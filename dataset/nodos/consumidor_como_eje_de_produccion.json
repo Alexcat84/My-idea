@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "El Consumidor en la Línea de Producción (Investigación del Consumidor)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming plantea que el cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales que Deming enseño en Japón desde 1950.",
+  "resumen_teorico": "El cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales de la gestión de calidad que se enseñaron en Japón desde 1950.",
   "pasos_accionables": [
     "Identifica quién es realmente el consumidor final de tu producto o servicio",
     "Investiga qué necesita tu cliente y qué cree que necesita",
@@ -40,5 +40,27 @@
       "titulo": "El Consumidor en la Línea de Producción (Extensión de la Línea)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-036",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming plantea que el cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales que Deming enseño en Japón desde 1950.",
+      "texto_nuevo": "El cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales de la gestión de calidad que se enseñaron en Japón desde 1950.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming plantea que",
+          "que Deming enseño en Japón desde 1950"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-031 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

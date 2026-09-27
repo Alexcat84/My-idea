@@ -7,15 +7,15 @@
   "resumen_teorico": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las caracteristicas de lo que vas a enviar: cuanto pesa, que tan fragil es, si tiene forma irregular, si es liquido o polvo, cual es su valor y si su uso final exige algo especial. Tambien hay que revisar si el producto cae dentro de alguna categoria regulada, como perfumes, baterias o quimicos, que exigen empaque especifico. Esta evaluacion previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solucion, por lo que revisarlos todos antes de comprar ahorra dinero y devoluciones.",
   "pasos_accionables": [
     "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
-    "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
-    "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
-    "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
-    "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica."
+    "Pregunta si el contenido es líquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+    "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+    "Revisa si tu producto entra en alguna categoría regulada, como baterías, perfumes o químicos, antes de despacharlo.",
+    "Con esa información decide si necesitas caja simple, de doble pared o bolsa plástica."
   ],
-  "entregable_esperado": "Una lista de requisitos de empaque especificos para tu producto, lista antes de comprar materiales.",
+  "entregable_esperado": "Una lista de requisitos de empaque específicos para tu producto, lista antes de comprar materiales.",
   "nodos_previos": [
     "disenar_empaque_logistica",
-    "decision_aptitud_uso"
+    "logistica_inversa_retornos"
   ],
   "nodos_siguientes": [
     "conocer_limites_peso_tamano_courier",
@@ -30,5 +30,122 @@
     "Has tenido devoluciones por daño y no sabes si el problema es el empaque o el contenido.",
     "Sospechas que tu producto podria clasificar como mercancia peligrosa, como perfumes o baterias."
   ],
-  "etiqueta_arbol": "Evalúa antes de empacar"
+  "etiqueta_arbol": "Evalúa antes de empacar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t13-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+      "texto_nuevo": "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+      "cita": {
+        "libro": "DHL Express, An Essential Packing Guide for Express Shipments",
+        "fichero": "OCR/Extraccion delicada/dhl_express_packing_guide_en.md",
+        "lineas": "L81",
+        "frase": "Extra cushioning and protection may be required for high value goods."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: se comparo la extraccion nueva con la version oficial descargada de mydhl.express.dhl (PDF de 14 paginas fechado el 23/07/2026; la copia local es del 25/02/2026). El texto coincide salvo un parrafo nuevo sobre no usar 'black foil' en el exterior; la frase citada es identica en las dos y la palabra insurance no aparece en ninguna. La guia relaciona el valor del contenido con proteccion extra, pero no con un seguro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)"
+    },
+    {
+      "id": "t2-arista-030",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decision_aptitud_uso -> revisar_necesidades_de_empaque",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-18-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Revisar necesidades de empaque antes de comprar materiales no tiene relacion con la decision de aptitud para el uso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-007",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "logistica_inversa_retornos -> revisar_necesidades_de_empaque",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-orto-0172",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+      "texto_nuevo": "Pregunta si el contenido es líquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso1: líquido (Solo añade la tilde que faltaba en líquido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0173",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+      "texto_nuevo": "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso2: protección, algún (Solo añade las tildes de protección y algún.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0174",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
+      "texto_nuevo": "Revisa si tu producto entra en alguna categoría regulada, como baterías, perfumes o químicos, antes de despacharlo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso3: categoría, baterías, químicos (Solo añade las tildes de categoría, baterías y químicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0175",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica.",
+      "texto_nuevo": "Con esa información decide si necesitas caja simple, de doble pared o bolsa plástica.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso4: información, plástica (Solo añade las tildes de información y plástica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0176",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de requisitos de empaque especificos para tu producto, lista antes de comprar materiales.",
+      "texto_nuevo": "Una lista de requisitos de empaque específicos para tu producto, lista antes de comprar materiales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.entregable: específicos (Solo añade la tilde que faltaba en específicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "DHL Express, Guia de empaque"
+  ]
 }

@@ -20,7 +20,26 @@
     "revision_legal_marketing"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita material físico de credibilidad para compradores secundarios en el proceso de venta"
+    "Si vendes o piensas vender franquicias en Estados Unidos y necesitas material físico de credibilidad para compradores secundarios (abogados, prestamistas, contadores, cónyuges) en el proceso de venta"
   ],
-  "etiqueta_arbol": "Crea tu Folleto de Franquicia"
+  "etiqueta_arbol": "Crea tu Folleto de Franquicia",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-085",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se necesita material físico de credibilidad para compradores secundarios en el proceso de venta",
+      "texto_nuevo": "Si vendes o piensas vender franquicias en Estados Unidos y necesitas material físico de credibilidad para compradores secundarios (abogados, prestamistas, contadores, cónyuges) en el proceso de venta",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-004: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: el copy del folleto esta regulado en estados de Estados Unidos y la condicion no dice que aplica si vendes franquicias alli."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

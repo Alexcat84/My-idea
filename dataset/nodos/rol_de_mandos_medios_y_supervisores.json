@@ -7,11 +7,11 @@
   "resumen_teorico": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeno equipo o la que lleva la calidad en su propia area. Liderar un equipo que cruza distintas areas exige habilidades distintas a la autoridad jerarquica tradicional, como la tolerancia a la ambiguedad y la flexibilidad para adaptarse sobre la marcha.",
   "pasos_accionables": [
     "Desarrollar habilidades de liderazgo para coordinar equipos que no responden directamente a ti",
-    "Definir con claridad quien detecta y nombra los problemas de calidad",
+    "Definir con claridad quién detecta y nombra los problemas de calidad",
     "Fomentar la participación en grupos de trabajo enfocados en resolver temas de calidad",
-    "Evaluar habilidades de liderazgo como la tolerancia a fallas y la flexibilidad ante la ambiguedad"
+    "Evaluar habilidades de liderazgo como la tolerancia a fallas y la flexibilidad ante la ambigüedad"
   ],
-  "entregable_esperado": "Una guia de desarrollo de liderazgo para quienes coordinan equipos de calidad sin depender de una autoridad jerarquica formal",
+  "entregable_esperado": "Una guía de desarrollo de liderazgo para quienes coordinan equipos de calidad sin depender de una autoridad jerárquica formal",
   "nodos_previos": [
     "transferencia_de_actividades_a_departamentos_de_linea"
   ],
@@ -22,5 +22,51 @@
   "condiciones_activacion": [
     "Cuando alguien necesita liderar un proyecto de mejora de calidad sin tener autoridad jerarquica directa sobre las personas involucradas"
   ],
-  "etiqueta_arbol": "Empodera a tus Mandos Medios"
+  "etiqueta_arbol": "Empodera a tus Mandos Medios",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0198",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir con claridad quien detecta y nombra los problemas de calidad",
+      "texto_nuevo": "Definir con claridad quién detecta y nombra los problemas de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O017-033.paso1: quién (Se añade la tilde de quién, que aquí es interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0199",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evaluar habilidades de liderazgo como la tolerancia a fallas y la flexibilidad ante la ambiguedad",
+      "texto_nuevo": "Evaluar habilidades de liderazgo como la tolerancia a fallas y la flexibilidad ante la ambigüedad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O017-033.paso3: ambigüedad (Se restituye la diéresis que faltaba en ambigüedad.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0200",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una guia de desarrollo de liderazgo para quienes coordinan equipos de calidad sin depender de una autoridad jerarquica formal",
+      "texto_nuevo": "Una guía de desarrollo de liderazgo para quienes coordinan equipos de calidad sin depender de una autoridad jerárquica formal",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O017-033.entregable: guía, jerárquica (Solo se añaden las tildes que faltaban en guía y jerárquica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

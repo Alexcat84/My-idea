@@ -1,0 +1,56 @@
+[
+ {
+  "node_id": "contabilidad_innovacion",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo (línea base), aunque al inicio sea intuitivo",
+  "texto_nuevo": "Convertir las suposiciones de salto de fe del modelo de negocio en un modelo financiero cuantitativo que describa cómo será el negocio en un punto de éxito futuro, aunque al inicio sea intuitivo",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "L1292-L1307",
+   "frase": "first, use a minimum viable product to establish real data on where the company is right now"
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q040, lector y verificador de acuerdo). El libro sí dice que las suposiciones de salto de fe se convierten en un modelo financiero cuantitativo, aunque al principio sea intuitivo (L950, L1292). Pero ese modelo describe el negocio en un punto de éxito futuro, es decir, el ideal. La línea base son los datos reales que da el MVP (L1307, L1344, L3184). Al llamar línea base al modelo intuitivo, el paso invierte la distinción del libro. Busqué pasajes que igualen el modelo a la línea base y no hay ninguno.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q040-022",
+  "id": "fidelidad-t12-01",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "gestion_instalaciones",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajos costos de utilización) o sub-capacidad (pérdida de ventas)",
+  "texto_nuevo": "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajas tasas de utilización y mayores costos) o sub-capacidad (pérdida de ventas)",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "L1310-L1310",
+   "frase": "Too much capacity in a facility results in low utilization rates and higher supply chain costs."
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q009, arbitro). Tiene razon el LECTOR B. La accion general (evitar sobre y sub capacidad) coincide con el libro, pero el parentesis del paso atribuye a la sobrecapacidad 'bajos costos de utilizacion', y el libro dice que trae bajas tasas de utilizacion y MAYORES costos de la cadena. L136 lo confirma: 'capacity costs money, and excess capacity is idle capacity not in use and not generating revenue'. Busque en todo el libro (utilization, excess capacity, too much capacity) y ningun pasaje dice que el exceso de capacidad abarate costos; el paso invierte la consecuencia. El LECTOR A paso por alto esa inversion. La sesion solo restituye las tildes que el texto propuesto traia sin ellas.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q009-001",
+  "id": "fidelidad-t12-02",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "relacion_largo_plazo_proveedor_unico",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+  "texto_nuevo": "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "L844-L850",
+   "frase": "In return for steelmakers' cooperation with GM in its cost-cutting objectives, the auto maker is expected to reward suppliers with multi-year contracts."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q028, lector y verificador de acuerdo). El libro respalda los contratos plurianuales (tambien L1063, hasta seis anos), pero no menciona en ningun sitio la transparencia total de costos ni los 'open books'. Lo busque con open book, transparen, disclos y cost data.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q028-092",
+  "id": "fidelidad-t12-03",
+  "fecha": "2026-09-24"
+ }
+]

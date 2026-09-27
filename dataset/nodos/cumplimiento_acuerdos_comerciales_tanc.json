@@ -7,11 +7,11 @@
   "resumen_teorico": "Existen oficinas de gobierno que vigilan que otros paises cumplan los acuerdos comerciales firmados. Estas oficinas ofrecen ayuda gratuita a quien exporta, sobre todo a negocios pequenos, para identificar y reducir las barreras que un gobierno extranjero pone a tus productos. Si exportas, conviene que averigues si tu pais cuenta con un servicio así.",
   "pasos_accionables": [
     "Identifica las barreras comerciales que enfrentas al vender en un mercado extranjero",
-    "Busca si tu pais tiene una oficina de comercio con una base de datos de los acuerdos comerciales vigentes",
+    "Busca si tu país tiene una oficina de comercio con una base de datos de los acuerdos comerciales vigentes",
     "Presenta una queja formal sobre la barrera comercial ante esa oficina",
     "Da seguimiento hasta que el caso se resuelva"
   ],
-  "entregable_esperado": "Una queja documentada sobre una barrera comercial especifica, presentada ante la oficina correspondiente en tu pais",
+  "entregable_esperado": "Una queja documentada sobre una barrera comercial específica, presentada ante la oficina correspondiente en tu país",
   "nodos_previos": [
     "centro_asesoria_advocacy_center"
   ],
@@ -22,5 +22,37 @@
     "Cuando enfrentas una barrera comercial impuesta por un gobierno extranjero",
     "Cuando no tienes los recursos para resolver el problema por tu cuenta"
   ],
-  "etiqueta_arbol": "Vigila el Cumplimiento Comercial"
+  "etiqueta_arbol": "Vigila el Cumplimiento Comercial",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0291",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca si tu pais tiene una oficina de comercio con una base de datos de los acuerdos comerciales vigentes",
+      "texto_nuevo": "Busca si tu país tiene una oficina de comercio con una base de datos de los acuerdos comerciales vigentes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-039.paso1: país (Falta la tilde de hiato en 'país'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0292",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una queja documentada sobre una barrera comercial especifica, presentada ante la oficina correspondiente en tu pais",
+      "texto_nuevo": "Una queja documentada sobre una barrera comercial específica, presentada ante la oficina correspondiente en tu país",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-039.entregable: específica, país (Faltan las tildes de 'específica' (esdrújula) y 'país' (hiato); no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

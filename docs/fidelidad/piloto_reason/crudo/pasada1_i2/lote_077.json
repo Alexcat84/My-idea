@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_077",
+  "intento": 0,
+  "usd": 0.167052,
+  "turnos": 1,
+  "duracion_s": 16.2,
+  "pared_s": 17.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33438,
+  "tokens_out": 1665,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE1F7E5\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1539, 2716, 3821, 3829, 5043, 1522], \"razon\": \"El libro distingue errores y violaciones, pero admite violaciones erróneas (no deliberadas) y una violación como error basado en reglas. Equiparar violación con intencional simplifica un matiz.\"},\n  {\"id\": \"PE187C7\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Sección 4\", \"MEDA (checklist)\", \"información, equipo, diseño, capacitación, entorno, supervisión, comunicación\"], \"clase\": \"FIEL\", \"lineas\": [3747, 3763], \"razon\": \"Coincide con la Sección 4 de MEDA. La lista está incompleta, 'capacitación' no equivale exactamente a 'qualifications and skills' y omite completarla para cada error de la Sección 3.\"},\n  {\"id\": \"PBCC4FA\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [401, 423, 451, 1914], \"razon\": \"El libro señala como grieta la ausencia de un procedimiento formal de traspaso y el briefing solo verbal. El paso va en la misma dirección.\"},\n  {\"id\": \"PF33317\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Safety Case\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4433, 4435, 4462], \"razon\": \"El libro presenta juzgar la adecuación como muy difícil y quizá incognoscible, advierte contra hacerlo como checklist superficial y dice que los criterios absolutos rara vez se conocen de antemano.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE1F7E5",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1539,
+    2716,
+    3821,
+    3829,
+    5043,
+    1522
+   ],
+   "razon": "El libro distingue errores y violaciones, pero admite violaciones erróneas (no deliberadas) y una violación como error basado en reglas. Equiparar violación con intencional simplifica un matiz."
+  },
+  {
+   "id": "PE187C7",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Sección 4",
+    "MEDA (checklist)",
+    "información, equipo, diseño, capacitación, entorno, supervisión, comunicación"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3747,
+    3763
+   ],
+   "razon": "Coincide con la Sección 4 de MEDA. La lista está incompleta, 'capacitación' no equivale exactamente a 'qualifications and skills' y omite completarla para cada error de la Sección 3."
+  },
+  {
+   "id": "PBCC4FA",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    401,
+    423,
+    451,
+    1914
+   ],
+   "razon": "El libro señala como grieta la ausencia de un procedimiento formal de traspaso y el briefing solo verbal. El paso va en la misma dirección."
+  },
+  {
+   "id": "PF33317",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Safety Case"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4433,
+    4435,
+    4462
+   ],
+   "razon": "El libro presenta juzgar la adecuación como muy difícil y quizá incognoscible, advierte contra hacerlo como checklist superficial y dice que los criterios absolutos rara vez se conocen de antemano."
+  }
+ ]
+}

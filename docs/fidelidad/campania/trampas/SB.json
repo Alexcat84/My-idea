@@ -1,0 +1,82 @@
+[
+ {
+  "titulo": "Bloqueo y Etiquetado de Energía Peligrosa (Lockout/Tagout)",
+  "resumen": "Antes de dar servicio o mantenimiento a una máquina, debes aislar sus fuentes de energía con candados y etiquetas personales, liberar la energía almacenada y verificar que el equipo no pueda arrancar mientras alguien trabaja en él.",
+  "texto": "Bloquear el equipo en el pulsador o selector de control más cercano al punto de trabajo",
+  "tipo": "CONTRARIO",
+  "lineas": "L949 a L949",
+  "cita": "Machinery or equipment is locked out at the main power source; not at a push button, selector switch, or other control circuit type device.",
+  "dato": "",
+  "explicacion": "El libro exige bloquear en la fuente principal de energía y excluye expresamente el pulsador, el selector o cualquier dispositivo del circuito de control. El paso invierte la condición."
+ },
+ {
+  "titulo": "Almacenamiento de Cilindros de Gas para Soldadura y Corte",
+  "resumen": "Los cilindros de gas combustible y de oxígeno deben guardarse en lugares asignados, lejos de fuentes de calor, escaleras y pasillos, separados entre sí y con sus tapas protectoras de válvula colocadas cuando no se usan.",
+  "texto": "Separar en almacén los cilindros de oxígeno y de gas combustible al menos 10 pies",
+  "tipo": "CONTRARIO",
+  "lineas": "L1603 a L1603",
+  "cita": "Fuel gas cylinders and oxygen cylinders in storage are separated by a distance of at least 20 feet, or by a non-combustible barrier at least 5 feet (1. 5m) high, having a fire-resistance rating of at least 30 minutes.",
+  "dato": "",
+  "explicacion": "El libro fija una separación mínima de 20 pies (o una barrera no combustible de 5 pies de alto con 30 minutos de resistencia al fuego). El paso rebaja el umbral a la mitad."
+ },
+ {
+  "titulo": "Vigilante Exterior en Espacios Confinados con Permiso",
+  "resumen": "Mientras alguien trabaja dentro de un espacio confinado, un vigilante capacitado y equipado permanece afuera, mantiene comunicación con quien entró, da la alarma si algo falla y presta asistencia en una emergencia.",
+  "texto": "Aprovechar al vigilante exterior para alcanzar herramientas y registrar lecturas mientras supervisa",
+  "tipo": "CONTRARIO",
+  "lineas": "L1339 a L1341",
+  "cita": "A trained and equipped attendant is positioned outside the confined space, whose sole responsibility is to watch the work in progress, sound an alarm if necessary, and render assistance.",
+  "dato": "",
+  "explicacion": "El libro dice que la única responsabilidad del vigilante es observar el trabajo, dar la alarma y asistir. Cargarle tareas de apoyo contradice esa exclusividad."
+ },
+ {
+  "titulo": "Capacitación y Evaluación de Operadores de Montacargas",
+  "resumen": "Solo trabajadores capacitados y certificados por el empleador pueden manejar montacargas y otros vehículos industriales motorizados. La formación la imparte alguien con experiencia y el desempeño de cada operador se reevalúa periódicamente.",
+  "texto": "Reevaluar el desempeño de cada operador de montacargas al menos cada cinco años",
+  "tipo": "CONTRARIO",
+  "lineas": "L1205 a L1205",
+  "cita": "PIT operator performance is evaluated at least once every three years, and workers are retrained as necessary.",
+  "dato": "",
+  "explicacion": "El libro pide evaluar a los operadores al menos una vez cada tres años. El paso alarga el plazo a cinco, un umbral que el libro no admite."
+ },
+ {
+  "titulo": "Plan de Aclimatación al Calor",
+  "resumen": "Los trabajadores nuevos, temporales o que vuelven de una ausencia larga necesitan adaptarse poco a poco al calor. El plan ajusta sus tareas, los supervisa de cerca y vigila los síntomas de enfermedad por calor.",
+  "texto": "Aumentar gradualmente la carga de trabajo de los recién llegados durante sus primeros 14 días",
+  "tipo": "ANADIDO",
+  "lineas": "L851 a L851",
+  "cita": "An acclimatization plan is in place to modify work duties for and to closely supervise (1) new workers, (2) temporary or contract workers, and (3) workers returning from extended leave to ensure they gradually build tolerance to heat.",
+  "dato": "14 días de aclimatación",
+  "explicacion": "El libro pide aclimatar de forma gradual pero no da ninguna duración. Grep sin resultados para 'two weeks', '14 days', 'fourteen'; el único '14' del texto es la cifra de muertes diarias (L19, L41)."
+ },
+ {
+  "titulo": "Medición de la Exposición al Ruido",
+  "resumen": "Identifica las zonas donde el ruido supera los 85 decibeles, mide los niveles y guarda los registros. Si la evaluación lo indica, pon en marcha un programa de conservación auditiva con protectores y pruebas periódicas.",
+  "texto": "Medir la exposición de cada trabajador con un dosímetro personal durante toda la jornada",
+  "tipo": "ANADIDO",
+  "lineas": "L1279 a L1279",
+  "cita": "Noise levels have been measured with a sound level meter or an octave band analyzer and records are being kept.",
+  "dato": "dosímetro personal de ruido durante la jornada completa",
+  "explicacion": "El libro solo menciona el sonómetro y el analizador de bandas de octava. El dosímetro personal y la medición de jornada completa no aparecen (grep 'dosimet' sin resultados)."
+ },
+ {
+  "titulo": "Capacitación Inicial de Trabajadores Jóvenes",
+  "resumen": "Los trabajadores jóvenes suelen estar en su primer empleo y dudan en preguntar. Pregúntales por su experiencia previa, enséñales los peligros del puesto y refuerza las instrucciones clave de varias maneras en sus primeras semanas.",
+  "texto": "Reforzar las instrucciones clave de seguridad durante sus primeras cuatro semanas en el puesto",
+  "tipo": "ANADIDO",
+  "lineas": "L1755 a L1755",
+  "cita": "Key job safety information/instructions are routinely reinforced in a variety of ways, especially over the first several weeks on the job, to help ensure young workers clearly understand tasks to be performed.",
+  "dato": "cuatro semanas",
+  "explicacion": "El libro habla de 'the first several weeks' sin fijar un número. Grep sin resultados para 'four weeks' y '4 weeks'."
+ },
+ {
+  "titulo": "Manejo y Revisión de Cilindros de Gas Comprimido",
+  "resumen": "Los cilindros deben estar bien identificados, guardados donde no puedan golpearse ni manipularse sin permiso, con las válvulas cerradas y las tapas protectoras puestas cuando no se usan, y revisados en busca de defectos y fugas.",
+  "texto": "Revisar cada trimestre los cilindros en busca de óxido profundo, defectos y fugas",
+  "tipo": "ANADIDO",
+  "lineas": "L277 a L277",
+  "cita": "Cylinders are regularly examined for obvious signs of defects, deep rusting, and leakage.",
+  "dato": "frecuencia trimestral",
+  "explicacion": "El libro solo dice 'regularly examined', sin frecuencia. Grep sin resultados para 'quarter', 'every three months' y '90 days'."
+ }
+]

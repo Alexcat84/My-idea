@@ -11,7 +11,7 @@
     "Inspeccionar visualmente cables y equipos antes de cada uso",
     "Bloquear y etiquetar los circuitos desenergizados antes de intervenirlos",
     "Instalar interruptores de falla a tierra (GFCI) en circuitos temporales",
-    "Aprender RCP si tu o alguien de tu negocio esta expuesto a la electricidad",
+    "Aprender RCP si tú o alguien de tu negocio está expuesto a la electricidad",
     "Asegurar la conexión a tierra de herramientas y equipos eléctricos portátiles"
   ],
   "entregable_esperado": "Checklist de seguridad eléctrica completado y un plan para corregir las deficiencias detectadas en instalaciones o equipos.",
@@ -23,5 +23,24 @@
     "Cuando tu negocio opera o mantiene equipos e instalaciones eléctricas",
     "Cuando detectas riesgos de contacto con partes energizadas"
   ],
-  "etiqueta_arbol": "Cuida la Seguridad Eléctrica"
+  "etiqueta_arbol": "Cuida la Seguridad Eléctrica",
+  "fuentes_internas": [
+    "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0550",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprender RCP si tu o alguien de tu negocio esta expuesto a la electricidad",
+      "texto_nuevo": "Aprender RCP si tú o alguien de tu negocio está expuesto a la electricidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-023.paso5: tú, está (Añade las tildes que faltaban en tú (pronombre) y en está (verbo); el posesivo tu negocio sigue sin tilde, como debe.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "franquicia_como_capital_alternativo",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Franquiciar como Alternativa de Capital",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -25,5 +25,23 @@
     "Si el emprendedor no tiene acceso a capital de deuda o equity para escalar",
     "Si se busca crecer sin diluir propiedad del negocio"
   ],
-  "etiqueta_arbol": "Financia sin Deuda ni Socios"
+  "etiqueta_arbol": "Financia sin Deuda ni Socios",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-174",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-031: Compara el capital que exige crecer por cuenta propia o via franquicia para decidir la estrategia de expansion; es planificacion de recursos. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

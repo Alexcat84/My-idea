@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P28E0EC",
+  "intento": 0,
+  "usd": 0.217188,
+  "turnos": 1,
+  "duracion_s": 9.5,
+  "pared_s": 10.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 50662,
+  "tokens_out": 727,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P28E0EC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5063, 5057, 5085, 5266], \"cita\": \"Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. … If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide juicio cuidadoso en la zona gris y propone un 'jurado' de pares y una junta de revisión disciplinaria (L5085). También pregunta si los pares y los representantes sindicales participan en el juicio (L5266). El paso concreta esa idea en la misma dirección. No excluye a los pares ni impone gerencia, así que no contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P28E0EC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5063,
+   5057,
+   5085,
+   5266
+  ],
+  "cita": "Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. … If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide juicio cuidadoso en la zona gris y propone un 'jurado' de pares y una junta de revisión disciplinaria (L5085). También pregunta si los pares y los representantes sindicales participan en el juicio (L5266). El paso concreta esa idea en la misma dirección. No excluye a los pares ni impone gerencia, así que no contradice.",
+  "paso_fiel": ""
+ }
+}

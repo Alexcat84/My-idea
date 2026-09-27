@@ -1,6 +1,6 @@
 {
   "node_id": "evaluar_proceso_completo_no_cada_metrica",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "entrega",
   "titulo_concepto": "Evaluar el proceso completo, no cada métrica por separado",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Anota cada paso de tu entrega que pueda fallar: a tiempo, completo, sin daño, factura correcta.",
     "Mide el porcentaje de aciertos de cada paso por separado durante un mes.",
-    "Multiplica esos porcentajes entre si para obtener el resultado combinado real.",
+    "Multiplica esos porcentajes entre sí para obtener el resultado combinado real.",
     "Compara esa cifra combinada con lo que le prometes al cliente y ajusta tus metas.",
-    "Repite la medicion cada mes para ver si el numero combinado mejora."
+    "Sugerencia de My Idea: repite la medición cada mes para ver si el número combinado mejora."
   ],
-  "entregable_esperado": "Una cifra unica que representa el porcentaje real de pedidos perfectos, no el promedio de metricas sueltas.",
+  "entregable_esperado": "Una cifra única que representa el porcentaje real de pedidos perfectos, no el promedio de métricas sueltas.",
   "nodos_previos": [
     "definir_tu_propio_pedido_perfecto"
   ],
@@ -22,5 +22,81 @@
     "Mides varias cosas por separado pero nunca las juntas en un solo numero.",
     "Quieres saber si tu servicio real es tan bueno como crees."
   ],
-  "etiqueta_arbol": "Multiplica tus métricas, no las sumes"
+  "etiqueta_arbol": "Multiplica tus métricas, no las sumes",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-054",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repite la medicion cada mes para ver si el numero combinado mejora.",
+      "texto_nuevo": "Sugerencia de My Idea: repite la medicion cada mes para ver si el numero combinado mejora.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L2935-L2939",
+        "frase": "involving a systematic and continuous concentration on monitoring and control"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide seguimiento continuo pero no fija una frecuencia mensual.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-082"
+    },
+    {
+      "id": "n1-fase-077",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q042-011: Mide durante un mes los aciertos de entregas reales y ajusta metas: es control y mejora de una operación en marcha, no planificación. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0907",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Multiplica esos porcentajes entre si para obtener el resultado combinado real.",
+      "texto_nuevo": "Multiplica esos porcentajes entre sí para obtener el resultado combinado real.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-040.paso2: sí (Falta la tilde en el pronombre tónico sí de «entre sí»; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0908",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: repite la medicion cada mes para ver si el numero combinado mejora.",
+      "texto_nuevo": "Sugerencia de My Idea: repite la medición cada mes para ver si el número combinado mejora.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-040.paso4: medición, número (Faltan tildes reales en medición y número; el condicional si queda sin tilde, que es correcto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0909",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una cifra unica que representa el porcentaje real de pedidos perfectos, no el promedio de metricas sueltas.",
+      "texto_nuevo": "Una cifra única que representa el porcentaje real de pedidos perfectos, no el promedio de métricas sueltas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-040.entregable: única, métricas (Faltan tildes reales en única y métricas; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ]
 }

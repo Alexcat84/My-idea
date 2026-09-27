@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0231F8",
+  "intento": 0,
+  "usd": 0.096324,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 20091,
+  "tokens_out": 798,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0231F8\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5690, 5905, 5907], \"cita\": \"non-injury events--such as the number of leaks of combustible materials--are much more diagnostic of the integrity of the system as a whole. It is these precursor events, along with regular checks upon the quality of the underlying processes (see Chapter 7), that show where the high-potential risks are located.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide medir la integridad del sistema con precursores y chequeos de procesos, y hacerlo junto al LTIF: cada modelo tiene sus metricas, todos cumplen su papel y no se ignoran las lesiones (L5905-5907). 'Complementarias' no hace del LTIF la metrica principal. 'Process safety indicators' solo nombra esas medidas; no aporta cifra, herramienta ni norma nueva.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0231F8",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5690,
+   5905,
+   5907
+  ],
+  "cita": "non-injury events--such as the number of leaks of combustible materials--are much more diagnostic of the integrity of the system as a whole. It is these precursor events, along with regular checks upon the quality of the underlying processes (see Chapter 7), that show where the high-potential risks are located.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide medir la integridad del sistema con precursores y chequeos de procesos, y hacerlo junto al LTIF: cada modelo tiene sus metricas, todos cumplen su papel y no se ignoran las lesiones (L5905-5907). 'Complementarias' no hace del LTIF la metrica principal. 'Process safety indicators' solo nombra esas medidas; no aporta cifra, herramienta ni norma nueva.",
+  "paso_fiel": ""
+ }
+}

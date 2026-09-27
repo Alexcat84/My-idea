@@ -5,13 +5,13 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu pais, para que puedas venderlas publicamente. Solo importa de verdad si el negocio piensa salir a bolsa algun día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto minimo de oferta y un porcentaje minimo garantizado si hay reduccion proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, seran los bancos de inversion quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu pais.",
   "pasos_accionables": [
-    "Define cuantas veces puedes exigir un registro (por ejemplo, dos) y el monto minimo de oferta publica que necesitas para poder ejercerlo",
-    "Negocia tu derecho a sumarte a un registro ya en marcha y como se reduciria tu parte según las condiciones de mercado",
-    "Revisa que porcentaje minimo tienes garantizado si hay reduccion proporcional (normalmente no menos del 30%)",
-    "Acuerda quien paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocacion) y el tope de honorarios legales si vendes acciones",
-    "No le dediques demasiado tiempo legal a esta clausula: su impacto practico es limitado frente al control que tendran los bancos de inversion cuando llegue el momento de salir a bolsa"
+    "Define cuántas veces puedes exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública que necesitas para poder ejercerlo",
+    "Negocia tu derecho a sumarte a un registro ya en marcha y cómo se reduciría tu parte según las condiciones de mercado",
+    "Revisa qué porcentaje mínimo tienes garantizado si hay reducción proporcional (normalmente no menos del 30%)",
+    "Acuerda quién paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocación) y el tope de honorarios legales si vendes acciones",
+    "No le dediques demasiado tiempo legal a esta cláusula: su impacto práctico es limitado frente al control que tendrán los bancos de inversión cuando llegue el momento de salir a bolsa"
   ],
-  "entregable_esperado": "Clausula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con limites de tiempo, gastos y porcentajes de reduccion claramente definidos",
+  "entregable_esperado": "Cláusula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
   "condiciones_activacion": [
     "Si planeas una eventual salida a bolsa",
     "Si necesitas garantias de poder vender tus acciones en el futuro",
@@ -31,5 +31,93 @@
     "right_of_first_refusal_pro_rata",
     "registration_rights_stock_consideration"
   ],
-  "etiqueta_arbol": "Asegura tus Derechos de Registro"
+  "etiqueta_arbol": "Asegura tus Derechos de Registro",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0421",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define cuantas veces puedes exigir un registro (por ejemplo, dos) y el monto minimo de oferta publica que necesitas para poder ejercerlo",
+      "texto_nuevo": "Define cuántas veces puedes exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública que necesitas para poder ejercerlo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-037.paso0: cuántas, mínimo, pública (Faltan las tildes de cuántas, mínimo y pública.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0422",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Negocia tu derecho a sumarte a un registro ya en marcha y como se reduciria tu parte según las condiciones de mercado",
+      "texto_nuevo": "Negocia tu derecho a sumarte a un registro ya en marcha y cómo se reduciría tu parte según las condiciones de mercado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-037.paso1: cómo, reduciría (Faltan las tildes de cómo y reduciría.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0423",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa que porcentaje minimo tienes garantizado si hay reduccion proporcional (normalmente no menos del 30%)",
+      "texto_nuevo": "Revisa qué porcentaje mínimo tienes garantizado si hay reducción proporcional (normalmente no menos del 30%)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-037.paso2: qué, mínimo, reducción (Faltan las tildes de qué, mínimo y reducción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0424",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Acuerda quien paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocacion) y el tope de honorarios legales si vendes acciones",
+      "texto_nuevo": "Acuerda quién paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocación) y el tope de honorarios legales si vendes acciones",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-037.paso3: quién, colocación (Faltan las tildes de quién y colocación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0425",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No le dediques demasiado tiempo legal a esta clausula: su impacto practico es limitado frente al control que tendran los bancos de inversion cuando llegue el momento de salir a bolsa",
+      "texto_nuevo": "No le dediques demasiado tiempo legal a esta cláusula: su impacto práctico es limitado frente al control que tendrán los bancos de inversión cuando llegue el momento de salir a bolsa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-037.paso4: cláusula, práctico, tendrán, inversión (Faltan las tildes de cláusula, práctico, tendrán e inversión.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0426",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clausula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con limites de tiempo, gastos y porcentajes de reduccion claramente definidos",
+      "texto_nuevo": "Cláusula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-037.entregable: Cláusula, límites, reducción (Faltan las tildes de Cláusula, límites y reducción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

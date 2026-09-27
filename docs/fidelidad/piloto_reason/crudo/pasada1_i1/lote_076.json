@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_076",
+  "intento": 0,
+  "usd": 0.169932,
+  "turnos": 1,
+  "duracion_s": 18.1,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33863,
+  "tokens_out": 1724,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA2CAC7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5236, 5242, 5246, 5270, 5272], \"razon\": \"Reason plantea literalmente estas preguntas: qué miembros del consejo responden por la seguridad organizacional y si se discute en todas las reuniones regulares del consejo o equivalentes.\"},\n  {\"id\": \"P59D349\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [81, 83, 3955, 3957, 3959, 3965, 3971, 3973], \"razon\": \"La erosión gradual e inconsciente coincide con el libro. Pero Vaughan atribuye Challenger a la conformidad y rechaza la presión de plazos que sugiere el ejemplo. Conviene revisarlo.\"},\n  {\"id\": \"PB1B1D2\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5043, 5057, 1558, 1569, 1618], \"razon\": \"El árbol de decisión pregunta por el incumplimiento deliberado de procedimientos seguros y considera su adecuación. Distingue así las violaciones inducidas por el sistema, como exige el paso.\"},\n  {\"id\": \"PF8348E\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4274, 4304, 4308, 4318, 4433], \"razon\": \"La autorregulación deja a los operadores libres de identificar los medios para alcanzar los fines de seguridad exigidos, mediante una mejor organización interna de la seguridad.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA2CAC7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5236,
+    5242,
+    5246,
+    5270,
+    5272
+   ],
+   "razon": "Reason plantea literalmente estas preguntas: qué miembros del consejo responden por la seguridad organizacional y si se discute en todas las reuniones regulares del consejo o equivalentes."
+  },
+  {
+   "id": "P59D349",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    81,
+    83,
+    3955,
+    3957,
+    3959,
+    3965,
+    3971,
+    3973
+   ],
+   "razon": "La erosión gradual e inconsciente coincide con el libro. Pero Vaughan atribuye Challenger a la conformidad y rechaza la presión de plazos que sugiere el ejemplo. Conviene revisarlo."
+  },
+  {
+   "id": "PB1B1D2",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5043,
+    5057,
+    1558,
+    1569,
+    1618
+   ],
+   "razon": "El árbol de decisión pregunta por el incumplimiento deliberado de procedimientos seguros y considera su adecuación. Distingue así las violaciones inducidas por el sistema, como exige el paso."
+  },
+  {
+   "id": "PF8348E",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4274,
+    4304,
+    4308,
+    4318,
+    4433
+   ],
+   "razon": "La autorregulación deja a los operadores libres de identificar los medios para alcanzar los fines de seguridad exigidos, mediante una mejor organización interna de la seguridad."
+  }
+ ]
+}

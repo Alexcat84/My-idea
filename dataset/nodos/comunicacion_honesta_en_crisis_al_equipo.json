@@ -18,14 +18,56 @@
   ],
   "entregable_esperado": "Discurso/comunicado de crisis entregado al equipo con petición clara de compromiso y plazo definido",
   "nodos_previos": [
-    "revisiones_regulares_desempeno_ceo"
+    "cultura_transparencia_organizacional"
   ],
-  "nodos_siguientes": [
-    "cierre_segun_complejidad_venta"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la empresa enfrenta una amenaza existencial y se requiere un esfuerzo extraordinario del equipo",
     "Cuando los discursos motivacionales convencionales ya no son creíbles ni efectivos"
   ],
-  "etiqueta_arbol": "Sé Honesto en la Crisis"
+  "etiqueta_arbol": "Sé Honesto en la Crisis",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-016",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_honesta_en_crisis_al_equipo -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-14): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La comunicacion honesta del CEO en una crisis interna no prepara la efectividad del cierre de ventas; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-115",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "revisiones_regulares_desempeno_ceo -> comunicacion_honesta_en_crisis_al_equipo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-02-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las revisiones del CEO por el consejo no llevan de forma natural a la comunicacion del CEO con su equipo en una crisis. Lo unico en comun es el rol del CEO. La correccion solo convirtio el calendario en sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-03",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cultura_transparencia_organizacional -> comunicacion_honesta_en_crisis_al_equipo",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-03, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "La crisis es el caso extremo de la transparencia radical del CEO: decir con franqueza lo grave de la situación y pedir el sacrificio es su aplicación directa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
+  ]
 }

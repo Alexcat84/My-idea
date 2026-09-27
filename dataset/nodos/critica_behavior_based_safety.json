@@ -1,6 +1,6 @@
 {
   "node_id": "critica_behavior_based_safety",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Crítica a los Programas de Seguridad Basados en Comportamiento",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -11,14 +11,13 @@
     "Elimina prácticas que estigmaticen a trabajadores lesionados, como identificadores visibles frente al resto del equipo",
     "Evalúa si las políticas posteriores a un incidente, como pruebas de drogas obligatorias, desincentivan el reporte",
     "Sustituye las métricas basadas en tasas de incidentes por métricas de proceso o de condiciones de seguridad",
-    "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
+    "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
   ],
   "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño.",
   "nodos_previos": [
     "participacion_trabajadores",
     "vieja_vision_vs_nueva_vision_seguridad",
-    "cultura_de_seguridad_interpretivista_funcionalista",
-    "proteccion_organizacion_matriz_experimentos"
+    "cultura_de_seguridad_interpretivista_funcionalista"
   ],
   "nodos_siguientes": [
     "cuestionar_vision_zero",
@@ -40,5 +39,53 @@
       "titulo": "Riesgos de los Programas de Seguridad Basados en Comportamiento",
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-50",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+      "texto_nuevo": "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L3525-L3525",
+        "frase": "the union representative asked a subsequent group to write “yes” on a piece of paper if they were afraid to report injuries."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Método añadido: el libro no propone entrevistas anónimas. Cuenta que un representante sindical pidió a los trabajadores escribir 'sí' en un papel, sin identificarse, si tenían miedo de reportar lesiones (Dekker L3525). Como herramienta o formato práctico, se reescribe como sugerencia de My Idea. Ni el resumen_teorico ni el entregable repiten el dato.",
+      "indice": 5,
+      "auditoria": "tramo1 DK1-059"
+    },
+    {
+      "id": "t2-arista-107",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proteccion_organizacion_matriz_experimentos -> critica_behavior_based_safety",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-04-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Proteger el negocio de siempre de tus experimentos comerciales no tiene relacion con los programas de seguridad basados en el comportamiento."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-fase-033",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q066-023: Razon para B: el dominio ya es health_safety, asi que A se equivoco al marcarlo mal; la fase es ejecucion porque los pasos y las condiciones parten de un programa de incentivos que ya existe y lo auditan, eliminan practicas y sustituyen metricas, es decir mejoran la gestion operativa de un negocio en marcha. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ],
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
   ]
 }

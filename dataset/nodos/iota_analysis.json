@@ -24,13 +24,42 @@
   ],
   "nodos_siguientes": [
     "analisis_competitivo",
-    "future_scenarios_planning",
-    "innovacion_abierta",
-    "arquitectura_tecnica_modular"
+    "innovacion_abierta"
   ],
   "condiciones_activacion": [
     "Cuando se han realizado múltiples análisis estratégicos y se necesita sintetizarlos en acciones concretas",
     "Cuando el equipo directivo necesita decidir sobre inversión en nuevos productos"
   ],
-  "etiqueta_arbol": "Cruza tus Análisis Estratégicos"
+  "etiqueta_arbol": "Cruza tus Análisis Estratégicos",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-076",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "iota_analysis -> arquitectura_tecnica_modular",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-20-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El IOTA integra analisis estrategicos de amenazas y oportunidades; no prepara la decision de construir sistemas con servicios cloud, SaaS y APIs."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-077",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "iota_analysis -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-18-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: IOTA integra los resultados de analisis previos, entre ellos los escenarios, asi que va despues de la planificacion de escenarios y no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_003",
+  "intento": 0,
+  "usd": 0.162132,
+  "turnos": 1,
+  "duracion_s": 17.3,
+  "pared_s": 18.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34123,
+  "tokens_out": 1282,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P48B4B6\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [423, 451, 401, 1914, 4025, 4027], \"razon\": \"El libro señala la ausencia de procedimiento formal de traspaso línea/base como grieta latente y cita fallos de traspaso de turno en Piper Alpha; auditarlo va en su dirección.\"},\n  {\"id\": \"PEFE28D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [225, 3965, 3971, 3985, 3989, 5832], \"razon\": \"El libro destaca la falta de datos de tendencia sobre anomalías toleradas (O-rings) y el coste de incidentes menores; revisar ese historial es extensión coherente.\"},\n  {\"id\": \"P815253\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2884, 2922, 2977, 3817, 4765], \"razon\": \"El libro critica apoyarse en exhortaciones y sanciones; el paso dice 'solo', compatible con que el libro admita sanciones para actos atroces.\"},\n  {\"id\": \"P5C2B69\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4777, 5234, 5270], \"razon\": \"Evaluar los cuatro subcomponentes encaja, pero el libro advierte que tener los componentes no basta: la cultura es más que la suma de sus partes. Riesgo de lectura tipo checklist.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P48B4B6",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    423,
+    451,
+    401,
+    1914,
+    4025,
+    4027
+   ],
+   "razon": "El libro señala la ausencia de procedimiento formal de traspaso línea/base como grieta latente y cita fallos de traspaso de turno en Piper Alpha; auditarlo va en su dirección."
+  },
+  {
+   "id": "PEFE28D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    225,
+    3965,
+    3971,
+    3985,
+    3989,
+    5832
+   ],
+   "razon": "El libro destaca la falta de datos de tendencia sobre anomalías toleradas (O-rings) y el coste de incidentes menores; revisar ese historial es extensión coherente."
+  },
+  {
+   "id": "P815253",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2884,
+    2922,
+    2977,
+    3817,
+    4765
+   ],
+   "razon": "El libro critica apoyarse en exhortaciones y sanciones; el paso dice 'solo', compatible con que el libro admita sanciones para actos atroces."
+  },
+  {
+   "id": "P5C2B69",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4777,
+    5234,
+    5270
+   ],
+   "razon": "Evaluar los cuatro subcomponentes encaja, pero el libro advierte que tener los componentes no basta: la cultura es más que la suma de sus partes. Riesgo de lectura tipo checklist."
+  }
+ ]
+}

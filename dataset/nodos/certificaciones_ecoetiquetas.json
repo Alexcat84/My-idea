@@ -1,6 +1,6 @@
 {
   "node_id": "certificaciones_ecoetiquetas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Certificaciones y Eco-etiquetas para Compras Sostenibles",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -20,5 +20,23 @@
     "Si no existe capacidad interna para evaluar impacto ambiental de un producto",
     "Si se busca simplificar la selección de proveedores sostenibles"
   ],
-  "etiqueta_arbol": "Elige Compras con Eco-etiquetas"
+  "etiqueta_arbol": "Elige Compras con Eco-etiquetas",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-049",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-027: Incorporar certificaciones a la política de compras y a la selección de proveedores es gestión operativa, no validación con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

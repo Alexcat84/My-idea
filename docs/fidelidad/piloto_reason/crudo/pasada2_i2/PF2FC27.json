@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF2FC27",
+  "intento": 0,
+  "usd": 0.166316,
+  "turnos": 1,
+  "duracion_s": 15.5,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35819,
+  "tokens_out": 1152,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF2FC27\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [105, 204, 263, 821, 1033], \"cita\": \"The consequence of both processes--neglecting existing defences and failing to provide new ones--is a much increased risk of a catastrophic, and sometimes terminal, accident. [...] At no point will it be argued that defences are intrinsically bad.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda cerrar los agujeros y preservar las defensas (L105, L204), y la investigación busca evitar la repetición (L263). El capítulo 3 advierte contra añadir componentes nuevos (L1033), pero no contra reforzar capas existentes, y niega que las defensas sean malas (L821). Concreta el libro sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF2FC27",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   105,
+   204,
+   263,
+   821,
+   1033
+  ],
+  "cita": "The consequence of both processes--neglecting existing defences and failing to provide new ones--is a much increased risk of a catastrophic, and sometimes terminal, accident. [...] At no point will it be argued that defences are intrinsically bad.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda cerrar los agujeros y preservar las defensas (L105, L204), y la investigación busca evitar la repetición (L263). El capítulo 3 advierte contra añadir componentes nuevos (L1033), pero no contra reforzar capas existentes, y niega que las defensas sean malas (L821). Concreta el libro sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

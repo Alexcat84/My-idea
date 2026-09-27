@@ -1,6 +1,6 @@
 {
   "node_id": "desarrollar_caracteristicas_proceso",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Desarrollar las Características del Proceso",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -24,5 +24,23 @@
     "Cuando las características del producto ya están definidas y priorizadas",
     "Si existe duda sobre si el proceso actual puede cumplir con los nuevos requisitos"
   ],
-  "etiqueta_arbol": "Define las Características del Proceso"
+  "etiqueta_arbol": "Define las Características del Proceso",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-047",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q094-011: Es un paso del modelo de planificacion de la calidad: seleccionar y disenar los procesos capaces de producir las caracteristicas del producto, no operar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

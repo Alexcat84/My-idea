@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_036",
+  "intento": 0,
+  "usd": 0.161128,
+  "turnos": 1,
+  "duracion_s": 16.0,
+  "pared_s": 17.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32817,
+  "tokens_out": 1493,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P781E87\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [2170, 2224, 2228, 2232, 2236, 2240, 2244, 2248, 2250, 2127],\n    \"razon\": \"El libro identifica pasos propensos por análisis de tarea (rasgos provocadores de omisión) y ve difícil reconstruir omisiones pasadas ajenas; el paso propone como vía principal los errores históricos.\"\n  },\n  {\n    \"id\": \"P1C21B7\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [5077, 5055, 3829, 5641, 2922, 2948],\n    \"razon\": \"El libro respalda sancionar actos atroces, pero valora el modelo personal para riesgos de lesión personal. 'Repetida' podría incluir errores repetidos, lo que alimentaría el ciclo de culpa.\"\n  },\n  {\n    \"id\": \"P5A956E\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4502, 4500, 3075, 2872, 2876],\n    \"razon\": \"El libro dice que eliminar las instancias una a una no mejora la salud de seguridad; las reparaciones locales quedan en un bucle subordinado. El paso invierte la prioridad.\"\n  },\n  {\n    \"id\": \"PF77D84\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4360, 4378, 4380],\n    \"razon\": \"El procedimiento COSHH que describe el libro incluye literalmente la vigilancia de salud de los empleados expuestos al riesgo.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P781E87",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2170,
+    2224,
+    2228,
+    2232,
+    2236,
+    2240,
+    2244,
+    2248,
+    2250,
+    2127
+   ],
+   "razon": "El libro identifica pasos propensos por análisis de tarea (rasgos provocadores de omisión) y ve difícil reconstruir omisiones pasadas ajenas; el paso propone como vía principal los errores históricos."
+  },
+  {
+   "id": "P1C21B7",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5077,
+    5055,
+    3829,
+    5641,
+    2922,
+    2948
+   ],
+   "razon": "El libro respalda sancionar actos atroces, pero valora el modelo personal para riesgos de lesión personal. 'Repetida' podría incluir errores repetidos, lo que alimentaría el ciclo de culpa."
+  },
+  {
+   "id": "P5A956E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4502,
+    4500,
+    3075,
+    2872,
+    2876
+   ],
+   "razon": "El libro dice que eliminar las instancias una a una no mejora la salud de seguridad; las reparaciones locales quedan en un bucle subordinado. El paso invierte la prioridad."
+  },
+  {
+   "id": "PF77D84",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4378,
+    4380
+   ],
+   "razon": "El procedimiento COSHH que describe el libro incluye literalmente la vigilancia de salud de los empleados expuestos al riesgo."
+  }
+ ]
+}

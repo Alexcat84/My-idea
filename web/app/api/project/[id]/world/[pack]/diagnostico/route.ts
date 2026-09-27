@@ -13,13 +13,18 @@
  * - Telemetría §6: preview_completado.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_MUNDOS } from "@/lib/i18n/mensajes/servidorMundos";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { costoAcumuladoUsd } from "@/lib/costmeter";
 import { guardarEstadoSesion, obtenerProyecto, obtenerSesion, registrarBitacora } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { materialDiagnostico, redactarDiagnostico } from "@/lib/engine/diagnosticoMundo";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { createClient } from "@/lib/supabase/server";
@@ -28,12 +33,15 @@ export const runtime = "nodejs";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
   const { id: projectId, pack } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_MUNDOS, idioma).diagnostico;
 
   const entrada = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).find(
     (p) => p.clave === pack
   );
   if (!entrada || !(PACK_CLICKS_PACK as readonly string[]).includes(pack)) {
-    return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
+    return NextResponse.json({ error: r.mundoNoExiste }, { status: 404 });
   }
 
   let body: { session_id?: unknown } = {};
@@ -41,7 +49,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const texto = await request.text();
     if (texto.trim().length > 0) body = JSON.parse(texto);
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -49,18 +57,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // ETAPA 2 (la frontera): motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   // La sesión del preview: la del body, o la amarrada a la fila del unlock.
@@ -75,16 +83,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     sessionId = (unlockRows?.[0] as { preview_session_id?: string | null } | undefined)?.preview_session_id ?? null;
   }
   if (!sessionId) {
-    return NextResponse.json({ error: "no hay un preview de este mundo en curso" }, { status: 409 });
+    return NextResponse.json({ error: t.sinExploracion }, { status: 409 });
   }
 
   const sesion = await obtenerSesion(supabase, sessionId);
   if (!sesion || sesion.project_id !== projectId || ((sesion as { dominio?: string }).dominio ?? "core") !== pack) {
-    return NextResponse.json({ error: "esa sesion no es el preview de este mundo" }, { status: 409 });
+    return NextResponse.json({ error: t.sinExploracion }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido;
   if (!estadoPersistido) {
-    return NextResponse.json({ error: "el preview no tiene recorrido que diagnosticar" }, { status: 409 });
+    return NextResponse.json({ error: t.sinRespuestas }, { status: 409 });
+  }
+  // AUD-09 H01: un ciclo de seguimiento del mundo termina en su PLAN, nunca en
+  // un diagnóstico. Sin esta guarda, recargar a mitad del ciclo convertía la
+  // sesión en un diagnóstico nuevo y pisaba el resumen y la sesión del preview.
+  if (estadoPersistido.recorrido.esSeguimiento) {
+    return NextResponse.json(
+      { error: t.esSeguimiento },
+      { status: 409 }
+    );
   }
 
   const graph = cargarGrafo();
@@ -98,7 +115,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let resumen: string;
   let acumulado = estadoPersistido.acumulado;
   try {
-    const r = await redactarDiagnostico(createAnthropicClient(), material, acumulado);
+    const r = await redactarDiagnostico(createAnthropicClient(), material, acumulado, idiomaDelProyecto(proyecto));
     resumen = r.resumen;
     acumulado = r.acumulado;
   } catch (e) {
@@ -106,7 +123,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // vendedor del mundo; un escaparate mediocre vende peor que un reintento.
     console.error("[diagnostico] fallo el redactor:", e);
     return NextResponse.json(
-      { error: "no pudimos redactar tu diagnóstico; intenta de nuevo en un momento" },
+      { error: t.noPudimosRedactar },
       { status: 502 }
     );
   }
@@ -119,7 +136,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     .eq("dominio", pack);
   if (errPersistir) {
     console.error("[diagnostico] no se pudo persistir el resumen:", errPersistir);
-    return NextResponse.json({ error: "no pudimos guardar tu diagnóstico; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: t.noPudimosGuardar }, { status: 500 });
   }
 
   // La sesión queda en fase 'cerrada' SIN closed_at: la UI no re-abre la

@@ -1,0 +1,66 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_101",
+  "intento": 0,
+  "usd": 0.16038000000000002,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33875,
+  "tokens_out": 1244,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0FFFDB\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4364], \"razon\": \"El libro enumera, dentro del procedimiento COSHH, realizar evaluaciones de riesgo recurriendo a expertos externos si es necesario.\"},\n  {\"id\": \"PC484EE\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4769, 5164, 5174, 5208], \"razon\": \"El control pasa a expertos de la tarea presentes en el lugar. El paso omite condiciones esenciales: jerarquía disciplinada previa, formación de supervisores y regreso al modo burocrático. 'Expertos técnicos' puede leerse como externos.\"},\n  {\"id\": \"PF56CA1\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3692, 3704], \"razon\": \"El equipo evaluador asigna razones de influencia (bueno/malo) apoyándose en escalas graduadas de evidencia, guiado por un facilitador experimentado.\"},\n  {\"id\": \"P4F3ABE\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [198, 563, 567, 569, 580, 5781], \"razon\": \"Las condiciones latentes de diseño pueden permanecer inactivas durante décadas. En Nakina, la causa raíz estaba en los planos originales de 1916. Extender la auditoría al diseño original va en la misma dirección que el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0FFFDB",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4364
+   ],
+   "razon": "El libro enumera, dentro del procedimiento COSHH, realizar evaluaciones de riesgo recurriendo a expertos externos si es necesario."
+  },
+  {
+   "id": "PC484EE",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5208
+   ],
+   "razon": "El control pasa a expertos de la tarea presentes en el lugar. El paso omite condiciones esenciales: jerarquía disciplinada previa, formación de supervisores y regreso al modo burocrático. 'Expertos técnicos' puede leerse como externos."
+  },
+  {
+   "id": "PF56CA1",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3692,
+    3704
+   ],
+   "razon": "El equipo evaluador asigna razones de influencia (bueno/malo) apoyándose en escalas graduadas de evidencia, guiado por un facilitador experimentado."
+  },
+  {
+   "id": "P4F3ABE",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    198,
+    563,
+    567,
+    569,
+    580,
+    5781
+   ],
+   "razon": "Las condiciones latentes de diseño pueden permanecer inactivas durante décadas. En Nakina, la causa raíz estaba en los planos originales de 1916. Extender la auditoría al diseño original va en la misma dirección que el libro."
+  }
+ ]
+}

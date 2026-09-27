@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P7324EA",
+  "intento": 0,
+  "usd": 0.145312,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 10.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32768,
+  "tokens_out": 712,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7324EA\", \"veredicto\": \"FIEL\", \"lineas\": [5037, 5057], \"cita\": \"Then ask the following question: 'In the light of how events unfolded and were perceived by those involved in real time, is it likely that this new individual would have behaved any differently?' ... A useful addition to the substitution test is to ask of the individual's peers\", \"datos_sin_respaldo\": [], \"razon\": \"El libro formula la misma pregunta de sustitución y la dirige expresamente a los pares o a un 'jury' de pares, que es a quienes apunta el nodo. El orden tras descartar abuso de sustancias e incumplimiento deliberado (L5057) es una sugerencia ('seems appropriate'). Formular la pregunta no lleva a hacer nada que el libro desaconseje.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7324EA",
+  "veredicto": "FIEL",
+  "lineas": [
+   5037,
+   5057
+  ],
+  "cita": "Then ask the following question: 'In the light of how events unfolded and were perceived by those involved in real time, is it likely that this new individual would have behaved any differently?' ... A useful addition to the substitution test is to ask of the individual's peers",
+  "datos_sin_respaldo": [],
+  "razon": "El libro formula la misma pregunta de sustitución y la dirige expresamente a los pares o a un 'jury' de pares, que es a quienes apunta el nodo. El orden tras descartar abuso de sustancias e incumplimiento deliberado (L5057) es una sugerencia ('seems appropriate'). Formular la pregunta no lleva a hacer nada que el libro desaconseje.",
+  "paso_fiel": ""
+ }
+}

@@ -1,7 +1,7 @@
 {
   "node_id": "driver_transporte",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Driver de Transporte: Selección de Modo según Valor del Producto",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El transporte mueve materiales y productos entre instalaciones. Existen seis modos básicos: barco y ferrocarril (bajo costo, lento), tuberías (eficiente pero limitado a líquidos/gases), camiones (flexible, costo variable), avión (rápido y costoso) y transporte electrónico (instantáneo pero limitado a datos/energía). Como regla general, productos de alto valor deben usar redes de transporte que prioricen capacidad de respuesta, y productos de bajo valor (commodities) deben usar redes que prioricen eficiencia. El transporte puede representar hasta un tercio del costo operativo de la cadena de suministro.",
@@ -26,5 +26,23 @@
     "Cuando el usuario debe decidir cómo mover inventario entre ubicaciones o hacia el cliente final.",
     "Cuando los costos de logística son un porcentaje significativo del costo total."
   ],
-  "etiqueta_arbol": "Elige el Transporte Según el Valor"
+  "etiqueta_arbol": "Elige el Transporte Según el Valor",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-08",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-07: Elegir entre barco, tren, tubería, camión o avión y diseñar redes de transporte es decisión logística de especialista, ajena a una tienda pequeña o a un servicio. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ]
 }

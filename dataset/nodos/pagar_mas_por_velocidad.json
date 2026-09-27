@@ -6,12 +6,12 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "El transporte mas barato no siempre es la mejor decision. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, es mayor que la diferencia de precio entre un envio rapido y uno lento, conviene pagar mas por la velocidad. Esta logica aplica sobre todo a pedidos urgentes, insumos criticos o productos donde el cliente no esperara mucho tiempo antes de buscar otro proveedor. La decision no es una regla fija, depende de tu margen, de tu tipo de producto y de cuanto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder mas dinero del que ahorras en el flete.",
   "pasos_accionables": [
-    "Calcula cuanto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
-    "Compara ese costo contra la diferencia de precio entre el envio rapido y el barato.",
-    "Elige el envio rapido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
-    "Revisa esta decision cada vez que cambien tus proveedores de envio o tus margenes."
+    "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
+    "Compara ese costo contra la diferencia de precio entre el envío rápido y el barato.",
+    "Elige el envío rápido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
+    "Revisa esta decisión cada vez que cambien tus proveedores de envío o tus márgenes."
   ],
-  "entregable_esperado": "Un criterio simple para decidir cuando pagar envio rapido y cuando no.",
+  "entregable_esperado": "Un criterio simple para decidir cuándo pagar envío rápido y cuándo no.",
   "nodos_previos": [
     "detectar_prioridad_cliente_entrega",
     "reduccion_tiempo_de_mercado_velocidad",
@@ -23,5 +23,79 @@
     "Tienes que elegir entre dos couriers y uno es mas caro pero mas confiable",
     "Vendes algo urgente, como repuestos o insumos, donde la demora cuesta mas que el flete"
   ],
-  "etiqueta_arbol": "Decide cuándo pagar más rápido"
+  "etiqueta_arbol": "Decide cuándo pagar más rápido",
+  "fuentes_internas": [
+    "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0521",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula cuanto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
+      "texto_nuevo": "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-025.paso0: cuánto (Solo se añade la tilde que exige el interrogativo indirecto cuánto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0522",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara ese costo contra la diferencia de precio entre el envio rapido y el barato.",
+      "texto_nuevo": "Compara ese costo contra la diferencia de precio entre el envío rápido y el barato.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-025.paso1: envío, rápido (Solo se añaden las tildes que faltaban en envío y rápido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0523",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige el envio rapido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
+      "texto_nuevo": "Elige el envío rápido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-025.paso2: envío, rápido (Solo se añaden las tildes que faltaban en envío y rápido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0524",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa esta decision cada vez que cambien tus proveedores de envio o tus margenes.",
+      "texto_nuevo": "Revisa esta decisión cada vez que cambien tus proveedores de envío o tus márgenes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-025.paso3: decisión, envío, márgenes (Solo se añaden las tildes que faltaban en decisión, envío y márgenes.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0525",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un criterio simple para decidir cuando pagar envio rapido y cuando no.",
+      "texto_nuevo": "Un criterio simple para decidir cuándo pagar envío rápido y cuándo no.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-025.entregable: cuándo, envío, rápido, cuándo (Solo se añaden las tildes que faltaban en cuándo (interrogativo indirecto), envío y rápido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "comunicacion_aprendizaje_continuo",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Comunicar y Compartir el Aprendizaje Continuamente",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -18,8 +18,8 @@
   ],
   "nodos_siguientes": [
     "buyin_customer_development",
-    "customer_acquisition_activation_web",
-    "riesgo_no_pivotar_a_tiempo"
+    "riesgo_no_pivotar_a_tiempo",
+    "get_customers_funnel_webmobile"
   ],
   "condiciones_activacion": [
     "Si los inversionistas se quejan de falta de visibilidad sobre el progreso real del descubrimiento de clientes",
@@ -35,6 +35,37 @@
       "node_id": "comunicacion_aprendizaje_startup",
       "titulo": "Comunicar y Compartir el Aprendizaje del Descubrimiento de Clientes",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-140",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "comunicacion_aprendizaje_continuo -> customer_acquisition_activation_web",
+      "texto_nuevo": "comunicacion_aprendizaje_continuo -> get_customers_funnel_webmobile",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a customer_acquisition_activation_web, deprecado; su superviviente es get_customers_funnel_webmobile."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-fase-024",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q053-029: El nodo trata de registrar y compartir lo que se aprende durante el Customer Discovery (hipotesis, entrevistas, hallazgos), que es probar la idea con clientes, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ]
 }

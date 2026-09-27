@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PA0A4EE",
+  "intento": 0,
+  "usd": 0.22237600000000002,
+  "turnos": 1,
+  "duracion_s": 18.7,
+  "pared_s": 19.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47009,
+  "tokens_out": 1717,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA0A4EE\", \"veredicto\": \"CONTRARIO\", \"lineas\": [323, 244, 248, 194, 293], \"cita\": \"Individual accidents can, and usually do, have organizational origins. [...] Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event.\", \"datos_sin_respaldo\": [\"antes de iniciar cualquier investigación\"], \"tambien_anadido\": true, \"razon\": \"El libro respalda distinguir ambos tipos, pero advierte que los accidentes individuales suelen tener origen organizacional y que la línea no es nítida. En el ejemplo del jumbo, lo que revela el carácter organizacional es la investigación, tras descartar el 'error del piloto'. Clasificar antes de investigar invierte ese orden y cerraría la indagación en el acto inseguro.\", \"paso_fiel\": \"Clasificar los eventos de seguridad pasados de la organización como individuales u organizacionales según lo que revele su investigación, remontando desde los actos inseguros hasta las condiciones del lugar de trabajo y los factores organizacionales, sin cerrar el análisis porque un evento parezca individual.\"}\n```",
+ "parseado": {
+  "id": "PA0A4EE",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   323,
+   244,
+   248,
+   194,
+   293
+  ],
+  "cita": "Individual accidents can, and usually do, have organizational origins. [...] Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event.",
+  "datos_sin_respaldo": [
+   "antes de iniciar cualquier investigación"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro respalda distinguir ambos tipos, pero advierte que los accidentes individuales suelen tener origen organizacional y que la línea no es nítida. En el ejemplo del jumbo, lo que revela el carácter organizacional es la investigación, tras descartar el 'error del piloto'. Clasificar antes de investigar invierte ese orden y cerraría la indagación en el acto inseguro.",
+  "paso_fiel": "Clasificar los eventos de seguridad pasados de la organización como individuales u organizacionales según lo que revele su investigación, remontando desde los actos inseguros hasta las condiciones del lugar de trabajo y los factores organizacionales, sin cerrar el análisis porque un evento parezca individual."
+ }
+}

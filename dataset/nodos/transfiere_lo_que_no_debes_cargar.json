@@ -17,13 +17,30 @@
   ],
   "nodos_siguientes": [
     "los_controles_que_ya_tienes",
-    "plan_b_antes_de_necesitarlo",
-    "ata_el_pago_al_cumplimiento_real_del_servicio"
+    "plan_b_antes_de_necesitarlo"
   ],
   "condiciones_activacion": [
     "cuando un solo golpe raro podría quebrarte",
     "cuando cargas tú con un riesgo que en realidad causa o controla otro",
     "cuando firmas contratos sin revisar quién paga si algo sale mal"
   ],
-  "etiqueta_arbol": "Transfiere lo Que No Debes Cargar"
+  "etiqueta_arbol": "Transfiere lo Que No Debes Cargar",
+  "fuentes_internas": [
+    "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-025",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "transfiere_lo_que_no_debes_cargar -> ata_el_pago_al_cumplimiento_real_del_servicio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por contract_close_out."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

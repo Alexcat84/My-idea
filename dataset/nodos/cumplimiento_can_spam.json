@@ -11,13 +11,51 @@
     "Incluir dirección postal física válida del remitente en los correos",
     "Honrar las solicitudes de exclusión de manera oportuna"
   ],
-  "entregable_esperado": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM y regulaciones locales equivalentes",
+  "entregable_esperado": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM",
   "nodos_previos": [
     "promocion_sitio_web"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Si la empresa utiliza campañas de correo electrónico comercial dirigidas a consumidores en EE.UU. u otros mercados con normativa similar"
+    "Si la empresa envía campañas de correo electrónico comercial a consumidores en EE.UU."
   ],
-  "etiqueta_arbol": "Cumple las Reglas del Correo"
+  "etiqueta_arbol": "Cumple las Reglas del Correo",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-j03",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE_DE_CLASE",
+      "texto_anterior": "Si la empresa utiliza campañas de correo electrónico comercial dirigidas a consumidores en EE.UU. u otros mercados con normativa similar",
+      "texto_nuevo": "Si la empresa envía campañas de correo electrónico comercial a consumidores en EE.UU.",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L18-L33",
+        "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (CAN-SPAM): la condicion abria el nodo a otros mercados con normativa similar.",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-j04",
+      "fecha": "2026-09-26",
+      "campo": "entregable_esperado",
+      "veredicto": "INCOHERENTE_DE_CLASE",
+      "texto_anterior": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM y regulaciones locales equivalentes",
+      "texto_nuevo": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L18-L33",
+        "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (CAN-SPAM): el entregable prometia regulaciones locales equivalentes.",
+      "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ]
 }

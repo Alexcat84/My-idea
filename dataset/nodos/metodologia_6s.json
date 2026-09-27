@@ -16,13 +16,13 @@
   "entregable_esperado": "Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido",
   "nodos_previos": [
     "introduccion_lean",
-    "errores_a_prueba_poka_yoke"
+    "error_proofing_servicio"
   ],
   "nodos_siguientes": [
     "validacion_sistema_medicion",
     "validacion_sistema_medicion_2",
-    "mistake_proofing_poka_yoke",
-    "tpm_maintenance"
+    "tpm_maintenance",
+    "error_proofing_servicio"
   ],
   "condiciones_activacion": [
     "Cuando tu lugar de trabajo está desorganizado, sucio o te hace perder tiempo buscando cosas",
@@ -44,6 +44,37 @@
       "node_id": "6s_workplace_organization",
       "titulo": "6S – Organización del Lugar de Trabajo",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-176",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "metodologia_6s -> mistake_proofing_poka_yoke",
+      "texto_nuevo": "metodologia_6s -> error_proofing_servicio",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a mistake_proofing_poka_yoke, deprecado; su superviviente es error_proofing_servicio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-177",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "errores_a_prueba_poka_yoke -> metodologia_6s",
+      "texto_nuevo": "error_proofing_servicio -> metodologia_6s",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a errores_a_prueba_poka_yoke, deprecado; su superviviente es error_proofing_servicio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ]
 }

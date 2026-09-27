@@ -15,14 +15,59 @@
   ],
   "entregable_esperado": "Un protocolo estandarizado de traspaso vendedor-cuenta con guion o checklist replicable",
   "nodos_previos": [
-    "eliminacion_firmas_redundantes"
+    "desconexion_ventas_experiencia"
   ],
   "nodos_siguientes": [
     "fase_affirm_buyers_remorse"
   ],
   "condiciones_activacion": [
     "Cuando existen roles distintos entre quien vende y quien ejecuta/da servicio",
-    "Si el negocio opera con interacciones remotas u online sin contacto físico"
+    "Si tus clientes sienten que pierden la conexión o las expectativas acordadas al pasar del vendedor al equipo que les da el servicio"
   ],
-  "etiqueta_arbol": "Cuida la Entrega del Cliente"
+  "etiqueta_arbol": "Cuida la Entrega del Cliente",
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-047",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "eliminacion_firmas_redundantes -> handoff_transicion_ventas_cuentas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-16-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El traspaso de un cliente de ventas a gestion de cuentas no tiene relacion con eliminar firmas redundantes en procesos administrativos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-08",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "desconexion_ventas_experiencia -> handoff_transicion_ventas_cuentas",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-08, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Primero se ve que se corta la conexión entre quien vende y quien entrega; el traspaso cuidado entre ventas y gestión de cuentas es la solución que sigue."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-condicion-104",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el negocio opera con interacciones remotas u online sin contacto físico",
+      "texto_nuevo": "Si tus clientes sienten que pierden la conexión o las expectativas acordadas al pasar del vendedor al equipo que les da el servicio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q015-006: La condicion 1 (negocio remoto u online) no describe cuando aplica el traspaso. (lector y verificador de acuerdo) Motivo: Operar en remoto u online no es la situacion en la que aplica el traspaso vendedor a cuenta; es una circunstancia tangencial que activaria el nodo en negocios online sin traspaso alguno."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ]
 }

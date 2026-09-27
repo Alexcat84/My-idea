@@ -24,7 +24,6 @@
     "evaluacion_vp_ventas"
   ],
   "nodos_siguientes": [
-    "metodologia_clara_reporte",
     "diseno_metricas_lideres_rezagados",
     "diseno_organizacional",
     "gestion_confrontacion_ejecutiva",
@@ -44,6 +43,24 @@
       "node_id": "preguntas_excelencia_operacional",
       "titulo": "Preguntas de Excelencia Operacional para Ejecutivos",
       "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-071",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_excelencia_operacional -> metodologia_clara_reporte",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-22, lector y verificador de acuerdo)",
+        "motivo": "La autoevaluacion de la gestion y el diseño de metricas no continua en la metodologia para reportar datos de sostenibilidad; solo comparten la idea de medir."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ]
 }

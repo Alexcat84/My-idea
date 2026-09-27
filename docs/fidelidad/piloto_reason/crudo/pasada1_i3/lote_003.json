@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_003",
+  "intento": 0,
+  "usd": 0.168956,
+  "turnos": 1,
+  "duracion_s": 15.6,
+  "pared_s": 17.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34434,
+  "tokens_out": 1561,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PAE9C80\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [196, 250, 252, 5582, 5641],\n    \"razon\": \"El libro dice que en sistemas complejos los actos inseguros son consecuencias. Una investigación centrada en la persona no encuentra causas remediables. Coincide con el paso.\"\n  },\n  {\n    \"id\": \"P2913A0\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4765, 4798, 4824, 4832, 4836, 4854, 4987],\n    \"razon\": \"El libro limita la indemnidad («as far as practicable»): excluye actos deliberados, delitos y actos egregios. El paso omite esos límites, y 'honestos' no los recoge; podría leerse como amnistía.\"\n  },\n  {\n    \"id\": \"P06E841\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"periódica\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2596, 2598, 2654, 4757, 4773],\n    \"razon\": \"El libro pide chequeos regulares y extraer conclusiones del sistema de información. 'Periódica' es una frecuencia genérica, en la misma dirección que el libro; conviene verificarla.\"\n  },\n  {\n    \"id\": \"P732A2F\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4765, 4987, 5063],\n    \"razon\": \"El libro declara inaceptable tanto castigar todos los errores como dar inmunidad general. Es exactamente lo que dice el paso.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PAE9C80",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    196,
+    250,
+    252,
+    5582,
+    5641
+   ],
+   "razon": "El libro dice que en sistemas complejos los actos inseguros son consecuencias. Una investigación centrada en la persona no encuentra causas remediables. Coincide con el paso."
+  },
+  {
+   "id": "P2913A0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4765,
+    4798,
+    4824,
+    4832,
+    4836,
+    4854,
+    4987
+   ],
+   "razon": "El libro limita la indemnidad («as far as practicable»): excluye actos deliberados, delitos y actos egregios. El paso omite esos límites, y 'honestos' no los recoge; podría leerse como amnistía."
+  },
+  {
+   "id": "P06E841",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "periódica"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2596,
+    2598,
+    2654,
+    4757,
+    4773
+   ],
+   "razon": "El libro pide chequeos regulares y extraer conclusiones del sistema de información. 'Periódica' es una frecuencia genérica, en la misma dirección que el libro; conviene verificarla."
+  },
+  {
+   "id": "P732A2F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4765,
+    4987,
+    5063
+   ],
+   "razon": "El libro declara inaceptable tanto castigar todos los errores como dar inmunidad general. Es exactamente lo que dice el paso."
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_009",
+  "intento": 0,
+  "usd": 0.058359,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3733,
+  "tokens_out": 1266,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P19AEDA\", \"consultas\": [\"disseminate near-miss findings widely to top management\", \"feedback of incident reports to senior managers and workforce\", \"reporting culture feedback lessons learned distribution\"], \"nodo\": \"near-miss reporting systems free lessons\"}, {\"id\": \"P1AFF1D\", \"consultas\": [\"regulators lack human factors and organizational expertise\", \"regulatory inspectors competence assessing safety cases organizational factors\", \"regulator's dilemma evaluating sociotechnical risks self-regulation\"], \"nodo\": \"self-regulation versus deregulation risks for regulators\"}, {\"id\": \"PDFD02B\", \"consultas\": [\"focus quality assurance on safety-critical maintenance tasks\", \"installation reassembly omissions most error-prone maintenance steps\", \"maintenance-related errors hands-on frequent critical tasks nuclear\"], \"nodo\": \"maintenance as major source of human failures\"}, {\"id\": \"P8126D3\", \"consultas\": [\"high-tempo operations hierarchy shifts to flatter professional structure\", \"high-reliability organizations reconfigure decision making to task experts\", \"crisis emergency bureaucratic hierarchy impedes rapid response flexible culture\"], \"nodo\": \"flexible culture high-reliability organizations reconfiguration\"}, {\"id\": \"P65B21D\", \"consultas\": [\"mode transitions not detected automated cockpit interface feedback\", \"mode awareness displays Woods Sarter automation surprises\", \"operator fails to notice uncommanded mode change glass cockpit\"], \"nodo\": \"mode confusion in automated control systems\"}, {\"id\": \"P34DC2D\", \"consultas\": [\"Johnston substitution test comparable qualifications experience peers\", \"substitute another individual same circumstances would behave differently\", \"ask peers whether they would have acted differently culpability\"], \"nodo\": \"Johnston substitution test individual culpability\"}, {\"id\": \"P3E24E0\", \"consultas\": [\"safety case revised updated when significant operational changes occur\", \"living safety case continuous review modifications installation\", \"Cullen report safety case offshore installation major hazards demonstration\"], \"nodo\": \"safety case formal safety assessment Piper Alpha Cullen\"}, {\"id\": \"P748CE7\", \"consultas\": [\"lost-time injury rates ignore organizational accident risks\", \"personal injury statistics poor indicator of major hazard safety\", \"person model engineering model organizational model safety management\"], \"nodo\": \"person engineering organizational models of safety management\"}, {\"id\": \"PF211A9\", \"consultas\": [\"workforce involvement participation in safety measures Robens\", \"Robens Report apathy employee involvement self-regulation\", \"Health and Safety at Work Act 1974 goal-setting worker consultation\"], \"nodo\": \"self-regulation Robens Report HSW Act goal-based legislation\"}, {\"id\": \"P99E03D\", \"consultas\": [\"HSE loss costing study Chevron North Sea oil platform\", \"uninsured costs accidents iceberg ratio insured losses\", \"accumulated minor incidents true cost accident losses study\"], \"nodo\": \"iceberg model hidden uninsured accident costs\"}, {\"id\": \"P47749D\", \"consultas\": [\"HEART error-producing conditions multipliers unfamiliarity time shortage\", \"Williams error producing conditions list nominal error probability\", \"assess proportion of effect error producing conditions HEART\"], \"nodo\": \"HEART human error assessment and reduction technique\"}, {\"id\": \"P14AA99\", \"consultas\": [\"safety measures ticking boxes checklist mentality not living process\", \"going through the motions safety compliance paperwork exercise\", \"commitment competence cognition safety engine drivers\"], \"nodo\": \"commitment competence cognition safety engine\"}]",
+ "parseado": [
+  {
+   "id": "P19AEDA",
+   "consultas": [
+    "disseminate near-miss findings widely to top management",
+    "feedback of incident reports to senior managers and workforce",
+    "reporting culture feedback lessons learned distribution"
+   ],
+   "nodo": "near-miss reporting systems free lessons"
+  },
+  {
+   "id": "P1AFF1D",
+   "consultas": [
+    "regulators lack human factors and organizational expertise",
+    "regulatory inspectors competence assessing safety cases organizational factors",
+    "regulator's dilemma evaluating sociotechnical risks self-regulation"
+   ],
+   "nodo": "self-regulation versus deregulation risks for regulators"
+  },
+  {
+   "id": "PDFD02B",
+   "consultas": [
+    "focus quality assurance on safety-critical maintenance tasks",
+    "installation reassembly omissions most error-prone maintenance steps",
+    "maintenance-related errors hands-on frequent critical tasks nuclear"
+   ],
+   "nodo": "maintenance as major source of human failures"
+  },
+  {
+   "id": "P8126D3",
+   "consultas": [
+    "high-tempo operations hierarchy shifts to flatter professional structure",
+    "high-reliability organizations reconfigure decision making to task experts",
+    "crisis emergency bureaucratic hierarchy impedes rapid response flexible culture"
+   ],
+   "nodo": "flexible culture high-reliability organizations reconfiguration"
+  },
+  {
+   "id": "P65B21D",
+   "consultas": [
+    "mode transitions not detected automated cockpit interface feedback",
+    "mode awareness displays Woods Sarter automation surprises",
+    "operator fails to notice uncommanded mode change glass cockpit"
+   ],
+   "nodo": "mode confusion in automated control systems"
+  },
+  {
+   "id": "P34DC2D",
+   "consultas": [
+    "Johnston substitution test comparable qualifications experience peers",
+    "substitute another individual same circumstances would behave differently",
+    "ask peers whether they would have acted differently culpability"
+   ],
+   "nodo": "Johnston substitution test individual culpability"
+  },
+  {
+   "id": "P3E24E0",
+   "consultas": [
+    "safety case revised updated when significant operational changes occur",
+    "living safety case continuous review modifications installation",
+    "Cullen report safety case offshore installation major hazards demonstration"
+   ],
+   "nodo": "safety case formal safety assessment Piper Alpha Cullen"
+  },
+  {
+   "id": "P748CE7",
+   "consultas": [
+    "lost-time injury rates ignore organizational accident risks",
+    "personal injury statistics poor indicator of major hazard safety",
+    "person model engineering model organizational model safety management"
+   ],
+   "nodo": "person engineering organizational models of safety management"
+  },
+  {
+   "id": "PF211A9",
+   "consultas": [
+    "workforce involvement participation in safety measures Robens",
+    "Robens Report apathy employee involvement self-regulation",
+    "Health and Safety at Work Act 1974 goal-setting worker consultation"
+   ],
+   "nodo": "self-regulation Robens Report HSW Act goal-based legislation"
+  },
+  {
+   "id": "P99E03D",
+   "consultas": [
+    "HSE loss costing study Chevron North Sea oil platform",
+    "uninsured costs accidents iceberg ratio insured losses",
+    "accumulated minor incidents true cost accident losses study"
+   ],
+   "nodo": "iceberg model hidden uninsured accident costs"
+  },
+  {
+   "id": "P47749D",
+   "consultas": [
+    "HEART error-producing conditions multipliers unfamiliarity time shortage",
+    "Williams error producing conditions list nominal error probability",
+    "assess proportion of effect error producing conditions HEART"
+   ],
+   "nodo": "HEART human error assessment and reduction technique"
+  },
+  {
+   "id": "P14AA99",
+   "consultas": [
+    "safety measures ticking boxes checklist mentality not living process",
+    "going through the motions safety compliance paperwork exercise",
+    "commitment competence cognition safety engine drivers"
+   ],
+   "nodo": "commitment competence cognition safety engine"
+  }
+ ]
+}

@@ -1,17 +1,17 @@
 {
   "node_id": "limitaciones_analisis_costo_beneficio",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming advierte que el análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+  "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
   "pasos_accionables": [
-    "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precision razonable",
+    "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precisión razonable",
     "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
-    "Evita apoyarte en costo/beneficio cuando la decision de diseño ponga en juego la seguridad o la vida de alguien",
-    "Anota los supuestos y los limites de cualquier análisis costo/beneficio que uses para decidir"
+    "Evita apoyarte en costo/beneficio cuando la decisión de diseño ponga en juego la seguridad o la vida de alguien",
+    "Anota los supuestos y los límites de cualquier análisis costo/beneficio que uses para decidir"
   ],
-  "entregable_esperado": "Un informe corto donde queden claros los supuestos y los limites de cualquier análisis costo/beneficio que estes usando en tu proyecto de calidad",
+  "entregable_esperado": "Un informe corto donde queden claros los supuestos y los límites de cualquier análisis costo/beneficio que estés usando en tu proyecto de calidad",
   "nodos_previos": [
     "modelo_costo_optimo_calidad"
   ],
@@ -20,5 +20,94 @@
     "Cuando quieras justificar una inversion en calidad usando un análisis costo/beneficio",
     "Cuando la decision de diseño involucre riesgo de seguridad"
   ],
-  "etiqueta_arbol": "Cuestiona el Costo Beneficio en Calidad"
+  "etiqueta_arbol": "Cuestiona el Costo Beneficio en Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-113",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming advierte que el análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "texto_nuevo": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming advierte que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-022 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-205",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-014: Trata de como decidir inversiones y diseno de producto con analisis costo/beneficio y sus limites: decision de plan, no prueba de mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0337",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precision razonable",
+      "texto_nuevo": "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precisión razonable",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.paso0: precisión (Falta la tilde de precisión; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0338",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita apoyarte en costo/beneficio cuando la decision de diseño ponga en juego la seguridad o la vida de alguien",
+      "texto_nuevo": "Evita apoyarte en costo/beneficio cuando la decisión de diseño ponga en juego la seguridad o la vida de alguien",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.paso2: decisión (Falta la tilde de decisión; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0339",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota los supuestos y los limites de cualquier análisis costo/beneficio que uses para decidir",
+      "texto_nuevo": "Anota los supuestos y los límites de cualquier análisis costo/beneficio que uses para decidir",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.paso3: límites (Falta la tilde de límites; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0340",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un informe corto donde queden claros los supuestos y los limites de cualquier análisis costo/beneficio que estes usando en tu proyecto de calidad",
+      "texto_nuevo": "Un informe corto donde queden claros los supuestos y los límites de cualquier análisis costo/beneficio que estés usando en tu proyecto de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.entregable: límites, estés (Faltan las tildes de límites y estés; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

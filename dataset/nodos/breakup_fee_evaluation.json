@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de la comisión por cancelación (breakup fee) al vender tu empresa",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y confiar en la cláusula de exclusividad (no-shop), salvo en casos puntuales donde sospeches que el comprador solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o donde tú asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
   "pasos_accionables": [
     "Evalúa si el comprador tiene intención real de cerrar o si solo está buscando información sin compromiso",
     "Determina qué riesgo corres con tus clientes o empleados al iniciar el proceso de venta",
     "Resiste por defecto la petición de comisión por cancelación, apoyándote en la cláusula de exclusividad (no-shop)",
-    "Acepta esta comisión solo en circunstancias excepcionales y bien justificadas",
+    "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
     "Consulta con quien te asesore legalmente antes de aceptar cualquier comisión de este tipo"
   ],
   "entregable_esperado": "Una postura clara y por escrito sobre si aceptas o rechazas la comisión por cancelación en la carta de intención (LOI)",
@@ -17,12 +17,61 @@
     "no_shop_extension_negotiation",
     "fees_y_breakup_fee_adquisicion"
   ],
-  "nodos_siguientes": [
-    "mejorar_deal_despues_del_hecho"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el comprador te pide una comisión por cancelación en la carta de intención",
     "Cuando sospechas que el proceso de venta puede ser solo una exploración sin intención real de comprar"
   ],
-  "etiqueta_arbol": "Evalúa la Penalidad por Cancelar"
+  "etiqueta_arbol": "Evalúa la Penalidad por Cancelar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-03",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y confiar en la cláusula de exclusividad (no-shop), salvo en casos puntuales donde sospeches que el comprador solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o donde tú asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "texto_nuevo": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4329-L4338",
+        "frase": "We generally resist any request of a buyer to institute a breakup fee and tell the potential buyer to rely on the no-shop clause instead. / There are some rare circumstances in which a seller can reasonably ask for a breakup fee. If the buyer is competitive and the seller is concerned that the buyer may be entering the process as a fishing expedition as opposed to a good-faith effort to buy the company, or if the seller incurs a massive amount of customer or employee risk by entering into the deal, a breakup fee may be appropriate."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R022-012 (CONTRARIO, lector y verificador de acuerdo): Invierte quién paga en los casos excepcionales: el libro no dice que ahí se acepte la petición del comprador, sino que el vendedor puede pedir él la comisión. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R022-012"
+    },
+    {
+      "id": "saneamiento-t1-c01-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Acepta esta comisión solo en circunstancias excepcionales y bien justificadas",
+      "texto_nuevo": "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+        "lineas": "L4338",
+        "frase": "There are some rare circumstances in which a seller can reasonably ask for a breakup fee. If the buyer is competitive and the seller is concerned that the buyer may be entering the process as a fishing expedition as opposed to a good-faith effort to buy the company, or if the seller incurs a massive amount of customer or employee risk by entering into the deal, a breakup fee may be appropriate."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro separa dos direcciones: la comisión que pide el comprador se resiste y se le remite a la cláusula de exclusividad (L4329: \"We generally resist any request of a buyer to institute a breakup fee and tell the potential buyer to rely on the no-shop clause instead.\"), y la excepción rara es que sea el vendedor quien la pida (L4338), por expedición de pesca o por gran riesgo con clientes o empleados. El paso 3 invertía esa excepción al convertirla en aceptar la comisión del comprador. El resumen, los pasos 0 a 2 y las condiciones ya son fieles; solo cambia este paso, con el mismo vocabulari",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO pasada K, ficha C01 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "t2-arista-007",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "breakup_fee_evaluation -> mejorar_deal_despues_del_hecho",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-11-01): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon B. El nodo trata de la comision por cancelacion en la venta de la empresa, antes del cierre. El vecino trata de corregir las condiciones de una ronda de financiamiento ya cerrada, con nuevas rondas, inversionistas lideres y la motivacion del equipo. Despues de vender la empresa no hay rondas que levantar, asi que el vecino no usa ni continua esta decision. Lo unico en comun es la idea generica de 'un trato', que es demasiado vaga para un recorrido. La correccion no cambio nada que importe aqui (el resumen visible es igual ANTES y AHORA), asi que el desajuste ya venia de antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ]
 }

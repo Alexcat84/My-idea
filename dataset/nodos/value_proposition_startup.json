@@ -7,10 +7,10 @@
   "resumen_teorico": "Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.",
   "pasos_accionables": [
     "Identifica los problemas o necesidades reales de tu segmento de clientes.",
-    "Define que caracteristicas de tu producto o servicio resuelven esos problemas.",
+    "Define qué características de tu producto o servicio resuelven esos problemas.",
     "Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos."
   ],
-  "entregable_esperado": "Una propuesta de valor validada y alineada con un segmento de clientes especifico.",
+  "entregable_esperado": "Una propuesta de valor validada y alineada con un segmento de clientes específico.",
   "nodos_previos": [
     "search_for_business_model",
     "disenar_los_detalles_no_lo_inevitable",
@@ -19,7 +19,6 @@
     "economia_circular_de_la_imaginacion",
     "economia_de_la_experiencia",
     "multi_sided_platforms",
-    "narrativa_como_herramienta_de_sentido",
     "ecuacion_de_valor_venta",
     "preguntas_need_payoff",
     "pivot_post_ventas",
@@ -62,5 +61,50 @@
   "condiciones_activacion": [
     "Cuando necesitas dejar claro por que tu cliente te compraria a ti"
   ],
-  "etiqueta_arbol": "Resuelve el Trabajo del Cliente"
+  "etiqueta_arbol": "Resuelve el Trabajo del Cliente",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-091",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "narrativa_como_herramienta_de_sentido -> value_proposition_startup",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-04-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Del efecto Heider-Simmel y la narrativa como forma de dar sentido no se pasa de manera natural a la propuesta de valor como job del cliente. La correccion solo marco dos pasos como Sugerencia de My Idea."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0226",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define que caracteristicas de tu producto o servicio resuelven esos problemas.",
+      "texto_nuevo": "Define qué características de tu producto o servicio resuelven esos problemas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-019.paso1: qué, características (Solo corrige las tildes de qué y características.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0227",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una propuesta de valor validada y alineada con un segmento de clientes especifico.",
+      "texto_nuevo": "Una propuesta de valor validada y alineada con un segmento de clientes específico.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-019.entregable: específico (Solo corrige la tilde de específico.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

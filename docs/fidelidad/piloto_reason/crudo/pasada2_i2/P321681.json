@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P321681",
+  "intento": 0,
+  "usd": 0.17906,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39960,
+  "tokens_out": 961,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P321681\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2948, 5499, 5907], \"cita\": \"Within a skilled, experienced and largely well intentioned workforce, situations are more amenable to improvement than people. […] You cannot change the human condition, but you can change the conditions under which people work. In short, the solutions to most human performance problems are technical rather than psychological.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro antepone las soluciones situacionales y técnicas a las personales. Tarea, herramientas (Hardware) y procedimientos figuran entre sus niveles y GFT. 'Primera línea' se entiende frente a las medidas disciplinarias, no frente a lo organizacional. No excluye actuar en varios niveles a la vez (L5907), así que concreta el enfoque sin invertir ninguna prioridad ni añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P321681",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2948,
+   5499,
+   5907
+  ],
+  "cita": "Within a skilled, experienced and largely well intentioned workforce, situations are more amenable to improvement than people. […] You cannot change the human condition, but you can change the conditions under which people work. In short, the solutions to most human performance problems are technical rather than psychological.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro antepone las soluciones situacionales y técnicas a las personales. Tarea, herramientas (Hardware) y procedimientos figuran entre sus niveles y GFT. 'Primera línea' se entiende frente a las medidas disciplinarias, no frente a lo organizacional. No excluye actuar en varios niveles a la vez (L5907), así que concreta el enfoque sin invertir ninguna prioridad ni añadir datos.",
+  "paso_fiel": ""
+ }
+}

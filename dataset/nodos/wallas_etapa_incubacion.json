@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Etapa de Incubación y Abstención Voluntaria",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "La Incubación es el periodo en que se deja de pensar conscientemente en un problema específico, permitiendo que ocurra un trabajo mental inconsciente. Puede tomar dos formas: (1) trabajar conscientemente en otros problemas mientras el primero 'descansa', economizando tiempo; o (2) relajación mental completa (paseos, ejercicio físico, day-dreaming), especialmente necesaria para las formas más difíciles de pensamiento creativo. Wallas advierte que la lectura pasiva excesiva y el exceso de tareas administrativas rutinarias son enemigos de la incubación efectiva, porque no dejan espacio para que la mente subconsciente trabaje libremente.",
+  "resumen_teorico": "La Incubación es el periodo en que se deja de pensar conscientemente en un problema específico, permitiendo que ocurra un trabajo mental inconsciente. Puede tomar dos formas: (1) trabajar conscientemente en otros problemas mientras el primero 'descansa', economizando tiempo; o (2) relajación mental completa (paseos, ejercicio físico, day-dreaming), especialmente necesaria para las formas más difíciles de pensamiento creativo. La lectura pasiva excesiva y el exceso de tareas administrativas rutinarias son enemigos de la incubación efectiva, porque no dejan espacio para que la mente subconsciente trabaje libremente.",
   "pasos_accionables": [
     "Tras un periodo intenso de Preparación, alejarse conscientemente del problema.",
     "Alternar entre varios problemas en desarrollo en vez de agotar cada uno de una sola vez.",
@@ -20,7 +20,6 @@
     "esfuerzo_voluntario_vs_urge_espontaneo"
   ],
   "nodos_siguientes": [
-    "cuatro_etapas_del_pensamiento_creativo",
     "reglas_brainstorming",
     "second_wind_energia_mental",
     "sistema_captura_ideas"
@@ -39,5 +38,39 @@
       "titulo": "Período de Incubación antes de la Iluminación",
       "fuente": "The Art of Thought - Wallas, Graham"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-179",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "La Incubación es el periodo en que se deja de pensar conscientemente en un problema específico, permitiendo que ocurra un trabajo mental inconsciente. Puede tomar dos formas: (1) trabajar conscientemente en otros problemas mientras el primero 'descansa', economizando tiempo; o (2) relajación mental completa (paseos, ejercicio físico, day-dreaming), especialmente necesaria para las formas más difíciles de pensamiento creativo. Wallas advierte que la lectura pasiva excesiva y el exceso de tareas administrativas rutinarias son enemigos de la incubación efectiva, porque no dejan espacio para que la mente subconsciente trabaje libremente.",
+      "texto_nuevo": "La Incubación es el periodo en que se deja de pensar conscientemente en un problema específico, permitiendo que ocurra un trabajo mental inconsciente. Puede tomar dos formas: (1) trabajar conscientemente en otros problemas mientras el primero 'descansa', economizando tiempo; o (2) relajación mental completa (paseos, ejercicio físico, day-dreaming), especialmente necesaria para las formas más difíciles de pensamiento creativo. La lectura pasiva excesiva y el exceso de tareas administrativas rutinarias son enemigos de la incubación efectiva, porque no dejan espacio para que la mente subconsciente trabaje libremente.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Wallas advierte que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-023 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-136",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "wallas_etapa_incubacion -> cuatro_etapas_del_pensamiento_creativo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-05-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la etapa de incubacion es una parte del modelo de las cuatro etapas y deberia ir despues del panorama general, no antes (el mismo nodo ya la tiene tambien como DESPUES, igual que preparacion y verificacion)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ],
+  "fuentes_internas": [
+    "The Art of Thought - Wallas, Graham"
   ]
 }

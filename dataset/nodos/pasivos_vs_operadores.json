@@ -1,6 +1,6 @@
 {
   "node_id": "pasivos_vs_operadores",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Inversionistas Pasivos vs. Propietarios-Operadores",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -21,5 +21,23 @@
   "condiciones_activacion": [
     "Cuando se define la estrategia de expansión y el tipo de franquiciado objetivo"
   ],
-  "etiqueta_arbol": "Elige Inversionistas o Dueños Operadores"
+  "etiqueta_arbol": "Elige Inversionistas o Dueños Operadores",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-133",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q105-009: Definir la politica de propiedad aceptada y el tipo de franquiciado dentro de la estrategia de expansion es disenar el modelo, no operar. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

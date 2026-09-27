@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P06E841",
+  "intento": 0,
+  "usd": 0.190944,
+  "turnos": 1,
+  "duracion_s": 12.5,
+  "pared_s": 13.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43116,
+  "tokens_out": 924,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P06E841\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4773, 2638, 2598, 2596], \"cita\": \"an organization must possess a learning culture--the willingness and the competence to draw the right conclusions from its safety information system, and the will to implement major reforms when their need is indicated.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide sacar las conclusiones correctas de los sucesos pasados y revisar con regularidad ('regular health checks', 'regularly measure and improve'). Que la revisión sea 'periódica' coincide con 'regular' y es el mismo dato. El paso concreta en un proceso institucional lo que el libro dice, sin datos nuevos. No excluye actuar, que otro paso del nodo cubre.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P06E841",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4773,
+   2638,
+   2598,
+   2596
+  ],
+  "cita": "an organization must possess a learning culture--the willingness and the competence to draw the right conclusions from its safety information system, and the will to implement major reforms when their need is indicated.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide sacar las conclusiones correctas de los sucesos pasados y revisar con regularidad ('regular health checks', 'regularly measure and improve'). Que la revisión sea 'periódica' coincide con 'regular' y es el mismo dato. El paso concreta en un proceso institucional lo que el libro dice, sin datos nuevos. No excluye actuar, que otro paso del nodo cubre.",
+  "paso_fiel": ""
+ }
+}

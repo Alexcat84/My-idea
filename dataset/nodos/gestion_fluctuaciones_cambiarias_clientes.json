@@ -21,8 +21,27 @@
     "calculo_de_aranceles_importacion"
   ],
   "condiciones_activacion": [
-    "Si el usuario ya exporta y enfrenta apreciación o depreciación significativa del dólar",
+    "Si ya exportas desde Estados Unidos y enfrentas una apreciación o depreciación significativa del dólar",
     "Si el usuario considera abandonar mercados internacionales por baja rentabilidad temporal"
   ],
-  "etiqueta_arbol": "Cuida a tus Clientes Globales"
+  "etiqueta_arbol": "Cuida a tus Clientes Globales",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-092",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el usuario ya exporta y enfrenta apreciación o depreciación significativa del dólar",
+      "texto_nuevo": "Si ya exportas desde Estados Unidos y enfrentas una apreciación o depreciación significativa del dólar",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-022: Razon para A: con la condicion 0 anclada a Estados Unidos el nodo cumple la regla de clase C; la condicion 1 describe bien la situacion y en la duda queda ok. (arbitro) Motivo: Clase C Estados Unidos: el nodo trata del dolar y del Ex-Im Bank para exportadores de Estados Unidos, y ninguna condicion lo dice."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

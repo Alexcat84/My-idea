@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P83AEC8",
+  "intento": 0,
+  "usd": 0.234468,
+  "turnos": 1,
+  "duracion_s": 24.8,
+  "pared_s": 25.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46882,
+  "tokens_out": 2347,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P83AEC8\", \"veredicto\": \"CONTRARIO\", \"lineas\": [4033, 4027, 4039, 4433, 4435], \"cita\": \"He is not given a fixed list of procedures, equipment and items which he must tick off in the form of a check list. This could create considerable difficulties given the variety of operations, working procedures and installations involved. … it would lead to operators anticipating\", \"datos_sin_respaldo\": [], \"razon\": \"El libro solo lamenta que faltara la checklist de permisos de trabajo (L4027). Contra una lista fija y uniforme recoge dos problemas que no refuta: la variedad de instalaciones y que los operadores anticiparían lo revisado. Cullen critica la superficialidad, no la falta de lista fija. Su remedio es el Safety Case, distinto en cada organización y evaluado sin checklist superficial.\", \"paso_fiel\": \"Dotar a los inspectores de las listas de verificación existentes para sistemas críticos como el permiso de trabajo y usarlas como apoyo en inspecciones con tiempo suficiente y adaptadas a cada instalación, sin convertirlas en una lista fija e idéntica que los operadores puedan anticipar.\"}\n```",
+ "parseado": {
+  "id": "P83AEC8",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   4033,
+   4027,
+   4039,
+   4433,
+   4435
+  ],
+  "cita": "He is not given a fixed list of procedures, equipment and items which he must tick off in the form of a check list. This could create considerable difficulties given the variety of operations, working procedures and installations involved. … it would lead to operators anticipating",
+  "datos_sin_respaldo": [],
+  "razon": "El libro solo lamenta que faltara la checklist de permisos de trabajo (L4027). Contra una lista fija y uniforme recoge dos problemas que no refuta: la variedad de instalaciones y que los operadores anticiparían lo revisado. Cullen critica la superficialidad, no la falta de lista fija. Su remedio es el Safety Case, distinto en cada organización y evaluado sin checklist superficial.",
+  "paso_fiel": "Dotar a los inspectores de las listas de verificación existentes para sistemas críticos como el permiso de trabajo y usarlas como apoyo en inspecciones con tiempo suficiente y adaptadas a cada instalación, sin convertirlas en una lista fija e idéntica que los operadores puedan anticipar."
+ }
+}

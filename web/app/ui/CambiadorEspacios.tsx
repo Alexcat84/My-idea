@@ -11,6 +11,9 @@
  * Tema oscuro de la casa (adaptación del patrón de tabs-fichero que pidió el
  * fundador). El icono sale del mismo juego que la fila de potenciadores.
  */
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { ESPACIOS } from "@/lib/i18n/mensajes/espacios";
 import { Icono } from "./PotenciaTuIdea";
 
 export function CambiadorEspacios({
@@ -28,6 +31,7 @@ export function CambiadorEspacios({
   onIrMundo: (dominio: string) => void;
   onMas: () => void;
 }) {
+  const t = elegir(ESPACIOS, useIdioma()).cambiador;
   const claseTab = (activa: boolean) =>
     "group relative flex min-w-[86px] shrink-0 flex-col items-center gap-1.5 rounded-t-[12px] border border-b-0 px-5 pt-2.5 pb-3 transition-[background,border-color] duration-150 " +
     (activa
@@ -41,12 +45,12 @@ export function CambiadorEspacios({
   return (
     <div
       role="tablist"
-      aria-label="Los espacios de tu proyecto"
+      aria-label={t.aria}
       className="mb-6 flex items-stretch gap-1 overflow-x-auto border-b border-hairline [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
       <button role="tab" aria-selected={activo === "core"} onClick={onIrCore} className={claseTab(activo === "core")}>
         <Icono clave="core" activo={activo === "core"} />
-        <span className={claseNombre(activo === "core")}>Tu viaje</span>
+        <span className={claseNombre(activo === "core")}>{t.tuViaje}</span>
       </button>
 
       {mundos.map((m) => {
@@ -67,12 +71,12 @@ export function CambiadorEspacios({
 
       <button
         onClick={onMas}
-        aria-label="Añadir un mundo"
-        title="Añadir un mundo"
+        aria-label={t.anadirMundo}
+        title={t.anadirMundo}
         className="group flex min-w-[72px] shrink-0 flex-col items-center justify-center gap-1.5 rounded-t-[12px] border border-b-0 border-transparent px-4 pt-2.5 pb-3 text-dim transition-colors hover:bg-surface-2/50 hover:text-ink"
       >
         <span className="text-2xl leading-none">+</span>
-        <span className="text-[12.5px] font-semibold">Mundo</span>
+        <span className="text-[12.5px] font-semibold">{t.mundo}</span>
       </button>
     </div>
   );

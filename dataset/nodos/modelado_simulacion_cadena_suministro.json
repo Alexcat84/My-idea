@@ -1,7 +1,7 @@
 {
   "node_id": "modelado_simulacion_cadena_suministro",
   "fase_proyecto": "planificacion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Modelado y Simulación de Cadena de Suministro con Cuatro Entidades",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Cualquier cadena de suministro puede modelarse definiendo cuatro tipos de entidades: Productos (costo, peso, volumen), Instalaciones (ubicación, costos operativos, tasas de producción/demanda), Vehículos (velocidad, capacidad, costos, rutas) y Rutas (destinos, distancias, frecuencias). Usando mapas digitales (Google Maps, etc.) estas entidades se colocan geográficamente y se simulan interacciones para detectar problemas de desempeño antes de implementarlos en la realidad, reduciendo riesgo y costo de errores.",
@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Modelo de simulación de la cadena de suministro con métricas base de desempeño (inventario, costos, tiempos).",
   "nodos_previos": [
-    "estructura_de_costos"
+    "simulacion_de_operaciones_supply_chain"
   ],
   "nodos_siguientes": [
     "sop_colaborativo",
@@ -23,5 +23,49 @@
     "Si el negocio requiere coordinar múltiples proveedores, fábricas o puntos de distribución",
     "Si se necesita validar un diseño logístico antes de invertir capital"
   ],
-  "etiqueta_arbol": "Modela tu Cadena de Suministro"
+  "etiqueta_arbol": "Modela tu Cadena de Suministro",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-22",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-16: Modelar y simular una cadena de suministro con productos, instalaciones, vehículos y rutas en software como SCM Globe es técnica de diseño logístico avanzado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-019",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estructura_de_costos -> modelado_simulacion_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A25, lectores de acuerdo)",
+        "motivo": "El bloque de estructura de costos del modelo de negocio no sigue con modelar entidades de una cadena de suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-entrada-04",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "simulacion_de_operaciones_supply_chain -> modelado_simulacion_cadena_suministro",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-04, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Presenta la simulacion en general, para que sirve y en que horizontes, y el nodo es el siguiente paso practico: como construir el modelo con sus cuatro entidades."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
+  ]
 }

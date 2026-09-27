@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PBDE013",
+  "intento": 0,
+  "usd": 0.19890799999999997,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45762,
+  "tokens_out": 793,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PBDE013\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3965, 3971, 4429, 4478], \"cita\": \"What drove NASA inexorably towards the tragic outcome was the insidious erosion of the standards against which they regulated themselves. […] the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe la erosión insidiosa de estándares que no se percibe desde dentro. También pide un interés estrecho, continuo y proactivo, y seguir los cambios con evaluaciones sucesivas. Revisar periódicamente las desviaciones aceptadas concreta eso en la misma dirección. 'Calendario' es solo un soporte genérico, sin cifra, plazo ni herramienta específica.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PBDE013",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3965,
+   3971,
+   4429,
+   4478
+  ],
+  "cita": "What drove NASA inexorably towards the tragic outcome was the insidious erosion of the standards against which they regulated themselves. […] the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe la erosión insidiosa de estándares que no se percibe desde dentro. También pide un interés estrecho, continuo y proactivo, y seguir los cambios con evaluaciones sucesivas. Revisar periódicamente las desviaciones aceptadas concreta eso en la misma dirección. 'Calendario' es solo un soporte genérico, sin cifra, plazo ni herramienta específica.",
+  "paso_fiel": ""
+ }
+}

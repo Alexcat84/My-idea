@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_025",
+  "intento": 0,
+  "usd": 0.16276800000000002,
+  "turnos": 1,
+  "duracion_s": 16.0,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33827,
+  "tokens_out": 1373,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P3AFA10\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3743, 3745], \"razon\": \"El libro dice que MEDA ofrece análisis de tendencias computarizado para la organización de mantenimiento, además de la investigación de línea.\"},\n  {\"id\": \"P960DA8\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2520, 2638, 2640, 2866], \"razon\": \"El libro exige combinar medidas reactivas y proactivas y medir procesos de 'salud de seguridad', no solo resultados negativos.\"},\n  {\"id\": \"PF64EB7\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"requisite variety\"], \"clase\": \"FIEL\", \"lineas\": [5184, 5190, 5200, 666], \"razon\": \"Weick, citado en el libro: equipos de personas divergentes tienen más variedad requerida. Encaja con la cultura compartida, sin chocar con ella.\"},\n  {\"id\": \"P85099C\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3724, 3722, 3692], \"razon\": \"El libro suma las probabilidades incondicionales solo de los factores influyentes inmediatos. El paso omite esa condición; conviene verificar que no induzca a sumar todos los nodos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P3AFA10",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3743,
+    3745
+   ],
+   "razon": "El libro dice que MEDA ofrece análisis de tendencias computarizado para la organización de mantenimiento, además de la investigación de línea."
+  },
+  {
+   "id": "P960DA8",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2520,
+    2638,
+    2640,
+    2866
+   ],
+   "razon": "El libro exige combinar medidas reactivas y proactivas y medir procesos de 'salud de seguridad', no solo resultados negativos."
+  },
+  {
+   "id": "PF64EB7",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "requisite variety"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5184,
+    5190,
+    5200,
+    666
+   ],
+   "razon": "Weick, citado en el libro: equipos de personas divergentes tienen más variedad requerida. Encaja con la cultura compartida, sin chocar con ella."
+  },
+  {
+   "id": "P85099C",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3724,
+    3722,
+    3692
+   ],
+   "razon": "El libro suma las probabilidades incondicionales solo de los factores influyentes inmediatos. El paso omite esa condición; conviene verificar que no induzca a sumar todos los nodos."
+  }
+ ]
+}

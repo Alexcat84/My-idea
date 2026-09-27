@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_069",
+  "intento": 0,
+  "usd": 0.154264,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32741,
+  "tokens_out": 1165,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD39124\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3199, 3203, 3209], \"razon\": \"El libro dice que el software de Tripod-Delta analiza la checklist y genera el Failure State Profile, un grafico de barras de los 11 GFTs.\"},\n  {\"id\": \"P3B1C0A\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [1035, 1618, 1630, 1724, 1456, 1522, 1726, 5132], \"razon\": \"Encaja con que las reglas son insensibles al contexto (Ginna). Pero el libro no propone capacitar en juicio, advierte que el razonamiento en linea es propenso a error, y existe la misvention.\"},\n  {\"id\": \"P842D09\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [409, 1834, 1838, 2030, 2060, 2129, 2139, 2161, 2170], \"razon\": \"El libro usa datos historicos que confirman que predominan los errores de instalacion y las omisiones (sujetadores, tapas). Contrastarlo con datos propios sigue esa misma direccion.\"},\n  {\"id\": \"PE6B901\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4802, 4818, 4880, 4888, 4906], \"razon\": \"La confidencialidad o des-identificacion es uno de los cinco factores clave. El libro prefiere des-identificar despues de recibir el reporte antes que el anonimato total.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD39124",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3199,
+    3203,
+    3209
+   ],
+   "razon": "El libro dice que el software de Tripod-Delta analiza la checklist y genera el Failure State Profile, un grafico de barras de los 11 GFTs."
+  },
+  {
+   "id": "P3B1C0A",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    1035,
+    1618,
+    1630,
+    1724,
+    1456,
+    1522,
+    1726,
+    5132
+   ],
+   "razon": "Encaja con que las reglas son insensibles al contexto (Ginna). Pero el libro no propone capacitar en juicio, advierte que el razonamiento en linea es propenso a error, y existe la misvention."
+  },
+  {
+   "id": "P842D09",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    409,
+    1834,
+    1838,
+    2030,
+    2060,
+    2129,
+    2139,
+    2161,
+    2170
+   ],
+   "razon": "El libro usa datos historicos que confirman que predominan los errores de instalacion y las omisiones (sujetadores, tapas). Contrastarlo con datos propios sigue esa misma direccion."
+  },
+  {
+   "id": "PE6B901",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4802,
+    4818,
+    4880,
+    4888,
+    4906
+   ],
+   "razon": "La confidencialidad o des-identificacion es uno de los cinco factores clave. El libro prefiere des-identificar despues de recibir el reporte antes que el anonimato total."
+  }
+ ]
+}

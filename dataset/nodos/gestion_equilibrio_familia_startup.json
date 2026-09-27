@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo equilibrar tu negocio y tu familia",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Si no tienes apoyo familiar, tu pareja le tiene miedo al riesgo o cargas con responsabilidades familiares pesadas, esto puede ser el obstáculo más difícil que enfrentes al fundar tu negocio. Steve Blank identificó 'cuatro grandes mentiras' que te dices sobre el trabajo y la familia. Una salida posible es trabajar en tu negocio a tiempo parcial como fase de transición, aunque esto puede devolverte a las esposas de carrera y frenar tu avance.",
+  "resumen_teorico": "Si no tienes apoyo familiar, tu pareja le tiene miedo al riesgo o cargas con responsabilidades familiares pesadas, esto puede ser el obstáculo más difícil que enfrentes al fundar tu negocio. Hay 'cuatro grandes mentiras' que te dices sobre el trabajo y la familia. Una salida posible es trabajar en tu negocio a tiempo parcial como fase de transición, aunque esto puede devolverte a las esposas de carrera y frenar tu avance.",
   "pasos_accionables": [
     "Ten una conversación honesta con tu pareja o tu familia sobre las expectativas y los sacrificios reales",
     "Evalúa si es viable trabajar a tiempo parcial como transición",
@@ -22,5 +22,26 @@
     "Cuando mencionas preocupaciones familiares o de pareja como freno para emprender",
     "Cuando identificas el factor personal como desfavorable dentro del marco de las tres preguntas"
   ],
-  "etiqueta_arbol": "Equilibra tu Startup y Familia"
+  "etiqueta_arbol": "Equilibra tu Startup y Familia",
+  "correcciones": [
+    {
+      "id": "atribucion-100",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Si no tienes apoyo familiar, tu pareja le tiene miedo al riesgo o cargas con responsabilidades familiares pesadas, esto puede ser el obstáculo más difícil que enfrentes al fundar tu negocio. Steve Blank identificó 'cuatro grandes mentiras' que te dices sobre el trabajo y la familia. Una salida posible es trabajar en tu negocio a tiempo parcial como fase de transición, aunque esto puede devolverte a las esposas de carrera y frenar tu avance.",
+      "texto_nuevo": "Si no tienes apoyo familiar, tu pareja le tiene miedo al riesgo o cargas con responsabilidades familiares pesadas, esto puede ser el obstáculo más difícil que enfrentes al fundar tu negocio. Hay 'cuatro grandes mentiras' que te dices sobre el trabajo y la familia. Una salida posible es trabajar en tu negocio a tiempo parcial como fase de transición, aunque esto puede devolverte a las esposas de carrera y frenar tu avance.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Steve Blank identificó 'cuatro grandes mentiras'"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ]
 }

@@ -550,14 +550,22 @@ def gemelos_divergentes(nodos_dataset, nodos_web):
 
     Se comparan CAMPOS, no bytes: el orden de las claves y el formato son cosa
     del serializador y no dicen nada.
+
+    La web es la VISTA WEB (decision del fundador del 27 sep 2026: nada interno
+    llega al navegador): no lleva las claves internas de scripts/sync_assets_web.py
+    (fuente, fuentes_internas, correcciones, merged_originals). Esas no se comparan,
+    y si una aparece en la copia web es una divergencia.
     """
+    sys.path.insert(0, str(BASE / "scripts"))
+    from sync_assets_web import CLAVES_INTERNAS_NODO
     dif = {}
     for nid in sorted(set(nodos_dataset) | set(nodos_web)):
         a, b = nodos_dataset.get(nid), nodos_web.get(nid)
         if a is None or b is None:
             dif[nid] = "solo en " + ("dataset" if b is None else "web")
             continue
-        campos = sorted(k for k in set(a) | set(b) if a.get(k) != b.get(k))
+        campos = sorted(k for k in set(a) | set(b) if k not in CLAVES_INTERNAS_NODO and a.get(k) != b.get(k))
+        campos += ["%s en la web" % k for k in sorted(set(b) & set(CLAVES_INTERNAS_NODO))]
         if campos:
             dif[nid] = ",".join(campos)
     return dif

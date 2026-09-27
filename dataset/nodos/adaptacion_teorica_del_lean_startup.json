@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Usa el Lean Startup como teoría, no como receta",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "El Lean Startup no es una receta fija de pasos, sino un marco teórico que debes adaptar a tu negocio. Al implementarlo es normal que sientas una caída temporal en tu productividad percibida, porque los problemas de tu sistema anterior eran invisibles mientras que los nuevos se notan de inmediato. Lo clave es que uses la teoría para predecir resultados y distingas las causas puntuales de las causas propias del sistema (una idea de Deming), sin caer en el dogmatismo ni aceptar cada cambio sugerido sin cuestionarlo.",
+  "resumen_teorico": "El Lean Startup no es una receta fija de pasos, sino un marco teórico que debes adaptar a tu negocio. Al implementarlo es normal que sientas una caída temporal en tu productividad percibida, porque los problemas de tu sistema anterior eran invisibles mientras que los nuevos se notan de inmediato. Lo clave es que uses la teoría para predecir resultados y distingas las causas puntuales de las causas propias del sistema, sin caer en el dogmatismo ni aceptar cada cambio sugerido sin cuestionarlo.",
   "pasos_accionables": [
     "Antes de implementar un cambio, predice teóricamente qué resultado esperas obtener.",
     "Prueba cualquier cambio propuesto en un grupo pequeño antes de aplicarlo a todo tu negocio.",
@@ -23,5 +23,26 @@
     "Si aparecen resistencias o te sugieren constantemente volver atrás con el cambio.",
     "Si necesitas distinguir si un problema lo causó el nuevo sistema o algo que ya existía antes."
   ],
-  "etiqueta_arbol": "No Sigas la Receta"
+  "etiqueta_arbol": "No Sigas la Receta",
+  "correcciones": [
+    {
+      "id": "atribucion-002",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El Lean Startup no es una receta fija de pasos, sino un marco teórico que debes adaptar a tu negocio. Al implementarlo es normal que sientas una caída temporal en tu productividad percibida, porque los problemas de tu sistema anterior eran invisibles mientras que los nuevos se notan de inmediato. Lo clave es que uses la teoría para predecir resultados y distingas las causas puntuales de las causas propias del sistema (una idea de Deming), sin caer en el dogmatismo ni aceptar cada cambio sugerido sin cuestionarlo.",
+      "texto_nuevo": "El Lean Startup no es una receta fija de pasos, sino un marco teórico que debes adaptar a tu negocio. Al implementarlo es normal que sientas una caída temporal en tu productividad percibida, porque los problemas de tu sistema anterior eran invisibles mientras que los nuevos se notan de inmediato. Lo clave es que uses la teoría para predecir resultados y distingas las causas puntuales de las causas propias del sistema, sin caer en el dogmatismo ni aceptar cada cambio sugerido sin cuestionarlo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "(una idea de Deming)"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-006 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ]
 }

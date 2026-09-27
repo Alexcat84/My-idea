@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_067",
+  "intento": 0,
+  "usd": 0.17746,
+  "turnos": 1,
+  "duracion_s": 21.6,
+  "pared_s": 22.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33690,
+  "tokens_out": 2135,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PE60316\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [1573, 4221, 4244, 4274, 4431, 4435, 4500],\n    \"razon\": \"El libro apoya ir más allá de lo prescriptivo. Pero L4435 dice que los factores humanos y organizacionales no se conocen del todo y esas disciplinas aún no han dado resultados. Hay matiz de dificultad.\"\n  },\n  {\n    \"id\": \"P397AE3\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4765, 4987, 5027, 5063, 5065, 5077],\n    \"razon\": \"Al decir 'solo', excluye sabotaje, abuso de sustancias e imprudencia, que el libro sanciona severamente. Además, el libro sitúa la negligencia en una zona gris de menor culpabilidad.\"\n  },\n  {\n    \"id\": \"P20F495\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [478, 494, 504, 526],\n    \"razon\": \"El libro enuncia el principio de separar trading y settlement, y critica el doble rol de Leeson. El paso lo generaliza a mapear roles, en la misma dirección.\"\n  },\n  {\n    \"id\": \"P05EFC4\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4433, 4435, 4462, 4500],\n    \"razon\": \"El libro dice que definir un Safety Case adecuado no es fácil y que sus factores quizá sean incognoscibles. Rechaza el checklist superficial y propone un ciclo de aprendizaje porque los criterios rara vez se conocen de antemano.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PE60316",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1573,
+    4221,
+    4244,
+    4274,
+    4431,
+    4435,
+    4500
+   ],
+   "razon": "El libro apoya ir más allá de lo prescriptivo. Pero L4435 dice que los factores humanos y organizacionales no se conocen del todo y esas disciplinas aún no han dado resultados. Hay matiz de dificultad."
+  },
+  {
+   "id": "P397AE3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4765,
+    4987,
+    5027,
+    5063,
+    5065,
+    5077
+   ],
+   "razon": "Al decir 'solo', excluye sabotaje, abuso de sustancias e imprudencia, que el libro sanciona severamente. Además, el libro sitúa la negligencia en una zona gris de menor culpabilidad."
+  },
+  {
+   "id": "P20F495",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    478,
+    494,
+    504,
+    526
+   ],
+   "razon": "El libro enuncia el principio de separar trading y settlement, y critica el doble rol de Leeson. El paso lo generaliza a mapear roles, en la misma dirección."
+  },
+  {
+   "id": "P05EFC4",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4433,
+    4435,
+    4462,
+    4500
+   ],
+   "razon": "El libro dice que definir un Safety Case adecuado no es fácil y que sus factores quizá sean incognoscibles. Rechaza el checklist superficial y propone un ciclo de aprendizaje porque los criterios rara vez se conocen de antemano."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCB1F9B",
+  "intento": 0,
+  "usd": 0.114356,
+  "turnos": 1,
+  "duracion_s": 6.0,
+  "pared_s": 7.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26574,
+  "tokens_out": 403,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCB1F9B\", \"veredicto\": \"FIEL\", \"lineas\": [3395], \"cita\": \"to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question. Having done this, the nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice lo mismo que el paso. Primero se eligen las EPC que afectan a la actividad. Después se multiplica la probabilidad nominal por una proporción juzgada del factor de cada EPC aplicable. 'EPC' es el término del propio libro, así que no es un dato sin respaldo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCB1F9B",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395
+  ],
+  "cita": "to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question. Having done this, the nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice lo mismo que el paso. Primero se eligen las EPC que afectan a la actividad. Después se multiplica la probabilidad nominal por una proporción juzgada del factor de cada EPC aplicable. 'EPC' es el término del propio libro, así que no es un dato sin respaldo.",
+  "paso_fiel": ""
+ }
+}

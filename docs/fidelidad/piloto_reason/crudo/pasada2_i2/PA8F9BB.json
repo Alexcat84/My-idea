@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA8F9BB",
+  "intento": 0,
+  "usd": 0.165048,
+  "turnos": 1,
+  "duracion_s": 12.9,
+  "pared_s": 13.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36052,
+  "tokens_out": 1042,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA8F9BB\", \"veredicto\": \"FIEL\", \"lineas\": [2687, 4814, 4948], \"cita\": \"the data need to be disseminated widely, particularly among the bean counters in the upper echelons of the organization. The latter have been known to become especially alert when the information relating to each event includes a realistic estimate of its potential financial cost to the organization.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro asocia a cada evento una estimacion realista de su coste financiero potencial para alertar a la alta direccion. El paso dice lo mismo. No obliga al informante a calcular el coste, asi que no choca con la facilidad de reporte (L4814, L4948). No añade cifras, plazos ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA8F9BB",
+  "veredicto": "FIEL",
+  "lineas": [
+   2687,
+   4814,
+   4948
+  ],
+  "cita": "the data need to be disseminated widely, particularly among the bean counters in the upper echelons of the organization. The latter have been known to become especially alert when the information relating to each event includes a realistic estimate of its potential financial cost to the organization.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro asocia a cada evento una estimacion realista de su coste financiero potencial para alertar a la alta direccion. El paso dice lo mismo. No obliga al informante a calcular el coste, asi que no choca con la facilidad de reporte (L4814, L4948). No añade cifras, plazos ni responsables.",
+  "paso_fiel": ""
+ }
+}

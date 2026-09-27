@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P33AEEC",
+  "intento": 0,
+  "usd": 0.162208,
+  "turnos": 1,
+  "duracion_s": 9.5,
+  "pared_s": 10.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36572,
+  "tokens_out": 796,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P33AEEC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1977, 1991, 2250], \"cita\": \"It would be reasonable to expect that an activity scoring ‘high’ on all three of these questions is the one most likely to be associated with human performance problems.\", \"datos_sin_respaldo\": [], \"razon\": \"Las tres condiciones (contacto directo, criticidad, frecuencia) salen del libro, que las aplica a clases de actividad. Bajarlas a tareas concretas cambia la escala, pero sigue su misma dirección, y el libro también propone identificar de antemano los pasos más vulnerables. No contradice ni añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P33AEEC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1963,
+   1977,
+   1991,
+   2250
+  ],
+  "cita": "It would be reasonable to expect that an activity scoring ‘high’ on all three of these questions is the one most likely to be associated with human performance problems.",
+  "datos_sin_respaldo": [],
+  "razon": "Las tres condiciones (contacto directo, criticidad, frecuencia) salen del libro, que las aplica a clases de actividad. Bajarlas a tareas concretas cambia la escala, pero sigue su misma dirección, y el libro también propone identificar de antemano los pasos más vulnerables. No contradice ni añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

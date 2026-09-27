@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_099",
+  "intento": 0,
+  "usd": 0.16938,
+  "turnos": 1,
+  "duracion_s": 16.7,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34655,
+  "tokens_out": 1538,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P0E43DB\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"HAZOP\", \"PRA\", \"análisis de tareas cognitivas\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [5544, 5546, 5559, 5905],\n    \"razon\": \"El libro sitúa HAZOPS, PRA y cognitive task analyses en el modelo de ingeniería, centrado en desajustes humano-máquina. Además dice que los modelos coexisten.\"\n  },\n  {\n    \"id\": \"P38C769\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4360, 4364],\n    \"razon\": \"Coincide literalmente con el primer paso del rolling procedure de COSHH: listar sustancias peligrosas e identificar puntos de uso. Omite la evaluación de riesgos, pero no la invierte.\"\n  },\n  {\n    \"id\": \"PA1F7E0\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"ratio de personal de seguridad respecto al total\", \"estándares del sector\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [3993, 5254, 4207, 4454],\n    \"razon\": \"El libro cita la cifra de NASA (2% del personal) y habla de recortes en reguladores. No menciona estándares sectoriales de referencia, y el nodo trata de reguladores, no de la organización.\"\n  },\n  {\n    \"id\": \"P555401\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"más de 10 años de antigüedad\"],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [3097, 3209, 3199],\n    \"razon\": \"El libro solo cita la edad del equipo como componente del GFT Hardware; no da umbral de 10 años. Además pide gestionar perfiles, no corregir indicadores sueltos.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P0E43DB",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "HAZOP",
+    "PRA",
+    "análisis de tareas cognitivas"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5544,
+    5546,
+    5559,
+    5905
+   ],
+   "razon": "El libro sitúa HAZOPS, PRA y cognitive task analyses en el modelo de ingeniería, centrado en desajustes humano-máquina. Además dice que los modelos coexisten."
+  },
+  {
+   "id": "P38C769",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4364
+   ],
+   "razon": "Coincide literalmente con el primer paso del rolling procedure de COSHH: listar sustancias peligrosas e identificar puntos de uso. Omite la evaluación de riesgos, pero no la invierte."
+  },
+  {
+   "id": "PA1F7E0",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "ratio de personal de seguridad respecto al total",
+    "estándares del sector"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    3993,
+    5254,
+    4207,
+    4454
+   ],
+   "razon": "El libro cita la cifra de NASA (2% del personal) y habla de recortes en reguladores. No menciona estándares sectoriales de referencia, y el nodo trata de reguladores, no de la organización."
+  },
+  {
+   "id": "P555401",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "más de 10 años de antigüedad"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3097,
+    3209,
+    3199
+   ],
+   "razon": "El libro solo cita la edad del equipo como componente del GFT Hardware; no da umbral de 10 años. Además pide gestionar perfiles, no corregir indicadores sueltos."
+  }
+ ]
+}

@@ -15,12 +15,28 @@
   "nodos_previos": [
     "practica_deliberada_asistida_ia"
   ],
-  "nodos_siguientes": [
-    "future_scenarios_planning"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el negocio depende significativamente de IA generativa para producir valor.",
     "Si se busca identificar y retener talento con ventaja competitiva en el uso de IA."
   ],
-  "etiqueta_arbol": "Domina el Trabajo con IA"
+  "etiqueta_arbol": "Domina el Trabajo con IA",
+  "fuentes_internas": [
+    "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-069",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "habilidad_prompting_como_experticia -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-18-11): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La habilidad individual para trabajar con IA no prepara la construccion de escenarios cruzando impulsores de incertidumbre; la relacion no se sostiene."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

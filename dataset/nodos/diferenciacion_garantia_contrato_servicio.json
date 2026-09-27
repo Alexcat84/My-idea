@@ -6,12 +6,12 @@
   "fuente": "Businessperson's Guide to Federal Warranty Law",
   "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de proteccion adicional que tu cliente compra por separado del producto, a diferencia de la garantia, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantias implicitas de ese producto.",
   "pasos_accionables": [
-    "Distingue con claridad en tu oferta la garantia incluida y el contrato de servicio opcional que se paga aparte.",
-    "Escribe los terminos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantia.",
-    "Revisa que no estes renunciando a garantias implicitas al ofrecer un contrato de servicio sobre tu propio producto.",
-    "Deja claro quien responde por el cumplimiento de los terminos: tu como vendedor o el fabricante."
+    "Distingue con claridad en tu oferta la garantía incluida y el contrato de servicio opcional que se paga aparte.",
+    "Escribe los términos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantía.",
+    "Revisa que no estés renunciando a garantías implícitas al ofrecer un contrato de servicio sobre tu propio producto.",
+    "Deja claro quién responde por el cumplimiento de los términos: tú como vendedor o el fabricante."
   ],
-  "entregable_esperado": "Una estructura comercial clara que separa la garantia base del contrato de servicio opcional, con los terminos documentados.",
+  "entregable_esperado": "Una estructura comercial clara que separa la garantía base del contrato de servicio opcional, con los términos documentados.",
   "nodos_previos": [
     "clasificacion_garantia_full_limited"
   ],
@@ -22,5 +22,79 @@
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
     "Cuando ofreces planes de proteccion extendida o servicios postventa pagados además de la garantia."
   ],
-  "etiqueta_arbol": "Distingue Garantía de Contrato"
+  "etiqueta_arbol": "Distingue Garantía de Contrato",
+  "fuentes_internas": [
+    "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0784",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Distingue con claridad en tu oferta la garantia incluida y el contrato de servicio opcional que se paga aparte.",
+      "texto_nuevo": "Distingue con claridad en tu oferta la garantía incluida y el contrato de servicio opcional que se paga aparte.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-039.paso0: garantía (Faltaba la tilde en garantía; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0785",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe los terminos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantia.",
+      "texto_nuevo": "Escribe los términos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantía.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-039.paso1: términos, garantía (Tildes que faltaban de verdad en términos y garantía; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0786",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa que no estes renunciando a garantias implicitas al ofrecer un contrato de servicio sobre tu propio producto.",
+      "texto_nuevo": "Revisa que no estés renunciando a garantías implícitas al ofrecer un contrato de servicio sobre tu propio producto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-039.paso2: estés, garantías, implícitas (Tildes que faltaban de verdad en estés, garantías e implícitas; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0787",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja claro quien responde por el cumplimiento de los terminos: tu como vendedor o el fabricante.",
+      "texto_nuevo": "Deja claro quién responde por el cumplimiento de los términos: tú como vendedor o el fabricante.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-039.paso3: quién, términos, tú (Tildes que faltaban de verdad en quién, términos y tú (pronombre); no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0788",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una estructura comercial clara que separa la garantia base del contrato de servicio opcional, con los terminos documentados.",
+      "texto_nuevo": "Una estructura comercial clara que separa la garantía base del contrato de servicio opcional, con los términos documentados.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-039.entregable: garantía, términos (Tildes que faltaban de verdad en garantía y términos; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

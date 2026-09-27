@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Rotación (Turnover) del Equipo Fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos ('los altos son más altos, pero los bajos son mucho más bajos'). Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
+  "resumen_teorico": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup, y en un equipo que lleva mucho tiempo junto y cuyas rutinas frenan la creatividad, reemplazar a un miembro por alguien nuevo puede dar un 'diversity shock' que la reactive. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos ('los altos son más altos, pero los bajos son mucho más bajos'). Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
   "pasos_accionables": [
     "Evaluar objetivamente si un cofundador está escalando con las necesidades del startup",
     "Revisar acuerdos legales previos (no competencia, PI) antes de cofundar con excompañeros",
     "Planificar una salida ordenada y con términos claros si un cofundador debe dejar el equipo",
-    "Consultar con un abogado especializado en startups sobre riesgos legales de rotación",
+    "Conocer los acuerdos de no competencia, no solicitación y propiedad intelectual de cada cofundador y los problemas legales que pueden plantear",
     "Documentar el impacto en equity y roles cuando ocurre una salida"
   ],
   "entregable_esperado": "Plan de contingencia y cláusulas contractuales (vesting, buy-back) para manejar salidas de fundadores",
@@ -28,5 +28,43 @@
     "Si existe riesgo legal por acuerdos previos con empleadores",
     "Cuando el equipo necesita 'diversity shock' para reactivar la creatividad"
   ],
-  "etiqueta_arbol": "Cuando un Fundador se Va"
+  "etiqueta_arbol": "Cuando un Fundador se Va",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-022",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consultar con un abogado especializado en startups sobre riesgos legales de rotación",
+      "texto_nuevo": "Conocer los acuerdos de no competencia, no solicitación y propiedad intelectual de cada cofundador y los problemas legales que pueden plantear",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L1193",
+        "frase": "Before deciding to cofound (or hire), each founder should make sure he or she is familiar with the other's agreements and the potential problems they may pose."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razón B. L1193 cita la observación del abogado Bill Schnoor sobre acuerdos de no competencia, de no solicitación y de propiedad intelectual. Pero el paso que recomienda el libro es que cada fundador conozca los acuerdos del otro, no que consulte a un abogado. Busqué en todo el libro (lawyer, attorney, counsel, legal advice, noncompete, nonsolicitation, abogado). Solo encontré L485, L1193, L1520 (Evan contrata abogados, como ejemplo) y L1744 (poner el acuerdo por escrito por cuenta propia o con abogado). Ninguno recomienda consultar a un abogado especializado en startups por los riesgos de la rotación. El paso añade un responsable concreto en materia legal, así que es ANADIDO de tipo LEGAL_CIFRA. A se equivocó al tratarlo como una concreción sin dato nuevo.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-107"
+    },
+    {
+      "id": "saneamiento-t1-c05-1",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos ('los altos son más altos, pero los bajos son mucho más bajos'). Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
+      "texto_nuevo": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup, y en un equipo que lleva mucho tiempo junto y cuyas rutinas frenan la creatividad, reemplazar a un miembro por alguien nuevo puede dar un 'diversity shock' que la reactive. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos ('los altos son más altos, pero los bajos son mucho más bajos'). Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L1191",
+        "frase": "On the other hand, studies have also shown that teams that have spent more time together have entrenched “standard operating procedures” that hinder creativity; the “diversity shock” when a homogeneous team member is replaced by someone new can help kick-start the creative process."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Wasserman trata el 'diversity shock' en el mismo párrafo sobre la rotación del equipo fundador (L1191). Lo presenta como otro de los casos en que la rotación resulta beneficiosa, junto al mal encaje y al fundador que no escala. La condición [2] es fiel al libro. Lo que falla es el resumen, que omite ese beneficio y deja la condición sin respaldo. Se añade solo esa cláusula al resumen, y la condición y los pasos no se tocan.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C05 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ]
 }

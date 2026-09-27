@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_037",
+  "intento": 0,
+  "usd": 0.165776,
+  "turnos": 1,
+  "duracion_s": 18.3,
+  "pared_s": 19.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32264,
+  "tokens_out": 1836,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P2A95E2\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"puesto relacionado con seguridad\"], \"clase\": \"FIEL\", \"lineas\": [5258, 2579, 5270], \"razon\": \"El libro plantea literalmente esa pregunta: si un nombramiento de seguridad premia el talento o es un destierro para gente agotada.\"},\n  {\"id\": \"P4683EB\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"listas de verificación\", \"obligatorias\", \"firma paso a paso\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [409, 413, 2250, 2994, 2977], \"razon\": \"El libro pide identificar los pasos propensos a omisión. No prescribe checklists firmadas y muestra que las firmas se dan sin inspección real. Obligar a todo puede chocar.\"},\n  {\"id\": \"P713B0A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [198, 200, 202, 293, 271, 273, 582, 5748], \"razon\": \"Rastrear hacia arriba coincide con el libro, pero hacerlo con cada condición choca con los rendimientos decrecientes, los límites manejables y la priorización. Además, no siempre hay una mala decisión.\"},\n  {\"id\": \"P488A68\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3825, 2716, 1006, 3829, 2724], \"razon\": \"Los errores se combaten con mejor información, en esa misma dirección. Pero añadir procedimientos puede sobreespecificar y generar violaciones, y los factores organizacionales son la prioridad.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P2A95E2",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "puesto relacionado con seguridad"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5258,
+    2579,
+    5270
+   ],
+   "razon": "El libro plantea literalmente esa pregunta: si un nombramiento de seguridad premia el talento o es un destierro para gente agotada."
+  },
+  {
+   "id": "P4683EB",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "listas de verificación",
+    "obligatorias",
+    "firma paso a paso"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    409,
+    413,
+    2250,
+    2994,
+    2977
+   ],
+   "razon": "El libro pide identificar los pasos propensos a omisión. No prescribe checklists firmadas y muestra que las firmas se dan sin inspección real. Obligar a todo puede chocar."
+  },
+  {
+   "id": "P713B0A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    198,
+    200,
+    202,
+    293,
+    271,
+    273,
+    582,
+    5748
+   ],
+   "razon": "Rastrear hacia arriba coincide con el libro, pero hacerlo con cada condición choca con los rendimientos decrecientes, los límites manejables y la priorización. Además, no siempre hay una mala decisión."
+  },
+  {
+   "id": "P488A68",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3825,
+    2716,
+    1006,
+    3829,
+    2724
+   ],
+   "razon": "Los errores se combaten con mejor información, en esa misma dirección. Pero añadir procedimientos puede sobreespecificar y generar violaciones, y los factores organizacionales son la prioridad."
+  }
+ ]
+}

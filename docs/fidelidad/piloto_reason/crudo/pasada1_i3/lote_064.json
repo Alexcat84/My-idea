@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_064",
+  "intento": 0,
+  "usd": 0.16155199999999997,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33808,
+  "tokens_out": 1316,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8F3C61\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5061, 5057, 5063], \"razon\": \"El libro incluye la pregunta 'Any previous?', pero aclara que el historial no pesa necesariamente en la culpabilidad del acto actual. Solo indica formación correctiva. El paso omite esa condición.\"},\n  {\"id\": \"P40FAEF\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 50, 107, 213, 2650], \"razon\": \"El libro indica investigar partiendo del resultado y examinar cada defensa vulnerada o eludida. Luego se buscan fallos activos y condiciones latentes.\"},\n  {\"id\": \"P742855\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"equipo central de expertos externos\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3163, 3199, 3213, 3224], \"razon\": \"El libro dice que los indicadores los crean especialistas de la tarea que trabajan en la operación diaria, en sindicatos, de abajo arriba. El paso lo invierte al excluir al personal operativo.\"},\n  {\"id\": \"PCD1593\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3079, 3199, 3382, 2750, 3209], \"razon\": \"El libro pide medir los GFT regularmente, con sesiones trimestrales y software que analiza tendencias en el tiempo. También pide seguir la evolución de los perfiles.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8F3C61",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5061,
+    5057,
+    5063
+   ],
+   "razon": "El libro incluye la pregunta 'Any previous?', pero aclara que el historial no pesa necesariamente en la culpabilidad del acto actual. Solo indica formación correctiva. El paso omite esa condición."
+  },
+  {
+   "id": "P40FAEF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    50,
+    107,
+    213,
+    2650
+   ],
+   "razon": "El libro indica investigar partiendo del resultado y examinar cada defensa vulnerada o eludida. Luego se buscan fallos activos y condiciones latentes."
+  },
+  {
+   "id": "P742855",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "equipo central de expertos externos"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3163,
+    3199,
+    3213,
+    3224
+   ],
+   "razon": "El libro dice que los indicadores los crean especialistas de la tarea que trabajan en la operación diaria, en sindicatos, de abajo arriba. El paso lo invierte al excluir al personal operativo."
+  },
+  {
+   "id": "PCD1593",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3079,
+    3199,
+    3382,
+    2750,
+    3209
+   ],
+   "razon": "El libro pide medir los GFT regularmente, con sesiones trimestrales y software que analiza tendencias en el tiempo. También pide seguir la evolución de los perfiles."
+  }
+ ]
+}

@@ -9,7 +9,7 @@
     "Identificar el número de clasificación HS del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
     "Determinar si existe ventaja arancelaria comparando la tasa MFN vs la tasa preferencial del FTA (export.customsinfo.com)",
     "Verificar si el producto contiene insumos no originarios del FTA",
-    "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)",
+    "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado",
     "Determinar si el contenido extranjero cumple con la regla de cambio arancelario (Tariff Shift) o de contenido de valor regional (RVC)"
   ],
   "entregable_esperado": "Documento con la clasificación HS del producto y determinación preliminar de si califica para beneficios arancelarios bajo el FTA aplicable",
@@ -24,7 +24,7 @@
     "reglas_origen_sectoriales"
   ],
   "condiciones_activacion": [
-    "Si el usuario exporta a un país con el cual EE.UU. tiene un Tratado de Libre Comercio vigente",
+    "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
     "Si el producto contiene insumos o componentes de múltiples países"
   ],
   "merged_originals": [
@@ -37,5 +37,58 @@
   "ids_alias": [
     "reglas_de_origen_fta"
   ],
-  "etiqueta_arbol": "Verifica las Reglas de Origen"
+  "etiqueta_arbol": "Verifica las Reglas de Origen",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-011",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)",
+      "texto_nuevo": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L4829-L4829",
+        "frase": "Identify the specific ROO for the final product that you are exporting by consulting the USHTS General Notes or visiting export.gov/fta and locating a ROOs chapter in the final text of a relevant FTA agreement"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La accion coincide con el libro, pero la fuente dada es otro valor: el libro remite a export.gov/fta (y a las General Notes del USHTS), no a trade.gov/fta, que no aparece en todo el libro. Por la regla de otro valor para el mismo dato, es CONTRARIO. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C017-045"
+    },
+    {
+      "id": "saneamiento-t1-02",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "REGRESION_DE_CLASE",
+      "texto_anterior": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
+      "texto_nuevo": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L26-L33",
+        "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): reglas_de_origen_fta_2 vuelve a CLASE C. Regresion medida en docs/SANEAMIENTO_DATASET.md: la campania de fidelidad (fidelidad-t4-011) le puso la formula de la clase B a un nodo-frontera.",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO_DATASET pasada J"
+    },
+    {
+      "id": "n1-condicion-159",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el usuario exporta a un país con el cual EE.UU. tiene un Tratado de Libre Comercio vigente",
+      "texto_nuevo": "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q007-019: La condicion principal no deja claro que el nodo aplica a quien exporta desde Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: exportar a un pais con TLC con EE.UU. no exige exportar desde Estados Unidos; un exportador de otro pais tambien la cumpliria."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ]
 }

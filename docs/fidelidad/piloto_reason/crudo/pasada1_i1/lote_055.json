@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_055",
+  "intento": 0,
+  "usd": 0.149616,
+  "turnos": 1,
+  "duracion_s": 11.3,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32404,
+  "tokens_out": 1000,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC97800\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [96, 83, 1133, 2566, 2583], \"razon\": \"El libro advierte que las ganancias protectoras se convierten en ventajas productivas y pide vigilar las medidas de seguridad; monitorear márgenes tras nuevas defensas va en esa dirección.\"},\n  {\"id\": \"PE38A46\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [3747, 3755, 1943, 2109, 2113], \"razon\": \"No aparece la sección de MEDA que clasifica el error, y 'categorías definidas' es ambiguo. El libro advierte que la taxonomía causal de lapsos es difícil para no especialistas.\"},\n  {\"id\": \"P84BD90\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [65, 67, 77, 2568], \"razon\": \"El libro propone que la protección iguale el peligro de las operaciones (zona de paridad). También pide fijar la posición actual; mapear ambos niveles es coherente.\"},\n  {\"id\": \"P18EBA8\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2556, 2568, 2579, 4749], \"razon\": \"El libro nombra las presiones públicas y regulatorias y la cultura de seguridad como fuerzas hacia la resistencia, y pide entender esas fuerzas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC97800",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    96,
+    83,
+    1133,
+    2566,
+    2583
+   ],
+   "razon": "El libro advierte que las ganancias protectoras se convierten en ventajas productivas y pide vigilar las medidas de seguridad; monitorear márgenes tras nuevas defensas va en esa dirección."
+  },
+  {
+   "id": "PE38A46",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    3747,
+    3755,
+    1943,
+    2109,
+    2113
+   ],
+   "razon": "No aparece la sección de MEDA que clasifica el error, y 'categorías definidas' es ambiguo. El libro advierte que la taxonomía causal de lapsos es difícil para no especialistas."
+  },
+  {
+   "id": "P84BD90",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    65,
+    67,
+    77,
+    2568
+   ],
+   "razon": "El libro propone que la protección iguale el peligro de las operaciones (zona de paridad). También pide fijar la posición actual; mapear ambos niveles es coherente."
+  },
+  {
+   "id": "P18EBA8",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2556,
+    2568,
+    2579,
+    4749
+   ],
+   "razon": "El libro nombra las presiones públicas y regulatorias y la cultura de seguridad como fuerzas hacia la resistencia, y pide entender esas fuerzas."
+  }
+ ]
+}

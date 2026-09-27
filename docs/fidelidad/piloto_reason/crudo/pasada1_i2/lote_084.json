@@ -1,0 +1,86 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_084",
+  "intento": 0,
+  "usd": 0.160988,
+  "turnos": 1,
+  "duracion_s": 13.6,
+  "pared_s": 14.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33517,
+  "tokens_out": 1346,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P10E872\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"cuatro tipos de riesgo\", \"personal, operador clave, latente, terceros\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [5572, 5578, 5582, 5586, 5590, 5603, 5611, 5639],\n    \"razon\": \"El libro define los cuatro tipos de riesgo y los estima por dominio en la Tabla 10.1. El libro no pide mapearlos por organización, pero el paso va en su misma dirección.\"\n  },\n  {\n    \"id\": \"PCE0109\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"análisis de sensibilidad\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [1021, 1031, 1033, 1035],\n    \"razon\": \"El libro no menciona el análisis de sensibilidad. Dice que los reguladores no pueden prever todos los escenarios; el paso podría sugerir que un análisis los anticipa.\"\n  },\n  {\n    \"id\": \"PC3D530\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"Perfil de Factores Organizacionales\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4476, 4478, 4492, 4494],\n    \"razon\": \"El libro indica sumar las calificaciones de todas las instancias para generar el Organizational Factor Profile.\"\n  },\n  {\n    \"id\": \"P2DFCE0\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [5190, 5200, 666],\n    \"razon\": \"El libro recomienda equipos de personas divergentes (otra especialidad, otra experiencia). Advierte que los grupos homogéneos ven lo mismo y carecen de variedad requerida. El paso invierte la recomendación.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P10E872",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "cuatro tipos de riesgo",
+    "personal, operador clave, latente, terceros"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5572,
+    5578,
+    5582,
+    5586,
+    5590,
+    5603,
+    5611,
+    5639
+   ],
+   "razon": "El libro define los cuatro tipos de riesgo y los estima por dominio en la Tabla 10.1. El libro no pide mapearlos por organización, pero el paso va en su misma dirección."
+  },
+  {
+   "id": "PCE0109",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "análisis de sensibilidad"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    1021,
+    1031,
+    1033,
+    1035
+   ],
+   "razon": "El libro no menciona el análisis de sensibilidad. Dice que los reguladores no pueden prever todos los escenarios; el paso podría sugerir que un análisis los anticipa."
+  },
+  {
+   "id": "PC3D530",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Perfil de Factores Organizacionales"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4476,
+    4478,
+    4492,
+    4494
+   ],
+   "razon": "El libro indica sumar las calificaciones de todas las instancias para generar el Organizational Factor Profile."
+  },
+  {
+   "id": "P2DFCE0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5190,
+    5200,
+    666
+   ],
+   "razon": "El libro recomienda equipos de personas divergentes (otra especialidad, otra experiencia). Advierte que los grupos homogéneos ven lo mismo y carecen de variedad requerida. El paso invierte la recomendación."
+  }
+ ]
+}

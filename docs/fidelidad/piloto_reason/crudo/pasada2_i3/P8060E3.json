@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8060E3",
+  "intento": 0,
+  "usd": 0.09782,
+  "turnos": 1,
+  "duracion_s": 8.8,
+  "pared_s": 9.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 21340,
+  "tokens_out": 623,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8060E3\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2320], \"cita\": \"These ‘weak’ components will have been identified at the design stage and made accessible and replaceable. This is termed the ‘expected maintenance load’. Yet other components will fail in an unplanned way as the result of design mistakes or operational mishandling. This is the ‘unexpected maintenance load’.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro distingue los componentes 'débiles' identificados en diseño (carga esperada) de los que fallan de forma imprevista por errores de diseño u operación (carga no esperada). Clasificar componentes con esa distinción la lleva a la práctica en la misma dirección. No añade datos y no contradice la advertencia sobre los errores que introduce el propio mantenimiento.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8060E3",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2320
+  ],
+  "cita": "These ‘weak’ components will have been identified at the design stage and made accessible and replaceable. This is termed the ‘expected maintenance load’. Yet other components will fail in an unplanned way as the result of design mistakes or operational mishandling. This is the ‘unexpected maintenance load’.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro distingue los componentes 'débiles' identificados en diseño (carga esperada) de los que fallan de forma imprevista por errores de diseño u operación (carga no esperada). Clasificar componentes con esa distinción la lleva a la práctica en la misma dirección. No añade datos y no contradice la advertencia sobre los errores que introduce el propio mantenimiento.",
+  "paso_fiel": ""
+ }
+}

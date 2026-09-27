@@ -1,5 +1,9 @@
 # EL PREVIEW DE LOS MUNDOS — Modelo comercial, análisis y plan
 
+> **Nota de la AUD-09 (25 sep 2026):** las cifras de precio de este plan se
+> alinearon con `web/lib/precios.ts`, la única fuente (`AGENTS.md`). El texto
+> "Explóralo gratis" de la máquina de estados murió después (BANCO §7.1).
+
 Destino: docs/PREVIEW_MUNDOS_PLAN.md. Fase: 4.5. Tag al cierre: web-v1.4.0.
 Decisión del fundador (jul 2026), analizada y especificada con el auditor.
 
@@ -14,7 +18,7 @@ cobra 5) extendido a los siete mundos (preview gratis → plan cobra 3).
 
 ### 2.1 Los tres problemas del modelo con candado
 
-- **Compra a ciegas**: el usuario paga 3 créditos ANTES de saber si el mundo
+- **Compra a ciegas**: el usuario pagaba la activación ANTES de saber si el mundo
   le aporta. La promesa del catálogo es genérica; su proyecto es específico.
 - **El reembolso como experiencia de compra**: el cierre honesto post-pago
   (fase 4.3) es correcto pero es un tropiezo con disculpa: cobrar-y-devolver
@@ -46,7 +50,9 @@ cobra 5) extendido a los siete mundos (preview gratis → plan cobra 3).
   El resumen-diagnóstico (más corto que un plan): ~$0.02-0.03.
 - **Costo del preview: ~$0.07-0.12 por usuario por mundo. Redondeo de
   planificación: 10 centavos.**
-- La compra que provoca: 3 créditos (≈$3 al precio de catálogo).
+- La compra que provoca: el plan del mundo al precio de `precios.ts`
+  (`mundo_activar`, hoy 5 créditos; al escribirse este plan eran 3, y el punto
+  de equilibrio de abajo se calculó con esa cifra: con 5 queda más holgado).
 - **Punto de equilibrio: 1 compra por cada ~25 previews (4%).** Las tasas
   normales de freemium bien ejecutado (5-15%) dejan el preview como costo
   de adquisición pagado con margen.
@@ -97,7 +103,8 @@ vuelo (asserts sobre el resumen: cero imperativos de ejecución).
      ▼
 [diagnóstico listo]   EL ESTADO PROTAGONISTA. Chip "Listo para generar tu
      │        plan". El resumen persiste y se relee. CTA permanente:
-     │        "Generar mi plan de [mundo] · 3 créditos" (beta: tachado).
+     │        "Generar mi plan de [mundo] · N créditos" (N de precios.ts;
+     │        sin tachado: la beta no tiene cortesía).
      │        Evento 'preview_completado_sin_compra' en bitácora (gancho de
      │        notificación futura, capa post-beta).
      │  compra (cobro A LA ENTREGA, patrón de la casa)
@@ -130,7 +137,7 @@ vuelo (asserts sobre el resumen: cero imperativos de ejecución).
    jerga, espejo). El detector de incompatibilidad corre aquí (pre-compra).
 3. **Cobro**: el punto de cobro del mundo se MUDA del unlock a la entrega
    del plan (ancla ETAPA 2 actualizada; verificar-al-inicio /
-   descontar-a-la-entrega). El precio no cambia: 3 créditos.
+   descontar-a-la-entrega). El precio es el de `precios.ts` (`mundo_activar`).
 4. **UI**: la fila de potenciadores y la sección del mundo reflejan los
    cuatro estados. Implementación sobria con piezas existentes; la vara
    del preview no existe en el canon → anotar en la matriz "implementado,

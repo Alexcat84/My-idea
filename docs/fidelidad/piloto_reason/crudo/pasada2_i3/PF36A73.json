@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF36A73",
+  "intento": 0,
+  "usd": 0.148296,
+  "turnos": 1,
+  "duracion_s": 6.0,
+  "pared_s": 7.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35504,
+  "tokens_out": 314,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PF36A73\", \"veredicto\": \"CONTRARIO\", \"lineas\": [96, 1133, 1076], \"cita\": \"In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta la conversión de mejoras de protección en ventaja productiva (Davy, radar) como compensación de riesgo que deja al sistema igual o menos seguro y causa accidentes (L96, L1133). El paso aconseja justamente hacerlo con cada mejora: invierte la advertencia del libro.\", \"paso_fiel\": \"Vigilar que las mejoras de protección instaladas tras un accidente no se conviertan en aumentos de velocidad o volumen de la operación, porque eso anula su beneficio de seguridad.\"}",
+ "parseado": {
+  "id": "PF36A73",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   96,
+   1133,
+   1076
+  ],
+  "cita": "In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta la conversión de mejoras de protección en ventaja productiva (Davy, radar) como compensación de riesgo que deja al sistema igual o menos seguro y causa accidentes (L96, L1133). El paso aconseja justamente hacerlo con cada mejora: invierte la advertencia del libro.",
+  "paso_fiel": "Vigilar que las mejoras de protección instaladas tras un accidente no se conviertan en aumentos de velocidad o volumen de la operación, porque eso anula su beneficio de seguridad."
+ }
+}

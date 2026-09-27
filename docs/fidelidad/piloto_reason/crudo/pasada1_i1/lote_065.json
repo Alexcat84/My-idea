@@ -1,0 +1,66 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_065",
+  "intento": 0,
+  "usd": 0.149812,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33238,
+  "tokens_out": 843,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P135D20\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2583, 1060, 5641], \"razon\": \"El libro define la paradoja posicional como síntoma de falta de cognisance: los directivos culpan a fallos personales del personal operativo. Evaluar esa atribución es fiel.\"},\n{\"id\": \"PD471B8\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2716, 3825, 3829, 1006], \"razon\": \"El libro dice que la información sirve para los errores. Las violaciones son motivacionales y se abordan con normas, actitudes, cultura y mejores procedimientos, no con capacitación técnica ni más información.\"},\n{\"id\": \"P1A72AB\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5781, 582, 2769], \"razon\": \"El libro exige un proceso continuo: 'it has to be a continuous process... no final victories'. Describe la gestión de riesgos como un programa de fitness a largo plazo.\"},\n{\"id\": \"PB75CC1\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [3971, 4257, 4259, 4261], \"razon\": \"El libro no recomienda mentores. Señala una cultura cerrada, pero también que la supervisión externa recibe información filtrada y acaba capturada o simpatizando. Hay posible tensión de matiz.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P135D20",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2583,
+    1060,
+    5641
+   ],
+   "razon": "El libro define la paradoja posicional como síntoma de falta de cognisance: los directivos culpan a fallos personales del personal operativo. Evaluar esa atribución es fiel."
+  },
+  {
+   "id": "PD471B8",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2716,
+    3825,
+    3829,
+    1006
+   ],
+   "razon": "El libro dice que la información sirve para los errores. Las violaciones son motivacionales y se abordan con normas, actitudes, cultura y mejores procedimientos, no con capacitación técnica ni más información."
+  },
+  {
+   "id": "P1A72AB",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5781,
+    582,
+    2769
+   ],
+   "razon": "El libro exige un proceso continuo: 'it has to be a continuous process... no final victories'. Describe la gestión de riesgos como un programa de fitness a largo plazo."
+  },
+  {
+   "id": "PB75CC1",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    3971,
+    4257,
+    4259,
+    4261
+   ],
+   "razon": "El libro no recomienda mentores. Señala una cultura cerrada, pero también que la supervisión externa recibe información filtrada y acaba capturada o simpatizando. Hay posible tensión de matiz."
+  }
+ ]
+}

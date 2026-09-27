@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_014",
+  "intento": 0,
+  "usd": 0.16031600000000001,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33154,
+  "tokens_out": 1385,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB070F1\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4730, 4734, 4820], \"razon\": \"La definición HSC cita confianza mutua y percepción compartida como rasgos de cultura positiva, no como método de medición. Reason prioriza el sistema de información de seguridad. Conversión dudosa.\"},\n  {\"id\": \"PC72623\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4027, 4033, 4037, 4039, 3213], \"razon\": \"El libro advierte que una lista fija idéntica genera dificultades por la variedad de instalaciones y es previsible. Cullen critica la inspección superficial, no pide una checklist uniforme universal.\"},\n  {\"id\": \"P24B964\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4219, 4221, 4244, 1573, 4431, 4500, 3213], \"razon\": \"El libro limita la legislación específica a los accidentes individuales, respalda la autorregulación y la reforma de factores organizacionales, y complementa lo prescriptivo sin descartarlo.\"},\n  {\"id\": \"P1A0BA8\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [478, 494, 504, 526], \"razon\": \"El rol dual de Leeson, no delimitado y mal supervisado, fue central en el colapso y una auditoría lo detectó. Auditar periódicamente los roles duales sigue la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB070F1",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4730,
+    4734,
+    4820
+   ],
+   "razon": "La definición HSC cita confianza mutua y percepción compartida como rasgos de cultura positiva, no como método de medición. Reason prioriza el sistema de información de seguridad. Conversión dudosa."
+  },
+  {
+   "id": "PC72623",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4027,
+    4033,
+    4037,
+    4039,
+    3213
+   ],
+   "razon": "El libro advierte que una lista fija idéntica genera dificultades por la variedad de instalaciones y es previsible. Cullen critica la inspección superficial, no pide una checklist uniforme universal."
+  },
+  {
+   "id": "P24B964",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4219,
+    4221,
+    4244,
+    1573,
+    4431,
+    4500,
+    3213
+   ],
+   "razon": "El libro limita la legislación específica a los accidentes individuales, respalda la autorregulación y la reforma de factores organizacionales, y complementa lo prescriptivo sin descartarlo."
+  },
+  {
+   "id": "P1A0BA8",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    478,
+    494,
+    504,
+    526
+   ],
+   "razon": "El rol dual de Leeson, no delimitado y mal supervisado, fue central en el colapso y una auditoría lo detectó. Auditar periódicamente los roles duales sigue la misma dirección."
+  }
+ ]
+}

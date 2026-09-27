@@ -1,0 +1,78 @@
+[
+ {
+  "titulo": "Empacar perecederos con aislante y refrigerante",
+  "etiqueta": "Empaca perecederos en frio",
+  "resumen": "Los productos perecederos pueden pasar por temperaturas o humedad extremas en el camino, asi que el empaque tiene que dar proteccion termica y estabilidad. Usa contenedores de espuma aislante con paredes de al menos 1,5 pulgadas de grosor, mete en bolsas impermeables de minimo 2 mil lo que pueda derretirse, descongelarse o soltar liquido, y coloca el contenedor de espuma dentro de una caja exterior resistente. Para refrigerar entre 0 y 16 grados usa geles refrigerantes, y para lo congelado usa hielo seco, que en transporte aereo es mercancia peligrosa; nunca uses hielo seco con mariscos vivos como langostas. Empaca para un transito minimo de 30 horas, envia por servicios nocturnos y evita que el viaje caiga en fin de semana o en feriado.",
+  "entregable": "Un empaque aislado y refrigerado para tus perecederos, preparado para al menos 30 horas de transito y, si decides usar un servicio de dos dias, calculado para 12 horas menos que el compromiso de entrega.",
+  "condiciones": [
+   "Vas a enviar alimentos, flores, mariscos o productos que deben llegar frios o congelados.",
+   "Te han llegado productos derretidos, descongelados o con fugas de liquido.",
+   "No sabes si usar geles refrigerantes o hielo seco para tu envio."
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "Guia de empaque para envios (FedEx)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\HowToPack_fxcom.txt",
+  "lineas": "309",
+  "cita": "but if you choose to you should package shipments for at least 12 hours more than the delivery commitment time.",
+  "dato": "calculado para 12 horas menos que el compromiso de entrega",
+  "explicacion": "La guia dice que si se usa un servicio de dos dias (2Day, Express Saver) el empaque debe aguantar al menos 12 horas MAS que el compromiso de entrega; el entregable invierte el sentido y dice 12 horas menos, lo que dejaria el producto sin frio antes de llegar."
+ },
+ {
+  "titulo": "Asegurar carga pesada sobre una base para montacargas",
+  "etiqueta": "Asegura la carga pesada",
+  "resumen": "Un envio que califica como carga debe empacarse para que se puedan apilar otros paquetes encima. Todo envio de 151 libras o mas va sobre una base apta para montacargas y compatible con transpaleta, nunca sobre tarimas de carton corrugado o de fibra, y el producto no debe sobresalir de la tarima por ningun lado. La carga se sujeta a la tarima con flejes en ambas direcciones y pelicula estirable: una tarima asegurada solo con pelicula no se acepta. Una pieza unica de mas de 150 libras se fleja por todos sus lados con fleje metalico o plastico resistente, salvo que vaya dentro de un contenedor rigido de madera contrachapada o metal con cierres o abrazaderas exteriores; pegamento, clavos o tornillos no bastan.",
+  "entregable": "Una tarima armada con base para montacargas, flejes en ambas direcciones y pelicula estirable, sin producto que sobresalga, lista para que el courier la acepte como carga.",
+  "condiciones": [
+   "Vas a enviar piezas o lotes de mas de 150 libras que ya no caben como paquete normal.",
+   "Te rechazaron o danaron una tarima que solo iba envuelta en pelicula estirable.",
+   "Exportas carga sobre tarimas de madera y necesitas que lleven el sello de tratamiento NIMF 15 que exige la aduana de destino."
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "Guia de empaque para envios (FedEx)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\HowToPack_fxcom.txt",
+  "lineas": "839-847",
+  "cita": "Avoid corrugated or fiberboard pallets. You must secure all freight shipments weighing 151 lbs. or more on a forkliftable base, compatible with pallet-jack usage.",
+  "dato": "necesitas que lleven el sello de tratamiento NIMF 15 que exige la aduana de destino",
+  "explicacion": "La guia habla de la base para montacargas, los flejes y la pelicula, pero no menciona en ninguna parte la norma NIMF 15 (ISPM 15), el tratamiento de la madera ni requisitos de aduana; Grep de ISPM, NIMF, heat treat, fumigat, phytosanit, wood packag, customs y pest en todo el libro da cero coincidencias. La condicion introduce una norma que el libro no da."
+ },
+ {
+  "titulo": "Medir la salud de seguridad con Tripod-Delta",
+  "etiqueta": "Mide tus fallas de fondo",
+  "resumen": "Tripod-Delta mide la salud de seguridad de una operacion sin depender de las estadisticas de accidentes: en lugar de perseguir las lesiones con tiempo perdido una por una, evalua once Tipos Generales de Falla (GFT), las condiciones organizacionales y del lugar de trabajo que provocan los actos inseguros. Los indicadores de cada GFT los crean los propios especialistas de la tarea, y en cada medicion el programa elige 20 indicadores por GFT y arma una lista de 220 preguntas que responde alguien de la plantilla, por ejemplo un supervisor de perforacion. El resultado es un Perfil de Estado de Falla en barras que senala los dos o tres GFT que mas atencion necesitan. Las sesiones de medicion se hacen normalmente cada mes, y la tarea de la linea de mando es gestionar el perfil y no arreglar indicadores sueltos, porque los indicadores son solo sintomas.",
+  "entregable": "Un Perfil de Estado de Falla de tu operacion con los dos o tres Tipos Generales de Falla peores y un plan de accion para corregirlos.",
+  "condiciones": [
+   "Cuando tu unica medida de seguridad es el conteo de lesiones con tiempo perdido y quieres adelantarte a los accidentes.",
+   "Si cada incidente se corrige con un arreglo puntual y los problemas vuelven a aparecer en otra forma.",
+   "Cuando necesitas priorizar en que condiciones de la organizacion invertir primero."
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "3199",
+  "cita": "Tripod-Delta testing sessions usually take place on a quarterly basis, though this can be adjusted to suit the pace of change in a particular work site.",
+  "dato": "Las sesiones de medicion se hacen normalmente cada mes",
+  "explicacion": "El libro dice que las sesiones de Tripod-Delta suelen hacerse cada trimestre (quarterly), ajustables al ritmo de cambio del sitio; el resumen cambia el plazo a mensual. La frecuencia mensual aparece en el libro solo para las valoraciones de factores organizacionales de MESH, no para Tripod-Delta."
+ },
+ {
+  "titulo": "Valorar factores locales y organizacionales con MESH",
+  "etiqueta": "Valora lo que frena tu trabajo",
+  "resumen": "MESH (Managing Engineering Safety Health), creado para el mantenimiento aeronautico, pide a quienes hacen el trabajo que valoren en una escala de 1 (casi nada) a 5 (muy a menudo) cuanto les han afectado ciertos problemas del lugar de trabajo o de la organizacion en un periodo corto o en unos pocos trabajos concretos. Los factores organizacionales los valoran los gerentes tecnicos cada mes, y a veces cada trimestre; los factores locales los valora entre un 20 y un 30 por ciento de la plantilla que hace el trabajo manual, elegida al azar, que entra de forma anonima indicando solo su categoria, oficio y lugar, normalmente cada semana. Los resultados se resumen en diagramas de barras para identificar los dos o tres factores que mas necesitan correccion y seguir su evolucion. El sistema solo funciona si los evaluadores ven que la direccion actua sobre sus valoraciones; si no se ve nada, se deja de evaluar y el sistema muere.",
+  "entregable": "Un perfil de barras de los factores locales y organizacionales de tu area de mantenimiento, con los dos o tres factores a corregir primero, que cumpla los requisitos de medicion del desempeno de la norma ISO 45001.",
+  "condiciones": [
+   "Cuando diriges un area de mantenimiento y no sabes que problemas del lugar de trabajo estan afectando mas a tus tecnicos.",
+   "Si los indicadores de si o no te dan poca informacion porque casi siempre salen igual.",
+   "Cuando necesitas que la plantilla opine sobre las condiciones de trabajo sin miedo a ser identificada."
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "3382-3384",
+  "cita": "As in Tripod-Delta, the purpose of these profiles is to identify two or three factors most in need of remediation and to track their changes over time.",
+  "dato": "que cumpla los requisitos de medicion del desempeno de la norma ISO 45001",
+  "explicacion": "El libro describe el perfil de barras de MESH y su proposito, pero nunca menciona la norma ISO 45001 ni ninguna norma ISO u OHSAS; Grep de ISO (palabra completa), 45001, OHSAS y 9001 en todo el libro da cero coincidencias. El entregable anade un requisito normativo que el libro no da."
+ }
+]

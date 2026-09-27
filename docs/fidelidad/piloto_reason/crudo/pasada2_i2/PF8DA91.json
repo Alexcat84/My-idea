@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF8DA91",
+  "intento": 0,
+  "usd": 0.171936,
+  "turnos": 1,
+  "duracion_s": 16.2,
+  "pared_s": 17.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36164,
+  "tokens_out": 1364,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF8DA91\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1021, 2638, 2650, 1145], \"cita\": \"We need to learn the right lessons from past events, and then translate this knowledge into enhanced resistance.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda aprender de cada evento, que muestra su trayectoria por las defensas, y convertirlo en mayor resistencia. Los investigadores deben recomendar medidas contra la recurrencia (L1021). La advertencia de L1145 es que esos arreglos pueden contribuir al siguiente accidente, a veces. Es una cautela, no una prohibicion de reforzar defensas. El paso concreta la direccion del libro sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF8DA91",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1021,
+   2638,
+   2650,
+   1145
+  ],
+  "cita": "We need to learn the right lessons from past events, and then translate this knowledge into enhanced resistance.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda aprender de cada evento, que muestra su trayectoria por las defensas, y convertirlo en mayor resistencia. Los investigadores deben recomendar medidas contra la recurrencia (L1021). La advertencia de L1145 es que esos arreglos pueden contribuir al siguiente accidente, a veces. Es una cautela, no una prohibicion de reforzar defensas. El paso concreta la direccion del libro sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

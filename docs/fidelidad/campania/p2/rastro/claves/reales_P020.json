@@ -1,0 +1,1458 @@
+[
+ {
+  "node_id": "determinar_alcance_cui",
+  "paso": 1,
+  "titulo": "Determinación del Alcance y Aplicabilidad de SP 800-171",
+  "resumen": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
+  "texto": "Inventariar todos los sistemas y componentes de la organización",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-066"
+ },
+ {
+  "node_id": "determinar_alcance_cui",
+  "paso": 2,
+  "titulo": "Determinación del Alcance y Aplicabilidad de SP 800-171",
+  "resumen": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
+  "texto": "Identificar cuáles sistemas procesan, almacenan o transmiten CUI",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-022"
+ },
+ {
+  "node_id": "diagrama_flujo_cui",
+  "paso": 4,
+  "titulo": "Diagrama de Flujo de Datos de CUI",
+  "resumen": "Crear un diagrama de flujo de datos que muestre cómo el CUI entra, se mueve dentro y sale del negocio ayuda a los profesionales a entender el alcance de aplicabilidad de los requisitos de seguridad de SP 800-171 a los sistemas del negocio. Es un paso fundamental para inventariar sistemas y componentes relacionados con el manejo de CUI.",
+  "texto": "Crear un diagrama visual del flujo completo de CUI",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-011"
+ },
+ {
+  "node_id": "estructura_sp800171",
+  "paso": 1,
+  "titulo": "Estructura de SP 800-171: 17 Familias de Requisitos de Seguridad",
+  "resumen": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Cada requisito incluye un identificador único, descripción, parámetros definidos por la organización (ODP), discusión y referencias a SP 800-53.",
+  "texto": "Revisar las 17 familias de requisitos disponibles en el catálogo de SP 800-171",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-064"
+ },
+ {
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 1,
+  "titulo": "Gestión de Configuración y Mínima Funcionalidad",
+  "resumen": "Establece y mantiene configuraciones base e inventarios de sistemas organizacionales (hardware, software, firmware, documentación), así como configuraciones de seguridad para productos de TI empleados. El concepto de Mínima Funcionalidad implica configurar el sistema para proveer solo las capacidades esenciales para la misión, deshabilitando o removiendo funciones, puertos, protocolos y servicios innecesarios o inseguros.",
+  "texto": "Limitar quién puede realizar cambios en sistemas que contienen CUI",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-076"
+ },
+ {
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 2,
+  "titulo": "Gestión de Configuración y Mínima Funcionalidad",
+  "resumen": "Establece y mantiene configuraciones base e inventarios de sistemas organizacionales (hardware, software, firmware, documentación), así como configuraciones de seguridad para productos de TI empleados. El concepto de Mínima Funcionalidad implica configurar el sistema para proveer solo las capacidades esenciales para la misión, deshabilitando o removiendo funciones, puertos, protocolos y servicios innecesarios o inseguros.",
+  "texto": "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-043"
+ },
+ {
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 3,
+  "titulo": "Gestión de Configuración y Mínima Funcionalidad",
+  "resumen": "Establece y mantiene configuraciones base e inventarios de sistemas organizacionales (hardware, software, firmware, documentación), así como configuraciones de seguridad para productos de TI empleados. El concepto de Mínima Funcionalidad implica configurar el sistema para proveer solo las capacidades esenciales para la misión, deshabilitando o removiendo funciones, puertos, protocolos y servicios innecesarios o inseguros.",
+  "texto": "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-060"
+ },
+ {
+  "node_id": "gestion_contrasenas_cui",
+  "paso": 2,
+  "titulo": "Gestión Segura de Contraseñas",
+  "resumen": "Define reglas organizacionales para la creación, transmisión y actualización de contraseñas, asegurando que no coincidan con listas de contraseñas comprometidas o comúnmente utilizadas, y que se transmitan mediante canales cifrados.",
+  "texto": "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-023"
+ },
+ {
+  "node_id": "getting_started_media_protection",
+  "paso": 1,
+  "titulo": "Protección de Medios (Media Protection)",
+  "resumen": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "texto": "Inventariar qué medios contienen CUI.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-028"
+ },
+ {
+  "node_id": "getting_started_media_protection",
+  "paso": 2,
+  "titulo": "Protección de Medios (Media Protection)",
+  "resumen": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "texto": "Establecer procedimientos de préstamo y devolución de medios físicos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-012"
+ },
+ {
+  "node_id": "getting_started_media_protection",
+  "paso": 3,
+  "titulo": "Protección de Medios (Media Protection)",
+  "resumen": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "texto": "Almacenar medios de forma segura (cajón con llave, gabinete, biblioteca controlada).",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-085"
+ },
+ {
+  "node_id": "getting_started_media_protection",
+  "paso": 5,
+  "titulo": "Protección de Medios (Media Protection)",
+  "resumen": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "texto": "Sanitizar medios antes de reutilización o disposición.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-029"
+ },
+ {
+  "node_id": "getting_started_media_protection",
+  "paso": 6,
+  "titulo": "Protección de Medios (Media Protection)",
+  "resumen": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "texto": "Restringir y revisar periódicamente el acceso a medios digitales y físicos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-006"
+ },
+ {
+  "node_id": "getting_started_media_protection",
+  "paso": 7,
+  "titulo": "Protección de Medios (Media Protection)",
+  "resumen": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "texto": "Mantener trazabilidad durante el transporte de medios.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-047"
+ },
+ {
+  "node_id": "getting_started_personnel_security",
+  "paso": 1,
+  "titulo": "Seguridad del Personal",
+  "resumen": "Asegura que los individuos, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad, protegiendo la información durante y después de acciones de personal como despidos o transferencias.",
+  "texto": "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-072"
+ },
+ {
+  "node_id": "getting_started_personnel_security",
+  "paso": 2,
+  "titulo": "Seguridad del Personal",
+  "resumen": "Asegura que los individuos, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad, protegiendo la información durante y después de acciones de personal como despidos o transferencias.",
+  "texto": "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-106"
+ },
+ {
+  "node_id": "getting_started_personnel_security",
+  "paso": 3,
+  "titulo": "Seguridad del Personal",
+  "resumen": "Asegura que los individuos, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad, protegiendo la información durante y después de acciones de personal como despidos o transferencias.",
+  "texto": "Definir políticas de reasignación: revisar y ajustar los permisos según nueva necesidad operativa.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-034"
+ },
+ {
+  "node_id": "getting_started_physical_protection",
+  "paso": 2,
+  "titulo": "Protección Física de Instalaciones y Sistemas",
+  "resumen": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+  "texto": "Emitir credenciales de identificación para empleados y visitantes.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-027"
+ },
+ {
+  "node_id": "getting_started_physical_protection",
+  "paso": 3,
+  "titulo": "Protección Física de Instalaciones y Sistemas",
+  "resumen": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+  "texto": "Revisar periódicamente la lista de acceso y remover a quienes ya no lo requieran.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-092"
+ },
+ {
+  "node_id": "getting_started_physical_protection",
+  "paso": 4,
+  "titulo": "Protección Física de Instalaciones y Sistemas",
+  "resumen": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+  "texto": "Identificar y aprobar sitios de trabajo alternativos con requisitos de seguridad definidos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-070"
+ },
+ {
+  "node_id": "getting_started_physical_protection",
+  "paso": 6,
+  "titulo": "Protección Física de Instalaciones y Sistemas",
+  "resumen": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+  "texto": "Colocar dispositivos de salida (impresoras, monitores) en áreas seguras y usar filtros de privacidad.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-068"
+ },
+ {
+  "node_id": "getting_started_physical_protection",
+  "paso": 7,
+  "titulo": "Protección Física de Instalaciones y Sistemas",
+  "resumen": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+  "texto": "Controlar puntos de entrada/salida con lectores de tarjeta, llaves o guardias, y escoltar visitantes.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-062"
+ },
+ {
+  "node_id": "getting_started_planning",
+  "paso": 1,
+  "titulo": "Plan de Seguridad del Sistema (System Security Plan)",
+  "resumen": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+  "texto": "Definir componentes del sistema y tipos de información procesada, almacenada y transmitida.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-042"
+ },
+ {
+  "node_id": "getting_started_planning",
+  "paso": 2,
+  "titulo": "Plan de Seguridad del Sistema (System Security Plan)",
+  "resumen": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+  "texto": "Describir amenazas específicas al sistema y su entorno operativo.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-008"
+ },
+ {
+  "node_id": "getting_started_planning",
+  "paso": 4,
+  "titulo": "Plan de Seguridad del Sistema (System Security Plan)",
+  "resumen": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+  "texto": "Identificar individuos con roles y responsabilidades en el sistema.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-103"
+ },
+ {
+  "node_id": "getting_started_planning",
+  "paso": 5,
+  "titulo": "Plan de Seguridad del Sistema (System Security Plan)",
+  "resumen": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+  "texto": "Establecer reglas de comportamiento para el uso del sistema y protección de CUI.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-075"
+ },
+ {
+  "node_id": "getting_started_planning",
+  "paso": 7,
+  "titulo": "Plan de Seguridad del Sistema (System Security Plan)",
+  "resumen": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+  "texto": "Revisar y actualizar periódicamente el plan de seguridad, protegiéndolo de divulgación no autorizada.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-003"
+ },
+ {
+  "node_id": "getting_started_risk_assessment",
+  "paso": 2,
+  "titulo": "Evaluación de Riesgos (Risk Assessment)",
+  "resumen": "Evalúa periódicamente los riesgos a las operaciones, activos e individuos de la organización derivados del uso de sistemas que procesan CUI, considerando amenazas, vulnerabilidades, probabilidad e impacto, incluyendo riesgos de terceros y de la cadena de suministro.",
+  "texto": "Inventariar todos los sistemas, datos y activos físicos que procesan CUI, incluidos los de terceros.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-113"
+ },
+ {
+  "node_id": "getting_started_risk_assessment",
+  "paso": 4,
+  "titulo": "Evaluación de Riesgos (Risk Assessment)",
+  "resumen": "Evalúa periódicamente los riesgos a las operaciones, activos e individuos de la organización derivados del uso de sistemas que procesan CUI, considerando amenazas, vulnerabilidades, probabilidad e impacto, incluyendo riesgos de terceros y de la cadena de suministro.",
+  "texto": "Establecer frecuencia de monitoreo y escaneo de vulnerabilidades.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-107"
+ },
+ {
+  "node_id": "getting_started_risk_assessment",
+  "paso": 5,
+  "titulo": "Evaluación de Riesgos (Risk Assessment)",
+  "resumen": "Evalúa periódicamente los riesgos a las operaciones, activos e individuos de la organización derivados del uso de sistemas que procesan CUI, considerando amenazas, vulnerabilidades, probabilidad e impacto, incluyendo riesgos de terceros y de la cadena de suministro.",
+  "texto": "Definir política de remediación rápida ante vulnerabilidades detectadas.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-009"
+ },
+ {
+  "node_id": "getting_started_risk_assessment",
+  "paso": 6,
+  "titulo": "Evaluación de Riesgos (Risk Assessment)",
+  "resumen": "Evalúa periódicamente los riesgos a las operaciones, activos e individuos de la organización derivados del uso de sistemas que procesan CUI, considerando amenazas, vulnerabilidades, probabilidad e impacto, incluyendo riesgos de terceros y de la cadena de suministro.",
+  "texto": "Categorizar cada activo según impacto (alto, moderado, bajo) si se compromete su confidencialidad.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-084"
+ },
+ {
+  "node_id": "getting_started_risk_assessment",
+  "paso": 7,
+  "titulo": "Evaluación de Riesgos (Risk Assessment)",
+  "resumen": "Evalúa periódicamente los riesgos a las operaciones, activos e individuos de la organización derivados del uso de sistemas que procesan CUI, considerando amenazas, vulnerabilidades, probabilidad e impacto, incluyendo riesgos de terceros y de la cadena de suministro.",
+  "texto": "Considerar contratar un proveedor externo si no hay recursos internos suficientes.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-030"
+ },
+ {
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 1,
+  "titulo": "Evaluación de Seguridad y Monitoreo Continuo",
+  "resumen": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
+  "texto": "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-097"
+ },
+ {
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 2,
+  "titulo": "Evaluación de Seguridad y Monitoreo Continuo",
+  "resumen": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
+  "texto": "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-118"
+ },
+ {
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 3,
+  "titulo": "Evaluación de Seguridad y Monitoreo Continuo",
+  "resumen": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
+  "texto": "Establecer un programa de monitoreo continuo con frecuencia adecuada según el tipo de requisito.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-114"
+ },
+ {
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 4,
+  "titulo": "Evaluación de Seguridad y Monitoreo Continuo",
+  "resumen": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
+  "texto": "Utilizar herramientas comerciales o proveedores externos para apoyar el monitoreo continuo.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-095"
+ },
+ {
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 1,
+  "titulo": "Gestión de Riesgo de la Cadena de Suministro (SCRM)",
+  "resumen": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
+  "texto": "Identificar proveedores críticos con acceso a sistemas que procesan CUI.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-094"
+ },
+ {
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 2,
+  "titulo": "Gestión de Riesgo de la Cadena de Suministro (SCRM)",
+  "resumen": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
+  "texto": "Definir la frecuencia de revisión y actualización del plan SCRM.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-014"
+ },
+ {
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 3,
+  "titulo": "Gestión de Riesgo de la Cadena de Suministro (SCRM)",
+  "resumen": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
+  "texto": "Identificar riesgos en diseño, manufactura, adquisición, entrega e integración de componentes.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-101"
+ },
+ {
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 5,
+  "titulo": "Gestión de Riesgo de la Cadena de Suministro (SCRM)",
+  "resumen": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
+  "texto": "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-035"
+ },
+ {
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 6,
+  "titulo": "Gestión de Riesgo de la Cadena de Suministro (SCRM)",
+  "resumen": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
+  "texto": "Establecer estrategia de monitoreo de desempeño frente al plan SCRM.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-038"
+ },
+ {
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 1,
+  "titulo": "Protección de Comunicaciones y Límites del Sistema",
+  "resumen": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+  "texto": "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-061"
+ },
+ {
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 3,
+  "titulo": "Protección de Comunicaciones y Límites del Sistema",
+  "resumen": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+  "texto": "Permitir conexiones externas solo a través de interfaces gestionadas.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-017"
+ },
+ {
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 5,
+  "titulo": "Protección de Comunicaciones y Límites del Sistema",
+  "resumen": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+  "texto": "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-089"
+ },
+ {
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 7,
+  "titulo": "Protección de Comunicaciones y Límites del Sistema",
+  "resumen": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+  "texto": "Almacenar de forma segura las claves de cifrado.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-088"
+ },
+ {
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 1,
+  "titulo": "Integridad de Sistemas e Información",
+  "resumen": "Identifica, reporta y corrige fallas de sistema oportunamente, provee protección contra código malicioso, y monitorea alertas de seguridad para actuar en consecuencia, además de gestionar la retención adecuada de CUI.",
+  "texto": "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-053"
+ },
+ {
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 2,
+  "titulo": "Integridad de Sistemas e Información",
+  "resumen": "Identifica, reporta y corrige fallas de sistema oportunamente, provee protección contra código malicioso, y monitorea alertas de seguridad para actuar en consecuencia, además de gestionar la retención adecuada de CUI.",
+  "texto": "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-078"
+ },
+ {
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 3,
+  "titulo": "Integridad de Sistemas e Información",
+  "resumen": "Identifica, reporta y corrige fallas de sistema oportunamente, provee protección contra código malicioso, y monitorea alertas de seguridad para actuar en consecuencia, además de gestionar la retención adecuada de CUI.",
+  "texto": "Detectar ataques, conexiones no autorizadas y actividades inusuales en tráfico entrante/saliente.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-082"
+ },
+ {
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 4,
+  "titulo": "Integridad de Sistemas e Información",
+  "resumen": "Identifica, reporta y corrige fallas de sistema oportunamente, provee protección contra código malicioso, y monitorea alertas de seguridad para actuar en consecuencia, además de gestionar la retención adecuada de CUI.",
+  "texto": "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-081"
+ },
+ {
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 1,
+  "titulo": "Adquisición de Sistemas y Servicios",
+  "resumen": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "texto": "Identificar componentes de sistema sin soporte (sin parches, actualizaciones o mantenimiento).",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-086"
+ },
+ {
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 2,
+  "titulo": "Adquisición de Sistemas y Servicios",
+  "resumen": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "texto": "Establecer procedimientos para reemplazo o uso continuado justificado de componentes no soportados.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-054"
+ },
+ {
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 3,
+  "titulo": "Adquisición de Sistemas y Servicios",
+  "resumen": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "texto": "Definir mitigaciones de riesgo o fuentes alternativas de soporte.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-093"
+ },
+ {
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 4,
+  "titulo": "Adquisición de Sistemas y Servicios",
+  "resumen": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "texto": "Revisar acuerdos de nivel de servicio (SLA) con proveedores externos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-098"
+ },
+ {
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 5,
+  "titulo": "Adquisición de Sistemas y Servicios",
+  "resumen": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "texto": "Definir requisitos de seguridad, roles, responsabilidades y remedios ante incumplimiento en los SLA.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-091"
+ },
+ {
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 6,
+  "titulo": "Adquisición de Sistemas y Servicios",
+  "resumen": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "texto": "Establecer procedimiento de monitoreo del cumplimiento de requisitos de seguridad por proveedores externos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-040"
+ },
+ {
+  "node_id": "identificacion_autenticacion_mfa",
+  "paso": 1,
+  "titulo": "Identificación, Autenticación y Autenticación Multifactor (MFA)",
+  "resumen": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son suficientes para proteger contra atacantes.",
+  "texto": "Implementar MFA para acceso a cuentas privilegiadas y no privilegiadas",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-015"
+ },
+ {
+  "node_id": "identificacion_autenticacion_mfa",
+  "paso": 3,
+  "titulo": "Identificación, Autenticación y Autenticación Multifactor (MFA)",
+  "resumen": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son suficientes para proteger contra atacantes.",
+  "texto": "Enviar contraseñas usando formas criptográficamente protegidas (correo encriptado, gestores de contraseñas)",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-110"
+ },
+ {
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 1,
+  "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+  "resumen": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+  "texto": "Identificar las herramientas usadas para diagnóstico y reparación del sistema",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-045"
+ },
+ {
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 2,
+  "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+  "resumen": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+  "texto": "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-119"
+ },
+ {
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 3,
+  "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+  "resumen": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+  "texto": "Habilitar actualizaciones automáticas donde sea apropiado",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-073"
+ },
+ {
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 4,
+  "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+  "resumen": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+  "texto": "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-100"
+ },
+ {
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 5,
+  "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+  "resumen": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+  "texto": "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-020"
+ },
+ {
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 6,
+  "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+  "resumen": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+  "texto": "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-024"
+ },
+ {
+  "node_id": "plan_seguridad_sistema_poam",
+  "paso": 2,
+  "titulo": "Plan de Seguridad del Sistema (SSP) y Plan de Acción y Cronograma (POAM)",
+  "resumen": "El Plan de Seguridad del Sistema (SSP) documenta cómo una organización cumple o planea cumplir los requisitos de seguridad para un sistema, describiendo el límite del sistema, el entorno operativo, cómo se satisfacen los requisitos y las relaciones con otros sistemas. El Plan de Acción y Cronograma (POAM) describe cómo se cumplirán los requisitos de seguridad no satisfechos y cómo se implementarán las mitigaciones planificadas. Las agencias federales pueden considerar estos documentos como insumos para decisiones de riesgo sobre si procesar CUI en sistemas de la organización no federal.",
+  "texto": "Documentar en el SSP cómo se satisface cada requisito de seguridad aplicable",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-079"
+ },
+ {
+  "node_id": "plan_seguridad_sistema_poam",
+  "paso": 3,
+  "titulo": "Plan de Seguridad del Sistema (SSP) y Plan de Acción y Cronograma (POAM)",
+  "resumen": "El Plan de Seguridad del Sistema (SSP) documenta cómo una organización cumple o planea cumplir los requisitos de seguridad para un sistema, describiendo el límite del sistema, el entorno operativo, cómo se satisfacen los requisitos y las relaciones con otros sistemas. El Plan de Acción y Cronograma (POAM) describe cómo se cumplirán los requisitos de seguridad no satisfechos y cómo se implementarán las mitigaciones planificadas. Las agencias federales pueden considerar estos documentos como insumos para decisiones de riesgo sobre si procesar CUI en sistemas de la organización no federal.",
+  "texto": "Para los requisitos no satisfechos, crear un POAM con plazos y responsables de mitigación",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-115"
+ },
+ {
+  "node_id": "que_es_cui",
+  "paso": 2,
+  "titulo": "Comprensión de la Información No Clasificada Controlada (CUI)",
+  "resumen": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Incluye información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+  "texto": "Contactar al oficial de contratos para confirmar qué información específica es CUI",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-059"
+ },
+ {
+  "node_id": "que_es_cui",
+  "paso": 3,
+  "titulo": "Comprensión de la Información No Clasificada Controlada (CUI)",
+  "resumen": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Incluye información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+  "texto": "Consultar el sitio de NARA (archives.gov/cui) para conocer tipos y marcados de CUI",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-050"
+ },
+ {
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 1,
+  "titulo": "Plan de Respuesta a Incidentes para CUI",
+  "resumen": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
+  "texto": "Designar un responsable (business champion) del plan de respuesta a incidentes",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-099"
+ },
+ {
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 2,
+  "titulo": "Plan de Respuesta a Incidentes para CUI",
+  "resumen": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
+  "texto": "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-051"
+ },
+ {
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 3,
+  "titulo": "Plan de Respuesta a Incidentes para CUI",
+  "resumen": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
+  "texto": "Documentar requisitos específicos de reporte según contratos federales",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-031"
+ },
+ {
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 4,
+  "titulo": "Plan de Respuesta a Incidentes para CUI",
+  "resumen": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
+  "texto": "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-036"
+ },
+ {
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 5,
+  "titulo": "Plan de Respuesta a Incidentes para CUI",
+  "resumen": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
+  "texto": "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos.",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C032-074"
+ },
+ {
+  "node_id": "actualizacion_posiciones_existentes",
+  "paso": 1,
+  "titulo": "Actualización ('Upgrade') de Posiciones Existentes",
+  "resumen": "A medida que el startup crece, las demandas de cada posición aumentan más rápido de lo que muchas personas pueden aprender, obligando a decidir entre mantener a un fundador/empleado temprano que no puede escalar o reemplazarlo con alguien más capacitado. Esta decisión es delicada por el impacto emocional y organizacional en equipos pequeños y cohesionados, y se complica por la 'inflación de títulos' otorgada tempranamente.",
+  "texto": "Establecer desde el inicio expectativas claras sobre la posibilidad de futuras 'actualizaciones' de posición",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-085"
+ },
+ {
+  "node_id": "actualizacion_posiciones_existentes",
+  "paso": 2,
+  "titulo": "Actualización ('Upgrade') de Posiciones Existentes",
+  "resumen": "A medida que el startup crece, las demandas de cada posición aumentan más rápido de lo que muchas personas pueden aprender, obligando a decidir entre mantener a un fundador/empleado temprano que no puede escalar o reemplazarlo con alguien más capacitado. Esta decisión es delicada por el impacto emocional y organizacional en equipos pequeños y cohesionados, y se complica por la 'inflación de títulos' otorgada tempranamente.",
+  "texto": "Evitar otorgar títulos inflados tempranamente que compliquen futuros reemplazos",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-043"
+ },
+ {
+  "node_id": "acumulacion_capital_previo_fundacion",
+  "paso": 1,
+  "titulo": "Junta tu experiencia, tus contactos y tus ahorros antes de fundar",
+  "resumen": "Mientras más recursos juntes antes de fundar (experiencia en el rubro, contactos que importan, ahorros propios) más probable es que logres tanto riqueza como control sobre tu negocio. Esto significa trabajar en el rubro que te interesa, construir relaciones con posibles clientes e inversionistas, y gastar poco para poder juntar el capital inicial.",
+  "texto": "Trabaja el tiempo que haga falta en el rubro que te interesa para aprender lo técnico y lo de gestión",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-069"
+ },
+ {
+  "node_id": "acumulacion_capital_previo_fundacion",
+  "paso": 2,
+  "titulo": "Junta tu experiencia, tus contactos y tus ahorros antes de fundar",
+  "resumen": "Mientras más recursos juntes antes de fundar (experiencia en el rubro, contactos que importan, ahorros propios) más probable es que logres tanto riqueza como control sobre tu negocio. Esto significa trabajar en el rubro que te interesa, construir relaciones con posibles clientes e inversionistas, y gastar poco para poder juntar el capital inicial.",
+  "texto": "Cultiva relaciones con posibles clientes, futuros colaboradores e inversionistas antes de lanzarte",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-078"
+ },
+ {
+  "node_id": "acumulacion_capital_previo_fundacion",
+  "paso": 3,
+  "titulo": "Junta tu experiencia, tus contactos y tus ahorros antes de fundar",
+  "resumen": "Mientras más recursos juntes antes de fundar (experiencia en el rubro, contactos que importan, ahorros propios) más probable es que logres tanto riqueza como control sobre tu negocio. Esto significa trabajar en el rubro que te interesa, construir relaciones con posibles clientes e inversionistas, y gastar poco para poder juntar el capital inicial.",
+  "texto": "Gasta poco en lo personal para poder juntar más capital inicial",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-041"
+ },
+ {
+  "node_id": "analisis_motivaciones_fundador",
+  "paso": 1,
+  "titulo": "Análisis de Motivaciones del Fundador",
+  "resumen": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden con éxito suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera, mientras que otras motivaciones dominan en quienes no emprenden. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "texto": "Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-026"
+ },
+ {
+  "node_id": "analisis_motivaciones_fundador",
+  "paso": 3,
+  "titulo": "Análisis de Motivaciones del Fundador",
+  "resumen": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden con éxito suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera, mientras que otras motivaciones dominan en quienes no emprenden. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "texto": "Compara esas motivaciones con los perfiles típicos de quienes emprenden y de quienes no",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-025"
+ },
+ {
+  "node_id": "analisis_motivaciones_fundador",
+  "paso": 4,
+  "titulo": "Análisis de Motivaciones del Fundador",
+  "resumen": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden con éxito suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera, mientras que otras motivaciones dominan en quienes no emprenden. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "texto": "Decide si tu perfil motivacional es compatible con el camino de emprender",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-012"
+ },
+ {
+  "node_id": "analisis_motivaciones_fundador",
+  "paso": 5,
+  "titulo": "Análisis de Motivaciones del Fundador",
+  "resumen": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden con éxito suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera, mientras que otras motivaciones dominan en quienes no emprenden. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "texto": "Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-102"
+ },
+ {
+  "node_id": "anticipacion_riesgos_fundacionales",
+  "paso": 1,
+  "titulo": "Anticipa los riesgos de fundar tu negocio antes de que te pasen",
+  "resumen": "Muchos de los problemas que vas a enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va, investigar antes a tus inversionistas) que reducen el daño.",
+  "texto": "Pon acuerdos claros por escrito si vas a cofundar con familiares o amigos cercanos",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-045"
+ },
+ {
+  "node_id": "anticipacion_riesgos_fundacionales",
+  "paso": 2,
+  "titulo": "Anticipa los riesgos de fundar tu negocio antes de que te pasen",
+  "resumen": "Muchos de los problemas que vas a enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va, investigar antes a tus inversionistas) que reducen el daño.",
+  "texto": "Incluye una cláusula para recomprar la participación de un cofundador que abandone el proyecto",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-021"
+ },
+ {
+  "node_id": "anticipacion_riesgos_fundacionales",
+  "paso": 3,
+  "titulo": "Anticipa los riesgos de fundar tu negocio antes de que te pasen",
+  "resumen": "Muchos de los problemas que vas a enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va, investigar antes a tus inversionistas) que reducen el daño.",
+  "texto": "Reparte la participación de forma que pueda ajustarse con el tiempo, no de forma fija desde el día uno",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-125"
+ },
+ {
+  "node_id": "anticipacion_riesgos_fundacionales",
+  "paso": 4,
+  "titulo": "Anticipa los riesgos de fundar tu negocio antes de que te pasen",
+  "resumen": "Muchos de los problemas que vas a enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va, investigar antes a tus inversionistas) que reducen el daño.",
+  "texto": "Antes de aceptar dinero, investiga si esos inversionistas suelen reemplazar al fundador que dirige el negocio",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-019"
+ },
+ {
+  "node_id": "background_startup_vs_corporativo",
+  "paso": 1,
+  "titulo": "Experiencia en startup o en gran empresa: qué mirar al contratar",
+  "resumen": "Cuando contratas a alguien que viene de una gran empresa, sueles encontrar habilidades especializadas y experiencia en organizaciones con procesos ya definidos. Pero si tu negocio está en una etapa temprana, necesitas comprobar que esa persona también sabe construir desde cero. La diferencia clave está entre ser un hacedor y ser un gerente: en un negocio recién empezado todos deben poder trabajar con las manos en la masa, no solo coordinar a otros.",
+  "texto": "Pregunta en la entrevista si construyó algo desde cero, no solo si gestionó sistemas ya existentes",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-068"
+ },
+ {
+  "node_id": "background_startup_vs_corporativo",
+  "paso": 2,
+  "titulo": "Experiencia en startup o en gran empresa: qué mirar al contratar",
+  "resumen": "Cuando contratas a alguien que viene de una gran empresa, sueles encontrar habilidades especializadas y experiencia en organizaciones con procesos ya definidos. Pero si tu negocio está en una etapa temprana, necesitas comprobar que esa persona también sabe construir desde cero. La diferencia clave está entre ser un hacedor y ser un gerente: en un negocio recién empezado todos deben poder trabajar con las manos en la masa, no solo coordinar a otros.",
+  "texto": "Evalúa si puede trabajar como hacedor individual, no solo como gerente de equipo",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-077"
+ },
+ {
+  "node_id": "background_startup_vs_corporativo",
+  "paso": 3,
+  "titulo": "Experiencia en startup o en gran empresa: qué mirar al contratar",
+  "resumen": "Cuando contratas a alguien que viene de una gran empresa, sueles encontrar habilidades especializadas y experiencia en organizaciones con procesos ya definidos. Pero si tu negocio está en una etapa temprana, necesitas comprobar que esa persona también sabe construir desde cero. La diferencia clave está entre ser un hacedor y ser un gerente: en un negocio recién empezado todos deben poder trabajar con las manos en la masa, no solo coordinar a otros.",
+  "texto": "Toma como señal de alerta que no pueda contarte un aporte individual reciente y concreto",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-006"
+ },
+ {
+  "node_id": "background_startup_vs_corporativo",
+  "paso": 4,
+  "titulo": "Experiencia en startup o en gran empresa: qué mirar al contratar",
+  "resumen": "Cuando contratas a alguien que viene de una gran empresa, sueles encontrar habilidades especializadas y experiencia en organizaciones con procesos ya definidos. Pero si tu negocio está en una etapa temprana, necesitas comprobar que esa persona también sabe construir desde cero. La diferencia clave está entre ser un hacedor y ser un gerente: en un negocio recién empezado todos deben poder trabajar con las manos en la masa, no solo coordinar a otros.",
+  "texto": "Sopesa el valor de los procesos que aprendió en una empresa grande contra el riesgo de que le cueste adaptarse o sea rígido",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-013"
+ },
+ {
+  "node_id": "board_gridlock_y_directores_independientes",
+  "paso": 1,
+  "titulo": "Gridlock del Board y Director Independiente",
+  "resumen": "Muchos boards de startups tienen número par de miembros divididos equitativamente entre fundadores e inversionistas, lo que genera riesgo de bloqueo en decisiones (gridlock). Una solución común es incluir un director independiente que actúe como voto decisivo, aunque quién lo nomina se convierte en punto crítico de negociación.",
+  "texto": "Evaluar si el board tiene número par de miembros y riesgo de empate",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-109"
+ },
+ {
+  "node_id": "board_gridlock_y_directores_independientes",
+  "paso": 2,
+  "titulo": "Gridlock del Board y Director Independiente",
+  "resumen": "Muchos boards de startups tienen número par de miembros divididos equitativamente entre fundadores e inversionistas, lo que genera riesgo de bloqueo en decisiones (gridlock). Una solución común es incluir un director independiente que actúe como voto decisivo, aunque quién lo nomina se convierte en punto crítico de negociación.",
+  "texto": "Negociar la inclusión de un director independiente neutral",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-032"
+ },
+ {
+  "node_id": "busqueda_ceo_sucesor_externo",
+  "paso": 3,
+  "titulo": "Búsqueda de un CEO Sucesor Externo",
+  "resumen": "A diferencia de las grandes empresas, donde la mayoría de los CEOs nuevos provienen de dentro de la organización, en las startups el nuevo CEO casi siempre viene de fuera del equipo ejecutivo existente. Esto ocurre porque el nuevo CEO es contratado para hacer cambios importantes -profesionalizar la cultura, ajustar la estrategia original, o reemplazar a cofundadores o empleados tempranos de bajo desempeño- que el fundador no pudo o no quiso hacer, y porque el equipo ejecutivo pequeño de una startup rara vez ofrece candidatos internos con el perfil de liderazgo general necesario.",
+  "texto": "Iniciar una búsqueda externa mediante firmas de reclutamiento especializadas, explorando también la red de contactos propia y de los inversionistas",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-120"
+ },
+ {
+  "node_id": "busqueda_ceo_sucesor_externo",
+  "paso": 5,
+  "titulo": "Búsqueda de un CEO Sucesor Externo",
+  "resumen": "A diferencia de las grandes empresas, donde la mayoría de los CEOs nuevos provienen de dentro de la organización, en las startups el nuevo CEO casi siempre viene de fuera del equipo ejecutivo existente. Esto ocurre porque el nuevo CEO es contratado para hacer cambios importantes -profesionalizar la cultura, ajustar la estrategia original, o reemplazar a cofundadores o empleados tempranos de bajo desempeño- que el fundador no pudo o no quiso hacer, y porque el equipo ejecutivo pequeño de una startup rara vez ofrece candidatos internos con el perfil de liderazgo general necesario.",
+  "texto": "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para asegurar una transición más cooperativa",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-076"
+ },
+ {
+  "node_id": "busqueda_cofundador_complementario",
+  "paso": 1,
+  "titulo": "Búsqueda de Cofundador Complementario",
+  "resumen": "Cuando un fundador potencial tiene capital humano y social favorable pero carece de una idea, o tiene una idea pero carece de habilidades técnicas u operativas, una solución efectiva es buscar un cofundador cuyas fortalezas complementen sus debilidades. Espacios como clubes de emprendimiento universitarios, excompañeros de trabajo o de escuela son fuentes comunes de cofundadores complementarios.",
+  "texto": "Diagnosticar qué capital o habilidad específica falta (idea, técnica, comercial)",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-054"
+ },
+ {
+  "node_id": "busqueda_cofundador_complementario",
+  "paso": 2,
+  "titulo": "Búsqueda de Cofundador Complementario",
+  "resumen": "Cuando un fundador potencial tiene capital humano y social favorable pero carece de una idea, o tiene una idea pero carece de habilidades técnicas u operativas, una solución efectiva es buscar un cofundador cuyas fortalezas complementen sus debilidades. Espacios como clubes de emprendimiento universitarios, excompañeros de trabajo o de escuela son fuentes comunes de cofundadores complementarios.",
+  "texto": "Asistir a eventos de networking, clubes de emprendimiento o comunidades relacionadas al sector",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-101"
+ },
+ {
+  "node_id": "busqueda_cofundador_complementario",
+  "paso": 3,
+  "titulo": "Búsqueda de Cofundador Complementario",
+  "resumen": "Cuando un fundador potencial tiene capital humano y social favorable pero carece de una idea, o tiene una idea pero carece de habilidades técnicas u operativas, una solución efectiva es buscar un cofundador cuyas fortalezas complementen sus debilidades. Espacios como clubes de emprendimiento universitarios, excompañeros de trabajo o de escuela son fuentes comunes de cofundadores complementarios.",
+  "texto": "Buscar en la red de excompañeros de trabajo o de estudios a personas con habilidades complementarias",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-034"
+ },
+ {
+  "node_id": "busqueda_cofundador_complementario",
+  "paso": 4,
+  "titulo": "Búsqueda de Cofundador Complementario",
+  "resumen": "Cuando un fundador potencial tiene capital humano y social favorable pero carece de una idea, o tiene una idea pero carece de habilidades técnicas u operativas, una solución efectiva es buscar un cofundador cuyas fortalezas complementen sus debilidades. Espacios como clubes de emprendimiento universitarios, excompañeros de trabajo o de escuela son fuentes comunes de cofundadores complementarios.",
+  "texto": "Evaluar compatibilidad de visión y valores antes de formalizar la sociedad",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-122"
+ },
+ {
+  "node_id": "capital_financiero_cushion",
+  "paso": 1,
+  "titulo": "Colchón Financiero ('Walk-Away Savings') Antes de Fundar",
+  "resumen": "Acumular ahorros suficientes ('nivel walk-away') antes de dejar el empleo determina cuánto tiempo puede dedicar el fundador al startup, el nivel de estrés/urgencia por generar flujo de caja, y las decisiones que tomará bajo presión. La falta de este colchón es una de las razones principales por las que muchas personas que consideran emprender nunca lo hacen (51.3% según estudios citados).",
+  "texto": "Calcular el 'nivel walk-away': monto de ahorro que da seguridad para dejar el empleo actual",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-022"
+ },
+ {
+  "node_id": "capital_financiero_cushion",
+  "paso": 3,
+  "titulo": "Colchón Financiero ('Walk-Away Savings') Antes de Fundar",
+  "resumen": "Acumular ahorros suficientes ('nivel walk-away') antes de dejar el empleo determina cuánto tiempo puede dedicar el fundador al startup, el nivel de estrés/urgencia por generar flujo de caja, y las decisiones que tomará bajo presión. La falta de este colchón es una de las razones principales por las que muchas personas que consideran emprender nunca lo hacen (51.3% según estudios citados).",
+  "texto": "Evaluar el impacto de tener o no un cónyuge con ingresos estables como colchón adicional",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-073"
+ },
+ {
+  "node_id": "capital_social_de_inversores",
+  "paso": 2,
+  "titulo": "Capital Social: Conexiones y Credibilidad de Inversores",
+  "resumen": "Los VCs aportan valor más allá del dinero: conectan al startup con futuros inversores (31% de casos vs 10% con ángeles) e inversionistas corporativos, y otorgan legitimidad ('halo effect') que mejora valoraciones y facilita contratación de talento y clientes, especialmente en etapas tempranas donde la credibilidad es escasa.",
+  "texto": "Priorizar inversores de alto estatus si se busca credibilidad para contratación o ventas.",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-056"
+ },
+ {
+  "node_id": "capital_social_founder",
+  "paso": 2,
+  "titulo": "Construye tu red de contactos antes de fundar",
+  "resumen": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien te preste dinero. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido, consigues tus primeros clientes más rápido y te resulta más fácil atraer capital.",
+  "texto": "Identifica qué te falta en el equipo (por ejemplo, alguien con años de experiencia en el sector) y busca activamente cómo conectar con esa gente",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-110"
+ },
+ {
+  "node_id": "capital_social_founder",
+  "paso": 3,
+  "titulo": "Construye tu red de contactos antes de fundar",
+  "resumen": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien te preste dinero. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido, consigues tus primeros clientes más rápido y te resulta más fácil atraer capital.",
+  "texto": "Antes de fundar, dedica tiempo a cultivar relaciones con posibles clientes, con quien te asesore y con quien te preste dinero",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-020"
+ },
+ {
+  "node_id": "capital_social_founder",
+  "paso": 4,
+  "titulo": "Construye tu red de contactos antes de fundar",
+  "resumen": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien te preste dinero. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido, consigues tus primeros clientes más rápido y te resulta más fácil atraer capital.",
+  "texto": "Usa tus conexiones de la escuela o de trabajos anteriores como puente hacia un primer cliente que te dé credibilidad",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-005"
+ },
+ {
+  "node_id": "ceo_equity_premium",
+  "paso": 2,
+  "titulo": "Prima de Equity para el CEO Fundador",
+  "resumen": "Los roles jerárquicos claramente definidos en el equipo fundador tienden a justificar splits de equity desiguales: el fundador que asume el rol de CEO recibe en promedio una 'prima' de equity de 14 a 20 puntos porcentuales adicionales respecto a sus cofundadores, y el fundador-CTO una prima menor pero significativa de 5 a 8 puntos. Esta prima refleja la expectativa de mayor responsabilidad, esfuerzo y contribución al éxito del startup asociada a los roles de mayor control.",
+  "texto": "Evaluar si cada cofundador prioriza el control (el título) o la recompensa financiera (el equity), y negociar el trade-off correspondiente",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-123"
+ },
+ {
+  "node_id": "ceo_puente_interino",
+  "paso": 1,
+  "titulo": "CEO Puente o Interino en la Transición",
+  "resumen": "Estrategia de transición suave donde se contrata a un ejecutivo experimentado por un período limitado y predefinido (ej. 18 meses) para profesionalizar la empresa (procesos, estructura, dirección estratégica) sin representar una amenaza permanente al control del fundador. También existe la variante de 'transición en dos etapas', donde el sucesor entra primero como ejecutivo no-CEO antes de asumir el liderazgo completo.",
+  "texto": "Definir un mandato claro y temporal para el CEO interino (ej. estabilización, profesionalización de procesos)",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-112"
+ },
+ {
+  "node_id": "ceo_puente_interino",
+  "paso": 4,
+  "titulo": "CEO Puente o Interino en la Transición",
+  "resumen": "Estrategia de transición suave donde se contrata a un ejecutivo experimentado por un período limitado y predefinido (ej. 18 meses) para profesionalizar la empresa (procesos, estructura, dirección estratégica) sin representar una amenaza permanente al control del fundador. También existe la variante de 'transición en dos etapas', donde el sucesor entra primero como ejecutivo no-CEO antes de asumir el liderazgo completo.",
+  "texto": "Considerar contratar al sucesor primero en un rol no-CEO para generar confianza mutua",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-103"
+ },
+ {
+  "node_id": "circulos_busqueda_cofundadores",
+  "paso": 2,
+  "titulo": "Los Tres Círculos de Búsqueda de Cofundadores",
+  "resumen": "Los cofundadores potenciales pueden buscarse en tres círculos concéntricos: el círculo interno (contacto directo, relaciones preexistentes como familia o pareja), el círculo medio (contacto indirecto a través de conocidos mutuos) y el círculo externo (búsqueda impersonal de desconocidos con habilidades específicas). La elección del círculo afecta la velocidad de formación del equipo pero también sus riesgos a largo plazo.",
+  "texto": "Evaluar qué habilidades y redes faltan en el equipo actual",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-124"
+ },
+ {
+  "node_id": "circulos_busqueda_cofundadores",
+  "paso": 4,
+  "titulo": "Los Tres Círculos de Búsqueda de Cofundadores",
+  "resumen": "Los cofundadores potenciales pueden buscarse en tres círculos concéntricos: el círculo interno (contacto directo, relaciones preexistentes como familia o pareja), el círculo medio (contacto indirecto a través de conocidos mutuos) y el círculo externo (búsqueda impersonal de desconocidos con habilidades específicas). La elección del círculo afecta la velocidad de formación del equipo pero también sus riesgos a largo plazo.",
+  "texto": "Usar networking indirecto (conocidos de conocidos) para ampliar el círculo medio",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-088"
+ },
+ {
+  "node_id": "cofundar_con_amigos_familia_riesgos",
+  "paso": 1,
+  "titulo": "Riesgos de Cofundar con Amigos y Familia (Relational Teams)",
+  "resumen": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+  "texto": "Evaluar honestamente si la relación social previa (amistad/familia) aporta las habilidades necesarias o solo comodidad, identificando primero de qué tipo es: familiar, amigo, excompañero de trabajo, conocido o desconocido",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-038"
+ },
+ {
+  "node_id": "cofundar_con_amigos_familia_riesgos",
+  "paso": 3,
+  "titulo": "Riesgos de Cofundar con Amigos y Familia (Relational Teams)",
+  "resumen": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+  "texto": "Probar la relación de trabajo en un proyecto pequeño antes de comprometerse totalmente ('trying before buying')",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-060"
+ },
+ {
+  "node_id": "cofundar_con_amigos_familia_riesgos",
+  "paso": 4,
+  "titulo": "Riesgos de Cofundar con Amigos y Familia (Relational Teams)",
+  "resumen": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+  "texto": "Establecer mecanismos formales (firewalls) para separar la relación personal de la profesional",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-107"
+ },
+ {
+  "node_id": "cofundar_con_amigos_familia_riesgos",
+  "paso": 6,
+  "titulo": "Riesgos de Cofundar con Amigos y Familia (Relational Teams)",
+  "resumen": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+  "texto": "Revisa si ya trabajaste de verdad con esa persona antes, no solo si se conocen socialmente.",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt"
+  ],
+  "origen": "campania_tramo2",
+  "id_primera_lectura": "C024-007"
+ }
+]

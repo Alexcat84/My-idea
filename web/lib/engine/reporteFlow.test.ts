@@ -115,3 +115,49 @@ describe("reporteFlow: si ya estan todos los campos esenciales, genera el report
     expect(clasificarOfertaFalso).not.toHaveBeenCalled();
   });
 });
+
+// i18n F5 (D2): el reporte es un documento de la idea. La IA lo narra en el
+// idioma de la IDEA; lo que arma el código sin IA (el respaldo, el aviso) sale
+// en ese idioma si es de los once, y si no en el de la interfaz. Las preguntas
+// de la mini-entrevista siguen la interfaz.
+describe("reporteFlow: el idioma de la idea (i18n F5)", () => {
+  const completos = {
+    costo_materiales_unidad: { valor: 68, unidad: "por pieza", texto_original: null, session_id: null, updated_at: null },
+    horas_por_unidad: { valor: 0, unidad: "por pieza", texto_original: null, session_id: null, updated_at: null },
+    valor_hora: { valor: 0, unidad: "por hora", texto_original: null, session_id: null, updated_at: null },
+    precio_tentativo: { valor: 85, unidad: "por pieza", texto_original: null, session_id: null, updated_at: null },
+    capacidad_semanal: { valor: 10, unidad: "pieza", texto_original: null, session_id: null, updated_at: null },
+    costos_fijos_mensuales: { valor: 200, unidad: "por mes", texto_original: null, session_id: null, updated_at: null },
+  };
+
+  it("idea en coreano, interfaz en inglés: narra en coreano, plantillas en coreano", async () => {
+    narrarReporteFalso.mockResolvedValue({ contenido: "x", acumulado: acumuladoVacio });
+    await iniciarReporte({} as never, completos, "producto_fisico", "pieza", acumuladoVacio, "en", "ko");
+    const args = narrarReporteFalso.mock.calls[0];
+    expect(args[5]).toBe("ko"); // idioma de las plantillas
+    expect(args[6]).toBe("ko"); // idioma de salida de la IA
+  });
+
+  it("idea en ruso, interfaz en inglés: narra en ruso, plantillas en inglés", async () => {
+    narrarReporteFalso.mockResolvedValue({ contenido: "x", acumulado: acumuladoVacio });
+    await iniciarReporte({} as never, completos, "producto_fisico", "pieza", acumuladoVacio, "en", "ru");
+    const args = narrarReporteFalso.mock.calls[0];
+    expect(args[5]).toBe("en");
+    expect(args[6]).toBe("ru");
+  });
+
+  it("sin idioma de idea (antes de F5): español en todo, como siempre", async () => {
+    narrarReporteFalso.mockResolvedValue({ contenido: "x", acumulado: acumuladoVacio });
+    await iniciarReporte({} as never, completos, "producto_fisico", "pieza", acumuladoVacio, "en");
+    const args = narrarReporteFalso.mock.calls[0];
+    expect(args[5]).toBe("es");
+    expect(args[6]).toBeNull();
+  });
+
+  it("clasificarOferta recibe el idioma de la idea (la unidad de venta se muestra)", async () => {
+    clasificarOfertaFalso.mockResolvedValue({ tipo: null, unidad: null, acumulado: acumuladoVacio });
+    const estado = (await iniciarReporte({} as never, {}, null, null, acumuladoVacio, "en", "ko")) as { estado: EstadoReporte };
+    await avanzarReporte({} as never, estado.estado, {}, "빵", acumuladoVacio, "en", "ko");
+    expect(clasificarOfertaFalso.mock.calls[0][3]).toBe("ko");
+  });
+});

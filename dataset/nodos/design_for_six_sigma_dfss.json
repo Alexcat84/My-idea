@@ -17,7 +17,6 @@
   "nodos_previos": [
     "herramientas_de_diseno_de_calidad",
     "diseno_de_procesos_por_caracteristicas",
-    "innovacion_tipo_ii",
     "juran_quality_by_design",
     "six_sigma_dmaic",
     "descubrir_necesidades_del_cliente"
@@ -64,6 +63,24 @@
       "node_id": "design_for_six_sigma_dmadv_2",
       "titulo": "Design for Six Sigma (DMADV) para Innovación Continua",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-030",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "innovacion_tipo_ii -> design_for_six_sigma_dfss",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A33, lectores de acuerdo)",
+        "motivo": "Una tecnica simple de ideacion no tiene como continuacion natural DFSS y DMADV."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

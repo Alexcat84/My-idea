@@ -15,10 +15,30 @@
   "nodos_previos": [
     "economia_circular_como_modelo_de_negocio"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "modelo_simulacion_cadena_suministro_circular"
+  ],
   "condiciones_activacion": [
     "Cuando ya decidiste que tu modelo de negocio será circular y hay que elegir por cuál de las cinco estrategias empezar",
     "Antes de simular o dimensionar la cadena, porque la simulación necesita una estrategia y un mecanismo ya elegidos para comparar"
   ],
-  "etiqueta_arbol": "Elige tu Estrategia Circular"
+  "etiqueta_arbol": "Elige tu Estrategia Circular",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-13",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "estrategia_circular_y_mecanismo_de_retorno -> modelo_simulacion_cadena_suministro_circular",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-14, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Este candidato declara que la estrategia circular elegida y el mecanismo de retorno son el insumo de la simulación, así que la simulación circular es su paso siguiente."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

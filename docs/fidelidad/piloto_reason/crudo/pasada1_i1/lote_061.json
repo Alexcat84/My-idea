@@ -1,0 +1,64 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_061",
+  "intento": 0,
+  "usd": 0.15329199999999998,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32338,
+  "tokens_out": 1197,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P58568E\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [261, 263, 275, 277, 293], \"razon\": \"El libro pide rastrear los factores organizacionales, pero limitando el alcance a lo que los gestores podían controlar y fijando reglas de parada. Documentar la 'cadena completa' podría chocar con ese límite.\"},\n  {\"id\": \"P0FDF51\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5206], \"razon\": \"El libro dice que la formación debe darse al inicio del empleo y consolidarse y ampliarse con guía supervisora en el terreno.\"},\n  {\"id\": \"PAE01DA\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [181, 308, 2650], \"razon\": \"El libro recomienda revisiones periódicas para ver dónde hay huecos ahora y dónde aparecerán. Mapear capas y huecos va en esa dirección, aunque los huecos son dinámicos.\"},\n  {\"id\": \"PC927DF\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2320, 2340, 2342], \"razon\": \"El libro define ambas cargas, pero la no esperada surge de fallos imprevistos y no se puede asignar de antemano. Tampoco aborda el riesgo de error humano durante el mantenimiento. Dudoso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P58568E",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    261,
+    263,
+    275,
+    277,
+    293
+   ],
+   "razon": "El libro pide rastrear los factores organizacionales, pero limitando el alcance a lo que los gestores podían controlar y fijando reglas de parada. Documentar la 'cadena completa' podría chocar con ese límite."
+  },
+  {
+   "id": "P0FDF51",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5206
+   ],
+   "razon": "El libro dice que la formación debe darse al inicio del empleo y consolidarse y ampliarse con guía supervisora en el terreno."
+  },
+  {
+   "id": "PAE01DA",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    181,
+    308,
+    2650
+   ],
+   "razon": "El libro recomienda revisiones periódicas para ver dónde hay huecos ahora y dónde aparecerán. Mapear capas y huecos va en esa dirección, aunque los huecos son dinámicos."
+  },
+  {
+   "id": "PC927DF",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2320,
+    2340,
+    2342
+   ],
+   "razon": "El libro define ambas cargas, pero la no esperada surge de fallos imprevistos y no se puede asignar de antemano. Tampoco aborda el riesgo de error humano durante el mantenimiento. Dudoso."
+  }
+ ]
+}

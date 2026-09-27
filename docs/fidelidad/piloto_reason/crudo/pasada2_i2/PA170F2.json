@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA170F2",
+  "intento": 0,
+  "usd": 0.19008,
+  "turnos": 1,
+  "duracion_s": 6.2,
+  "pared_s": 7.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45535,
+  "tokens_out": 397,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA170F2\", \"veredicto\": \"FIEL\", \"lineas\": [3747, 3767], \"cita\": \"Section 5a pinpoints failed defences and Section 5b outlines potential solutions. ... Section 5a asks whether there were any current procedures, processes and policies within the system that should have prevented the incident, but which did not.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro atribuye a la Sección 5a de MEDA identificar las defensas fallidas: los procedimientos, procesos y políticas vigentes que debieron prevenir el incidente y no lo hicieron. El paso dice lo mismo. El dato concreto (Sección 5a, MEDA) está respaldado por el texto.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA170F2",
+  "veredicto": "FIEL",
+  "lineas": [
+   3747,
+   3767
+  ],
+  "cita": "Section 5a pinpoints failed defences and Section 5b outlines potential solutions. ... Section 5a asks whether there were any current procedures, processes and policies within the system that should have prevented the incident, but which did not.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro atribuye a la Sección 5a de MEDA identificar las defensas fallidas: los procedimientos, procesos y políticas vigentes que debieron prevenir el incidente y no lo hicieron. El paso dice lo mismo. El dato concreto (Sección 5a, MEDA) está respaldado por el texto.",
+  "paso_fiel": ""
+ }
+}

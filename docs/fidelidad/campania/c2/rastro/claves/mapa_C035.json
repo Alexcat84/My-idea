@@ -1,0 +1,666 @@
+{
+ "C035-001": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Autorización del Sistema para Operar",
+   "resumen": "Un funcionario senior de la organización decide si el riesgo de seguridad y privacidad de operar el sistema es aceptable, a partir de un paquete de autorización con los planes, los informes de evaluación y el plan de acción.",
+   "texto": "Emitir una decisión de autorización que indique si el sistema puede operar, y renovarla cada tres años (Tarea R-4).",
+   "tipo": "ANADIDO",
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1314.txt",
+   "lineas": "L217",
+   "cita": "The authorizing official issues an authorization decision for the information system, indicating whether the system is authorized to operate or not. (Task R-4)",
+   "dato": "Plazo de renovación de la autorización \"cada tres años\"",
+   "explicacion": "La guía describe la decisión de autorización de la Tarea R-4, pero no fija ningún plazo de vigencia ni de renovación. Comprobado con Grep: \"three\", \"years\", \"renew\", \"reauthoriz\", \"expire\" y \"annually\" no aparecen en el texto. El plazo de tres años es un añadido."
+  }
+ },
+ "C035-002": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Entrega Incremental para Exponer el Riesgo",
+   "resumen": "Entregar todo de una vez al final es apostar a ciegas. Entregar por partes, con un plan pensado de antemano, expone los riesgos temprano, cuando todavía hay margen para corregir el rumbo sin perderlo todo.",
+   "texto": "Deja para las últimas versiones las partes que dependen de algo técnicamente difícil y empieza por lo que ya sabes hacer, para ganar ritmo.",
+   "tipo": "CONTRARIO",
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "L1272",
+   "cita": "Those parts of the system that depend on pulling off technical wonders should be pushed into the early versions.",
+   "dato": "",
+   "explicacion": "El libro pide llevar a las primeras versiones las partes con riesgo técnico serio (\"take your losers early\"), para tener más opciones de repliegue si fallan. El paso recomienda justo lo contrario: aplazarlas al final, que es lo que el libro describe como la tentación del gestor que no quiere exponer sus hipótesis más débiles."
+  }
+ },
+ "C035-003": {
+  "real": true,
+  "node_id": "evaluar_controles",
+  "paso": 5,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-004": {
+  "real": true,
+  "node_id": "correr_hacia_el_riesgo",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-005": {
+  "real": true,
+  "node_id": "monitoreo_continuo",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-006": {
+  "real": true,
+  "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-007": {
+  "real": true,
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-008": {
+  "real": true,
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-009": {
+  "real": true,
+  "node_id": "autorizar_sistema",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-010": {
+  "real": true,
+  "node_id": "tus_alertas_tempranas",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-011": {
+  "real": true,
+  "node_id": "rmf_paso_preparar",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-012": {
+  "real": true,
+  "node_id": "estrategia_gestion_riesgo_tolerancia",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-013": {
+  "real": true,
+  "node_id": "evaluar_controles",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-014": {
+  "real": true,
+  "node_id": "seleccion_controles",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-015": {
+  "real": true,
+  "node_id": "manten_viva_tu_lista_de_riesgos",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-016": {
+  "real": true,
+  "node_id": "limites_autorizacion_sistema",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-017": {
+  "real": true,
+  "node_id": "monitoreo_continuo",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-018": {
+  "real": true,
+  "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-019": {
+  "real": true,
+  "node_id": "evaluar_controles",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-020": {
+  "real": true,
+  "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-021": {
+  "real": true,
+  "node_id": "tus_alertas_tempranas",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-022": {
+  "real": true,
+  "node_id": "estrategia_gestion_riesgo_tolerancia",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-023": {
+  "real": true,
+  "node_id": "tus_alertas_tempranas",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-024": {
+  "real": true,
+  "node_id": "manten_viva_tu_lista_de_riesgos",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-025": {
+  "real": true,
+  "node_id": "el_valor_tambien_es_incierto",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-026": {
+  "real": true,
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-027": {
+  "real": true,
+  "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-028": {
+  "real": true,
+  "node_id": "el_valor_tambien_es_incierto",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-029": {
+  "real": true,
+  "node_id": "implementar_controles",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-030": {
+  "real": true,
+  "node_id": "manten_viva_tu_lista_de_riesgos",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-031": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "El Censo de Riesgos",
+   "resumen": "Una lista de riesgos no se llena sola. Primero se nombran las amenazas sin juzgarlas, luego se decide cuáles atender, y hace falta un mecanismo que siga recogiendo riesgos nuevos cuando la primera ronda se agota.",
+   "texto": "Nombra a una persona como responsable de riesgos y pídele que revise la lista completa cada dos semanas.",
+   "tipo": "ANADIDO",
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "L148",
+   "cita": "You may want to appoint one person to be especially responsible for this (a risk officer).",
+   "dato": "Frecuencia de revisión de la lista \"cada dos semanas\"",
+   "explicacion": "El libro respalda nombrar a un responsable de riesgos (risk officer) dentro de un proceso continuo de descubrimiento de riesgos, pero no fija ninguna frecuencia de revisión. Comprobado con Grep: \"two weeks\", \"biweekly\", \"bi-weekly\", \"fortnight\" y \"every other week\" no aparecen en el texto. La cadencia de dos semanas es un añadido."
+  }
+ },
+ "C035-032": {
+  "real": true,
+  "node_id": "deja_de_ignorar_el_riesgo",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-033": {
+  "real": true,
+  "node_id": "rmf_paso_preparar",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-034": {
+  "real": true,
+  "node_id": "deja_de_ignorar_el_riesgo",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-035": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Paso Categorizar: Clasificación de Sistemas por Impacto",
+   "resumen": "Categorizar es clasificar cada sistema según el impacto (bajo, moderado o alto) que tendría perder la confidencialidad, la integridad o la disponibilidad de su información. De esa categoría dependen los controles que vas a elegir.",
+   "texto": "Determinar el impacto general del sistema promediando los niveles de confidencialidad, integridad y disponibilidad.",
+   "tipo": "CONTRARIO",
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1314.txt",
+   "lineas": "L183",
+   "cita": "Overall System Impact: The level assigned matches the highest level (low, moderate, or high) for confidentiality, integrity, or availability of information on the system; also known as the \"high-water mark.\"",
+   "dato": "",
+   "explicacion": "La guía manda asignar al sistema el nivel más alto de los tres (el \"high-water mark\"), no un promedio. Promediar rebajaría la categoría de un sistema con un solo impacto alto y llevaría a elegir menos controles de los necesarios."
+  }
+ },
+ "C035-036": {
+  "real": true,
+  "node_id": "seleccion_controles",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-037": {
+  "real": true,
+  "node_id": "manten_viva_tu_lista_de_riesgos",
+  "paso": 5,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-038": {
+  "real": true,
+  "node_id": "guarda_un_colchon_de_tiempo_y_dinero",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-039": {
+  "real": true,
+  "node_id": "seleccion_controles",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-040": {
+  "real": true,
+  "node_id": "guarda_un_colchon_de_tiempo_y_dinero",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-041": {
+  "real": true,
+  "node_id": "rmf_paso_categorizar",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-042": {
+  "real": true,
+  "node_id": "nombra_tus_suposiciones_fragiles",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-043": {
+  "real": true,
+  "node_id": "riesgo_contra_valor_vale_la_pena",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-044": {
+  "real": true,
+  "node_id": "fundamentos_gestion_riesgo",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-045": {
+  "real": true,
+  "node_id": "seleccion_controles",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-046": {
+  "real": true,
+  "node_id": "implementar_controles",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-047": {
+  "real": true,
+  "node_id": "nombra_tus_suposiciones_fragiles",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-048": {
+  "real": true,
+  "node_id": "estrategia_gestion_riesgo_tolerancia",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-049": {
+  "real": true,
+  "node_id": "rmf_paso_preparar",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-050": {
+  "real": true,
+  "node_id": "correr_hacia_el_riesgo",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-051": {
+  "real": true,
+  "node_id": "nombra_tus_suposiciones_fragiles",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-052": {
+  "real": true,
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-053": {
+  "real": true,
+  "node_id": "correr_hacia_el_riesgo",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-054": {
+  "real": true,
+  "node_id": "implementar_controles",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-055": {
+  "real": true,
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-056": {
+  "real": true,
+  "node_id": "las_formas_en_que_los_proyectos_mueren",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-057": {
+  "real": true,
+  "node_id": "guarda_un_colchon_de_tiempo_y_dinero",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-058": {
+  "real": true,
+  "node_id": "guarda_un_colchon_de_tiempo_y_dinero",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-059": {
+  "real": true,
+  "node_id": "rmf_paso_categorizar",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-060": {
+  "real": true,
+  "node_id": "evaluar_controles",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-061": {
+  "real": true,
+  "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-062": {
+  "real": true,
+  "node_id": "fundamentos_gestion_riesgo",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-063": {
+  "real": true,
+  "node_id": "proceso_rmf_siete_pasos",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-064": {
+  "real": true,
+  "node_id": "monitoreo_continuo",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-065": {
+  "real": true,
+  "node_id": "el_valor_tambien_es_incierto",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-066": {
+  "real": true,
+  "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
+  "paso": 5,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-067": {
+  "real": true,
+  "node_id": "manten_viva_tu_lista_de_riesgos",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-068": {
+  "real": true,
+  "node_id": "el_valor_tambien_es_incierto",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-069": {
+  "real": true,
+  "node_id": "autorizar_sistema",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-070": {
+  "real": true,
+  "node_id": "riesgo_contra_valor_vale_la_pena",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-071": {
+  "real": true,
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-072": {
+  "real": true,
+  "node_id": "rmf_paso_categorizar",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-073": {
+  "real": true,
+  "node_id": "las_formas_en_que_los_proyectos_mueren",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-074": {
+  "real": true,
+  "node_id": "proceso_rmf_siete_pasos",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-075": {
+  "real": true,
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-076": {
+  "real": true,
+  "node_id": "las_formas_en_que_los_proyectos_mueren",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-077": {
+  "real": true,
+  "node_id": "limites_autorizacion_sistema",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-078": {
+  "real": true,
+  "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-079": {
+  "real": true,
+  "node_id": "proceso_rmf_siete_pasos",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-080": {
+  "real": true,
+  "node_id": "tus_alertas_tempranas",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-081": {
+  "real": true,
+  "node_id": "evaluar_controles",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-082": {
+  "real": true,
+  "node_id": "rmf_paso_categorizar",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-083": {
+  "real": true,
+  "node_id": "rmf_paso_preparar",
+  "paso": 5,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-084": {
+  "real": true,
+  "node_id": "nombra_tus_suposiciones_fragiles",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-085": {
+  "real": true,
+  "node_id": "autorizar_sistema",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-086": {
+  "real": true,
+  "node_id": "riesgo_contra_valor_vale_la_pena",
+  "paso": 3,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-087": {
+  "real": true,
+  "node_id": "limites_autorizacion_sistema",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-088": {
+  "real": true,
+  "node_id": "fundamentos_gestion_riesgo",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-089": {
+  "real": true,
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-090": {
+  "real": true,
+  "node_id": "deja_de_ignorar_el_riesgo",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-091": {
+  "real": true,
+  "node_id": "limites_autorizacion_sistema",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-092": {
+  "real": true,
+  "node_id": "monitoreo_continuo",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-093": {
+  "real": true,
+  "node_id": "proceso_rmf_siete_pasos",
+  "paso": 4,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-094": {
+  "real": true,
+  "node_id": "las_formas_en_que_los_proyectos_mueren",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-095": {
+  "real": true,
+  "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
+  "paso": 4,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-096": {
+  "real": true,
+  "node_id": "correr_hacia_el_riesgo",
+  "paso": 5,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-097": {
+  "real": true,
+  "node_id": "correr_hacia_el_riesgo",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-098": {
+  "real": true,
+  "node_id": "deja_de_ignorar_el_riesgo",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-099": {
+  "real": true,
+  "node_id": "riesgo_contra_valor_vale_la_pena",
+  "paso": 2,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ },
+ "C035-100": {
+  "real": true,
+  "node_id": "autorizar_sistema",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-101": {
+  "real": true,
+  "node_id": "estrategia_gestion_riesgo_tolerancia",
+  "paso": 2,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-102": {
+  "real": true,
+  "node_id": "fundamentos_gestion_riesgo",
+  "paso": 3,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-103": {
+  "real": true,
+  "node_id": "rmf_paso_preparar",
+  "paso": 1,
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+ },
+ "C035-104": {
+  "real": true,
+  "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
+  "paso": 1,
+  "libro": "DeMarco y Lister, Waltzing with Bears"
+ }
+}

@@ -6,12 +6,12 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Al contratar a tu consultor y al abogado que te asesore, tienes que decidir entre pagar mas por el mejor profesional disponible ('bazooka') o optar por una opcion mas económica pero capaz ('peashooter'). Conviene elegir al mejor profesional posible, ya que el valor generado por una venta adicional de franquicia, una mejora en la tasa de regalias, o la prevencion de una demanda, puede representar cientos de miles o millones de dolares a lo largo de la vida del sistema, superando ampliamente la diferencia de honorarios.",
   "pasos_accionables": [
-    "Calcula el valor presente estimado de una franquicia adicional vendida gracias a mejor asesoria",
-    "Compara el costo incremental de contratar al mejor consultor o abogado frente a una opcion mas económica",
-    "Evalua el impacto de mejoras marginales (por ejemplo, 1% mas de regalia, 0.1% mas en tasa de cierre) en tus ingresos totales",
-    "Decide la inversion en el abogado o consultor que elijas basandote en el retorno de largo plazo, no solo en el costo inicial"
+    "Calcula el valor presente estimado de una franquicia adicional vendida gracias a mejor asesoría",
+    "Compara el costo incremental de contratar al mejor consultor o abogado frente a una opción más económica",
+    "Evalúa el impacto de mejoras marginales (por ejemplo, 1% más de regalía, 0.1% más en tasa de cierre) en tus ingresos totales",
+    "Decide la inversión en el abogado o consultor que elijas basándote en el retorno de largo plazo, no solo en el costo inicial"
   ],
-  "entregable_esperado": "Una justificacion financiera documentada de la inversion en el abogado o consultor que hayas elegido",
+  "entregable_esperado": "Una justificación financiera documentada de la inversión en el abogado o consultor que hayas elegido",
   "nodos_previos": [
     "seleccion_consultor_franquicias",
     "eleccion_abogado_franquicias"
@@ -22,5 +22,79 @@
   "condiciones_activacion": [
     "Si dudas entre pagar mas por un mejor profesional o ahorrar con una opcion económica"
   ],
-  "etiqueta_arbol": "Elige lo Mejor o Económico"
+  "etiqueta_arbol": "Elige lo Mejor o Económico",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0145",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula el valor presente estimado de una franquicia adicional vendida gracias a mejor asesoria",
+      "texto_nuevo": "Calcula el valor presente estimado de una franquicia adicional vendida gracias a mejor asesoría",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-014.paso0: asesoría (Falta real: 'asesoría' lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0146",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara el costo incremental de contratar al mejor consultor o abogado frente a una opcion mas económica",
+      "texto_nuevo": "Compara el costo incremental de contratar al mejor consultor o abogado frente a una opción más económica",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-014.paso1: opción, más (Faltas reales: 'opción' y 'más' llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0147",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua el impacto de mejoras marginales (por ejemplo, 1% mas de regalia, 0.1% mas en tasa de cierre) en tus ingresos totales",
+      "texto_nuevo": "Evalúa el impacto de mejoras marginales (por ejemplo, 1% más de regalía, 0.1% más en tasa de cierre) en tus ingresos totales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-014.paso2: Evalúa, más, regalía, más (Faltas reales: 'Evalúa', 'más' (dos veces) y 'regalía' llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0148",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide la inversion en el abogado o consultor que elijas basandote en el retorno de largo plazo, no solo en el costo inicial",
+      "texto_nuevo": "Decide la inversión en el abogado o consultor que elijas basándote en el retorno de largo plazo, no solo en el costo inicial",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-014.paso3: inversión, basándote (Faltas reales: 'inversión' y 'basándote' llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0149",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una justificacion financiera documentada de la inversion en el abogado o consultor que hayas elegido",
+      "texto_nuevo": "Una justificación financiera documentada de la inversión en el abogado o consultor que hayas elegido",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-014.entregable: justificación, inversión (Faltas reales: 'justificación' e 'inversión' llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

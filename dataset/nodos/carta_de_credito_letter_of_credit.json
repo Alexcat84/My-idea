@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisar minuciosamente todos los términos y condiciones de la L/C recibida antes de aceptar la orden.",
     "Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.",
-    "Confirmar la fecha límite de embarque y el plazo de presentación de documentos (usualmente 21 días desde la fecha del B/L).",
+    "Confirmar la fecha límite de embarque y el plazo de presentación de documentos que fija la L/C.",
     "Si no se puede cumplir algún término, contactar al comprador para gestionar una enmienda antes de embarcar.",
     "Coordinar con el banco confirmador (en el país del exportador) para la negociación de los documentos y el cobro del pago."
   ],
@@ -19,8 +19,7 @@
   ],
   "nodos_siguientes": [
     "letra_de_cambio_bill_of_exchange",
-    "documentacion_exportacion",
-    "elaboracion_pro_forma_invoice"
+    "documentacion_exportacion"
   ],
   "condiciones_activacion": [
     "Cuando el comprador extranjero paga mediante carta de crédito.",
@@ -37,5 +36,40 @@
   "ids_alias": [
     "carta_de_credito"
   ],
-  "etiqueta_arbol": "Usa Carta de Crédito"
+  "etiqueta_arbol": "Usa Carta de Crédito",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-025",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar la fecha límite de embarque y el plazo de presentación de documentos (usualmente 21 días desde la fecha del B/L).",
+      "texto_nuevo": "Confirmar la fecha límite de embarque y el plazo de presentación de documentos que fija la L/C.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L4089-L4091",
+        "frase": "Documents must be presented by the date specified."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. El libro dice que el plazo de presentacion es el que fija la carta de credito y pide confirmar con el banco que habra tiempo suficiente. Busque en todo el libro 21 days, twenty-one, within y presented within: los 21 dias solo aparecen en la carta de credito de ejemplo (L6787), nunca como plazo habitual. El libro no da otro valor tipico, simplemente no fija ninguno, asi que el usualmente 21 dias es un plazo que el libro no respalda.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-075"
+    },
+    {
+      "id": "t2-arista-012",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "carta_de_credito_letter_of_credit -> elaboracion_pro_forma_invoice",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-19-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el comprador usa la pro forma invoice para abrir la carta de credito, asi que la pro forma va antes que la L/C y no despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ]
 }

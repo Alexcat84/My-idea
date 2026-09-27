@@ -10,7 +10,7 @@
     "Aclarar la diferencia entre gastar más por sumar cosas y gastar menos por reducir desperdicio",
     "Abrir un canal de conversación directa con la persona que te ayuda para que exprese sus dudas",
     "Evitar dejar todo el cambio en manos de otro y desentenderte tú del proceso",
-    "Explicar el por qué del cambio antes de que aparezcan rumores o malentendidos"
+    "Explicar el porqué del cambio antes de que aparezcan rumores o malentendidos"
   ],
   "entregable_esperado": "Un plan simple para manejar el cambio que nombre claramente cada barrera identificada y cómo la vas a resolver",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Cuando notas resistencia al cambio en tu negocio",
     "Cuando intentos anteriores de mejorar la calidad fallaron sin que quede clara la causa"
   ],
-  "etiqueta_arbol": "Supera las Barreras del Cambio"
+  "etiqueta_arbol": "Supera las Barreras del Cambio",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0330",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Explicar el por qué del cambio antes de que aparezcan rumores o malentendidos",
+      "texto_nuevo": "Explicar el porqué del cambio antes de que aparezcan rumores o malentendidos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-035.paso4: porqué (Aquí porqué es sustantivo ('el porqué') y se escribe junto y con tilde; es una corrección ortográfica real.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF05E9D",
+  "intento": 0,
+  "usd": 0.162644,
+  "turnos": 1,
+  "duracion_s": 18.5,
+  "pared_s": 19.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32111,
+  "tokens_out": 1710,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF05E9D\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2650, 2658, 5781], \"cita\": \"Regular checks reveal where holes exist now and where they are most likely to appear next. [...] Their purpose is to provide regular checks both on the system's defences and on its 'vital signs' [...] But it has to be a continuous process.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide chequeos proactivos regulares de las defensas para ver dónde hay huecos ahora y dónde aparecerán, como proceso continuo. 'Continuo' encaja con ese proceso permanente y no fija una frecuencia nueva. 'Cada capa' concreta esos chequeos sin contradecir el muestreo de 8-16 índices, que el libro aplica a procesos organizacionales y no a capas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF05E9D",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2650,
+   2658,
+   5781
+  ],
+  "cita": "Regular checks reveal where holes exist now and where they are most likely to appear next. [...] Their purpose is to provide regular checks both on the system's defences and on its 'vital signs' [...] But it has to be a continuous process.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide chequeos proactivos regulares de las defensas para ver dónde hay huecos ahora y dónde aparecerán, como proceso continuo. 'Continuo' encaja con ese proceso permanente y no fija una frecuencia nueva. 'Cada capa' concreta esos chequeos sin contradecir el muestreo de 8-16 índices, que el libro aplica a procesos organizacionales y no a capas.",
+  "paso_fiel": ""
+ }
+}

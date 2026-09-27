@@ -19,8 +19,27 @@
     "exportacion_de_servicios"
   ],
   "condiciones_activacion": [
-    "Cuando el producto requiere soporte postventa o mantenimiento",
+    "Cuando vas a vender en un mercado extranjero un producto que requiere garantía, soporte postventa o mantenimiento",
     "Si el mercado destino tiene regulaciones estrictas de protección al consumidor"
   ],
-  "etiqueta_arbol": "Define las Garantías de tu Producto"
+  "etiqueta_arbol": "Define las Garantías de tu Producto",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-089",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el producto requiere soporte postventa o mantenimiento",
+      "texto_nuevo": "Cuando vas a vender en un mercado extranjero un producto que requiere garantía, soporte postventa o mantenimiento",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q066-029: La primera condicion no exige el contexto internacional del que trata el nodo. (lector y verificador de acuerdo) Motivo: Es demasiado general: se activaria con cualquier producto que tenga soporte postventa, aunque no se venda fuera, y el nodo trata de garantias en mercados internacionales."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

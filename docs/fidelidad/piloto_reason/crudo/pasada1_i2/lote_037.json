@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_037",
+  "intento": 0,
+  "usd": 0.163584,
+  "turnos": 1,
+  "duracion_s": 17.1,
+  "pared_s": 18.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32626,
+  "tokens_out": 1654,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P3240A6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5641, 5643, 5649, 5667, 5675, 5907, 196], \"razon\": \"El libro señala que el modelo de persona no sirve para errores de operadores clave, condiciones latentes ni riesgos a terceros, y explica su atractivo emocional y tradicional.\"},\n  {\"id\": \"P3784E2\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [594, 5134, 4753, 4757, 848, 586], \"razon\": \"Chronic unease sí viene del libro, pero leído como 'vigilancia constante' choca con L848: la vigilancia humana sostenida falla. El libro la sostiene con datos, no con esfuerzo personal.\"},\n  {\"id\": \"P8EC7A7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5692, 5688, 5690], \"razon\": \"El libro critica los carteles de horas sin LTI porque transmiten que el sitio es seguro, cuando no lo es, y además desincentivan reportar.\"},\n  {\"id\": \"P20BB6D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4798, 4765, 4824, 4832, 4836, 4854, 4820], \"razon\": \"El libro da indemnidad 'en lo practicable', con límites: actos inadvertidos, no temerarios ni delictivos. Condicionarla solo a la honestidad del reporte puede derivar en la amnistía general que el libro rechaza.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P3240A6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5641,
+    5643,
+    5649,
+    5667,
+    5675,
+    5907,
+    196
+   ],
+   "razon": "El libro señala que el modelo de persona no sirve para errores de operadores clave, condiciones latentes ni riesgos a terceros, y explica su atractivo emocional y tradicional."
+  },
+  {
+   "id": "P3784E2",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    594,
+    5134,
+    4753,
+    4757,
+    848,
+    586
+   ],
+   "razon": "Chronic unease sí viene del libro, pero leído como 'vigilancia constante' choca con L848: la vigilancia humana sostenida falla. El libro la sostiene con datos, no con esfuerzo personal."
+  },
+  {
+   "id": "P8EC7A7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5692,
+    5688,
+    5690
+   ],
+   "razon": "El libro critica los carteles de horas sin LTI porque transmiten que el sitio es seguro, cuando no lo es, y además desincentivan reportar."
+  },
+  {
+   "id": "P20BB6D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4798,
+    4765,
+    4824,
+    4832,
+    4836,
+    4854,
+    4820
+   ],
+   "razon": "El libro da indemnidad 'en lo practicable', con límites: actos inadvertidos, no temerarios ni delictivos. Condicionarla solo a la honestidad del reporte puede derivar en la amnistía general que el libro rechaza."
+  }
+ ]
+}

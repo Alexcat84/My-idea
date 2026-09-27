@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_087",
+  "intento": 0,
+  "usd": 0.17310799999999998,
+  "turnos": 1,
+  "duracion_s": 20.1,
+  "pared_s": 21.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33657,
+  "tokens_out": 1924,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5F051B\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [323, 2652, 2654, 5503, 5907, 40], \"razon\": \"El libro trata ambos accidentes como distintos. Pero la línea entre ellos no es nítida, pide un marco clasificatorio común y ve los accidentes organizacionales difíciles de prever. Hay matiz.\"},\n  {\"id\": \"P14BC39\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [198, 200, 202, 2720, 2724, 5559, 5781], \"razon\": \"El libro dice que las condiciones latentes nacen de decisiones de alto nivel: recursos, diseño, formación, dotación. Pide identificarlas y corregirlas.\"},\n  {\"id\": \"PD54138\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 668, 686, 3985, 3989, 3991, 3153, 5692], \"razon\": \"Apoyan el paso los avisos ignorados (Barings, SR&QA). Pero el libro advierte del sesgo retrospectivo: una señal solo es aviso si sabes qué desastre vendrá.\"},\n  {\"id\": \"P6DCB9A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3782, 3784, 3794], \"razon\": \"El libro dice que el software genera el árbol y un borrador de informe para edición final. Pero exige antes verificar la lógica y resolver anomalías; el paso lo omite.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5F051B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    323,
+    2652,
+    2654,
+    5503,
+    5907,
+    40
+   ],
+   "razon": "El libro trata ambos accidentes como distintos. Pero la línea entre ellos no es nítida, pide un marco clasificatorio común y ve los accidentes organizacionales difíciles de prever. Hay matiz."
+  },
+  {
+   "id": "P14BC39",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    198,
+    200,
+    202,
+    2720,
+    2724,
+    5559,
+    5781
+   ],
+   "razon": "El libro dice que las condiciones latentes nacen de decisiones de alto nivel: recursos, diseño, formación, dotación. Pide identificarlas y corregirlas."
+  },
+  {
+   "id": "PD54138",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    668,
+    686,
+    3985,
+    3989,
+    3991,
+    3153,
+    5692
+   ],
+   "razon": "Apoyan el paso los avisos ignorados (Barings, SR&QA). Pero el libro advierte del sesgo retrospectivo: una señal solo es aviso si sabes qué desastre vendrá."
+  },
+  {
+   "id": "P6DCB9A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3782,
+    3784,
+    3794
+   ],
+   "razon": "El libro dice que el software genera el árbol y un borrador de informe para edición final. Pero exige antes verificar la lógica y resolver anomalías; el paso lo omite."
+  }
+ ]
+}

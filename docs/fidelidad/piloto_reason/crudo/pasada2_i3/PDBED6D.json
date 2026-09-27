@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PDBED6D",
+  "intento": 0,
+  "usd": 0.204512,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45258,
+  "tokens_out": 1174,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDBED6D\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [3993, 4180, 4121], \"cita\": \"Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. [...] Overall, safety, reliability and quality staff comprised about 2 per cent of NASA's 22 000 staff.\", \"datos_sin_respaldo\": [\"comparación con estándares del sector como referencia\"], \"tambien_anadido\": false, \"razon\": \"El libro usa la proporción de personal de seguridad (2% en NASA) y su recorte (71%) para mostrar la falta de recursos. También compara la carga de trabajo con la dotación (FAA, inspector de ACAA). No desaconseja medir ratios, así que no es contrario. Pero nunca propone contrastarlos con estándares del sector: esa referencia es un añadido.\", \"paso_fiel\": \"Calcular la proporción de personal de seguridad sobre la plantilla total y su evolución en el tiempo (recortes acumulados), junto con la carga que soporta, para evidenciar la erosión de recursos de supervisión.\"}\n```",
+ "parseado": {
+  "id": "PDBED6D",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   3993,
+   4180,
+   4121
+  ],
+  "cita": "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. [...] Overall, safety, reliability and quality staff comprised about 2 per cent of NASA's 22 000 staff.",
+  "datos_sin_respaldo": [
+   "comparación con estándares del sector como referencia"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro usa la proporción de personal de seguridad (2% en NASA) y su recorte (71%) para mostrar la falta de recursos. También compara la carga de trabajo con la dotación (FAA, inspector de ACAA). No desaconseja medir ratios, así que no es contrario. Pero nunca propone contrastarlos con estándares del sector: esa referencia es un añadido.",
+  "paso_fiel": "Calcular la proporción de personal de seguridad sobre la plantilla total y su evolución en el tiempo (recortes acumulados), junto con la carga que soporta, para evidenciar la erosión de recursos de supervisión."
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_026",
+  "intento": 0,
+  "usd": 0.157556,
+  "turnos": 1,
+  "duracion_s": 12.7,
+  "pared_s": 14.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33589,
+  "tokens_out": 1160,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"PF1A20E\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1044, 1068, 1072, 213, 3981], \"razon\": \"El libro advierte que añadir redundancia aumenta la complejidad, las fallas de modo común y la opacidad. Proponerla como remedio principal contra fallas simultáneas choca con esa advertencia.\"},\n{\"id\": \"P67E78F\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [3395, 3397, 3401, 3405, 3659], \"razon\": \"El ranking de EPCs es útil para gestores, pero HEART exige decidir qué condiciones afectan a cada tarea y ponderarlas. Priorizar por el ranking genérico podría omitir esa condición.\"},\n{\"id\": \"PDAABAD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5688, 5690, 5907, 3053], \"razon\": \"El libro dice que los eventos precursores (fugas) y los chequeos de procesos son más diagnósticos que un LTIF bajo, sin ignorar las lesiones personales.\"},\n{\"id\": \"P04F84D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2340, 2342, 2250, 2369, 2028], \"razon\": \"El libro afirma que el mantenimiento preventivo y el correctivo pueden introducir errores dañinos. Propone identificar de antemano los pasos propensos a error, sobre todo en el reensamblaje.\"}]",
+ "parseado": [
+  {
+   "id": "PF1A20E",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1044,
+    1068,
+    1072,
+    213,
+    3981
+   ],
+   "razon": "El libro advierte que añadir redundancia aumenta la complejidad, las fallas de modo común y la opacidad. Proponerla como remedio principal contra fallas simultáneas choca con esa advertencia."
+  },
+  {
+   "id": "P67E78F",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    3395,
+    3397,
+    3401,
+    3405,
+    3659
+   ],
+   "razon": "El ranking de EPCs es útil para gestores, pero HEART exige decidir qué condiciones afectan a cada tarea y ponderarlas. Priorizar por el ranking genérico podría omitir esa condición."
+  },
+  {
+   "id": "PDAABAD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5688,
+    5690,
+    5907,
+    3053
+   ],
+   "razon": "El libro dice que los eventos precursores (fugas) y los chequeos de procesos son más diagnósticos que un LTIF bajo, sin ignorar las lesiones personales."
+  },
+  {
+   "id": "P04F84D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2340,
+    2342,
+    2250,
+    2369,
+    2028
+   ],
+   "razon": "El libro afirma que el mantenimiento preventivo y el correctivo pueden introducir errores dañinos. Propone identificar de antemano los pasos propensos a error, sobre todo en el reensamblaje."
+  }
+ ]
+}

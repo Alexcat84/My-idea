@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3F0BAE",
+  "intento": 0,
+  "usd": 0.178204,
+  "turnos": 1,
+  "duracion_s": 8.9,
+  "pared_s": 10.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40986,
+  "tokens_out": 713,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3F0BAE\", \"veredicto\": \"FIEL\", \"lineas\": [293, 192, 2905], \"cita\": \"For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro manda establecer las fallas activas, que define como errores y violaciones en primera línea (L192, L293). Advierte que identificar el error es solo el comienzo (L2905), pero el paso no dice detenerse ahí; los demás pasos del nodo cubren las condiciones latentes. Tampoco afirma que siempre haya actos inseguros (L291).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3F0BAE",
+  "veredicto": "FIEL",
+  "lineas": [
+   293,
+   192,
+   2905
+  ],
+  "cita": "For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro manda establecer las fallas activas, que define como errores y violaciones en primera línea (L192, L293). Advierte que identificar el error es solo el comienzo (L2905), pero el paso no dice detenerse ahí; los demás pasos del nodo cubren las condiciones latentes. Tampoco afirma que siempre haya actos inseguros (L291).",
+  "paso_fiel": ""
+ }
+}

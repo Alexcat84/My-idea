@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Análisis Conversacional (Conversation Analysis)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Técnica de notación de grano fino desarrollada por Maurice Nevile para transcripciones de voz, que captura pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
+  "resumen_teorico": "Técnica de notación de grano fino para transcripciones de voz, que captura pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
   "pasos_accionables": [
     "Aplicar notación estándar (pausas en segundos, micro-pausas, superposición con corchetes)",
     "Marcar cambios de velocidad (más rápido/lento que el habla circundante)",
@@ -23,5 +23,26 @@
     "Cuando se requiere evidencia detallada y concreta sobre calidad de coordinación entre operadores",
     "Cuando se sospecha pérdida de gestión de recursos de equipo (CRM)"
   ],
-  "etiqueta_arbol": "Analiza Conversaciones al Detalle"
+  "etiqueta_arbol": "Analiza Conversaciones al Detalle",
+  "correcciones": [
+    {
+      "id": "atribucion-004",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Técnica de notación de grano fino desarrollada por Maurice Nevile para transcripciones de voz, que captura pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
+      "texto_nuevo": "Técnica de notación de grano fino para transcripciones de voz, que captura pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "desarrollada por Maurice Nevile"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-017 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ]
 }

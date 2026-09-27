@@ -1,10 +1,10 @@
 {
   "node_id": "herramientas_analisis_causa_raiz",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Herramientas Gráficas de Análisis de Datos (Gráficos, Histogramas, Box Plots, Pareto, Dispersión, Estratificación)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Conjunto de herramientas visuales que permiten representar y comprender grandes volúmenes de datos cuantitativos para detectar patrones, variaciones y relaciones. Incluyen gráficos y cartas para resumir información, histogramas y box plots para mostrar variación, el análisis de Pareto de Juran para identificar los 'pocos vitales', diagramas de dispersión para explorar relaciones causa-efecto, y la estratificación para separar datos en categorías relevantes.",
+  "resumen_teorico": "Conjunto de herramientas visuales que permiten representar y comprender grandes volúmenes de datos cuantitativos para detectar patrones, variaciones y relaciones. Incluyen gráficos y cartas para resumir información, histogramas y box plots para mostrar variación, el análisis de Pareto para identificar los 'pocos vitales', diagramas de dispersión para explorar relaciones causa-efecto, y la estratificación para separar datos en categorías relevantes.",
   "pasos_accionables": [
     "Recolectar datos cuantitativos relevantes al problema de calidad.",
     "Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, ranking).",
@@ -26,5 +26,39 @@
     "Cuando se necesita comprender grandes volúmenes de datos de manera visual.",
     "Cuando se busca identificar los factores más críticos que afectan la calidad."
   ],
-  "etiqueta_arbol": "Encuentra la Causa con Gráficos"
+  "etiqueta_arbol": "Encuentra la Causa con Gráficos",
+  "correcciones": [
+    {
+      "id": "atribucion-104",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Conjunto de herramientas visuales que permiten representar y comprender grandes volúmenes de datos cuantitativos para detectar patrones, variaciones y relaciones. Incluyen gráficos y cartas para resumir información, histogramas y box plots para mostrar variación, el análisis de Pareto de Juran para identificar los 'pocos vitales', diagramas de dispersión para explorar relaciones causa-efecto, y la estratificación para separar datos en categorías relevantes.",
+      "texto_nuevo": "Conjunto de herramientas visuales que permiten representar y comprender grandes volúmenes de datos cuantitativos para detectar patrones, variaciones y relaciones. Incluyen gráficos y cartas para resumir información, histogramas y box plots para mostrar variación, el análisis de Pareto para identificar los 'pocos vitales', diagramas de dispersión para explorar relaciones causa-efecto, y la estratificación para separar datos en categorías relevantes.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "de Juran"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-184",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F05-017: Las herramientas gráficas (Pareto, histogramas, estratificación) se aplican a problemas de calidad de un proceso en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

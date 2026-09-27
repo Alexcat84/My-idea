@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "HEART: Human Error Assessment and Reduction Technique",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "HEART, desarrollada por Jeremy Williams, es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea (Tabla 7.2), cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según su proporción real de influencia. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
+  "resumen_teorico": "HEART es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea, cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según su proporción real de influencia. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
   "pasos_accionables": [
     "Clasifica la actividad a evaluar dentro de los tipos de tarea genéricos de la Tabla 7.2",
     "Determina la probabilidad de error nominal asociada a ese tipo de tarea",
@@ -38,5 +38,27 @@
       "titulo": "HEART: Evaluación y Reducción de Errores Humanos",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-103",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "HEART, desarrollada por Jeremy Williams, es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea (Tabla 7.2), cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según su proporción real de influencia. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
+      "texto_nuevo": "HEART es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea, cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según su proporción real de influencia. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "desarrollada por Jeremy Williams",
+          "(Tabla 7.2)"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-026 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
   ]
 }

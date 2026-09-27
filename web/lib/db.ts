@@ -10,9 +10,10 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
 import type { UsoAcumulado } from "./costmeter";
-import type { CapacidadSemanal, ModoCamino, ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
+import { ETIQUETAS_CICLO, type CapacidadSemanal, type ChecklistEstado, type ModoCamino, type ModoRuta, type PlanEtiqueta, type ProjectNodeTipo, type SessionTipo } from "./dbContract";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
+import type { FilaHeredada } from "./engine/replanteamiento";
 
 export const FASES = ["ideacion", "validacion", "planificacion", "ejecucion"] as const;
 export type Fase = (typeof FASES)[number];
@@ -38,6 +39,9 @@ export interface Proyecto {
   /** Fase 4.0 §8 (acta de cierre): por qué el usuario cerró la idea aquí, en
    * sus palabras. null si cerró sin escribir nada (el campo es opcional). */
   cierre_motivo?: string | null;
+  /** i18n F5 (migration 046): el idioma de la idea (ISO 639-1). NULL o ausente
+   * = anterior a F5, español. Se lee con idiomaDelProyecto(). */
+  idioma?: string | null;
   /** FASE B (canon 14, migration 027): cuándo se activó Tus Números para esta
    * idea. Ancla del cobro UNA vez por idea (ETAPA 2). null = no activado. */
   tus_numeros_activado_at?: string | null;
@@ -110,12 +114,25 @@ function ahora(): string {
   return new Date().toISOString();
 }
 
-export async function crearProyecto(supabase: SupabaseClient, userId: string, entradaOriginal: string): Promise<string> {
-  const { data, error } = await supabase
-    .from("projects")
-    .insert({ user_id: userId, entrada_original: entradaOriginal, fase_actual: "ideacion" })
-    .select("id")
-    .single();
+/** Crea la idea. `idioma` es el de su texto (i18n F5, lib/i18n/detectarIdioma):
+ * manda en lo que escribe la IA y en los documentos (D2). */
+export async function crearProyecto(
+  supabase: SupabaseClient,
+  userId: string,
+  entradaOriginal: string,
+  idioma?: string
+): Promise<string> {
+  const fila: Record<string, unknown> = { user_id: userId, entrada_original: entradaOriginal, fase_actual: "ideacion" };
+  if (idioma) fila.idioma = idioma;
+  let { data, error } = await supabase.from("projects").insert(fila).select("id").single();
+  // i18n F5: projects.idioma llega con la 046. Si el código corre antes de
+  // aplicarla, la idea se crea igual sin él (se leerá como español, como antes
+  // de F5) y queda el síntoma en el log.
+  if (error && "idioma" in fila && /idioma/.test(error.message ?? "")) {
+    console.error("[crearProyecto] falta la migracion 046 (projects.idioma); se crea la idea sin su idioma:", error.message);
+    delete fila.idioma;
+    ({ data, error } = await supabase.from("projects").insert(fila).select("id").single());
+  }
   if (error) throw error;
   return (data as { id: string }).id;
 }
@@ -371,10 +388,14 @@ export async function registrarBitacora(
   tipo: string,
   payload: Record<string, unknown> = {}
 ): Promise<void> {
+  // La bitácora nunca bloquea la acción del usuario, pero su falla deja rastro
+  // (AUD-09 tanda 5): supabase-js no lanza, devuelve { error }, y antes ese
+  // error se perdía sin síntoma, incluido el registro de un cobro_carrera.
   try {
-    await supabase.from("project_bitacora").insert({ project_id: projectId, tipo, payload });
-  } catch {
-    /* la bitácora nunca bloquea la acción del usuario */
+    const { error } = await supabase.from("project_bitacora").insert({ project_id: projectId, tipo, payload });
+    if (error) console.error(`[bitacora] no se registro "${tipo}" en ${projectId}:`, error);
+  } catch (e) {
+    console.error(`[bitacora] no se registro "${tipo}" en ${projectId}:`, e);
   }
 }
 
@@ -385,13 +406,17 @@ export async function crearSesion(
   tipo: SessionTipo,
   mensajeEntrada: string,
   puertaEntrada: string | null = null,
-  dominio: string = "core"
+  dominio: string = "core",
+  // AUD-09 M25: el id ya generado por la ruta, cuando la reserva de créditos
+  // (clave plan:{id}) se hace ANTES de crear la sesión.
+  opciones: { id?: string } = {}
 ): Promise<string> {
   const proyecto = await obtenerProyecto(supabase, projectId);
   const posicion = (proyecto?.session_count ?? 0) + 1;
   const { data, error } = await supabase
     .from("sessions")
     .insert({
+      ...(opciones.id ? { id: opciones.id } : {}),
       project_id: projectId,
       user_id: userId,
       session_position: posicion,
@@ -587,6 +612,53 @@ export async function guardarPlan(
   return data.id as string;
 }
 
+/**
+ * AUD-09 M26: la entrega del plan es IDEMPOTENTE POR SESIÓN. Si una entrega
+ * anterior de esta misma sesión alcanzó a guardar su plan y falló antes de
+ * cerrar la sesión, el reintento REUSA ese plan (con el texto de esta entrega,
+ * la única que llega al usuario) en vez de crear un segundo. `yaExistia` dice
+ * si hay que mirar su checklist antes de escribirlo.
+ */
+export async function guardarPlanDeSesion(
+  supabase: SupabaseClient,
+  userId: string,
+  sessionId: string,
+  etiqueta: PlanEtiqueta,
+  contenidoMd: string,
+  conceptosUsados: number,
+  familiasCubiertas: string[],
+  dominio: string = "core"
+): Promise<{ planId: string; yaExistia: boolean }> {
+  const { data: previos, error: errPrevio } = await supabase
+    .from("plans")
+    .select("id")
+    .eq("session_id", sessionId)
+    .eq("etiqueta", etiqueta);
+  if (errPrevio) throw errPrevio;
+  const previo = ((previos ?? []) as Array<{ id: string }>)[0];
+  if (!previo) {
+    const planId = await guardarPlan(supabase, userId, sessionId, etiqueta, contenidoMd, conceptosUsados, familiasCubiertas, dominio);
+    return { planId, yaExistia: false };
+  }
+  const { error } = await supabase
+    .from("plans")
+    .update({ contenido_md: contenidoMd, conceptos_usados: conceptosUsados, familias_cubiertas: familiasCubiertas })
+    .eq("id", previo.id);
+  if (error) throw error;
+  return { planId: previo.id, yaExistia: true };
+}
+
+/** AUD-09 M26: cuántas tareas tiene ya un plan (0 = su checklist no se escribió). */
+export async function contarItemsDePlan(supabase: SupabaseClient, projectId: string, planId: string): Promise<number> {
+  const { data, error } = await supabase
+    .from("checklist_items")
+    .select("id")
+    .eq("project_id", projectId)
+    .eq("plan_id", planId);
+  if (error) throw error;
+  return (data ?? []).length;
+}
+
 /** Fase 3.3: persiste el checklist derivado de un plan recién guardado.
  * Solo los planes de entrevista (inicial|completo|seguimiento) derivan
  * checklist; organizador y reporte_numeros NO llegan aquí. */
@@ -603,7 +675,7 @@ export async function obtenerPlanCoreVigente(supabase: SupabaseClient, projectId
     .select("id")
     .in("session_id", ids)
     .eq("dominio", "core")
-    .in("etiqueta", ["inicial", "completo", "seguimiento"])
+    .in("etiqueta", [...ETIQUETAS_CICLO])
     .order("created_at", { ascending: false })
     .limit(1);
   return ((data ?? [])[0] as { id: string } | undefined)?.id ?? null;
@@ -617,17 +689,20 @@ export async function obtenerItemsDePlan(
   supabase: SupabaseClient,
   projectId: string,
   planId: string
-): Promise<Array<{ id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null }>> {
-  const columnas = "id, texto, etapa, orden, estado, fecha_base, banda";
+): Promise<Array<{ id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null; nodos_origen?: string[] | null }>> {
+  // AUD-09 M15: nodos_origen viaja para que el enlace de protección guarde los
+  // nodos de lo protegido y el registro resuelva por nodo.
+  const columnas = "id, texto, etapa, orden, estado, fecha_base, banda, nodos_origen";
   const leer = (cols: string) =>
     supabase.from("checklist_items").select(cols).eq("project_id", projectId).eq("plan_id", planId);
   let { data, error } = await leer(columnas);
-  // Resiliencia de columnas (patron del GET del checklist): si 'banda' aun no
-  // existiera, el snapshot se arma sin ella en vez de caerse entero.
-  if (error) ({ data, error } = await leer(columnas.replace(", banda", "")));
+  // Resiliencia de columnas (patron del GET del checklist): si una columna nueva
+  // aun no existiera, el snapshot se arma sin ella en vez de caerse entero.
+  if (error) ({ data, error } = await leer(columnas.replace(", nodos_origen", "")));
+  if (error) ({ data, error } = await leer(columnas.replace(", banda, nodos_origen", "")));
   if (error) throw error;
   return (data ?? []) as unknown as Array<{
-    id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null;
+    id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null; nodos_origen?: string[] | null;
   }>;
 }
 
@@ -648,6 +723,8 @@ export async function insertarChecklist(
     // respuesta protege, su deteccion y su severidad en palabras. Ausente en
     // todo lo que no sea un plan de proteccion.
     protege_item?: string | null;
+    /** AUD-09 M15 (migración 041): los nodos de lo protegido. */
+    protege_nodos?: string[] | null;
     deteccion?: string | null;
     probabilidad?: string | null;
     dolor?: string | null;
@@ -659,35 +736,115 @@ export async function insertarChecklist(
   // verificarProcedenciaEtapas. Aqui solo se PERSISTE: cero API, cero cambios
   // al prompt. Si no viene, cada item guarda null, que se lee como "nacio antes
   // del sensor" y NO como "no vino de ningun nodo".
-  nodosPorEtapa?: Record<string, string[]> | null
+  nodosPorEtapa?: Record<string, string[]> | null,
+  /** Ciclo de replanteamiento, Fase 2 (047): las tareas que "me siguen
+   * sirviendo", HECHAS. Van en la MISMA sentencia que las nuevas: misma fecha de
+   * creación, así su orden negativo las pone primero en la etapa 1 (la lectura
+   * del checklist ordena por fecha, etapa y orden). */
+  heredadas: FilaHeredada[] = []
 ): Promise<void> {
-  if (items.length === 0) return;
-  const { error } = await supabase.from("checklist_items").insert(
-    items.map((i) => ({
-      project_id: projectId,
-      plan_id: planId,
-      dominio,
-      etapa: i.etapa,
-      orden: i.orden,
-      texto: i.texto,
-      destacado: i.destacado,
-      banda: i.banda ?? null,
-      espera_externa: i.espera_externa ?? null,
-      // La autodeclaracion es por ETAPA, no por item: este item hereda los
-      // nodos de SU etapa. Documentado como limite en docs/SENSORES_DEL_PANEL.
-      nodos_origen: nodosPorEtapa?.[String(i.etapa)] ?? null,
-      // Solo viajan si el plan es de proteccion: en los demas ni siquiera se
-      // nombran, para no escribir cuatro nulls por item en cada plan de la casa.
-      ...(i.protege_item !== undefined || i.deteccion !== undefined
-        ? {
-            protege_item: i.protege_item ?? null,
-            deteccion: i.deteccion ?? null,
-            probabilidad: i.probabilidad ?? null,
-            dolor: i.dolor ?? null,
-            camino: i.camino ?? null,
-          }
-        : {}),
-    }))
-  );
+  if (items.length === 0 && heredadas.length === 0) return;
+  const filasNuevas = items.map((i) => ({
+    project_id: projectId,
+    plan_id: planId,
+    dominio,
+    etapa: i.etapa,
+    orden: i.orden,
+    texto: i.texto,
+    destacado: i.destacado,
+    banda: i.banda ?? null,
+    espera_externa: i.espera_externa ?? null,
+    // La autodeclaracion es por ETAPA, no por item: este item hereda los
+    // nodos de SU etapa. Documentado como limite en docs/SENSORES_DEL_PANEL.
+    nodos_origen: nodosPorEtapa?.[String(i.etapa)] ?? null,
+    // Solo viajan si el plan es de proteccion: en los demas ni siquiera se
+    // nombran, para no escribir cuatro nulls por item en cada plan de la casa.
+    ...(i.protege_item !== undefined || i.deteccion !== undefined
+      ? {
+          protege_item: i.protege_item ?? null,
+          protege_nodos: i.protege_nodos ?? null,
+          deteccion: i.deteccion ?? null,
+          probabilidad: i.probabilidad ?? null,
+          dolor: i.dolor ?? null,
+          camino: i.camino ?? null,
+        }
+      : {}),
+  }));
+  const filas: Array<Record<string, unknown>> = [
+    ...heredadas.map((h) => ({ ...h, project_id: projectId, plan_id: planId, dominio })),
+    ...filasNuevas,
+  ];
+  let { error } = await supabase.from("checklist_items").insert(filas);
+  // AUD-09 M15: protege_nodos llega con la 041. Si el código corre antes de
+  // aplicarla, el plan de protección no se cae: se inserta sin esa columna (la
+  // protección se resolverá por id, como antes) y queda el síntoma en el log.
+  if (error && filas.some((f) => "protege_nodos" in f) && /protege_nodos/.test(error.message ?? "")) {
+    console.error("[insertarChecklist] falta la migracion 041 (protege_nodos); se inserta sin los nodos de lo protegido:", error.message);
+    ({ error } = await supabase
+      .from("checklist_items")
+      .insert(
+        filas.map((f) => {
+          const resto: Record<string, unknown> = { ...f };
+          delete resto.protege_nodos;
+          return resto;
+        })
+      ));
+  }
   if (error) throw error;
+}
+
+/** Ciclo de replanteamiento, Fase 2: el plan VIGENTE de un espacio (el último
+ * ciclo: inicial, completo, seguimiento o replanteamiento), sin contar el de la
+ * sesión indicada (en un reintento de la entrega, el plan de esa misma sesión
+ * ya podría existir y no es "el anterior"). */
+export async function obtenerPlanVigenteDe(
+  supabase: SupabaseClient,
+  projectId: string,
+  dominio: string,
+  excluirSessionId?: string
+): Promise<{ id: string; contenido_md: string; created_at: string } | null> {
+  const { data: sesiones } = await supabase.from("sessions").select("id").eq("project_id", projectId);
+  const ids = (sesiones ?? []).map((x: { id: string }) => x.id).filter((id) => id !== excluirSessionId);
+  if (ids.length === 0) return null;
+  const { data } = await supabase
+    .from("plans")
+    .select("id, contenido_md, created_at")
+    .in("session_id", ids)
+    .eq("dominio", dominio)
+    .in("etiqueta", [...ETIQUETAS_CICLO])
+    .order("created_at", { ascending: false })
+    .limit(1);
+  return ((data ?? [])[0] as { id: string; contenido_md: string; created_at: string } | undefined) ?? null;
+}
+
+/** Una tarea de un plan con lo que un ciclo necesita de ella. */
+export interface TareaDePlan {
+  id: string;
+  etapa: number;
+  orden: number;
+  texto: string;
+  destacado: boolean;
+  estado: ChecklistEstado;
+  nota: string | null;
+  completed_at: string | null;
+  no_aplica_motivo?: string | null;
+}
+
+/** Ciclo de replanteamiento, Fase 2: las tareas de un plan, en su orden, para
+ * el plan anterior que recibe la IA y para las hechas que se conservan. */
+export async function obtenerTareasDePlan(supabase: SupabaseClient, projectId: string, planId: string): Promise<TareaDePlan[]> {
+  const columnas = "id, etapa, orden, texto, destacado, estado, nota, completed_at";
+  const leer = (cols: string) =>
+    supabase
+      .from("checklist_items")
+      .select(cols)
+      .eq("project_id", projectId)
+      .eq("plan_id", planId)
+      .order("etapa", { ascending: true })
+      .order("orden", { ascending: true });
+  // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no está.
+  let { data, error } = await leer(`${columnas}, no_aplica_motivo`);
+  if (error) ({ data, error } = await leer(columnas));
+  if (error) throw error;
+  return (data ?? []) as unknown as TareaDePlan[];
 }

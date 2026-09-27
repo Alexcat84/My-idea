@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P02A2A5",
+  "intento": 0,
+  "usd": 0.158428,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35567,
+  "tokens_out": 808,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P02A2A5\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 1006, 1573, 1575, 1724], \"cita\": \"often reducing the range of permitted actions to far less than those necessary to get the job done under anything but optimal conditions.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro critica las reglas que solo sirven en condiciones óptimas (L990) y señala los procedimientos malos o inaplicables como condiciones latentes (L1724). Admite que las reglas nunca cubrirán toda la variedad, pero pide no abandonarlas (L1575). El paso no promete cobertura total: solo pide tener en cuenta la variabilidad real. Concreta la misma dirección sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P02A2A5",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   990,
+   1006,
+   1573,
+   1575,
+   1724
+  ],
+  "cita": "often reducing the range of permitted actions to far less than those necessary to get the job done under anything but optimal conditions.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro critica las reglas que solo sirven en condiciones óptimas (L990) y señala los procedimientos malos o inaplicables como condiciones latentes (L1724). Admite que las reglas nunca cubrirán toda la variedad, pero pide no abandonarlas (L1575). El paso no promete cobertura total: solo pide tener en cuenta la variabilidad real. Concreta la misma dirección sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

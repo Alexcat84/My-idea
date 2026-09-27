@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_013",
+  "intento": 0,
+  "usd": 0.16594799999999998,
+  "turnos": 1,
+  "duracion_s": 18.3,
+  "pared_s": 19.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32142,
+  "tokens_out": 1869,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P3EA3DA\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [83, 96, 105, 1076, 1133], \"razon\": \"El libro describe como las ganancias protectoras se convierten en ventaja productiva y erosionan el margen. Monitorizar ese margen concreta la advertencia en su misma direccion.\"},\n  {\"id\": \"P4C7E22\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [866, 1085, 1089, 1095, 1141, 1145, 1149], \"razon\": \"El libro atribuye el problema a la falta de fiabilidad de la alarma. Advierte que las medidas contra la causa del accidente anterior y las barreras rigidas pueden causar el siguiente. El Trident ya tenia un piloto monitor.\"},\n  {\"id\": \"P9297F3\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1058, 2638, 2650, 2767, 2853, 5775, 5781], \"razon\": \"El libro apoya identificar condiciones latentes proactivamente. Pero las considera inevitables, ya presentes y en proceso continuo; 'antes de que se acumulen' puede suponer un matiz distinto.\"},\n  {\"id\": \"P524B00\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4464, 4466, 4502], \"razon\": \"Las visitas de sitio generan instancias de incumplimiento, que son los datos brutos del proceso regulatorio. Registrarlas es el primer paso del modelo.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P3EA3DA",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    83,
+    96,
+    105,
+    1076,
+    1133
+   ],
+   "razon": "El libro describe como las ganancias protectoras se convierten en ventaja productiva y erosionan el margen. Monitorizar ese margen concreta la advertencia en su misma direccion."
+  },
+  {
+   "id": "P4C7E22",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    866,
+    1085,
+    1089,
+    1095,
+    1141,
+    1145,
+    1149
+   ],
+   "razon": "El libro atribuye el problema a la falta de fiabilidad de la alarma. Advierte que las medidas contra la causa del accidente anterior y las barreras rigidas pueden causar el siguiente. El Trident ya tenia un piloto monitor."
+  },
+  {
+   "id": "P9297F3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1058,
+    2638,
+    2650,
+    2767,
+    2853,
+    5775,
+    5781
+   ],
+   "razon": "El libro apoya identificar condiciones latentes proactivamente. Pero las considera inevitables, ya presentes y en proceso continuo; 'antes de que se acumulen' puede suponer un matiz distinto."
+  },
+  {
+   "id": "P524B00",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4464,
+    4466,
+    4502
+   ],
+   "razon": "Las visitas de sitio generan instancias de incumplimiento, que son los datos brutos del proceso regulatorio. Registrarlas es el primer paso del modelo."
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P4AE3EA",
+  "intento": 0,
+  "usd": 0.23228,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54025,
+  "tokens_out": 809,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4AE3EA\", \"veredicto\": \"FIEL\", \"lineas\": [3829, 2716], \"cita\": \"Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture, on the one hand, and by improving the credibility, applicability, availability and accuracy of the procedures, on the other.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda abordar las violaciones cambiando normas, creencias, actitudes y cultura, y además mejorando los procedimientos (L3829, L2716). El paso dice lo mismo. L4724 advierte que cambiar valores colectivos adultos es casi imposible, pero no desaconseja actuar sobre actitudes ante violaciones, y el paso no descarta los procedimientos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P4AE3EA",
+  "veredicto": "FIEL",
+  "lineas": [
+   3829,
+   2716
+  ],
+  "cita": "Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture, on the one hand, and by improving the credibility, applicability, availability and accuracy of the procedures, on the other.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda abordar las violaciones cambiando normas, creencias, actitudes y cultura, y además mejorando los procedimientos (L3829, L2716). El paso dice lo mismo. L4724 advierte que cambiar valores colectivos adultos es casi imposible, pero no desaconseja actuar sobre actitudes ante violaciones, y el paso no descarta los procedimientos.",
+  "paso_fiel": ""
+ }
+}

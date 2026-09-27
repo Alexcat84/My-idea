@@ -6,11 +6,11 @@
   "fuente": "Guia visual de empaque",
   "resumen_teorico": "La etiqueta pegada por fuera de la caja es la unica guia del paquete durante el viaje, pero se puede rasgar, mojar o despegar con el manejo. Por eso conviene imprimir la etiqueta de envio dos veces: una para la parte exterior de la caja, en su cara mas grande y visible, y otra copia identica que se coloca dentro, encima del contenido, antes de sellar. Esa copia interna incluye la direccion completa del remitente y del destinatario, para que si la etiqueta externa se pierde o se daña, quien abra la caja pueda identificar de donde viene y a donde va. Es una practica de bajo costo que evita que un envio se convierta en paquete perdido dentro de la bodega del courier.",
   "pasos_accionables": [
-    "Imprime la etiqueta de envio por duplicado antes de cerrar la caja.",
-    "Pega la primera copia en la cara mas grande y plana de la caja, sin arrugas.",
+    "Imprime la etiqueta de envío por duplicado antes de cerrar la caja.",
+    "Pega la primera copia en la cara más grande y plana de la caja, sin arrugas.",
     "Coloca la segunda copia dentro de la caja, encima del contenido, antes de sellar.",
-    "Verifica que ambas copias tengan la direccion completa de remitente y destinatario.",
-    "Revisa que ninguna cinta ni otra etiqueta cubra la informacion de contacto."
+    "Verifica que ambas copias tengan la dirección completa de remitente y destinatario.",
+    "Revisa que ninguna cinta ni otra etiqueta cubra la información de contacto."
   ],
   "entregable_esperado": "Un paquete con etiqueta doble que sigue siendo identificable aunque la etiqueta externa se dañe.",
   "nodos_previos": [
@@ -24,5 +24,66 @@
     "Trabajas con couriers donde el manejo agresivo puede desprender etiquetas.",
     "Quieres reducir reclamos por paquetes que el courier no pudo identificar."
   ],
-  "etiqueta_arbol": "Duplica la etiqueta dentro"
+  "etiqueta_arbol": "Duplica la etiqueta dentro",
+  "fuentes_internas": [
+    "Guia visual de empaque"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0282",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Imprime la etiqueta de envio por duplicado antes de cerrar la caja.",
+      "texto_nuevo": "Imprime la etiqueta de envío por duplicado antes de cerrar la caja.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-003.paso0: envío (Falta la tilde de hiato en 'envío'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0283",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pega la primera copia en la cara mas grande y plana de la caja, sin arrugas.",
+      "texto_nuevo": "Pega la primera copia en la cara más grande y plana de la caja, sin arrugas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-003.paso1: más (Falta la tilde del adverbio 'más'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0284",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Verifica que ambas copias tengan la direccion completa de remitente y destinatario.",
+      "texto_nuevo": "Verifica que ambas copias tengan la dirección completa de remitente y destinatario.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-003.paso3: dirección (Falta la tilde de la aguda 'dirección'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0285",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa que ninguna cinta ni otra etiqueta cubra la informacion de contacto.",
+      "texto_nuevo": "Revisa que ninguna cinta ni otra etiqueta cubra la información de contacto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-003.paso4: información (Falta la tilde de la aguda 'información'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

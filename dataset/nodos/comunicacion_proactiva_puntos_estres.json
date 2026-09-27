@@ -18,11 +18,27 @@
   "nodos_previos": [
     "fase_acclimate_experiencia_cliente"
   ],
-  "nodos_siguientes": [
-    "segmentos_de_clientes_problema_necesidad"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el servicio involucra tiempos de espera, logística o procesos fuera del control directo del cliente"
   ],
-  "etiqueta_arbol": "Adelántate a la Ansiedad del Cliente"
+  "etiqueta_arbol": "Adelántate a la Ansiedad del Cliente",
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-018",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_proactiva_puntos_estres -> segmentos_de_clientes_problema_necesidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-17): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El orden esta invertido: comunicar de forma proactiva en los puntos de estres del cliente supone ya conocer el segmento, asi que no lo prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

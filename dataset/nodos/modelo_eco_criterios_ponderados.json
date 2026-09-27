@@ -1,18 +1,18 @@
 {
   "node_id": "modelo_eco_criterios_ponderados",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Sistema de puntos para pesar tus proyectos ambientales (Eco-Model)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Es una manera de reunir distintas miradas de tu negocio (retener a tu gente, conseguir clientes, mantenerlos contentos, cuidar tu reputacion, cumplir tus compromisos de responsabilidad social) para armar un sistema de puntos que pese tus iniciativas ambientales. Te sirve cuando tienes que comparar proyectos con un retorno financiero parecido, usando criterios que los números solos no capturan, y respalda tu decisión porque nace de varias miradas expertas.",
   "pasos_accionables": [
-    "Reune a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
+    "Reúne a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
     "Comparte con ellas una lista inicial de costos y beneficios relacionados con lo ambiental.",
-    "Ajusta esa lista junto con ellas y decidan que peso darle a cada punto según que tan importante es para tu negocio.",
-    "Aplica ese sistema de puntos a los proyectos que compiten por tu inversion.",
-    "Usa el puntaje ambiental para desempatar o para revisar con mas cuidado un proyecto."
+    "Ajusta esa lista junto con ellas y decidan qué peso darle a cada punto según qué tan importante es para tu negocio.",
+    "Aplica ese sistema de puntos a los proyectos que compiten por tu inversión.",
+    "Usa el puntaje ambiental para desempatar o para revisar con más cuidado un proyecto."
   ],
-  "entregable_esperado": "Un sistema de puntos ponderados (eco model) que armas junto con distintas personas de tu negocio, listo para comparar proyectos entre si.",
+  "entregable_esperado": "Un sistema de puntos ponderados (eco model) que armas junto con distintas personas de tu negocio, listo para comparar proyectos entre sí.",
   "nodos_previos": [
     "eco_advantage"
   ],
@@ -24,5 +24,92 @@
     "Cuando tienes varios proyectos con un retorno financiero parecido compitiendo por tu inversion.",
     "Cuando necesitas argumentos solidos para justificar una inversion sostenible."
   ],
-  "etiqueta_arbol": "Pondera tus Iniciativas Ambientales"
+  "etiqueta_arbol": "Pondera tus Iniciativas Ambientales",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-227",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-009: Montar un sistema de puntos para decidir entre proyectos que compiten por inversion es asignar recursos, no probar nada con clientes o con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0623",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reune a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
+      "texto_nuevo": "Reúne a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-031.paso0: Reúne ('Reúne' lleva tilde para romper el diptongo; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0624",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ajusta esa lista junto con ellas y decidan que peso darle a cada punto según que tan importante es para tu negocio.",
+      "texto_nuevo": "Ajusta esa lista junto con ellas y decidan qué peso darle a cada punto según qué tan importante es para tu negocio.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-031.paso2: qué, qué (Los dos 'qué' son interrogativos indirectos y llevan tilde; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0625",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplica ese sistema de puntos a los proyectos que compiten por tu inversion.",
+      "texto_nuevo": "Aplica ese sistema de puntos a los proyectos que compiten por tu inversión.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-031.paso3: inversión (Faltaba la tilde de 'inversión'; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0626",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa el puntaje ambiental para desempatar o para revisar con mas cuidado un proyecto.",
+      "texto_nuevo": "Usa el puntaje ambiental para desempatar o para revisar con más cuidado un proyecto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-031.paso4: más ('más' es adverbio de cantidad y lleva tilde; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0627",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un sistema de puntos ponderados (eco model) que armas junto con distintas personas de tu negocio, listo para comparar proyectos entre si.",
+      "texto_nuevo": "Un sistema de puntos ponderados (eco model) que armas junto con distintas personas de tu negocio, listo para comparar proyectos entre sí.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-031.entregable: sí ('sí' es pronombre reflexivo y lleva tilde; 'eco model' queda sin tocar.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

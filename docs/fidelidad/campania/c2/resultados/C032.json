@@ -1,0 +1,2229 @@
+[
+ {
+  "id": "C032-001",
+  "veredicto": "OPERATIVO",
+  "lineas": "L235-L243",
+  "frase_clave": "Understand how CUI flows into, within, and out of the business.",
+  "razon": "El libro pide entender como entra el CUI en el negocio; identificar los puntos de entrada lo concreta. Los ejemplos (correos, portales, contratos) son ilustrativos y van en la misma direccion.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "diagrama_flujo_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar todos los puntos de entrada de CUI a la organización (correos, portales, contratos)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar todos los puntos de entrada de CUI a la organización (correos, portales, contratos)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-002",
+  "veredicto": "FIEL",
+  "lineas": "L415-L417",
+  "frase_clave": "Define password rules for your organization.",
+  "razon": "Traduccion literal del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "identificacion_autenticacion_mfa",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir reglas de contraseñas para la organización",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir reglas de contraseñas para la organización",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-003",
+  "veredicto": "FIEL",
+  "lineas": "L737-L737",
+  "frase_clave": "Periodically review and update the system security plan and take steps to protect it from unauthorized disclosure.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 7,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Revisar y actualizar periódicamente el plan de seguridad, protegiéndolo de divulgación no autorizada.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Revisar y actualizar periódicamente el plan de seguridad, protegiéndolo de divulgación no autorizada.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-004",
+  "veredicto": "OPERATIVO",
+  "lineas": "L351-L353",
+  "frase_clave": "Is access to management of audit logging functionality authorized to only a subset of privileged users or roles?",
+  "razon": "El libro lo plantea como pregunta que hay que hacerse; el paso la convierte en accion en la misma direccion, sin datos nuevos.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "auditoria_responsabilidad",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Restringir el acceso a la gestión de funciones de auditoría solo a usuarios privilegiados autorizados",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Restringir el acceso a la gestión de funciones de auditoría solo a usuarios privilegiados autorizados",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-005",
+  "veredicto": "FIEL",
+  "lineas": "L285-L287",
+  "frase_clave": "Protect CUI with device locks and session termination.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "control_acceso_least_privilege",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Proteger CUI con bloqueos de dispositivo y terminación de sesión automática",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Proteger CUI con bloqueos de dispositivo y terminación de sesión automática",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-006",
+  "veredicto": "FIEL",
+  "lineas": "L521-L523",
+  "frase_clave": "Understand who has access to digital and physical media. Periodically review to modify or remove access, as appropriate.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Restringir y revisar periódicamente el acceso a medios digitales y físicos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Restringir y revisar periódicamente el acceso a medios digitales y físicos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-007",
+  "veredicto": "OPERATIVO",
+  "lineas": "L177",
+  "frase_clave": "The NIST Cybersecurity and Privacy Reference Tool (CPRT) provides online, interactive versions of the updated security requirements in SP 800-171, Revision 3",
+  "razon": "El libro presenta la CPRT como recurso con versiones interactivas de los requisitos; recomendar usarla para explorarlos concreta ese recurso sin anadir datos.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "estructura_sp800171",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Usar la herramienta NIST Cybersecurity and Privacy Reference Tool (CPRT) para explorar requisitos específicos",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Usar la herramienta NIST Cybersecurity and Privacy Reference Tool (CPRT) para explorar requisitos específicos",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-008",
+  "veredicto": "FIEL",
+  "lineas": "L733-L735",
+  "frase_clave": "Describes specific threats to the system that are of concern to the organization; Describes the operational environment for the system",
+  "razon": "Paráfrasis fiel del contenido del SSP.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Describir amenazas específicas al sistema y su entorno operativo.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Describir amenazas específicas al sistema y su entorno operativo.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-009",
+  "veredicto": "FIEL",
+  "lineas": "L619-L619",
+  "frase_clave": "Establish a policy that directs if vulnerabilities are discovered, they are remediated as quickly as possible.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir política de remediación rápida ante vulnerabilidades detectadas.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir política de remediación rápida ante vulnerabilidades detectadas.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-010",
+  "veredicto": "FIEL",
+  "lineas": "L417",
+  "frase_clave": "Verify your passwords are not found on the list when users create or update passwords.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "gestion_contrasenas_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-011",
+  "veredicto": "FIEL",
+  "lineas": "L235-L235",
+  "frase_clave": "Create your own diagram to understand how CUI flows into, within, and out of the business.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "diagrama_flujo_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Crear un diagrama visual del flujo completo de CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Crear un diagrama visual del flujo completo de CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-012",
+  "veredicto": "FIEL",
+  "lineas": "L513-L513",
+  "frase_clave": "Establish procedures to allow authorized individuals to check out and return physical media to designated areas.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer procedimientos de préstamo y devolución de medios físicos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer procedimientos de préstamo y devolución de medios físicos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-013",
+  "veredicto": "OPERATIVO",
+  "lineas": "L265",
+  "frase_clave": "Implement in phases based upon your resources (including time, expertise, budget, etc.), starting with understanding what security requirements you may have already satisfied and building from there.",
+  "razon": "El libro pide implantar por fases partiendo de lo ya cumplido; priorizar segun el estado actual de la organizacion concreta esa idea en la misma direccion, sin cifras ni normas nuevas.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "estructura_sp800171",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Priorizar familias según el nivel de madurez actual de la organización",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Priorizar familias según el nivel de madurez actual de la organización",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-014",
+  "veredicto": "FIEL",
+  "lineas": "L795-L795",
+  "frase_clave": "Define the frequency for reviewing and updating the supply chain risk management plan (e.g., annually, semi-annually)",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir la frecuencia de revisión y actualización del plan SCRM.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir la frecuencia de revisión y actualización del plan SCRM.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-015",
+  "veredicto": "FIEL",
+  "lineas": "L413-L413",
+  "frase_clave": "Implement MFA for access to privileged and non-privileged accounts.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "identificacion_autenticacion_mfa",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Implementar MFA para acceso a cuentas privilegiadas y no privilegiadas",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Implementar MFA para acceso a cuentas privilegiadas y no privilegiadas",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-017",
+  "veredicto": "FIEL",
+  "lineas": "L675-L675",
+  "frase_clave": "Protect the system from external system connections by only allowing connections through managed interfaces.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Permitir conexiones externas solo a través de interfaces gestionadas.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Permitir conexiones externas solo a través de interfaces gestionadas.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-018",
+  "veredicto": "FIEL",
+  "lineas": "L387",
+  "frase_clave": "Disable or remove functions, ports, protocols, connections, and services that are unnecessary or nonsecure.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Deshabilitar funciones, puertos y servicios innecesarios en los sistemas",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Deshabilitar funciones, puertos y servicios innecesarios en los sistemas",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-019",
+  "veredicto": "OPERATIVO",
+  "lineas": "L353",
+  "frase_clave": "Are we retaining audit records for a period consistent with the business records retention policy? Note that some industries and types of data (e.g., financial, employee, and medical records) have regulatory specifications.",
+  "razon": "El libro vincula la retencion a la politica del negocio y senala que algunos sectores tienen especificaciones regulatorias; definir la politica teniendo en cuenta esas regulaciones lo concreta sin datos nuevos.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "auditoria_responsabilidad",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir políticas de retención de registros conforme a regulaciones del sector",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir políticas de retención de registros conforme a regulaciones del sector",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-020",
+  "veredicto": "FIEL",
+  "lineas": "L479-L481",
+  "frase_clave": "Ensure multi-factor authentication is enabled when establishing the maintenance session. Fully terminate the connection when the maintenance is complete.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-021",
+  "veredicto": "FIEL",
+  "lineas": "L349-L349",
+  "frase_clave": "Ask internal information security staff, or your security vendor, what audit log information, if any, the system currently captures",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "auditoria_responsabilidad",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-022",
+  "veredicto": "FIEL",
+  "lineas": "L381-L383",
+  "frase_clave": "Identify the location of CUI and the system components on which the information is processed and stored.",
+  "razon": "Paráfrasis fiel, en línea con el alcance de L245.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "determinar_alcance_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar cuáles sistemas procesan, almacenan o transmiten CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar cuáles sistemas procesan, almacenan o transmiten CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-023",
+  "veredicto": "FIEL",
+  "lineas": "L417-L417",
+  "frase_clave": "When you send passwords to others, do so using cryptographically protected forms, such as through encrypted email or password managers.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "gestion_contrasenas_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-024",
+  "veredicto": "FIEL",
+  "lineas": "L491-L493",
+  "frase_clave": "Verify that there is no CUI on the equipment by sanitizing or destroying the equipment or retaining the equipment within the facility before it is removed.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-025",
+  "veredicto": "FIEL",
+  "lineas": "L313",
+  "frase_clave": "Customize the content to make it relevant-- based on the systems that personnel have authorized access to, contextualized to the work environments of personnel (e.g., telework, shop floor), and tailored to the specific roles of personnel.",
+  "razon": "El libro dice personalizar el contenido segun roles y entornos de trabajo.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Diseñar contenido de entrenamiento personalizado según roles y entornos de trabajo del personal",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Diseñar contenido de entrenamiento personalizado según roles y entornos de trabajo del personal",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-026",
+  "veredicto": "OPERATIVO",
+  "lineas": "L265-L267",
+  "frase_clave": "View sample templates for system security plans on the Defense Industrial Base Sector Coordinating Council website.",
+  "razon": "El libro remite a plantillas de SSP del DIB Sector Coordinating Council y a una plantilla editable para el POAM; el paso las junta y concreta su uso en la misma direccion.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "plan_seguridad_sistema_poam",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Usar plantillas editables disponibles del Defense Industrial Base Sector Coordinating Council",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Usar plantillas editables disponibles del Defense Industrial Base Sector Coordinating Council",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-027",
+  "veredicto": "FIEL",
+  "lineas": "L579-L579",
+  "frase_clave": "Issue authorization credentials (i.e., identification badges, identification cards) for employee and visitor facility access.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Emitir credenciales de identificación para empleados y visitantes.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Emitir credenciales de identificación para empleados y visitantes.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-028",
+  "veredicto": "FIEL",
+  "lineas": "L511-L511",
+  "frase_clave": "Conduct an inventory of what media contains CUI.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Inventariar qué medios contienen CUI.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Inventariar qué medios contienen CUI.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-029",
+  "veredicto": "FIEL",
+  "lineas": "L519-L519",
+  "frase_clave": "Sanitize media. If media is designated for disposal or reuse",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Sanitizar medios antes de reutilización o disposición.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Sanitizar medios antes de reutilización o disposición.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-030",
+  "veredicto": "FIEL",
+  "lineas": "L619-L619",
+  "frase_clave": "Many small businesses might not have the resources to conduct risk assessments... consider engaging a vendor who can be your partner in risk management.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 7,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Considerar contratar un proveedor externo si no hay recursos internos suficientes.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Considerar contratar un proveedor externo si no hay recursos internos suficientes.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-031",
+  "veredicto": "FIEL",
+  "lineas": "L437-L437",
+  "frase_clave": "most federal contracts will include specific reporting and notification requirements that should be included in the Incident Response Plan",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Documentar requisitos específicos de reporte según contratos federales",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Documentar requisitos específicos de reporte según contratos federales",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-032",
+  "veredicto": "OPERATIVO",
+  "lineas": "L29-L35",
+  "frase_clave": "Controlled Technical Information ... General Proprietary Business Information",
+  "razon": "El libro pide determinar si el negocio tiene CUI (L239) y da como tipos la informacion tecnica y la propietaria; el SSP identifica los tipos de informacion (L735). Documentarlo concreta esa direccion.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "que_es_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Documentar qué tipo de CUI maneja el negocio (técnica, propietaria, etc.)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Documentar qué tipo de CUI maneja el negocio (técnica, propietaria, etc.)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-033",
+  "veredicto": "FIEL",
+  "lineas": "L617",
+  "frase_clave": "Identify the risks (internal and external threats and vulnerabilities, likelihood of occurrence and overall impact) associated with each asset.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar riesgos internos y externos, su probabilidad e impacto para cada activo.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar riesgos internos y externos, su probabilidad e impacto para cada activo.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-034",
+  "veredicto": "FIEL",
+  "lineas": "L557-L561",
+  "frase_clave": "Review and confirm the ongoing operational need for current logical and physical access authorizations... Modify access authorization to correspond with any changes in operational need.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_personnel_security",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir políticas de reasignación: revisar y ajustar los permisos según nueva necesidad operativa.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir políticas de reasignación: revisar y ajustar los permisos según nueva necesidad operativa.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-035",
+  "veredicto": "FIEL",
+  "lineas": "L801-L801",
+  "frase_clave": "How will the business respond to a supply chain incident? Are there alternative suppliers or systems to rely upon",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-036",
+  "veredicto": "FIEL",
+  "lineas": "L109-L113",
+  "frase_clave": "Incident response testing includes the use of checklists, walk-through or tabletop exercises, and simulations.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-037",
+  "veredicto": "OPERATIVO",
+  "lineas": "L715-L717",
+  "frase_clave": "Retaining CUI on nonfederal systems after contracts or agreements have concluded increases the attack surface for those systems and the risk of the information being compromised.",
+  "razon": "El libro advierte del riesgo de retener CUI tras el contrato; eliminarlo concreta esa advertencia en la misma direccion.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Eliminar CUI de sistemas no federales una vez concluidos los contratos para reducir la superficie de ataque.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Eliminar CUI de sistemas no federales una vez concluidos los contratos para reducir la superficie de ataque.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-038",
+  "veredicto": "FIEL",
+  "lineas": "L803-L803",
+  "frase_clave": "Define a strategy for monitoring performance against the plan.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer estrategia de monitoreo de desempeño frente al plan SCRM.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer estrategia de monitoreo de desempeño frente al plan SCRM.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-039",
+  "veredicto": "OPERATIVO",
+  "lineas": "L353",
+  "frase_clave": "How frequently are these records reviewed?",
+  "razon": "El libro lo formula como pregunta; fijar una frecuencia de revision la convierte en accion sin dar una cifra concreta.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "auditoria_responsabilidad",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer frecuencia de revisión de los registros de auditoría",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer frecuencia de revisión de los registros de auditoría",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-040",
+  "veredicto": "FIEL",
+  "lineas": "L777-L777",
+  "frase_clave": "A procedure for monitoring security requirement compliance by external service providers is established.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer procedimiento de monitoreo del cumplimiento de requisitos de seguridad por proveedores externos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer procedimiento de monitoreo del cumplimiento de requisitos de seguridad por proveedores externos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-041",
+  "veredicto": "FIEL",
+  "lineas": "L613",
+  "frase_clave": "Convene a team of individuals from across the organization (also include any vendors or contractors)",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Convocar un equipo multidisciplinario (incluyendo proveedores/contratistas) para el análisis.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Convocar un equipo multidisciplinario (incluyendo proveedores/contratistas) para el análisis.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-042",
+  "veredicto": "FIEL",
+  "lineas": "L733-L735",
+  "frase_clave": "Defines the system components; Identifies the information types processed, stored, and transmitted by the system",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir componentes del sistema y tipos de información procesada, almacenada y transmitida.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir componentes del sistema y tipos de información procesada, almacenada y transmitida.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-043",
+  "veredicto": "FIEL",
+  "lineas": "L377-L379",
+  "frase_clave": "Authorized software – allow by exception. It is important to identify permitted and prohibited actions regarding software installation",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-044",
+  "veredicto": "ANADIDO",
+  "lineas": "L415-L417",
+  "frase_clave": "Define password rules for your organization.",
+  "razon": "El libro solo pide definir reglas de contrasenas y mantener una lista de contrasenas comprometidas; no habla de complejidad ni de renovacion. Busque complex, expir, rotat, renew y change sin hallazgos pertinentes.",
+  "texto_fiel": "",
+  "texto_sugerencia": "Sugerencia de My Idea: definir reglas de contrasenas para la organizacion que incluyan criterios de complejidad y de renovacion.",
+  "tipo_anadido": "PRACTICO",
+  "dato": "reglas de complejidad y renovacion de contrasenas",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "ANADIDO",
+  "verificador": "ANADIDO",
+  "node_id": "gestion_contrasenas_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir reglas de complejidad y renovación de contraseñas para la organización.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir reglas de complejidad y renovación de contraseñas para la organización.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-045",
+  "veredicto": "FIEL",
+  "lineas": "L477-L477",
+  "frase_clave": "Identify the tools that are used for diagnostic and repair actions on the system.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar las herramientas usadas para diagnóstico y reparación del sistema",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar las herramientas usadas para diagnóstico y reparación del sistema",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-046",
+  "veredicto": "FIEL",
+  "lineas": "L353-L353",
+  "frase_clave": "Do audit records contain information that establishes type of event, when the event occurred, where the event occurred, the source of the event, outcome, and the identity of the individual associated with the event?",
+  "razon": "Paráfrasis fiel de la verificación que propone el libro.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "auditoria_responsabilidad",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Verificar que los registros contengan tipo de evento, momento, origen, resultado e identidad del individuo asociado",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Verificar que los registros contengan tipo de evento, momento, origen, resultado e identidad del individuo asociado",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-047",
+  "veredicto": "FIEL",
+  "lineas": "L525-L527",
+  "frase_clave": "Maintaining accountability of media during transport.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 7,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Mantener trazabilidad durante el transporte de medios.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Mantener trazabilidad durante el transporte de medios.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-048",
+  "veredicto": "OPERATIVO",
+  "lineas": "L235-L243",
+  "frase_clave": "Understand how CUI flows into, within, and out of the business.",
+  "razon": "Identificar los puntos de salida concreta el flujo de salida del CUI que pide el libro; los ejemplos son ilustrativos.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "diagrama_flujo_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar los puntos de salida del CUI (entregables, reportes, backups externos)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar los puntos de salida del CUI (entregables, reportes, backups externos)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-049",
+  "veredicto": "FIEL",
+  "lineas": "L675",
+  "frase_clave": "Deny network communications traffic by default. Only allow network communications traffic by exception.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Denegar tráfico de red por defecto, permitiendo solo por excepción.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Denegar tráfico de red por defecto, permitiendo solo por excepción.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-050",
+  "veredicto": "FIEL",
+  "lineas": "L39-L39",
+  "frase_clave": "For more information on types of CUI and markings, visit the National Archives and Records Administration (NARA) https://www.archives.gov/cui.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "que_es_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Consultar el sitio de NARA (archives.gov/cui) para conocer tipos y marcados de CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Consultar el sitio de NARA (archives.gov/cui) para conocer tipos y marcados de CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-051",
+  "veredicto": "FIEL",
+  "lineas": "L437-L455",
+  "frase_clave": "Who to call: List all the individuals who may be part of the incident response efforts. Include their contact information, roles, and responsibilities.",
+  "razon": "Paráfrasis fiel con los contactos de la tabla del libro.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-052",
+  "veredicto": "FIEL",
+  "lineas": "L325-L325",
+  "frase_clave": "Examples of security awareness techniques include displaying posters... generating email advisories or notices from leadership, and conducting awareness events—such as a lunch-and-learn or workshop.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-053",
+  "veredicto": "FIEL",
+  "lineas": "L697-L705",
+  "frase_clave": "Software vendors, subscription services, and industry Information Sharing and Analysis Centers (ISACs) may also provide security alerts and advisories.",
+  "razon": "Paráfrasis fiel de las fuentes listadas.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-054",
+  "veredicto": "FIEL",
+  "lineas": "L765-L765",
+  "frase_clave": "Establish procedures for the replacement or continued use of unsupported system components. Justify use of continued use",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer procedimientos para reemplazo o uso continuado justificado de componentes no soportados.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer procedimientos para reemplazo o uso continuado justificado de componentes no soportados.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-055",
+  "veredicto": "OPERATIVO",
+  "lineas": "L241-L243",
+  "frase_clave": "how the data flows into, within, and out of those systems or components",
+  "razon": "El libro pide entender como fluye el CUI dentro del negocio y sus sistemas; mapearlo con ejemplos de sistemas concreta esa direccion.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "diagrama_flujo_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Mapear cómo el CUI se mueve entre sistemas internos (bases de datos, servidores, dispositivos)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Mapear cómo el CUI se mueve entre sistemas internos (bases de datos, servidores, dispositivos)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-056",
+  "veredicto": "FIEL",
+  "lineas": "L245",
+  "frase_clave": "You may limit the scope of the security requirements by isolating the system components in a separate security domain. Isolation can be achieved by implementing subnetworks with firewalls or other boundary protection devices.",
+  "razon": "El libro plantea la opcion de aislar en un dominio separado con subredes y firewalls.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "determinar_alcance_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Evaluar la posibilidad de aislar estos sistemas en un dominio de seguridad separado (subredes, firewalls)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Evaluar la posibilidad de aislar estos sistemas en un dominio de seguridad separado (subredes, firewalls)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-059",
+  "veredicto": "FIEL",
+  "lineas": "L237-L237",
+  "frase_clave": "The federal agency is responsible for communicating what CUI the business is responsible for protecting... If there are questions, reach out to the contracting officer.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "que_es_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Contactar al oficial de contratos para confirmar qué información específica es CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Contactar al oficial de contratos para confirmar qué información específica es CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-060",
+  "veredicto": "FIEL",
+  "lineas": "L381-L383",
+  "frase_clave": "Identify the location of CUI and the system components on which the information is processed and stored.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-061",
+  "veredicto": "FIEL",
+  "lineas": "L675-L675",
+  "frase_clave": "Communications at external and key internal managed interfaces of the system, such as gateways, routers, firewalls, and encrypted tunnels are monitored and controlled.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-062",
+  "veredicto": "FIEL",
+  "lineas": "L597-L599",
+  "frase_clave": "Use control systems such as card readers, keys, locks, or guards. Escort visitors and control visitor activity",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 7,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Controlar puntos de entrada/salida con lectores de tarjeta, llaves o guardias, y escoltar visitantes.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Controlar puntos de entrada/salida con lectores de tarjeta, llaves o guardias, y escoltar visitantes.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-063",
+  "veredicto": "FIEL",
+  "lineas": "L257-L267",
+  "frase_clave": "Review NIST SP 800-171A to help you understand how the security requirements in SP 800-171 can be self-assessed or are assessed by independent, third-party entities or by the government.",
+  "razon": "Tiene razon el lector B. El paso ('Realizar una autoevaluacion o auditoria de seguridad usando SP 800-171A') es una parafrasis que el libro sostiene en varios pasajes. L63 dice que 'NIST SP 800-171A ... provides assessment procedures and a methodology to conduct assessments'. L143 dice 'For additional guidance on NIST's methodology to plan, prepare for, and conduct security requirement assessments, refer to SP 800-171A'. L257 habla de autoevaluacion o evaluacion por terceros. L267 y L639 dicen 'Once you have completed your audit or security assessment'. La accion (realizar la evaluacion o auditoria), el objeto y la herramienta (SP 800-171A) estan en el libro, y el paso no anade condicion, cifra ni responsable. El lector A lo apoyo solo en L257, que habla de revisar el documento para entenderlo, y no vio L63 ni L143, donde el libro remite expresamente a SP 800-171A para realizar las evaluaciones.",
+  "decidido_por": "arbitro",
+  "lector": "OPERATIVO",
+  "verificador": "FIEL",
+  "node_id": "plan_seguridad_sistema_poam",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Realizar una autoevaluación o auditoría de seguridad usando SP 800-171A",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Realizar una autoevaluación o auditoría de seguridad usando SP 800-171A",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-064",
+  "veredicto": "FIEL",
+  "lineas": "L97-L101",
+  "frase_clave": "SP 800-171 security requirements are organized into 17 families",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "estructura_sp800171",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Revisar las 17 familias de requisitos disponibles en el catálogo de SP 800-171",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Revisar las 17 familias de requisitos disponibles en el catálogo de SP 800-171",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-065",
+  "veredicto": "FIEL",
+  "lineas": "L579",
+  "frase_clave": "Develop, approve, and maintain a list of individuals with authorized access to the facility where the system resides.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Desarrollar y mantener una lista de personas autorizadas a acceder a las instalaciones.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Desarrollar y mantener una lista de personas autorizadas a acceder a las instalaciones.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-066",
+  "veredicto": "FIEL",
+  "lineas": "L241-L241",
+  "frase_clave": "Inventorying what systems or components the business has",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "determinar_alcance_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Inventariar todos los sistemas y componentes de la organización",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Inventariar todos los sistemas y componentes de la organización",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-067",
+  "veredicto": "FIEL",
+  "lineas": "L295-L295",
+  "frase_clave": "Identify who within the business has administrative... privileges on systems and devices. Limit administrative privileges to only those who need them",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "control_acceso_least_privilege",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar y restringir privilegios administrativos solo a quienes los necesitan",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar y restringir privilegios administrativos solo a quienes los necesitan",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-068",
+  "veredicto": "FIEL",
+  "lineas": "L593-L595",
+  "frase_clave": "Place these devices in locked rooms or other secured areas... Use privacy screens on monitors",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Colocar dispositivos de salida (impresoras, monitores) en áreas seguras y usar filtros de privacidad.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Colocar dispositivos de salida (impresoras, monitores) en áreas seguras y usar filtros de privacidad.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-069",
+  "veredicto": "FIEL",
+  "lineas": "L281-L283",
+  "frase_clave": "Complete a review of publicly available information, such as information on the company website. Review the content for CUI and remove such information if discovered.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "control_acceso_least_privilege",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Revisar información pública (sitio web de la empresa) para eliminar CUI expuesto",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Revisar información pública (sitio web de la empresa) para eliminar CUI expuesto",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-070",
+  "veredicto": "FIEL",
+  "lineas": "L581-L583",
+  "frase_clave": "Identify approved alternate work sites. Establish security requirements for that site.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar y aprobar sitios de trabajo alternativos con requisitos de seguridad definidos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar y aprobar sitios de trabajo alternativos con requisitos de seguridad definidos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-071",
+  "veredicto": "FIEL",
+  "lineas": "L417",
+  "frase_clave": "Maintain a list of commonly used, expected, or compromised passwords, and update the list regularly.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "identificacion_autenticacion_mfa",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Mantener y actualizar una lista de contraseñas comprometidas o comunes para verificación",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Mantener y actualizar una lista de contraseñas comprometidas o comunes para verificación",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-072",
+  "veredicto": "FIEL",
+  "lineas": "L547-L547",
+  "frase_clave": "Establish a process for screening individuals prior to authorizing access to the system, such as utilizing background checks.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_personnel_security",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-073",
+  "veredicto": "FIEL",
+  "lineas": "L477-L477",
+  "frase_clave": "Enable automatic updates where appropriate.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Habilitar actualizaciones automáticas donde sea apropiado",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Habilitar actualizaciones automáticas donde sea apropiado",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-074",
+  "veredicto": "FIEL",
+  "lineas": "L437-L437",
+  "frase_clave": "What/when/how to report: List the business' communications/reporting responsibilities as required by laws, regulations, contracts, agreements, or policies.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-075",
+  "veredicto": "FIEL",
+  "lineas": "L743-L745",
+  "frase_clave": "Establish rules that describe the responsibilities and expected behavior for system usage and protecting CUI.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer reglas de comportamiento para el uso del sistema y protección de CUI.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer reglas de comportamiento para el uso del sistema y protección de CUI.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-076",
+  "veredicto": "FIEL",
+  "lineas": "L373-L373",
+  "frase_clave": "Limit who can make changes to the system containing CUI.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "gestion_configuracion_least_functionality",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Limitar quién puede realizar cambios en sistemas que contienen CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Limitar quién puede realizar cambios en sistemas que contienen CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-077",
+  "veredicto": "FIEL",
+  "lineas": "L735",
+  "frase_clave": "Provides an overview of the security requirements for the system; Describes the safeguards in place or planned for meeting the security requirements",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Detallar requisitos de seguridad y las salvaguardas implementadas o planeadas.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Detallar requisitos de seguridad y las salvaguardas implementadas o planeadas.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-078",
+  "veredicto": "FIEL",
+  "lineas": "L707-L709",
+  "frase_clave": "Establish a System Monitoring Strategy, Including: Procedures for system monitoring tools and techniques.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-079",
+  "veredicto": "FIEL",
+  "lineas": "L251-L265",
+  "frase_clave": "the system security plan describes the system boundary, the environment in which the system operates, how the security requirements are satisfied",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "plan_seguridad_sistema_poam",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Documentar en el SSP cómo se satisface cada requisito de seguridad aplicable",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Documentar en el SSP cómo se satisface cada requisito de seguridad aplicable",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-080",
+  "veredicto": "FIEL",
+  "lineas": "L279-L279",
+  "frase_clave": "Implement policies and procedures that limit access to CUI on systems and devices to only those individuals that require such access to do their jobs.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "control_acceso_least_privilege",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Implementar políticas que limiten el acceso a CUI solo a individuos que lo requieren para su trabajo",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Implementar políticas que limiten el acceso a CUI solo a individuos que lo requieren para su trabajo",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-081",
+  "veredicto": "FIEL",
+  "lineas": "L717-L717",
+  "frase_clave": "Establish policies and procedures for managing and retaining CUI in accordance with applicable laws, Executive Orders, directives, regulations",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-082",
+  "veredicto": "FIEL",
+  "lineas": "L709-L709",
+  "frase_clave": "Monitoring the system to detect attacks, indicators of potential attacks, and unauthorized connections... Unusual or unauthorized activities or conditions for inbound communications traffic.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_information_integrity",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Detectar ataques, conexiones no autorizadas y actividades inusuales en tráfico entrante/saliente.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Detectar ataques, conexiones no autorizadas y actividades inusuales en tráfico entrante/saliente.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-083",
+  "veredicto": "FIEL",
+  "lineas": "L799",
+  "frase_clave": "Establish policies for evaluating vendors prior to purchasing components or engaging in services.",
+  "razon": "Traduccion literal del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-084",
+  "veredicto": "FIEL",
+  "lineas": "L621-L621",
+  "frase_clave": "categorize each based on the impact to the organization if the confidentiality of the CUI were to be compromised. For example, assign a \"high, moderate, or low\" impact rating for each.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Categorizar cada activo según impacto (alto, moderado, bajo) si se compromete su confidencialidad.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Categorizar cada activo según impacto (alto, moderado, bajo) si se compromete su confidencialidad.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-085",
+  "veredicto": "FIEL",
+  "lineas": "L515-L515",
+  "frase_clave": "Securely store media (e.g., locked drawer, desk, cabinet, or a controlled media library).",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Almacenar medios de forma segura (cajón con llave, gabinete, biblioteca controlada).",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Almacenar medios de forma segura (cajón con llave, gabinete, biblioteca controlada).",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-086",
+  "veredicto": "FIEL",
+  "lineas": "L761-L765",
+  "frase_clave": "Support for system components includes software patches, firmware updates, replacement parts, and maintenance contracts.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar componentes de sistema sin soporte (sin parches, actualizaciones o mantenimiento).",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar componentes de sistema sin soporte (sin parches, actualizaciones o mantenimiento).",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-087",
+  "veredicto": "ANADIDO",
+  "tipo_anadido": "PRACTICO",
+  "lineas": "L681-L685",
+  "frase_clave": "Mechanisms that protect the confidentiality of CUI during transmission include TLS and IPsec.",
+  "dato": "TLS o IPsec como medio para cifrar la CUI en almacenamiento",
+  "razon": "Tiene razon el lector A. El libro pide cifrar en transito y en almacenamiento ('Encryption protects CUI from unauthorized disclosure during transmission and while in storage'), pero reserva TLS e IPsec para la transmision. Para el almacenamiento solo remite a 'NIST SP 800-111 Guide to Storage Encryption Technologies' (L679), a la guia de CISA sobre datos guardados (L685) y a 'many free and paid encryption tools' (L683). Al decir 'en transito y almacenamiento usando TLS o IPsec', el paso asigna una herramienta a un objeto (el almacenamiento) al que el libro no la aplica. Eso es un dato concreto sin respaldo, no una simple concrecion. Tampoco es CONTRARIO: el libro no fija otra herramienta concreta para el almacenamiento ni desaconseja TLS. Es una herramienta, asi que el tipo es PRACTICO. El lector B reconocio el desajuste pero lo dejo en OPERATIVO, y eso no cabe, porque el paso contiene un dato que el libro no pone.",
+  "texto_fiel": "Cifrar CUI en tránsito (por ejemplo, con TLS o IPsec) y en almacenamiento.",
+  "texto_sugerencia": "Sugerencia de My Idea: cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+  "decidido_por": "arbitro",
+  "lector": "ANADIDO",
+  "verificador": "OPERATIVO",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Cifrar CUI en tránsito y almacenamiento usando TLS o IPsec.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Cifrar CUI en tránsito y almacenamiento usando TLS o IPsec.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-088",
+  "veredicto": "FIEL",
+  "lineas": "L683-L683",
+  "frase_clave": "Securely store your encryption key(s) so that you do not lose access to your systems or assets.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 7,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Almacenar de forma segura las claves de cifrado.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Almacenar de forma segura las claves de cifrado.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-089",
+  "veredicto": "FIEL",
+  "lineas": "L675-L675",
+  "frase_clave": "Terminate the network connections at the end of the session or after a defined period of inactivity.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-090",
+  "veredicto": "FIEL",
+  "lineas": "L417",
+  "frase_clave": "Maintain a list of commonly used, expected, or compromised passwords, and update the list regularly.",
+  "razon": "Parafrasis del libro; debiles equivale a comunes o esperadas.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "gestion_contrasenas_cui",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-091",
+  "veredicto": "FIEL",
+  "lineas": "L775-L777",
+  "frase_clave": "Security requirements to be satisfied by external system service providers are defined. Roles and responsibilities are clearly defined... Remedies, mitigations, and response requirements for instances of noncompliance are identified.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir requisitos de seguridad, roles, responsabilidades y remedios ante incumplimiento en los SLA.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir requisitos de seguridad, roles, responsabilidades y remedios ante incumplimiento en los SLA.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-092",
+  "veredicto": "FIEL",
+  "lineas": "L579-L579",
+  "frase_clave": "Periodically review the facility access list. Remove individuals from the facility access list when access is no longer required.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Revisar periódicamente la lista de acceso y remover a quienes ya no lo requieran.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Revisar periódicamente la lista de acceso y remover a quienes ya no lo requieran.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-093",
+  "veredicto": "FIEL",
+  "lineas": "L765-L765",
+  "frase_clave": "determine risk mitigation options or identify alternative sources for continued support.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir mitigaciones de riesgo o fuentes alternativas de soporte.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir mitigaciones de riesgo o fuentes alternativas de soporte.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-094",
+  "veredicto": "FIEL",
+  "lineas": "L793-L793",
+  "frase_clave": "Identify critical suppliers that have access to, or provide components to, systems that process, store, or transmit CUI.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar proveedores críticos con acceso a sistemas que procesan CUI.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar proveedores críticos con acceso a sistemas que procesan CUI.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-095",
+  "veredicto": "FIEL",
+  "lineas": "L645-L645",
+  "frase_clave": "There are commercially available tools to help businesses achieve continuous monitoring or third- vendors can support continuous monitoring goals.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Utilizar herramientas comerciales o proveedores externos para apoyar el monitoreo continuo.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Utilizar herramientas comerciales o proveedores externos para apoyar el monitoreo continuo.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-096",
+  "veredicto": "FIEL",
+  "lineas": "L675",
+  "frase_clave": "Protect internal networks from publicly accessible ones by setting up subnetworks",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_system_communication_protection",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Separar redes internas de las públicas mediante subredes.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Separar redes internas de las públicas mediante subredes.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-097",
+  "veredicto": "FIEL",
+  "lineas": "L637-L637",
+  "frase_clave": "These can be self-assessments or can be completed by a third party.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-098",
+  "veredicto": "FIEL",
+  "lineas": "L775-L775",
+  "frase_clave": "Review new or existing service level agreements for the following criteria",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_system_services_acquisition",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Revisar acuerdos de nivel de servicio (SLA) con proveedores externos.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Revisar acuerdos de nivel de servicio (SLA) con proveedores externos.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-099",
+  "veredicto": "FIEL",
+  "lineas": "L437-L437",
+  "frase_clave": "A business champion: Someone who is responsible for developing and maintaining the incident response plan.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "respuesta_incidentes_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Designar un responsable (business champion) del plan de respuesta a incidentes",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Designar un responsable (business champion) del plan de respuesta a incidentes",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-100",
+  "veredicto": "FIEL",
+  "lineas": "L477-L477",
+  "frase_clave": "Plan for upgrades to end-of-life hardware or software that will no longer be supported.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-101",
+  "veredicto": "FIEL",
+  "lineas": "L797-L797",
+  "frase_clave": "Identify risks associated with the development, design, manufacturing, acquisition, delivery, integration, operations, maintenance, and disposal",
+  "razon": "Paráfrasis fiel, con subconjunto de fases.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar riesgos en diseño, manufactura, adquisición, entrega e integración de componentes.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar riesgos en diseño, manufactura, adquisición, entrega e integración de componentes.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-102",
+  "veredicto": "FIEL",
+  "lineas": "L585-L587",
+  "frase_clave": "Examples of physical access monitoring include guards, visitor logs, video surveillance equipment (i.e., cameras), and sensor devices.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_physical_protection",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Monitorear el acceso físico mediante guardias, registros de visitantes, cámaras o sensores.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Monitorear el acceso físico mediante guardias, registros de visitantes, cámaras o sensores.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-103",
+  "veredicto": "FIEL",
+  "lineas": "L735-L735",
+  "frase_clave": "Identifies individuals who fulfill system roles and responsibilities",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Identificar individuos con roles y responsabilidades en el sistema.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Identificar individuos con roles y responsabilidades en el sistema.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-104",
+  "veredicto": "FIEL",
+  "lineas": "L293-L293",
+  "frase_clave": "Reassign or remove privileges as necessary, such as when an individual no longer requires access to CUI and the system.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "control_acceso_least_privilege",
+  "paso": 5,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Reasignar o remover privilegios cuando un individuo ya no requiere acceso",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Reasignar o remover privilegios cuando un individuo ya no requiere acceso",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-106",
+  "veredicto": "FIEL",
+  "lineas": "L549-L555",
+  "frase_clave": "Establish policies and procedures for personnel termination. Disable system access. Terminate or revoke authenticators and credentials... Retrieve system property.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_personnel_security",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-107",
+  "veredicto": "FIEL",
+  "lineas": "L619-L619",
+  "frase_clave": "Establish a frequency at which the system containing CUI is monitored and scanned for vulnerabilities.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer frecuencia de monitoreo y escaneo de vulnerabilidades.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer frecuencia de monitoreo y escaneo de vulnerabilidades.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-108",
+  "veredicto": "FIEL",
+  "lineas": "L321-L321",
+  "frase_clave": "training should be provided to staff before authorizing access to the system or CUI",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-109",
+  "veredicto": "FIEL",
+  "lineas": "L517",
+  "frase_clave": "Mark system media that contain CUI to indicate distribution limitations, handling caveats, and applicable CUI markings.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_media_protection",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Marcar los medios con las restricciones de distribución y manejo de CUI.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Marcar los medios con las restricciones de distribución y manejo de CUI.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-110",
+  "veredicto": "FIEL",
+  "lineas": "L417-L417",
+  "frase_clave": "When you send passwords to others, do so using cryptographically protected forms, such as through encrypted email or password managers.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "identificacion_autenticacion_mfa",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Enviar contraseñas usando formas criptográficamente protegidas (correo encriptado, gestores de contraseñas)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Enviar contraseñas usando formas criptográficamente protegidas (correo encriptado, gestores de contraseñas)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-111",
+  "veredicto": "OPERATIVO",
+  "lineas": "L137-L151",
+  "frase_clave": "It is the responsibility of the federal agency to ensure that requirements to protect CUI are identified in applicable contracts or agreements",
+  "razon": "Tiene razon el lector A. El libro no dice literalmente que haya que revisar los contratos para ver si contienen requisitos de CUI. Dice que esos requisitos se identifican en los contratos (L137), que hay que entender los requisitos contractuales actuales o futuros (L237) y que hay que determinar si el negocio tiene CUI (L239). L151 ('Contractors should check for specific requirements in their contracts') si pide revisar los contratos, pero para saber que revision de SP 800-171 aplica, no para detectar si hay CUI. El paso junta esas piezas en una accion concreta y en la misma direccion, sin cifra, plazo, herramienta ni responsable nuevos. Eso es OPERATIVO, no una parafrasis directa como sostiene el lector B.",
+  "decidido_por": "arbitro",
+  "lector": "OPERATIVO",
+  "verificador": "FIEL",
+  "node_id": "que_es_cui",
+  "paso": 1,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de CUI",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de CUI",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-112",
+  "veredicto": "OPERATIVO",
+  "lineas": "L245",
+  "frase_clave": "Appropriately scoping requirements is an important factor in determining protection-related investment decisions and managing security risks for your business.",
+  "razon": "El libro destaca determinar el alcance y que el SSP describe el limite del sistema (L265); documentar la decision y su justificacion lo concreta sin datos nuevos.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "determinar_alcance_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Documentar la decisión de alcance y su justificación",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Documentar la decisión de alcance y su justificación",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-113",
+  "veredicto": "FIEL",
+  "lineas": "L617-L617",
+  "frase_clave": "Inventory all systems, data, and physical assets that process, store, or transmit CUI... Include those also used by third party vendors or contractors.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_risk_assessment",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Inventariar todos los sistemas, datos y activos físicos que procesan CUI, incluidos los de terceros.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Inventariar todos los sistemas, datos y activos físicos que procesan CUI, incluidos los de terceros.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-114",
+  "veredicto": "FIEL",
+  "lineas": "L645-L645",
+  "frase_clave": "organizations assess and monitor their systems at a frequency that is sufficient to support risk-based decisions. Different types of security requirements may require different monitoring frequencies.",
+  "razon": "Paráfrasis fiel.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Establecer un programa de monitoreo continuo con frecuencia adecuada según el tipo de requisito.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Establecer un programa de monitoreo continuo con frecuencia adecuada según el tipo de requisito.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-115",
+  "veredicto": "FIEL",
+  "lineas": "L639-L655",
+  "frase_clave": "describe how unsatisfied security requirements will be met and how planned mitigations will be implemented within a POAM",
+  "razon": "Paráfrasis fiel; la plantilla del libro incluye responsable y fechas.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "plan_seguridad_sistema_poam",
+  "paso": 3,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Para los requisitos no satisfechos, crear un POAM con plazos y responsables de mitigación",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Para los requisitos no satisfechos, crear un POAM con plazos y responsables de mitigación",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-116",
+  "veredicto": "FIEL",
+  "lineas": "L327-L333",
+  "frase_clave": "NARA CUI training • Center for Development of Security Excellence Security Awareness Hub",
+  "razon": "Paráfrasis fiel de los recursos gratuitos listados.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "paso": 4,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Utilizar recursos gratuitos disponibles (NARA CUI training, Security Awareness Hub)",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Utilizar recursos gratuitos disponibles (NARA CUI training, Security Awareness Hub)",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-117",
+  "veredicto": "FIEL",
+  "lineas": "L745",
+  "frase_clave": "Receive a documented acknowledgement from individuals indicating that they have read, understand, and agree to abide by the rules of behavior before authorizing access to CUI and the system.",
+  "razon": "Parafrasis directa del libro.",
+  "texto_fiel": "",
+  "texto_sugerencia": "",
+  "tipo_anadido": "",
+  "dato": "",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "getting_started_planning",
+  "paso": 6,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Obtener reconocimiento documentado de los usuarios sobre las reglas antes de otorgar acceso.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Obtener reconocimiento documentado de los usuarios sobre las reglas antes de otorgar acceso.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-118",
+  "veredicto": "FIEL",
+  "lineas": "L639-L655",
+  "frase_clave": "Weaknesses Responsible Office/Organization... Resource Estimate... Scheduled Completion Date",
+  "razon": "Paráfrasis fiel de los campos del POAM en el libro.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "getting_started_security_assessment_monitoring",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C032-119",
+  "veredicto": "FIEL",
+  "lineas": "L477-L477",
+  "frase_clave": "Determine a regular maintenance schedule and build in mechanisms to verify it is followed.",
+  "razon": "Literal.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "mantenimiento_sistema_cui",
+  "paso": 2,
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "texto_actual": "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt"
+  ],
+  "texto_leido": "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
+  "ya_corregido_antes": false
+ }
+]

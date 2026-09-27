@@ -7,24 +7,23 @@
   "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.",
   "pasos_accionables": [
     "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
-    "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+    "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
     "Mide la magnitud real de los síntomas con datos, no con impresiones.",
     "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
     "Implementa un remedio dirigido específicamente a esa causa raíz.",
     "Controla los resultados periódicamente para asegurar que la mejora se mantenga.",
-    "Establecer la creencia de que el cambio es deseable y factible",
-    "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
-    "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
-    "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
-    "Establecer un proyecto formal con equipo asignado.",
+    "Antes de seleccionar el problema del paso 1, establece la creencia de que el cambio es deseable y factible.",
+    "Para elegir el problema del paso 1, realiza un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales.",
+    "Al lanzar el proyecto del paso 1, crea un brazo directivo (steering arm) que lo guíe y un brazo diagnóstico (diagnostic arm) que reúna y analice los datos de los pasos 3 y 4.",
+    "Al implementar el remedio del paso 5, y antes de fijar los controles del paso 6, evalúa el impacto cultural de los cambios propuestos y gestiona la resistencia.",
+    "Formaliza el proyecto del paso 1 con un equipo asignado antes de empezar a definir el problema.",
     "Replicar los resultados exitosos y nominar nuevos proyectos de mejora."
   ],
-  "entregable_esperado": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+  "entregable_esperado": "Proyecto DMAIC documentado con la selección del proyecto y las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
   "nodos_previos": [
     "viaje_diagnostico_remedial",
     "analisis_pareto_de_proveedores",
     "error_proofing_servicio",
-    "dmaic_fase_improve",
     "costo_de_mala_calidad_copq",
     "auditorias_calidad_proceso",
     "control_calidad_operaciones_servicio",
@@ -98,5 +97,123 @@
       "titulo": "Six Sigma - Metodología DMAIC",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-022",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+      "texto_nuevo": "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L5036-L5040",
+        "frase": "Define the problem. (Champions and management do this.)"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide definir el problema con una declaracion del problema, pero 'diez segundos' es una cifra que no aparece (buscado ten seconds, 10 seconds).",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C057-114"
+    },
+    {
+      "id": "t2-arista-044",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "dmaic_fase_improve -> six_sigma_dmaic",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-05-12): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la fase Improve es una parte de DMAIC; deberia ir despues del modelo general, no prepararlo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-coherencia-05",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+      "texto_nuevo": "Proyecto DMAIC documentado con la selección del proyecto y las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 5038-5048; 14258: \"Experience with applying the five DMAIC steps shows that the team’s DMAIC journey needs to be preceded by management selecting the project.\". El resumen es fiel al libro (lineas 5038-5048: seleccionar y lanzar mas definir, medir, analizar, mejorar, controlar) y el entregable solo nombraba las cinco fases. Ambos son fieles: las cinco fases van precedidas por la seleccion del proyecto. Se anade esa seleccion al entregable con el cambio minimo (redaccion del lector B)."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro."
+    },
+    {
+      "id": "n1-coherencia-06",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Establecer la creencia de que el cambio es deseable y factible",
+      "texto_nuevo": "Antes de seleccionar el problema del paso 1, establece la creencia de que el cambio es deseable y factible.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 5071: \"The starting point is the attitude that a breakthrough is both desirable and feasible.\". En la secuencia de ruptura de Juran la creencia en el cambio es el punto de partida, no algo posterior al control. Como no se reordena la lista, se ancla explicitamente antes del paso 1 (redaccion del lector A, minima)."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 6
+    },
+    {
+      "id": "n1-coherencia-07",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+      "texto_nuevo": "Para elegir el problema del paso 1, realiza un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 5073: \"This study will help separate the problem into major parts, the vital few from the useful many. I call this the Pareto analysis.\". El estudio de factibilidad con Pareto es el segundo paso de la secuencia de ruptura y sirve para escoger los pocos problemas vitales, o sea alimenta la seleccion del paso 1; tras el control rompia el orden. Redaccion del lector B. La cita se toma de un tramo de la linea sin raya larga."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 7
+    },
+    {
+      "id": "n1-coherencia-08",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+      "texto_nuevo": "Al lanzar el proyecto del paso 1, crea un brazo directivo (steering arm) que lo guíe y un brazo diagnóstico (diagnostic arm) que reúna y analice los datos de los pasos 3 y 4.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 5075: \"It requires that we appoint or create two systems: one that directs or guides the breakthrough, and one that does the fact-gathering and analysis. We call them the steering arm and the diagnostic arm, respectively. [...] When both are in place, diagnosis begins.\". Los dos brazos se crean antes del diagnostico ('When both are in place, diagnosis begins'), es decir al lanzar el proyecto y antes de medir y analizar (pasos 3 y 4); despues del control contradecia el orden. Redaccion del lector B."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 8
+    },
+    {
+      "id": "n1-coherencia-09",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
+      "texto_nuevo": "Al implementar el remedio del paso 5, y antes de fijar los controles del paso 6, evalúa el impacto cultural de los cambios propuestos y gestiona la resistencia.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 5032; 5034: \"c. From workable remedies to dealing with predictable resistance to change\". El conflicto pasos-pasos que midieron los lectores abarca los pasos 7 a 11 injertados tras el control, y este es uno de ellos: evaluar 'cambios propuestos' despues de controlar es incoherente. En el recorrido de remedio del libro la resistencia se atiende entre el remedio y los nuevos controles (linea 5034: 'd. From dealing with resistance to establishing new controls on the remedies to hold the gains'). Se ancla ahi (propuesta del lector A; el lector B lo dejo intacto pero reconoce ese mismo orden en el libro)."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 9
+    },
+    {
+      "id": "n1-coherencia-10",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Establecer un proyecto formal con equipo asignado.",
+      "texto_nuevo": "Formaliza el proyecto del paso 1 con un equipo asignado antes de empezar a definir el problema.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 4984; 5038: \"b. Establish a project and team. (Management does this.)\". El proyecto ya se selecciona y lanza en el paso 1; volver a establecerlo despues de controlar era la contradiccion de orden. En el libro establecer proyecto y equipo va justo tras nominar el problema y antes del diagnostico, asi que se convierte en la formalizacion del mismo proyecto del paso 1, antes de Definir (redaccion del lector B). El paso de indice 11 (replicar y nominar nuevos proyectos) ya va bien al final y no se toca."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 10
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ]
 }

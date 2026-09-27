@@ -16,11 +16,28 @@
     "ingenieria_calidad_proveedores"
   ],
   "nodos_siguientes": [
-    "ingenieria_calidad",
-    "separa_la_visita_de_evaluacion_de_la_decision_de_compra"
+    "ingenieria_calidad"
   ],
   "condiciones_activacion": [
     "Cuando se reciben materiales o componentes de terceros para producción"
   ],
-  "etiqueta_arbol": "Inspecciona lo que Compras, Antes"
+  "etiqueta_arbol": "Inspecciona lo que Compras, Antes",
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-026",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "aceptacion_bienes_comprados -> separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por obtencion_de_compromiso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

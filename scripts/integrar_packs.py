@@ -185,7 +185,8 @@ def validar_prerequisitos(packs):
             "(regla: ningún nodo core ancla más de 2-3 puentes por dominio) y guardar la selección "
             "en bridges_aprobados.json. Este script NO corre sin el archivo de cada pack pendiente."
         )
-    # Regla de concentración: ningún nodo core ancla más de 3 puentes por dominio.
+    # Regla de concentración (la LEY DEL ANCLA): ningún nodo core ancla más de 2 puentes por dominio. Toleraba 3
+    # hasta el saneamiento del 26 sep 2026 (tanda 2, punto 9; AUD-09 M53); la guarda es engine/test_puentes_tejidos.py.
     # Formato esperado (el de bridges_propuestos.json['candidatos']):
     # {"core": <id core>, "dominio": <id del nodo del pack>, "score": ...}
     for d, puentes in puentes_por_dominio.items():
@@ -195,9 +196,9 @@ def validar_prerequisitos(packs):
             if not core:
                 fallar(f"puente sin campo 'core' en '{d}': {json.dumps(p, ensure_ascii=False)[:120]}")
             conteo[core] = conteo.get(core, 0) + 1
-        excedidos = {k: v for k, v in conteo.items() if v > 3}
+        excedidos = {k: v for k, v in conteo.items() if v > 2}
         if excedidos:
-            fallar(f"'{d}': nodos core anclando más de 3 puentes (regla del plan): {excedidos}")
+            fallar(f"'{d}': nodos core anclando más de 2 puentes (ley del ancla): {excedidos}")
         if not (5 <= len(puentes) <= 20):
             print(f"  AVISO: '{d}' tiene {len(puentes)} puentes (esperado 10-15±) — verificar que es intencional.")
     return puentes_por_dominio

@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Relación de largo plazo con proveedor único",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming propone que la mejor economía y calidad se logran estableciendo una relación de largo plazo, lealtad y confianza con un único proveedor por artículo, en lugar de dividir la compra entre múltiples fuentes. Esto reduce variación lote a lote, simplifica inventarios, y permite al proveedor innovar y mejorar continuamente sus procesos sabiendo que tiene negocio asegurado.",
+  "resumen_teorico": "Para lograr la mejor economía y calidad, conviene establecer una relación de largo plazo, lealtad y confianza con un único proveedor por artículo, en lugar de dividir la compra entre múltiples fuentes. Esto reduce variación lote a lote, simplifica inventarios, y permite al proveedor innovar y mejorar continuamente sus procesos sabiendo que tiene negocio asegurado.",
   "pasos_accionables": [
     "Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo",
     "Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas",
-    "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+    "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
     "Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)"
   ],
   "entregable_esperado": "Lista de proveedores únicos por artículo crítico y contratos de largo plazo firmados con criterios de calidad definidos",
@@ -26,5 +26,43 @@
     "Cuando la empresa maneja múltiples proveedores para un mismo insumo",
     "Si hay variación de calidad entre lotes de distintos proveedores del mismo ítem"
   ],
-  "etiqueta_arbol": "Elige un Solo Proveedor"
+  "etiqueta_arbol": "Elige un Solo Proveedor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t12-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+      "texto_nuevo": "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L844-L850",
+        "frase": "In return for steelmakers' cooperation with GM in its cost-cutting objectives, the auto maker is expected to reward suppliers with multi-year contracts."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q028, lector y verificador de acuerdo). El libro respalda los contratos plurianuales (tambien L1063, hasta seis anos), pero no menciona en ningun sitio la transparencia total de costos ni los 'open books'. Lo busque con open book, transparen, disclos y cost data.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q028-092"
+    },
+    {
+      "id": "atribucion-152",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming propone que la mejor economía y calidad se logran estableciendo una relación de largo plazo, lealtad y confianza con un único proveedor por artículo, en lugar de dividir la compra entre múltiples fuentes. Esto reduce variación lote a lote, simplifica inventarios, y permite al proveedor innovar y mejorar continuamente sus procesos sabiendo que tiene negocio asegurado.",
+      "texto_nuevo": "Para lograr la mejor economía y calidad, conviene establecer una relación de largo plazo, lealtad y confianza con un único proveedor por artículo, en lugar de dividir la compra entre múltiples fuentes. Esto reduce variación lote a lote, simplifica inventarios, y permite al proveedor innovar y mejorar continuamente sus procesos sabiendo que tiene negocio asegurado.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming propone que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-010 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_081",
+  "intento": 0,
+  "usd": 0.157784,
+  "turnos": 1,
+  "duracion_s": 17.0,
+  "pared_s": 18.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33741,
+  "tokens_out": 1141,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P238A39\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4908, 4806, 4161, 4165, 3989], \"razon\": \"El libro pide separar a quien recibe los reportes del regulador y de la gerencia operativa, y crear una agencia de seguridad independiente. El paso sigue esa dirección.\"},\n  {\"id\": \"PB73860\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2598, 2654, 4773, 4500, 4512], \"razon\": \"El libro propone chequeos regulares, analizar varios eventos con un marco común y un ciclo continuo de aprendizaje. Una revisión periódica encaja con eso sin contradecirlo.\"},\n  {\"id\": \"PA86E78\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 50, 107, 2650], \"razon\": \"El libro indica que la investigación parte del resultado y examina cómo y cuándo falló cada defensa, que es lo que pide el paso.\"},\n  {\"id\": \"P9B4EA0\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2259, 2263, 2267, 2271, 2275, 2279, 2281], \"razon\": \"El libro enumera exactamente estos cinco criterios universales de un buen recordatorio: conspicuo, contiguo, contexto, contenido y verificación.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P238A39",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4908,
+    4806,
+    4161,
+    4165,
+    3989
+   ],
+   "razon": "El libro pide separar a quien recibe los reportes del regulador y de la gerencia operativa, y crear una agencia de seguridad independiente. El paso sigue esa dirección."
+  },
+  {
+   "id": "PB73860",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2598,
+    2654,
+    4773,
+    4500,
+    4512
+   ],
+   "razon": "El libro propone chequeos regulares, analizar varios eventos con un marco común y un ciclo continuo de aprendizaje. Una revisión periódica encaja con eso sin contradecirlo."
+  },
+  {
+   "id": "PA86E78",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    50,
+    107,
+    2650
+   ],
+   "razon": "El libro indica que la investigación parte del resultado y examina cómo y cuándo falló cada defensa, que es lo que pide el paso."
+  },
+  {
+   "id": "P9B4EA0",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2259,
+    2263,
+    2267,
+    2271,
+    2275,
+    2279,
+    2281
+   ],
+   "razon": "El libro enumera exactamente estos cinco criterios universales de un buen recordatorio: conspicuo, contiguo, contexto, contenido y verificación."
+  }
+ ]
+}

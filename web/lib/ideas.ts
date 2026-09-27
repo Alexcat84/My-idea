@@ -10,7 +10,13 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { nombreDeMundo } from "./catalogoMundos";
 import { listarProyectos } from "./db";
+import { estadoEntrevista } from "./entrevistaAbierta";
+import { etapaDeIdea } from "./etapaIdea";
 import { fechaSello } from "./fechas";
+import { esActivo, type ChecklistEstado, ETIQUETAS_CICLO } from "./dbContract";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { formaPlural, interpolar } from "./i18n/interpolar";
+import { MIS_IDEAS } from "./i18n/mensajes/misIdeas";
 
 export type EstadoIdea = "Organizada" | "En entrevista" | "Con plan" | "En seguimiento";
 
@@ -49,16 +55,17 @@ export function nombreDeIdea(titulo: string | null, entradaOriginal: string): st
 // una copia se separa: bastaba un mundo nuevo para que esta pantalla lo llamara
 // por su clave mientras las demas lo nombraban. Ahora se lee de la fuente.
 
-export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Cinta[]> {
+export async function listarIdeasConEstado(supabase: SupabaseClient, idioma: Locale = LOCALE_BASE): Promise<Cinta[]> {
+  const t = elegir(MIS_IDEAS, idioma).cintas;
   const proyectos = await listarProyectos(supabase);
   if (proyectos.length === 0) return [];
 
   // RLS limita las consultas al usuario autenticado. El checklist puede no
   // existir aún (pre-migración 015): se tolera con lista vacía.
   const [{ data: sesiones }, { data: planes }, checklistRes] = await Promise.all([
-    supabase.from("sessions").select("id, project_id, closed_at, estado_recorrido"),
+    supabase.from("sessions").select("id, project_id, closed_at, estado_recorrido, dominio"),
     supabase.from("plans").select("session_id, etiqueta"),
-    supabase.from("checklist_items").select("project_id, plan_id, dominio, estado, created_at"),
+    supabase.from("checklist_items").select("project_id, plan_id, dominio, estado, created_at, updated_at"),
   ]);
   const checklist = (checklistRes.error ? [] : (checklistRes.data ?? [])) as Array<{
     project_id: string;
@@ -66,7 +73,16 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     dominio: string;
     estado: string;
     created_at: string;
+    updated_at?: string | null;
   }>;
+  // AUD-09 M42: la última acción de cada idea cuenta el trabajo en sus tareas
+  // (marcar, mover fechas, anotar), que no toca projects.updated_at.
+  const ultimaEnTareas = new Map<string, string>();
+  for (const item of checklist) {
+    const t = item.updated_at ?? item.created_at;
+    const actual = ultimaEnTareas.get(item.project_id);
+    if (!actual || t > actual) ultimaEnTareas.set(item.project_id, t);
+  }
 
   // Progreso del plan VIGENTE por proyecto y dominio (el último por fecha):
   // los checklists de planes anteriores son Historia, no el estado actual.
@@ -84,14 +100,23 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     if (!progreso.has(item.project_id)) progreso.set(item.project_id, new Map());
     const porDominio = progreso.get(item.project_id)!;
     const r = porDominio.get(item.dominio) ?? { total: 0, hechos: 0, empezoAlguno: false };
-    r.total += 1;
-    if (item.estado === "hecho") r.hechos += 1;
+    // AUD-09 M01: las retiradas no cuentan en el total (la cuenta honesta de
+    // dbContract.cuentaHonesta, "X de N activas").
+    if (esActivo(item.estado as ChecklistEstado)) {
+      r.total += 1;
+      if (item.estado === "hecho") r.hechos += 1;
+    }
     if (item.estado !== "pendiente") r.empezoAlguno = true;
     porDominio.set(item.dominio, r);
   }
 
   const proyectoDeSesion = new Map<string, string>();
   const entrevistaAbierta = new Set<string>();
+  // AUD-09 M29: qué espera cada idea con entrevista abierta (la regla única).
+  const esperaPlan = new Set<string>();
+  // AUD-09 B10: qué clase de sesión está abierta (la regla única de la etapa).
+  const explorandoNucleo = new Set<string>();
+  const seguimientoAbierto = new Set<string>();
   for (const s of (sesiones ?? []) as Array<{
     id: string;
     project_id: string;
@@ -99,7 +124,14 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     estado_recorrido: unknown;
   }>) {
     proyectoDeSesion.set(s.id, s.project_id);
-    if (!s.closed_at && s.estado_recorrido) entrevistaAbierta.add(s.project_id);
+    const abierta = estadoEntrevista(s);
+    if (abierta) entrevistaAbierta.add(s.project_id);
+    const deNucleo = !(s as { dominio?: string | null }).dominio || (s as { dominio?: string | null }).dominio === "core";
+    if (abierta && deNucleo) {
+      const esSeg = (s.estado_recorrido as { recorrido?: { esSeguimiento?: boolean } }).recorrido?.esSeguimiento === true;
+      (esSeg ? seguimientoAbierto : explorandoNucleo).add(s.project_id);
+    }
+    if (abierta === "listo_para_plan") esperaPlan.add(s.project_id);
   }
 
   const etiquetasPorProyecto = new Map<string, Set<string>>();
@@ -114,36 +146,42 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     const etiquetas = etiquetasPorProyecto.get(p.id) ?? new Set<string>();
     let estado: EstadoIdea;
     if (entrevistaAbierta.has(p.id)) estado = "En entrevista";
-    else if (etiquetas.has("seguimiento")) estado = "En seguimiento";
+    else if (etiquetas.has("seguimiento") || etiquetas.has("replanteamiento")) estado = "En seguimiento";
     else if (etiquetas.has("inicial") || etiquetas.has("completo")) estado = "Con plan";
     else estado = "Organizada";
 
     // Etapa canónica y chips (canon 3.6): solo lecturas de lo persistido.
-    const conPlan = etiquetas.has("inicial") || etiquetas.has("completo") || etiquetas.has("seguimiento");
+    const conPlan = ETIQUETAS_CICLO.some((e) => etiquetas.has(e));
     const porDominio = progreso.get(p.id) ?? new Map<string, { total: number; hechos: number; empezoAlguno: boolean }>();
     const core = porDominio.get("core");
-    const enObra = Boolean(core?.empezoAlguno) || etiquetas.has("seguimiento");
+    const enObra = Boolean(core?.empezoAlguno) || etiquetas.has("seguimiento") || etiquetas.has("replanteamiento");
 
-    let etapa: number;
     const pensando = entrevistaAbierta.has(p.id);
-    if (enObra) etapa = 5;
-    else if (conPlan) etapa = 4;
-    else if (pensando) etapa = 3;
-    else etapa = 2; // hay proyecto ⇒ hubo Chispa; con organizador es Claridad
+    // AUD-09 M28: sin organizador no hay Claridad (su IA falló): se queda en la
+    // Chispa y se dice "Sin ordenar", no "Con claridad".
+    const ordenada = etiquetas.has("organizador");
+    // AUD-09 B10: la regla única de la etapa (la misma del encabezado de la idea).
+    const etapa = etapaDeIdea({
+      conPlan,
+      enObra,
+      explorandoNucleo: explorandoNucleo.has(p.id),
+      seguimientoAbierto: seguimientoAbierto.has(p.id),
+      ordenada,
+    });
 
     const chips: ChipCinta[] = [];
     if (etapa === 5 && core) {
-      chips.push({ texto: `Manos a la Obra · ${core.hechos}/${core.total}`, tono: "verde" });
+      chips.push({ texto: interpolar(t.manosALaObra, { hechos: core.hechos, total: core.total }), tono: "verde" });
       for (const [dominio, r] of porDominio) {
         if (dominio === "core") continue;
-        chips.push({ texto: `${nombreDeMundo(dominio)} · ${r.hechos}/${r.total}`, tono: "verde" });
+        chips.push({ texto: interpolar(t.mundoProgreso, { mundo: nombreDeMundo(dominio, idioma), hechos: r.hechos, total: r.total }), tono: "verde" });
       }
     } else if (pensando) {
-      chips.push({ texto: "En exploración", tono: "azul" });
+      chips.push({ texto: t.enExploracion, tono: "azul" });
     } else if (conPlan) {
-      chips.push({ texto: "Con plan", tono: "azul" });
+      chips.push({ texto: t.conPlan, tono: "azul" });
     } else {
-      chips.push({ texto: "Con claridad", tono: "neutro" });
+      chips.push({ texto: ordenada ? t.conClaridad : t.sinOrdenar, tono: "neutro" });
     }
 
     // Fase 4.3.1: la pista ANCLA la idea en el calendario (fechaSello) en vez
@@ -151,22 +189,30 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     // historial. "una pregunta te espera" cuando el motor tiene el turno.
     // Canon 01: la meta line COMBINA la invitación con el sello, no una u otra
     // ("Una pregunta te espera · última acción ayer 21:26").
+    const tareas = ultimaEnTareas.get(p.id);
+    const ultimaAccion = tareas && tareas > p.updated_at ? tareas : p.updated_at;
+    const fecha = fechaSello(ultimaAccion, undefined, idioma);
     const pista = pensando
-      ? `Una pregunta te espera · última acción ${fechaSello(p.updated_at)}`
-      : `última acción · ${fechaSello(p.updated_at)}`;
+      ? esperaPlan.has(p.id)
+        ? interpolar(t.pistaPlanListo, { fecha })
+        : interpolar(t.pistaPregunta, { fecha })
+      : interpolar(t.pistaUltimaAccion, { fecha });
 
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
     const realizada = Boolean(realizadaAt);
+    const dias = realizadaAt
+      ? Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))
+      : 0;
     const resumenRealizada = realizadaAt
-      ? `realizada ${fechaSello(realizadaAt)} · ${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días de la chispa al proyecto`
+      ? interpolar(formaPlural(idioma, dias, t.resumenRealizada), { fecha: fechaSello(realizadaAt, undefined, idioma), dias })
       : undefined;
 
     return {
       id: p.id,
       nombre: nombreDeIdea(p.titulo, p.entrada_original),
       estado,
-      actualizado: p.updated_at,
+      actualizado: ultimaAccion,
       etapa,
       pensando,
       chips,
@@ -177,16 +223,17 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
   });
 }
 
-/** "hace 2 días", "hace 3 h", "ahora mismo" — español, sin librerías. */
-export function haceCuanto(iso: string): string {
+/** "hace 2 días", "hace 3 h", "ahora mismo" — por idioma, sin librerías. */
+export function haceCuanto(iso: string, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(MIS_IDEAS, idioma).haceCuanto;
   const ms = Date.now() - new Date(iso).getTime();
   const min = Math.floor(ms / 60_000);
-  if (min < 2) return "ahora mismo";
-  if (min < 60) return `hace ${min} min`;
+  if (min < 2) return t.ahoraMismo;
+  if (min < 60) return interpolar(t.haceMin, { n: min });
   const h = Math.floor(min / 60);
-  if (h < 24) return `hace ${h} h`;
+  if (h < 24) return interpolar(t.haceHoras, { n: h });
   const d = Math.floor(h / 24);
-  if (d < 30) return d === 1 ? "ayer" : `hace ${d} días`;
+  if (d < 30) return d === 1 ? t.ayer : interpolar(t.haceDias, { n: d });
   const meses = Math.floor(d / 30);
-  return meses === 1 ? "hace un mes" : `hace ${meses} meses`;
+  return meses === 1 ? t.haceUnMes : interpolar(t.haceMeses, { n: meses });
 }

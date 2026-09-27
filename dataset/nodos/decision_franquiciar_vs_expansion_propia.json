@@ -1,6 +1,6 @@
 {
   "node_id": "decision_franquiciar_vs_expansion_propia",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -37,6 +37,24 @@
       "node_id": "analisis_estrategia_crecimiento_franquicia_vs_corporativo",
       "titulo": "Análisis de Estrategia de Crecimiento: Franquicia vs. Crecimiento Corporativo",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-088",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F17-025: Con un negocio ya probado, modela escenarios de crecimiento a 5 a 10 anos y selecciona la estrategia, es planificacion estrategica. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ]
 }

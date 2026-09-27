@@ -15,6 +15,9 @@
  * calcula ningún número de riesgo y un test vigila que no empiece a hacerlo.
  */
 import type { Camino, Dolor, Probabilidad } from "./dbContract";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { REGISTRO_PROTECCION } from "./i18n/mensajes/registroProteccion";
 
 /** Una respuesta del plan del mundo, tal como sale del checklist. */
 export interface FilaRespuesta {
@@ -24,6 +27,9 @@ export interface FilaRespuesta {
   orden: number;
   estado: string;
   protege_item?: string | null;
+  /** AUD-09 M15 (migración 041): los NODOS de la tarea protegida. La
+   * protección apunta al nodo, no al id de la tarea de un ciclo. */
+  protege_nodos?: string[] | null;
   deteccion?: string | null;
   probabilidad?: Probabilidad | null;
   dolor?: Dolor | null;
@@ -35,6 +41,42 @@ export interface ActividadProtegida {
   id: string;
   indice: number;
   titulo: string;
+  /** Los nodos de la tarea (checklist_items.nodos_origen), para resolver la
+   * protección por nodo en el plan vigente (AUD-09 M15). */
+  nodos_origen?: string[] | null;
+}
+
+/**
+ * AUD-09 M15 (decisión del fundador, 25 sep 2026): a qué tarea del plan VIGENTE
+ * del núcleo apunta una respuesta de protección. Apunta al NODO de la tarea: un
+ * ciclo nuevo inserta tareas con ids nuevos, y por id la protección quedaba
+ * huérfana sin aviso. Orden: (1) si el id sigue en el plan vigente, ese (el
+ * mismo ciclo no se mueve); (2) si no, la tarea vigente que comparte más nodos
+ * (a igualdad, la primera del plan). Límite declarado: nodos_origen se guarda
+ * por ETAPA (migración 037), así que en un ciclo nuevo la resolución es exacta
+ * a nivel de etapa, no de tarea. Filas sin nodos (antes de la 037/041): solo por
+ * id. `idsDelPlan` (opcional): TODOS los ids del plan vigente, retiradas
+ * incluidas; si el id está ahí pero no en `vigente`, la tarea se retiró en este
+ * ciclo y el nodo NO la muda a una hermana de etapa. Devuelve el id de la tarea
+ * vigente, o null si ya no está. Pura.
+ */
+export function resolverProtegido(
+  r: { protege_item?: string | null; protege_nodos?: string[] | null },
+  vigente: ReadonlyArray<{ id: string; nodos_origen?: string[] | null }>,
+  idsDelPlan?: ReadonlySet<string>
+): string | null {
+  if (r.protege_item && vigente.some((a) => a.id === r.protege_item)) return r.protege_item;
+  if (r.protege_item && idsDelPlan?.has(r.protege_item)) return null;
+  const nodos = r.protege_nodos ?? [];
+  if (nodos.length > 0) {
+    let mejor: { id: string; comunes: number } | null = null;
+    for (const a of vigente) {
+      const comunes = (a.nodos_origen ?? []).filter((n) => nodos.includes(n)).length;
+      if (comunes > 0 && (!mejor || comunes > mejor.comunes)) mejor = { id: a.id, comunes };
+    }
+    return mejor?.id ?? null;
+  }
+  return null;
 }
 
 export interface EntradaRegistro {
@@ -58,38 +100,30 @@ export interface EntradaRegistro {
 }
 
 /** La severidad en palabras de persona. Fuente única para pantalla y documento:
- * si vivieran en dos sitios, algún día dirían cosas distintas. */
-export const PALABRA_PROBABILIDAD: Record<Probabilidad, string> = {
-  poco_probable: "poco probable",
-  probable: "probable",
-  muy_probable: "muy probable",
-};
+ * si vivieran en dos sitios, algún día dirían cosas distintas. (i18n F2: los
+ * textos viven en el catálogo; estas constantes son su valor en el idioma base.) */
+export const PALABRA_PROBABILIDAD: Record<Probabilidad, string> = elegir(REGISTRO_PROTECCION, LOCALE_BASE).probabilidad;
 
-export const PALABRA_DOLOR: Record<Dolor, string> = {
-  poco: "dolería poco",
-  bastante: "dolería bastante",
-  mucho: "dolería mucho",
-};
+export const PALABRA_DOLOR: Record<Dolor, string> = elegir(REGISTRO_PROTECCION, LOCALE_BASE).dolor;
 
 /** El camino en palabras de persona. Fuente única para pantalla y papel. */
-export const PALABRA_CAMINO: Record<Camino, string> = {
-  evitar: "evitarlo",
-  mitigar: "reducirlo",
-  transferir: "pasárselo a otro",
-  aceptar: "aceptarlo con los ojos abiertos",
-};
+export const PALABRA_CAMINO: Record<Camino, string> = elegir(REGISTRO_PROTECCION, LOCALE_BASE).camino;
 
 /**
  * La severidad de una entrada, en una frase. null cuando no hay nada que decir:
  * se calla en vez de rellenar con un "sin definir" que no aporta.
  */
-export function severidadEnPalabras(e: {
-  probabilidad: Probabilidad | null;
-  dolor: Dolor | null;
-}): string | null {
-  const p = e.probabilidad ? PALABRA_PROBABILIDAD[e.probabilidad] : null;
-  const d = e.dolor ? PALABRA_DOLOR[e.dolor] : null;
-  if (p && d) return `${p} y ${d}`;
+export function severidadEnPalabras(
+  e: {
+    probabilidad: Probabilidad | null;
+    dolor: Dolor | null;
+  },
+  idioma: Locale = LOCALE_BASE
+): string | null {
+  const t = elegir(REGISTRO_PROTECCION, idioma);
+  const p = e.probabilidad ? t.probabilidad[e.probabilidad] : null;
+  const d = e.dolor ? t.dolor[e.dolor] : null;
+  if (p && d) return interpolar(t.severidad, { probabilidad: p, dolor: d });
   return p ?? d ?? null;
 }
 
@@ -104,15 +138,20 @@ export function severidadEnPalabras(e: {
  */
 export function armarRegistro(
   respuestas: FilaRespuesta[],
-  actividadesNucleo: ActividadProtegida[]
+  actividadesNucleo: ActividadProtegida[],
+  /** AUD-09 M15: todos los ids del plan vigente del núcleo, retiradas incluidas
+   * (ver resolverProtegido). Sin él, una retirada podría mudarse por nodo. */
+  idsDelPlan?: ReadonlySet<string>
 ): EntradaRegistro[] {
   const porId = new Map(actividadesNucleo.map((a) => [a.id, a]));
   return respuestas
-    .filter((r) => r.deteccion || r.protege_item || r.probabilidad || r.dolor)
+    .filter((r) => r.deteccion || r.protege_item || r.protege_nodos?.length || r.probabilidad || r.dolor)
     .slice()
     .sort((a, b) => a.etapa - b.etapa || a.orden - b.orden)
     .map((r) => {
-      const protege = r.protege_item ? porId.get(r.protege_item) ?? null : null;
+      const apuntaA = Boolean(r.protege_item || r.protege_nodos?.length);
+      const idVigente = resolverProtegido(r, actividadesNucleo, idsDelPlan);
+      const protege = idVigente ? porId.get(idVigente) ?? null : null;
       return {
         id: r.id,
         deteccion: r.deteccion ?? null,
@@ -122,16 +161,17 @@ export function armarRegistro(
         respuesta: r.texto,
         estado: r.estado,
         protege,
-        protegidaDesaparecida: Boolean(r.protege_item) && !porId.has(r.protege_item as string),
+        protegidaDesaparecida: apuntaA && protege === null,
       };
     });
 }
 
 /** Cómo se nombra lo protegido en pantalla y en el documento. */
-export function textoProtege(e: EntradaRegistro): string {
+export function textoProtege(e: EntradaRegistro, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(REGISTRO_PROTECCION, idioma);
   if (e.protege) return `#${e.protege.indice} · ${e.protege.titulo}`;
-  if (e.protegidaDesaparecida) return "la actividad que protegía ya no está en tu plan";
-  return "tu negocio entero";
+  if (e.protegidaDesaparecida) return t.protegidaDesaparecida;
+  return t.negocioEntero;
 }
 
 /**
@@ -139,24 +179,33 @@ export function textoProtege(e: EntradaRegistro): string {
  * Mismo contenido que la pantalla, del mismo armador: el papel y la pantalla no
  * pueden contar cosas distintas.
  */
-export function registroMarkdown(nombreMundo: string, entradas: EntradaRegistro[]): string {
+/**
+ * AUD-09 M48: el registro vacío. Solo se muestra (pantalla y papel) cuando el
+ * mundo ya tiene su plan, así que vacío significa que el enlace con las
+ * actividades del núcleo falló; antes decía "se llenará con el plan". Fuente
+ * única para pantalla y papel.
+ */
+export const REGISTRO_VACIO = elegir(REGISTRO_PROTECCION, LOCALE_BASE).registroVacio;
+
+export function registroMarkdown(nombreMundo: string, entradas: EntradaRegistro[], idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(REGISTRO_PROTECCION, idioma);
+  const td = t.documento;
   const l: string[] = [];
-  l.push(`## Registro de ${nombreMundo}`);
+  l.push(interpolar(td.titulo, { mundo: nombreMundo }));
   l.push("");
   if (entradas.length === 0) {
-    l.push("Este registro se llenará con el plan de este mundo: cada cosa que detecte");
-    l.push("quedará aquí junto a la respuesta que la atiende.");
+    l.push(t.registroVacio);
     l.push("");
     return l.join("\n");
   }
   for (const e of entradas) {
     l.push(`### ${e.deteccion ?? e.respuesta}`);
     l.push("");
-    const sev = severidadEnPalabras(e);
-    if (sev) l.push(`Qué tan serio: ${sev}.`);
-    if (e.camino) l.push(`El camino: ${PALABRA_CAMINO[e.camino]}.`);
-    l.push(`Qué protege: ${textoProtege(e)}.`);
-    l.push(`Tu respuesta: ${e.respuesta}`);
+    const sev = severidadEnPalabras(e, idioma);
+    if (sev) l.push(interpolar(td.queTanSerio, { severidad: sev }));
+    if (e.camino) l.push(interpolar(td.elCamino, { camino: t.camino[e.camino] }));
+    l.push(interpolar(td.queProtege, { protege: textoProtege(e, idioma) }));
+    l.push(interpolar(td.tuRespuesta, { respuesta: e.respuesta }));
     l.push("");
   }
   return l.join("\n");

@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P055E9D",
+  "intento": 0,
+  "usd": 0.202788,
+  "turnos": 1,
+  "duracion_s": 20.6,
+  "pared_s": 21.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41497,
+  "tokens_out": 1840,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P055E9D\", \"veredicto\": \"FIEL\", \"lineas\": [4761, 4765, 4788, 4798, 4820, 4824], \"cita\": \"it is necessary to engineer a reporting culture--an organizational climate in which people are prepared to report their errors and near-misses ... an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide una cultura de reporte basada en la confianza y señala el miedo a las represalias como el principal freno. Recomienda animar e incluso premiar a quien informa. 'Sin represalias' se refiere a castigar el hecho de reportar, no a una amnistía total. Omitir que la indemnidad es 'as far as practicable' es un matiz, no una inversión.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P055E9D",
+  "veredicto": "FIEL",
+  "lineas": [
+   4761,
+   4765,
+   4788,
+   4798,
+   4820,
+   4824
+  ],
+  "cita": "it is necessary to engineer a reporting culture--an organizational climate in which people are prepared to report their errors and near-misses ... an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide una cultura de reporte basada en la confianza y señala el miedo a las represalias como el principal freno. Recomienda animar e incluso premiar a quien informa. 'Sin represalias' se refiere a castigar el hecho de reportar, no a una amnistía total. Omitir que la indemnidad es 'as far as practicable' es un matiz, no una inversión.",
+  "paso_fiel": ""
+ }
+}

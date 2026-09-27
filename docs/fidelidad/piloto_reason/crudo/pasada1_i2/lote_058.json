@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_058",
+  "intento": 0,
+  "usd": 0.171152,
+  "turnos": 1,
+  "duracion_s": 18.1,
+  "pared_s": 19.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34108,
+  "tokens_out": 1736,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P005692\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1085, 1095, 1141, 2922], \"razon\": \"El libro atribuye el problema a las falsas alarmas del sistema. Capacitar o exhortar al personal ataca el sintoma, y L2922 dice que las advertencias apenas afectan a los factores que producen el error.\"},\n  {\"id\": \"P82A6FB\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"periódicamente\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4296, 3965, 4388], \"razon\": \"Coincide con la seguridad como objetivo movil hacia el riesgo cero. Pero revisar el estandar podria rebajarlo, y el libro advierte sobre la erosion insidiosa de los estandares.\"},\n  {\"id\": \"PA99418\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"loss costing\", \"HSE-Chevron\"], \"clase\": \"FIEL\", \"lineas\": [5790, 5832, 5250], \"razon\": \"El libro describe el estudio conjunto HSE-Chevron sobre el coste acumulado de incidentes menores y pregunta que sistema de costeo de perdidas tiene la organizacion.\"},\n  {\"id\": \"P091B3B\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5063, 5065, 5077, 4765, 4987], \"razon\": \"Con \\\"solo\\\" excluye el sabotaje y el abuso de sustancias, que el libro sanciona severamente. Ademas trata la negligencia como sancionable, cuando el libro la situa en una zona gris que exige juicio cuidadoso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P005692",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1085,
+    1095,
+    1141,
+    2922
+   ],
+   "razon": "El libro atribuye el problema a las falsas alarmas del sistema. Capacitar o exhortar al personal ataca el sintoma, y L2922 dice que las advertencias apenas afectan a los factores que producen el error."
+  },
+  {
+   "id": "P82A6FB",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4276,
+    4296,
+    3965,
+    4388
+   ],
+   "razon": "Coincide con la seguridad como objetivo movil hacia el riesgo cero. Pero revisar el estandar podria rebajarlo, y el libro advierte sobre la erosion insidiosa de los estandares."
+  },
+  {
+   "id": "PA99418",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "loss costing",
+    "HSE-Chevron"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5790,
+    5832,
+    5250
+   ],
+   "razon": "El libro describe el estudio conjunto HSE-Chevron sobre el coste acumulado de incidentes menores y pregunta que sistema de costeo de perdidas tiene la organizacion."
+  },
+  {
+   "id": "P091B3B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5063,
+    5065,
+    5077,
+    4765,
+    4987
+   ],
+   "razon": "Con \"solo\" excluye el sabotaje y el abuso de sustancias, que el libro sanciona severamente. Ademas trata la negligencia como sancionable, cuando el libro la situa en una zona gris que exige juicio cuidadoso."
+  }
+ ]
+}

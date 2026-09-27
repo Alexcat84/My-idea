@@ -1,6 +1,6 @@
 {
   "node_id": "lean_manufacturing",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Lean Manufacturing y Gestión de la Cadena de Valor",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -23,5 +23,23 @@
   "condiciones_activacion": [
     "Cuando la organización manufacturera busca reducir desperdicios y mejorar flujo de producción"
   ],
-  "etiqueta_arbol": "Elimina el Desperdicio en tu Producción"
+  "etiqueta_arbol": "Elimina el Desperdicio en tu Producción",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-115",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q078-012: Lean mapea el flujo actual y elimina desperdicios de una operacion manufacturera ya en marcha: es mejorar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

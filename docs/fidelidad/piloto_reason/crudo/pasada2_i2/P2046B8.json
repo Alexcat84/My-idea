@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P2046B8",
+  "intento": 0,
+  "usd": 0.112292,
+  "turnos": 1,
+  "duracion_s": 5.8,
+  "pared_s": 7.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26068,
+  "tokens_out": 401,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2046B8\", \"veredicto\": \"FIEL\", \"lineas\": [3395], \"cita\": \"The next, and most important, step (and the one that gives HEART its pre-eminence in this area) is to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta como paso central de HEART consultar la lista de EPCs y decidir cuáles afectan a la actividad evaluada. El paso dice lo mismo. El término EPCs es del propio libro. 'Presentes en el contexto' equivale a 'likely to impact upon the performance'. Solo difiere en el matiz, no en la dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2046B8",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395
+  ],
+  "cita": "The next, and most important, step (and the one that gives HEART its pre-eminence in this area) is to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta como paso central de HEART consultar la lista de EPCs y decidir cuáles afectan a la actividad evaluada. El paso dice lo mismo. El término EPCs es del propio libro. 'Presentes en el contexto' equivale a 'likely to impact upon the performance'. Solo difiere en el matiz, no en la dirección.",
+  "paso_fiel": ""
+ }
+}

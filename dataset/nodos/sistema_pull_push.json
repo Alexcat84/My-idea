@@ -6,14 +6,14 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basandose en pronosticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza segun su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operacion. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la produccion segun consumo real, no segun pronostico.",
   "pasos_accionables": [
-    "Evaluar si tu operacion actual funciona bajo un esquema push o pull",
-    "Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso",
-    "Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente",
-    "Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor",
-    "Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad",
+    "Evaluar si tu operación actual funciona bajo un esquema push o pull",
+    "Identificar los cuellos de botella que el sistema push está ignorando en tu proceso",
+    "Rediseñar el flujo para que la producción se autorice según demanda real y consumo del cliente",
+    "Implementar kanbans y señales de reposición basadas en consumo, eligiendo el tipo de señal entre tarjeta, espacio, contenedor",
+    "Monitorear la reducción del tiempo de entrega y la mejora en confiabilidad",
     "Implementar el sistema y capacitar a los operadores"
   ],
-  "entregable_esperado": "Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.",
+  "entregable_esperado": "Sistema de producción rediseñado bajo lógica pull con kanbans implementados y métricas de flujo mejoradas.",
   "nodos_previos": [
     "mapeo_flujo_valor",
     "tres_tipos_desperdicio_tps",
@@ -46,6 +46,94 @@
       "node_id": "kanban_pull_system",
       "titulo": "Kanban – Señal para Producir",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0527",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evaluar si tu operacion actual funciona bajo un esquema push o pull",
+      "texto_nuevo": "Evaluar si tu operación actual funciona bajo un esquema push o pull",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-036.paso0: operación (Solo se añade la tilde que faltaba en operación; push y pull se quedan como están.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0528",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso",
+      "texto_nuevo": "Identificar los cuellos de botella que el sistema push está ignorando en tu proceso",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-036.paso1: está (Solo se añade la tilde que faltaba en el verbo está.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0529",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente",
+      "texto_nuevo": "Rediseñar el flujo para que la producción se autorice según demanda real y consumo del cliente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-036.paso2: producción, según (Solo se añaden las tildes que faltaban en producción y según.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0530",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor",
+      "texto_nuevo": "Implementar kanbans y señales de reposición basadas en consumo, eligiendo el tipo de señal entre tarjeta, espacio, contenedor",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-036.paso3: reposición, señal (Solo se corrigen la tilde de reposición y la eñe de señal.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0531",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad",
+      "texto_nuevo": "Monitorear la reducción del tiempo de entrega y la mejora en confiabilidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-036.paso4: reducción (Solo se añade la tilde que faltaba en reducción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0532",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.",
+      "texto_nuevo": "Sistema de producción rediseñado bajo lógica pull con kanbans implementados y métricas de flujo mejoradas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O044-036.entregable: producción, lógica, métricas (Solo se añaden las tildes que faltaban en producción, lógica y métricas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -16,12 +16,17 @@
  * inicial", desde fecha_base_original).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
 interface ItemFecha {
+  plan_id: string | null;
   id: string;
   dominio: string;
   etapa: number;
@@ -56,36 +61,53 @@ function cambioFecha(prev: ItemFecha, nueva: string): Record<string, unknown> {
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).moverFecha;
 
   let cuerpo: unknown;
   try {
     cuerpo = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo JSON inválido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoJsonInvalido }, { status: 400 });
   }
   const datos = parsear(cuerpo);
   if (!datos) {
-    return NextResponse.json({ error: "falta item_id o fecha mal formada" }, { status: 400 });
+    return NextResponse.json({ error: t.faltaItemOFecha }, { status: 400 });
   }
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  if (!user) return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   const proyecto = await obtenerProyecto(supabase, projectId);
-  if (!proyecto) return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+  if (!proyecto) return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
 
   // Todo el checklist del proyecto: el objetivo y sus posibles posteriores.
   const { data: filas } = await supabase
     .from("checklist_items")
-    .select("id, dominio, etapa, estado, fecha_base, fecha_base_origen, fecha_base_original")
+    .select("id, plan_id, dominio, etapa, estado, fecha_base, fecha_base_origen, fecha_base_original")
     .eq("project_id", projectId);
   const items = (filas ?? []) as ItemFecha[];
   const objetivo = items.find((i) => i.id === datos.item_id);
-  if (!objetivo) return NextResponse.json({ error: "actividad no encontrada" }, { status: 404 });
+  if (!objetivo) return NextResponse.json({ error: t.actividadNoEncontrada }, { status: 404 });
+  // AUD-09 M41: lo hecho y lo retirado no se mueven aquí. Mover lo hecho lo
+  // reclasificaba "A tiempo"; su fecha real se ajusta en la actividad.
+  if (objetivo.estado === "hecho") {
+    return NextResponse.json(
+      { error: t.yaHecha },
+      { status: 409 }
+    );
+  }
+  if (objetivo.estado === "no_aplica") {
+    return NextResponse.json(
+      { error: t.retirada },
+      { status: 409 }
+    );
+  }
   if (!objetivo.fecha_base) {
-    return NextResponse.json({ error: "esta actividad no tiene una fecha que mover" }, { status: 400 });
+    return NextResponse.json({ error: t.sinFecha }, { status: 400 });
   }
 
   const deltaMs = Date.parse(datos.fecha) - Date.parse(objetivo.fecha_base);
@@ -103,6 +125,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         (i) =>
           i.id !== objetivo.id &&
           i.dominio === objetivo.dominio &&
+          // AUD-09 M06: solo del MISMO plan; las de un plan reemplazado no se arrastran.
+          i.plan_id === objetivo.plan_id &&
           i.estado !== "hecho" &&
           i.estado !== "no_aplica" &&
           i.etapa >= objetivo.etapa &&
@@ -112,10 +136,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     : [];
 
   // Aplica: el objetivo a su nueva fecha; cada posterior corre el MISMO delta.
-  await supabase.from("checklist_items").update(cambioFecha(objetivo, datos.fecha)).eq("id", objetivo.id).eq("project_id", projectId);
+  // AUD-09 (tanda 5): toda escritura que falla deja rastro; antes se respondía
+  // "ok" y la bitácora registraba un movimiento que no se guardó.
+  let fallos = 0;
+  const { error: errEscritura1 } = await supabase.from("checklist_items").update(cambioFecha(objetivo, datos.fecha)).eq("id", objetivo.id).eq("project_id", projectId);
+  if (errEscritura1) {
+    console.error("[app/api/project/[id]/mover-fecha/route.ts] update checklist_items fallo:", errEscritura1);
+    fallos += 1;
+  }
   for (const p of posteriores) {
     const nueva = new Date(Date.parse(p.fecha_base!) + deltaMs).toISOString();
-    await supabase.from("checklist_items").update(cambioFecha(p, nueva)).eq("id", p.id).eq("project_id", projectId);
+    const { error: errEscritura2 } = await supabase.from("checklist_items").update(cambioFecha(p, nueva)).eq("id", p.id).eq("project_id", projectId);
+    if (errEscritura2) {
+      console.error("[app/api/project/[id]/mover-fecha/route.ts] update checklist_items fallo:", errEscritura2);
+      fallos += 1;
+    }
+  }
+
+  if (fallos > 0) {
+    return NextResponse.json({ error: r.noPudeGuardarFechas, fallidas: fallos }, { status: 500 });
   }
 
   await registrarBitacora(supabase, projectId, "fecha_movida", {

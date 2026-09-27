@@ -1,10 +1,10 @@
 {
   "node_id": "definicion_calidad_fitness_for_purpose",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Definición de Calidad como 'Fitness for Purpose'",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Juran define la calidad como 'aptitud para el uso' (fitness for use), concepto que se amplía a 'fitness for purpose' para reflejar también la economía de servicios. El propósito siempre lo define el cliente que usa el bien o servicio, y surge de sus necesidades, las cuales impulsan la compra. Para ser apto para su propósito, todo bien o servicio debe tener las características correctas que satisfacen esas necesidades y estar libre de fallas, sin retrabajo, desperdicio ni quejas. Esta definición aplica tanto a bienes como a servicios y es la base conceptual para gestionar la calidad de forma consistente en tu negocio, sin importar su tamaño.",
+  "resumen_teorico": "La calidad se define como 'aptitud para el uso' (fitness for use), concepto que se amplía a 'fitness for purpose' para reflejar también la economía de servicios. El propósito siempre lo define el cliente que usa el bien o servicio, y surge de sus necesidades, las cuales impulsan la compra. Para ser apto para su propósito, todo bien o servicio debe tener las características correctas que satisfacen esas necesidades y estar libre de fallas, sin retrabajo, desperdicio ni quejas. Esta definición aplica tanto a bienes como a servicios y es la base conceptual para gestionar la calidad de forma consistente en tu negocio, sin importar su tamaño.",
   "pasos_accionables": [
     "Identifica quién es tu cliente final del bien o servicio",
     "Determina las necesidades explícitas e implícitas de ese cliente",
@@ -21,8 +21,8 @@
   "nodos_siguientes": [
     "trilogia_de_juran",
     "costo_de_mala_calidad_copq",
-    "impacto_calidad_en_ingresos",
-    "descubrir_necesidades_del_cliente"
+    "descubrir_necesidades_del_cliente",
+    "impacto_calidad_ingresos_costos"
   ],
   "condiciones_activacion": [
     "Cuando existe confusión sobre qué significa calidad en tu negocio",
@@ -39,5 +39,52 @@
       "titulo": "Calidad como 'Fitness for Purpose'",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-057",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Juran define la calidad como 'aptitud para el uso' (fitness for use), concepto que se amplía a 'fitness for purpose' para reflejar también la economía de servicios. El propósito siempre lo define el cliente que usa el bien o servicio, y surge de sus necesidades, las cuales impulsan la compra. Para ser apto para su propósito, todo bien o servicio debe tener las características correctas que satisfacen esas necesidades y estar libre de fallas, sin retrabajo, desperdicio ni quejas. Esta definición aplica tanto a bienes como a servicios y es la base conceptual para gestionar la calidad de forma consistente en tu negocio, sin importar su tamaño.",
+      "texto_nuevo": "La calidad se define como 'aptitud para el uso' (fitness for use), concepto que se amplía a 'fitness for purpose' para reflejar también la economía de servicios. El propósito siempre lo define el cliente que usa el bien o servicio, y surge de sus necesidades, las cuales impulsan la compra. Para ser apto para su propósito, todo bien o servicio debe tener las características correctas que satisfacen esas necesidades y estar libre de fallas, sin retrabajo, desperdicio ni quejas. Esta definición aplica tanto a bienes como a servicios y es la base conceptual para gestionar la calidad de forma consistente en tu negocio, sin importar su tamaño.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Juran define la calidad como"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-025 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-154",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_fitness_for_purpose -> impacto_calidad_en_ingresos",
+      "texto_nuevo": "definicion_calidad_fitness_for_purpose -> impacto_calidad_ingresos_costos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a impacto_calidad_en_ingresos, deprecado; su superviviente es impacto_calidad_ingresos_costos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-093",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F14-013: Traducir necesidades del cliente en caracteristicas y criterios de ausencia de fallas es disenar el producto y su estandar de calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ]
 }

@@ -31,10 +31,18 @@ RAIZ = Path(__file__).resolve().parent.parent
 #     reporta, no se parchea),
 #  3. la curaduria FINAL del auditor, que resuelve las colisiones que la lista
 #     D introdujo y los anglicismos que no cubria.
+#  4. las correcciones de FIDELIDAD del fundador (25 sep 2026): etiquetas que
+#     decian lo contrario o algo distinto del concepto de su nodo, cada una con
+#     su motivo escrito en `_motivos`.
 LISTAS = [
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1.json",
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_casa.json",
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_curaduria_final.json",
+    #  la ORTOGRAFIA (saneamiento, nivel 1, criterio 16, 27 sep 2026): solo tildes, erratas y enie, cada una con su
+    #  motivo en `_motivos`. Va ANTES de la de fidelidad, que sigue siendo la ultima (engine/test_etiquetas_fidelidad.py):
+    #  no comparten ninguna etiqueta.
+    RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_ortografia.json",
+    RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_fidelidad.json",
 ]
 GRAFOS = [
     RAIZ / "dataset" / "metadata" / "master_graph.json",

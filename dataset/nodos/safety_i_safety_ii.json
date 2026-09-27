@@ -6,13 +6,13 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Distincion de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoria del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahi vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingenieria de resiliencia para anticiparte al exito operacional, no solo reaccionar al fallo.",
   "pasos_accionables": [
-    "Evalua si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
-    "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por que haces las cosas como las haces, no para corregirte de inmediato",
+    "Evalúa si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
+    "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por qué haces las cosas como las haces, no para corregirte de inmediato",
     "Identifica los ajustes y soluciones improvisadas frecuentes de bajo impacto como señales de riesgo, además de los incidentes graves",
-    "Documenta como logras que las cosas salgan bien cada día, incluso con objetivos que se contradicen o fallos de diseño",
-    "Crea indicadores de exito operacional que complementen tus metricas reactivas de fallos"
+    "Documenta cómo logras que las cosas salgan bien cada día, incluso con objetivos que se contradicen o fallos de diseño",
+    "Crea indicadores de éxito operacional que complementen tus métricas reactivas de fallos"
   ],
-  "entregable_esperado": "Un marco de gestion de seguridad que combine indicadores de Safety I (incidentes) con indicadores de Safety II (resiliencia y observacion del trabajo normal), respaldado por un registro de campo sobre los patrones de adaptacion diaria.",
+  "entregable_esperado": "Un marco de gestión de seguridad que combine indicadores de Safety I (incidentes) con indicadores de Safety II (resiliencia y observación del trabajo normal), respaldado por un registro de campo sobre los patrones de adaptación diaria.",
   "nodos_previos": [
     "organizaciones_alta_confiabilidad",
     "teoria_sistemas_seguridad",
@@ -47,6 +47,80 @@
       "node_id": "safety_ii_resiliencia",
       "titulo": "Safety II: Seguridad como Capacidad de Éxito",
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ],
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0389",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
+      "texto_nuevo": "Evalúa si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-040.paso0: Evalúa (Faltaba la tilde en 'Evalúa'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0390",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por que haces las cosas como las haces, no para corregirte de inmediato",
+      "texto_nuevo": "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por qué haces las cosas como las haces, no para corregirte de inmediato",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-040.paso1: qué (Faltaba la tilde en 'qué' ('por qué', interrogativa indirecta).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0391",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documenta como logras que las cosas salgan bien cada día, incluso con objetivos que se contradicen o fallos de diseño",
+      "texto_nuevo": "Documenta cómo logras que las cosas salgan bien cada día, incluso con objetivos que se contradicen o fallos de diseño",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-040.paso3: cómo (Faltaba la tilde en 'cómo' (interrogativa indirecta).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0392",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea indicadores de exito operacional que complementen tus metricas reactivas de fallos",
+      "texto_nuevo": "Crea indicadores de éxito operacional que complementen tus métricas reactivas de fallos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-040.paso4: éxito, métricas (Tildes que faltaban en 'éxito' y 'métricas'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0393",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un marco de gestion de seguridad que combine indicadores de Safety I (incidentes) con indicadores de Safety II (resiliencia y observacion del trabajo normal), respaldado por un registro de campo sobre los patrones de adaptacion diaria.",
+      "texto_nuevo": "Un marco de gestión de seguridad que combine indicadores de Safety I (incidentes) con indicadores de Safety II (resiliencia y observación del trabajo normal), respaldado por un registro de campo sobre los patrones de adaptación diaria.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-040.entregable: gestión, observación, adaptación (Tildes que faltaban en 'gestión', 'observación' y 'adaptación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -1,0 +1,65 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_042",
+  "intento": 0,
+  "usd": 0.14576,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31810,
+  "tokens_out": 926,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P4F4C90\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3384, 4910], \"razon\": \"El libro exige que la dirección mantenga siempre informada a la plantilla del progreso de las medidas correctoras. Si no se ve acción, no hay incentivo y el sistema muere.\"},\n{\"id\": \"P3D9298\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [252, 2961, 2965, 3813, 5499], \"razon\": \"El libro afirma que la falibilidad humana no se elimina y que no se puede cambiar la condición humana, pero sí las condiciones de trabajo. Favorece el enfoque situacional.\"},\n{\"id\": \"P4AD9EF\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2583, 2585], \"razon\": \"El fenómeno tick-off: las medidas de seguridad no basta con implantarlas, hay que vigilarlas y ajustarlas. Auditar esto es una extensión directa.\"},\n{\"id\": \"PF3B082\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5557, 5781, 5905, 5907], \"razon\": \"El libro recomienda aplicar el modelo organizacional a la integridad de las defensas y a las condiciones latentes, y hacerlo coexistir con los otros modelos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P4F4C90",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3384,
+    4910
+   ],
+   "razon": "El libro exige que la dirección mantenga siempre informada a la plantilla del progreso de las medidas correctoras. Si no se ve acción, no hay incentivo y el sistema muere."
+  },
+  {
+   "id": "P3D9298",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    252,
+    2961,
+    2965,
+    3813,
+    5499
+   ],
+   "razon": "El libro afirma que la falibilidad humana no se elimina y que no se puede cambiar la condición humana, pero sí las condiciones de trabajo. Favorece el enfoque situacional."
+  },
+  {
+   "id": "P4AD9EF",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2583,
+    2585
+   ],
+   "razon": "El fenómeno tick-off: las medidas de seguridad no basta con implantarlas, hay que vigilarlas y ajustarlas. Auditar esto es una extensión directa."
+  },
+  {
+   "id": "PF3B082",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5557,
+    5781,
+    5905,
+    5907
+   ],
+   "razon": "El libro recomienda aplicar el modelo organizacional a la integridad de las defensas y a las condiciones latentes, y hacerlo coexistir con los otros modelos."
+  }
+ ]
+}

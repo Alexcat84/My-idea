@@ -82,6 +82,20 @@ describe("POST /api/project/[id]/mover-fecha (Fase 4.7)", () => {
     expect(estadoFalso.bitacora.at(-1)).toMatchObject({ tipo: "fecha_movida", payload: { cascada: 2, delta_dias: 7 } });
   });
 
+  // AUD-09 M06 (tanda 5, conteos): la cascada filtraba por dominio y no por plan:
+  // arrastraba tareas de planes ya reemplazados por un seguimiento ("Hay 5 que
+  // siguen" desde Manos contra "Hay 3" desde el calendario).
+  it("CON cascada: una tarea de un plan REEMPLAZADO no se arrastra", async () => {
+    estadoFalso.checklistItems.push({
+      id: "viejo", project_id: "p1", plan_id: "pl-anterior", dominio: "core", etapa: 3, estado: "pendiente",
+      fecha_base: D("2026-04-02"), fecha_base_origen: "sugerida", fecha_base_original: null,
+    });
+    const res = await POST(req({ item_id: "it2", fecha: D("2026-03-27"), cascada: true }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(fb("viejo")).toBe(D("2026-04-02"));
+    expect((await res.json()).cascada).toBe(2); // it3 e it4, del mismo plan
+  });
+
   it("congela la fecha ORIGINAL en la primera movida y pasa el origen a 'ajustada'", async () => {
     await POST(req({ item_id: "it2", fecha: D("2026-03-27"), cascada: true }), PARAMS);
     const it2 = estadoFalso.checklistItems.find((i) => i.id === "it2")!;
@@ -90,4 +104,59 @@ describe("POST /api/project/[id]/mover-fecha (Fase 4.7)", () => {
     expect(it2.fecha_base_origen).toBe("ajustada");
     expect(it3.fecha_base_original).toBe(D("2026-03-25")); // también congela la suya
   });
+
+  it("si la escritura falla: 500 honesto, sin 'ok' y sin evento en la bitácora (AUD-09)", async () => {
+    hacerFallarUpdatesDeChecklist();
+    const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await POST(req({ item_id: "it2", fecha: D("2026-03-27"), cascada: false }), PARAMS);
+    expect(res.status).toBe(500);
+    expect(estadoFalso.bitacora.some((e) => e.tipo === "fecha_movida")).toBe(false);
+    expect(errores).toHaveBeenCalled();
+    errores.mockRestore();
+  });
 });
+
+// AUD-09 (tanda 5): toda escritura que falla deja rastro. Si el update de
+// checklist_items falla, la ruta ya no responde "ok" ni registra en la bitácora.
+function hacerFallarUpdatesDeChecklist() {
+  const fromReal = supabaseFalso.from.getMockImplementation()!;
+  supabaseFalso.from.mockImplementation((nombre: string) => {
+    const tabla = fromReal(nombre) as Record<string, unknown>;
+    if (nombre === "checklist_items") {
+      const update = tabla.update as (p: unknown) => unknown;
+      tabla.update = (p: unknown) => {
+        update(p);
+        tabla.then = (res: (v: unknown) => unknown) =>
+          Promise.resolve({ data: null, error: { message: "la base no responde" } }).then(res);
+        return tabla;
+      };
+    }
+    return tabla as never;
+  });
+}
+
+// AUD-09 M41 (tanda 7A, datos): mover-fecha aceptaba tareas HECHAS y las
+// reclasificaba "A tiempo" (su fecha planeada pasaba a coincidir con la real).
+// La fecha de algo hecho es la de realización y se ajusta en la actividad; una
+// retirada primero se reactiva. Ninguna de las dos se mueve aquí.
+describe("mover-fecha no toca lo hecho ni lo retirado (AUD-09 M41)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    sembrar();
+  });
+
+  it("una tarea hecha: 409, su fecha intacta y sin evento", async () => {
+    const res = await POST(req({ item_id: "it1", fecha: D("2026-03-15"), cascada: false }), PARAMS);
+    expect(res.status).toBe(409);
+    expect(fb("it1")).toBe(D("2026-03-10"));
+    expect(estadoFalso.bitacora).toHaveLength(0);
+  });
+
+  it("una tarea retirada: 409, su fecha intacta", async () => {
+    const res = await POST(req({ item_id: "it5", fecha: D("2026-04-09"), cascada: false }), PARAMS);
+    expect(res.status).toBe(409);
+    expect(fb("it5")).toBe(D("2026-04-05"));
+  });
+});
+

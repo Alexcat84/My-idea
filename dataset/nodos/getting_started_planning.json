@@ -24,7 +24,26 @@
     "getting_started_system_services_acquisition"
   ],
   "condiciones_activacion": [
-    "Cuando la organización necesita documentar formalmente sus controles de seguridad para cumplimiento de SP 800-171."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas documentar formalmente tus controles de seguridad para cumplir SP 800-171."
   ],
-  "etiqueta_arbol": "Redacta tu Plan de Seguridad"
+  "etiqueta_arbol": "Redacta tu Plan de Seguridad",
+  "fuentes_internas": [
+    "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-098",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la organización necesita documentar formalmente sus controles de seguridad para cumplimiento de SP 800-171.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas documentar formalmente tus controles de seguridad para cumplir SP 800-171.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-006: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición cita SP 800-171 pero no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Lista cada tarea del servicio por separado, sin agruparla en frases generales.",
     "Anota la frecuencia exacta de cada tarea: diaria, semanal o mensual.",
-    "Describe el estandar minimo aceptable para cada tarea, en palabras claras.",
-    "Escribe explicitamente que queda fuera del servicio para evitar sorpresas despues.",
+    "Describe el estándar mínimo aceptable para cada tarea, en palabras claras.",
+    "Escribe explícitamente qué queda fuera del servicio para evitar sorpresas después.",
     "Comparte este documento con el proveedor antes de firmar y pide que confirme que puede cumplirlo."
   ],
-  "entregable_esperado": "Un documento de alcance de servicio que se anexa al contrato y sirve para medir cumplimiento despues.",
+  "entregable_esperado": "Un documento de alcance de servicio que se anexa al contrato y sirve para medir cumplimiento después.",
   "nodos_previos": [
     "escucha_activa_requisitos"
   ],
@@ -22,5 +22,51 @@
     "Ya tuviste un desacuerdo con un proveedor sobre que incluia o no el servicio contratado.",
     "Estas comparando cotizaciones de distintos proveedores para el mismo servicio y no son comparables entre si."
   ],
-  "etiqueta_arbol": "Escribe el alcance exacto del servicio"
+  "etiqueta_arbol": "Escribe el alcance exacto del servicio",
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0439",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Describe el estandar minimo aceptable para cada tarea, en palabras claras.",
+      "texto_nuevo": "Describe el estándar mínimo aceptable para cada tarea, en palabras claras.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-017.paso2: estándar, mínimo (Faltan las tildes en estándar y mínimo; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0440",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe explicitamente que queda fuera del servicio para evitar sorpresas despues.",
+      "texto_nuevo": "Escribe explícitamente qué queda fuera del servicio para evitar sorpresas después.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-017.paso3: explícitamente, qué, después (Faltan las tildes en explícitamente, qué (interrogativa indirecta) y después.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0441",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un documento de alcance de servicio que se anexa al contrato y sirve para medir cumplimiento despues.",
+      "texto_nuevo": "Un documento de alcance de servicio que se anexa al contrato y sirve para medir cumplimiento después.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-017.entregable: después (Falta la tilde en después.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

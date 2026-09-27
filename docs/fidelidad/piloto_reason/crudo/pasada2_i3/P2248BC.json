@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2248BC",
+  "intento": 0,
+  "usd": 0.16638,
+  "turnos": 1,
+  "duracion_s": 6.7,
+  "pared_s": 7.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39395,
+  "tokens_out": 440,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2248BC\", \"veredicto\": \"FIEL\", \"lineas\": [3759, 1943], \"cita\": \"Section 3 classifies the nature of the lapse. These are broken down into the following categories: improper installation, improper servicing, improper or incomplete repair, improper fault isolation, inspection or testing, foreign object damage, surrounding equipment damage, personal injury.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"La Sección 3 de MEDA clasifica el lapso en categorías definidas (L3759), que es lo que pide el paso. La sospecha del filtro no procede: la dificultad para no especialistas (L1943) se refiere a la taxonomía causal cognitiva. MEDA usa categorías consecuenciales, que el libro considera fáciles de interpretar.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2248BC",
+  "veredicto": "FIEL",
+  "lineas": [
+   3759,
+   1943
+  ],
+  "cita": "Section 3 classifies the nature of the lapse. These are broken down into the following categories: improper installation, improper servicing, improper or incomplete repair, improper fault isolation, inspection or testing, foreign object damage, surrounding equipment damage, personal injury.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "La Sección 3 de MEDA clasifica el lapso en categorías definidas (L3759), que es lo que pide el paso. La sospecha del filtro no procede: la dificultad para no especialistas (L1943) se refiere a la taxonomía causal cognitiva. MEDA usa categorías consecuenciales, que el libro considera fáciles de interpretar.",
+  "paso_fiel": ""
+ }
+}

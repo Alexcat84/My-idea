@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P745537",
+  "intento": 0,
+  "usd": 0.168768,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36757,
+  "tokens_out": 1087,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P745537\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [413, 437, 971, 2028], \"cita\": \"in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error. ... The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro lamenta la falta de inspección separada y de supervisión, y la autofirma de trabajo incompleto. También señala que en la instalación los errores son más probables y más difíciles de detectar. Su advertencia sobre la redundancia se refiere a defensas en profundidad en general y no desaconseja la inspección independiente, cuya abolición critica (L973). El paso concreta esto sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P745537",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   413,
+   437,
+   971,
+   2028
+  ],
+  "cita": "in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error. ... The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro lamenta la falta de inspección separada y de supervisión, y la autofirma de trabajo incompleto. También señala que en la instalación los errores son más probables y más difíciles de detectar. Su advertencia sobre la redundancia se refiere a defensas en profundidad en general y no desaconseja la inspección independiente, cuya abolición critica (L973). El paso concreta esto sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

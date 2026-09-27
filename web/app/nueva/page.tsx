@@ -8,12 +8,21 @@
  * /idea/<id> para que un refresh caiga en la vista persistida.
  */
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
 import { BotonHeroe } from "../ui/BotonHeroe";
-import { consumirSSE } from "@/lib/sseCliente";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
+import { leerRechazo } from "@/lib/mensajeServidor";
+import { consumirSSE, EsperaAgotadaError } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
+import { avisoPrecioExploracion } from "@/lib/avisoExploracion";
+import { CODIGO_CIERRE_SIN_TERMINAL } from "@/lib/streamTerminal";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
+import { NUEVA_IDEA } from "@/lib/i18n/mensajes/nuevaIdea";
 
 type Fase =
   | { fase: "captura"; error?: string }
@@ -22,21 +31,45 @@ type Fase =
   | { fase: "limite"; mensaje: string };
 
 export default function NuevaIdea() {
+  const idioma = useIdioma();
+  const t = elegir(NUEVA_IDEA, idioma);
+  const tc = elegir(CLARIDAD, idioma);
   const router = useRouter();
   const [texto, setTexto] = useState("");
   const [estado, setEstado] = useState<Fase>({ fase: "captura" });
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
   const [etiqueta, setEtiqueta] = useState<string | undefined>();
+  // AUD-09 M28: /nueva?idea=<id> ordena una idea que ya existe y quedó sin su
+  // Claridad (el organizador falló). Se trae su texto y se reusa la misma idea.
+  const [ideaAReordenar, setIdeaAReordenar] = useState<string | null>(null);
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("idea");
+    if (!id) return;
+    fetch(`/api/idea/${id}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { idea?: { entrada_original?: string } } | null) => {
+        if (!d?.idea?.entrada_original) return;
+        setTexto(d.idea.entrada_original);
+        setIdeaAReordenar(id);
+      })
+      .catch(() => {});
+  }, []);
 
   async function enviar() {
     if (!texto.trim()) return;
+    // AUD-09 H03: el límite se dice antes de enviar, con su número, y el texto
+    // se queda en el campo para recortarlo.
+    if (texto.length > MAX_LARGO_IDEA) {
+      setEstado({ fase: "captura", error: mensajeIdeaLarga(idioma) });
+      return;
+    }
     setEstado({ fase: "generando" });
     setNodos([]);
     try {
       const res = await fetch("/api/organizer/stream", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ texto }),
+        body: JSON.stringify(ideaAReordenar ? { texto, project_id: ideaAReordenar } : { texto }),
       });
       if (res.status === 429) {
         const data = await res.json();
@@ -44,35 +77,48 @@ export default function NuevaIdea() {
         return;
       }
       if (!res.ok || !res.body) {
-        setEstado({ fase: "captura", error: "algo se atoró de nuestro lado; intenta de nuevo en un momento" });
+        // AUD-09 H03: el rechazo con razón (fusible, texto largo) se dice tal cual.
+        setEstado({ fase: "captura", error: (await leerRechazo(res, idioma)).mensaje });
         return;
       }
-      let projectId = "";
-      let huboError = false;
+      // AUD-09 H08: la espera termina SIEMPRE con salida. Lo que decide es si
+      // llegó el evento final (done o error), no si llegó "inicio".
+      let terminal = false;
       await consumirSSE(res, ({ evento, data }) => {
-        if (evento === "inicio") {
-          projectId = String((data as { project_id: string }).project_id);
-        } else if (evento === "seccion") {
+        if (evento === "seccion") {
           const s = data as { clave: string; label: string };
           setEtiqueta(s.label);
           setNodos((prev) => [...prev, { id: s.clave, label: s.label }]);
         } else if (evento === "done") {
+          terminal = true;
           const d = data as { project_id: string; data: OrganizadorData };
           window.history.replaceState(null, "", `/idea/${d.project_id}`);
           setEstado({ fase: "resultado", projectId: d.project_id, data: d.data });
         } else if (evento === "error") {
-          huboError = true;
+          terminal = true;
+          // AUD-09: un cierre mudo llega como código + identificador (la causa
+          // interna se queda en el servidor): aquí se dice en palabras de persona.
+          const d = data as { error?: string; codigo?: string; id?: string };
           setEstado({
             fase: "captura",
-            error: String((data as { error?: string })?.error ?? "algo se atoró; intenta de nuevo"),
+            error:
+              d?.codigo === CODIGO_CIERRE_SIN_TERMINAL
+                ? interpolar(t.errores.conexionCortadaRef, { id: d.id ?? t.errores.sinId })
+                : String(d?.error ?? t.errores.atorado),
           });
         }
       });
-      if (!projectId && !huboError) {
-        setEstado({ fase: "captura", error: "la conexión se cortó a medio camino; intenta de nuevo" });
+      if (!terminal) {
+        setEstado({ fase: "captura", error: t.errores.cortadaAMedioCamino });
       }
-    } catch {
-      setEstado({ fase: "captura", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+    } catch (e) {
+      setEstado({
+        fase: "captura",
+        error:
+          e instanceof EsperaAgotadaError
+            ? t.errores.tardando
+            : t.errores.sinConexion,
+      });
     }
   }
 
@@ -80,11 +126,13 @@ export default function NuevaIdea() {
     return (
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
         <p className="text-lg">{estado.mensaje}</p>
+        {/* AUD-09 B05: a la portada "a ver planes" no había nada que ver; las
+            ideas guardadas sí te esperan. */}
         <button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/ideas")}
           className="mt-8 rounded-cinta border border-hairline bg-surface px-5 py-3 text-dim hover:text-ink"
         >
-          Ver planes
+          {t.irAMisIdeas}
         </button>
       </main>
     );
@@ -93,7 +141,7 @@ export default function NuevaIdea() {
   if (estado.fase === "generando") {
     return (
       <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-10 sm:px-6">
-        <h1 className="mb-8 text-xl font-semibold">Organizando tu idea…</h1>
+        <h1 className="mb-8 text-xl font-semibold">{t.organizando}</h1>
         <ArbolPensante nodos={nodos} generando etiquetaGenerando={etiqueta} />
       </main>
     );
@@ -112,7 +160,7 @@ export default function NuevaIdea() {
           <div className="mb-4 flex items-center gap-2">
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
             <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-              Esto entendí de tu idea
+              {tc.estoEntendi}
             </span>
           </div>
           <h1 className="text-[26px] font-bold leading-[1.35] tracking-[-0.02em] [text-wrap:balance] sm:text-[30px]">
@@ -126,7 +174,7 @@ export default function NuevaIdea() {
             style={{ animationDelay: "0.35s" }}
           >
             <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-              Lo que ya tienes
+              {tc.loQueYaTienes}
             </p>
             <ul className="flex flex-col gap-4">
               {(d.lo_que_ya_tienes_claro ?? []).map((b, i) => (
@@ -148,7 +196,7 @@ export default function NuevaIdea() {
             style={{ animationDelay: "0.5s", border: "1px solid rgba(77,124,254,0.3)" }}
           >
             <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-              Lo que estás asumiendo
+              {tc.loQueEstasAsumiendo}
             </p>
             <ul className="flex flex-col gap-4">
               {(d.lo_que_estas_asumiendo_sin_saberlo ?? []).map((b, i) => (
@@ -164,8 +212,7 @@ export default function NuevaIdea() {
               ))}
             </ul>
             <p className="mt-5 border-t border-hairline pt-[18px] text-[13px] leading-[1.6] text-dim [text-wrap:pretty]">
-              Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a
-              pregunta.
+              {tc.notaSuposiciones}
             </p>
           </section>
         </div>
@@ -175,8 +222,10 @@ export default function NuevaIdea() {
             onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
             className="rounded-[10px] px-[26px] py-3 text-sm font-semibold"
           >
-            Explorar estas suposiciones
+            {tc.explorarSuposiciones}
           </BotonHeroe>
+          {/* AUD-09 M32: el aviso de precio del canon 03, antes de empezar. */}
+          <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">{avisoPrecioExploracion(idioma)}</p>
         </div>
       </main>
     );
@@ -186,13 +235,13 @@ export default function NuevaIdea() {
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-4 py-10 sm:px-6">
       {/* Canon 02 (La Chispa): el momento sagrado — un campo grande y nada más */}
       <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-        Nueva idea · La Chispa
+        {t.etiquetaChispa}
       </p>
       <label htmlFor="idea" className="mb-2 block text-2xl font-bold leading-snug tracking-tight">
-        Cuéntame tu idea
+        {t.cuentameTuIdea}
       </label>
       <p className="mb-4 text-[15px] text-dim">
-        Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.
+        {t.subtitulo}
       </p>
       <CampoConVoz
         id="idea"
@@ -200,7 +249,7 @@ export default function NuevaIdea() {
         onCambio={setTexto}
         filas={7}
         autoFocus
-        placeholder="Quiero vender café de especialidad a domicilio en mi barrio…"
+        placeholder={t.placeholder}
       />
       {estado.error && (
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -211,18 +260,18 @@ export default function NuevaIdea() {
             disabled={!texto.trim()}
             className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10 disabled:opacity-40"
           >
-            Intentar de nuevo
+            {t.intentarDeNuevo}
           </button>
         </div>
       )}
       <div className="mt-5 flex items-center justify-between gap-4">
-        <p className="text-xs text-dim">Sin plantillas ni formularios. Solo tu idea, en tus palabras.</p>
+        <p className="text-xs text-dim">{t.sinPlantillas}</p>
         <button
           onClick={enviar}
           disabled={!texto.trim()}
           className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
         >
-          Continuar
+          {t.continuar}
         </button>
       </div>
     </main>

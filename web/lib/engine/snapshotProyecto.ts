@@ -20,6 +20,8 @@
  * se levanta ninguna protección.
  */
 import { esActivo, type Banda, type ChecklistEstado } from "../dbContract";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { MOTOR } from "../i18n/mensajes/motor";
 
 /** Una actividad del núcleo tal como la ve un mundo de protección. */
 export interface ActividadSnapshot {
@@ -140,5 +142,8 @@ export function tokensAprox(texto: string): number {
  * vinimos a eliminar. Es una lectura transitoria de sus propios datos: se le
  * dice y reintenta, como hace el diagnóstico cuando su redactor falla.
  */
-export const ERROR_SNAPSHOT_ILEGIBLE =
-  "no pudimos leer las actividades de tu plan; intenta de nuevo en un momento";
+// i18n F2: el texto vive en el catálogo MOTOR; la constante es el valor base.
+export function errorSnapshotIlegible(idioma: Locale = LOCALE_BASE): string {
+  return elegir(MOTOR, idioma).errorSnapshotIlegible;
+}
+export const ERROR_SNAPSHOT_ILEGIBLE = errorSnapshotIlegible(LOCALE_BASE);

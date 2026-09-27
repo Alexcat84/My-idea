@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_023",
+  "intento": 0,
+  "usd": 0.156592,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32653,
+  "tokens_out": 1299,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PEC6BA3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2907, 2918, 2920, 2922, 3817, 5641, 5661, 5675], \"razon\": \"El libro critica el ciclo de culpa y la tendencia a atribuir errores a personas. Revisar si uno siempre culpa a alguien concreta esa idea, sin datos nuevos.\"},\n {\"id\": \"P90EC3A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [105, 306, 2556, 2566, 2568], \"razon\": \"El libro describe corrientes hacia la vulnerabilidad: olvidar el miedo, desviar recursos a producción y la deriva del 'unrocked boat'. Pide entender esas fuerzas para navegar.\"},\n {\"id\": \"PBAAD09\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4060, 4182, 4416, 4418, 4431, 4433, 4435], \"razon\": \"El libro presenta la desregulación como causa de pérdida de vigilancia (Dryden, FAA, HSE). No la avala como objetivo que equilibrar, y el paso la legitima.\"},\n {\"id\": \"PE4D087\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"prueba de sustitución\", \"jurado de pares\"], \"clase\": \"FIEL\", \"lineas\": [5037, 5055, 5057, 5059], \"razon\": \"El libro propone el test de Johnston con un 'jurado' de pares. Pero lo aplica después de descartar abuso de sustancias y violación deliberada, y el paso omite ese orden.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PEC6BA3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2907,
+    2918,
+    2920,
+    2922,
+    3817,
+    5641,
+    5661,
+    5675
+   ],
+   "razon": "El libro critica el ciclo de culpa y la tendencia a atribuir errores a personas. Revisar si uno siempre culpa a alguien concreta esa idea, sin datos nuevos."
+  },
+  {
+   "id": "P90EC3A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    105,
+    306,
+    2556,
+    2566,
+    2568
+   ],
+   "razon": "El libro describe corrientes hacia la vulnerabilidad: olvidar el miedo, desviar recursos a producción y la deriva del 'unrocked boat'. Pide entender esas fuerzas para navegar."
+  },
+  {
+   "id": "PBAAD09",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4060,
+    4182,
+    4416,
+    4418,
+    4431,
+    4433,
+    4435
+   ],
+   "razon": "El libro presenta la desregulación como causa de pérdida de vigilancia (Dryden, FAA, HSE). No la avala como objetivo que equilibrar, y el paso la legitima."
+  },
+  {
+   "id": "PE4D087",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "prueba de sustitución",
+    "jurado de pares"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5037,
+    5055,
+    5057,
+    5059
+   ],
+   "razon": "El libro propone el test de Johnston con un 'jurado' de pares. Pero lo aplica después de descartar abuso de sustancias y violación deliberada, y el paso omite ese orden."
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_074",
+  "intento": 0,
+  "usd": 0.15013200000000002,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33133,
+  "tokens_out": 880,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P76AAE7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4376], \"razon\": \"El libro enumera literalmente, entre los pasos del procedimiento COSHH, monitorear la exposición mediante técnicas válidas de higiene ocupacional.\"},\n {\"id\": \"P772378\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2556, 2566, 2568, 105], \"razon\": \"El libro describe las corrientes hacia la vulnerabilidad (olvidar el temor, desvío a producción, deriva del 'unrocked boat') y exige entender las fuerzas que actúan sobre la organización.\"},\n {\"id\": \"PDE897B\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3747], \"razon\": \"El libro dice que la Sección 5a de MEDA identifica las defensas que fallaron.\"},\n {\"id\": \"P83B4AB\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [204, 225, 2765, 4448, 2658], \"razon\": \"Es razonable porque las condiciones latentes se repiten. Pero el libro advierte contra 'prevenir el último accidente' y prefiere medidas proactivas de proceso. Hay un matiz posible.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P76AAE7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4376
+   ],
+   "razon": "El libro enumera literalmente, entre los pasos del procedimiento COSHH, monitorear la exposición mediante técnicas válidas de higiene ocupacional."
+  },
+  {
+   "id": "P772378",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2556,
+    2566,
+    2568,
+    105
+   ],
+   "razon": "El libro describe las corrientes hacia la vulnerabilidad (olvidar el temor, desvío a producción, deriva del 'unrocked boat') y exige entender las fuerzas que actúan sobre la organización."
+  },
+  {
+   "id": "PDE897B",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3747
+   ],
+   "razon": "El libro dice que la Sección 5a de MEDA identifica las defensas que fallaron."
+  },
+  {
+   "id": "P83B4AB",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    204,
+    225,
+    2765,
+    4448,
+    2658
+   ],
+   "razon": "Es razonable porque las condiciones latentes se repiten. Pero el libro advierte contra 'prevenir el último accidente' y prefiere medidas proactivas de proceso. Hay un matiz posible."
+  }
+ ]
+}

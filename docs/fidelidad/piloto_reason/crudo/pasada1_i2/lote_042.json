@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_042",
+  "intento": 0,
+  "usd": 0.16726,
+  "turnos": 1,
+  "duracion_s": 18.9,
+  "pared_s": 19.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33120,
+  "tokens_out": 1739,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P091436\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [213, 293, 310, 181, 5779, 5781], \"razon\": \"Fiel si es análisis retrospectivo (L293). Pero si se usa para anticipar la alineación, el libro dice que los huecos se mueven y los detonantes son difíciles de anticipar; prioriza eliminar condiciones latentes.\"},\n  {\"id\": \"PEF62FD\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"mandos técnicos\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2577, 2583, 2748, 4693, 5270], \"razon\": \"Coincide con el tick-off en mandos técnicos (L2583). Matiz: cognisance es tarea de la alta dirección y la cultura se forma con prácticas, no con capacitación.\"},\n  {\"id\": \"PFAC933\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4714, 4720, 2948, 2961], \"razon\": \"El libro trata la indefensión aprendida como cultura organizacional que alimenta la culpa. Buscarla como síntoma del personal podría llevar al enfoque centrado en la persona.\"},\n  {\"id\": \"PE964FE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3384, 4810, 4910], \"razon\": \"El libro dice que la dirección debe informar siempre a la plantilla del avance de las medidas; si no ve acción, el sistema muere.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P091436",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    213,
+    293,
+    310,
+    181,
+    5779,
+    5781
+   ],
+   "razon": "Fiel si es análisis retrospectivo (L293). Pero si se usa para anticipar la alineación, el libro dice que los huecos se mueven y los detonantes son difíciles de anticipar; prioriza eliminar condiciones latentes."
+  },
+  {
+   "id": "PEF62FD",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "mandos técnicos"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2577,
+    2583,
+    2748,
+    4693,
+    5270
+   ],
+   "razon": "Coincide con el tick-off en mandos técnicos (L2583). Matiz: cognisance es tarea de la alta dirección y la cultura se forma con prácticas, no con capacitación."
+  },
+  {
+   "id": "PFAC933",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4714,
+    4720,
+    2948,
+    2961
+   ],
+   "razon": "El libro trata la indefensión aprendida como cultura organizacional que alimenta la culpa. Buscarla como síntoma del personal podría llevar al enfoque centrado en la persona."
+  },
+  {
+   "id": "PE964FE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3384,
+    4810,
+    4910
+   ],
+   "razon": "El libro dice que la dirección debe informar siempre a la plantilla del avance de las medidas; si no ve acción, el sistema muere."
+  }
+ ]
+}

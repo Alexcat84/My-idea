@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Identifica qué te están comprando realmente: la gente, el producto o el negocio completo",
     "Ajusta lo que esperas de valor según cuál de las tres categorías te ofrecen",
-    "Prepara la documentación financiera que corresponda, con las métricas de negocio si aplica"
+    "Sugerencia de My Idea: prepara la documentación financiera que corresponda, con las métricas de negocio si aplica."
   ],
   "entregable_esperado": "Tener claro qué tipo de oferta de compra recibiste y qué rango de valor esperar según esa categoría",
   "nodos_previos": [
-    "engineering_as_marketing"
+    "decision_de_vender_startup"
   ],
   "nodos_siguientes": [
     "co_sale_drag_along_agreements"
@@ -21,5 +21,53 @@
     "Cuando recibes una oferta formal de compra",
     "Cuando estás preparando a quienes te asesoran legal y financieramente para este proceso"
   ],
-  "etiqueta_arbol": "Conoce los Tipos de Adquisición"
+  "etiqueta_arbol": "Conoce los Tipos de Adquisición",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-044",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prepara la documentación financiera que corresponda, con las métricas de negocio si aplica",
+      "texto_nuevo": "Sugerencia de My Idea: prepara la documentación financiera que corresponda, con las métricas de negocio si aplica.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L3260-L3270",
+        "frase": "These deals are typically valued (at least in part) by their financial metrics and can be extremely large"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. El libro clasifica las adquisiciones y dice que la compra del negocio se valora en parte por metricas financieras. Lo usa para decidir si vender o no (L3272-L3278), no para preparar una venta. No pide preparar documentacion financiera ni ningun entregable para el comprador. Busque financial statement, due diligence y document en todo el libro sin hallar esa preparacion. Preparar la documentacion es una accion y un entregable nuevos, no la concrecion de algo que el libro diga.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-081"
+    },
+    {
+      "id": "t2-arista-050",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "engineering_as_marketing -> tipos_adquisiciones_tecnologia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-12-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Ingenieria como marketing (herramientas gratuitas para captar leads) no prepara entender que tipo de adquisicion de tu empresa te ofrecen. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-18",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "decision_de_vender_startup -> tipos_adquisiciones_tecnologia",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-18, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Una vez decidido vender la empresa, lo siguiente es entender qué tipo de compra se ofrece y cómo se valora cada una."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ]
 }

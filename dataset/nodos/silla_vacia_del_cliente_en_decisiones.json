@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "La Silla Vacia del Cliente en las Reuniones de Decision",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Amazon usa, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+  "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
   "pasos_accionables": [
     "Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión",
     "Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico"
   ],
-  "entregable_esperado": "Un simbolo del cliente instalado en tus reuniones internas de decision, con la regla escrita de quien lo ocupa y en que momento de la reunion se le pregunta",
+  "entregable_esperado": "Un símbolo del cliente instalado en tus reuniones internas de decisión, con la regla escrita de quién lo ocupa y en qué momento de la reunión se le pregunta",
   "nodos_previos": [
     "cultura_de_experiencia",
     "customer_journey_mapping"
@@ -19,5 +19,39 @@
     "Cuando las decisiones internas se toman por comodidad operativa y el cliente aparece solo al final, si aparece",
     "Cuando quieres instalar un recordatorio permanente en vez de una campana de una vez"
   ],
-  "etiqueta_arbol": "Sienta al Cliente en tu Mesa"
+  "etiqueta_arbol": "Sienta al Cliente en tu Mesa",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-48",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Amazon usa, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+      "texto_nuevo": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L6302",
+        "frase": "Finally, to keep the customer \"front and center\" in every internal discussion, an empty chair was placed in each meeting to represent the customer."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R046-026 (CONTRARIO, lector y verificador de acuerdo): El libro da otro dato para el mismo ejemplo: la silla vacia es de Comcast, no de Amazon. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R046-026"
+    },
+    {
+      "id": "n1-orto-0352",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un simbolo del cliente instalado en tus reuniones internas de decision, con la regla escrita de quien lo ocupa y en que momento de la reunion se le pregunta",
+      "texto_nuevo": "Un símbolo del cliente instalado en tus reuniones internas de decisión, con la regla escrita de quién lo ocupa y en qué momento de la reunión se le pregunta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-006.entregable: símbolo, decisión, quién, qué, reunión (Tildes reales (símbolo, decisión, reunión e interrogativos indirectos quién y qué); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ]
 }

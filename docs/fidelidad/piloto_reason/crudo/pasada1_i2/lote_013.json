@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_013",
+  "intento": 0,
+  "usd": 0.165628,
+  "turnos": 1,
+  "duracion_s": 19.8,
+  "pared_s": 21.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32887,
+  "tokens_out": 1704,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PD7C0F1\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2944, 2936, 2957, 2961, 2866, 5907],\n    \"razon\": \"Coincide con las causas múltiples. Pero analizar 'cada error' uno a uno es reactivo y guiado por eventos, enfoque que el libro critica (L2866) frente a lo proactivo.\"\n  },\n  {\n    \"id\": \"P5D77B3\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2977, 2981, 3817, 4987, 5077, 5667, 5675],\n    \"razon\": \"El libro dice que las sanciones tienen efecto limitado y que culpar cierra el rastreo causal. El paso no prohíbe sancionar a los pocos imprudentes (L4987, L5077).\"\n  },\n  {\n    \"id\": \"P88D183\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [3784],\n    \"razon\": \"El libro dice literalmente que, ante un fallo activo, hay precondiciones en el lugar de trabajo que se identifican y describen en Tripod-Beta.\"\n  },\n  {\n    \"id\": \"P0DC9D9\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [65, 67, 77, 79],\n    \"razon\": \"El libro dice que las actividades de bajo peligro pueden operar por debajo de la zona de paridad. El peligro es el extremo inferior derecho. El paso presenta 'debajo de paridad' como problema en general.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PD7C0F1",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2944,
+    2936,
+    2957,
+    2961,
+    2866,
+    5907
+   ],
+   "razon": "Coincide con las causas múltiples. Pero analizar 'cada error' uno a uno es reactivo y guiado por eventos, enfoque que el libro critica (L2866) frente a lo proactivo."
+  },
+  {
+   "id": "P5D77B3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2977,
+    2981,
+    3817,
+    4987,
+    5077,
+    5667,
+    5675
+   ],
+   "razon": "El libro dice que las sanciones tienen efecto limitado y que culpar cierra el rastreo causal. El paso no prohíbe sancionar a los pocos imprudentes (L4987, L5077)."
+  },
+  {
+   "id": "P88D183",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784
+   ],
+   "razon": "El libro dice literalmente que, ante un fallo activo, hay precondiciones en el lugar de trabajo que se identifican y describen en Tripod-Beta."
+  },
+  {
+   "id": "P0DC9D9",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    65,
+    67,
+    77,
+    79
+   ],
+   "razon": "El libro dice que las actividades de bajo peligro pueden operar por debajo de la zona de paridad. El peligro es el extremo inferior derecho. El paso presenta 'debajo de paridad' como problema en general."
+  }
+ ]
+}

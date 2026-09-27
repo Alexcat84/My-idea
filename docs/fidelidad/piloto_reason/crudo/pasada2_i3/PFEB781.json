@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PFEB781",
+  "intento": 0,
+  "usd": 0.116408,
+  "turnos": 1,
+  "duracion_s": 7.6,
+  "pared_s": 8.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26682,
+  "tokens_out": 484,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PFEB781\", \"veredicto\": \"FIEL\", \"lineas\": [3395, 3397], \"cita\": \"decide which condition(s) are likely to impact upon the performance of the activity in question. Having done this, the nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice lo mismo que el paso. Tras elegir las EPC que afectan a la actividad, se multiplica la probabilidad nominal por una proporción juzgada del factor de cada EPC. El paso pone 'proporción de cada EPC' donde el libro dice 'proporción del factor EPC'; es solo abreviación. EPC y probabilidad nominal son términos del propio libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PFEB781",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "cita": "decide which condition(s) are likely to impact upon the performance of the activity in question. Having done this, the nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice lo mismo que el paso. Tras elegir las EPC que afectan a la actividad, se multiplica la probabilidad nominal por una proporción juzgada del factor de cada EPC. El paso pone 'proporción de cada EPC' donde el libro dice 'proporción del factor EPC'; es solo abreviación. EPC y probabilidad nominal son términos del propio libro.",
+  "paso_fiel": ""
+ }
+}

@@ -19,7 +19,26 @@
     "patent_cooperation_treaty"
   ],
   "condiciones_activacion": [
-    "Si el usuario ya presentó una solicitud de patente o marca en EE.UU. y planea expandirse internacionalmente"
+    "Si ya presentaste una primera solicitud de patente o marca en un país miembro del Convenio de París y planeas protegerla en otros países"
   ],
-  "etiqueta_arbol": "Protege tu Marca a Tiempo"
+  "etiqueta_arbol": "Protege tu Marca a Tiempo",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-132",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el usuario ya presentó una solicitud de patente o marca en EE.UU. y planea expandirse internacionalmente",
+      "texto_nuevo": "Si ya presentaste una primera solicitud de patente o marca en un país miembro del Convenio de París y planeas protegerla en otros países",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q006-001: Tenía razón el lector A: la condición exige una solicitud en EE.UU., cuando el nodo aplica a una primera solicitud en cualquier país miembro del Convenio de París y EE.UU. es solo el ejemplo del paso 1; dominio y fase están bien, y en eso coinciden los dos. (arbitro) Motivo: El contenido cita EE.UU. solo como ejemplo (paso 1: 'ej. EE.UU.'); el derecho de prioridad nace de una primera solicitud en cualquier país miembro del Convenio de París, y la condición convierte el ejemplo en requisito y deja fuera a quien presentó en otro país."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

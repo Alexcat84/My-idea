@@ -1,7 +1,7 @@
 {
   "node_id": "mission_and_operations_planning",
   "fase_proyecto": "planificacion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Planificación de Misión y Operaciones (M&OP)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos que comienza con la definición de la misión (CONOPS), sigue con planificación de demanda por instalación, planificación de transporte, modelado del supply chain y simulación para elegir el mejor plan antes de ejecutarlo en el mundo real.",
@@ -20,8 +20,40 @@
     "alineacion_stakeholders_ma"
   ],
   "condiciones_activacion": [
-    "Cuando se requiere coordinar múltiples organizaciones sin jerarquía formal",
+    "Cuando necesitas planificar una cadena de suministro ad hoc, como una respuesta a desastres, y elegir el mejor plan de demanda y transporte antes de ejecutarlo",
     "Cuando es necesario actualizar planes operativos de forma continua ante cambios rápidos"
   ],
-  "etiqueta_arbol": "Planifica tu Misión y Operación"
+  "etiqueta_arbol": "Planifica tu Misión y Operación",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-126",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se requiere coordinar múltiples organizaciones sin jerarquía formal",
+      "texto_nuevo": "Cuando necesitas planificar una cadena de suministro ad hoc, como una respuesta a desastres, y elegir el mejor plan de demanda y transporte antes de ejecutarlo",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q099-001: El contenido es planificación logística de una cadena de suministro (demanda por instalación, transporte, modelo y simulación), así que corresponde a entrega y no a core; además la condición 0 es genérica y no dice cuándo aplica. (lector y verificador de acuerdo) Motivo: Es demasiado genérica: sirve para cualquier colaboración entre organizaciones y no nombra lo que el nodo trata, que es planificar una cadena de suministro ad hoc."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "mv-dominio-21",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-30: El M&OP para cadenas de respuesta a desastres con CONOPS es planificación logística muy especializada que casi ningún emprendedor necesita. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ]
 }

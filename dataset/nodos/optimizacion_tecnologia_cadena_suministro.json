@@ -15,8 +15,7 @@
   "entregable_esperado": "Un sistema tecnológico implementado que permite monitorear y comparar el desempeño ambiental de la cadena de suministro",
   "nodos_previos": [
     "alcance_profundo_cadena_suministro",
-    "ia_en_supply_chain",
-    "colaboracion_cadena_suministro"
+    "supply_chain_management_systems"
   ],
   "nodos_siguientes": [
     "alianzas_cross_industry",
@@ -26,5 +25,49 @@
     "Cuando la empresa necesita escalar su programa de sostenibilidad a múltiples proveedores",
     "Si se requiere comparabilidad de datos entre distintas cadenas de valor"
   ],
-  "etiqueta_arbol": "Optimiza tu Cadena con Tecnología"
+  "etiqueta_arbol": "Optimiza tu Cadena con Tecnología",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-001",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "supply_chain_management_systems -> optimizacion_tecnologia_cadena_suministro",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B01, lectores de acuerdo)",
+        "motivo": "Los sistemas SCM con capacidad analitica son la base tecnologica tras la cual se entra a dashboards e integracion de impactos ambientales."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-002",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ia_en_supply_chain -> optimizacion_tecnologia_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B01)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en supply_chain_management_systems."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-arista-003",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "colaboracion_cadena_suministro -> optimizacion_tecnologia_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B02)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en supply_chain_management_systems."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    }
+  ]
 }

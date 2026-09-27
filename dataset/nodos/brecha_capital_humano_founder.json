@@ -1,6 +1,6 @@
 {
   "node_id": "brecha_capital_humano_founder",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Lo que tu experiencia en una empresa grande no te preparó para saber (puntos ciegos al fundar)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
@@ -23,5 +23,23 @@
     "Si vienes de una carrera larga en una empresa grande",
     "Si nunca has manejado una junta directiva con inversionistas de capital de riesgo"
   ],
-  "etiqueta_arbol": "Reconoce tus Puntos Ciegos"
+  "etiqueta_arbol": "Reconoce tus Puntos Ciegos",
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-032",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F21-019: Sus pasos y su entregable son un mapa de opciones de financiamiento y una presentacion para inversionistas: planificacion de recursos. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

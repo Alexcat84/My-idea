@@ -1,6 +1,6 @@
 {
   "node_id": "diseno_en_la_cuarta_dimension",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Diseñar con el Tiempo (La Cuarta Dimensión)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
@@ -27,5 +27,23 @@
     "Cuando la experiencia del usuario ocurre en múltiples etapas o sesiones",
     "Cuando es necesario coordinar múltiples touchpoints de un servicio"
   ],
-  "etiqueta_arbol": "Diseña con el Tiempo en Mente"
+  "etiqueta_arbol": "Diseña con el Tiempo en Mente",
+  "fuentes_internas": [
+    "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-059",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q088-027: El contenido es disenar la experiencia en el tiempo con storyboards, journeys y escenarios, trabajo de diseno y no de operar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

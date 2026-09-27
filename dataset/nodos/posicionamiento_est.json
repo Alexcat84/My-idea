@@ -1,7 +1,7 @@
 {
   "node_id": "posicionamiento_est",
   "fase_proyecto": "planificacion",
-  "dominio": "franquicias",
+  "dominio": "core",
   "titulo_concepto": "Elige en qué vas a ser el mejor (y renuncia al resto)",
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Según un estudio de McMillan Doolittle, tienes que ser el mejor en al menos una de cinco cosas: el que tiene más variedad, el más barato, el más fácil de usar, el más rápido o el más de moda. Si intentas destacar en más de dos a la vez, terminas siendo mediocre en todas. Elegir en qué destacar significa aceptar que vas a sacrificar otras cosas a propósito.",
@@ -12,14 +12,69 @@
   ],
   "entregable_esperado": "Una decisión clara de en qué área (o máximo dos) vas a ser el mejor, y en cuáles decidiste no competir",
   "nodos_previos": [
-    "historia_marca_diferenciacion"
+    "historia_marca_diferenciacion",
+    "brief_competitivo"
   ],
-  "nodos_siguientes": [
-    "propuesta_valor_franquicia",
-    "calificacion_prospectos_marketing"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando tu negocio no tiene claro en qué se diferencia de la competencia"
   ],
-  "etiqueta_arbol": "Sé el Mejor en Algo"
+  "etiqueta_arbol": "Sé el Mejor en Algo",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-141",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "franquicias",
+      "texto_nuevo": "core",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q052-022: Elegir en qué diferenciarse frente a la competencia es estrategia general de cualquier negocio; el contenido no trata de franquicias. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "mv-arista-023",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "posicionamiento_est -> propuesta_valor_franquicia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A44, arbitro)",
+        "motivo": "Tiene razon el lector A: elegir en que destacar frente a los clientes es estrategia general, mientras que la propuesta de valor de la franquicia trata del sistema completo que compra un franquiciado. Presupone haber decidido franquiciar, asi que el posicionamiento no es su puerta natural."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-024",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "posicionamiento_est -> calificacion_prospectos_marketing",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A43, lectores de acuerdo)",
+        "motivo": "Elegir en que ser el mejor no lleva a calificar prospectos de franquicia."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-043",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "brief_competitivo -> posicionamiento_est",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C11, lectores de acuerdo)",
+        "motivo": "Analizar por que tu producto supera a las alternativas precede a elegir en que ser el mejor y a que renunciar."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

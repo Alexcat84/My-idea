@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF51157",
+  "intento": 0,
+  "usd": 0.20206400000000002,
+  "turnos": 1,
+  "duracion_s": 7.4,
+  "pared_s": 8.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47786,
+  "tokens_out": 546,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF51157\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5892], \"cita\": \"To these should also be added such intangibles as damage to the company's reputation (probably reflected in the share price), loss of business, recruitment difficulties and a general lowering of morale.\", \"datos_sin_respaldo\": [\"medir la variacion del Net Promoter Score de los clientes tras el evento\"], \"razon\": \"El libro pide sumar el daño reputacional a los costos de los accidentes, así que el paso va en su misma dirección. Pero lo trata como un intangible que probablemente se refleja en el precio de la acción. No propone medirlo con el Net Promoter Score ni con encuestas a clientes. El NPS es una herramienta que el libro no respalda.\", \"paso_fiel\": \"Incluir en el costo de cada accidente intangibles como el daño a la reputación de la empresa (que probablemente se refleja en el precio de la acción), la pérdida de negocio, las dificultades de contratación y la baja de la moral.\"}\n```",
+ "parseado": {
+  "id": "PF51157",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5892
+  ],
+  "cita": "To these should also be added such intangibles as damage to the company's reputation (probably reflected in the share price), loss of business, recruitment difficulties and a general lowering of morale.",
+  "datos_sin_respaldo": [
+   "medir la variacion del Net Promoter Score de los clientes tras el evento"
+  ],
+  "razon": "El libro pide sumar el daño reputacional a los costos de los accidentes, así que el paso va en su misma dirección. Pero lo trata como un intangible que probablemente se refleja en el precio de la acción. No propone medirlo con el Net Promoter Score ni con encuestas a clientes. El NPS es una herramienta que el libro no respalda.",
+  "paso_fiel": "Incluir en el costo de cada accidente intangibles como el daño a la reputación de la empresa (que probablemente se refleja en el precio de la acción), la pérdida de negocio, las dificultades de contratación y la baja de la moral."
+ }
+}

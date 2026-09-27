@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Definición de Procedimientos en Organizaciones de Servicio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming señala que, a diferencia de manufactura donde existen especificaciones detalladas, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). La ambigüedad en la definición operacional de un 'error' o 'defecto' en servicios es tan compleja como en manufactura.",
+  "resumen_teorico": "A diferencia de manufactura, donde existen especificaciones detalladas, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). La ambigüedad en la definición operacional de un 'error' o 'defecto' en servicios es tan compleja como en manufactura.",
   "pasos_accionables": [
     "Auditar todos los departamentos de servicio para verificar si existen procedimientos escritos y actualizados",
     "Definir operacionalmente qué constituye un error o defecto en cada proceso de servicio",
-    "Documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+    "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
     "Capacitar al personal en el uso correcto de los procedimientos definidos"
   ],
   "entregable_esperado": "Manual de procedimientos operacionales documentado y validado para cada área de servicio crítica",
@@ -23,5 +23,57 @@
     "Cuando una organización de servicio presenta errores recurrentes sin causa clara",
     "Si no existen procedimientos escritos que guíen las tareas operativas del personal"
   ],
-  "etiqueta_arbol": "Define tus Procesos de Servicio"
+  "etiqueta_arbol": "Define tus Procesos de Servicio",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-049",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+      "texto_nuevo": "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las areas de mayor contacto con el cliente",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L4228-L4228",
+        "frase": "Few organizations have up-to-date procedures."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide procedimientos definidos, pero no fija un orden de prioridad por contacto con el cliente.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-102"
+    },
+    {
+      "id": "atribucion-138",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming señala que, a diferencia de manufactura donde existen especificaciones detalladas, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). La ambigüedad en la definición operacional de un 'error' o 'defecto' en servicios es tan compleja como en manufactura.",
+      "texto_nuevo": "A diferencia de manufactura, donde existen especificaciones detalladas, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). La ambigüedad en la definición operacional de un 'error' o 'defecto' en servicios es tan compleja como en manufactura.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming señala que,"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0368",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las areas de mayor contacto con el cliente",
+      "texto_nuevo": "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O032-009.paso2: áreas ('areas' lleva tilde (áreas); es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

@@ -23,7 +23,26 @@
   ],
   "condiciones_activacion": [
     "Si los franquiciados actuales son reacios a dar referencias positivas",
-    "Si se necesita fortalecer el proceso de validación"
+    "Si quieres que tus franquiciados actuales hablen bien de la marca a los candidatos y te refieran nuevos interesados"
   ],
-  "etiqueta_arbol": "Prepara a Franquiciados para Validar"
+  "etiqueta_arbol": "Prepara a Franquiciados para Validar",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-066",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si se necesita fortalecer el proceso de validación",
+      "texto_nuevo": "Si quieres que tus franquiciados actuales hablen bien de la marca a los candidatos y te refieran nuevos interesados",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q094-001: La condicion 1 es ambigua con la fase de validacion del catalogo; se concreta a la validacion de candidatos a franquiciado. (lector y verificador de acuerdo) Motivo: Es ambigua: fuera de contexto se lee como la fase de validacion de la idea con el mercado, cuando el nodo habla de la validacion que hacen los candidatos a franquiciado hablando con los franquiciados actuales."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ]
 }

@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_005",
+  "intento": 0,
+  "usd": 0.18064000000000002,
+  "turnos": 1,
+  "duracion_s": 22.4,
+  "pared_s": 23.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34340,
+  "tokens_out": 2164,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P59B010\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"doble verificación\", \"inspecciones independientes posteriores al reensamblaje\", \"antes de la puesta en servicio\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [409, 413, 969, 971, 973, 1068, 1072, 2250, 2259, 2961], \"razon\": \"El libro respalda la inspección independiente. Pero advierte que la redundancia defensiva vuelve opaco el sistema y privilegia recordatorios y enfoque situacional sobre supervisión; revisar el matiz.\"},\n  {\"id\": \"PCB4EEE\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4765, 4818, 4820, 4906], \"razon\": \"Difundir criterios va en la línea del libro. Pero el libro dice que la confianza se gana con indemnidad, confidencialidad y separación, y tarda; comunicar no basta.\"},\n  {\"id\": \"P5DC4B8\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4161, 4165], \"razon\": \"El libro relata la separación de las funciones comerciales y de vigilancia del ACAA (CASA / Air Services) como respuesta al conflicto inherente. Lo describe más que recomendarlo explícitamente.\"},\n  {\"id\": \"P4A1977\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"process safety indicators\", \"LTIF\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [5688, 5690, 5907, 3053], \"razon\": \"El libro propone eventos precursores y chequeos de procesos subyacentes, sin abandonar lesiones personales. El término 'process safety indicators' no aparece en el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P59B010",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "doble verificación",
+    "inspecciones independientes posteriores al reensamblaje",
+    "antes de la puesta en servicio"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    409,
+    413,
+    969,
+    971,
+    973,
+    1068,
+    1072,
+    2250,
+    2259,
+    2961
+   ],
+   "razon": "El libro respalda la inspección independiente. Pero advierte que la redundancia defensiva vuelve opaco el sistema y privilegia recordatorios y enfoque situacional sobre supervisión; revisar el matiz."
+  },
+  {
+   "id": "PCB4EEE",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4765,
+    4818,
+    4820,
+    4906
+   ],
+   "razon": "Difundir criterios va en la línea del libro. Pero el libro dice que la confianza se gana con indemnidad, confidencialidad y separación, y tarda; comunicar no basta."
+  },
+  {
+   "id": "P5DC4B8",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4109,
+    4161,
+    4165
+   ],
+   "razon": "El libro relata la separación de las funciones comerciales y de vigilancia del ACAA (CASA / Air Services) como respuesta al conflicto inherente. Lo describe más que recomendarlo explícitamente."
+  },
+  {
+   "id": "P4A1977",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "process safety indicators",
+    "LTIF"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    5688,
+    5690,
+    5907,
+    3053
+   ],
+   "razon": "El libro propone eventos precursores y chequeos de procesos subyacentes, sin abandonar lesiones personales. El término 'process safety indicators' no aparece en el libro."
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
   "node_id": "comercio_electronico_fundamentos",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "exportacion",
   "titulo_concepto": "Fundamentos del Comercio Electrónico para Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -24,5 +24,23 @@
     "Si la empresa considera usar Internet como canal de exportación",
     "Si la empresa no tiene presencia digital internacional aún"
   ],
-  "etiqueta_arbol": "Vende por Comercio Electrónico"
+  "etiqueta_arbol": "Vende por Comercio Electrónico",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-052",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-009: El entregable es un documento de estrategia de comercio electrónico dentro del plan de exportación, con mercados e idiomas priorizados: es planificación. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

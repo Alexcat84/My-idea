@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE56E59",
+  "intento": 0,
+  "usd": 0.195556,
+  "turnos": 1,
+  "duracion_s": 8.2,
+  "pared_s": 9.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45569,
+  "tokens_out": 664,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE56E59\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5174], \"cita\": \"where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed. […] When the high-tempo period slackens off, authority reverts seamlessly to its previous bureaucratic, rank-determined form.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que el control vuelve al modo jerárquico cuando pasa la emergencia o baja el ritmo. Fijar criterios de reversión concreta ese disparador en la misma dirección y sin datos nuevos. 'Seamlessly' describe lo observado, no desaconseja criterios. La crítica de Weick a las reglas (L5178) se refiere a gestionar emergencias sin precedente, no a la reversión.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE56E59",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5174
+  ],
+  "cita": "where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed. […] When the high-tempo period slackens off, authority reverts seamlessly to its previous bureaucratic, rank-determined form.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que el control vuelve al modo jerárquico cuando pasa la emergencia o baja el ritmo. Fijar criterios de reversión concreta ese disparador en la misma dirección y sin datos nuevos. 'Seamlessly' describe lo observado, no desaconseja criterios. La crítica de Weick a las reglas (L5178) se refiere a gestionar emergencias sin precedente, no a la reversión.",
+  "paso_fiel": ""
+ }
+}

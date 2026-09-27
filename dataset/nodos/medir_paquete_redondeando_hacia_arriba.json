@@ -7,10 +7,10 @@
   "resumen_teorico": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumetrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumetrico y peso minimo facturable. La formula y el divisor exactos varian segun el courier y el pais, asi que hay que confirmarlos directamente con quien te va a hacer el envio.",
   "pasos_accionables": [
     "Mide largo, ancho y alto de la caja ya cerrada y empacada, no del producto solo.",
-    "Define el lado mas largo como el largo del paquete.",
+    "Define el lado más largo como el largo del paquete.",
     "Redondea cada medida hacia arriba a la unidad completa antes de anotarla.",
-    "Pregunta a tu courier cual es su formula y su divisor para calcular el peso volumetrico.",
-    "Compara peso real, peso volumetrico y peso minimo facturable, y usa el mayor para presupuestar el envio."
+    "Pregunta a tu courier cuál es su fórmula y su divisor para calcular el peso volumétrico.",
+    "Compara peso real, peso volumétrico y peso mínimo facturable, y usa el mayor para presupuestar el envío."
   ],
   "entregable_esperado": "Una medida confiable del paquete que evita sorpresas en el cobro del courier.",
   "nodos_previos": [
@@ -24,5 +24,52 @@
     "Vendes productos livianos pero voluminosos, como ropa o articulos inflables.",
     "Vas a comparar tarifas entre varios couriers y necesitas medir igual con todos."
   ],
-  "etiqueta_arbol": "Mide y redondea hacia arriba"
+  "etiqueta_arbol": "Mide y redondea hacia arriba",
+  "fuentes_internas": [
+    "Guia visual de empaque"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0377",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define el lado mas largo como el largo del paquete.",
+      "texto_nuevo": "Define el lado más largo como el largo del paquete.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-011.paso1: más (Faltaba la tilde en 'más'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0378",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tu courier cual es su formula y su divisor para calcular el peso volumetrico.",
+      "texto_nuevo": "Pregunta a tu courier cuál es su fórmula y su divisor para calcular el peso volumétrico.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-011.paso3: cuál, fórmula, volumétrico (Tildes que faltaban: 'cuál' (interrogativa indirecta), 'fórmula' y 'volumétrico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0379",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara peso real, peso volumetrico y peso minimo facturable, y usa el mayor para presupuestar el envio.",
+      "texto_nuevo": "Compara peso real, peso volumétrico y peso mínimo facturable, y usa el mayor para presupuestar el envío.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-011.paso4: volumétrico, mínimo, envío (Tildes que faltaban en 'volumétrico', 'mínimo' y 'envío'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

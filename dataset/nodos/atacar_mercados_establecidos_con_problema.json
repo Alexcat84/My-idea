@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Siguiendo la idea de Clayton Christensen de 'rascar una picazón no rascada', se trata de identificar mercados grandes y establecidos con problemas persistentes que nadie ha resuelto bien (ej. agua potable, gestión de residuos, movilidad). Estas son oportunidades para innovación disruptiva que simplifica o facilita una tarea importante para el cliente.",
   "pasos_accionables": [
-    "Identificar mercados grandes y maduros con necesidades no resueltas a largo plazo (grand challenges), y también mercados en fase embrionaria o de rápido crecimiento",
+    "Identificar mercados grandes y establecidos, con potencial considerable a largo plazo, que enfrentan problemas nuevos o grandes sin resolver (grand challenges)",
     "Investigar qué tareas importantes son difíciles o costosas para el cliente en ese mercado",
     "Evaluar si la empresa puede aplicar sus fortalezas para simplificar esa tarea",
     "Validar el tamaño del problema y el potencial de mercado antes de invertir",
@@ -44,5 +44,27 @@
       "titulo": "Encontrar Grandes Problemas, Crear Grandes Soluciones",
       "fuente": "Winning at New Products - Robert G. Cooper"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c08-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Identificar mercados grandes y maduros con necesidades no resueltas a largo plazo (grand challenges), y también mercados en fase embrionaria o de rápido crecimiento",
+      "texto_nuevo": "Identificar mercados grandes y establecidos, con potencial considerable a largo plazo, que enfrentan problemas nuevos o grandes sin resolver (grand challenges)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L7936",
+        "frase": "Thus, a third approach is to find large and established markets with considerable long-term potential but facing new or large unresolved problems."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Cooper separa dos enfoques. El segundo es 'Find Big Problems in New and Growing Markets' (L7914-L7917: 'A second approach is to look for embryonic or newer but rapidly growing markets or sectors where customers face many problems.'). El tercero, que es el concepto de este nodo, es 'Tackle Large, Established Markets That Have an Itch' (L7931-L7936). El paso 0 metía el segundo enfoque dentro del tercero. Se quita esa coletilla y el paso se ajusta a la frase del libro, en línea con el título y el resumen.",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO pasada K, ficha C08 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
   ]
 }

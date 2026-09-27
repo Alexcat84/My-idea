@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_037",
+  "intento": 0,
+  "usd": 0.136456,
+  "turnos": 1,
+  "duracion_s": 6.3,
+  "pared_s": 7.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31809,
+  "tokens_out": 461,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"PEFC1DA\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2594, 2596, 2598, 2489, 2493, 5692], \"razon\": \"El libro dice que la unica meta alcanzable no es cero accidentes y que los accidentes no son directamente controlables; el paso invierte ambas recomendaciones.\"},\n{\"id\": \"PFCC089\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 2905, 2837, 2841, 1934], \"razon\": \"El libro indica que identificar el error es el inicio de la busqueda y que hay que buscar las condiciones locales y los factores organizacionales que lo provocaron.\"},\n{\"id\": \"P6A039E\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5258, 2579], \"razon\": \"El libro plantea exactamente esa pregunta: si un puesto de seguridad premia el talento o es un 'oubliette' para ejecutivos quemados.\"},\n{\"id\": \"P45B4E6\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5603, 5641], \"razon\": \"El libro dice que el peso de cada riesgo cambia con la tecnologia y la sociedad; revisar si el enfoque quedo desactualizado es una extension razonable, pero no es literal.\"}]",
+ "parseado": [
+  {
+   "id": "PEFC1DA",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2594,
+    2596,
+    2598,
+    2489,
+    2493,
+    5692
+   ],
+   "razon": "El libro dice que la unica meta alcanzable no es cero accidentes y que los accidentes no son directamente controlables; el paso invierte ambas recomendaciones."
+  },
+  {
+   "id": "PFCC089",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    2905,
+    2837,
+    2841,
+    1934
+   ],
+   "razon": "El libro indica que identificar el error es el inicio de la busqueda y que hay que buscar las condiciones locales y los factores organizacionales que lo provocaron."
+  },
+  {
+   "id": "P6A039E",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5258,
+    2579
+   ],
+   "razon": "El libro plantea exactamente esa pregunta: si un puesto de seguridad premia el talento o es un 'oubliette' para ejecutivos quemados."
+  },
+  {
+   "id": "P45B4E6",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5603,
+    5641
+   ],
+   "razon": "El libro dice que el peso de cada riesgo cambia con la tecnologia y la sociedad; revisar si el enfoque quedo desactualizado es una extension razonable, pero no es literal."
+  }
+ ]
+}

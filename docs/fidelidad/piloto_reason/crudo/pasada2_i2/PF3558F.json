@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF3558F",
+  "intento": 0,
+  "usd": 0.185612,
+  "turnos": 1,
+  "duracion_s": 13.1,
+  "pared_s": 14.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43038,
+  "tokens_out": 673,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF3558F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2577, 2579, 2687, 2765], \"cita\": \"Must we conclude that it takes catastrophes of the magnitude of Piper Alpha, Chernobyl, or Bhopal before politicians and top managers understand that investment in safety is good business?\", \"datos_sin_respaldo\": [], \"razon\": \"El libro asigna a la alta dirección los recursos para seguridad, incluida la calidad y cantidad del personal (L2577-2579). Defiende que invertir en seguridad es buen negocio (L2765) y que la alta dirección reacciona ante costes financieros estimados (L2687). El caso de negocio concreta esto en la misma dirección, sin cifras ni plazos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF3558F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2577,
+   2579,
+   2687,
+   2765
+  ],
+  "cita": "Must we conclude that it takes catastrophes of the magnitude of Piper Alpha, Chernobyl, or Bhopal before politicians and top managers understand that investment in safety is good business?",
+  "datos_sin_respaldo": [],
+  "razon": "El libro asigna a la alta dirección los recursos para seguridad, incluida la calidad y cantidad del personal (L2577-2579). Defiende que invertir en seguridad es buen negocio (L2765) y que la alta dirección reacciona ante costes financieros estimados (L2687). El caso de negocio concreta esto en la misma dirección, sin cifras ni plazos nuevos.",
+  "paso_fiel": ""
+ }
+}

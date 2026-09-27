@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC787B1",
+  "intento": 0,
+  "usd": 0.22902,
+  "turnos": 1,
+  "duracion_s": 13.4,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 51840,
+  "tokens_out": 1083,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC787B1\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1012, 1035, 1618], \"cita\": \"The important issue in many hazardous technologies is not whether to violate, but when to violate--or perhaps, more importantly, when to comply. ... Deciding when to do this, though, is a matter of delicate and sometimes fallible judgement.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro no pide formación explícita, pero sí respalda la dirección del paso. Dice que las reglas no captan las condiciones locales (Ginna). Reconoce la 'correct violation'. Plantea cuándo cumplir y cuándo apartarse como un juicio delicado. El paso no elimina el cumplimiento ('no solo'). Por eso no invierte el aviso sobre violaciones: solo concreta la lección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC787B1",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1012,
+   1035,
+   1618
+  ],
+  "cita": "The important issue in many hazardous technologies is not whether to violate, but when to violate--or perhaps, more importantly, when to comply. ... Deciding when to do this, though, is a matter of delicate and sometimes fallible judgement.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro no pide formación explícita, pero sí respalda la dirección del paso. Dice que las reglas no captan las condiciones locales (Ginna). Reconoce la 'correct violation'. Plantea cuándo cumplir y cuándo apartarse como un juicio delicado. El paso no elimina el cumplimiento ('no solo'). Por eso no invierte el aviso sobre violaciones: solo concreta la lección.",
+  "paso_fiel": ""
+ }
+}

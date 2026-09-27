@@ -1,6 +1,6 @@
 {
   "node_id": "demo_prototipo_inversion",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Demo o Prototipo como Herramienta de Fundraising",
   "fuente": "Venture Deals - Brad Feld",
@@ -22,5 +22,23 @@
     "Cuando la startup está en etapa muy temprana sin tracción sólida",
     "Cuando se busca generar conexión emocional con el inversionista"
   ],
-  "etiqueta_arbol": "Enseña un Prototipo Convincente"
+  "etiqueta_arbol": "Enseña un Prototipo Convincente",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-100",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F24-029: Preparar una demo para levantar fondos sirve para conseguir recursos de inversionistas, no para validar el producto con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

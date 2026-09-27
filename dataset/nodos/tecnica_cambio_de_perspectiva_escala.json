@@ -17,7 +17,6 @@
   ],
   "nodos_siguientes": [
     "reconocer_sesgo_de_apofenia",
-    "search_for_business_model",
     "narrativa_como_herramienta_de_sentido"
   ],
   "condiciones_activacion": [
@@ -25,5 +24,23 @@
     "Al diseñar para futuros lejanos o sistemas complejos (ej. sostenibilidad, tecnología emergente).",
     "En sesiones de ideación que buscan romper el pensamiento convencional."
   ],
-  "etiqueta_arbol": "Cambia tu Escala de Observación"
+  "etiqueta_arbol": "Cambia tu Escala de Observación",
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-129",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "tecnica_cambio_de_perspectiva_escala -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-34): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La tecnica de zoom out/zoom in no tiene relacion con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

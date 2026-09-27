@@ -1,6 +1,6 @@
 {
   "node_id": "auditoria_negocio",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Negocio (Business Audit)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -27,5 +27,23 @@
     "Cuando necesitas una validación independiente de que tus sistemas funcionan correctamente",
     "Cuando buscas una certificación o un reconocimiento externo de calidad para tu negocio"
   ],
-  "etiqueta_arbol": "Revisa tu Negocio sin Sesgos"
+  "etiqueta_arbol": "Revisa tu Negocio sin Sesgos",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-022",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F07-017: Una auditoria independiente de como funcionan los sistemas del negocio es control y mejora de lo que ya opera. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

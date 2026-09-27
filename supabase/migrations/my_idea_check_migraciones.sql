@@ -555,5 +555,120 @@ FROM (
         AND conname = 'credit_transactions_tipo_check'
     )
 
+
+  UNION ALL
+  -- 039 . la marca propia del plan basico de un mundo (AUD-09).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '039', 'project_unlocks.plan_basico_at (plan basico de mundo, no es sello de pago)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks'
+        AND column_name='plan_basico_at'
+    )
+    -- y el sello de pago sigue en su lugar: la 039 es aditiva
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks'
+        AND column_name='plan_pagado_at'
+    )
+
+
+  UNION ALL
+  -- 040 . las actas de cierre como foto (AUD-09 M04).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '040', 'project_actas (acta de cierre como instantanea) con RLS',
+    EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='project_actas'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_actas' AND column_name='instantanea'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='project_actas' AND policyname='project_actas_own'
+    )
+  UNION ALL
+  -- 041 . la proteccion apunta al nodo de la tarea (AUD-09 M15).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '041', 'checklist_items.protege_nodos (proteccion por nodo)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='protege_nodos'
+    )
+  UNION ALL
+  -- 042 . reserva de creditos al empezar la sesion (AUD-09 M25).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '042', 'credit_reservas + reservar_creditos + resolver_reserva (service-role-only)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='credit_reservas')
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='reservar_creditos' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='resolver_reserva' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='reservar_creditos'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
+  UNION ALL
+  -- 043 . re-enrolar el autenticador no desarma el candado (AUD-09 M50).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '043', 'user_seguridad.totp_secret_pendiente (alta de autenticador en espera)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='user_seguridad' AND column_name='totp_secret_pendiente'
+    )
+  UNION ALL
+  -- 044 . borrado real de los datos del usuario (decisiones del fundador, 26 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '044', 'credit_refund_log.user_id nullable + limpiar_ideas_de_invitado (service-role-only)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='credit_refund_log' AND column_name='user_id' AND is_nullable='YES'
+    )
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='limpiar_ideas_de_invitado' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='limpiar_ideas_de_invitado'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
+  UNION ALL
+  -- 045 . historial de creditos anonimo al borrar la cuenta (decision del fundador, 27 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '045', 'credit_transactions.user_id y saldo_resultante nullable (historial anonimo)',
+    (SELECT count(*) FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='credit_transactions'
+        AND column_name IN ('user_id','saldo_resultante') AND is_nullable='YES') = 2
+  UNION ALL
+  -- 046 . idioma del proyecto + conteo anonimo de idiomas (i18n F5, decision del fundador, 25 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '046', 'projects.idioma + conteo_idiomas + contar_idioma_de_idea (service-role-only)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='projects' AND column_name='idioma'
+    )
+    AND EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='conteo_idiomas')
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='conteo_idiomas' AND column_name IN ('user_id','project_id')
+    )
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='contar_idioma_de_idea' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='contar_idioma_de_idea'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
+  UNION ALL
+  -- 047 . ciclo de replanteamiento (decision del fundador, 27 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '047', 'plans_etiqueta_check admite ''replanteamiento'' + checklist_items.heredado_de',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_etiqueta_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%replanteamiento%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='heredado_de'
+    )
 ) checks
 ORDER BY num;

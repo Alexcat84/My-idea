@@ -15,7 +15,7 @@
   "nodos_previos": [
     "tu_gestion_de_riesgo_funciona",
     "del_caos_al_metodo_madurez_de_riesgo",
-    "estrategia_gestion_riesgo_tolerancia"
+    "reglas_gestion_riesgo_gambling"
   ],
   "nodos_siguientes": [
     "del_caos_al_metodo_madurez_de_riesgo",
@@ -26,5 +26,36 @@
     "cuando abandonas la gestión de riesgo por parecerte demasiado complicada",
     "cuando prefieres un tablero vistoso a unos hábitos simples que sí funcionan"
   ],
-  "etiqueta_arbol": "Empieza con lo Que Ya Funciona"
+  "etiqueta_arbol": "Empieza con lo Que Ya Funciona",
+  "fuentes_internas": [
+    "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-020",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "reglas_gestion_riesgo_gambling -> empieza_con_lo_que_ya_funciona",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-032",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estrategia_gestion_riesgo_tolerancia -> empieza_con_lo_que_ya_funciona",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por reglas_gestion_riesgo_gambling."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

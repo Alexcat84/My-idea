@@ -1,0 +1,62 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_066",
+  "intento": 0,
+  "usd": 0.151444,
+  "turnos": 1,
+  "duracion_s": 9.0,
+  "pared_s": 10.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33851,
+  "tokens_out": 802,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P805124\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4989, 4765, 4987], \"razon\": \"El libro dice que un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables es prerrequisito de una cultura justa.\"},\n  {\"id\": \"PA0FDAE\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4368], \"razon\": \"COSHH incluye controlar la exposición con ventilación, mejores instalaciones de lavado y sustancias menos peligrosas donde sea posible; el paso lo refleja.\"},\n  {\"id\": \"P331B51\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2281, 2289, 2293], \"razon\": \"El libro presenta bloquear y confirmar como criterios secundarios aplicables en muchas situaciones, 'cuando se justifique o sea posible'. Evaluar si conviene es coherente.\"},\n  {\"id\": \"P6D2508\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3737, 3745], \"razon\": \"El libro indica que MEDA ofrece análisis computarizado de tendencias para la organización de mantenimiento, además de la investigación de línea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P805124",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4989,
+    4765,
+    4987
+   ],
+   "razon": "El libro dice que un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables es prerrequisito de una cultura justa."
+  },
+  {
+   "id": "PA0FDAE",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4368
+   ],
+   "razon": "COSHH incluye controlar la exposición con ventilación, mejores instalaciones de lavado y sustancias menos peligrosas donde sea posible; el paso lo refleja."
+  },
+  {
+   "id": "P331B51",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2281,
+    2289,
+    2293
+   ],
+   "razon": "El libro presenta bloquear y confirmar como criterios secundarios aplicables en muchas situaciones, 'cuando se justifique o sea posible'. Evaluar si conviene es coherente."
+  },
+  {
+   "id": "P6D2508",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3737,
+    3745
+   ],
+   "razon": "El libro indica que MEDA ofrece análisis computarizado de tendencias para la organización de mantenimiento, además de la investigación de línea."
+  }
+ ]
+}

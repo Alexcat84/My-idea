@@ -16,6 +16,7 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { MAX_SALTOS_POSIBLES_OFRECIDOS, MIN_SCORE_SALTO, buscarAfines } from "../compass";
+import { consultaAlEspanol } from "./consultaAlEspanol";
 import {
   llamarClaude,
   llamarClaudeConversacion,
@@ -36,6 +37,7 @@ import {
   type ResumenNodo,
 } from "./graph";
 import { tokensCosecha } from "./tokens";
+import { LOCALE_BASE, type Locale } from "../i18n/config";
 
 export interface PrioridadDeclarada {
   texto: string;
@@ -140,12 +142,29 @@ export interface EventoAnclajeProteccion {
   motivo?: string;
 }
 
+/** AUD-09: la sesión nace para regenerar un plan básico; apunta a la sesión
+ * de origen (la que queda archivada con su plan y sus tareas). */
+export interface EventoRegeneracionPlanBasico {
+  tipo: "regeneracion_plan_basico";
+  desde_sesion: string;
+}
+
+/** i18n F5, remedio de F1: la traducción de la consulta al español falló y la
+ * brújula buscó con el original (recupera peor: F1_BUSCADOR.md). */
+export interface EventoConsultaSinTraducir {
+  tipo: "consulta_sin_traducir";
+  nodo_actual: string;
+  idioma: string | null;
+}
+
 export type EventoInterprete =
+  | EventoConsultaSinTraducir
   | EventoFallback
   | EventoDecisionTurno
   | EventoPuertaReelegida
   | EventoMundoIncompatible
-  | EventoAnclajeProteccion;
+  | EventoAnclajeProteccion
+  | EventoRegeneracionPlanBasico;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */
 function repararCaminoCadena(actualId: string, camino: string[], graph: Grafo, visitados: Set<string>): string[] {
@@ -277,6 +296,12 @@ export interface InterpretarMultiSaltoParams {
   /** Fase 3.5: dominios recorribles del proyecto (core + unlocks);
    * undefined = solo core, el comportamiento de siempre. */
   dominiosDesbloqueados?: string[];
+  /** i18n F2: el idioma de la pregunta genérica del respaldo tier-2 (la única
+   * que el intérprete arma sin la IA). Sin él, el base. */
+  idioma?: Locale;
+  /** i18n F5: el idioma de la IDEA, en que la IA escribe la pregunta adaptada
+   * y la repregunta (lib/i18n/idiomaSalida). Sin él, español. */
+  idiomaSalida?: string | null;
 }
 
 export interface ResultadoInterpretarMultiSalto {
@@ -305,6 +330,8 @@ export async function interpretarMultiSalto(
     historialMensajes,
     registrarEvento,
     dominiosDesbloqueados,
+    idioma = LOCALE_BASE,
+    idiomaSalida = null,
   } = params;
   let acumulado = params.acumulado;
 
@@ -317,7 +344,14 @@ export async function interpretarMultiSalto(
     return entradaNivel1;
   });
 
-  const textoParaBrujula = respuestaUsuario || textoOriginal;
+  // i18n F5, remedio de F1: el índice está en español; en una idea escrita en
+  // otro idioma, la brújula busca con la respuesta traducida al español.
+  const traducida = await consultaAlEspanol(client, respuestaUsuario || textoOriginal, idiomaSalida, acumulado);
+  acumulado = traducida.acumulado;
+  if (traducida.fallo && registrarEvento) {
+    registrarEvento({ tipo: "consulta_sin_traducir", nodo_actual: actualId, idioma: idiomaSalida });
+  }
+  const textoParaBrujula = traducida.consulta;
   const excluidosBrujula = new Set([...visitados, ...nivel1Ids]);
   const saltoCandidatos = await buscarAfines(textoParaBrujula, excluidosBrujula, {
     k: MAX_SALTOS_POSIBLES_OFRECIDOS,
@@ -463,7 +497,7 @@ export async function interpretarMultiSalto(
         JSON.stringify(ctxTurno),
         MODEL_HAIKU,
         acumulado,
-        { maxTokens: 700, componente: "turnos" }
+        { maxTokens: 700, componente: "turnos", idiomaSalida }
       );
       raw = r.texto;
       acumulado = r.acumulado;
@@ -472,6 +506,7 @@ export async function interpretarMultiSalto(
       const r = await llamarClaude(client, SYSTEM_INTERPRETE_MULTI, JSON.stringify(ctxTurno), MODEL_HAIKU, acumulado, {
         maxTokens: 700,
         componente: "turnos",
+        idiomaSalida,
       });
       raw = r.texto;
       acumulado = r.acumulado;
@@ -501,6 +536,7 @@ export async function interpretarMultiSalto(
     const r2 = await llamarClaude(client, SYSTEM_INTERPRETE_MULTI, JSON.stringify(ctxRetry), MODEL_HAIKU, acumulado, {
       maxTokens: 700,
       componente: "turnos",
+      idiomaSalida,
     });
     acumulado = r2.acumulado;
     const resultado = validarRespuesta(r2.texto);
@@ -519,7 +555,7 @@ export async function interpretarMultiSalto(
         motivo: segundoError instanceof Error ? segundoError.message : String(segundoError),
       });
     }
-    const preguntaFallback = obtenerPregunta(candidato, graph[candidato], preguntasCache);
+    const preguntaFallback = obtenerPregunta(candidato, graph[candidato], preguntasCache, idioma);
     const resultado: ResultadoInterprete = {
       accion: "avanzar",
       camino: [candidato],

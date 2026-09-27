@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Secuenciación de Producción por Tiempo de Agotamiento (Run-out Time)",
+  "resumen": "Después de fijar el lote económico de cada producto, la secuencia de corridas se decide con el run-out time (inventario disponible / demanda esperada). Se recalculan los valores R tras cada corrida supuesta y se ajusta el programa contra la demanda real.",
+  "texto": "Programar primero la corrida del producto con el run-out time más alto, para aprovechar su inventario disponible mientras se producen los demás",
+  "tipo": "CONTRARIO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L1271",
+  "cita": "The first production run is then scheduled for the product with the lowest R-value.",
+  "explicacion": "El libro ordena programar primero el producto con el valor R más bajo (el que se agota antes, ver también L1257: si su inventario es bajo respecto a la demanda se programa por delante). El paso invierte la condición y recomienda empezar por el de R más alto."
+ },
+ {
+  "titulo": "Acción Correctiva: Diagnóstico y Remedio de No Conformidades",
+  "resumen": "La acción correctiva (troubleshooting) cierra el bucle de retroalimentación: diagnostica qué cambió y restaura la conformidad. Se apoya en autopsias forenses, comparación de productos y datos de proceso antes y después, y reconstrucción de la cronología.",
+  "texto": "Para no conformidades crónicas, aplicar el mismo bucle de retroalimentación de troubleshooting que en los casos esporádicos hasta restaurar la conformidad",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L8257",
+  "cita": "the feedback loop is not well designed to deal with the area of chronic waste shown in the figure. Instead, the need is to employ the quality improvement process.",
+  "explicacion": "Juran limita el bucle de retroalimentación (acción correctiva) a los problemas esporádicos y advierte que no sirve para el desperdicio crónico, que exige el proceso de mejora de calidad. El paso recomienda justo lo que el libro dice que falla."
+ },
+ {
+  "titulo": "Ajuste del Lote Económico de Pedido (EOQ) a Tamaños Estándar",
+  "resumen": "El EOQ equilibra el costo fijo de pedido y el costo de mantener inventario. Como pequeños cambios en el EOQ apenas alteran el costo total, conviene ajustarlo a un tamaño de pedido práctico, por ejemplo la caja estándar del proveedor.",
+  "texto": "Redondear el EOQ calculado al tamaño de caja estándar más cercano, siempre que el ajuste no supere el 15% de la cantidad calculada",
+  "tipo": "ANADIDO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L861",
+  "cita": "Small changes in the EOQ do not have a big impact on total ordering and holding costs, so it is best to round off the EOQ quantity to the nearest standard ordering size.",
+  "dato": "Umbral máximo de ajuste del 15% sobre el EOQ calculado",
+  "explicacion": "El libro aconseja redondear el EOQ al tamaño de pedido estándar más cercano (ejemplo: de 34 a 30 unidades), pero no pone ningún límite porcentual al ajuste. Con Grep no aparece \"15 percent\", \"15%\" ni \"fifteen\" en todo el texto."
+ },
+ {
+  "titulo": "Consolidación de Pedidos LTL en Rutas Milk Run",
+  "resumen": "Cuando los EOQ de cada punto receptor quedan por debajo de una carga completa (LTL), las entregas milk run combinan pedidos de varios productos o destinos hasta llenar un camión. Así se usa mejor el transporte y baja el costo de recepción, porque llegan menos entregas y más grandes.",
+  "texto": "Combinar pedidos LTL en una misma ruta milk run hasta completar la carga del camión, con un máximo de ocho paradas por ruta",
+  "tipo": "ANADIDO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L1562",
+  "cita": "If the EOQs of different products needed by a receiving location are less than truck load (LTL) amounts, milk run deliveries allow orders for different products to be combined until the resulting quantity equals a TL amount.",
+  "dato": "Límite de ocho paradas por ruta milk run",
+  "explicacion": "El libro respalda combinar pedidos LTL hasta completar una carga TL, pero no fija ningún número máximo de paradas por ruta. Con Grep no aparecen \"eight\", \"stops\" (en ese sentido), \"per route\" ni una cifra de paradas en todo el texto."
+ }
+]

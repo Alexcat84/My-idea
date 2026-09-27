@@ -20,7 +20,26 @@
     "drum_buffer_rope"
   ],
   "condiciones_activacion": [
-    "Cuando ya se ha definido el objetivo del sistema y se necesita un plan operativo concreto"
+    "Cuando un cuello de botella en tu operacion o en tu cadena de suministro limita lo que puedes producir o entregar y necesitas un plan concreto para gestionarlo"
   ],
-  "etiqueta_arbol": "Enfócate en tu Cuello de Botella"
+  "etiqueta_arbol": "Enfócate en tu Cuello de Botella",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-019",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando ya se ha definido el objetivo del sistema y se necesita un plan operativo concreto",
+      "texto_nuevo": "Cuando un cuello de botella en tu operacion o en tu cadena de suministro limita lo que puedes producir o entregar y necesitas un plan concreto para gestionarlo",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q033-028: La condicion no dice cuando aplica el metodo, que es cuando hay un cuello de botella que limita el sistema. (lector y verificador de acuerdo) Motivo: Es tan generica que se activaria ante cualquier plan operativo; no menciona los cuellos de botella, que son la situacion en la que el metodo aplica de verdad."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

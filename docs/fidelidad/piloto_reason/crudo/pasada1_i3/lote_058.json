@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_058",
+  "intento": 0,
+  "usd": 0.17136,
+  "turnos": 1,
+  "duracion_s": 21.1,
+  "pared_s": 22.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32190,
+  "tokens_out": 2130,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PCF97A3\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [594, 586, 4753, 4757, 5134, 848], \"razon\": \"El libro respalda la chronic unease, pero advierte que cuesta sostenerla y que la vía es reunir datos (L4757). L848 limita la vigilancia prolongada. Revisar el matiz.\"},\n  {\"id\": \"P276A3A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2577, 2581, 4757], \"razon\": \"L2581 define la competencia por la calidad del sistema de información: si recoge, difunde y actúa sobre la información correcta. El paso lo reproduce.\"},\n  {\"id\": \"P9FCBF6\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1842, 2311, 2320, 2342, 2358, 2369], \"razon\": \"Va en la dirección del libro, que asigna el remedio a diseñadores y fabricantes. Si el operador reduce mantenimiento por su cuenta arriesga la negligencia de mantenimiento (L2320). El modelo es especulativo (L2342).\"},\n  {\"id\": \"P8F0A58\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"supervisores y gestores\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [4989, 5037, 5057, 5085, 5063], \"razon\": \"El libro no habla de capacitar a supervisores. Pide principios acordados, un jurado de pares (L5057) y una junta disciplinaria con AMMS (L5085). El paso traslada el juicio a gestores.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PCF97A3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    594,
+    586,
+    4753,
+    4757,
+    5134,
+    848
+   ],
+   "razon": "El libro respalda la chronic unease, pero advierte que cuesta sostenerla y que la vía es reunir datos (L4757). L848 limita la vigilancia prolongada. Revisar el matiz."
+  },
+  {
+   "id": "P276A3A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2577,
+    2581,
+    4757
+   ],
+   "razon": "L2581 define la competencia por la calidad del sistema de información: si recoge, difunde y actúa sobre la información correcta. El paso lo reproduce."
+  },
+  {
+   "id": "P9FCBF6",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1842,
+    2311,
+    2320,
+    2342,
+    2358,
+    2369
+   ],
+   "razon": "Va en la dirección del libro, que asigna el remedio a diseñadores y fabricantes. Si el operador reduce mantenimiento por su cuenta arriesga la negligencia de mantenimiento (L2320). El modelo es especulativo (L2342)."
+  },
+  {
+   "id": "P8F0A58",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "supervisores y gestores"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    4989,
+    5037,
+    5057,
+    5085,
+    5063
+   ],
+   "razon": "El libro no habla de capacitar a supervisores. Pide principios acordados, un jurado de pares (L5057) y una junta disciplinaria con AMMS (L5085). El paso traslada el juicio a gestores."
+  }
+ ]
+}

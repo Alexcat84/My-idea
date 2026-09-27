@@ -1,6 +1,6 @@
 {
   "node_id": "crear_pitch",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Creación de un Pitch",
   "fuente": "The field guide to human-centered design",
@@ -24,5 +24,23 @@
     "Cuando se necesita comunicar el proyecto a inversionistas, socios o financiadores",
     "Al finalizar la fase de planificación antes de buscar recursos"
   ],
-  "etiqueta_arbol": "Prepara tu Pitch Clave"
+  "etiqueta_arbol": "Prepara tu Pitch Clave",
+  "fuentes_internas": [
+    "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-032",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q072-015: Definir y redactar el pitch del proyecto para buscar inversores y socios es preparar la busqueda de recursos, fase planificacion, como la propia condicion lo situa al cerrar la planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

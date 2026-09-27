@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB5B692",
+  "intento": 0,
+  "usd": 0.1607,
+  "turnos": 1,
+  "duracion_s": 9.4,
+  "pared_s": 10.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36505,
+  "tokens_out": 734,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB5B692\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [158, 308], \"cita\": \"The defensive functions outlined above are usually achieved through a mixture of ‘hard’ and ‘soft’ applications. … We have categorized these barriers and safeguards in two ways: by their functions … and by their modes of application (‘hard’ and ‘soft’ defences).\", \"datos_sin_respaldo\": [], \"razon\": \"El libro clasifica las defensas por modo de aplicación, duras o blandas, y dice que se combinan. En el capítulo 3 señala riesgos de ambos tipos: complejidad añadida en las duras y sobreespecificación de procedimientos en las blandas. Evaluar esa mezcla aplica la clasificación del libro en su misma dirección. No fija ninguna proporción ideal ni añade cifras, plazos o responsables, así que no es contrario ni añadido.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB5B692",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   158,
+   308
+  ],
+  "cita": "The defensive functions outlined above are usually achieved through a mixture of ‘hard’ and ‘soft’ applications. … We have categorized these barriers and safeguards in two ways: by their functions … and by their modes of application (‘hard’ and ‘soft’ defences).",
+  "datos_sin_respaldo": [],
+  "razon": "El libro clasifica las defensas por modo de aplicación, duras o blandas, y dice que se combinan. En el capítulo 3 señala riesgos de ambos tipos: complejidad añadida en las duras y sobreespecificación de procedimientos en las blandas. Evaluar esa mezcla aplica la clasificación del libro en su misma dirección. No fija ninguna proporción ideal ni añade cifras, plazos o responsables, así que no es contrario ni añadido.",
+  "paso_fiel": ""
+ }
+}

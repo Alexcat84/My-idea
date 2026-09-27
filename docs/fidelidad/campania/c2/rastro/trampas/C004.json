@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Sistemas de Reporte y Confianza del Informante",
+  "resumen": "Un sistema de reporte de incidentes y casi accidentes solo funciona si quien reporta confía en que su relato no se volverá en su contra. Los programas de aviación más exitosos, como ASRS de NASA y BASIS de British Airways, muestran que la cantidad y calidad de los reportes depende de la indemnidad disciplinaria, la confidencialidad, la separación entre quien analiza y quien sanciona, la retroalimentación rápida y la facilidad para reportar.",
+  "texto": "Asigna la recepción y el análisis de los reportes al mismo departamento que aplica las medidas disciplinarias, para que cada hallazgo tenga seguimiento directo y consecuencias claras",
+  "tipo": "CONTRARIO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L4806",
+  "cita": "The separation of the agency or department collecting and analysing the reports from those bodies with the authority to institute disciplinary proceedings and impose sanctions.",
+  "dato": "",
+  "explicacion": "Reason cita la separación entre quien recoge y analiza los reportes y quien tiene autoridad para sancionar como uno de los cinco factores que generan confianza en un sistema de reporte. El paso aconseja justo lo contrario: juntar ambas funciones en el mismo departamento."
+ },
+ {
+  "titulo": "Doble Verificación en Tareas de Mantenimiento",
+  "resumen": "Todo trabajo de mantenimiento combina dos fases: desmontar componentes y volver a montarlos. Reason muestra con el ejemplo del perno con ocho tuercas que las dos fases no son igual de propensas al error, y que los errores de una fase son más difíciles de detectar que los de la otra. Saber dónde se concentra el riesgo permite poner la verificación independiente donde más rinde.",
+  "texto": "Concentra la doble verificación y la inspección independiente en la fase de desmontaje, que es donde se cometen la mayoría de los errores y donde resultan más difíciles de detectar",
+  "tipo": "CONTRARIO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L2028",
+  "cita": "Thus, the probability of making errors during installation is very much greater than during disassembly, while the chances of detecting and correcting them are very much less.",
+  "dato": "",
+  "explicacion": "El libro dice que la probabilidad de error es mucho mayor en la instalación o el reensamblaje que en el desmontaje, y que en la instalación los errores son mucho más difíciles de detectar. El paso invierte la fase y pone la verificación donde el riesgo es menor."
+ },
+ {
+  "titulo": "Actualización del Safety Case",
+  "resumen": "Tras el desastre de Piper Alpha, el informe Cullen pidió que los operadores de instalaciones peligrosas hicieran una evaluación formal de sus peligros mayores y la presentaran en forma de Safety Case ante el regulador. El documento demuestra que los peligros se identificaron y que hay controles adecuados, y debe mantenerse vivo a lo largo de la operación.",
+  "texto": "Revisa y actualiza el Safety Case al menos cada dos años, y además cada vez que haya un cambio importante en la operación",
+  "tipo": "ANADIDO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L4388",
+  "cita": "The presentation of the formal safety assessment should take the form of a Safety Case, which would be updated at regular intervals and on the occurrence of a major change of circumstances.",
+  "dato": "frecuencia de actualización del Safety Case: al menos cada dos años",
+  "explicacion": "El libro, citando a Cullen, solo dice que el Safety Case se actualice a intervalos regulares y ante un cambio importante, sin fijar periodo. El plazo de dos años es inventado. Grep: 'every two' y 'biennial' no aparecen, y 'two years' solo sale en contextos ajenos (L3623 VPCs, L4094 Dryden, L4238 acoplamientos ferroviarios)."
+ },
+ {
+  "titulo": "Pasos de Mantenimiento Propensos a la Omisión",
+  "resumen": "Las omisiones son el tipo de error más común en mantenimiento, sobre todo al reensamblar. Como el mantenimiento está muy procedimentado, se pueden identificar de antemano los pasos más vulnerables contando cuántos rasgos propensos a la omisión tiene cada uno, y protegerlos con recordatorios bien diseñados: visibles, cercanos al paso, con contexto, contenido y forma de comprobarlo.",
+  "texto": "Marca como paso crítico cualquier paso de reensamblaje que reúna tres o más rasgos propensos a la omisión y ponle un recordatorio visible junto al punto de trabajo",
+  "tipo": "ANADIDO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L2250",
+  "cita": "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses.",
+  "dato": "umbral de tres o más rasgos propensos a la omisión para declarar un paso crítico",
+  "explicacion": "El libro propone contar cuántos rasgos propensos a la omisión tiene cada paso para identificar los más vulnerables, pero no fija ningún umbral numérico. El corte de tres o más es inventado. Grep: 'three or more' solo aparece en L2506 (coces de caballo en el ejemplo de Poisson), y 'at least three' y 'threshold' no aparecen."
+ }
+]

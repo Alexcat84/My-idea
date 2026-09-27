@@ -1,6 +1,6 @@
 {
   "node_id": "plan_de_materiales_colaterales",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Plan de Materiales Colaterales (Collateral Plan)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -26,5 +26,23 @@
     "Cuando el startup está por iniciar customer validation y necesita materiales de venta",
     "Si el ciclo de venta requiere justificación técnica o financiera ante múltiples stakeholders"
   ],
-  "etiqueta_arbol": "Prepara tus Materiales de Venta"
+  "etiqueta_arbol": "Prepara tus Materiales de Venta",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-135",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q037-025: El plan de colaterales se prepara para iniciar la validacion con clientes y se prueba en campo con A/B tests, como dice su propia condicion; no es operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

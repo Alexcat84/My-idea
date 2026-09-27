@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P9D6E40",
+  "intento": 0,
+  "usd": 0.26501199999999997,
+  "turnos": 1,
+  "duracion_s": 25.7,
+  "pared_s": 26.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54498,
+  "tokens_out": 2351,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9D6E40\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4769, 5164, 5174, 5178, 5208], \"cita\": \"it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot […] neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.\", \"datos_sin_respaldo\": [\"protocolos (formales) de transferencia de autoridad\"], \"tambien_anadido\": false, \"razon\": \"Transferir el control a los expertos en la tarea durante emergencias va en la dirección del libro, así que no es contrario. Pero el libro describe ese traspaso como un rasgo cultural basado en valores compartidos, disciplina jerárquica previa y formación, y advierte que las reglas sirven mal ante emergencias sin precedente. No respalda protocolos formales.\", \"paso_fiel\": \"Preparar a la organización para que, en emergencias u operaciones de alto ritmo, el control pase a los expertos en la tarea presentes en el lugar (sobre todo los supervisores de primera línea), apoyándose en valores compartidos y formación más que en reglas escritas.\"}\n```",
+ "parseado": {
+  "id": "P9D6E40",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4769,
+   5164,
+   5174,
+   5178,
+   5208
+  ],
+  "cita": "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot […] neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.",
+  "datos_sin_respaldo": [
+   "protocolos (formales) de transferencia de autoridad"
+  ],
+  "tambien_anadido": false,
+  "razon": "Transferir el control a los expertos en la tarea durante emergencias va en la dirección del libro, así que no es contrario. Pero el libro describe ese traspaso como un rasgo cultural basado en valores compartidos, disciplina jerárquica previa y formación, y advierte que las reglas sirven mal ante emergencias sin precedente. No respalda protocolos formales.",
+  "paso_fiel": "Preparar a la organización para que, en emergencias u operaciones de alto ritmo, el control pase a los expertos en la tarea presentes en el lugar (sobre todo los supervisores de primera línea), apoyándose en valores compartidos y formación más que en reglas escritas."
+ }
+}

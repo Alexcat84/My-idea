@@ -1,0 +1,1400 @@
+{
+ "R05-01-01": {
+  "nodo": "decision_fpr",
+  "vecino": "earned_value_status",
+  "sentido": "previo",
+  "trampa": true
+ },
+ "R05-01-02": {
+  "nodo": "decision_fpr",
+  "vecino": "registro_estatal_franquicia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-01-03": {
+  "nodo": "decision_fpr",
+  "vecino": "proceso_llamada_inicial_venta",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-01-04": {
+  "nodo": "decision_fpr",
+  "vecino": "validacion_con_franquiciados",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-01-05": {
+  "nodo": "decision_fpr",
+  "vecino": "valor_presente_franquicia_pvf",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-01-06": {
+  "nodo": "decision_fpr",
+  "vecino": "preparar_fdd",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-02-01": {
+  "nodo": "critica_del_plan_con_ia",
+  "vecino": "gut_check",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-03-01": {
+  "nodo": "disenar_los_detalles_no_lo_inevitable",
+  "vecino": "value_proposition_startup",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-03-02": {
+  "nodo": "disenar_los_detalles_no_lo_inevitable",
+  "vecino": "ciclo_circunstancias_sentimientos_ideas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-03-03": {
+  "nodo": "disenar_los_detalles_no_lo_inevitable",
+  "vecino": "definicion_tipos_nuevo_producto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-04-01": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "definicion_producto_proyecto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-02": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "desarrollo_en_espiral",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-03": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "customer_discovery_get_out_of_building",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-04": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "customer_journey_mapping",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-05": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "data_integrity_forecasting",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-06": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "estrategia_producto_global_glocal",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-07": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "homework_frontend_loading",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-08": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "product_backlog_agile",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-09": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "reduccion_tiempo_de_mercado_velocidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-10": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "observar_al_cliente_en_su_contexto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-11": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "ventaja_competitiva_producto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-04-12": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "producto_unico_superior",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-04-13": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "desirability_feasibility_viability",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-04-14": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "procesamiento_paralelo_con_espirales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-04-15": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "customer_development_modelo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-04-16": {
+  "nodo": "voz_del_cliente_voc",
+  "vecino": "customer_development_process",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-05-01": {
+  "nodo": "sesgo_optimismo_fundador",
+  "vecino": "tres_preguntas_carrera",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-05-02": {
+  "nodo": "sesgo_optimismo_fundador",
+  "vecino": "prospecto_emprendedor_flaming",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-05-03": {
+  "nodo": "sesgo_optimismo_fundador",
+  "vecino": "evaluacion_ventana_mercado",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-05-04": {
+  "nodo": "sesgo_optimismo_fundador",
+  "vecino": "evaluacion_capacidades_fundador",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-06-01": {
+  "nodo": "ways_to_grow_framework",
+  "vecino": "crear_pitch",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-06-02": {
+  "nodo": "ways_to_grow_framework",
+  "vecino": "resource_assessment",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-06-03": {
+  "nodo": "ways_to_grow_framework",
+  "vecino": "generar_insights_how_might_we",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-01": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "ciclo_construir_medir_aprender",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-02": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "resource_assessment",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-03": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "estrategia_de_ventas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-04": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "value_proposition_canvas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-05": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "preservar_efectivo_buscar_modelo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-06": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "alineacion_ti_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-07": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "business_model_environment_mapping",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-08": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "blue_ocean_four_actions",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-09": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "business_model_canvas_scorecard",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-10": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "business_plan_cinco_secciones",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-11": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "convertible_debt_fundamentos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-12": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "search_for_business_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-13": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "customer_development_weekly_lessons_learned",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-14": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "customer_discovery",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-15": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "customer_discovery_get_out_of_building",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-16": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "segmentos_de_clientes_problema_necesidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-17": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "empathy_map",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-18": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "epicentros_innovacion_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-19": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "evaluacion_amazon_case",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-20": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "customer_validation",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-21": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "fundamentos_inteligencia_financiera",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-22": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "future_scenarios_planning",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-23": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "herramientas_computacionales_business_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-24": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "integracion_deseabilidad_viabilidad_factibilidad_social",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-25": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "key_resources_hypothesis",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-26": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "lean_launchpad_web_startup_process",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-27": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "long_tail_pattern",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-28": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "mapa_flujo_trabajo_cliente",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-29": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "metodo_strategic_buckets",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-30": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "modelo_customer_development",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-31": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "modelo_estrella_alineacion_organizacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-32": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "multi_sided_platforms",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-33": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "obstaculos_innovacion_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-34": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "open_business_models",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-35": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "organizaciones_ambidiestras",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-36": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "patron_free_business_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-37": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "pensamiento_visual_modelos_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-38": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "plan_de_adquisicion_acquire",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-39": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "priorizar_elementos_a_validar",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-40": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "pro_forma_vs_actuals",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-41": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "proceso_ideacion_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-42": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "project_charter",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-43": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "prototipado_modelos_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-44": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "prototipado_organizacional_estrategico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-45": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "decision_pivotar_o_proceder",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-46": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "sistemas_sabios_vs_ignorantes",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-47": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "storytelling_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-48": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "swot_business_model_canvas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-49": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "testear_circulo_cuadrado_rectangulo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-50": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "determinar_tipo_de_mercado",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-51": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "unbundling_business_models",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-52": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "unique_selling_proposition_statement",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-53": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "war_room_pivot_proceed",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-54": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "definicion_alineacion_cadena_suministro",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-55": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "jerarquia_datos_scor",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-56": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "marco_analisis_mercado_cadena_suministro",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-57": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "scor_model_operaciones",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-58": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "simulacion_de_operaciones_supply_chain",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-07-59": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "estructura_de_costos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-60": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "flujos_de_ingresos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-61": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "segmentos_de_clientes_problema_necesidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-62": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "storyboard",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-63": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "create_a_concept",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-64": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "rapid_prototyping",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-65": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "search_for_business_model",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-66": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "conocimiento_local_colaboracion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-67": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "retention_metrics",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-68": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "escenarios_diseno_modelo_negocio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-69": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "decision_pivotar_o_proceder",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-70": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "four_actions_framework_lado_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-71": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "lean_launchpad_web_startup_process",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-72": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "patron_bait_hook",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-73": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "patron_free_business_model",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-74": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "patron_freemium",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-75": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "proceso_ideacion_modelo_negocio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-76": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "proposito_como_motor_energia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-77": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "reinvencion_constante",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-78": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "restricciones_extremas_como_innovacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-79": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "revenue_pricing_hypothesis",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-07-80": {
+  "nodo": "lienzo_modelo_negocio",
+  "vecino": "test_ab_precio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-08-01": {
+  "nodo": "estandar_gtin_epc",
+  "vecino": "conformidad_comercio_internacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-08-02": {
+  "nodo": "estandar_gtin_epc",
+  "vecino": "iot_big_data_supply_chain",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-01": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "metricas_de_startup",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-02": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "estrategia_producto_global_glocal",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-03": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "market_type_revenue_growth",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-04": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "analisis_costo_entrada_mercado",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-05": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "brief_competitivo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-06": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "entrada_mercado_nuevo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-07": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "embudo_get_keep_grow",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-08": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "enfoque_etapa_investigacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-09": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "hipotesis_relacion_clientes_web",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-10": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "resegmentacion_mercado_nicho_bajo_costo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-11": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "actualizar_business_model_canvas_tuneup",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-09-12": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "diseno_experimentos_hipotesis",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-13": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "lanzamiento_nuevos_productos_enfoque_problema",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-14": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "board_management_buyin",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-15": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "channels_hypothesis_physical",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-16": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "channels_hypothesis_web_mobile",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-17": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "multi_sided_market_channel",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-18": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "capturar_conocimiento_de_mercado",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-19": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "hipotesis_de_canales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-20": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "lienzo_modelo_negocio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-21": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "resegmentacion_mercado_nicho_bajo_costo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-22": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "seleccion_canal_distribucion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-23": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "seleccion_canal_fisico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-24": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "customer_creation",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-09-25": {
+  "nodo": "determinar_tipo_de_mercado",
+  "vecino": "seleccion_estrategia_pricing",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-10-01": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "las_formas_en_que_los_proyectos_mueren",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-10-02": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "cuan_probable_y_cuanto_doleria",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-10-03": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "busca_el_riesgo_antes_de_que_te_busque",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-10-04": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "cual_es_tu_mayor_riesgo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-10-05": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "amenaza_y_oportunidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-10-06": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "empieza_con_lo_que_ya_funciona",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-10-07": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "nombra_tus_suposiciones_fragiles",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-10-08": {
+  "nodo": "haz_tu_lista_de_lo_que_puede_fallar",
+  "vecino": "riesgo_del_negocio_o_del_proyecto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-11-01": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "letters_of_credit",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-11-02": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "seleccion_metodo_transporte_internacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-11-03": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "seleccion_de_metodo_de_pago",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-11-04": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "elaboracion_pro_forma_invoice",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-11-05": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "seguro_exportacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-11-06": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "certificado_de_origen_coo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-11-07": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "seleccion_de_metodo_de_pago",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-11-08": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "documentacion_exportacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-11-09": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "fijacion_precio_exportacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-11-10": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "evaluacion_mercados_objetivo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-11-11": {
+  "nodo": "incoterms_reglas_comerciales_internacionales",
+  "vecino": "modos_de_entrada_intermediarios",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-12-01": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "decision_consciente_de_crecimiento",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-12-02": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "footnotes_financieros",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-12-03": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "tipos_de_utilidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-12-04": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "metodo_valor_presente_neto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-12-05": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "estructura_estado_resultados",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-12-06": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "pro_forma_vs_actuals",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-12-07": {
+  "nodo": "analisis_varianza_financiera",
+  "vecino": "analisis_porcentual_estados_financieros",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-13-01": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "investigacion_mercado_primaria_secundaria_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-13-02": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "centro_asesoria_advocacy_center",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-13-03": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "programas_ex_im_bank",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-13-04": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "programas_estatales_locales_financiamiento_exportacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-13-05": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "uso_del_us_commercial_service",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-13-06": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "ecosistema_global_emprendimiento_gee",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-13-07": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "evaluacion_mercados_objetivo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-13-08": {
+  "nodo": "recursos_apoyo_gubernamental_exportacion",
+  "vecino": "trade_missions",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-14-01": {
+  "nodo": "desarrollo_attack_plans",
+  "vecino": "product_roadmap_estrategico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-14-02": {
+  "nodo": "desarrollo_attack_plans",
+  "vecino": "manifiesto_agile",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-14-03": {
+  "nodo": "desarrollo_attack_plans",
+  "vecino": "strat_map_arenas_estrategicas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-14-04": {
+  "nodo": "desarrollo_attack_plans",
+  "vecino": "reconstruccion_de_equipo_ejecutivo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-15-01": {
+  "nodo": "prospecto_emprendedor_flaming",
+  "vecino": "clasificacion_abc_prospectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-15-02": {
+  "nodo": "prospecto_emprendedor_flaming",
+  "vecino": "encaje_organizacional",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-15-03": {
+  "nodo": "prospecto_emprendedor_flaming",
+  "vecino": "pasivos_vs_operadores",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-15-04": {
+  "nodo": "prospecto_emprendedor_flaming",
+  "vecino": "evaluacion_capacidades_fundador",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-15-05": {
+  "nodo": "prospecto_emprendedor_flaming",
+  "vecino": "sesgo_optimismo_fundador",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-16-01": {
+  "nodo": "seis_canales_comunicacion_assess",
+  "vecino": "fase_admit_celebracion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-16-02": {
+  "nodo": "seis_canales_comunicacion_assess",
+  "vecino": "fase_assess_ciclo_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-16-03": {
+  "nodo": "seis_canales_comunicacion_assess",
+  "vecino": "estrategia_multicanal_bienvenida",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-17-01": {
+  "nodo": "actualizacion_hvac",
+  "vecino": "gestion_energia_equipos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-17-02": {
+  "nodo": "actualizacion_hvac",
+  "vecino": "eficiencia_hidrica_edificios_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-17-03": {
+  "nodo": "actualizacion_hvac",
+  "vecino": "actualizacion_iluminacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-17-04": {
+  "nodo": "actualizacion_hvac",
+  "vecino": "mejora_envolvente_edificio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-01": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "plan_de_control",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-02": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "aim_of_leadership",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-03": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "deteccion_de_lideres_y_rezagados",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-04": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "deteccion_defectos_raros_control_estadistico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-05": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "mejora_continua_del_proceso",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-06": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "pruebas_destructivas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-07": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "punto_equilibrio_calidad_inspeccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-08": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "gestion_miedo_reportes",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-09": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "causas_comunes_vs_especiales",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-18-10": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "histograma",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-11": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "analisis_pareto_de_proveedores",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-12": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "perseguir_multiples_nortes",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R05-18-13": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "costo_de_mala_calidad_copq",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-14": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "plan_de_control",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-15": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "mejora_continua_del_sistema",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-16": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "error_proofing_servicio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-17": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "capacidad_proceso_concepto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-18-18": {
+  "nodo": "control_estadistico_de_procesos",
+  "vecino": "establecimiento_capacidad_proceso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-19-01": {
+  "nodo": "aplicar_regla_fija_de_colchon_de_relleno",
+  "vecino": "elegir_material_de_relleno_segun_producto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-19-02": {
+  "nodo": "aplicar_regla_fija_de_colchon_de_relleno",
+  "vecino": "hacer_cajas_a_medida_del_pedido",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-19-03": {
+  "nodo": "aplicar_regla_fija_de_colchon_de_relleno",
+  "vecino": "elegir_caja_correcta",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-20-01": {
+  "nodo": "arquitectura_tecnica_modular",
+  "vecino": "diseno_conceptual_sistema",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-20-02": {
+  "nodo": "arquitectura_tecnica_modular",
+  "vecino": "funcion_identify_inventario_activos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-20-03": {
+  "nodo": "arquitectura_tecnica_modular",
+  "vecino": "gestion_visual_del_pipeline_de_desarrollo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-20-04": {
+  "nodo": "arquitectura_tecnica_modular",
+  "vecino": "definicion_alineacion_cadena_suministro",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-20-05": {
+  "nodo": "arquitectura_tecnica_modular",
+  "vecino": "iota_analysis",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-21-01": {
+  "nodo": "metodos_pago_electronico_internacional",
+  "vecino": "fiscalidad_comercio_electronico_internacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-21-02": {
+  "nodo": "metodos_pago_electronico_internacional",
+  "vecino": "promocion_sitio_web",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-22-01": {
+  "nodo": "no_shop_extension_negotiation",
+  "vecino": "breakup_fee_evaluation",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-22-02": {
+  "nodo": "no_shop_extension_negotiation",
+  "vecino": "carta_de_intencion_loi",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-22-03": {
+  "nodo": "no_shop_extension_negotiation",
+  "vecino": "clausula_no_shop_adquisicion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-22-04": {
+  "nodo": "no_shop_extension_negotiation",
+  "vecino": "co_sale_drag_along_agreements",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-22-05": {
+  "nodo": "no_shop_extension_negotiation",
+  "vecino": "negociacion_carta_compromiso_banquero",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-22-06": {
+  "nodo": "no_shop_extension_negotiation",
+  "vecino": "descubrir_valor_inesperado_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-23-01": {
+  "nodo": "sesgo_retrospectivo_hindsight_2",
+  "vecino": "analisis_factores_distales_proximales",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-23-02": {
+  "nodo": "sesgo_retrospectivo_hindsight_2",
+  "vecino": "fijacion_cognitiva",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-23-03": {
+  "nodo": "sesgo_retrospectivo_hindsight_2",
+  "vecino": "cuanto_sabes_y_cuanto_solo_crees",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-23-04": {
+  "nodo": "sesgo_retrospectivo_hindsight_2",
+  "vecino": "cultura_generativa_westrum",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-23-05": {
+  "nodo": "sesgo_retrospectivo_hindsight_2",
+  "vecino": "revision_de_aprendizaje",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-23-06": {
+  "nodo": "sesgo_retrospectivo_hindsight_2",
+  "vecino": "condiciones_latentes_largo_plazo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R05-24-01": {
+  "nodo": "ejecucion_rapida_de_despidos",
+  "vecino": "entrenamiento_de_gerentes_para_despidos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-24-02": {
+  "nodo": "ejecucion_rapida_de_despidos",
+  "vecino": "comunicacion_a_toda_la_empresa",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R05-24-03": {
+  "nodo": "ejecucion_rapida_de_despidos",
+  "vecino": "falta_de_constancia_de_proposito",
+  "sentido": "previo",
+  "trampa": false
+ }
+}

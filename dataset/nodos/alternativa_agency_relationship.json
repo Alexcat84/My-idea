@@ -18,8 +18,27 @@
     "alternativa_joint_venture"
   ],
   "condiciones_activacion": [
-    "Si el negocio vende servicios a través de representantes de ventas independientes",
+    "Si tu negocio opera en Estados Unidos y vende servicios a través de representantes de ventas independientes",
     "Si se requiere evitar el elemento de fee de franquicia en la relación comercial"
   ],
-  "etiqueta_arbol": "Considera una Relación de Agencia"
+  "etiqueta_arbol": "Considera una Relación de Agencia",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-001",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el negocio vende servicios a través de representantes de ventas independientes",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y vende servicios a través de representantes de ventas independientes",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-021: Clase C sin la condición de operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (la definición de franquicia y el elemento de fee de Estados Unidos), pero ninguna condición dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

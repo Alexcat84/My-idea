@@ -5,6 +5,8 @@
  * libres; el motor de pago exige cuenta real desde "Iniciar La Exploración".
  */
 import type { User } from "@supabase/supabase-js";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
 
 export const DOMINIO_INVITADO = "@invitado.my-idea.local";
 
@@ -18,7 +20,9 @@ export function esInvitadoInvisible(user: Pick<User, "is_anonymous" | "email"> |
 
 /** El aviso del 401 de frontera, en palabras de persona. La UI lo detecta por
  * `login_requerido` y lleva al login conservando adónde volver. */
-export const AVISO_LOGIN = {
-  login_requerido: true,
-  error: "Para explorar tu idea necesitas tu cuenta. Entra con tu correo y seguimos justo donde quedaste.",
-} as const;
+export function avisoLogin(idioma: Locale = LOCALE_BASE) {
+  return { login_requerido: true, error: elegir(SERVIDOR_COMUN, idioma).avisoLogin } as const;
+}
+
+/** El aviso en el idioma base (para quien aún no elige por idioma). */
+export const AVISO_LOGIN = avisoLogin(LOCALE_BASE);

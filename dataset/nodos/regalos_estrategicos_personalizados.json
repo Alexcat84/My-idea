@@ -17,7 +17,7 @@
     "Memorializar experiencias (cenas, eventos) con un objeto físico que las recuerde",
     "Empezar con 2-3 clientes clave antes de escalar la práctica"
   ],
-  "entregable_esperado": "Plan de regalos personalizados para al menos los 10-20 clientes más valiosos, con presupuesto y calendario de entrega",
+  "entregable_esperado": "Plan de regalos personalizados para tus clientes más valiosos, con presupuesto y calendario de entrega",
   "nodos_previos": [
     "enfoque_en_superfans",
     "herramientas_de_activacion_web",
@@ -30,8 +30,8 @@
   ],
   "condiciones_activacion": [
     "Cuando se dispone de presupuesto para inversión en relación con pocos clientes de alto valor",
-    "Si se busca generar contenido viral o testimonios emocionales",
-    "Cuando el usuario ya tiene un proceso de onboarding y personalización de clientes establecido",
+    "Si se busca reforzar la lealtad de clientes clave con un gesto exclusivo y privado, sin fines publicitarios",
+    "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
     "Cuando se busca diferenciarse de la competencia en la retención de clientes clave"
   ],
   "etiqueta_arbol": "Regala Algo Único a tus Clientes",
@@ -44,5 +44,68 @@
       "titulo": "Sorpresas y Regalos Estratégicos al Cliente",
       "fuente": "Never Lose a Customer Again - Joey Coleman"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-72",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de regalos personalizados para al menos los 10-20 clientes más valiosos, con presupuesto y calendario de entrega",
+      "texto_nuevo": "Plan de regalos personalizados para tus clientes más valiosos, con presupuesto y calendario de entrega",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L4779-L4812",
+        "frase": "The Cubs gifted the limited edition ... speakers to their top four hundred most important relationships"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R046-017 (ANADIDO, lector y verificador de acuerdo): Cifra de 10 a 20 clientes no presente en el libro; buscada en numero y letra sin resultado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R046-017"
+    },
+    {
+      "id": "t2-coherencia-1",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si se busca generar contenido viral o testimonios emocionales",
+      "texto_nuevo": "Si se busca reforzar la lealtad de clientes clave con un gesto exclusivo y privado, sin fines publicitarios",
+      "cita": {
+        "instrumento": "Pasada M del saneamiento (docs/saneamiento/resultados/M)",
+        "evidencia": "Razon para A. De cuatro condiciones, dos no encajan. Una es tener ya un proceso de onboarding y personalizacion establecido, que el contenido no exige: empieza desde cero con 2 o 3 clientes. La otra es buscar contenido viral, que va contra un regalo privado, exclusivo, sin marca y sin comercializacion masiva. B vio el choque y aun asi lo dio por bueno, pero con la mitad de las condiciones mal el conjunto no describe bien cuando aplica el nodo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 9: corregir el caso de condicion hallado; la condicion nueva sale de los pasos del propio nodo.",
+      "indice": 1
+    },
+    {
+      "id": "t2-coherencia-2",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el usuario ya tiene un proceso de onboarding y personalización de clientes establecido",
+      "texto_nuevo": "Cuando se quiere empezar con 2 o 3 clientes clave antes de escalar la practica",
+      "cita": {
+        "instrumento": "Pasada M del saneamiento (docs/saneamiento/resultados/M)",
+        "evidencia": "Razon para A. De cuatro condiciones, dos no encajan. Una es tener ya un proceso de onboarding y personalizacion establecido, que el contenido no exige: empieza desde cero con 2 o 3 clientes. La otra es buscar contenido viral, que va contra un regalo privado, exclusivo, sin marca y sin comercializacion masiva. B vio el choque y aun asi lo dio por bueno, pero con la mitad de las condiciones mal el conjunto no describe bien cuando aplica el nodo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 9: corregir el caso de condicion hallado; la condicion nueva sale de los pasos del propio nodo.",
+      "indice": 2
+    },
+    {
+      "id": "n1-condicion-157",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se quiere empezar con 2 o 3 clientes clave antes de escalar la practica",
+      "texto_nuevo": "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q031-008: Tiene razon el lector A: la condicion 2 repite el paso 10 y habla de 'la practica' como si ya estuviera en marcha, asi que no sirve para activar el nodo; dominio core y fase ejecucion son correctos. (arbitro) Motivo: Copia el paso 10 del metodo (empezar con 2 o 3 clientes antes de escalar) y presupone que ya se aplica la practica; no describe una situacion en la que el nodo aplica."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
   ]
 }

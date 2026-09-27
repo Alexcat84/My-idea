@@ -33,13 +33,15 @@ import {
   margenConPrecio,
   margenUnitario,
   precioParaMargenObjetivo,
-  techoIngresoCapacidad,
   unidadesParaGananciaObjetivo,
   type NumerosProyecto,
   type Rango,
   type TipoOferta,
   type ValorNumerico,
+  escenariosCapacidad,
 } from "./calculadora";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { MOTOR_NUMEROS } from "./i18n/mensajes/motorNumeros";
 
 // Politica del fundador (2026-07-17). Constantes con nombre a proposito:
 // se mueven aqui, con datos de la beta, sin tocar la logica.
@@ -69,6 +71,13 @@ export function redondearHumano(n: number): number {
   const abs = Math.abs(n);
   const paso = abs < 30 ? 1 : abs < 1000 ? 5 : 50;
   return Math.round(n / paso) * paso;
+}
+
+/** AUD-09 H12: la ganancia NETA del mes (contribución menos fijos), redondeada.
+ * UNA sola fórmula para la palanca de volumen y la tabla de escenarios: la
+ * misma pantalla no puede decir dos cifras para lo mismo. */
+export function gananciaNetaDeFijos(contribucionMes: number, fijosMes: number): number {
+  return redondearHumano(contribucionMes - fijosMes);
 }
 
 export interface MargenResultante {
@@ -120,7 +129,8 @@ function valorCampo(numeros: NumerosProyecto, campo: string): ValorNumerico | nu
 export function construirPalancas(
   numeros: NumerosProyecto,
   tipoOferta?: TipoOferta,
-  opciones?: { pisoMargenSano?: number; testPrecioSano?: number }
+  opciones?: { pisoMargenSano?: number; testPrecioSano?: number },
+  idioma: Locale = LOCALE_BASE
 ): Palancas {
   const piso = opciones?.pisoMargenSano ?? PISO_MARGEN_SANO;
   const test = opciones?.testPrecioSano ?? TEST_PRECIO_SANO;
@@ -207,19 +217,24 @@ export function construirPalancas(
       clave: "volumen",
       modo,
       bloqueada: true,
-      razonBloqueo:
-        "Con el margen en rojo, el volumen agranda la pérdida. Primero arregla el margen; cuando esté en verde, aquí va cuántas unidades al mes necesitas para tu meta.",
+      razonBloqueo: elegir(MOTOR_NUMEROS, idioma).palancas.volumenBloqueado,
       meta: null,
       actual: null,
       recomendada: false,
     };
   } else {
-    const techoUnidadesMedio = medio(techoIngresoCapacidad(numeros).unidades_mes);
+    // AUD-09 H12: la meta y su ganancia salen del MISMO escenario que la fila
+    // "A capacidad plena" de la tabla (escenariosCapacidad().base). Antes las
+    // unidades se redondeaban hacia arriba (44 -> 45: por encima de la
+    // capacidad) y la ganancia se calculaba aparte: dos cifras para lo mismo.
+    const base = escenariosCapacidad(numeros).base;
     let metaUnidades: number | null = null;
     let ganancia: number | null = null;
-    if (techoUnidadesMedio !== null) {
-      metaUnidades = redondearHumano(techoUnidadesMedio);
-      if (fijosMedio !== null) ganancia = redondearHumano(metaUnidades * margenValMedio - fijosMedio);
+    if (base) {
+      metaUnidades = base.unidades_mes;
+      if (fijosMedio !== null && base.margen_mensual !== null) {
+        ganancia = gananciaNetaDeFijos(base.margen_mensual, fijosMedio);
+      }
     }
     volumen = {
       clave: "volumen",

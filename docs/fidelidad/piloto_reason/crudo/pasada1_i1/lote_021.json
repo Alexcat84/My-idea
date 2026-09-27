@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_021",
+  "intento": 0,
+  "usd": 0.16233999999999998,
+  "turnos": 1,
+  "duracion_s": 14.1,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34565,
+  "tokens_out": 1204,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P37AE7A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3395, 3397, 3659, 2837], \"razon\": \"HEART exige consultar la lista de EPCs y decidir cuáles afectan la actividad evaluada; identificar condiciones presentes es exactamente ese paso.\"},\n{\"id\": \"PB77C29\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5178, 5208, 5182, 4769], \"razon\": \"Weick: cultura logra cumplimiento sin vigilancia; pero el libro condiciona la descentralización a jerarquía disciplinada previa y a supervisores de primera línea fuertes. 'Sin supervisión directa' podría leerse como prescindir de ellos.\"},\n{\"id\": \"PAB7113\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4478, 4494, 3209, 3382], \"razon\": \"El perfil sirve para identificar los dos o tres factores que más necesitan reforma urgente; no se puede abordar todo a la vez.\"},\n{\"id\": \"P72FDF3\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [1085, 1095, 1141, 2922, 196], \"razon\": \"El libro atribuye el problema a las falsas alarmas del sistema. No propone capacitación como remedio y advierte que exhortaciones apenas afectan los factores productores de error.\"}]",
+ "parseado": [
+  {
+   "id": "P37AE7A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3395,
+    3397,
+    3659,
+    2837
+   ],
+   "razon": "HEART exige consultar la lista de EPCs y decidir cuáles afectan la actividad evaluada; identificar condiciones presentes es exactamente ese paso."
+  },
+  {
+   "id": "PB77C29",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5178,
+    5208,
+    5182,
+    4769
+   ],
+   "razon": "Weick: cultura logra cumplimiento sin vigilancia; pero el libro condiciona la descentralización a jerarquía disciplinada previa y a supervisores de primera línea fuertes. 'Sin supervisión directa' podría leerse como prescindir de ellos."
+  },
+  {
+   "id": "PAB7113",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4478,
+    4494,
+    3209,
+    3382
+   ],
+   "razon": "El perfil sirve para identificar los dos o tres factores que más necesitan reforma urgente; no se puede abordar todo a la vez."
+  },
+  {
+   "id": "P72FDF3",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    1085,
+    1095,
+    1141,
+    2922,
+    196
+   ],
+   "razon": "El libro atribuye el problema a las falsas alarmas del sistema. No propone capacitación como remedio y advierte que exhortaciones apenas afectan los factores productores de error."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_086",
+  "intento": 0,
+  "usd": 0.16943999999999998,
+  "turnos": 1,
+  "duracion_s": 20.3,
+  "pared_s": 21.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33835,
+  "tokens_out": 1705,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P7324EA\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5037, 5057], \"razon\": \"La pregunta de sustitución coincide con L5037. Pero el paso omite que el libro la aplica tras descartar abuso de sustancias e incumplimiento deliberado (L5057). También es ambiguo a quién se pregunta.\"},\n  {\"id\": \"PE2A05E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"expertos técnicos\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5174, 5176, 5208], \"razon\": \"El libro respalda que el control pase a expertos. Pero lo presenta como cultura, no como protocolo formal. El paso omite la vuelta a la jerarquía, la cultura jerárquica previa y la inversión en formación y supervisores.\"},\n  {\"id\": \"P7A2F8A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4388, 4398], \"razon\": \"Cullen exige demostrar que se identificaron los peligros mayores potenciales. Ese es el primer paso de la FSA.\"},\n  {\"id\": \"PB38B4B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2520, 2598, 2658, 2654], \"razon\": \"El libro pide muestrear regularmente los signos vitales mediante medidas de proceso proactivas. Advierte que se elija un subconjunto, no todos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P7324EA",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5037,
+    5057
+   ],
+   "razon": "La pregunta de sustitución coincide con L5037. Pero el paso omite que el libro la aplica tras descartar abuso de sustancias e incumplimiento deliberado (L5057). También es ambiguo a quién se pregunta."
+  },
+  {
+   "id": "PE2A05E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "expertos técnicos"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5176,
+    5208
+   ],
+   "razon": "El libro respalda que el control pase a expertos. Pero lo presenta como cultura, no como protocolo formal. El paso omite la vuelta a la jerarquía, la cultura jerárquica previa y la inversión en formación y supervisores."
+  },
+  {
+   "id": "P7A2F8A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4388,
+    4398
+   ],
+   "razon": "Cullen exige demostrar que se identificaron los peligros mayores potenciales. Ese es el primer paso de la FSA."
+  },
+  {
+   "id": "PB38B4B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2520,
+    2598,
+    2658,
+    2654
+   ],
+   "razon": "El libro pide muestrear regularmente los signos vitales mediante medidas de proceso proactivas. Advierte que se elija un subconjunto, no todos."
+  }
+ ]
+}

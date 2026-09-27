@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P10FA63",
+  "intento": 0,
+  "usd": 0.197248,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43337,
+  "tokens_out": 1195,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P10FA63\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2598, 2654, 2658], \"cita\": \"managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro manda medir con regularidad los procesos implicados en accidentes ('health checks' regulares). El paso anterior del nodo identifica esos procesos a partir de accidentes previos, que es justo el criterio de seleccion del libro (L2654). Por eso no pide medirlo todo. Solo concreta en 'metricas de calidad' y 'chequeos periodicos', sin cifras ni herramientas nuevas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P10FA63",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2598,
+   2654,
+   2658
+  ],
+  "cita": "managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro manda medir con regularidad los procesos implicados en accidentes ('health checks' regulares). El paso anterior del nodo identifica esos procesos a partir de accidentes previos, que es justo el criterio de seleccion del libro (L2654). Por eso no pide medirlo todo. Solo concreta en 'metricas de calidad' y 'chequeos periodicos', sin cifras ni herramientas nuevas.",
+  "paso_fiel": ""
+ }
+}

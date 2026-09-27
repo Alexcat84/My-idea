@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE371A9",
+  "intento": 0,
+  "usd": 0.19246000000000002,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43720,
+  "tokens_out": 879,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE371A9\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5178, 5208], \"cita\": \"possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. [...] centralisation by standardisation and hierarchy [...] Furthermore, neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro limita el cambio de modo a operaciones de alto ritmo y a ciertos peligros. En esas situaciones la jerarquía cede ante la pericia técnica (L5164), y la centralización por jerarquía no sirve ante emergencias sin precedente (L5178). El paso se ciñe a situaciones de crisis y no presenta la jerarquía como obstáculo general. No contradice L5208 y no añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE371A9",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5164,
+   5178,
+   5208
+  ],
+  "cita": "possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. [...] centralisation by standardisation and hierarchy [...] Furthermore, neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro limita el cambio de modo a operaciones de alto ritmo y a ciertos peligros. En esas situaciones la jerarquía cede ante la pericia técnica (L5164), y la centralización por jerarquía no sirve ante emergencias sin precedente (L5178). El paso se ciñe a situaciones de crisis y no presenta la jerarquía como obstáculo general. No contradice L5208 y no añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

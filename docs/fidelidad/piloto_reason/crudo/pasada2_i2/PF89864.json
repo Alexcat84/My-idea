@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF89864",
+  "intento": 0,
+  "usd": 0.178508,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40737,
+  "tokens_out": 778,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF89864\", \"veredicto\": \"FIEL\", \"lineas\": [2905, 293, 5748, 273], \"cita\": \"Errors, as we have seen in earlier chapters, are shaped and provoked by upstream workplace and organizational factors. Identifying an error is merely the beginning of the search for causes, not the end.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro manda buscar, para cada acto inseguro, las condiciones locales que lo provocaron y luego los factores organizacionales previos (L293). El aviso de rendimientos decrecientes (L5748) apunta a causas lejanas fuera del control de los gestores, como las sociales o económicas. No apunta a los factores del lugar de trabajo y la organización, que es donde el libro sitúa el análisis (L273).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF89864",
+  "veredicto": "FIEL",
+  "lineas": [
+   2905,
+   293,
+   5748,
+   273
+  ],
+  "cita": "Errors, as we have seen in earlier chapters, are shaped and provoked by upstream workplace and organizational factors. Identifying an error is merely the beginning of the search for causes, not the end.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro manda buscar, para cada acto inseguro, las condiciones locales que lo provocaron y luego los factores organizacionales previos (L293). El aviso de rendimientos decrecientes (L5748) apunta a causas lejanas fuera del control de los gestores, como las sociales o económicas. No apunta a los factores del lugar de trabajo y la organización, que es donde el libro sitúa el análisis (L273).",
+  "paso_fiel": ""
+ }
+}

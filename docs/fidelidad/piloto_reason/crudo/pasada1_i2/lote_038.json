@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_038",
+  "intento": 0,
+  "usd": 0.16394,
+  "turnos": 1,
+  "duracion_s": 16.7,
+  "pared_s": 17.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33605,
+  "tokens_out": 1476,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PFACD0A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [834, 840, 844, 848, 852], \"razon\": \"Bainbridge: los diseñadores dejan al humano lo que no supieron automatizar, sobre todo restaurar el sistema tras fallos imprevistos. El paso lo concreta como evaluación, en la misma dirección.\"},\n  {\"id\": \"P56B062\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2596, 2598, 2658, 2767, 3213, 4466], \"razon\": \"'Para cada proceso' choca con el muestreo deliberadamente no exhaustivo (8-16 índices) para hallar los 2-3 procesos urgentes. La frecuencia depende del ritmo de cambio del proceso.\"},\n  {\"id\": \"P724604\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4257, 4259, 4261, 4215], \"razon\": \"Vaughan/Reason describen límites estructurales: filtrado de información, visitas que solo dan vistazos aislados, tamaño, complejidad, jerga y dependencia del regulado.\"},\n  {\"id\": \"P33A5CF\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [261, 263, 293, 291, 2981], \"razon\": \"El libro advierte que la causalidad no tiene cortes naturales y que el análisis debe limitarse a lo controlable, no a la 'cadena completa'. Además la relación causal es muchos-a-muchos, no una cadena.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PFACD0A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    834,
+    840,
+    844,
+    848,
+    852
+   ],
+   "razon": "Bainbridge: los diseñadores dejan al humano lo que no supieron automatizar, sobre todo restaurar el sistema tras fallos imprevistos. El paso lo concreta como evaluación, en la misma dirección."
+  },
+  {
+   "id": "P56B062",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2596,
+    2598,
+    2658,
+    2767,
+    3213,
+    4466
+   ],
+   "razon": "'Para cada proceso' choca con el muestreo deliberadamente no exhaustivo (8-16 índices) para hallar los 2-3 procesos urgentes. La frecuencia depende del ritmo de cambio del proceso."
+  },
+  {
+   "id": "P724604",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4257,
+    4259,
+    4261,
+    4215
+   ],
+   "razon": "Vaughan/Reason describen límites estructurales: filtrado de información, visitas que solo dan vistazos aislados, tamaño, complejidad, jerga y dependencia del regulado."
+  },
+  {
+   "id": "P33A5CF",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    261,
+    263,
+    293,
+    291,
+    2981
+   ],
+   "razon": "El libro advierte que la causalidad no tiene cortes naturales y que el análisis debe limitarse a lo controlable, no a la 'cadena completa'. Además la relación causal es muchos-a-muchos, no una cadena."
+  }
+ ]
+}

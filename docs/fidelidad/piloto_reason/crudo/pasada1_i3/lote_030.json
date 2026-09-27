@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_030",
+  "intento": 0,
+  "usd": 0.164332,
+  "turnos": 1,
+  "duracion_s": 15.6,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33903,
+  "tokens_out": 1436,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P1E4D5A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [443, 447, 3993, 4121, 5254], \"razon\": \"El libro señala la falta de medios para ajustar la dotación a la carga de trabajo y los recortes de personal de seguridad. El paso lo concreta en la misma dirección.\"},\n  {\"id\": \"PD9E0F6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2487, 2520, 2638, 2648, 2650], \"razon\": \"El libro pide combinar medidas reactivas y proactivas, y medir la 'salud de seguridad' con indicadores de proceso, no solo con resultados negativos.\"},\n  {\"id\": \"P5FE948\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4215, 4257, 4259, 4261, 4265, 4446], \"razon\": \"Coherente con el riesgo de depender del regulado. Pero el libro dice que las visitas solo dan vistazos aislados y que el compromiso es estructural, no un fallo. Conviene revisar el matiz.\"},\n  {\"id\": \"PBD0948\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 992, 1006, 1012, 1547, 2720, 5055], \"razon\": \"El libro describe cómo la sobreespecificación hace imposible la tarea sin violar el procedimiento. Identificar esas tareas concreta el diagnóstico en la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P1E4D5A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    443,
+    447,
+    3993,
+    4121,
+    5254
+   ],
+   "razon": "El libro señala la falta de medios para ajustar la dotación a la carga de trabajo y los recortes de personal de seguridad. El paso lo concreta en la misma dirección."
+  },
+  {
+   "id": "PD9E0F6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2487,
+    2520,
+    2638,
+    2648,
+    2650
+   ],
+   "razon": "El libro pide combinar medidas reactivas y proactivas, y medir la 'salud de seguridad' con indicadores de proceso, no solo con resultados negativos."
+  },
+  {
+   "id": "P5FE948",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4215,
+    4257,
+    4259,
+    4261,
+    4265,
+    4446
+   ],
+   "razon": "Coherente con el riesgo de depender del regulado. Pero el libro dice que las visitas solo dan vistazos aislados y que el compromiso es estructural, no un fallo. Conviene revisar el matiz."
+  },
+  {
+   "id": "PBD0948",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    990,
+    992,
+    1006,
+    1012,
+    1547,
+    2720,
+    5055
+   ],
+   "razon": "El libro describe cómo la sobreespecificación hace imposible la tarea sin violar el procedimiento. Identificar esas tareas concreta el diagnóstico en la misma dirección."
+  }
+ ]
+}

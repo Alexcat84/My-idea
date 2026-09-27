@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P59B010",
+  "intento": 0,
+  "usd": 0.170564,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36846,
+  "tokens_out": 1159,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P59B010\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2028, 413, 437, 971, 1072], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service. ... in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro situa en la instalacion la mayor probabilidad de error y la menor de deteccion (L2028). Tambien senala como fallos la supervision insuficiente, la autofirma y la falta de inspeccion separada antes de declarar apto (L413, L437, L971). L1072 critica la redundancia tecnica en general, no la inspeccion independiente. El paso concreta todo esto en la misma direccion, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P59B010",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2028,
+   413,
+   437,
+   971,
+   1072
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service. ... in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro situa en la instalacion la mayor probabilidad de error y la menor de deteccion (L2028). Tambien senala como fallos la supervision insuficiente, la autofirma y la falta de inspeccion separada antes de declarar apto (L413, L437, L971). L1072 critica la redundancia tecnica en general, no la inspeccion independiente. El paso concreta todo esto en la misma direccion, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

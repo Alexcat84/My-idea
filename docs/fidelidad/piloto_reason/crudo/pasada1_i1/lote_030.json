@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_030",
+  "intento": 0,
+  "usd": 0.169,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35560,
+  "tokens_out": 1338,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P5F3D4A\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [204, 1851, 1934, 5605], \"razon\": \"Estudiar casos encaja con el libro, pero este los toma de muchas tecnologías y ve causas organizacionales comunes. Limitarse al sector propio podría estrechar ese enfoque transversal.\"},\n{\"id\": \"P1871C3\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2918, 2920, 2922, 5641, 5661, 5675, 4987], \"razon\": \"El libro critica el ciclo de culpa y el modelo de persona como sesgo dominante. Revisar si siempre se culpa a alguien va en esa dirección y no niega los casos culpables.\"},\n{\"id\": \"P9869CE\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5775, 5781, 2750, 3209, 3075], \"razon\": \"El libro apoya identificar y eliminar patógenos y seguir los remedios. Pero pide gestionar perfiles de procesos y no arreglar indicadores sueltos; un seguimiento ítem por ítem podría contradecirlo.\"},\n{\"id\": \"P0EB19C\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [3993, 4121, 4207], \"razon\": \"El libro cita el 2% de personal de seguridad en NASA, pero no propone comparar ratios con estándares del sector. Los recortes afectan a todo el sector, así que el estándar puede ser engañoso.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P5F3D4A",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    204,
+    1851,
+    1934,
+    5605
+   ],
+   "razon": "Estudiar casos encaja con el libro, pero este los toma de muchas tecnologías y ve causas organizacionales comunes. Limitarse al sector propio podría estrechar ese enfoque transversal."
+  },
+  {
+   "id": "P1871C3",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2918,
+    2920,
+    2922,
+    5641,
+    5661,
+    5675,
+    4987
+   ],
+   "razon": "El libro critica el ciclo de culpa y el modelo de persona como sesgo dominante. Revisar si siempre se culpa a alguien va en esa dirección y no niega los casos culpables."
+  },
+  {
+   "id": "P9869CE",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5775,
+    5781,
+    2750,
+    3209,
+    3075
+   ],
+   "razon": "El libro apoya identificar y eliminar patógenos y seguir los remedios. Pero pide gestionar perfiles de procesos y no arreglar indicadores sueltos; un seguimiento ítem por ítem podría contradecirlo."
+  },
+  {
+   "id": "P0EB19C",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    3993,
+    4121,
+    4207
+   ],
+   "razon": "El libro cita el 2% de personal de seguridad en NASA, pero no propone comparar ratios con estándares del sector. Los recortes afectan a todo el sector, así que el estándar puede ser engañoso."
+  }
+ ]
+}

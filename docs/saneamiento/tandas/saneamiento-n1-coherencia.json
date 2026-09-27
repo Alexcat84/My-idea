@@ -1,0 +1,149 @@
+[
+ {
+  "id": "n1-coherencia-01",
+  "node_id": "comprender_definicion_legal_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Franchise Your Business (Siebert), lineas 121; 137: \"3.A required payment of more than $500 in the first six months of operation by the franchisee (including initial fees, royalties, advertising fees, training fees, or fees for equipment)\". Ambos lectores coinciden. Solo se quita el residuo 'que se pague mas de $500', que dejaba dos umbrales en la misma frase. El libro (regla enmendada en 2008) dice $500; como el propio nodo ya trae la cifra vigente con su fuente (ajuste de la FTC de 2024: $735), vale la vigente. No se toca el alcance (Estados Unidos) ni la ubicacion nucleo o mundo del nodo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-coherencia-02",
+  "node_id": "comprender_definicion_legal_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Calcula si el pago que le pedirías al operador supera los $500 en los primeros seis meses",
+  "texto_nuevo": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Franchise Your Business (Siebert), lineas 121; 137: \"It is intended to capture any payment of at least $500 during the first six months of the franchisee’s operations.\". El paso calculaba contra el umbral antiguo del libro ($500) y el resumen fija el vigente ($735, ajuste FTC 2024, fuente ya citada en el nodo). Se alinea el paso con la cifra vigente y con la misma ventana temporal del resumen. Se toma la version del lector A: no se repite la cifra del libro en el paso para no volver a meter dos umbrales en el mismo nodo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 2
+ },
+ {
+  "id": "n1-coherencia-03",
+  "node_id": "prevenir_franquicias_inadvertidas",
+  "campo": "condiciones_activacion",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+  "texto_nuevo": "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Franchise Your Business (Siebert), lineas 2263; 2287: \"In virtually every case, these companies (or their lawyers) simply did not realize they were franchising.\". La condicion excluia justo al publico del nodo: quien crea una franquicia sin saberlo no 'vende ni piensa vender franquicias' (linea 2263: 'Some simply had no clue about franchise law'). Se conserva el ambito de Estados Unidos (el pasaje trata la Regla FTC 436 y leyes estatales de Illinois y Connecticut) y el disparador pasa a ser que terceros usen tu marca. Se toma la redaccion del lector B. Esta correccion solo quita la contradiccion interna; NO decide si el nodo va en el nucleo o en el mundo de franquicias: esa decision es de la pasada nodo por nodo del fundador (prueba de si lo necesita cualquier emprendedor aunque nunca active ese mundo) y aqui no se toca."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 0
+ },
+ {
+  "id": "n1-coherencia-04",
+  "node_id": "evaluacion_gestion_riesgos",
+  "campo": "entregable_esperado",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+  "texto_nuevo": "Lista de acciones concretas para minimizar o eliminar cada riesgo que ya priorizaste (por severidad x probabilidad), con responsable y fecha límite asignados",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 12478; 12691: \"Use the list of concerns and options tempered by consideration of the consequences, the cost/benefit and future impact to develop a list of real actions and projects that we can and will do. [...] We identify the action or project, the name of the person who is responsible and the date it is due.\". Los pasos y la condicion 3 cubren la etapa de gestion que el libro pone DESPUES de puntuar (seccion Managing Risk, linea 12478; paso 6 del procedimiento, linea 12691). El score severidad x probabilidad es el paso 4 del libro (linea 12683), un insumo previo que ningun paso del nodo calcula. Se corrige el entregable para que la priorizacion sea entrada y el producto sea la lista de acciones con responsable y fecha, que el libro llama 'the real purpose of doing a risk assessment'. Se toma la redaccion del lector A (mas corta) con la cita doble del lector B."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-coherencia-05",
+  "node_id": "six_sigma_dmaic",
+  "campo": "entregable_esperado",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+  "texto_nuevo": "Proyecto DMAIC documentado con la selección del proyecto y las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 5038-5048; 14258: \"Experience with applying the five DMAIC steps shows that the team’s DMAIC journey needs to be preceded by management selecting the project.\". El resumen es fiel al libro (lineas 5038-5048: seleccionar y lanzar mas definir, medir, analizar, mejorar, controlar) y el entregable solo nombraba las cinco fases. Ambos son fieles: las cinco fases van precedidas por la seleccion del proyecto. Se anade esa seleccion al entregable con el cambio minimo (redaccion del lector B)."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-coherencia-06",
+  "node_id": "six_sigma_dmaic",
+  "campo": "pasos_accionables",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Establecer la creencia de que el cambio es deseable y factible",
+  "texto_nuevo": "Antes de seleccionar el problema del paso 1, establece la creencia de que el cambio es deseable y factible.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 5071: \"The starting point is the attitude that a breakthrough is both desirable and feasible.\". En la secuencia de ruptura de Juran la creencia en el cambio es el punto de partida, no algo posterior al control. Como no se reordena la lista, se ancla explicitamente antes del paso 1 (redaccion del lector A, minima)."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 6
+ },
+ {
+  "id": "n1-coherencia-07",
+  "node_id": "six_sigma_dmaic",
+  "campo": "pasos_accionables",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+  "texto_nuevo": "Para elegir el problema del paso 1, realiza un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 5073: \"This study will help separate the problem into major parts, the vital few from the useful many. I call this the Pareto analysis.\". El estudio de factibilidad con Pareto es el segundo paso de la secuencia de ruptura y sirve para escoger los pocos problemas vitales, o sea alimenta la seleccion del paso 1; tras el control rompia el orden. Redaccion del lector B. La cita se toma de un tramo de la linea sin raya larga."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 7
+ },
+ {
+  "id": "n1-coherencia-08",
+  "node_id": "six_sigma_dmaic",
+  "campo": "pasos_accionables",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+  "texto_nuevo": "Al lanzar el proyecto del paso 1, crea un brazo directivo (steering arm) que lo guíe y un brazo diagnóstico (diagnostic arm) que reúna y analice los datos de los pasos 3 y 4.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 5075: \"It requires that we appoint or create two systems: one that directs or guides the breakthrough, and one that does the fact-gathering and analysis. We call them the steering arm and the diagnostic arm, respectively. [...] When both are in place, diagnosis begins.\". Los dos brazos se crean antes del diagnostico ('When both are in place, diagnosis begins'), es decir al lanzar el proyecto y antes de medir y analizar (pasos 3 y 4); despues del control contradecia el orden. Redaccion del lector B."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 8
+ },
+ {
+  "id": "n1-coherencia-09",
+  "node_id": "six_sigma_dmaic",
+  "campo": "pasos_accionables",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
+  "texto_nuevo": "Al implementar el remedio del paso 5, y antes de fijar los controles del paso 6, evalúa el impacto cultural de los cambios propuestos y gestiona la resistencia.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 5032; 5034: \"c. From workable remedies to dealing with predictable resistance to change\". El conflicto pasos-pasos que midieron los lectores abarca los pasos 7 a 11 injertados tras el control, y este es uno de ellos: evaluar 'cambios propuestos' despues de controlar es incoherente. En el recorrido de remedio del libro la resistencia se atiende entre el remedio y los nuevos controles (linea 5034: 'd. From dealing with resistance to establishing new controls on the remedies to hold the gains'). Se ancla ahi (propuesta del lector A; el lector B lo dejo intacto pero reconoce ese mismo orden en el libro)."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 9
+ },
+ {
+  "id": "n1-coherencia-10",
+  "node_id": "six_sigma_dmaic",
+  "campo": "pasos_accionables",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Establecer un proyecto formal con equipo asignado.",
+  "texto_nuevo": "Formaliza el proyecto del paso 1 con un equipo asignado antes de empezar a definir el problema.",
+  "cita": {
+   "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+   "evidencia": "Juran's Quality Handbook, lineas 4984; 5038: \"b. Establish a project and team. (Management does this.)\". El proyecto ya se selecciona y lanza en el paso 1; volver a establecerlo despues de controlar era la contradiccion de orden. En el libro establecer proyecto y equipo va justo tras nominar el problema y antes del diagnostico, asi que se convierte en la formalizacion del mismo proyecto del paso 1, antes de Definir (redaccion del lector B). El paso de indice 11 (replicar y nominar nuevos proyectos) ya va bien al final y no se toca."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+  "fecha": "2026-09-27",
+  "indice": 10
+ }
+]

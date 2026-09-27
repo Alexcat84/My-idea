@@ -18,11 +18,28 @@
   ],
   "nodos_siguientes": [
     "extension_credito_compradores_extranjeros",
-    "programas_ex_im_bank",
-    "evaluacion_preparacion_empresa_exportar"
+    "programas_ex_im_bank"
   ],
   "condiciones_activacion": [
     "Si necesitas definir cómo financiar una operación de exportación"
   ],
-  "etiqueta_arbol": "Elige cómo Financiar tu Exportación"
+  "etiqueta_arbol": "Elige cómo Financiar tu Exportación",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-032",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decisiones_de_financiamiento_exportacion -> evaluacion_preparacion_empresa_exportar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-14-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: decidir cómo financiar una operación de exportación (plazo del comprador, costo, capital de trabajo al embarcar) es posterior a evaluar si la empresa está preparada para exportar, no la prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

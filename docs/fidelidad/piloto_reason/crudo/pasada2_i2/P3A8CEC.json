@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P3A8CEC",
+  "intento": 0,
+  "usd": 0.159972,
+  "turnos": 1,
+  "duracion_s": 8.7,
+  "pared_s": 9.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37453,
+  "tokens_out": 508,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3A8CEC\", \"veredicto\": \"FIEL\", \"lineas\": [2568, 2535, 2520], \"cita\": \"managers must understand the nature of the forces acting upon the organization, as well as the kinds of information needed to fix their current position.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide expresamente fijar la posición actual de la organización en el espacio de seguridad. El paso no manda medirla con datos de accidentes, así que no contradice que deba hacerse con indicadores de proceso. Omitir ese detalle no lo convierte en contrario. Tampoco añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3A8CEC",
+  "veredicto": "FIEL",
+  "lineas": [
+   2568,
+   2535,
+   2520
+  ],
+  "cita": "managers must understand the nature of the forces acting upon the organization, as well as the kinds of information needed to fix their current position.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide expresamente fijar la posición actual de la organización en el espacio de seguridad. El paso no manda medirla con datos de accidentes, así que no contradice que deba hacerse con indicadores de proceso. Omitir ese detalle no lo convierte en contrario. Tampoco añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

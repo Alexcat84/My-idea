@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PEF0787",
+  "intento": 0,
+  "usd": 0.116332,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 24978,
+  "tokens_out": 821,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PEF0787\", \"veredicto\": \"FIEL\", \"lineas\": [3163, 3173, 3199], \"cita\": \"Each indicator relates to a tangible item--something that can be observed directly within the facility or can be found within a filing system--and requires a simple ‘yes/no’ response. ... stores the indicator databases (one database for each GFT for each type of operation)\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe indicadores tangibles y observables, de respuesta sí/no, organizados por cada uno de los 11 GFTs y por tipo de operación. El paso no dice quién los crea (especialistas de tarea), pero ese punto lo cubre otro paso del nodo y la omisión no invierte nada. Gestionar perfiles en vez de indicadores sueltos se refiere al uso, no a la generación.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PEF0787",
+  "veredicto": "FIEL",
+  "lineas": [
+   3163,
+   3173,
+   3199
+  ],
+  "cita": "Each indicator relates to a tangible item--something that can be observed directly within the facility or can be found within a filing system--and requires a simple ‘yes/no’ response. ... stores the indicator databases (one database for each GFT for each type of operation)",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe indicadores tangibles y observables, de respuesta sí/no, organizados por cada uno de los 11 GFTs y por tipo de operación. El paso no dice quién los crea (especialistas de tarea), pero ese punto lo cubre otro paso del nodo y la omisión no invierte nada. Gestionar perfiles en vez de indicadores sueltos se refiere al uso, no a la generación.",
+  "paso_fiel": ""
+ }
+}

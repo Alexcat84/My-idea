@@ -12,7 +12,7 @@
     "Revisar si la confianza en las múltiples defensas ha generado complacencia operativa",
     "Evaluar el balance entre defensas duras y blandas existentes.",
     "Identificar funciones defensivas ausentes o débiles en el sistema.",
-    "Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema"
+    "Antes de añadir redundancia entre capas, evaluar si volverá el sistema más complejo y opaco o si un mismo error podría hacer fallar varias capas a la vez"
   ],
   "entregable_esperado": "Mapa de capas de defensa del sistema con análisis de independencia real y puntos ciegos de detección",
   "nodos_previos": [
@@ -51,5 +51,27 @@
       "titulo": "Defensas en Profundidad (Capas de Barreras y Salvaguardas)",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c13-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema",
+      "texto_nuevo": "Antes de añadir redundancia entre capas, evaluar si volverá el sistema más complejo y opaco o si un mismo error podría hacer fallar varias capas a la vez",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L1068-L1072",
+        "frase": "Redundant defensive back-ups increase the interactive complexity of high-technology organizations and thus increase the likelihood of unforeseeable common-mode failures. / Adding redundancy makes the system more opaque to the people who nominally control and manage it."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En la sección 'Defences-in-Depth: Protection or Dangerous Concealment?' (L1041-L1076), Reason, con Rasmussen y Perrow, presenta la redundancia añadida como origen de la 'falacia de las defensas en profundidad'. Según el libro, aumenta la complejidad interactiva y los fallos de modo común (L1068), vuelve el sistema más opaco para que se acumulen fallas latentes (L1072) y da una falsa sensación de seguridad (L1076). El resumento y los pasos 0 a 5 del nodo son fieles a eso. El paso 6 recetaba sumar redundancia como remedio, lo contrario del libro. El paso nuevo ya no receta redundancia: pide eval",
+      "indice": 6,
+      "auditoria": "SANEAMIENTO pasada K, ficha C13 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
   ]
 }

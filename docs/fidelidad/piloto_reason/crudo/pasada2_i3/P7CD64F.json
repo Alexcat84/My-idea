@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P7CD64F",
+  "intento": 0,
+  "usd": 0.211216,
+  "turnos": 1,
+  "duracion_s": 14.6,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46159,
+  "tokens_out": 1329,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7CD64F\", \"veredicto\": \"FIEL\", \"lineas\": [5184, 5190, 5198, 5200], \"cita\": \"Work groups made up of divergent people. ‘A team of divergent individuals has more requisite variety than a team of homogeneous individuals.’\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"Reason, citando a Weick, propone los grupos de trabajo formados por personas diversas para reducir la brecha de variedad requerida entre el sistema y quienes lo controlan: juntando sus observaciones ven más. El término 'requisite variety' viene del libro (L5184, L5200). Leer esa variedad como percepción de riesgos encaja con el contexto de peligros, información pasada por alto y diagnósticos incompletos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7CD64F",
+  "veredicto": "FIEL",
+  "lineas": [
+   5184,
+   5190,
+   5198,
+   5200
+  ],
+  "cita": "Work groups made up of divergent people. ‘A team of divergent individuals has more requisite variety than a team of homogeneous individuals.’",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "Reason, citando a Weick, propone los grupos de trabajo formados por personas diversas para reducir la brecha de variedad requerida entre el sistema y quienes lo controlan: juntando sus observaciones ven más. El término 'requisite variety' viene del libro (L5184, L5200). Leer esa variedad como percepción de riesgos encaja con el contexto de peligros, información pasada por alto y diagnósticos incompletos.",
+  "paso_fiel": ""
+ }
+}

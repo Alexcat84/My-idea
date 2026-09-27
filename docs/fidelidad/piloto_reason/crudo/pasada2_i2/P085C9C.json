@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P085C9C",
+  "intento": 0,
+  "usd": 0.190752,
+  "turnos": 1,
+  "duracion_s": 15.6,
+  "pared_s": 16.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40458,
+  "tokens_out": 1446,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P085C9C\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2259, 2299, 2452], \"cita\": \"The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen--it will certainly help to bring about a substantial reduction in their numbers. [...] 'A process of deliberate, patient, continual refinements'\", \"datos_sin_respaldo\": [], \"razon\": \"El libro no habla de pilotos, pero no se opone: avisa de que los recordatorios no garantizan nada y los enmarca en el kaizen, un refinamiento deliberado y paciente. Comprobar el recordatorio en el trabajo real antes de extenderlo sigue esa misma dirección. No añade cifras, plazos, herramientas, responsables ni frecuencias.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P085C9C",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2259,
+   2299,
+   2452
+  ],
+  "cita": "The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen--it will certainly help to bring about a substantial reduction in their numbers. [...] 'A process of deliberate, patient, continual refinements'",
+  "datos_sin_respaldo": [],
+  "razon": "El libro no habla de pilotos, pero no se opone: avisa de que los recordatorios no garantizan nada y los enmarca en el kaizen, un refinamiento deliberado y paciente. Comprobar el recordatorio en el trabajo real antes de extenderlo sigue esa misma dirección. No añade cifras, plazos, herramientas, responsables ni frecuencias.",
+  "paso_fiel": ""
+ }
+}

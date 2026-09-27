@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P616D00",
+  "intento": 0,
+  "usd": 0.17741600000000002,
+  "turnos": 1,
+  "duracion_s": 8.0,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41119,
+  "tokens_out": 647,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P616D00\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3587, 3589, 3623], \"cita\": \"As before, he created a limited list of generic violation behaviours, each with their associated nominal probabilities for females--unlike errors, there is a large gender effect in non-compliance. For males, the nominal probabilities need to be multiplied by 1.4.\", \"datos_sin_respaldo\": [], \"razon\": \"La Tabla 7.3 existe en el libro y recoge los comportamientos genéricos de violación de Williams. El libro no ordena explícitamente clasificar la violación con ella, pero lo hace por analogía con HEART, cuyo primer paso es emparejar la actividad con una tarea genérica (Tabla 7.2). El paso concreta ese uso en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P616D00",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3395,
+   3587,
+   3589,
+   3623
+  ],
+  "cita": "As before, he created a limited list of generic violation behaviours, each with their associated nominal probabilities for females--unlike errors, there is a large gender effect in non-compliance. For males, the nominal probabilities need to be multiplied by 1.4.",
+  "datos_sin_respaldo": [],
+  "razon": "La Tabla 7.3 existe en el libro y recoge los comportamientos genéricos de violación de Williams. El libro no ordena explícitamente clasificar la violación con ella, pero lo hace por analogía con HEART, cuyo primer paso es emparejar la actividad con una tarea genérica (Tabla 7.2). El paso concreta ese uso en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

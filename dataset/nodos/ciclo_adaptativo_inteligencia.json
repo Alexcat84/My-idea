@@ -9,7 +9,7 @@
     "Recopilar datos internos: capacidad de procesos, COPQ, cultura organizacional, lealtad de empleados",
     "Recopilar datos externos: necesidades del cliente, tendencias tecnológicas, benchmarking competitivo",
     "Interpretar y evaluar la información recolectada",
-    "Referir la información distilada a funciones empoderadas para tomar acción",
+    "Referir la información destilada a funciones empoderadas para tomar acción",
     "Repetir el ciclo de forma periódica y continua"
   ],
   "entregable_esperado": "Reporte periódico de inteligencia organizacional (interno y externo) con hallazgos accionables",
@@ -24,5 +24,24 @@
     "Cuando se requiere monitoreo continuo del entorno para sostener ventaja competitiva",
     "Si la organización carece de un sistema estructurado de detección de amenazas y oportunidades"
   ],
-  "etiqueta_arbol": "Detecta y Adapta tu Entorno"
+  "etiqueta_arbol": "Detecta y Adapta tu Entorno",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0610",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Referir la información distilada a funciones empoderadas para tomar acción",
+      "texto_nuevo": "Referir la información destilada a funciones empoderadas para tomar acción",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-009.paso3: destilada (Distilada es una errata: el verbo correcto es destilar.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

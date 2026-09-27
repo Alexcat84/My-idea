@@ -23,7 +23,7 @@
     "cultura_de_optimismo"
   ],
   "condiciones_activacion": [
-    "Si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+    "Si vendes en Francia productos electrónicos, donde desde 2021 debes puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
     "Si tu producto se puede romper o está pensado para volverse obsoleto.",
     "Si quieres diferenciarte por cuidar el ambiente o reducir la basura que generas."
   ],
@@ -36,6 +36,25 @@
       "node_id": "diseno_reparabilidad_cultura_arreglo",
       "titulo": "Diseñar para la Reparabilidad: Índice de Reparabilidad",
       "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+    }
+  ],
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-109",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+      "texto_nuevo": "Si vendes en Francia productos electrónicos, donde desde 2021 debes puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-007: Clase C sin mención de operar o vender en Francia. (lector y verificador de acuerdo) Motivo: Clase C Francia: ninguna condición dice que el nodo aplica si fabricas o vendes en Francia, donde el índice es obligatorio."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

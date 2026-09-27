@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Orgullo por el Trabajo (Pride of Workmanship)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming sostiene que la posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeno injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeno mejora drasticamente.",
+  "resumen_teorico": "La posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeno injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeno mejora drasticamente.",
   "pasos_accionables": [
-    "Hablar directamente con las personas que hacen el trabajo día a día para identificar que barreras concretas les impiden hacerlo bien",
+    "Hablar directamente con las personas que hacen el trabajo día a día para identificar qué barreras concretas les impiden hacerlo bien",
     "Crear una forma simple para que quien trabaja contigo pueda reportar fallas de herramientas o materiales, y asegurarte de darle seguimiento real",
-    "Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales",
-    "Si alguien supervisa a otros, asegurarte de que conozca bien el trabajo tecnico que supervisa, no solo el trato humano",
-    "Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacia",
-    "Armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros"
+    "Eliminar evaluaciones que generen miedo y no reflejen cómo funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales",
+    "Si alguien supervisa a otros, asegurarte de que conozca bien el trabajo técnico que supervisa, no solo el trato humano",
+    "Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacía",
+    "Sugerencia de My Idea: armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros."
   ],
   "entregable_esperado": "Un sistema de reporte y seguimiento de problemas operativos con evidencia de acciones tomadas sobre las quejas de las personas que trabajan contigo",
   "nodos_previos": [
@@ -21,8 +21,7 @@
   ],
   "nodos_siguientes": [
     "fomento_educacion_autoeducacion",
-    "enfermedades_mortales_gestion",
-    "analisis_causa_raiz_despido_ejecutivo"
+    "enfermedades_mortales_gestion"
   ],
   "condiciones_activacion": [
     "Cuando existe alto ausentismo o rotación entre las personas que trabajan contigo",
@@ -40,5 +39,112 @@
       "titulo": "Eliminación de Barreras al Orgullo del Trabajo",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-048",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros",
+      "texto_nuevo": "Sugerencia de My Idea: armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L3488-L3488",
+        "frase": "What is your plan and what are you doing about it for removal of barriers that rob the hourly worker of his pride of workmanship?"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B en el veredicto. El libro respalda tener un plan para quitar las barreras (L3488) y que eso lleva anos (L3261: cinco anos, y diez en muchas empresas). Pero no dice como armar ese plan. Busque deadline, timetable y responsible en todo el libro, y no aparece nada sobre repartir responsables ni fijar plazos para quitar estas barreras. Pedir 'responsables y plazos claros' impone un formato de gestion que el libro no da. Como no fija una cifra concreta, es un anadido practico.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-037"
+    },
+    {
+      "id": "atribucion-128",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming sostiene que la posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeno injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeno mejora drasticamente.",
+      "texto_nuevo": "La posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeno injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeno mejora drasticamente.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming sostiene que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-097",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "orgullo_por_el_trabajo -> analisis_causa_raiz_despido_ejecutivo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-05-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Pasar de las barreras al orgullo por el trabajo (Deming) a la causa raiz de despedir a un ejecutivo no es una continuacion natural. Solo los une una idea sistemica vaga, y ninguno de los dos textos la desarrolla hacia el otro. La correccion solo marco un paso como sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0087",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hablar directamente con las personas que hacen el trabajo día a día para identificar que barreras concretas les impiden hacerlo bien",
+      "texto_nuevo": "Hablar directamente con las personas que hacen el trabajo día a día para identificar qué barreras concretas les impiden hacerlo bien",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-028.paso0: qué ('qué' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0088",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales",
+      "texto_nuevo": "Eliminar evaluaciones que generen miedo y no reflejen cómo funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-028.paso2: cómo ('cómo' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0089",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si alguien supervisa a otros, asegurarte de que conozca bien el trabajo tecnico que supervisa, no solo el trato humano",
+      "texto_nuevo": "Si alguien supervisa a otros, asegurarte de que conozca bien el trabajo técnico que supervisa, no solo el trato humano",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-028.paso3: técnico (Falta la tilde en 'técnico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0090",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacia",
+      "texto_nuevo": "Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacía",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-028.paso4: vacía (Falta la tilde en 'vacía'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

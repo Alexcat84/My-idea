@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P767674",
+  "intento": 0,
+  "usd": 0.251936,
+  "turnos": 1,
+  "duracion_s": 11.0,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58279,
+  "tokens_out": 941,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P767674\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4318, 4388], \"cita\": \"Both of these functions are strongly influenced by what the technology or the society regards as safe enough. [...] it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro no pide literalmente justificar la elección del enfoque. Sí dice que lo 'seguro' depende de lo que la sociedad considera aceptable y que el operador debe demostrar ante el regulador, y ante trabajadores y público, que sus riesgos están identificados y controlados (Safety Case). Rendir cuentas a partes interesadas y reguladores va en esa dirección. No contradice el deber legal ALARP ni añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P767674",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4318,
+   4388
+  ],
+  "cita": "Both of these functions are strongly influenced by what the technology or the society regards as safe enough. [...] it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro no pide literalmente justificar la elección del enfoque. Sí dice que lo 'seguro' depende de lo que la sociedad considera aceptable y que el operador debe demostrar ante el regulador, y ante trabajadores y público, que sus riesgos están identificados y controlados (Safety Case). Rendir cuentas a partes interesadas y reguladores va en esa dirección. No contradice el deber legal ALARP ni añade datos.",
+  "paso_fiel": ""
+ }
+}

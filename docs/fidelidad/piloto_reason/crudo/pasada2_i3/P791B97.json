@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P791B97",
+  "intento": 0,
+  "usd": 0.162504,
+  "turnos": 1,
+  "duracion_s": 7.8,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38031,
+  "tokens_out": 519,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P791B97\", \"veredicto\": \"FIEL\", \"lineas\": [2750, 2702, 2520], \"cita\": \"What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"L2750 pide muestrear cada una de las seis dimensiones, que coinciden exactamente con las del paso. 'Periódicamente' está respaldado por 'regular assessments' (L2702) y 'on a regular basis' (L2520). Omitir el propósito remedial no invierte el libro, y otro paso del nodo lo cubre.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P791B97",
+  "veredicto": "FIEL",
+  "lineas": [
+   2750,
+   2702,
+   2520
+  ],
+  "cita": "What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "L2750 pide muestrear cada una de las seis dimensiones, que coinciden exactamente con las del paso. 'Periódicamente' está respaldado por 'regular assessments' (L2702) y 'on a regular basis' (L2520). Omitir el propósito remedial no invierte el libro, y otro paso del nodo lo cubre.",
+  "paso_fiel": ""
+ }
+}

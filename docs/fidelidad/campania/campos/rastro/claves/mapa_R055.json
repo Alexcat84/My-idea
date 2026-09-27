@@ -1,0 +1,313 @@
+{
+ "R055-001": {
+  "real": true,
+  "node_id": "eco_eficiencia",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-002": {
+  "real": true,
+  "node_id": "eficiencia_hidrica_edificios_2",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-003": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Reducción del Papel y Optimización de Impresoras en la Oficina",
+   "etiqueta": "Imprime Menos, Gasta Menos",
+   "resumen": "Buena parte de lo que se imprime en una oficina se descarta enseguida: según Xerox, más del 40% de las impresiones se tira en menos de 24 horas. Configurar la impresión a doble cara por defecto, usar herramientas que imprimen solo lo necesario y exigir PIN o tarjeta para recoger los trabajos en impresoras compartidas reduce el papel y los costos. Además, sustituir equipos viejos por menos dispositivos multifunción más eficientes ataca el problema de impresoras que pasan cerca del 98% del tiempo inactivas pero consumiendo energía.",
+   "entregable": "Una política de impresión con doble cara por defecto, liberación por PIN o tarjeta en impresoras compartidas e indicadores de seguimiento del consumo de papel con responsables asignados",
+   "condiciones": [
+    "Si la oficina supera las 10.000 páginas impresas al mes",
+    "Si hay muchas impresoras individuales o equipos antiguos poco eficientes"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "condiciones",
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2335-2343",
+   "cita": "Measure paper flow and set targets to reduce paper use and increase re-use and recycling.",
+   "dato": "Si la oficina supera las 10.000 páginas impresas al mes",
+   "explicacion": "El libro recomienda medir el flujo de papel y fijar metas para cualquier empresa (\"Every company has documents that don't need to be printed.\", línea 2335), pero no da ningún umbral de páginas al mes para activar estas medidas. El Grep de \"10,000 pages\", \"pages a month\" y \"pages per month\" solo encuentra la línea 3171, que habla de estimar las páginas al mes sin fijar ningún umbral. La cifra de 10.000 páginas al mes se inventó."
+  }
+ },
+ "R055-004": {
+  "real": true,
+  "node_id": "desmaterializacion_producto_servicio",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-005": {
+  "real": true,
+  "node_id": "dialogo_con_stakeholders",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-006": {
+  "real": true,
+  "node_id": "especificacion_vehiculos_eficientes",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-007": {
+  "real": true,
+  "node_id": "cultura_reduce_reuse_recycle",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-008": {
+  "real": true,
+  "node_id": "equipos_multifuncionales_dfe",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-009": {
+  "real": true,
+  "node_id": "estrategia_recoleccion_datos_carbono",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-010": {
+  "real": true,
+  "node_id": "eficiencia_energetica_almacenes",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-011": {
+  "real": true,
+  "node_id": "evaluacion_actitudes_empleados",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-012": {
+  "real": true,
+  "node_id": "evaluar_impacto_ecosistemas_biodiversidad",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-013": {
+  "real": true,
+  "node_id": "establecer_metas_reduccion_emisiones",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-014": {
+  "real": true,
+  "node_id": "employee_mobilization_sostenibilidad",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-015": {
+  "real": true,
+  "node_id": "estrategia_comunicacion_sostenibilidad",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-016": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Reducción del Ralentí en la Flota",
+   "etiqueta": "Apaga el Motor en las Esperas",
+   "resumen": "Mantener el motor encendido con el vehículo detenido desperdicia combustible y genera emisiones sin ningún beneficio. Como regla práctica, apagar el motor solo compensa cuando la espera va a superar un minuto; por debajo de eso, reiniciar consume más que dejarlo en marcha. Puedes reducir el ralentí con políticas de no ralentí, zonas de no ralentí en áreas de carga donde es habitual dejar el motor encendido y dispositivos que dan calefacción, aire acondicionado y electricidad con el motor apagado.",
+   "entregable": "Una política de no ralentí con zonas definidas en las áreas de carga y un plan de instalación de dispositivos de reducción de ralentí",
+   "condiciones": [
+    "Si la empresa opera una flota propia con esperas frecuentes en zonas de carga",
+    "Si buscas un ahorro de combustible de bajo costo sin renovar vehículos"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "4819",
+   "cita": "According to the Environmental Defense Fund, idling for over 10 seconds uses more gas and emits more global warming pollution than restarting a vehicle.",
+   "dato": "apagar el motor solo compensa cuando la espera va a superar un minuto; por debajo de eso, reiniciar consume más que dejarlo en marcha",
+   "explicacion": "El libro da el umbral de 10 segundos: a partir de ahí el ralentí gasta más que reiniciar. El resumen lo sube a un minuto y afirma que por debajo de eso conviene dejar el motor en marcha, lo contrario de lo que dice el libro para esperas de entre 10 y 60 segundos."
+  }
+ },
+ "R055-017": {
+  "real": true,
+  "node_id": "formar_consejo_asesor_sostenibilidad",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-018": {
+  "real": true,
+  "node_id": "definir_limites_huella_carbono",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-019": {
+  "real": true,
+  "node_id": "diseno_para_el_medio_ambiente",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-020": {
+  "real": true,
+  "node_id": "dar_forma_politica_climatica",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-021": {
+  "real": true,
+  "node_id": "cuestionar_supuestos_financieros",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-022": {
+  "real": true,
+  "node_id": "eventos_reuniones_verdes",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-023": {
+  "real": true,
+  "node_id": "crecimiento_ingresos_verdes",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-024": {
+  "real": true,
+  "node_id": "estrategia_proactiva_ambiental",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-025": {
+  "real": true,
+  "node_id": "cumplimiento_normativo_ambiental",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-026": {
+  "real": true,
+  "node_id": "evaluar_huella_hidrica",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-027": {
+  "real": true,
+  "node_id": "dialogo_proveedores",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-028": {
+  "real": true,
+  "node_id": "expandir_cadena_valor",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-029": {
+  "real": true,
+  "node_id": "deteccion_temprana_regulatoria",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-030": {
+  "real": true,
+  "node_id": "enfoque_portafolio_sostenibilidad",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-031": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Diagnóstico de Actitudes del Equipo hacia la Sostenibilidad",
+   "etiqueta": "Escucha a tu Equipo Primero",
+   "resumen": "Antes de cerrar tu estrategia de compromiso de empleados, evalúa con cuidado lo que piensa tu equipo sobre el medio ambiente y la sostenibilidad, sin dar por hecho que ya lo sabes. Usa entrevistas, recorridos, encuestas anónimas, reuniones pequeñas o asambleas para conocer las reacciones a palabras como 'verde' o 'sostenibilidad', detectar a los escépticos y ver cómo conectan estos temas con su trabajo diario. Repite la encuesta cada seis meses para seguir la evolución de las actitudes.",
+   "entregable": "Un informe de diagnóstico que identifique posibles líderes, focos de apatía o resistencia y los temas o iniciativas que más resuenan en el equipo",
+   "condiciones": [
+    "Antes de definir las metas y los canales de tu estrategia de compromiso de empleados"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "6566",
+   "cita": "Before making final decisions about your employee engagement strategy, we recommend doing a careful assessment of attitudes across your company about the environment and sustainability.",
+   "dato": "Repite la encuesta cada seis meses para seguir la evolución de las actitudes",
+   "explicacion": "El libro pide una evaluación cuidadosa de las actitudes antes de decidir la estrategia, pero no fija ninguna periodicidad para repetirla. El Grep de \"six months\", \"semiannual\" y \"twice a year\" solo encuentra contextos ajenos: la formación de conductores de Novo Nordisk (línea 1014), el comité asesor de Coca-Cola (línea 6173) y el foro de Cisco (línea 6672). El plazo semestral se inventó."
+  }
+ },
+ "R055-032": {
+  "real": true,
+  "node_id": "evitar_greenwashing",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-033": {
+  "real": true,
+  "node_id": "estrategia_ti_verde",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-034": {
+  "real": true,
+  "node_id": "deteccion_ineficiencias_ti",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-035": {
+  "real": true,
+  "node_id": "draft_plan_accion_climatico",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-036": {
+  "real": true,
+  "node_id": "establecimiento_metas_publicas",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-037": {
+  "real": true,
+  "node_id": "eficiencia_flota_vehicular",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-038": {
+  "real": true,
+  "node_id": "estandarizar_metodologia_lca",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-039": {
+  "real": true,
+  "node_id": "empaque_ecoeficiente",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-040": {
+  "real": true,
+  "node_id": "estrategia_edificios_verdes",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-041": {
+  "real": true,
+  "node_id": "diseno_mensaje_verde",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-042": {
+  "real": true,
+  "node_id": "formalizar_alianza_estrategica",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-043": {
+  "real": true,
+  "node_id": "dialogo_stakeholders",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-044": {
+  "real": true,
+  "node_id": "energia_fuentes_limpias",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-045": {
+  "real": true,
+  "node_id": "estrategia_eco_advantage",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-046": {
+  "real": true,
+  "node_id": "eliminacion_desperdicio_lean_green",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-047": {
+  "real": true,
+  "node_id": "definicion_metas_engagement",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-048": {
+  "real": true,
+  "node_id": "eco_advantage",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty"
+ },
+ "R055-049": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Fijar Metas Públicas e Internas de Reducción de Emisiones",
+   "etiqueta": "Separa Metas Públicas e Internas",
+   "resumen": "Una vez que identificas de dónde vienen tus emisiones, el siguiente paso es fijar metas de reducción que estiren a la organización pero sigan siendo realistas. Las metas adecuadas varían mucho según tu industria, tu capacidad y tu posición en el mercado. No alcanzar una meta no tiene por qué ser una crisis, pero sí exige una explicación: tienes que ser franco sobre el déficit y explicar qué salió mal.",
+   "entregable": "Un documento de metas en el que las metas de largo plazo y más ambiciosas se anuncian públicamente y las metas de corto plazo quedan como referencia interna del equipo",
+   "condiciones": [
+    "Si ya tienes un inventario de emisiones y vas a anunciar tus primeros compromisos de reducción"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "entregable",
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "6283",
+   "cita": "Set your short-term and publicly announced targets with an eye toward success. Missing a target does not need to produce a crisis but does require some explanation. It is critical to be forthright about the shortfall and explain what went wrong. Longer-term and more ambitious targets can inspire more transformational thinking",
+   "dato": "las metas de largo plazo y más ambiciosas se anuncian públicamente y las metas de corto plazo quedan como referencia interna del equipo",
+   "explicacion": "El libro dice que las metas públicas son las de corto plazo, fijadas pensando en cumplirlas, y la misma frase sigue diciendo que las de largo plazo y más ambiciosas quizá sea mejor guardarlas dentro de la empresa. El entregable invierte el reparto: publica las ambiciosas de largo plazo y deja las de corto plazo como internas."
+  }
+ }
+}

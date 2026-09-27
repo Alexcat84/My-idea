@@ -18,12 +18,45 @@
   ],
   "nodos_siguientes": [
     "metodos_de_pronostico",
-    "gestion_rationing_shortage_gaming"
+    "gestion_rationing_shortage_gaming",
+    "mitigacion_efecto_latigo",
+    "sales_operations_planning"
   ],
   "condiciones_activacion": [
     "Cuando se necesita planificar inventario, producción o compras",
     "Si el negocio enfrenta alta variabilidad de demanda o mercado nuevo",
     "Antes de definir metas de ventas o producción para el siguiente período"
   ],
-  "etiqueta_arbol": "Analiza las Cuatro Variables Clave"
+  "etiqueta_arbol": "Analiza las Cuatro Variables Clave",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-040",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "pronostico_de_demanda_variables -> mitigacion_efecto_latigo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C08, lectores de acuerdo)",
+        "motivo": "El primer factor del efecto latigo es un pronostico mal basado, asi que se llega tras entender el pronostico de demanda."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "mv-arista-044",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "pronostico_de_demanda_variables -> sales_operations_planning",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C12, lectores de acuerdo)",
+        "motivo": "El S&OP equilibra oferta y demanda agregadas, lo que parte de entender el pronostico de demanda; se evita proceso_sop_mop por ser casi duplicado."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

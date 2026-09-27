@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P6A9804",
+  "intento": 0,
+  "usd": 0.16536800000000001,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37072,
+  "tokens_out": 854,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6A9804\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5894, 5896], \"cita\": \"Recent studies have shown that crisis-prepared organizations plan for at least five different types of crisis, and the crisis plans are closely linked to business recovery plans.\", \"datos_sin_respaldo\": [], \"razon\": \"La cifra 'al menos cinco tipos' está en el libro. Allí aparece como rasgo observado de las organizaciones preparadas para crisis, dentro de la recomendación de planificar la recuperación (L5894). El paso lo convierte en pauta en la misma dirección y añade 'relevantes al negocio', que concreta sin aportar datos nuevos. No hay contradicción ni dato sin respaldo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6A9804",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5894,
+   5896
+  ],
+  "cita": "Recent studies have shown that crisis-prepared organizations plan for at least five different types of crisis, and the crisis plans are closely linked to business recovery plans.",
+  "datos_sin_respaldo": [],
+  "razon": "La cifra 'al menos cinco tipos' está en el libro. Allí aparece como rasgo observado de las organizaciones preparadas para crisis, dentro de la recomendación de planificar la recuperación (L5894). El paso lo convierte en pauta en la misma dirección y añade 'relevantes al negocio', que concreta sin aportar datos nuevos. No hay contradicción ni dato sin respaldo.",
+  "paso_fiel": ""
+ }
+}

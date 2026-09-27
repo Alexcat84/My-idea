@@ -7,7 +7,7 @@
   "resumen_teorico": "Esta es una figura del derecho estadounidense (Magnuson-Moss Warranty Act) sobre garantías de productos. Antes de que un cliente te demande por incumplir la garantía, puedes ofrecerle un mecanismo informal para resolver el reclamo, como conciliación, mediación o arbitraje, gestionado por un tercero imparcial (por ejemplo, el Better Business Bureau) o por alguien de tu propio negocio dedicado a esto. Si decides exigir que el cliente use este mecanismo antes de poder demandarte, la ley te obliga a cumplir reglas de la FTC (Dispute Resolution Rule): debe ser gratuito para el cliente, imparcial, con procedimientos escritos, resolver en 40 días y someterse a auditoría anual. Los conceptos son útiles en cualquier país, pero confirma la norma vigente donde vendes.",
   "pasos_accionables": [
     "Decide si vas a ofrecer un mecanismo informal de resolución de disputas.",
-    "Si quieres exigirlo como paso previo a que el cliente te demande, diseñalo cumpliendo los estándares de la Dispute Resolution Rule (gratuito, imparcial, con plazos y auditoría).",
+    "Si quieres exigirlo como paso previo a que el cliente te demande, diséñalo cumpliendo los estándares de la Dispute Resolution Rule (gratuito, imparcial, con plazos y auditoría).",
     "Documenta los procedimientos por escrito y capacita a alguien de tu equipo, o contrata un tercero (por ejemplo, el Better Business Bureau) para administrarlo.",
     "Explica este mecanismo dentro del texto de tu garantía."
   ],
@@ -15,13 +15,43 @@
   "nodos_previos": [
     "regla_divulgacion_garantia"
   ],
-  "nodos_siguientes": [
-    "contract_close_out"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si vendes, o piensas vender, productos con garantía a clientes en Estados Unidos.",
     "Cuando quieres reducir el riesgo de juicios costosos por reclamos de garantía.",
     "Cuando tienes muchos clientes y esperas reclamos frecuentes."
   ],
-  "etiqueta_arbol": "Resuelve Disputas de Garantía Antes"
+  "etiqueta_arbol": "Resuelve Disputas de Garantía Antes",
+  "fuentes_internas": [
+    "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0447",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si quieres exigirlo como paso previo a que el cliente te demande, diseñalo cumpliendo los estándares de la Dispute Resolution Rule (gratuito, imparcial, con plazos y auditoría).",
+      "texto_nuevo": "Si quieres exigirlo como paso previo a que el cliente te demande, diséñalo cumpliendo los estándares de la Dispute Resolution Rule (gratuito, imparcial, con plazos y auditoría).",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-030.paso1: diséñalo (Diséñalo es esdrújula con enclítico y lleva tilde; el término en inglés no se toca.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "mv-arista-025",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mecanismo_resolucion_disputas -> contract_close_out",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A37, lectores de acuerdo)",
+        "motivo": "Las disputas de garantia con consumidores no tienen relacion con el cierre de contratos con proveedores."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
+  ]
 }

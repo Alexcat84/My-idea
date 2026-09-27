@@ -1,6 +1,6 @@
 {
   "node_id": "falta_de_constancia_de_proposito",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Falta de Constancia de Propósito (La Enfermedad Más Incapacitante)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -17,8 +17,7 @@
     "enfermedades_mortales_gestion"
   ],
   "nodos_siguientes": [
-    "enfasis_en_utilidades_corto_plazo",
-    "ejecucion_rapida_de_despidos"
+    "enfasis_en_utilidades_corto_plazo"
   ],
   "condiciones_activacion": [
     "Cuando tomas decisiones guiadas únicamente por resultados de corto plazo o del mes",
@@ -34,6 +33,37 @@
       "node_id": "falta_de_constancia_de_proposito_2",
       "titulo": "Falta de Constancia de Propósito (Ausencia de Plan a Largo Plazo)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-056",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "falta_de_constancia_de_proposito -> ejecucion_rapida_de_despidos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-24-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La falta de constancia de proposito (enfermedad mortal de Deming) no prepara la ejecucion rapida de un despido ya decidido; no hay continuidad entre los dos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-165",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-021: Define un propósito de largo plazo y un presupuesto para investigación y capacitación; es estrategia y recursos, no exploración de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ]
 }

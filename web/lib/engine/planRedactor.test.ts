@@ -169,7 +169,7 @@ describe("corregirCoherenciaCobertura: 3a reincidencia del bug etiqueta/contenid
       es_completa: false,
       tiene_accion_clientes: true,
       tiene_viabilidad_economica: false,
-      familias_faltantes: ["si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)"],
+      familias_faltantes: ["si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)"],
     };
     const eventos: Record<string, unknown>[] = [];
     const corregida = corregirCoherenciaCobertura(evaluacionMala, cuerpo, true, (e) => eventos.push(e));
@@ -239,16 +239,29 @@ describe("verificarProcedenciaEtapas (Fase 3.1): cada id declarado por etapa deb
 
 describe("ensamblarOffline / extraerTitulo", () => {
   const material: MaterialNodo[] = [
-    { id: "fundamentos_test", concepto: "Fundamentos", pasos: ["paso uno", "paso dos"], entregable: "un documento", es_viabilidad_economica: false },
+    { id: "fundamentos_test", concepto: "Customer Development según Blank", etiqueta: "Fundamentos", pasos: ["paso uno", "paso dos"], entregable: "un documento", es_viabilidad_economica: false },
   ];
 
   it("arma un markdown con etapas y pasos numerados", () => {
     const md = ensamblarOffline(material, "perfil x", "mi idea original");
-    expect(md).toContain("# Tu plan de accion");
+    expect(md).toContain("# Tu plan de acción");
     expect(md).toContain("Punto de partida: mi idea original");
     expect(md).toContain("## Etapa 1: Fundamentos");
+    // REGLA ESTRICTA (fundador, 26 sep 2026): el plan sin IA nombra la etapa por su etiqueta, nunca por el titulo.
+    expect(md).not.toContain("Customer Development");
+    expect(md).not.toContain("Blank");
     expect(md).toContain("1.1 paso uno");
     expect(md).toContain("Punto de control: un documento");
+  });
+
+  it("cada etapa lleva su Primera acción sin fecha (decisión del fundador, 26 sep 2026)", () => {
+    // A MANO: la etapa 1 (Fundamentos) arranca por su primer paso, "paso uno",
+    // con el marcador neutro; nada de "Esta semana".
+    const md = ensamblarOffline(material, "perfil x", "mi idea original");
+    expect(md).toContain("**Primera acción:** paso uno");
+    expect(md).not.toContain("Esta semana");
+    // En coreano, el marcador también nace neutro (la pantalla lo pinta).
+    expect(ensamblarOffline(material, null, "", "ko")).toContain("**Primera acción:** paso uno");
   });
 
   it("extraerTitulo toma la primera linea que empieza con '# '", () => {
@@ -301,7 +314,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
     const resultado = finalizarPlan(rawModelo, prep, ruta, families, "mi idea");
     expect(resultado.evaluacionCobertura.es_completa).toBe(true);
     expect(resultado.markdown).toContain("_Plan completo_");
-    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("Lo que este plan aún no cubre");
     expect(resultado.markdown).toContain("# Mi Plan");
   });
 
@@ -313,14 +326,14 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
     const resultado = finalizarPlan(rawModelo, prep, ruta, families, "mi idea");
     expect(resultado.evaluacionCobertura.es_completa).toBe(false);
     expect(resultado.markdown).toContain("_Plan inicial_");
-    expect(resultado.markdown).toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).toContain("Lo que este plan aún no cubre");
   });
 
   it("rawTextoModelo=null usa el respaldo offline con el material principal", () => {
     const ruta = ["design_thinking_fundamentos"];
     const prep = prepararPlan(ruta, graph, families, "mi idea", "perfil", null, false, null);
     const resultado = finalizarPlan(null, prep, ruta, families, "mi idea");
-    expect(resultado.markdown).toContain("# Tu plan de accion");
+    expect(resultado.markdown).toContain("# Tu plan de acción");
   });
 
   it("Hotfix v2.2.1 4(a): con el bloque ===JSON=== ausente por completo, las familias se derivan de los encabezados y la etiqueta es correcta", () => {
@@ -335,7 +348,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
 
     expect(resultado.evaluacionCobertura.es_completa).toBe(true);
     expect(resultado.markdown).toContain("_Plan completo_");
-    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("Lo que este plan aún no cubre");
     expect(resultado.markdown).not.toContain("===JSON===");
     expect(eventos).toContainEqual({ tipo: "autodeclaracion_fallida" });
   });
@@ -353,7 +366,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
 
     expect(resultado.evaluacionCobertura.es_completa).toBe(true);
     expect(resultado.markdown).toContain("_Plan completo_");
-    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("Lo que este plan aún no cubre");
     expect(resultado.markdown).not.toContain("===JSON===");
     expect(resultado.markdown).not.toContain("familias_tratadas");
     expect(eventos).toContainEqual({ tipo: "autodeclaracion_fallida" });
@@ -391,5 +404,49 @@ describe("comprimirEstadoVivo", () => {
     const cliente = { messages: { create } };
     const r = await comprimirEstadoVivo(cliente as never, null, "perfil nuevo", [], usoVacio());
     expect(r.estadoVivo).toBe("perfil nuevo");
+  });
+});
+
+// i18n F5 (DISENO §5): el plan se GUARDA con los marcadores neutros (los
+// rótulos de estructura en español) y el contenido en el idioma de la idea.
+// Si la IA tradujo un rótulo, vuelve al neutro antes de guardar; lo que arma
+// el código (la etiqueta, el encabezado de lo que falta, las etapas del plan
+// sin IA) nace neutro.
+import { textosFamiliaFaltante as familiaFaltanteI18n } from "./constants";
+
+describe("finalizarPlan y ensamblarOffline: marcadores neutros (i18n F5)", () => {
+  const ruta = ["design_thinking_fundamentos"];
+
+  it("rótulos traducidos por la IA vuelven al neutro; la etiqueta y lo que falta, neutros con el contenido en coreano", () => {
+    const prep = prepararPlan(ruta, graph, families, "idea", "perfil", null, false, null);
+    const raw = "# 계획\n\n## 1단계: 수요 확인\n\n**이번 주:** 전화하세요.\n\n" + '===JSON===\n{"familias_tratadas": ["accion_clientes"]}';
+    const r = finalizarPlan(raw, prep, ruta, families, "idea", undefined, undefined, "ko");
+    expect(r.markdown).toContain("## Etapa 1: 수요 확인");
+    // "이번 주" es la traducción del rótulo VIEJO: se guarda con el nuevo (26 sep 2026).
+    expect(r.markdown).toContain("**Primera acción:** 전화하세요.");
+    expect(r.markdown.startsWith("_Plan inicial_")).toBe(true);
+    expect(r.markdown).toContain("## Lo que este plan aún no cubre");
+    // El contenido de lo que falta sí va en el idioma de la idea.
+    expect(r.markdown).toContain(`- ${familiaFaltanteI18n("ko").viabilidad_economica}`);
+  });
+
+  it("el plan sin IA en coreano: etapas con el marcador neutro, el resto en coreano", () => {
+    const material: MaterialNodo[] = [
+      { id: "x", concepto: "Fundamentos", etiqueta: "기초", pasos: ["하나"], entregable: "문서", es_viabilidad_economica: false },
+    ];
+    const md = ensamblarOffline(material, null, "", "ko");
+    expect(md).toContain("## Etapa 1: 기초");
+    expect(md).not.toContain("1단계");
+  });
+});
+
+describe("el detector de acentos solo mira planes en español (i18n F5)", () => {
+  it("un plan en portugués con 'analise' no deja el evento salida_sin_acentos", () => {
+    const ruta = ["design_thinking_fundamentos"];
+    const prep = prepararPlan(ruta, graph, families, "ideia", "perfil", null, false, null);
+    const raw = "# Plano\n\n## Etapa 1: Faça a analise do mercado e a logica dos numeros\n\nConteúdo." + '\n===JSON===\n{"familias_tratadas": []}';
+    const eventos: Record<string, unknown>[] = [];
+    finalizarPlan(raw, prep, ruta, families, "ideia", (e) => eventos.push(e), undefined, "pt");
+    expect(eventos.some((e) => e.tipo === "salida_sin_acentos")).toBe(false);
   });
 });

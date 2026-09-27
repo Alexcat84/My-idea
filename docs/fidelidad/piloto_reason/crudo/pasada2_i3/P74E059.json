@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P74E059",
+  "intento": 0,
+  "usd": 0.192528,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43797,
+  "tokens_out": 867,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P74E059\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5174, 5178, 5208], \"cita\": \"possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. […] neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que ante picos de ritmo o ciertos peligros la jerarquía cede ante la pericia técnica, y que reglas y jerarquía no bastan en emergencias sin precedente. Identificar esas situaciones concreta esa idea. El paso no pide eliminar la jerarquía ni niega que la cultura disciplinada previa sea condición del éxito (L5208). No añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P74E059",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5164,
+   5174,
+   5178,
+   5208
+  ],
+  "cita": "possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. […] neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que ante picos de ritmo o ciertos peligros la jerarquía cede ante la pericia técnica, y que reglas y jerarquía no bastan en emergencias sin precedente. Identificar esas situaciones concreta esa idea. El paso no pide eliminar la jerarquía ni niega que la cultura disciplinada previa sea condición del éxito (L5208). No añade datos.",
+  "paso_fiel": ""
+ }
+}

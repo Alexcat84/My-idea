@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P123778",
+  "intento": 0,
+  "usd": 0.181092,
+  "turnos": 1,
+  "duracion_s": 8.7,
+  "pared_s": 10.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42313,
+  "tokens_out": 592,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P123778\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4435, 4448], \"cita\": \"What regulators often lack, however, are the tools, training and the resources to confront the all-important human and organizational factors and to monitor the insidious accumulation of the latent conditions\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro constata que a los reguladores les faltan pericia, herramientas y formación en factores humanos y organizacionales (L4435, L4448). Identificar esa brecha concreta el diagnóstico en la misma dirección. El paso no propone contratar expertos ni alcanzar el ratio 80:20, que es lo que el libro matiza. 'Regulador' es el actor del propio texto, no un dato añadido.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P123778",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4435,
+   4448
+  ],
+  "cita": "What regulators often lack, however, are the tools, training and the resources to confront the all-important human and organizational factors and to monitor the insidious accumulation of the latent conditions",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro constata que a los reguladores les faltan pericia, herramientas y formación en factores humanos y organizacionales (L4435, L4448). Identificar esa brecha concreta el diagnóstico en la misma dirección. El paso no propone contratar expertos ni alcanzar el ratio 80:20, que es lo que el libro matiza. 'Regulador' es el actor del propio texto, no un dato añadido.",
+  "paso_fiel": ""
+ }
+}

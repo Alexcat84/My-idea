@@ -1,17 +1,17 @@
 {
   "node_id": "critica_ground_truth_investigacion",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "No Existe una 'Verdad Absoluta' en la Investigación",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Cuando analizas algo que salió mal, no tienes acceso a una verdad objetiva contra la cual medir lo que entendia la persona que tomo la decision en ese momento. Toda mirada es subjetiva y depende de donde estas parado. Tu, analizando después y ya sabiendo como termino todo, crees tener una vision objetiva, pero es tan limitada como la de quien actuo sin saber el desenlace. No existe una mirada neutral desde ningun lugar.",
   "pasos_accionables": [
-    "Reconoce que tu mirada al analizar lo ocurrido es subjetiva y esta influida porque ya sabes como termino (conocimiento retrospectivo)",
-    "Evita comparar lo que sabes ahora con lo que sabia la persona que decidio en ese momento",
-    "Esfuerzate por reconstruir la situacion desde adentro, es decir, desde la posicion de quien decidio antes de conocer el resultado",
-    "Deja por escrito, de forma explicita, las limitaciones de tu propia mirada al analizar lo sucedido"
+    "Reconoce que tu mirada al analizar lo ocurrido es subjetiva y está influida porque ya sabes cómo terminó (conocimiento retrospectivo)",
+    "Evita comparar lo que sabes ahora con lo que sabía la persona que decidió en ese momento",
+    "Esfuérzate por reconstruir la situación desde adentro, es decir, desde la posición de quien decidió antes de conocer el resultado",
+    "Deja por escrito, de forma explícita, las limitaciones de tu propia mirada al analizar lo sucedido"
   ],
-  "entregable_esperado": "Un marco de análisis que reconozca explicitamente que tu mirada es subjetiva y evite usar una 'verdad objetiva' como punto de comparacion",
+  "entregable_esperado": "Un marco de análisis que reconozca explícitamente que tu mirada es subjetiva y evite usar una 'verdad objetiva' como punto de comparación",
   "nodos_previos": [
     "identificacion_eventos_datos"
   ],
@@ -24,5 +24,92 @@
     "Cuando evaluas en retrospectiva una decision tomada por ti o por alguien mas",
     "Si crees tener una vision objetiva de los hechos al analizarlos"
   ],
-  "etiqueta_arbol": "Duda de la Verdad Absoluta"
+  "etiqueta_arbol": "Duda de la Verdad Absoluta",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-034",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q075-017: Analizar en retrospectiva algo que ya salio mal es control y mejora de lo que funciona, no planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0773",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que tu mirada al analizar lo ocurrido es subjetiva y esta influida porque ya sabes como termino (conocimiento retrospectivo)",
+      "texto_nuevo": "Reconoce que tu mirada al analizar lo ocurrido es subjetiva y está influida porque ya sabes cómo terminó (conocimiento retrospectivo)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-007.paso0: está, cómo, terminó (Tildes que faltaban de verdad en está, cómo y terminó; el resto del texto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0774",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita comparar lo que sabes ahora con lo que sabia la persona que decidio en ese momento",
+      "texto_nuevo": "Evita comparar lo que sabes ahora con lo que sabía la persona que decidió en ese momento",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-007.paso1: sabía, decidió (Tildes que faltaban de verdad en sabía y decidió; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0775",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Esfuerzate por reconstruir la situacion desde adentro, es decir, desde la posicion de quien decidio antes de conocer el resultado",
+      "texto_nuevo": "Esfuérzate por reconstruir la situación desde adentro, es decir, desde la posición de quien decidió antes de conocer el resultado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-007.paso2: Esfuérzate, situación, posición, decidió (Tildes que faltaban de verdad en Esfuérzate, situación, posición y decidió; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0776",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja por escrito, de forma explicita, las limitaciones de tu propia mirada al analizar lo sucedido",
+      "texto_nuevo": "Deja por escrito, de forma explícita, las limitaciones de tu propia mirada al analizar lo sucedido",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-007.paso3: explícita (Faltaba la tilde en explícita; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0777",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un marco de análisis que reconozca explicitamente que tu mirada es subjetiva y evite usar una 'verdad objetiva' como punto de comparacion",
+      "texto_nuevo": "Un marco de análisis que reconozca explícitamente que tu mirada es subjetiva y evite usar una 'verdad objetiva' como punto de comparación",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-007.entregable: explícitamente, comparación (Tildes que faltaban de verdad en explícitamente y comparación; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

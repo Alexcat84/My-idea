@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Nivel de Impacto Global de un Sistema",
+  "etiqueta": "Mide el Impacto de tu Sistema",
+  "resumen": "Antes de elegir controles, cada sistema importante se clasifica según el impacto que tendría para la organización perder la confidencialidad, la integridad o la disponibilidad de la información que maneja. Para cada tipo de información (por ejemplo contabilidad, pagos o datos de sensores) se asigna un nivel bajo, moderado o alto en cada dimensión: bajo significa un efecto adverso limitado, moderado un efecto adverso serio y alto un efecto severo o catastrófico sobre operaciones, activos o personas. Una tabla de planeación sencilla ayuda a empezar y la clasificación guía después la selección de controles.",
+  "entregable": "Una tabla de planeación por sistema con el impacto de cada tipo de información en confidencialidad, integridad y disponibilidad, y el impacto global del sistema calculado como el promedio de esos tres niveles.",
+  "condiciones": [
+   "Cuando ya identificaste tus activos, procesos y sistemas más importantes y no sabes cuánto protegerlos",
+   "Antes de seleccionar los controles de seguridad y privacidad de un sistema"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1314.txt",
+  "lineas": "183",
+  "cita": "Overall System Impact: The level assigned matches the highest level (low, moderate, or high) for confidentiality, integrity, or availability of information on the system; also known as the \"high-water mark.\"",
+  "dato": "el impacto global del sistema calculado como el promedio de esos tres niveles",
+  "explicacion": "El libro dice que el impacto global del sistema es el nivel MAS ALTO de los tres (high-water mark), no un promedio. Con el promedio, un sistema con disponibilidad alta y lo demas bajo quedaria como moderado y se subprotegeria."
+ },
+ {
+  "titulo": "Capacitación en Manejo Seguro de CUI",
+  "etiqueta": "Enseña a Cuidar la CUI",
+  "resumen": "SP 800-171 pide dar con regularidad capacitación básica y avanzada en alfabetización de seguridad al personal nuevo y al existente, adaptada a los sistemas a los que cada persona tiene acceso, a su entorno de trabajo (teletrabajo, planta) y a su rol. El temario incluye por qué la seguridad importa a la misión del negocio, acciones concretas como usar autenticación multifactor y no compartir contraseñas, cómo responder a incidentes y cómo reconocer amenazas internas e ingeniería social. El manejo seguro de CUI se enseña una vez que la persona ya trabaja con el sistema, para que la capacitación se apoye en casos reales de su puesto. Se puede reforzar con carteles, avisos de la dirección y eventos como un almuerzo de aprendizaje, usando recursos gratuitos adaptados al negocio.",
+  "entregable": "Plan de capacitación por rol con su temario (necesidad de seguridad, MFA y contraseñas, respuesta a incidentes, manejo de CUI, amenazas internas e ingeniería social) y un calendario de actividades de concientización.",
+  "condiciones": [
+   "Cuando personal nuevo o existente va a trabajar con sistemas que procesan o guardan CUI",
+   "Si tu equipo trabaja en entornos distintos (teletrabajo, planta) y la capacitación actual es genérica"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "321",
+  "cita": "How to securely handle CUI (training should be provided to staff before authorizing access to the system or CUI).",
+  "dato": "El manejo seguro de CUI se enseña una vez que la persona ya trabaja con el sistema",
+  "explicacion": "El libro invierte la secuencia: la capacitación en manejo de CUI debe darse ANTES de autorizar el acceso al sistema o a la CUI, no despues de que la persona ya trabaja con el."
+ },
+ {
+  "titulo": "Registros de Auditoría para Rastrear Acciones",
+  "etiqueta": "Sabe Quién Hizo Qué",
+  "resumen": "Se trata de entender y rastrear quién realiza acciones en los sistemas del negocio, qué acciones son y cuándo ocurren. Los registros deberían indicar el tipo de evento, cuándo y dónde ocurrió, su fuente, su resultado y la identidad de la persona asociada. Hay que proteger la información de auditoría y las herramientas de registro contra acceso, modificación y borrado no autorizados, limitar su administración a un subconjunto de usuarios privilegiados, definir quién recibe alertas cuando falla la captura o se llena el almacenamiento, y retener los registros según la política de retención del negocio, considerando que algunas industrias tienen reglas regulatorias. Existen herramientas automáticas, desde gratuitas de código abierto hasta comerciales.",
+  "entregable": "Lista de verificación de los registros de auditoría que confirme qué campos se capturan, quién recibe alertas por fallas, cuánto tiempo se retienen, quién puede administrarlos y con qué frecuencia se revisan.",
+  "condiciones": [
+   "Si no sabes qué información capturan hoy los registros de tus sistemas con CUI",
+   "Si tus registros de auditoría se conservan menos de un año, el mínimo de retención que exige SP 800-171"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "353",
+  "cita": "Are we retaining audit records for a period consistent with the business records retention policy?",
+  "dato": "se conservan menos de un año, el mínimo de retención que exige SP 800-171",
+  "explicacion": "El libro no fija ningun plazo minimo de retencion: remite a la politica de retencion del propio negocio y a especificaciones regulatorias de algunas industrias. Grep en todo el libro de year, month, days, annual y 12 no encuentra ningun plazo de retencion de registros; el 'un año' y la exigencia atribuida a SP 800-171 son inventados."
+ },
+ {
+  "titulo": "Plan Básico de Respuesta a Incidentes",
+  "etiqueta": "Prepárate Antes del Ataque",
+  "resumen": "Antes de que ocurra un incidente conviene tener listo un plan de respuesta básico, adaptado al negocio, con un responsable que lo desarrolle y lo mantenga, una lista de quién llamar con sus datos de contacto, responsabilidades y autoridad, y qué, cuándo y cómo reportar. Ante un incidente se evalúa su gravedad, qué pasó y su causa raíz, y se toman pasos para contenerlo y erradicarlo antes de que cause más daño. Un incidente confirmado se comunica a clientes, socios, autoridades y reguladores dentro de las 72 horas siguientes a su detección.",
+  "entregable": "Plan de respuesta a incidentes con responsable designado, tabla de contactos (líder del negocio, contacto técnico, policía estatal, legal, banco, seguro) y obligaciones de reporte documentadas.",
+  "condiciones": [
+   "Si el negocio no tiene un plan de respuesta a incidentes o nunca lo ha practicado",
+   "Cuando no está claro quién decide y a quién llamar ante un incidente confirmado"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1300.txt",
+  "lineas": "249",
+  "cita": "Communicate a confirmed cybersecurity incident with all internal and external stakeholders (e.g., customers, business partners, law enforcement agencies, regulatory bodies) as required by laws, regulations, contracts, or policies. (RS.CO-02/03)",
+  "dato": "dentro de las 72 horas siguientes a su detección",
+  "explicacion": "El libro no da ningun plazo para comunicar el incidente: remite a lo que exijan leyes, regulaciones, contratos o politicas. Grep en todo el libro de 72, hour, days y within no encuentra ningun plazo de notificacion; las 72 horas son una cifra anadida."
+ }
+]

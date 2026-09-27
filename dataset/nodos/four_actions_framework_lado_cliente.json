@@ -1,6 +1,6 @@
 {
   "node_id": "four_actions_framework_lado_cliente",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Four Actions Framework: Impacto en el Cliente",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
@@ -17,11 +17,40 @@
     "fit_value_proposition",
     "analisis_y_sintesis"
   ],
-  "nodos_siguientes": [
-    "lienzo_modelo_negocio"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se ha modificado la Propuesta de Valor y se necesita evaluar efectos en el resto del modelo de negocio"
   ],
-  "etiqueta_arbol": "Mide el Impacto en Clientes"
+  "etiqueta_arbol": "Mide el Impacto en Clientes",
+  "fuentes_internas": [
+    "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-059",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "four_actions_framework_lado_cliente -> lienzo_modelo_negocio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-07-70): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la extension del Four Actions Framework se aplica sobre los bloques del Business Model Canvas (Canales, Relaciones, Ingresos), asi que presupone el lienzo y deberia ir despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-173",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F27-014: Analiza el efecto de la nueva propuesta de valor sobre canales, relaciones, segmentos y costos; es diseno del modelo de negocio. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

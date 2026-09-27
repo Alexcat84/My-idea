@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_035",
+  "intento": 0,
+  "usd": 0.183228,
+  "turnos": 1,
+  "duracion_s": 23.7,
+  "pared_s": 24.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33672,
+  "tokens_out": 2427,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P94A857\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [275, 285, 293, 5710], \"razon\": \"El libro dice que la investigación empieza por el mal resultado y después examina cómo y cuándo fallaron las defensas. El paso coincide.\"},\n  {\"id\": \"PDDD98F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [107, 293, 474, 2650, 181], \"razon\": \"Va en la dirección de L293. Matiz: habla solo de capas 'penetradas'; el libro incluye defensas ausentes u obviadas y trayectorias parciales.\"},\n  {\"id\": \"P246591\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"según las categorías definidas (del MEDA, según el nodo)\"], \"clase\": \"SIN_COBERTURA\", \"lineas\": [1943, 2170, 3747, 3751, 3755], \"razon\": \"Faltan en los fragmentos las secciones 3-4 del MEDA. El libro dice que la taxonomía cognitiva es difícil para no especialistas y prefiere la clasificación por consecuencias o tareas.\"},\n  {\"id\": \"P85DB43\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5182, 5204, 5208, 4693, 4769], \"razon\": \"Weick opone cultura a reglas, pero el libro exige antes una cultura jerárquica disciplinada con confianza en los SOP y la forma con prácticas compartidas. La 'mentoría' no aparece.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P94A857",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    275,
+    285,
+    293,
+    5710
+   ],
+   "razon": "El libro dice que la investigación empieza por el mal resultado y después examina cómo y cuándo fallaron las defensas. El paso coincide."
+  },
+  {
+   "id": "PDDD98F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    107,
+    293,
+    474,
+    2650,
+    181
+   ],
+   "razon": "Va en la dirección de L293. Matiz: habla solo de capas 'penetradas'; el libro incluye defensas ausentes u obviadas y trayectorias parciales."
+  },
+  {
+   "id": "P246591",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "según las categorías definidas (del MEDA, según el nodo)"
+   ],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    1943,
+    2170,
+    3747,
+    3751,
+    3755
+   ],
+   "razon": "Faltan en los fragmentos las secciones 3-4 del MEDA. El libro dice que la taxonomía cognitiva es difícil para no especialistas y prefiere la clasificación por consecuencias o tareas."
+  },
+  {
+   "id": "P85DB43",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5182,
+    5204,
+    5208,
+    4693,
+    4769
+   ],
+   "razon": "Weick opone cultura a reglas, pero el libro exige antes una cultura jerárquica disciplinada con confianza en los SOP y la forma con prácticas compartidas. La 'mentoría' no aparece."
+  }
+ ]
+}

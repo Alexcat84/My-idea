@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Un documento que acompañe tu reporte de sostenibilidad explicando tus criterios y supuestos",
   "nodos_previos": [
-    "establecimiento_metas_publicas",
-    "framework_excelencia_operacional"
+    "establecimiento_metas_publicas"
   ],
   "nodos_siguientes": [
     "contextualizacion_datos_sostenibilidad"
@@ -23,5 +22,23 @@
     "Cuando preparas un reporte de sostenibilidad formal",
     "Si existe un protocolo aplicable a tu sector"
   ],
-  "etiqueta_arbol": "Sé Claro al Reportar Datos"
+  "etiqueta_arbol": "Sé Claro al Reportar Datos",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-071",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_excelencia_operacional -> metodologia_clara_reporte",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-22, lector y verificador de acuerdo)",
+        "motivo": "La autoevaluacion de la gestion y el diseño de metricas no continua en la metodologia para reportar datos de sostenibilidad; solo comparten la idea de medir."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
+  ]
 }

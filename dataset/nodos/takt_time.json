@@ -17,7 +17,7 @@
   "nodos_previos": [
     "ocho_desperdicios_lean",
     "lean_manufacturing",
-    "value_stream_mapping_2"
+    "mapeo_flujo_valor"
   ],
   "nodos_siguientes": [
     "mapeo_flujo_valor",
@@ -37,6 +37,37 @@
       "node_id": "takt_time_demand",
       "titulo": "Takt Time y Gestión de la Demanda",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-173",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "mapeo_flujo_valor -> takt_time_demand",
+      "texto_nuevo": "mapeo_flujo_valor -> takt_time",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a takt_time_demand, deprecado; su superviviente es takt_time."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-189",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "value_stream_mapping_2 -> takt_time",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a value_stream_mapping_2, deprecado; su superviviente es mapeo_flujo_valor."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ]
 }

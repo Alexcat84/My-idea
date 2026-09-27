@@ -1,6 +1,6 @@
 {
   "node_id": "riesgo_no_es_mala_suerte",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Riesgo Como Efecto de la Incertidumbre",
   "fuente": "Edwards et al., Managing Project Risks",
@@ -25,5 +25,23 @@
     "cuando confundes cualquier cosa incierta con un peligro real para tu proyecto",
     "cuando no distingues entre lo que de verdad amenaza tu meta y lo que da igual"
   ],
-  "etiqueta_arbol": "Riesgo No Es Mala Suerte"
+  "etiqueta_arbol": "Riesgo No Es Mala Suerte",
+  "fuentes_internas": [
+    "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-285",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-007: Identificar y nombrar los riesgos que afectan los objetivos del proyecto forma parte del plan, no de la exploracion de la idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

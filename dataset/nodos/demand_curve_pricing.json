@@ -1,6 +1,6 @@
 {
   "node_id": "demand_curve_pricing",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Curva de Demanda y Estrategia de Precios",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -26,5 +26,23 @@
     "Cuando el modelo de negocio depende de un producto físico con costos de manufactura variables según escala",
     "Si hay dudas sobre si el precio actual es sostenible a largo plazo"
   ],
-  "etiqueta_arbol": "Encuentra tu Precio Óptimo"
+  "etiqueta_arbol": "Encuentra tu Precio Óptimo",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-099",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F05-001: Es diseño de la estrategia de precios con un análisis de costos y sensibilidad, sin ninguna prueba con clientes o con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

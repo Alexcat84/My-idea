@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB83FCC",
+  "intento": 0,
+  "usd": 0.23716800000000002,
+  "turnos": 1,
+  "duracion_s": 13.4,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53337,
+  "tokens_out": 1191,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB83FCC\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4761, 4806, 4908], \"cita\": \"separate the organization receiving the reports from both the regulatory body and from the employing company. ... the receiving department should be perceived as being completely independent of operational management\", \"datos_sin_respaldo\": [\"'personal de seguridad' como destinatario de los canales: el libro dirige el reporte independiente a toda la plantilla en contacto con los peligros, no a los tecnicos de seguridad\"], \"razon\": \"El libro si respalda canales de reporte independientes: separados de quien impone sanciones, del regulador y de la direccion operativa. Pero los dirige a la plantilla en contacto directo con los peligros (L4761). Limitar el canal al 'personal de seguridad' anade un rol que el libro no respalda.\", \"paso_fiel\": \"Establecer canales de reporte de incidentes y cuasi-incidentes para toda la plantilla, gestionados por una unidad independiente de la direccion operativa, del regulador y de quien tiene autoridad disciplinaria.\"}\n```",
+ "parseado": {
+  "id": "PB83FCC",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4761,
+   4806,
+   4908
+  ],
+  "cita": "separate the organization receiving the reports from both the regulatory body and from the employing company. ... the receiving department should be perceived as being completely independent of operational management",
+  "datos_sin_respaldo": [
+   "'personal de seguridad' como destinatario de los canales: el libro dirige el reporte independiente a toda la plantilla en contacto con los peligros, no a los tecnicos de seguridad"
+  ],
+  "razon": "El libro si respalda canales de reporte independientes: separados de quien impone sanciones, del regulador y de la direccion operativa. Pero los dirige a la plantilla en contacto directo con los peligros (L4761). Limitar el canal al 'personal de seguridad' anade un rol que el libro no respalda.",
+  "paso_fiel": "Establecer canales de reporte de incidentes y cuasi-incidentes para toda la plantilla, gestionados por una unidad independiente de la direccion operativa, del regulador y de quien tiene autoridad disciplinaria."
+ }
+}

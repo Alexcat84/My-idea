@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_014",
+  "intento": 0,
+  "usd": 0.158328,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33712,
+  "tokens_out": 1174,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8CB129\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3965, 3971, 3985, 520, 977, 668, 686, 4215], \"razon\": \"Coincide con la erosion de estandares y las señales ignoradas, pero el libro advierte que las alertas solo se reconocen como tales a posteriori (sesgo retrospectivo).\"},\n  {\"id\": \"P34CBAB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4466, 4476, 4478, 4502], \"razon\": \"El libro indica evaluar la contribucion de cada factor O&M a cada instancia local detectada en las visitas.\"},\n  {\"id\": \"P4B1703\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [81, 83, 105, 306, 1543, 1638, 2493], \"razon\": \"Para el libro, los atajos sin consecuencias erosionan los margenes y las violaciones exitosas generan exceso de confianza. Validarlos invierte esa advertencia.\"},\n  {\"id\": \"P8814C2\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5497, 5641, 5688, 5690, 5692, 5907], \"razon\": \"El libro advierte que centrarse solo en lesiones personales (LTIF) oculta los riesgos organizacionales. El paso concreta ese diagnostico sin añadir datos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8CB129",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3965,
+    3971,
+    3985,
+    520,
+    977,
+    668,
+    686,
+    4215
+   ],
+   "razon": "Coincide con la erosion de estandares y las señales ignoradas, pero el libro advierte que las alertas solo se reconocen como tales a posteriori (sesgo retrospectivo)."
+  },
+  {
+   "id": "P34CBAB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4466,
+    4476,
+    4478,
+    4502
+   ],
+   "razon": "El libro indica evaluar la contribucion de cada factor O&M a cada instancia local detectada en las visitas."
+  },
+  {
+   "id": "P4B1703",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    81,
+    83,
+    105,
+    306,
+    1543,
+    1638,
+    2493
+   ],
+   "razon": "Para el libro, los atajos sin consecuencias erosionan los margenes y las violaciones exitosas generan exceso de confianza. Validarlos invierte esa advertencia."
+  },
+  {
+   "id": "P8814C2",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5497,
+    5641,
+    5688,
+    5690,
+    5692,
+    5907
+   ],
+   "razon": "El libro advierte que centrarse solo en lesiones personales (LTIF) oculta los riesgos organizacionales. El paso concreta ese diagnostico sin añadir datos."
+  }
+ ]
+}

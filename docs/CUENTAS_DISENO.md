@@ -5,6 +5,11 @@
 **Antecede:** [`docs/CUENTAS_PLAN.md`](CUENTAS_PLAN.md) (plan aprobado en arquitectura por el auditor).
 **Referencia probada:** The Original I Ching (`referencia/iching-app/`, en `.gitignore`).
 
+> **Nota de vigencia (AUD-09, 25 sep 2026):** este es el diseño de la ETAPA 1 y
+> se conserva como historia. Sus cifras (cortesía de 20 créditos, plan 5,
+> seguimientos 2, mundo 3, Tus Números 2) ya no rigen: las vigentes viven en
+> `web/lib/precios.ts` y la beta va sin cortesía (`docs/ANALISIS_PRECIOS.md` §4).
+
 ---
 
 ## 0. Decisiones del fundador (locked)

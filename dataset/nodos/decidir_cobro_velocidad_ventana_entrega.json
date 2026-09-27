@@ -6,13 +6,13 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "Ofrecer entrega el mismo dia o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precision en el horario incrementa el costo de operar tu logistica, porque exige mas viajes, mas coordinacion y menos margen de error. Antes de prometer un servicio rapido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes estan dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estandar, entrega rapida y ventana angosta, y dejan que el cliente elija segun lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
   "pasos_accionables": [
-    "Pide a tu courier las tarifas de cada nivel de servicio: estandar, rapido y mismo dia.",
-    "Calcula cuanto te cuesta cada nivel frente a lo que cobras hoy por el envio.",
-    "Ofrece la ventana angosta o el mismo dia como opcion de pago extra, no como estandar gratuito.",
-    "Revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
-    "Elimina el nivel mas rapido si notas que nadie paga la diferencia y solo te cuesta margen."
+    "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
+    "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
+    "Ofrece la ventana angosta o el mismo día como opción de pago extra, no como estándar gratuito.",
+    "Sugerencia de My Idea: revisa cada mes cuántos clientes eligen cada nivel para ajustar precios.",
+    "Elimina el nivel más rápido si notas que nadie paga la diferencia y solo te cuesta margen."
   ],
-  "entregable_esperado": "Una tabla simple con los niveles de entrega que ofreces y cuanto cobras por cada uno, basada en el costo real de tu courier.",
+  "entregable_esperado": "Una tabla simple con los niveles de entrega que ofreces y cuánto cobras por cada uno, basada en el costo real de tu courier.",
   "nodos_previos": [
     "ofrecer_puntos_recogida",
     "detectar_prioridad_cliente_entrega",
@@ -26,5 +26,110 @@
     "Un cliente te pide una ventana de entrega muy angosta y no sabes cuanto cobrarle.",
     "Notas que estas perdiendo margen en los envios rapidos sin haberlo decidido a proposito."
   ],
-  "etiqueta_arbol": "Cobra bien la entrega rápida"
+  "etiqueta_arbol": "Cobra bien la entrega rápida",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-051",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L236-L238",
+        "frase": "Part of the problem is that customers are loathe to pay for this service, but attitudes may be changing."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El capitulo no fija ninguna frecuencia mensual de revision.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-008"
+    },
+    {
+      "id": "n1-orto-0246",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide a tu courier las tarifas de cada nivel de servicio: estandar, rapido y mismo dia.",
+      "texto_nuevo": "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-035.paso0: estándar, rápido, día (Faltan tres tildes, y courier se mantiene tal cual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0247",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula cuanto te cuesta cada nivel frente a lo que cobras hoy por el envio.",
+      "texto_nuevo": "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-035.paso1: cuánto, envío (Faltan las tildes de cuánto y envío, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0248",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ofrece la ventana angosta o el mismo dia como opcion de pago extra, no como estandar gratuito.",
+      "texto_nuevo": "Ofrece la ventana angosta o el mismo día como opción de pago extra, no como estándar gratuito.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-035.paso2: día, opción, estándar (Faltan tres tildes, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0249",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada mes cuántos clientes eligen cada nivel para ajustar precios.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-035.paso3: cuántos (Es una interrogativa indirecta y cuántos lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0250",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elimina el nivel mas rapido si notas que nadie paga la diferencia y solo te cuesta margen.",
+      "texto_nuevo": "Elimina el nivel más rápido si notas que nadie paga la diferencia y solo te cuesta margen.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-035.paso4: más, rápido (Faltan las tildes de más y rápido, y solo sigue sin tilde, como pide la norma.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0251",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una tabla simple con los niveles de entrega que ofreces y cuanto cobras por cada uno, basada en el costo real de tu courier.",
+      "texto_nuevo": "Una tabla simple con los niveles de entrega que ofreces y cuánto cobras por cada uno, basada en el costo real de tu courier.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-035.entregable: cuánto (Es una interrogativa indirecta y cuánto lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
+  ]
 }

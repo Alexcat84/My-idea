@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P312C65",
+  "intento": 0,
+  "usd": 0.214784,
+  "turnos": 1,
+  "duracion_s": 5.0,
+  "pared_s": 6.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52456,
+  "tokens_out": 248,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P312C65\", \"veredicto\": \"FIEL\", \"lineas\": [3747, 3771], \"cita\": \"Section 5b asks what corrective measures have been taken, or should have been taken at the local level to prevent the recurrence of the incident.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que la Sección 5b de MEDA recoge las medidas correctivas tomadas o que debieron tomarse a nivel local para prevenir la recurrencia del incidente. El paso lo reproduce: sección, carácter local y finalidad coinciden. 'Sección 5b' figura literalmente en el libro, así que no es un dato añadido.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P312C65",
+  "veredicto": "FIEL",
+  "lineas": [
+   3747,
+   3771
+  ],
+  "cita": "Section 5b asks what corrective measures have been taken, or should have been taken at the local level to prevent the recurrence of the incident.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que la Sección 5b de MEDA recoge las medidas correctivas tomadas o que debieron tomarse a nivel local para prevenir la recurrencia del incidente. El paso lo reproduce: sección, carácter local y finalidad coinciden. 'Sección 5b' figura literalmente en el libro, así que no es un dato añadido.",
+  "paso_fiel": ""
+ }
+}

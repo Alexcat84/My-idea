@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P542BC4",
+  "intento": 0,
+  "usd": 0.249888,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57532,
+  "tokens_out": 988,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P542BC4\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5208], \"cita\": \"you first have to centralise so that people are socialised to use similar decision premises and assumptions so that when they operate their own units, these decentralised operations are equivalent and coordinated.\", \"datos_sin_respaldo\": [], \"razon\": \"Weick, citado por Reason, exige socializar primero y descentralizar después, y L5208 atribuye la coordinación a los valores y supuestos compartidos creados previamente. El paso concreta ese orden en la misma dirección. Omitir la palabra centralizar no invierte nada: la centralización sirve justamente para socializar. El énfasis en prácticas (L4693) no contradice el paso. 'Temprana' no es un dato nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P542BC4",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5208
+  ],
+  "cita": "you first have to centralise so that people are socialised to use similar decision premises and assumptions so that when they operate their own units, these decentralised operations are equivalent and coordinated.",
+  "datos_sin_respaldo": [],
+  "razon": "Weick, citado por Reason, exige socializar primero y descentralizar después, y L5208 atribuye la coordinación a los valores y supuestos compartidos creados previamente. El paso concreta ese orden en la misma dirección. Omitir la palabra centralizar no invierte nada: la centralización sirve justamente para socializar. El énfasis en prácticas (L4693) no contradice el paso. 'Temprana' no es un dato nuevo.",
+  "paso_fiel": ""
+ }
+}

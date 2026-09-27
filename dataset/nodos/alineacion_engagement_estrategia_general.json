@@ -6,12 +6,12 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Las personas que trabajan contigo notaran rapidamente cualquier desconexion entre lo que propones para involucrarlas y tu estrategia de sostenibilidad. Esta practica reune diez recomendaciones clave: ser urgentemente paciente, hacerlo personal, conectar con los objetivos del negocio, demostrar tu propio apoyo con hechos, elegir a las personas correctas para liderar, hacer la agenda clara y realista, crear herramientas de apoyo, dar flexibilidad, usar un toque personal y dar seguimiento visible.",
   "pasos_accionables": [
-    "Verificar que lo que propones para involucrar a tu equipo refleje tu vision y mision de sostenibilidad",
-    "Mostrar con hechos, no solo con palabras, que tu mismo sigues lo que pides",
-    "Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen mas conocimiento tecnico",
+    "Verificar que lo que propones para involucrar a tu equipo refleje tu visión y misión de sostenibilidad",
+    "Mostrar con hechos, no solo con palabras, que tú mismo sigues lo que pides",
+    "Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen más conocimiento técnico",
     "Dar seguimiento constante y reconocer los errores abiertamente"
   ],
-  "entregable_esperado": "Lista de verificacion cumplida que muestra que lo que propones para involucrar a tu equipo esta alineado con tu estrategia de sostenibilidad",
+  "entregable_esperado": "Lista de verificación cumplida que muestra que lo que propones para involucrar a tu equipo está alineado con tu estrategia de sostenibilidad",
   "nodos_previos": [
     "pilotos_estrategia_sostenibilidad"
   ],
@@ -21,5 +21,65 @@
   "condiciones_activacion": [
     "Cuando exista riesgo de que tu equipo perciba incoherencia entre lo que dices y lo que haces"
   ],
-  "etiqueta_arbol": "Conecta tu Compromiso con tu Estrategia"
+  "etiqueta_arbol": "Conecta tu Compromiso con tu Estrategia",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0318",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Verificar que lo que propones para involucrar a tu equipo refleje tu vision y mision de sostenibilidad",
+      "texto_nuevo": "Verificar que lo que propones para involucrar a tu equipo refleje tu visión y misión de sostenibilidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O027-022.paso0: visión, misión (Solo añade las tildes que faltaban en visión y misión.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0319",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mostrar con hechos, no solo con palabras, que tu mismo sigues lo que pides",
+      "texto_nuevo": "Mostrar con hechos, no solo con palabras, que tú mismo sigues lo que pides",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O027-022.paso1: tú (Aquí tú es pronombre personal y lleva tilde; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0320",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen mas conocimiento tecnico",
+      "texto_nuevo": "Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen más conocimiento técnico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O027-022.paso2: más, técnico (Solo añade las tildes que faltaban en más y técnico.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0321",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lista de verificacion cumplida que muestra que lo que propones para involucrar a tu equipo esta alineado con tu estrategia de sostenibilidad",
+      "texto_nuevo": "Lista de verificación cumplida que muestra que lo que propones para involucrar a tu equipo está alineado con tu estrategia de sostenibilidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O027-022.entregable: verificación, está (Solo añade las tildes que faltaban en verificación y en el verbo está.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

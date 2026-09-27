@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Fitness for Use / Fitness for Purpose",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Definición central de calidad según Juran: 'calidad' significa aptitud para el uso, extendida a 'aptitud para el propósito'. Incorpora dos dimensiones: presencia de características que generan satisfacción y ausencia de fallas. Es el usuario quien decide qué significa 'uso' y 'aptitud', no el proveedor. Distingue entre uso previsto (intended use) y uso real (actual use), y entre uso creativo del cliente y abuso del producto.",
+  "resumen_teorico": "Definición central de calidad: 'calidad' significa aptitud para el uso, extendida a 'aptitud para el propósito'. Incorpora dos dimensiones: presencia de características que generan satisfacción y ausencia de fallas. Es el usuario quien decide qué significa 'uso' y 'aptitud', no el proveedor. Distingue entre uso previsto (intended use) y uso real (actual use), y entre uso creativo del cliente y abuso del producto.",
   "pasos_accionables": [
     "Identificar el uso previsto original del producto o servicio",
     "Investigar los usos reales que los clientes le dan (incluyendo usos no previstos)",
@@ -24,5 +24,26 @@
     "Cuando se define qué es calidad para un producto específico",
     "Cuando existe confusión entre satisfacción del cliente y ausencia de quejas"
   ],
-  "etiqueta_arbol": "Define la Calidad por su Uso"
+  "etiqueta_arbol": "Define la Calidad por su Uso",
+  "correcciones": [
+    {
+      "id": "atribucion-094",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Definición central de calidad según Juran: 'calidad' significa aptitud para el uso, extendida a 'aptitud para el propósito'. Incorpora dos dimensiones: presencia de características que generan satisfacción y ausencia de fallas. Es el usuario quien decide qué significa 'uso' y 'aptitud', no el proveedor. Distingue entre uso previsto (intended use) y uso real (actual use), y entre uso creativo del cliente y abuso del producto.",
+      "texto_nuevo": "Definición central de calidad: 'calidad' significa aptitud para el uso, extendida a 'aptitud para el propósito'. Incorpora dos dimensiones: presencia de características que generan satisfacción y ausencia de fallas. Es el usuario quien decide qué significa 'uso' y 'aptitud', no el proveedor. Distingue entre uso previsto (intended use) y uso real (actual use), y entre uso creativo del cliente y abuso del producto.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "según Juran"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-020 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

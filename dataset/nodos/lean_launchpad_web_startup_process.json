@@ -1,6 +1,6 @@
 {
   "node_id": "lean_launchpad_web_startup_process",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Proceso Lean LaunchPad para Construir un Startup Web",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -35,5 +35,23 @@
     "Cuando el usuario está construyendo un startup web/mobile y necesita un proceso concreto y ordenado",
     "Si el equipo no sabe cómo estructurar las primeras semanas de desarrollo de producto y validación"
   ],
-  "etiqueta_arbol": "Construye tu Negocio Web"
+  "etiqueta_arbol": "Construye tu Negocio Web",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-114",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q065-018: El proceso consiste en redactar hipotesis, montar un sitio de baja fidelidad, llevar trafico para probar segmento y propuesta, probar problema y solucion y pedir dinero: es validacion con el mercado, no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

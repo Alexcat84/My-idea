@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_052",
+  "intento": 0,
+  "usd": 0.173196,
+  "turnos": 1,
+  "duracion_s": 21.6,
+  "pared_s": 22.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33324,
+  "tokens_out": 1995,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0CDCB1\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [29, 31, 4219, 4221, 4223, 4244], \"razon\": \"El libro distingue accidentes individuales con peligros bien conocidos de accidentes organizacionales poco comprendidos; clasificar el riesgo concreta esa distinción en la misma dirección.\"},\n  {\"id\": \"P40761F\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"11 GFTs\", \"sí/no\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3093, 3163, 3173, 3199, 3209, 3224], \"razon\": \"El paso omite que los indicadores deben crearlos especialistas de la tarea en grupos. También omite que es costoso y que se gestionan perfiles, no indicadores sueltos. Revisar.\"},\n  {\"id\": \"P56F333\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [419, 2028, 2226, 2250], \"razon\": \"El libro valora las fichas paso a paso con firmas y las acciones sobre pasos propensos a omisión. Numerar y verificar la reinstalación concreta eso sin datos nuevos.\"},\n  {\"id\": \"P010E76\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"EPCs\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3395, 3397, 3659, 2652], \"razon\": \"HEART aplica una proporción juzgada de cada EPC presente. Priorizar por el multiplicador bruto quita esa condición y la de presencia real en la tarea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0CDCB1",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    29,
+    31,
+    4219,
+    4221,
+    4223,
+    4244
+   ],
+   "razon": "El libro distingue accidentes individuales con peligros bien conocidos de accidentes organizacionales poco comprendidos; clasificar el riesgo concreta esa distinción en la misma dirección."
+  },
+  {
+   "id": "P40761F",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "11 GFTs",
+    "sí/no"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3093,
+    3163,
+    3173,
+    3199,
+    3209,
+    3224
+   ],
+   "razon": "El paso omite que los indicadores deben crearlos especialistas de la tarea en grupos. También omite que es costoso y que se gestionan perfiles, no indicadores sueltos. Revisar."
+  },
+  {
+   "id": "P56F333",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    419,
+    2028,
+    2226,
+    2250
+   ],
+   "razon": "El libro valora las fichas paso a paso con firmas y las acciones sobre pasos propensos a omisión. Numerar y verificar la reinstalación concreta eso sin datos nuevos."
+  },
+  {
+   "id": "P010E76",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "EPCs"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3395,
+    3397,
+    3659,
+    2652
+   ],
+   "razon": "HEART aplica una proporción juzgada de cada EPC presente. Priorizar por el multiplicador bruto quita esa condición y la de presencia real en la tarea."
+  }
+ ]
+}

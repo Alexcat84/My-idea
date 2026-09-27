@@ -1,6 +1,6 @@
 {
   "node_id": "consecuencias_no_intencionadas_sistemicas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Consecuencias No Intencionadas en Sistemas Interconectados",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
@@ -25,5 +25,23 @@
     "Cuando se lanza un producto que interactúa con infraestructura pública o plataformas sociales.",
     "Si existe riesgo de que el uso viral o masivo del producto genere efectos secundarios peligrosos."
   ],
-  "etiqueta_arbol": "Anticipa Consecuencias No Intencionadas"
+  "etiqueta_arbol": "Anticipa Consecuencias No Intencionadas",
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-067",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-031: Anticipar interacciones con sistemas externos y diseñar salvaguardas y planes de mitigación es análisis de riesgos del diseño, no prueba con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

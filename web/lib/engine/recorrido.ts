@@ -18,6 +18,7 @@
  * es permanente y no depende de que el interprete decida "generar_plan"
  * (ver decision de arquitectura de la Fase 3.0).
  */
+import type { CicloSesion } from "./replanteamiento";
 import type Anthropic from "@anthropic-ai/sdk";
 import { buscarAfines } from "../compass";
 import { llamarClaude, MODEL_HAIKU, type MensajeConversacion, type UsoAcumulado } from "../costmeter";
@@ -25,8 +26,14 @@ import type { ModoRuta } from "../dbContract";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { idiomaDePlantilla } from "../i18n/detectarIdioma";
+import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { avisosNodo } from "./avisos";
+import { preguntaEnIdioma } from "./preguntaEnIdioma";
+import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
@@ -93,6 +100,23 @@ export interface EstadoRecorrido {
   unidadVentaSesion: string | null;
   fase: FaseRecorrido;
   sigamosDirigido: SigamosDirigidoState | null;
+  /** i18n F5: el idioma de la IDEA (projects.idioma), en que escribe la IA.
+   * Ausente en sesiones de antes de F5 = español. */
+  idioma?: string;
+  /** Ciclo de replanteamiento, Fase 2: lo que la persona pidió al abrir un ciclo
+   * posterior (profundizar o replantear). Viaja con la sesión hasta la entrega
+   * del plan, donde se registra en la bitácora. Ausente en todo lo demás. */
+  ciclo?: CicloSesion;
+}
+
+/** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de
+ * MUNDO son el núcleo y ese mundo, nunca otro mundo previsualizado (una arista
+ * vieja de mundo a mundo llevaba la entrevista de Calidad a Riesgos). En el
+ * núcleo, los desbloqueados de siempre. */
+export function dominiosDelRecorrido(estado: Pick<EstadoRecorrido, "dominioSesion" | "dominiosDesbloqueados">): string[] {
+  // Estados guardados antes de dominioSesion lo traen vacío: son del núcleo.
+  const dominio = estado.dominioSesion ?? "core";
+  return dominio !== "core" ? ["core", dominio] : estado.dominiosDesbloqueados ?? ["core"];
 }
 
 export function estadoInicial(params: {
@@ -106,6 +130,10 @@ export function estadoInicial(params: {
   dominioSesion?: string;
   /** Mundos de proteccion (P1): el snapshot del nucleo ya renderizado. */
   snapshotNucleo?: string | null;
+  /** i18n F5: el idioma de la idea (projects.idioma). */
+  idioma?: string;
+  /** Ciclo de replanteamiento, Fase 2. */
+  ciclo?: CicloSesion;
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -120,6 +148,7 @@ export function estadoInicial(params: {
     dominioSesion: params.dominioSesion ?? "core",
     puertasDescartadas: [],
     snapshotNucleo: params.snapshotNucleo ?? null,
+    idioma: params.idioma ?? "es",
     fallbackEvents: [],
     prioridadDeclarada: null,
     preguntaPendiente: null,
@@ -131,6 +160,7 @@ export function estadoInicial(params: {
     unidadVentaSesion: null,
     fase: "esperando_respuesta",
     sigamosDirigido: null,
+    ...(params.ciclo ? { ciclo: params.ciclo } : {}),
   };
 }
 
@@ -142,6 +172,9 @@ export interface NodoTranscrito {
    * (jul 2026): el usuario nunca ve los nombres internos de los conceptos.
    * Dos idiomas: técnico adentro, natural afuera. */
   etiqueta: string;
+  /** Los avisos del nodo para la tarjeta (jurisdiccion y vigencia), en el idioma de la interfaz
+   * (lib/engine/avisos.ts; decision del fundador del 26 sep 2026). */
+  avisos?: string[];
   modo: ModoNodo;
 }
 
@@ -176,7 +209,7 @@ export type ResultadoTurno =
       tipo: "error_temporal";
       estado: EstadoRecorrido;
       acumulado: UsoAcumulado;
-      opciones: Array<{ id: string; titulo: string }>;
+      opciones: Array<{ id: string; etiqueta: string }>;
     };
 
 /** Port de _detectar_decision_plan: clasifica una respuesta libre como
@@ -195,9 +228,10 @@ export const SENTINELA_SEGUIR_EXPLORANDO = "__seguimos_explorando__";
 async function temasPendientesDeLaMesa(
   estado: EstadoRecorrido,
   families: Record<string, Familia>,
-  graph: Grafo
+  graph: Grafo,
+  idioma: Locale = LOCALE_BASE
 ): Promise<string[]> {
-  const evaluacion = evaluarRuta(estado.ruta, families);
+  const evaluacion = evaluarRuta(estado.ruta, families, idioma);
   const faltantesKeys: string[] = [];
   if (!evaluacion.tiene_accion_clientes) faltantesKeys.push("accion_clientes");
   if (!evaluacion.tiene_viabilidad_economica) faltantesKeys.push("viabilidad_economica");
@@ -210,20 +244,20 @@ async function temasPendientesDeLaMesa(
       const afines = await buscarAfines(FAMILIA_QUERY_BRUJULA[familia] ?? familia, visitados, {
         k: 10,
         graph,
-        dominiosDesbloqueados: estado.dominiosDesbloqueados,
+        dominiosDesbloqueados: dominiosDelRecorrido(estado),
       });
       const deLaFamilia = afines
         .map((c) => c.id)
         .filter((nid) => (families[nid] ?? "general") === familia)
         .slice(0, 2);
       for (const nid of deLaFamilia) {
-        const n = graph[nid];
-        const etiqueta = n?.etiqueta_arbol ?? n?.titulo_concepto;
+        const etiqueta = graph[nid] ? etiquetaArbol(nid, graph, idioma) : null;
         if (etiqueta && !etiquetas.includes(etiqueta)) etiquetas.push(etiqueta);
       }
     } catch {
       // la brujula caida no bloquea la oferta: cae al nombre humano de la familia
-      const nombre = familia === "accion_clientes" ? "Salir a validar con clientes" : "Tus numeros de verdad";
+      const temas = elegir(MOTOR, idioma).temaFamilia;
+      const nombre = familia === "accion_clientes" ? temas.accionClientes : temas.viabilidadEconomica;
       if (!etiquetas.includes(nombre)) etiquetas.push(nombre);
     }
   }
@@ -249,11 +283,65 @@ export async function detectarDecisionPlan(
   } catch {
     // fallo la interpretacion: cae al detector simple de palabras clave
   }
-  const low = respuesta.trim().toLowerCase();
-  const positivas = ["ya", "ahora", "dame", "listo", "asi esta bien", "así está bien"];
-  const decision = positivas.some((p) => low.includes(p)) ? "generar_ya" : "continuar";
-  return { decision, acumulado: acumuladoActualizado };
+  return { decision: decisionPorPalabras(respuesta), acumulado: acumuladoActualizado };
 }
+
+/**
+ * AUD-09 B14a: el respaldo por palabras cuando la IA no pudo leer la respuesta.
+ * Antes buscaba SUBCADENAS ("playa" contiene "ya") y cortaba la exploración.
+ * Frases explícitas a cualquier largo; palabras sueltas solo enteras y en una
+ * respuesta de hasta 3 palabras (una decisión, no una respuesta). En la duda,
+ * seguir: el usuario siempre tiene el botón para pedir su plan. Paridad con
+ * _decision_por_palabras de engine/prototipo_motor.py.
+ */
+export function decisionPorPalabras(respuesta: string): "generar_ya" | "continuar" {
+  const plano = normalizarDecision(respuesta);
+  if (FRASES_DECISION.some((f) => (SIN_ESPACIOS.test(f) ? plano.includes(f) : ` ${plano} `.includes(` ${f} `)))) return "generar_ya";
+  const palabras = plano ? plano.split(" ") : [];
+  if (palabras.length > 0 && palabras.length <= 3 && palabras.some((w) => SUELTAS_DECISION.has(w))) return "generar_ya";
+  return "continuar";
+}
+
+/** Minúsculas, sin los acentos del alfabeto latino, sin puntuación. Conserva
+ * las marcas de las otras escrituras (las vocales del devanagari, la hamza). */
+function normalizarDecision(texto: string): string {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\p{L}\p{M}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** i18n F5: el "dame mi plan" en los once idiomas (la persona responde en el de
+ * su idea). El español, en paridad con engine/prototipo_motor.py; los demás
+ * solo en la web (el motor de Python habla español). */
+const FRASES_DECISION = [
+  "dame mi plan", "dame el plan", "genera mi plan", "genera el plan", "asi esta bien", "con esto alcanza",
+  "give me my plan", "give me the plan", "generate my plan", "generate the plan", "thats enough", "that is enough", "good enough",
+  "me de meu plano", "me de o plano", "me da meu plano", "gera meu plano", "gere meu plano", "assim esta bom", "ja basta",
+  "donne moi mon plan", "donne moi le plan", "genere mon plan", "genere le plan", "ca suffit", "c est bon",
+  "gib mir meinen plan", "gib mir den plan", "erstelle meinen plan", "das reicht", "passt so",
+  "dammi il mio piano", "dammi il piano", "genera il mio piano", "va bene cosi", "basta cosi",
+  "プランをください", "計画をください", "プランを作って", "計画を作って", "これで十分",
+  "给我计划", "给我我的计划", "生成计划", "生成我的计划", "就这样吧", "够了",
+  "계획 주세요", "계획을 주세요", "플랜 주세요", "계획 만들어 주세요", "이제 됐어요", "충분해요",
+  "أعطني خطتي", "أعطني الخطة", "أنشئ خطتي", "هذا يكفي",
+  "मुझे मेरी योजना दो", "योजना दो", "योजना बनाओ", "बस इतना काफी है",
+].map(normalizarDecision);
+
+/** Palabras sueltas (solo en una respuesta de hasta 3 palabras). Fuera las
+ * ambiguas entre idiomas: "pronto" (listo en portugués e italiano, "luego" en
+ * español) y "ja" (sí en alemán). */
+const SUELTAS_DECISION = new Set(
+  ["ya", "listo", "ahora", "dale", "now", "ready", "done", "agora", "maintenant", "jetzt", "fertig", "ora", "adesso", "지금", "الآن", "अभी"].map(
+    normalizarDecision
+  )
+);
+
+/** Chino y japonés no separan palabras: la frase se busca dentro del texto. */
+const SIN_ESPACIOS = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 
 /** Port de pregunta_dirigida: pregunta adaptada para un nodo elegido por
  * la brujula en la extension dirigida, sin pasar por el contrato completo
@@ -266,9 +354,11 @@ export async function preguntaDirigida(
   preguntasCache: PreguntasCache,
   perfilSesion: string | null,
   ultimasPreguntas: string[],
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  idioma: Locale = LOCALE_BASE,
+  idiomaSalida: string | null = null
 ): Promise<{ pregunta: string; acumulado: UsoAcumulado }> {
-  const plano = preguntaDeNodo(nid, graph, preguntasCache);
+  const plano = preguntaDeNodo(nid, graph, preguntasCache, idioma);
   try {
     const ctx = {
       perfil_sesion: perfilSesion,
@@ -278,6 +368,7 @@ export async function preguntaDirigida(
     const r = await llamarClaude(client, SYSTEM_PREGUNTA_DIRIGIDA, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
       maxTokens: 150,
       componente: "turnos",
+      idiomaSalida,
     });
     const texto = r.texto.trim();
     return { pregunta: texto || plano, acumulado: r.acumulado };
@@ -300,10 +391,50 @@ export interface AvanzarTurnoParams {
   /** Metadata de codigo (no algo que el modelo deba inventar) para
    * timestampear numeros_detectados_sesion, igual que Python. */
   dbSessionId: string;
+  /** i18n F2: el idioma de los textos que el motor arma sin la IA (la pregunta
+   * genérica de un nodo, los temas de respaldo). Sin él, el base. */
+  idioma?: Locale;
 }
 
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
+  return adaptarPreguntaDelCache(params, await avanzarTurnoBase(params));
+}
+
+/**
+ * D3 (i18n F5): si el turno termina en la pregunta CACHEADA del nodo (en
+ * español) y la idea está en otro idioma, la IA la expresa en ese idioma, y
+ * esa versión queda como pendiente y en el historial anti-repetición (lo que
+ * la persona leyó).
+ */
+async function adaptarPreguntaDelCache(params: AvanzarTurnoParams, r: ResultadoTurno): Promise<ResultadoTurno> {
+  const idiomaSalida = r.estado.idioma;
+  if (r.tipo !== "pregunta" || !idiomaSalida || idiomaSalida === "es") return r;
+  const actual = r.estado.ruta[r.estado.ruta.length - 1];
+  const cruda = actual ? params.preguntasCache[resolverId(actual, params.graph) ?? actual]?.pregunta : undefined;
+  if (!cruda || r.pregunta !== cruda) return r;
+  const t = await preguntaEnIdioma(params.client, cruda, idiomaSalida, r.acumulado);
+  if (!t.traducida) return { ...r, acumulado: t.acumulado };
+  return {
+    ...r,
+    pregunta: t.pregunta,
+    acumulado: t.acumulado,
+    estado: {
+      ...r.estado,
+      preguntaPendiente: t.pregunta,
+      ultimasPreguntas: r.estado.ultimasPreguntas.map((q) => (q === cruda ? t.pregunta : q)),
+    },
+  };
+}
+
+async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
   const { client, graph, families, preguntasCache, dbSessionId } = params;
+  // i18n F5: lo que el motor arma sin la IA sale en el idioma de la IDEA si es
+  // de los once; si no, en el de la interfaz (D2). Sin idioma guardado, la
+  // sesión es de antes de F5: español.
+  const idioma = idiomaDePlantilla(params.estado.idioma ?? "es", params.idioma ?? LOCALE_BASE);
+  const idiomaSalida = params.estado.idioma ?? null;
+  // D3: el riel y la tarjeta de lo que queda son NAVEGACIÓN: idioma de la interfaz.
+  const idiomaInterfaz = params.idioma ?? LOCALE_BASE;
   let estado = params.estado;
   let acumulado = params.acumulado;
   let respuestaUsuario = params.respuestaUsuario;
@@ -312,7 +443,8 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
   function nodosNuevosDesdeInicio(): NodoTranscrito[] {
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
-      etiqueta: etiquetaArbol(nid, graph),
+      etiqueta: etiquetaArbol(nid, graph, idiomaInterfaz),
+      avisos: avisosNodo(nid, graph, idiomaInterfaz),
       modo: estado.modos[rutaLongitudInicial + i],
     }));
   }
@@ -329,9 +461,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     }
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
-    const evaluacion = evaluarRuta(estado.ruta, families);
+    const evaluacion = evaluarRuta(estado.ruta, families, idioma);
     const familiasFaltantesKeys: string[] = [];
     if (!evaluacion.tiene_accion_clientes) familiasFaltantesKeys.push("accion_clientes");
     if (!evaluacion.tiene_viabilidad_economica) familiasFaltantesKeys.push("viabilidad_economica");
@@ -341,17 +473,20 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     const afines = await buscarAfines(query, visitados, {
       k: 20,
       graph,
-      dominiosDesbloqueados: estado.dominiosDesbloqueados,
+      dominiosDesbloqueados: dominiosDelRecorrido(estado),
     });
     let candidatosFamilia = afines.map((c) => c.id).filter((nid) => familiasFaltantesKeys.includes(families[nid] ?? "general"));
     // Phase 3.7.2: con la ruta completa, "Seguimos explorando" sigue
     // siendo una promesa real: los mejores afines al perfil, sin filtro
     // de familia (antes: elegidos vacios -> listo otra vez, boton muerto).
     if (candidatosFamilia.length === 0 && familiasFaltantesKeys.length === 0) {
-      const afinesPerfil = await buscarAfines(estado.perfilSesion || estado.textoOriginal, visitados, {
+      // i18n F5, remedio de F1: el índice está en español.
+      const traducida = await consultaAlEspanol(client, estado.perfilSesion || estado.textoOriginal, idiomaSalida, acumulado);
+      acumulado = traducida.acumulado;
+      const afinesPerfil = await buscarAfines(traducida.consulta, visitados, {
         k: 6,
         graph,
-        dominiosDesbloqueados: estado.dominiosDesbloqueados,
+        dominiosDesbloqueados: dominiosDelRecorrido(estado),
       });
       candidatosFamilia = afinesPerfil.map((c) => c.id);
     }
@@ -362,13 +497,13 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         (nid) =>
           !visitados.has(nid) &&
           familiasFaltantesKeys.includes(families[nid] ?? "general") &&
-          esOfrecible(nid, graph, estado.dominiosDesbloqueados)
+          esOfrecible(nid, graph, dominiosDelRecorrido(estado))
       );
     }
     const elegidos = candidatosFamilia.slice(0, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO);
     if (elegidos.length === 0) {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
 
     const primerNid = elegidos[0];
@@ -379,7 +514,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       preguntasCache,
       estado.perfilSesion,
       estado.ultimasPreguntas,
-      acumulado
+      acumulado,
+      idioma,
+      idiomaSalida
     );
     acumulado = a2;
     estado = {
@@ -400,7 +537,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     acumulado = a1;
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null, sigamosDirigido: null };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
     const { elegidos, indice } = estado.sigamosDirigido;
     const nidActual = elegidos[indice];
@@ -418,7 +555,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         preguntaPendiente: null,
         sigamosDirigido: null,
       };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
 
     const siguienteNid = elegidos[siguienteIndice];
@@ -429,7 +566,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       preguntasCache,
       perfilNuevo,
       estado.ultimasPreguntas,
-      acumulado
+      acumulado,
+      idioma,
+      idiomaSalida
     );
     acumulado = a2;
     estado = {
@@ -453,14 +592,53 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     // Paridad modo_seguir: cubiertos de sesiones previas + ruta actual
     // (?? [] defiende estados persistidos antes de la Fase 3.3).
     const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
-    const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, estado.dominiosDesbloqueados);
+    const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, dominiosDelRecorrido(estado));
+    // AUD-09 H13 (decisión del fundador, 25 sep 2026): que la entrevista de un
+    // MUNDO siempre tenga salida es deber del motor, no del grafo. Un nodo sin
+    // sucesores puede ser un final legítimo del contenido, así que el dataset no
+    // se toca: el motor elige otra puerta del mismo mundo con la misma lógica
+    // que usa cuando el intérprete decide salir, sin repetir lo ya visitado. Solo
+    // si el mundo ya no tiene nada por recorrer, la entrevista pasa al plan.
+    if (nivel1Ids.length === 0 && estado.dominioSesion !== "core" && estado.ruta.length < MAX_DEPTH) {
+      const reeleccion = reelegirPuertaDeMundo({
+        dominio: estado.dominioSesion,
+        graph,
+        estadoVivo: estado.estadoVivoPrevio,
+        perfilSesion: estado.perfilSesion,
+        cubiertos: visitados,
+        descartados: new Set(estado.puertasDescartadas),
+      });
+      if (reeleccion) {
+        const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
+        estado = {
+          ...estado,
+          ruta: [...estado.ruta, reeleccion.puertaId],
+          modos: [...estado.modos, "conversado"],
+          preguntaPendiente: pregunta,
+          ultimasPreguntas: [...estado.ultimasPreguntas, pregunta].slice(-3),
+          fallbackEvents: [
+            ...estado.fallbackEvents,
+            {
+              tipo: "puerta_reelegida",
+              dominio: estado.dominioSesion,
+              puerta_descartada: actualId,
+              puerta_nueva: reeleccion.puertaId,
+              motivo: "el nodo no tiene sucesores en este mundo",
+              es_semilla: reeleccion.esSemilla,
+              candidatas_restantes: reeleccion.candidatas,
+            },
+          ],
+        };
+        return { tipo: "pregunta", estado, pregunta, acumulado, nodosNuevos: nodosNuevosDesdeInicio() };
+      }
+    }
     if (nivel1Ids.length === 0 || estado.ruta.length >= MAX_DEPTH) {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
       return {
         tipo: "listo_para_plan",
         estado,
         acumulado,
-        evaluacion: evaluarRuta(estado.ruta, families),
+        evaluacion: evaluarRuta(estado.ruta, families, idioma),
         nodosNuevos: nodosNuevosDesdeInicio(),
       };
     }
@@ -481,7 +659,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       historialMensajes: estado.historialMensajes,
       acumulado,
       registrarEvento: (e) => eventosNuevos.push(e),
-      dominiosDesbloqueados: estado.dominiosDesbloqueados,
+      dominiosDesbloqueados: dominiosDelRecorrido(estado),
+      idioma,
+      idiomaSalida,
     });
     acumulado = resultadoInterprete.acumulado;
     if (resultadoInterprete.historialMensajes) {
@@ -498,7 +678,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         tipo: "error_temporal",
         estado,
         acumulado,
-        opciones: nivel1Ids.map((nid) => ({ id: nid, titulo: graph[nid].titulo_concepto })),
+        // REGLA ESTRICTA (fundador, 26 sep 2026): lo que llega al cliente nombra el tema por su ETIQUETA, nunca
+        // por el titulo del concepto (que puede traer un libro o un autor).
+        opciones: nivel1Ids.map((nid) => ({ id: nid, etiqueta: etiquetaArbol(nid, graph, idiomaInterfaz) })),
       };
     }
 
@@ -525,14 +707,17 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
     if (resultado.accion === "salir") {
       // ── Fase 4.3: EL MUNDO NUNCA ABANDONA ──
-      // En una sesion de mundo, 'salir' NO cierra. El usuario pago por explorar
+      // En una sesion de mundo, 'salir' NO cierra. El usuario eligio explorar
       // ESTE mundo; que la semilla que eligio evaluacionBrecha (ciega al perfil,
       // V2) no encajara no es problema suyo. La brujula re-elige entre las demas
       // semillas del dominio y sus vecinos, descartando la RAMA rechazada.
       // Quien juzga el perfil sigue siendo el interprete: si tambien rechaza la
       // puerta nueva, se vuelve a re-elegir. La brujula propone, el interprete
-      // dispone, y solo cuando no queda ninguna hay cierre -- honesto y con
-      // reembolso.
+      // dispone, y solo cuando no queda ninguna hay cierre honesto. El cierre
+      // no borra nada (AUD-09 H04): la fila del mundo se queda, con su sello de
+      // compra, su cierre y su diagnostico si los tiene. El preview es gratis y
+      // el cobro solo ocurre a la entrega de un plan, asi que no hay reembolso
+      // que hacer aqui.
       if (estado.dominioSesion !== "core") {
         const rechazada = ramaDe(actualId, graph);
         const descartados = new Set<string>([...estado.puertasDescartadas, ...rechazada]);
@@ -546,7 +731,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         });
         const motivo = resultado.razonamiento ?? null;
         if (reeleccion) {
-          const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache);
+          const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
           estado = {
             ...estado,
             ruta: [...estado.ruta, reeleccion.puertaId],
@@ -607,14 +792,14 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     }
 
     if (resultado.accion === "generar_plan") {
-      const evaluacion = evaluarRuta(estado.ruta, families);
+      const evaluacion = evaluarRuta(estado.ruta, families, idioma);
       // Phase 3.7.2 (la oferta honesta, canon 04): la oferta de
       // suficiencia ya no es una pregunta de texto que invita a salir a
       // ciegas; es una tarjeta con lo que queda sobre la mesa (2-3 temas
       // pendientes por su etiqueta de arbol) y dos CTAs de peso igual.
       // Si no falta nada, lo dice con honestidad inversa (temas = []).
       if (!estado.profundizarOfrecido) {
-        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph);
+        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph, idiomaInterfaz);
         estado = { ...estado, profundizarOfrecido: true, fase: "esperando_profundizar", preguntaPendiente: null };
         return {
           tipo: "listo_para_plan",
@@ -646,7 +831,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     const nuevoActualId = camino[camino.length - 1];
 
     if (preguntaNecesaria) {
-      const pregunta = resultado.preguntaAdaptada || preguntaDeNodo(nuevoActualId, graph, preguntasCache);
+      const pregunta = resultado.preguntaAdaptada || preguntaDeNodo(nuevoActualId, graph, preguntasCache, idioma);
       estado = {
         ...estado,
         preguntaPendiente: pregunta,

@@ -1,0 +1,315 @@
+{
+ "R045-001": {
+  "real": true,
+  "node_id": "conoce_insumos_vitales",
+  "libro": "Max Muller, Essentials of Inventory Management"
+ },
+ "R045-002": {
+  "real": true,
+  "node_id": "comunicacion_proactiva_puntos_estres",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-003": {
+  "real": true,
+  "node_id": "garantia_devolucion_dinero",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-004": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Calcula tu punto de pedido con el sistema de tres cajones",
+   "etiqueta": "Fija Cuándo Volver a Pedir",
+   "resumen": "El punto de pedido es la cantidad más baja que tendrás entre lo disponible y lo ya pedido antes de volver a pedir. Piénsalo como tres cajones: el primero es el stock de trabajo, el segundo la reserva que cubre tu consumo durante el plazo de entrega y el tercero el stock de seguridad, que absorbe retrasos y defectos y parte del 50 por ciento de la reserva. La fórmula es (consumo x plazo de entrega) + stock de seguridad. Recalcula el punto de pedido cada 30 días con el consumo real del mes y ajusta el stock de seguridad a tu experiencia real.",
+   "entregable": "Tabla por artículo con consumo mensual, plazo de entrega, reserva de trabajo, stock de seguridad y punto de pedido calculado",
+   "condiciones": [
+    "Cuando se te agotan artículos mientras esperas a que llegue el pedido",
+    "Cuando tus proveedores tienen plazos de entrega inciertos o te llegan productos defectuosos"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\OCR\\Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "3900-3912",
+   "cita": "Mathematically safety stock is 50 percent of working reserve. (The average between having nothing in Bin 2 and having it at 100 percent full is 50 percent.) However, companies adjust safety stock levels to coincide with their actual experience.",
+   "dato": "Recalcula el punto de pedido cada 30 días con el consumo real del mes",
+   "explicacion": "El libro explica el sistema de tres cajones, la fórmula (Usage x Lead Time) + Safety Stock = ROP y que el stock de seguridad se ajusta a la experiencia real, pero no fija ningún plazo para recalcular el punto de pedido. Un Grep de '30 days|thirty days|30-day' en todo el libro no da ningún resultado. El plazo de 30 días es inventado."
+  }
+ },
+ "R045-005": {
+  "real": true,
+  "node_id": "construccion_tribu_de_marca",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-006": {
+  "real": true,
+  "node_id": "unidades_medida_sensores",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-007": {
+  "real": true,
+  "node_id": "celebracion_hitos_cliente",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-008": {
+  "real": true,
+  "node_id": "experiencia_del_cliente_proactiva",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-009": {
+  "real": true,
+  "node_id": "valores_centrales_baldrige",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-010": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Arranca el conteo cíclico con un grupo de control",
+   "etiqueta": "Ensaya el Conteo con 100 Artículos",
+   "resumen": "Antes de elegir un método de conteo cíclico, haz una prueba a pequeña escala: escoge 100 artículos que sean un corte real de todo tu inventario (caros y baratos, de rotación rápida y lenta, con plazo de entrega largo) y cuenta solo 10 al día durante 100 días, de modo que cada artículo se cuente 10 veces. Así detectas pronto los grandes fallos del sistema, como el acceso libre al almacén o el desfase entre mover el producto y registrar el movimiento, y corriges tus errores sobre unos pocos SKU en lugar de cientos.",
+   "entregable": "Hoja de seguimiento del grupo de control con los 100 artículos contados 10 veces cada uno, adoptada como tu método de conteo cíclico permanente para todo el inventario",
+   "condiciones": [
+    "Cuando vas a empezar a hacer conteos cíclicos y todavía no sabes cómo funciona realmente tu sistema de inventario",
+    "Cuando lo que dice el sistema no coincide con lo que hay en los estantes y no sabes por qué"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "entregable",
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\OCR\\Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "5280",
+   "cita": "The control group approach should only be used as a starting point and not as an ongoing cycle count method. The reason for this is that the control group is not statistically large enough to actually represent your entire inventory.",
+   "dato": "adoptada como tu método de conteo cíclico permanente para todo el inventario",
+   "explicacion": "El libro dice que el grupo de control es solo un punto de partida y no un método de conteo continuo, porque no es estadísticamente representativo de todo el inventario; después hay que elegir otro método (línea 5282). El entregable dice lo contrario: lo convierte en el método permanente para todo el inventario."
+  }
+ },
+ "R045-011": {
+  "real": true,
+  "node_id": "gratificacion_inmediata_producto",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-012": {
+  "real": true,
+  "node_id": "enfoque_en_superfans",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-013": {
+  "real": true,
+  "node_id": "fase_acclimate_experiencia_cliente",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-014": {
+  "real": true,
+  "node_id": "clasifica_tu_inventario",
+  "libro": "Max Muller, Essentials of Inventory Management"
+ },
+ "R045-015": {
+  "real": true,
+  "node_id": "viaje_diagnostico_remedial",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-016": {
+  "real": true,
+  "node_id": "fase_assess_ciclo_cliente",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-017": {
+  "real": true,
+  "node_id": "gamificacion_onboarding_visual",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-018": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Acción Correctiva ante Cambios Esporádicos",
+   "etiqueta": "Encuentra Qué Cambió y Restáuralo",
+   "resumen": "Cuando un proceso que funcionaba bien se sale de pronto de sus metas, el problema es esporádico y nace de un cambio adverso. El viaje de diagnóstico busca qué cambió: compara productos y datos del proceso de antes y de después de que empezara el problema, y reconstruye la cronología de eventos como cambios de turno, empleados nuevos o mantenimientos. Una vez hallada la causa, lo peor ha pasado: casi siempre el remedio consiste en volver a lo que se hacía antes, y el propio personal local puede restablecer la situación.",
+   "entregable": "Cronología de los eventos de las 72 horas anteriores y posteriores al inicio del fallo, con la causa del cambio identificada y la conformidad restablecida",
+   "condiciones": [
+    "Cuando aparece un pico repentino de defectos en un proceso que normalmente cumple sus metas",
+    "Cuando necesitas volver a la normalidad sin lanzar un proyecto de mejora completo"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8259-8289",
+   "cita": "Reconstruction of the chronology, which consists of logging on a time scale (of hours, days, etc.) (1) the events that took place in the process before and after the sporadic change",
+   "dato": "de las 72 horas anteriores y posteriores al inicio del fallo",
+   "explicacion": "El libro pide reconstruir la cronología en una escala de tiempo (horas, días, etc.) antes y después del cambio esporádico, sin fijar ninguna ventana concreta. Un Grep de '72 hours|72-hour|seventy-two|72 h' en todo el libro no da ningún resultado. La ventana de 72 horas es un plazo inventado."
+  }
+ },
+ "R045-019": {
+  "real": true,
+  "node_id": "validacion_sistema_medicion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-020": {
+  "real": true,
+  "node_id": "celebracion_automatizada_de_hitos",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-021": {
+  "real": true,
+  "node_id": "hacer_remarcable_lo_requerido",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-022": {
+  "real": true,
+  "node_id": "gestion_testimonios",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-023": {
+  "real": true,
+  "node_id": "estrategia_multicanal_bienvenida",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-024": {
+  "real": true,
+  "node_id": "incentivos_internos_alineados_a_retencion",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-025": {
+  "real": true,
+  "node_id": "fase_assess",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-026": {
+  "real": true,
+  "node_id": "autoservicio_y_autosanacion_del_producto",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-027": {
+  "real": true,
+  "node_id": "fase_affirm_buyers_remorse",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-028": {
+  "real": true,
+  "node_id": "fase_adopt_ciclo_cliente",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-029": {
+  "real": true,
+  "node_id": "experiencias_exclusivas_vip",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-030": {
+  "real": true,
+  "node_id": "calcula_costo_de_mantener_contra_costo_de_reponer",
+  "libro": "Max Muller, Essentials of Inventory Management"
+ },
+ "R045-031": {
+  "real": true,
+  "node_id": "fase_accomplish_experiencia_cliente",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-032": {
+  "real": true,
+  "node_id": "documento_quien_es_quien_equipo",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-033": {
+  "real": true,
+  "node_id": "vacios_conocimiento_cliente",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-034": {
+  "real": true,
+  "node_id": "calibracion_intensidad_celebracion",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-035": {
+  "real": true,
+  "node_id": "handoff_transicion_ventas_cuentas",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-036": {
+  "real": true,
+  "node_id": "fase_admit_celebracion",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-037": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Fase Affirm: Reforzar la Decisión de Compra",
+   "etiqueta": "Calma las Dudas tras Comprar",
+   "resumen": "Justo después de la compra, la emoción positiva empieza a deteriorarse y aparece una corriente de duda que el cliente quizá ni percibe. La zona de silencio entre la compra y la entrega agrava ese remordimiento, porque el cliente llena el vacío de comunicación con sus propias dudas. Tu tarea es contrarrestarlo reforzando la decisión y recordándole los elementos de la oferta que lo llevaron a comprar, por ejemplo con una llamada de agradecimiento en las primeras veinticuatro horas.",
+   "entregable": "Secuencia de contactos posteriores a la compra que reafirman la decisión del cliente desde el cierre de la venta hasta su primer uso importante del producto",
+   "condiciones": [
+    "Cuando hay un periodo de espera entre el pago y la entrega del producto o servicio",
+    "Cuando el cliente ya tuvo su primera interacción importante con el producto y empieza a dudar de su compra"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "condiciones",
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\clientes_y_postventa\\Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "2869",
+   "cita": "The Affirm stage of the customer life cycle experience begins in the minutes and hours after the purchase and lasts until the first major interaction with the purchased product or service.",
+   "dato": "Cuando el cliente ya tuvo su primera interacción importante con el producto y empieza a dudar de su compra",
+   "explicacion": "Según el libro, la fase Affirm empieza minutos u horas después de la compra y termina con la primera interacción importante con el producto. La condición activa el nodo justo cuando esa fase ya ha terminado, es decir, cambia la secuencia que da el libro."
+  }
+ },
+ "R045-038": {
+  "real": true,
+  "node_id": "value_non_value_added_analysis",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-039": {
+  "real": true,
+  "node_id": "traduce_stock_muerto_numeros",
+  "libro": "Max Muller, Essentials of Inventory Management"
+ },
+ "R045-040": {
+  "real": true,
+  "node_id": "fase_activate_primera_impresion",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-041": {
+  "real": true,
+  "node_id": "conversacion_emocional_postcompra",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-042": {
+  "real": true,
+  "node_id": "fase_adopt",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-043": {
+  "real": true,
+  "node_id": "conexion_personal_emocional",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-044": {
+  "real": true,
+  "node_id": "advocacy_customer_journey",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-045": {
+  "real": true,
+  "node_id": "validacion_sistema_medicion_2",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-046": {
+  "real": true,
+  "node_id": "visualizacion_datos_deteccion_outliers",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R045-047": {
+  "real": true,
+  "node_id": "define_punto_maximo_de_stock",
+  "libro": "Max Muller, Essentials of Inventory Management"
+ },
+ "R045-048": {
+  "real": true,
+  "node_id": "desconexion_ventas_experiencia",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ },
+ "R045-049": {
+  "real": true,
+  "node_id": "fase_acclimate",
+  "libro": "Never Lose a Customer Again - Joey Coleman"
+ }
+}

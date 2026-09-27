@@ -19,8 +19,27 @@
     "financiamiento_bancos_multilaterales_desarrollo"
   ],
   "condiciones_activacion": [
-    "La empresa planea construir o equipar instalaciones en un mercado emergente",
+    "Tu empresa opera en Estados Unidos y planea construir o equipar instalaciones en un mercado emergente",
     "Existe riesgo político significativo en el país destino de la inversión"
   ],
-  "etiqueta_arbol": "Protege tu Inversión Externa"
+  "etiqueta_arbol": "Protege tu Inversión Externa",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-177",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La empresa planea construir o equipar instalaciones en un mercado emergente",
+      "texto_nuevo": "Tu empresa opera en Estados Unidos y planea construir o equipar instalaciones en un mercado emergente",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q008-016: La condicion 0 no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): OPIC solo apoya inversion de empresas estadounidenses y ninguna condicion deja claro que aplica si operas alli"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "costo_de_calidad",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Costo de la Calidad (Marco de Análisis Financiero)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -32,5 +32,23 @@
     "Cuando necesitas justificar con números si vale la pena invertir en calidad.",
     "Cuando notas crecimientos inusuales en inventario, retrabajo o costos operativos ligados a defectos."
   ],
-  "etiqueta_arbol": "Traduce Calidad a Dinero"
+  "etiqueta_arbol": "Traduce Calidad a Dinero",
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-031",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q081-030: Tenia razon el lector A: los pasos (revision mensual, costo real de inventario, defectos y retrabajo frente a lo presupuestado, asignar quien corrige cada desviacion) son control operativo de un negocio en marcha, que la regla manda a ejecucion; el uso para decidir invertir en prevencion es solo el ultimo paso y no convierte el nodo en diseno del plan. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

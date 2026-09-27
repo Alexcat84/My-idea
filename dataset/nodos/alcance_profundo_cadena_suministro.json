@@ -15,8 +15,7 @@
   "nodos_previos": [
     "programa_mentoria_proveedores",
     "codigo_conducta_proveedores",
-    "gestion_procurement_consumo",
-    "plataforma_colaboracion_tiempo_real"
+    "seleccion_de_proveedores_por_costo_total"
   ],
   "nodos_siguientes": [
     "optimizacion_tecnologia_cadena_suministro",
@@ -37,6 +36,50 @@
       "node_id": "profundizacion_cadena_suministro",
       "titulo": "Profundización en la Cadena de Suministro (Tier 2/3)",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-060",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "plataforma_colaboracion_tiempo_real -> alcance_profundo_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-18, lector y verificador de acuerdo)",
+        "motivo": "Una plataforma de colaboracion en tiempo real con los socios no es la puerta natural al control ambiental de los proveedores de segundo y tercer nivel."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "mv-arista-004",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "seleccion_de_proveedores_por_costo_total -> alcance_profundo_cadena_suministro",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B03, lectores de acuerdo)",
+        "motivo": "Tras gestionar y elegir proveedores directos se llega a extender los requisitos a los niveles 2 y 3."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-005",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_procurement_consumo -> alcance_profundo_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B03)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en seleccion_de_proveedores_por_costo_total."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
     }
   ]
 }

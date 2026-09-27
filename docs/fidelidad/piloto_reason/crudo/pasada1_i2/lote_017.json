@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_017",
+  "intento": 0,
+  "usd": 0.17248799999999997,
+  "turnos": 1,
+  "duracion_s": 18.1,
+  "pared_s": 19.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34197,
+  "tokens_out": 1785,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD93B3F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"1 (casi nunca)\", \"5 (muy frecuente)\", \"escalas de calificación de 1 a 5\", \"periodo definido\"], \"clase\": \"FIEL\", \"lineas\": [3226, 3228, 3232, 3332], \"razon\": \"El libro pide estimar de 1 (hardly at all) a 5 (very often indeed) en un periodo corto y claramente definido. El paso omite 'corto' y la alternativa de trabajos concretos.\"},\n  {\"id\": \"P14DCA6\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Sistema de Comando de Incidentes\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [4769, 5164, 5174, 5176, 5178, 5208], \"razon\": \"El libro no menciona ese sistema. La flexibilidad se basa en cultura y valores compartidos, jerarquía previa y formación; Weick dice que reglas y estandarización sirven mal en emergencias sin precedente.\"},\n  {\"id\": \"PACB32B\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4223, 4236, 4244, 4246, 4302, 1006], \"razon\": \"El libro respalda la legislación sobre actos inseguros concretos si peligros, situaciones y personas son bien conocidos, con aplicación efectiva. Critica la regulación prescriptiva fragmentada y la sobreespecificación de procedimientos.\"},\n  {\"id\": \"PA705CB\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"alta gerencia\"], \"clase\": \"FIEL\", \"lineas\": [2687, 4757], \"razon\": \"El libro dice que los datos deben difundirse ampliamente, sobre todo entre los 'bean counters' de los niveles altos, idealmente con el coste financiero potencial de cada evento.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD93B3F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "1 (casi nunca)",
+    "5 (muy frecuente)",
+    "escalas de calificación de 1 a 5",
+    "periodo definido"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3226,
+    3228,
+    3232,
+    3332
+   ],
+   "razon": "El libro pide estimar de 1 (hardly at all) a 5 (very often indeed) en un periodo corto y claramente definido. El paso omite 'corto' y la alternativa de trabajos concretos."
+  },
+  {
+   "id": "P14DCA6",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Sistema de Comando de Incidentes"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5176,
+    5178,
+    5208
+   ],
+   "razon": "El libro no menciona ese sistema. La flexibilidad se basa en cultura y valores compartidos, jerarquía previa y formación; Weick dice que reglas y estandarización sirven mal en emergencias sin precedente."
+  },
+  {
+   "id": "PACB32B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4223,
+    4236,
+    4244,
+    4246,
+    4302,
+    1006
+   ],
+   "razon": "El libro respalda la legislación sobre actos inseguros concretos si peligros, situaciones y personas son bien conocidos, con aplicación efectiva. Critica la regulación prescriptiva fragmentada y la sobreespecificación de procedimientos."
+  },
+  {
+   "id": "PA705CB",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "alta gerencia"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2687,
+    4757
+   ],
+   "razon": "El libro dice que los datos deben difundirse ampliamente, sobre todo entre los 'bean counters' de los niveles altos, idealmente con el coste financiero potencial de cada evento."
+  }
+ ]
+}

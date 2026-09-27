@@ -11,11 +11,20 @@
  * es tuyo no se cobra.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolarEn } from "@/lib/i18n/elision";
+import { idiomaDeDocumentos } from "@/lib/i18n/idiomaDocumento";
+import { pintarRotulos } from "@/lib/i18n/rotulosPlan";
+import { formaPlural, interpolar } from "@/lib/i18n/interpolar";
+import { DOCUMENTOS_RUTA } from "@/lib/i18n/mensajes/documentosRuta";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
+import { actasVigentes } from "@/lib/acta";
 import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
-import catalogo from "@/lib/assets/packs_catalog.json";
-import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
+import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { bitacoraCuerpo, bitacoraDeEspacio, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerItemsDePlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
@@ -35,14 +44,16 @@ import {
   type AccionExpediente,
   type CicloExpediente,
   type MundoExpediente,
+  accionesDelCicloVigente,
 } from "@/lib/expediente";
 import { nombreDeIdea } from "@/lib/ideas";
 import { sinProcedencia } from "@/lib/planParser";
 import { createClient } from "@/lib/supabase/server";
+import { resumenCaminoExpediente } from "@/lib/resumenExpediente";
+import { ETIQUETAS_CICLO } from "@/lib/dbContract";
 
 export const runtime = "nodejs";
 
-const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
 const esCore = (dominio: string | null | undefined) => !dominio || dominio === "core";
 
 type FilaPlan = {
@@ -55,6 +66,8 @@ type FilaPlan = {
 };
 type FilaSesion = { id: string; created_at: string; tipo: string; dominio: string | null };
 type FilaAccion = {
+  /** AUD-09 M02: el plan de la tarea, para quedarse con el ciclo vigente. */
+  plan_id?: string | null;
   dominio: string | null;
   etapa: number;
   texto: string;
@@ -68,23 +81,25 @@ type FilaAccion = {
  * se reintenta sin esa columna si aún no está). Compartido por el expediente y el
  * Reporte de un mundo, que luego filtran por dominio. */
 async function cargarAcciones(supabase: Awaited<ReturnType<typeof createClient>>, projectId: string): Promise<FilaAccion[]> {
-  const COLS = "dominio, etapa, texto, estado, completed_at, fecha_base, orden";
+  const COLS = "plan_id, dominio, etapa, texto, estado, completed_at, fecha_base, orden";
   const con = await supabase
     .from("checklist_items")
     .select(`${COLS}, no_aplica_motivo`)
     .eq("project_id", projectId)
     .order("etapa", { ascending: true })
     .order("orden", { ascending: true });
-  const raw = con.error
-    ? (
-        await supabase
-          .from("checklist_items")
-          .select(COLS)
-          .eq("project_id", projectId)
-          .order("etapa", { ascending: true })
-          .order("orden", { ascending: true })
-      ).data
-    : con.data;
+  let raw: unknown[] | null = con.data;
+  if (con.error) {
+    const sin030 = await supabase
+      .from("checklist_items")
+      .select(COLS)
+      .eq("project_id", projectId)
+      .order("etapa", { ascending: true })
+      .order("orden", { ascending: true });
+    // AUD-09 M18: si tampoco la lectura mínima responde, no es "sin tareas".
+    if (sin030.error) throw new LecturaFallidaError("las tareas", sin030.error);
+    raw = sin030.data;
+  }
   return ((raw ?? []) as FilaAccion[]).map((i) => ({ ...i, no_aplica_motivo: i.no_aplica_motivo ?? null }));
 }
 
@@ -97,35 +112,60 @@ const aAccion = (i: FilaAccion): AccionExpediente => ({
   noAplicaMotivo: i.no_aplica_motivo ?? null,
 });
 
-export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+async function generarDocumentos(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(DOCUMENTOS_RUTA, idioma);
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
+  // i18n F6 (D2): lo que FORMA el documento (títulos, archivo, encabezados,
+  // fechas, los rótulos del plan) sigue el idioma del proyecto; el índice que
+  // lista los documentos y los rechazos, el de la interfaz (lib/i18n/idiomaDocumento.ts).
+  const idiomaDoc = idiomaDeDocumentos(proyecto, idioma);
+  const tDoc = elegir(DOCUMENTOS_RUTA, idiomaDoc);
+  // El plan se guarda con sus rótulos neutros (F5); el documento los pinta en su idioma.
+  const planEnDoc = (md: string) => pintarRotulos(sinProcedencia(md), idiomaDoc);
 
-  const { data: sesionesRaw } = await supabase
+  const { data: sesionesRaw, error: errSesiones } = await supabase
     .from("sessions")
     .select("id, created_at, tipo, dominio")
     .eq("project_id", projectId);
+  if (errSesiones) throw new LecturaFallidaError("las sesiones", errSesiones);
   const sesiones = (sesionesRaw ?? []) as FilaSesion[];
   const idsSesiones = sesiones.map((s) => s.id);
-  const { data: planesRaw } = idsSesiones.length
+  const { data: planesRaw, error: errPlanes } = idsSesiones.length
     ? await supabase
         .from("plans")
         .select("id, etiqueta, contenido_md, created_at, dominio, baseline_confirmada_at")
         .in("session_id", idsSesiones)
         .order("created_at", { ascending: true })
-    : { data: [] };
+    : { data: [], error: null };
+  if (errPlanes) throw new LecturaFallidaError("los planes", errPlanes);
   const planes = (planesRaw ?? []) as FilaPlan[];
+
+  // Ciclo de replanteamiento, Fase 2: lo que la persona contó al pedir cada
+  // ciclo (evento ciclo_* con su plan_id) acompaña a su plan en el documento.
+  const relatoDe = new Map<string, string>();
+  const { data: ciclosBitacora } = await supabase
+    .from("project_bitacora")
+    .select("payload")
+    .eq("project_id", projectId)
+    .in("tipo", ["ciclo_profundizado", "ciclo_replanteado"]);
+  for (const c of (ciclosBitacora ?? []) as Array<{ payload?: { plan_id?: unknown; relato?: unknown } }>) {
+    const relato = typeof c.payload?.relato === "string" ? c.payload.relato.trim() : "";
+    if (typeof c.payload?.plan_id === "string" && relato) relatoDe.set(c.payload.plan_id, relato);
+  }
 
   const ciclos: CicloExpediente[] = planes
     .filter((p) => esCore(p.dominio) && ETIQUETAS_CICLO.includes(p.etiqueta))
@@ -135,14 +175,17 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       planId: p.id,
       etiqueta: p.etiqueta,
       createdAt: p.created_at,
-      contenidoMd: sinProcedencia(p.contenido_md),
+      contenidoMd: planEnDoc(p.contenido_md),
+      relato: relatoDe.get(p.id) ?? null,
     }));
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
   const realizadaAt = proyecto.realizada_at ?? null;
 
-  const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
-  const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
+  // El nombre de cara de un mundo: en el documento, en su idioma; en el índice,
+  // en el de la interfaz (el panel parte sus recuadros con el nombre que pinta).
+  const nombreMundo = (dominio: string) => nombreDeMundo(dominio, idiomaDoc);
+  const nombreMundoIndice = (dominio: string) => nombreDeMundo(dominio, idioma);
 
   // Fase 3 (tanda 5): los mundos con plan (dominios distintos entre los planes de
   // mundo), para el Reporte por espacio del índice. Los ciclos de un dominio se
@@ -150,15 +193,15 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const ciclosDeDominio = (dominio: string): CicloExpediente[] =>
     planes
       .filter((p) => p.dominio === dominio && ETIQUETAS_CICLO.includes(p.etiqueta))
-      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: sinProcedencia(p.contenido_md) }));
+      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: planEnDoc(p.contenido_md), relato: relatoDe.get(p.id) ?? null }));
   const dominiosMundo = [
     ...new Set(planes.filter((p) => !esCore(p.dominio) && ETIQUETAS_CICLO.includes(p.etiqueta)).map((p) => p.dominio!)),
   ];
-  const mundosIndice = dominiosMundo.map((dom) => ({ dominio: dom, nombre: nombreMundo(dom) }));
+  const mundosIndice = dominiosMundo.map((dom) => ({ dominio: dom, nombre: nombreMundoIndice(dom) }));
 
   const doc = new URL(request.url).searchParams.get("doc");
   if (!doc) {
-    return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt, mundosIndice) });
+    return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt, mundosIndice, idioma) });
   }
 
   // ── Reporte de un mundo (documento por espacio) ────────────────────────────
@@ -166,26 +209,28 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     const dominio = doc.slice("reporte:".length);
     const ciclosMundo = ciclosDeDominio(dominio);
     if (ciclosMundo.length === 0) {
-      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
     const ahora = new Date().toISOString();
     const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
     const am = analyticsDeMundo(entrada, dominio);
-    const comoTeFueMd = am ? resumenEspacioMd(am.universal, am.cumplimiento).join("\n") : null;
+    const comoTeFueMd = am ? resumenEspacioMd(am.universal, am.cumplimiento, idiomaDoc).join("\n") : null;
 
-    const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+    const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc);
     // Scopeado: la secuencia del mundo NO se auto-etiqueta (ya estás en su espacio).
-    const bitacoraMd = bitacoraCuerpo(bitacoraDeEspacio(entradasBita, dominio), 3).join("\n");
+    const bitacoraMd = bitacoraCuerpo(bitacoraDeEspacio(entradasBita, dominio), 3, undefined, idiomaDoc).join("\n");
 
-    const accionesMundo = (await cargarAcciones(supabase, projectId))
+    // AUD-09 M02: solo el ciclo vigente del mundo (los anteriores son sus ciclos).
+    const accionesMundo = accionesDelCicloVigente(await cargarAcciones(supabase, projectId), planes)
       .filter((i) => i.dominio === dominio)
       .map(aAccion);
 
     const nombreDom = nombreMundo(dominio);
     return NextResponse.json({
-      titulo: `Reporte de ${nombreDom}`,
+      titulo: interpolar(tDoc.tituloReporte, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, `Reporte de ${nombreDom}`),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloReporte, { mundo: nombreDom }), idiomaDoc),
       markdown: reporteMundoMarkdown({
         nombreIdea: nombre,
         nombreMundo: nombreDom,
@@ -195,7 +240,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
         bitacoraMd,
         completadoAt: am?.completadoAt ?? null,
         generadoAt: ahora,
-      }),
+      }, idiomaDoc),
     });
   }
 
@@ -205,53 +250,71 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     // Solo los tres mundos de protección y solo con plan: el índice no lo ofrece
     // en ningún otro caso, así que llegar aquí sin eso es una clave inventada.
     if (!esMundoProteccion(dominio) || ciclosDeDominio(dominio).length === 0) {
-      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
-    const { data: filasMundo, error: errRegistro } = await supabase
-      .from("checklist_items")
-      .select("id, texto, etapa, orden, estado, protege_item, deteccion, probabilidad, dolor, camino")
-      .eq("project_id", projectId)
-      .eq("dominio", dominio);
+    const COLS_REGISTRO = "id, plan_id, texto, etapa, orden, estado, protege_item, protege_nodos, deteccion, probabilidad, dolor, camino";
+    const leerRegistro = (cols: string) =>
+      supabase.from("checklist_items").select(cols).eq("project_id", projectId).eq("dominio", dominio);
+    let { data: filasMundo, error: errRegistro } = await leerRegistro(COLS_REGISTRO);
+    // Si la 041 aún no se aplicó, se lee sin protege_nodos (resuelve por id).
+    if (errRegistro) ({ data: filasMundo, error: errRegistro } = await leerRegistro(COLS_REGISTRO.replace(", protege_nodos", "")));
     if (errRegistro) {
       // Fallar ruidoso (BANCO §9): sin registro a medias ni plantilla.
-      return NextResponse.json({ error: "no pudimos leer tu registro; intenta de nuevo en un momento" }, { status: 500 });
+      return NextResponse.json({ error: t.noPudimosLeerRegistro }, { status: 500 });
     }
     // Las actividades del núcleo con su #N, del MISMO armador que usó el
     // enlazador: pantalla, papel y enlace comparten numeración.
     const planCore = await obtenerPlanCoreVigente(supabase, projectId);
     const filasNucleo = planCore ? await obtenerItemsDePlan(supabase, projectId, planCore) : [];
+    // AUD-09 M15: con sus nodos (la protección se resuelve por nodo contra
+    // este plan) y con los ids de TODO el plan, retiradas incluidas.
+    const nodosPorId = new Map(filasNucleo.map((f) => [f.id, f.nodos_origen ?? null]));
     const actividades = armarSnapshot(filasNucleo as unknown as FilaChecklistSnapshot[]).actividades.map((a) => ({
       id: a.id,
       indice: a.indice,
       titulo: a.titulo,
+      nodos_origen: nodosPorId.get(a.id) ?? null,
     }));
-    const entradas = armarRegistro((filasMundo ?? []) as unknown as FilaRespuesta[], actividades);
+    const idsDelPlan = new Set(filasNucleo.map((f) => f.id));
+    // AUD-09 M03: el Registro del ciclo vigente, igual que la pantalla.
+    const filasVigentes = accionesDelCicloVigente(
+      ((filasMundo ?? []) as unknown as Array<Record<string, unknown>>).map((f) => ({ ...f, dominio })) as Array<{ plan_id: string | null; dominio: string }>,
+      planes
+    );
+    const entradas = armarRegistro(filasVigentes as unknown as FilaRespuesta[], actividades, idsDelPlan);
     const nombreDom = nombreMundo(dominio);
     const generado = new Date().toISOString();
     return NextResponse.json({
-      titulo: `Registro de ${nombreDom}`,
+      titulo: interpolar(tDoc.tituloRegistro, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, `Registro de ${nombreDom}`),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloRegistro, { mundo: nombreDom }), idiomaDoc),
       markdown: [
-        `> ${nombre} · Registro de ${nombreDom} · ${fechaHumanaCorta(generado)}`,
+        interpolarEn(idiomaDoc, tDoc.encabezadoRegistro, { nombre, mundo: nombreDom, fecha: fechaHumanaCorta(generado, idiomaDoc) }),
         "",
-        registroMarkdown(nombreDom, entradas),
+        registroMarkdown(nombreDom, entradas, idiomaDoc),
       ].join("\n"),
     });
   }
 
   if (doc === CLAVE_BITACORA) {
     const generado = new Date().toISOString();
-    const entradas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+    const entradas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc);
     // Fase 3 (tanda 4): la bitácora GLOBAL etiqueta cada entrada con su espacio
     // (nombre de cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada.
     const hayMundos = proyectoTieneMundos(entradas);
     return NextResponse.json({
-      titulo: "Tu bitácora",
+      titulo: tDoc.tituloBitacora,
       nombre,
-      archivo: nombreArchivo(nombre, "Tu bitacora"),
-      markdown: bitacoraMarkdown(nombre, entradas, generado, undefined, (e) =>
-        etiquetaEspacio(e.dominio, hayMundos, nombreMundo),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, tDoc.archivoBitacora, idiomaDoc),
+      markdown: bitacoraMarkdown(
+        nombre,
+        entradas,
+        generado,
+        undefined,
+        (e) => etiquetaEspacio(e.dominio, hayMundos, nombreMundo, idiomaDoc),
+        idiomaDoc,
       ),
       // El PDF de la bitácora se dibuja estructurado (espina continua), no como
       // markdown; el .md sigue saliendo del mismo texto de arriba.
@@ -266,7 +329,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     // su propio botón de descarga.
     const ahora = new Date().toISOString();
     const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
-    const analytics = calcularAnalytics(entrada);
+    const analytics = calcularAnalytics(entrada, idiomaDoc);
     const u = analytics.universal;
     const c = analytics.cumplimiento;
     const restantes = Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas);
@@ -277,10 +340,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
             restantes,
             semanas,
             ritmo: u.ritmoAccionesPorSemana,
-            fechaHumana: fechaHumanaCorta(new Date(Date.parse(ahora) + semanas * 7 * 86_400_000).toISOString()),
+            fechaHumana: fechaHumanaCorta(new Date(Date.parse(ahora) + semanas * 7 * 86_400_000).toISOString(), idiomaDoc),
           }
         : null;
-    const nombreDom = (dom: string) => (dom === "core" ? "Tu viaje principal" : nombreMundo(dom));
     const analisis: AnalisisPapelData = {
       cerrada: Boolean(realizadaAt),
       avance: { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total },
@@ -300,63 +362,55 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
             pctTardias: c.pctTardias,
             desviacionMediaDias: c.desviacionMediaDias,
             porEtapa: c.porEtapa,
-            porDominio: c.porDominio.map((d) => ({
-              nombre: nombreDom(d.dominio),
-              adelantadas: d.adelantadas,
-              aTiempo: d.aTiempo,
-              tardias: d.tardias,
-              completado: analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt),
-            })),
           }
         : null,
     };
     return NextResponse.json({
-      titulo: "Análisis del proyecto",
+      titulo: tDoc.tituloAnalisis,
       nombre,
-      archivo: nombreArchivo(nombre, "Analisis del proyecto"),
-      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, tDoc.archivoAnalisis, idiomaDoc),
+      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null, idiomaDoc),
       papel: { analisis },
     });
   }
 
   if (doc !== CLAVE_EXPEDIENTE) {
-    const titulado = titulosDeCiclos(ciclos).find(({ ciclo }) => `ciclo:${ciclo.planId}` === doc);
+    const titulado = titulosDeCiclos(ciclos, idiomaDoc).find(({ ciclo }) => `ciclo:${ciclo.planId}` === doc);
     if (!titulado) {
-      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
     return NextResponse.json({
       titulo: titulado.titulo,
       nombre,
-      archivo: nombreArchivo(nombre, titulado.titulo),
-      markdown: cicloMarkdown(nombre, titulado.titulo, titulado.ciclo),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, titulado.titulo, idiomaDoc),
+      markdown: cicloMarkdown(nombre, titulado.titulo, titulado.ciclo, idiomaDoc),
     });
   }
 
   // ── Expediente completo ────────────────────────────────────────────────
-  const todasAcciones = await cargarAcciones(supabase, projectId);
+  // AUD-09 M02: el Expediente cuenta el ciclo vigente de cada espacio, como el
+  // tablero; los ciclos anteriores viven en sus propias secciones.
+  const todasAcciones = accionesDelCicloVigente(await cargarAcciones(supabase, projectId), planes);
   // Solo el viaje principal en la sección de acciones del core: las de un mundo
   // van dentro de SU sección (cada cosa en su carril).
   const acciones: AccionExpediente[] = todasAcciones.filter((i) => esCore(i.dominio)).map(aAccion);
 
   let unlocks: Array<{ dominio: string; completado_at?: string | null }> = [];
-  try {
-    const { data, error } = await supabase
-      .from("project_unlocks")
-      .select("dominio, completado_at")
-      .eq("project_id", projectId);
-    if (!error) unlocks = (data ?? []) as typeof unlocks;
-    else {
-      const { data: previo } = await supabase.from("project_unlocks").select("dominio").eq("project_id", projectId);
-      unlocks = (previo ?? []) as typeof unlocks;
-    }
-  } catch {
-    unlocks = [];
+  const conCierre = await supabase.from("project_unlocks").select("dominio, completado_at").eq("project_id", projectId);
+  if (!conCierre.error) unlocks = (conCierre.data ?? []) as typeof unlocks;
+  else {
+    const previo = await supabase.from("project_unlocks").select("dominio").eq("project_id", projectId);
+    // AUD-09 M18: si tampoco la lectura mínima responde, no es "sin mundos".
+    if (previo.error) throw new LecturaFallidaError("los mundos", previo.error);
+    unlocks = (previo.data ?? []) as typeof unlocks;
   }
 
   const ahora = new Date().toISOString();
   const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
-  const analytics = calcularAnalytics(entrada);
-  const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+  const analytics = calcularAnalytics(entrada, idiomaDoc);
+  const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc);
 
   // Fase 3 (tanda 5): cada mundo se COMPLETA con su plan, SUS acciones y su cómo
   // te fue (su capa universal ya calculada en analytics.mundos, sin recalcular).
@@ -365,10 +419,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     const am = analytics.mundos.find((m) => m.dominio === u.dominio);
     return {
       nombre: nombreMundo(u.dominio),
-      contenidoMd: planMundo ? sinProcedencia(planMundo.contenido_md) : null,
+      contenidoMd: planMundo ? planEnDoc(planMundo.contenido_md) : null,
       completadoAt: u.completado_at ?? null,
       acciones: todasAcciones.filter((i) => i.dominio === u.dominio).map(aAccion),
-      comoTeFueMd: am ? resumenEspacioMd(am.universal, am.cumplimiento).join("\n") : null,
+      comoTeFueMd: am ? resumenEspacioMd(am.universal, am.cumplimiento, idiomaDoc).join("\n") : null,
     };
   });
 
@@ -380,7 +434,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     const num = planes.filter((p) => p.etiqueta === "reporte_numeros").at(-1);
     return num ? sinProcedencia(num.contenido_md) : null;
   })();
-  const informeMd = acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo) : null;
+  const informeMd = acciones.length
+    ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null, idiomaDoc)
+    : null;
 
   const baseDoc = {
     nombre,
@@ -403,42 +459,67 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     informeMd,
     // Fase 3 (tanda 4): la secuencia del expediente etiqueta cada entrada con su
     // espacio (nombre de cara), con RUIDO CERO (solo-core no etiqueta nada).
-    bitacoraMd: bitacoraCuerpo(entradasBita, 3, (e) =>
-      etiquetaEspacio(e.dominio, proyectoTieneMundos(entradasBita), nombreMundo),
+    bitacoraMd: bitacoraCuerpo(
+      entradasBita,
+      3,
+      (e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradasBita), nombreMundo, idiomaDoc),
+      idiomaDoc,
     ).join("\n"),
-  });
+  }, idiomaDoc);
 
   // PDF: el CUERPO va como markdown (sin informe ni secuencia), y el resumen
   // "Cómo te fue" + la secuencia se dibujan ESTRUCTURADOS (páginas de papel de
   // Design), en su propia página. Los datos del resumen salen de analytics.
-  const bodyMarkdown = expedienteMarkdown({ ...baseDoc, informeMd: null, bitacoraMd: null });
+  const bodyMarkdown = expedienteMarkdown({ ...baseDoc, informeMd: null, bitacoraMd: null }, idiomaDoc);
   const u = analytics.universal;
-  const c = analytics.cumplimiento;
+  // AUD-09 M39: el "Cómo te fue" habla con los datos (modo y cumplimiento), no
+  // con un veredicto fijo.
+  const camino = resumenCaminoExpediente(
+    {
+      cerrada: Boolean(realizadaAt),
+      modo: analytics.modoCamino,
+      cumplimiento: analytics.cumplimiento,
+    },
+    idiomaDoc
+  );
+  const pendientes = Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas);
   const resumen = acciones.length
     ? {
         cerrada: Boolean(realizadaAt),
         cierreMotivo: proyecto.cierre_motivo ?? null,
-        intro: realizadaAt
-          ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
-          : "Vas por buen camino. Esto es lo que llevas hasta aquí.",
+        intro: camino.intro,
         dias: u.duracionTotalDias,
-        accionesCumplidas: u.accionesHechas,
+        accionesCumplidas: u.accionesVigente.hechas,
         hitos: analytics.hitos
           .filter((h) => h.tipo !== "accion")
-          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
-        loQueMovio:
-          c && c.replanificaciones > 0
-            ? `Frente a tu plan inicial te moviste ${c.desviacionVsInicialDias >= 0 ? "+" : ""}${c.desviacionVsInicialDias.toFixed(1)} días de media a lo largo de ${c.replanificaciones} replanificación${c.replanificaciones === 1 ? "" : "es"}. Ajustar el mapa fue parte del método.`
-            : "Mantuviste tu ritmo cerca de tu plan a lo largo del camino.",
-        loQuePendiente: `Quedan ${Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas)} acciones por delante${u.retiradas.length ? ` y ${u.retiradas.length} que retiraste con su motivo` : ""}. Nada se borró: siguen en tu expediente.`,
+          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? tDoc.hitoRealizado : h.etiqueta })),
+        loQueMovio: camino.loQueMovio,
+        loQuePendiente: u.retiradas.length
+          ? interpolar(formaPlural(idiomaDoc, pendientes, tDoc.loQuePendienteConRetiradas), {
+              n: pendientes,
+              retiradas: u.retiradas.length,
+            })
+          : interpolar(formaPlural(idiomaDoc, pendientes, tDoc.loQuePendiente), { n: pendientes }),
       }
     : null;
 
   return NextResponse.json({
-    titulo: "Expediente completo",
+    titulo: tDoc.tituloExpediente,
     nombre,
-    archivo: nombreArchivo(nombre, "Expediente completo"),
+    idioma: idiomaDoc,
+    archivo: nombreArchivo(nombre, tDoc.tituloExpediente, idiomaDoc),
     markdown,
     papel: { bodyMarkdown, resumen, entradas: entradasBita },
   });
+}
+
+/** AUD-09 M18: una lectura fallida en cualquier punto de los documentos se dice
+ * (503 con el mismo mensaje honesto), nunca se descarga un papel con ceros. */
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  try {
+    return await generarDocumentos(request, { params });
+  } catch (e) {
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: mensajeLecturaFallida(idiomaDeRequest(request)) }, { status: 503 });
+    throw e;
+  }
 }

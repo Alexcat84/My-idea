@@ -19,12 +19,29 @@
     "plan_de_lanzamiento_al_mercado"
   ],
   "nodos_siguientes": [
-    "risk_audit",
     "project_close_out"
   ],
   "condiciones_activacion": [
     "Cuando tu proyecto está en marcha y necesitas saber cuánto vas a gastar al final",
     "Cuando hay diferencias en costos o tiempos que necesitas proyectar hacia adelante"
   ],
-  "etiqueta_arbol": "Proyecta tu Costo Final"
+  "etiqueta_arbol": "Proyecta tu Costo Final",
+  "fuentes_internas": [
+    "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-029",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estimate_at_completion_eac -> risk_audit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A23, lectores de acuerdo)",
+        "motivo": "La estimacion al completar no lleva naturalmente a auditar el proceso de riesgos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
+  ]
 }

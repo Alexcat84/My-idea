@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P453593",
+  "intento": 0,
+  "usd": 0.201092,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44853,
+  "tokens_out": 1084,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P453593\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2957, 2948, 5041, 5085], \"cita\": \"which is the easiest to remedy, the person or the situation? ... Within a skilled, experienced and largely well intentioned workforce, situations are more amenable to improvement than people.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro plantea explícitamente la decisión persona/situación y ofrece criterios estructurados para ello (árbol de culpabilidad, AMMS). Fijar criterios propios concreta esa decisión sin cifras, plazos ni herramientas nuevas. No manda priorizar a la persona ni invierte la prioridad situacional, que queda fijada por los demás pasos del nodo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P453593",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2957,
+   2948,
+   5041,
+   5085
+  ],
+  "cita": "which is the easiest to remedy, the person or the situation? ... Within a skilled, experienced and largely well intentioned workforce, situations are more amenable to improvement than people.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro plantea explícitamente la decisión persona/situación y ofrece criterios estructurados para ello (árbol de culpabilidad, AMMS). Fijar criterios propios concreta esa decisión sin cifras, plazos ni herramientas nuevas. No manda priorizar a la persona ni invierte la prioridad situacional, que queda fijada por los demás pasos del nodo.",
+  "paso_fiel": ""
+ }
+}

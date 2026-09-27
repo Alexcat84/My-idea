@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_104",
+  "intento": 0,
+  "usd": 0.166732,
+  "turnos": 1,
+  "duracion_s": 15.5,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34523,
+  "tokens_out": 1432,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PAB7472\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784, 293], \"razon\": \"El libro indica partir de la pérdida y retroceder para determinar la defensa o defensas fallidas y el peligro. Es lo mismo que pide el paso.\"},\n  {\"id\": \"PE0017C\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1044, 1068, 1072, 1133, 1149, 4060, 4092], \"razon\": \"El libro advierte que añadir redundancia aumenta la complejidad, la opacidad y las fallas de modo común. En Dryden atribuye la falla a causas sistémicas, no a falta de redundancia.\"},\n  {\"id\": \"PC08D12\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2905, 196, 1934, 5641, 293], \"razon\": \"El libro dice que el error es consecuencia y no causa, y que identificarlo es el inicio de la búsqueda. Solo matiza los rendimientos decrecientes de factores remotos (L5742).\"},\n  {\"id\": \"P4D3FA3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5641, 5643, 5675, 5907, 3817], \"razon\": \"El libro señala que el modelo de persona no sirve para condiciones latentes ni riesgos de terceros. Aun así, lo reconoce valioso para lesiones personales.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PAB7472",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "El libro indica partir de la pérdida y retroceder para determinar la defensa o defensas fallidas y el peligro. Es lo mismo que pide el paso."
+  },
+  {
+   "id": "PE0017C",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1044,
+    1068,
+    1072,
+    1133,
+    1149,
+    4060,
+    4092
+   ],
+   "razon": "El libro advierte que añadir redundancia aumenta la complejidad, la opacidad y las fallas de modo común. En Dryden atribuye la falla a causas sistémicas, no a falta de redundancia."
+  },
+  {
+   "id": "PC08D12",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2905,
+    196,
+    1934,
+    5641,
+    293
+   ],
+   "razon": "El libro dice que el error es consecuencia y no causa, y que identificarlo es el inicio de la búsqueda. Solo matiza los rendimientos decrecientes de factores remotos (L5742)."
+  },
+  {
+   "id": "P4D3FA3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5641,
+    5643,
+    5675,
+    5907,
+    3817
+   ],
+   "razon": "El libro señala que el modelo de persona no sirve para condiciones latentes ni riesgos de terceros. Aun así, lo reconoce valioso para lesiones personales."
+  }
+ ]
+}

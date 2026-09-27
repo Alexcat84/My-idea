@@ -1,13 +1,13 @@
 {
   "node_id": "estandar_gtin_epc",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Estandarización de Identificación de Producto (GTIN/EPC)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual, permitiendo rastrear su historial de movimiento a través de la red EPCglobal.",
   "pasos_accionables": [
     "Registrar la organización en GS1 para obtener un código de gestor (manager code)",
-    "Etiquetar los productos con GTIN/EPC según el estándar correspondiente a la región (13 o 14 dígitos)",
+    "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 dígitos (el 'UPC de 14 dígitos' en Norteamérica o el 'EAN de 13 dígitos más dígito de control' en Europa)",
     "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real",
     "Mantener actualizada la base de datos de códigos EPC conforme los productos se mueven en la cadena"
   ],
@@ -15,12 +15,72 @@
   "nodos_previos": [
     "iot_big_data_supply_chain"
   ],
-  "nodos_siguientes": [
-    "conformidad_comercio_internacional"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la empresa opera en múltiples países y necesita interoperabilidad de datos de producto",
     "Si se requiere trazabilidad detallada del historial de cada unidad de producto"
   ],
-  "etiqueta_arbol": "Estandariza la Identificación de Productos"
+  "etiqueta_arbol": "Estandariza la Identificación de Productos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-001",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Etiquetar los productos con GTIN/EPC según el estándar correspondiente a la región (13 o 14 dígitos)",
+      "texto_nuevo": "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 digitos (el 'UPC de 14 digitos' en Norteamerica o el 'EAN de 13 digitos mas digito de control' en Europa)",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L2369-L2371",
+        "frase": "which refers to the fact that there is now just one unified 14-digit numbering scheme"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que UPC y EAN se unificaron en un solo esquema GTIN de 14 digitos (el EAN de 13 digitos mas digito de control); el paso presenta 13 o 14 digitos como opciones segun la region, cambiando el dato.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-009"
+    },
+    {
+      "id": "t2-puente-056",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estandar_gtin_epc -> conformidad_comercio_internacional",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-06, lector y verificador de acuerdo)",
+        "motivo": "Los codigos GTIN/EPC para identificar productos y el marcado CE de conformidad solo coinciden en que son estandares de comercio; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-orto-0327",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 digitos (el 'UPC de 14 digitos' en Norteamerica o el 'EAN de 13 digitos mas digito de control' en Europa)",
+      "texto_nuevo": "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 dígitos (el 'UPC de 14 dígitos' en Norteamérica o el 'EAN de 13 dígitos más dígito de control' en Europa)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-011.paso1: dígitos, dígitos, Norteamérica, dígitos, más, dígito (Tildes que faltaban en dígitos, Norteamérica, más y dígito; las siglas y las comillas quedan intactas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "mv-dominio-11",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-03: Registrarse en GS1 e integrarse con EPCglobal solo lo necesita quien vende producto físico en canales de distribución; un servicio o una app jamás lo toca. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ]
 }

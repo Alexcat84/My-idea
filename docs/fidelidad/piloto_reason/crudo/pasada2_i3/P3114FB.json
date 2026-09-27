@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3114FB",
+  "intento": 0,
+  "usd": 0.22750800000000002,
+  "turnos": 1,
+  "duracion_s": 6.1,
+  "pared_s": 7.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54767,
+  "tokens_out": 422,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3114FB\", \"veredicto\": \"FIEL\", \"lineas\": [3784], \"cita\": \"Preconditions are likely to be the product of identifiable latent failures. Once again, they are described and the associated GFTs identified. The procedure continues until all the identifiable factors have been identified and described. As the analyst progresses, he or she will link the causally related nodes and boxes\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro indica que en Tripod-Beta las precondiciones proceden de fallos latentes identificables, que se describen y cuyos GFTs asociados se identifican, y que el analista enlaza los nodos relacionados causalmente. Los GFTs son un elemento del propio libro, no un dato añadido.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3114FB",
+  "veredicto": "FIEL",
+  "lineas": [
+   3784
+  ],
+  "cita": "Preconditions are likely to be the product of identifiable latent failures. Once again, they are described and the associated GFTs identified. The procedure continues until all the identifiable factors have been identified and described. As the analyst progresses, he or she will link the causally related nodes and boxes",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro indica que en Tripod-Beta las precondiciones proceden de fallos latentes identificables, que se describen y cuyos GFTs asociados se identifican, y que el analista enlaza los nodos relacionados causalmente. Los GFTs son un elemento del propio libro, no un dato añadido.",
+  "paso_fiel": ""
+ }
+}

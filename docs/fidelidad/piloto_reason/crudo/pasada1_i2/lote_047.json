@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_047",
+  "intento": 0,
+  "usd": 0.160312,
+  "turnos": 1,
+  "duracion_s": 15.1,
+  "pared_s": 16.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33368,
+  "tokens_out": 1342,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC7E815\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3985, 3989, 3971, 668, 674, 686, 4215], \"razon\": \"Va en la dirección del libro (datos de tendencia no difundidos), pero el libro matiza que las señales solo se ven como tales con retrospectiva: la autoevaluación es difícil.\"},\n  {\"id\": \"PAA3713\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5258, 2579, 5270], \"razon\": \"El libro plantea literalmente si un puesto de seguridad premia el talento o es un 'oubliette' para ejecutivos agotados.\"},\n  {\"id\": \"PB64BDE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4757, 4761, 2581], \"razon\": \"El libro pide un sistema que recolecte, analice y difunda información de incidentes y cuasi-incidentes, además de chequeos proactivos, que el paso omite.\"},\n  {\"id\": \"P418DD7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2598, 2769, 2585, 5781], \"razon\": \"El libro afirma que moverse hacia más seguridad no es difícil pero sostener las mejoras es muy duro. 'Comunicarlo' es una concreción propia del paso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC7E815",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3985,
+    3989,
+    3971,
+    668,
+    674,
+    686,
+    4215
+   ],
+   "razon": "Va en la dirección del libro (datos de tendencia no difundidos), pero el libro matiza que las señales solo se ven como tales con retrospectiva: la autoevaluación es difícil."
+  },
+  {
+   "id": "PAA3713",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5258,
+    2579,
+    5270
+   ],
+   "razon": "El libro plantea literalmente si un puesto de seguridad premia el talento o es un 'oubliette' para ejecutivos agotados."
+  },
+  {
+   "id": "PB64BDE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4757,
+    4761,
+    2581
+   ],
+   "razon": "El libro pide un sistema que recolecte, analice y difunda información de incidentes y cuasi-incidentes, además de chequeos proactivos, que el paso omite."
+  },
+  {
+   "id": "P418DD7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2598,
+    2769,
+    2585,
+    5781
+   ],
+   "razon": "El libro afirma que moverse hacia más seguridad no es difícil pero sostener las mejoras es muy duro. 'Comunicarlo' es una concreción propia del paso."
+  }
+ ]
+}

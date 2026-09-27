@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P268055",
+  "intento": 0,
+  "usd": 0.16061199999999998,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35633,
+  "tokens_out": 904,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P268055\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5781, 2767, 2598, 2658], \"cita\": \"identifying and eliminating latent conditions proactively still offer the best routes to improving system 'fitness'. But it has to be a continuous process. [...] Latent accident-producing conditions are present now. It is not necessary to wait for bad events to find out what they are.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide vigilar las condiciones latentes de forma proactiva y continua, sin esperar al accidente, mediante un sistema de informacion de seguridad con chequeos regulares. El 'registro' concreta ese sistema en la misma direccion. No es contrario: la continuidad la afirma L5781. Solo omite matices, como medir procesos y ajustar la frecuencia al ritmo de cambio.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P268055",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5781,
+   2767,
+   2598,
+   2658
+  ],
+  "cita": "identifying and eliminating latent conditions proactively still offer the best routes to improving system 'fitness'. But it has to be a continuous process. [...] Latent accident-producing conditions are present now. It is not necessary to wait for bad events to find out what they are.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide vigilar las condiciones latentes de forma proactiva y continua, sin esperar al accidente, mediante un sistema de informacion de seguridad con chequeos regulares. El 'registro' concreta ese sistema en la misma direccion. No es contrario: la continuidad la afirma L5781. Solo omite matices, como medir procesos y ajustar la frecuencia al ritmo de cambio.",
+  "paso_fiel": ""
+ }
+}

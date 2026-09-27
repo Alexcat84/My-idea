@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Crossdocking para Surtido de Baja Rotación",
+  "resumen": "El crossdocking elimina el almacenamiento intermedio: la mercancía que llega de los proveedores se descompone en lotes pequeños, se recombina según las necesidades del día y sale enseguida en camiones hacia su destino final. Así el producto fluye más rápido y se ahorra manipulación, a cambio de una coordinación estrecha entre envíos de entrada y de salida.",
+  "texto": "Aplicar crossdocking sobre todo a productos de demanda irregular y bajo volumen, en los que tener inventario en almacén no compensa",
+  "tipo": "CONTRARIO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L1597",
+  "cita": "The benefits of crossdocking can be realized when there are large predictable product volumes and when economies of scale can be had on both the inbound and outbound transportation.",
+  "dato": "",
+  "explicacion": "El libro dice que el crossdocking solo rinde con volúmenes grandes y predecibles y con economías de escala en el transporte de entrada y de salida. El paso invierte la condición y lo recomienda para demanda irregular y bajo volumen, justo donde no funciona."
+ },
+ {
+  "titulo": "Mitigar el Efecto Látigo Causado por el Agrupamiento de Pedidos",
+  "resumen": "Las empresas agrupan sus pedidos en lotes periódicos, calculados con la cantidad económica de pedido (EOQ), para minimizar los costos de procesamiento y de transporte. Esos lotes se apartan de la demanda real y la desviación crece al subir por la cadena. Hay que actuar sobre los costos que hacen rentable ese agrupamiento.",
+  "texto": "Consolidar los pedidos a proveedores en lotes más grandes y menos frecuentes para suavizar el flujo de pedidos hacia arriba en la cadena",
+  "tipo": "CONTRARIO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L3558",
+  "cita": "This will cause EOQ lot sizes to get smaller and orders to be placed more frequently. The result will be a smoother flow of orders that distributors and manufacturers will be able to handle more efficiently.",
+  "dato": "",
+  "explicacion": "El libro dice que el flujo de pedidos se suaviza bajando los costos de pedir y de transportar, de modo que los lotes EOQ sean más pequeños y los pedidos más frecuentes. El paso aconseja lo contrario: lotes más grandes y menos frecuentes, que es precisamente lo que amplifica el efecto látigo."
+ },
+ {
+  "titulo": "Compartir Datos de Punto de Venta para Frenar el Efecto Látigo",
+  "resumen": "Pronosticar a partir de los pedidos recibidos, y no de la demanda del consumidor final, distorsiona cada vez más la previsión al subir por la cadena. La solución es que todas las empresas pronostiquen sobre un mismo conjunto de datos de demanda, tomados del eslabón más cercano al cliente final.",
+  "texto": "Enviar cada semana los datos de venta POS a todos los proveedores de la cadena mediante el mensaje EDI 852",
+  "tipo": "ANADIDO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L3547",
+  "cita": "Sharing point-of-sales (POS) data among all the companies in a supply chain goes a long way toward taming the bullwhip effect because it lets everyone respond to actual market demand instead of supply chain distortions.",
+  "dato": "Mensaje EDI 852 y envío semanal de los datos POS",
+  "explicacion": "El libro recomienda compartir los datos POS entre todas las empresas de la cadena, pero no nombra ningún mensaje EDI concreto para hacerlo (solo cita las transacciones 850, 810, 856 y 855 en L2023; el 852 no aparece en el texto) ni fija una frecuencia semanal para ese envío."
+ },
+ {
+  "titulo": "Data Warehouse: Empezar Pequeño y Crecer con el Uso",
+  "resumen": "Conviene arrancar el repositorio central de datos con algo simple y a pequeña escala, para que las personas se acostumbren a usar los datos en su trabajo. Cuando ya sepan describir las funciones adicionales que quieren, se construyen versiones más grandes y complejas. Lo más importante del sistema son las personas que lo usan.",
+  "texto": "Arrancar con una versión pequeña del data warehouse en un piloto limitado a 20 usuarios clave, antes de abrirlo al resto de la organización",
+  "tipo": "ANADIDO",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "L3329",
+  "cita": "When designing and building a data warehouse, it is best to start quickly with something that is simple and on a smaller scale.",
+  "dato": "Piloto limitado a 20 usuarios clave",
+  "explicacion": "El libro recomienda empezar rápido con un data warehouse simple y pequeño, pero no pone ningún tope de usuarios ni habla de un piloto con 20 personas. En todo el texto no aparece '20 users' ni 'twenty', y las únicas cifras de usuarios son las 'thousands of simultaneous users' de la plataforma de respuesta a desastres."
+ }
+]

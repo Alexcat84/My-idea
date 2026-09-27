@@ -7,8 +7,8 @@
   "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión minima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
   "pasos_accionables": [
     "Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea",
-    "Prueba como percibe el cliente el problema antes de mostrarle nada del producto",
-    "Construye una versión minima del producto (MVP) para testear la solución",
+    "Prueba cómo percibe el cliente el problema antes de mostrarle nada del producto",
+    "Construye una versión mínima del producto (MVP) para testear la solución",
     "Confirma que el problema le importa lo suficiente como para que decida comprar",
     "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback",
     "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis",
@@ -16,7 +16,7 @@
     "Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano",
     "Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más"
   ],
-  "entregable_esperado": "Un conjunto de hipótesis sobre tu negocio, validadas o descartadas con conversaciones reales con clientes, mas un MVP probado en el terreno",
+  "entregable_esperado": "Un conjunto de hipótesis sobre tu negocio, validadas o descartadas con conversaciones reales con clientes, más un MVP probado en el terreno",
   "nodos_previos": [
     "search_for_business_model",
     "modelo_customer_development",
@@ -87,6 +87,52 @@
       "node_id": "customer_discovery_overview",
       "titulo": "Las cuatro fases para descubrir a tu cliente (Customer Discovery)",
       "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0841",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prueba como percibe el cliente el problema antes de mostrarle nada del producto",
+      "texto_nuevo": "Prueba cómo percibe el cliente el problema antes de mostrarle nada del producto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-014.paso1: cómo (Aquí cómo es interrogativo indirecto y lleva tilde; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0842",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construye una versión minima del producto (MVP) para testear la solución",
+      "texto_nuevo": "Construye una versión mínima del producto (MVP) para testear la solución",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-014.paso2: mínima (Tilde que faltaba en mínima; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0843",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un conjunto de hipótesis sobre tu negocio, validadas o descartadas con conversaciones reales con clientes, mas un MVP probado en el terreno",
+      "texto_nuevo": "Un conjunto de hipótesis sobre tu negocio, validadas o descartadas con conversaciones reales con clientes, más un MVP probado en el terreno",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-014.entregable: más (Aquí más es adverbio de adición y lleva tilde; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "quality_audit",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "quality",
   "titulo_concepto": "Auditoría de Calidad",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Revisión estructurada e independiente de procesos, documentos o productos del proyecto para verificar cumplimiento de políticas y plan de calidad, identificando buenas prácticas y áreas de mejora.",
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Si se requiere verificar cumplimiento del plan de calidad o de procesos organizacionales"
   ],
-  "etiqueta_arbol": "Audita tu Calidad a Fondo"
+  "etiqueta_arbol": "Audita tu Calidad a Fondo",
+  "fuentes_internas": [
+    "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-28",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "quality",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-18: La auditoría independiente contra un plan de calidad, con Change Requests, es práctica formal de gestión de la calidad que solo necesita quien entra a fondo en ese mundo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ]
 }

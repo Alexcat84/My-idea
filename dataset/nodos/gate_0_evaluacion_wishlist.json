@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Una lista depurada de proyectos que decides llevar adelante, con una idea aproximada de cuándo empezar cada uno",
   "nodos_previos": [
-    "product_roadmap_estrategico",
-    "desarrollo_posicionamiento_producto"
+    "product_roadmap_estrategico"
   ],
   "nodos_siguientes": [
     "stage_gate_system"
@@ -24,5 +23,23 @@
     "Cuando tienes varias ideas de producto y necesitas un primer filtro antes de comprometer recursos",
     "Antes de meter un proyecto al proceso formal completo"
   ],
-  "etiqueta_arbol": "Filtra tu Lista de Ideas"
+  "etiqueta_arbol": "Filtra tu Lista de Ideas",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-035",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "desarrollo_posicionamiento_producto -> gate_0_evaluacion_wishlist",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-24-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El Gate 0, un primer filtro de ideas de producto, va mucho antes que el resumen de posicionamiento final de la validacion de clientes. El orden esta invertido o no hay relacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

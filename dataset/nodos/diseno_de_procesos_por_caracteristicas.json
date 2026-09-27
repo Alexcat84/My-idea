@@ -17,7 +17,6 @@
     "descubrir_necesidades_del_cliente",
     "desarrollar_caracteristicas_producto",
     "herramientas_de_diseno_de_calidad",
-    "diseno_organizacional",
     "identificar_caracteristicas_metas_proceso"
   ],
   "nodos_siguientes": [
@@ -29,5 +28,23 @@
     "Cuando se inicia el diseño formal de un nuevo proceso",
     "Cuando se requiere vincular metas de producto con actividades operativas"
   ],
-  "etiqueta_arbol": "Diseña tu Proceso por Características"
+  "etiqueta_arbol": "Diseña tu Proceso por Características",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-041",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diseno_organizacional -> diseno_de_procesos_por_caracteristicas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-04-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El diseno de procesos de calidad (vincular caracteristicas del proceso con las del producto) no continua el diseno del equipo segun el flujo de informacion y decisiones."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

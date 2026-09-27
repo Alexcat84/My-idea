@@ -1,0 +1,61 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_064",
+  "intento": 0,
+  "usd": 0.160832,
+  "turnos": 1,
+  "duracion_s": 12.9,
+  "pared_s": 14.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34403,
+  "tokens_out": 1161,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD4856A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4974, 3989, 4906], \"razon\": \"El libro concluye que los potenciales informantes deben tener muy claro qué constituye un incidente, porque no siempre es intuitivo. Además critica la falta de requisitos precisos de reporte.\"},\n  {\"id\": \"P5D340D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4109, 4161, 4165], \"razon\": \"El libro atribuye el colapso de la ACAA al conflicto entre funciones comerciales y de vigilancia, y describe su separación en agencias distintas. Reason no lo prescribe explícitamente, pero va en la misma dirección.\"},\n  {\"id\": \"P465E81\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3784], \"razon\": \"Tripod-Beta: ante un fallo activo probablemente hay precondiciones en el lugar de trabajo, que se identifican con texto descriptivo y se vinculan a GFTs.\"},\n  {\"id\": \"P38876A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3395, 3397], \"razon\": \"Casi literal: la probabilidad nominal de error se multiplica por una proporción adecuadamente juzgada del factor EPC correspondiente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD4856A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4974,
+    3989,
+    4906
+   ],
+   "razon": "El libro concluye que los potenciales informantes deben tener muy claro qué constituye un incidente, porque no siempre es intuitivo. Además critica la falta de requisitos precisos de reporte."
+  },
+  {
+   "id": "P5D340D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4109,
+    4161,
+    4165
+   ],
+   "razon": "El libro atribuye el colapso de la ACAA al conflicto entre funciones comerciales y de vigilancia, y describe su separación en agencias distintas. Reason no lo prescribe explícitamente, pero va en la misma dirección."
+  },
+  {
+   "id": "P465E81",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3784
+   ],
+   "razon": "Tripod-Beta: ante un fallo activo probablemente hay precondiciones en el lugar de trabajo, que se identifican con texto descriptivo y se vinculan a GFTs."
+  },
+  {
+   "id": "P38876A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "Casi literal: la probabilidad nominal de error se multiplica por una proporción adecuadamente juzgada del factor EPC correspondiente."
+  }
+ ]
+}

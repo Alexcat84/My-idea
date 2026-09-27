@@ -10,13 +10,12 @@
     "Automatizar con IA/algoritmos las tareas repetitivas de monitoreo y registro de datos.",
     "Asignar a personas las tareas de excepción, negociación y resolución de problemas complejos.",
     "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes.",
-    "Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA",
-    "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+    "Sugerencia de My Idea: recompensar a los empleados que identifiquen y automaticen con IA las tareas aburridas",
+    "Sugerencia de My Idea: clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
     "Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio"
   ],
   "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
   "nodos_previos": [
-    "gestion_visual_del_pipeline_de_desarrollo",
     "riesgo_control_algoritmico",
     "comprension_capacidades_limitaciones_ia"
   ],
@@ -24,8 +23,8 @@
     "bucle_retroalimentacion_autoajustable",
     "centaur_cyborg_ia",
     "riesgo_sobredependencia_ia",
-    "search_for_business_model",
-    "sistemas_organizacionales_ia"
+    "sistemas_organizacionales_ia",
+    "combinacion_humano_ia_decision"
   ],
   "condiciones_activacion": [
     "Cuando se está diseñando un sistema que combina automatización con toma de decisiones humana.",
@@ -56,5 +55,98 @@
       "titulo": "Framework de Clasificación de Tareas: Just Me, Delegadas y Automatizadas",
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-026",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+      "texto_nuevo": "Sugerencia de My Idea: clasificar cada tarea en Just Me, Delegada o Automatizada segun riesgo, importancia personal y capacidad actual de la IA",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L5849-L5853",
+        "frase": "Computers and AI are best used to automate the rote, repetitious activities that humans find to be dull and boring."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro reparte tareas entre rutinarias (IA) y creativas (personas); el marco Just Me, Delegada, Automatizada y sus criterios no aparecen en el libro.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-068"
+    },
+    {
+      "id": "fidelidad-t8-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA",
+      "texto_nuevo": "Sugerencia de My Idea: recompensar a los empleados que identifiquen y automaticen con IA las tareas aburridas",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L5849-L5879",
+        "frase": "First motivate people by providing them with monetary or psychological rewards for achieving predefined performance targets."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro recompensa el logro de metas de desempeno, no la identificacion y automatizacion de tareas aburridas con IA; esa practica no esta en el libro.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-078"
+    },
+    {
+      "id": "t2-arista-043",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "division_trabajo_humano_ia -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-19-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La busqueda de un modelo de negocio en un startup no continua la division de tareas entre humanos e IA. Los nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-067",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_visual_del_pipeline_de_desarrollo -> division_trabajo_humano_ia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-19-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los tableros visuales del pipeline de Agile-Stage-Gate no preparan la division del trabajo entre humanos e IA. Los temas no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0302",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: clasificar cada tarea en Just Me, Delegada o Automatizada segun riesgo, importancia personal y capacidad actual de la IA",
+      "texto_nuevo": "Sugerencia de My Idea: clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O025-032.paso5: según (Falta la tilde de según; los términos en inglés y el resto del texto no cambian.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "mv-arista-035",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "division_trabajo_humano_ia -> combinacion_humano_ia_decision",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C03, lectores de acuerdo)",
+        "motivo": "La division entre tareas repetitivas para la maquina y juicio creativo humano lleva a la combinacion optima de ambos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos",
+    "Co-Intelligence_ Living and Wor - Ethan Mollick"
   ]
 }

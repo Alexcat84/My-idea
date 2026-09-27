@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P28784A",
+  "intento": 0,
+  "usd": 0.194828,
+  "turnos": 1,
+  "duracion_s": 7.3,
+  "pared_s": 8.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46157,
+  "tokens_out": 510,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P28784A\", \"veredicto\": \"FIEL\", \"lineas\": [5204], \"cita\": \"it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs. [...] A prerequisite is an extensive experience of the jobs carried out in the workplace [...] Supervisors need to be 'sitewise' [...] to the range of obvious and less obvious hazards.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide seleccionar a los supervisores de primera línea. Pone como requisito una experiencia amplia de los trabajos del lugar y un conocimiento del sitio y de sus peligros, obvios y menos obvios. El rol de supervisor coincide con 'first-line supervisors'. El paso no menciona la formación, pero esta aparece en otro paso del nodo. No añade datos ni contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P28784A",
+  "veredicto": "FIEL",
+  "lineas": [
+   5204
+  ],
+  "cita": "it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs. [...] A prerequisite is an extensive experience of the jobs carried out in the workplace [...] Supervisors need to be 'sitewise' [...] to the range of obvious and less obvious hazards.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide seleccionar a los supervisores de primera línea. Pone como requisito una experiencia amplia de los trabajos del lugar y un conocimiento del sitio y de sus peligros, obvios y menos obvios. El rol de supervisor coincide con 'first-line supervisors'. El paso no menciona la formación, pero esta aparece en otro paso del nodo. No añade datos ni contradice.",
+  "paso_fiel": ""
+ }
+}

@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Verifica que la solución cumple con lo que buscabas lograr.",
     "Determina los recursos necesarios (personas, dinero, tiempo, materiales).",
-    "Especifica que procedimientos, formas de trabajar o sistemas debes modificar.",
-    "Evalua si necesitas capacitarte tu o capacitar a quien te ayuda.",
+    "Especifica qué procedimientos, formas de trabajar o sistemas debes modificar.",
+    "Evalúa si necesitas capacitarte tú o capacitar a quien te ayuda.",
     "Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.",
     "Implementa la solución siguiendo un plan claro si es algo complejo."
   ],
@@ -26,5 +26,38 @@
   "ids_alias": [
     "diseño_implementacion_remedio"
   ],
-  "etiqueta_arbol": "Diseña e Implementa tu Solución"
+  "etiqueta_arbol": "Diseña e Implementa tu Solución",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0684",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Especifica que procedimientos, formas de trabajar o sistemas debes modificar.",
+      "texto_nuevo": "Especifica qué procedimientos, formas de trabajar o sistemas debes modificar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-035.paso2: qué (Qué es interrogativo indirecto y lleva tilde; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0685",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua si necesitas capacitarte tu o capacitar a quien te ayuda.",
+      "texto_nuevo": "Evalúa si necesitas capacitarte tú o capacitar a quien te ayuda.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-035.paso3: Evalúa, tú (Faltaban las tildes de Evalúa y de tú (pronombre personal), y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

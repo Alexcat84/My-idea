@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_000",
+  "intento": 0,
+  "usd": 0.172524,
+  "turnos": 1,
+  "duracion_s": 20.5,
+  "pared_s": 22.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33421,
+  "tokens_out": 1942,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC635FF\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4806, 4818, 4908], \"razon\": \"El libro lista como factor de confianza separar el área que recoge y analiza reportes de quienes pueden imponer sanciones, idealmente sin autoridad sobre los informantes.\"},\n  {\"id\": \"P5F0DC7\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"LTIF\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5688, 5690, 2765, 2487], \"razon\": \"Va en la dirección del libro, pero este acota el problema a LTIF bajo; un LTIF alto sí es diagnóstico. Revisar si el paso generaliza sin esa condición.\"},\n  {\"id\": \"PD6BC57\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2568, 2598, 2658], \"razon\": \"El libro pide medir la salud de seguridad de forma regular con medidas proactivas de proceso; la frecuencia depende de cuán rápido cambie cada proceso.\"},\n  {\"id\": \"PAED150\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"supervisor\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [413, 435, 421, 1354], \"razon\": \"El libro señala que firmar el propio trabajo eliminó una oportunidad de detectar el error, pero no prescribe prohibirlo y critica la reacción de añadir prohibiciones.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC635FF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4806,
+    4818,
+    4908
+   ],
+   "razon": "El libro lista como factor de confianza separar el área que recoge y analiza reportes de quienes pueden imponer sanciones, idealmente sin autoridad sobre los informantes."
+  },
+  {
+   "id": "P5F0DC7",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "LTIF"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5688,
+    5690,
+    2765,
+    2487
+   ],
+   "razon": "Va en la dirección del libro, pero este acota el problema a LTIF bajo; un LTIF alto sí es diagnóstico. Revisar si el paso generaliza sin esa condición."
+  },
+  {
+   "id": "PD6BC57",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2568,
+    2598,
+    2658
+   ],
+   "razon": "El libro pide medir la salud de seguridad de forma regular con medidas proactivas de proceso; la frecuencia depende de cuán rápido cambie cada proceso."
+  },
+  {
+   "id": "PAED150",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "supervisor"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    413,
+    435,
+    421,
+    1354
+   ],
+   "razon": "El libro señala que firmar el propio trabajo eliminó una oportunidad de detectar el error, pero no prescribe prohibirlo y critica la reacción de añadir prohibiciones."
+  }
+ ]
+}

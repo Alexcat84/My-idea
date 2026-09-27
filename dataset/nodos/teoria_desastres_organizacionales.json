@@ -1,6 +1,6 @@
 {
   "node_id": "teoria_desastres_organizacionales",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Teoría de Desastres Provocados por el Hombre (Man-Made Disaster Theory)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -22,5 +22,23 @@
     "Si la organización ha tenido bajos incidentes reportados pero opera bajo alta presión de producción",
     "Si se investiga un accidente mayor tras un largo periodo de buen desempeño aparente"
   ],
-  "etiqueta_arbol": "Previene Desastres Organizacionales"
+  "etiqueta_arbol": "Previene Desastres Organizacionales",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-186",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q058-031: Tenia razon B: los pasos (mapear silos existentes, detectar practicas bajo presion, analizar retrospectivamente decisiones pasadas) y las condiciones (organizacion que ya opera, investigacion de un accidente) son diagnostico y control de un negocio en marcha, no diseno de un plan. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

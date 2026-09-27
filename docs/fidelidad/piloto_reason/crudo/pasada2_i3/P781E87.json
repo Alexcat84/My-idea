@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P781E87",
+  "intento": 0,
+  "usd": 0.20652,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44800,
+  "tokens_out": 1366,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P781E87\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2170, 2250, 2127, 2259], \"cita\": \"Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses.\", \"datos_sin_respaldo\": [\"revision de errores historicos como metodo para identificar los pasos propensos a omision\"], \"tambien_anadido\": false, \"razon\": \"El libro no desaconseja revisar errores pasados. Lo dificil, segun L2170, es reconstruir sus mecanismos cognitivos, y el propio autor usa datos historicos para ver que se omite (L2127). No es contrario. Pero el metodo que el libro da para identificar los pasos es otro: el analisis de tarea, anticipado, que cuenta los rasgos provocadores de omision de cada paso.\", \"paso_fiel\": \"Identifica de antemano los pasos de tarea propensos a omision contando cuantos rasgos provocadores de omision reune cada paso: aislado funcionalmente, posterior al logro del objetivo principal, cerca del final, oculto a la vista, con varios elementos que instalar, cambio reciente, o no siempre requerido.\"}\n```",
+ "parseado": {
+  "id": "P781E87",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2170,
+   2250,
+   2127,
+   2259
+  ],
+  "cita": "Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses.",
+  "datos_sin_respaldo": [
+   "revision de errores historicos como metodo para identificar los pasos propensos a omision"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro no desaconseja revisar errores pasados. Lo dificil, segun L2170, es reconstruir sus mecanismos cognitivos, y el propio autor usa datos historicos para ver que se omite (L2127). No es contrario. Pero el metodo que el libro da para identificar los pasos es otro: el analisis de tarea, anticipado, que cuenta los rasgos provocadores de omision de cada paso.",
+  "paso_fiel": "Identifica de antemano los pasos de tarea propensos a omision contando cuantos rasgos provocadores de omision reune cada paso: aislado funcionalmente, posterior al logro del objetivo principal, cerca del final, oculto a la vista, con varios elementos que instalar, cambio reciente, o no siempre requerido."
+ }
+}

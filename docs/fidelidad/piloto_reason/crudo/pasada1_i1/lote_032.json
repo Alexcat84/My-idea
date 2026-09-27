@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_032",
+  "intento": 0,
+  "usd": 0.15520399999999998,
+  "turnos": 1,
+  "duracion_s": 13.6,
+  "pared_s": 14.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32801,
+  "tokens_out": 1200,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"PA2D7B3\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2948, 2961, 3825, 3829, 4989, 5499, 5641], \"razon\": \"El libro ya fija criterios: la situación es preferible, errores→información, violaciones→normas, con principios acordados. 'Criterios propios' puede derivar al modelo personal, que el libro critica.\"}, {\"id\": \"PF9594E\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4765, 4987, 5063, 5077], \"razon\": \"El libro dice textualmente que es inaceptable castigar todos los errores y también dar inmunidad general a todas las acciones.\"}, {\"id\": \"P5F2094\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1044, 1056, 1058, 1068, 1072, 1076, 1137, 821], \"razon\": \"El nodo advierte que la redundancia oculta fallas y genera fallas de modo común que violan la independencia. Recomendarla sin salvedades contradice la 'falacia de las defensas en profundidad'.\"}, {\"id\": \"P05BEA9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [1450, 5204, 5208, 4769], \"razon\": \"Auftragssystem: formar supervisores para lograr objetivos con o sin órdenes y sin SOP para todo; 'no solo reglas' conserva la base jerárquica disciplinada.\"}]",
+ "parseado": [
+  {
+   "id": "PA2D7B3",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2948,
+    2961,
+    3825,
+    3829,
+    4989,
+    5499,
+    5641
+   ],
+   "razon": "El libro ya fija criterios: la situación es preferible, errores→información, violaciones→normas, con principios acordados. 'Criterios propios' puede derivar al modelo personal, que el libro critica."
+  },
+  {
+   "id": "PF9594E",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4765,
+    4987,
+    5063,
+    5077
+   ],
+   "razon": "El libro dice textualmente que es inaceptable castigar todos los errores y también dar inmunidad general a todas las acciones."
+  },
+  {
+   "id": "P5F2094",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1044,
+    1056,
+    1058,
+    1068,
+    1072,
+    1076,
+    1137,
+    821
+   ],
+   "razon": "El nodo advierte que la redundancia oculta fallas y genera fallas de modo común que violan la independencia. Recomendarla sin salvedades contradice la 'falacia de las defensas en profundidad'."
+  },
+  {
+   "id": "P05BEA9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    1450,
+    5204,
+    5208,
+    4769
+   ],
+   "razon": "Auftragssystem: formar supervisores para lograr objetivos con o sin órdenes y sin SOP para todo; 'no solo reglas' conserva la base jerárquica disciplinada."
+  }
+ ]
+}

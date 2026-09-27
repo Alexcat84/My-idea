@@ -1,0 +1,47 @@
+[
+ {
+  "id": "n1-orto-det-1",
+  "node_id": "conoce_insumos_vitales",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "ORTOGRAFIA",
+  "texto_anterior": "Marca por separado cuales, si faltan, detienen tu operacion o tus ventas de inmediato.",
+  "texto_nuevo": "Marca por separado cuáles, si faltan, detienen tu operación o tus ventas de inmediato.",
+  "cita": {
+   "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+   "evidencia": "Faltas que la pasada O dejo pasar: cuáles, operación"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-orto-det-2",
+  "node_id": "programas_ex_im_bank",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "ORTOGRAFIA",
+  "texto_anterior": "Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion",
+  "texto_nuevo": "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
+  "cita": {
+   "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+   "evidencia": "Faltas que la pasada O dejo pasar: Garantía, exportación"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-orto-det-3",
+  "node_id": "punto_equilibrio_unidades",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "ORTOGRAFIA",
+  "texto_anterior": "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribucion por unidad para obtener el punto de equilibrio en unidades por mes",
+  "texto_nuevo": "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
+  "cita": {
+   "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+   "evidencia": "Faltas que la pasada O dejo pasar: contribución"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+  "fecha": "2026-09-27"
+ }
+]

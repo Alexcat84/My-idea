@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1CBD1D",
+  "intento": 0,
+  "usd": 0.16742,
+  "turnos": 1,
+  "duracion_s": 9.0,
+  "pared_s": 10.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38535,
+  "tokens_out": 664,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P1CBD1D\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 5254, 582, 3153], \"cita\": \"The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las señales dispersas, juntas, debían alertar (L520). Pide hacer visibles las condiciones latentes (L582) y pregunta quién recopila y analiza la información de seguridad (L5254). El registro centralizado concreta esa recopilación sin datos nuevos. El sesgo retrospectivo (L668-686) matiza, pero no desaconseja recoger señales.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P1CBD1D",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   5254,
+   582,
+   3153
+  ],
+  "cita": "The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las señales dispersas, juntas, debían alertar (L520). Pide hacer visibles las condiciones latentes (L582) y pregunta quién recopila y analiza la información de seguridad (L5254). El registro centralizado concreta esa recopilación sin datos nuevos. El sesgo retrospectivo (L668-686) matiza, pero no desaconseja recoger señales.",
+  "paso_fiel": ""
+ }
+}

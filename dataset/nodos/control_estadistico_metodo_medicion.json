@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Control Estadístico del Método de Medición (Condición de Validez)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "resumen_teorico": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
   "pasos_accionables": [
     "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.",
     "Verifica que el rango de variación se mantenga dentro de límites de control estadístico.",
@@ -40,5 +40,26 @@
       "titulo": "Control Estadístico del Método de Prueba (Instrumento y Operador)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-039",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+      "texto_nuevo": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming establece que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-017 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

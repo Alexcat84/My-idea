@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE1F7E5",
+  "intento": 0,
+  "usd": 0.182192,
+  "turnos": 1,
+  "duracion_s": 12.3,
+  "pared_s": 13.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40648,
+  "tokens_out": 980,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE1F7E5\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1435, 1539, 2716, 3821], \"cita\": \"he or she has committed either an unwitting error or a deliberate violation. [...] Such deviations can be either deliberate or erroneous [...] However, we are mostly interested in deliberate violations, where the actions--though not their possible bad consequences--are intended.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro distingue errores (en gran parte no intencionales) de violaciones (sobre todo deliberadas) y asigna a cada uno un manejo distinto. El paso lo traslada al análisis organizacional en la misma dirección. Omite que existen violaciones erróneas, pero es una simplificación de detalle que coincide con el foco del propio libro, no un contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE1F7E5",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1435,
+   1539,
+   2716,
+   3821
+  ],
+  "cita": "he or she has committed either an unwitting error or a deliberate violation. [...] Such deviations can be either deliberate or erroneous [...] However, we are mostly interested in deliberate violations, where the actions--though not their possible bad consequences--are intended.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro distingue errores (en gran parte no intencionales) de violaciones (sobre todo deliberadas) y asigna a cada uno un manejo distinto. El paso lo traslada al análisis organizacional en la misma dirección. Omite que existen violaciones erróneas, pero es una simplificación de detalle que coincide con el foco del propio libro, no un contrario.",
+  "paso_fiel": ""
+ }
+}

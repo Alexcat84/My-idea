@@ -1,0 +1,3095 @@
+{
+  "k": 10,
+  "umbral": 0.3,
+  "resumen": [
+    {
+      "idioma": "es",
+      "solapeMedio": 1,
+      "primeroIgual": 1,
+      "sobreUmbralMedio": 7.35,
+      "scoreMaxMedio": 0.379
+    },
+    {
+      "idioma": "en",
+      "solapeMedio": 0.63,
+      "primeroIgual": 0.8,
+      "sobreUmbralMedio": 2.8,
+      "scoreMaxMedio": 0.332,
+      "remedio": {
+        "solapeMedio": 0.77,
+        "primeroIgual": 0.75,
+        "sobreUmbralMedio": 7.4
+      }
+    },
+    {
+      "idioma": "pt",
+      "solapeMedio": 0.71,
+      "primeroIgual": 0.8,
+      "sobreUmbralMedio": 6.9,
+      "scoreMaxMedio": 0.361,
+      "remedio": {
+        "solapeMedio": 0.85,
+        "primeroIgual": 0.85,
+        "sobreUmbralMedio": 7.1
+      }
+    },
+    {
+      "idioma": "fr",
+      "solapeMedio": 0.66,
+      "primeroIgual": 0.6,
+      "sobreUmbralMedio": 4.4,
+      "scoreMaxMedio": 0.343,
+      "remedio": {
+        "solapeMedio": 0.81,
+        "primeroIgual": 0.75,
+        "sobreUmbralMedio": 7.55
+      }
+    },
+    {
+      "idioma": "de",
+      "solapeMedio": 0.625,
+      "primeroIgual": 0.6,
+      "sobreUmbralMedio": 2.95,
+      "scoreMaxMedio": 0.333,
+      "remedio": {
+        "solapeMedio": 0.785,
+        "primeroIgual": 0.8,
+        "sobreUmbralMedio": 7.2
+      }
+    },
+    {
+      "idioma": "it",
+      "solapeMedio": 0.655,
+      "primeroIgual": 0.8,
+      "sobreUmbralMedio": 5.2,
+      "scoreMaxMedio": 0.346,
+      "remedio": {
+        "solapeMedio": 0.78,
+        "primeroIgual": 0.85,
+        "sobreUmbralMedio": 7.65
+      }
+    },
+    {
+      "idioma": "ja",
+      "solapeMedio": 0.565,
+      "primeroIgual": 0.45,
+      "sobreUmbralMedio": 4.2,
+      "scoreMaxMedio": 0.325,
+      "remedio": {
+        "solapeMedio": 0.72,
+        "primeroIgual": 0.6,
+        "sobreUmbralMedio": 7.35
+      }
+    },
+    {
+      "idioma": "zh",
+      "solapeMedio": 0.565,
+      "primeroIgual": 0.65,
+      "sobreUmbralMedio": 4.35,
+      "scoreMaxMedio": 0.335,
+      "remedio": {
+        "solapeMedio": 0.71,
+        "primeroIgual": 0.65,
+        "sobreUmbralMedio": 7.1
+      }
+    },
+    {
+      "idioma": "ko",
+      "solapeMedio": 0.59,
+      "primeroIgual": 0.7,
+      "sobreUmbralMedio": 5.05,
+      "scoreMaxMedio": 0.34,
+      "remedio": {
+        "solapeMedio": 0.74,
+        "primeroIgual": 0.6,
+        "sobreUmbralMedio": 7.7
+      }
+    },
+    {
+      "idioma": "ar",
+      "solapeMedio": 0.56,
+      "primeroIgual": 0.6,
+      "sobreUmbralMedio": 3.25,
+      "scoreMaxMedio": 0.322,
+      "remedio": {
+        "solapeMedio": 0.775,
+        "primeroIgual": 0.7,
+        "sobreUmbralMedio": 7.1
+      }
+    },
+    {
+      "idioma": "hi",
+      "solapeMedio": 0.605,
+      "primeroIgual": 0.65,
+      "sobreUmbralMedio": 3.2,
+      "scoreMaxMedio": 0.318,
+      "remedio": {
+        "solapeMedio": 0.73,
+        "primeroIgual": 0.75,
+        "sobreUmbralMedio": 6.75
+      }
+    }
+  ],
+  "filas": [
+    {
+      "idea": 1,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.367
+    },
+    {
+      "idea": 1,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.327,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre con entrega a domicilio en mi vecindario.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "pt",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.376,
+      "remedio": {
+        "traducida": "Quiero vender pan de fermentación natural con entrega a domicilio en mi barrio.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "fr",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.417,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre con entrega a domicilio en mi barrio.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "de",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.317,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre con entrega a domicilio en mi vecindario.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "it",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.354,
+      "remedio": {
+        "traducida": "Quiero vender pan con masa madre con entrega a domicilio en mi barrio.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "ja",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.3,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre (sourdough) por entrega a domicilio en mi vecindario.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 9
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "zh",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 7,
+      "scoreMax": 0.358,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa fermentada entregado a domicilio en mi comunidad.",
+        "solape": 0.5,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "ko",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 5,
+      "scoreMax": 0.349,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre por entrega en mi barrio.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "ar",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.305,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre con entrega a domicilio en mi barrio.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 1,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.354,
+      "remedio": {
+        "traducida": "Quiero vender pan de masa madre fermentada con entrega a domicilio en mi vecindario.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 8
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.468
+    },
+    {
+      "idea": 2,
+      "idioma": "en",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.419,
+      "remedio": {
+        "traducida": "Abre un taller de reparación para bicicletas eléctricas.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 9
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "pt",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.423,
+      "remedio": {
+        "traducida": "Abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "fr",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.455,
+      "remedio": {
+        "traducida": "Abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "de",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.414,
+      "remedio": {
+        "traducida": "Abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "it",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.451,
+      "remedio": {
+        "traducida": "Abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.393,
+      "remedio": {
+        "traducida": "Quiero abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.394,
+      "remedio": {
+        "traducida": "Abrir una tienda de reparación de bicicletas eléctricas.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "ko",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.457,
+      "remedio": {
+        "traducida": "Quiero abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.349,
+      "remedio": {
+        "traducida": "Apertura de un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 2,
+      "idioma": "hi",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.345,
+      "remedio": {
+        "traducida": "Abrir un taller de reparación de bicicletas eléctricas.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.369
+    },
+    {
+      "idea": 3,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.293,
+      "remedio": {
+        "traducida": "Una aplicación para que los dueños de mascotas encuentren cuidadores de perros confiables.",
+        "solape": 0.5,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "pt",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.348,
+      "remedio": {
+        "traducida": "Una aplicación para que los dueños de mascotas encuentren paseadores de perros de confianza.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.327,
+      "remedio": {
+        "traducida": "Una aplicación para que los dueños de mascotas encuentren paseadores de perros confiables.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "de",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.277,
+      "remedio": {
+        "traducida": "Una aplicación con la que los dueños de mascotas pueden encontrar cuidadores de perros de confianza para pasearlos.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "it",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.323,
+      "remedio": {
+        "traducida": "Una aplicación para que los dueños de mascotas encuentren cuidadores de perros confiables para los paseos.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 9
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "ja",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.323,
+      "remedio": {
+        "traducida": "Una aplicación que ayuda a los dueños de mascotas a encontrar a un confiable cuidador de perros que pasee a sus perros.",
+        "solape": 0.4,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "zh",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.312,
+      "remedio": {
+        "traducida": "Una aplicación que ayuda a los dueños de mascotas a encontrar paseadores de perros confiables.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "ko",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.307,
+      "remedio": {
+        "traducida": "Una aplicación para encontrar un ayudante confiable de paseos de perros en la que los dueños de mascotas puedan confiar.",
+        "solape": 0.5,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "ar",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.294,
+      "remedio": {
+        "traducida": "Una aplicación que ayuda a los dueños de mascotas a encontrar con confianza a alguien que pasee a sus perros.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 3,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.307,
+      "remedio": {
+        "traducida": "Una aplicación a través de la cual los dueños de mascotas pueden encontrar paseadores de perros confiables.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 7,
+      "scoreMax": 0.339
+    },
+    {
+      "idea": 4,
+      "idioma": "en",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.326,
+      "remedio": {
+        "traducida": "Fabrica velas aromáticas hechas a mano y véndelas en Instagram.",
+        "solape": 0.3,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "pt",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.343,
+      "remedio": {
+        "traducida": "Hacer velas aromáticas artesanales y venderlas por Instagram.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "fr",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.321,
+      "remedio": {
+        "traducida": "Fabricar velas perfumadas artesanales y venderlas en Instagram.",
+        "solape": 0.4,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "de",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.333,
+      "remedio": {
+        "traducida": "Fabricar velas aromáticas hechas a mano y venderlas a través de Instagram.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "it",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.337,
+      "remedio": {
+        "traducida": "Realizar velas aromáticas artesanales y venderlas en Instagram.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.35,
+      "remedio": {
+        "traducida": "Quiero hacer velas aromáticas caseras y venderlas en Instagram.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "zh",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.33,
+      "remedio": {
+        "traducida": "Hacer velas aromáticas hechas a mano y venderlas en Instagram.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "ko",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 5,
+      "scoreMax": 0.329,
+      "remedio": {
+        "traducida": "Quiero hacer velas aromáticas hechas a mano y venderlas en Instagram.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "ar",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.304,
+      "remedio": {
+        "traducida": "Fabricación y venta de velas aromáticas hechas a mano a través de Instagram.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 4,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.301,
+      "remedio": {
+        "traducida": "Hacer y vender velas aromáticas hechas a mano en Instagram.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.315
+    },
+    {
+      "idea": 5,
+      "idioma": "en",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.276,
+      "remedio": {
+        "traducida": "Enseñar clases de programación para niños los fines de semana.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "pt",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.319,
+      "remedio": {
+        "traducida": "Dar clases de programación para niños los fines de semana.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.289,
+      "remedio": {
+        "traducida": "Dar clases de programación a los niños los fines de semana.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "de",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.261,
+      "remedio": {
+        "traducida": "Dar cursos de programación para niños los fines de semana.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "it",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.295,
+      "remedio": {
+        "traducida": "Ofrecer cursos de programación para niños los fines de semana.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "ja",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.262,
+      "remedio": {
+        "traducida": "Quiero abrir una clase de programación para niños los fines de semana.",
+        "solape": 0.4,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "zh",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.221,
+      "remedio": {
+        "traducida": "Enseño clases de programación a los niños el fin de semana.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "ko",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.266,
+      "remedio": {
+        "traducida": "Quiero dar clases de codificación para niños el fin de semana.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.258,
+      "remedio": {
+        "traducida": "Ofrecer lecciones de programación para niños durante los fines de semana.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 5,
+      "idioma": "hi",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.263,
+      "remedio": {
+        "traducida": "Tomar clases de programación para niños los fines de semana.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.498
+    },
+    {
+      "idea": 6,
+      "idioma": "en",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.418,
+      "remedio": {
+        "traducida": "Un servicio de limpieza de oficinas que utiliza productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "pt",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.442,
+      "remedio": {
+        "traducida": "Un servicio de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "fr",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 8,
+      "scoreMax": 0.451,
+      "remedio": {
+        "traducida": "Un servicio de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "de",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.397,
+      "remedio": {
+        "traducida": "Un servicio de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "it",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.417,
+      "remedio": {
+        "traducida": "Un servicio de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "ja",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 8,
+      "scoreMax": 0.433,
+      "remedio": {
+        "traducida": "Servicio de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "zh",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 5,
+      "scoreMax": 0.401,
+      "remedio": {
+        "traducida": "Servicios de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "ko",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 7,
+      "scoreMax": 0.434,
+      "remedio": {
+        "traducida": "Servicio de limpieza de oficinas con productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.412,
+      "remedio": {
+        "traducida": "Servicio de limpieza de oficinas utilizando productos ecológicos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 6,
+      "idioma": "hi",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 9,
+      "scoreMax": 0.455,
+      "remedio": {
+        "traducida": "Servicio de limpieza de oficinas con productos amigables con el medio ambiente.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.403
+    },
+    {
+      "idea": 7,
+      "idioma": "en",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.34,
+      "remedio": {
+        "traducida": "Vender café especial de pequeños productores a través de una suscripción.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "pt",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.385,
+      "remedio": {
+        "traducida": "Vender por suscripción café especial de pequeños productores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "fr",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.365,
+      "remedio": {
+        "traducida": "Vender café de especialidad de pequeños productores por suscripción.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "de",
+      "solape": 0.2,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.327,
+      "remedio": {
+        "traducida": "Vender café de especialidad de pequeños productores en suscripción.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "it",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.371,
+      "remedio": {
+        "traducida": "Vender café specialty de pequeños productores en suscripción.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "ja",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.364,
+      "remedio": {
+        "traducida": "Quiero vender café de especialidad de pequeños productores a través de un modelo de suscripción.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "zh",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.354,
+      "remedio": {
+        "traducida": "Vender café premium de pequeños agricultores mediante un modelo de suscripción.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "ko",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.375,
+      "remedio": {
+        "traducida": "Quiero vender café de especialidad de pequeñas granjas a través de un modelo de suscripción.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "ar",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.331,
+      "remedio": {
+        "traducida": "Venta de café de especialidad de pequeños productores mediante un sistema de suscripción.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 7,
+      "idioma": "hi",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.367,
+      "remedio": {
+        "traducida": "Venta de suscripción de café de especialidad de pequeños productores.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.37
+    },
+    {
+      "idea": 8,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.311,
+      "remedio": {
+        "traducida": "Una tienda en línea de ropa de segunda mano de buena calidad.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "pt",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.357,
+      "remedio": {
+        "traducida": "Una tienda en línea de ropa de segunda mano de buena calidad.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.331,
+      "remedio": {
+        "traducida": "Una tienda en línea de ropa de segunda mano de buena calidad.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "de",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.308,
+      "remedio": {
+        "traducida": "Una tienda en línea de ropa de segunda mano de alta calidad.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "it",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 6,
+      "scoreMax": 0.339,
+      "remedio": {
+        "traducida": "Una tienda en línea de ropa usada de buena calidad.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "ja",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.3,
+      "remedio": {
+        "traducida": "Tienda en línea de ropa vintage de buena calidad.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 2
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.366,
+      "remedio": {
+        "traducida": "Una tienda en línea que vende ropa de segunda mano de calidad.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "ko",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.313,
+      "remedio": {
+        "traducida": "Tienda en línea de ropa usada de buena calidad.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "ar",
+      "solape": 0.3,
+      "primero": true,
+      "sobreUmbral": 7,
+      "scoreMax": 0.399,
+      "remedio": {
+        "traducida": "Tienda en línea de ropa usada de buena calidad.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 8,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.304,
+      "remedio": {
+        "traducida": "Tienda en línea de ropa usada de buena calidad.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.46
+    },
+    {
+      "idea": 9,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.461,
+      "remedio": {
+        "traducida": "Consejos de contabilidad para emprendedores independientes.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "pt",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.414,
+      "remedio": {
+        "traducida": "Asesoría contable para emprendedores autónomos.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "fr",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.435,
+      "remedio": {
+        "traducida": "Servicios de consultoría en contabilidad para emprendedores autónomos.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "de",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.475,
+      "remedio": {
+        "traducida": "Asesoramiento contable para empresarios autónomos.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "it",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.392,
+      "remedio": {
+        "traducida": "Asesoría contable para empresarios independientes.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "ja",
+      "solape": 0.2,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.399,
+      "remedio": {
+        "traducida": "Servicio de asesoramiento contable para trabajadores autónomos.",
+        "solape": 0.4,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.42,
+      "remedio": {
+        "traducida": "Proporcionar asesoramiento contable para emprendedores independientes.",
+        "solape": 0.9,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "ko",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.393,
+      "remedio": {
+        "traducida": "Servicio de asesoramiento contable para emprendedores individuales.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "ar",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.399,
+      "remedio": {
+        "traducida": "Asesoramiento contable para emprendedores independientes.",
+        "solape": 0.9,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 9,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.347,
+      "remedio": {
+        "traducida": "Servicio de consultoría contable para emprendedores independientes.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.33
+    },
+    {
+      "idea": 10,
+      "idioma": "en",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.285,
+      "remedio": {
+        "traducida": "Un camión de comida vegana en áreas de oficinas.",
+        "solape": 0.5,
+        "primero": false,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "pt",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 5,
+      "scoreMax": 0.313,
+      "remedio": {
+        "traducida": "Un food truck de comida vegana en áreas de oficinas.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "fr",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.305,
+      "remedio": {
+        "traducida": "Un camión de comida vegana en los barrios de oficinas.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 4
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "de",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.292,
+      "remedio": {
+        "traducida": "Un food truck vegano en distritos comerciales.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "it",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.32,
+      "remedio": {
+        "traducida": "Un camión de comida de cocina vegana en zonas de oficinas.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.298,
+      "remedio": {
+        "traducida": "Quiero establecer un food truck de comida vegana en un distrito de oficinas.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "zh",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.318,
+      "remedio": {
+        "traducida": "Operar un carrito de comida vegetariana en una zona de oficinas.",
+        "solape": 0.3,
+        "primero": false,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "ko",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.295,
+      "remedio": {
+        "traducida": "Quiero hacer un food truck vegano en una zona con mucha concentración de oficinas.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "ar",
+      "solape": 0.3,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.343,
+      "remedio": {
+        "traducida": "Un camión de comida vegana en zonas de oficinas.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 10,
+      "idioma": "hi",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.27,
+      "remedio": {
+        "traducida": "Camiones de comida vegana en áreas de oficinas.",
+        "solape": 0.5,
+        "primero": false,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.429
+    },
+    {
+      "idea": 11,
+      "idioma": "en",
+      "solape": 0.3,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.368,
+      "remedio": {
+        "traducida": "Construir muebles personalizados con madera recuperada.",
+        "solape": 0.3,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "pt",
+      "solape": 0.9,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.413,
+      "remedio": {
+        "traducida": "Fabricar muebles a medida con madera reciclada.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "fr",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.408,
+      "remedio": {
+        "traducida": "Fabricar muebles personalizados de madera reciclada.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "de",
+      "solape": 0.8,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.383,
+      "remedio": {
+        "traducida": "Fabricar muebles personalizados con madera reciclada.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "it",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.393,
+      "remedio": {
+        "traducida": "Crear muebles personalizados con madera reciclada.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "ja",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.341,
+      "remedio": {
+        "traducida": "Quiero hacer muebles personalizados con madera reciclada.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.402,
+      "remedio": {
+        "traducida": "Muebles personalizados hechos con madera reciclada.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "ko",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.381,
+      "remedio": {
+        "traducida": "Quiero hacer muebles personalizados con madera reciclada.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "ar",
+      "solape": 0.8,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.41,
+      "remedio": {
+        "traducida": "Fabricación de muebles personalizados de madera reciclada.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 11,
+      "idioma": "hi",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.343,
+      "remedio": {
+        "traducida": "Fabricación de muebles bajo pedido con madera reciclada.",
+        "solape": 0.8,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.319
+    },
+    {
+      "idea": 12,
+      "idioma": "en",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.256,
+      "remedio": {
+        "traducida": "Un servicio de cuidado en el hogar para adultos mayores.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "pt",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.288,
+      "remedio": {
+        "traducida": "Un servicio de cuidado domiciliar para adultos mayores.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 2
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "fr",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.257,
+      "remedio": {
+        "traducida": "Un servicio de atención domiciliaria para personas mayores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "de",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.275,
+      "remedio": {
+        "traducida": "Un servicio de cuidados domiciliarios para personas mayores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "it",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.252,
+      "remedio": {
+        "traducida": "Un servicio de atención domiciliaria para personas mayores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "ja",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.253,
+      "remedio": {
+        "traducida": "Servicio de cuidado domiciliario para personas mayores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "zh",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.242,
+      "remedio": {
+        "traducida": "Proporcionar servicios de cuidado a domicilio para personas mayores.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 2
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "ko",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.269,
+      "remedio": {
+        "traducida": "Servicio de cuidado domiciliario para personas mayores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.228,
+      "remedio": {
+        "traducida": "Servicio de cuidado domiciliario para personas mayores.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 12,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.235,
+      "remedio": {
+        "traducida": "Servicio de cuidado en el hogar para personas mayores.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.359
+    },
+    {
+      "idea": 13,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.321,
+      "remedio": {
+        "traducida": "Organiza tours gastronómicos para turistas en tu ciudad.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "pt",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.364,
+      "remedio": {
+        "traducida": "Organizar tours gastronómicos para turistas en tu ciudad.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.33,
+      "remedio": {
+        "traducida": "Organizar circuitos gastronómicos para los turistas en mi ciudad.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "de",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 9,
+      "scoreMax": 0.376,
+      "remedio": {
+        "traducida": "Organizar tours culinarios para turistas en mi ciudad.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "it",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.36,
+      "remedio": {
+        "traducida": "Organizar tours gastronómicos para turistas en mi ciudad.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "ja",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 8,
+      "scoreMax": 0.343,
+      "remedio": {
+        "traducida": "Quiero planificar un tour gastronómico para turistas en mi ciudad.",
+        "solape": 0.5,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.335,
+      "remedio": {
+        "traducida": "Organizar un tour gastronómico para turistas en mi ciudad.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 8
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "ko",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 8,
+      "scoreMax": 0.35,
+      "remedio": {
+        "traducida": "Quiero operar un tour gastronómico dirigido a turistas en nuestra ciudad.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.322,
+      "remedio": {
+        "traducida": "Organizar tours de degustación de comida para turistas en mi ciudad.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 13,
+      "idioma": "hi",
+      "solape": 0.8,
+      "primero": false,
+      "sobreUmbral": 6,
+      "scoreMax": 0.361,
+      "remedio": {
+        "traducida": "Organizar un recorrido culinario para turistas en su ciudad.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 4
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.348
+    },
+    {
+      "idea": 14,
+      "idioma": "en",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.329,
+      "remedio": {
+        "traducida": "Vende kits de huerta urbana para apartamentos.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "pt",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.339,
+      "remedio": {
+        "traducida": "Selling urban garden kits for apartments.",
+        "solape": 0.4,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "fr",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.283,
+      "remedio": {
+        "traducida": "Vender kits de huerto urbano para apartamentos.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "de",
+      "solape": 0.3,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.291,
+      "remedio": {
+        "traducida": "Vender sets de huertos urbanos para apartamentos.",
+        "solape": 0.4,
+        "primero": true,
+        "sobreUmbral": 1
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "it",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.302,
+      "remedio": {
+        "traducida": "Vender kits para huerta urbana para apartamentos.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.306,
+      "remedio": {
+        "traducida": "Quiero vender kits de huertos caseros para apartamentos.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "zh",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.346,
+      "remedio": {
+        "traducida": "Venta de kits de huerto urbano aptos para apartamentos.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "ko",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.276,
+      "remedio": {
+        "traducida": "Quiero vender un kit de huerto urbano para apartamentos.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 8
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "ar",
+      "solape": 0.2,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.25,
+      "remedio": {
+        "traducida": "Venta de kits de huertos urbanos para apartamentos.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 14,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.265,
+      "remedio": {
+        "traducida": "Vender kits de jardinería urbana para apartamentos.",
+        "solape": 0.5,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.44
+    },
+    {
+      "idea": 15,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.393,
+      "remedio": {
+        "traducida": "Un estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "pt",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.415,
+      "remedio": {
+        "traducida": "Un estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "fr",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.406,
+      "remedio": {
+        "traducida": "Un estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "de",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.406,
+      "remedio": {
+        "traducida": "Un estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "it",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.429,
+      "remedio": {
+        "traducida": "Un estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "ja",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 8,
+      "scoreMax": 0.339,
+      "remedio": {
+        "traducida": "Estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.362,
+      "remedio": {
+        "traducida": "Estudio que proporciona fotografía de productos para tiendas en línea.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "ko",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 9,
+      "scoreMax": 0.392,
+      "remedio": {
+        "traducida": "Estudio fotográfico de productos para tienda en línea.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.451,
+      "remedio": {
+        "traducida": "Estudio de fotografía de productos para tiendas electrónicas.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 15,
+      "idioma": "hi",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 7,
+      "scoreMax": 0.374,
+      "remedio": {
+        "traducida": "Estudio de fotografía de productos para tiendas en línea.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 3,
+      "scoreMax": 0.342
+    },
+    {
+      "idea": 16,
+      "idioma": "en",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.333,
+      "remedio": {
+        "traducida": "Exportar mis salsas picantes caseras a otros países.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "pt",
+      "solape": 0.3,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.36,
+      "remedio": {
+        "traducida": "Exportar mis salsas picantes caseras a otros países.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.309,
+      "remedio": {
+        "traducida": "Exportar mis salsas picantes caseras hacia otros países.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "de",
+      "solape": 0.5,
+      "primero": false,
+      "sobreUmbral": 2,
+      "scoreMax": 0.324,
+      "remedio": {
+        "traducida": "Exportar mis salsas picantes caseras a otros países.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "it",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.302,
+      "remedio": {
+        "traducida": "Exportar mis salsas picantes caseras a otros países.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "ja",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 5,
+      "scoreMax": 0.342,
+      "remedio": {
+        "traducida": "Quiero exportar mi salsa picante casera al extranjero.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "zh",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.383,
+      "remedio": {
+        "traducida": "Exportar mi salsa picante casera a otros países.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "ko",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.381,
+      "remedio": {
+        "traducida": "Quiero exportar salsa picante hecha en casa al extranjero.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "ar",
+      "solape": 0.2,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.249,
+      "remedio": {
+        "traducida": "Exportar mis salsas picantes caseras a otros países.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 16,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.32,
+      "remedio": {
+        "traducida": "Exportar chutneys picantes caseros a otros países.",
+        "solape": 0.6,
+        "primero": true,
+        "sobreUmbral": 2
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 5,
+      "scoreMax": 0.41
+    },
+    {
+      "idea": 17,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.349,
+      "remedio": {
+        "traducida": "Una franquicia de lavado de autos sin agua.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "pt",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 5,
+      "scoreMax": 0.368,
+      "remedio": {
+        "traducida": "Una franquicia de lavado de autos sin agua.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "fr",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.336,
+      "remedio": {
+        "traducida": "Una franquicia de lavado de autos sin agua.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "de",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.328,
+      "remedio": {
+        "traducida": "Una franquicia para lavado de autos sin agua.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "it",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.377,
+      "remedio": {
+        "traducida": "Una franquicia de lavado de autos sin agua.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.327,
+      "remedio": {
+        "traducida": "Franquicia de lavado de autos sin agua.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "zh",
+      "solape": 0.3,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.251,
+      "remedio": {
+        "traducida": "Tienda de franquicia de lavado de autos sin agua.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "ko",
+      "solape": 0.3,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.339,
+      "remedio": {
+        "traducida": "Franquicia de lavado de autos sin agua.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "ar",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.384,
+      "remedio": {
+        "traducida": "Franquicia comercial para lavado de autos sin agua.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 8
+      }
+    },
+    {
+      "idea": 17,
+      "idioma": "hi",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.279,
+      "remedio": {
+        "traducida": "Franquicia de lavado de autos sin agua.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.384
+    },
+    {
+      "idea": 18,
+      "idioma": "en",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.328,
+      "remedio": {
+        "traducida": "Una plataforma para que los vecinos se alquilen herramientas entre sí.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "pt",
+      "solape": 0.9,
+      "primero": false,
+      "sobreUmbral": 10,
+      "scoreMax": 0.378,
+      "remedio": {
+        "traducida": "Una plataforma para alquilar herramientas entre vecinos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "fr",
+      "solape": 0.9,
+      "primero": false,
+      "sobreUmbral": 3,
+      "scoreMax": 0.32,
+      "remedio": {
+        "traducida": "Una plataforma de alquiler de herramientas entre vecinos.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "de",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.336,
+      "remedio": {
+        "traducida": "Una plataforma donde los vecinos se alquilan herramientas entre sí.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "it",
+      "solape": 0.6,
+      "primero": false,
+      "sobreUmbral": 6,
+      "scoreMax": 0.349,
+      "remedio": {
+        "traducida": "Una plataforma para alquilar herramientas entre vecinos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 6,
+      "scoreMax": 0.325,
+      "remedio": {
+        "traducida": "Una plataforma donde los vecinos pueden prestarse herramientas entre sí.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.365,
+      "remedio": {
+        "traducida": "Una plataforma para que los vecinos se presten herramientas entre sí.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "ko",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 2,
+      "scoreMax": 0.338,
+      "remedio": {
+        "traducida": "Una plataforma para prestar herramientas entre vecinos.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "ar",
+      "solape": 0.9,
+      "primero": true,
+      "sobreUmbral": 4,
+      "scoreMax": 0.333,
+      "remedio": {
+        "traducida": "Plataforma para alquilar herramientas entre vecinos.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 18,
+      "idioma": "hi",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.335,
+      "remedio": {
+        "traducida": "Plataforma de alquiler de herramientas entre vecinos.",
+        "solape": 1,
+        "primero": false,
+        "sobreUmbral": 10
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.238
+    },
+    {
+      "idea": 19,
+      "idioma": "en",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.179,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres mayores de 50.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "pt",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.237,
+      "remedio": {
+        "traducida": "Una pequeña academia para mujeres mayores de 50 años.",
+        "solape": 0.6,
+        "primero": false,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": false,
+      "sobreUmbral": 0,
+      "scoreMax": 0.213,
+      "remedio": {
+        "traducida": "Un pequeño centro de entrenamiento para mujeres mayores de 50 años.",
+        "solape": 0.7,
+        "primero": false,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "de",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.232,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres mayores de 50 años.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "it",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.231,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres mayores de 50.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "ja",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.204,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres de 50 años en adelante.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.225,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio dirigido a mujeres mayores de 50 años.",
+        "solape": 0.7,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "ko",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.219,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres mayores de 50 años.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "ar",
+      "solape": 0.4,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.156,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres mayores de cincuenta años.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 19,
+      "idioma": "hi",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.233,
+      "remedio": {
+        "traducida": "Un pequeño gimnasio para mujeres mayores de 50 años.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 0
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "es",
+      "solape": 1,
+      "primero": true,
+      "sobreUmbral": 6,
+      "scoreMax": 0.395
+    },
+    {
+      "idea": 20,
+      "idioma": "en",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.324,
+      "remedio": {
+        "traducida": "Producir jabones naturales y venderlos a hoteles boutique.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "pt",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.339,
+      "remedio": {
+        "traducida": "Producir jabones naturales y venderlos a hoteles boutique.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "fr",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.305,
+      "remedio": {
+        "traducida": "Producir jabones naturales y venderlos a hoteles-boutiques.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "de",
+      "solape": 0.8,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.308,
+      "remedio": {
+        "traducida": "Fabricar jabones naturales y venderlos a hoteles boutique.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 2
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "it",
+      "solape": 0.7,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.323,
+      "remedio": {
+        "traducida": "Producir jabones naturales y venderlos a hoteles boutique.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 6
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "ja",
+      "solape": 0.4,
+      "primero": false,
+      "sobreUmbral": 1,
+      "scoreMax": 0.302,
+      "remedio": {
+        "traducida": "Quiero hacer jabón natural y venderlo a hoteles boutique.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 4
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "zh",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 1,
+      "scoreMax": 0.305,
+      "remedio": {
+        "traducida": "Producir jabón natural y venderlo a hoteles boutique.",
+        "solape": 1,
+        "primero": true,
+        "sobreUmbral": 5
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "ko",
+      "solape": 0.5,
+      "primero": true,
+      "sobreUmbral": 10,
+      "scoreMax": 0.337,
+      "remedio": {
+        "traducida": "Quiero hacer jabón natural y venderlo a hoteles boutique.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 4
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "ar",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.267,
+      "remedio": {
+        "traducida": "Producción y venta de jabón natural para hoteles boutique.",
+        "solape": 0.9,
+        "primero": true,
+        "sobreUmbral": 3
+      }
+    },
+    {
+      "idea": 20,
+      "idioma": "hi",
+      "solape": 0.6,
+      "primero": true,
+      "sobreUmbral": 0,
+      "scoreMax": 0.297,
+      "remedio": {
+        "traducida": "Hacer y vender jabón natural a hoteles boutique.",
+        "solape": 0.8,
+        "primero": true,
+        "sobreUmbral": 7
+      }
+    }
+  ]
+}

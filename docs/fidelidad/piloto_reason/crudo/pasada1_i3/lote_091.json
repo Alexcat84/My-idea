@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_091",
+  "intento": 0,
+  "usd": 0.157304,
+  "turnos": 1,
+  "duracion_s": 13.7,
+  "pared_s": 14.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33446,
+  "tokens_out": 1176,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8F2224\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784, 293, 291], \"razon\": \"L3784 respalda distinguir si el fallo es activo o latente. Pero L293 pide establecer ambos por defensa; el 'o' excluyente podría hacer que el cliente se quede en uno.\"},\n  {\"id\": \"P7EB986\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5200, 5190, 666], \"razon\": \"L5200 recomienda grupos de personas divergentes (especialidad, experiencia, género) porque colectivamente ven más; el paso coincide.\"},\n  {\"id\": \"PE20459\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2716, 1945, 3825, 3829], \"razon\": \"L2716 valora la naturaleza y variedad de los actos inseguros vinculada al tipo de actividad, y distingue errores de violaciones por su distinto manejo.\"},\n  {\"id\": \"P4E0E8D\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4810, 4910, 4912], \"razon\": \"L4810 y L4910 piden retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8F2224",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    293,
+    291
+   ],
+   "razon": "L3784 respalda distinguir si el fallo es activo o latente. Pero L293 pide establecer ambos por defensa; el 'o' excluyente podría hacer que el cliente se quede en uno."
+  },
+  {
+   "id": "P7EB986",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5200,
+    5190,
+    666
+   ],
+   "razon": "L5200 recomienda grupos de personas divergentes (especialidad, experiencia, género) porque colectivamente ven más; el paso coincide."
+  },
+  {
+   "id": "PE20459",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2716,
+    1945,
+    3825,
+    3829
+   ],
+   "razon": "L2716 valora la naturaleza y variedad de los actos inseguros vinculada al tipo de actividad, y distingue errores de violaciones por su distinto manejo."
+  },
+  {
+   "id": "P4E0E8D",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4810,
+    4910,
+    4912
+   ],
+   "razon": "L4810 y L4910 piden retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante."
+  }
+ ]
+}

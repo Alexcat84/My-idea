@@ -7,8 +7,8 @@
   "resumen_teorico": "La contabilidad ambiental es un conjunto de herramientas que te permite tomar mejores decisiones al incorporar costos y beneficios ambientales reales que la contabilidad tradicional suele ignorar. Incluye conceptos como costeo total, costeo integral, costeo real y contabilidad de ciclo de vida, que buscan capturar costos externos e internos relacionados con el impacto ambiental de tu operacion.",
   "pasos_accionables": [
     "Identificar los costos ambientales ocultos en tu forma actual de llevar las cuentas",
-    "Definir que costos internos y externos vas a incluir en el análisis",
-    "Elegir las herramientas de contabilidad ambiental mas adecuadas para tu negocio, como full cost accounting, EMA",
+    "Definir qué costos internos y externos vas a incluir en el análisis",
+    "Elegir las herramientas de contabilidad ambiental más adecuadas para tu negocio, como full cost accounting, EMA",
     "Buscar a la persona que te ayuda en temas de sostenibilidad para poner en marcha estas herramientas, o a un equipo interdisciplinario (científicos, ingenieros, contadores)",
     "Reportar resultados tanto para uso interno como para stakeholders externos"
   ],
@@ -37,6 +37,39 @@
       "node_id": "herramientas_contabilidad_ambiental",
       "titulo": "Herramientas de Contabilidad Ambiental y de Gestión Sostenible",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0428",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir que costos internos y externos vas a incluir en el análisis",
+      "texto_nuevo": "Definir qué costos internos y externos vas a incluir en el análisis",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O036-011.paso1: que ('qué' lleva tilde porque introduce una interrogativa indirecta; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0429",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir las herramientas de contabilidad ambiental mas adecuadas para tu negocio, como full cost accounting, EMA",
+      "texto_nuevo": "Elegir las herramientas de contabilidad ambiental más adecuadas para tu negocio, como full cost accounting, EMA",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O036-011.paso2: mas ('más' es adverbio de cantidad y lleva tilde; los términos en inglés y la sigla quedan intactos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
     }
   ]
 }

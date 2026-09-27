@@ -1,0 +1,110 @@
+[
+ {
+  "node_id": "decision_fpr",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Sopesar el riesgo legal vs beneficio de marketing de incluir un FPR",
+  "texto_nuevo": "Sopesar los factores de incluir un FPR: reduce la exposición legal y le da al candidato información para decidir, frente a un historial poco representativo de lo que logrará un franquiciado o la confidencialidad de tus cifras",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "L4717-L4719",
+   "frase": "But for many, the biggest reason to use FPRs is their ability to reduce potential liability. This may at first seem counterintuitive."
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P015, arbitro). Tenía razón el lector A. El paso plantea el FPR como un riesgo legal que hay que compensar con su beneficio de marketing. El libro invierte ese planteamiento. Dice que pensar que el FPR abre la puerta a demandas es un error intuitivo y que un FPR bien documentado hace muy difícil probar una acusación de fraude (L4717; también L2054). Además relativiza el beneficio de marketing: no encontró una correlación significativa con crecer más rápido (L2052, L4695). Busqué con Grep en todo el libro (FPR, earnings claim, financial performance representation) algún pasaje que presente el FPR como fuente de riesgo legal y no hay ninguno. Las razones que da el libro para no usarlo son un prototipo que no representa lo que vivirá el franquiciado, la confidencialidad o unas cifras poco competitivas (L2056, L4719-L4721). El lector B se apoya en que la decisión es compleja (L2058), y eso respalda sopesar factores, pero no el eje riesgo legal frente a marketing que propone el paso. La sesion ajusta el texto del arbitro, que traia \"facilita la venta\": el libro lo desmiente (L2052, \"no significant correlation between the use of an FPR and speed of growth\"; L4695). Queda con los dos beneficios que el libro si da (L4715, informacion para el candidato; L4717, menos exposicion legal) y dos de las razones para no usarlo (L4719). Anotado en EXCEPCIONES para que el fundador lo ratifique.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P015-058",
+  "id": "fidelidad-t11-01",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Divide tu proyecto en versiones pequeñas, suficientes para entregar algo cada semana o dos.",
+  "texto_nuevo": "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "L1576-L1576",
+   "frase": "lots of versions, at least enough to schedule a new version every week or so"
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P012, arbitro). Tenia razon A. El libro pone un minimo de cadencia: al menos suficientes versiones para programar una nueva cada semana, mas o menos. El paso dice 'cada semana o dos', con lo que el intervalo puede doblarse a dos semanas y queda por debajo del minimo semanal ('at least'). 'Or so' da un margen aproximado, no permite duplicar el plazo. Busque en todo el libro every week, two weeks, fortnight, biweekly, weekly y each week: solo aparece esta frase. La cita de Gilb (L1274, 'lots of versions (so the time between versions is relatively small)') no respalda un intervalo de dos semanas. Segun la vara, un plazo cambiado respecto al libro es CONTRARIO aunque la accion general sea correcta.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P012-067",
+  "id": "fidelidad-t11-02",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "no_shop_agreement",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones",
+  "texto_nuevo": "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+   "lineas": "L1730-L1736",
+   "frase": "Except for the provisions contained herein entitled \"Legal Fees and Expenses,\" \"No-Shop Agreement,\" and \"Governing Law,\" which are explicitly agreed by the Investors and the Company to be binding upon execution of this term sheet"
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P024, arbitro). Tiene razon B. Es cierto que el no-shop es vinculante desde la firma. Pero el paso dice que eso es 'a diferencia del resto de sus condiciones', y el libro dice lo contrario: gastos legales y ley aplicable tambien son vinculantes al firmar (L1730, L1736). L2052 lo pone 'part of the few terms that are binding'. Busque con Grep 'binding' en todo el libro y ningun pasaje presenta al no-shop como la unica clausula vinculante. En L4947 y L5043 tambien aparece acompanado de otras. El paso invierte un hecho que el texto sostiene. Ademas, el lector podria creer que la clausula de gastos legales no lo obliga.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P024-064",
+  "id": "fidelidad-t11-03",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "propuesta_valor_franquicia",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Articular por qué el sistema garantiza consistencia y replicabilidad del éxito",
+  "texto_nuevo": "Articular cómo el sistema asegura una experiencia de consumo consistente y probada, sin garantizar el éxito al franquiciado",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "L3277-L3277",
+   "frase": "Of course, as a franchisor, you will not be offering your franchisees any guarantees or assurances of success."
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P018, arbitro). Tiene razon el LECTOR B. He buscado con Grep pasajes que apoyen el paso. L3277 dice que los sistemas aseguran la consistencia a nivel del consumidor ('ensure consistency at the consumer level'), y L1657 y L2558 dicen que un buen sistema replica su exito y que documentarlo es la clave para duplicarlo. Esa es la parte de la consistencia, y esta respaldada. Pero el paso forma parte de la propuesta de valor dirigida al prospecto y manda argumentar que el sistema garantiza que el exito se replique. L649 (lineas L645-L652) lo descarta de forma expresa: el franquiciador no ofrece garantias ni seguridades de exito. Ademas L166 y L611 limitan lo que se puede decir al prospecto sobre resultados si no esta en el Item 19. Ningun pasaje apoya prometer que el exito se replica; solo apoyan la replicacion como objetivo del sistema. Presentarla como garantia invierte lo que dice el libro. El LECTOR A se quedo en L3277 y no vio L649.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P018-098",
+  "id": "fidelidad-t11-04",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "prospecto_emprendedor_flaming",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Buscar señales de alerta: cambios frecuentes de empleo, múltiples negocios fallidos, historial de manejo problemático",
+  "texto_nuevo": "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "L4405-L4407",
+   "frase": "They are likely to have changed jobs frequently; started numerous new businesses (whether successfully or not), often at an early age; displayed a spotty driving record"
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P018, lector y verificador de acuerdo). El libro pone como senal haber iniciado muchos negocios, con exito o sin el. El paso la reduce a negocios fallidos y cambia el criterio que el libro fija de forma expresa. En el libro nada apoya que la senal sea el fracaso. La sesion solo restituye las tildes y la enie que el texto del verificador traia sin ellas.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P018-010",
+  "id": "fidelidad-t11-05",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana o par de semanas, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
+  "texto_nuevo": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana, más o menos, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "L1576-L1576",
+   "frase": "lots of versions, at least enough to schedule a new version every week or so"
+  },
+  "decision": "Mandato del fundador, dato repetido en el resumen del mismo nodo: el resumen repetia el plazo \"cada semana o par de semanas\", que el libro fija en \"at least enough to schedule a new version every week or so\" (L1576). Se corrige con la misma cita que fidelidad-t11-02.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P012-067",
+  "id": "fidelidad-t11-06",
+  "fecha": "2026-09-24"
+ }
+]

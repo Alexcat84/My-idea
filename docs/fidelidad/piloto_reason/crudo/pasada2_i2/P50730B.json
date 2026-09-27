@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P50730B",
+  "intento": 0,
+  "usd": 0.222704,
+  "turnos": 1,
+  "duracion_s": 18.3,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46896,
+  "tokens_out": 1756,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P50730B\", \"veredicto\": \"CONTRARIO\", \"lineas\": [244, 248, 252, 293, 323], \"cita\": \"Individual accidents can, and usually do, have organizational origins. ... it is not always easy to draw a hard and fast line between individual and organizational accidents | The first possibility raised after such an accident is that of ‘pilot error’. In this case, however, the air accident investigators soon establish\", \"datos_sin_respaldo\": [], \"razon\": \"Para el libro, el caracter organizacional se descubre al investigar: en el caso del jumbo, la primera hipotesis es 'pilot error' y la investigacion la desmiente. Ademas, los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar invierte ese orden y lleva a cerrar el analisis en el operador, justo lo que el libro desaconseja.\", \"paso_fiel\": \"Clasificar los eventos de seguridad pasados como individuales u organizacionales a partir de lo que revele su investigación (de las defensas vulneradas a las condiciones del lugar de trabajo y los factores organizacionales), sin dar ningún evento por individual antes de haber indagado sus orígenes organizacionales.\"}\n```",
+ "parseado": {
+  "id": "P50730B",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   244,
+   248,
+   252,
+   293,
+   323
+  ],
+  "cita": "Individual accidents can, and usually do, have organizational origins. ... it is not always easy to draw a hard and fast line between individual and organizational accidents | The first possibility raised after such an accident is that of ‘pilot error’. In this case, however, the air accident investigators soon establish",
+  "datos_sin_respaldo": [],
+  "razon": "Para el libro, el caracter organizacional se descubre al investigar: en el caso del jumbo, la primera hipotesis es 'pilot error' y la investigacion la desmiente. Ademas, los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar invierte ese orden y lleva a cerrar el analisis en el operador, justo lo que el libro desaconseja.",
+  "paso_fiel": "Clasificar los eventos de seguridad pasados como individuales u organizacionales a partir de lo que revele su investigación (de las defensas vulneradas a las condiciones del lugar de trabajo y los factores organizacionales), sin dar ningún evento por individual antes de haber indagado sus orígenes organizacionales."
+ }
+}

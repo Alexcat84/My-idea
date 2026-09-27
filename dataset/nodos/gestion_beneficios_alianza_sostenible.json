@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir métricas de beneficio compartido (ahorro de costos, crecimiento de ingresos, participación de mercado).",
     "Asignar valor monetario a cada beneficio esperado por ambas partes.",
-    "Implementar tablero de seguimiento periódico (mensual/trimestral) de estos beneficios.",
+    "Sugerencia de My Idea: implementa un tablero para seguir estos beneficios cada mes o cada trimestre.",
     "Ajustar continuamente pequeñas operaciones para mantener el ratio costo/beneficio favorable.",
     "Evaluar si la relación con el socio requiere una oferta personalizada (no commodity).",
     "Definir KPIs conjuntos y metas de desempeño medibles para la coordinación.",
@@ -17,7 +17,8 @@
   ],
   "entregable_esperado": "Tablero de métricas compartidas con valores monetarios asignados y frecuencia de revisión definida.",
   "nodos_previos": [
-    "formalizar_alianza_estrategica"
+    "formalizar_alianza_estrategica",
+    "coordinacion_colaboracion_cadena_suministro"
   ],
   "nodos_siguientes": [
     "bucle_retroalimentacion_autoajustable"
@@ -26,5 +27,40 @@
     "Cuando una alianza estratégica ya está en marcha y se requiere mantenerla rentable para ambas partes a largo plazo.",
     "Si existe riesgo de que una parte presione solo por reducción de precios, deteriorando la relación."
   ],
-  "etiqueta_arbol": "Comparte Beneficios con tus Socios"
+  "etiqueta_arbol": "Comparte Beneficios con tus Socios",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-029",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar tablero de seguimiento periódico (mensual/trimestral) de estos beneficios.",
+      "texto_nuevo": "Sugerencia de My Idea: implementa un tablero para seguir estos beneficios cada mes o cada trimestre.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L5396-L5400",
+        "frase": "Then make sure the benefits are accurately tracked and the rewards shared between both parties."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide rastrear con exactitud los beneficios, pero no fija una frecuencia mensual o trimestral para ese seguimiento.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C090-069"
+    },
+    {
+      "id": "n1-nucleo-09",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> gestion_beneficios_alianza_sostenible",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-10, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tras entender que la coordinación con socios vale más que el control unilateral, se sigue con cómo sostener el beneficio compartido de la alianza con métricas valorizadas."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ]
 }

@@ -17,12 +17,28 @@
     "community_building_estrategia",
     "construccion_tribu_de_marca"
   ],
-  "nodos_siguientes": [
-    "cultura_organizacional_calidad"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el producto depende de contenido generado por usuarios",
     "Cuando se busca reducir costos de contratación aprovechando el compromiso comunitario existente"
   ],
-  "etiqueta_arbol": "Convierte tu Comunidad en Activo"
+  "etiqueta_arbol": "Convierte tu Comunidad en Activo",
+  "fuentes_internas": [
+    "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-055",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunidad_como_activo_estrategico -> cultura_organizacional_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-05, lector y verificador de acuerdo)",
+        "motivo": "La comunidad de usuarios como activo y la cultura organizacional frente a la calidad son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
+  ]
 }

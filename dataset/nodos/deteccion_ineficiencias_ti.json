@@ -1,6 +1,6 @@
 {
   "node_id": "deteccion_ineficiencias_ti",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Detección de Ineficiencias con Enfoque Verde",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -23,5 +23,23 @@
     "Cuando ya se cuenta con datos de auditoría de TI",
     "Si se sospechan desperdicios de recursos tecnológicos"
   ],
-  "etiqueta_arbol": "Revisa tu Tecnología con Ojo Verde"
+  "etiqueta_arbol": "Revisa tu Tecnología con Ojo Verde",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-103",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-028: Revisar activos y politicas de TI de la empresa para eliminar desperdicios es mejora operativa de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

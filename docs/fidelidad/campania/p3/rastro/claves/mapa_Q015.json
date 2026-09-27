@@ -1,0 +1,736 @@
+{
+ "Q015-001": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-002": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-003": {
+  "real": true,
+  "node_id": "distribucion_binomial",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-004": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-005": {
+  "real": true,
+  "node_id": "disposicion_producto_no_conforme",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-006": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-007": {
+  "real": true,
+  "node_id": "distribucion_normal_probabilidad",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-008": {
+  "real": true,
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-009": {
+  "real": true,
+  "node_id": "design_scorecard",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-010": {
+  "real": true,
+  "node_id": "diseno_experimentos_doe_mejora",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-011": {
+  "real": true,
+  "node_id": "diseno_de_metodos_de_recoleccion_de_datos",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-012": {
+  "real": true,
+  "node_id": "diferencia_planeacion_mejora",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-013": {
+  "real": true,
+  "node_id": "diagnostico_antes_remedio",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-014": {
+  "real": true,
+  "node_id": "disposicion_producto_no_conforme",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-015": {
+  "real": true,
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-016": {
+  "real": true,
+  "node_id": "diseno_de_metodos_de_recoleccion_de_datos",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-017": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-018": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-019": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Disposición de Producto No Conforme",
+   "resumen": "Secuencia planificada que se activa cuando un inspector declara no conforme un lote: retención y cuarentena, investigación de aptitud para el uso y decisión formal de disposición (reparar, reclasificar, desechar o enviar bajo waiver).",
+   "texto": "Marcar el lote como 'hold', enviarlo a cuarentena y cerrar su disposición en un plazo máximo de 72 horas.",
+   "tipo": "ANADIDO",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L24448",
+   "cita": "The lot is marked “hold” and is often sent to a special holding area to reduce the risk of mix-ups. The product is put into quarantine.",
+   "dato": "plazo máximo de 72 horas para cerrar la disposición",
+   "explicacion": "El libro describe la retención, la cuarentena y la asignación de un investigador, pero no fija ningún plazo para decidir la disposición. Grep de '72', 'seventy', 'three days' junto a hour/hold/quarantine/disposition sin resultados en ese contexto: el plazo de 72 horas es inventado."
+  }
+ },
+ "Q015-020": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Diagrama de Afinidad",
+   "resumen": "Herramienta que toma muchas ideas generadas por brainstorming y las ordena en grupos con sentido. Se usa al recoger información variada de clientes o empleados, y sirve de preludio al diagrama causa efecto.",
+   "texto": "Agrupar las ideas en categorías de 'temas similares' comentando en voz alta dónde encaja cada tarjeta hasta que el equipo acuerde",
+   "tipo": "CONTRARIO",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L17853",
+   "cita": "3. Sort into like groups; do this without speaking, based on individual perception.",
+   "explicacion": "El libro pide que la clasificación en grupos se haga sin hablar, según la percepción individual de cada uno; la discusión viene después, en el paso 6, sobre el diagrama ya organizado. El paso invierte la condición y propone agrupar debatiendo en voz alta."
+  }
+ },
+ "Q015-021": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-022": {
+  "real": true,
+  "node_id": "desperdicio_cronico_vs_esporadico",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-023": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-024": {
+  "real": true,
+  "node_id": "design_for_environment",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-025": {
+  "real": true,
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-026": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-027": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Diagnóstico de Cambios Esporádicos",
+   "resumen": "Recorrido de diagnóstico para la acción correctiva ante picos esporádicos: centrarse en qué ha cambiado comparando producto y proceso antes y después del problema y reconstruyendo la cronología de eventos.",
+   "texto": "Reconstruir la cronología de eventos de los 5 turnos previos al pico: rotaciones, personal nuevo y acciones de mantenimiento",
+   "tipo": "ANADIDO",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L8276",
+   "cita": "Reconstruction of the chronology, which consists of logging on a time scale (of hours, days, etc.) (1) the events that took place in the process before and after the sporadic change—that is, rotation of shifts, new employees on the job, maintenance actions, etc.",
+   "dato": "ventana fija de los 5 turnos previos al pico",
+   "explicacion": "El libro pide registrar en una escala de tiempo (horas, días, etc.) los eventos antes y después del cambio esporádico, sin fijar ninguna ventana y cubriendo también lo ocurrido después. La ventana de 5 turnos no aparece: Grep de 'five shifts', '5 shifts', 'previous ... shifts' y 'shifts before' sin resultados."
+  }
+ },
+ "Q015-028": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-029": {
+  "real": true,
+  "node_id": "desperdicio_cronico_vs_esporadico",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-030": {
+  "real": true,
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-031": {
+  "real": true,
+  "node_id": "diagrama_barreras_ayudas",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-032": {
+  "real": true,
+  "node_id": "diseno_experimentos_doe_mejora",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-033": {
+  "real": true,
+  "node_id": "distribucion_normal_probabilidad",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-034": {
+  "real": true,
+  "node_id": "design_for_six_sigma_dfss",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-035": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-036": {
+  "real": true,
+  "node_id": "disposicion_producto_no_conforme",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-037": {
+  "real": true,
+  "node_id": "diagnostico_antes_remedio",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-038": {
+  "real": true,
+  "node_id": "diagrama_barreras_ayudas",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-039": {
+  "real": true,
+  "node_id": "diseno_de_metodos_de_recoleccion_de_datos",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-040": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-041": {
+  "real": true,
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-042": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-043": {
+  "real": true,
+  "node_id": "design_for_six_sigma_dfss",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-044": {
+  "real": true,
+  "node_id": "diagrama_arbol_despliegue",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-045": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Análisis del Sistema de Medición (Gauge R&R)",
+   "resumen": "Estudio que separa la variación de la medición en repetibilidad (equipo) y reproducibilidad (evaluadores) para juzgar si el proceso de medición es adecuado antes de usar sus datos en un proyecto de mejora.",
+   "texto": "Aceptar el sistema de medición si la dispersión 5.15σ del R&R no supera el 30 % del rango de especificación",
+   "tipo": "CONTRARIO",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L19324",
+   "cita": "If 5.15σ is equal to or less than 10 percent of the specification range for the quality characteristic, the measurement process is viewed as acceptable for that characteristic; if the result is greater than 10 percent, the measurement process is viewed as unacceptable.",
+   "explicacion": "El libro fija el umbral de aceptación en el 10 % del rango de especificación y declara inaceptable cualquier valor mayor. El paso cambia el umbral al 30 %, con lo que daría por bueno un sistema de medición que el libro rechaza."
+  }
+ },
+ "Q015-046": {
+  "real": true,
+  "node_id": "design_for_six_sigma_dfss",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-047": {
+  "real": true,
+  "node_id": "determinacion_tamano_muestra",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-048": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-049": {
+  "real": true,
+  "node_id": "diferencia_planeacion_mejora",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-050": {
+  "real": true,
+  "node_id": "design_scorecard",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-051": {
+  "real": true,
+  "node_id": "design_for_manufacture",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-052": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-053": {
+  "real": true,
+  "node_id": "despliegue_metas",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-054": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-055": {
+  "real": true,
+  "node_id": "desplegar_metas_organizacion",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-056": {
+  "real": true,
+  "node_id": "despliegue_metas",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-057": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-058": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-059": {
+  "real": true,
+  "node_id": "diagrama_barreras_ayudas",
+  "paso": 6,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-060": {
+  "real": true,
+  "node_id": "diagrama_arbol_despliegue",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-061": {
+  "real": true,
+  "node_id": "diferencia_iso9001_iso9004",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-062": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-063": {
+  "real": true,
+  "node_id": "determinacion_tamano_muestra",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-064": {
+  "real": true,
+  "node_id": "desplegar_metas_organizacion",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-065": {
+  "real": true,
+  "node_id": "distribucion_binomial",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-066": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "paso": 7,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-067": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-068": {
+  "real": true,
+  "node_id": "distribucion_normal_probabilidad",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-069": {
+  "real": true,
+  "node_id": "disponibilidad_producto",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-070": {
+  "real": true,
+  "node_id": "diseno_experimentos_doe_mejora",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-071": {
+  "real": true,
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-072": {
+  "real": true,
+  "node_id": "desplegar_metas_organizacion",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-073": {
+  "real": true,
+  "node_id": "diagrama_arbol_despliegue",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-074": {
+  "real": true,
+  "node_id": "diagrama_barreras_ayudas",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-075": {
+  "real": true,
+  "node_id": "determinacion_tamano_muestra",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-076": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-077": {
+  "real": true,
+  "node_id": "diseno_implementacion_remedio",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-078": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 8,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-079": {
+  "real": true,
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-080": {
+  "real": true,
+  "node_id": "diseno_experimentos_doe_mejora",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-081": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-082": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-083": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-084": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-085": {
+  "real": true,
+  "node_id": "design_scorecard",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-086": {
+  "real": true,
+  "node_id": "desplegar_metas_organizacion",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-087": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-088": {
+  "real": true,
+  "node_id": "diagrama_barreras_ayudas",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-089": {
+  "real": true,
+  "node_id": "diseno_implementacion_remedio",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-090": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-091": {
+  "real": true,
+  "node_id": "design_for_manufacture",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-092": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 7,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-093": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-094": {
+  "real": true,
+  "node_id": "diferencia_planeacion_mejora",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-095": {
+  "real": true,
+  "node_id": "desperdicio_cronico_vs_esporadico",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-096": {
+  "real": true,
+  "node_id": "distribucion_normal_probabilidad",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-097": {
+  "real": true,
+  "node_id": "diseno_implementacion_remedio",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-098": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-099": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-100": {
+  "real": true,
+  "node_id": "diseno_de_metodos_de_recoleccion_de_datos",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-101": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-102": {
+  "real": true,
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-103": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-104": {
+  "real": true,
+  "node_id": "diseno_implementacion_remedio",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-105": {
+  "real": true,
+  "node_id": "diseno_de_metodos_de_recoleccion_de_datos",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-106": {
+  "real": true,
+  "node_id": "distribucion_binomial",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-107": {
+  "real": true,
+  "node_id": "despliegue_metas",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-108": {
+  "real": true,
+  "node_id": "diagnostico_antes_remedio",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-109": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-110": {
+  "real": true,
+  "node_id": "disponibilidad_producto",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-111": {
+  "real": true,
+  "node_id": "disponibilidad_producto",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-112": {
+  "real": true,
+  "node_id": "disposicion_producto_no_conforme",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-113": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-114": {
+  "real": true,
+  "node_id": "disposicion_producto_no_conforme",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-115": {
+  "real": true,
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q015-116": {
+  "real": true,
+  "node_id": "design_for_manufacture",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ }
+}

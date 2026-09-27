@@ -17,6 +17,7 @@
  * presupuesto duro por sesion sigue siendo real, solo que vive en la
  * base de datos en vez de en memoria del proceso.
  */
+import { bloquesDeSistema } from "./i18n/idiomaSalida";
 import Anthropic from "@anthropic-ai/sdk";
 import { limpiarGuiones } from "./voz";
 
@@ -123,11 +124,43 @@ export function registrarUso(
   };
 }
 
+/** Suma dos acumulados (AUD-09 H06): una llamada con presupuesto PROPIO se
+ * mide desde cero y su gasto se suma después al de la sesión, para que el
+ * registro de costos siga completo. No muta ninguno de los dos. */
+export function sumarUso(base: UsoAcumulado, extra: UsoAcumulado): UsoAcumulado {
+  const uso: Record<string, UsoModelo> = { ...base.uso };
+  for (const [model, e] of Object.entries(extra.uso)) {
+    const b = uso[model] ?? { in: 0, out: 0, llamadas: 0, cache_read: 0, cache_write: 0 };
+    uso[model] = {
+      in: b.in + e.in,
+      out: b.out + e.out,
+      llamadas: b.llamadas + e.llamadas,
+      cache_read: b.cache_read + e.cache_read,
+      cache_write: b.cache_write + e.cache_write,
+    };
+  }
+  const uso_por_componente = { ...base.uso_por_componente };
+  for (const [c, costo] of Object.entries(extra.uso_por_componente)) {
+    uso_por_componente[c] = (uso_por_componente[c] ?? 0) + costo;
+  }
+  return { uso, uso_por_componente, presupuesto_excedido: base.presupuesto_excedido || extra.presupuesto_excedido };
+}
+
 export class PresupuestoExcedidoError extends Error {
   constructor(presupuestoUsd: number) {
     super(`presupuesto de sesion excedido ($${presupuestoUsd.toFixed(2)})`);
     this.name = "PresupuestoExcedidoError";
   }
+}
+
+/** i18n F5: `idiomaSalida` es el idioma de la IDEA (lib/i18n/idiomaSalida);
+ * `rotulosFijos`, los marcadores de estructura que el código lee de la salida. */
+export interface LlamadaOpts {
+  maxTokens?: number;
+  componente?: string;
+  presupuestoUsd?: number;
+  idiomaSalida?: string | null;
+  rotulosFijos?: readonly string[];
 }
 
 export interface ResultadoLlamada {
@@ -150,7 +183,7 @@ export async function llamarClaude(
   userText: string,
   model: string,
   acumulado: UsoAcumulado,
-  opts: { maxTokens?: number; componente?: string; presupuestoUsd?: number } = {}
+  opts: LlamadaOpts = {}
 ): Promise<ResultadoLlamada> {
   const presupuestoUsd = opts.presupuestoUsd ?? PRESUPUESTO_SESION_USD_DEFAULT;
   if (costoAcumuladoUsd(acumulado) >= presupuestoUsd) {
@@ -159,7 +192,7 @@ export async function llamarClaude(
   const msg = await client.messages.create({
     model,
     max_tokens: opts.maxTokens ?? 1500,
-    system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+    system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
     messages: [{ role: "user", content: userText }],
   });
   const nuevoAcumulado = registrarUso(acumulado, model, msg.usage, opts.componente);
@@ -207,7 +240,7 @@ export async function llamarClaudeConversacion(
   nuevoTurnoTexto: string,
   model: string,
   acumulado: UsoAcumulado,
-  opts: { maxTokens?: number; componente?: string; presupuestoUsd?: number } = {}
+  opts: LlamadaOpts = {}
 ): Promise<ResultadoLlamadaConversacion> {
   const presupuestoUsd = opts.presupuestoUsd ?? PRESUPUESTO_SESION_USD_DEFAULT;
   if (costoAcumuladoUsd(acumulado) >= presupuestoUsd) {
@@ -238,7 +271,7 @@ export async function llamarClaudeConversacion(
   const msg = await client.messages.create({
     model,
     max_tokens: opts.maxTokens ?? 600,
-    system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+    system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
     messages: [...historialSinMarca, nuevoTurno] as Anthropic.MessageParam[],
   });
 

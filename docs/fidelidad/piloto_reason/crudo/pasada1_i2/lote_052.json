@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_052",
+  "intento": 0,
+  "usd": 0.17264800000000002,
+  "turnos": 1,
+  "duracion_s": 20.6,
+  "pared_s": 21.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32877,
+  "tokens_out": 2057,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC01CFF\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"capacitación de primera línea\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5208], \"razon\": \"El libro habla de ganar respeto, no confianza, sobre todo de los supervisores de primera línea. Omite que antes hace falta una cultura jerárquica fuerte y disciplinada.\"},\n  {\"id\": \"PC02761\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"análisis genuino de causas raíz\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4714, 4716, 4720, 2905, 2922, 5742], \"razon\": \"El libro vincula la evitación de ansiedad con el ciclo de culpa y pide buscar causas en el contexto. Pero 'causa raíz' puede llevar a causas remotas, con rendimientos decrecientes (L5742).\"},\n  {\"id\": \"PE60EC2\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"sistemas de autodiagnóstico\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [2311, 2369, 1114, 1816], \"razon\": \"El libro propone eliminar el contacto manual por diseño o con autodesactivación. El autodiagnóstico es un medio añadido, y el libro advierte que los dispositivos añadidos aumentan la complejidad y los errores de mantenimiento.\"},\n  {\"id\": \"P300498\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 992, 1006, 1571, 1573, 1712, 1724], \"razon\": \"Va en la dirección del libro, pero este afirma que los procedimientos nunca cubrirán toda la variabilidad. Intentar cubrirla podría añadir reglas y agravar la sobreespecificación.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC01CFF",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "capacitación de primera línea"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5208
+   ],
+   "razon": "El libro habla de ganar respeto, no confianza, sobre todo de los supervisores de primera línea. Omite que antes hace falta una cultura jerárquica fuerte y disciplinada."
+  },
+  {
+   "id": "PC02761",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "análisis genuino de causas raíz"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4714,
+    4716,
+    4720,
+    2905,
+    2922,
+    5742
+   ],
+   "razon": "El libro vincula la evitación de ansiedad con el ciclo de culpa y pide buscar causas en el contexto. Pero 'causa raíz' puede llevar a causas remotas, con rendimientos decrecientes (L5742)."
+  },
+  {
+   "id": "PE60EC2",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "sistemas de autodiagnóstico"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2311,
+    2369,
+    1114,
+    1816
+   ],
+   "razon": "El libro propone eliminar el contacto manual por diseño o con autodesactivación. El autodiagnóstico es un medio añadido, y el libro advierte que los dispositivos añadidos aumentan la complejidad y los errores de mantenimiento."
+  },
+  {
+   "id": "P300498",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    990,
+    992,
+    1006,
+    1571,
+    1573,
+    1712,
+    1724
+   ],
+   "razon": "Va en la dirección del libro, pero este afirma que los procedimientos nunca cubrirán toda la variabilidad. Intentar cubrirla podría añadir reglas y agravar la sobreespecificación."
+  }
+ ]
+}

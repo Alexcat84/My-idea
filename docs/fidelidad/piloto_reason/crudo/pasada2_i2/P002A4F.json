@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P002A4F",
+  "intento": 0,
+  "usd": 0.15258,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34060,
+  "tokens_out": 817,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P002A4F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [118, 120, 150, 158, 308], \"cita\": \"Defences can be categorized both according to the various functions they serve and by the ways in which these functions are achieved. […] All defences are designed to serve one or more of the following functions:\", \"datos_sin_respaldo\": [], \"razon\": \"L120-150 enumera exactamente siete funciones defensivas. L308 las resume con otra agrupacion, pero son las mismas. Barreras físicas, sistemas de protección y procedimientos son defensas duras y blandas del libro (L158). 'Clasificar en las funciones' no exige asignar cada defensa a una sola. El libro clasifica pero no ordena mapear el sistema: el paso concreta, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P002A4F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   118,
+   120,
+   150,
+   158,
+   308
+  ],
+  "cita": "Defences can be categorized both according to the various functions they serve and by the ways in which these functions are achieved. […] All defences are designed to serve one or more of the following functions:",
+  "datos_sin_respaldo": [],
+  "razon": "L120-150 enumera exactamente siete funciones defensivas. L308 las resume con otra agrupacion, pero son las mismas. Barreras físicas, sistemas de protección y procedimientos son defensas duras y blandas del libro (L158). 'Clasificar en las funciones' no exige asignar cada defensa a una sola. El libro clasifica pero no ordena mapear el sistema: el paso concreta, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

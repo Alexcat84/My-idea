@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF4ACB1",
+  "intento": 0,
+  "usd": 0.180596,
+  "turnos": 1,
+  "duracion_s": 15.4,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38719,
+  "tokens_out": 1286,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF4ACB1\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [852, 856], \"cita\": \"Skills need to be practised continuously in order to preserve them. Yet an automatic system that fails only very occasionally denies the human operator the opportunity to practise the skills that will be called upon in an emergency.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide practicar las habilidades de forma continua y más inversión en entrenamiento, porque los fallos reales son raros. El entrenamiento recurrente equivale a esa práctica continua. Simular fallos es la forma directa de practicar habilidades de emergencia sin fallos reales. Va en la misma dirección y no añade cifras, plazos, herramientas concretas ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF4ACB1",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   852,
+   856
+  ],
+  "cita": "Skills need to be practised continuously in order to preserve them. Yet an automatic system that fails only very occasionally denies the human operator the opportunity to practise the skills that will be called upon in an emergency.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide practicar las habilidades de forma continua y más inversión en entrenamiento, porque los fallos reales son raros. El entrenamiento recurrente equivale a esa práctica continua. Simular fallos es la forma directa de practicar habilidades de emergencia sin fallos reales. Va en la misma dirección y no añade cifras, plazos, herramientas concretas ni responsables.",
+  "paso_fiel": ""
+ }
+}

@@ -7,12 +7,12 @@
   "resumen_teorico": "El scorecard es un paquete de informes disenado para que tu conozcas el estado de la calidad en tu negocio. Debe incluir indicadores clave, reportes cuantitativos basados en datos, reportes narrativos sobre amenazas y oportunidades, y auditorias realizadas. Debe presentarse en formato facil de leer, mostrando metas, desempeno real y variaciones.",
   "pasos_accionables": [
     "Definir los indicadores clave que quieres seguir de cerca",
-    "Disenar reportes cuantitativos que muestren metas, desempeno real y variaciones",
+    "Diseñar reportes cuantitativos que muestren metas, desempeño real y variaciones",
     "Incluir reportes narrativos sobre amenazas, oportunidades y eventos relevantes",
-    "Establecer una frecuencia de publicación, mensual o trimestral, alineada con tus revisiones periodicas",
-    "Asignar quien sera responsable de editarlo, ya seas tu mismo o la persona que te ayuda con la calidad"
+    "Establecer una frecuencia de publicación, mensual o trimestral, alineada con tus revisiones periódicas",
+    "Asignar quién será responsable de editarlo, ya seas tú mismo o la persona que te ayuda con la calidad"
   ],
-  "entregable_esperado": "Un tablero de control periodico con indicadores, tendencias graficas y reportes narrativos listo para que lo revises",
+  "entregable_esperado": "Un tablero de control periódico con indicadores, tendencias gráficas y reportes narrativos listo para que lo revises",
   "nodos_previos": [
     "sistema_medicion_kpi",
     "revision_progreso"
@@ -24,5 +24,65 @@
     "Cuando necesitas una visión consolidada del desempeno de calidad de tu negocio",
     "Cuando quieres comunicar avances de forma visual y periodica"
   ],
-  "etiqueta_arbol": "Informa a tu Alta Dirección"
+  "etiqueta_arbol": "Informa a tu Alta Dirección",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0669",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disenar reportes cuantitativos que muestren metas, desempeno real y variaciones",
+      "texto_nuevo": "Diseñar reportes cuantitativos que muestren metas, desempeño real y variaciones",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O057-039.paso1: Diseñar, desempeño (Faltaba la eñe en 'Diseñar' y en 'desempeño'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0670",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer una frecuencia de publicación, mensual o trimestral, alineada con tus revisiones periodicas",
+      "texto_nuevo": "Establecer una frecuencia de publicación, mensual o trimestral, alineada con tus revisiones periódicas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O057-039.paso3: periódicas (Tilde real en 'periódicas'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0671",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asignar quien sera responsable de editarlo, ya seas tu mismo o la persona que te ayuda con la calidad",
+      "texto_nuevo": "Asignar quién será responsable de editarlo, ya seas tú mismo o la persona que te ayuda con la calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O057-039.paso4: quién, será, tú (Tildes reales en el interrogativo indirecto 'quién', en 'será' y en el pronombre 'tú'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0672",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un tablero de control periodico con indicadores, tendencias graficas y reportes narrativos listo para que lo revises",
+      "texto_nuevo": "Un tablero de control periódico con indicadores, tendencias gráficas y reportes narrativos listo para que lo revises",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O057-039.entregable: periódico, gráficas (Tildes reales en 'periódico' y 'gráficas'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

@@ -19,8 +19,6 @@
     "seleccion_fuente_unica_multiple",
     "definicion_alineacion_cadena_suministro",
     "information_driver_supply_chain",
-    "gestion_instalaciones",
-    "gestion_pedidos_order_management",
     "scor_model_operaciones"
   ],
   "nodos_siguientes": [
@@ -33,5 +31,36 @@
   "condiciones_activacion": [
     "Cuando se diseña la estrategia global de abastecimiento de una organización"
   ],
-  "etiqueta_arbol": "Organiza tu Cadena de Suministro"
+  "etiqueta_arbol": "Organiza tu Cadena de Suministro",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-039",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_instalaciones -> planificacion_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-05, lector y verificador de acuerdo)",
+        "motivo": "La gestion del rol y la capacidad de instalaciones no se continua en el proceso de sourcing por commodities; la relacion es solo de cadena de suministro en general."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-puente-058",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_pedidos_order_management -> planificacion_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-11, lector y verificador de acuerdo)",
+        "motivo": "La gestion de pedidos hacia el cliente y la planificacion del abastecimiento con proveedores son procesos distintos; solo comparten la etiqueta de cadena de suministro."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
+  ]
 }

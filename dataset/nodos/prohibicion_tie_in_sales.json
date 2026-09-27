@@ -7,7 +7,7 @@
   "resumen_teorico": "Esta es una ley estadounidense (la Magnuson-Moss Warranty Act) que prohíbe que condiciones la validez de la garantía de tu producto al uso obligatorio de repuestos o servicios de una marca o proveedor específico, por ejemplo exigir que solo usen tus repuestos oficiales o que el mantenimiento lo haga un tercero autorizado por ti. La excepción es que ofrezcas ese repuesto o servicio gratis, o que cuentes con una exención otorgada por la FTC, la Comisión Federal de Comercio de Estados Unidos. Sí puedes excluir de la cobertura los daños causados por partes o servicios no autorizados. Esto aplica bajo la ley federal de Estados Unidos; si vendes en otro país además, revisa ahí la norma de garantías vigente, porque varía.",
   "pasos_accionables": [
     "Revisa el texto de tu garantía para detectar frases que obliguen a comprar repuestos o servicios de un proveedor específico.",
-    "Elimina cualquier cláusula de este tipo, salvo que ese repuesto o servicio lo dés gratis o tengas una exención de la FTC.",
+    "Elimina cualquier cláusula de este tipo, salvo que ese repuesto o servicio lo des gratis o tengas una exención de la FTC.",
     "Escribe en su lugar una cláusula que excluya la cobertura solo cuando el daño fue causado por partes o servicios no autorizados."
   ],
   "entregable_esperado": "El texto de tu garantía revisado, sin cláusulas que obliguen a usar un proveedor único, y validado por alguien que sepa de leyes.",
@@ -21,5 +21,24 @@
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos y ofreces una garantía sobre esos productos.",
     "Cuando el texto de tu garantía menciona el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico."
   ],
-  "etiqueta_arbol": "Evita Atar tu Garantía"
+  "etiqueta_arbol": "Evita Atar tu Garantía",
+  "fuentes_internas": [
+    "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0388",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elimina cualquier cláusula de este tipo, salvo que ese repuesto o servicio lo dés gratis o tengas una exención de la FTC.",
+      "texto_nuevo": "Elimina cualquier cláusula de este tipo, salvo que ese repuesto o servicio lo des gratis o tengas una exención de la FTC.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-039.paso1: des ('dés' lleva una tilde de más: 'des' es monosílabo y se escribe sin tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    }
+  ]
 }

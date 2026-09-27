@@ -26,6 +26,8 @@
  * separan otra vez. Para el precio de un mundo, PRECIOS.mundo_activar.
  */
 import catalogo from "./assets/packs_catalog.json";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { MUNDOS_I18N } from "./i18n/mensajes/mundos";
 
 export type Mundo = {
   clave: string;
@@ -62,19 +64,27 @@ export function filtrarVisibles(lista: readonly Mundo[], incluirOcultos = false)
  * abierta el mundo aparece MARCADO como sin publicar, para que nadie confunda
  * un paseo de prueba con un mundo en venta.
  */
-export function mundosVisibles(incluirOcultos = false): Mundo[] {
-  return filtrarVisibles(MUNDOS, incluirOcultos);
+export function mundosVisibles(incluirOcultos = false, idioma: Locale = LOCALE_BASE): Mundo[] {
+  return filtrarVisibles(MUNDOS, incluirOcultos).map((m) => enIdioma(m, idioma));
+}
+
+/** i18n F3: el nombre y la promesa en el idioma pedido (glosario, DISENO §6).
+ * Un mundo nuevo sin traducir todavía cae a lo que diga el JSON. */
+function enIdioma(m: Mundo, idioma: Locale): Mundo {
+  const t = (elegir(MUNDOS_I18N, idioma) as Record<string, { nombre: string; promesa: string } | undefined>)[m.clave];
+  return t ? { ...m, nombre: t.nombre, promesa: t.promesa } : m;
 }
 
 /** Resolución por clave: funciona también para los ocultos (ver cabecera). */
-export function mundo(clave: string | null | undefined): Mundo | undefined {
+export function mundo(clave: string | null | undefined, idioma: Locale = LOCALE_BASE): Mundo | undefined {
   if (!clave) return undefined;
-  return MUNDOS.find((m) => m.clave === clave);
+  const m = MUNDOS.find((x) => x.clave === clave);
+  return m ? enIdioma(m, idioma) : undefined;
 }
 
 /** El nombre de cara de un mundo, o su clave si no está en el catálogo. */
-export function nombreDeMundo(clave: string): string {
-  return mundo(clave)?.nombre ?? clave;
+export function nombreDeMundo(clave: string, idioma: Locale = LOCALE_BASE): string {
+  return mundo(clave, idioma)?.nombre ?? clave;
 }
 
 /** ¿Está publicado? Útil para los avisos del mini-gate, no para esconder. */

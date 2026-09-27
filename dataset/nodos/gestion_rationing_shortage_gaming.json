@@ -1,7 +1,7 @@
 {
   "node_id": "gestion_rationing_shortage_gaming",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Gestión del Racionamiento y Shortage Gaming",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Cuando la demanda supera la oferta, los fabricantes racionan producto según pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
@@ -21,5 +21,23 @@
     "Cuando la demanda de un producto supera consistentemente la capacidad de oferta",
     "Si se detectan pedidos anormalmente altos de ciertos clientes"
   ],
-  "etiqueta_arbol": "Cuida el Racionamiento de Producto"
+  "etiqueta_arbol": "Cuida el Racionamiento de Producto",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-15",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-29: Diseñar políticas de racionamiento contra el shortage gaming de distribuidores solo aplica a fabricantes que reparten oferta escasa entre canales. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ]
 }

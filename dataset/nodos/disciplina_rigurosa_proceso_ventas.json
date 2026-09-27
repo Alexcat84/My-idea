@@ -6,12 +6,12 @@
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
   "resumen_teorico": "Un pronostico de ventas (forecast) optimista basado en supuestos sin verificar, como pensar que la persona que te apoya adentro (champion) ya te aseguro todo, es peligroso. Antes de dar por segura una oportunidad, habla directamente con todas las personas que deciden, no solo con tu contacto principal, incluyendo sus pares y jefes. Revisa cada negociacion en voz alta frente a tu equipo de ventas para mantener el estándar alto y evitar la comodidad.",
   "pasos_accionables": [
-    "Arma una llamada semanal de pronostico donde revisas cada negociacion en detalle junto a todo tu equipo de ventas",
+    "Arma una llamada semanal de pronóstico donde revisas cada negociación en detalle junto a todo tu equipo de ventas",
     "Exige haber hablado directamente con todas las personas que deciden, no solo con quien te apoya adentro",
     "Cuestiona cualquier supuesto que no hayas verificado en tu lista de oportunidades",
     "Aplica consecuencias claras, sin excepciones, cuando falte este rigor"
   ],
-  "entregable_esperado": "Un proceso semanal de revisión de tu lista de oportunidades, con una checklist para confirmar que hablaste con todas las personas que deciden en cada negociacion",
+  "entregable_esperado": "Un proceso semanal de revisión de tu lista de oportunidades, con una checklist para confirmar que hablaste con todas las personas que deciden en cada negociación",
   "nodos_previos": [
     "reempaquetado_producto"
   ],
@@ -23,5 +23,37 @@
     "Cuando necesitas crecer rápido y quieres evitar pronosticos poco confiables",
     "Cuando notas que no estas verificando todos los niveles de decisión de tus clientes"
   ],
-  "etiqueta_arbol": "Verifica tu Proceso de Venta"
+  "etiqueta_arbol": "Verifica tu Proceso de Venta",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0111",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Arma una llamada semanal de pronostico donde revisas cada negociacion en detalle junto a todo tu equipo de ventas",
+      "texto_nuevo": "Arma una llamada semanal de pronóstico donde revisas cada negociación en detalle junto a todo tu equipo de ventas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-006.paso0: pronóstico, negociación (Solo se añaden las tildes que faltan en 'pronóstico' y 'negociación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0112",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proceso semanal de revisión de tu lista de oportunidades, con una checklist para confirmar que hablaste con todas las personas que deciden en cada negociacion",
+      "texto_nuevo": "Un proceso semanal de revisión de tu lista de oportunidades, con una checklist para confirmar que hablaste con todas las personas que deciden en cada negociación",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-006.entregable: negociación (Solo se añade la tilde que falta en 'negociación'; 'checklist' se queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

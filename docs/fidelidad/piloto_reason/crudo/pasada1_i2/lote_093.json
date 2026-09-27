@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_093",
+  "intento": 0,
+  "usd": 0.166356,
+  "turnos": 1,
+  "duracion_s": 18.7,
+  "pared_s": 20.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32824,
+  "tokens_out": 1753,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P6CA2BD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4376], \"razon\": \"El libro enumera literalmente, dentro del procedimiento COSHH, monitorear la exposicion mediante tecnicas validas de higiene ocupacional.\"},\n  {\"id\": \"P4F4A24\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [65, 67, 77, 79, 2568], \"razon\": \"El libro pide que la proteccion iguale los peligros (zona de paridad) y fijar la posicion actual. Mapear concreta eso. Advierte que medir la proteccion es dificil y engañoso.\"},\n  {\"id\": \"P76250F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Sección 1-3\", \"aerolínea\", \"MEDA (implícito)\"], \"clase\": \"FIEL\", \"lineas\": [3747, 3751, 3755, 3759], \"razon\": \"Las secciones 1-3 de MEDA responden 'que ocurrio': datos de aerolinea, naturaleza del evento y clasificacion del fallo. Coincide con el libro.\"},\n  {\"id\": \"PC2E31E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4435, 4448], \"razon\": \"El libro señala esas carencias del regulador. Pero advierte que añadir expertos en factores humanos quiza no resuelva nada. Hay riesgo de que el cliente infiera la solucion equivocada.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P6CA2BD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4376
+   ],
+   "razon": "El libro enumera literalmente, dentro del procedimiento COSHH, monitorear la exposicion mediante tecnicas validas de higiene ocupacional."
+  },
+  {
+   "id": "P4F4A24",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    65,
+    67,
+    77,
+    79,
+    2568
+   ],
+   "razon": "El libro pide que la proteccion iguale los peligros (zona de paridad) y fijar la posicion actual. Mapear concreta eso. Advierte que medir la proteccion es dificil y engañoso."
+  },
+  {
+   "id": "P76250F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Sección 1-3",
+    "aerolínea",
+    "MEDA (implícito)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3747,
+    3751,
+    3755,
+    3759
+   ],
+   "razon": "Las secciones 1-3 de MEDA responden 'que ocurrio': datos de aerolinea, naturaleza del evento y clasificacion del fallo. Coincide con el libro."
+  },
+  {
+   "id": "PC2E31E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4435,
+    4448
+   ],
+   "razon": "El libro señala esas carencias del regulador. Pero advierte que añadir expertos en factores humanos quiza no resuelva nada. Hay riesgo de que el cliente infiera la solucion equivocada."
+  }
+ ]
+}

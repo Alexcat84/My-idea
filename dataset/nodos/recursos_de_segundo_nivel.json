@@ -1,6 +1,6 @@
 {
   "node_id": "recursos_de_segundo_nivel",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "La estrategia de los recursos intermedios",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
@@ -21,5 +21,23 @@
     "Cuando quieres conservar control o participación pero necesitas avanzar tu producto con recursos limitados.",
     "Cuando el dinero escasea y prefieres sostenerte con lo propio antes de buscar una inversión grande."
   ],
-  "etiqueta_arbol": "Elige Recursos de Nivel Intermedio"
+  "etiqueta_arbol": "Elige Recursos de Nivel Intermedio",
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-155",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q027-002: El nodo diseña un plan por fases de contratación y financiamiento (qué recursos intermedios usar y cuándo cambiarlos), que es planificar recursos y estrategia, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

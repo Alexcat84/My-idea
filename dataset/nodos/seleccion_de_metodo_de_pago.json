@@ -10,7 +10,7 @@
     "Definir cuánto riesgo estás dispuesto a asumir según la relación con el comprador y el país al que exportas",
     "Comparar los cinco métodos de pago según seguridad, costo y competitividad",
     "Negociar con el comprador el método de pago y dejarlo claro por escrito en el contrato de venta",
-    "Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, tambien ante circunstancias inusuales",
+    "Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, también ante circunstancias inusuales",
     "Monitorear continuamente los patrones de pago de clientes existentes"
   ],
   "entregable_esperado": "Los términos de pago definidos y por escrito en el contrato de venta o en la factura pro forma",
@@ -43,6 +43,25 @@
       "node_id": "prevencion_problemas_de_pago",
       "titulo": "Prevención de Problemas de Pago en Exportación",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0015",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, tambien ante circunstancias inusuales",
+      "texto_nuevo": "Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, también ante circunstancias inusuales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-002.paso4: también (Solo se añade la tilde que faltaba en 'también'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ]
 }

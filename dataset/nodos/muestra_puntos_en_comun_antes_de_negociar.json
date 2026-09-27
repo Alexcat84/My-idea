@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Una nota con dos o tres puntos en común identificados con la otra parte antes de negociar el trato.",
   "nodos_previos": [
-    "negocia_por_intereses_no_posiciones",
-    "plantea_oferta_como_rango_o_cifra_precisa"
+    "negocia_por_intereses_no_posiciones"
   ],
   "nodos_siguientes": [
     "lleva_scorecard_desempeno_proveedor"
@@ -24,5 +23,23 @@
     "Sientes que la otra parte está a la defensiva o desconfiada desde el inicio.",
     "Quieres construir una relación que dure más de una compra."
   ],
-  "etiqueta_arbol": "Encuentra puntos en común"
+  "etiqueta_arbol": "Encuentra puntos en común",
+  "fuentes_internas": [
+    "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-099",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "plantea_oferta_como_rango_o_cifra_precisa -> muestra_puntos_en_comun_antes_de_negociar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-20-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el propio vecino dice que se busca el terreno comun antes de hablar de precio, asi que prepara el nodo y no va despues de dar la oferta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

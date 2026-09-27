@@ -6,13 +6,13 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una accion concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
   "pasos_accionables": [
-    "Crea una pagina simple con tu propuesta de valor y sus beneficios",
-    "Incluye una accion clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
+    "Crea una página simple con tu propuesta de valor y sus beneficios",
+    "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
     "Suma videos, encuestas o un blog si te ayudan a mostrar la idea",
     "Prueba varias versiones si quieres testear distintas formas de contar el problema",
     "Publica lo antes posible sin preocuparte por que se vea perfecto"
   ],
-  "entregable_esperado": "Una pagina o prototipo funcionando en línea, listo para recibir visitas y medir el interes real",
+  "entregable_esperado": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real",
   "nodos_previos": [
     "disenar_tests_pass_fail",
     "desirability_feasibility_viability",
@@ -30,5 +30,51 @@
   "condiciones_activacion": [
     "Cuando necesitas saber si a la gente realmente le importa el problema antes de construir el producto"
   ],
-  "etiqueta_arbol": "Crea tu Primer Prototipo Simple"
+  "etiqueta_arbol": "Crea tu Primer Prototipo Simple",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0681",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea una pagina simple con tu propuesta de valor y sus beneficios",
+      "texto_nuevo": "Crea una página simple con tu propuesta de valor y sus beneficios",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-030.paso0: página (Faltaba la tilde de página y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0682",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incluye una accion clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
+      "texto_nuevo": "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-030.paso1: acción (Faltaba la tilde de acción y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0683",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una pagina o prototipo funcionando en línea, listo para recibir visitas y medir el interes real",
+      "texto_nuevo": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-030.entregable: página, interés (Faltaban las tildes de página e interés, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

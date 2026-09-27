@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PAD1DB8",
+  "intento": 0,
+  "usd": 0.136208,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29857,
+  "tokens_out": 839,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PAD1DB8\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5497, 5517, 5641, 5905, 5907], \"cita\": \"the principal metric for assessing safety in the oil industry, as in many other hazardous domains, has been LTIF--lost-time injuries per million man hours. [...] Each has its own metrics and countermeasures.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que cada modelo tiene sus propias métricas y que LTIF mide el modelo de persona. Señala que el predominio de ese modelo es la fuente de los conflictos y una barrera para la seguridad. Diagnosticar qué modelo predomina concreta ese análisis en su misma dirección. No añade datos nuevos, aunque el libro no lo formula como paso.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PAD1DB8",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5497,
+   5517,
+   5641,
+   5905,
+   5907
+  ],
+  "cita": "the principal metric for assessing safety in the oil industry, as in many other hazardous domains, has been LTIF--lost-time injuries per million man hours. [...] Each has its own metrics and countermeasures.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que cada modelo tiene sus propias métricas y que LTIF mide el modelo de persona. Señala que el predominio de ese modelo es la fuente de los conflictos y una barrera para la seguridad. Diagnosticar qué modelo predomina concreta ese análisis en su misma dirección. No añade datos nuevos, aunque el libro no lo formula como paso.",
+  "paso_fiel": ""
+ }
+}

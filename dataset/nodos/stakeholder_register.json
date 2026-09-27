@@ -29,13 +29,30 @@
     "plan_gestion_interesados",
     "plan_gestion_riesgos",
     "requirements_documentation",
-    "requirements_management_plan",
-    "risk_audit"
+    "requirements_management_plan"
   ],
   "condiciones_activacion": [
     "Cuando necesitas identificar quién afecta o a quién afecta tu proyecto",
     "Cuando corres el riesgo de dejar fuera a alguien clave en tus decisiones",
     "Al empezar a planificar cómo te vas a comunicar o cómo vas a manejar los riesgos"
   ],
-  "etiqueta_arbol": "Registra a tus Interesados"
+  "etiqueta_arbol": "Registra a tus Interesados",
+  "fuentes_internas": [
+    "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-026",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "stakeholder_register -> risk_audit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A53, lectores de acuerdo)",
+        "motivo": "El registro de interesados no conduce a la auditoria de riesgos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
+  ]
 }

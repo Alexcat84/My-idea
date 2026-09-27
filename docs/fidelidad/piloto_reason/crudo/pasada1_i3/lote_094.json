@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_094",
+  "intento": 0,
+  "usd": 0.167416,
+  "turnos": 1,
+  "duracion_s": 16.4,
+  "pared_s": 17.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33899,
+  "tokens_out": 1591,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P1C43D9\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"cada seis meses\", \"sesión de simulador\", \"FMS\", \"fases de alta carga de trabajo\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [852, 856, 868, 872, 942, 2724], \"razon\": \"El libro respalda invertir en entrenamiento (Bainbridge), pero no fija simuladores ni frecuencia semestral. Además atribuye la confusión de modos al diseño torpe y prioriza lo organizacional.\"},\n {\"id\": \"P190509\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [213, 310, 2652, 2654, 4105], \"razon\": \"Concreta el uso del modelo: identificar qué huecos de fallos activos y latentes se alinearon. El libro recomienda analizar varios eventos con un marco común.\"},\n {\"id\": \"PB7907F\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"más de 10 años\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3097, 3209, 3073, 2724], \"razon\": \"La edad del equipo es componente del GFT Hardware, pero la cifra es añadida. El libro pide gestionar perfiles, no arreglar indicadores sueltos, que rara vez cura la causa.\"},\n {\"id\": \"PFA7EB5\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4806, 4818, 4908], \"razon\": \"El libro enumera literalmente como factor clave separar el departamento que recoge los reportes de quienes pueden imponer sanciones.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P1C43D9",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cada seis meses",
+    "sesión de simulador",
+    "FMS",
+    "fases de alta carga de trabajo"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    852,
+    856,
+    868,
+    872,
+    942,
+    2724
+   ],
+   "razon": "El libro respalda invertir en entrenamiento (Bainbridge), pero no fija simuladores ni frecuencia semestral. Además atribuye la confusión de modos al diseño torpe y prioriza lo organizacional."
+  },
+  {
+   "id": "P190509",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    213,
+    310,
+    2652,
+    2654,
+    4105
+   ],
+   "razon": "Concreta el uso del modelo: identificar qué huecos de fallos activos y latentes se alinearon. El libro recomienda analizar varios eventos con un marco común."
+  },
+  {
+   "id": "PB7907F",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "más de 10 años"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3097,
+    3209,
+    3073,
+    2724
+   ],
+   "razon": "La edad del equipo es componente del GFT Hardware, pero la cifra es añadida. El libro pide gestionar perfiles, no arreglar indicadores sueltos, que rara vez cura la causa."
+  },
+  {
+   "id": "PFA7EB5",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4806,
+    4818,
+    4908
+   ],
+   "razon": "El libro enumera literalmente como factor clave separar el departamento que recoge los reportes de quienes pueden imponer sanciones."
+  }
+ ]
+}

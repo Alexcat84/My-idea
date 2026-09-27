@@ -11,8 +11,12 @@
  *    jamas plan encubierto. Esta guardia no redacta (eso es del prompt); caza
  *    violaciones gruesas para el vuelo y los tests.
  */
+import { ACTIVE_LOCALES } from "../i18n/config";
+import { neutralizarRotulos, rotulosPlan } from "../i18n/rotulosPlan";
 
-export type EstadoMundo = "bloqueado" | "abierto" | "diagnostico_listo" | "plan_comprado";
+// AUD-09: "plan_basico" = el mundo recibió un plan armado sin IA (no cobrado).
+// No es una compra: el mundo ofrece "Generar el plan completo".
+export type EstadoMundo = "bloqueado" | "abierto" | "diagnostico_listo" | "plan_basico" | "plan_comprado";
 
 /** Lo que la maquina necesita de la fila de project_unlocks (null = sin fila). */
 export interface UnlockPreview {
@@ -20,6 +24,8 @@ export interface UnlockPreview {
   resumen_md?: string | null;
   resumen_at?: string | null;
   plan_pagado_at?: string | null;
+  /** AUD-09 (migración 039): la marca del plan básico. No es sello de pago. */
+  plan_basico_at?: string | null;
 }
 
 /**
@@ -32,6 +38,7 @@ export function estadoMundo(unlock: UnlockPreview | null | undefined, hayPlanCor
   if (!hayPlanCore) return "bloqueado";
   if (!unlock) return "abierto";
   if (unlock.plan_pagado_at) return "plan_comprado";
+  if (unlock.plan_basico_at) return "plan_basico";
   if (unlock.resumen_md && unlock.resumen_at) return "diagnostico_listo";
   return "abierto";
 }
@@ -59,9 +66,13 @@ export function violacionesFronteraPreview(md: string): string[] {
   const violaciones: string[] = [];
   const texto = md.toLowerCase();
 
-  if (/esta semana/.test(texto)) violaciones.push('"esta semana" (accion calendarizada)');
+  // i18n F5: "esta semana" y las etapas numeradas, en cualquiera de los once
+  // (la IA escribe el diagnóstico en el idioma de la idea).
+  const estaSemana = ACTIVE_LOCALES.some((l) => texto.includes(rotulosPlan(l).estaSemana.toLowerCase()));
+  if (estaSemana) violaciones.push('"esta semana" (accion calendarizada)');
   if (/entregable/.test(texto)) violaciones.push('"entregable" (estructura de plan)');
-  if (/^#+\s*etapa\b/im.test(md) || /\betapa\s+\d/.test(texto)) violaciones.push("etapas numeradas (secuencia de ejecucion)");
+  if (/^#+\s*etapa\b/im.test(md) || /\betapa\s+\d/.test(texto) || /^## Etapa \d/m.test(neutralizarRotulos(md)))
+    violaciones.push("etapas numeradas (secuencia de ejecucion)");
   if (/^\s*(paso|dia|semana)\s+\d+\s*[:.]/im.test(md)) violaciones.push("pasos/dias numerados (secuencia de ejecucion)");
   // Tres o mas items de lista NUMERADA consecutivos = una secuencia de
   // ejecucion disfrazada (los bullets tematicos "- tema" son legitimos).

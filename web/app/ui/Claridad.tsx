@@ -7,6 +7,9 @@
  * azules) con su nota al pie. Azul piensa. El parser respeta el markdown
  * REAL del organizador; si no reconoce la estructura, cae al markdown plano.
  */
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
 import { Markdown } from "./Markdown";
 
 interface Claridad {
@@ -77,6 +80,7 @@ function Rombo() {
 }
 
 export function Claridad({ md }: { md: string }) {
+  const t = elegir(CLARIDAD, useIdioma());
   const { frase, tienes, asumes } = parsear(md);
 
   // Sin estructura reconocible: no rompemos: markdown plano.
@@ -92,7 +96,7 @@ export function Claridad({ md }: { md: string }) {
     <section className="flex flex-col">
       <p className="anima-plan-in mb-4 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim" style={{ animationDelay: "0.1s" }}>
         <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-        Esto entendí de tu idea
+        {t.estoEntendi}
       </p>
       {frase && (
         <h2 className="anima-plan-in text-[22px] font-bold leading-[1.35] tracking-[-0.01em] [text-wrap:balance] sm:text-[30px]" style={{ animationDelay: "0.1s" }}>
@@ -103,7 +107,7 @@ export function Claridad({ md }: { md: string }) {
       <div className="mt-8 grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-5">
         {tienes.length > 0 && (
           <div className="anima-plan-in rounded-panel border border-hairline bg-surface p-6 sm:p-7" style={{ animationDelay: "0.35s" }}>
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Lo que ya tienes</p>
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.loQueYaTienes}</p>
             <ul className="flex flex-col gap-4">
               {tienes.map((t, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -119,7 +123,7 @@ export function Claridad({ md }: { md: string }) {
             className="anima-plan-in rounded-panel bg-surface p-6 sm:p-7"
             style={{ animationDelay: "0.5s", border: "1px solid rgba(77,124,254,0.3)" }}
           >
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">Lo que estás asumiendo</p>
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">{t.loQueEstasAsumiendo}</p>
             <ul className="flex flex-col gap-4">
               {asumes.map((a, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -129,7 +133,7 @@ export function Claridad({ md }: { md: string }) {
               ))}
             </ul>
             <p className="mt-5 border-t border-hairline pt-[18px] text-[13px] leading-[1.6] text-dim [text-wrap:pretty]">
-              Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a pregunta.
+              {t.notaSuposiciones}
             </p>
           </div>
         )}

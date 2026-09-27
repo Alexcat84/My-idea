@@ -34,6 +34,20 @@ CAMPOS_PERMITIDOS = {
     # dataset contiene de verdad, que es para lo que existe una lista blanca.
     # La deuda se paga reconociéndola, no reescribiéndola.
     "deprecado", "merged_originals",
+    # Campania de FIDELIDAD (mandato del fundador, sep 2026: "nunca le diremos a
+    # un cliente lo contrario de lo que dice su fuente"):
+    #  * `correcciones`: el registro de las correcciones declaradas del propio
+    #    nodo. Cada entrada guarda el texto viejo, el nuevo y la cita literal del
+    #    libro que motiva el cambio. Se LEGALIZA con este criterio: la doctrina de
+    #    la casa exige que una correccion no tape lo que corrige
+    #    (docs/loop/EJECUTOR.md, regla 8), y el fundador pidio que ese registro
+    #    viva en el nodo. Lo escribe solo scripts/fidelidad/aplicar_correcciones.py.
+    "correcciones",
+    #  * `fuentes_internas` (decisiones del fundador del 27 sep 2026, puntos 1 y 4):
+    #    la lista COMPLETA de los libros del nodo, el suyo mas los de todo lo que
+    #    absorbio en cadena. Registro interno: jamas llega al cliente. Lo escribe
+    #    solo scripts/fuentes_internas.py; `fuente` no se toca.
+    "fuentes_internas",
 }
 OBLIGATORIOS_NO_VACIOS = {
     "node_id", "fase_proyecto", "dominio", "titulo_concepto", "fuente",

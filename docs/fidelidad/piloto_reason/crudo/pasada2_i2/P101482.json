@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P101482",
+  "intento": 0,
+  "usd": 0.143708,
+  "turnos": 1,
+  "duracion_s": 11.7,
+  "pared_s": 12.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31212,
+  "tokens_out": 943,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P101482\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4261, 4117, 4215, 4464], \"cita\": \"The regulator's knowledge of the nature and severity of a safety problem can be manipulated by what the regulated organization chooses to communicate and how this material is presented.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala como problema la dependencia del regulador respecto a la información del regulado. Critica la supervisión limitada a documentos (Monarch), mientras su modelo propio parte de visitas in situ. No aconseja una independencia total: solo reconoce que es difícil y parcial. El paso dice «no únicamente», va en la misma dirección y no añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P101482",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4261,
+   4117,
+   4215,
+   4464
+  ],
+  "cita": "The regulator's knowledge of the nature and severity of a safety problem can be manipulated by what the regulated organization chooses to communicate and how this material is presented.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala como problema la dependencia del regulador respecto a la información del regulado. Critica la supervisión limitada a documentos (Monarch), mientras su modelo propio parte de visitas in situ. No aconseja una independencia total: solo reconoce que es difícil y parcial. El paso dice «no únicamente», va en la misma dirección y no añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

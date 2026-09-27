@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_078",
+  "intento": 0,
+  "usd": 0.147228,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32362,
+  "tokens_out": 889,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P6AB958\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5184, 5186, 5196], \"razon\": \"El libro valora una cultura de 'war stories' y comunicación cara a cara. Compartir experiencias de errores pasados va en esa misma dirección.\"},\n  {\"id\": \"PE4B704\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2716, 3825, 3829], \"razon\": \"El libro reserva la información en la cabeza o en el puesto para los errores. Las violaciones son motivacionales y se atacan con normas, actitudes, cultura y mejores procedimientos.\"},\n  {\"id\": \"P178C9C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2924, 2936, 2957], \"razon\": \"Es casi literal del libro: las acciones humanas están casi siempre limitadas por factores fuera del control inmediato del individuo.\"},\n  {\"id\": \"P7CC2FE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4014, 4025, 4027], \"razon\": \"El inspector aceptó que Occidental había 'tidied up' deficiencias que luego causaron el desastre. También se critica la falta de vigor al comprobar las mejoras. El paso lo concreta.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P6AB958",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5184,
+    5186,
+    5196
+   ],
+   "razon": "El libro valora una cultura de 'war stories' y comunicación cara a cara. Compartir experiencias de errores pasados va en esa misma dirección."
+  },
+  {
+   "id": "PE4B704",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2716,
+    3825,
+    3829
+   ],
+   "razon": "El libro reserva la información en la cabeza o en el puesto para los errores. Las violaciones son motivacionales y se atacan con normas, actitudes, cultura y mejores procedimientos."
+  },
+  {
+   "id": "P178C9C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2924,
+    2936,
+    2957
+   ],
+   "razon": "Es casi literal del libro: las acciones humanas están casi siempre limitadas por factores fuera del control inmediato del individuo."
+  },
+  {
+   "id": "P7CC2FE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4014,
+    4025,
+    4027
+   ],
+   "razon": "El inspector aceptó que Occidental había 'tidied up' deficiencias que luego causaron el desastre. También se critica la falta de vigor al comprobar las mejoras. El paso lo concreta."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_050",
+  "intento": 0,
+  "usd": 0.161484,
+  "turnos": 1,
+  "duracion_s": 16.4,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32691,
+  "tokens_out": 1536,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0A8A46\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2905, 2876, 2880, 2944, 2948, 4824, 5037], \"razon\": \"El libro sostiene que el error humano es consecuencia, no causa, y que hay que buscar factores situacionales y organizacionales. El paso lo concreta aplicándolo a los registros de incidentes.\"},\n  {\"id\": \"P90EE23\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2652, 2654, 2656], \"razon\": \"El libro lo recomienda, pero limitado a eventos 'domain-related' o 'from the same domain'. El paso omite esa condición y podría llevar a mezclar incidentes heterogéneos.\"},\n  {\"id\": \"P84E638\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5690, 2669, 2693, 2769, 4974], \"razon\": \"El libro considera los eventos precursores (fugas, near-misses) más diagnósticos y valora los sistemas de reporte. 'Fallas de equipos' es una concreción en la misma dirección.\"},\n  {\"id\": \"P58BE34\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"permisos de trabajo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1914, 441, 451, 1896, 1869, 580, 4027], \"razon\": \"Los casos del libro muestran esas condiciones latentes (permisos de trabajo y relevo de turno en Piper Alpha, reparaciones no estándar). 'En cada caso' generaliza un poco, pero va en la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0A8A46",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2905,
+    2876,
+    2880,
+    2944,
+    2948,
+    4824,
+    5037
+   ],
+   "razon": "El libro sostiene que el error humano es consecuencia, no causa, y que hay que buscar factores situacionales y organizacionales. El paso lo concreta aplicándolo a los registros de incidentes."
+  },
+  {
+   "id": "P90EE23",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2652,
+    2654,
+    2656
+   ],
+   "razon": "El libro lo recomienda, pero limitado a eventos 'domain-related' o 'from the same domain'. El paso omite esa condición y podría llevar a mezclar incidentes heterogéneos."
+  },
+  {
+   "id": "P84E638",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5690,
+    2669,
+    2693,
+    2769,
+    4974
+   ],
+   "razon": "El libro considera los eventos precursores (fugas, near-misses) más diagnósticos y valora los sistemas de reporte. 'Fallas de equipos' es una concreción en la misma dirección."
+  },
+  {
+   "id": "P58BE34",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "permisos de trabajo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1914,
+    441,
+    451,
+    1896,
+    1869,
+    580,
+    4027
+   ],
+   "razon": "Los casos del libro muestran esas condiciones latentes (permisos de trabajo y relevo de turno en Piper Alpha, reparaciones no estándar). 'En cada caso' generaliza un poco, pero va en la misma dirección."
+  }
+ ]
+}

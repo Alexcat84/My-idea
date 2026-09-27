@@ -16,12 +16,28 @@
   "nodos_previos": [
     "costos_ocultos_accidentes_iceberg"
   ],
-  "nodos_siguientes": [
-    "plan_de_desastre_y_recuperacion"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la organización opera en un dominio de alto riesgo sin plan formal de continuidad de negocio",
     "Después de completar el análisis de costos de accidentes y antes de finalizar el presupuesto de gestión de riesgos"
   ],
-  "etiqueta_arbol": "Planifica tu Recuperación Post-Accidente"
+  "etiqueta_arbol": "Planifica tu Recuperación Post-Accidente",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-037",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "planificacion_recuperacion_post_accidente -> plan_de_desastre_y_recuperacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por plan_de_contingencia_b."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

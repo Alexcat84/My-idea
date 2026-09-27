@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P19A050",
+  "intento": 0,
+  "usd": 0.149856,
+  "turnos": 1,
+  "duracion_s": 7.1,
+  "pared_s": 8.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34934,
+  "tokens_out": 506,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P19A050\", \"veredicto\": \"FIEL\", \"lineas\": [5781, 582], \"cita\": \"identifying and eliminating latent conditions proactively still offer the best routes to improving system 'fitness'. But it has to be a continuous process. As one problem is being addressed, others will spring up in its place. There are no final victories in the safety war.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda identificar y eliminar las condiciones latentes de forma proactiva y exige que sea un proceso continuo (L5781); también habla de un 'fitness programme' a largo plazo (L582). El paso no afirma que se puedan eliminar todas ni que se haga de una vez. Omitir la priorización es un detalle que no invierte el consejo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P19A050",
+  "veredicto": "FIEL",
+  "lineas": [
+   5781,
+   582
+  ],
+  "cita": "identifying and eliminating latent conditions proactively still offer the best routes to improving system 'fitness'. But it has to be a continuous process. As one problem is being addressed, others will spring up in its place. There are no final victories in the safety war.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda identificar y eliminar las condiciones latentes de forma proactiva y exige que sea un proceso continuo (L5781); también habla de un 'fitness programme' a largo plazo (L582). El paso no afirma que se puedan eliminar todas ni que se haga de una vez. Omitir la priorización es un detalle que no invierte el consejo.",
+  "paso_fiel": ""
+ }
+}

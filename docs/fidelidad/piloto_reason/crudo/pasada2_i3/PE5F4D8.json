@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE5F4D8",
+  "intento": 0,
+  "usd": 0.20928000000000002,
+  "turnos": 1,
+  "duracion_s": 12.8,
+  "pared_s": 13.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46405,
+  "tokens_out": 1183,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE5F4D8\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5184, 5186, 4757, 5196], \"cita\": \"A system that values stories and storytelling is potentially more reliable because ... they are more confident that they can handle those errors that do occur because they know that other people have already handled similar errors.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro valora las historias de guerra sobre errores ya manejados por otros (L5184-5186) y pide difundir información de cuasi-accidentes (L4757). Documentar y difundir esos casos concreta lo que dice el libro, en su misma dirección. No sustituye la conversación cara a cara (L5196) ni añade cifras, plazos ni herramientas. Centrarse en manejos exitosos es un detalle respaldado por L5186, no una inversión.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE5F4D8",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5184,
+   5186,
+   4757,
+   5196
+  ],
+  "cita": "A system that values stories and storytelling is potentially more reliable because ... they are more confident that they can handle those errors that do occur because they know that other people have already handled similar errors.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro valora las historias de guerra sobre errores ya manejados por otros (L5184-5186) y pide difundir información de cuasi-accidentes (L4757). Documentar y difundir esos casos concreta lo que dice el libro, en su misma dirección. No sustituye la conversación cara a cara (L5196) ni añade cifras, plazos ni herramientas. Centrarse en manejos exitosos es un detalle respaldado por L5186, no una inversión.",
+  "paso_fiel": ""
+ }
+}

@@ -1,6 +1,6 @@
 {
   "node_id": "riesgo_concepto_vs_amenaza_competitiva",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Balance entre Riesgo de Concepto y Amenaza Competitiva (Timing de Franquiciar)",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -22,5 +22,23 @@
     "Cuando el usuario duda si es 'demasiado pronto' o 'demasiado tarde' para franquiciar",
     "Cuando existe riesgo de que un competidor copie el concepto"
   ],
-  "etiqueta_arbol": "Elige el Momento de Franquiciar"
+  "etiqueta_arbol": "Elige el Momento de Franquiciar",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-281",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-015: Decidir cuándo franquiciar un concepto que ya opera y fijar el cronograma es estrategia de expansión; no se prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

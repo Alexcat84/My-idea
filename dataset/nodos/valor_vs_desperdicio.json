@@ -1,6 +1,6 @@
 {
   "node_id": "valor_vs_desperdicio",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Valor vs. Desperdicio en Startups (Lean Thinking aplicado)",
   "fuente": "The Lean Startup - Eric Ries",
@@ -25,5 +25,23 @@
     "Cuando el equipo está invirtiendo semanas o meses de desarrollo en un producto sin haber validado sus supuestos con clientes reales",
     "Cuando existe presión para 'perfeccionar' el producto en lugar de lanzarlo pronto para aprender"
   ],
-  "etiqueta_arbol": "Distingue Valor de Desperdicio"
+  "etiqueta_arbol": "Distingue Valor de Desperdicio",
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-191",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q040-016: El contenido trata de validar hipotesis con clientes antes de seguir construyendo, lo que es validacion y no operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

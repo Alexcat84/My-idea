@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_011",
+  "intento": 0,
+  "usd": 0.15606,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32305,
+  "tokens_out": 1342,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P73FD44\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [2259, 2299, 2311], \"razon\": \"El libro describe criterios de buen recordatorio pero no habla de probarlo en el flujo real antes de generalizarlo; no puede confirmarse ni descartarse.\"},\n  {\"id\": \"PBD6142\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [868, 918, 942, 872], \"razon\": \"El libro atribuye la confusión de modos a no percibir transiciones y a sistemas que ocultan cambios; hacer visibles los cambios de modo va en la misma dirección.\"},\n  {\"id\": \"PA4BF5C\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [323, 2654, 5688, 5907, 5503], \"razon\": \"Tratarlos como distintos es útil (L323). Pero ambos tienen raíces sistémicas comunes y se recomienda un marco común; un proceso separado podría llevar a analizar individuales solo con el modelo persona.\"},\n  {\"id\": \"P1EA34A\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4946, 4948, 4954], \"razon\": \"Según el libro, las preguntas específicas facilitan completar el formulario, mientras que las abiertas dan más información pero llevan más tiempo. El paso junta como compatibles dos objetivos que el libro presenta en tensión.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P73FD44",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    2259,
+    2299,
+    2311
+   ],
+   "razon": "El libro describe criterios de buen recordatorio pero no habla de probarlo en el flujo real antes de generalizarlo; no puede confirmarse ni descartarse."
+  },
+  {
+   "id": "PBD6142",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    868,
+    918,
+    942,
+    872
+   ],
+   "razon": "El libro atribuye la confusión de modos a no percibir transiciones y a sistemas que ocultan cambios; hacer visibles los cambios de modo va en la misma dirección."
+  },
+  {
+   "id": "PA4BF5C",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    323,
+    2654,
+    5688,
+    5907,
+    5503
+   ],
+   "razon": "Tratarlos como distintos es útil (L323). Pero ambos tienen raíces sistémicas comunes y se recomienda un marco común; un proceso separado podría llevar a analizar individuales solo con el modelo persona."
+  },
+  {
+   "id": "P1EA34A",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4946,
+    4948,
+    4954
+   ],
+   "razon": "Según el libro, las preguntas específicas facilitan completar el formulario, mientras que las abiertas dan más información pero llevan más tiempo. El paso junta como compatibles dos objetivos que el libro presenta en tensión."
+  }
+ ]
+}

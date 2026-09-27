@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE6EDD1",
+  "intento": 0,
+  "usd": 0.21690399999999999,
+  "turnos": 1,
+  "duracion_s": 6.4,
+  "pared_s": 7.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52361,
+  "tokens_out": 373,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PE6EDD1\", \"veredicto\": \"FIEL\", \"lineas\": [3747, 3771], \"cita\": \"Section 5b asks what corrective measures have been taken, or should have been taken at the local level to prevent the recurrence of the incident.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que la Sección 5b de MEDA recoge las medidas correctivas locales, ya tomadas o que debieron tomarse, para prevenir la recurrencia del incidente (L3771), y que esa sección esboza soluciones potenciales (L3747). El paso reproduce esto sin datos nuevos ni cambio de dirección.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PE6EDD1",
+  "veredicto": "FIEL",
+  "lineas": [
+   3747,
+   3771
+  ],
+  "cita": "Section 5b asks what corrective measures have been taken, or should have been taken at the local level to prevent the recurrence of the incident.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que la Sección 5b de MEDA recoge las medidas correctivas locales, ya tomadas o que debieron tomarse, para prevenir la recurrencia del incidente (L3771), y que esa sección esboza soluciones potenciales (L3747). El paso reproduce esto sin datos nuevos ni cambio de dirección.",
+  "paso_fiel": ""
+ }
+}

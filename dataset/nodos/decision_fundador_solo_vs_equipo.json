@@ -1,5 +1,5 @@
 {
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Fundar Solo o Formar un Equipo: la Decisión que Enfrentas al Inicio",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
@@ -16,7 +16,7 @@
     "Cuando tienes una idea validada y debes decidir cómo armar tu equipo fundador",
     "Cuando estás considerando incorporar un socio o cofundador",
     "Cuando estás iniciando tu negocio y aún no decides tu estructura de equipo",
-    "Si tienes dudas sobre delegar decisiones clave"
+    "Si dudas entre mantener el control total de las decisiones o compartirlo con socios al fundar tu negocio"
   ],
   "node_id": "decision_fundador_solo_vs_equipo",
   "nodos_previos": [
@@ -43,5 +43,37 @@
     "contratar_por_fortaleza",
     "framework_ones_and_twos"
   ],
-  "etiqueta_arbol": "Decide Fundar Solo o Acompañado"
+  "etiqueta_arbol": "Decide Fundar Solo o Acompañado",
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-089",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F09-017: Tiene razon el lector B: el nodo no explora ni descubre la idea (su primera condicion la da por validada), sino que decide la estructura del equipo fundador y cubre con socios el talento, los contactos y el dinero que faltan, y eso es disenar los recursos, o sea planificacion. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-condicion-040",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si tienes dudas sobre delegar decisiones clave",
+      "texto_nuevo": "Si dudas entre mantener el control total de las decisiones o compartirlo con socios al fundar tu negocio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q015-030: La condicion 3 sobre delegar decisiones es demasiado generica y no ata al dilema fundar solo o en equipo. (lector y verificador de acuerdo) Motivo: Dudar sobre delegar decisiones clave es propio de un negocio en marcha con equipo; el nodo trata de cuanto control necesitas al decidir fundar solo o con socios."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 3
+    }
+  ]
 }

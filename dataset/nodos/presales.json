@@ -9,7 +9,7 @@
     "Publica el proyecto en una plataforma de crowdfunding o crea tu propio proceso de preventa.",
     "Define una meta de financiamiento; los fondos solo se liberan si se alcanza.",
     "En contexto B2B, recolecta cartas de intención o compromisos de compra no vinculantes.",
-    "Analiza el nivel de fondos/comprosmisos alcanzados como indicador de interés real."
+    "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real."
   ],
   "entregable_esperado": "Campaña de preventa con monto recaudado o compromisos firmados como evidencia de demanda.",
   "nodos_previos": [
@@ -23,7 +23,40 @@
   ],
   "condiciones_activacion": [
     "Cuando se quiere validar disposición real a pagar con un compromiso de compra",
-    "Precaución: éxito en preventa no garantiza escalabilidad del modelo de negocio"
+    "Cuando quieres comprobar la demanda real antes de fabricar o lanzar tu producto, con una campaña de crowdfunding, una preventa propia o cartas de intención de clientes B2B"
   ],
-  "etiqueta_arbol": "Vende Antes de Construir"
+  "etiqueta_arbol": "Vende Antes de Construir",
+  "fuentes_internas": [
+    "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-143",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Precaución: éxito en preventa no garantiza escalabilidad del modelo de negocio",
+      "texto_nuevo": "Cuando quieres comprobar la demanda real antes de fabricar o lanzar tu producto, con una campaña de crowdfunding, una preventa propia o cartas de intención de clientes B2B",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q099-031: La condición 1 es una precaución y no una condición de activación. (lector y verificador de acuerdo) Motivo: Es una advertencia sobre la escalabilidad y no una situación en la que el nodo se active."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0328",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analiza el nivel de fondos/comprosmisos alcanzados como indicador de interés real.",
+      "texto_nuevo": "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-023.paso3: compromisos (Errata real: comprosmisos pasa a compromisos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

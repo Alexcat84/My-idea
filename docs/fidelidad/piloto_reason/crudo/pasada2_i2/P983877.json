@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P983877",
+  "intento": 0,
+  "usd": 0.197452,
+  "turnos": 1,
+  "duracion_s": 12.5,
+  "pared_s": 13.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43633,
+  "tokens_out": 1146,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P983877\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5594, 5641, 5037, 5907], \"cita\": \"When applied to the appropriate risks, both the person approach and its tools have shown themselves to be valuable. The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro da criterios para distinguir cuándo sirve el enfoque persona (riesgos de lesión personal, prueba de sustitución, árbol de culpabilidad) y cuándo el sistémico (operadores clave, condiciones latentes, terceros). El paso concreta esto sin datos nuevos. Aunque L5907 pide aplicar contramedidas en varios niveles a la vez, definir criterios no contradice esa coexistencia; solo difiere en el detalle.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P983877",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5594,
+   5641,
+   5037,
+   5907
+  ],
+  "cita": "When applied to the appropriate risks, both the person approach and its tools have shown themselves to be valuable. The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro da criterios para distinguir cuándo sirve el enfoque persona (riesgos de lesión personal, prueba de sustitución, árbol de culpabilidad) y cuándo el sistémico (operadores clave, condiciones latentes, terceros). El paso concreta esto sin datos nuevos. Aunque L5907 pide aplicar contramedidas en varios niveles a la vez, definir criterios no contradice esa coexistencia; solo difiere en el detalle.",
+  "paso_fiel": ""
+ }
+}

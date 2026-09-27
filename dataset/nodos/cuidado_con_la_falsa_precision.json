@@ -1,6 +1,6 @@
 {
   "node_id": "cuidado_con_la_falsa_precision",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Errores en los Métodos Cuantitativos",
   "fuente": "Hubbard, The Failure of Risk Management",
@@ -25,5 +25,23 @@
     "cuando metes en una fórmula datos que sacaste de la manga",
     "cuando presentas cifras exactas sobre cosas que en realidad no mediste"
   ],
-  "etiqueta_arbol": "Cuidado con la Falsa Precisión"
+  "etiqueta_arbol": "Cuidado con la Falsa Precisión",
+  "fuentes_internas": [
+    "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-080",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F16-022: Revisar el origen de los datos en calculos de riesgo es parte del analisis y la planificacion, no una prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

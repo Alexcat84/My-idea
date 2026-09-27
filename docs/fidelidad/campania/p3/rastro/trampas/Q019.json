@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Hoshin Kanri (Despliegue de Políticas)",
+  "resumen": "Hoshin Kanri traduce la estrategia de alto nivel en acciones ejecutables en cada nivel de la organización mediante una cascada de 'qués' y 'cómos', negociada en un diálogo bidireccional llamado 'catchball' que alinea a planificadores y ejecutores.",
+  "texto": "Comunicar los 'qués' al siguiente nivel organizacional junto con instrucciones detalladas sobre cómo cumplirlos",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L8600",
+  "cita": "Those responsible at the next level are provided with these hoshins or whats generally with little to no guidance as to \"how to\" fulfill them: determination of how is up to those at that level as is the selection of which hoshins are relevant to their span of influence.",
+  "explicacion": "El libro dice que los 'qués' se entregan al siguiente nivel con poca o ninguna guía sobre el 'cómo', porque decidir el cómo le toca a ese nivel. El paso invierte esa regla y pide dar instrucciones detalladas de cómo cumplirlos."
+ },
+ {
+  "titulo": "Qué tan capaz es tu proceso de cumplir con lo que se pide (índice Cp)",
+  "resumen": "El índice Cp compara el ancho de lo permitido entre el límite superior y el inferior con la variación natural de tu proceso (seis veces la desviación estándar), suponiendo que el proceso está centrado. Te dice si tu proceso, tal como funciona hoy, puede cumplir lo que esperas de él.",
+  "texto": "Da por capaz tu proceso en cuanto el Cp llegue a 1.0, porque ya cubre todo el rango permitido",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L20819",
+  "cita": "The criticality of many applications and the reality that the process average will not remain at the midpoint of the specification range suggest that Cp should be at least 1.33.",
+  "explicacion": "El libro explica que con un Cp de 1.0 el proceso apenas cumple los límites, y que el Cp debería ser de al menos 1.33 porque la media no se queda en el punto medio. El paso rebaja el umbral a 1.0 y lo da por suficiente."
+ },
+ {
+  "titulo": "Hojas de Verificación (Check Sheets)",
+  "resumen": "Es una herramienta para recoger y analizar datos en un formato que te deja ver enseguida patrones y tendencias. Te ayuda a contar de forma ordenada cuántas veces ocurre un defecto o un evento.",
+  "texto": "Pide al supervisor de turno que revise y firme la hoja al final de cada turno",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L18157",
+  "cita": "3. Provide any additional information about the analysis that will be helpful for others to review, that is, who is conducting the analysis, the date and time of the analysis, where and why the analysis is being done.",
+  "dato": "Firma del supervisor de turno al final de cada turno (responsable y frecuencia)",
+  "explicacion": "El libro pide anotar quién hace el análisis, cuándo, dónde y por qué, para que otros puedan revisarlo, pero no pide ninguna firma ni revisión del supervisor de turno al cierre de cada turno. Grep en todo el texto: 'shift supervisor', 'end of each shift' y 'every shift' no aparecen ninguna vez, y 'signed by' solo sale en contextos que no tienen que ver (L6844, L14020)."
+ },
+ {
+  "titulo": "Inspección Automatizada",
+  "resumen": "Consiste en usar sistemas automatizados (medición mecánica, pruebas electrónicas, visión artificial) para bajar los costos de inspección, el error humano y la monotonía. Permite inspeccionar el 100 % con niveles de defectos de partes por millón.",
+  "texto": "Automatizar solo las pruebas cuya inversión se recupere en menos de 18 meses",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L24691",
+  "cita": "The economics of automation are computed, and trials are made on some likely candidates for a good return on investment.",
+  "dato": "Umbral de recuperación de la inversión en menos de 18 meses",
+  "explicacion": "El libro pide calcular la economía de la automatización y probar con candidatos que prometan un buen retorno de la inversión, pero no da ningún plazo de recuperación. Grep en todo el texto: '18 months' y 'eighteen months' no aparecen; 'payback' sale una sola vez, en L17206, sobre benchmarking y sin relación con esto."
+ }
+]

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PDCDF93",
+  "intento": 0,
+  "usd": 0.24354,
+  "turnos": 1,
+  "duracion_s": 9.2,
+  "pared_s": 10.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57630,
+  "tokens_out": 651,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDCDF93\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5134], \"cita\": \"Actions in these HROs were closely monitored so that immediate investigations--termed ‘hot washups’ in the US Navy--were conducted whenever errors occurred.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe como rasgo de las HRO las investigaciones inmediatas de errores ('hot washups' de la US Navy). No prescribe identificarlas. El paso convierte ese rasgo en una acción de diagnóstico: comprobar si la organización tiene esos mecanismos. Va en la misma dirección y no aporta datos nuevos. El término 'hot washups' está respaldado literalmente.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PDCDF93",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5134
+  ],
+  "cita": "Actions in these HROs were closely monitored so that immediate investigations--termed ‘hot washups’ in the US Navy--were conducted whenever errors occurred.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe como rasgo de las HRO las investigaciones inmediatas de errores ('hot washups' de la US Navy). No prescribe identificarlas. El paso convierte ese rasgo en una acción de diagnóstico: comprobar si la organización tiene esos mecanismos. Va en la misma dirección y no aporta datos nuevos. El término 'hot washups' está respaldado literalmente.",
+  "paso_fiel": ""
+ }
+}

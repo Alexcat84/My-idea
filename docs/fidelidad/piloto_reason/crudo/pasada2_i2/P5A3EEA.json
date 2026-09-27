@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5A3EEA",
+  "intento": 0,
+  "usd": 0.183252,
+  "turnos": 1,
+  "duracion_s": 5.7,
+  "pared_s": 6.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44123,
+  "tokens_out": 338,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P5A3EEA\", \"veredicto\": \"CONTRARIO\", \"lineas\": [852, 856], \"cita\": \"Perhaps the final irony is that it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training\", \"datos_sin_respaldo\": [], \"razon\": \"El libro, citando a Bainbridge, dice que los sistemas automatizados más exitosos, con rara intervención manual, pueden necesitar la mayor inversión en entrenamiento, porque la falta de práctica degrada las habilidades que se necesitan en emergencias (L852). El paso aconseja reducir esa inversión justo ahí: invierte la recomendación.\", \"paso_fiel\": \"Mantener, e incluso aumentar, la inversión en entrenamiento manual de los operadores en los sistemas automatizados más confiables, donde casi nunca deben intervenir, porque la falta de práctica deteriora las habilidades que necesitarán en una emergencia.\"}",
+ "parseado": {
+  "id": "P5A3EEA",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   852,
+   856
+  ],
+  "cita": "Perhaps the final irony is that it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training",
+  "datos_sin_respaldo": [],
+  "razon": "El libro, citando a Bainbridge, dice que los sistemas automatizados más exitosos, con rara intervención manual, pueden necesitar la mayor inversión en entrenamiento, porque la falta de práctica degrada las habilidades que se necesitan en emergencias (L852). El paso aconseja reducir esa inversión justo ahí: invierte la recomendación.",
+  "paso_fiel": "Mantener, e incluso aumentar, la inversión en entrenamiento manual de los operadores en los sistemas automatizados más confiables, donde casi nunca deben intervenir, porque la falta de práctica deteriora las habilidades que necesitarán en una emergencia."
+ }
+}

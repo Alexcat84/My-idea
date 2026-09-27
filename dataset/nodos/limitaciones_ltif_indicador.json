@@ -1,6 +1,6 @@
 {
   "node_id": "limitaciones_ltif_indicador",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Limitaciones del LTIF como Indicador de Seguridad",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -22,5 +22,23 @@
     "Cuando la organización tiene LTIF muy bajo pero preocupación por riesgos catastróficos",
     "Cuando se necesita justificar inversión en indicadores de seguridad de proceso más allá de estadísticas de lesiones"
   ],
-  "etiqueta_arbol": "No Confíes Solo en un Indicador"
+  "etiqueta_arbol": "No Confíes Solo en un Indicador",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-206",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F16-026: Montar indicadores de seguridad de proceso en una organizacion que opera es control operativo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -1,0 +1,91 @@
+[
+ {
+  "id": "saneamiento-t1-01",
+  "node_id": "programas_cooperativos_osha",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "REGRESION_DE_CLASE",
+  "texto_anterior": "Aprovecha la información y los recursos de cumplimiento que OSHA, o la autoridad equivalente en tu mercado, comparte a través de su Programa de Alianzas con asociaciones comerciales y profesionales, sindicatos y otras organizaciones",
+  "texto_nuevo": "Aprovecha la información y los recursos de cumplimiento que OSHA comparte a través de su Programa de Alianzas con asociaciones comerciales y profesionales, sindicatos y otras organizaciones",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L26-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): programas_cooperativos_osha vuelve a CLASE C. Regresion medida en docs/SANEAMIENTO_DATASET.md: la campania de fidelidad (fidelidad-t3-44) le puso la formula de la clase B a un nodo-frontera.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO_DATASET pasada J"
+ },
+ {
+  "id": "saneamiento-t1-02",
+  "node_id": "reglas_de_origen_fta_2",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "REGRESION_DE_CLASE",
+  "texto_anterior": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
+  "texto_nuevo": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L26-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): reglas_de_origen_fta_2 vuelve a CLASE C. Regresion medida en docs/SANEAMIENTO_DATASET.md: la campania de fidelidad (fidelidad-t4-011) le puso la formula de la clase B a un nodo-frontera.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO_DATASET pasada J"
+ },
+ {
+  "id": "saneamiento-t1-03",
+  "node_id": "valuacion_409a",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "REGRESION_DE_CLASE",
+  "texto_anterior": "Mantén vigente la valoración hecha por una firma profesional para conservar el respaldo (safe harbor) ante el IRS o la autoridad equivalente en tu mercado",
+  "texto_nuevo": "Mantén vigente la valoración hecha por una firma profesional para conservar el respaldo (safe harbor) ante el IRS",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L26-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): valuacion_409a vuelve a CLASE C con la condicion 'si tu empresa esta constituida en EE.UU. (por ejemplo, Delaware para levantar capital alli)'. La fidelidad (fidelidad-t4-035) le puso la formula B; el resumen cerraba con 'verificalos con un profesional en tu mercado', que tambien es formula B.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO_DATASET pasada J"
+ },
+ {
+  "id": "saneamiento-t1-04",
+  "node_id": "valuacion_409a",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "REGRESION_DE_CLASE",
+  "texto_anterior": "Cuando vayas a otorgar opciones sobre acciones a tus empleados",
+  "texto_nuevo": "Solo si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí) y vas a otorgar opciones sobre acciones a tus empleados",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L26-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): valuacion_409a vuelve a CLASE C con la condicion 'si tu empresa esta constituida en EE.UU. (por ejemplo, Delaware para levantar capital alli)'. La fidelidad (fidelidad-t4-035) le puso la formula B; el resumen cerraba con 'verificalos con un profesional en tu mercado', que tambien es formula B.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO_DATASET pasada J"
+ },
+ {
+  "id": "saneamiento-t1-05",
+  "node_id": "valuacion_409a",
+  "campo": "resumen_teorico",
+  "veredicto": "REGRESION_DE_CLASE",
+  "texto_anterior": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor) que te protege de sanciones de la autoridad fiscal (IRS). Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Esta práctica hizo que las acciones comunes se valoren ahora entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Estos detalles legales y fiscales varían según el país, así que antes de actuar verifícalos con un profesional en tu mercado.",
+  "texto_nuevo": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor) que te protege de sanciones de la autoridad fiscal (IRS). Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Esta práctica hizo que las acciones comunes se valoren ahora entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L26-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): valuacion_409a vuelve a CLASE C con la condicion 'si tu empresa esta constituida en EE.UU. (por ejemplo, Delaware para levantar capital alli)'. La fidelidad (fidelidad-t4-035) le puso la formula B; el resumen cerraba con 'verificalos con un profesional en tu mercado', que tambien es formula B.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO_DATASET pasada J"
+ }
+]

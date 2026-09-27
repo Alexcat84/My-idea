@@ -6,13 +6,13 @@
   "fuente": "Chris Voss, Rompe la barrera del no",
   "resumen_teorico": "Cada proveedor tiene sus propias normas, creencias o estándares con los que mide lo correcto. Si detectas esas reglas y enmarcas tu propuesta dentro de ellas, evitas que se sienta atacado y consigues que ceda sin confrontacion. La palabra justo funciona como un detonante emocional: casi nadie quiere parecer injusto, y por eso reacciona cuando se le acusa de serlo. Puedes usarla para defenderte de una acusacion, para devolverla con calma cuando la usan contra ti, o para instalar desde el principio una relacion honesta pidiendo que te avisen si sienten que no estas siendo justo. Como vas a volver a comprarle a ese mismo proveedor, esta herramienta se usa para construir confianza, no para ganar una sola vuelta.",
   "pasos_accionables": [
-    "Antes de negociar, pregunta o investiga que normas o estandares suele mencionar el proveedor sobre precios, plazos o condiciones.",
-    "Redacta tu oferta usando ese mismo estandar como referencia, por ejemplo citando lo que el mercado o su propia practica habitual indica.",
-    "Si te acusan de ser injusto, respira antes de ceder y pregunta con calma en que parte especifica no estas siendo justo.",
-    "Si alguien usa la palabra justo para presionarte sin dar razones, responde pidiendo que te muestre datos que sostengan esa afirmacion.",
-    "Al iniciar una relacion con un proveedor nuevo, dile abiertamente que quieres tratarlo con justicia y que te avise si en algun momento siente lo contrario."
+    "Antes de negociar, pregunta o investiga qué normas o estándares suele mencionar el proveedor sobre precios, plazos o condiciones.",
+    "Redacta tu oferta usando ese mismo estándar como referencia, por ejemplo citando lo que el mercado o su propia práctica habitual indica.",
+    "Si te acusan de ser injusto, respira antes de ceder y pregunta con calma en qué parte específica no estás siendo justo.",
+    "Si alguien usa la palabra justo para presionarte sin dar razones, responde pidiendo que te muestre datos que sostengan esa afirmación.",
+    "Al iniciar una relación con un proveedor nuevo, dile abiertamente que quieres tratarlo con justicia y que te avise si en algún momento siente lo contrario."
   ],
-  "entregable_esperado": "Un guion breve con la frase de apertura sobre justicia y el estandar del proveedor identificado, listo para usar en la proxima negociacion.",
+  "entregable_esperado": "Un guion breve con la frase de apertura sobre justicia y el estándar del proveedor identificado, listo para usar en la próxima negociación.",
   "nodos_previos": [
     "revela_tu_propio_plazo_limite_al_negociar"
   ],
@@ -22,5 +22,93 @@
     "Quieres empezar una relacion de compra duradera y necesitas sentar una base de confianza.",
     "Notas que el proveedor usa cierto estandar o regla propia al justificar sus condiciones."
   ],
-  "etiqueta_arbol": "Usa la palabra justo con cuidado"
+  "etiqueta_arbol": "Usa la palabra justo con cuidado",
+  "fuentes_internas": [
+    "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0018",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de negociar, pregunta o investiga que normas o estandares suele mencionar el proveedor sobre precios, plazos o condiciones.",
+      "texto_nuevo": "Antes de negociar, pregunta o investiga qué normas o estándares suele mencionar el proveedor sobre precios, plazos o condiciones.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-012.paso0: qué, estándares (Solo tildes: 'qué' de la interrogativa indirecta y 'estándares'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0019",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redacta tu oferta usando ese mismo estandar como referencia, por ejemplo citando lo que el mercado o su propia practica habitual indica.",
+      "texto_nuevo": "Redacta tu oferta usando ese mismo estándar como referencia, por ejemplo citando lo que el mercado o su propia práctica habitual indica.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-012.paso1: estándar, práctica (Solo se añaden las tildes de 'estándar' y 'práctica'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0020",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si te acusan de ser injusto, respira antes de ceder y pregunta con calma en que parte especifica no estas siendo justo.",
+      "texto_nuevo": "Si te acusan de ser injusto, respira antes de ceder y pregunta con calma en qué parte específica no estás siendo justo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-012.paso2: qué, específica, estás (Solo tildes: 'qué' de la interrogativa indirecta, 'específica' y 'estás'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0021",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si alguien usa la palabra justo para presionarte sin dar razones, responde pidiendo que te muestre datos que sostengan esa afirmacion.",
+      "texto_nuevo": "Si alguien usa la palabra justo para presionarte sin dar razones, responde pidiendo que te muestre datos que sostengan esa afirmación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-012.paso3: afirmación (Solo se añade la tilde que faltaba en 'afirmación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0022",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al iniciar una relacion con un proveedor nuevo, dile abiertamente que quieres tratarlo con justicia y que te avise si en algun momento siente lo contrario.",
+      "texto_nuevo": "Al iniciar una relación con un proveedor nuevo, dile abiertamente que quieres tratarlo con justicia y que te avise si en algún momento siente lo contrario.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-012.paso4: relación, algún (Solo se añaden las tildes de 'relación' y 'algún'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0023",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un guion breve con la frase de apertura sobre justicia y el estandar del proveedor identificado, listo para usar en la proxima negociacion.",
+      "texto_nuevo": "Un guion breve con la frase de apertura sobre justicia y el estándar del proveedor identificado, listo para usar en la próxima negociación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-012.entregable: estándar, próxima, negociación (Solo se añaden las tildes de 'estándar', 'próxima' y 'negociación'; 'guion' queda sin tilde, como pide la norma.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

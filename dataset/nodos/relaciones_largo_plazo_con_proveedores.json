@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reducción de Proveedores y Relaciones de Largo Plazo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Deming propone reducir el número de proveedores por artículo y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
+  "resumen_teorico": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Conviene reducir el número de proveedores por artículo y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
   "pasos_accionables": [
     "Revisar cuántos proveedores tienes hoy para cada artículo clave que compras",
     "Definir criterios de evaluación que incluyan evidencia estadística de calidad, no solo el precio",
@@ -20,5 +20,26 @@
   "condiciones_activacion": [
     "Cuando eliges a tus proveedores solo por el precio más bajo"
   ],
-  "etiqueta_arbol": "Reduce y Fideliza Proveedores"
+  "etiqueta_arbol": "Reduce y Fideliza Proveedores",
+  "correcciones": [
+    {
+      "id": "atribucion-153",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Deming propone reducir el número de proveedores por artículo y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
+      "texto_nuevo": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Conviene reducir el número de proveedores por artículo y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming propone"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

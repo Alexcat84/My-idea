@@ -16,12 +16,28 @@
     "identificacion_necesidad_sucesion_ceo",
     "sucesion_iniciada_por_fundador"
   ],
-  "nodos_siguientes": [
-    "dilema_riqueza_vs_control"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la junta directiva decide reemplazar al fundador-CEO",
     "Cuando un nuevo CEO profesional debe integrarse sin generar conflicto con el fundador"
   ],
-  "etiqueta_arbol": "Gana Apoyo del Fundador Saliente"
+  "etiqueta_arbol": "Gana Apoyo del Fundador Saliente",
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-060",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_tres_rs_sucesion -> dilema_riqueza_vs_control",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-12-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: los Tres Rs sirven para gestionar la sucesion de un fundador ya reemplazado, que viene despues de elegir entre riqueza y control, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

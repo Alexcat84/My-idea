@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P704932",
+  "intento": 0,
+  "usd": 0.087024,
+  "turnos": 1,
+  "duracion_s": 12.4,
+  "pared_s": 13.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 16611,
+  "tokens_out": 1029,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P704932\", \"veredicto\": \"FIEL\", \"lineas\": [2598, 2638, 2658, 2765], \"cita\": \"Navigational aids fall into two main categories: reactive measures that can only be applied after the occurrence of an event, and proactive measures that can be used before an event to assess the 'safety health' of the system as a whole. Effective safety management requires the use of both of these measures.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro exige usar ambos tipos de medidas, reactivas y proactivas, como ayudas para navegar el espacio de seguridad. El paso no les da el mismo peso ni hace de los resultados la via principal, asi que no invierte la prioridad. El libro situa las medidas proactivas como las mas importantes (L2658) y desaconseja apoyarse principalmente en resultados (L2765).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P704932",
+  "veredicto": "FIEL",
+  "lineas": [
+   2598,
+   2638,
+   2658,
+   2765
+  ],
+  "cita": "Navigational aids fall into two main categories: reactive measures that can only be applied after the occurrence of an event, and proactive measures that can be used before an event to assess the 'safety health' of the system as a whole. Effective safety management requires the use of both of these measures.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro exige usar ambos tipos de medidas, reactivas y proactivas, como ayudas para navegar el espacio de seguridad. El paso no les da el mismo peso ni hace de los resultados la via principal, asi que no invierte la prioridad. El libro situa las medidas proactivas como las mas importantes (L2658) y desaconseja apoyarse principalmente en resultados (L2765).",
+  "paso_fiel": ""
+ }
+}

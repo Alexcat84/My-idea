@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0B904F",
+  "intento": 0,
+  "usd": 0.160864,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35776,
+  "tokens_out": 888,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0B904F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [419, 453, 2250, 2279], \"cita\": \"the line-generated work pack contained no mention of the restorative work--replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala como condición latente que el paquete no tuviera pasos de reensamblaje ni firmas paso a paso (L419, L453). También propone identificar los pasos propensos a omisión (L2250) y usar recordatorios que permitan comprobar cada acción (L2279). 'Secuencias numeradas y verificables' concreta esto en la misma dirección. No añade ningún dato. Lo citado en L459 no respalda la contradicción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0B904F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   419,
+   453,
+   2250,
+   2279
+  ],
+  "cita": "the line-generated work pack contained no mention of the restorative work--replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala como condición latente que el paquete no tuviera pasos de reensamblaje ni firmas paso a paso (L419, L453). También propone identificar los pasos propensos a omisión (L2250) y usar recordatorios que permitan comprobar cada acción (L2279). 'Secuencias numeradas y verificables' concreta esto en la misma dirección. No añade ningún dato. Lo citado en L459 no respalda la contradicción.",
+  "paso_fiel": ""
+ }
+}

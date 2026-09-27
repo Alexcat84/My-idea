@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_008",
+  "intento": 0,
+  "usd": 0.158172,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32723,
+  "tokens_out": 1364,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P604623\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2868, 2890, 2892], \"razon\": \"El libro critica que las prácticas de gestión de errores no distingan bien entre factores de error aleatorios y sistemáticos; el paso pide hacer esa distinción.\"},\n{\"id\": \"PD120F5\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [413, 435, 967, 969, 971, 973, 975, 3465], \"razon\": \"El libro advierte que firmar el propio trabajo sin inspección independiente elimina una oportunidad de detectar errores; el paso pide evaluar ese riesgo.\"},\n{\"id\": \"P47F9B1\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [415, 417, 419, 451, 453], \"razon\": \"El libro señala la diferencia de prácticas entre línea y base como una grieta sutil del sistema; revisarla concreta esa lección en la misma dirección.\"},\n{\"id\": \"P195D07\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4366, 4368], \"razon\": \"Coincide con COSHH, pero omite 'where possible' en la sustitución por sustancias menos peligrosas: el paso vuelve incondicional una medida que la fuente condiciona.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P604623",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2868,
+    2890,
+    2892
+   ],
+   "razon": "El libro critica que las prácticas de gestión de errores no distingan bien entre factores de error aleatorios y sistemáticos; el paso pide hacer esa distinción."
+  },
+  {
+   "id": "PD120F5",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    413,
+    435,
+    967,
+    969,
+    971,
+    973,
+    975,
+    3465
+   ],
+   "razon": "El libro advierte que firmar el propio trabajo sin inspección independiente elimina una oportunidad de detectar errores; el paso pide evaluar ese riesgo."
+  },
+  {
+   "id": "P47F9B1",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    415,
+    417,
+    419,
+    451,
+    453
+   ],
+   "razon": "El libro señala la diferencia de prácticas entre línea y base como una grieta sutil del sistema; revisarla concreta esa lección en la misma dirección."
+  },
+  {
+   "id": "P195D07",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4366,
+    4368
+   ],
+   "razon": "Coincide con COSHH, pero omite 'where possible' en la sustitución por sustancias menos peligrosas: el paso vuelve incondicional una medida que la fuente condiciona."
+  }
+ ]
+}

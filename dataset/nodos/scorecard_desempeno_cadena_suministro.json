@@ -1,7 +1,7 @@
 {
   "node_id": "scorecard_desempeno_cadena_suministro",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Scorecard de Desempeño y Bucle de Retroalimentación Autocorrectivo",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: las empresas corrigen sus propios problemas rápidamente sin esperar instrucciones, porque saben que su desempeño es visible para todos. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
@@ -19,13 +19,42 @@
     "colaboracion_transporte_ctm",
     "sistema_visibilidad_cadena_suministro_low_cost"
   ],
-  "nodos_siguientes": [
-    "sistema_manejo_quejas"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando ya existe flujo continuo de datos entre socios de la cadena",
     "Si se busca mejorar el desempeño colectivo sin aumentar el control centralizado",
     "Para reducir el efecto bullwhip mediante mayor transparencia de demanda real"
   ],
-  "etiqueta_arbol": "Comparte el Desempeño de tu Cadena"
+  "etiqueta_arbol": "Comparte el Desempeño de tu Cadena",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-116",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "scorecard_desempeno_cadena_suministro -> sistema_manejo_quejas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R02-02-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Un scorecard de desempeño entre empresas de la cadena de suministro no prepara un sistema de manejo de quejas de clientes; comparten solo la palabra retroalimentación."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "mv-dominio-30",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-11: Un scorecard compartido en tiempo real entre todas las empresas de la cadena solo tiene sentido para quien gestiona una cadena de suministro multiempresa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ]
 }

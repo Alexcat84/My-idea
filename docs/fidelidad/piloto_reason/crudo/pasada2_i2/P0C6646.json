@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0C6646",
+  "intento": 0,
+  "usd": 0.187108,
+  "turnos": 1,
+  "duracion_s": 7.3,
+  "pared_s": 8.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44057,
+  "tokens_out": 544,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0C6646\", \"veredicto\": \"FIEL\", \"lineas\": [3813, 2961, 2965, 2948], \"cita\": \"We cannot change the human condition. People will always make errors and commit violations. But we can change the conditions under which they work to make these unsafe acts less likely.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso reproduce el principio 3 del libro. Reason sostiene que la falibilidad no puede eliminarse del todo y que la evidencia favorece el enfoque situacional. El paso habla de enfocar la gestión, no de excluir las medidas individuales, así que no contradice el matiz de L2829. No añade cifras, plazos ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0C6646",
+  "veredicto": "FIEL",
+  "lineas": [
+   3813,
+   2961,
+   2965,
+   2948
+  ],
+  "cita": "We cannot change the human condition. People will always make errors and commit violations. But we can change the conditions under which they work to make these unsafe acts less likely.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso reproduce el principio 3 del libro. Reason sostiene que la falibilidad no puede eliminarse del todo y que la evidencia favorece el enfoque situacional. El paso habla de enfocar la gestión, no de excluir las medidas individuales, así que no contradice el matiz de L2829. No añade cifras, plazos ni responsables.",
+  "paso_fiel": ""
+ }
+}

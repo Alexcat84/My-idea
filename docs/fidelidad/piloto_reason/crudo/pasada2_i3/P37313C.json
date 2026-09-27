@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P37313C",
+  "intento": 0,
+  "usd": 0.135764,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30381,
+  "tokens_out": 712,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P37313C\", \"veredicto\": \"FIEL\", \"lineas\": [4261, 4014, 4211, 4125], \"cita\": \"Regulators, being human beings, tend to establish personal relationships with the regulated--they get to like the people they oversee and come to sympathize with their problems on a personal level--and this sometimes compromises their ability to identify, report or sanction violations.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro afirma este riesgo (L4261) y recoge la crítica a la relación 'cosy' del regulador (L4014) y a las relaciones 'overly collusive' (L4211). L4125 critica la falta de contacto, pero el paso solo señala el exceso, así que no lo contradice. L4265 explica que el compromiso es estructural y no niega el riesgo. Inspectores y regulados figuran en el texto.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P37313C",
+  "veredicto": "FIEL",
+  "lineas": [
+   4261,
+   4014,
+   4211,
+   4125
+  ],
+  "cita": "Regulators, being human beings, tend to establish personal relationships with the regulated--they get to like the people they oversee and come to sympathize with their problems on a personal level--and this sometimes compromises their ability to identify, report or sanction violations.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro afirma este riesgo (L4261) y recoge la crítica a la relación 'cosy' del regulador (L4014) y a las relaciones 'overly collusive' (L4211). L4125 critica la falta de contacto, pero el paso solo señala el exceso, así que no lo contradice. L4265 explica que el compromiso es estructural y no niega el riesgo. Inspectores y regulados figuran en el texto.",
+  "paso_fiel": ""
+ }
+}

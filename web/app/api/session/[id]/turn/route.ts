@@ -9,9 +9,13 @@
  * proceso (a diferencia de historial_mensajes en el CLI).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { avanzarTurno } from "@/lib/engine/recorrido";
@@ -21,20 +25,23 @@ import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: sessionId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).turno;
 
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const respuesta = (body as { respuesta?: unknown } | null)?.respuesta;
   if (typeof respuesta !== "string" || respuesta.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'respuesta'" }, { status: 400 });
+    return NextResponse.json({ error: t.faltaRespuesta }, { status: 400 });
   }
   if (respuesta.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: `'respuesta' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: mensajeTextoLargo(idioma), limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }
@@ -44,26 +51,26 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   const sesion = await obtenerSesion(supabase, sessionId);
   if (!sesion) {
-    return NextResponse.json({ error: "sesion no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.sesionNoEncontrada }, { status: 404 });
   }
   if (sesion.closed_at) {
-    return NextResponse.json({ error: "la sesion ya esta cerrada" }, { status: 409 });
+    return NextResponse.json({ error: r.conversacionTerminada }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido as EstadoSesionPersistido | null;
   if (!estadoPersistido) {
     return NextResponse.json(
-      { error: "la sesion no tiene un turno pendiente; llama a /api/session/start primero" },
+      { error: r.conversacionSinPendiente },
       { status: 409 }
     );
   }
   if (estadoPersistido.recorrido.fase === "cerrada" || estadoPersistido.recorrido.fase === "listo_para_plan") {
     return NextResponse.json(
-      { error: `la sesion esta en fase '${estadoPersistido.recorrido.fase}', no espera una respuesta nueva` },
+      { error: r.conversacionSinPendiente, fase: estadoPersistido.recorrido.fase },
       { status: 409 }
     );
   }
@@ -82,6 +89,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     respuestaUsuario: respuesta,
     acumulado: estadoPersistido.acumulado,
     dbSessionId: sessionId,
+    idioma,
   });
 
   // El recorrido conversado: se cierra la pareja (la pregunta que estaba en
@@ -108,6 +116,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     anclado.resultado,
     anclado.acumulado,
     [],
-    turnos
+    turnos,
+    idioma
   );
 }

@@ -1,10 +1,10 @@
 {
   "node_id": "medidas_productividad_no_mejoran",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Las Mediciones de Productividad No Generan Mejora por Sí Solas",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming advierte que dedicar esfuerzos a medir y comparar la productividad (mes a mes, país a país) no conduce por sí mismo a mejorarla, de la misma forma que las estadísticas de accidentes no reducen los accidentes. Es más valioso hacer un estudio ordenado de si una actividad es consistente con el objetivo de la organización y qué está costando, en lugar de simplemente generar reportes comparativos.",
+  "resumen_teorico": "Dedicar esfuerzos a medir y comparar la productividad (mes a mes, país a país) no conduce por sí mismo a mejorarla, de la misma forma que las estadísticas de accidentes no reducen los accidentes. Es más valioso hacer un estudio ordenado de si una actividad es consistente con el objetivo de la organización y qué está costando, en lugar de simplemente generar reportes comparativos.",
   "pasos_accionables": [
     "Evitar crear oficinas o reportes cuyo único fin sea medir productividad sin un plan de acción asociado.",
     "En lugar de comparar cifras históricas, analizar si cada actividad o proceso es coherente con el objetivo real de la organización.",
@@ -19,5 +19,39 @@
     "Cuando la organización invierte recursos en medir productividad sin un plan claro de mejora.",
     "Cuando se cuestiona si una actividad recurrente sigue cumpliendo su propósito original."
   ],
-  "etiqueta_arbol": "Mide, pero Actúa para Mejorar"
+  "etiqueta_arbol": "Mide, pero Actúa para Mejorar",
+  "correcciones": [
+    {
+      "id": "atribucion-121",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming advierte que dedicar esfuerzos a medir y comparar la productividad (mes a mes, país a país) no conduce por sí mismo a mejorarla, de la misma forma que las estadísticas de accidentes no reducen los accidentes. Es más valioso hacer un estudio ordenado de si una actividad es consistente con el objetivo de la organización y qué está costando, en lugar de simplemente generar reportes comparativos.",
+      "texto_nuevo": "Dedicar esfuerzos a medir y comparar la productividad (mes a mes, país a país) no conduce por sí mismo a mejorarla, de la misma forma que las estadísticas de accidentes no reducen los accidentes. Es más valioso hacer un estudio ordenado de si una actividad es consistente con el objetivo de la organización y qué está costando, en lugar de simplemente generar reportes comparativos.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming advierte que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-009 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-216",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F01-026: Revisar si las actividades de la organizacion cumplen su objetivo en vez de solo medir productividad es mejora de la operacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

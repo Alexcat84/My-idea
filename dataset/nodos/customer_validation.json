@@ -30,7 +30,6 @@
     "producto_minimo_viable",
     "customer_development_process",
     "decision_pivotar_o_proceder",
-    "gestion_alucinaciones_ia",
     "lienzo_modelo_negocio"
   ],
   "nodos_siguientes": [
@@ -43,7 +42,6 @@
     "mvp_alta_fidelidad",
     "checkpoints_validacion",
     "realizar_pruebas_pasa_no_pasa",
-    "coraje_decision_ceo",
     "customer_validation_sales_roadmap",
     "customer_validation_sell_phase",
     "establecer_linea_base_mvp",
@@ -72,6 +70,37 @@
       "node_id": "introduccion_validacion_clientes",
       "titulo": "Introducción a la Validación de Clientes (Customer Validation)",
       "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-029",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "customer_validation -> coraje_decision_ceo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-09-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La validacion con clientes (Customer Development) no prepara el tema del coraje del CEO frente a la presion social. Son asuntos distintos, y el cambio no viene de la correccion (que tocaba solo cuando documentar el razonamiento)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-062",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_alucinaciones_ia -> customer_validation",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-23-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La validacion con clientes (Customer Development) no continua ni profundiza la gestion de alucinaciones de la IA; los nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

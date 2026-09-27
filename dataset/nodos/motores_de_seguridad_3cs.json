@@ -6,13 +6,13 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Tres ingredientes impulsan el motor de seguridad de tu negocio, y dependen de ti como quien decide: Compromiso (motivacion mas recursos de calidad, no solo cumplir minimos exigidos), Competencia (un sistema de información de seguridad que recolecta, difunde y actua sobre datos relevantes) y Cognicion (conciencia real de los peligros, evitando la paradoja posicional, cuando culpas al personal de línea en vez de mirar el sistema completo, y el fenomeno del tic, cuando tratas la seguridad como un checklist de equipo en vez de un proceso continuo).",
   "pasos_accionables": [
-    "Evaluar tu nivel de compromiso real con la seguridad: ¿buscas ser modelo o solo cumplir minimos exigidos?",
-    "Revisar la calidad de tu sistema de información de seguridad: como recolectas, difundes y actuas sobre los datos",
+    "Evaluar tu nivel de compromiso real con la seguridad: ¿buscas ser modelo o solo cumplir mínimos exigidos?",
+    "Revisar la calidad de tu sistema de información de seguridad: cómo recolectas, difundes y actúas sobre los datos",
     "Identificar si caes en la paradoja posicional, culpar al personal de línea en vez de mirar el sistema completo",
-    "Identificar el fenomeno del tic, tratar las medidas de seguridad como un checklist en vez de un proceso vivo",
-    "Armar un plan para fortalecer cada uno de los tres motores: compromiso, competencia y cognicion"
+    "Identificar el fenómeno del tic, tratar las medidas de seguridad como un checklist en vez de un proceso vivo",
+    "Armar un plan para fortalecer cada uno de los tres motores: compromiso, competencia y cognición"
   ],
-  "entregable_esperado": "Un diagnostico de los tres motores de seguridad, compromiso, competencia y cognicion, con un plan de accion para fortalecer cada uno",
+  "entregable_esperado": "Un diagnóstico de los tres motores de seguridad, compromiso, competencia y cognición, con un plan de acción para fortalecer cada uno",
   "nodos_previos": [
     "espacio_de_seguridad",
     "medidas_proceso_vs_resultado"
@@ -24,5 +24,79 @@
     "Cuando diseñas o revisas la estrategia de seguridad de tu negocio de alto riesgo",
     "Cuando notas que se culpa solo al personal operativo por los problemas de seguridad, sin mirar el sistema completo"
   ],
-  "etiqueta_arbol": "Impulsa Compromiso, Competencia y Conocimiento"
+  "etiqueta_arbol": "Impulsa Compromiso, Competencia y Conocimiento",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0615",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evaluar tu nivel de compromiso real con la seguridad: ¿buscas ser modelo o solo cumplir minimos exigidos?",
+      "texto_nuevo": "Evaluar tu nivel de compromiso real con la seguridad: ¿buscas ser modelo o solo cumplir mínimos exigidos?",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-021.paso0: mínimos (Faltaba la tilde de 'mínimos'; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0616",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar la calidad de tu sistema de información de seguridad: como recolectas, difundes y actuas sobre los datos",
+      "texto_nuevo": "Revisar la calidad de tu sistema de información de seguridad: cómo recolectas, difundes y actúas sobre los datos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-021.paso1: cómo, actúas ('cómo' es interrogativo indirecto y 'actúas' necesita tilde; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0617",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar el fenomeno del tic, tratar las medidas de seguridad como un checklist en vez de un proceso vivo",
+      "texto_nuevo": "Identificar el fenómeno del tic, tratar las medidas de seguridad como un checklist en vez de un proceso vivo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-021.paso3: fenómeno (Faltaba la tilde de 'fenómeno'; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0618",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Armar un plan para fortalecer cada uno de los tres motores: compromiso, competencia y cognicion",
+      "texto_nuevo": "Armar un plan para fortalecer cada uno de los tres motores: compromiso, competencia y cognición",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-021.paso4: cognición (Faltaba la tilde de 'cognición'; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0619",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un diagnostico de los tres motores de seguridad, compromiso, competencia y cognicion, con un plan de accion para fortalecer cada uno",
+      "texto_nuevo": "Un diagnóstico de los tres motores de seguridad, compromiso, competencia y cognición, con un plan de acción para fortalecer cada uno",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-021.entregable: diagnóstico, cognición, acción (Faltaban las tildes de 'diagnóstico', 'cognición' y 'acción'; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

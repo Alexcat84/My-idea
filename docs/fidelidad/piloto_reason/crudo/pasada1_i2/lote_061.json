@@ -1,0 +1,89 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_061",
+  "intento": 0,
+  "usd": 0.17118,
+  "turnos": 1,
+  "duracion_s": 18.7,
+  "pared_s": 19.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33805,
+  "tokens_out": 1798,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PAD1DB8\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"LTIF\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5497, 5501, 5515, 5517, 5641, 5905], \"razon\": \"El libro distingue los tres modelos, cada uno con sus métricas, y cita LTIF como métrica principal del modelo de persona. Diagnosticar cuál predomina va en su misma dirección.\"},\n  {\"id\": \"PBC12CB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [81, 83, 3965, 3971, 3973], \"razon\": \"El libro describe la erosión gradual de estándares y de márgenes de seguridad para cumplir plazos. Revisar si los criterios se relajaron sin decidirlo concreta esa idea.\"},\n  {\"id\": \"P9ADE10\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"al menos 48 horas antes\", \"tarjetas paso a paso\", \"firmas de reensamblaje\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [417, 419, 423, 451, 453], \"razon\": \"El plazo de 48 h no está en el libro. Además, la documentación de línea se genera justo antes del trabajo y los traspasos son raros e imprevistos: el plazo choca con eso.\"},\n  {\"id\": \"P6C1ADC\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5582, 5639, 2905, 2594, 2973, 5641, 5907], \"razon\": \"El libro dice que un error aislado difícilmente causa un accidente organizacional, que el error no puede eliminarse y que la prioridad son las condiciones latentes. El paso invierte eso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PAD1DB8",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "LTIF"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5497,
+    5501,
+    5515,
+    5517,
+    5641,
+    5905
+   ],
+   "razon": "El libro distingue los tres modelos, cada uno con sus métricas, y cita LTIF como métrica principal del modelo de persona. Diagnosticar cuál predomina va en su misma dirección."
+  },
+  {
+   "id": "PBC12CB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    81,
+    83,
+    3965,
+    3971,
+    3973
+   ],
+   "razon": "El libro describe la erosión gradual de estándares y de márgenes de seguridad para cumplir plazos. Revisar si los criterios se relajaron sin decidirlo concreta esa idea."
+  },
+  {
+   "id": "P9ADE10",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "al menos 48 horas antes",
+    "tarjetas paso a paso",
+    "firmas de reensamblaje"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    417,
+    419,
+    423,
+    451,
+    453
+   ],
+   "razon": "El plazo de 48 h no está en el libro. Además, la documentación de línea se genera justo antes del trabajo y los traspasos son raros e imprevistos: el plazo choca con eso."
+  },
+  {
+   "id": "P6C1ADC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5582,
+    5639,
+    2905,
+    2594,
+    2973,
+    5641,
+    5907
+   ],
+   "razon": "El libro dice que un error aislado difícilmente causa un accidente organizacional, que el error no puede eliminarse y que la prioridad son las condiciones latentes. El paso invierte eso."
+  }
+ ]
+}

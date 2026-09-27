@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PEB1118",
+  "intento": 0,
+  "usd": 0.239576,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53604,
+  "tokens_out": 1258,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PEB1118\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5190, 5196], \"cita\": \"A culture that favours face-to-face communication. [...] if high reliability systems need rich, dense talk to maintain complexity, then they may find it hard to generate this richness if talk is devalued or if people are unable to find substitutes for talk (e.g., electronic mail may be a substitute).\", \"datos_sin_respaldo\": [], \"razon\": \"El libro propone una cultura que favorece la comunicación cara a cara porque los sistemas complejos necesitan conversación rica y densa. El correo aparece solo como sustituto cuando no se puede hablar. Anteponer el cara a cara al canal impersonal va en la misma dirección. Limitarlo a temas complejos de seguridad concreta el libro sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PEB1118",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5190,
+   5196
+  ],
+  "cita": "A culture that favours face-to-face communication. [...] if high reliability systems need rich, dense talk to maintain complexity, then they may find it hard to generate this richness if talk is devalued or if people are unable to find substitutes for talk (e.g., electronic mail may be a substitute).",
+  "datos_sin_respaldo": [],
+  "razon": "El libro propone una cultura que favorece la comunicación cara a cara porque los sistemas complejos necesitan conversación rica y densa. El correo aparece solo como sustituto cuando no se puede hablar. Anteponer el cara a cara al canal impersonal va en la misma dirección. Limitarlo a temas complejos de seguridad concreta el libro sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

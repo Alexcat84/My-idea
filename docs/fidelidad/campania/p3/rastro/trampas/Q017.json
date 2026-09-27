@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Eventos de Mejora Rápida (RIE) y Kaizen",
+  "resumen": "Un evento de mejora rápida es un esfuerzo concentrado de una semana, guiado por un Lean Expert o Black Belt, para analizar el flujo de valor y aplicar soluciones en poco tiempo. La preparación previa con datos y un equipo bien armado es lo que permite obtener mejoras visibles al terminar la semana.",
+  "texto": "Formar el equipo del evento solo con personas del área que opera el proceso, para que se mueva rápido y sin interferencias de otros departamentos",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L13201",
+  "cita": "RIE or kaizen teams are multifunctional so that all aspects of the process and problems associated with them are considered and solutions developed will be understood and accepted by all.",
+  "dato": "",
+  "explicacion": "El libro dice que los equipos de RIE o kaizen son multifuncionales para que se consideren todos los aspectos del proceso y todos entiendan y acepten las soluciones. El paso recomienda lo contrario: un equipo de una sola área, excluyendo a los demás departamentos."
+ },
+ {
+  "titulo": "Inspección por Muestreo con Planes AQL (ANSI/ASQC Z1.4)",
+  "resumen": "Los planes de muestreo por atributos basados en AQL definen el tamaño de muestra y el número de aceptación según el tamaño del lote y el nivel de inspección. La norma prevé pasar a inspección rigurosa cuando la calidad se deteriora, para proteger al cliente sin revisar el 100% del producto.",
+  "texto": "Pasar a inspección rigurosa cuando tres de cinco lotes consecutivos sean rechazados en la inspección original",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L25083",
+  "cita": "If two out of five consecutive lots are not acceptable (rejected) on original inspection, a tightened inspection plan is imposed.",
+  "dato": "",
+  "explicacion": "El libro pone el umbral para pasar a inspección rigurosa en dos de cinco lotes consecutivos rechazados. El paso lo sube a tres de cinco, así que se tolera más deterioro antes de endurecer el plan."
+ },
+ {
+  "titulo": "Estudio de Lealtad del Cliente",
+  "resumen": "El estudio de lealtad se hace en persona, con entrevistadores entrenados, más o menos cada seis meses y con las mismas personas, clientes y exclientes. Sus resultados se cuantifican y se grafican para ligar cada mejora concreta con su efecto en ventas y en la planeación estratégica.",
+  "texto": "Entrevista en cada ronda al menos a 25 clientes actuales y 25 exclientes para que los resultados sean comparables",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L2185",
+  "cita": "the customer loyalty study, which is conducted in person with trained interviewers every six months or so on the same people.",
+  "dato": "Un mínimo de 25 clientes actuales y 25 exclientes por ronda",
+  "explicacion": "El libro describe el estudio de lealtad (en persona, entrevistadores entrenados, cada seis meses, mismas personas, clientes y exclientes), pero en ningún momento da un tamaño mínimo de muestra. Con Grep no aparecen '25 customers', 'twenty-five customers' ni '25 interviews'. La cifra de 25 más 25 es inventada."
+ },
+ {
+  "titulo": "Estratificación de Datos",
+  "resumen": "Estratificar es separar los datos en categorías para ver cuáles contribuyen más al problema. Se eligen las variables, se definen categorías, se clasifican las observaciones, se calcula el fenómeno en cada categoría y se muestran los resultados, casi siempre con gráficas de barras.",
+  "texto": "Asegurar al menos 20 observaciones en cada categoría antes de comparar los resultados entre ellas",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L18778-L18780",
+  "cita": "4. Calculate the phenomenon being measured for each category. These calculations can be a count of the number of observations in the category, an average value for those observations or a display (like a histogram) for each category.",
+  "dato": "Mínimo de 20 observaciones por categoría",
+  "explicacion": "Los pasos de estratificación del libro (L18774-L18786) no fijan ningún número mínimo de observaciones por categoría. El único ejemplo usa 40 piezas por proveedor, pero como caso concreto, no como regla. Con Grep no aparecen '20 observations', 'twenty observations' ni 'at least 20' referido a observaciones. El umbral de 20 es inventado."
+ }
+]

@@ -21,7 +21,6 @@
   ],
   "node_id": "convertible_debt_fundamentos",
   "nodos_previos": [
-    "lienzo_modelo_negocio",
     "warrants_financiamiento"
   ],
   "nodos_siguientes": [
@@ -32,5 +31,23 @@
     "valuation_cap_deuda_convertible",
     "warrant_pricing_venture_debt"
   ],
-  "etiqueta_arbol": "Entiende la Deuda Convertible"
+  "etiqueta_arbol": "Entiende la Deuda Convertible",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-079",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "lienzo_modelo_negocio -> convertible_debt_fundamentos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-07-11): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La deuda convertible es un instrumento de financiamiento; no usa ni continua el lienzo de modelo de negocio. La correccion fue solo marcar un paso como sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

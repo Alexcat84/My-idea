@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD2B557",
+  "intento": 0,
+  "usd": 0.158352,
+  "turnos": 1,
+  "duracion_s": 9.2,
+  "pared_s": 10.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35803,
+  "tokens_out": 757,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD2B557\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2342, 2358, 2369], \"cita\": \"the likelihood of error will increase as a direct linear function of the amount of maintenance activity ... the maintainer’s touch can harm as well as heal, and the point seems to have been reached in some modern systems when the risks of the former may outweigh the benefits of the latter\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que el riesgo de error crece linealmente con la cantidad de mantenimiento. Advierte que el contacto humano, a menudo innecesario, puede superar a sus beneficios. Afirmar que cada intervención adicional reduce el riesgo invierte esa causalidad. Además, generalizar el aumento a todos los equipos críticos contradice la crítica a los programas de mantenimiento obsoletos.\", \"paso_fiel\": \"Ajustar la frecuencia del mantenimiento preventivo de los equipos críticos comparando el riesgo de fallo por mantenimiento descuidado con el riesgo de errores que introduce cada intervención, y eliminar el contacto físico innecesario.\"}\n```",
+ "parseado": {
+  "id": "PD2B557",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2342,
+   2358,
+   2369
+  ],
+  "cita": "the likelihood of error will increase as a direct linear function of the amount of maintenance activity ... the maintainer’s touch can harm as well as heal, and the point seems to have been reached in some modern systems when the risks of the former may outweigh the benefits of the latter",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que el riesgo de error crece linealmente con la cantidad de mantenimiento. Advierte que el contacto humano, a menudo innecesario, puede superar a sus beneficios. Afirmar que cada intervención adicional reduce el riesgo invierte esa causalidad. Además, generalizar el aumento a todos los equipos críticos contradice la crítica a los programas de mantenimiento obsoletos.",
+  "paso_fiel": "Ajustar la frecuencia del mantenimiento preventivo de los equipos críticos comparando el riesgo de fallo por mantenimiento descuidado con el riesgo de errores que introduce cada intervención, y eliminar el contacto físico innecesario."
+ }
+}

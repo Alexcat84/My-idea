@@ -1,6 +1,6 @@
 {
   "node_id": "dar_forma_politica_climatica",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Dar Forma a la Política de Cambio Climático",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -19,5 +19,23 @@
   "condiciones_activacion": [
     "Si la empresa busca influir en la regulación climática de su sector o país."
   ],
-  "etiqueta_arbol": "Influye en la Política Climática"
+  "etiqueta_arbol": "Influye en la Política Climática",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-083",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F24-008: Tiene razon el lector A: ideacion no encaja, y aunque evaluar la alineacion tiene algo de estrategia, los pasos 3 y 4 y el entregable (participacion activa en una coalicion con objetivos de incidencia) consisten en actuar desde una empresa ya en marcha, no en disenar un plan. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

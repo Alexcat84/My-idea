@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3D9626",
+  "intento": 0,
+  "usd": 0.21600000000000003,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49605,
+  "tokens_out": 879,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3D9626\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4027, 4039, 3993], \"cita\": \"He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro atribuye el fallo de Piper Alpha a no disponer de tiempo para una auditoría completa. Cullen califica las inspecciones de superficiales y señala la falta crónica de personal. Duda del tipo de inspección por muestreo, no de las auditorías completas. El paso concreta esa lección en la misma dirección y no añade plazos ni cifras.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3D9626",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4027,
+   4039,
+   3993
+  ],
+  "cita": "He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro atribuye el fallo de Piper Alpha a no disponer de tiempo para una auditoría completa. Cullen califica las inspecciones de superficiales y señala la falta crónica de personal. Duda del tipo de inspección por muestreo, no de las auditorías completas. El paso concreta esa lección en la misma dirección y no añade plazos ni cifras.",
+  "paso_fiel": ""
+ }
+}

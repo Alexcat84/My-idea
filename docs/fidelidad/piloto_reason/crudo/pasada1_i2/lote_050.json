@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_050",
+  "intento": 0,
+  "usd": 0.154596,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32244,
+  "tokens_out": 1281,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB74032\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [29, 31, 323, 4221, 4223, 4244, 5905], \"razon\": \"El libro distingue ambos tipos de accidente. Pero matiza que no siempre hay una línea tajante (L323) y que un mismo dominio puede tener ambos riesgos (L5905); una clasificación excluyente choca con ese matiz.\"},\n  {\"id\": \"PE371A9\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5174, 5176, 5178, 5208], \"razon\": \"El libro apoya el paso a un modo descentralizado en situaciones de alto ritmo. Pero presenta la jerarquía disciplinada previa como condición de éxito (L5208, L5178); tratarla como obstáculo podría invertir ese matiz.\"},\n  {\"id\": \"PB8A2DE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 3784], \"razon\": \"Tripod-Beta parte del resultado final, la pérdida, y retrocede hacia las defensas fallidas (L3784). La investigación empieza por el mal resultado (L293).\"},\n  {\"id\": \"P24D894\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [83, 96, 306, 1076, 1133], \"razon\": \"El libro describe justamente convertir las mejoras de protección en ventaja productiva como compensación de riesgo peligrosa. El paso aconseja hacer eso mismo.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB74032",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    29,
+    31,
+    323,
+    4221,
+    4223,
+    4244,
+    5905
+   ],
+   "razon": "El libro distingue ambos tipos de accidente. Pero matiza que no siempre hay una línea tajante (L323) y que un mismo dominio puede tener ambos riesgos (L5905); una clasificación excluyente choca con ese matiz."
+  },
+  {
+   "id": "PE371A9",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5176,
+    5178,
+    5208
+   ],
+   "razon": "El libro apoya el paso a un modo descentralizado en situaciones de alto ritmo. Pero presenta la jerarquía disciplinada previa como condición de éxito (L5208, L5178); tratarla como obstáculo podría invertir ese matiz."
+  },
+  {
+   "id": "PB8A2DE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    3784
+   ],
+   "razon": "Tripod-Beta parte del resultado final, la pérdida, y retrocede hacia las defensas fallidas (L3784). La investigación empieza por el mal resultado (L293)."
+  },
+  {
+   "id": "P24D894",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    83,
+    96,
+    306,
+    1076,
+    1133
+   ],
+   "razon": "El libro describe justamente convertir las mejoras de protección en ventaja productiva como compensación de riesgo peligrosa. El paso aconseja hacer eso mismo."
+  }
+ ]
+}

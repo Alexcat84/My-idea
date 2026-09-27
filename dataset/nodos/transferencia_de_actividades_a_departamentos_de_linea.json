@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un area aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dandoles la capacitación necesaria para asumir esa responsabilidad.",
   "pasos_accionables": [
-    "Identificar que tareas de calidad estan hoy centralizadas y podrian pasar a quien hace el trabajo",
+    "Identificar qué tareas de calidad están hoy centralizadas y podrían pasar a quien hace el trabajo",
     "Capacitar a esas personas en las nuevas responsabilidades",
     "Dejar que quien antes se encargaba de calidad funcione ahora como apoyo o consultor interno",
-    "Medir con encuestas periodicas que tan conforme queda quien recibe el trabajo de otra parte del negocio"
+    "Medir con encuestas periódicas qué tan conforme queda quien recibe el trabajo de otra parte del negocio"
   ],
   "entregable_esperado": "Un plan de traspaso de responsabilidades de calidad con su cronograma de capacitación",
   "nodos_previos": [
@@ -22,5 +22,38 @@
     "Cuando una sola area concentra demasiadas tareas de calidad que podrian resolverse donde se hace el trabajo",
     "Cuando buscas que cada quien controle la calidad de lo suyo en vez de depender de otra parte del negocio"
   ],
-  "etiqueta_arbol": "Lleva Calidad a cada Área"
+  "etiqueta_arbol": "Lleva Calidad a cada Área",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0743",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar que tareas de calidad estan hoy centralizadas y podrian pasar a quien hace el trabajo",
+      "texto_nuevo": "Identificar qué tareas de calidad están hoy centralizadas y podrían pasar a quien hace el trabajo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-019.paso0: qué, están, podrían (Faltan las tildes de 'qué', 'están' y 'podrían'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0744",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Medir con encuestas periodicas que tan conforme queda quien recibe el trabajo de otra parte del negocio",
+      "texto_nuevo": "Medir con encuestas periódicas qué tan conforme queda quien recibe el trabajo de otra parte del negocio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-019.paso3: periódicas, qué (Faltan las tildes de 'periódicas' y de 'qué' en 'qué tan'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

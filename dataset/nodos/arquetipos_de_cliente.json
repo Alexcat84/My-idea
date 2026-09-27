@@ -7,11 +7,11 @@
   "pasos_accionables": [
     "Ten conversaciones exploratorias con clientes potenciales sobre sus problemas, necesidades y frustraciones",
     "Busca los patrones que se repiten en esas conversaciones",
-    "Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubiculo) y su rutina",
+    "Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubículo) y su rutina",
     "Si aplica, describe o dibuja por separado a quien decide la compra, que puede ser distinto de quien lo usa",
-    "Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar, con su perfil demográfico y psicográfico",
-    "Escribe un documento breve que reuna el perfil, los problemas y el contexto de cada retrato",
-    "Conecta estas caracteristicas con el resto de tu negocio: como llegas a tu cliente, como te relacionas con el y como le cobras",
+    "Define tus hipótesis sobre quién es el comprador: su estilo de vida, nivel económico y situación familiar, con su perfil demográfico y psicográfico",
+    "Escribe un documento breve que reúna el perfil, los problemas y el contexto de cada retrato",
+    "Conecta estas características con el resto de tu negocio: cómo llegas a tu cliente, cómo te relacionas con él y cómo le cobras",
     "Trata cada retrato como una hipótesis provisional que revisas a medida que aprendes"
   ],
   "entregable_esperado": "Un documento o fichas con al menos un retrato de tu cliente (quien lo usa y, si aplica, quien decide la compra), con su perfil, problemas, contexto y motivaciones, conectado con el resto de tu negocio",
@@ -57,6 +57,68 @@
       "node_id": "customer_archetypes",
       "titulo": "Arquetipos de Cliente",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve",
+    "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0062",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubiculo) y su rutina",
+      "texto_nuevo": "Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubículo) y su rutina",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-024.paso2: cubículo ('cubiculo' lleva tilde (cubículo); 'a quien usa' es relativo y va bien sin tilde; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0063",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar, con su perfil demográfico y psicográfico",
+      "texto_nuevo": "Define tus hipótesis sobre quién es el comprador: su estilo de vida, nivel económico y situación familiar, con su perfil demográfico y psicográfico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-024.paso4: quién, situación ('quién' es interrogativo indirecto y lleva tilde, y 'situación' también; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0064",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe un documento breve que reuna el perfil, los problemas y el contexto de cada retrato",
+      "texto_nuevo": "Escribe un documento breve que reúna el perfil, los problemas y el contexto de cada retrato",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-024.paso5: reúna ('reúna' lleva tilde por el hiato; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0065",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conecta estas caracteristicas con el resto de tu negocio: como llegas a tu cliente, como te relacionas con el y como le cobras",
+      "texto_nuevo": "Conecta estas características con el resto de tu negocio: cómo llegas a tu cliente, cómo te relacionas con él y cómo le cobras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-024.paso6: características, cómo, cómo, él, cómo (Todas son tildes que faltaban: 'características', los tres 'cómo' interrogativos y el pronombre 'él'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
     }
   ]
 }

@@ -7,13 +7,13 @@
   "resumen_teorico": "En tu negocio vas a encontrar dos tipos de problemas de calidad: los esporadicos, que necesitas resolver de inmediato, y los cronicos, que requieren mejorar el proceso y replanificar. Existen tres tipos de acción: controlar, mejorar y planificar. Para que esto no quede en un esfuerzo puntual, necesitas diagnosticar y construir una cultura de calidad positiva, apoyandote en quien te ayuda con temas de calidad como socio que te da soporte tecnico y capacitación. Cuando un problema tiene causas que vienen de otra parte del negocio, conviene juntar a las personas involucradas de esas areas para atacar la raiz, en lugar de intentar resolverlo solo desde operaciones.",
   "pasos_accionables": [
     "Diagnostica la cultura de calidad actual de tu operación",
-    "Clasifica cada problema como esporadico o cronico antes de actuar",
-    "Resuelve de inmediato los problemas esporadicos o urgentes",
-    "Dedica tiempo y esfuerzo enfocado a atacar los problemas cronicos de raiz",
-    "Junta a las personas de otras areas cuando la causa raiz las involucre",
-    "Pide a quien te ayuda con calidad soporte tecnico y capacitación continua"
+    "Clasifica cada problema como esporádico o crónico antes de actuar",
+    "Resuelve de inmediato los problemas esporádicos o urgentes",
+    "Dedica tiempo y esfuerzo enfocado a atacar los problemas crónicos de raíz",
+    "Junta a las personas de otras áreas cuando la causa raíz las involucre",
+    "Pide a quien te ayuda con calidad soporte técnico y capacitación continua"
   ],
-  "entregable_esperado": "Un sistema propio para manejar problemas esporadicos y cronicos, con responsables asignados y tu cultura de calidad diagnosticada",
+  "entregable_esperado": "Un sistema propio para manejar problemas esporádicos y crónicos, con responsables asignados y tu cultura de calidad diagnosticada",
   "nodos_previos": [
     "gestion_datos_calidad",
     "medicion_de_calidad_en_manufactura"
@@ -36,6 +36,94 @@
       "node_id": "enfoque_mejora_continua_operaciones",
       "titulo": "Enfoque en la Mejora Continua en Operaciones",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0001",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasifica cada problema como esporadico o cronico antes de actuar",
+      "texto_nuevo": "Clasifica cada problema como esporádico o crónico antes de actuar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-006.paso1: esporádico, crónico (Faltan las tildes de esporádico y crónico; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0002",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Resuelve de inmediato los problemas esporadicos o urgentes",
+      "texto_nuevo": "Resuelve de inmediato los problemas esporádicos o urgentes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-006.paso2: esporádicos (Falta la tilde de esporádicos; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0003",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dedica tiempo y esfuerzo enfocado a atacar los problemas cronicos de raiz",
+      "texto_nuevo": "Dedica tiempo y esfuerzo enfocado a atacar los problemas crónicos de raíz",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-006.paso3: crónicos, raíz (Faltan las tildes de crónicos y raíz; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0004",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Junta a las personas de otras areas cuando la causa raiz las involucre",
+      "texto_nuevo": "Junta a las personas de otras áreas cuando la causa raíz las involucre",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-006.paso4: áreas, raíz (Faltan las tildes de áreas y raíz; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0005",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide a quien te ayuda con calidad soporte tecnico y capacitación continua",
+      "texto_nuevo": "Pide a quien te ayuda con calidad soporte técnico y capacitación continua",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-006.paso5: técnico (Falta la tilde de técnico; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0006",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un sistema propio para manejar problemas esporadicos y cronicos, con responsables asignados y tu cultura de calidad diagnosticada",
+      "texto_nuevo": "Un sistema propio para manejar problemas esporádicos y crónicos, con responsables asignados y tu cultura de calidad diagnosticada",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-006.entregable: esporádicos, crónicos (Faltan las tildes de esporádicos y crónicos; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

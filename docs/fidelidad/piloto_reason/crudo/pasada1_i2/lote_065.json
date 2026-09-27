@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_065",
+  "intento": 0,
+  "usd": 0.15588800000000003,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33772,
+  "tokens_out": 1040,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P282E72\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4394, 4406, 4410, 4414], \"razon\": \"El libro lista la evaluación costo-beneficio de las alternativas de gestión como cuarto paso de la FSA, según la MSA. El paso lo reproduce.\"},\n  {\"id\": \"PEC80C4\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [105, 594, 2585, 4753, 4757], \"razon\": \"El libro pide 'no olvidar tener miedo' y 'unease' crónica. Advierte que cuesta sostenerlo y que la vía es un sistema de información (cultura informada). El paso concreta en la misma dirección.\"},\n  {\"id\": \"P221C5D\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2596], \"razon\": \"El libro dice literalmente que la gestión de seguridad no es un añadido, sino parte esencial del negocio central del sistema.\"},\n  {\"id\": \"P6F5F65\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2489, 2491, 2547, 5688, 5690], \"razon\": \"El libro afirma que, con tasas bajas, los resultados negativos son más ruido que señal y revelan poco sobre la seguridad intrínseca.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P282E72",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4394,
+    4406,
+    4410,
+    4414
+   ],
+   "razon": "El libro lista la evaluación costo-beneficio de las alternativas de gestión como cuarto paso de la FSA, según la MSA. El paso lo reproduce."
+  },
+  {
+   "id": "PEC80C4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    105,
+    594,
+    2585,
+    4753,
+    4757
+   ],
+   "razon": "El libro pide 'no olvidar tener miedo' y 'unease' crónica. Advierte que cuesta sostenerlo y que la vía es un sistema de información (cultura informada). El paso concreta en la misma dirección."
+  },
+  {
+   "id": "P221C5D",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2596
+   ],
+   "razon": "El libro dice literalmente que la gestión de seguridad no es un añadido, sino parte esencial del negocio central del sistema."
+  },
+  {
+   "id": "P6F5F65",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2489,
+    2491,
+    2547,
+    5688,
+    5690
+   ],
+   "razon": "El libro afirma que, con tasas bajas, los resultados negativos son más ruido que señal y revelan poco sobre la seguridad intrínseca."
+  }
+ ]
+}

@@ -6,13 +6,13 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "Casi la mitad de quienes devuelven una compra en linea culpan a la descripcion del producto: la realidad no coincidio con lo que vieron antes de comprar. Esto pesa mucho porque una devolucion no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo, ademas del costo del envio de vuelta. La forma mas barata de bajar la tasa de devoluciones no es mejorar la logistica de retorno, sino atacar la causa antes de que ocurra: dar informacion honesta y completa antes de que la persona compre. Esto es especialmente critico en categorias como ropa, donde es comun que la gente compre varias tallas o colores a proposito sabiendo que va a devolver lo que no le sirva.",
   "pasos_accionables": [
-    "Revisa la descripcion de tu producto y agrega medidas, materiales o detalles que hoy falten.",
-    "Suma fotos desde varios angulos y, si aplica, una tabla de tallas o guia de uso.",
-    "Lee las ultimas devoluciones que recibiste y busca el motivo repetido en la descripcion.",
-    "Corrige la ficha del producto que mas se devuelve primero, no todo el catalogo a la vez.",
-    "Pregunta directamente al cliente que devuelve que esperaba y que recibio."
+    "Revisa la descripción de tu producto y agrega medidas, materiales o detalles que hoy falten.",
+    "Suma fotos desde varios ángulos y, si aplica, una tabla de tallas o guía de uso.",
+    "Lee las últimas devoluciones que recibiste y busca el motivo repetido en la descripción.",
+    "Corrige la ficha del producto que más se devuelve primero, no todo el catálogo a la vez.",
+    "Pregunta directamente al cliente que devuelve qué esperaba y qué recibió."
   ],
-  "entregable_esperado": "Una ficha de producto corregida que reduce el motivo mas comun de devolucion.",
+  "entregable_esperado": "Una ficha de producto corregida que reduce el motivo más común de devolución.",
   "nodos_previos": [
     "detectar_prioridad_cliente_entrega"
   ],
@@ -22,5 +22,93 @@
     "Vendes ropa u otra categoria donde la gente compra varias opciones para probar y devolver.",
     "Quieres bajar el costo de devoluciones sin mejorar toda la logistica de retorno."
   ],
-  "etiqueta_arbol": "Describe mejor para devolver menos"
+  "etiqueta_arbol": "Describe mejor para devolver menos",
+  "fuentes_internas": [
+    "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0822",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa la descripcion de tu producto y agrega medidas, materiales o detalles que hoy falten.",
+      "texto_nuevo": "Revisa la descripción de tu producto y agrega medidas, materiales o detalles que hoy falten.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-015.paso0: descripción (Falta la tilde en 'descripcion'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0823",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Suma fotos desde varios angulos y, si aplica, una tabla de tallas o guia de uso.",
+      "texto_nuevo": "Suma fotos desde varios ángulos y, si aplica, una tabla de tallas o guía de uso.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-015.paso1: ángulos, guía (Faltan las tildes en 'angulos' y 'guia'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0824",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee las ultimas devoluciones que recibiste y busca el motivo repetido en la descripcion.",
+      "texto_nuevo": "Lee las últimas devoluciones que recibiste y busca el motivo repetido en la descripción.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-015.paso2: últimas, descripción (Faltan las tildes en 'ultimas' y 'descripcion'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0825",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Corrige la ficha del producto que mas se devuelve primero, no todo el catalogo a la vez.",
+      "texto_nuevo": "Corrige la ficha del producto que más se devuelve primero, no todo el catálogo a la vez.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-015.paso3: más (Falta la tilde en 'mas' y también en 'catalogo', que la propuesta pasó por alto y se añade aquí.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0826",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta directamente al cliente que devuelve que esperaba y que recibio.",
+      "texto_nuevo": "Pregunta directamente al cliente que devuelve qué esperaba y qué recibió.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-015.paso4: qué, qué, recibió (Los 'qué' interrogativos indirectos llevan tilde y a 'recibio' le falta la suya; el primer 'que' es relativo y queda sin tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0827",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una ficha de producto corregida que reduce el motivo mas comun de devolucion.",
+      "texto_nuevo": "Una ficha de producto corregida que reduce el motivo más común de devolución.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-015.entregable: más, devolución (Faltan las tildes en 'mas' y 'devolucion' y también en 'comun', que la propuesta pasó por alto y se añade aquí.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

@@ -1,16 +1,16 @@
 {
   "node_id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "compras",
   "titulo_concepto": "Pide una revisión externa antes de firmar cualquier contrato",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
   "resumen_teorico": "Antes de firmar, pide que alguien mas lea el contrato completo: un colega con mas experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o clausulas faltantes que tu, por estar metido en la negociacion, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta informacion por escrito, no que algo este mal. Esta revision cuesta poco tiempo y evita que despues tengas que corregir el contrato con el proveedor, lo cual siempre es mas incomodo que corregirlo antes de firmar.",
   "pasos_accionables": [
-    "Termina el borrador del contrato con todos los terminos que negociaste incluidos.",
-    "Envialo a al menos una persona de confianza con mas experiencia en contratos o en tu tipo de negocio.",
-    "Pidele que marque cualquier clausula que le parezca ambigua, incompleta o riesgosa.",
-    "Agrega la informacion que falte antes de mandar el contrato al proveedor para su firma.",
-    "Si el monto es alto, paga una consulta puntual con un abogado solo para esa revision."
+    "Termina el borrador del contrato con todos los términos que negociaste incluidos.",
+    "Envíalo a al menos una persona de confianza con más experiencia en contratos o en tu tipo de negocio.",
+    "Pídele que marque cualquier cláusula que le parezca ambigua, incompleta o riesgosa.",
+    "Agrega la información que falte antes de mandar el contrato al proveedor para su firma.",
+    "Si el monto es alto, paga una consulta puntual con un abogado solo para esa revisión."
   ],
   "entregable_esperado": "Un contrato revisado por un segundo par de ojos, con los huecos corregidos antes de firmar.",
   "nodos_previos": [
@@ -24,5 +24,93 @@
     "Nunca has firmado un contrato de este tipo y no sabes que se te puede estar escapando.",
     "El monto o el riesgo del acuerdo es lo bastante grande para que un error te cueste caro."
   ],
-  "etiqueta_arbol": "Pide una segunda lectura"
+  "etiqueta_arbol": "Pide una segunda lectura",
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-250",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F21-003: Revisar un contrato con un proveedor antes de firmarlo es gestion operativa de compras, no prueba con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0033",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Termina el borrador del contrato con todos los terminos que negociaste incluidos.",
+      "texto_nuevo": "Termina el borrador del contrato con todos los términos que negociaste incluidos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-016.paso0: términos (Solo añade la tilde que faltaba en términos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0034",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envialo a al menos una persona de confianza con mas experiencia en contratos o en tu tipo de negocio.",
+      "texto_nuevo": "Envíalo a al menos una persona de confianza con más experiencia en contratos o en tu tipo de negocio.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-016.paso1: Envíalo, más (Solo añade las tildes que faltaban en Envíalo y más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0035",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pidele que marque cualquier clausula que le parezca ambigua, incompleta o riesgosa.",
+      "texto_nuevo": "Pídele que marque cualquier cláusula que le parezca ambigua, incompleta o riesgosa.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-016.paso2: Pídele, cláusula (Solo añade las tildes que faltaban en Pídele y cláusula.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0036",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Agrega la informacion que falte antes de mandar el contrato al proveedor para su firma.",
+      "texto_nuevo": "Agrega la información que falte antes de mandar el contrato al proveedor para su firma.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-016.paso3: información (Solo añade la tilde que faltaba en información.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0037",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si el monto es alto, paga una consulta puntual con un abogado solo para esa revision.",
+      "texto_nuevo": "Si el monto es alto, paga una consulta puntual con un abogado solo para esa revisión.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-016.paso4: revisión (Solo añade la tilde que faltaba en revisión.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

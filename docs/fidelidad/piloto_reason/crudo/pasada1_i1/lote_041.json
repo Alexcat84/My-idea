@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_041",
+  "intento": 0,
+  "usd": 0.155276,
+  "turnos": 1,
+  "duracion_s": 12.8,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33299,
+  "tokens_out": 1104,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P525911\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5031, 5035, 5037, 4987, 5063], \"razon\": \"El paso adopta la regla de Lord Denning, un solo fallo justifica el despido. Reason la llama insatisfactoria porque ignora la ubicuidad del error y los factores situacionales. Propone en su lugar el test de sustitución.\"},\n  {\"id\": \"PDF06DE\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5272, 4695, 4749], \"razon\": \"Reason dice que la cultura de seguridad se persigue pero rara vez se alcanza, y que el proceso importa más que el producto. Emerge gradualmente como aprendizaje colectivo.\"},\n  {\"id\": \"P43ABB2\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4769, 5164, 5174, 5176, 5178, 5208, 5204], \"razon\": \"El libro respalda el paso de autoridad jerárquica a experta. Pero condiciona su éxito a una cultura jerárquica previa, a valores compartidos y a invertir en supervisores. Weick advierte que las reglas no bastan en emergencias.\"},\n  {\"id\": \"P5A5ED6\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3163, 3173, 3199, 3224], \"razon\": \"Tripod-Delta usa indicadores tangibles de respuesta sí/no para cada GFT, adaptados a cada tipo de operación. Los generan especialistas de la tarea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P525911",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5031,
+    5035,
+    5037,
+    4987,
+    5063
+   ],
+   "razon": "El paso adopta la regla de Lord Denning, un solo fallo justifica el despido. Reason la llama insatisfactoria porque ignora la ubicuidad del error y los factores situacionales. Propone en su lugar el test de sustitución."
+  },
+  {
+   "id": "PDF06DE",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5272,
+    4695,
+    4749
+   ],
+   "razon": "Reason dice que la cultura de seguridad se persigue pero rara vez se alcanza, y que el proceso importa más que el producto. Emerge gradualmente como aprendizaje colectivo."
+  },
+  {
+   "id": "P43ABB2",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5176,
+    5178,
+    5208,
+    5204
+   ],
+   "razon": "El libro respalda el paso de autoridad jerárquica a experta. Pero condiciona su éxito a una cultura jerárquica previa, a valores compartidos y a invertir en supervisores. Weick advierte que las reglas no bastan en emergencias."
+  },
+  {
+   "id": "P5A5ED6",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3163,
+    3173,
+    3199,
+    3224
+   ],
+   "razon": "Tripod-Delta usa indicadores tangibles de respuesta sí/no para cada GFT, adaptados a cada tipo de operación. Los generan especialistas de la tarea."
+  }
+ ]
+}

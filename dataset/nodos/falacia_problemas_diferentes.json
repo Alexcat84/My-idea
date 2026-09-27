@@ -1,16 +1,16 @@
 {
   "node_id": "falacia_problemas_diferentes",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "La falacia de 'mi negocio es diferente'",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Es comun pensar que tus problemas particulares de calidad son unicos y que por eso no puedes aprovechar principios generales de mejora. Aunque los detalles cambien de un caso a otro, los principios de fondo para mejorar la calidad son universales y aplican a cualquier tipo de negocio.",
   "pasos_accionables": [
-    "Antes de descartar un principio por creer que tu caso es distinto, identifica cuales son los principios universales de calidad",
-    "Compara casos de exito de otros rubros para encontrar patrones que también te sirvan a ti",
-    "Evita rechazar de entrada una metodologia solo porque crees que tu contexto es diferente"
+    "Antes de descartar un principio por creer que tu caso es distinto, identifica cuáles son los principios universales de calidad",
+    "En lugar de buscar casos de éxito de otros rubros, estudia los principios universales de calidad y entiende la teoría de lo que quieres hacer, porque copiar ejemplos es un peligro",
+    "Evita rechazar de entrada una metodología solo porque crees que tu contexto es diferente"
   ],
-  "entregable_esperado": "Un análisis escrito que identifique que principios universales de calidad puedes aplicar a tu propio negocio",
+  "entregable_esperado": "Un análisis escrito que identifique qué principios universales de calidad puedes aplicar a tu propio negocio",
   "nodos_previos": [
     "definiciones_operacionales"
   ],
@@ -21,5 +21,81 @@
   "condiciones_activacion": [
     "Cuando rechazas un método de mejora argumentando que tu negocio es único o diferente"
   ],
-  "etiqueta_arbol": "Tus Problemas No Son Únicos"
+  "etiqueta_arbol": "Tus Problemas No Son Únicos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-017",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Compara casos de exito de otros rubros para encontrar patrones que también te sirvan a ti",
+      "texto_nuevo": "En lugar de buscar casos de éxito de otros rubros, estudia los principios universales de calidad y entiende la teoría de lo que quieres hacer, porque copiar ejemplos es un peligro",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L2797-L2807",
+        "frase": "no number of examples of success or of failure in the improvement of quality and productivity would indicate to the enquirer what success his company would have."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro desaconseja buscar ejemplos de éxito en otras empresas o rubros: dice que copiar es un peligro y que lo que decide es entender los principios. Busqué pasajes que apoyen comparar casos de éxito y no hay ninguno.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-107"
+    },
+    {
+      "id": "t2-fase-163",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-024: Trata de aplicar principios de mejora de calidad a los problemas de un negocio que ya opera; no es explorar una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0764",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de descartar un principio por creer que tu caso es distinto, identifica cuales son los principios universales de calidad",
+      "texto_nuevo": "Antes de descartar un principio por creer que tu caso es distinto, identifica cuáles son los principios universales de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-033.paso0: cuáles (Solo se añade la tilde que falta en el interrogativo indirecto cuáles.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0765",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita rechazar de entrada una metodologia solo porque crees que tu contexto es diferente",
+      "texto_nuevo": "Evita rechazar de entrada una metodología solo porque crees que tu contexto es diferente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-033.paso2: metodología (Solo se añade la tilde que falta en metodología; solo sin tilde es correcto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0766",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un análisis escrito que identifique que principios universales de calidad puedes aplicar a tu propio negocio",
+      "texto_nuevo": "Un análisis escrito que identifique qué principios universales de calidad puedes aplicar a tu propio negocio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-033.entregable: qué (Solo se añade la tilde que falta en el interrogativo indirecto qué.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

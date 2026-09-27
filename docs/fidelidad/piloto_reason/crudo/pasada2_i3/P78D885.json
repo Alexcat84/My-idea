@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P78D885",
+  "intento": 0,
+  "usd": 0.221768,
+  "turnos": 1,
+  "duracion_s": 11.7,
+  "pared_s": 13.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 50747,
+  "tokens_out": 939,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P78D885\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5063, 5057, 5055, 5085, 5266], \"cita\": \"Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. [...] If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide un juicio cuidadoso para la zona gris. Lo encarga a un 'jurado' de pares, a un comité disciplinario y a la participación de pares y representantes sindicales. Un grupo que revise los casos ambiguos va en esa dirección. No excluye a los pares ni contradice el test de sustitución, solo es menos específico.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P78D885",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5063,
+   5057,
+   5055,
+   5085,
+   5266
+  ],
+  "cita": "Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. [...] If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide un juicio cuidadoso para la zona gris. Lo encarga a un 'jurado' de pares, a un comité disciplinario y a la participación de pares y representantes sindicales. Un grupo que revise los casos ambiguos va en esa dirección. No excluye a los pares ni contradice el test de sustitución, solo es menos específico.",
+  "paso_fiel": ""
+ }
+}

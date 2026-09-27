@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD82351",
+  "intento": 0,
+  "usd": 0.1703,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 14.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36800,
+  "tokens_out": 1155,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD82351\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [563, 580, 584, 5775], \"cita\": \"established from the original plans that the roadbed had been located on the corner of an existing beaver pond … Although the upper portions of the roadbed had been maintained and upgraded over the ensuing decades, the basic instability of their foundations had not been rectified.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro muestra que el origen estaba en el diseño de 1916, pese al buen mantenimiento. Sitúa el diseño y la construcción entre las fuentes de condiciones latentes y pide identificarlas antes del suceso. Llamar a Nakina 'caso muy especial' (L584) solo señala que era difícil de detectar, no desaconseja revisar el diseño. El paso concreta en la misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD82351",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   563,
+   580,
+   584,
+   5775
+  ],
+  "cita": "established from the original plans that the roadbed had been located on the corner of an existing beaver pond … Although the upper portions of the roadbed had been maintained and upgraded over the ensuing decades, the basic instability of their foundations had not been rectified.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro muestra que el origen estaba en el diseño de 1916, pese al buen mantenimiento. Sitúa el diseño y la construcción entre las fuentes de condiciones latentes y pide identificarlas antes del suceso. Llamar a Nakina 'caso muy especial' (L584) solo señala que era difícil de detectar, no desaconseja revisar el diseño. El paso concreta en la misma dirección.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Estudio de Repetibilidad y Reproducibilidad (Gauge R&R)",
+  "resumen": "Un estudio gauge R&R separa el error de medición en repetibilidad (variación del equipo) y reproducibilidad (variación de los evaluadores), usando varios evaluadores, varias piezas y ensayos repetidos. Con la desviación total obtenida se juzga si el proceso de medición es adecuado para la característica de calidad.",
+  "texto": "Analizar los datos del estudio con el método de promedios y rangos, preferible a ANOVA por ser más simple y no requerir computadora",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L19322",
+  "cita": "Overall, the ANOVA method is preferred to analyzing the averages and ranges.",
+  "dato": "",
+  "explicacion": "El libro reconoce que el método de promedios y rangos exige menos estadística y no requiere computadora, pero concluye que se prefiere ANOVA porque además detecta la interacción entre evaluadores y piezas. El paso invierte esa preferencia."
+ },
+ {
+  "titulo": "Confidencialidad y Aprendizaje en el Reporte de Benchmarking",
+  "resumen": "Al elaborar el reporte de un estudio de benchmarking hay que decidir qué nivel de anonimización tendrán los datos. Siempre hay un equilibrio entre confidencialidad y oportunidad de aprendizaje, dentro del acuerdo de confidencialidad firmado y de la legislación antimonopolio.",
+  "texto": "Anonimizar por completo la identidad de todos los participantes en el reporte, incluidos los de mejor desempeño, para maximizar la confidencialidad",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L17474",
+  "cita": "If the identity of the superior performers cannot be revealed, then the opportunity to learn from them is minimized.",
+  "dato": "",
+  "explicacion": "El libro advierte que ocultar la identidad de los mejores reduce al mínimo lo que se puede aprender de ellos. Dice que, respetando la ley y el acuerdo de confidencialidad, la apertura debe ser la mayor posible (\"the degree of openness should also be maximized\"). El paso recomienda justo lo contrario: la máxima anonimización."
+ },
+ {
+  "titulo": "Análisis de Licitaciones Perdidas para Mejorar la Tasa de Adjudicación",
+  "resumen": "La proporción de contratos ganados frente a licitaciones presentadas determina ventas y utilidades, y preparar cada oferta es costoso. Analizar el historial de licitaciones no ganadas permite descubrir las causas que más influyen y corregir el proceso de estimación de precios.",
+  "texto": "Documentar las causas principales y contribuyentes de cada licitación no ganada en un plazo máximo de 10 días hábiles tras conocer el fallo",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L619-L625",
+  "cita": "To create Table 0.3, a multifunctional team analyzed 20 unsuccessful bids. It identified the main and contributing reasons for failure to win the contract.",
+  "dato": "Plazo de 10 días hábiles tras conocer el fallo para documentar las causas",
+  "explicacion": "El libro describe un equipo multifuncional que revisa a posteriori un conjunto de 20 licitaciones no ganadas y busca sus causas principales y contribuyentes, pero no fija ningún plazo para documentar cada licitación. Grep sobre todo el texto: \"ten working days\", \"10 working days\" y \"within 10 days\" dan 0 resultados."
+ },
+ {
+  "titulo": "Auditoría de Monitor del Proceso",
+  "resumen": "La auditoría de monitor revisa aspectos amplios del proceso, como si las especificaciones son correctas y si los registros se llenan y conservan. Las discrepancias se clasifican como críticas, mayores o menores, se documentan y exigen una acción correctiva por escrito con plazos según su gravedad.",
+  "texto": "Designar al jefe de turno como responsable de ejecutar la auditoría de monitor en su línea",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L23202",
+  "cita": "The monitor process audit covers a broad range of issues, e.g., whether specifications are correct and whether logs are filled in and maintained.",
+  "dato": "Jefe de turno como responsable de la auditoría de monitor",
+  "explicacion": "El libro solo asigna responsable a la auditoría de ingeniería, que hace un ingeniero de aseguramiento de calidad (L23152). De la auditoría de monitor da el alcance, la clasificación de discrepancias y los plazos (inmediato para críticas, cinco días hábiles para mayores y menores), pero no dice quién la ejecuta. Grep sobre todo el texto: \"shift supervisor\", \"shift leader\" y \"shift manager\" dan 0 resultados."
+ }
+]

@@ -1,6 +1,6 @@
 {
   "node_id": "evitar_perdida_situacion_awareness",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Evitar el Uso de 'Pérdida de Conciencia Situacional' como Explicación",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -23,7 +23,7 @@
   "condiciones_activacion": [
     "Cuando un informe de accidente atribuye la causa a 'pérdida de situation awareness'",
     "Si se está considerando responsabilidad legal o disciplinaria basada en este concepto",
-    "Cuando se diseña un programa de entrenamiento en factores humanos"
+    "Cuando se redacta o revisa una investigacion de incidente y hay que explicar por que la actuacion del operador tenia sentido en ese momento"
   ],
   "etiqueta_arbol": "No Uses Esa Etiqueta Fácil",
   "ids_alias": [
@@ -34,6 +34,38 @@
       "node_id": "critica_perdida_de_conciencia_situacional",
       "titulo": "Crítica al Concepto 'Pérdida de Conciencia Situacional'",
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ],
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-079",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se diseña un programa de entrenamiento en factores humanos",
+      "texto_nuevo": "Cuando se redacta o revisa una investigacion de incidente y hay que explicar por que la actuacion del operador tenia sentido en ese momento",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q075-013: Razon para B: ambos aciertan en que la fase es ejecucion (investigar accidentes ya ocurridos es control de una operacion en marcha), pero la condicion de disenar un programa de entrenamiento no sale de los pasos ni del entregable, que son todos de investigacion e informe. (arbitro) Motivo: El contenido no trata de disenar programas de entrenamiento sino de como explicar la actuacion del operador en investigaciones e informes, y su entregable es un informe de investigacion."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
+    },
+    {
+      "id": "n1-fase-080",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q075-013: Razon para B: ambos aciertan en que la fase es ejecucion (investigar accidentes ya ocurridos es control de una operacion en marcha), pero la condicion de disenar un programa de entrenamiento no sale de los pasos ni del entregable, que son todos de investigacion e informe. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ]
 }

@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Norma de equipo documentada y comunicada, aplicada consistentemente ante cada error detectado",
   "nodos_previos": [
-    "protocolo_reuniones_gate"
+    "curse_cinco_culpas"
   ],
   "nodos_siguientes": [
     "five_whys_inversion_proporcional"
@@ -22,5 +22,62 @@
     "Cuando el equipo o la organización carece aún de la confianza o madurez para aplicar el proceso completo de Cinco Porqués",
     "Cuando un colaborador individual quiere empezar a aplicar prevención de errores sin contar con apoyo total de su gerente o equipo"
   ],
-  "etiqueta_arbol": "Aplica Dos Reglas Simples"
+  "etiqueta_arbol": "Aplica Dos Reglas Simples",
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-108",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "protocolo_reuniones_gate -> regla_simplificada_tolerancia_errores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-04-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las reglas de las reuniones de decisión (gate) no tienen que ver con el sistema de dos reglas para el análisis de causa raíz de errores. La corrección solo tocó el plazo de envío de los entregables."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-16",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "five_whys_inversion_proporcional -> regla_simplificada_tolerancia_errores",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-16, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Es una versión simplificada de los Cinco Porqués con inversión proporcional, pensada para equipos que todavía no pueden aplicar el proceso completo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-entrada-19",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "five_whys_inversion_proporcional -> regla_simplificada_tolerancia_errores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Gate 0, OP-C-05: par bidireccional sin veredicto de lectura (26 sep 2026)",
+        "motivo": "La entrada elegida en E-16 formaba un par de ida y vuelta con regla_simplificada_tolerancia_errores -> five_whys_inversion_proporcional: la regla simplificada va antes del proceso completo, no despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-entrada-20",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "curse_cinco_culpas -> regla_simplificada_tolerancia_errores",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-16, segundo candidato): un lector sobre los candidatos 2 a 8, tras excluir el que formaba el par.",
+        "motivo": "Quien ha visto que los Cinco Porques pueden acabar buscando culpables y danando la confianza pasa de forma natural a este sistema de dos reglas, pensado para equipos donde todavia falta confianza."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
+  ]
 }

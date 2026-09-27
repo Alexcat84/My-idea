@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_068",
+  "intento": 0,
+  "usd": 0.155616,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32304,
+  "tokens_out": 1320,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P2E4B94\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [263, 5748, 5742], \"razon\": \"El libro cita la evidencia disponible como limitacion descriptiva; su regla de corte prescrita es lo controlable por los gestores. El paso invierte el criterio prioritario.\"},\n  {\"id\": \"P18AB2F\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [520, 668, 686, 1085, 3153], \"razon\": \"El libro dice que las señales combinadas debian alertar. Pero advierte que una señal solo avisa si se conoce el desastre y que las falsas alarmas erosionan la confianza. Hay matiz sobre disparos automaticos.\"},\n  {\"id\": \"P70C0AC\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [1012, 1541, 1543, 1547, 5055, 1724], \"razon\": \"Consultar a expertos y pares encaja con el libro. Pero el paso mezcla violaciones rutinarias (atajos de minimo esfuerzo) con necesarias, que el libro distingue. Ademas, los expertos no siempre saben donde esta el limite.\"},\n  {\"id\": \"P38F969\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2369, 2311], \"razon\": \"El libro pide urgentemente que diseñadores y fabricantes sean mas conscientes de la falibilidad humana en el mantenimiento y que diseñen sistemas teniendolo en cuenta.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P2E4B94",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    263,
+    5748,
+    5742
+   ],
+   "razon": "El libro cita la evidencia disponible como limitacion descriptiva; su regla de corte prescrita es lo controlable por los gestores. El paso invierte el criterio prioritario."
+  },
+  {
+   "id": "P18AB2F",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    520,
+    668,
+    686,
+    1085,
+    3153
+   ],
+   "razon": "El libro dice que las señales combinadas debian alertar. Pero advierte que una señal solo avisa si se conoce el desastre y que las falsas alarmas erosionan la confianza. Hay matiz sobre disparos automaticos."
+  },
+  {
+   "id": "P70C0AC",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    1012,
+    1541,
+    1543,
+    1547,
+    5055,
+    1724
+   ],
+   "razon": "Consultar a expertos y pares encaja con el libro. Pero el paso mezcla violaciones rutinarias (atajos de minimo esfuerzo) con necesarias, que el libro distingue. Ademas, los expertos no siempre saben donde esta el limite."
+  },
+  {
+   "id": "P38F969",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2369,
+    2311
+   ],
+   "razon": "El libro pide urgentemente que diseñadores y fabricantes sean mas conscientes de la falibilidad humana en el mantenimiento y que diseñen sistemas teniendolo en cuenta."
+  }
+ ]
+}

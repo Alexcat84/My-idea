@@ -3,6 +3,101 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
+## 0. Fechas de las decisiones del fundador: vale la del commit (corrección declarada, 24 sep 2026)
+
+Las decisiones del fundador que en este repo (y en la forja) aparecen fechadas
+**"25 sep", "26 sep" y "27 sep" de 2026** fueron mal fechadas por el auditor de
+hilo: el reloj de la máquina, que es el correcto, marcaba el 24 de septiembre
+cuando se recogieron (las de la campaña de fidelidad entraron en commits del 24).
+**Su fecha real es la del commit que las recoge.** Los documentos no se reescriben: esta nota es la corrección, única y
+declarada, y cubre también los ficheros de la campaña de fidelidad que citan esas
+decisiones (`docs/fidelidad/`, las tandas y el campo `correcciones` de los nodos).
+
+**La regla, desde ahora:** la fecha que vale de una decisión es la del commit que la
+recoge (`git log --format=%ci`). Una fecha escrita en el texto es orientativa; si
+no coincide con la del commit, manda el commit.
+
+## 0c. Saneamiento del dataset, NIVEL 2 "MEJORA CONTINUA" (decision del fundador del 27 sep 2026)
+
+No bloquean la declaracion "saneado para el cliente" (nivel 1, `docs/SANEAMIENTO_DATASET.md`). Cada ficha se abre el
+27 sep 2026 y se cierra con su instrumento, sus trampas y su tanda declarada, por el metodo de siempre.
+
+### Ficha `n2-aristas-por-lectura` (abierta el 27 sep 2026)
+- **Que:** leer una a una las aristas vivas que ninguna pasada leyo todavia (unas 4.900 de 7.162; ya leidas: las
+  nuevas, los pares bidireccionales, las 2.212 de la pasada R, las 61 de la P y las entradas de E, C y N) y tejer las
+  477 que faltan (`docs/loop/ACTA_INTEGRAL.md`).
+- **Tasa de referencia:** la pasada R midio 6,7 por ciento de aristas rancias en su muestra (no aleatoria).
+- **Como se cierra:** pasada de aristas por lectura con la vara de R (lector con trampas, verificador ciego, arbitro);
+  las rancias salen por `scripts/saneamiento/aplicar_aristas.py` sin dejar a ningun nodo sin camino; Gate 0 en verde.
+
+### Ficha `n2-vigencia-completa` (abierta el 27 sep 2026)
+- **Que:** la campania completa de vigencia de los 305 nodos con norma, plazo, cifra con fecha o institucion: ficha de
+  vigencia con fecha de verificacion por nodo, cada norma, cifra e institucion contra su fuente oficial vigente, los unos
+  63 nodos con dependencia que la criba no marco, y los 10 anos de libro de seguridad BAJA.
+- **Como se cierra:** `dataset/metadata/vigencia.json` con fecha de verificacion por nodo, y correcciones declaradas
+  (veredicto VIGENCIA) de lo que haya cambiado.
+
+### Ficha `n2-voz-de-la-casa` (abierta el 27 sep 2026)
+- **Que:** la voz de la casa (segunda persona, sin jerga sin explicar, sin anglicismos crudos) en los textos que ve el
+  cliente. La ortografia se cerro en el nivel 1; la voz no.
+- **Como se cierra:** pasada de voz con la vara de la casa y correccion declarada, sin cambiar el sentido.
+
+### Ficha `n2-muestra-anadidos-practicos` (abierta el 27 sep 2026)
+- **Que:** una MUESTRA con semilla de los anadidos practicos de resumenes y entregables (lo que el nodo agrega que su
+  libro no dice), para decidir si merecen campania. La pasada de campos de la fidelidad solo busco cifras, plazos y
+  normas contrarios o anadidos.
+- **Como se cierra:** la tasa medida, con su intervalo, y la decision del fundador: campania o cierre.
+
+## 0b. Saneamiento del dataset: lo que la tanda 1 deja para despues (26 sep 2026)
+
+Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
+- **Vigencia, campania posterior:** fichas de vigencia con fecha de verificacion por nodo; las normas, cifras datadas e
+  instituciones de los 305 nodos contra su fuente oficial vigente (la tanda 1 verifico solo los 21 plazos legales); los unos
+  63 nodos con dependencia que la criba no marco; confirmar los 10 anos de libro de seguridad BAJA; corregir los enlaces de
+  `docs/saneamiento/ENLACES.md` (Half.com cerrado, NIST.gov/CyberFramework y otexa.ita.doc.gov movidos, confirmar los 403);
+  `incoterms_reglas_comerciales_internacionales` cita la edicion 2010 (la vigente es Incoterms 2020).
+- **Mundo 11, en la forja y por su proceso, antes de integrar:** `evitar_preguntas_ilegales_entrevista` sin clase y con
+  contratar como norma (clase C o B, y contratar como metodo); las 3 cifras de mercado (`repartir_material_antes_reunion`,
+  `vender_puesto_jugador`, `nombrar_delegados_amigos_casa`) salen.
+- **Mundo 11, al integrar (REGLA ESTRICTA del 26 sep y decisiones del 27 sep 2026):** sus libros nuevos entran a
+  `dataset/metadata/fuentes_canonicas.json` con sus titulos; se corre `python scripts/fuentes_internas.py`; sus nodos
+  pasan la guarda de titulos (`engine/test_fuentes_de_cara.py`) y cualquier cita a un autor o libro como fuente sale por
+  correccion declarada (veredicto ATRIBUCION) antes de integrar.
+- **Sesion con credencial: HECHA** (saneamiento, nivel 1, criterio 7): 349 nodos re-embebidos y 60 preguntas regeneradas (`docs/fidelidad/credencial/LISTAS.md`).
+
+## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
+
+Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice
+su fuente. Las correcciones de fidelidad entran a `main` por tandas
+(`fidelidad-tN`), cada una declarada en el propio nodo (campo `correcciones`,
+con el texto viejo y la cita literal del libro) y con Gate 0 y las dos suites
+en verde. El registro de cada tanda vive en `docs/fidelidad/tandas/`.
+
+Lo que esas tandas **no** pueden hacer solas, y queda para la integración del
+mundo 11:
+
+1. **Primera sesión HECHA el 24 sep 2026** (commit 58362389). **Segunda sesión PENDIENTE** tras la tanda fidelidad-t15 (pasada sobre los campos que llegan a la IA): 52 nodos y 52 preguntas retiradas, listas en `docs/fidelidad/credencial/LISTAS.md`. **Re-embeber los nodos corregidos** en la sesión con credencial (Voyage). El
+   índice semántico guarda el vector del texto viejo; Gate 0 no lo ve rojo
+   porque el vector existe, pero ya no describe el texto nuevo. **Lista exacta
+   (24 sep 2026): `docs/fidelidad/credencial/nodos_a_reembeber.txt`**, con su
+   razón en `docs/fidelidad/credencial/LISTAS.md`. Solo entran los nodos con
+   una corrección en título, resumen o condiciones, que es lo que se embebe;
+   una corrección de paso no cambia el vector.
+2. **Al sincronizar `puente-forja` con `main`, regenerar los ficheros derivados
+   del grafo** (`master_graph`, las etiquetas de cara reaplicadas, la copia web
+   de `sync_assets_web.py`), en vez de fusionarlos a mano: el ciclo es
+   `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar` y
+   `sync_assets_web.py`.
+3. **Las 23 de la primera sesión, de vuelta en la caché el 24 sep 2026; las 52 retiradas por fidelidad-t15, pendientes de la segunda sesión.** **La caché de preguntas** (`preguntas_cache.json`) se construyó con el texto
+   viejo de esos nodos; su regeneración parcial (`build_question_cache.py
+   --patch`) también gasta credencial y va en la misma sesión que el punto 1.
+   Las preguntas nacidas de un resumen corregido por CONTRARIO o por cifra,
+   plazo o norma **ya se retiraron** de la caché (decisión del fundador del 27
+   sep, commit de `fidelidad-cache-1`; registro en
+   `docs/fidelidad/PREGUNTAS_RETIRADAS.json`). **Lista exacta a regenerar:
+   `docs/fidelidad/credencial/preguntas_a_regenerar.txt`**, para
+   `--patch-file`.
+
 ## 0b. La cirugía de costuras se ordena por PARES LIBERADOS (12 ago 2026)
 
 **El dato que cambia la prioridad**, contado del archivo del cribado intra: hay
@@ -482,6 +577,35 @@ son la capa 3 embrionaria). Matriz de fases:
 - **2FA/TOTP + dominio de correo propio**: dormido (anclas listas).
 
 ## 5. Backlog / afinar
+
+- **`ritual-fechas-sin-fecha`** — **RESUELTA en la rama `ritual-fechas` (decisión del fundador, 25 sep 2026):** el ritual lista exactamente lo que el repartidor fecha (lo pendiente) en las dos corridas, con `tramosDelRitual`. Era más amplio que lo anotado: el recálculo tampoco quitaba las retiradas ("no aplica"), que igual llegaban sin fecha. Prueba en rojo en `app/ui/ritualFechasSinFecha.test.ts`. Lo que sigue es la ficha original. (hallado en i18n F2, 27 sep 2026; defecto PREVIO, no causado por
+  F2). El ritual de fechas de Manos a la Obra (`RitualFechas`) muestra en su primera corrida todas las
+  tareas (`soloPendientes=false`), pero `calcularFechasRitual` solo da fecha a las pendientes: con una
+  tarea hecha o retirada sin fecha, `fechaHumana(isoDesdeInputLocal(undefined))` lanza `RangeError:
+  Invalid time value` y la pantalla se rompe. Lo reprodujo el agente de Manos a la Obra renderizando la
+  versión de antes y la de después (las dos lanzan igual). Prueba en rojo primero.
+- **`contador-upstash-ruidoso`** — **RESUELTA en la rama `upstash-contador` (decisión del fundador, 25 sep 2026):** con la base caída, fusible y límite diario FALLAN CERRADOS (`caido: true`), las siete rutas de la IA responden 503 con "Servicio temporalmente no disponible. No se te cobró nada; intenta de nuevo en unos minutos." (once idiomas) y sueltan la reserva, el registro dice `[rateLimit] UPSTASH NO RESPONDE`; el límite de envíos del doble factor (no es IA) no se cierra pero cae a un LÍMITE DE RESPALDO en memoria (3 por cuenta y por hora) y lo registra (condición del fundador, 26 sep 2026); el candado de INTENTOS al introducir el código vive en la base (`two_factor_attempts`) y no depende de Upstash (prueba que lo fija); la tarea diaria `/api/cron/limpiar-invitados` da un latido a la base y falla con ALERTA si no responde. Lo que sigue es la ficha original. (decisión del fundador 3, 27 sep 2026). **El
+  incidente (24 sep 2026):** la base Redis de Upstash que usa el contador de límites
+  (`web/lib/rateLimit.ts`) desapareció (`getaddrinfo ENOTFOUND
+  tough-fox-158997.upstash.io`, confirmado contra los DNS de Google) y **toda la IA
+  quedó caída**: ordenar, explorar y generar planes daban 500 y la pantalla decía el
+  genérico "algo se atoró de nuestro lado". El fundador creó una base nueva y cargó
+  `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` en Vercel.
+  **Lo que se encontró en el código:** el comentario de `contarEnUpstash` promete
+  "Upstash caído no debe tumbar el producto: se permite y se registra", pero solo lo
+  cumple cuando Upstash RESPONDE con error (`!resIncr.ok`); si no se le puede alcanzar
+  (DNS, red), `fetch` lanza, nadie lo atrapa y la ruta cae en 500. El texto promete lo
+  que el código no hace.
+  **Lo que manda el fundador:** el fallo del contador se dice con claridad **en los
+  registros y en pantalla, nunca un genérico**. Por decidir en la tanda: si con el
+  contador caído se **deja pasar** (con alerta ruidosa en los registros y un aviso
+  honesto) o se **frena** con un mensaje que diga la razón; el fusible global también
+  vive en Upstash, así que dejar pasar deja la IA sin tope de gasto mientras dure.
+  **Revisar (POR VERIFICAR con la política vigente de Upstash):** si una base gratuita
+  puede archivarse o borrarse por inactividad, y cómo evitarlo (un toque diario desde la
+  tarea programada que ya existe, `/api/cron/limpiar-invitados`; el plan de pago; o la
+  integración de Upstash del Marketplace de Vercel). Prueba en rojo primero: `fetch`
+  que lanza en `contarEnUpstash` → hoy 500 con genérico.
 
 - **`mundos-de-proteccion-sobre-lo-existente`** → **PROMOVIDA A CAMPAÑA.** La spec del
   fundador es **`docs/PLAN_MUNDOS_PROTECCION.md`** (5 ago 2026), que responde las
@@ -2593,6 +2717,8 @@ distingue; (3) esta.
   buscando sobre el master entero. Los 22 mal anclados se re-anclaron (0 podados: todos
   superaban el piso calibrado), el proponedor ya solo mira candidatos de dominio `core`, y la
   aserción pasó de "packs pendientes" a **todos los puentes en cada corrida**.
+  **REPARO de la AUD-09 (25 sep 2026):** el re-anclaje quedó en el ARCHIVO de puentes, no en el
+  grafo servido. Ver la ficha `puentes-reanclados-sin-tejer`, al final de este documento.
 
 ---
 
@@ -17455,3 +17581,202 @@ ese pack**: su casa es el mundo 10, `Vender`, que todavia no existe en la app.
 **Lo que falta para abrirlo:** el dominio en la app (Gate 0, web y desbloqueos), la fuente de
 la ONU en la lista canonica de `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` (el puente del 23 sep
 no la dio de alta a proposito) y su propio pack desde la forja con `scripts/importar_forja.py`.
+
+## Ficha de lectura futura: `callejones-del-grafo` (AUD-09 H13, decisión del fundador 25 sep 2026)
+
+**De dónde sale.** La AUD-09 (`docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`, M55 y
+H13) midió los nodos vivos sin ningún sucesor ofrecible dentro de su dominio más el núcleo.
+Medido otra vez el 25 sep 2026 sobre `web/lib/assets/master_graph.json`: **233 callejones**,
+**37 en ideación o validación**. Por dominio: núcleo 69, quality 57, environmental 30,
+franquicias 26, health_safety 21, entrega 12, exportacion 8, compras 7, seguridad_digital 3.
+
+**Lo que ya se resolvió, y dónde.** Que la entrevista siempre tenga salida es deber del MOTOR,
+no del grafo: un nodo sin sucesor puede ser un final legítimo del contenido. Desde la tanda 4
+de la AUD-09, cuando una entrevista de MUNDO llega a un callejón, `avanzarTurno`
+(`web/lib/engine/recorrido.ts`) elige otra puerta del mismo mundo con `reelegirPuertaDeMundo`,
+la misma lógica de cuando el intérprete decide salir, sin repetir lo ya visitado. La prueba
+de `recorrido.test.ts` recorre los 164 callejones de los mundos y exige salida en todos. En el
+NÚCLEO (69), un callejón sigue llevando a la oferta del plan, donde "Seguimos explorando" busca
+nodos afines por semántica.
+
+**Decisión del fundador (25 sep 2026): el callejón del núcleo se queda como está.** Ofrecer el
+plan con la salida "Seguimos explorando" es el paso natural del núcleo; el motor no reelige
+puertas ahí como lo hace en los mundos.
+
+**Decisión del fundador (25 sep 2026) sobre el M16: una entrevista de mundo PUEDE pasar por
+nodos del núcleo** (los mundos están anclados al núcleo por la ley del ancla). Lo que queda
+cortado es el paso de un mundo a OTRO mundo: `dominiosDelRecorrido`
+(`web/lib/engine/recorrido.ts`) da, en una sesión de mundo, el núcleo y ese mundo.
+
+**Lo que esta ficha NO autoriza.** El dataset no se tocó para esto y no se toca por esta
+ficha. Si alguno de estos nodos merece una arista real, se escribe **por lectura**, en otra
+campaña, afirmando una continuidad de contenido y no para tapar un hueco del motor.
+
+**Los 37 tempranos, para esa lectura:**
+- núcleo, ideación: `comprender_alineacion_etica_ia`, `critica_del_plan_con_ia`,
+  `ideacion_con_ia_en_la_sesion`, `modelos_negocio_mas_alla_del_lucro`, `patron_inside_out`,
+  `patron_outside_in`, `prompting_alta_variacion`, `ser_buen_jig`.
+- núcleo, validación: `deteccion_efecto_hawthorne`, `diseno_de_comportamiento_sostenible`,
+  `inteligencia_de_anuncios_de_la_competencia`, `puntos_brillantes_antes_del_pivote`.
+- entrega, validación: `medir_satisfaccion_real_del_cliente`,
+  `reconocer_mercancia_peligrosa_disfrazada`.
+- environmental, ideación: `dar_forma_politica_climatica`,
+  `desmaterializacion_producto_servicio`, `disruptores_endocrinos_y_salud_industrial`,
+  `diversidad_activa`, `identificar_eco_riesgos_oportunidades`.
+- environmental, validación: `certificacion_cradle_to_cradle`, `certificaciones_ecoetiquetas`,
+  `realizar_analisis_ciclo_vida`.
+- franquicias: `decision_marca_comun_branding` (ideación); `contribucion_por_unidad_desventaja`,
+  `mejora_valoracion_empresa` (validación).
+- health_safety, validación: `sbrefa_cumplimiento`, `ventana_oportunidad_accidente`.
+- quality: `investigacion_necesidades_consumidor` (ideación);
+  `conformidad_especificacion_aptitud_uso`, `indice_cpk`,
+  `limitaciones_analisis_costo_beneficio`, `mapa_satisfaccion_importancia`,
+  `medidas_productividad_no_mejoran`, `muestreo_con_seguimiento_no_respondientes`,
+  `premio_shingo`, `pruebas_inadecuadas_prototipos`, `sistema_puntuacion_baldrige`
+  (validación).
+
+**Condición de cierre:** cada uno leído y con su veredicto escrito (final legítimo, o arista
+por lectura con su fuente), en una campaña propia.
+
+## Ficha para la integración: `puentes-reanclados-sin-tejer` (AUD-09 M51 y M53, decisión del fundador 25 sep 2026)
+
+**CERRADA el 26 sep 2026 (saneamiento, tanda 2, punto 9):** aprobados igual a aristas en los 9 mundos, ley del ancla en 2
+en `integrar_packs.py`, y la guarda `engine/test_puentes_tejidos.py` sobre el grafo servido. Detalle en
+`docs/SANEAMIENTO_DATASET.md`, tanda 2.
+
+**Por qué va a la integración y no a otra sesión.** Son DATO DEL GRAFO. Por su doctrina, la
+única sesión que puede tocar `dataset/` es la de integración; la rama de arreglos de la AUD-09
+no lo toca.
+
+**Lo que midió la AUD-09** (tramo F, `docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`):
+- `scripts/reanclar_puentes.py` (commit `ff3da85f`) solo escribió `bridges_aprobados.json` y
+  `docs/_reanclaje_puentes.json`; ningún nodo cambió. Puentes aprobados contra aristas reales
+  núcleo a mundo en el grafo servido: compras 13 y 8, entrega 15 y 9, risk_management 13 y 2.
+  Los 22 sin tejer coinciden uno a uno con los cambios de `_reanclaje_puentes.json`.
+- Siguen vivas las aristas viejas de mundo a mundo (por ejemplo
+  `calificacion_de_calidad_de_proveedores` (quality) a `lleva_scorecard_desempeno_proveedor`,
+  `identificacion_de_riesgos` (quality) a `evalua_la_gravedad_sin_autoengano`), y desde el
+  núcleo Riesgos solo tiene dos puertas reales. El puente correctivo
+  `matriz_probabilidad_impacto` a `evalua_la_gravedad_sin_autoengano` no existe en el grafo.
+- Ningún guardián lo ve: `validar_anclas_de_todos_los_puentes` (`integrar_packs.py`) y el
+  chequeo de puentes de `run_phase1.py` leen el archivo, no las aristas.
+- Hermano (M53): la ley del ancla dice máximo 2 puentes por ancla y
+  `reglas_gestion_riesgo_gambling` ancla 3 (`packs/risk_management/metadata/bridges_aprobados.json`);
+  `integrar_packs.py` solo falla con más de 3. Y hay 61 aristas núcleo a mundo fuera de todo
+  `bridges_aprobados` (48 hacia quality, 7 hacia health_safety, 6 hacia environmental).
+
+**Lo que pide la ficha, en la integración:** tejer en el grafo los puentes que el archivo ya
+aprueba (y retirar las aristas viejas que reemplazan), un guardián que compare archivo contra
+aristas, y el tope de la ley del ancla en 2. **Condición de cierre:** aprobados igual a
+aristas reales en cada mundo, y el guardián en verde sobre el grafo servido.
+
+## Ficha para la próxima entrega de Design: `mockups-con-precios-viejos` (AUD-09, decisión del fundador 25 sep 2026)
+
+**Qué.** Varios mockups del canon visual (`docs/diseno-canon/`) todavía muestran cifras de
+antes del Catálogo congruente: La Exploración a 5, seguimientos a 2, plan de mundo a 3, Tus
+Números a 2, cortesía de 20 y reembolsos de 3. Los precios viven en `web/lib/precios.ts` y
+nada más los define (`AGENTS.md`); por eso es ERRATA de la entrega, no cambio de política.
+
+**Cuáles** (medido el 24 sep 2026): 03 (La Exploración a 5), 05, 07, 12, 14, 16, 17, 18, 20 y
+23. En el 23, revisar cuáles cifras son saldos de ejemplo (por ejemplo el chip "20 créditos")
+y cuáles son precios.
+
+**Lo que ya se hizo.** El canon de TEXTO (`REGLAS_Y_TOKENS.md` §3) se corrigió en la AUD-09
+con su nota de adopción; las pantallas de Design no se redibujaron desde aquí.
+
+**Lo que pide la ficha.** Que la próxima entrega de Design venga alineada de origen con
+`precios.ts`. **Condición de cierre:** los diez mockups sin cifras viejas, cotejados contra
+`precios.ts` al adoptar la entrega (el mismo cotejo que `AGENTS.md` exige para el canon).
+
+
+## Ficha de backlog: `aud09-remanentes` (AUD-09, cierre de la campaña, 25 sep 2026)
+
+**Qué.** La campaña de arreglos de la AUD-09 cerró con la tanda 6 (`web-v2.6.4`). Lo que quedó
+fuera del alcance de las tandas que fijó el fundador NO se da por resuelto: vive aquí hasta que
+el fundador lo ordene en otra campaña. El detalle de cada uno (archivo, línea y tramo) está en
+`docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`; su estado, en
+`docs/audits/AUD-09-Acta_de_Cierre.md`.
+
+**Abiertos, MEDIA (29):** M09, M24, M25, M26, M27, M28, M29, M30, M31, M32, M33, M34, M35, M37,
+M38, M39, M40, M41, M42, M43, M44, M45, M46, M47, M48, M49, M50, M52 y M54.
+
+**Parciales:** M22 (queda rechazar sin saldo antes de que el usuario escriba su "qué pasó") y
+B16 (siguen sin pruebas `unlock` y `start`).
+
+**Abiertos, BAJA (13):** B02, B03, B05, B06, B07, B08, B09, B10, B11, B12, B13, B14 y B15.
+
+**Con ficha propia (no se repiten aquí):** M51 y M53 en `puentes-reanclados-sin-tejer`, M55 en
+`callejones-del-grafo`, y los mockups de B01 en `mockups-con-precios-viejos`.
+
+**Condición de cierre:** cada hallazgo arreglado con su prueba en rojo primero, o descartado
+por decisión escrita del fundador, y tachado aquí con su commit.
+
+**Triaje del fundador (25 sep 2026).** Cada remanente se clasificó en DINERO, DATOS,
+SEGURIDAD, CONFIANZA u OTRO. Tanda 7A = dinero, datos y seguridad; tanda 7B = confianza (más
+M35 por texto); OTRO se queda en esta ficha.
+
+**Tanda 7A, hecha** (cada uno con su prueba en rojo primero; rama `arreglos-aud09`):
+- Dinero: M24 `60389f57`, M25 `9b280470` (reserva de créditos, migración 042), M22
+  `8a73d772` (la parte que quedaba), M30 `ede226a3`, M32 `45406c0f`, B14a `66672721`.
+- Datos: M09 `2cd655aa`, M26 `00623953` (reproducido antes de arreglar), M27 `f52a99cc`, M34
+  `72037406`, M41 `ac8f5376`, B14b `f39a8746`.
+- Seguridad: M49 `b5ad1b20` (por texto), M50 `7d8c9e3f` (migración 043), B07a `87e7d081`,
+  B12 `e10fd538`.
+- **Constancia del rojo de M50 (decisión del fundador, 25 sep 2026).** Su prueba
+  (`reenrolarSinPerderCandado.test.ts`) se corrió contra el código ANTERIOR al arreglo
+  (`b5ad1b20`, restaurando solo las tres fuentes que tocó `7d8c9e3f`): **3 de 3 en rojo**.
+  Enrolar: `expected undefined to be 'enc(NUEVO)'` (el secreto no quedaba pendiente).
+  Verificar: `expected 400 to be 200`. Código de rescate en alta: `expected 400 to be 401`;
+  esta cae por una razón vecina (el código viejo no conocía el pendiente y respondía "primero
+  genera tu QR"), así que prueba el rojo pero no el caso exacto.
+- `streamTerminal` (hermano de B07a), decisión del fundador: la causa interna sale del mensaje
+  al cliente; el servidor la registra completa con un identificador de correlación y al
+  cliente solo llegan el código y ese identificador (`3e037783`).
+- El guardián de commit corre `tsc --noEmit` sobre `web/` cuando el commit la toca, con la
+  prueba de que un error de tipos aborta (`1bcbf33b`).
+
+**Tanda 7B, hecha (confianza)**, cada uno con su prueba en rojo primero, sin migraciones:
+M31 `a42a312d` (más el punto del fundador: el saldo del encabezado muestra lo disponible y
+dice lo reservado), M28 `2bf59bae`, M29 `24a900ab`, M33 `d64051f0`, M37 `6876156f`, M38
+`e95686b8`, M39 `c5c0ec60`, M40 `c97f38c1`, M42 `fa45f9fc`, M43 `9436b833`, M47 `f5fe191c`,
+M48 `7eefed19`, B03a `9543b64b`, B05 `d45fdff9`, B10 `b55ed305`, B14c `8f60e5d2` y M35 por
+texto `1243c826`.
+
+**Se quedan aquí (OTRO):** M44, M45, M46, M52, M54, B02, B03b, B06, B07b, B08, B09, B11, B13,
+B14d, B15 y B16.
+
+**Funciones futuras (regla del fundador, 25 sep 2026: cuando una función falta, el texto
+no puede prometerla).** Se corrigió el texto a lo que el producto hace hoy; la función queda
+aquí para cuando se decida construirla:
+- **Doble factor al entrar (M49).** Hoy el candado cubre usar créditos y borrar una idea o la
+  cuenta; el centro de cuenta ya lo dice así (tanda 7A). El mockup 23 del canon todavía
+  promete "Un segundo paso al entrar protege tu cuenta": errata para la próxima entrega de
+  Design. **Condición de cierre:** el desafío también al iniciar sesión, o el canon alineado.
+
+- **Tus Números dentro del Expediente (M35, decisión del fundador).** El tablero vivo de Tus
+  Números escribe en `project_numeros_versiones` y el Expediente no lo lee (solo el reporte
+  viejo de `/report`). El Expediente ya dice exactamente lo que incluye (tanda 7B).
+  **Condición de cierre:** el Expediente lee la versión vigente del tablero, o se decide que
+  Tus Números vive solo en su tablero.
+- **Volver a enlazar un registro de protección (M48).** Si el enlace falla al entregar el
+  plan, el registro dice ahora que quedó vacío (tanda 7B); no hay reintento. **Condición de
+  cierre:** un "volver a enlazar" que corra el enlazador sobre el plan ya entregado.
+
+**Límite aceptado de M15 (decisión del fundador, 25 sep 2026).** La protección apunta al nodo
+de la tarea (`d28ffe0e`), pero `checklist_items.nodos_origen` se guarda por ETAPA (migración
+037: el redactor autodeclara nodos por etapa y cada tarea hereda los de la suya). En un ciclo
+nuevo, la protección cae en la etapa correcta; si esa etapa tiene varias tareas con los mismos
+nodos, cae en la primera. Se acepta por ahora. **Condición de cierre:** si algún día hace falta
+más precisión, guardar los nodos POR TAREA al nacer el plan (el redactor declarándolos por
+tarea, o una lectura que los asigne), y que `resolverProtegido` los use sin más cambios.
+
+## Ficha de función futura: `moneda-por-proyecto` (i18n, decisión D6 del fundador, 26 sep 2026)
+
+**Qué.** Tus Números muestra hoy el dinero con un "$" genérico. Con la app en 11 idiomas, los
+separadores y el formato salen por idioma con `Intl` (F3), pero el símbolo sigue siendo "$".
+
+**Lo que pide la ficha.** Que cada proyecto elija su moneda (por defecto, la que sugiera el idioma
+del proyecto) y que Tus Números, el Expediente y los documentos la usen.
+
+**Condición de cierre:** la moneda elegida se guarda en el proyecto y se pinta en todas las cifras
+de dinero, con su prueba por idioma.

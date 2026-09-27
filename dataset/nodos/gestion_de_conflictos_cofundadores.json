@@ -17,13 +17,30 @@
     "decision_egalitaria_vs_jerarquica"
   ],
   "nodos_siguientes": [
-    "rotacion_equipo_fundador",
-    "enfoque_situacional_vs_personal"
+    "rotacion_equipo_fundador"
   ],
   "condiciones_activacion": [
     "Cuando surgen tensiones recurrentes entre cofundadores",
     "Si el equipo detecta señales de desconfianza o resentimiento",
     "Antes de que un conflicto escale a punto de poner en riesgo la continuidad de la empresa"
   ],
-  "etiqueta_arbol": "Distingue Conflictos entre Socios"
+  "etiqueta_arbol": "Distingue Conflictos entre Socios",
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "d27-arista-06",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_de_conflictos_cofundadores -> enfoque_situacional_vs_personal",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-08)",
+        "motivo": "Los dos lectores de la pasada P juzgaron debil este puente: los conflictos entre cofundadores no llevan al enfoque situacional de la seguridad."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 2: se rechaza el puente."
+    }
+  ]
 }

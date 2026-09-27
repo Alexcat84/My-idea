@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Paso Categorizar: Impacto Global del Sistema",
+  "resumen": "Una vez identificados tus activos y sistemas más importantes, clasifica cada tipo de información según el impacto (bajo, moderado o alto) que tendría perder su confidencialidad, integridad o disponibilidad. Con esos tres valores asignas al sistema un impacto global que guía la selección de controles.",
+  "texto": "Asigna a cada sistema un impacto global igual al promedio de sus niveles de confidencialidad, integridad y disponibilidad",
+  "tipo": "CONTRARIO",
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1314.txt",
+  "lineas": "L183",
+  "cita": "Overall System Impact: The level assigned matches the highest level (low, moderate, or high) for confidentiality, integrity, or availability of information on the system; also known as the \"high-water mark.\"",
+  "dato": "",
+  "explicacion": "La guía fija el impacto global en el nivel MÁS ALTO de los tres (high-water mark), no en un promedio. Promediar rebaja la categoría: un sistema SCADA con integridad y disponibilidad altas (ejemplo del propio libro, L165-L175) quedaría por debajo de alto y recibiría menos controles de los necesarios."
+ },
+ {
+  "titulo": "Función Recover: Restaurar desde Copias de Seguridad",
+  "resumen": "Tras un incidente, la función Recover busca devolver activos y operaciones a la normalidad. Implica saber quién tiene responsabilidades de recuperación, priorizar las acciones según las necesidades del negocio, restaurar desde las copias de seguridad y documentar lo ocurrido en un informe post-incidente.",
+  "texto": "Restaura primero desde la copia de seguridad más reciente y verifica su integridad cuando el negocio ya vuelva a operar",
+  "tipo": "CONTRARIO",
+  "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1300.txt",
+  "lineas": "L279",
+  "cita": "Assess the integrity of your backed-up data and assets before using them for restoration. (RC.RP-03)",
+  "dato": "",
+  "explicacion": "El libro pide evaluar la integridad de las copias ANTES de usarlas para restaurar; el paso invierte el orden y propone verificar después. Restaurar sin verificar puede reintroducir datos dañados o el propio malware, justo lo que el libro advierte al preguntar cómo asegurar que la recuperación no introduzca nuevas vulnerabilidades (L305)."
+ },
+ {
+  "titulo": "Paso Preparar: Estrategia de Monitoreo Continuo",
+  "resumen": "Antes de ejecutar el RMF conviene dejar definida una estrategia de monitoreo continuo que vigile la postura de seguridad y privacidad de la organización. Esa estrategia establece con qué frecuencia se revisan los controles y cómo se hace esa revisión, para detectar a tiempo si dejan de funcionar.",
+  "texto": "Fija en tu estrategia de monitoreo una revisión trimestral de todos los controles (Tarea P-7)",
+  "tipo": "ANADIDO",
+  "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1314.txt",
+  "lineas": "L89",
+  "cita": "Implement a continuous monitoring strategy for your organization to monitor security and privacy risk posture. (Task P-7) Note: The strategy articulates frequency of control monitoring and how monitoring is to be conducted.",
+  "dato": "Revisión trimestral (cada 90 días) de todos los controles",
+  "explicacion": "El libro dice que la estrategia debe fijar la frecuencia del monitoreo, pero no da ninguna frecuencia concreta; la deja a criterio de cada organización (también L139 y L223 hablan solo de frecuencias sin cifrarlas). Grep en todo el texto: no aparecen quarter, trimestral, 90, month, annual, year ni every."
+ },
+ {
+  "titulo": "Comprobar el dinero y el crédito del candidato",
+  "resumen": "La falta de capital es la principal causa de fracaso de un franquiciado. Antes de aprobar a un candidato tienes que asegurarte de que tenga fondos para abrir y sostener la unidad hasta que sea rentable, revisando su patrimonio neto, la liquidez de sus activos y su historial de crédito.",
+  "texto": "Exige un score crediticio mínimo de 700 antes de aprobar al candidato",
+  "tipo": "ANADIDO",
+  "libro": "Franchise Your Business - Mark Siebert",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+  "lineas": "L4285",
+  "cita": "Generally, the criterion is based on net worth, liquidity of assets, and the candidate’s credit score.",
+  "dato": "Score crediticio mínimo de 700",
+  "explicacion": "El libro incluye el score crediticio entre los criterios y pide un enfoque conservador, pero no fija ningún umbral numérico. Grep en todo el texto: 700 solo aparece en L891 como valor en dólares de un negocio ($500,000 a $700,000); no hay 'minimum credit', 'credit score of' ni FICO."
+ }
+]

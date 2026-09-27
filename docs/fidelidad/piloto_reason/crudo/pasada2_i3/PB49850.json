@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PB49850",
+  "intento": 0,
+  "usd": 0.16505999999999998,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37210,
+  "tokens_out": 811,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PB49850\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [413, 435], \"cita\": \"the shift managers involved in both accidents were also in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como condición latente que el supervisor pudiera firmar su propio trabajo incompleto sin otra inspección (L413, L435). Así se perdía una oportunidad de detectar el error. El libro no prescribe prohibirlo, pero el paso concreta esa lección en la misma dirección. El rol de supervisor está respaldado ('supervisory staff', 'shift managers').\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PB49850",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   413,
+   435
+  ],
+  "cita": "the shift managers involved in both accidents were also in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como condición latente que el supervisor pudiera firmar su propio trabajo incompleto sin otra inspección (L413, L435). Así se perdía una oportunidad de detectar el error. El libro no prescribe prohibirlo, pero el paso concreta esa lección en la misma dirección. El rol de supervisor está respaldado ('supervisory staff', 'shift managers').",
+  "paso_fiel": ""
+ }
+}

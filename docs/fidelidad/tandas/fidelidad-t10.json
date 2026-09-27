@@ -1,0 +1,74 @@
+[
+ {
+  "node_id": "abrazar_la_incomodidad",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Registra los descubrimientos que surgen después de superar la incomodidad inicial.",
+  "texto_nuevo": "Registra los descubrimientos que van surgiendo mientras permaneces en la incomodidad, sin intentar resolverla.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future - Doorley, Scott; Carter, Carissa",
+   "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "L2696-L2696",
+   "frase": "If you resist the desire to resolve your awkwardness, you give your psyche room to let something novel hop in, rather than cutting off all possibility with a quick, ready-made resolution."
+  },
+  "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el arbitro, con su cita. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. Registrar los hallazgos que salen con el tiempo sí va en la línea del libro (Roberts, L4662). Pero el paso pone el descubrimiento \"después de superar la incomodidad inicial\", y eso invierte la secuencia que da el libro. Para el libro, lo nuevo aparece precisamente porque no resuelves la incomodidad y te quedas en ella: \"dwell\", \"linger\", \"discomfort without resolution\", \"Then keep standing there\". Dice incluso que el afán de resolver es \"the enemy of luck\". Superar la incomodidad es justo lo que el libro pide no hacer, y además choca con el paso 2 del propio nodo (\"Resiste el impulso de resolverlo\"). Invertir una secuencia o una recomendación cuenta como CONTRARIO, y hay citas que se oponen de forma directa (L2690, L2696, L4662). Busqueda en todo el libro: Busqué en todo el libro awkward, discomfort, uncomfortable, overcome, get past y push through. A favor de registrar lo que aparece con el tiempo: L2692-L2694 (Roberts, tres horas: los detalles se despliegan con paciencia, \"access is not synonymous with learning\") y L4662 (\"We can sit with our awkward moments until the quirky components reveal design opportunities\"). En los dos casos los hallazgos llegan mientras sigues dentro de la incomodidad, no después de dejarla atrás. En contra de \"superar\": L2688 (\"that's where you need to dwell\", \"linger in discomfort\", \"staying open when something is off\"), L2690 (\"discomfort without resolution is a cocktail that delivers a curiosity buzz\"), L2696 (\"The relentless desire to resolve things is the enemy of luck... Stew in it... Then keep standing there\"), L3011 (\"if we sit with it rather than react, we might find treasure\") y L4347 (\"get comfortable with your discomfort\"). No hay ningún pasaje que diga que hay que superar, dejar atrás o resolver la incomodidad para descubrir algo.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada abrazar_la_incomodidad",
+  "id": "fidelidad-t10-01",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "accidentes_individuales_vs_organizacionales",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.",
+  "texto_nuevo": "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
+  "cita": {
+   "libro": "Managing the Risks of Organizational Accidents - Reason, James",
+   "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L323-L323",
+   "frase": "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor, con el texto del arbitro. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. El núcleo del paso, distinguir los eventos como individuales u organizacionales, tiene respaldo en L323 (\"useful to treat them as distinct kinds of event\") y en L194/L250, donde el tipo de accidente cambia hasta dónde debe llegar la investigación. Pero el paso añade dos cosas que el libro no da: una acción concreta sobre los eventos pasados de la organización y, sobre todo, una regla de orden universal (\"antes de iniciar cualquier investigación\"). El libro no fija ese orden en ninguna parte. Además dice que la línea entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener origen organizacional (L323), así que la pertenencia a un tipo depende muchas veces de lo que la investigación descubre (causas múltiples en distintos niveles, L31). Tampoco llega a CONTRARIO, porque ninguna cita prohíbe clasificar antes de investigar. Es un añadido práctico de My Idea. Busqueda en todo el libro: Busqué con Grep en todo el libro \"individual accident\", \"classif\", \"categori\" y leí los pasajes relevantes. L29-L31: definición de los dos tipos (causas múltiples en distintos niveles frente a agente y víctima a la vez). L194 y L250: si fueran accidentes individuales, encontrar los actos inseguros cerraría la investigación; centrarse en ellos no permitiría hallar las causas corregibles de un accidente organizacional. L302 y L310: resumen del capítulo. L323: la frontera entre ambos tipos no siempre es nítida, los accidentes individuales suelen tener origen organizacional, pero es útil tratarlos como tipos de evento distintos. L5578-L5594 y L5641: los cuatro tipos de riesgo agrupados en individuales y organizacionales, y la advertencia de no ver todos los problemas como problemas de la persona. Ningún pasaje manda clasificar los eventos históricos de la organización ni fija que esa clasificación vaya antes de cualquier investigación.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada accidentes_individuales_vs_organizacionales",
+  "id": "fidelidad-t10-02",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "documentacion_mantenimiento_linea_base",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Asegurar que toda tarea, sin importar su origen, incluya documentación completa y advertencias de seguridad.",
+  "texto_nuevo": "Sugerencia de My Idea: cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
+  "cita": {
+   "libro": "Managing the Risks of Organizational Accidents - Reason, James",
+   "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L417",
+   "frase": "The line and base environments thus require different kinds of planning and supportive work packs."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor, con el texto del arbitro. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. El libro identifica como grieta la documentacion escasa del paquete de linea cuando la tarea pasa a personal de base que no la conoce (L419, L453), pero no prescribe que toda tarea lleve documentacion completa. Al contrario, L417 presenta como normal y requerido que linea y base tengan paquetes distintos, con tarjetas breves en linea. La regla universal \"toda tarea, sin importar su origen\" es un alcance que el libro no da; no llega a CONTRARIO porque el libro no recomienda expresamente lo opuesto, solo describe la diferencia como legitima. El lector de campania leyo OPERATIVO apoyandose en L419, pero esa frase describe la carencia en el caso concreto del traspaso, no respalda la generalizacion. ANADIDO de tipo practico. Busqueda en todo el libro: Lei L391-L461 (caso de las cubiertas del motor) y busque con Grep en todo el libro: work pack, task card, handover, stage sheet, documentation, warnings, borescope, reassembly, reminder, procedures. Lo que hay: L419 describe que el paquete de linea no traia tarjetas paso a paso, ni el trabajo de restitucion, ni las advertencias del manual; L441 y L453 (Tabla 2.1) lo registran como condicion latente del traspaso; L423 y L451 senalan la falta de procedimiento formal de traspaso de linea a base. En contra del alcance universal: L417 dice que linea y base requieren planes y paquetes distintos y que en linea las tarjetas dan solo una descripcion breve porque la documentacion se genera justo antes y cambia segun la operacion; L421 reconoce que aun recuperado el material detallado no habria sido facil de usar; L1575 afirma que los procedimientos nunca seran del todo completos ni universalmente aplicables; L1006 advierte que endurecer continuamente las practicas aumenta las violaciones. Capitulo 5 (L2256-L2311) propone recordatorios en los pasos propensos a omision, no documentacion completa para toda tarea. Ningun pasaje pide que toda tarea, sin importar su origen, lleve documentacion completa. La sesion recorta del texto del arbitro la coletilla final \", en lugar de exigir documentacion completa a toda tarea\", que solo remitia al texto viejo; lo demas (tarjetas paso a paso, trabajo de restitucion con su firma, advertencias del manual) esta en L419.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada documentacion_mantenimiento_linea_base",
+  "id": "fidelidad-t10-03",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "sesgo_retrospectivo_hindsight_2",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes",
+  "texto_nuevo": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Sugerencia de My Idea: ten en cuenta también el volumen de información disperso entre los participantes.",
+  "cita": {
+   "libro": "The Field Guide to Understanding Human Error - Dekker, Sidney",
+   "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "L1732-L1732",
+   "frase": "data observability: what would have been observable given the features of the interface and the multiple interleaving tasks, goals, interests, knowledge and even culture of the people looking at it."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor, con el texto del arbitro. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. La primera parte del paso es fiel: el libro distingue lo que estaba fisicamente disponible de lo que era observable dados la interfaz y las tareas, objetivos, intereses, conocimiento y cultura de quien miraba (L1730-L1732). El matiz final, \"sin olvidar el volumen de informacion disperso entre los participantes\", no aparece en el libro. Los factores de observabilidad que da el autor son propios de la persona que mira y de su interfaz, no la dispersion de la informacion entre varios participantes. Las unicas menciones cercanas (data overload en L2335 y memoria distributed across the cockpit en L2367) tratan otros temas y no respaldan esta condicion. Es un anadido practico, no una cifra ni el nombre de una herramienta. Busqueda en todo el libro: Lei L1722-L1734 (data availability frente a data observability) y su repeticion en L2067. Busque con Grep en todo el libro distributed, scattered, dispersed, spread, data overload, amount of data/information, volume of, shared, among/between participants, observab, who knew. Hallazgos: L2335 habla de data overload, pero se refiere a grandes cantidades de datos que producen los ordenadores y que la persona no logra ordenar, no a informacion repartida entre participantes; L2367 dice que la memoria de las velocidades esta distributed across the entire cockpit, en artefactos fisicos, dentro del capitulo de automatizacion y no como criterio para separar lo disponible de lo observable; L1838-L1842 trata el entendimiento compartido del equipo en otro contexto (CRM). Ningun pasaje incluye el volumen de informacion disperso entre los participantes como factor de observabilidad.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada sesgo_retrospectivo_hindsight_2",
+  "id": "fidelidad-t10-04",
+  "fecha": "2026-09-24"
+ }
+]

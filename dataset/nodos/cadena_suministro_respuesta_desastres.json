@@ -1,7 +1,7 @@
 {
   "node_id": "cadena_suministro_respuesta_desastres",
   "fase_proyecto": "planificacion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Cadenas de Suministro para Respuesta a Desastres",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Las cadenas de suministro de respuesta a desastres (DR) enfrentan alta imprevisibilidad y organización ad hoc, sin autoridad centralizada clara. A diferencia de las cadenas comerciales, requieren mayores niveles de inventario de contingencia (surge capacity), planificación pre-desastre, y entrenamiento colaborativo entre organizaciones diversas (gobierno, ONG, militares, empresas) que normalmente no trabajan juntas.",
@@ -14,7 +14,7 @@
   ],
   "entregable_esperado": "Plan de preparación pre-desastre con inventario de contingencia, proveedores identificados y ejercicios de entrenamiento colaborativo diseñados",
   "nodos_previos": [
-    "reglas_gestion_riesgo_gambling"
+    "plataforma_colaboracion_tiempo_real"
   ],
   "nodos_siguientes": [
     "mission_and_operations_planning"
@@ -23,5 +23,49 @@
     "Cuando se diseña una operación logística para contextos de alta incertidumbre",
     "Cuando múltiples organizaciones deben coordinarse sin autoridad centralizada"
   ],
-  "etiqueta_arbol": "Prepara tu Cadena para Desastres"
+  "etiqueta_arbol": "Prepara tu Cadena para Desastres",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-01",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-31: Las cadenas de suministro humanitarias con surge capacity y entrenamiento entre gobierno y ONG son un nicho logístico, no algo general del emprendimiento. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-031",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reglas_gestion_riesgo_gambling -> cadena_suministro_respuesta_desastres",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A49, lectores de acuerdo)",
+        "motivo": "Las reglas de riesgo para nuevos productos no llevan a cadenas de respuesta a desastres."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-entrada-01",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plataforma_colaboracion_tiempo_real -> cadena_suministro_respuesta_desastres",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-01, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Quien trabaja la colaboracion en tiempo real entre actores que actuan sin una autoridad central llega de forma natural al caso extremo de la respuesta a desastres, donde organizaciones diversas tienen que coordinarse sin un mando claro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
+  ]
 }

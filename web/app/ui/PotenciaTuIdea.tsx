@@ -21,6 +21,11 @@ import { mundosVisibles } from "@/lib/catalogoMundos";
 import type { EstadoMundo } from "@/lib/engine/previewMundos";
 import { murallaSinPlan } from "@/lib/espacios";
 import { PRECIOS } from "@/lib/precios";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { POTENCIA_TU_IDEA } from "@/lib/i18n/mensajes/potenciaTuIdea";
+import { rico } from "@/lib/i18n/rico";
 
 interface Pack {
   clave: string;
@@ -134,6 +139,8 @@ export function PotenciaTuIdea({
   onActivarMundo,
   mostrarOcultos = false,
 }: Props) {
+  const idioma = useIdioma();
+  const t = elegir(POTENCIA_TU_IDEA, idioma);
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
   const [avisoBloqueado, setAvisoBloqueado] = useState<string | null>(null);
@@ -141,7 +148,7 @@ export function PotenciaTuIdea({
   // nueve estan publicados, asi que esto no filtra nada; el filtro sigue en
   // pie para el proximo mundo que nazca, que entrara oculto hasta que el
   // fundador lo camine.
-  const packs = mundosVisibles(mostrarOcultos) as unknown as Pack[];
+  const packs = mundosVisibles(mostrarOcultos, idioma) as unknown as Pack[];
 
   // Fase 4.5 (PREVIEW_MUNDOS_PLAN): abrir un mundo es GRATIS, siempre. Lo que
   // se compra es su PLAN, a la entrega (ancla ETAPA 2 en la ruta del plan).
@@ -165,11 +172,11 @@ export function PotenciaTuIdea({
   }
 
   const claseCard =
-    "group flex flex-col rounded-[14px] border bg-surface p-[22px] text-left transition-[transform,background,border-color] duration-200 hover:-translate-y-[3px] hover:bg-surface-2";
+    "group flex flex-col rounded-[14px] border bg-surface p-[22px] text-start transition-[transform,background,border-color] duration-200 hover:-translate-y-[3px] hover:bg-surface-2";
 
   return (
     <section className="mt-2">
-      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Potencia tu idea</p>
+      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.titulo}</p>
       <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
         {/* Tus Números es un potenciador COMO LOS DEMÁS (regla del fundador:
             sin trato distinto). Va primero, en la misma grilla y con la misma
@@ -178,14 +185,14 @@ export function PotenciaTuIdea({
           <div className="mb-3.5 flex items-center justify-between gap-2">
             <Icono clave="tus_numeros" />
             <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-              {PRECIOS.tus_numeros > 0 ? `${PRECIOS.tus_numeros} créditos` : "Incluido"}
+              {PRECIOS.tus_numeros > 0 ? interpolar(t.creditos, { n: PRECIOS.tus_numeros }) : t.incluido}
             </span>
           </div>
-          <p className="text-[15px] font-semibold">Tus Números</p>
+          <p className="text-[15px] font-semibold">{t.tusNumeros}</p>
           <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
-            Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
+            {t.tusNumerosPromesa}
           </p>
-          <p className="mt-2 text-[12px] text-dim/70">Incluido con tu plan · una vez por idea</p>
+          <p className="mt-2 text-[12px] text-dim/70">{t.tusNumerosNota}</p>
         </Link>
 
         {/* Los mundos del catálogo — Fase 4.5: los CUATRO estados del preview
@@ -197,7 +204,9 @@ export function PotenciaTuIdea({
           const progreso = progresoMundos[p.clave] ?? null;
           const comprado = estado === "plan_comprado";
           const bloqueado = estado === "bloqueado";
-          const destacado = comprado || estado === "diagnostico_listo";
+          // AUD-09: un plan básico no es una compra; el mundo espera su plan completo.
+          const basico = estado === "plan_basico";
+          const destacado = comprado || basico || estado === "diagnostico_listo";
           return (
             <button
               key={p.clave}
@@ -219,24 +228,32 @@ export function PotenciaTuIdea({
                     <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
                       <path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    Completado
+                    {t.completado}
                   </span>
                 ) : comprado ? (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-                    Activo{progreso ? <> · <span className="text-done">{progreso.hechos}/{progreso.total}</span></> : ""}
+                    {progreso
+                      ? rico(interpolar(t.activoConProgreso, { hechos: progreso.hechos, total: progreso.total }), {
+                          progreso: (c) => <span className="text-done">{c}</span>,
+                        })
+                      : t.activo}
+                  </span>
+                ) : basico ? (
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-accent/50 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+                    {t.planBasico}
                   </span>
                 ) : estado === "diagnostico_listo" ? (
                   /* El estado protagonista: el escaparate espera. */
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/50 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-                    Listo para tu plan
+                    {t.listoParaTuPlan}
                   </span>
                 ) : bloqueado ? (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-hairline px-2.5 py-[3px] text-[10.5px] font-bold text-dim">
-                    Se abre con tu plan
+                    {t.seAbreConTuPlan}
                   </span>
                 ) : (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-                    {activando === p.clave ? "Abriendo…" : `${PRECIOS.mundo_activar} créditos`}
+                    {activando === p.clave ? t.abriendo : interpolar(t.creditos, { n: PRECIOS.mundo_activar })}
                   </span>
                 )}
               </div>
@@ -246,8 +263,8 @@ export function PotenciaTuIdea({
                   /* Solo se ve con la puerta del mini-gate abierta. Sin esta
                      marca, un paseo de prueba se confunde con un mundo en
                      venta, que es exactamente el error que hay que evitar. */
-                  <span className="ml-2 rounded-full border border-warn/40 px-2 py-0.5 align-middle text-[10.5px] font-bold uppercase tracking-wide text-warn">
-                    sin publicar
+                  <span className="ms-2 rounded-full border border-warn/40 px-2 py-0.5 align-middle text-[10.5px] font-bold uppercase tracking-wide text-warn">
+                    {t.sinPublicar}
                   </span>
                 )}
               </p>
@@ -257,20 +274,20 @@ export function PotenciaTuIdea({
               {!comprado && !completado && (
                 <p className="mt-2 text-[12px] text-dim/70">
                   {errorEn === p.clave ? (
-                    "No pudimos abrirlo; intenta de nuevo."
+                    t.errorAbrir
                   ) : avisoBloqueado === p.clave ? (
                     /* La muralla del sin plan: la MISMA frase que responde la
                        ruta, interpolada con el nombre del mundo (fuente única
                        en espacios.ts). */
-                    murallaSinPlan(p.nombre)
+                    murallaSinPlan(p.nombre, idioma)
+                  ) : basico ? (
+                    interpolar(t.basicoEspera, { n: PRECIOS.mundo_activar })
                   ) : estado === "diagnostico_listo" ? (
-                    <>
-                      Tu diagnóstico te espera · su plan: {PRECIOS.mundo_activar} créditos
-                    </>
+                    interpolar(t.diagnosticoEspera, { n: PRECIOS.mundo_activar })
                   ) : (
                     /* Campaña "Espacios": el precio va al frente (chip); el
                        diagnóstico es la rampa gratis, no el titular. */
-                    "Empieza con un diagnóstico gratis"
+                    t.empiezaDiagnostico
                   )}
                 </p>
               )}

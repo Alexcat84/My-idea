@@ -1,6 +1,6 @@
 {
   "node_id": "pensamiento_visual_modelos_negocio",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Pensamiento Visual (Visual Thinking) para Modelos de Negocio",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
@@ -28,5 +28,23 @@
     "Cuando se necesita comunicar un modelo de negocio complejo a un equipo o inversionistas",
     "Si el equipo tiene dificultades para alinear entendimientos tácitos sobre el modelo"
   ],
-  "etiqueta_arbol": "Discute con Post-it y Diagramas"
+  "etiqueta_arbol": "Discute con Post-it y Diagramas",
+  "fuentes_internas": [
+    "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-248",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-011: Mapear y comunicar el modelo de negocio sobre el Canvas es disenar el modelo, planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

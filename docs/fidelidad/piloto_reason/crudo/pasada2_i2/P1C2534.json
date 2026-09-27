@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P1C2534",
+  "intento": 0,
+  "usd": 0.170192,
+  "turnos": 1,
+  "duracion_s": 9.2,
+  "pared_s": 10.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38573,
+  "tokens_out": 795,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1C2534\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [520, 504, 692], \"cita\": \"The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.\", \"datos_sin_respaldo\": [\"Comité de Auditoría del directorio como responsable de la revisión\"], \"razon\": \"El libro respalda revisar las señales en conjunto aunque ninguna baste por sí sola (L520). No asigna esa tarea a ningún órgano concreto, y menos a un Comité de Auditoría del directorio. El sesgo retrospectivo (L668, L686) matiza la idea, pero para Barings el libro lo relativiza (L692) y no desaconseja integrar señales. Por eso no es contrario.\", \"paso_fiel\": \"Revisar en conjunto las señales de alerta dispersas, aunque ninguna por sí sola parezca suficiente, para que colectivamente hagan saltar la alarma tanto en la dirección central como en la unidad local.\"}\n```",
+ "parseado": {
+  "id": "P1C2534",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   520,
+   504,
+   692
+  ],
+  "cita": "The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.",
+  "datos_sin_respaldo": [
+   "Comité de Auditoría del directorio como responsable de la revisión"
+  ],
+  "razon": "El libro respalda revisar las señales en conjunto aunque ninguna baste por sí sola (L520). No asigna esa tarea a ningún órgano concreto, y menos a un Comité de Auditoría del directorio. El sesgo retrospectivo (L668, L686) matiza la idea, pero para Barings el libro lo relativiza (L692) y no desaconseja integrar señales. Por eso no es contrario.",
+  "paso_fiel": "Revisar en conjunto las señales de alerta dispersas, aunque ninguna por sí sola parezca suficiente, para que colectivamente hagan saltar la alarma tanto en la dirección central como en la unidad local."
+ }
+}

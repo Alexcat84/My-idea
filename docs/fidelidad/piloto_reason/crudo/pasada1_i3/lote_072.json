@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_072",
+  "intento": 0,
+  "usd": 0.16744799999999999,
+  "turnos": 1,
+  "duracion_s": 21.0,
+  "pared_s": 21.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32137,
+  "tokens_out": 1945,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PCAD467\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2520, 2596, 2598, 2658], \"razon\": \"El libro pide medidas de proceso que muestreen regularmente los signos vitales del sistema. Su frecuencia dependera de cuanto cambie cada proceso. El paso no fija frecuencia ni pide medirlo todo.\"},\n{\"id\": \"PA1165A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [65, 67, 77], \"razon\": \"El libro admite operar por debajo de la zona de paridad en actividades de bajo peligro. El paso lo trata como senal de subproteccion; el riesgo real esta en el extremo inferior derecho.\"},\n{\"id\": \"PDF1A9C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1543, 3623, 3625, 3629, 3633, 3637, 3829], \"razon\": \"Evaluar el contexto de cumplimiento concreta el analisis de condiciones productoras de violacion (deteccion, inconveniencia, autoridad). Es vago pero va en la misma direccion del libro.\"},\n{\"id\": \"P43926F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"siete funciones defensivas\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [118, 120, 126, 130, 134, 138, 142, 146, 150, 154, 158, 308], \"razon\": \"El libro enumera siete funciones defensivas y clasifica las defensas en duras y blandas. Mapear todas las capas es una concrecion operativa en la misma direccion.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PCAD467",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2520,
+    2596,
+    2598,
+    2658
+   ],
+   "razon": "El libro pide medidas de proceso que muestreen regularmente los signos vitales del sistema. Su frecuencia dependera de cuanto cambie cada proceso. El paso no fija frecuencia ni pide medirlo todo."
+  },
+  {
+   "id": "PA1165A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    65,
+    67,
+    77
+   ],
+   "razon": "El libro admite operar por debajo de la zona de paridad en actividades de bajo peligro. El paso lo trata como senal de subproteccion; el riesgo real esta en el extremo inferior derecho."
+  },
+  {
+   "id": "PDF1A9C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1543,
+    3623,
+    3625,
+    3629,
+    3633,
+    3637,
+    3829
+   ],
+   "razon": "Evaluar el contexto de cumplimiento concreta el analisis de condiciones productoras de violacion (deteccion, inconveniencia, autoridad). Es vago pero va en la misma direccion del libro."
+  },
+  {
+   "id": "P43926F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "siete funciones defensivas"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    118,
+    120,
+    126,
+    130,
+    134,
+    138,
+    142,
+    146,
+    150,
+    154,
+    158,
+    308
+   ],
+   "razon": "El libro enumera siete funciones defensivas y clasifica las defensas en duras y blandas. Mapear todas las capas es una concrecion operativa en la misma direccion."
+  }
+ ]
+}

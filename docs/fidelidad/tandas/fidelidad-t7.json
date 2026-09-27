@@ -1,0 +1,910 @@
+[
+  {
+    "node_id": "realizar_analisis_ciclo_de_vida_lca",
+    "campo": "pasos_accionables",
+    "indice": 4,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Evitar comparar resultados con competidores salvo que ambos usen certificación de terceros equivalente",
+    "texto_nuevo": "Evitar comparar resultados con competidores salvo que los productos de ambos esten verificados por la misma agencia certificadora de terceros",
+    "cita": {
+      "libro": "The Green to Gold Business Play - Daniel C. Esty",
+      "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+      "lineas": "L1906-L1906",
+      "frase": "Unless two companies’ products are verified by the same third-party certification agency, there is little meaning in comparing environmental impacts across competitors."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro pone una condicion concreta: la misma agencia certificadora, y lo justifica en la misma frase con Deloitte (pequenas diferencias de supuestos dan resultados radicalmente distintos). Cambiar esa condicion por una certificacion equivalente la relaja hasta el caso que el libro dice que tiene poco sentido (agencias distintas con supuestos distintos). Busque en todo el libro algun apoyo a comparar con certificaciones equivalentes: L1526 habla de comparar datos similares publicados por la competencia para hacer benchmarking, no de resultados de LCA, asi que no lo respalda. Una condicion cambiada respecto al libro cuenta como CONTRARIO.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-024",
+    "id": "fidelidad-t7-001",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-002",
+    "fecha": "2026-09-24",
+    "node_id": "realizar_analisis_ciclo_de_vida_lca",
+    "campo": "resumen_teorico",
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si ambas usan certificación de terceros idéntica.",
+    "texto_nuevo": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+    "cita": {
+      "libro": "The Green to Gold Business Play - Daniel C. Esty",
+      "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+      "lineas": "L1906-L1906",
+      "frase": "Unless two companies’ products are verified by the same third-party certification agency, there is little meaning in comparing environmental impacts across competitors."
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la condición relajada del paso 4: una certificación de terceros idéntica en vez de la misma agencia certificadora. Es CONTRARIO y se corrige igual que el paso, según L1906 del libro de Esty.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-024"
+  },
+  {
+    "node_id": "reporte_sostenibilidad_digital",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Imprime solo unas pocas copias para quien prefiera tenerlo en papel",
+    "texto_nuevo": "En algunos casos, imprime unos pocos cientos de copias para visitantes o para quien prefiera tenerlo en papel",
+    "cita": {
+      "libro": "The Green to Gold Business Play - Daniel C. Esty",
+      "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+      "lineas": "L7237-L7237",
+      "frase": "In some cases, printing a few hundred hard copies to hand out to office visitors or others who want the old-fashioned document may make sense."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro fija la cantidad en unos pocos cientos de copias impresas y solo para algunos casos. El paso la cambia a solo unas pocas copias. Una cantidad cambiada respecto al libro cuenta como CONTRARIO aunque la idea general de imprimir poco sea correcta. Busque en todo el libro un apoyo a imprimir solo unas pocas copias y no hay ninguno: la unica cifra de tiraje es la de L7237.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-100",
+    "id": "fidelidad-t7-003",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "desarrollo_posicionamiento_producto",
+    "campo": "pasos_accionables",
+    "indice": 0,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Revisar la declaración de posicionamiento inicial creada durante el descubrimiento de clientes",
+    "texto_nuevo": "Revisar la declaración de posicionamiento inicial creada al comienzo de la validación de clientes",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L12455-L12495",
+      "frase": "Return to the simple, single-phrase positioning statement you developed at the outset of customer validation"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenía razón el lector A. El paso sitúa la declaración de posicionamiento inicial en el descubrimiento de clientes, pero el libro dice dos veces que esa declaración se crea al comienzo de la validación: L12466 y L10740, \"core product-positioning statement developed in Step 1 of customer validation\". Se redacta en la fase 1 de validación, \"Get Ready to Sell: Craft Positioning Statement\" (L10222-L10226), \"in light of what you've learned in customer discovery\". L12457 lo confirma: la primera versión se escribió al crear la presentación de ventas, que también es de validación. El lector B se apoya en los briefs de posicionamiento por tipo de mercado del descubrimiento (L6095, L6341-L6355) y en \"updates the positioning briefs developed earlier\". Pero esos briefs son otro objeto, no la declaración de una sola frase que nombra el paso. El paso cambia la secuencia del libro, y la vara dice que eso es CONTRARIO.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-082",
+    "id": "fidelidad-t7-004",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "determinar_tipo_de_mercado",
+    "campo": "pasos_accionables",
+    "indice": 7,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+    "texto_nuevo": "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L6078-L6080",
+      "frase": "spend three times the combined sales and marketing budget of that dominant player ... 1.7 times the combined sales and marketing budget of the company you plan to attack"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenía razón el lector B. Las cifras 3x y 1.7x son del libro, pero el paso cambia la base del cálculo en dos puntos. Primero, reduce la base al presupuesto de marketing, cuando el libro dice presupuesto combinado de ventas y marketing, así que el costo de entrada sale más bajo. Segundo, aplica el 1.7x al líder, cuando el libro lo aplica a la empresa que atacas en un mercado con varios participantes (L6136: \"1.7 times that of a competitor in a crowded market\"). El libro solo usa \"del líder\" para el 3x (L6126, \"three times the resources of the market leader\"). En ningún pasaje el libro calcula la entrada sobre el presupuesto de marketing solo. Un umbral con otra base es otro valor para el mismo dato, y eso es CONTRARIO. El lector A lo consideró solo un resumen válido.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-091",
+    "id": "fidelidad-t7-005",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "prueba_solucion_con_cliente",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría",
+    "texto_nuevo": "Explora los límites de precio proponiendo una cifra muy alta, toma la primera cifra que te dé el cliente como su presupuesto y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L20852-L20862",
+      "frase": "Once you get a first number, ask, \"How much more would you expect to pay for professional services...\" Then push and see whether they would spend those extra dollars every year or ask, \"What would we have to do to get you to spend twice that? Three times that?\""
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro coincide con el paso en proponer una cifra muy alta (\"Would you pay $1 million for our software?\"), pero no es el fundador quien baja la cifra: es el cliente quien responde con su primera cifra, que el libro toma como su presupuesto inmediato (L20852). Despues el libro manda empujar hacia arriba: servicios profesionales, gasto recurrente cada anio, el doble, el triple (L20862). El paso cambia la secuencia y pide ir bajando paso a paso hasta dar con lo que pagaria. Busque con Grep en todo el libro pasajes que apoyen bajar el precio de forma progresiva (lower the price, price down, work down, would you pay, how much would you pay) y no hay ninguno: el unico pasaje sobre los limites de precio es este, y va hacia arriba. El LECTOR A se quedo con la primera frase y no leyo la continuacion en L20862.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-013",
+    "id": "fidelidad-t7-006",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "segmentos_de_clientes_problema_necesidad",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Clasifica el problema en la escala: latente, pasivo, activo o con una solución casera, y también cuando aún no existe y tú le muestras una visión",
+    "texto_nuevo": "Clasifica el problema en la escala: latente (no sabe que lo tiene), pasivo, activo (o urgente) o visión (ya tiene una idea para resolverlo, incluso una solución casera, y pagaría por una mejor)",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L5635-L5643",
+      "frase": "a vision: they have an idea for solving the problem and even have cobbled together a home-grown solution, but are prepared to pay for a better one"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La escala del libro tiene cuatro niveles: latente, pasivo, activo (o urgente) y vision, y la vision es del cliente, que ya tiene una idea e incluso una solucion casera. El paso anade un nivel en el que el problema aun no existe y eres tu quien muestra la vision, lo que invierte el sentido de esa categoria.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-015",
+    "id": "fidelidad-t7-007",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "desarrollo_attack_plans",
+    "campo": "pasos_accionables",
+    "indice": 0,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower, Defensor o Reactor",
+    "texto_nuevo": "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower o Defensor; no elijas ser Reactor, que solo responde cuando lo obligan y casi no es una estrategia",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L8399-L8407",
+      "frase": "It is difficult to imagine any business deliberately electing this strategy--some would argue that it's a \"non strategy\""
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso ofrece Reactor como opcion a elegir; el libro solo recomienda elegir entre innovador, fast follower o defensor (L8407) y descarta elegir Reactor de forma deliberada.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-062",
+    "id": "fidelidad-t7-008",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "desarrollo_en_espiral",
+    "campo": "pasos_accionables",
+    "indice": 4,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Repetir el ciclo varias veces (de tres a cuatro en promedio, hasta quince en procesos muy iterativos), manteniendo contacto continuo con el cliente hasta llegar a pruebas de campo formales",
+    "texto_nuevo": "Repetir el ciclo varias veces (entre 3 y 4,5 versiones en promedio en fabricantes B2B; firmas de diseño como IDEO iteran en promedio 15 veces), manteniendo contacto continuo con el cliente hasta llegar a las pruebas formales del producto o de campo",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L1694-L1700",
+      "frase": "between 3 and 4.5 versions of the product ... were presented to validate the design with customers ... (while product ideation-and-design contractors, such as IDEO, iterated on average 15 times with the customer per project!)"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso cambia las cifras: el libro da de 3 a 4,5 versiones en promedio y 15 iteraciones como promedio de IDEO, no como maximo.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-105",
+    "id": "fidelidad-t7-009",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-010",
+    "fecha": "2026-09-24",
+    "node_id": "desarrollo_en_espiral",
+    "campo": "resumen_teorico",
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio de tres a cuatro veces en negocios entre empresas, hasta quince en procesos de diseño muy iterativos, y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
+    "texto_nuevo": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio entre 3 y 4,5 veces en fabricantes que venden a otras empresas (firmas de diseño como IDEO iteran en promedio 15 veces), y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L1694-L1700",
+      "frase": "between 3 and 4.5 versions of the product ... were presented to validate the design with customers ... (while product ideation-and-design contractors, such as IDEO, iterated on average 15 times with the customer per project!)"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite las cifras cambiadas del paso 4 (de tres a cuatro en promedio, hasta quince). El libro da entre 3 y 4,5 versiones en promedio en fabricantes B2B y 15 como promedio de IDEO, no como máximo (Cooper, L1694-L1700).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-105"
+  },
+  {
+    "node_id": "pruning_portafolio",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Identificar el ~30% de proyectos de menor valor o impacto estratégico",
+    "texto_nuevo": "Identificar aproximadamente un tercio de proyectos de menor valor o impacto estratégico",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L6707-L6707",
+      "frase": "experience suggests that in the typical portfolio, roughly one-third of the projects should be cut"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro fija la proporcion a cortar en un tercio y lo repite tres veces (L1966 \"Lopping off the bottom third\", L5674 \"about one-third of the projects underway should be killed\", L5682 \"lop off the bottom third\", L6707). Busque 30 percent y thirty percent: el unico 30 percent del libro es un umbral de IRR (L7106), sin relacion. El paso cambia la cifra del libro a ~30%; por la vara, una cifra o umbral cambiado respecto al libro es CONTRARIO aunque la accion general sea correcta. El arreglo es trivial: volver a un tercio.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-006",
+    "id": "fidelidad-t7-011",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-012",
+    "fecha": "2026-09-24",
+    "node_id": "pruning_portafolio",
+    "campo": "entregable_esperado",
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Lista depurada de proyectos activos con al menos 30% de reducción, y plan de reasignación de recursos liberados",
+    "texto_nuevo": "Lista depurada de proyectos activos con una reducción de aproximadamente un tercio, y plan de reasignación de recursos liberados",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L6707-L6707",
+      "frase": "experience suggests that in the typical portfolio, roughly one-third of the projects should be cut"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra cambiada del paso 2 (30% en vez de un tercio) y además la pone como mínimo. El libro dice que hay que cortar aproximadamente un tercio de los proyectos (Cooper, L6707).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-006"
+  },
+  {
+    "node_id": "protocolo_reuniones_gate",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Envía los entregables con al menos 3 días de anticipación y en un formato que todos entiendan igual.",
+    "texto_nuevo": "Envía los entregables unos 3 días hábiles antes de la reunión y en un formato estándar para que se puedan comparar los proyectos.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L7289-L7289",
+      "frase": "The deliverables are sent to the gatekeepers about three working days prior to the meeting. Project teams are asked to use a standard format for their deliverables (for example, templates--but keep these short!) so that gatekeepers can compare projects more easily"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. Es el unico pasaje del libro con este plazo (busque three/3 days prior, in advance, days before). El libro da unos tres dias habiles como plazo aproximado; el paso lo convierte en un minimo de al menos 3 dias sin decir habiles, que pueden ser menos de tres dias laborables (por ejemplo, enviar el viernes para una reunion el lunes). Por la vara, un plazo cambiado es CONTRARIO aunque la accion general sea correcta. Lo del formato es fiel en sustancia (formato estandar para comparar proyectos).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-076",
+    "id": "fidelidad-t7-013",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "deteccion_defectos_raros_control_estadistico",
+    "campo": "pasos_accionables",
+    "indice": 0,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo menor a 1 en 1000).",
+    "texto_nuevo": "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos).",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L9785-L9789",
+      "frase": "There would be little reason to put more faith in one manufacturer for his claim that only 1 piece in 10,000 is defective, against another one that claims that only 1 piece in 5000 is defective."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pone como ejemplo de defectos extremadamente raros 1 en 5000 o menos (p = 1/5000); el paso cambia el umbral de ejemplo a 1 en 1000, que el libro no usa.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C083-070",
+    "id": "fidelidad-t7-014",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "falacia_recompensa_loteria",
+    "campo": "pasos_accionables",
+    "indice": 5,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período",
+    "texto_nuevo": "Comunicar a la organización que el mérito solo lo merece quien queda fuera del sistema por el lado bueno, no quien destaca dentro de un sistema estable, ni en un período ni en varios seguidos",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L6541-L6547",
+      "frase": "If the work of the group forms a statistical system, then the prize would be merely a lottery. On the other hand, if the top man is a special cause on the side of low proportion defective, then he is indeed outstanding."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro basa el reconocimiento en un criterio estadistico: solo lo merece quien queda fuera de los limites del sistema por el lado bueno (L6545; L2506: 'If he is outside the limit of variation of the system on the good side ... he deserves recognition'; L2553). Tambien advierte que, dentro de un sistema estable, repetir buenos resultados puede ser azar: el mismo hombre del mes dos meses seguidos (L8945) y el general que gana cinco batallas seguidas ('Mathematical probability, not genius', L8958). Busque en todo el libro un apoyo al merito por 'mejoras sostenidas' o resultados repetidos y no lo hay: L2224 critica que la calificacion por merito premie a quien rinde bien dentro del sistema. El paso acierta al rechazar un solo periodo, pero cambia el criterio del libro por otro que el libro desmonta de forma expresa. El lector A lo vio (cita L8945), pero lo dejo en OPERATIVO.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-037",
+    "id": "fidelidad-t7-015",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "limitaciones_intervalos_confianza",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "No usar p-values o intervalos de confianza como única base para decisiones de planificación futura",
+    "texto_nuevo": "No usar p-values ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L2856-L2860",
+      "frase": "But a confidence interval has no operational meaning for prediction, hence provides no degree of belief for planning."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro dice que los intervalos de confianza y las pruebas de significancia no dan ninguna base para predecir ni planificar (L2856: 'they provide no basis for prediction'; L2860: 'do not provide any measure of degree of belief for planning'), que no tienen aplicacion en problemas analiticos (L8408) y 'have no application here or anywhere' (L6495). Solo les da valor para resumir estudios enumerativos (L2858). Busque en todo el libro un apoyo para usarlos como base parcial de planificacion y no lo hay. Al decir 'como unica base', el paso da a entender que sirven como base parcial, y eso cambia la condicion del libro. El lector A reconocio que el libro es mas tajante, pero lo dejo en OPERATIVO.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-071",
+    "id": "fidelidad-t7-016",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "falacia_problemas_diferentes",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Compara casos de exito de otros rubros para encontrar patrones que también te sirvan a ti",
+    "texto_nuevo": "En lugar de buscar casos de éxito de otros rubros, estudia los principios universales de calidad y entiende la teoría de lo que quieres hacer, porque copiar ejemplos es un peligro",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L2797-L2807",
+      "frase": "no number of examples of success or of failure in the improvement of quality and productivity would indicate to the enquirer what success his company would have."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro desaconseja buscar ejemplos de éxito en otras empresas o rubros: dice que copiar es un peligro y que lo que decide es entender los principios. Busqué pasajes que apoyen comparar casos de éxito y no hay ninguno.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-107",
+    "id": "fidelidad-t7-017",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "investigacion_necesidades_consumidor",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Establecer métricas para estimar la pérdida de negocio por clientes insatisfechos que no se quejan",
+    "texto_nuevo": "Reconocer que la pérdida de negocio por clientes insatisfechos que no se quejan no se puede estimar, y no ignorarla por no poder medirla",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L3843-L3845",
+      "frase": "A second principle is that no one can guess the future loss of business from a dissatisfied customer."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que esa pérdida no se puede adivinar ni estimar. La llama cifra desconocida e imposible de conocer (L244) e imposible de estimar (L9409). El paso pide fijar métricas para estimar justo eso.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-112",
+    "id": "fidelidad-t7-018",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-019",
+    "fecha": "2026-09-24",
+    "node_id": "investigacion_necesidades_consumidor",
+    "campo": "entregable_esperado",
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Estudio de necesidades futuras del consumidor y estimación de pérdida por insatisfacción silenciosa",
+    "texto_nuevo": "Estudio de necesidades futuras del consumidor que reconozca la pérdida por insatisfacción silenciosa como una cifra que no se puede estimar, sin ignorarla por no poder medirla",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L3843-L3845",
+      "frase": "A second principle is that no one can guess the future loss of business from a dissatisfied customer."
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el dato corregido en el paso 1: el entregable pide estimar la pérdida por clientes insatisfechos que no se quejan, y el libro dice que esa pérdida no se puede estimar (L3843, L244, L9409).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-112"
+  },
+  {
+    "node_id": "punto_equilibrio_calidad_inspeccion",
+    "campo": "pasos_accionables",
+    "indice": 6,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado",
+    "texto_nuevo": "Seleccionar la estrategia de inspeccion segun el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante esta en caos.",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L10165-L10175",
+      "frase": "adoption of any plan of inspection other than the all-or-none rules runs the risk of increase of overall cost... any inspection whatever in the region to the left of the breakeven point (p < k1/k2) will increase total cost"
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Segun el resultado de comparar p con k1/k2 el libro solo admite ninguna inspeccion o 100%; incluir el muestreo como opcion contradice la regla todo o nada. El muestreo solo aparece con las reglas de Joyce Orsini en estado de caos.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-096",
+    "id": "fidelidad-t7-020",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "sistema_estable_causas_comunes",
+    "campo": "pasos_accionables",
+    "indice": 4,
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Evitar fijar metas numéricas o culpar a la persona que te ayuda hasta haber intervenido sobre el sistema mismo.",
+    "texto_nuevo": "Evitar fijar metas numericas y culpar a la persona que te ayuda: si el sistema es estable, la mejora solo llega interviniendo sobre el sistema mismo.",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L1571-L1573",
+      "frase": "If you have a stable system, then there is no use to specify a goal. You will get whatever the system will deliver."
+    },
+    "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro elimina las metas numericas en sistema estable o inestable y dice que el trabajador responde solo por causas especiales (L7460); el paso las aplaza hasta intervenir el sistema, lo que cambia la condicion del libro. L1465 critica metas sin hoja de ruta, no las autoriza tras intervenir.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-077",
+    "id": "fidelidad-t7-021",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-022",
+    "fecha": "2026-09-24",
+    "node_id": "sistema_estable_causas_comunes",
+    "campo": "resumen_teorico",
+    "veredicto": "CONTRARIO",
+    "texto_anterior": "Un sistema estable es aquel cuya variación proviene solo de causas comunes: se mantiene dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales, que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya, no de la persona que te ayuda a ejecutarlo, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedirle a alguien que 'trabaje mejor' o fijar metas numéricas sin cambiar materiales, herramientas, definiciones o capacitación es inútil y desmoralizante. La mejora real exige identificar qué cambio estructural puede mover la capacidad del sistema antes de exigir resultados distintos.",
+    "texto_nuevo": "Un sistema estable es aquel cuya variación proviene solo de causas comunes: se mantiene dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales, que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya, no de la persona que te ayuda a ejecutarlo, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedirle a alguien que 'trabaje mejor' o fijar metas numéricas es inútil y desmoralizante: si el sistema es estable, obtendrás lo que el sistema dé. La mejora real exige identificar qué cambio estructural, como materiales, herramientas, definiciones o capacitación, puede mover la capacidad del sistema.",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L1571-L1573",
+      "frase": "If you have a stable system, then there is no use to specify a goal. You will get whatever the system will deliver."
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Repite la misma condición corregida en el paso 4: presenta las metas numéricas y la exigencia de resultados como aceptables una vez cambiado el sistema, cuando el libro las elimina sin más en un sistema estable (L1571-L1573, L7460).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-077"
+  },
+  {
+    "node_id": "ab_testing_optimizacion",
+    "campo": "pasos_accionables",
+    "indice": 4,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas.",
+    "texto_nuevo": "Sugerencia de My Idea: Implementar la version ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente metrica cuando se agoten las ideas.",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L11485-L11613",
+      "frase": "In summary: The optimization plan will change often, perhaps as often as every day. Start by defining the specific acquisition metrics to optimize. Don't tackle too many at once"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro pide probar, medir y ajustar sin fin (L11528, L11613), ordena las metricas una tras otra por tipo de negocio (L11485: start by optimizing traffic... and then move on) y documenta los experimentos en el canvas (L2220). Pero no pone ninguna condicion para pasar a la siguiente metrica, y menos 'cuando se agoten las ideas'. Busque run out of, out of ideas, next metric, winner, winning version: nada en el contexto de las pruebas A/B. Ese disparador es una pauta de metodo añadida, no una concrecion sin datos nuevos.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-047",
+    "id": "fidelidad-t7-023",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "burn_rate_por_etapa",
+    "campo": "pasos_accionables",
+    "indice": 3,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Revisa cada mes para no quedarte sin efectivo antes de validar tu modelo",
+    "texto_nuevo": "Sugerencia de My Idea: Revisa cada mes para no quedarte sin efectivo antes de validar tu modelo",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L2288-L2338",
+      "frase": "Use the time frames that make the most sense for your startup. Generally, the longer the physical-channel sales cycle (think enterprise software), the longer the \"space\" between calculations should be. Here we used a quarter-by-quarter forecast"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El burn rate se expresa por mes (L2288) y el libro pide tenerlo siempre presente (L13020), pero no fija una revision mensual: deja el intervalo entre calculos a criterio de la startup y su ejemplo es trimestral (L2338, L2371). No es CONTRARIO porque el libro no da otra frecuencia obligatoria; es una frecuencia añadida. Busque every month, each month, monthly review: nada sobre revisar el gasto cada mes.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-082",
+    "id": "fidelidad-t7-024",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "ab_testing_optimizacion",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.",
+    "texto_nuevo": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L11613-L11613",
+      "frase": "Many testers drive 80% of the traffic to one alternative, and 20% to the other, which can test on high-traffic pages well."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El reparto equitativo y el 80/20 en páginas de mucho tráfico son del libro, y 'no abordar muchas métricas a la vez' también (L11520). El plazo 'durante semanas' no está: el libro dice que solo la experiencia indica cuánto dura una prueba, que más corto es mejor, y que hay que llegar al máximo global (L8022). Busqué weeks, several weeks y run the test: sin plazo para A/B.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-092",
+    "id": "fidelidad-t7-025",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "ab_testing_optimizacion",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
+    "texto_nuevo": "Sugerencia de My Idea: Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipotesis de cambios grandes antes que las de pequeños ajustes.",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L11504-L11510",
+      "frase": "Don't test everything, test the important things. Don't test more than two changes to a page at a time, to avoid confusing your visitors so you can tell which change drove which improvement."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. Cambiar un solo elemento cabe dentro del limite del libro (no mas de dos cambios, L11510) y L11826 dice Test each one, one at a time, asi que esa parte es fiel. Pero el orden 'cambios grandes antes que pequeños ajustes' no esta en el libro: 'test the important things' prioriza por importancia, no por tamaño del cambio. Busque big changes, bigger changes, small changes, minor changes, tweaks, biggest impact: nada sobre ese orden. No es CONTRARIO porque el libro no da otro orden.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-106",
+    "id": "fidelidad-t7-026",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "customer_retention_tactics",
+    "campo": "pasos_accionables",
+    "indice": 4,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Define el Dia 1 de la relacion con el cliente y mapea los primeros 100 dias para identificar el punto exacto de mayor desercion",
+    "texto_nuevo": "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L6792-L6808",
+      "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide vigilar metricas de retencion organizadas por cohortes; no habla de un Dia 1 de la relacion ni de mapear los primeros 100 dias (busque 100 days, hundred days, first days, Day One sin resultado en ese contexto).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083",
+    "id": "fidelidad-t7-027",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-028",
+    "fecha": "2026-09-24",
+    "node_id": "customer_retention_tactics",
+    "campo": "resumen_teorico",
+    "veredicto": "ANADIDO",
+    "texto_anterior": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave definir el Dia 1 de la relacion con el cliente y mapear el customer life cycle completo, prestando especial atencion a los primeros 100 dias, donde suele concentrarse la mayor desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+    "texto_nuevo": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L6792-L6808",
+      "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Repite el dato corregido en el paso 4: el Dia 1 y los primeros 100 dias como punto de mayor desercion no estan en el libro, que pide organizar las metricas de retencion por cohortes (L6792-L6808).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+  },
+  {
+    "id": "fidelidad-t7-029",
+    "fecha": "2026-09-24",
+    "node_id": "customer_retention_tactics",
+    "campo": "entregable_esperado",
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos en los primeros 100 dias, listo para probar en validacion de clientes.",
+    "texto_nuevo": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L6792-L6808",
+      "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el plazo de los primeros 100 dias corregido en el paso 4, que el libro no respalda (ANADIDO de plazo: se quita).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+  },
+  {
+    "node_id": "decisiones_reversibles_irreversibles",
+    "campo": "pasos_accionables",
+    "indice": 4,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Anotar cuántas decisiones tomas y revisas por semana para medir tu tempo",
+    "texto_nuevo": "Sugerencia de My Idea: anotar cuántas decisiones tomas y revisas por semana para medir tu tempo",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L1270-L1272",
+      "frase": "tempo--the ability to make quick decisions consistently and at all levels in the company"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de tempo y compara 20 decisiones tomadas y cinco revertidas, pero no pide contar decisiones por semana; busqué 'week', 'semana' junto a decisiones sin resultado. Frecuencia y métrica añadidas.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-102",
+    "id": "fidelidad-t7-030",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-031",
+    "fecha": "2026-09-24",
+    "node_id": "decisiones_reversibles_irreversibles",
+    "campo": "resumen_teorico",
+    "veredicto": "ANADIDO",
+    "texto_anterior": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles. Medir tu propio tempo de decisión te ayuda a detectar cuándo te estás paralizando.",
+    "texto_nuevo": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles.",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L1270-L1272",
+      "frase": "tempo--the ability to make quick decisions consistently and at all levels in the company"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (Sugerencia de My Idea): el resumen presenta como teoría del libro la idea de medir tu propio tempo, que es el fin del paso 4 (anotar cuántas decisiones tomas y revisas por semana para medir tu tempo). El libro define el tempo pero no pide medirlo ni llevar esa cuenta; en el resumen_teorico se quita el dato.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-102"
+  },
+  {
+    "node_id": "intellectual_property_strategy",
+    "campo": "pasos_accionables",
+    "indice": 5,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Busca a alguien con buen criterio legal antes de avanzar más en construir tu negocio",
+    "texto_nuevo": "Define qué ideas e invenciones clave necesitan patente o patente provisional y empieza a presentarlas pronto",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L7429-L7440",
+      "frase": "What are the most important ideas and inventions that need patents (or provisional patents)? Start filing these early!"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no pide buscar asesoría o criterio legal para la propiedad intelectual; búsqueda de legal, lawyer, attorney y counsel sin pasaje que lo respalde. Introduce un responsable legal que el libro no pone.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C071-050",
+    "id": "fidelidad-t7-032",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "intellectual_property_strategy",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Crear acuerdos de cesión de invención con empleados y contratistas, incluido el acuerdo de 'work for hire'",
+    "texto_nuevo": "Crear acuerdos de cesión de invención con empleados y acuerdos escritos de cesión del trabajo creado con contratistas y subcontratistas",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L7449",
+      "frase": "If you're using independent contractors, make sure you have written agreements assigning work created. Make sure you have Employee Invention Assignment Agreements."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide acuerdos de cesión con empleados y contratistas, pero no menciona la figura legal work for hire (búsqueda de work for hire y variantes sin resultado).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C071-108",
+    "id": "fidelidad-t7-033",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "search_for_business_model",
+    "campo": "pasos_accionables",
+    "indice": 7,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible",
+    "texto_nuevo": "Sugerencia de My Idea: usa el Business Model Canvas como marcador de tus hipótesis y complétalo con el Value Proposition Canvas como herramienta de planificación flexible",
+    "cita": {
+      "libro": "The Startup Owner's Manual - Blank, Steve",
+      "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+      "lineas": "L1108-L1118",
+      "frase": "In this book, Alexander Osterwalder’s business model canvas serves as the scorecard for the customer discovery process"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro usa el Business Model Canvas como marcador de hipotesis. El Value Proposition Canvas no aparece en ninguna parte del libro (busque value proposition canvas y proposition canvas).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-083",
+    "id": "fidelidad-t7-034",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "benchmark_inversion_rd_industria",
+    "campo": "pasos_accionables",
+    "indice": 0,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Calcular el gasto histórico en I+D como porcentaje de ventas de la empresa en los últimos 3-5 años.",
+    "texto_nuevo": "Calcular el gasto histórico en I+D de la empresa como porcentaje de ventas.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L1035-L1035",
+      "frase": "What is your historical level of R&D spending as a percentage of sales? Has it been going up or down?"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide el nivel historico de I+D sobre ventas pero no fija ventana temporal; busque three/five years, 3-5 y variantes y solo aparecen en otros contextos (ventas de nuevos productos, roadmaps).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C075-069",
+    "id": "fidelidad-t7-035",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "benchmark_inversion_rd_industria",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Identificar el promedio de I+D/ventas para la industria específica (usando fuentes como datos de la NSF o asociaciones sectoriales).",
+    "texto_nuevo": "Sugerencia de My Idea: identificar el promedio de I+D/ventas de la industria específica usando fuentes como los datos de la NSF (o la autoridad equivalente en tu mercado) o asociaciones sectoriales.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L564-L564",
+      "frase": "Table 1.1 provides breakdown of R&D spending by industry so that you can compare your firm with others in your industry."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro remite a su Tabla 1.1 para comparar con la industria; no menciona la NSF ni asociaciones sectoriales como fuente (busque NSF, National Science Foundation, trade association sin resultado en este contexto).",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C075-081",
+    "id": "fidelidad-t7-036",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "investigacion_etnografica_ideacion",
+    "campo": "pasos_accionables",
+    "indice": 7,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)",
+    "texto_nuevo": "Sugerencia de My Idea: busca situaciones análogas (por ejemplo, un pit stop de carreras para entender una sala de emergencias)",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L4981-L5006",
+      "frase": "Ethnography, the term used in marketing for cultural anthropology, involves camping out with customers or observation of customers for extended periods"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La seccion de etnografia no menciona buscar situaciones analogas ni el ejemplo del pit stop y la sala de emergencias; busque pit stop, emergency room, racing, analog sin hallarlo.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-014",
+    "id": "fidelidad-t7-037",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "investigacion_etnografica_ideacion",
+    "campo": "pasos_accionables",
+    "indice": 8,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Construir confianza genuina con los sujetos observados antes de extraer insights",
+    "texto_nuevo": "Sugerencia de My Idea: construye confianza genuina con las personas que observas antes de sacar conclusiones",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L4981-L5006",
+      "frase": "this observational method relies very much on the skill of the observer"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La seccion de etnografia no habla de construir confianza con los observados antes de extraer insights; busque trust, rapport sin hallarlo.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-100",
+    "id": "fidelidad-t7-038",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "investigacion_etnografica_ideacion",
+    "campo": "pasos_accionables",
+    "indice": 6,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.",
+    "texto_nuevo": "Sugerencia de My Idea: forma equipos que combinen antropólogos o etnógrafos con diseñadores, arquitectos e ingenieros.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L4981-L5006",
+      "frase": "members of the project team undertook an ethnographic study"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de equipos de proyecto o de VoC que hacen etnografia, no de combinar antropologos con disenadores, arquitectos e ingenieros; busque anthropolog, architect, designers en ese contexto sin hallarlo.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-113",
+    "id": "fidelidad-t7-039",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "investigacion_etnografica_ideacion",
+    "campo": "pasos_accionables",
+    "indice": 1,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa",
+    "texto_nuevo": "Sugerencia de My Idea: observa directamente a los usuarios usando o usando mal el producto durante un período extendido, e involucra a líderes o clientes en la observación de campo para generar empatía directa",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L4986-L4986",
+      "frase": "observation of customers for extended periods, watching and probing as they use or misuse products"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La primera parte es fiel, pero el libro no pide involucrar o delegar en lideres o clientes la observacion de campo; busque deputiz y la presencia de ejecutivos en visitas sin hallarlo.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-117",
+    "id": "fidelidad-t7-040",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "ocho_factores_exito_criticos",
+    "campo": "pasos_accionables",
+    "indice": 3,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Asignar responsables para asegurar cada factor durante el desarrollo",
+    "texto_nuevo": "Sugerencia de My Idea: asignar responsables para asegurar cada factor durante el desarrollo.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L1812-L1830",
+      "frase": "What would be the first eight principles that might underpin your system? The eight success drivers outlined above in this chapter"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razón el lector B. Cuando el libro explica cómo aplicar los ocho factores (L1812-L1830), no habla de dueños por factor: pide meter cada uno en el playbook o en el sistema de idea a lanzamiento como acción o criterio de decisión (acciones y criterios, VoC obligatoria, etapas de homework, definición firmada, espirales, entradas globales, plan de lanzamiento, formas de acelerar). La cita del lector A (L1452) existe, pero solo cubre las cinco claves de la ventaja de producto, que es un solo factor, y se las da al líder y al equipo en conjunto como objetivos personales. No reparte los ocho factores entre responsables distintos. Busqué accountable, responsible, owner, assign, in charge y personal objective en todo el libro. Siempre es el equipo del proyecto en conjunto el que responde por los resultados y las proyecciones (L2171, L3275, L6313, L6462). No aparece ningún responsable por factor. El paso añade así una forma de organizarse que el libro no propone. Es práctica de gestión, no cifra ni norma, por eso el tipo es PRACTICO. No es CONTRARIO, porque el libro no desaconseja nombrar responsables y sí pide que el equipo responda.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C079-097",
+    "id": "fidelidad-t7-041",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "seleccion_arenas_estrategicas",
+    "campo": "pasos_accionables",
+    "indice": 5,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Selecciona y prioriza de 2 a 4 arenas específicas como foco final",
+    "texto_nuevo": "Selecciona y prioriza unas pocas arenas específicas como foco final",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L7977-L7977",
+      "frase": "identified a total of twelve new potential strategic arenas in their strategy development, and ended up choosing only three as target arenas"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide foco en pocas arenas y muestra ejemplos con tres o cuatro, pero no fija un rango de 2 a 4 como regla. Busque two to four, three to five y variantes sin encontrarlo aplicado a arenas.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-061",
+    "id": "fidelidad-t7-042",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-043",
+    "fecha": "2026-09-24",
+    "node_id": "seleccion_arenas_estrategicas",
+    "campo": "entregable_esperado",
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Una lista corta (2 a 4) de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
+    "texto_nuevo": "Una lista corta de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L7977-L7977",
+      "frase": "identified a total of twelve new potential strategic arenas in their strategy development, and ended up choosing only three as target arenas"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el rango de 2 a 4 arenas que la ficha C080-061 quita del paso 5 (ANADIDO de cifra). El libro pide foco en pocas arenas pero no fija ese rango; se deja la lista corta sin cifra.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-061"
+  },
+  {
+    "node_id": "seleccion_arenas_estrategicas",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
+    "texto_nuevo": "Genera una lista amplia de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L7977-L7977",
+      "frase": "The OSB construction-materials firm, one of the examples above, identified a total of twelve new potential strategic arenas in their strategy development, and ended up choosing only three as target arenas."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. Diverger con una lista amplia (L7975-L7977), usar dimensiones como grupos de clientes, sectores, categorias de producto y tecnologias (L8179-L8190) y evitar definiciones demasiado amplias (caso OSB, L7895) si son del libro. Pero el doce solo sale como resultado de dos ejemplos (OSB en L7977, Chempro en L8307 y L8320). Busque twelve, 12, dozen, long list y broad list: el libro nunca lo propone como minimo ni como referencia. Convertirlo en \"12 o más\" es una cifra normativa que el libro no respalda. No es CONTRARIO porque el libro no da otro minimo distinto.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-094",
+    "id": "fidelidad-t7-044",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "voz_del_cliente_voc",
+    "campo": "pasos_accionables",
+    "indice": 0,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.",
+    "texto_nuevo": "Sugerencia de My Idea: prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.",
+    "cita": {
+      "libro": "Winning at New Products - Robert G. Cooper",
+      "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+      "lineas": "L1527-L1531",
+      "frase": "after some training on how to do ethnographic research, they began their camping-out exercises"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El libro respalda formarse antes de observar (L1527 y L5004: 'Some talent and training is needed') y observar en el entorno del cliente ademas de entrevistarlo (L1529-L1531). Pero no dice en ningun sitio que haya que empezar por los clientes mas exigentes. Busque demanding, toughest, most sophisticated, key customers, start with y begin with: solo aparecen usos ajenos a esto. Los lead users que cita B (L5058) son usuarios innovadores que van por delante de las tendencias del mercado, y el libro los trata como otro metodo distinto de la etnografia. No son 'los mas exigentes' ni el libro los pone como punto de partida de la observacion. La prioridad es un criterio de seleccion practico que el libro no da.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C081-020",
+    "id": "fidelidad-t7-045",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "eliminacion_firmas_redundantes",
+    "campo": "pasos_accionables",
+    "indice": 5,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Mide tu tasa de errores durante 2 a 4 semanas antes y después del cambio para verificar la mejora",
+    "texto_nuevo": "Mide tu tasa de errores antes y después del cambio para verificar la mejora",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L4729",
+      "frase": "My prediction was that the problem would evaporate in three weeks. Actually, irregularities dropped to 3 in 100 in two weeks."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no fija un periodo de medicion. Solo cuenta en cuanto tiempo cayeron los errores en un caso. El plazo de medicion es un dato anadido.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C084-087",
+    "id": "fidelidad-t7-046",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "muestreo_con_seguimiento_no_respondientes",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Realizar seguimiento activo (entrevista personal o telefónica) a quienes no respondan dentro de la muestra.",
+    "texto_nuevo": "Sugerencia de My Idea: realizar seguimiento activo a quienes no respondan dentro de la muestra, con entrevista personal o, si no es posible, por teléfono.",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L5011-L5011",
+      "frase": "then to follow up by personal interview with the nonrespondents"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El libro fija el medio de seguimiento: entrevista personal a quienes no responden dentro de la muestra. Busque telephone y phone en todo el libro y la via telefonica nunca aparece como forma de seguir a los no respondientes (solo sale en otros contextos: companias telefonicas, operadoras, quejas). El seguimiento personal es fiel, pero la opcion telefonica es un canal o herramienta que el libro no pone. No es solo concretar: anade otro medio.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-014",
+    "id": "fidelidad-t7-047",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "orgullo_por_el_trabajo",
+    "campo": "pasos_accionables",
+    "indice": 5,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros",
+    "texto_nuevo": "Sugerencia de My Idea: armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros.",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L3488-L3488",
+      "frase": "What is your plan and what are you doing about it for removal of barriers that rob the hourly worker of his pride of workmanship?"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B en el veredicto. El libro respalda tener un plan para quitar las barreras (L3488) y que eso lleva anos (L3261: cinco anos, y diez en muchas empresas). Pero no dice como armar ese plan. Busque deadline, timetable y responsible en todo el libro, y no aparece nada sobre repartir responsables ni fijar plazos para quitar estas barreras. Pedir 'responsables y plazos claros' impone un formato de gestion que el libro no da. Como no fija una cifra concreta, es un anadido practico.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-037",
+    "id": "fidelidad-t7-048",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "procedimientos_definidos_en_servicios",
+    "campo": "pasos_accionables",
+    "indice": 2,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+    "texto_nuevo": "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las areas de mayor contacto con el cliente",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L4228-L4228",
+      "frase": "Few organizations have up-to-date procedures."
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide procedimientos definidos, pero no fija un orden de prioridad por contacto con el cliente.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-102",
+    "id": "fidelidad-t7-049",
+    "fecha": "2026-09-24"
+  },
+  {
+    "node_id": "transformacion_gerencial_para_la_calidad",
+    "campo": "pasos_accionables",
+    "indice": 3,
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Da seguimiento al avance de cada uno de los 14 puntos con plazos definidos",
+    "texto_nuevo": "Da seguimiento al avance de cada uno de los 14 puntos, sabiendo que cada uno requiere tiempo",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L2723-L2740",
+      "frase": "A better way would be to enquire into advancement during the past year on:"
+    },
+    "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide indagar el avance en removal de barreras, proveedores, formacion, etc., y advierte que los puntos requieren tiempo (L3263), pero no fija plazos definidos por punto; se busco deadline, timetable, target date sin hallarlo.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-030",
+    "id": "fidelidad-t7-050",
+    "fecha": "2026-09-24"
+  },
+  {
+    "id": "fidelidad-t7-051",
+    "fecha": "2026-09-24",
+    "node_id": "transformacion_gerencial_para_la_calidad",
+    "campo": "entregable_esperado",
+    "veredicto": "ANADIDO",
+    "texto_anterior": "Plan de transformación de tu negocio con horizonte de 5 a 10 anos o mas, con hitos definidos",
+    "texto_nuevo": "Plan de transformación de tu negocio con horizonte de 5 a 10 anos o mas",
+    "cita": {
+      "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+      "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+      "lineas": "L2723-L2740",
+      "frase": "A better way would be to enquire into advancement during the past year on:"
+    },
+    "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la idea de plazos definidos que la ficha C087-030 quita del paso 3 (ANADIDO de plazo): los hitos definidos funcionan como fechas objetivo que el libro no fija (se busco deadline, timetable y target date sin hallarlo). Solo se quita ese trozo; el horizonte temporal no es objeto de esta ficha.",
+    "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-030"
+  }
+]

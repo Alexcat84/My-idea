@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_054",
+  "intento": 0,
+  "usd": 0.170236,
+  "turnos": 1,
+  "duracion_s": 19.3,
+  "pared_s": 20.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33849,
+  "tokens_out": 1742,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA4D09C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2880, 2884, 2922, 2961, 3817, 4765, 4987], \"razon\": \"El libro desaconseja culpar como enfoque principal. 'Como estrategia principal' deja sitio a sancionar actos flagrantes, en linea con la cultura justa, no la sin-culpa.\"},\n  {\"id\": \"PE7F5D4\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5037, 5057, 5059], \"razon\": \"'Negativa' es ambiguo. En L5057, si la respuesta es 'no', se revisa formacion y seleccion; si no aparecen deficiencias, cabe negligencia. Ademas, el test va tras descartar sustancias e incumplimiento deliberado.\"},\n  {\"id\": \"PCEFF40\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [323, 2652, 2654, 5503, 5907], \"razon\": \"El libro distingue ambos tipos de accidente, pero no prescribe un proceso separado. Recomienda un marco comun para varios eventos, que los modelos coexistan y aplicar contramedidas a todos los niveles.\"},\n  {\"id\": \"PE3A29E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [596, 608, 628, 648, 4765, 4786], \"razon\": \"Westrum clasifica las culturas segun como tratan a los mensajeros. Evaluar ese trato concreta la tipologia en su misma direccion, sin datos nuevos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA4D09C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2880,
+    2884,
+    2922,
+    2961,
+    3817,
+    4765,
+    4987
+   ],
+   "razon": "El libro desaconseja culpar como enfoque principal. 'Como estrategia principal' deja sitio a sancionar actos flagrantes, en linea con la cultura justa, no la sin-culpa."
+  },
+  {
+   "id": "PE7F5D4",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5037,
+    5057,
+    5059
+   ],
+   "razon": "'Negativa' es ambiguo. En L5057, si la respuesta es 'no', se revisa formacion y seleccion; si no aparecen deficiencias, cabe negligencia. Ademas, el test va tras descartar sustancias e incumplimiento deliberado."
+  },
+  {
+   "id": "PCEFF40",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    323,
+    2652,
+    2654,
+    5503,
+    5907
+   ],
+   "razon": "El libro distingue ambos tipos de accidente, pero no prescribe un proceso separado. Recomienda un marco comun para varios eventos, que los modelos coexistan y aplicar contramedidas a todos los niveles."
+  },
+  {
+   "id": "PE3A29E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    596,
+    608,
+    628,
+    648,
+    4765,
+    4786
+   ],
+   "razon": "Westrum clasifica las culturas segun como tratan a los mensajeros. Evaluar ese trato concreta la tipologia en su misma direccion, sin datos nuevos."
+  }
+ ]
+}

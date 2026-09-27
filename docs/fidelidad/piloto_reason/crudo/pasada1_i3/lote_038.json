@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_038",
+  "intento": 0,
+  "usd": 0.162464,
+  "turnos": 1,
+  "duracion_s": 15.8,
+  "pared_s": 16.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33016,
+  "tokens_out": 1520,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P82F303\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2936, 2957, 2924], \"razon\": \"El paso reproduce casi literalmente el primer hecho básico que el libro propone reconocer para romper el ciclo de la culpa.\"},\n  {\"id\": \"P2E55A4\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [105, 83, 2566, 2585], \"razon\": \"El libro dice que en periodos sin accidentes cae la inversión y el mantenimiento de defensas. Auditarla concreta esa idea, en su misma dirección.\"},\n  {\"id\": \"PD1D609\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5603, 5639, 5701, 5907], \"razon\": \"Priorizar por el riesgo predominante del dominio puede relegar las condiciones latentes. El libro dice que son altas en todos los dominios y pide contramedidas simultáneas en todos los niveles.\"},\n  {\"id\": \"PDB837E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [1085, 1095, 1141, 2948, 2884], \"razon\": \"El libro no propone capacitar. Presenta la desconfianza como consecuencia de falsas alarmas reales y privilegia cambiar situaciones antes que personas. Capacitar como vía principal podría chocar con eso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P82F303",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2936,
+    2957,
+    2924
+   ],
+   "razon": "El paso reproduce casi literalmente el primer hecho básico que el libro propone reconocer para romper el ciclo de la culpa."
+  },
+  {
+   "id": "P2E55A4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    105,
+    83,
+    2566,
+    2585
+   ],
+   "razon": "El libro dice que en periodos sin accidentes cae la inversión y el mantenimiento de defensas. Auditarla concreta esa idea, en su misma dirección."
+  },
+  {
+   "id": "PD1D609",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5603,
+    5639,
+    5701,
+    5907
+   ],
+   "razon": "Priorizar por el riesgo predominante del dominio puede relegar las condiciones latentes. El libro dice que son altas en todos los dominios y pide contramedidas simultáneas en todos los niveles."
+  },
+  {
+   "id": "PDB837E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    1085,
+    1095,
+    1141,
+    2948,
+    2884
+   ],
+   "razon": "El libro no propone capacitar. Presenta la desconfianza como consecuencia de falsas alarmas reales y privilegia cambiar situaciones antes que personas. Capacitar como vía principal podría chocar con eso."
+  }
+ ]
+}

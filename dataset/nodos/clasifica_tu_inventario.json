@@ -6,14 +6,13 @@
   "fuente": "Max Muller, Essentials of Inventory Management",
   "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercaderia lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operacion diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorias sin distincion hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes segun su funcion real y define una meta concreta para ti mismo: cuantos dias de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decision de compra es a ciegas.",
   "pasos_accionables": [
-    "Separa lo que tienes en bodega segun su funcion: para vender, para producir, para reponer piezas o consumibles de operacion.",
-    "Identifica cuanto de ese stock es reserva de seguridad y cuanto es exceso sin proposito claro.",
-    "Decide una meta concreta: dias de stock, numero de rotaciones al ano, o nivel de disponibilidad para tus clientes.",
-    "Revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
+    "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas o consumibles de operación.",
+    "Identifica cuánto de ese stock es reserva de seguridad y cuánto es exceso sin propósito claro.",
+    "Decide una meta concreta: días de stock, número de rotaciones al año, o nivel de disponibilidad para tus clientes.",
+    "Sugerencia de My Idea: revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
   ],
-  "entregable_esperado": "Una lista de tu inventario dividido por tipo, con una meta numerica escrita para cada categoria relevante.",
+  "entregable_esperado": "Una lista de tu inventario dividido por tipo, con una meta numérica escrita para cada categoría relevante.",
   "nodos_previos": [
-    "prepara_posicion_agenda_antes_negociar",
     "gestion_inventario"
   ],
   "nodos_siguientes": [
@@ -24,5 +23,95 @@
     "Compras sin saber si estas por encima o por debajo de lo que tu negocio necesita.",
     "Quieres liberar capital atrapado en mercaderia sin arriesgarte a quedarte sin stock."
   ],
-  "etiqueta_arbol": "Clasifica tu inventario y su meta"
+  "etiqueta_arbol": "Clasifica tu inventario y su meta",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-059",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "L4418-L4422",
+        "frase": "Your company should have a 'zero-tolerance' inventory policy. That is, it will not accept any inventory over a stated target."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide una meta pero no fija una frecuencia de revision.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-114"
+    },
+    {
+      "id": "t2-arista-100",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prepara_posicion_agenda_antes_negociar -> clasifica_tu_inventario",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-09-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el nodo pide clasificar el inventario y fijar metas antes de decidir cuanto comprar; negociar con el proveedor viene despues, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0580",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Separa lo que tienes en bodega segun su funcion: para vender, para producir, para reponer piezas o consumibles de operacion.",
+      "texto_nuevo": "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas o consumibles de operación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-027.paso0: según, función, operación (Solo añade tildes que faltaban (según, función, operación).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0581",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica cuanto de ese stock es reserva de seguridad y cuanto es exceso sin proposito claro.",
+      "texto_nuevo": "Identifica cuánto de ese stock es reserva de seguridad y cuánto es exceso sin propósito claro.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-027.paso1: cuánto, cuánto, propósito (Solo añade tildes que faltaban (cuánto interrogativo indirecto, propósito).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0582",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide una meta concreta: dias de stock, numero de rotaciones al ano, o nivel de disponibilidad para tus clientes.",
+      "texto_nuevo": "Decide una meta concreta: días de stock, número de rotaciones al año, o nivel de disponibilidad para tus clientes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-027.paso2: días, número, año (Corrige tildes y la eñe de año (ano era errata grave); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0583",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de tu inventario dividido por tipo, con una meta numerica escrita para cada categoria relevante.",
+      "texto_nuevo": "Una lista de tu inventario dividido por tipo, con una meta numérica escrita para cada categoría relevante.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-027.entregable: numérica, categoría (Solo añade tildes en numérica y categoría.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Max Muller, Essentials of Inventory Management"
+  ]
 }

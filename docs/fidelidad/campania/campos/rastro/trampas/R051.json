@@ -1,0 +1,77 @@
+[
+ {
+  "titulo": "Etiqueta que sobrevive al trayecto",
+  "etiqueta": "Pon la etiqueta donde se lea",
+  "resumen": "Una etiqueta mal puesta hace que el paquete se atrase o se pierda aunque el empaque sea perfecto. Pégala plana sobre la cara superior, que además debe ser la más grande de la caja, y quita o tapa cualquier etiqueta o marca de envíos anteriores, incluidos los indicadores viejos de material peligroso, para que nadie lea una dirección equivocada. Mete también una copia de la etiqueta dentro de la caja con la dirección completa de entrega y de retorno: si la de afuera se despega, el paquete todavía puede llegar. Y no confíes lo frágil a las flechas de este lado arriba, porque el courier no está obligado a respetarlas.",
+  "entregable": "Un paquete con la etiqueta pegada plana en la cara más grande, cubierta con cinta transparente para protegerla, sin marcas de envíos anteriores y con una copia de la etiqueta dentro de la caja.",
+  "condiciones": [
+   "Reusas cajas que todavía tienen etiquetas o códigos de envíos anteriores.",
+   "Un paquete tuyo se atrasó o llegó a otra dirección y no sabes por qué.",
+   "Confías en las flechas de este lado arriba para proteger algo frágil."
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "Requisitos de empaque de los couriers",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\EXTRACCION_EMPAQUE_COURIERS.md",
+  "lineas": "69-70",
+  "cita": "La etiqueta en la superficie superior/más grande, plana, NUNCA cubierta por cinta ni papeles (DHL: cubrirla atrasa el sorteo",
+  "dato": "cubierta con cinta transparente para protegerla",
+  "explicacion": "La fuente dice que la etiqueta NUNCA debe quedar cubierta por cinta ni papeles, y DHL añade que cubrirla atrasa el sorteo automático. El entregable pide justo lo contrario: cubrirla con cinta transparente. La cita cruza el salto de línea entre la 69 (termina en NUNCA) y la 70."
+ },
+ {
+  "titulo": "El sándwich de dos cajas para lo frágil",
+  "etiqueta": "Mete lo frágil en dos cajas",
+  "resumen": "Lo frágil, filoso o valioso no viaja seguro en una sola caja, por mucho relleno que le pongas. El método que enseñan los couriers es poner el producto acolchado en una caja interna y meter esa caja dentro de otra más grande, con colchón entre las dos. Los números que dan son parecidos: la caja de afuera unos 15 cm más grande en cada dimensión (UPS pide 15 cm y DHL al menos 14 cm) y unos 7.5 cm de colchón entre ambas cajas. Para lo preempacado, blando, durable o granulado basta una sola caja; las dos cajas se reservan para lo filoso, lo frágil y los artículos de lujo.",
+  "entregable": "Un envío frágil armado con caja interna acolchada dentro de una caja externa unos 15 cm más grande, con colchón entre las dos.",
+  "condiciones": [
+   "Vendes vidrio, cerámica u otro producto que se rompe con un golpe.",
+   "Envías algo frágil que pesa más de 2 kg, el peso desde el cual los couriers piden usar dos cajas.",
+   "Ya te llegó un reclamo por un producto frágil que se quebró en el camino."
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "Requisitos de empaque de los couriers",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\EXTRACCION_EMPAQUE_COURIERS.md",
+  "lineas": "43",
+  "cita": "pide caja externa 15 cm mayor en cada dimensión y ~7.5 cm de colchón",
+  "dato": "el peso desde el cual los couriers piden usar dos cajas",
+  "explicacion": "La fuente decide entre una y dos cajas por el tipo de contenido (frágil, filoso, valioso o de lujo frente a preempacado, blando, durable o granulado), y los únicos umbrales que da para este método son de tamaño y colchón (15 cm, 14 cm, 7.5 cm). No existe ningún umbral de 2 kg para exigir dos cajas: Grep de '2 kg' en el fichero no da nada; el único peso que aparece es el de ~10 kg para la doble pared (línea 23)."
+ },
+ {
+  "titulo": "Eliminar las causas de error (Paso 11)",
+  "etiqueta": "Deja que tu equipo nombre el problema",
+  "resumen": "El paso 11 del programa de catorce pasos de Crosby le da a cada persona una forma de avisarte de lo que le impide trabajar sin errores. Funciona como un buzón de sugerencias: cada persona describe en un formato sencillo de una página el problema que tiene y propone cómo resolverlo, y deja el formato en una caja de su área. Es importante acusar recibo rápido, dentro de las veinticuatro horas, para que la gente vea que la escuchas. Los estudios que cita Crosby muestran que más del 90 por ciento de lo que se reporta termina atendido, y que el 75 por ciento se resuelve en el primer nivel de supervisión.",
+  "entregable": "Un formato de una página para reportar causas de error, colocado en cada área, con un registro de respuestas dadas en menos de veinticuatro horas.",
+  "condiciones": [
+   "Cuando tu equipo aguanta problemas en silencio porque no le parecen lo bastante importantes para avisarte.",
+   "Después de fijar metas de mejora, cuando necesitas saber qué impide cumplirlas."
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+  "lineas": "1631",
+  "cita": "This is not a suggestion system. All they have to list is the problem; the appropriate functional group (e.g., industrial engineering) will develop the answer.",
+  "dato": "Funciona como un buzón de sugerencias: cada persona describe en un formato sencillo de una página el problema que tiene y propone cómo resolverlo",
+  "explicacion": "Crosby dice expresamente que la eliminación de causas de error NO es un sistema de sugerencias: la persona solo anota el problema y es el área funcional la que desarrolla la respuesta. La línea 3271 lo repite: en un sistema de sugerencias el trabajador tiene que conocer el problema y además proponer la solución, mientras que en ECR solo tiene que reconocer el problema. El resumen invierte ese punto."
+ },
+ {
+  "titulo": "Ubicar lo que más sale cerca de donde armas los pedidos",
+  "etiqueta": "Acerca lo que más vendes",
+  "resumen": "Si guardas tus productos sin orden, cada pedido te obliga a caminar y buscar más de la cuenta. Ordena tus productos por cuántas veces aparecen en los pedidos durante un periodo, no solo por las unidades vendidas, y pon los que más se piden en los lugares más fáciles de alcanzar. También conviene poner juntos los productos que suelen comprarse al mismo tiempo, para caminar menos entre ellos. Como lo que se vende rápido puede dejar de venderse de un momento a otro, sobre todo si depende de la moda, revisa y reacomoda tus ubicaciones cada 90 días, sin esperar a que el desorden se note.",
+  "entregable": "Un mapa de tu espacio de guardado con los productos más pedidos en los lugares más accesibles.",
+  "condiciones": [
+   "Tardas mucho en juntar cada pedido porque tienes que buscar los productos.",
+   "Tus productos más vendidos están guardados en el fondo o en lugares difíciles de alcanzar.",
+   "Tu catálogo cambia con la temporada o la moda y lo que antes se vendía ya no sale."
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+  "fichero": "C:\\Users\\AlexDesk\\Downloads\\Supply chain\\The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+  "lineas": "11950",
+  "cita": "There is therefore a trade-off between the cost of reslotting items and the benefits achieved by minimizing pick times.",
+  "dato": "revisa y reacomoda tus ubicaciones cada 90 días",
+  "explicacion": "El libro dice que los resultados del slotting cambian con el tiempo y plantea reubicar como un balance entre el costo de mover los artículos y el ahorro en tiempo de armado, que se calcula con análisis de datos o con IA. No da ninguna frecuencia fija. Grep de '90 days', 'ninety days', '45 days' y 'quarterly' no encuentra ninguna frecuencia para reubicar: 'quarterly' aparece solo para reuniones y reportes de gestión."
+ }
+]

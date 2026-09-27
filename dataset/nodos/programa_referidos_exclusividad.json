@@ -7,13 +7,13 @@
   "resumen_teorico": "En lugar de maximizar la cantidad de referidos, algunas empresas priorizan la calidad limitando el número de referidos que cada cliente puede hacer (ej. 'golden ticket'). Esto genera urgencia, exclusividad y asegura que los referidos sean del perfil correcto, además de convertir la invitación misma en un honor social.",
   "pasos_accionables": [
     "Limitar el número de referidos permitidos por cliente (ej: solo 1 por año)",
-    "Convertir el referido en un privilegio exclusivo, no en una tarea more",
+    "Convertir el referido en un privilegio exclusivo, no en una tarea más",
     "Usar listas de espera o procesos de aplicación para mantener la selectividad",
     "Premiar públicamente a los referidores frente a la comunidad para reforzar el estatus social"
   ],
   "entregable_esperado": "Un sistema de referidos exclusivo con criterios claros de elegibilidad y un mecanismo de reconocimiento público",
   "nodos_previos": [
-    "incentivos_reconocimiento_sostenibilidad"
+    "incentivos_no_monetarios_advocacy"
   ],
   "nodos_siguientes": [
     "advocacy_customer_journey"
@@ -22,5 +22,50 @@
     "Si el negocio tiene alta demanda y quiere mantener calidad sobre cantidad de clientes nuevos",
     "Si se busca crear una comunidad de marca fuerte"
   ],
-  "etiqueta_arbol": "Haz tus Referidos Exclusivos"
+  "etiqueta_arbol": "Haz tus Referidos Exclusivos",
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-072",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "incentivos_reconocimiento_sostenibilidad -> programa_referidos_exclusividad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-19-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los incentivos por desempeno en sostenibilidad para empleados no tienen relacion con un programa de referidos de clientes basado en exclusividad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-15",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "incentivos_no_monetarios_advocacy -> programa_referidos_exclusividad",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-15, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Después de ver cómo incentivar las recomendaciones sin dinero, la exclusividad y la escasez del golden ticket son otra forma de diseñar el programa de referidos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-orto-0427",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Convertir el referido en un privilegio exclusivo, no en una tarea more",
+      "texto_nuevo": "Convertir el referido en un privilegio exclusivo, no en una tarea más",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O036-010.paso1: more ('more' es una errata evidente por 'más' dentro de una frase en español; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    }
+  ]
 }

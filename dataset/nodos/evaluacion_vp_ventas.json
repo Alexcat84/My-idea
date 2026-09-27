@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de Candidatos para VP de Ventas",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Horowitz plantea un marco riguroso de preguntas para evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+  "resumen_teorico": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
   "pasos_accionables": [
     "Pregunta si el candidato diseñó o solo ejecutó el proceso de ventas en su empresa anterior",
     "Verifica su comprensión de procesos técnicos de venta: benchmarking, POCs, demos, lockout documents",
-    "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiendole ejemplos de contrataciones que salieron mal",
+    "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiéndole ejemplos de contrataciones que salieron mal",
     "Pide que describa su modelo de evaluación de representantes y diferencie entre reps transaccionales y de venta enterprise",
     "Solicita referencias de clientes que puedan confirmar su capacidad de cerrar grandes deals",
     "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal",
@@ -19,8 +19,7 @@
   "entregable_esperado": "Checklist de entrevista estructurado con preguntas específicas para validar competencias reales de un candidato a VP de Ventas",
   "nodos_previos": [
     "framework_ones_and_twos",
-    "contratar_cerrador_de_ventas",
-    "segmentos_de_clientes_problema_necesidad"
+    "contratar_cerrador_de_ventas"
   ],
   "nodos_siguientes": [
     "diseno_embudo_ventas_cliente",
@@ -42,5 +41,53 @@
       "titulo": "Cómo evaluar a un candidato a líder de ventas para grandes cuentas (Head of Enterprise Sales)",
       "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-091",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Horowitz plantea un marco riguroso de preguntas para evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+      "texto_nuevo": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Horowitz plantea un marco riguroso"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-124",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "segmentos_de_clientes_problema_necesidad -> evaluacion_vp_ventas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Evaluar a un candidato a VP de Ventas no es un paso natural despues de entender el problema, la necesidad o la pasion del segmento de clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0269",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiendole ejemplos de contrataciones que salieron mal",
+      "texto_nuevo": "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiéndole ejemplos de contrataciones que salieron mal",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-026.paso2: pidiéndole (Solo añade la tilde que faltaba en pidiéndole.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
   ]
 }

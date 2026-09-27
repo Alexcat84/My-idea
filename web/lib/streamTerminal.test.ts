@@ -10,7 +10,7 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { garantizarTerminal, MOTIVO_CIERRE_SIN_TERMINAL } from "./streamTerminal";
+import { CODIGO_CIERRE_SIN_TERMINAL, garantizarTerminal, MOTIVO_CIERRE_SIN_TERMINAL } from "./streamTerminal";
 
 function arnes(over: Partial<Parameters<typeof garantizarTerminal>[0]> = {}) {
   const enviados: Array<{ evento: string; data: unknown }> = [];
@@ -32,18 +32,27 @@ describe("ningun stream del plan termina en silencio", () => {
     const { enviados, logs, args } = arnes();
     expect(garantizarTerminal(args)).toBe(true);
 
-    // grita por el canal
+    // grita por el canal. AUD-09 (decisión del fundador, 25 sep 2026): al
+    // cliente solo llegan un CÓDIGO y un identificador de correlación; la
+    // causa interna, la sesión y los eventos emitidos van solo al log.
     expect(enviados).toHaveLength(1);
     expect(enviados[0].evento).toBe("error");
     const d = enviados[0].data as Record<string, unknown>;
-    expect(d.motivo).toBe(MOTIVO_CIERRE_SIN_TERMINAL);
-    expect(d.session_id).toBe("sid-1");
-    expect(d.emitidos).toEqual(["contexto_final_usuario"]);
-    expect(d.causa).toBe("enqueue on closed controller");
+    expect(Object.keys(d).sort()).toEqual(["codigo", "id"]);
+    expect(d.codigo).toBe(CODIGO_CIERRE_SIN_TERMINAL);
+    expect(typeof d.id).toBe("string");
+    expect(JSON.stringify(d)).not.toContain("enqueue on closed controller");
 
-    // y grita por el log del servidor, que es la prueba cuando el canal murio
+    // y grita por el log del servidor, COMPLETO y con el mismo identificador:
+    // es la prueba cuando el canal murió, y lo que se busca con el id del cliente
     expect(logs).toHaveLength(1);
     expect(logs[0].mensaje).toBe("[plan] cierre sin terminal");
+    const det = logs[0].detalle as Record<string, unknown>;
+    expect(det.id).toBe(d.id);
+    expect(det.motivo).toBe(MOTIVO_CIERRE_SIN_TERMINAL);
+    expect(det.causa).toBe("enqueue on closed controller");
+    expect(det.session_id).toBe("sid-1");
+    expect(det.emitidos).toEqual(["contexto_final_usuario"]);
   });
 
   it("si YA salio un terminal, no toca nada", () => {

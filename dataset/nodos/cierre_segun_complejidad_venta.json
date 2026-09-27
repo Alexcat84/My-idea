@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Efectividad del Cierre según la Complejidad de la Venta",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso frecuente de técnicas de cierre puede mejorar resultados. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+  "resumen_teorico": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
   "pasos_accionables": [
-    "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
-    "Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción",
+    "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y también por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
+    "Si es venta pequeña y transaccional: las técnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequeñas las llamadas con más de dos cierres fueron las menos exitosas",
     "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)",
     "Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito",
     "Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan",
@@ -24,11 +24,7 @@
     "escala_actitud_cierre",
     "modelo_spin_preguntas",
     "preguntas_need_payoff",
-    "comunicacion_honesta_en_crisis_al_equipo",
-    "gratificacion_inmediata_producto",
-    "metodologia_spin_selling",
-    "nobody_cares_just_run_company",
-    "reuniones_diarias_eliminar_bloqueos"
+    "metodologia_spin_selling"
   ],
   "nodos_siguientes": [
     "compromiso_linea_tiempo_cliente",
@@ -85,5 +81,139 @@
       "titulo": "Riesgo de las Técnicas de Cierre en Ventas Complejas",
       "fuente": "SPIN Selling - Neil Rackham"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción",
+      "texto_nuevo": "Si es venta pequena y transaccional: las tecnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequenas las llamadas con mas de dos cierres fueron las menos exitosas",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L635-L672",
+        "frase": "Notice, however, that the least successful calls were those with more than two closing behaviors, where the success rate was below 20 percent."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro acepta el cierre en ventas pequenas (L635), pero en el estudio de American Airlines, con ventas relativamente pequenas, las llamadas con mas de dos cierres fueron las menos exitosas. 'Sin restriccion' contradice ese dato.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C125-027"
+    },
+    {
+      "id": "fidelidad-t9-004",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso frecuente de técnicas de cierre puede mejorar resultados. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "texto_nuevo": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L635-L672",
+        "frase": "Notice, however, that the least successful calls were those with more than two closing behaviors, where the success rate was below 20 percent."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la idea contraria del paso 1 (cerrar sin restricción, aquí como uso frecuente); el libro dice que incluso en ventas pequeñas las llamadas con más de dos cierres fueron las menos exitosas.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C125-027"
+    },
+    {
+      "id": "atribucion-026",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "texto_nuevo": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Concepto central de la investigación de Rackham:"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-008 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-016",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_honesta_en_crisis_al_equipo -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-14): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La comunicacion honesta del CEO en una crisis interna no prepara la efectividad del cierre de ventas; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-068",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gratificacion_inmediata_producto -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Quitar friccion para que el cliente use el producto recibido es posventa y de otro tema; no prepara el analisis del cierre y en todo caso iria despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-093",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "nobody_cares_just_run_company -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-17): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Dejar las excusas y dirigir la empresa no tiene relacion con las tecnicas de cierre segun la complejidad de la venta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-114",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reuniones_diarias_eliminar_bloqueos -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-18): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las reuniones diarias para eliminar bloqueos en situacion de supervivencia no tienen que ver con el cierre de ventas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0535",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
+      "texto_nuevo": "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y también por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O046-025.paso0: también (Solo corrige la tilde que faltaba en 'también'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0536",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si es venta pequena y transaccional: las tecnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequenas las llamadas con mas de dos cierres fueron las menos exitosas",
+      "texto_nuevo": "Si es venta pequeña y transaccional: las técnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequeñas las llamadas con más de dos cierres fueron las menos exitosas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O046-025.paso1: pequeña, técnicas, pequeñas, más (Corrige la eñe de 'pequeña/pequeñas' y las tildes de 'técnicas' y 'más'; lo demás queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
   ]
 }

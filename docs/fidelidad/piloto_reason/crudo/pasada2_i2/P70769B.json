@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P70769B",
+  "intento": 0,
+  "usd": 0.250724,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58171,
+  "tokens_out": 902,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P70769B\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4388, 4276, 4328, 4352], \"cita\": \"it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body. The presentation of the formal safety assessment should take the form of a Safety Case\", \"datos_sin_respaldo\": [], \"razon\": \"El libro exige que el operador demuestre ante el regulador, y con información al público, que sus riesgos están identificados y controlados (Safety Case, CIMAH). Justificar el criterio de riesgo aceptable ante reguladores y partes interesadas concreta esa obligación en la misma dirección. 'Reguladores' está respaldado. El libro no desaconseja justificar la elección, así que no es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P70769B",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4388,
+   4276,
+   4328,
+   4352
+  ],
+  "cita": "it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body. The presentation of the formal safety assessment should take the form of a Safety Case",
+  "datos_sin_respaldo": [],
+  "razon": "El libro exige que el operador demuestre ante el regulador, y con información al público, que sus riesgos están identificados y controlados (Safety Case, CIMAH). Justificar el criterio de riesgo aceptable ante reguladores y partes interesadas concreta esa obligación en la misma dirección. 'Reguladores' está respaldado. El libro no desaconseja justificar la elección, así que no es contrario.",
+  "paso_fiel": ""
+ }
+}

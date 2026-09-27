@@ -1,6 +1,6 @@
 {
   "node_id": "checklist_sistema_stage_gate_primera_clase",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Checklist de un Sistema Stage-Gate de Primera Clase",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -29,5 +29,23 @@
     "Cuando una empresa quiere evaluar la madurez y efectividad de su proceso de innovación",
     "Cuando se busca comparar el desempeño del proceso propio contra las mejores prácticas de la industria"
   ],
-  "etiqueta_arbol": "Evalúa tu Sistema de Etapas"
+  "etiqueta_arbol": "Evalúa tu Sistema de Etapas",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-016",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q032-016: Tenia razon el lector A: el nodo presupone un Stage-Gate ya operando (mide su adopcion real, implanta metricas de cumplimiento, designa un gerente de mejora continua y lo revisa cada 3-5 anos) y su entregable es una auditoria del sistema existente, es decir controlar y mejorar lo que ya funciona, no disenarlo; condiciones y dominio core estan bien segun ambos. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

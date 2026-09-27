@@ -1,0 +1,63 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_078",
+  "intento": 0,
+  "usd": 0.157484,
+  "turnos": 1,
+  "duracion_s": 15.6,
+  "pared_s": 17.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31981,
+  "tokens_out": 1478,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P9AD4D7\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [3763], \"razon\": \"La lista de la Seccion 4 esta incompleta: omite tarea, desempeno individual y entorno organizacional. 'Capacitacion' traduce libremente 'qualifications and skills' y falta 'para cada error de la Seccion 3'.\"},\n  {\"id\": \"P77B31B\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [567, 584, 582], \"razon\": \"El libro dice que solo un analisis geotecnico detallado lo habria revelado, pero llama al caso 'muy especial' y casi indetectable. Generalizarlo choca con los recursos limitados que el libro subraya.\"},\n  {\"id\": \"P9752EA\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2985, 2948, 2892, 2880], \"razon\": \"Coincide con que los accidentes provienen mas de situaciones propensas al error que de personas, y con distinguir factores sistematicos. Es una extension diagnostica coherente.\"},\n  {\"id\": \"P1D44FB\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4027, 4014, 4039], \"razon\": \"El inspector acepto que Occidental habia 'arreglado' deficiencias que luego causaron el desastre. Tambien se critica la falta de vigor al comprobar mejoras acordadas. Va en la misma direccion.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P9AD4D7",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    3763
+   ],
+   "razon": "La lista de la Seccion 4 esta incompleta: omite tarea, desempeno individual y entorno organizacional. 'Capacitacion' traduce libremente 'qualifications and skills' y falta 'para cada error de la Seccion 3'."
+  },
+  {
+   "id": "P77B31B",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    567,
+    584,
+    582
+   ],
+   "razon": "El libro dice que solo un analisis geotecnico detallado lo habria revelado, pero llama al caso 'muy especial' y casi indetectable. Generalizarlo choca con los recursos limitados que el libro subraya."
+  },
+  {
+   "id": "P9752EA",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2985,
+    2948,
+    2892,
+    2880
+   ],
+   "razon": "Coincide con que los accidentes provienen mas de situaciones propensas al error que de personas, y con distinguir factores sistematicos. Es una extension diagnostica coherente."
+  },
+  {
+   "id": "P1D44FB",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4027,
+    4014,
+    4039
+   ],
+   "razon": "El inspector acepto que Occidental habia 'arreglado' deficiencias que luego causaron el desastre. Tambien se critica la falta de vigor al comprobar mejoras acordadas. Va en la misma direccion."
+  }
+ ]
+}

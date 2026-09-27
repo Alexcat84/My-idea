@@ -13,21 +13,25 @@
  * Mantenerlo puro hace que toda esta logica se pueda probar sin mockear
  * streaming.
  */
+import type { PlanAnteriorIA } from "./replanteamiento";
 import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_ESTADO_VIVO } from "../prompts";
 import {
-  coincideKeyword,
   evaluarRuta,
-  KEYWORDS_ACCION_CLIENTES,
-  KEYWORDS_VIABILIDAD_ECONOMICA,
-  normalizarTexto,
+  normalizarParaPalabras,
+  PALABRAS_FAMILIAS_PLAN,
   type EvaluacionCobertura,
   type Familia,
 } from "../readiness";
-import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAMILIA_FALTANTE } from "./constants";
-import { esOfrecible, resolverId, type Grafo } from "./graph";
+import { elegir, esActivo, LOCALE_BASE, type Locale } from "../i18n/config";
+import { detectarIdioma } from "../i18n/detectarIdioma";
+import { neutralizarRotulos, rotulosPlan } from "../i18n/rotulosPlan";
+import { interpolar } from "../i18n/interpolar";
+import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
+import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
+import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
 import {
@@ -39,11 +43,32 @@ import {
 } from "../verificadorHuerfanos";
 import { detectarFaltaDeAcentos } from "../detectorAcentos";
 
+
+/** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
+ * redacción con IA (el ensamblado offline). Ese plan no se cobra. */
+// i18n F2: el texto vive en el catálogo MOTOR_PLAN; la constante es el valor base.
+export function avisoVersionBasica(idioma: Locale = LOCALE_BASE): string {
+  return elegir(MOTOR_PLAN, idioma).avisoVersionBasica;
+}
+export const AVISO_VERSION_BASICA = avisoVersionBasica(LOCALE_BASE);
+
+/** El aviso de un plan ya guardado, derivado del evento que la ruta del plan
+ * deja en las decisiones de su sesión: tras recargar, el aviso sigue ahí. */
+export function avisoDelPlan(decisiones: unknown, idioma: Locale = LOCALE_BASE): string | null {
+  if (!Array.isArray(decisiones)) return null;
+  return decisiones.some((e) => (e as { tipo?: unknown } | null)?.tipo === "plan_version_basica")
+    ? elegir(MOTOR_PLAN, idioma).avisoVersionBasica
+    : null;
+}
+
 export { SECCION_ECONOMICA_TITULO };
 
 export interface MaterialNodo {
   id: string;
+  /** El titulo del concepto: material INTERNO para el redactor (que tiene prohibido citarlo). */
   concepto: string;
+  /** Lo que ve el cliente cuando el plan se arma sin IA: la etiqueta, nunca el titulo (REGLA ESTRICTA, 26 sep 2026). */
+  etiqueta: string;
   pasos: string[];
   entregable: string;
   es_viabilidad_economica: boolean;
@@ -67,6 +92,7 @@ export function aMaterial(nid: string, graph: Grafo, families: Record<string, Fa
   return {
     id: nid,
     concepto: n.titulo_concepto,
+    etiqueta: etiquetaArbol(real, graph),
     pasos: n.pasos_accionables ?? [],
     entregable: n.entregable_esperado ?? "",
     es_viabilidad_economica: (families[real] ?? "general") === "viabilidad_economica",
@@ -86,9 +112,13 @@ export function cosecharVecindario(
   perfilSesion: string | null,
   prioridadDeclarada: PrioridadDeclarada | null = null,
   tope = MAX_COSECHA,
-  dominiosDesbloqueados: string[] | null = null
+  dominiosDesbloqueados: string[] | null = null,
+  /** Ciclo de replanteamiento, Fase 2: los conceptos que el proyecto YA cubrió
+   * en sesiones anteriores. La regla 8 de SYSTEM_PLAN promete que el material
+   * "ya excluye lo cubierto"; antes solo se excluía la ruta actual. */
+  excluir: Iterable<string> = []
 ): string[] {
-  const rutaSet = new Set(ruta);
+  const rutaSet = new Set([...ruta, ...excluir]);
   const candidatos = new Set<string>();
   for (const nid of ruta) {
     const n = graph[nid];
@@ -168,6 +198,27 @@ export interface PayloadPlan {
   bloqueo_declarado: string | null;
   es_seguimiento?: true;
   estado_vivo_previo?: string | null;
+  /** Ciclo de replanteamiento, Fase 2: el plan anterior (etapas y tareas con su
+   * estado), para construir encima y no repetir (regla 8-ter). */
+  plan_anterior?: PlanAnteriorIA;
+  /** "Replantear mi camino": la historia, lo que se conserva, lo que se suelta y
+   * el camino elegido (regla 8-quater). */
+  replanteamiento?: BloqueReplanteamiento;
+}
+
+export interface BloqueReplanteamiento {
+  historia: string;
+  se_conserva: string[];
+  se_suelta: string[];
+  camino_elegido: { titulo: string; descripcion: string } | null;
+}
+
+/** Lo que un ciclo posterior añade al armado del plan (Fase 2 del ciclo de
+ * replanteamiento). Todo opcional: un plan sin extras sale como siempre. */
+export interface ExtrasPlan {
+  excluir?: string[];
+  planAnterior?: PlanAnteriorIA | null;
+  replanteamiento?: BloqueReplanteamiento | null;
 }
 
 export interface PreparacionPlan {
@@ -190,7 +241,8 @@ export function prepararPlan(
   prioridadDeclarada: PrioridadDeclarada | null,
   esSeguimiento: boolean,
   estadoVivoPrevio: string | null,
-  dominiosDesbloqueados: string[] | null = null
+  dominiosDesbloqueados: string[] | null = null,
+  extras: ExtrasPlan = {}
 ): PreparacionPlan {
   const evaluacionRuta = evaluarRuta(ruta, families);
   const materialPrincipal = ruta.map((nid) => aMaterial(nid, graph, families));
@@ -202,7 +254,8 @@ export function prepararPlan(
     perfilSesion,
     prioridadDeclarada,
     undefined,
-    dominiosDesbloqueados
+    dominiosDesbloqueados,
+    extras.excluir ?? []
   );
   const materialDeApoyo = cosechaIds.map((nid) => aMaterial(nid, graph, families));
   const tieneMaterialEconomico = [...materialPrincipal, ...materialDeApoyo].some((m) => m.es_viabilidad_economica);
@@ -218,6 +271,8 @@ export function prepararPlan(
     payload.es_seguimiento = true;
     payload.estado_vivo_previo = estadoVivoPrevio;
   }
+  if (extras.planAnterior) payload.plan_anterior = extras.planAnterior;
+  if (extras.replanteamiento) payload.replanteamiento = extras.replanteamiento;
 
   return { payload, cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico };
 }
@@ -333,13 +388,17 @@ export interface CoberturaPlan {
  * que evaluarRuta, pero a partir de lo que el REDACTOR declaro que el
  * plan realmente trata -- la UNICA fuente para la etiqueta del plan y la
  * seccion "no cubre", coherente por construccion. */
-export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionPlan | null): CoberturaPlan {
+export function evaluacionDesdeAutodeclaracion(
+  autodeclaracion: AutodeclaracionPlan | null,
+  idioma: Locale = LOCALE_BASE
+): CoberturaPlan {
   const tratadas = new Set(autodeclaracion?.familias_tratadas ?? []);
   const tieneAccion = tratadas.has("accion_clientes");
   const tieneViabilidad = tratadas.has("viabilidad_economica");
+  const textoFaltante = textosFamiliaFaltante(idioma);
   const faltantes = ["accion_clientes", "viabilidad_economica"]
     .filter((f) => !tratadas.has(f))
-    .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
+    .map((f) => textoFaltante[f]);
   return {
     es_completa: tieneAccion && tieneViabilidad,
     tiene_accion_clientes: tieneAccion,
@@ -361,25 +420,67 @@ export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionP
  * viabilidad_economica ademas se confirma por la presencia exacta de la
  * seccion fija de sostenibilidad (regla 4), la misma senal que ya usa
  * corregirCoherenciaCobertura.
+ *
+ * i18n F6: el plan esta escrito en el idioma de la idea (con sus rotulos de
+ * estructura neutros, en espanol). Las palabras se buscan en el espanol, en
+ * el idioma de la plantilla (`idioma`) y en el idioma en que el TEXTO esta
+ * escrito (detectarIdioma sobre el plan sin sus rotulos neutros), con las
+ * listas por idioma de readiness.ts (PALABRAS_FAMILIAS_PLAN). Si el texto
+ * esta en un idioma fuera de los once (una idea en ruso), no hay palabras
+ * con que leerlo: el resultado se degrada, y eso se DICE (evento
+ * 'respaldo_familias_sin_palabras' con el idioma, y un aviso en el log), no
+ * se calla (BANCO 9, "fallar ruidoso").
  */
-export function familiasDesdeEncabezados(cuerpo: string): CoberturaPlan {
+export function familiasDesdeEncabezados(
+  cuerpo: string,
+  idioma: Locale = LOCALE_BASE,
+  registrarEvento?: (evento: Record<string, unknown>) => void
+): CoberturaPlan {
   const encabezados = cuerpo
     .split("\n")
     .filter((linea) => linea.trim().startsWith("#"))
     .join(" ");
-  const textoEncabezados = normalizarTexto(encabezados);
-  const tieneAccion = coincideKeyword(textoEncabezados, KEYWORDS_ACCION_CLIENTES);
-  const tieneViabilidad =
-    cuerpo.includes(SECCION_ECONOMICA_TITULO) || coincideKeyword(textoEncabezados, KEYWORDS_VIABILIDAD_ECONOMICA);
+  const textoEncabezados = normalizarParaPalabras(encabezados);
+  const idiomas = new Set<Locale>([LOCALE_BASE, idioma]);
+  const delTexto = detectarIdioma(textoSinRotulosNeutros(cuerpo), idioma).codigo;
+  if (esActivo(delTexto)) {
+    idiomas.add(delTexto);
+  } else {
+    registrarEvento?.({ tipo: "respaldo_familias_sin_palabras", idioma: delTexto });
+    console.warn(`[familiasDesdeEncabezados] plan en «${delTexto}», sin palabras clave para ese idioma: la cobertura se lee solo con ${[...idiomas].join(", ")}`);
+  }
+  const hay = (familia: "accion_clientes" | "viabilidad_economica") =>
+    [...idiomas].some((l) => PALABRAS_FAMILIAS_PLAN[l][familia].some((p) => textoEncabezados.includes(normalizarParaPalabras(p))));
+  const tieneAccion = hay("accion_clientes");
+  const tieneViabilidad = cuerpo.includes(SECCION_ECONOMICA_TITULO) || hay("viabilidad_economica");
+  const textoFaltante = textosFamiliaFaltante(idioma);
   const faltantes = (["accion_clientes", "viabilidad_economica"] as const)
     .filter((f) => (f === "accion_clientes" ? !tieneAccion : !tieneViabilidad))
-    .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
+    .map((f) => textoFaltante[f]);
   return {
     es_completa: tieneAccion && tieneViabilidad,
     tiene_accion_clientes: tieneAccion,
     tiene_viabilidad_economica: tieneViabilidad,
     familias_faltantes: faltantes,
   };
+}
+
+/** El plan sin sus rotulos de estructura neutros (en espanol en todo idioma,
+ * F5): lo que queda es el texto en el idioma de la idea. */
+const NEUTROS = rotulosPlan(LOCALE_BASE);
+function textoSinRotulosNeutros(cuerpo: string): string {
+  return cuerpo
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(
+      (l) =>
+        !l.startsWith(`## ${SECCION_ECONOMICA_TITULO}`) &&
+        l !== `## ${NEUTROS.noCubre}` &&
+        l !== `_${NEUTROS.etiquetaCompleto}_` &&
+        l !== `_${NEUTROS.etiquetaInicial}_`
+    )
+    .map((l) => l.replace(/^##\s+Etapa\s+\d+\s*:\s*/, "").replace(/^\*\*[^*]*\*\*\s*/, ""))
+    .join("\n");
 }
 
 /** Post-validador MECANICO (Motor v2.2) de la incoherencia etiqueta/
@@ -393,7 +494,8 @@ export function corregirCoherenciaCobertura(
   evaluacionCobertura: CoberturaPlan,
   cuerpo: string,
   tieneMaterialEconomico: boolean,
-  registrarEvento?: (evento: Record<string, unknown>) => void
+  registrarEvento?: (evento: Record<string, unknown>) => void,
+  idioma: Locale = LOCALE_BASE
 ): CoberturaPlan {
   const seccionPresente = tieneMaterialEconomico && cuerpo.includes(SECCION_ECONOMICA_TITULO);
   if (seccionPresente && !evaluacionCobertura.tiene_viabilidad_economica) {
@@ -402,7 +504,7 @@ export function corregirCoherenciaCobertura(
       ...evaluacionCobertura,
       tiene_viabilidad_economica: true,
       familias_faltantes: evaluacionCobertura.familias_faltantes.filter(
-        (f) => f !== TEXTO_FAMILIA_FALTANTE.viabilidad_economica
+        (f) => f !== textosFamiliaFaltante(idioma).viabilidad_economica
       ),
       es_completa: evaluacionCobertura.tiene_accion_clientes,
     };
@@ -482,18 +584,30 @@ export function extraerSeccionEconomica(cuerpo: string): string {
 
 /** Port de _ensamblar_offline: respaldo sin IA (fallo de red/presupuesto
  * en la llamada al redactor) -- concatena el material sin narrar. */
-export function ensamblarOffline(material: MaterialNodo[], perfilSesion: string | null, textoOriginal: string): string {
-  const out: string[] = ["# Tu plan de accion", ""];
+export function ensamblarOffline(
+  material: MaterialNodo[],
+  perfilSesion: string | null,
+  textoOriginal: string,
+  idioma: Locale = LOCALE_BASE
+): string {
+  const t = elegir(MOTOR_PLAN, idioma).offline;
+  const out: string[] = [t.titulo, ""];
   if (textoOriginal || perfilSesion) {
-    out.push("## Contexto");
-    if (textoOriginal) out.push(`Punto de partida: ${textoOriginal}`);
-    if (perfilSesion) out.push(`Lo que sabemos de tu idea: ${perfilSesion}`);
+    out.push(t.contexto);
+    if (textoOriginal) out.push(interpolar(t.puntoDePartida, { texto: textoOriginal }));
+    if (perfilSesion) out.push(interpolar(t.loQueSabemos, { perfil: perfilSesion }));
     out.push("");
   }
+  // i18n F5: la etapa nace con el MARCADOR NEUTRO (el que leen checklist.ts y
+  // planParser.ts); la pantalla lo pinta en el idioma de quien lee.
+  const etapaNeutra = elegir(MOTOR_PLAN, LOCALE_BASE).offline.etapa;
   material.forEach((m, i) => {
-    out.push(`## Etapa ${i + 1}: ${m.concepto}`);
+    out.push(interpolar(etapaNeutra, { n: i + 1, concepto: m.etiqueta }));
     m.pasos.forEach((p, j) => out.push(`  ${i + 1}.${j + 1} ${p}`));
-    if (m.entregable) out.push(`  Punto de control: ${m.entregable}`);
+    if (m.entregable) out.push(`  ${interpolar(t.puntoDeControl, { entregable: m.entregable })}`);
+    // Decisión del fundador (26 sep 2026): cada etapa lleva su Primera acción,
+    // sin fecha: su primer paso, con el marcador neutro (paridad con Python).
+    if (m.pasos.length > 0) out.push(`**${rotulosPlan(LOCALE_BASE).primeraAccion}:** ${m.pasos[0]}`);
     out.push("");
   });
   return out.join("\n");
@@ -532,7 +646,8 @@ export function finalizarPlan(
   families: Record<string, Familia>,
   textoOriginal: string,
   registrarEvento?: (evento: Record<string, unknown>) => void,
-  numerosProyecto?: unknown
+  numerosProyecto?: unknown,
+  idioma: Locale = LOCALE_BASE
 ): ResultadoEnsamblado {
   const { cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico, payload } = preparacion;
 
@@ -540,22 +655,23 @@ export function finalizarPlan(
   let autodeclaracion: AutodeclaracionPlan | null = null;
   if (rawTextoModelo !== null) {
     const parsed = parsearAutodeclaracion(rawTextoModelo);
-    cuerpo = parsed.cuerpo;
+    // i18n F5: si la IA tradujo algún rótulo de estructura, vuelve al neutro.
+    cuerpo = neutralizarRotulos(parsed.cuerpo);
     autodeclaracion = parsed.autodeclaracion;
   } else {
-    cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal);
+    cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);
   }
 
   let evaluacionCobertura: CoberturaPlan;
   if (autodeclaracion !== null) {
-    evaluacionCobertura = evaluacionDesdeAutodeclaracion(autodeclaracion);
+    evaluacionCobertura = evaluacionDesdeAutodeclaracion(autodeclaracion, idioma);
   } else {
     // Hotfix v2.2.1: ver familiasDesdeEncabezados -- jamas se degrada la
     // etiqueta solo porque el JSON de cola se corto.
-    evaluacionCobertura = familiasDesdeEncabezados(cuerpo);
+    evaluacionCobertura = familiasDesdeEncabezados(cuerpo, idioma, registrarEvento);
     registrarEvento?.({ tipo: "autodeclaracion_fallida" });
   }
-  evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento);
+  evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento, idioma);
   verificarProcedenciaEtapas(autodeclaracion, ruta, cosechaIds, registrarEvento);
 
   // Fase 3.1 (caja de vidrio): igual que en el reporte, pero acotado a la
@@ -578,12 +694,16 @@ export function finalizarPlan(
 
   // Fase 3.9 (D11): salida sin acentos (el prompt va sin tildes y el modelo lo
   // imita). Un solo evento con la muestra de palabras sospechosas.
-  const sinAcentos = detectarFaltaDeAcentos(cuerpo);
+  // i18n F5: el detector conoce palabras del español; en otro idioma no aplica.
+  const sinAcentos = idioma === LOCALE_BASE ? detectarFaltaDeAcentos(cuerpo) : [];
   if (sinAcentos.length > 0) {
     registrarEvento?.({ tipo: "salida_sin_acentos", muestra: sinAcentos.slice(0, 12), total: sinAcentos.length });
   }
 
-  const etiqueta = evaluacionCobertura.es_completa ? "Plan completo" : "Plan inicial";
+  // i18n F5: la etiqueta y el encabezado de lo que falta son MARCADORES NEUTROS
+  // (los lee planParser.ts); lo que falta, en el idioma del plan.
+  const neutro = elegir(MOTOR_PLAN, LOCALE_BASE);
+  const etiqueta = evaluacionCobertura.es_completa ? neutro.etiquetaCompleto : neutro.etiquetaInicial;
   const totalConceptos = ruta.length + cosechaIds.length;
   const partes: string[] = [`_${etiqueta}_`, "", cuerpo];
   // CONFIDENCIAL: la cobertura de conceptos (recorrido + vecindario del
@@ -597,9 +717,10 @@ export function finalizarPlan(
     cosecha: cosechaIds.length,
   });
   if (!evaluacionCobertura.es_completa) {
-    partes.push("", "## Lo que este plan aun no cubre", "");
+    partes.push("", neutro.noCubre, "");
     for (const f of evaluacionCobertura.familias_faltantes) partes.push(`- ${f}`);
-    partes.push("", "Para profundizar, continua la conversacion en esta misma sesion.");
+    // AUD-09 M33: sin la invitación a "continuar en esta misma sesión": la
+    // sesión ya está cerrada (el camino sigue es el Ciclo de profundización).
   }
 
   return {
@@ -618,7 +739,9 @@ export async function comprimirEstadoVivo(
   estadoAnterior: string | null,
   perfilSesionNueva: string,
   conceptosNuevosTitulos: string[],
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** i18n F5: el estado vivo es memoria del proyecto: en el idioma de la idea. */
+  idiomaSalida: string | null = null
 ): Promise<{ estadoVivo: string; acumulado: UsoAcumulado }> {
   try {
     const ctx = {
@@ -629,9 +752,12 @@ export async function comprimirEstadoVivo(
     const r = await llamarClaude(client, SYSTEM_ESTADO_VIVO, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
       maxTokens: 700,
       componente: "estado_vivo",
+      idiomaSalida,
     });
     return { estadoVivo: r.texto.trim(), acumulado: r.acumulado };
-  } catch {
+  } catch (e) {
+    // AUD-09 M17: el respaldo (concatenar) sigue, pero la caída deja rastro.
+    console.error("[estado_vivo] la compresión falló; se concatena sin comprimir:", e);
     const estadoVivo = estadoAnterior ? `${estadoAnterior}\n${perfilSesionNueva}`.trim() : perfilSesionNueva;
     return { estadoVivo, acumulado };
   }

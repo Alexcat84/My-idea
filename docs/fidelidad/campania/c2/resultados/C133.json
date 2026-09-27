@@ -1,0 +1,255 @@
+[
+ {
+  "id": "C133-001",
+  "veredicto": "OPERATIVO",
+  "lineas": "L93-L99",
+  "frase_clave": "Fill empty spaces within the box with any of the following filler materials to limit movement during shipping",
+  "razon": "El libro pide rellenar los huecos para limitar el movimiento del producto durante el envío. Agitar la caja con cuidado es una forma casera de comprobar ese mismo objetivo, sin cifras, normas ni herramientas nuevas. No contradice nada: el libro menciona el ensayo ISTA 3A para validar la protección, y esta prueba no lo sustituye ni lo niega.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 5,
+  "libro": "Guia de empaque para transporte",
+  "texto_actual": "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\Packaging_Guidelines.txt"
+  ],
+  "texto_leido": "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-002",
+  "veredicto": "OPERATIVO",
+  "lineas": "L39-L81",
+  "frase_clave": "Do not use with flat or narrow products ... Use anti-static peanuts for electronic items ... Used primarily as void-fill material for lightweight, non-fragile items.",
+  "razon": "El libro asigna cada relleno según el tipo de producto: liviano o no, frágil, plano o angosto, electrónico, con esquinas filosas. Mirar primero cómo es el producto concreta ese criterio sin aportar datos nuevos. Lo pesado se trata aparte, en Large and/or Heavy Packages (L279-L281).",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 1,
+  "libro": "Guia de empaque para transporte",
+  "texto_actual": "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\Packaging_Guidelines.txt"
+  ],
+  "texto_leido": "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-004",
+  "veredicto": "FIEL",
+  "lineas": "L12-L12",
+  "frase_clave": "Running away from risk is a no-win proposition. ... Projects with no real risks are losers. ... Risks and benefits always go hand in hand.",
+  "razon": "La tesis del libro es ir hacia el riesgo, no huirle, y administrarlo con método (la gestión de riesgos). En L64 se lee además 'This is an era in which risk-taking is rewarded', y en L1358 se elogia al gerente con agallas ('gutsy manager'). El paso lo resume sin añadir nada.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "FIEL",
+  "verificador": "FIEL",
+  "node_id": "el_riesgo_nunca_se_acaba_se_administra",
+  "paso": 4,
+  "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+  "texto_actual": "Sigue arriesgando con valentía, ahora con método debajo del brazo.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Sigue arriesgando con valentía, ahora con método debajo del brazo.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-006",
+  "veredicto": "ANADIDO",
+  "lineas": "L560-L572",
+  "frase_clave": "You mitigate a risk when you take steps before its materialization to reduce eventual containment costs.",
+  "razon": "El libro explica cómo mitigar y contener riesgos preparándose de antemano, pero nunca propone celebrar los golpes evitados, ni cada tanto ni de otra forma (busqué celebrat, credit, recogni y congratul sin resultados). Celebrar es una práctica nueva con una frecuencia que el libro no pone.",
+  "dato": "celebrar cada tanto los golpes evitados o amortiguados",
+  "tipo_anadido": "PRACTICO",
+  "texto_sugerencia": "Sugerencia de My Idea: cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "ANADIDO",
+  "verificador": "ANADIDO",
+  "node_id": "el_riesgo_nunca_se_acaba_se_administra",
+  "paso": 3,
+  "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+  "texto_actual": "Cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-008",
+  "veredicto": "FIEL",
+  "lineas": "L57-L67",
+  "frase_clave": "Do not use with flat or narrow products ... Peanuts cause static electricity and may damage electronic items. Use anti-static peanuts for electronic items, along with bubble sheeting around the item.",
+  "razon": "El paso dice lo mismo que el libro: nada de maníes comunes con productos planos, y versión antiestática para electrónicos. Solo omite las burbujas alrededor del artículo.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 3,
+  "libro": "Guia de empaque para transporte",
+  "texto_actual": "Evita maníes de poliestireno comunes con productos planos o electrónicos; usa la versión antiestática si es necesario.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\Packaging_Guidelines.txt"
+  ],
+  "texto_leido": "Evita maníes de poliestireno comunes con productos planos o electrónicos; usa la versión antiestática si es necesario.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-009",
+  "veredicto": "ANADIDO",
+  "lineas": "L79-L81",
+  "frase_clave": "Used primarily as void-fill material for lightweight, non-fragile items. Must be tightly crumpled.",
+  "razon": "El libro reserva el papel kraft arrugado para artículos livianos y no frágiles. 'Resistentes' equivale a no frágiles, pero el libro no pone la condición de 'bajo valor', y el paso deja fuera que el artículo sea liviano.",
+  "dato": "de bajo valor",
+  "tipo_anadido": "PRACTICO",
+  "texto_sugerencia": "Sugerencia de My Idea: reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "ANADIDO",
+  "verificador": "ANADIDO",
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 4,
+  "libro": "Guia de empaque para transporte",
+  "texto_actual": "Reserva el papel kraft arrugado para artículos resistentes y de bajo valor.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\Packaging_Guidelines.txt"
+  ],
+  "texto_leido": "Reserva el papel kraft arrugado para artículos resistentes y de bajo valor.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-010",
+  "veredicto": "FIEL",
+  "lineas": "L1152-L1162",
+  "frase_clave": "risk management needs to be an ongoing activity",
+  "razon": "Tenía razón el lector B. El libro dice literalmente que la gestión de riesgos tiene que ser una actividad continua y rechaza que se haga al inicio del proyecto y después se abandone (L1152). Lo repite en L1114 (\"should not happen just once\"), en L666 y en L1586 (\"Keep the risk-discovery process going throughout the project\"), y en L1160-L1162 enumera las actividades que deben seguir activas hasta el final. \"Hábito permanente, no una tarea que se termina\" es una paráfrasis de \"ongoing activity\" que no agrega ninguna acción, objeto, frecuencia ni condición. No hay nada que concretar, así que no corresponde OPERATIVO.",
+  "decidido_por": "arbitro",
+  "lector": "OPERATIVO",
+  "verificador": "FIEL",
+  "node_id": "el_riesgo_nunca_se_acaba_se_administra",
+  "paso": 2,
+  "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+  "texto_actual": "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-012",
+  "veredicto": "OPERATIVO",
+  "lineas": "L124-L126",
+  "frase_clave": "The IT project analog to loss of a juror is personnel turnover, one of the core risks on all software projects.",
+  "razon": "El libro trata la pérdida de una persona clave como un riesgo central que hay que mitigar, cita el agotamiento ('burnout', L282) como un costo real y, en la vida personal, la enfermedad como un riesgo que se mitiga (L156). Cuidar la propia salud y energía siendo la persona clave va en esa misma dirección, sin cifras ni herramientas nuevas.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "OPERATIVO",
+  "verificador": "OPERATIVO",
+  "node_id": "el_riesgo_eres_tu",
+  "paso": 4,
+  "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+  "texto_actual": "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-013",
+  "veredicto": "ANADIDO",
+  "lineas": "L150-L156",
+  "frase_clave": "contingency planning: what you expect to do if and when the risk materializes",
+  "razon": "Escribir qué harías si te pasa algo es el plan de contingencia que pide el libro, y en L156 habla de dejar dispuesto quién se ocupa si ocurre algo malo. Pero el plazo de 'dos semanas' no aparece en el libro (busqué two weeks, fortnight y 2 weeks).",
+  "dato": "dos semanas",
+  "tipo_anadido": "LEGAL_CIFRA",
+  "texto_fiel": "Escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "lector": "ANADIDO",
+  "verificador": "ANADIDO",
+  "node_id": "el_riesgo_eres_tu",
+  "paso": 3,
+  "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+  "texto_actual": "Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-014",
+  "veredicto": "FIEL",
+  "lineas": "L41-L45",
+  "frase_clave": "Designed to protect and cushion lightweight items. Used in multiple wraps and layers to ensure that the item is completely protected, especially on corners and edges.",
+  "razon": "El paso reproduce el uso del plástico de burbujas que da el libro: en capas, sobre esquinas y bordes, para artículos livianos.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 2,
+  "libro": "Guia de empaque para transporte",
+  "texto_actual": "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\Packaging_Guidelines.txt"
+  ],
+  "texto_leido": "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-015",
+  "veredicto": "OPERATIVO",
+  "lineas": "L122-L126",
+  "frase_clave": "There may be some steps you have to take before the transition, in order to keep your options open and to make correction possible afterward. That work is called mitigation.",
+  "razon": "Tenía razón el lector B. El libro identifica como riesgo la pérdida de una persona clave (L1072, y la rotación como riesgo central en L1006) y como mitigación propone tomar medidas antes de que ocurra para que otra persona pueda reemplazarla \"fully versed\" (L122-L126). En un proyecto de una sola persona no hay equipo que cubra, así que dejar documentado cómo funciona todo es la forma concreta de preparar esa sustitución: va en la misma dirección que el libro. El lector A buscó password y document y no los encontró, y es cierto que el libro no los nombra, pero el paso no introduce ninguno de los datos que la vara exige para ANADIDO (ni cifra, ni plazo, ni herramienta con nombre, ni responsable, ni norma, ni frecuencia). Cuentas, contraseñas y proveedores son simplemente el contenido de \"cómo funciona tu operación\". El libro no dice nada en contra.",
+  "decidido_por": "arbitro",
+  "lector": "ANADIDO",
+  "verificador": "OPERATIVO",
+  "node_id": "el_riesgo_eres_tu",
+  "paso": 1,
+  "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+  "texto_actual": "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-016",
+  "veredicto": "OPERATIVO",
+  "lineas": "L156-L156",
+  "frase_clave": "We mitigate by buying life and health insurance and by making arrangements for who will look out for the kids if something bad happens.",
+  "razon": "Tenía razón el lector B. El libro sí respalda dejar designado de antemano a quién se hará cargo si pasa algo: lo dice en L156 (\"making arrangements for who will look out for the kids\") y con los jurados suplentes en L124-L126, que funcionan como un reemplazo nombrado y preparado desde el primer día. El contacto de emergencia es esa misma figura aplicada al fundador que trabaja solo, y el acceso seguro a lo esencial es lo que le permite estar \"fully versed\" para poder intervenir. El lector A lo marcó ANADIDO porque ve un responsable nuevo, pero ese responsable es justamente el reemplazo designado que propone el libro. El paso no fija persona concreta, cifra, plazo ni herramienta.",
+  "decidido_por": "arbitro",
+  "lector": "ANADIDO",
+  "verificador": "OPERATIVO",
+  "node_id": "el_riesgo_eres_tu",
+  "paso": 2,
+  "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+  "texto_actual": "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+  "ya_corregido_antes": false
+ },
+ {
+  "id": "C133-017",
+  "veredicto": "FIEL",
+  "lineas": "L12",
+  "frase_clave": "Projects with no real risks are losers. They are almost always devoid of benefit ... Risks and benefits always go hand in hand.",
+  "razon": "El libro sostiene que el riesgo no se elimina y que buscar cero riesgo es renunciar al beneficio (también en L300: \"no party can be confident of having responsibility for zero risks\"). Aceptarlo y administrarlo es esa misma idea parafraseada.",
+  "decidido_por": "lector (FIEL no muestreado)",
+  "lector": "FIEL",
+  "node_id": "el_riesgo_nunca_se_acaba_se_administra",
+  "paso": 1,
+  "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+  "texto_actual": "Acepta que siempre habrá riesgo: la meta no es cero riesgo, sino riesgo administrado.",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt"
+  ],
+  "texto_leido": "Acepta que siempre habrá riesgo: la meta no es cero riesgo, sino riesgo administrado.",
+  "ya_corregido_antes": false
+ }
+]

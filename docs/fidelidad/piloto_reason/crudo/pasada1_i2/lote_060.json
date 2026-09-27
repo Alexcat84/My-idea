@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_060",
+  "intento": 0,
+  "usd": 0.16389600000000001,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33299,
+  "tokens_out": 1535,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD1F5ED\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2170, 2172, 2174, 2190, 2192, 2194, 1943, 2259], \"razon\": \"El libro dice que la vía cognitiva es difícil, a veces imposible, y que el análisis de tareas es más prometedor. El paso manda por la vía cognitiva como principal.\"},\n  {\"id\": \"P9638B8\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3079, 3199, 3382, 2750, 4478], \"razon\": \"El libro pide medir con regularidad, analizar tendencias en el tiempo y seguir la eficacia de las medidas correctoras.\"},\n  {\"id\": \"P85C0AE\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1820, 1830, 1840, 1995, 2161, 2876, 1943], \"razon\": \"Va en la dirección del libro, pero los historiales suelen registrar fallos activos y ocultar condiciones latentes de mantenimiento; el cliente podría descartar el mantenimiento por error.\"},\n  {\"id\": \"P89BEF7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4161, 4165], \"razon\": \"El libro relata la separación en agencias distintas para resolver el conflicto entre funciones comerciales y de vigilancia, aunque sin evaluar su resultado.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD1F5ED",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2170,
+    2172,
+    2174,
+    2190,
+    2192,
+    2194,
+    1943,
+    2259
+   ],
+   "razon": "El libro dice que la vía cognitiva es difícil, a veces imposible, y que el análisis de tareas es más prometedor. El paso manda por la vía cognitiva como principal."
+  },
+  {
+   "id": "P9638B8",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3079,
+    3199,
+    3382,
+    2750,
+    4478
+   ],
+   "razon": "El libro pide medir con regularidad, analizar tendencias en el tiempo y seguir la eficacia de las medidas correctoras."
+  },
+  {
+   "id": "P85C0AE",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1820,
+    1830,
+    1840,
+    1995,
+    2161,
+    2876,
+    1943
+   ],
+   "razon": "Va en la dirección del libro, pero los historiales suelen registrar fallos activos y ocultar condiciones latentes de mantenimiento; el cliente podría descartar el mantenimiento por error."
+  },
+  {
+   "id": "P89BEF7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4109,
+    4161,
+    4165
+   ],
+   "razon": "El libro relata la separación en agencias distintas para resolver el conflicto entre funciones comerciales y de vigilancia, aunque sin evaluar su resultado."
+  }
+ ]
+}

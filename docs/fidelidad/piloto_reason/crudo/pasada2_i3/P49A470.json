@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P49A470",
+  "intento": 0,
+  "usd": 0.18081999999999998,
+  "turnos": 1,
+  "duracion_s": 7.3,
+  "pared_s": 8.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42690,
+  "tokens_out": 503,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P49A470\", \"veredicto\": \"FIEL\", \"lineas\": [3395, 3397], \"cita\": \"The next, and most important, step ... is to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question. ... The principal error-producing conditions (EPCs) are listed below in rank order of effect.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro indica, como paso central de HEART, consultar la lista de EPCs, ordenada por magnitud de efecto, y decidir cuáles afectan a la actividad evaluada. Comparar las condiciones de la tarea con esa lista es exactamente lo que describe el libro. Tanto las EPCs como su orden jerárquico aparecen en el texto.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P49A470",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "cita": "The next, and most important, step ... is to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question. ... The principal error-producing conditions (EPCs) are listed below in rank order of effect.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro indica, como paso central de HEART, consultar la lista de EPCs, ordenada por magnitud de efecto, y decidir cuáles afectan a la actividad evaluada. Comparar las condiciones de la tarea con esa lista es exactamente lo que describe el libro. Tanto las EPCs como su orden jerárquico aparecen en el texto.",
+  "paso_fiel": ""
+ }
+}

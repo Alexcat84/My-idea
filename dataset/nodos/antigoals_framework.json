@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Framework de Antigoals (Metas, No-metas, Antimetas, Salvaguardas)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Basado en el libro Tragic Design de Savard Saucier y Shariat, este framework propone listar 4 tipos de objetivos para cualquier proyecto: Metas normales (lo que buscas lograr), No-metas (lo fuera de alcance), Antimetas (lo que te comprometes a NO hacer) y Salvaguardas (mecanismos para evitar que las cosas salgan mal). Las antimetas son especialmente útiles para la 'desorientación deliberada', ayudando a proteger valores éticos y evitar daños no intencionados, incluso cuando se persigue innovación agresiva (ej. el caso de Jennifer Doudna y CRISPR).",
+  "resumen_teorico": "Este framework propone listar 4 tipos de objetivos para cualquier proyecto: Metas normales (lo que buscas lograr), No-metas (lo fuera de alcance), Antimetas (lo que te comprometes a NO hacer) y Salvaguardas (mecanismos para evitar que las cosas salgan mal). Las antimetas son especialmente útiles para la 'desorientación deliberada', ayudando a proteger valores éticos y evitar daños no intencionados, incluso cuando se persigue innovación agresiva (ej. el caso de Jennifer Doudna y CRISPR).",
   "pasos_accionables": [
     "Reúne al equipo y define explícitamente las Metas normales del proyecto",
     "Define las No-metas: qué está fuera de alcance intencionalmente",
@@ -17,8 +17,7 @@
   "nodos_previos": [
     "metas_vs_proposito",
     "disenio_en_turbulencia",
-    "diseno_consecuencias_no_intencionadas",
-    "search_for_business_model"
+    "diseno_consecuencias_no_intencionadas"
   ],
   "nodos_siguientes": [
     "diseno_experimentos_pass_fail",
@@ -39,5 +38,39 @@
       "titulo": "Antigoals: Definir lo que NO harás",
       "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-006",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Basado en el libro Tragic Design de Savard Saucier y Shariat, este framework propone listar 4 tipos de objetivos para cualquier proyecto: Metas normales (lo que buscas lograr), No-metas (lo fuera de alcance), Antimetas (lo que te comprometes a NO hacer) y Salvaguardas (mecanismos para evitar que las cosas salgan mal). Las antimetas son especialmente útiles para la 'desorientación deliberada', ayudando a proteger valores éticos y evitar daños no intencionados, incluso cuando se persigue innovación agresiva (ej. el caso de Jennifer Doudna y CRISPR).",
+      "texto_nuevo": "Este framework propone listar 4 tipos de objetivos para cualquier proyecto: Metas normales (lo que buscas lograr), No-metas (lo fuera de alcance), Antimetas (lo que te comprometes a NO hacer) y Salvaguardas (mecanismos para evitar que las cosas salgan mal). Las antimetas son especialmente útiles para la 'desorientación deliberada', ayudando a proteger valores éticos y evitar daños no intencionados, incluso cuando se persigue innovación agresiva (ej. el caso de Jennifer Doudna y CRISPR).",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Basado en el libro Tragic Design de Savard Saucier y Shariat"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-117",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> antigoals_framework",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El marco de antimetas de Tragic Design no tiene que ver con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ],
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
   ]
 }

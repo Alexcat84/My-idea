@@ -7,12 +7,12 @@
   "resumen_teorico": "Decidir si le das a cada franquiciado un territorio exclusivo es una decisión clave: si el territorio es muy pequeño, la persona fracasa; si es muy grande, pierdes saturacion de mercado y dejas de ganar en regalias a futuro, con perdidas que se cuentan en millones a largo plazo. Para definirlo tienes que mirar variables como la demografia, los canales alternativos de distribucion y los requisitos de desempeño que mantendran la exclusividad.",
   "pasos_accionables": [
     "Decide si vas a ofrecer territorio exclusivo como parte de tu propuesta de valor",
-    "Elige como lo vas a delimitar: por radio o por mapa demografico",
+    "Elige cómo lo vas a delimitar: por radio o por mapa demográfico",
     "Fija los requisitos de desempeño que la persona debe cumplir para conservar su exclusividad",
     "Define las reglas para las ventas que se hagan por otros canales, como internet, cuentas nacionales o ventas fuera del territorio",
-    "Deja margen en el contrato para ajustar los territorios cuando tengas mas datos"
+    "Deja margen en el contrato para ajustar los territorios cuando tengas más datos"
   ],
-  "entregable_esperado": "Un territorio exclusivo definido en el contrato, con sus metricas, limites y condiciones de desempeño",
+  "entregable_esperado": "Un territorio exclusivo definido en el contrato, con sus métricas, límites y condiciones de desempeño",
   "nodos_previos": [
     "otras_fees_franquicia"
   ],
@@ -23,5 +23,51 @@
   "condiciones_activacion": [
     "Cuando tu modelo de franquicia necesita asignar zonas geograficas exclusivas"
   ],
-  "etiqueta_arbol": "Define tus Territorios Exclusivos"
+  "etiqueta_arbol": "Define tus Territorios Exclusivos",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0374",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige como lo vas a delimitar: por radio o por mapa demografico",
+      "texto_nuevo": "Elige cómo lo vas a delimitar: por radio o por mapa demográfico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-009.paso1: cómo, demográfico (Tildes que faltaban: 'cómo' (interrogativa indirecta) y 'demográfico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0375",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja margen en el contrato para ajustar los territorios cuando tengas mas datos",
+      "texto_nuevo": "Deja margen en el contrato para ajustar los territorios cuando tengas más datos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-009.paso4: más (Faltaba la tilde en 'más'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0376",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un territorio exclusivo definido en el contrato, con sus metricas, limites y condiciones de desempeño",
+      "texto_nuevo": "Un territorio exclusivo definido en el contrato, con sus métricas, límites y condiciones de desempeño",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-009.entregable: métricas, límites (Tildes que faltaban en 'métricas' y 'límites'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

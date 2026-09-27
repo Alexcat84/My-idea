@@ -19,13 +19,30 @@
   "nodos_siguientes": [
     "obtencion_compromiso_venta",
     "domina_lo_que_compras",
-    "preguntas_abiertas_motivacion_proveedor",
-    "detectar_prioridad_cliente_entrega"
+    "preguntas_abiertas_motivacion_proveedor"
   ],
   "condiciones_activacion": [
     "Cuando la venta involucra múltiples decisores o niveles jerárquicos",
     "Cuando el vendedor no puede estar presente en todas las conversaciones de decisión",
     "En ventas grandes (large sales) donde el ciclo de decisión es largo y distribuido"
   ],
-  "etiqueta_arbol": "Prepara al Cliente para Vender"
+  "etiqueta_arbol": "Prepara al Cliente para Vender",
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-132",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "venta_interna_cliente -> detectar_prioridad_cliente_entrega",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-10-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Ensayar al comprador para la venta interna en ventas complejas B2B no prepara la deteccion de prioridades de entrega en venta en linea. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

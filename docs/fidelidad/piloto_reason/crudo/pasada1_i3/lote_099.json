@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_099",
+  "intento": 0,
+  "usd": 0.17380400000000001,
+  "turnos": 1,
+  "duracion_s": 20.4,
+  "pared_s": 21.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33421,
+  "tokens_out": 2006,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P92D1D9\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"décadas atrás\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [198, 559, 563, 567, 569, 580, 582], \"razon\": \"Nakina: la causa raíz era la construcción de 1916 y las inspecciones externas no la detectaban. El libro no prescribe auditar el diseño antiguo, pero va en esa dirección.\"},\n  {\"id\": \"PFE71E8\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"diseñadores y fabricantes\"], \"clase\": \"FIEL\", \"lineas\": [2311, 2369, 2342], \"razon\": \"El libro pide que diseñadores y fabricantes conozcan la falibilidad humana, sobre todo en mantenimiento y reensamblaje. El paso lo amplía a todo el ciclo de vida.\"},\n  {\"id\": \"P6258D6\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5182, 5208, 4693], \"razon\": \"Weick apoya socializar antes de descentralizar. Pero Reason dice que la cultura organizacional se forma sobre todo por prácticas compartidas, no por valores; el paso centra en valores.\"},\n  {\"id\": \"P3FDEDE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [808, 821, 1076, 1114, 1129], \"razon\": \"El libro afirma que las defensas pueden introducir peligros nuevos y pide comprender sus ventajas y riesgos. Revisar cada capa concreta esa idea en la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P92D1D9",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "décadas atrás"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    198,
+    559,
+    563,
+    567,
+    569,
+    580,
+    582
+   ],
+   "razon": "Nakina: la causa raíz era la construcción de 1916 y las inspecciones externas no la detectaban. El libro no prescribe auditar el diseño antiguo, pero va en esa dirección."
+  },
+  {
+   "id": "PFE71E8",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "diseñadores y fabricantes"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2311,
+    2369,
+    2342
+   ],
+   "razon": "El libro pide que diseñadores y fabricantes conozcan la falibilidad humana, sobre todo en mantenimiento y reensamblaje. El paso lo amplía a todo el ciclo de vida."
+  },
+  {
+   "id": "P6258D6",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5182,
+    5208,
+    4693
+   ],
+   "razon": "Weick apoya socializar antes de descentralizar. Pero Reason dice que la cultura organizacional se forma sobre todo por prácticas compartidas, no por valores; el paso centra en valores."
+  },
+  {
+   "id": "P3FDEDE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    808,
+    821,
+    1076,
+    1114,
+    1129
+   ],
+   "razon": "El libro afirma que las defensas pueden introducir peligros nuevos y pide comprender sus ventajas y riesgos. Revisar cada capa concreta esa idea en la misma dirección."
+  }
+ ]
+}

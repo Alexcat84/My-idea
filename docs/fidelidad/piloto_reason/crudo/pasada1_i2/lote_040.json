@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_040",
+  "intento": 0,
+  "usd": 0.15702,
+  "turnos": 1,
+  "duracion_s": 18.1,
+  "pared_s": 19.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32025,
+  "tokens_out": 1446,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5F1B29\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3382, 3230, 3209], \"razon\": \"En MESH cada evaluador ve primero su diagrama de barras y luego el promedio del lugar de trabajo; coincide con el paso.\"},\n  {\"id\": \"P94781A\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"16 RPFs\", \"8 factores organizacionales\"], \"clase\": \"FIEL\", \"lineas\": [3232, 3298, 3332, 4466], \"razon\": \"El libro enumera 16 RPF para ferrocarril, 8 factores organizacionales comunes y factores locales que varían por lugar en MESH; los factores dependen del contexto.\"},\n  {\"id\": \"PC4982A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4274, 4302, 4320, 4360], \"razon\": \"El libro distingue leyes que prescriben medios de leyes basadas en objetivos; el paso lo convierte en un diagnóstico, en la misma dirección.\"},\n  {\"id\": \"PA3AC71\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [96, 83, 1076, 1133], \"razon\": \"El libro advierte que las ganancias de protección se convierten en ventaja productiva y erosionan el margen; vigilarlo concreta esa idea sin datos nuevos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5F1B29",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3382,
+    3230,
+    3209
+   ],
+   "razon": "En MESH cada evaluador ve primero su diagrama de barras y luego el promedio del lugar de trabajo; coincide con el paso."
+  },
+  {
+   "id": "P94781A",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "16 RPFs",
+    "8 factores organizacionales"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3232,
+    3298,
+    3332,
+    4466
+   ],
+   "razon": "El libro enumera 16 RPF para ferrocarril, 8 factores organizacionales comunes y factores locales que varían por lugar en MESH; los factores dependen del contexto."
+  },
+  {
+   "id": "PC4982A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4274,
+    4302,
+    4320,
+    4360
+   ],
+   "razon": "El libro distingue leyes que prescriben medios de leyes basadas en objetivos; el paso lo convierte en un diagnóstico, en la misma dirección."
+  },
+  {
+   "id": "PA3AC71",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    96,
+    83,
+    1076,
+    1133
+   ],
+   "razon": "El libro advierte que las ganancias de protección se convierten en ventaja productiva y erosionan el margen; vigilarlo concreta esa idea sin datos nuevos."
+  }
+ ]
+}

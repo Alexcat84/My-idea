@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_058",
+  "intento": 0,
+  "usd": 0.153,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34085,
+  "tokens_out": 833,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P4DFD42\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3747, 3751, 3755, 3759], \"razon\": \"El libro indica que las Secciones 1-3 responden a '¿qué pasó?': datos de aerolínea y avión, naturaleza del evento y clasificación del fallo.\"},\n{\"id\": \"P294252\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3395, 3547, 3549], \"razon\": \"El libro dice que el punto de partida de HEART es asignar la actividad evaluada a una de las tareas genéricas de la Tabla 7.2.\"},\n{\"id\": \"P24C53B\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [1056, 1058, 1060, 1133, 1137, 2566], \"razon\": \"El libro dice que las defensas ocultan errores y que sus ganancias se desvían a producción. Revisar la complacencia va en esa misma dirección, sin choque.\"},\n{\"id\": \"PE9DEE7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [105, 2566, 2585], \"razon\": \"El libro dice que en periodos sin accidentes cae la inversión en protección y el mantenimiento de las defensas. Tratarlos como periodos de peligro respalda auditarlos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P4DFD42",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3747,
+    3751,
+    3755,
+    3759
+   ],
+   "razon": "El libro indica que las Secciones 1-3 responden a '¿qué pasó?': datos de aerolínea y avión, naturaleza del evento y clasificación del fallo."
+  },
+  {
+   "id": "P294252",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3395,
+    3547,
+    3549
+   ],
+   "razon": "El libro dice que el punto de partida de HEART es asignar la actividad evaluada a una de las tareas genéricas de la Tabla 7.2."
+  },
+  {
+   "id": "P24C53B",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    1056,
+    1058,
+    1060,
+    1133,
+    1137,
+    2566
+   ],
+   "razon": "El libro dice que las defensas ocultan errores y que sus ganancias se desvían a producción. Revisar la complacencia va en esa misma dirección, sin choque."
+  },
+  {
+   "id": "PE9DEE7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    105,
+    2566,
+    2585
+   ],
+   "razon": "El libro dice que en periodos sin accidentes cae la inversión en protección y el mantenimiento de las defensas. Tratarlos como periodos de peligro respalda auditarlos."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PBD3235",
+  "intento": 0,
+  "usd": 0.208972,
+  "turnos": 1,
+  "duracion_s": 11.4,
+  "pared_s": 12.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47213,
+  "tokens_out": 1006,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PBD3235\", \"veredicto\": \"FIEL\", \"lineas\": [196, 293, 273, 4105, 5712], \"cita\": \"For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it. For each of these local conditions, we then go on to ask what upstream organizational factors\", \"datos_sin_respaldo\": [], \"razon\": \"El libro manda investigar de arriba abajo, desde el acto inseguro hasta los factores organizacionales previos. También dice que la búsqueda no debe acabar en el error del operador (L196). Incluye a los reguladores dentro del alcance (L273, L4105). La advertencia del péndulo (L5712) se refiere a factores remotos, sociales o económicos. El paso no pide eso, así que no lo contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PBD3235",
+  "veredicto": "FIEL",
+  "lineas": [
+   196,
+   293,
+   273,
+   4105,
+   5712
+  ],
+  "cita": "For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it. For each of these local conditions, we then go on to ask what upstream organizational factors",
+  "datos_sin_respaldo": [],
+  "razon": "El libro manda investigar de arriba abajo, desde el acto inseguro hasta los factores organizacionales previos. También dice que la búsqueda no debe acabar en el error del operador (L196). Incluye a los reguladores dentro del alcance (L273, L4105). La advertencia del péndulo (L5712) se refiere a factores remotos, sociales o económicos. El paso no pide eso, así que no lo contradice.",
+  "paso_fiel": ""
+ }
+}

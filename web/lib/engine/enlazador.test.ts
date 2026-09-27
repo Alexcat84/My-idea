@@ -271,3 +271,23 @@ describe("enlazarPlanProteccion: el plan JAMÁS se bloquea", () => {
     expect(c.messages.create as ReturnType<typeof vi.fn>).not.toHaveBeenCalled();
   });
 });
+
+// AUD-09 M15: al nacer el enlace se guardan los NODOS de lo protegido (su
+// nodos_origen), para resolverlo contra el plan vigente cuando el núcleo abra
+// otro ciclo con ids nuevos.
+import { nodosDeLoProtegido } from "./enlazador";
+
+describe("nodosDeLoProtegido (AUD-09 M15)", () => {
+  const filas = [
+    { id: "n1", nodos_origen: ["precio_de_venta", "costo_unitario"] },
+    { id: "n2", nodos_origen: null },
+  ];
+  it("copia los nodos de la tarea protegida", () => {
+    expect(nodosDeLoProtegido("n1", filas)).toEqual(["precio_de_venta", "costo_unitario"]);
+  });
+  it("sistémica (sin protegido), protegido sin nodos o ausente: null", () => {
+    expect(nodosDeLoProtegido(null, filas)).toBeNull();
+    expect(nodosDeLoProtegido("n2", filas)).toBeNull();
+    expect(nodosDeLoProtegido("no-existe", filas)).toBeNull();
+  });
+});

@@ -11,7 +11,7 @@
     "Desarrollar herramientas de autoservicio y autosanación dentro del producto",
     "Medir el porcentaje de problemas resueltos sin intervención humana"
   ],
-  "entregable_esperado": "El inventario de las fricciones de tu producto que generan llamadas de soporte, los mecanismos de deteccion proactiva con aviso automatico a tu cliente, las herramientas de autoservicio construidas, y el porcentaje de problemas resueltos sin intervencion humana",
+  "entregable_esperado": "El inventario de las fricciones de tu producto que generan llamadas de soporte, los mecanismos de detección proactiva con aviso automático a tu cliente, las herramientas de autoservicio construidas, y el porcentaje de problemas resueltos sin intervención humana",
   "nodos_previos": [
     "sistema_inmune_producto"
   ],
@@ -20,5 +20,23 @@
     "Cuando el volumen de soporte crece al mismo ritmo que los clientes y no hay forma de contratar a esa velocidad",
     "Cuando tu cliente se entera de los fallos de tu producto antes que tu"
   ],
-  "etiqueta_arbol": "Resuelve sin que te Llamen"
+  "etiqueta_arbol": "Resuelve sin que te Llamen",
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0252",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El inventario de las fricciones de tu producto que generan llamadas de soporte, los mecanismos de deteccion proactiva con aviso automatico a tu cliente, las herramientas de autoservicio construidas, y el porcentaje de problemas resueltos sin intervencion humana",
+      "texto_nuevo": "El inventario de las fricciones de tu producto que generan llamadas de soporte, los mecanismos de detección proactiva con aviso automático a tu cliente, las herramientas de autoservicio construidas, y el porcentaje de problemas resueltos sin intervención humana",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-012.entregable: detección, automático, intervención (Solo se añaden las tildes que faltaban en detección, automático e intervención.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

@@ -6,10 +6,10 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Cuando un prospecto no cumple los requisitos financieros u otros criterios, tu le comunicas el rechazo de forma profesional y empatica, poniendo por delante el exito de la persona como franquiciado, y le ofreces alternativas cuando existan, como buscar un inversionista o esperar y ahorrar mas.",
   "pasos_accionables": [
-    "Identifica la brecha especifica, financiera u otra, que descalifica al prospecto",
-    "Comunica el rechazo poniendo por delante el exito del futuro franquiciado",
+    "Identifica la brecha específica, financiera u otra, que descalifica al prospecto",
+    "Comunica el rechazo poniendo por delante el éxito del futuro franquiciado",
     "Sugiere alternativas viables si existen, como conseguir un inversionista o esperar",
-    "Cierra la conversacion rápido y sin dejar ambiguedad"
+    "Cierra la conversación rápido y sin dejar ambigüedad"
   ],
   "entregable_esperado": "Un guion de rechazo estandarizado que puedas usar cada vez que se presente el caso",
   "nodos_previos": [
@@ -19,5 +19,52 @@
   "condiciones_activacion": [
     "Cuando un prospecto no cumple los criterios de calificacion financiera o de perfil"
   ],
-  "etiqueta_arbol": "Rechaza con Delicadeza al Prospecto"
+  "etiqueta_arbol": "Rechaza con Delicadeza al Prospecto",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0761",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica la brecha especifica, financiera u otra, que descalifica al prospecto",
+      "texto_nuevo": "Identifica la brecha específica, financiera u otra, que descalifica al prospecto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-020.paso0: específica (Solo se añade la tilde que falta en específica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0762",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comunica el rechazo poniendo por delante el exito del futuro franquiciado",
+      "texto_nuevo": "Comunica el rechazo poniendo por delante el éxito del futuro franquiciado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-020.paso1: éxito (Solo se añade la tilde que falta en éxito.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0763",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cierra la conversacion rápido y sin dejar ambiguedad",
+      "texto_nuevo": "Cierra la conversación rápido y sin dejar ambigüedad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-020.paso3: conversación, ambigüedad (Solo se añaden la tilde de conversación y la diéresis de ambigüedad.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

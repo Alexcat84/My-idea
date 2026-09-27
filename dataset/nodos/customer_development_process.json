@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "El proceso para descubrir a tu cliente (Customer Development)",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Un proceso de cuatro pasos creado por Steve Blank para que encuentres a tu cliente antes de construir a ciegas. Primero sales a entender qué necesita tu cliente, qué le duele y qué espera ganar (jobs, pains y gains). Luego pruebas si de verdad valora tu solución. Después generas demanda real y descubres como venderla a mas gente. Y por ultimo dejas de estar buscando respuestas y pasas a tener una forma de trabajar que funciona todos los días. La idea de fondo: no hay hechos dentro de tu casa u oficina, los encuentras afuera, hablando con clientes.",
+  "resumen_teorico": "Un proceso de cuatro pasos para que encuentres a tu cliente antes de construir a ciegas. Primero sales a entender qué necesita tu cliente, qué le duele y qué espera ganar (jobs, pains y gains). Luego pruebas si de verdad valora tu solución. Después generas demanda real y descubres como venderla a mas gente. Y por ultimo dejas de estar buscando respuestas y pasas a tener una forma de trabajar que funciona todos los días. La idea de fondo: no hay hechos dentro de tu casa u oficina, los encuentras afuera, hablando con clientes.",
   "pasos_accionables": [
-    "Etapa 1, descubrir a tu cliente: sal a entender que necesita, que le duele y que espera ganar",
+    "Etapa 1, descubrir a tu cliente: sal a entender qué necesita, qué le duele y qué espera ganar",
     "Etapa 2, validar con tu cliente: prueba con experimentos si tu solución realmente le importa",
-    "Etapa 3, crear demanda: construye demanda real y guia a tus clientes hacia como comprarte",
+    "Etapa 3, crear demanda: construye demanda real y guía a tus clientes hacia cómo comprarte",
     "Etapa 4, construir tu negocio: pasa de estar buscando respuestas a tener una forma de trabajar que puedas repetir y hacer crecer"
   ],
-  "entregable_esperado": "Un mapa de en que etapa de este proceso estas tu y que preguntas todavia tienes que responder en esa etapa",
+  "entregable_esperado": "Un mapa de en qué etapa de este proceso estás tú y qué preguntas todavía tienes que responder en esa etapa",
   "nodos_previos": [
     "search_for_business_model",
     "waterfall_vs_agile_development"
@@ -34,5 +34,67 @@
     "Cuando necesitas ubicar en que etapa de validación esta tu negocio",
     "Si todavia no has salido a hablar con clientes reales"
   ],
-  "etiqueta_arbol": "Descubre, Valida, Crea y Escala"
+  "etiqueta_arbol": "Descubre, Valida, Crea y Escala",
+  "correcciones": [
+    {
+      "id": "atribucion-054",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Un proceso de cuatro pasos creado por Steve Blank para que encuentres a tu cliente antes de construir a ciegas. Primero sales a entender qué necesita tu cliente, qué le duele y qué espera ganar (jobs, pains y gains). Luego pruebas si de verdad valora tu solución. Después generas demanda real y descubres como venderla a mas gente. Y por ultimo dejas de estar buscando respuestas y pasas a tener una forma de trabajar que funciona todos los días. La idea de fondo: no hay hechos dentro de tu casa u oficina, los encuentras afuera, hablando con clientes.",
+      "texto_nuevo": "Un proceso de cuatro pasos para que encuentres a tu cliente antes de construir a ciegas. Primero sales a entender qué necesita tu cliente, qué le duele y qué espera ganar (jobs, pains y gains). Luego pruebas si de verdad valora tu solución. Después generas demanda real y descubres como venderla a mas gente. Y por ultimo dejas de estar buscando respuestas y pasas a tener una forma de trabajar que funciona todos los días. La idea de fondo: no hay hechos dentro de tu casa u oficina, los encuentras afuera, hablando con clientes.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "creado por Steve Blank"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-018 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0631",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Etapa 1, descubrir a tu cliente: sal a entender que necesita, que le duele y que espera ganar",
+      "texto_nuevo": "Etapa 1, descubrir a tu cliente: sal a entender qué necesita, qué le duele y qué espera ganar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-009.paso0: qué, qué, qué (Tres tildes de interrogativo indirecto reales; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0632",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Etapa 3, crear demanda: construye demanda real y guia a tus clientes hacia como comprarte",
+      "texto_nuevo": "Etapa 3, crear demanda: construye demanda real y guía a tus clientes hacia cómo comprarte",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-009.paso2: guía, cómo (Tildes reales en guía y en el interrogativo indirecto cómo; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0633",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un mapa de en que etapa de este proceso estas tu y que preguntas todavia tienes que responder en esa etapa",
+      "texto_nuevo": "Un mapa de en qué etapa de este proceso estás tú y qué preguntas todavía tienes que responder en esa etapa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-009.entregable: qué, estás, tú, qué, todavía (Faltan tildes en qué, estás, tú, qué y todavía; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Value Proposition Design"
+  ]
 }

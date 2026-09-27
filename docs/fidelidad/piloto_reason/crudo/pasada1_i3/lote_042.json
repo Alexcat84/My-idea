@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_042",
+  "intento": 0,
+  "usd": 0.1707,
+  "turnos": 1,
+  "duracion_s": 21.1,
+  "pared_s": 22.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32795,
+  "tokens_out": 1976,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P857B98\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5603, 5639, 5641, 4296], \"razon\": \"El libro dice que el peso de cada riesgo cambia con la tecnología y la sociedad. El paso concreta esa revisión en la misma dirección, sin datos nuevos.\"},\n  {\"id\": \"P7B9342\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [225, 3965, 3967, 3971, 3985, 3989], \"razon\": \"Coincide con el libro: NASA normalizó las anomalías y no recopiló la tendencia de erosión de las juntas tóricas. Auditar las anomalías toleradas va en esa dirección.\"},\n  {\"id\": \"PE59408\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4773, 2579, 2581, 5219, 2583], \"razon\": \"La cultura de aprendizaje exige voluntad de implantar reformas y compromiso de recursos. Matiz: el libro advierte que implantar no basta, hay que seguir vigilando y ajustando (tick-off).\"},\n  {\"id\": \"P2EE4EC\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"periódicamente\"], \"clase\": \"SIN_COBERTURA\", \"lineas\": [2299, 2311], \"razon\": \"Los fragmentos no tratan la revisión de recordatorios. El libro los llama 'primeros auxilios' y prefiere soluciones de diseño; ajustarlos sin fin podría desviar de eso. 'Periódicamente' es una frecuencia.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P857B98",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5603,
+    5639,
+    5641,
+    4296
+   ],
+   "razon": "El libro dice que el peso de cada riesgo cambia con la tecnología y la sociedad. El paso concreta esa revisión en la misma dirección, sin datos nuevos."
+  },
+  {
+   "id": "P7B9342",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    225,
+    3965,
+    3967,
+    3971,
+    3985,
+    3989
+   ],
+   "razon": "Coincide con el libro: NASA normalizó las anomalías y no recopiló la tendencia de erosión de las juntas tóricas. Auditar las anomalías toleradas va en esa dirección."
+  },
+  {
+   "id": "PE59408",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4773,
+    2579,
+    2581,
+    5219,
+    2583
+   ],
+   "razon": "La cultura de aprendizaje exige voluntad de implantar reformas y compromiso de recursos. Matiz: el libro advierte que implantar no basta, hay que seguir vigilando y ajustando (tick-off)."
+  },
+  {
+   "id": "P2EE4EC",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    2299,
+    2311
+   ],
+   "razon": "Los fragmentos no tratan la revisión de recordatorios. El libro los llama 'primeros auxilios' y prefiere soluciones de diseño; ajustarlos sin fin podría desviar de eso. 'Periódicamente' es una frecuencia."
+  }
+ ]
+}

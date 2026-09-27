@@ -1,0 +1,61 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_029",
+  "intento": 0,
+  "usd": 0.154692,
+  "turnos": 1,
+  "duracion_s": 10.8,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34123,
+  "tokens_out": 910,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PF211A9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4302, 4308, 4761], \"razon\": \"Robens pide 'more involvement of work people themselves' y critica la falta de participación laboral del modelo Factories Act; el paso sigue esa recomendación.\"},\n{\"id\": \"P99E03D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5790, 5832, 5250], \"razon\": \"El libro describe el estudio HSE-Chevron: incidentes menores sumaron £1 millón en 13 semanas. Además pregunta por sistemas para costear pérdidas por incidentes.\"},\n{\"id\": \"P47749D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3395, 3397], \"razon\": \"Según el libro, el paso más importante de HEART es consultar la lista de EPCs y decidir cuáles afectan a la actividad evaluada.\"},\n{\"id\": \"P14AA99\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2583], \"razon\": \"El libro define el tick-off phenomenon: tratar las medidas de seguridad como equipo que se instala y se tacha, cuando requieren vigilancia y ajuste continuos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PF211A9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4302,
+    4308,
+    4761
+   ],
+   "razon": "Robens pide 'more involvement of work people themselves' y critica la falta de participación laboral del modelo Factories Act; el paso sigue esa recomendación."
+  },
+  {
+   "id": "P99E03D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5790,
+    5832,
+    5250
+   ],
+   "razon": "El libro describe el estudio HSE-Chevron: incidentes menores sumaron £1 millón en 13 semanas. Además pregunta por sistemas para costear pérdidas por incidentes."
+  },
+  {
+   "id": "P47749D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "Según el libro, el paso más importante de HEART es consultar la lista de EPCs y decidir cuáles afectan a la actividad evaluada."
+  },
+  {
+   "id": "P14AA99",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2583
+   ],
+   "razon": "El libro define el tick-off phenomenon: tratar las medidas de seguridad como equipo que se instala y se tacha, cuando requieren vigilancia y ajuste continuos."
+  }
+ ]
+}

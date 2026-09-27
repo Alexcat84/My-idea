@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Viaje Diagnóstico y Viaje Remedial",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
+  "resumen_teorico": "Metodología dual para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
   "pasos_accionables": [
     "Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)",
     "Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto",
@@ -36,7 +36,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución",
-    "Cuando el equipo tiene múltiples hipótesis sin validar"
+    "Cuando el equipo tiene varias teorías sobre la causa de un defecto de calidad y necesita probarlas con datos antes de diseñar un remedio"
   ],
   "etiqueta_arbol": "Diagnostica y Corrige la Causa",
   "ids_alias": [
@@ -54,5 +54,40 @@
       "titulo": "Análisis y Diagnóstico de la Causa Raíz",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-178",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
+      "texto_nuevo": "Metodología dual para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Metodología dual de Juran"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-condicion-193",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el equipo tiene múltiples hipótesis sin validar",
+      "texto_nuevo": "Cuando el equipo tiene varias teorías sobre la causa de un defecto de calidad y necesita probarlas con datos antes de diseñar un remedio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q077-021: Tenía razón el lector B: la condición 1 no dice que las hipótesis sean sobre la causa de un problema de calidad, así que el nodo se activaría en cualquier validación de hipótesis de negocio, algo que su contenido no cubre. En dominio (quality) y fase (ejecucion) los dos lectores coinciden y aciertan. (arbitro) Motivo: Demasiado genérica: en un catálogo de emprendimiento, 'múltiples hipótesis sin validar' se cumple ante cualquier hipótesis de negocio o de mercado, cuando el nodo trata de teorías sobre la causa de un defecto de calidad que se prueban con datos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ]
 }

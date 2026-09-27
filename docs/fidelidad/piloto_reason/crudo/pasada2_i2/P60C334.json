@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P60C334",
+  "intento": 0,
+  "usd": 0.23843999999999999,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 55970,
+  "tokens_out": 728,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P60C334\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4765, 4906, 5081], \"cita\": \"What is needed is a just culture, an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information--but in which they are also clear about where the line must be drawn between acceptable and unacceptable behaviour.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro exige que todos tengan claro dónde está la línea (L4765) y que los criterios los conozcan y entiendan todos (L4906). Marx advierte que las reglas confusas disuaden de informar (L5081). Difundir la política concreta eso en la misma dirección. No dice que comunicar baste para crear confianza, así que no contradice que esta dependa de indemnidad, confidencialidad y separación.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P60C334",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4765,
+   4906,
+   5081
+  ],
+  "cita": "What is needed is a just culture, an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information--but in which they are also clear about where the line must be drawn between acceptable and unacceptable behaviour.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro exige que todos tengan claro dónde está la línea (L4765) y que los criterios los conozcan y entiendan todos (L4906). Marx advierte que las reglas confusas disuaden de informar (L5081). Difundir la política concreta eso en la misma dirección. No dice que comunicar baste para crear confianza, así que no contradice que esta dependa de indemnidad, confidencialidad y separación.",
+  "paso_fiel": ""
+ }
+}

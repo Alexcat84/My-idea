@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0BEACF",
+  "intento": 0,
+  "usd": 0.16649599999999998,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37554,
+  "tokens_out": 814,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0BEACF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5603, 5605, 5639], \"cita\": \"the balance between the risks varies from domain to domain (see Table 10.1). Moreover, this preponderance is not fixed once and for all by the nature of the domain … The history of modern technology is rich in instances of risk managers being caught with their eyes on the wrong ball.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro compara los cuatro tipos de riesgo entre dominios (Tabla 10.1) y usa casos históricos de otros dominios para mostrar riesgos pasados por alto. Compararse con dominios similares concreta eso en la misma dirección y sin datos nuevos. No hay contradicción: el libro considera altas las condiciones latentes en todos los dominios, así que la comparación no las rebaja.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0BEACF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5603,
+   5605,
+   5639
+  ],
+  "cita": "the balance between the risks varies from domain to domain (see Table 10.1). Moreover, this preponderance is not fixed once and for all by the nature of the domain … The history of modern technology is rich in instances of risk managers being caught with their eyes on the wrong ball.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro compara los cuatro tipos de riesgo entre dominios (Tabla 10.1) y usa casos históricos de otros dominios para mostrar riesgos pasados por alto. Compararse con dominios similares concreta eso en la misma dirección y sin datos nuevos. No hay contradicción: el libro considera altas las condiciones latentes en todos los dominios, así que la comparación no las rebaja.",
+  "paso_fiel": ""
+ }
+}

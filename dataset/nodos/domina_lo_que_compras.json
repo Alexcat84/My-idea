@@ -7,10 +7,10 @@
   "resumen_teorico": "Si no conoces bien lo que estas comprando, cualquier vendedor con mas informacion que tu puede llevarte a pagar de mas o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quienes son los competidores de tu proveedor actual. No te apoyes en el formato de cotizacion que te entrega el proveedor, porque esta pensado para que el salga ganando, no para que compares opciones a tu favor. Habla con otras personas que compren lo mismo en tu rubro para saber que condiciones son normales y cuales son abusivas. Llegar informado no busca vencer al proveedor de una vez, sino sostener una relacion de compra pareja con quien te seguira vendiendo en el futuro.",
   "pasos_accionables": [
     "Investiga precios de referencia y variantes del insumo o servicio antes de hablar con el proveedor.",
-    "Pregunta a otras personas de tu rubro que condiciones de compra consideran normales.",
+    "Pregunta a otras personas de tu rubro qué condiciones de compra consideran normales.",
     "Usa tu propio formato para pedir cotizaciones en vez del que te entrega el proveedor.",
-    "Identifica quienes son los competidores de tu proveedor y que ofrecen.",
-    "Anota las preguntas que aun no puedes responder antes de sentarte a negociar."
+    "Identifica quiénes son los competidores de tu proveedor y qué ofrecen.",
+    "Anota las preguntas que aún no puedes responder antes de sentarte a negociar."
   ],
   "entregable_esperado": "Una ficha personal con lo que sabes del insumo, el mercado y los competidores antes de negociar.",
   "nodos_previos": [
@@ -26,5 +26,52 @@
     "Un vendedor te presiona con datos tecnicos que no puedes verificar por tu cuenta.",
     "Es la primera vez que compras este tipo de insumo o servicio."
   ],
-  "etiqueta_arbol": "Conoce tu mercado antes de negociar"
+  "etiqueta_arbol": "Conoce tu mercado antes de negociar",
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0150",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a otras personas de tu rubro que condiciones de compra consideran normales.",
+      "texto_nuevo": "Pregunta a otras personas de tu rubro qué condiciones de compra consideran normales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-019.paso1: qué (Falta real: 'qué' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0151",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica quienes son los competidores de tu proveedor y que ofrecen.",
+      "texto_nuevo": "Identifica quiénes son los competidores de tu proveedor y qué ofrecen.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-019.paso3: quiénes, qué (Faltas reales: 'quiénes' y 'qué' son interrogativos indirectos y llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0152",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota las preguntas que aun no puedes responder antes de sentarte a negociar.",
+      "texto_nuevo": "Anota las preguntas que aún no puedes responder antes de sentarte a negociar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-019.paso4: aún (Falta real: 'aún' con sentido de 'todavía' lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

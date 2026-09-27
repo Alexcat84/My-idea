@@ -23,7 +23,7 @@
     "getting_started_media_protection"
   ],
   "condiciones_activacion": [
-    "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171",
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y debes cumplir los requisitos de mantenimiento de SP 800-171",
     "Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas."
   ],
   "etiqueta_arbol": "Mantén Segura tu Información",
@@ -35,6 +35,25 @@
       "node_id": "getting_started_maintenance",
       "titulo": "Mantenimiento de Sistemas",
       "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+    }
+  ],
+  "fuentes_internas": [
+    "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-120",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y debes cumplir los requisitos de mantenimiento de SP 800-171",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-022: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición dice que aplica si operas o vendes en Estados Unidos; SP 800-171 y CUI solo lo sugieren."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

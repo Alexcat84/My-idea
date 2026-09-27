@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PCB4EEE",
+  "intento": 0,
+  "usd": 0.23886,
+  "turnos": 1,
+  "duracion_s": 8.9,
+  "pared_s": 9.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 56065,
+  "tokens_out": 730,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCB4EEE\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4765, 4906, 4987, 5081], \"cita\": \"What is needed is a just culture, an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information--but in which they are also clear about where the line must be drawn between acceptable and unacceptable behaviour.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro exige que la plantilla tenga claro dónde está la línea y que los criterios sean conocidos por todos (L4906). Marx critica que el empleado necesite ser abogado para saber si es seguro informar (L5081). Difundir la política concreta eso. El paso no presenta la comunicación como vía única frente a indemnidad, confidencialidad o separación, así que no contradice el libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCB4EEE",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4765,
+   4906,
+   4987,
+   5081
+  ],
+  "cita": "What is needed is a just culture, an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information--but in which they are also clear about where the line must be drawn between acceptable and unacceptable behaviour.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro exige que la plantilla tenga claro dónde está la línea y que los criterios sean conocidos por todos (L4906). Marx critica que el empleado necesite ser abogado para saber si es seguro informar (L5081). Difundir la política concreta eso. El paso no presenta la comunicación como vía única frente a indemnidad, confidencialidad o separación, así que no contradice el libro.",
+  "paso_fiel": ""
+ }
+}

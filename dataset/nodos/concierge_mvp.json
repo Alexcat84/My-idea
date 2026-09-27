@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Consigue un primer cliente real (o un grupo muy pequeño) dispuesto a pagar por el servicio, aunque sea manual.",
     "Entrega el servicio de forma completamente manual y personalizada, sin usar sistemas automatizados.",
-    "Anota que hipótesis de tu modelo de crecimiento estas probando en cada interaccion.",
-    "Mide comportamientos concretos del cliente, como finalizacion, repeticion y recomendacion, además de su opinion.",
-    "Repite el proceso con mas clientes uno a uno hasta que atenderlos a mano se te vuelva insostenible.",
+    "Anota qué hipótesis de tu modelo de crecimiento estás probando en cada interacción.",
+    "Mide comportamientos concretos del cliente, como finalización, repetición y recomendación, además de su opinión.",
+    "Repite el proceso con más clientes uno a uno hasta que atenderlos a mano se te vuelva insostenible.",
     "Automatiza solo las partes del proceso que se conviertan en cuello de botella, una vez que superes tu capacidad manual."
   ],
-  "entregable_esperado": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalizacion, repeticion y recomendacion) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
+  "entregable_esperado": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalización, repetición y recomendación) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
   "nodos_previos": [
     "leap_of_faith_assumptions",
     "hipotesis_valor_crecimiento",
@@ -52,6 +52,66 @@
       "node_id": "mvp_tipo_concierge",
       "titulo": "MVP tipo Concierge",
       "fuente": "The Lean Startup - Eric Ries"
+    }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0576",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota que hipótesis de tu modelo de crecimiento estas probando en cada interaccion.",
+      "texto_nuevo": "Anota qué hipótesis de tu modelo de crecimiento estás probando en cada interacción.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-006.paso2: qué, estás, interacción (Solo añade tildes que faltaban (qué, estás, interacción).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0577",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mide comportamientos concretos del cliente, como finalizacion, repeticion y recomendacion, además de su opinion.",
+      "texto_nuevo": "Mide comportamientos concretos del cliente, como finalización, repetición y recomendación, además de su opinión.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-006.paso3: finalización, repetición, recomendación, opinión (Solo añade tildes que faltaban en finalización, repetición, recomendación y opinión.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0578",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repite el proceso con mas clientes uno a uno hasta que atenderlos a mano se te vuelva insostenible.",
+      "texto_nuevo": "Repite el proceso con más clientes uno a uno hasta que atenderlos a mano se te vuelva insostenible.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-006.paso4: más (Solo añade la tilde de más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0579",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalizacion, repeticion y recomendacion) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
+      "texto_nuevo": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalización, repetición y recomendación) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-006.entregable: finalización, repetición, recomendación (Solo añade tildes que faltaban; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

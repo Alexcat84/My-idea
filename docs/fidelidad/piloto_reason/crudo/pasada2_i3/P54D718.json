@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P54D718",
+  "intento": 0,
+  "usd": 0.146572,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32748,
+  "tokens_out": 779,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P54D718\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2654, 3093], \"cita\": \"To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations. Moreover, these patterns also indicate which of the local or organizational factors is playing a regular part\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide mejorar los procesos 'known to be implicated' en accidentes y usar el análisis de varios sucesos pasados para elegir qué procesos muestrear (así se eligieron los GFT de Tripod). El paso lo concreta en la misma dirección, en plural y sin datos nuevos. No propone fijar metas por resultados ni analizar un suceso aislado. No es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P54D718",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2654,
+   3093
+  ],
+  "cita": "To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations. Moreover, these patterns also indicate which of the local or organizational factors is playing a regular part",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide mejorar los procesos 'known to be implicated' en accidentes y usar el análisis de varios sucesos pasados para elegir qué procesos muestrear (así se eligieron los GFT de Tripod). El paso lo concreta en la misma dirección, en plural y sin datos nuevos. No propone fijar metas por resultados ni analizar un suceso aislado. No es contrario.",
+  "paso_fiel": ""
+ }
+}

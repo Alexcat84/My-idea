@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_071",
+  "intento": 0,
+  "usd": 0.171032,
+  "turnos": 1,
+  "duracion_s": 18.5,
+  "pared_s": 20.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34108,
+  "tokens_out": 1730,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA99C47\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4133, 4165, 4161, 4215, 668], \"razon\": \"Sigue la línea del sesgo de la ACAA. Pero el libro no propone auditar decisiones pasadas: su remedio es estructural (agencia independiente) y advierte del sesgo retrospectivo.\"},\n  {\"id\": \"PAB30D9\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"periódicas\", \"obligatorias\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [105, 2566, 2585, 2650], \"razon\": \"El libro respalda revisar defensas regularmente y ver un periodo sin accidentes como peligroso. 'Obligatorias' y 'periódicas' concretan una norma y una frecuencia que el libro no fija.\"},\n  {\"id\": \"P7DE25A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784, 293, 308, 219], \"razon\": \"L3784 dice 'active or latent'. Pero L293 y L308 piden establecer ambos tipos en cada defensa. Plantearlo como disyuntiva podría excluir uno de los dos.\"},\n  {\"id\": \"P8C2D4F\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"mentor\", \"asesor\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [3971, 3965, 4257, 4259, 668], \"razon\": \"El libro describe una cultura cerrada, pero no receta un mentor o asesor. Además muestra los límites de los observadores externos (reguladores, retrospectiva).\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA99C47",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4109,
+    4133,
+    4165,
+    4161,
+    4215,
+    668
+   ],
+   "razon": "Sigue la línea del sesgo de la ACAA. Pero el libro no propone auditar decisiones pasadas: su remedio es estructural (agencia independiente) y advierte del sesgo retrospectivo."
+  },
+  {
+   "id": "PAB30D9",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "periódicas",
+    "obligatorias"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    105,
+    2566,
+    2585,
+    2650
+   ],
+   "razon": "El libro respalda revisar defensas regularmente y ver un periodo sin accidentes como peligroso. 'Obligatorias' y 'periódicas' concretan una norma y una frecuencia que el libro no fija."
+  },
+  {
+   "id": "P7DE25A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    293,
+    308,
+    219
+   ],
+   "razon": "L3784 dice 'active or latent'. Pero L293 y L308 piden establecer ambos tipos en cada defensa. Plantearlo como disyuntiva podría excluir uno de los dos."
+  },
+  {
+   "id": "P8C2D4F",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "mentor",
+    "asesor"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    3971,
+    3965,
+    4257,
+    4259,
+    668
+   ],
+   "razon": "El libro describe una cultura cerrada, pero no receta un mentor o asesor. Además muestra los límites de los observadores externos (reguladores, retrospectiva)."
+  }
+ ]
+}

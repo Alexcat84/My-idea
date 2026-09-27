@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PBED60A",
+  "intento": 0,
+  "usd": 0.127088,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 27657,
+  "tokens_out": 823,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PBED60A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3393, 3395, 3401, 3405, 3659], \"cita\": \"The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager’s tool box.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro jerarquiza las EPC por efecto (x17 falta de familiaridad, x11 escasez de tiempo) y presenta HEART como técnica de evaluación y reducción del error. No manda explícitamente priorizar la remediación por impacto, pero el paso lo concreta en su misma dirección. Los ejemplos salen del libro. La ponderación por aplicabilidad (L3395) es un detalle, no una contradicción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PBED60A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3393,
+   3395,
+   3401,
+   3405,
+   3659
+  ],
+  "cita": "The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager’s tool box.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro jerarquiza las EPC por efecto (x17 falta de familiaridad, x11 escasez de tiempo) y presenta HEART como técnica de evaluación y reducción del error. No manda explícitamente priorizar la remediación por impacto, pero el paso lo concreta en su misma dirección. Los ejemplos salen del libro. La ponderación por aplicabilidad (L3395) es un detalle, no una contradicción.",
+  "paso_fiel": ""
+ }
+}

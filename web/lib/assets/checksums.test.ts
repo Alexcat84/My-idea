@@ -10,7 +10,7 @@ import { describe, expect, it } from "vitest";
 const ASSETS_DIR = path.resolve(__dirname);
 const manifest = JSON.parse(
   readFileSync(path.join(ASSETS_DIR, "manifest.json"), "utf-8")
-) as Record<string, { sha256: string; bytes: number; fuente: string }>;
+) as Record<string, { sha256: string; bytes: number; origen: string }>;
 
 function sha256(filePath: string): string {
   return createHash("sha256").update(readFileSync(filePath)).digest("hex");
@@ -25,14 +25,16 @@ describe("assets sincronizados desde Python (scripts/sync_assets_web.py)", () =>
     });
   }
 
-  it("el manifest tiene exactamente los 6 assets esperados", () => {
+  it("el manifest tiene exactamente los 8 assets esperados", () => {
     expect(Object.keys(manifest).sort()).toEqual([
       "entry_seeds.json",
+      "jurisdiccion.json",
       "master_graph.json",
       "node_families.json",
       "preguntas_cache.json",
       "prompts.json",
       "semantic_index.json",
+      "vigencia.json",
     ]);
   });
 });

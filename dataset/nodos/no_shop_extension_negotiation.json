@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor gana temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
   "pasos_accionables": [
     "Anticipar la solicitud de extensión del no-shop antes de que expire el periodo original",
-    "Identificar 1-2 concesiones razonables a solicitar a cambio de la extensión (ej. relief de working capital, financiamiento puente)",
+    "Identificar concesiones razonables a solicitar a cambio de la extensión (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de más",
     "Evitar pedir demasiado para no deteriorar el tono de la negociación final",
     "Negociar carve-outs específicos en el no-shop, como financiamientos del sindicato existente, para mantener presión sobre el comprador",
     "Incluir siempre una cláusula de salida automática si el comprador termina el proceso"
@@ -17,8 +17,7 @@
     "carta_de_intencion_loi",
     "clausula_no_shop_adquisicion",
     "co_sale_drag_along_agreements",
-    "negociacion_carta_compromiso_banquero",
-    "descubrir_valor_inesperado_cliente"
+    "negociacion_carta_compromiso_banquero"
   ],
   "nodos_siguientes": [
     "breakup_fee_evaluation"
@@ -27,5 +26,54 @@
     "Cuando el periodo de no-shop está por vencer y el comprador solicita una extensión",
     "Cuando el vendedor busca maximizar el apalancamiento residual antes del cierre"
   ],
-  "etiqueta_arbol": "Negocia la Extensión del Acuerdo"
+  "etiqueta_arbol": "Negocia la Extensión del Acuerdo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-032",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar 1-2 concesiones razonables a solicitar a cambio de la extensión (ej. relief de working capital, financiamiento puente)",
+      "texto_nuevo": "Identificar concesiones razonables a solicitar a cambio de la extension (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de mas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4307",
+        "frase": "The seller should be careful not to overreach at this moment"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro menciona esas concesiones y pide no excederse, pero no fija un numero de concesiones; el 1-2 no aparece.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-061"
+    },
+    {
+      "id": "t2-arista-038",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "descubrir_valor_inesperado_cliente -> no_shop_extension_negotiation",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-22-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Descubrir el exciting value de un cliente critico (gestion de expectativas) no prepara la negociacion de la extension del no-shop en la venta de la empresa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0478",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar concesiones razonables a solicitar a cambio de la extension (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de mas",
+      "texto_nuevo": "Identificar concesiones razonables a solicitar a cambio de la extensión (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de más",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-004.paso1: extension, mas (Faltan las tildes de extensión y más; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ]
 }

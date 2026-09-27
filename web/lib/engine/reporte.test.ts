@@ -115,3 +115,58 @@ describe("reporteOffline", () => {
     expect(md).toContain("capacidad_semanal");
   });
 });
+
+// AUD-09 M20 (tanda 5, fallas silenciosas): si la narración con IA fallaba,
+// narrarReporte caía a reporteOffline con un catch mudo, y Tus Números guardaba
+// ese texto como "narración" y lo contaba contra el tope diario, sin evento.
+import { vi } from "vitest";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import type Anthropic from "@anthropic-ai/sdk";
+import { narrarReporte as narrarM20 } from "./reporte";
+import { calcularReporte as calcularM20 } from "../calculadora";
+import { usoVacio as usoVacioM20 } from "../costmeter";
+
+describe("narrarReporte: la narración que falla lo dice (AUD-09 M20)", () => {
+  it("marca sinIA y deja rastro en el log cuando la IA no responde", async () => {
+    const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+    const cliente = { messages: { create: async () => { throw new Error("sin red"); } } } as unknown as Anthropic;
+    const r = await narrarM20(cliente, calcularM20({}, null), {}, null, usoVacioM20());
+    expect(r.sinIA).toBe(true);
+    expect(errores).toHaveBeenCalled();
+    errores.mockRestore();
+  });
+
+  it("Tus Números no guarda como narración un texto sin IA", () => {
+    const ruta = readFileSync(path.join(__dirname, "..", "..", "app", "api", "project", "[id]", "numeros", "route.ts"), "utf8");
+    expect(ruta).toMatch(/r\.sinIA/);
+  });
+});
+
+// i18n F5 (D2): el reporte es un documento de la idea: la nota al pie y la
+// unidad declarada salen en su idioma (el de las plantillas).
+import { unidadDeclaradaCampo as unidadI18n } from "./reporte";
+import { MOTOR as MOTOR_I18N } from "../i18n/mensajes/motor";
+
+describe("reporte en otros idiomas (i18n F5)", () => {
+  it("la nota al pie del reporte sin IA sale en inglés", async () => {
+    const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+    const cliente = { messages: { create: async () => { throw new Error("sin red"); } } } as unknown as Anthropic;
+    const r = await narrarM20(cliente, calcularM20({}, null), {}, null, usoVacioM20(), "en");
+    expect(r.contenido.endsWith(MOTOR_I18N.en.reporteDisclaimer)).toBe(true);
+    errores.mockRestore();
+  });
+
+  it("la unidad declarada, en español como siempre y en inglés", () => {
+    expect(unidadI18n("costos_fijos_mensuales", null, "vela")).toBe("por mes");
+    expect(unidadI18n("precio_tentativo", null, "vela")).toBe("por vela");
+    expect(unidadI18n("precio_tentativo", null, null)).toBe("por unidad");
+    expect(unidadI18n("unidades_vendidas", "digital", "usuario")).toBe("usuario/mes");
+    expect(unidadI18n("costos_fijos_mensuales", null, "candle", "en")).toBe("per month");
+    expect(unidadI18n("valor_hora", null, "candle", "en")).toBe("per hour");
+    expect(unidadI18n("precio_tentativo", null, "candle", "en")).toBe("per candle");
+    expect(unidadI18n("precio_tentativo", null, null, "en")).toBe("per unit");
+    expect(unidadI18n("unidades_vendidas", "digital", "user", "en")).toBe("user/month");
+    expect(unidadI18n("unidades_vendidas", null, "candle", "en")).toBe("candle");
+  });
+});

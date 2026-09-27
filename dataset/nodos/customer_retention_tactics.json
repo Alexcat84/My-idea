@@ -4,30 +4,27 @@
   "dominio": "core",
   "titulo_concepto": "Tácticas de Retención de Clientes (Keep)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave definir el Dia 1 de la relacion con el cliente y mapear el customer life cycle completo, prestando especial atencion a los primeros 100 dias, donde suele concentrarse la mayor desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
   "pasos_accionables": [
-    "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y senales de abandono",
-    "Disena e-mails de bienvenida y guias de uso para los primeros dias de cada cliente nuevo",
+    "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y señales de abandono",
+    "Diseña e-mails de bienvenida y guías de uso para los primeros días de cada cliente nuevo",
     "Crea un programa de lealtad con recompensas por compras o visitas repetidas",
-    "Envia notificaciones push y newsletters periodicas con tips para mantener el engagement",
-    "Define el Dia 1 de la relacion con el cliente y mapea los primeros 100 dias para identificar el punto exacto de mayor desercion",
-    "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante senales de posible abandono"
+    "Envía notificaciones push y newsletters periódicas con tips para mantener el engagement",
+    "Organiza tus métricas de retención por cohortes de clientes para identificar cuándo aparecen las señales de deserción",
+    "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante señales de posible abandono"
   ],
-  "entregable_esperado": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos en los primeros 100 dias, listo para probar en validacion de clientes.",
+  "entregable_esperado": "Plan de retención con tácticas específicas por canal digital y físico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validación de clientes.",
   "nodos_previos": [
     "segmentos_de_clientes_problema_necesidad",
     "channels_hypothesis_physical",
-    "vesting_acciones_fundadores",
-    "customer_acquisition_activation_web",
     "embudo_get_keep_grow",
     "community_building_estrategia",
     "customer_appreciation_pr",
     "eventos_offline_como_canal_traccion",
     "cierre_satisfaccion_postventa",
-    "gestion_pedidos_order_management",
-    "programacion_entregas_delivery_scheduling",
     "diseno_de_ia_antropomorfica_para_producto",
-    "analisis_de_cohortes"
+    "analisis_de_cohortes",
+    "get_customers_funnel_webmobile"
   ],
   "nodos_siguientes": [
     "retention_metrics",
@@ -35,7 +32,7 @@
   ],
   "condiciones_activacion": [
     "Cuando ya tienes una base activa de clientes y necesitas reducir el churn",
-    "Cuando detectas alta tasa de abandono en los primeros 100 dias de relacion",
+    "Cuando detectas alta tasa de abandono entre tus clientes al seguirlos por cohortes",
     "Si tu modelo de negocio depende de suscripciones o repeticion de compra"
   ],
   "etiqueta_arbol": "Aplica Tácticas para Retener Clientes",
@@ -48,5 +45,212 @@
       "titulo": "Estrategia de Retención de Clientes (Keep Customers)",
       "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define el Dia 1 de la relacion con el cliente y mapea los primeros 100 dias para identificar el punto exacto de mayor desercion",
+      "texto_nuevo": "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6792-L6808",
+        "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide vigilar metricas de retencion organizadas por cohortes; no habla de un Dia 1 de la relacion ni de mapear los primeros 100 dias (busque 100 days, hundred days, first days, Day One sin resultado en ese contexto).",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+    },
+    {
+      "id": "fidelidad-t7-028",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave definir el Dia 1 de la relacion con el cliente y mapear el customer life cycle completo, prestando especial atencion a los primeros 100 dias, donde suele concentrarse la mayor desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+      "texto_nuevo": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6792-L6808",
+        "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Repite el dato corregido en el paso 4: el Dia 1 y los primeros 100 dias como punto de mayor desercion no estan en el libro, que pide organizar las metricas de retencion por cohortes (L6792-L6808).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+    },
+    {
+      "id": "fidelidad-t7-029",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos en los primeros 100 dias, listo para probar en validacion de clientes.",
+      "texto_nuevo": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6792-L6808",
+        "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el plazo de los primeros 100 dias corregido en el paso 4, que el libro no respalda (ANADIDO de plazo: se quita).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+    },
+    {
+      "id": "fidelidad-t15-60",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando detectas alta tasa de abandono en los primeros 100 dias de relacion",
+      "texto_nuevo": "Cuando detectas alta tasa de abandono entre tus clientes al seguirlos por cohortes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L7296-L7296",
+        "frase": "You’ll organize the metrics around “cohorts,” or common groups of customers (such as “new customers signed in January”). Three-month customers, for example, may behave one way while nine-month customers may be more or less active than their newer brethren."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R062-002 (ANADIDO, lector y verificador de acuerdo): Plazo numerico que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R062-002"
+    },
+    {
+      "id": "t2-arista-066",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_pedidos_order_management -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-12): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La gestion de pedidos en la cadena de suministro no prepara las tacticas de retencion de clientes. Son dominios distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-104",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "programacion_entregas_delivery_scheduling -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Programar entregas directas o milk run es logistica y no tiene relacion con retener clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-133",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "vesting_acciones_fundadores -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-12-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El vesting (propiedad de acciones de fundadores y empleados) no tiene relacion con las tacticas de retencion de clientes; solo coinciden en la palabra retencion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-147",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "customer_acquisition_activation_web -> customer_retention_tactics",
+      "texto_nuevo": "get_customers_funnel_webmobile -> customer_retention_tactics",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a customer_acquisition_activation_web, deprecado; su superviviente es get_customers_funnel_webmobile."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0218",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y senales de abandono",
+      "texto_nuevo": "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y señales de abandono",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso0: señales (Solo corrige la eñe que faltaba en señales.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0219",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disena e-mails de bienvenida y guias de uso para los primeros dias de cada cliente nuevo",
+      "texto_nuevo": "Diseña e-mails de bienvenida y guías de uso para los primeros días de cada cliente nuevo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso1: Diseña, guías, días (Solo corrige la eñe y las tildes que faltaban; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0220",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envia notificaciones push y newsletters periodicas con tips para mantener el engagement",
+      "texto_nuevo": "Envía notificaciones push y newsletters periódicas con tips para mantener el engagement",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso3: Envía, periódicas (Solo corrige tildes; los términos en inglés se quedan como estaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0221",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
+      "texto_nuevo": "Organiza tus métricas de retención por cohortes de clientes para identificar cuándo aparecen las señales de deserción",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso4: métricas, retención, cuándo, señales, deserción (Solo corrige las tildes y la eñe que faltaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0222",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante senales de posible abandono",
+      "texto_nuevo": "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante señales de posible abandono",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso5: señales (Solo corrige la eñe que faltaba en señales.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0223",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
+      "texto_nuevo": "Plan de retención con tácticas específicas por canal digital y físico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validación de clientes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.entregable: retención, tácticas, específicas, físico, validación (Solo corrige las tildes que faltaban; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve",
+    "Never Lose a Customer Again - Joey Coleman"
   ]
 }

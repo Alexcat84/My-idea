@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P31955F",
+  "intento": 0,
+  "usd": 0.18256,
+  "turnos": 1,
+  "duracion_s": 8.0,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42550,
+  "tokens_out": 618,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P31955F\", \"veredicto\": \"FIEL\", \"lineas\": [3226, 3228], \"cita\": \"task specialists... are asked to estimate on a scale from 1 (hardly at all) to 5 (very often indeed) how frequently particular kinds of workplace or organizational problems have adversely affected their work over a short, clearly defined time period, or in relation to a few specific jobs.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe la misma escala de cinco puntos, de 1 (hardly at all) a 5 (very often indeed), usada en Review y MESH. También exige que se aplique sobre un periodo claramente definido. El paso omite que el periodo sea corto y la alternativa de valorar trabajos concretos. Son solo diferencias de detalle: el paso no contradice al libro ni añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P31955F",
+  "veredicto": "FIEL",
+  "lineas": [
+   3226,
+   3228
+  ],
+  "cita": "task specialists... are asked to estimate on a scale from 1 (hardly at all) to 5 (very often indeed) how frequently particular kinds of workplace or organizational problems have adversely affected their work over a short, clearly defined time period, or in relation to a few specific jobs.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe la misma escala de cinco puntos, de 1 (hardly at all) a 5 (very often indeed), usada en Review y MESH. También exige que se aplique sobre un periodo claramente definido. El paso omite que el periodo sea corto y la alternativa de valorar trabajos concretos. Son solo diferencias de detalle: el paso no contradice al libro ni añade datos.",
+  "paso_fiel": ""
+ }
+}

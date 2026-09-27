@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Determinación del Tamaño de las Cubetas Estratégicas",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "No existe una fórmula mágica para decidir qué porcentaje de recursos asignar a cada categoría de proyectos. El proceso recomendado combina una revisión histórica del gasto pasado, una evaluación de los resultados obtenidos por tipo de proyecto, un benchmark contra empresas de mejor desempeño (por ejemplo, la regla 70-20-10 de HBR o la distribución 35-25-25-15 de Cooper), y finalmente una discusión estratégica liderada por el equipo directivo para fijar los porcentajes deseados ('lo que debería ser').",
+  "resumen_teorico": "No existe una fórmula mágica para decidir qué porcentaje de recursos asignar a cada categoría de proyectos. El proceso recomendado combina una revisión histórica del gasto pasado, una evaluación de los resultados obtenidos por tipo de proyecto, un benchmark contra empresas de mejor desempeño (por ejemplo, la regla 70-20-10 o la distribución 35-25-25-15), y finalmente una discusión estratégica liderada por el equipo directivo para fijar los porcentajes deseados ('lo que debería ser').",
   "pasos_accionables": [
     "Realizar una revisión histórica de 12-24 meses del gasto por categoría.",
     "Evaluar la productividad (retorno por dólar invertido) de cada tipo de proyecto reciente.",
@@ -24,5 +24,27 @@
     "Cuando se va a implementar Strategic Buckets por primera vez.",
     "Cuando se requiere justificar cuantitativamente una redistribución de recursos de innovación."
   ],
-  "etiqueta_arbol": "Reparte tus Recursos por Categoría"
+  "etiqueta_arbol": "Reparte tus Recursos por Categoría",
+  "correcciones": [
+    {
+      "id": "atribucion-060",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "No existe una fórmula mágica para decidir qué porcentaje de recursos asignar a cada categoría de proyectos. El proceso recomendado combina una revisión histórica del gasto pasado, una evaluación de los resultados obtenidos por tipo de proyecto, un benchmark contra empresas de mejor desempeño (por ejemplo, la regla 70-20-10 de HBR o la distribución 35-25-25-15 de Cooper), y finalmente una discusión estratégica liderada por el equipo directivo para fijar los porcentajes deseados ('lo que debería ser').",
+      "texto_nuevo": "No existe una fórmula mágica para decidir qué porcentaje de recursos asignar a cada categoría de proyectos. El proceso recomendado combina una revisión histórica del gasto pasado, una evaluación de los resultados obtenidos por tipo de proyecto, un benchmark contra empresas de mejor desempeño (por ejemplo, la regla 70-20-10 o la distribución 35-25-25-15), y finalmente una discusión estratégica liderada por el equipo directivo para fijar los porcentajes deseados ('lo que debería ser').",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "la regla 70-20-10 de HBR",
+          "la distribución 35-25-25-15 de Cooper"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ]
 }

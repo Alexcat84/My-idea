@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_093",
+  "intento": 0,
+  "usd": 0.15632,
+  "turnos": 1,
+  "duracion_s": 16.8,
+  "pared_s": 18.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32135,
+  "tokens_out": 1389,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P32B096\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5067, 5077, 4765, 4987, 5063], \"razon\": \"L5067 respalda evitar castigos retrasados, pero el paso omite que el libro exige sancionar, incluso severamente, a los pocos culpables graves. Podría leerse como no sancionar si la sanción llega tarde.\"},\n  {\"id\": \"P9450C4\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2654, 2658, 3209], \"razon\": \"El libro indica típicamente de ocho a 16 chequeos de signos vitales, seleccionados según los patrones del análisis de múltiples eventos.\"},\n  {\"id\": \"P9E1176\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [1963, 1977, 1991, 2016, 2028, 2170], \"razon\": \"El libro aplica las tres preguntas a tipos de actividad, no a tareas individuales. Dentro del mantenimiento prioriza la instalación, las omisiones y el análisis de tareas propensas a omisión.\"},\n  {\"id\": \"P7E891D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2520, 2596, 2598, 2658, 2767], \"razon\": \"El libro pide medidas de proceso que muestreen regularmente signos vitales para evaluar la salud de seguridad del sistema.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P32B096",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5067,
+    5077,
+    4765,
+    4987,
+    5063
+   ],
+   "razon": "L5067 respalda evitar castigos retrasados, pero el paso omite que el libro exige sancionar, incluso severamente, a los pocos culpables graves. Podría leerse como no sancionar si la sanción llega tarde."
+  },
+  {
+   "id": "P9450C4",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2654,
+    2658,
+    3209
+   ],
+   "razon": "El libro indica típicamente de ocho a 16 chequeos de signos vitales, seleccionados según los patrones del análisis de múltiples eventos."
+  },
+  {
+   "id": "P9E1176",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    1963,
+    1977,
+    1991,
+    2016,
+    2028,
+    2170
+   ],
+   "razon": "El libro aplica las tres preguntas a tipos de actividad, no a tareas individuales. Dentro del mantenimiento prioriza la instalación, las omisiones y el análisis de tareas propensas a omisión."
+  },
+  {
+   "id": "P7E891D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2520,
+    2596,
+    2598,
+    2658,
+    2767
+   ],
+   "razon": "El libro pide medidas de proceso que muestreen regularmente signos vitales para evaluar la salud de seguridad del sistema."
+  }
+ ]
+}

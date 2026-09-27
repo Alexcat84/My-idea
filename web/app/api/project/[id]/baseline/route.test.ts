@@ -89,4 +89,57 @@ describe("POST /api/project/[id]/baseline (Fase 3.8)", () => {
     expect(it1.fecha_base).toBe("2026-03-16T12:00:00.000Z");
     expect(it1.fecha_base_original).toBe("2026-03-09T12:00:00.000Z");
   });
+
+  it("si la escritura falla: 500 honesto y la línea base no se sella (AUD-09)", async () => {
+    sembrar();
+    hacerFallarUpdatesDeChecklist();
+    const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await POST(
+      req({ plan_id: "plan-1", fechas: [{ item_id: "it1", fecha: "2026-03-09T12:00:00.000Z", origen: "sugerida" }] }),
+      PARAMS
+    );
+    expect(res.status).toBe(500);
+    const plan = estadoFalso.plans.find((p) => (p as { id: string }).id === "plan-1")! as Record<string, unknown>;
+    expect(plan.baseline_confirmada_at ?? null).toBeNull();
+    errores.mockRestore();
+  });
+});
+
+// AUD-09 (tanda 5): toda escritura que falla deja rastro. Si el update de
+// checklist_items falla, la ruta ya no responde "ok" ni registra en la bitácora.
+function hacerFallarUpdatesDeChecklist() {
+  const fromReal = supabaseFalso.from.getMockImplementation()!;
+  supabaseFalso.from.mockImplementation((nombre: string) => {
+    const tabla = fromReal(nombre) as Record<string, unknown>;
+    if (nombre === "checklist_items") {
+      const update = tabla.update as (p: unknown) => unknown;
+      tabla.update = (p: unknown) => {
+        update(p);
+        tabla.then = (res: (v: unknown) => unknown) =>
+          Promise.resolve({ data: null, error: { message: "la base no responde" } }).then(res);
+        return tabla;
+      };
+    }
+    return tabla as never;
+  });
+}
+
+// AUD-09 M34 (tanda 7A, datos): cada recálculo volvía a sellar
+// baseline_confirmada_at con la hora nueva, y la bitácora ("Aceptaste tus
+// fechas: tu línea base quedó sellada") perdía la fecha del primer sello. Nada
+// se reescribe: el sello es el del primer cierre de fechas.
+describe("re-confirmar no pisa el primer sello (AUD-09 M34)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("la segunda confirmación conserva la fecha del primer sello", async () => {
+    sembrar();
+    (estadoFalso.plans[0] as Record<string, unknown>).baseline_confirmada_at = "2026-03-01T12:00:00.000Z";
+    const res = await POST(req({ plan_id: "plan-1", fechas: [{ item_id: "it1", fecha: "2026-04-10T12:00:00.000Z", origen: "ajustada" }] }), PARAMS);
+    expect(res.status).toBe(200);
+    expect((estadoFalso.plans[0] as Record<string, unknown>).baseline_confirmada_at).toBe("2026-03-01T12:00:00.000Z");
+    expect((await res.json()).baseline_confirmada_at).toBe("2026-03-01T12:00:00.000Z");
+  });
 });

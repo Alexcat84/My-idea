@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_de_sensibilidad_riesgo",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Análisis de Sensibilidad y Ratio Riesgo-Retorno",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -20,16 +20,60 @@
     "expected_commercial_value_ecv",
     "analisis_costo_entrada_mercado",
     "analisis_tco_roi_b2b",
-    "analisis_trafico_competitivo",
     "demand_curve_pricing",
     "evaluacion_amazon_case",
     "evitar_paralisis_por_analisis",
     "genchi_gembutsu_salir_del_edificio",
-    "etapa_testing_validation"
+    "etapa_testing_validation",
+    "fundamentos_gestion_riesgo"
   ],
   "condiciones_activacion": [
     "Cuando el proyecto tiene alta incertidumbre en sus proyecciones financieras",
     "Antes de tomar decisiones Go/Kill importantes en gates"
   ],
-  "etiqueta_arbol": "Prueba tus Supuestos Críticos"
+  "etiqueta_arbol": "Prueba tus Supuestos Críticos",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-004",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "analisis_de_sensibilidad_riesgo -> analisis_trafico_competitivo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-22-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El analisis de sensibilidad financiera y el ratio riesgo-retorno de un proyecto no preparan el analisis del trafico web de los competidores; no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-013",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-025: El análisis de sensibilidad del modelo financiero (VAN, TIR, escenarios, ratio riesgo-retorno) sirve para diseñar el plan y decidir; no prueba la idea con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "mv-arista-047",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "analisis_de_sensibilidad_riesgo -> fundamentos_gestion_riesgo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B06, segunda eleccion de un lector)",
+        "motivo": "Quien ya identifico y cuantifico los riesgos clave de su proyecto al variar supuestos criticos sigue naturalmente con el ciclo completo de enmarcar, evaluar, responder y monitorear el riesgo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
+    }
+  ]
 }

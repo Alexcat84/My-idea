@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P210F94",
+  "intento": 0,
+  "usd": 0.198752,
+  "turnos": 1,
+  "duracion_s": 7.8,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46698,
+  "tokens_out": 598,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P210F94\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1991], \"cita\": \"It would be reasonable to expect that an activity scoring ‘high’ on all three of these questions is the one most likely to be associated with human performance problems.\", \"datos_sin_respaldo\": [\"IBM Maximo\"], \"razon\": \"El libro respalda priorizar las actividades que puntúan alto a la vez en contacto directo, criticidad y frecuencia (L1963-L1991), así que no hay contradicción. Pero en ningún lugar menciona IBM Maximo ni otra herramienta de software para registrarlas. Es una herramienta concreta añadida.\", \"paso_fiel\": \"Anota en una lista las actividades que puntúan alto a la vez en contacto directo, criticidad y frecuencia para priorizar su control.\"}\n```",
+ "parseado": {
+  "id": "P210F94",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977,
+   1991
+  ],
+  "cita": "It would be reasonable to expect that an activity scoring ‘high’ on all three of these questions is the one most likely to be associated with human performance problems.",
+  "datos_sin_respaldo": [
+   "IBM Maximo"
+  ],
+  "razon": "El libro respalda priorizar las actividades que puntúan alto a la vez en contacto directo, criticidad y frecuencia (L1963-L1991), así que no hay contradicción. Pero en ningún lugar menciona IBM Maximo ni otra herramienta de software para registrarlas. Es una herramienta concreta añadida.",
+  "paso_fiel": "Anota en una lista las actividades que puntúan alto a la vez en contacto directo, criticidad y frecuencia para priorizar su control."
+ }
+}

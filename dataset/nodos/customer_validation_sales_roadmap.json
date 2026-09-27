@@ -1,6 +1,6 @@
 {
   "node_id": "customer_validation_sales_roadmap",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Customer Validation y Sales Roadmap",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -29,5 +29,23 @@
     "Cuando el startup ya validó el problema/solución y busca confirmar que puede vender de forma repetible y escalable",
     "Si el CEO quiere acelerar contratando vendedores antes de validar el modelo"
   ],
-  "etiqueta_arbol": "Traza tu Ruta de Ventas"
+  "etiqueta_arbol": "Traza tu Ruta de Ventas",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-039",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q093-028: Customer Validation consiste en convertir hipótesis en hechos con ventas reales antes de escalar, lo que es validacion con el mercado y no planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

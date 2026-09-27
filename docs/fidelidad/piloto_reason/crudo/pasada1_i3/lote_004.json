@@ -1,0 +1,86 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_004",
+  "intento": 0,
+  "usd": 0.16594799999999998,
+  "turnos": 1,
+  "duracion_s": 17.3,
+  "pared_s": 18.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33547,
+  "tokens_out": 1588,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P591FB7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 275, 285, 107, 50], \"razon\": \"El libro indica que la investigación empieza por el mal resultado y luego examina cómo y cuándo fallaron las defensas.\"},\n  {\"id\": \"P02A2A5\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 992, 1006, 1571, 1573, 1712, 1724, 5204], \"razon\": \"Coincide con la crítica a las reglas pensadas solo para condiciones óptimas. Pero el libro dice que los procedimientos nunca cubren toda la variabilidad y apunta a formación y supervisores.\"},\n  {\"id\": \"P424337\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [821, 1044, 1056, 1058, 1068, 1072, 1076, 1133, 1137, 1149], \"razon\": \"El nodo trata la falacia de las defensas en profundidad. El paso propone añadir redundancia como remedio, cuando el libro advierte que aumenta la opacidad, las fallas de modo común y la falsa seguridad.\"},\n  {\"id\": \"PBCABD4\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5204, 4769, 5208], \"razon\": \"El libro dice que la autoridad del supervisor nace del respeto del equipo y del apoyo de la dirección. El paso concreta ese apoyo, sin sustituir el respeto ganado.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P591FB7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    275,
+    285,
+    107,
+    50
+   ],
+   "razon": "El libro indica que la investigación empieza por el mal resultado y luego examina cómo y cuándo fallaron las defensas."
+  },
+  {
+   "id": "P02A2A5",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    990,
+    992,
+    1006,
+    1571,
+    1573,
+    1712,
+    1724,
+    5204
+   ],
+   "razon": "Coincide con la crítica a las reglas pensadas solo para condiciones óptimas. Pero el libro dice que los procedimientos nunca cubren toda la variabilidad y apunta a formación y supervisores."
+  },
+  {
+   "id": "P424337",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    821,
+    1044,
+    1056,
+    1058,
+    1068,
+    1072,
+    1076,
+    1133,
+    1137,
+    1149
+   ],
+   "razon": "El nodo trata la falacia de las defensas en profundidad. El paso propone añadir redundancia como remedio, cuando el libro advierte que aumenta la opacidad, las fallas de modo común y la falsa seguridad."
+  },
+  {
+   "id": "PBCABD4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5204,
+    4769,
+    5208
+   ],
+   "razon": "El libro dice que la autoridad del supervisor nace del respeto del equipo y del apoyo de la dirección. El paso concreta ese apoyo, sin sustituir el respeto ganado."
+  }
+ ]
+}

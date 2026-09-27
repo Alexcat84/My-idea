@@ -14,7 +14,7 @@
   ],
   "entregable_esperado": "Equipo funcionando bajo metodología ágil con sprints definidos, reuniones diarias y entregas incrementales de producto",
   "nodos_previos": [
-    "desarrollo_attack_plans"
+    "waterfall_vs_agile_development"
   ],
   "nodos_siguientes": [
     "modelo_hibrido_agile_stage_gate"
@@ -23,5 +23,36 @@
     "Cuando el proyecto involucra desarrollo de software con requisitos cambiantes",
     "Si el mercado o los requerimientos del cliente son muy fluidos e inciertos"
   ],
-  "etiqueta_arbol": "Adopta los Valores Ágiles"
+  "etiqueta_arbol": "Adopta los Valores Ágiles",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-034",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "desarrollo_attack_plans -> manifiesto_agile",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-14-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El Manifiesto Agil (valores de desarrollo de software) no es un paso natural tras definir como competir en cada arena (Innovador, Fast Follower, Defensor, enfoque y alcance)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-11",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "waterfall_vs_agile_development -> manifiesto_agile",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-11, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Tras ver la diferencia entre cascada y ágil, lo natural es ir a los valores y principios que fundan lo ágil."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
+  ]
 }

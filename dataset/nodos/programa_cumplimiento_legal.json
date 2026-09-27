@@ -6,12 +6,12 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "La mayoria de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educacion, cuidado y un método claro de cumplimiento. Esto incluye capacitar cada ano a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periodicas para revisar como se vende, y aplicar mano dura sin excepciones ante cualquier infraccion.",
   "pasos_accionables": [
-    "Capacita cada ano a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluacion que quede registrada",
-    "Designa a una persona (puede ser tu mismo) como punto de contacto para dudas legales sobre las ventas",
+    "Capacita cada año a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluación que quede registrada",
+    "Designa a una persona (puede ser tú mismo) como punto de contacto para dudas legales sobre las ventas",
     "Usa un sistema para registrar todas las comunicaciones con cada interesado en comprar una franquicia",
-    "Haz una entrevista de cierre con cada franquiciado nuevo preguntando que le dijeron durante la venta",
-    "Realiza compras de prueba periodicas para verificar que se vende de forma correcta",
-    "Establece una politica de cero tolerancia ante infracciones e incluyela en los acuerdos de trabajo"
+    "Haz una entrevista de cierre con cada franquiciado nuevo preguntando qué le dijeron durante la venta",
+    "Realiza compras de prueba periódicas para verificar que se vende de forma correcta",
+    "Establece una política de cero tolerancia ante infracciones e inclúyela en los acuerdos de trabajo"
   ],
   "entregable_esperado": "Un manual de cumplimiento legal en funcionamiento, con una persona responsable designada y registros de capacitaciones y revisiones",
   "nodos_previos": [
@@ -23,5 +23,80 @@
   "condiciones_activacion": [
     "Cuando ya estas vendiendo franquicias activamente y necesitas reducir el riesgo legal"
   ],
-  "etiqueta_arbol": "Mitiga el Riesgo de Litigio"
+  "etiqueta_arbol": "Mitiga el Riesgo de Litigio",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0722",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Capacita cada ano a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluacion que quede registrada",
+      "texto_nuevo": "Capacita cada año a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluación que quede registrada",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-039.paso0: año, evaluación (Faltaba la eñe en año y la tilde en evaluación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0723",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Designa a una persona (puede ser tu mismo) como punto de contacto para dudas legales sobre las ventas",
+      "texto_nuevo": "Designa a una persona (puede ser tú mismo) como punto de contacto para dudas legales sobre las ventas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-039.paso1: tú (Faltaba la tilde en tú, que aquí es pronombre personal.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0724",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz una entrevista de cierre con cada franquiciado nuevo preguntando que le dijeron durante la venta",
+      "texto_nuevo": "Haz una entrevista de cierre con cada franquiciado nuevo preguntando qué le dijeron durante la venta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-039.paso3: qué (Faltaba la tilde en qué, que aquí es interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0725",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Realiza compras de prueba periodicas para verificar que se vende de forma correcta",
+      "texto_nuevo": "Realiza compras de prueba periódicas para verificar que se vende de forma correcta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-039.paso4: periódicas (Solo se añade la tilde que faltaba en periódicas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0726",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establece una politica de cero tolerancia ante infracciones e incluyela en los acuerdos de trabajo",
+      "texto_nuevo": "Establece una política de cero tolerancia ante infracciones e inclúyela en los acuerdos de trabajo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-039.paso5: política, inclúyela (Faltaban las tildes en política e inclúyela.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    }
+  ]
 }

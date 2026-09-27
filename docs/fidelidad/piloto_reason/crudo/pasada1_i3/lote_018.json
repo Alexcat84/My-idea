@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_018",
+  "intento": 0,
+  "usd": 0.166416,
+  "turnos": 1,
+  "duracion_s": 18.8,
+  "pared_s": 20.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33139,
+  "tokens_out": 1693,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P2A74C2\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2880, 2884, 2922, 2961, 3817, 4765, 4987, 5077], \"razon\": \"El libro respalda no culpar como vía principal. Matiz: rechaza la cultura 'no-blame' y exige sancionar actos atroces. Un cliente podría leer que no debe sancionar nunca.\"},\n  {\"id\": \"P3EF940\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5063, 5065, 5067, 5077, 4765], \"razon\": \"El libro dice que el castigo diferido no mejora la conducta, pero defiende sancionar a los pocos culpables graves. Evitar sanciones tardías podría llevar a no sancionarlos, contra L5077.\"},\n  {\"id\": \"P3F642A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 277, 279, 2724, 263, 273], \"razon\": \"El libro pide, para cada condición local, preguntar qué factores organizacionales upstream contribuyeron. Limita el análisis a lo controlable por los gestores.\"},\n  {\"id\": \"P53DB2A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4280, 4284, 4288, 4292, 4296, 3965, 2769], \"razon\": \"El libro enumera enfoques pero no manda fijar criterios. Advierte que la erosión de los 'riesgos aceptables' llevó al Challenger. Sitúa la meta en la resistencia intrínseca, no en umbrales.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P2A74C2",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2880,
+    2884,
+    2922,
+    2961,
+    3817,
+    4765,
+    4987,
+    5077
+   ],
+   "razon": "El libro respalda no culpar como vía principal. Matiz: rechaza la cultura 'no-blame' y exige sancionar actos atroces. Un cliente podría leer que no debe sancionar nunca."
+  },
+  {
+   "id": "P3EF940",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5063,
+    5065,
+    5067,
+    5077,
+    4765
+   ],
+   "razon": "El libro dice que el castigo diferido no mejora la conducta, pero defiende sancionar a los pocos culpables graves. Evitar sanciones tardías podría llevar a no sancionarlos, contra L5077."
+  },
+  {
+   "id": "P3F642A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    277,
+    279,
+    2724,
+    263,
+    273
+   ],
+   "razon": "El libro pide, para cada condición local, preguntar qué factores organizacionales upstream contribuyeron. Limita el análisis a lo controlable por los gestores."
+  },
+  {
+   "id": "P53DB2A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4276,
+    4280,
+    4284,
+    4288,
+    4292,
+    4296,
+    3965,
+    2769
+   ],
+   "razon": "El libro enumera enfoques pero no manda fijar criterios. Advierte que la erosión de los 'riesgos aceptables' llevó al Challenger. Sitúa la meta en la resistencia intrínseca, no en umbrales."
+  }
+ ]
+}

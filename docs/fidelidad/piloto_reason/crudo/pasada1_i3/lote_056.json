@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_056",
+  "intento": 0,
+  "usd": 0.15828,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32645,
+  "tokens_out": 1385,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF0B55E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"entre 8 y 16\"], \"clase\": \"FIEL\", \"lineas\": [2654, 2658], \"razon\": \"El libro da 8-16 como rango típico que varía según el sistema, con fin de hallar 2-3 procesos urgentes; el paso lo fija como rango y omite ese fin.\"},\n  {\"id\": \"PEF9B2A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2089, 2170, 2250, 2520], \"razon\": \"El libro prefiere identificar de antemano pasos propensos a omisión y advierte que medir resultados solo muestra la cara negativa; contar omisiones podría chocar.\"},\n  {\"id\": \"P8F4846\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"ISO 55001\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [435, 967, 969, 971, 975], \"razon\": \"El libro respalda la inspección independiente frente a firmar el propio trabajo, pero no menciona ISO 55001, que además es posterior a 1997.\"},\n  {\"id\": \"PD1360D\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2598, 4757, 4773, 4868], \"razon\": \"El libro pide un sistema que recoja, analice y difunda incidentes y chequeos proactivos regulares; el paso lo concreta sin datos nuevos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF0B55E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "entre 8 y 16"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2654,
+    2658
+   ],
+   "razon": "El libro da 8-16 como rango típico que varía según el sistema, con fin de hallar 2-3 procesos urgentes; el paso lo fija como rango y omite ese fin."
+  },
+  {
+   "id": "PEF9B2A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2089,
+    2170,
+    2250,
+    2520
+   ],
+   "razon": "El libro prefiere identificar de antemano pasos propensos a omisión y advierte que medir resultados solo muestra la cara negativa; contar omisiones podría chocar."
+  },
+  {
+   "id": "P8F4846",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "ISO 55001"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    435,
+    967,
+    969,
+    971,
+    975
+   ],
+   "razon": "El libro respalda la inspección independiente frente a firmar el propio trabajo, pero no menciona ISO 55001, que además es posterior a 1997."
+  },
+  {
+   "id": "PD1360D",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2598,
+    4757,
+    4773,
+    4868
+   ],
+   "razon": "El libro pide un sistema que recoja, analice y difunda incidentes y chequeos proactivos regulares; el paso lo concreta sin datos nuevos."
+  }
+ ]
+}

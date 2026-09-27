@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF0F6EA",
+  "intento": 0,
+  "usd": 0.165248,
+  "turnos": 1,
+  "duracion_s": 22.0,
+  "pared_s": 23.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32202,
+  "tokens_out": 1822,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF0F6EA\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2650, 2654, 2658], \"cita\": \"Regular checks reveal where holes exist now and where they are most likely to appear next. […] It involves sampling a subset of a potentially larger collection of indices […] The frequency with which these checks are carried out will depend upon the rate at which the process in question is likely to change.\", \"datos_sin_respaldo\": [\"monitoreo continuo\", \"en cada capa defensiva\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda vigilar proactivamente los huecos de las defensas (L2650). Pero habla de chequeos regulares, no de un monitoreo continuo. Además muestrea un subconjunto de indicadores, con una frecuencia según su ritmo de cambio, y advierte que no conviene muestrearlo todo (L2654). Continuo y exhaustivo son detalles añadidos; no invierten la recomendación central.\", \"paso_fiel\": \"Diseñar chequeos regulares de las defensas que revelen dónde hay huecos ahora y dónde es más probable que aparezcan, muestreando un subconjunto de indicadores con una frecuencia acorde a su ritmo de cambio.\"}\n```",
+ "parseado": {
+  "id": "PF0F6EA",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2650,
+   2654,
+   2658
+  ],
+  "cita": "Regular checks reveal where holes exist now and where they are most likely to appear next. […] It involves sampling a subset of a potentially larger collection of indices […] The frequency with which these checks are carried out will depend upon the rate at which the process in question is likely to change.",
+  "datos_sin_respaldo": [
+   "monitoreo continuo",
+   "en cada capa defensiva"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda vigilar proactivamente los huecos de las defensas (L2650). Pero habla de chequeos regulares, no de un monitoreo continuo. Además muestrea un subconjunto de indicadores, con una frecuencia según su ritmo de cambio, y advierte que no conviene muestrearlo todo (L2654). Continuo y exhaustivo son detalles añadidos; no invierten la recomendación central.",
+  "paso_fiel": "Diseñar chequeos regulares de las defensas que revelen dónde hay huecos ahora y dónde es más probable que aparezcan, muestreando un subconjunto de indicadores con una frecuencia acorde a su ritmo de cambio."
+ }
+}

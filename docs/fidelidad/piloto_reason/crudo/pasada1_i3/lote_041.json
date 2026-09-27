@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_041",
+  "intento": 0,
+  "usd": 0.156964,
+  "turnos": 1,
+  "duracion_s": 12.9,
+  "pared_s": 14.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33421,
+  "tokens_out": 1164,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE6FCD2\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [478, 494, 504, 526], \"razon\": \"El libro exige separar a quien opera (trading) de quien verifica (settlement). El paso lo generaliza a autorizar y aprobar el propio trabajo, en la misma dirección.\"},\n  {\"id\": \"P219A19\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4394, 4406, 4410, 4414], \"razon\": \"El análisis costo-beneficio de las alternativas es literalmente el cuarto paso de la FSA descrita por la MSA.\"},\n  {\"id\": \"P67C7EA\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4364], \"razon\": \"El primer paso del procedimiento continuo de COSHH es listar todas las sustancias peligrosas e identificar sus puntos de uso.\"},\n  {\"id\": \"PADF710\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"HAZOP\", \"PRA\", \"análisis de tareas cognitivas\"], \"clase\": \"FIEL\", \"lineas\": [5544, 5546, 5559, 5905], \"razon\": \"El libro cita HAZOPS, PRA y análisis de tareas cognitivas como herramientas del modelo de ingeniería, centrado en los desajustes humano-máquina.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE6FCD2",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    478,
+    494,
+    504,
+    526
+   ],
+   "razon": "El libro exige separar a quien opera (trading) de quien verifica (settlement). El paso lo generaliza a autorizar y aprobar el propio trabajo, en la misma dirección."
+  },
+  {
+   "id": "P219A19",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4394,
+    4406,
+    4410,
+    4414
+   ],
+   "razon": "El análisis costo-beneficio de las alternativas es literalmente el cuarto paso de la FSA descrita por la MSA."
+  },
+  {
+   "id": "P67C7EA",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4364
+   ],
+   "razon": "El primer paso del procedimiento continuo de COSHH es listar todas las sustancias peligrosas e identificar sus puntos de uso."
+  },
+  {
+   "id": "PADF710",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "HAZOP",
+    "PRA",
+    "análisis de tareas cognitivas"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5544,
+    5546,
+    5559,
+    5905
+   ],
+   "razon": "El libro cita HAZOPS, PRA y análisis de tareas cognitivas como herramientas del modelo de ingeniería, centrado en los desajustes humano-máquina."
+  }
+ ]
+}

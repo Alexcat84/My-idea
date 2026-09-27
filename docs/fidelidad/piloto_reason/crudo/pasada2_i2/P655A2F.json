@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P655A2F",
+  "intento": 0,
+  "usd": 0.149964,
+  "turnos": 1,
+  "duracion_s": 15.1,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30371,
+  "tokens_out": 1424,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P655A2F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4946, 4948, 4954, 4968], \"cita\": \"More open questions ... give the reporter a greater chance to tell the full story. This method is more effective in gathering all the information about an incident, but takes longer and usually requires more analytic resources\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide facilidad de reporte y presenta las preguntas abiertas como más eficaces. Describe cómo BA pasó a ellas, trasladando la carga analítica al equipo de análisis, con mejores resultados. 'Cuando sea posible' recoge el coste en recursos. El paso no invierte nada; concreta en la misma dirección sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P655A2F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4946,
+   4948,
+   4954,
+   4968
+  ],
+  "cita": "More open questions ... give the reporter a greater chance to tell the full story. This method is more effective in gathering all the information about an incident, but takes longer and usually requires more analytic resources",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide facilidad de reporte y presenta las preguntas abiertas como más eficaces. Describe cómo BA pasó a ellas, trasladando la carga analítica al equipo de análisis, con mejores resultados. 'Cuando sea posible' recoge el coste en recursos. El paso no invierte nada; concreta en la misma dirección sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

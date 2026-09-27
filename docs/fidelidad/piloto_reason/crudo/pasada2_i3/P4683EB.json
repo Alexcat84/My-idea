@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P4683EB",
+  "intento": 0,
+  "usd": 0.171164,
+  "turnos": 1,
+  "duracion_s": 13.7,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37026,
+  "tokens_out": 1153,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P4683EB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [419, 453, 2250, 2279], \"cita\": \"the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como grieta del sistema la falta de firmas paso a paso obligatorias para el trabajo de restitución. También pide recordatorios que permitan marcar cada acción en los pasos propensos a omisión. Que las firmas se den a veces sin inspección real (L409) es un fallo de su cumplimiento, no un rechazo de la herramienta. El paso concreta esto en su misma dirección.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P4683EB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   419,
+   453,
+   2250,
+   2279
+  ],
+  "cita": "the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como grieta del sistema la falta de firmas paso a paso obligatorias para el trabajo de restitución. También pide recordatorios que permitan marcar cada acción en los pasos propensos a omisión. Que las firmas se den a veces sin inspección real (L409) es un fallo de su cumplimiento, no un rechazo de la herramienta. El paso concreta esto en su misma dirección.",
+  "paso_fiel": ""
+ }
+}

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Optimización del Punto y Tipo de Inspección",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming plantea que la inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
+  "resumen_teorico": "La inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
   "pasos_accionables": [
     "Mapear todos los puntos de inspección actuales (materiales entrantes, proceso, producto final)",
     "Calcular el costo total asociado a cada punto de inspección versus el costo de no inspeccionar",
@@ -19,5 +19,26 @@
   "condiciones_activacion": [
     "Cuando la empresa usa planes de muestreo tradicionales sin analizar costo total del proceso"
   ],
-  "etiqueta_arbol": "Decide Dónde Inspeccionar"
+  "etiqueta_arbol": "Decide Dónde Inspeccionar",
+  "correcciones": [
+    {
+      "id": "atribucion-107",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming plantea que la inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
+      "texto_nuevo": "La inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming plantea que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-024 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

@@ -17,11 +17,56 @@
   "nodos_previos": [
     "getting_started_system_services_acquisition",
     "supply_chain_management_systems",
-    "gestion_riesgo_cadena_suministro"
+    "definicion_alineacion_cadena_suministro"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando la empresa depende de proveedores externos para componentes o servicios críticos relacionados con CUI."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y dependes de proveedores externos para componentes o servicios críticos relacionados con CUI."
   ],
-  "etiqueta_arbol": "Gestiona el Riesgo de Proveedores"
+  "etiqueta_arbol": "Gestiona el Riesgo de Proveedores",
+  "fuentes_internas": [
+    "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-100",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la empresa depende de proveedores externos para componentes o servicios críticos relacionados con CUI.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y dependes de proveedores externos para componentes o servicios críticos relacionados con CUI.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-010: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "mv-arista-012",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "definicion_alineacion_cadena_suministro -> getting_started_supply_chain_risk_management",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B07, lectores de acuerdo)",
+        "motivo": "Entender que es la cadena y los actores que la forman es el punto tras el cual se entra a gestionar su riesgo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-013",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_riesgo_cadena_suministro -> getting_started_supply_chain_risk_management",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B07)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en definicion_alineacion_cadena_suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    }
+  ]
 }

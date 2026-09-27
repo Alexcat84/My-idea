@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PEF9B2A",
+  "intento": 0,
+  "usd": 0.1777,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39955,
+  "tokens_out": 894,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PEF9B2A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1945, 2089, 3745, 3053], \"cita\": \"Such breakdowns of performance problems by activity can be very revealing, as will be shown below. [...] He also identified the activities most often associated with omissions [...] MEDA also provides a means for computerized trend analysis for the maintenance organization.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro desglosa las omisiones por actividad (Rasmussen) y considera reveladores esos desgloses. También respalda el análisis de tendencias de errores de mantenimiento con MEDA. Tripod-Delta prefiere medir procesos, pero el libro no desaconseja registrar errores. El paso solo concreta ese seguimiento, sin cifras, plazos ni herramientas nuevas, y no lo propone como vía principal frente al análisis de tareas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PEF9B2A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1945,
+   2089,
+   3745,
+   3053
+  ],
+  "cita": "Such breakdowns of performance problems by activity can be very revealing, as will be shown below. [...] He also identified the activities most often associated with omissions [...] MEDA also provides a means for computerized trend analysis for the maintenance organization.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro desglosa las omisiones por actividad (Rasmussen) y considera reveladores esos desgloses. También respalda el análisis de tendencias de errores de mantenimiento con MEDA. Tripod-Delta prefiere medir procesos, pero el libro no desaconseja registrar errores. El paso solo concreta ese seguimiento, sin cifras, plazos ni herramientas nuevas, y no lo propone como vía principal frente al análisis de tareas.",
+  "paso_fiel": ""
+ }
+}

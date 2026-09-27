@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Método de Payback en Decisiones de Inversión",
+  "resumen": "El payback mide cuánto tiempo tarda el flujo de efectivo de un proyecto en devolver la inversión inicial. Es simple de calcular y de explicar, y sirve como primera prueba de realidad: si el periodo de recuperación es más largo que la vida del proyecto, la inversión no tiene sentido.",
+  "texto": "Si el payback resulta más corto que la vida útil del proyecto, aprueba la inversión con ese resultado; NPV e IRR solo hacen falta cuando el payback sale dudoso.",
+  "tipo": "CONTRARIO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L3063",
+  "cita": "So the payback method is a rough rule of thumb, not strong financial analysis. If your results with payback look promising, go on to the next method to see whether the investment is really worth making.",
+  "dato": "",
+  "explicacion": "El libro dice que un payback prometedor no basta para decidir: es una regla aproximada y, si sale bien, hay que pasar al método siguiente (NPV) para ver si la inversión vale la pena. El paso invierte la condición: da por aprobada la inversión cuando el payback es favorable y reserva el NPV para los casos dudosos. En L3061 el libro añade que el payback solo debe usarse para comparar o para rechazar proyectos."
+ },
+ {
+  "titulo": "Razón Corriente (Current Ratio)",
+  "resumen": "La razón corriente compara los activos corrientes con los pasivos corrientes y muestra si la empresa puede cubrir las obligaciones que vencen en menos de un año. Puede ser demasiado baja o demasiado alta, y los bancos la miran antes de prestar.",
+  "texto": "Mantener la razón corriente cerca de 1 para no inmovilizar efectivo; es el nivel que los bancos ven como uso eficiente del capital de trabajo.",
+  "tipo": "CONTRARIO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L2675",
+  "cita": "In most industries a current ratio is too low when it is getting close to 1. At that point, you are just barely able to cover the liabilities that will come due with the cash you’ll have coming in. Most bankers aren’t going to lend money to a company with a current ratio anywhere near 1.",
+  "dato": "",
+  "explicacion": "El libro dice que una razón corriente cercana a 1 es demasiado baja y que la mayoría de los banqueros no prestan a una empresa en ese nivel. El paso recomienda justo ese nivel como objetivo y dice que los bancos lo ven bien, lo opuesto a la fuente."
+ },
+ {
+  "titulo": "Cobertura de Intereses (Interest Coverage)",
+  "resumen": "La cobertura de intereses divide la ganancia operativa (EBIT) entre los gastos por intereses y muestra con qué facilidad la empresa puede pagar sus intereses. A los banqueros les interesa mucho: un ratio cercano a 1 es mala señal y un ratio alto indica capacidad de asumir más deuda.",
+  "texto": "Antes de solicitar financiamiento, confirmar que la cobertura de intereses esté al menos en 3 veces, el mínimo que suelen exigir los bancos.",
+  "tipo": "ANADIDO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L2638",
+  "cita": "A ratio that gets too close to 1 is obviously a bad sign: most of a company’s profit is going to pay off interest! A high ratio is generally a sign that the company can afford to take on more debt—or at least that it can make the payments.",
+  "dato": "Umbral mínimo de 3 veces exigido por los bancos",
+  "explicacion": "El libro solo dice que un ratio cercano a 1 es mala señal y que uno alto indica capacidad de asumir más deuda. No da ningún umbral numérico ni atribuye a los bancos un mínimo de 3 veces. Comprobado con Grep: no aparecen 'three times', '3 times' ni '3.0', y 'coverage' solo sale en L2604 y L2629, sin cifras."
+ },
+ {
+  "titulo": "Activos Intangibles y Amortización de I+D",
+  "resumen": "Los PCGA (GAAP) permiten amortizar el I+D si el producto en desarrollo es técnicamente factible, y si no, obligan a registrarlo como gasto cuando se incurre. Decidir qué es factible deja margen de juicio, y esa decisión puede inflar las utilidades y el patrimonio reportados.",
+  "texto": "Amortizar el desarrollo de software capitalizado en un plazo máximo de 36 meses, como fija la norma ASC 350-40.",
+  "tipo": "ANADIDO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L1328",
+  "cita": "GAAP says that R&D can be amortized if the product under development is technologically feasible. But who determines technological feasibility?",
+  "dato": "Plazo máximo de 36 meses y norma ASC 350-40",
+  "explicacion": "El libro solo dice que los GAAP permiten amortizar el I+D cuando el producto es técnicamente factible, y subraya la subjetividad de esa decisión. No nombra ninguna norma ASC ni fija un plazo de amortización para el software. Comprobado con Grep: no aparecen 'ASC 350', 'Codification', '36 months', 'thirty-six months' ni 'software development'."
+ }
+]

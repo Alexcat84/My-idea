@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_013",
+  "intento": 0,
+  "usd": 0.16354,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33940,
+  "tokens_out": 1389,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P32AEEC\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [596, 600, 666, 5272], \"razon\": \"El libro presenta la tabla, no un método diagnóstico. L5272 advierte que creerse con buena cultura casi seguro es un error; un autodiagnóstico podría inducir exceso de confianza.\"},\n  {\"id\": \"PF8D394\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 275, 277, 279], \"razon\": \"L293 indica exactamente que, para cada condición local, se pregunta qué factores organizacionales upstream contribuyeron (mapeo muchos-a-muchos).\"},\n  {\"id\": \"P93E0C1\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5742, 5748, 271, 263], \"razon\": \"L5742: los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; hay rendimientos decrecientes en factores más remotos.\"},\n  {\"id\": \"PF288A7\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [409, 413, 2250], \"razon\": \"Los fragmentos no recomiendan listas firmadas paso a paso. Muestran firmas de trabajos incompletos (L409, L413): la firma es poco fiable como defensa. El remedio citado es identificar pasos propensos a omisión.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P32AEEC",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    596,
+    600,
+    666,
+    5272
+   ],
+   "razon": "El libro presenta la tabla, no un método diagnóstico. L5272 advierte que creerse con buena cultura casi seguro es un error; un autodiagnóstico podría inducir exceso de confianza."
+  },
+  {
+   "id": "PF8D394",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    275,
+    277,
+    279
+   ],
+   "razon": "L293 indica exactamente que, para cada condición local, se pregunta qué factores organizacionales upstream contribuyeron (mapeo muchos-a-muchos)."
+  },
+  {
+   "id": "P93E0C1",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5742,
+    5748,
+    271,
+    263
+   ],
+   "razon": "L5742: los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; hay rendimientos decrecientes en factores más remotos."
+  },
+  {
+   "id": "PF288A7",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    409,
+    413,
+    2250
+   ],
+   "razon": "Los fragmentos no recomiendan listas firmadas paso a paso. Muestran firmas de trabajos incompletos (L409, L413): la firma es poco fiable como defensa. El remedio citado es identificar pasos propensos a omisión."
+  }
+ ]
+}

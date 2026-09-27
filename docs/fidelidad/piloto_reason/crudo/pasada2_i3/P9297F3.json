@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P9297F3",
+  "intento": 0,
+  "usd": 0.17739200000000002,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40578,
+  "tokens_out": 754,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9297F3\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [582, 1058, 2650, 4448, 5775, 5781], \"cita\": \"we cannot prevent latent conditions from being seeded into the system since they are an inevitable product of strategic decisions. All we can usefully do is to make them visible to those who manage and operate the organization so that the worst of them, at any one time, can be corrected.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las defensas en profundidad ocultan fallas y permiten su acumulación insidiosa. Propone hacerlas visibles con controles proactivos regulares y eliminarlas antes del suceso, como proceso continuo. El paso concreta eso en la misma dirección. No promete evitar que surjan ni eliminarlas todas. No añade cifras, herramientas ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P9297F3",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   582,
+   1058,
+   2650,
+   4448,
+   5775,
+   5781
+  ],
+  "cita": "we cannot prevent latent conditions from being seeded into the system since they are an inevitable product of strategic decisions. All we can usefully do is to make them visible to those who manage and operate the organization so that the worst of them, at any one time, can be corrected.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las defensas en profundidad ocultan fallas y permiten su acumulación insidiosa. Propone hacerlas visibles con controles proactivos regulares y eliminarlas antes del suceso, como proceso continuo. El paso concreta eso en la misma dirección. No promete evitar que surjan ni eliminarlas todas. No añade cifras, herramientas ni responsables.",
+  "paso_fiel": ""
+ }
+}

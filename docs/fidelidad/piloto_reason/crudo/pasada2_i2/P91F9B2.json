@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P91F9B2",
+  "intento": 0,
+  "usd": 0.198856,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44824,
+  "tokens_out": 978,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P91F9B2\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5085, 5057, 5266], \"cita\": \"This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted.\", \"datos_sin_respaldo\": [\"capacitación como medio\", \"supervisores y gestores como responsables de aplicar los criterios\"], \"razon\": \"El libro sí pide aplicar los criterios de forma común y consistente. Lo hace mediante una junta de revisión disciplinaria con metodología estructurada y un 'jurado' de pares, con pares y sindicato en el juicio. No habla de capacitar a supervisores y gestores. No es contrario: el libro no excluye a la dirección del juicio disciplinario.\", \"paso_fiel\": \"Asegura que la junta de revisión disciplinaria aplique estos criterios de forma común y consistente, con un método estructurado y con participación de los pares del implicado en el juicio.\"}\n```",
+ "parseado": {
+  "id": "P91F9B2",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5085,
+   5057,
+   5266
+  ],
+  "cita": "This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted.",
+  "datos_sin_respaldo": [
+   "capacitación como medio",
+   "supervisores y gestores como responsables de aplicar los criterios"
+  ],
+  "razon": "El libro sí pide aplicar los criterios de forma común y consistente. Lo hace mediante una junta de revisión disciplinaria con metodología estructurada y un 'jurado' de pares, con pares y sindicato en el juicio. No habla de capacitar a supervisores y gestores. No es contrario: el libro no excluye a la dirección del juicio disciplinario.",
+  "paso_fiel": "Asegura que la junta de revisión disciplinaria aplique estos criterios de forma común y consistente, con un método estructurado y con participación de los pares del implicado en el juicio."
+ }
+}

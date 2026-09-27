@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1F10A7",
+  "intento": 0,
+  "usd": 0.23316800000000001,
+  "turnos": 1,
+  "duracion_s": 18.4,
+  "pared_s": 19.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 51617,
+  "tokens_out": 1335,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1F10A7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4714, 4716, 4720, 2905, 3209], \"cita\": \"such as ‘write another procedure’ and ‘blame and train,’ may not actually make the system more resistant to future organizational accidents, they at least serve the anxiety-reducing function of being seen to do something ... Identifying an error is merely the beginning of the search for causes, not the end.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las reacciones de evitación de ansiedad ('blame and train', 'write another procedure') alimentan el ciclo de culpa sin hacer el sistema más resistente. También pide buscar las causas del error y mejorar los procesos causales subyacentes. 'Causas raíz' es una paráfrasis genérica de esos procesos, no una herramienta nombrada ni un dato nuevo. El paso concreta al libro en su misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P1F10A7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4714,
+   4716,
+   4720,
+   2905,
+   3209
+  ],
+  "cita": "such as ‘write another procedure’ and ‘blame and train,’ may not actually make the system more resistant to future organizational accidents, they at least serve the anxiety-reducing function of being seen to do something ... Identifying an error is merely the beginning of the search for causes, not the end.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las reacciones de evitación de ansiedad ('blame and train', 'write another procedure') alimentan el ciclo de culpa sin hacer el sistema más resistente. También pide buscar las causas del error y mejorar los procesos causales subyacentes. 'Causas raíz' es una paráfrasis genérica de esos procesos, no una herramienta nombrada ni un dato nuevo. El paso concreta al libro en su misma dirección.",
+  "paso_fiel": ""
+ }
+}

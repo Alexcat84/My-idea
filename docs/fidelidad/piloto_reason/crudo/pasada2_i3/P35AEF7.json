@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P35AEF7",
+  "intento": 0,
+  "usd": 0.083656,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 16699,
+  "tokens_out": 843,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P35AEF7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2598, 2638, 2658, 2568], \"cita\": \"Navigational aids fall into two main categories: reactive measures that can only be applied after the occurrence of an event, and proactive measures that can be used before an event to assess the ‘safety health’ of the system as a whole. Effective safety management requires the use of both of these measures.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro exige usar medidas reactivas y proactivas juntas para navegar el espacio de seguridad. El paso las traduce como resultado y proceso. Da mas peso a las proactivas (L2658) y advierte contra depender de las de resultado (L2568, L2765), pero el paso no invierte esa prioridad ni convierte las de resultado en la via principal. Concreta sin anadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P35AEF7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2598,
+   2638,
+   2658,
+   2568
+  ],
+  "cita": "Navigational aids fall into two main categories: reactive measures that can only be applied after the occurrence of an event, and proactive measures that can be used before an event to assess the ‘safety health’ of the system as a whole. Effective safety management requires the use of both of these measures.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro exige usar medidas reactivas y proactivas juntas para navegar el espacio de seguridad. El paso las traduce como resultado y proceso. Da mas peso a las proactivas (L2658) y advierte contra depender de las de resultado (L2568, L2765), pero el paso no invierte esa prioridad ni convierte las de resultado en la via principal. Concreta sin anadir datos.",
+  "paso_fiel": ""
+ }
+}

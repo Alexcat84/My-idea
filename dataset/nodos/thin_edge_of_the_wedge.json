@@ -6,7 +6,7 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Concepto que describe la situación de organizaciones ultra-seguras o casi-cero accidentes, donde seguir haciendo más de lo mismo (más reglas, más estandarización, más reportes de incidentes) ya no genera mejoras adicionales de seguridad. En este punto, los accidentes sorpresivos no provienen de agujeros conocidos en las defensas ni de incidentes reportados, sino del trabajo normal cotidiano que nadie consideraba riesgoso.",
   "pasos_accionables": [
-    "Evaluar si la organización ya está en un nivel ultra-seguro o de meseta (plateau)",
+    "Evaluar si la organización ya está en un nivel ultraseguro o de meseta (plateau)",
     "Dejar de recomendar más reglas, procedimientos o campañas de concientización si ya se está en este nivel",
     "Enfocar la atención en el 'trabajo normal' y no solo en incidentes reportados",
     "Sostener (no abandonar) las prácticas que llevaron al nivel actual de seguridad, pero buscar nuevas estrategias para progresar"
@@ -23,5 +23,24 @@
     "Cuando la organización ha alcanzado una meseta en sus indicadores de seguridad a pesar de más regulaciones",
     "Cuando ocurren accidentes sorpresivos en organizaciones consideradas altamente seguras"
   ],
-  "etiqueta_arbol": "Supera tu Techo de Seguridad"
+  "etiqueta_arbol": "Supera tu Techo de Seguridad",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0430",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evaluar si la organización ya está en un nivel ultra-seguro o de meseta (plateau)",
+      "texto_nuevo": "Evaluar si la organización ya está en un nivel ultraseguro o de meseta (plateau)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O036-015.paso0: ultra-seguro (El prefijo 'ultra-' se escribe unido a la palabra según la norma de la RAE; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
+  ]
 }

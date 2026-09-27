@@ -6,18 +6,16 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar solo por números (metas, cuotas, cero errores). Un error comun es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
   "pasos_accionables": [
-    "Dejar de evaluar el trabajo, propio o de quien te ayuda, solo con metas numericas, cuotas o cifras frias",
+    "Dejar de evaluar el trabajo, propio o de quien te ayuda, solo con metas numéricas, cuotas o cifras frías",
     "Aprender a fondo el trabajo real antes de dirigirlo o delegarlo",
     "Escuchar y corregir las condiciones que dificultan el trabajo, como herramientas, materiales o criterios de calidad poco claros",
-    "Usar datos para identificar que esta realmente fuera de linea, no solo quien quedo bajo el promedio"
+    "Usar datos para identificar qué está realmente fuera de línea, no solo quién quedó bajo el promedio"
   ],
-  "entregable_esperado": "Una forma de liderar centrada en apoyar y mejorar el sistema, dejando atras las metricas puramente numericas para juzgar el desempeno",
+  "entregable_esperado": "Una forma de liderar centrada en apoyar y mejorar el sistema, dejando atrás las métricas puramente numéricas para juzgar el desempeño",
   "nodos_previos": [
     "institucionalizar_capacitacion",
     "causas_comunes_vs_especiales",
     "entrenamiento_gerencial",
-    "framework_good_bad_product_manager",
-    "gestion_de_problemas_sin_receta",
     "diseno_de_eucatastrofe_organizacional"
   ],
   "nodos_siguientes": [
@@ -30,5 +28,77 @@
     "Cuando gestionas o te evaluas solo por cuotas y numeros",
     "Cuando castigas resultados bajo el promedio sin analizar los datos con cuidado"
   ],
-  "etiqueta_arbol": "Ejerce Liderazgo, No Supervises"
+  "etiqueta_arbol": "Ejerce Liderazgo, No Supervises",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-042",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_good_bad_product_manager -> adopcion_liderazgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-09, lector y verificador de acuerdo)",
+        "motivo": "El marco de expectativas del product manager no se profundiza en el punto 7 de Deming sobre liderar sistemas en vez de vigilar numeros; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-puente-065",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_de_problemas_sin_receta -> adopcion_liderazgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-14, lector y verificador de acuerdo)",
+        "motivo": "Resolver crisis de personas sin recetas y el punto 7 de Deming solo comparten la palabra liderazgo; tienen enfoques distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-orto-0324",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dejar de evaluar el trabajo, propio o de quien te ayuda, solo con metas numericas, cuotas o cifras frias",
+      "texto_nuevo": "Dejar de evaluar el trabajo, propio o de quien te ayuda, solo con metas numéricas, cuotas o cifras frías",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-002.paso0: numéricas, frías (Tildes que faltaban en numéricas y frías; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0325",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usar datos para identificar que esta realmente fuera de linea, no solo quien quedo bajo el promedio",
+      "texto_nuevo": "Usar datos para identificar qué está realmente fuera de línea, no solo quién quedó bajo el promedio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-002.paso3: qué, está, línea, quién, quedó (Tildes que faltaban en qué, está, línea, quién y quedó (interrogativos indirectos incluidos); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0326",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una forma de liderar centrada en apoyar y mejorar el sistema, dejando atras las metricas puramente numericas para juzgar el desempeno",
+      "texto_nuevo": "Una forma de liderar centrada en apoyar y mejorar el sistema, dejando atrás las métricas puramente numéricas para juzgar el desempeño",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-002.entregable: atrás, métricas, numéricas, desempeño (Tildes y eñe que faltaban en atrás, métricas, numéricas y desempeño; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

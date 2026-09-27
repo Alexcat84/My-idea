@@ -19,12 +19,29 @@
     "customer_profile"
   ],
   "nodos_siguientes": [
-    "alineacion_bd_metricas_core",
-    "tipos_adquisiciones_tecnologia"
+    "alineacion_bd_metricas_core"
   ],
   "condiciones_activacion": [
     "Cuando el equipo tiene capacidad de ingeniería disponible y busca canales de adquisición escalables",
     "Cuando el producto es de tipo software/SaaS y puede complementarse con herramientas gratuitas"
   ],
-  "etiqueta_arbol": "Construye Herramientas que Atraigan Clientes"
+  "etiqueta_arbol": "Construye Herramientas que Atraigan Clientes",
+  "fuentes_internas": [
+    "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-050",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "engineering_as_marketing -> tipos_adquisiciones_tecnologia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-12-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Ingenieria como marketing (herramientas gratuitas para captar leads) no prepara entender que tipo de adquisicion de tu empresa te ofrecen. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

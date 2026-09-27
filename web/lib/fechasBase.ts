@@ -14,7 +14,7 @@
  * corrimiento de zona horaria. La persistencia (ISO mediodía local) la hace
  * isoDesdeInputLocal(); la lectura humana, fechaHumana().
  */
-import { esEstaSemana, fechaInputLocal } from "./fechas";
+import { fechaInputLocal } from "./fechas";
 
 const VIERNES = 5; // fin de la semana laboral
 const LUNES = 1; // inicio de la semana
@@ -76,24 +76,6 @@ export function cadenciaRealSemanas(duracionPorEtapa: Array<{ etapa: number; dia
 }
 
 /**
- * La chapa "esta semana", HONESTA (adjudicación fundador+auditor, ago 2026).
- *   - En modo FECHAS: aparece SOLO si la fecha vigente del ítem cae en la
- *     semana ISO actual (no en el bit `destacado`). Así, la destacada de una
- *     etapa FUTURA (fecha la semana que viene) NO la lleva: el rótulo deja de
- *     mentir sobre el calendario.
- *   - En modo A-MI-RITMO (o sin modo): se conserva atada a `destacado` — sin
- *     fechas, es la señal de arranque de la etapa, no un claim de calendario.
- * El gate !hecho/!retirada lo pone el llamador (la fila).
- */
-export function chapaEstaSemana(
-  modo: "ritmo" | "fechas" | null | undefined,
-  item: { destacado: boolean; fecha_base?: string | null },
-  ahora?: Date
-): boolean {
-  return modo === "fechas" ? esEstaSemana(item.fecha_base, ahora) : item.destacado;
-}
-
-/**
  * El ORDEN de lectura de los ítems de UNA etapa en modo FECHAS (adjudicación
  * ago 2026): por FECHA VIGENTE ascendente, con desempate ESTABLE por el orden
  * del plan (el sort estable de ES2019 conserva el orden de entrada ante fechas
@@ -133,4 +115,16 @@ export function sugerirFechasBase(opts: {
     const objetivo = objetivoEnSemana(base, it.etapa * cadencia, weekday);
     return { id: it.id, fecha: fechaInputLocal(objetivo) };
   });
+}
+
+/** AUD-09 M11: la cadencia de CADA espacio, aprendida de su propia duración real
+ * por etapa (analytics: la capa universal del núcleo y la de cada mundo). "Cero
+ * mezcla de medidas": el ritual de un mundo no hereda el ritmo del núcleo. */
+export function cadenciasPorEspacio(analytics: {
+  universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> };
+  mundos?: Array<{ dominio: string; universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> } }>;
+}): Record<string, number> {
+  const out: Record<string, number> = { core: cadenciaRealSemanas(analytics.universal?.duracionPorEtapa ?? []) };
+  for (const m of analytics.mundos ?? []) out[m.dominio] = cadenciaRealSemanas(m.universal?.duracionPorEtapa ?? []);
+  return out;
 }

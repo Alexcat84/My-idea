@@ -16,7 +16,6 @@
   "entregable_esperado": "Un portafolio de proyectos organizado en cubetas estratégicas, con porcentajes de recursos asignados y proyectos priorizados dentro de cada una, alineado con tu estrategia de innovación.",
   "nodos_previos": [
     "estrategia_innovacion_producto",
-    "lienzo_modelo_negocio",
     "portfolio_management",
     "analisis_de_capacidad_de_recursos"
   ],
@@ -41,6 +40,24 @@
       "node_id": "strategic_buckets",
       "titulo": "Método de Buckets Estratégicos (Strategic Buckets)",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-082",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "lienzo_modelo_negocio -> metodo_strategic_buckets",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-07-29): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Strategic Buckets es asignacion de recursos del portafolio de innovacion (gestion de portafolio de productos); no es un paso natural tras armar el Business Model Canvas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

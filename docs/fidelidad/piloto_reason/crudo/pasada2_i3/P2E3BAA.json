@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2E3BAA",
+  "intento": 0,
+  "usd": 0.251736,
+  "turnos": 1,
+  "duracion_s": 11.5,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58269,
+  "tokens_out": 933,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2E3BAA\", \"veredicto\": \"FIEL\", \"lineas\": [5204, 1450, 5208], \"cita\": \"a subordinate commander, a subaltern or senior NCO, should be trained to a level where he (or, very rarely, she) could achieve the tactical goals of superior officers, with or without orders. Translating this into a civilian context, it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide formar al supervisor de primera línea para lograr los objetivos de sus superiores con o sin órdenes y sin necesitar SOP. El paso dice lo mismo. 'No solo seguir reglas' conserva los procedimientos y no los elimina. La condición de una cultura jerárquica previa (L5208) no se contradice, porque el paso trata de la formación y no de descentralizar siempre.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2E3BAA",
+  "veredicto": "FIEL",
+  "lineas": [
+   5204,
+   1450,
+   5208
+  ],
+  "cita": "a subordinate commander, a subaltern or senior NCO, should be trained to a level where he (or, very rarely, she) could achieve the tactical goals of superior officers, with or without orders. Translating this into a civilian context, it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide formar al supervisor de primera línea para lograr los objetivos de sus superiores con o sin órdenes y sin necesitar SOP. El paso dice lo mismo. 'No solo seguir reglas' conserva los procedimientos y no los elimina. La condición de una cultura jerárquica previa (L5208) no se contradice, porque el paso trata de la formación y no de descentralizar siempre.",
+  "paso_fiel": ""
+ }
+}

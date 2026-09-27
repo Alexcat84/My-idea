@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_082",
+  "intento": 0,
+  "usd": 0.152704,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 17.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31921,
+  "tokens_out": 1251,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P05BA04\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [83, 96, 1076, 1133, 105, 306], \"razon\": \"El libro describe convertir mejoras protectoras en ventaja productiva como el proceso que deja la organización igual o peor protegida y causa accidentes. El paso lo recomienda.\"},\n  {\"id\": \"PFB4699\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2322, 2340, 2342, 2369], \"razon\": \"El libro critica la óptica puramente económica del mantenimiento. Propone sopesar el riesgo por negligencia frente al riesgo de error al intervenir, y señala contactos innecesarios por calendarios obsoletos.\"},\n  {\"id\": \"P7D0761\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [293, 310, 3784, 5765, 5779, 5781, 2650], \"razon\": \"Es válido en investigación retrospectiva. Si se lee como predicción proactiva, el libro dice que los disparadores locales son difíciles de anticipar y prioriza eliminar condiciones latentes.\"},\n  {\"id\": \"P10D510\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [158, 4060, 4062, 4064, 4068, 4072, 4076, 4084, 2767], \"razon\": \"Las defensas 'blandas' incluyen regulación, certificación y procedimientos. El caso Dryden muestra que fallan varias capas a la vez. Inventariarlas es una extensión coherente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P05BA04",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    83,
+    96,
+    1076,
+    1133,
+    105,
+    306
+   ],
+   "razon": "El libro describe convertir mejoras protectoras en ventaja productiva como el proceso que deja la organización igual o peor protegida y causa accidentes. El paso lo recomienda."
+  },
+  {
+   "id": "PFB4699",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2322,
+    2340,
+    2342,
+    2369
+   ],
+   "razon": "El libro critica la óptica puramente económica del mantenimiento. Propone sopesar el riesgo por negligencia frente al riesgo de error al intervenir, y señala contactos innecesarios por calendarios obsoletos."
+  },
+  {
+   "id": "P7D0761",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    293,
+    310,
+    3784,
+    5765,
+    5779,
+    5781,
+    2650
+   ],
+   "razon": "Es válido en investigación retrospectiva. Si se lee como predicción proactiva, el libro dice que los disparadores locales son difíciles de anticipar y prioriza eliminar condiciones latentes."
+  },
+  {
+   "id": "P10D510",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    158,
+    4060,
+    4062,
+    4064,
+    4068,
+    4072,
+    4076,
+    4084,
+    2767
+   ],
+   "razon": "Las defensas 'blandas' incluyen regulación, certificación y procedimientos. El caso Dryden muestra que fallan varias capas a la vez. Inventariarlas es una extensión coherente."
+  }
+ ]
+}

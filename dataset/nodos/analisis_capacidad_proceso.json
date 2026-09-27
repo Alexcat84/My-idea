@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_capacidad_proceso",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Análisis de Capacidad de Proceso (Process Capability)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -15,8 +15,7 @@
   "entregable_esperado": "Un informe de capacidad de proceso con índices Cpk/Cpm calculados, histograma comparativo con especificaciones y conclusión sobre si el proceso es estable y/o capaz",
   "nodos_previos": [
     "diseno_de_metodos_de_recoleccion_de_datos",
-    "distribucion_normal_probabilidad",
-    "modelo_spin_preguntas"
+    "distribucion_normal_probabilidad"
   ],
   "nodos_siguientes": [
     "mejora_continua_del_proceso",
@@ -28,5 +27,36 @@
     "Cuando se necesita verificar si un proceso cumple con las especificaciones del producto",
     "Cuando existe controversia entre departamentos sobre si 'la especificación es muy estricta' o 'el proceso es descuidado'"
   ],
-  "etiqueta_arbol": "Mide si tu Proceso Cumple"
+  "etiqueta_arbol": "Mide si tu Proceso Cumple",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-090",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "modelo_spin_preguntas -> analisis_capacidad_proceso",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-03-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La capacidad de proceso estadistica (calidad) no tiene relacion con las preguntas de venta SPIN."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-008",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-009: El analisis de capacidad de un proceso con cartas de control e indices Cpk es control de una operacion en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

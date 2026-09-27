@@ -8,7 +8,10 @@
  *    último nodo vivo (o a la meta si hay cierre real) y termina ahí.
  *  - La PUNTA VIVA (el último punto, dónde vas ahora) LATE; si aparece otro
  *    punto, el latido pasa a ese.
- *  - El CIERRE (la meta) solo aparece cuando hay cierre REAL, nunca antes.
+ *  - El CIERRE (la meta, con su celebración) solo aparece cuando hay cierre REAL.
+ *  - Lo que FALTA (decisión del fundador, 26 sep 2026): desde el principio, en
+ *    gris y después del hito actual, todas las etapas que quedan (el cierre
+ *    incluido, sin celebración). El latido sigue en el hito actual.
  * Se mide con getBoundingClientRect (como el knob del selector) para ser robusto
  * a alturas de fila variables. Eje central (a la izquierda en móvil), hitos
  * alternando lados, nodos que toman el color a su altura (azul del pensar → verde
@@ -17,6 +20,9 @@
 import { useEffect, useRef, useState } from "react";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import type { HitoEspacio, TipoHito } from "@/lib/hitosEspacio";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 
 const AZUL = "#4D7CFE";
 const MEDIO = "#3F9B8E";
@@ -24,20 +30,24 @@ const VERDE = "#3FB950";
 const AZUL_T = "rgba(77,124,254,0.34)";
 const MEDIO_T = "rgba(63,155,142,0.34)";
 const VERDE_T = "rgba(63,185,80,0.34)";
+/** Lo que falta (decisión del fundador, 26 sep 2026): gris, sin latido. */
+const GRIS = "rgba(255,255,255,0.22)";
 
 function colorNodo(tipo: TipoHito): string {
   if (tipo === "cierre") return VERDE;
-  if (tipo === "plan") return MEDIO;
-  return AZUL; // chispa, claridad, diagnostico
+  if (tipo === "plan" || tipo === "manos") return MEDIO;
+  return AZUL; // chispa, claridad, exploracion, diagnostico
 }
 
 export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
+  const idioma = useIdioma();
+  const t = elegir(ANALISIS, idioma).lineaAvance;
   const cierre = hitos.at(-1);
   const arranques = hitos.slice(0, -1);
   const cerrado = cierre?.alcanzado ?? false;
-  // La punta viva: el último arranque, mientras el espacio no ha cerrado (ahí
-  // termina el riel y ahí late).
-  const vivaIndex = cerrado ? -1 : arranques.length - 1;
+  // La punta viva: el último arranque ALCANZADO, mientras el espacio no ha
+  // cerrado (ahí termina el riel y ahí late). Lo que sigue va en gris.
+  const vivaIndex = cerrado ? -1 : arranques.map((h) => h.alcanzado).lastIndexOf(true);
 
   const contRef = useRef<HTMLDivElement | null>(null);
   const primeraRef = useRef<HTMLSpanElement | null>(null);
@@ -77,15 +87,15 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
 
   return (
     <div className="anima-plan-in">
-      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu avance</p>
-      <p className="mb-8 mt-1 text-[13px] leading-relaxed text-dim">Del inicio a donde vas, los hitos de este espacio.</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.titulo}</p>
+      <p className="mb-8 mt-1 text-[13px] leading-relaxed text-dim">{t.intro}</p>
 
       <div ref={contRef} className="relative mx-auto max-w-[620px]">
         {/* la línea CONTINUA, del primer hito al último alcanzado (nunca más allá) */}
         {linea && linea.height > 0 && (
           <span
             aria-hidden
-            className="absolute left-5 w-[4px] -translate-x-1/2 rounded sm:left-1/2"
+            className="absolute start-5 w-[4px] -translate-x-1/2 rtl:translate-x-1/2 rounded sm:start-1/2"
             style={{
               top: linea.top,
               height: linea.height,
@@ -96,11 +106,12 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
 
         {arranques.map((h, i) => {
           const izq = i % 2 === 0;
-          const color = colorNodo(h.tipo);
+          const pendiente = !h.alcanzado;
+          const color = pendiente ? GRIS : colorNodo(h.tipo);
           const viva = i === vivaIndex;
-          const esUltima = !cerrado && i === arranques.length - 1;
+          const esUltima = viva;
           return (
-            <div key={i} className="grid grid-cols-[40px_1fr] pb-8 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
+            <div key={i} data-pendiente={pendiente ? "true" : undefined} className="grid grid-cols-[40px_1fr] pb-8 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
               <div className="relative col-start-1 sm:col-start-2">
                 <span
                   ref={(el) => {
@@ -108,7 +119,7 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
                     if (esUltima) ultimaRef.current = el;
                   }}
                   className={
-                    "absolute left-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rounded-full sm:left-1/2 " +
+                    "absolute start-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rtl:translate-x-1/2 rounded-full sm:start-1/2 " +
                     (viva ? "anima-halo-viva" : "")
                   }
                   style={viva ? { background: color } : { background: color, boxShadow: "0 0 0 4px var(--bg)" }}
@@ -117,16 +128,37 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
               <div
                 className={
                   "col-start-2 flex min-w-0 flex-col gap-[3px] " +
-                  (izq ? "sm:col-start-1 sm:items-end sm:text-right" : "sm:col-start-3 sm:items-start sm:text-left")
+                  (izq ? "sm:col-start-1 sm:items-end sm:text-end" : "sm:col-start-3 sm:items-start sm:text-start")
                 }
               >
-                {h.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha)}</span>}
-                <span className="text-[17px] font-bold tracking-[-0.01em] [text-wrap:pretty]">{h.etiqueta}</span>
+                {h.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha, idioma)}</span>}
+                <span className={"text-[17px] font-bold tracking-[-0.01em] [text-wrap:pretty]" + (pendiente ? " text-dim" : "")}>{h.etiqueta}</span>
                 {h.subtitulo && <span className="text-[13.5px] leading-snug text-dim [text-wrap:pretty]">{h.subtitulo}</span>}
               </div>
             </div>
           );
         })}
+
+        {/* el cierre que FALTA: una etapa más, en gris (sin celebración). */}
+        {!cerrado && cierre && (
+          <div data-pendiente="true" className="grid grid-cols-[40px_1fr] pb-2 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
+            <div className="relative col-start-1 sm:col-start-2">
+              <span
+                className="absolute start-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rtl:translate-x-1/2 rounded-full sm:start-1/2"
+                style={{ background: GRIS, boxShadow: "0 0 0 4px var(--bg)" }}
+              />
+            </div>
+            <div
+              className={
+                "col-start-2 flex min-w-0 flex-col gap-[3px] " +
+                (arranques.length % 2 === 0 ? "sm:col-start-1 sm:items-end sm:text-end" : "sm:col-start-3 sm:items-start sm:text-start")
+              }
+            >
+              <span className="text-[17px] font-bold tracking-[-0.01em] text-dim [text-wrap:pretty]">{cierre.etiqueta}</span>
+              {cierre.subtitulo && <span className="text-[13.5px] leading-snug text-dim [text-wrap:pretty]">{cierre.subtitulo}</span>}
+            </div>
+          </div>
+        )}
 
         {/* la META: SOLO cuando hay cierre REAL (nunca antes). */}
         {cerrado && cierre && (
@@ -135,13 +167,13 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
               ref={(el) => {
                 ultimaRef.current = el;
               }}
-              className="absolute left-5 top-1 z-[1] flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full text-[17px] leading-none sm:left-1/2"
+              className="absolute start-5 top-1 z-[1] flex h-9 w-9 -translate-x-1/2 rtl:translate-x-1/2 items-center justify-center rounded-full text-[17px] leading-none sm:start-1/2"
               style={{ background: "var(--bg)", border: `2.5px solid ${VERDE}`, boxShadow: "0 0 0 5px var(--bg), 0 0 0 12px rgba(63,185,80,0.22)" }}
             >
               🎉
             </span>
-            <div className="flex flex-col gap-1 pl-[52px] pt-1 sm:items-center sm:pl-0 sm:pt-[52px] sm:text-center">
-              {cierre.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(cierre.fecha)}</span>}
+            <div className="flex flex-col gap-1 ps-[52px] pt-1 sm:items-center sm:ps-0 sm:pt-[52px] sm:text-center">
+              {cierre.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(cierre.fecha, idioma)}</span>}
               <span className="text-[15px] font-extrabold uppercase tracking-[1.6px] text-done">{cierre.etiqueta}</span>
               {cierre.subtitulo && <span className="text-[14px] text-dim">{cierre.subtitulo}</span>}
             </div>

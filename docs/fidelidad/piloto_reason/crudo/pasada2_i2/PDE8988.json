@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PDE8988",
+  "intento": 0,
+  "usd": 0.20212,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46130,
+  "tokens_out": 880,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDE8988\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2299, 2452], \"cita\": \"The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen19--it will certainly help to bring about a substantial reduction in their numbers. [...] A process of deliberate, patient, continual refinements\", \"datos_sin_respaldo\": [], \"razon\": \"El libro enmarca los recordatorios en el espíritu kaizen, es decir, en un refinamiento continuo, y advierte que no son una solución garantizada. Revisar su efectividad y ajustarlos concreta esa idea en la misma dirección. 'Periódicamente' no fija ningún intervalo, así que no añade un dato concreto. Tampoco los presenta como solución permanente, luego no contradice el carácter de 'primeros auxilios' (L2311).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PDE8988",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2299,
+   2452
+  ],
+  "cita": "The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen19--it will certainly help to bring about a substantial reduction in their numbers. [...] A process of deliberate, patient, continual refinements",
+  "datos_sin_respaldo": [],
+  "razon": "El libro enmarca los recordatorios en el espíritu kaizen, es decir, en un refinamiento continuo, y advierte que no son una solución garantizada. Revisar su efectividad y ajustarlos concreta esa idea en la misma dirección. 'Periódicamente' no fija ningún intervalo, así que no añade un dato concreto. Tampoco los presenta como solución permanente, luego no contradice el carácter de 'primeros auxilios' (L2311).",
+  "paso_fiel": ""
+ }
+}

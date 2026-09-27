@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P44E8EB",
+  "intento": 0,
+  "usd": 0.11244,
+  "turnos": 1,
+  "duracion_s": 8.9,
+  "pared_s": 10.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 24950,
+  "tokens_out": 632,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P44E8EB\", \"veredicto\": \"FIEL\", \"lineas\": [3199], \"cita\": \"selecting 20 indicators for each GFT and then produces a 220-item checklist to be completed by a member of the workforce ... Tripod-Delta testing sessions usually take place on a quarterly basis, though this can be adjusted to suit the pace of change\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda los tres datos del paso: 220 ítems, 20 por GFT y aplicación habitualmente trimestral y ajustable, que el paso recoge como 'sugerido'. El paso no afirma que la lista sea fija; el software la genera en cada ocasión desde las bases locales, y eso lo cubren los pasos vecinos. No hay contradicción ni dato añadido.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P44E8EB",
+  "veredicto": "FIEL",
+  "lineas": [
+   3199
+  ],
+  "cita": "selecting 20 indicators for each GFT and then produces a 220-item checklist to be completed by a member of the workforce ... Tripod-Delta testing sessions usually take place on a quarterly basis, though this can be adjusted to suit the pace of change",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda los tres datos del paso: 220 ítems, 20 por GFT y aplicación habitualmente trimestral y ajustable, que el paso recoge como 'sugerido'. El paso no afirma que la lista sea fija; el software la genera en cada ocasión desde las bases locales, y eso lo cubren los pasos vecinos. No hay contradicción ni dato añadido.",
+  "paso_fiel": ""
+ }
+}

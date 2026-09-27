@@ -22,15 +22,48 @@
     "Itera continuamente ajustando la estrategia según los resultados",
     "Documenta tácticas exitosas para escalarlas hasta el punto de saturación"
   ],
-  "entregable_esperado": "Tu canal nucleo con todos los recursos concentrados en el, un calendario de pruebas sobre sus variables clave con sus resultados documentados, y el criterio escrito de cuando lo consideras saturado para repetir el Bullseye",
+  "entregable_esperado": "Tu canal núcleo con todos los recursos concentrados en él, un calendario de pruebas sobre sus variables clave con sus resultados documentados, y el criterio escrito de cuándo lo consideras saturado para repetir el Bullseye",
   "nodos_previos": [
     "bullseye_framework",
     "enfoque_motor_unico_crecimiento"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "law_of_shitty_click_throughs"
+  ],
   "condiciones_activacion": [
     "Cuando las pruebas del anillo medio ya senalaron un canal ganador y hay que decidir cuanto le pones encima",
     "Cuando tu canal principal empieza a dar rendimientos decrecientes y hay que decidir si se sigue optimizando o se vuelve a la diana"
   ],
-  "etiqueta_arbol": "Exprime tu Canal Ganador"
+  "etiqueta_arbol": "Exprime tu Canal Ganador",
+  "fuentes_internas": [
+    "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-10",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "anillo_interior_explotar_el_canal_nucleo -> law_of_shitty_click_throughs",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-10, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Exprimir el canal núcleo hasta que se sature lleva a la ley que explica esa saturación y a buscar canales que aún nadie explota."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-orto-0331",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu canal nucleo con todos los recursos concentrados en el, un calendario de pruebas sobre sus variables clave con sus resultados documentados, y el criterio escrito de cuando lo consideras saturado para repetir el Bullseye",
+      "texto_nuevo": "Tu canal núcleo con todos los recursos concentrados en él, un calendario de pruebas sobre sus variables clave con sus resultados documentados, y el criterio escrito de cuándo lo consideras saturado para repetir el Bullseye",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-036.entregable: núcleo, él, cuándo (Tildes que faltaban en núcleo, él (pronombre) y cuándo (interrogativo indirecto); Bullseye queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

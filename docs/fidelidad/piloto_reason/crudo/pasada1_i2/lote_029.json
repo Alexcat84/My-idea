@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_029",
+  "intento": 0,
+  "usd": 0.165024,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 15.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34496,
+  "tokens_out": 1352,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5A3EEA\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [852, 856], \"razon\": \"Bainbridge: los sistemas automatizados más exitosos, con rara intervención manual, requieren la mayor inversión en entrenamiento. El paso aconseja reducirla: invierte la recomendación.\"},\n  {\"id\": \"P2E4452\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4261, 4211, 4125, 4265], \"razon\": \"L4261 respalda el riesgo. Matiz: L4125 critica la falta de contacto personal y L4265 dice que el compromiso no es un 'fallo'. Un cliente podría reducir contacto.\"},\n  {\"id\": \"P412CCD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4989, 4765, 5063], \"razon\": \"El libro exige como prerrequisito un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables.\"},\n  {\"id\": \"PCB6FD4\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5894, 5896, 1674, 1678], \"razon\": \"Va en la dirección del libro (80% de planes fallan la primera vez), pero el libro no menciona simulacros. El plan del banco fue probado por un atentado real.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5A3EEA",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    852,
+    856
+   ],
+   "razon": "Bainbridge: los sistemas automatizados más exitosos, con rara intervención manual, requieren la mayor inversión en entrenamiento. El paso aconseja reducirla: invierte la recomendación."
+  },
+  {
+   "id": "P2E4452",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4261,
+    4211,
+    4125,
+    4265
+   ],
+   "razon": "L4261 respalda el riesgo. Matiz: L4125 critica la falta de contacto personal y L4265 dice que el compromiso no es un 'fallo'. Un cliente podría reducir contacto."
+  },
+  {
+   "id": "P412CCD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4989,
+    4765,
+    5063
+   ],
+   "razon": "El libro exige como prerrequisito un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables."
+  },
+  {
+   "id": "PCB6FD4",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5894,
+    5896,
+    1674,
+    1678
+   ],
+   "razon": "Va en la dirección del libro (80% de planes fallan la primera vez), pero el libro no menciona simulacros. El plan del banco fue probado por un atentado real."
+  }
+ ]
+}

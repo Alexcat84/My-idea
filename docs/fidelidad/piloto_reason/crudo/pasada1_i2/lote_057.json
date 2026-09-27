@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_057",
+  "intento": 0,
+  "usd": 0.169116,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34834,
+  "tokens_out": 1489,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P101482\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4215, 4257, 4259, 4261, 4265, 4117, 4014, 4446], \"razon\": \"Va en la línea de las críticas a la vigilancia superficial. Pero el libro dice que el regulador solo dispone de información del operador o inspecciones periódicas, de alcance limitado, y ve el compromiso como algo estructural.\"},\n  {\"id\": \"P17034B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [83, 96, 1076, 1133], \"razon\": \"El libro describe cómo las mejoras de protección se convierten en ventaja productiva. Revisarlo concreta esa advertencia en la misma dirección.\"},\n  {\"id\": \"P958A29\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4757, 4777, 5234, 2583, 2748], \"razon\": \"El libro pide revisiones proactivas de los signos vitales. Pero advierte que la cultura es más que la suma de sus partes y critica el fenómeno de marcar casillas; medirla con indicadores podría chocar.\"},\n  {\"id\": \"P2358D5\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"equipo central de expertos externos\", \"sin involucrar al personal operativo\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3163, 3199, 3213, 3224], \"razon\": \"El libro dice que los indicadores los crean especialistas de tarea en grupos de trabajo, de abajo arriba, y que pertenecen a quienes hacen el trabajo. El paso invierte esto.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P101482",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4215,
+    4257,
+    4259,
+    4261,
+    4265,
+    4117,
+    4014,
+    4446
+   ],
+   "razon": "Va en la línea de las críticas a la vigilancia superficial. Pero el libro dice que el regulador solo dispone de información del operador o inspecciones periódicas, de alcance limitado, y ve el compromiso como algo estructural."
+  },
+  {
+   "id": "P17034B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    83,
+    96,
+    1076,
+    1133
+   ],
+   "razon": "El libro describe cómo las mejoras de protección se convierten en ventaja productiva. Revisarlo concreta esa advertencia en la misma dirección."
+  },
+  {
+   "id": "P958A29",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4757,
+    4777,
+    5234,
+    2583,
+    2748
+   ],
+   "razon": "El libro pide revisiones proactivas de los signos vitales. Pero advierte que la cultura es más que la suma de sus partes y critica el fenómeno de marcar casillas; medirla con indicadores podría chocar."
+  },
+  {
+   "id": "P2358D5",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "equipo central de expertos externos",
+    "sin involucrar al personal operativo"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3163,
+    3199,
+    3213,
+    3224
+   ],
+   "razon": "El libro dice que los indicadores los crean especialistas de tarea en grupos de trabajo, de abajo arriba, y que pertenecen a quienes hacen el trabajo. El paso invierte esto."
+  }
+ ]
+}

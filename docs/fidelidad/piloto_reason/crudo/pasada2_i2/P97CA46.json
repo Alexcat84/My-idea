@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P97CA46",
+  "intento": 0,
+  "usd": 0.16329200000000002,
+  "turnos": 1,
+  "duracion_s": 7.8,
+  "pared_s": 8.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37913,
+  "tokens_out": 582,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P97CA46\", \"veredicto\": \"FIEL\", \"lineas\": [2750, 2520, 2654], \"cita\": \"What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide muestrear cada una de las seis dimensiones con esas mismas etiquetas, y hacerlo con regularidad ('sampling various vital signs on a regular basis'; 'sample proactively on a regular basis'). 'Periódicamente' no fija ninguna frecuencia concreta, así que no contradice que la frecuencia dependa del ritmo de cambio de cada proceso (L2658).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P97CA46",
+  "veredicto": "FIEL",
+  "lineas": [
+   2750,
+   2520,
+   2654
+  ],
+  "cita": "What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide muestrear cada una de las seis dimensiones con esas mismas etiquetas, y hacerlo con regularidad ('sampling various vital signs on a regular basis'; 'sample proactively on a regular basis'). 'Periódicamente' no fija ninguna frecuencia concreta, así que no contradice que la frecuencia dependa del ritmo de cambio de cada proceso (L2658).",
+  "paso_fiel": ""
+ }
+}

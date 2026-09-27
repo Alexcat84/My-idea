@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Calendario de recorridos de revisión con registro de hallazgos, sugerencias recibidas y acciones de seguimiento",
   "nodos_previos": [
-    "planificacion_estrategica_despliegue",
-    "comunicacion_interna_post_despido_ejecutivo"
+    "planificacion_estrategica_despliegue"
   ],
   "nodos_siguientes": [
     "reconocimiento_publico_recompensas",
@@ -26,5 +25,23 @@
     "Cuando necesitas demostrar tu compromiso visible con una iniciativa de cambio",
     "Cuando existe desconexión entre tú y quienes trabajan contigo en el día a día"
   ],
-  "etiqueta_arbol": "Recorre tu Empresa y Escucha"
+  "etiqueta_arbol": "Recorre tu Empresa y Escucha",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-017",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_interna_post_despido_ejecutivo -> auditorias_gerenciales_periodicas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-20-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los recorridos periodicos para verificar controles y recoger sugerencias no continuan ni profundizan la comunicacion del despido de un ejecutivo; no tienen que ver. La correccion solo cambio los plazos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

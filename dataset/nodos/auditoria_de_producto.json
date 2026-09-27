@@ -7,14 +7,14 @@
   "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificacion del 98%) mientras en la calle el producto sigue fallando.",
   "pasos_accionables": [
     "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
-    "Elige en que momento revisas: fabrica, distribuidor, servicio o ya en campo, según que tan complejo sea tu producto",
-    "Decide cuantas unidades vas a revisar, usando un método estadistico o una regla practica como revisar un porcentaje pequeño de lo que produces por turno",
-    "Diseña que vas a mirar en cada revisión: si sera al azar o enfocada en un problema que ya conoces",
-    "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estas midiendo lo que de verdad importa",
-    "Clasifica cada falla según su gravedad, de critica a incidental, y calcula un indice de fallas por unidad",
-    "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo esta empeorando"
+    "Elige en qué momento revisas: fábrica, distribuidor, servicio o ya en campo, según qué tan complejo sea tu producto",
+    "Decide cuántas unidades vas a revisar, usando un método estadístico o una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
+    "Diseña qué vas a mirar en cada revisión: si será al azar o enfocada en un problema que ya conoces",
+    "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estás midiendo lo que de verdad importa",
+    "Clasifica cada falla según su gravedad, de crítica a incidental, y calcula un índice de fallas por unidad",
+    "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo está empeorando"
   ],
-  "entregable_esperado": "Tu informe de revisión con un indice de fallas por unidad, la gravedad de cada falla y la comparacion con lo que pasa en campo o en el mercado",
+  "entregable_esperado": "Tu informe de revisión con un índice de fallas por unidad, la gravedad de cada falla y la comparación con lo que pasa en campo o en el mercado",
   "nodos_previos": [
     "planificacion_de_la_inspeccion",
     "diferencia_planeacion_mejora",
@@ -41,6 +41,108 @@
       "node_id": "auditoria_producto",
       "titulo": "Auditoría de Producto (Aptitud de Uso y Conformidad)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0885",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige en que momento revisas: fabrica, distribuidor, servicio o ya en campo, según que tan complejo sea tu producto",
+      "texto_nuevo": "Elige en qué momento revisas: fábrica, distribuidor, servicio o ya en campo, según qué tan complejo sea tu producto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.paso1: qué, fábrica, qué (Faltaban tildes en los dos qué y en fábrica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0886",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide cuantas unidades vas a revisar, usando un método estadistico o una regla practica como revisar un porcentaje pequeño de lo que produces por turno",
+      "texto_nuevo": "Decide cuántas unidades vas a revisar, usando un método estadístico o una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.paso2: cuántas, estadístico, práctica (Faltaban tildes en cuántas, estadístico y práctica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0887",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diseña que vas a mirar en cada revisión: si sera al azar o enfocada en un problema que ya conoces",
+      "texto_nuevo": "Diseña qué vas a mirar en cada revisión: si será al azar o enfocada en un problema que ya conoces",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.paso3: qué, será (Faltaban tildes en qué y será.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0888",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estas midiendo lo que de verdad importa",
+      "texto_nuevo": "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estás midiendo lo que de verdad importa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.paso4: estás (Faltaba la tilde en estás.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0889",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasifica cada falla según su gravedad, de critica a incidental, y calcula un indice de fallas por unidad",
+      "texto_nuevo": "Clasifica cada falla según su gravedad, de crítica a incidental, y calcula un índice de fallas por unidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.paso5: crítica, índice (Faltaban tildes en crítica e índice.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0890",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo esta empeorando",
+      "texto_nuevo": "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo está empeorando",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.paso6: está (Faltaba la tilde en está.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
+    },
+    {
+      "id": "n1-orto-0891",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu informe de revisión con un indice de fallas por unidad, la gravedad de cada falla y la comparacion con lo que pasa en campo o en el mercado",
+      "texto_nuevo": "Tu informe de revisión con un índice de fallas por unidad, la gravedad de cada falla y la comparación con lo que pasa en campo o en el mercado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-036.entregable: índice, comparación (Faltaban tildes en índice y comparación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

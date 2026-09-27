@@ -1,27 +1,27 @@
 {
   "node_id": "concepto_quality_is_free",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Quality is Free (La Calidad es Gratis)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Crosby plantea que la calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantias e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofia de trabajo.",
+  "resumen_teorico": "La calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantias e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofia de trabajo.",
   "pasos_accionables": [
-    "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantias, desperdicio e inspecciones adicionales.",
+    "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantías, desperdicio e inspecciones adicionales.",
     "Calcula el costo actual de estos fallos internos y externos como referencia base.",
     "Registra esta cifra para usarla como punto de partida y medir la mejora con el tiempo.",
-    "Adopta el mensaje hacer las cosas bien la primera vez como filosofia de trabajo diario.",
-    "Usa el diagnostico de costos para decidir en que prevención invertir primero."
+    "Adopta el mensaje hacer las cosas bien la primera vez como filosofía de trabajo diario.",
+    "Usa el diagnóstico de costos para decidir en qué prevención invertir primero."
   ],
-  "entregable_esperado": "Un diagnostico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
+  "entregable_esperado": "Un diagnóstico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
   "nodos_previos": [
     "costo_de_calidad_3",
-    "conformance_to_requirements"
+    "definicion_calidad_conformidad"
   ],
   "nodos_siguientes": [
     "costo_de_mala_calidad_copq",
     "concepto_haciendo_la_calidad_cierta",
     "quality_awareness_crosby",
-    "programa_catorce_pasos_crosby"
+    "programa_mejora_calidad_14_pasos"
   ],
   "condiciones_activacion": [
     "Cuando crees que mejorar la calidad implica gastar mas dinero.",
@@ -38,5 +38,120 @@
       "titulo": "El Costo de la Calidad (Por Qué la Calidad es Gratis)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-034",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Crosby plantea que la calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantias e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofia de trabajo.",
+      "texto_nuevo": "La calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantias e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofia de trabajo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Crosby plantea que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-141",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "concepto_quality_is_free -> programa_catorce_pasos_crosby",
+      "texto_nuevo": "concepto_quality_is_free -> programa_mejora_calidad_14_pasos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a programa_catorce_pasos_crosby, deprecado; su superviviente es programa_mejora_calidad_14_pasos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-142",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "conformance_to_requirements -> concepto_quality_is_free",
+      "texto_nuevo": "definicion_calidad_conformidad -> concepto_quality_is_free",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a conformance_to_requirements, deprecado; su superviviente es definicion_calidad_conformidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-061",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-015: Calcula el costo de la no calidad (reprocesos, garantías, desperdicio) en un negocio que ya opera para medir su mejora; es control y mejora operativa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0364",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantias, desperdicio e inspecciones adicionales.",
+      "texto_nuevo": "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantías, desperdicio e inspecciones adicionales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.paso0: garantías (Tilde real en garantías; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0365",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Adopta el mensaje hacer las cosas bien la primera vez como filosofia de trabajo diario.",
+      "texto_nuevo": "Adopta el mensaje hacer las cosas bien la primera vez como filosofía de trabajo diario.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.paso3: filosofía (Tilde real en filosofía; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0366",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa el diagnostico de costos para decidir en que prevención invertir primero.",
+      "texto_nuevo": "Usa el diagnóstico de costos para decidir en qué prevención invertir primero.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.paso4: diagnóstico, qué (Tildes reales en diagnóstico y en el interrogativo indirecto qué; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0367",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un diagnostico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
+      "texto_nuevo": "Un diagnóstico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.entregable: diagnóstico (Tilde real en diagnóstico; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
   ]
 }

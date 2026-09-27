@@ -84,15 +84,18 @@ describe("verificarFusibleGlobal (tope diario de TODA la app)", () => {
     expect(llamadas[1]).toContain("/172800");
   });
 
-  it("dev user exento fuera de producción; Upstash caído permite", async () => {
+  // Decisión del fundador (25 sep 2026): con Upstash caído la IA FALLA CERRADA
+  // (antes esta prueba fijaba que "Upstash caído permite"). Ver upstashCaido.test.ts.
+  it("dev user exento fuera de producción; Upstash caído frena (falla cerrada)", async () => {
     const contador = { valor: 999 };
     mockUpstash(contador);
     const r = await verificarFusibleGlobal("dev@my-idea.local");
     expect(r.permitido).toBe(true);
 
     vi.stubGlobal("fetch", vi.fn(async () => new Response("boom", { status: 500 })));
+    vi.spyOn(console, "error").mockImplementation(() => {});
     const caido = await verificarFusibleGlobal();
-    expect(caido.permitido).toBe(true);
+    expect(caido).toMatchObject({ permitido: false, caido: true });
   });
 
   it("el mensaje del 503 habla como persona", () => {

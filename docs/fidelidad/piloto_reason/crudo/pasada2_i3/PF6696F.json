@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF6696F",
+  "intento": 0,
+  "usd": 0.1501,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34410,
+  "tokens_out": 623,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF6696F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [120, 154, 171, 181, 2650], \"cita\": \"In the real world, however, each layer has weaknesses and gaps of the kind revealed on the right-hand side of the figure. [...] Defences, barriers and safeguards: Each event shows a partial or complete trajectory through the defences. Regular checks reveal where holes exist now and where they are most likely to appear next.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro clasifica las capas de defensa por función (L120-154), afirma que cada una tiene huecos (L171) y recomienda comprobaciones que revelan dónde están ahora (L2650). Que los huecos se muevan (L181) matiza el mapa, pero no lo desaconseja, y el paso no exige que sea estático ni único. Concreta al libro sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF6696F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   120,
+   154,
+   171,
+   181,
+   2650
+  ],
+  "cita": "In the real world, however, each layer has weaknesses and gaps of the kind revealed on the right-hand side of the figure. [...] Defences, barriers and safeguards: Each event shows a partial or complete trajectory through the defences. Regular checks reveal where holes exist now and where they are most likely to appear next.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro clasifica las capas de defensa por función (L120-154), afirma que cada una tiene huecos (L171) y recomienda comprobaciones que revelan dónde están ahora (L2650). Que los huecos se muevan (L181) matiza el mapa, pero no lo desaconseja, y el paso no exige que sea estático ni único. Concreta al libro sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

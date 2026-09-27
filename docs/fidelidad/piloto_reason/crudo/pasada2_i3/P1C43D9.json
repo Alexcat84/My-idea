@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1C43D9",
+  "intento": 0,
+  "usd": 0.108264,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 22806,
+  "tokens_out": 852,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1C43D9\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [852, 856, 868, 872], \"cita\": \"Skills need to be practised continuously in order to preserve them. [...] it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training\", \"datos_sin_respaldo\": [\"cada seis meses\", \"sesión de simulador\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda invertir en entrenamiento y practicar habilidades de forma continuada. Señala que las transiciones de modo del FMS confunden sobre todo en periodos de máxima carga. Atribuir la causa al diseño torpe no desaconseja entrenar, así que no es contrario. Pero el libro no menciona simuladores ni ninguna frecuencia semestral.\", \"paso_fiel\": \"Invertir en entrenamiento práctico continuado para que las tripulaciones sepan qué modo del FMS está activo y cómo selecciona nuevos modos, especialmente en fases de alta carga de trabajo como despegues y aterrizajes.\"}\n```",
+ "parseado": {
+  "id": "P1C43D9",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   852,
+   856,
+   868,
+   872
+  ],
+  "cita": "Skills need to be practised continuously in order to preserve them. [...] it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training",
+  "datos_sin_respaldo": [
+   "cada seis meses",
+   "sesión de simulador"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda invertir en entrenamiento y practicar habilidades de forma continuada. Señala que las transiciones de modo del FMS confunden sobre todo en periodos de máxima carga. Atribuir la causa al diseño torpe no desaconseja entrenar, así que no es contrario. Pero el libro no menciona simuladores ni ninguna frecuencia semestral.",
+  "paso_fiel": "Invertir en entrenamiento práctico continuado para que las tripulaciones sepan qué modo del FMS está activo y cómo selecciona nuevos modos, especialmente en fases de alta carga de trabajo como despegues y aterrizajes."
+ }
+}

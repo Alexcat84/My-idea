@@ -1,6 +1,6 @@
 {
   "node_id": "ctq_caracteristicas_criticas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "CTQ - Características Críticas para la Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -24,5 +24,23 @@
     "Cuando ya recogiste información sobre las necesidades de tu cliente pero todavía te falta traducirla a términos técnicos",
     "Cuando necesitas criterios objetivos para tomar tus decisiones de diseño"
   ],
-  "etiqueta_arbol": "Define lo Crítico para el Cliente"
+  "etiqueta_arbol": "Define lo Crítico para el Cliente",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-076",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F01-031: Traducir la voz del cliente a especificaciones medibles para decidir el diseno es diseno del producto, no prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

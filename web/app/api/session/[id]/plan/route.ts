@@ -10,12 +10,21 @@
  * una cosecha silenciosa del vecindario del grafo (cosecharVecindario).
  * La llamada a Claude se transmite por texto (heartbeat cada 15s para
  * sobrevivir a proxies/Vercel mientras el modelo "piensa" -- mismo patron
- * ya resuelto en el proyecto I Ching para sus WebViews). Si la llamada
- * falla (red o presupuesto), cae al ensamblado offline sin narrar, igual
- * que el CLI.
+ * ya resuelto en el proyecto I Ching para sus WebViews). Un fallo de red se
+ * reintenta y, agotado, LANZA (error honesto, la sesion queda abierta para
+ * reintentar). Solo el presupuesto de sesion agotado cae al ensamblado offline.
+ *
+ * AUD-09 H02, politica del fundador (25 sep 2026): se verifica saldo al
+ * empezar y se cobra al final SOLO si se entrego lo prometido. Un plan armado
+ * sin IA (el ensamblado offline) NO se cobra: se entrega gratis, marcado como
+ * version basica y con un aviso honesto que la pantalla muestra.
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { garantizarTerminal } from "@/lib/streamTerminal";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import {
@@ -26,34 +35,48 @@ import {
   registrarUso,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { cobrar, conceptoDelPlan, mensajeSaldoInsuficiente, montoDelPlan, reembolsar, verificarSaldo } from "@/lib/creditos";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import {
+  cobrar,
+  conceptoDelPlan,
+  mensajeSaldoInsuficiente,
+  montoDelPlan,
+  reembolsar,
+  reservarCreditos,
+  resolverReserva,
+  verificarSaldo,
+} from "@/lib/creditos";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import {
   actualizarProyecto,
   cerrarSesion,
   guardarEstadoSesion,
-  guardarPlan,
+  contarItemsDePlan,
+  guardarPlanDeSesion,
   insertarChecklist,
   mergeNumerosProyecto,
   obtenerItemsDePlan,
   obtenerPlanCoreVigente,
   mergeTipoOferta,
+  obtenerPlanVigenteDe,
   obtenerProyecto,
   obtenerSesion,
+  obtenerTareasDePlan,
   registrarBitacora,
   registrarNodos,
   type EstadoSesionPersistido,
   type NodoConTipo,
 } from "@/lib/db";
 import { derivarChecklist } from "@/lib/engine/checklist";
-import { enlazarPlanProteccion } from "@/lib/engine/enlazador";
+import { enlazarPlanProteccion, nodosDeLoProtegido } from "@/lib/engine/enlazador";
 import { estimarLoteMayoria } from "@/lib/engine/estimacion";
 import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
 import { esMundoProteccion } from "@/lib/espacios";
 import { cargarGrafo, conceptosDeRuta, faseDeNodo } from "@/lib/engine/graph";
+import { dominiosDelRecorrido } from "@/lib/engine/recorrido";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
+  avisoVersionBasica,
   comprimirEstadoVivo,
   extraerTitulo,
   filtrarDeltaAntesDeAutodeclaracion,
@@ -61,7 +84,11 @@ import {
   prepararPlan,
   type PreparacionPlan,
 } from "@/lib/engine/planRedactor";
+import { filasHeredadas, planAnteriorParaIA, relatoDeCiclo, type PlanAnteriorIA } from "@/lib/engine/replanteamiento";
 import { SYSTEM_PLAN } from "@/lib/prompts";
+import { ROTULOS_PLAN } from "@/lib/engine/constants";
+import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
+import { bloquesDeSistema } from "@/lib/i18n/idiomaSalida";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -69,7 +96,7 @@ const INTERVALO_HEARTBEAT_MS = 15_000;
 
 // Reintento del redactor (hermano del fix del organizador). El plan se genera
 // en el momento de MAYOR inversion emocional del usuario -- acaba de terminar su
-// entrevista -- y pronto sera un momento PAGADO (5 creditos): un hipo transitorio
+// entrevista -- y es un momento PAGADO (PRECIOS.plan_completo): un hipo transitorio
 // de la API no puede costarle su plan. El SDK reintenta la conexion inicial pero
 // NO un fallo a mitad de stream: eso lo cubre esta red.
 const BACKOFFS_PLAN_MS = [0, 1000, 3000];
@@ -82,7 +109,9 @@ async function generarTextoPlan(
   /** Un intento previo pinto etapas en el arbol de espera y murio: el cliente
    * debe DESCARTARLAS antes de que el intento nuevo pinte las suyas (el texto
    * nuevo no es el mismo). Anunciar una sola vez, la leccion del organizador. */
-  onReinicio: () => void
+  onReinicio: () => void,
+  /** i18n F5: el idioma de la IDEA (el plan sigue al proyecto, D2). */
+  idiomaSalida: string | null = null
 ): Promise<{ rawTexto: string | null; acumulado: UsoAcumulado; avisoFallback: string | null }> {
   if (costoAcumuladoUsd(acumulado) >= PRESUPUESTO_SESION_USD_DEFAULT) {
     return { rawTexto: null, acumulado, avisoFallback: "presupuesto de sesion ya excedido, ensamblo sin narrar" };
@@ -97,7 +126,7 @@ async function generarTextoPlan(
       const stream = client.messages.stream({
         model: MODEL,
         max_tokens: 5000,
-        system: [{ type: "text", text: SYSTEM_PLAN, cache_control: { type: "ephemeral" } }],
+        system: bloquesDeSistema(SYSTEM_PLAN, idiomaSalida, ROTULOS_PLAN),
         messages: [{ role: "user", content: JSON.stringify(preparacion.payload) }],
       });
       // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
@@ -134,33 +163,36 @@ async function generarTextoPlan(
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: sessionId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).plan;
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // ETAPA 2 (la frontera): generar un plan es motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const sesion = await obtenerSesion(supabase, sessionId);
   if (!sesion) {
-    return NextResponse.json({ error: "sesion no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.sesionNoEncontrada }, { status: 404 });
   }
   if (sesion.closed_at) {
-    return NextResponse.json({ error: "la sesion ya esta cerrada" }, { status: 409 });
+    return NextResponse.json({ error: r.conversacionTerminada }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido as EstadoSesionPersistido | null;
   if (!estadoPersistido) {
     return NextResponse.json(
-      { error: "la sesion no tiene un turno pendiente; llama a /api/session/start primero" },
+      { error: r.conversacionSinPendiente },
       { status: 409 }
     );
   }
@@ -170,16 +202,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const client = createAnthropicClient();
   const { recorrido, acumulado } = estadoPersistido;
   const projectId = sesion.project_id;
+  // i18n F5 (D2): el plan sigue el idioma de la IDEA. La IA escribe en él;
+  // lo que arma el código sin IA, en él si es de los once y si no en el de la
+  // interfaz. Una sesión de antes de F5 no trae idioma: español.
+  const idiomaSalida = recorrido.idioma ?? null;
+  const idiomaPlan = idiomaDePlantilla(recorrido.idioma ?? "es", idioma);
 
   // Phase 3.7.2 (la oferta honesta): "¿Algo mas que quieras que tu plan
   // tome en cuenta?" — el texto opcional viaja al redactor por el mismo
   // canal que todo lo que el usuario conto (el perfil de sesion) y queda
   // en la bitacora como contexto_final_usuario.
   let contextoFinal: string | null = null;
+  // Ciclo de replanteamiento, Fase 2: el camino que la persona eligió en el
+  // paso 4 de "Replantear mi camino" (su id: a, b o c).
+  let caminoPedido: string | null = null;
   try {
-    const body = (await request.json()) as { contexto_final?: string };
+    const body = (await request.json()) as { contexto_final?: string; camino?: unknown };
     const texto = (body?.contexto_final ?? "").trim();
     if (texto) contextoFinal = texto.slice(0, 2000);
+    if (typeof body?.camino === "string") caminoPedido = body.camino;
   } catch {
     // sin body: el camino clasico
   }
@@ -189,17 +230,41 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
   }
 
   // ETAPA 2 — VERIFICAR antes de abrir el stream (la unidad facturable de
-  // esta entrega): core inicial 5, core seguimiento 2, mundo inicial 3 (el
-  // preview fue gratis: lo que se compra es EL PLAN), mundo seguimiento 2.
+  // esta entrega) al precio de su concepto en precios.ts (conceptoDelPlan: plan
+  // del nucleo, seguimiento, plan de mundo, seguimiento de mundo; el preview del
+  // mundo fue gratis: lo que se compra es EL PLAN).
   // 402 limpio antes de gastar un token. El descuento va a la ENTREGA.
   const dominioCobro = ((sesion as { dominio?: string }).dominio ?? "core") as string;
-  const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento);
-  const montoCobro = montoDelPlan(dominioCobro, recorrido.esSeguimiento);
+  // Ciclo de replanteamiento, Fase 2: un replanteamiento no tiene entrevista;
+  // su ruta es la del camino elegido (conceptos que no se conversaron: modo
+  // silencioso). Sin camino no hay plan. Se valida ANTES de apartar nada.
+  const ciclo = recorrido.ciclo;
+  const esReplanteo = ciclo?.tipo === "replantear";
+  if (ciclo?.tipo === "replantear") {
+    const elegido = ciclo.caminos.find((c) => c.id === (caminoPedido ?? ciclo.caminoElegido));
+    if (!elegido) return NextResponse.json({ error: t.eligeCamino }, { status: 400 });
+    ciclo.caminoElegido = elegido.id;
+    recorrido.ruta = [...elegido.nodos];
+    recorrido.modos = elegido.nodos.map(() => "silencioso" as const);
+  }
+  const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento, esReplanteo);
+  const montoCobro = montoDelPlan(dominioCobro, recorrido.esSeguimiento, esReplanteo);
+  //
+  // AUD-09 M25: la verificación es la RESERVA de esta entrega (clave
+  // plan:{sessionId}, la misma del cobro). Si la sesión ya reservó al empezar,
+  // se renueva sin contarse a sí misma; una compra de mundo reserva aquí. Otra
+  // sesión con el saldo apartado ya no pasa. Se marca cobrada al cobrar y se
+  // libera al final si no hubo cobro (plan sin IA, carrera, fallo).
+  const claveReserva = `plan:${sessionId}`;
   if (montoCobro > 0) {
-    const saldoPlan = await verificarSaldo(user.id, montoCobro);
-    if (!saldoPlan.alcanza) {
+    const reserva = await reservarCreditos(user.id, claveReserva, conceptoCobro, montoCobro);
+    if (!reserva.reservado) {
+      const saldoPlan = await verificarSaldo(user.id, montoCobro, claveReserva);
       return NextResponse.json(
-        { error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro), saldo: saldoPlan.creditos },
+        {
+          error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro, saldoPlan.apartados, idioma),
+          saldo: saldoPlan.creditos,
+        },
         { status: 402 }
       );
     }
@@ -222,9 +287,38 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
       // ETAPA 2: el cobro aplicado en ESTA entrega (para la red de reembolso
       // del catch). null = aun no se cobra, o el done ya salio.
       let cobroAplicado: { monto: number; concepto: string } | null = null;
+      // AUD-09 M25: si la reserva de esta entrega terminó cobrada.
+      let reservaCobrada = false;
       const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": heartbeat\n\n")), INTERVALO_HEARTBEAT_MS);
 
       try {
+        // AUD-09 H05 (PREVIEW_MUNDOS_PLAN §4): el estado vivo ACTUAL del
+        // proyecto, leído en el momento del plan. En la compra de un mundo el
+        // perfil de la sesión se congeló en el preview; si el proyecto cambió
+        // de ciclo desde entonces, el redactor debe ver la realidad de hoy.
+        const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
+        const estadoVivoActual = (proyectoParaPlan?.estado_vivo as string | null) ?? null;
+        if (
+          dominioCobro !== "core" &&
+          !recorrido.esSeguimiento &&
+          estadoVivoActual &&
+          !(recorrido.perfilSesion ?? "").includes(estadoVivoActual)
+        ) {
+          recorrido.perfilSesion = `${recorrido.perfilSesion ?? ""}
+Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActual}`.trim();
+        }
+
+        // Ciclo de replanteamiento, Fase 2: en un ciclo posterior la IA recibe el
+        // plan anterior del espacio (etapas y tareas con su estado, regla 8-ter)
+        // y, al replantear, la historia, lo que se conserva, lo que se suelta y
+        // el camino elegido (regla 8-quater). La cosecha excluye lo que el
+        // proyecto ya cubrió en sesiones anteriores (regla 8).
+        let planAnterior: PlanAnteriorIA | null = null;
+        if (recorrido.esSeguimiento) {
+          const previo = await obtenerPlanVigenteDe(supabase, projectId, dominioCobro, sessionId);
+          if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(supabase, projectId, previo.id));
+        }
+        const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
         const preparacion = prepararPlan(
           recorrido.ruta,
           graph,
@@ -234,7 +328,21 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           recorrido.prioridadDeclarada,
           recorrido.esSeguimiento,
           recorrido.estadoVivoPrevio,
-          recorrido.dominiosDesbloqueados ?? null
+          // AUD-09 M16: la cosecha de un plan de mundo no recoge nodos de otro mundo.
+          recorrido.dominiosDesbloqueados ? dominiosDelRecorrido(recorrido) : null,
+          {
+            excluir: recorrido.nodosCubiertosPrevios ?? [],
+            planAnterior,
+            replanteamiento:
+              ciclo?.tipo === "replantear"
+                ? {
+                    historia: ciclo.historia,
+                    se_conserva: ciclo.conserva.map((c) => c.texto),
+                    se_suelta: ciclo.suelta.map((c) => c.texto),
+                    camino_elegido: caminoElegido ? { titulo: caminoElegido.titulo, descripcion: caminoElegido.descripcion } : null,
+                  }
+                : null,
+          }
         );
 
         const { rawTexto, acumulado: acumuladoTrasRedactor, avisoFallback } = await generarTextoPlan(
@@ -242,9 +350,12 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           preparacion,
           acumulado,
           (texto) => enviar("delta", { texto }),
-          () => enviar("reinicio", { motivo: "reintentando la redaccion" })
+          () => enviar("reinicio", { motivo: "reintentando la redaccion" }),
+          idiomaSalida
         );
-        if (avisoFallback) enviar("aviso", { mensaje: avisoFallback });
+        // AUD-09 H02: sin texto del redactor, el plan sale del ensamblado
+        // offline. No es lo prometido: no se cobra y se dice en pantalla.
+        const versionBasica = rawTexto === null;
 
         // Fase 3.1 (caja de vidrio): eventos propios del ensamblado del
         // plan (autodeclaracion_fallida, coherencia_cobertura_corregida,
@@ -256,7 +367,9 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         if (contextoFinal) {
           eventosPlan.push({ tipo: "contexto_final_usuario", texto: contextoFinal });
         }
-        const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
+        if (versionBasica) {
+          eventosPlan.push({ tipo: "plan_version_basica", motivo: avisoFallback });
+        }
         const numerosParaPlan = {
           ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
           ...recorrido.numerosDetectadosSesion,
@@ -268,16 +381,23 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           families,
           recorrido.textoOriginal,
           (e) => eventosPlan.push(e),
-          numerosParaPlan
+          numerosParaPlan,
+          idiomaPlan
         );
 
         const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);
         const { estadoVivo, acumulado: acumuladoFinal } = await comprimirEstadoVivo(
           client,
-          recorrido.estadoVivoPrevio,
+          // AUD-09 H05: el estado anterior es el del proyecto HOY (antes, en la
+          // compra de un mundo, llegaba null y la compresión pisaba lo que el
+          // ciclo del núcleo había aprendido).
+          estadoVivoActual ?? recorrido.estadoVivoPrevio,
           recorrido.perfilSesion,
           conceptosTitulos,
-          acumuladoTrasRedactor
+          // El unico camino offline es el techo de la sesion: queda registrado
+          // (antes presupuesto_excedido nunca se marcaba en ningun lugar).
+          versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor,
+          idiomaSalida
         );
 
         const nodosConTipo: NodoConTipo[] = [
@@ -288,7 +408,12 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         await mergeNumerosProyecto(supabase, projectId, recorrido.numerosDetectadosSesion);
         await mergeTipoOferta(supabase, projectId, recorrido.tipoOfertaSesion, recorrido.unidadVentaSesion);
 
-        const etiquetaDb = recorrido.esSeguimiento
+        // Ciclo de replanteamiento, Fase 2 (migración 047): "Replantear mi camino"
+        // deja su plan con su propia etiqueta; "Profundizar mi plan" sigue siendo
+        // 'seguimiento'.
+        const etiquetaDb = esReplanteo
+          ? "replanteamiento"
+          : recorrido.esSeguimiento
           ? "seguimiento"
           : resultado.evaluacionCobertura.es_completa
             ? "completo"
@@ -302,7 +427,10 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // Fase 3.5: el plan hereda la procedencia de dominio de su sesión
         // (core para todo lo normal; el pack cuando la sesión es de mundo).
         const dominioSesion = ((sesion as { dominio?: string }).dominio ?? "core") as string;
-        const planId = await guardarPlan(
+        // AUD-09 M26: idempotente por sesión. Un reintento tras una falla
+        // entre guardar el plan y cerrar la sesión reusa ese plan en vez de
+        // crear un segundo (reproducido en la prueba antes del arreglo).
+        const { planId, yaExistia: planYaExistia } = await guardarPlanDeSesion(
           supabase,
           user.id,
           sessionId,
@@ -362,6 +490,9 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           itemsChecklist = itemsChecklist.map((it, i) => ({
             ...it,
             protege_item: enlace.enlaces[i]?.protege_item ?? null,
+            // AUD-09 M15: y los NODOS de lo protegido, para que la protección
+            // sobreviva al próximo ciclo del núcleo (ids nuevos, mismo nodo).
+            protege_nodos: nodosDeLoProtegido(enlace.enlaces[i]?.protege_item ?? null, filasNucleo),
             deteccion: enlace.enlaces[i]?.deteccion ?? null,
             probabilidad: enlace.enlaces[i]?.probabilidad ?? null,
             dolor: enlace.enlaces[i]?.dolor ?? null,
@@ -379,8 +510,32 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
             ...(enlace.fallo ? { texto: enlace.fallo } : {}),
           });
         }
-        await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion,
-          resultado.nodosPorEtapa);
+        // Si el plan ya existía y su checklist alcanzó a escribirse, no se
+        // duplica (AUD-09 M26).
+        if (!planYaExistia || (await contarItemsDePlan(supabase, projectId, planId)) === 0) {
+          // Ciclo de replanteamiento, Fase 2: lo que "me sigue sirviendo" pasa
+          // al plan nuevo COMO HECHO, enlazado a la original (047).
+          await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion,
+            resultado.nodosPorEtapa, ciclo?.tipo === "replantear" ? filasHeredadas(ciclo.conserva) : []);
+        }
+        // Ciclo de replanteamiento, Fase 2: lo que la persona escribió o dictó al
+        // pedir el ciclo queda en la bitácora (y de ahí en el Expediente y la
+        // Historia), una sola vez por plan.
+        if (ciclo && !planYaExistia) {
+          await registrarBitacora(
+            supabase,
+            projectId,
+            ciclo.tipo === "replantear" ? "ciclo_replanteado" : "ciclo_profundizado",
+            {
+              dominio: dominioSesion,
+              plan_id: planId,
+              relato: relatoDeCiclo(ciclo),
+              ...(ciclo.tipo === "replantear"
+                ? { camino: caminoElegido?.titulo ?? null, conserva: ciclo.conserva.length, suelta: ciclo.suelta.length }
+                : {}),
+            }
+          );
+        }
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
         const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(
@@ -410,7 +565,10 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
 
         const proyecto = await obtenerProyecto(supabase, projectId);
         const faseFinal = faseDeNodo(recorrido.ruta[recorrido.ruta.length - 1], graph);
-        const camposProyecto: Record<string, unknown> = { estado_vivo: estadoVivo, fase_actual: faseFinal };
+        const camposProyecto: Record<string, unknown> = { estado_vivo: estadoVivo };
+        // La fase del proyecto es la del núcleo: un plan de mundo no la mueve
+        // a la fase de su último nodo (AUD-09 H05).
+        if (dominioCobro === "core") camposProyecto.fase_actual = faseFinal;
         const titulo = extraerTitulo(resultado.markdown);
         if (titulo && !proyecto?.titulo) camposProyecto.titulo = titulo;
         await actualizarProyecto(supabase, projectId, camposProyecto);
@@ -426,7 +584,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // devuelve -1 con el plan ya persistido -> ENTREGAR Y REGISTRAR, nunca
         // cobrar de mas ni castigar (la regla sagrada).
         let creditosRestantes: number | null = null;
-        if (montoCobro > 0) {
+        if (montoCobro > 0 && !versionBasica) {
           const resultadoCobro = await cobrar(user.id, conceptoCobro, montoCobro, `plan:${sessionId}`);
           if (resultadoCobro === -1) {
             await registrarBitacora(supabase, projectId, "cobro_carrera", {
@@ -437,19 +595,45 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           } else {
             creditosRestantes = resultadoCobro;
             cobroAplicado = { monto: montoCobro, concepto: conceptoCobro };
+            reservaCobrada = true;
+            await resolverReserva(claveReserva, "cobrada");
           }
         }
         // Fase 4.5 (PREVIEW_MUNDOS_PLAN §5.3): para una sesion de MUNDO, esta
         // entrega es ADEMAS la compra del mundo: se sella plan_pagado_at
         // (idempotente, WHERE IS NULL) + telemetria preview_a_compra (§6).
+        // AUD-09, decision del fundador (25 sep 2026): UN SELLO DE PAGO SOLO
+        // EXISTE SI HUBO PAGO. Un plan basico (sin IA, no cobrado) no sella la
+        // compra: se marca con su propio campo, plan_basico_at (migracion 039),
+        // y el mundo ofrece "Generar el plan completo". Tampoco sella la
+        // carrera rara (se entrego sin poder cobrar).
         if (dominioSesion !== "core") {
-          await supabase
-            .from("project_unlocks")
-            .update({ plan_pagado_at: new Date().toISOString() })
-            .eq("project_id", projectId)
-            .eq("dominio", dominioSesion)
-            .is("plan_pagado_at", null);
-          await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+          const ahora = new Date().toISOString();
+          if (versionBasica) {
+            const { error: errBasico } = await supabase
+              .from("project_unlocks")
+              .update({ plan_basico_at: ahora })
+              .eq("project_id", projectId)
+              .eq("dominio", dominioSesion);
+            if (errBasico) {
+              console.error("[plan] no se pudo marcar el plan basico del mundo (¿falta la migracion 039?):", errBasico);
+            }
+          } else if (cobroAplicado) {
+            const { error: errEscritura1 } = await supabase
+              .from("project_unlocks")
+              .update({ plan_pagado_at: ahora })
+              .eq("project_id", projectId)
+              .eq("dominio", dominioSesion)
+              .is("plan_pagado_at", null);
+            if (errEscritura1) {
+              console.error("[app/api/session/[id]/plan/route.ts] update project_unlocks fallo:", errEscritura1);
+            }
+            // La compra es la primera entrega pagada; un ciclo de seguimiento
+            // no es una compra (AUD-09 M36).
+            if (!recorrido.esSeguimiento) {
+              await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+            }
+          }
         }
         enviar("done", {
           project_id: projectId,
@@ -459,6 +643,8 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           costo_usd: costoAcumuladoUsd(acumuladoConJuez),
           // El chip refresca su saldo con la entrega (patron del I Ching).
           creditos_restantes: creditosRestantes,
+          version_basica: versionBasica,
+          aviso: versionBasica ? avisoVersionBasica(idioma) : null,
         });
         cobroAplicado = null; // el done salio: la entrega llego a su dueño
       } catch (e) {
@@ -479,12 +665,17 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // escapaba del catch y el finally cerraba EN SILENCIO. Ese era el
         // camino del cierre mudo de la corrida I.
         try {
-          enviar("error", { error: e instanceof Error ? e.message : String(e) });
+          // AUD-09 B07a: el detalle va al log del servidor, no al cliente.
+          console.error("[plan] la entrega fallo:", e);
+          enviar("error", { error: t.noPudeTerminar });
         } catch (errEmit) {
           console.error("[plan] no se pudo emitir el error al cliente:", errEmit);
         }
       } finally {
         clearInterval(heartbeat);
+        // AUD-09 M25: sin cobro (plan sin IA, carrera o fallo), lo apartado se
+        // suelta; un reintento de la entrega vuelve a reservar.
+        if (montoCobro > 0 && !reservaCobrada) await resolverReserva(claveReserva, "liberada");
         // NINGUN STREAM TERMINA EN SILENCIO: si no salio done ni error,
         // esto grita por el log del servidor y lo intenta por el canal.
         garantizarTerminal({

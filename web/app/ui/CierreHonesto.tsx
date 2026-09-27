@@ -18,6 +18,11 @@
  * el ledger. Si no hubo cobro que revertir (o el ledger no lo respalda), el
  * hecho se dice igual pero SIN claim de dinero.
  */
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { plural } from "@/lib/i18n/interpolar";
+import { CIERRE_HONESTO } from "@/lib/i18n/mensajes/cierreHonesto";
+
 export function CierreHonesto({
   tipo,
   titulo,
@@ -43,6 +48,8 @@ export function CierreHonesto({
   onExplorarOtroAngulo: () => void;
   onVerMundos: () => void;
 }) {
+  const idioma = useIdioma();
+  const t = elegir(CIERRE_HONESTO, idioma);
   const esMundo = tipo === "mundo";
   const hayReembolso = typeof creditosDevueltos === "number" && creditosDevueltos > 0;
   return (
@@ -52,10 +59,10 @@ export function CierreHonesto({
       data-cierre-honesto
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-[11px] font-semibold uppercase tracking-[1.3px] text-dim">Un alto honesto</p>
+        <p className="text-[11px] font-semibold uppercase tracking-[1.3px] text-dim">{t.unAltoHonesto}</p>
         {esMundo && hayReembolso && (
           <span className="rounded-full border border-done/45 bg-done/[0.08] px-3 py-1.5 text-[12px] font-semibold text-done">
-            Activación devuelta · {creditosDevueltos} {creditosDevueltos === 1 ? "crédito" : "créditos"}
+            {plural(idioma, creditosDevueltos, t.activacionDevuelta)}
           </span>
         )}
       </div>
@@ -73,7 +80,7 @@ export function CierreHonesto({
       {porque && (
         <div className="mt-5 rounded-panel border border-hairline bg-surface-2 px-5 py-4">
           <div className="text-[12px] font-semibold uppercase tracking-[1.2px] text-dim">
-            {esMundo ? "Por qué este mundo, no ahora" : "Lo que vi"}
+            {esMundo ? t.porQueEsteMundo : t.loQueVi}
           </div>
           <p className="mt-2 text-[14px] leading-relaxed [text-wrap:pretty]">{porque}</p>
         </div>
@@ -94,8 +101,7 @@ export function CierreHonesto({
             <path d="M3 3v5h5" />
           </svg>
           <span className="text-[13.5px] leading-relaxed text-done/90">
-            Te devolvimos {creditosDevueltos} {creditosDevueltos === 1 ? "crédito" : "créditos"} de la activación.
-            Nunca pierdes créditos por algo que no te sirvió.
+            {plural(idioma, creditosDevueltos, t.teDevolvimos)}
           </span>
         </div>
       )}
@@ -105,20 +111,18 @@ export function CierreHonesto({
           onClick={esMundo || hayPlan ? onVolverAManos : onVolverAIdea}
           className="rounded-[10px] bg-done px-5 py-2.5 text-[13.5px] font-semibold text-[#04120A] hover:opacity-90"
         >
-          {esMundo || hayPlan ? "Volver a Manos a la Obra" : "Volver a mi idea"}
+          {esMundo || hayPlan ? t.volverAManos : t.volverAMiIdea}
         </button>
         <button
           onClick={esMundo ? onVerMundos : onExplorarOtroAngulo}
           className="rounded-[10px] border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-[13px] font-medium"
         >
-          {esMundo ? "Ver los otros mundos" : "Explorar otro ángulo de la idea"}
+          {esMundo ? t.verOtrosMundos : t.explorarOtroAngulo}
         </button>
       </div>
 
       <p className="mt-5 text-[13px] leading-relaxed text-dim">
-        {esMundo
-          ? "Tu viaje principal sigue intacto: cerrar este mundo no toca tu idea."
-          : "Nada se pierde: tu recorrido y tu Claridad quedan guardados tal como están."}
+        {esMundo ? t.notaMundo : t.notaCamino}
       </p>
     </section>
   );

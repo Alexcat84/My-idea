@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P701739",
+  "intento": 0,
+  "usd": 0.145292,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32063,
+  "tokens_out": 852,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P701739\", \"veredicto\": \"FIEL\", \"lineas\": [2594, 2596], \"cita\": \"Rather than struggling vainly to exercise direct control over incidents and accidents, managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents.\", \"datos_sin_respaldo\": [], \"razon\": \"En 'Setting the Right Safety Goals' el libro critica fijar metas de reducción de accidentes y propone medir y mejorar los procesos manejables. Los cuatro procesos citados están en su lista. 'Reemplazar' se refiere a las metas, no a dejar de registrar sucesos. El libro mantiene las medidas reactivas como ayuda de navegación, no como meta, y Tripod reduce LTIs indirectamente.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P701739",
+  "veredicto": "FIEL",
+  "lineas": [
+   2594,
+   2596
+  ],
+  "cita": "Rather than struggling vainly to exercise direct control over incidents and accidents, managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents.",
+  "datos_sin_respaldo": [],
+  "razon": "En 'Setting the Right Safety Goals' el libro critica fijar metas de reducción de accidentes y propone medir y mejorar los procesos manejables. Los cuatro procesos citados están en su lista. 'Reemplazar' se refiere a las metas, no a dejar de registrar sucesos. El libro mantiene las medidas reactivas como ayuda de navegación, no como meta, y Tripod reduce LTIs indirectamente.",
+  "paso_fiel": ""
+ }
+}

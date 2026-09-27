@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD8E1B6",
+  "intento": 0,
+  "usd": 0.215316,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49499,
+  "tokens_out": 866,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD8E1B6\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4027, 4039], \"cita\": \"He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta la falta de tiempo para una auditoria completa como causa de la omision del inspector. Cullen califica las inspecciones de superficiales y atribuye parte del problema al 'persistent undermanning'. El paso convierte ese diagnostico en una accion en la misma direccion y sin datos nuevos. Cullen cuestiona ademas el tipo de inspeccion, pero eso no invierte el paso.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD8E1B6",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4027,
+   4039
+  ],
+  "cita": "He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta la falta de tiempo para una auditoria completa como causa de la omision del inspector. Cullen califica las inspecciones de superficiales y atribuye parte del problema al 'persistent undermanning'. El paso convierte ese diagnostico en una accion en la misma direccion y sin datos nuevos. Cullen cuestiona ademas el tipo de inspeccion, pero eso no invierte el paso.",
+  "paso_fiel": ""
+ }
+}

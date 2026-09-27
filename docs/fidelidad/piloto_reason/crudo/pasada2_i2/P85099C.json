@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P85099C",
+  "intento": 0,
+  "usd": 0.12160800000000001,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26672,
+  "tokens_out": 746,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P85099C\", \"veredicto\": \"FIEL\", \"lineas\": [3692, 3724], \"cita\": \"The overall probability of grounding at a river bar is obtained by summing the unconditional probabilities of each of three immediate influencing factors: the risk perception of the master; the risk perception of the crew; and the likelihood of profit being placed before safety.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro obtiene la probabilidad del 'top event' sumando probabilidades incondicionales, como dice el paso. Solo omite que se suman las de los factores influyentes inmediatos. Es una diferencia de detalle: el libro no desaconseja otra forma de sumar y el paso no invierte ni generaliza nada.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P85099C",
+  "veredicto": "FIEL",
+  "lineas": [
+   3692,
+   3724
+  ],
+  "cita": "The overall probability of grounding at a river bar is obtained by summing the unconditional probabilities of each of three immediate influencing factors: the risk perception of the master; the risk perception of the crew; and the likelihood of profit being placed before safety.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro obtiene la probabilidad del 'top event' sumando probabilidades incondicionales, como dice el paso. Solo omite que se suman las de los factores influyentes inmediatos. Es una diferencia de detalle: el libro no desaconseja otra forma de sumar y el paso no invierte ni generaliza nada.",
+  "paso_fiel": ""
+ }
+}

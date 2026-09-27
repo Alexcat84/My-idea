@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_054",
+  "intento": 0,
+  "usd": 0.17758400000000002,
+  "turnos": 1,
+  "duracion_s": 23.0,
+  "pared_s": 24.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33701,
+  "tokens_out": 2139,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P965DAA\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5041, 5043, 5053, 5055, 5057, 5063], \"razon\": \"En el libro la 'mitigación' califica el abuso de sustancias, no las violaciones. El paso omite sustancias y el error sin culpa (≈90%); forzaría clasificar como culpables actos que el libro considera exculpables.\"},\n  {\"id\": \"P886214\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3965, 3967, 3971], \"razon\": \"El libro señala 'acceptable risk' y 'anomaly' como habla cotidiana que normalizaba la desviación. Identificar ese lenguaje concreta lo dicho, en la misma dirección.\"},\n  {\"id\": \"PE5110A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4974, 4906, 3989], \"razon\": \"El libro concluye que quienes reportan deben tener muy claro qué constituye un incidente, lo que no siempre es intuitivo.\"},\n  {\"id\": \"P863D48\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"registro de condiciones latentes conocidas\", \"de forma continua\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2638, 2658, 2767, 3079, 4448, 5775, 5781], \"razon\": \"El libro pide revisar proactiva y continuamente las condiciones latentes antes del evento. El registro como herramienta es una concreción; el libro prioriza medir procesos y eliminarlas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P965DAA",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5041,
+    5043,
+    5053,
+    5055,
+    5057,
+    5063
+   ],
+   "razon": "En el libro la 'mitigación' califica el abuso de sustancias, no las violaciones. El paso omite sustancias y el error sin culpa (≈90%); forzaría clasificar como culpables actos que el libro considera exculpables."
+  },
+  {
+   "id": "P886214",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3965,
+    3967,
+    3971
+   ],
+   "razon": "El libro señala 'acceptable risk' y 'anomaly' como habla cotidiana que normalizaba la desviación. Identificar ese lenguaje concreta lo dicho, en la misma dirección."
+  },
+  {
+   "id": "PE5110A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4974,
+    4906,
+    3989
+   ],
+   "razon": "El libro concluye que quienes reportan deben tener muy claro qué constituye un incidente, lo que no siempre es intuitivo."
+  },
+  {
+   "id": "P863D48",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "registro de condiciones latentes conocidas",
+    "de forma continua"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2638,
+    2658,
+    2767,
+    3079,
+    4448,
+    5775,
+    5781
+   ],
+   "razon": "El libro pide revisar proactiva y continuamente las condiciones latentes antes del evento. El registro como herramienta es una concreción; el libro prioriza medir procesos y eliminarlas."
+  }
+ ]
+}

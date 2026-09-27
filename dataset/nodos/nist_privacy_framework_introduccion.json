@@ -1,6 +1,6 @@
 {
   "node_id": "nist_privacy_framework_introduccion",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "seguridad_digital",
   "titulo_concepto": "Introducción al NIST Privacy Framework",
   "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
@@ -22,5 +22,23 @@
     "Si la organización maneja datos personales y no tiene un programa de privacidad formal",
     "Si se busca diferenciar el negocio mediante confianza y cumplimiento"
   ],
-  "etiqueta_arbol": "Conoce el Marco de Privacidad"
+  "etiqueta_arbol": "Conoce el Marco de Privacidad",
+  "fuentes_internas": [
+    "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-237",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F22-031: Conocer la estructura del marco para justificar la adopcion de un programa de privacidad en una organizacion es diseñar su plan, no explorar una idea de negocio. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

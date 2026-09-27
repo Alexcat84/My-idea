@@ -20,7 +20,26 @@
     "costo_de_calidad_3"
   ],
   "condiciones_activacion": [
-    "Cuando tienes varios proveedores y no es práctico medir a cada uno por separado"
+    "Cuando varias personas eligen o gestionan proveedores por ti y quieres saber quién necesita más cuidado al seleccionarlos y darles seguimiento"
   ],
-  "etiqueta_arbol": "Califica a tus Compradores"
+  "etiqueta_arbol": "Califica a tus Compradores",
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-010",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando tienes varios proveedores y no es práctico medir a cada uno por separado",
+      "texto_nuevo": "Cuando varias personas eligen o gestionan proveedores por ti y quieres saber quién necesita más cuidado al seleccionarlos y darles seguimiento",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q010-004: La condicion no refleja que el metodo compara a las personas que compran; el dominio encaja en quality y en compras, asi que se deja. (lector y verificador de acuerdo) Motivo: El metodo mide la tasa de defectos por persona que elige o gestiona proveedores; la condicion no exige que haya varias personas comprando, y a quien compra solo le llegaria un nodo que no puede usar."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

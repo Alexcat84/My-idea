@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_028",
+  "intento": 0,
+  "usd": 0.16186799999999998,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33037,
+  "tokens_out": 1486,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P2CDAC6\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"al menos cinco tipos distintos de escenarios de crisis\"], \"clase\": \"FIEL\", \"lineas\": [5896, 5894], \"razon\": \"El libro dice que las organizaciones preparadas para crisis planifican para al menos cinco tipos de crisis. 'Relevantes al negocio' es un matiz menor en la misma dirección.\"},\n{\"id\": \"P270A27\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"cero accidentes\", \"cada período\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2594, 2596, 2598, 2489, 5692], \"razon\": \"El libro dice que la meta no es cero accidentes y que no hay que intentar controlar directamente los incidentes, sino medir y mejorar los procesos. El paso invierte ambas cosas.\"},\n{\"id\": \"P63A7A8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"periódicamente\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4296, 3965], \"razon\": \"El libro dice que la seguridad es un objetivo móvil hacia el riesgo cero. Pero revisar sin fijar la dirección podría permitir la erosión de estándares que el libro critica en el caso NASA. La frecuencia no la trae el libro.\"},\n{\"id\": \"P5AFB82\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5572, 5603, 5690, 5907], \"razon\": \"El libro distingue cuatro tipos de riesgo y pide contramedidas distintas para cada nivel, además de comprobar precursores y procesos. El paso lo concreta sin añadir datos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P2CDAC6",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "al menos cinco tipos distintos de escenarios de crisis"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5896,
+    5894
+   ],
+   "razon": "El libro dice que las organizaciones preparadas para crisis planifican para al menos cinco tipos de crisis. 'Relevantes al negocio' es un matiz menor en la misma dirección."
+  },
+  {
+   "id": "P270A27",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cero accidentes",
+    "cada período"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2594,
+    2596,
+    2598,
+    2489,
+    5692
+   ],
+   "razon": "El libro dice que la meta no es cero accidentes y que no hay que intentar controlar directamente los incidentes, sino medir y mejorar los procesos. El paso invierte ambas cosas."
+  },
+  {
+   "id": "P63A7A8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4276,
+    4296,
+    3965
+   ],
+   "razon": "El libro dice que la seguridad es un objetivo móvil hacia el riesgo cero. Pero revisar sin fijar la dirección podría permitir la erosión de estándares que el libro critica en el caso NASA. La frecuencia no la trae el libro."
+  },
+  {
+   "id": "P5AFB82",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5572,
+    5603,
+    5690,
+    5907
+   ],
+   "razon": "El libro distingue cuatro tipos de riesgo y pide contramedidas distintas para cada nivel, además de comprobar precursores y procesos. El paso lo concreta sin añadir datos."
+  }
+ ]
+}

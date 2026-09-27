@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_048",
+  "intento": 0,
+  "usd": 0.161692,
+  "turnos": 1,
+  "duracion_s": 18.9,
+  "pared_s": 19.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33388,
+  "tokens_out": 1407,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PE1A12C\",\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"marca\": true,\n    \"lineas\": [848, 856, 942, 1033, 1085, 1149],\n    \"razon\": \"El libro constata la mala vigilancia humana, pero advierte que diseñar para compensar la falibilidad humana crea errores nuevos y complejidad. Su remedio es invertir en entrenamiento, no en más monitoreo.\"\n  },\n  {\n    \"id\": \"P750A7D\",\n    \"clase\": \"INFERIDO\",\n    \"marca\": true,\n    \"lineas\": [1995, 2003, 2356, 1934, 2907, 5748],\n    \"razon\": \"El libro usa datos de proporciones humano/técnico, pero advierte que el error humano es consecuencia de factores organizacionales. La dicotomía podría llevar a atribuir y culpar.\"\n  },\n  {\n    \"id\": \"PA6C1D5\",\n    \"clase\": \"INFERIDO\",\n    \"marca\": true,\n    \"lineas\": [4027, 4039, 4033],\n    \"razon\": \"El inspector carecía de experiencia en permisos de trabajo, pero Cullen cuestiona de raíz ese tipo de inspección. Capacitar puede ser un remedio parcial frente a un cambio de régimen.\"\n  },\n  {\n    \"id\": \"PDC47C9\",\n    \"clase\": \"FIEL\",\n    \"marca\": false,\n    \"lineas\": [2658, 3332],\n    \"razon\": \"El libro dice literalmente que la frecuencia depende de la velocidad de cambio y que los factores del lugar de trabajo cambian más rápido.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PE1A12C",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    848,
+    856,
+    942,
+    1033,
+    1085,
+    1149
+   ],
+   "razon": "El libro constata la mala vigilancia humana, pero advierte que diseñar para compensar la falibilidad humana crea errores nuevos y complejidad. Su remedio es invertir en entrenamiento, no en más monitoreo."
+  },
+  {
+   "id": "P750A7D",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    1995,
+    2003,
+    2356,
+    1934,
+    2907,
+    5748
+   ],
+   "razon": "El libro usa datos de proporciones humano/técnico, pero advierte que el error humano es consecuencia de factores organizacionales. La dicotomía podría llevar a atribuir y culpar."
+  },
+  {
+   "id": "PA6C1D5",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4027,
+    4039,
+    4033
+   ],
+   "razon": "El inspector carecía de experiencia en permisos de trabajo, pero Cullen cuestiona de raíz ese tipo de inspección. Capacitar puede ser un remedio parcial frente a un cambio de régimen."
+  },
+  {
+   "id": "PDC47C9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2658,
+    3332
+   ],
+   "razon": "El libro dice literalmente que la frecuencia depende de la velocidad de cambio y que los factores del lugar de trabajo cambian más rápido."
+  }
+ ]
+}

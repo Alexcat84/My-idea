@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P6D2E5E",
+  "intento": 0,
+  "usd": 0.20797600000000002,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48494,
+  "tokens_out": 700,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6D2E5E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [596, 600, 5272], \"cita\": \"Ron Westrum, a leading American industrial sociologist, has distinguished organizational cultures according to the way they deal with safety-related information. He identified three types of culture--pathological, bureaucratic and generative--and their principal characteristics are summarized in Table 2.2.\", \"datos_sin_respaldo\": [], \"razon\": \"La tabla existe (Tabla 2.2) y clasifica culturas por cómo manejan la información de seguridad. El libro no la presenta como instrumento de diagnóstico, pero aplicarla a la propia organización sigue su dirección sin añadir datos. La advertencia de L5272 pide no confiarse del resultado, no prohíbe diagnosticar; no es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6D2E5E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   596,
+   600,
+   5272
+  ],
+  "cita": "Ron Westrum, a leading American industrial sociologist, has distinguished organizational cultures according to the way they deal with safety-related information. He identified three types of culture--pathological, bureaucratic and generative--and their principal characteristics are summarized in Table 2.2.",
+  "datos_sin_respaldo": [],
+  "razon": "La tabla existe (Tabla 2.2) y clasifica culturas por cómo manejan la información de seguridad. El libro no la presenta como instrumento de diagnóstico, pero aplicarla a la propia organización sigue su dirección sin añadir datos. La advertencia de L5272 pide no confiarse del resultado, no prohíbe diagnosticar; no es contrario.",
+  "paso_fiel": ""
+ }
+}

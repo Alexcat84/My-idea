@@ -32,6 +32,7 @@ interface PromptsShape {
   SYSTEM_REPORTE: string;
   SYSTEM_CLASIFICAR_OFERTA: string;
   SYSTEM_DIAGNOSTICO_MUNDO: string;
+  SYSTEM_CAMINOS: string;
 }
 
 const prompts = promptsJson as PromptsShape;
@@ -48,6 +49,19 @@ export const SYSTEM_ORGANIZADOR = prompts.SYSTEM_ORGANIZADOR;
 export const SYSTEM_REPORTE = prompts.SYSTEM_REPORTE;
 export const SYSTEM_CLASIFICAR_OFERTA = prompts.SYSTEM_CLASIFICAR_OFERTA;
 export const SYSTEM_DIAGNOSTICO_MUNDO = prompts.SYSTEM_DIAGNOSTICO_MUNDO;
+/** Ciclo de replanteamiento, Fase 2: los caminos posibles de "Replantear mi camino". */
+export const SYSTEM_CAMINOS = prompts.SYSTEM_CAMINOS;
+
+/** i18n F5 (DISENO §5): la regla final de los prompts NATIVOS que escriben para
+ * la persona. Misma letra que REGLA_IDIOMA_SALIDA de engine/prototipo_motor.py
+ * (los prompts sincronizados ya la traen). El idioma de la idea llega en un
+ * bloque posterior (lib/i18n/idiomaSalida.ts). */
+const REGLA_IDIOMA_SALIDA =
+  "\n\nIDIOMA DE SALIDA: espanol, salvo que un bloque posterior de este " +
+  "sistema, titulado IDIOMA DE SALIDA, indique otro idioma. En ese caso, " +
+  "toda mencion de 'espanol' en estas reglas significa ese idioma, las " +
+  "reglas de acentos y signos se aplican con la ortografia de ese idioma, " +
+  "y lo que ese bloque diga sobre el idioma manda sobre estas reglas.";
 
 /**
  * SYSTEM_ESTIMACION_BANDA — Scheduler Inteligente, estimador de esfuerzo.
@@ -98,7 +112,38 @@ export const SYSTEM_REFORMULADOR_PROTECCION = [
   "Reglas: UNA sola pregunta, en segunda persona, sin explicar teoria antes, sin",
   "comillas y sin JSON. Menciona la actividad por su titulo (puedes citar su #N).",
   "Responde SOLO el texto de la pregunta.",
-].join("\n");
+].join("\n") + REGLA_IDIOMA_SALIDA;
+
+/**
+ * SYSTEM_TRADUCIR_PREGUNTA — D3 (i18n F5): fuera del español, las preguntas del
+ * grafo las adapta la IA. Las cacheadas están en español; cuando una llega
+ * cruda a una idea escrita en otro idioma, Haiku la expresa en ese idioma. El
+ * idioma llega en el bloque posterior de IDIOMA DE SALIDA (lib/i18n/idiomaSalida).
+ *
+ * PROCEDENCIA: nace en TS, como el reformulador: no viene del sync de Python
+ * (el motor de Python habla español).
+ */
+export const SYSTEM_TRADUCIR_PREGUNTA = [
+  "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas:",
+  "usa comas, dos puntos o parentesis.",
+  "",
+  "Recibes UNA pregunta de una entrevista de emprendimiento, escrita en espanol.",
+  "Expresala en el idioma de salida: la MISMA intencion y el mismo contenido, en",
+  "segunda persona, calida y natural, como la escribiria una persona nativa. No",
+  "agregues ni quites nada, no expliques teoria, no cambies QUE se pregunta.",
+  "",
+  "Responde SOLO el texto de la pregunta, sin comillas y sin JSON.",
+].join("\n") + REGLA_IDIOMA_SALIDA;
+
+/**
+ * SYSTEM_CONSULTA_AL_ESPANOL — el remedio de F1 (i18n F5; docs/i18n/F1_BUSCADOR.md).
+ * El índice semántico está hecho con el español de los nodos: antes de buscar,
+ * la consulta de una idea escrita en otro idioma se traduce al español. La
+ * letra es la MISMA que se midió en F1 (medicion_buscador.ts --remedio). Su
+ * salida es interna (va al buscador): no lleva la regla de idioma de salida.
+ */
+export const SYSTEM_CONSULTA_AL_ESPANOL =
+  "Traduce al español el texto del usuario. Responde SOLO con la traducción, sin comillas ni comentarios.";
 
 /**
  * SYSTEM_ENLACE_PROTECCION — Mundos de protección (P2): el ENLAZADOR.

@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P5EA355",
+  "intento": 0,
+  "usd": 0.24230000000000002,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53435,
+  "tokens_out": 1428,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5EA355\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4761, 4806, 4908], \"cita\": \"Another important measure for engendering trust is to separate the organization receiving the reports from both the regulatory body and from the employing company. [...] the receiving department should be perceived as being completely independent of operational management\", \"datos_sin_respaldo\": [\"personal de seguridad (como destinatario específico de los canales independientes)\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda que los canales de reporte sean independientes de la dirección operativa y de quien sanciona (L4806, L4908), y no contradice el paso. Pero esos canales son para toda la plantilla en contacto con los riesgos (L4761), no específicamente para el personal de seguridad. Ese rol concreto no aparece en el libro.\", \"paso_fiel\": \"Establecer canales de reporte de incidentes y errores independientes de la dirección operativa y de quienes pueden imponer sanciones, abiertos a todo el personal en contacto directo con los riesgos.\"}\n```",
+ "parseado": {
+  "id": "P5EA355",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4761,
+   4806,
+   4908
+  ],
+  "cita": "Another important measure for engendering trust is to separate the organization receiving the reports from both the regulatory body and from the employing company. [...] the receiving department should be perceived as being completely independent of operational management",
+  "datos_sin_respaldo": [
+   "personal de seguridad (como destinatario específico de los canales independientes)"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda que los canales de reporte sean independientes de la dirección operativa y de quien sanciona (L4806, L4908), y no contradice el paso. Pero esos canales son para toda la plantilla en contacto con los riesgos (L4761), no específicamente para el personal de seguridad. Ese rol concreto no aparece en el libro.",
+  "paso_fiel": "Establecer canales de reporte de incidentes y errores independientes de la dirección operativa y de quienes pueden imponer sanciones, abiertos a todo el personal en contacto directo con los riesgos."
+ }
+}

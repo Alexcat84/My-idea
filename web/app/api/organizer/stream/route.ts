@@ -9,8 +9,12 @@
  * existiendo para vuelo.ts/probar.ts).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   MODEL_HAIKU,
@@ -19,18 +23,22 @@ import {
   usoVacio,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
+import { actualizarProyecto, cerrarSesion, crearSesion, FASES, guardarPlan, obtenerProyecto } from "@/lib/db";
+import { nacerIdea } from "@/lib/nacerIdea";
+import { idiomaDelProyecto, idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
+import { bloquesDeSistema } from "@/lib/i18n/idiomaSalida";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import {
   construirMarkdown,
   limpiarOrganizador,
   MAX_TOKENS_ORGANIZADOR,
-  SECCIONES_ORGANIZADOR,
+  seccionesOrganizador,
   type OrganizadorData,
 } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { garantizarTerminal } from "@/lib/streamTerminal";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
 
@@ -45,19 +53,22 @@ const BACKOFFS_MS = [0, 1000, 3000];
 class OrganizadorTruncado extends Error {}
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).organizador;
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
   if (typeof texto !== "string" || texto.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
+    return NextResponse.json({ error: r.faltaTexto }, { status: 400 });
   }
-  if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
+  if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: `'texto' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: mensajeIdeaLarga(idioma), limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }
@@ -67,17 +78,43 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
+  }
+
+  // AUD-09 M28: ordenar una idea que YA existe (su organizador falló antes y
+  // quedó sin Claridad). Se reusa la misma idea en vez de crear otra; solo si es
+  // del usuario (RLS) y si de verdad no tiene su Claridad.
+  const idPedido = (body as { project_id?: unknown } | null)?.project_id;
+  let ideaExistente: string | null = null;
+  let idiomaExistente: string | null = null;
+  if (typeof idPedido === "string" && idPedido) {
+    const existente = await obtenerProyecto(supabase, idPedido);
+    if (!existente) {
+      return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
+    }
+    idiomaExistente = idiomaDelProyecto(existente);
+    const { data: sesionesIdea } = await supabase.from("sessions").select("id").eq("project_id", idPedido);
+    const ids = ((sesionesIdea ?? []) as Array<{ id: string }>).map((s) => s.id);
+    const { data: organizadores } = ids.length
+      ? await supabase.from("plans").select("id").in("session_id", ids).eq("etiqueta", "organizador")
+      : { data: [] };
+    if ((organizadores ?? []).length > 0) {
+      return NextResponse.json({ error: t.yaOrdenada }, { status: 409 });
+    }
+    ideaExistente = idPedido;
   }
 
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   const graph = cargarGrafo();
@@ -93,7 +130,10 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const projectId = await crearProyecto(supabase, user.id, texto);
+  // i18n F5: el idioma de la IDEA (el de su texto al nacer), en que escribe la IA.
+  const nacida = ideaExistente ? null : await nacerIdea(supabase, user.id, texto, idioma);
+  const projectId = ideaExistente ?? nacida!.projectId;
+  const idiomaIdea = idiomaExistente ?? nacida!.idioma;
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();
@@ -101,8 +141,15 @@ export async function POST(request: Request) {
 
   const stream = new ReadableStream({
     async start(controller) {
+      // AUD-09 H08: ningún stream termina en silencio (la misma garantía que la
+      // ruta del plan). Se apunta lo emitido para que el finally sepa si ya
+      // salió un evento final.
+      const emitidos: string[] = [];
+      let terminalEmitido: string | null = null;
       function enviar(evento: string, data: unknown) {
         controller.enqueue(encoder.encode(`event: ${evento}\ndata: ${JSON.stringify(data)}\n\n`));
+        emitidos.push(evento);
+        if (evento === "done" || evento === "error") terminalEmitido = evento;
       }
       const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": heartbeat\n\n")), INTERVALO_HEARTBEAT_MS);
 
@@ -110,6 +157,8 @@ export async function POST(request: Request) {
       // Las secciones se anuncian una sola vez aunque haya reintentos: el
       // árbol conserva lo que ya encendió.
       const anunciadas = new Set<string>();
+      // Los nombres de las secciones se pintan en el árbol: idioma de la interfaz.
+      const secciones = seccionesOrganizador(idioma);
 
       const cerrar = () =>
         cerrarSesion(
@@ -130,13 +179,13 @@ export async function POST(request: Request) {
         const claudeStream = client.messages.stream({
           model: MODEL_HAIKU,
           max_tokens: MAX_TOKENS_ORGANIZADOR,
-          system: [{ type: "text", text: SYSTEM_ORGANIZADOR, cache_control: { type: "ephemeral" } }],
+          system: bloquesDeSistema(SYSTEM_ORGANIZADOR, idiomaIdea),
           messages: [{ role: "user", content: JSON.stringify({ texto_usuario: texto, puertas }) }],
         });
         let crudo = "";
         claudeStream.on("text", (delta) => {
           crudo += delta;
-          for (const { clave, label } of SECCIONES_ORGANIZADOR) {
+          for (const { clave, label } of secciones) {
             if (!anunciadas.has(clave) && crudo.includes(`"${clave}"`)) {
               anunciadas.add(clave);
               enviar("seccion", { clave, label });
@@ -186,9 +235,7 @@ export async function POST(request: Request) {
           console.error("[organizer] fallo definitivo", { projectId, truncado, error: ultimoError });
           await cerrar().catch(() => {});
           enviar("error", {
-            error: truncado
-              ? "tu idea trae mucho y se pasó de lo que puedo organizar de una sola vez; recórtala un poco o cuéntamela por partes e intenta de nuevo"
-              : "no pudimos organizar tu idea en este momento; tu texto quedó guardado, intenta de nuevo",
+            error: truncado ? t.truncado : t.noPudimosOrganizar,
             project_id: projectId,
             reintentable: true,
           });
@@ -198,7 +245,8 @@ export async function POST(request: Request) {
         // La puerta SSE no pasa por el punto único de limpieza de
         // llamarClaude: se limpia aquí, antes del markdown y del cliente.
         data = limpiarOrganizador(data);
-        const markdown = construirMarkdown(data);
+        // i18n F5 (D2): la Claridad es un documento de la idea: en su idioma.
+        const markdown = construirMarkdown(data, idiomaDePlantilla(idiomaIdea, idioma));
         await guardarPlan(supabase, user.id, sessionId, "organizador", markdown, 0, []);
         await cerrar();
         if (typeof data.etapa_detectada === "string" && (FASES as readonly string[]).includes(data.etapa_detectada)) {
@@ -210,12 +258,13 @@ export async function POST(request: Request) {
         console.error("[organizer] error inesperado", { projectId, error: e });
         await cerrar().catch(() => {});
         enviar("error", {
-          error: "no pudimos organizar tu idea en este momento; tu texto quedó guardado, intenta de nuevo",
+          error: t.noPudimosOrganizar,
           project_id: projectId,
           reintentable: true,
         });
       } finally {
         clearInterval(heartbeat);
+        garantizarTerminal({ terminalEmitido, emitidos, sessionId, projectId, enviar });
         controller.close();
       }
     },

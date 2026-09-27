@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_083",
+  "intento": 0,
+  "usd": 0.179388,
+  "turnos": 1,
+  "duracion_s": 22.7,
+  "pared_s": 23.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34027,
+  "tokens_out": 2164,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PAC3703\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [213, 181, 1539, 2186, 219, 308],\n    \"razon\": \"El libro distingue huecos deliberados e involuntarios, pero las violaciones también pueden ser erróneas (L1539). Además, el paso omite los huecos creados por condiciones latentes. Hay un matiz que revisar.\"\n  },\n  {\n    \"id\": \"P50730B\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [323, 293, 2652, 2654, 5641],\n    \"razon\": \"El libro dice que los accidentes individuales suelen tener origen organizacional y que la línea entre ambos no es nítida. Clasificar antes de investigar invierte el orden y puede llevar a culpar al individuo.\"\n  },\n  {\n    \"id\": \"P423F40\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4276, 4280, 4284, 4288, 4292, 4296, 4318],\n    \"razon\": \"El libro enumera los enfoques y dice que dependen de lo que la tecnología o la sociedad considera suficientemente seguro. Determinar cuál aplica concreta esa idea en la misma dirección.\"\n  },\n  {\n    \"id\": \"P46F68E\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"mediante software\", \"de forma anónima\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [3232, 3332, 3382, 3384],\n    \"razon\": \"En MESH se registra anónimamente por ordenador y se ven promedios. En Review el libro no menciona anonimato, y las valoraciones organizacionales las hacen gerentes técnicos. Conviene verificar que el paso no generalice.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PAC3703",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    213,
+    181,
+    1539,
+    2186,
+    219,
+    308
+   ],
+   "razon": "El libro distingue huecos deliberados e involuntarios, pero las violaciones también pueden ser erróneas (L1539). Además, el paso omite los huecos creados por condiciones latentes. Hay un matiz que revisar."
+  },
+  {
+   "id": "P50730B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    323,
+    293,
+    2652,
+    2654,
+    5641
+   ],
+   "razon": "El libro dice que los accidentes individuales suelen tener origen organizacional y que la línea entre ambos no es nítida. Clasificar antes de investigar invierte el orden y puede llevar a culpar al individuo."
+  },
+  {
+   "id": "P423F40",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4276,
+    4280,
+    4284,
+    4288,
+    4292,
+    4296,
+    4318
+   ],
+   "razon": "El libro enumera los enfoques y dice que dependen de lo que la tecnología o la sociedad considera suficientemente seguro. Determinar cuál aplica concreta esa idea en la misma dirección."
+  },
+  {
+   "id": "P46F68E",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "mediante software",
+    "de forma anónima"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3232,
+    3332,
+    3382,
+    3384
+   ],
+   "razon": "En MESH se registra anónimamente por ordenador y se ven promedios. En Review el libro no menciona anonimato, y las valoraciones organizacionales las hacen gerentes técnicos. Conviene verificar que el paso no generalice."
+  }
+ ]
+}

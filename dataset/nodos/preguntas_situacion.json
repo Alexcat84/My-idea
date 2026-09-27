@@ -4,17 +4,15 @@
   "dominio": "core",
   "titulo_concepto": "Preguntas de situación",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta (sitio web, redes, lo que encuentres) para llegar con menos preguntas de este tipo y usarlas con moderación.",
+  "resumen_teorico": "Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta para llegar con menos preguntas de este tipo y usarlas con moderación.",
   "pasos_accionables": [
-    "Investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas innecesarias",
+    "Sugerencia de My Idea: investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situación innecesarias",
     "Limita tus preguntas de situación a lo estrictamente necesario para avanzar",
     "Úsalas como apertura breve y pasa pronto a preguntar por el problema"
   ],
   "entregable_esperado": "Tu lista corta y priorizada de preguntas de situación para el cliente que vas a contactar",
   "nodos_previos": [
-    "modelo_spin_preguntas",
-    "analisis_de_cohortes",
-    "estudio_mercado_calidad"
+    "modelo_spin_preguntas"
   ],
   "nodos_siguientes": [
     "preguntas_problema_2"
@@ -25,5 +23,83 @@
   "ids_alias": [
     "preguntas_situacion_2"
   ],
-  "etiqueta_arbol": "Haz Preguntas de Situación"
+  "etiqueta_arbol": "Haz Preguntas de Situación",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas innecesarias",
+      "texto_nuevo": "Sugerencia de My Idea: investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situacion innecesarias",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L1216-L1218",
+        "frase": "They do their homework before the call and, through good pre-call planning, eliminate many of the fact-finding questions that can bore the buyer."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda investigar antes de la llamada para reducir preguntas de situacion, pero no nombra fuentes concretas; sitio web y redes sociales no aparecen en el libro (buscado web, website, internet, social media).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C126-014"
+    },
+    {
+      "id": "fidelidad-t9-028",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta (sitio web, redes, lo que encuentres) para llegar con menos preguntas de este tipo y usarlas con moderación.",
+      "texto_nuevo": "Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta para llegar con menos preguntas de este tipo y usarlas con moderación.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L1216-L1218",
+        "frase": "They do their homework before the call and, through good pre-call planning, eliminate many of the fact-finding questions that can bore the buyer."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite las fuentes concretas del paso 0 (sitio web y redes), que el libro no nombra. Es un ANADIDO práctico, así que se quita del resumen y se mantiene investigar antes de la llamada, que el libro sí respalda.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C126-014"
+    },
+    {
+      "id": "t2-arista-003",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "analisis_de_cohortes -> preguntas_situacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-09-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El análisis de cohortes de retención no prepara las preguntas de situación de una conversación de venta. Son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-052",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estudio_mercado_calidad -> preguntas_situacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-09-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El estudio de mercado sobre la posición competitiva en calidad no prepara las preguntas de situación en una llamada de venta SPIN. La relación no se sostiene."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0214",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situacion innecesarias",
+      "texto_nuevo": "Sugerencia de My Idea: investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situación innecesarias",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-029.paso0: situación (Tilde de 'situación'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
+  ],
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
+  ]
 }

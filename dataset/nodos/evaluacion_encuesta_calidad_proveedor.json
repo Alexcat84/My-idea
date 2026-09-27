@@ -1,14 +1,14 @@
 {
   "node_id": "evaluacion_encuesta_calidad_proveedor",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Encuesta de Evaluación de Calidad del Proveedor",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Es una revisión de la capacidad real de un proveedor para prevenir, detectar y corregir producto no conforme. Puede ser tan simple como un cuestionario o tan completa como una visita donde revisas su forma de gestionar, diseñar, fabricar e inspeccionar, y los resultados de calidad que ha tenido. Lo que buscas es confirmar si lo que promete coincide con lo que realmente hace.",
   "pasos_accionables": [
     "Preparar un cuestionario o un plan de visita que cubra gestión, diseño, manufactura, inspección y resultados",
-    "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un angulo",
-    "Dar mas peso a lo que mas te importa a ti en esa compra al momento de valorar lo que ves",
+    "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un ángulo",
+    "Dar más peso a lo que más te importa a ti en esa compra al momento de valorar lo que ves",
     "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo",
     "Revisar si el proveedor ya tiene una certificación reconocida en tu mercado, para no repetir evaluaciones que ya alguien mas hizo"
   ],
@@ -25,5 +25,51 @@
     "Antes de decidirte formalmente por un proveedor",
     "Cuando necesitas confirmar si el proveedor puede realmente cumplir lo que promete, mas alla de lo que dice en el contrato"
   ],
-  "etiqueta_arbol": "Evalúa la Calidad de tu Proveedor"
+  "etiqueta_arbol": "Evalúa la Calidad de tu Proveedor",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-150",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-029: Evaluar la capacidad de calidad de un proveedor antes de aprobarlo es gestion operativa de compras, no validar la idea con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0500",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un angulo",
+      "texto_nuevo": "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un ángulo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-017.paso1: ángulo (Falta la tilde en ángulo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0501",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dar mas peso a lo que mas te importa a ti en esa compra al momento de valorar lo que ves",
+      "texto_nuevo": "Dar más peso a lo que más te importa a ti en esa compra al momento de valorar lo que ves",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-017.paso2: más, más (Los dos más son adverbios de cantidad y llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ]
 }

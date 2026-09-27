@@ -21,8 +21,27 @@
     "venture_debt_introduccion"
   ],
   "condiciones_activacion": [
-    "Si estás considerando recaudar capital a través de plataformas online o crowdfunding.",
+    "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas alli y estas considerando recaudar capital mediante crowdfunding o plataformas online",
     "Si tienes dudas sobre si necesitas registrar tu oferta ante la SEC."
   ],
-  "etiqueta_arbol": "Conoce las Reglas del Crowdfunding"
+  "etiqueta_arbol": "Conoce las Reglas del Crowdfunding",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-035",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si estás considerando recaudar capital a través de plataformas online o crowdfunding.",
+      "texto_nuevo": "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas alli y estas considerando recaudar capital mediante crowdfunding o plataformas online",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q002-014: La primera condicion no ata el nodo a Estados Unidos; la segunda, al nombrar la SEC, si lo hace. (lector y verificador de acuerdo) Motivo: Clase C: condicion generica sobre crowdfunding que no dice que las exenciones de la JOBS Act aplican si ofreces participaciones en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

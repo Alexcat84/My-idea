@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD78711",
+  "intento": 0,
+  "usd": 0.174164,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 14.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37871,
+  "tokens_out": 1134,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PD78711\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 668, 686, 1085], \"cita\": \"The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las señales, juntas, debían haber dado la alarma; fijar combinaciones que activen una revisión concreta eso en la misma dirección. Los avisos sobre el sesgo retrospectivo y las falsas alarmas matizan, pero no desaconsejan el paso: solo piden una revisión, no una acción. 'Automáticamente' es un detalle de diseño, no una cifra ni una norma nueva.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PD78711",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   668,
+   686,
+   1085
+  ],
+  "cita": "The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las señales, juntas, debían haber dado la alarma; fijar combinaciones que activen una revisión concreta eso en la misma dirección. Los avisos sobre el sesgo retrospectivo y las falsas alarmas matizan, pero no desaconsejan el paso: solo piden una revisión, no una acción. 'Automáticamente' es un detalle de diseño, no una cifra ni una norma nueva.",
+  "paso_fiel": ""
+ }
+}

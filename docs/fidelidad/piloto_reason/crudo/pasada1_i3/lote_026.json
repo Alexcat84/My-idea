@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_026",
+  "intento": 0,
+  "usd": 0.165428,
+  "turnos": 1,
+  "duracion_s": 15.5,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33697,
+  "tokens_out": 1532,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P74E059\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4769, 5162, 5164, 5170, 5174, 5178, 5208],\n    \"razon\": \"Sigue la idea del libro (pasar a modo plano en picos de ritmo), pero el libro dice que la jerarquia disciplinada previa es condicion del exito, no un obstaculo.\"\n  },\n  {\n    \"id\": \"PBBD983\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4478, 4494, 4512],\n    \"razon\": \"El libro dice que inspecciones posteriores generan nuevos perfiles y que su sucesion permite seguir el progreso de las reformas.\"\n  },\n  {\n    \"id\": \"P14D5C4\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"análisis de sensibilidad\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [1031, 1033, 1035, 3209],\n    \"razon\": \"El libro no menciona analisis de sensibilidad. Sostiene que no se pueden prever todos los escenarios y privilegia la mejora proactiva de procesos sobre los 'fixes'.\"\n  },\n  {\n    \"id\": \"P301D6A\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"16 RPFs\", \"8 factores organizacionales\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [3232, 3298, 3300, 3332],\n    \"razon\": \"El libro describe 16 RPF en Review, y en MESH ocho factores organizacionales fijos mas factores locales que varian segun el lugar de trabajo.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P74E059",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5162,
+    5164,
+    5170,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "Sigue la idea del libro (pasar a modo plano en picos de ritmo), pero el libro dice que la jerarquia disciplinada previa es condicion del exito, no un obstaculo."
+  },
+  {
+   "id": "PBBD983",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4478,
+    4494,
+    4512
+   ],
+   "razon": "El libro dice que inspecciones posteriores generan nuevos perfiles y que su sucesion permite seguir el progreso de las reformas."
+  },
+  {
+   "id": "P14D5C4",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "análisis de sensibilidad"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    1031,
+    1033,
+    1035,
+    3209
+   ],
+   "razon": "El libro no menciona analisis de sensibilidad. Sostiene que no se pueden prever todos los escenarios y privilegia la mejora proactiva de procesos sobre los 'fixes'."
+  },
+  {
+   "id": "P301D6A",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "16 RPFs",
+    "8 factores organizacionales"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3232,
+    3298,
+    3300,
+    3332
+   ],
+   "razon": "El libro describe 16 RPF en Review, y en MESH ocho factores organizacionales fijos mas factores locales que varian segun el lugar de trabajo."
+  }
+ ]
+}

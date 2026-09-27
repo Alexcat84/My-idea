@@ -1,0 +1,315 @@
+{
+ "R017-001": {
+  "real": true,
+  "node_id": "subfranquicia_master",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-002": {
+  "real": true,
+  "node_id": "vender_concepto_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-003": {
+  "real": true,
+  "node_id": "programa_entrena_al_entrenador",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-004": {
+  "real": true,
+  "node_id": "verificacion_capitalizacion_credito",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-005": {
+  "real": true,
+  "node_id": "relacion_franquiciador_franquiciado",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-006": {
+  "real": true,
+  "node_id": "reduccion_riesgo_percibido",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-007": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Mapea tus datos antes de evaluar el riesgo de privacidad",
+   "etiqueta": "Mapea tus Datos Personales",
+   "resumen": "El primer paso de un programa de privacidad es identificar que datos tratas (recoger, usar, compartir, guardar) y trazar su flujo por tus sistemas en todo su ciclo de vida, desde la recogida hasta la eliminacion. Ese mapa tiene que ser exhaustivo desde el primer momento, porque sin el no se puede evaluar el riesgo. Con el mapa en la mano se evalua como el tratamiento podria causar problemas a las personas, como verguenza, discriminacion o perdidas economicas, y que impacto tendrian esos problemas en tu organizacion, como perdida de confianza de los clientes o dano reputacional.",
+   "entregable": "Mapa del flujo de datos personales por sistema y una evaluacion de riesgos de privacidad que liste problemas posibles para las personas y su impacto en el negocio",
+   "condiciones": [
+    "Cuando vas a crear o mejorar un programa de privacidad y no sabes que datos personales manejas",
+    "Cuando cambias tus productos, servicios o la forma de tratar los datos"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\Getting-Started-NIST-Privacy-Framework-Guide.txt",
+   "lineas": "17",
+   "cita": "This doesn't have to be comprehensive, especially at first, but it's a foundation for understanding your privacy risks.",
+   "dato": "Ese mapa tiene que ser exhaustivo desde el primer momento, porque sin el no se puede evaluar el riesgo.",
+   "explicacion": "La guia dice expresamente que el mapa de datos no tiene que ser exhaustivo, sobre todo al principio; el resumen afirma lo contrario y convierte en requisito previo algo que la guia presenta como punto de partida parcial."
+  }
+ },
+ "R017-008": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Comunica con transparencia como tratas los datos",
+   "etiqueta": "Comunica tu Privacidad",
+   "resumen": "Define politicas para comunicar dentro y fuera de la organizacion que haces con los datos. Aumenta la transparencia con avisos e informes claros y accesibles, o con alertas y senales que informen a las personas sobre el tratamiento y sus opciones. Si haces encuestas o grupos focales para disenar productos, incluye preguntas de privacidad para conocer las preferencias de tus clientes, y decide de antemano que harias ante una brecha de datos: como notificarias y que remedios ofrecerias, como monitoreo o congelacion de credito.",
+   "entregable": "Politica de comunicacion de privacidad con avisos claros para clientes y un plan de respuesta a brechas que notifica a los afectados en un plazo maximo de 72 horas y define los remedios ofrecidos",
+   "condiciones": [
+    "Cuando ya sabes que datos tratas y quieres explicarlo a clientes y socios",
+    "Cuando no tienes definido que harias si se filtran datos de clientes"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\Getting-Started-NIST-Privacy-Framework-Guide.txt",
+   "lineas": "95",
+   "cita": "Consider what you will do in case of a data breach. How will you provide notifications or any remedies such as credit monitoring or freezes?",
+   "dato": "notifica a los afectados en un plazo maximo de 72 horas",
+   "explicacion": "La guia solo pide pensar como se notificaria una brecha y que remedios se darian; no fija ningun plazo. Grep de 72, hour, days y notif en todo el libro: el unico resultado es la linea 95, sin plazo alguno. El plazo de 72 horas es un anadido de norma ajena al libro."
+  }
+ },
+ "R017-009": {
+  "real": true,
+  "node_id": "riesgo_litigios_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-010": {
+  "real": true,
+  "node_id": "sistema_lms_entrenamiento",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-011": {
+  "real": true,
+  "node_id": "programas_compra_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-012": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Medir los medios de captacion de franquiciados mas alla del costo por venta",
+   "etiqueta": "Mide tus Medios de Captacion",
+   "resumen": "El costo por venta de una franquicia es la medida de exito mas significativa, pero para un franquiciante nuevo es de las menos fiables por la ley de los numeros pequenos: con pocas ventas, un resultado aislado distorsiona la lectura de cada medio. Por eso conviene seguir tambien el costo por lead por medio y tipo de medio, el costo por solicitud, la tasa de cierre por responsable de desarrollo y la velocidad de cierre, y usar esas cifras para decidir la compra de medios.",
+   "entregable": "Tablero de metricas de captacion por medio, revisado cada trimestre, con la regla de retirar el 30 a 40 por ciento de los medios de peor rendimiento y sustituirlos por medios alternativos",
+   "condiciones": [
+    "Cuando ya inviertes en varios medios para generar leads de franquicia y necesitas decidir donde poner el presupuesto",
+    "Cuando llevas pocas ventas cerradas y el costo por venta todavia no es una muestra fiable"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "entregable",
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4046",
+   "cita": "Then, on a quarterly basis, weed out the bottom 10 to 20 percent of your marketing performers and substitute in alternative media.",
+   "dato": "retirar el 30 a 40 por ciento de los medios de peor rendimiento",
+   "explicacion": "El libro fija el recorte trimestral en el 10 a 20 por ciento inferior de los medios; el entregable cambia el umbral a 30 a 40 por ciento, lo que duplica el recorte que el libro recomienda."
+  }
+ },
+ "R017-013": {
+  "real": true,
+  "node_id": "validacion_con_franquiciados",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-014": {
+  "real": true,
+  "node_id": "programa_entrenamiento_franquiciados",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-015": {
+  "real": true,
+  "node_id": "registro_estatal_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-016": {
+  "real": true,
+  "node_id": "retroalimentacion_franquiciados",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-017": {
+  "real": true,
+  "node_id": "communicate_transparencia",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+ },
+ "R017-018": {
+  "real": true,
+  "node_id": "reduccion_riesgo_franquiciante",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-019": {
+  "real": true,
+  "node_id": "proteccion_propiedad_intelectual_franq",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-020": {
+  "real": true,
+  "node_id": "seo_para_captacion_de_franquiciados",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-021": {
+  "real": true,
+  "node_id": "valor_presente_franquicia_pvf",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-022": {
+  "real": true,
+  "node_id": "go_plan_de_accion",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+ },
+ "R017-023": {
+  "real": true,
+  "node_id": "soporte_publicidad_marketing",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-024": {
+  "real": true,
+  "node_id": "prospecto_emprendedor_flaming",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-025": {
+  "real": true,
+  "node_id": "referidos_franquiciados_existentes",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-026": {
+  "real": true,
+  "node_id": "visitas_soporte_campo",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-027": {
+  "real": true,
+  "node_id": "segmentacion_perfil_franquiciado",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-028": {
+  "real": true,
+  "node_id": "control_minimizacion_datos",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+ },
+ "R017-029": {
+  "real": true,
+  "node_id": "soporte_continuo_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-030": {
+  "real": true,
+  "node_id": "propuesta_valor_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-031": {
+  "real": true,
+  "node_id": "programa_cumplimiento_legal",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-032": {
+  "real": true,
+  "node_id": "velocidad_crecimiento_franquicia_2",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-033": {
+  "real": true,
+  "node_id": "video_marketing_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-034": {
+  "real": true,
+  "node_id": "seleccion_consultor_franquicias",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-035": {
+  "real": true,
+  "node_id": "relaciones_publicas_leads_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-036": {
+  "real": true,
+  "node_id": "revision_legal_marketing",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-037": {
+  "real": true,
+  "node_id": "identify_mapeo_datos",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+ },
+ "R017-038": {
+  "real": true,
+  "node_id": "rentabilidad_incrementada_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-039": {
+  "real": true,
+  "node_id": "velocidad_crecimiento_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-040": {
+  "real": true,
+  "node_id": "programa_de_referidos_de_franquiciados",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-041": {
+  "real": true,
+  "node_id": "tasa_captura_leads",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-042": {
+  "real": true,
+  "node_id": "seleccion_estructura_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-043": {
+  "real": true,
+  "node_id": "rechazo_gentil_prospecto",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-044": {
+  "real": true,
+  "node_id": "govern_cultura_privacidad",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+ },
+ "R017-045": {
+  "real": true,
+  "node_id": "venta_primer_franquiciado",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-046": {
+  "real": true,
+  "node_id": "riesgo_concepto_vs_amenaza_competitiva",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-047": {
+  "real": true,
+  "node_id": "publicidad_impresa_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ },
+ "R017-048": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Visitas de campo que supervisan y asesoran al franquiciado",
+   "etiqueta": "Planifica tus Visitas de Campo",
+   "resumen": "Las visitas periodicas de representantes de campo cualificados son parte integral del soporte: sirven para observar como se opera la unidad y reforzar los estandares de marca, pero sobre todo para asesorar al franquiciado en como mejorar su negocio. El mejor representante reune varios papeles en uno: control de calidad con lista de estandares, formador de campo, consultor de operaciones, experto en marketing, planificador de negocio, animador y embajador de marca. Al principio estos papeles recaen en una sola persona y despues en un equipo.",
+   "entregable": "Plan de soporte de campo con frecuencia y duracion de visitas, lista de verificacion de estandares, pasos ante cada nivel de incumplimiento y un manual para los representantes de campo",
+   "condiciones": [
+    "Cuando ya tienes franquiciados operando y necesitas un soporte continuo en sus locales",
+    "Cuando un solo representante de campo ya atiende a mas de 15 franquiciados y hay que contratar otro"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "condiciones",
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2865",
+   "cita": "Based on the frequency of visits, the length of visits, the complexity of the business, the nature of the franchisees (startup vs. area developer, for example), and the clustering of your franchisees, how many franchisees can a single field representative handle?",
+   "dato": "mas de 15 franquiciados",
+   "explicacion": "El libro deja abierta como pregunta cuantos franquiciados puede atender un representante y la hace depender de la frecuencia y duracion de las visitas, la complejidad del negocio, el tipo de franquiciado y su concentracion geografica; no da ningun numero. Grep de 15 franch, fifteen y 15 unit: solo aparece en la linea 1600 (Panera, minimo de 15 locales por contrato de desarrollo), sin relacion con representantes de campo."
+  }
+ },
+ "R017-049": {
+  "real": true,
+  "node_id": "sitio_web_franquicia",
+  "libro": "Franchise Your Business - Mark Siebert"
+ }
+}

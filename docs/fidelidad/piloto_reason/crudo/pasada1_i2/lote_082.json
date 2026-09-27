@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_082",
+  "intento": 0,
+  "usd": 0.18714799999999998,
+  "turnos": 1,
+  "duracion_s": 23.6,
+  "pared_s": 25.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34237,
+  "tokens_out": 2510,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PBC3B0A\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"en cada auditoría\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5775, 5781, 2750, 3209, 2638, 277], \"razon\": \"El libro pide identificar y eliminar patógenos y remediar los 2-3 peores. Solo documentar y seguir omite eliminar; medir sin remediar 'no vale la pena'.\"},\n  {\"id\": \"P51B319\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2669, 2671, 2693, 4757, 4974], \"razon\": \"El libro respalda los sistemas de reporte de casi accidentes. Distingue eventos benignos (proactivos) de los que casi fueron catastróficos (reactivos).\"},\n  {\"id\": \"P91F9B2\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"supervisores y gestores\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [4989, 5057, 5085, 4806, 4908], \"razon\": \"El libro no menciona capacitar a gestores. La culpabilidad la juzgan un 'jurado' de pares y una junta disciplinaria, y la recepción de reportes va separada de la autoridad operativa y disciplinaria.\"},\n  {\"id\": \"PB75D34\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"periódica\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4773, 2652, 2654, 2598, 3209, 5219], \"razon\": \"La cultura de aprendizaje exige implementar reformas. El libro advierte contra centrarse en eventos únicos o reactivos; revisar lecciones sin analizar patrones ni reformar podría desviarse.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PBC3B0A",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "en cada auditoría"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5775,
+    5781,
+    2750,
+    3209,
+    2638,
+    277
+   ],
+   "razon": "El libro pide identificar y eliminar patógenos y remediar los 2-3 peores. Solo documentar y seguir omite eliminar; medir sin remediar 'no vale la pena'."
+  },
+  {
+   "id": "P51B319",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2669,
+    2671,
+    2693,
+    4757,
+    4974
+   ],
+   "razon": "El libro respalda los sistemas de reporte de casi accidentes. Distingue eventos benignos (proactivos) de los que casi fueron catastróficos (reactivos)."
+  },
+  {
+   "id": "P91F9B2",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "supervisores y gestores"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    4989,
+    5057,
+    5085,
+    4806,
+    4908
+   ],
+   "razon": "El libro no menciona capacitar a gestores. La culpabilidad la juzgan un 'jurado' de pares y una junta disciplinaria, y la recepción de reportes va separada de la autoridad operativa y disciplinaria."
+  },
+  {
+   "id": "PB75D34",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódica"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4773,
+    2652,
+    2654,
+    2598,
+    3209,
+    5219
+   ],
+   "razon": "La cultura de aprendizaje exige implementar reformas. El libro advierte contra centrarse en eventos únicos o reactivos; revisar lecciones sin analizar patrones ni reformar podría desviarse."
+  }
+ ]
+}

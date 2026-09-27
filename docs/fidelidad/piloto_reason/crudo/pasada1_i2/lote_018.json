@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_018",
+  "intento": 0,
+  "usd": 0.157384,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31976,
+  "tokens_out": 1474,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD4ED92\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4276, 4280, 4284, 4288, 4292, 4296, 3965, 2598, 2769], \"razon\": \"El libro solo enumera enfoques y no pide elegir uno ni fijar criterios. Además advierte que las 'acceptable risks' de NASA erosionaron estándares y que la seguridad es un objetivo móvil.\"},\n  {\"id\": \"PB0C03A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4384], \"razon\": \"El procedimiento COSHH incluye literalmente formar a los empleados sobre la naturaleza de los riesgos y las precauciones que deben tomarse.\"},\n  {\"id\": \"P2058E3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2944, 2905, 293, 2924], \"razon\": \"El libro afirma que los errores tienen causas personales, de tarea, situacionales y organizacionales. Pide explicar el contexto que provocó el error para romper el ciclo de la culpa.\"},\n  {\"id\": \"PFA29E1\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2322, 2340, 2342, 2369], \"razon\": \"El libro critica la visión ortodoxa que optimiza solo por costes. Propone sopesar el riesgo de descuidar el mantenimiento frente al riesgo de error al hacerlo, y señala el contacto innecesario. El paso concreta esa idea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD4ED92",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4276,
+    4280,
+    4284,
+    4288,
+    4292,
+    4296,
+    3965,
+    2598,
+    2769
+   ],
+   "razon": "El libro solo enumera enfoques y no pide elegir uno ni fijar criterios. Además advierte que las 'acceptable risks' de NASA erosionaron estándares y que la seguridad es un objetivo móvil."
+  },
+  {
+   "id": "PB0C03A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4384
+   ],
+   "razon": "El procedimiento COSHH incluye literalmente formar a los empleados sobre la naturaleza de los riesgos y las precauciones que deben tomarse."
+  },
+  {
+   "id": "P2058E3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2944,
+    2905,
+    293,
+    2924
+   ],
+   "razon": "El libro afirma que los errores tienen causas personales, de tarea, situacionales y organizacionales. Pide explicar el contexto que provocó el error para romper el ciclo de la culpa."
+  },
+  {
+   "id": "PFA29E1",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2322,
+    2340,
+    2342,
+    2369
+   ],
+   "razon": "El libro critica la visión ortodoxa que optimiza solo por costes. Propone sopesar el riesgo de descuidar el mantenimiento frente al riesgo de error al hacerlo, y señala el contacto innecesario. El paso concreta esa idea."
+  }
+ ]
+}

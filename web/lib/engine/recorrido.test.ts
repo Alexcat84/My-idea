@@ -23,6 +23,7 @@ vi.mock("../compass", () => ({
 import { usoVacio } from "../costmeter";
 import { cargarFamilies } from "../readiness";
 import { cargarGrafo, cargarPreguntasCache } from "./graph";
+import { avisosNodo } from "./avisos";
 import { avanzarTurno, estadoInicial } from "./recorrido";
 
 const graph = cargarGrafo();
@@ -90,14 +91,18 @@ describe("avanzarTurno: fase esperando_respuesta (orquestacion, interpretarMulti
     expect(r.estado.modos).toEqual(["conversado", "conversado"]);
     expect(r.pregunta).toBe("¿que capas has mapeado?");
     // El nodo que viaja al cliente lleva SOLO su etiqueta de cara: el
-    // titulo_concepto se queda adentro (decision del fundador, jul 2026).
+    // titulo_concepto se queda adentro (decision del fundador, jul 2026). Desde
+    // el 26 sep 2026 lleva tambien sus avisos de jurisdiccion y vigencia
+    // (lib/engine/avisos.ts), que son textos de la casa y nunca el titulo.
     expect(r.nodosNuevos).toEqual([
       {
         id: nid,
         etiqueta: graph[nid].etiqueta_arbol ?? graph[nid].titulo_concepto,
+        avisos: avisosNodo(nid, graph),
         modo: "conversado",
       },
     ]);
+    expect(JSON.stringify(r.nodosNuevos)).not.toContain(graph[nid].titulo_concepto);
   });
 
   it("accion=salir cierra la fase sin pedir mas nada", async () => {
@@ -286,3 +291,189 @@ function clienteConLlamadas(respuestas: unknown[]) {
   });
   return { cliente: { messages: { create } }, llamadas };
 }
+
+// AUD-09 H13 (decisión del fundador, 25 sep 2026): que la entrevista de un
+// mundo siempre tenga salida es deber del MOTOR, no del grafo. Un nodo sin
+// sucesores puede ser un final legítimo del contenido; la entrevista no. Cuando
+// llega a uno, el motor elige otra puerta del mismo mundo con la misma lógica
+// que usa cuando el intérprete decide salir, sin repetir lo ya visitado.
+import { esOfrecible, sucesoresNivel as sucesoresH13 } from "./graph";
+
+function estadoEnMundo(nid: string, dominio: string) {
+  return {
+    ...estadoInicial({
+      actualId: nid,
+      perfilSesion: "vende por internet y quiere ordenar su operación",
+      textoOriginal: "mi idea",
+      dominioSesion: dominio,
+      dominiosDesbloqueados: ["core", dominio],
+    }),
+    preguntaPendiente: "¿Cómo va eso hoy?",
+  };
+}
+
+describe("avanzarTurno: un callejón de un mundo no termina la entrevista (AUD-09 H13)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("la puerta del checklist de cláusulas ya no muere tras una pregunta", async () => {
+    const nid = "ten_un_checklist_de_clausulas_de_contrato";
+    const r = await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado: estadoEnMundo(nid, "compras"),
+      respuestaUsuario: "firmo sin revisar mucho",
+      acumulado: usoVacio(),
+      dbSessionId: "sess-h13",
+    });
+    expect(r.tipo).toBe("pregunta");
+    const nueva = r.estado.ruta[r.estado.ruta.length - 1];
+    expect(nueva).not.toBe(nid);
+    expect(graph[nueva].dominio).toBe("compras");
+    expect(r.estado.fallbackEvents.some((e) => e.tipo === "puerta_reelegida")).toBe(true);
+  });
+
+  it("NINGÚN nodo sin sucesor de los mundos deja la entrevista sin salida", async () => {
+    const callejones = Object.entries(graph)
+      .filter(([nid, n]) => n.dominio && n.dominio !== "core" && esOfrecible(nid, graph, [n.dominio]))
+      .filter(([nid, n]) => sucesoresH13(nid, graph, new Set([nid]), undefined, ["core", n.dominio as string]).length === 0)
+      .map(([nid, n]) => ({ nid, dominio: n.dominio as string }));
+    expect(callejones.length).toBeGreaterThan(50);
+    const sinSalida: string[] = [];
+    for (const c of callejones) {
+      const r = await avanzarTurno({
+        client: {} as never,
+        graph,
+        families,
+        preguntasCache,
+        estado: estadoEnMundo(c.nid, c.dominio),
+        respuestaUsuario: "sigo",
+        acumulado: usoVacio(),
+        dbSessionId: "sess-h13",
+      });
+      const nueva = r.estado.ruta[r.estado.ruta.length - 1];
+      if (r.tipo !== "pregunta" || nueva === c.nid || graph[nueva]?.dominio !== c.dominio) sinSalida.push(`${c.dominio}:${c.nid}`);
+    }
+    expect(sinSalida).toEqual([]);
+  }, 60_000);
+});
+
+// AUD-09 M16 (tanda 5, mezcla núcleo y mundos): la entrevista de un mundo
+// filtraba sus sucesores con TODOS los dominios desbloqueados (núcleo + cada
+// mundo previsualizado): la de Calidad podía derivar hacia Riesgos por una arista
+// vieja de mundo a mundo. Una sesión de mundo camina su mundo (y el núcleo).
+describe("avanzarTurno: la entrevista de un mundo no cruza a otro mundo (AUD-09 M16)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("al intérprete le llegan solo el núcleo y el mundo de la sesión", async () => {
+    interpretarMultiSaltoFalso.mockResolvedValueOnce({ resultado: null, acumulado: usoVacio(), eventos: [] });
+    const estado = {
+      ...estadoInicial({
+        // Un nodo de Calidad con sucesores en Calidad y en otro mundo (Entrega). Era identificacion_de_riesgos,
+        // que el saneamiento (nivel 1, pasada Q) paso a Riesgos.
+        actualId: "seleccion_fuente_unica_multiple",
+        perfilSesion: "p",
+        textoOriginal: "t",
+        dominioSesion: "quality",
+        dominiosDesbloqueados: ["core", "quality", "entrega"],
+      }),
+      preguntaPendiente: "¿Con cuántos proveedores trabajas para cada insumo?",
+    };
+    await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado,
+      respuestaUsuario: "los anoto",
+      acumulado: usoVacio(),
+      dbSessionId: "sess-m16",
+    });
+    const args = interpretarMultiSaltoFalso.mock.calls[0]?.[0] as { dominiosDesbloqueados?: string[] } | undefined;
+    expect(args?.dominiosDesbloqueados).toEqual(["core", "quality"]);
+  });
+});
+
+// i18n F5: la entrevista de una idea en coreano la escribe la IA en coreano
+// (el idioma de la IDEA viaja en el estado), y la de una sesión de antes de F5
+// (sin idioma en el estado) sigue en español.
+describe("avanzarTurno: el idioma de la idea llega al intérprete (i18n F5)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  async function turnoCon(idioma: string | undefined) {
+    interpretarMultiSaltoFalso.mockResolvedValueOnce({ resultado: null, acumulado: usoVacio(), eventos: [] });
+    const base = estadoInicial({ actualId: "leap_of_faith_assumptions", perfilSesion: "p", textoOriginal: "t", idioma });
+    const estado = { ...base, preguntaPendiente: "¿?" };
+    if (idioma === undefined) delete (estado as { idioma?: string }).idioma;
+    await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado,
+      respuestaUsuario: "r",
+      acumulado: usoVacio(),
+      dbSessionId: "sess-i18n",
+      idioma: "en",
+    });
+    return interpretarMultiSaltoFalso.mock.calls[0]?.[0] as { idiomaSalida?: string | null; idioma?: string };
+  }
+
+  it("idea en coreano con la interfaz en inglés: la IA en coreano, las plantillas en coreano", async () => {
+    const args = await turnoCon("ko");
+    expect(args.idiomaSalida).toBe("ko");
+    expect(args.idioma).toBe("ko");
+  });
+
+  it("idea en ruso (fuera de los once): la IA en ruso, las plantillas en la interfaz", async () => {
+    const args = await turnoCon("ru");
+    expect(args.idiomaSalida).toBe("ru");
+    expect(args.idioma).toBe("en");
+  });
+
+  it("sesión de antes de F5 (sin idioma): español en todo", async () => {
+    const args = await turnoCon(undefined);
+    expect(args.idiomaSalida).toBeNull();
+    expect(args.idioma).toBe("es");
+  });
+
+  it("estadoInicial sin idioma lo fija en español", () => {
+    expect(estadoInicial({ actualId: "x", perfilSesion: "p", textoOriginal: "t" }).idioma).toBe("es");
+  });
+});
+
+// D3 (i18n F5): el riel es navegación, así que sus etiquetas van en el idioma
+// de la INTERFAZ (la etiqueta derivada), aunque la idea esté en otro idioma.
+import { ETIQUETAS_RIEL } from "../i18n/etiquetasRiel";
+
+describe("avanzarTurno: el riel en el idioma de la interfaz (D3)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("nodosNuevos llevan la etiqueta derivada del idioma de la interfaz", async () => {
+    const nid = "mapeo_capas_diseno";
+    const antes = ETIQUETAS_RIEL.en[nid];
+    ETIQUETAS_RIEL.en[nid] = "Map Your Design Layers";
+    try {
+      interpretarMultiSaltoFalso.mockResolvedValueOnce({
+        resultado: {
+          accion: "avanzar", camino: [nid], esSalto: false, preguntaNecesaria: true, preguntaAdaptada: "디자인?",
+          repregunta: null, perfilUpdate: null, prioridadDeclarada: null, numerosDetectados: null,
+          tipoOfertaDetectado: null, unidadVentaDetectada: null,
+        },
+        acumulado: usoVacio(),
+        historialMensajes: [],
+      });
+      const estado = estadoInicial({ actualId: "design_thinking_fundamentos", perfilSesion: "p", textoOriginal: "t", idioma: "ko" });
+      const r = await avanzarTurno({
+        client: {} as never, graph, families, preguntasCache, estado,
+        respuestaUsuario: null, acumulado: usoVacio(), dbSessionId: "sess-d3", idioma: "en",
+      });
+      if (r.tipo !== "pregunta") throw new Error("esperaba tipo=pregunta");
+      expect(r.nodosNuevos[0].etiqueta).toBe("Map Your Design Layers");
+    } finally {
+      if (antes === undefined) delete ETIQUETAS_RIEL.en[nid];
+      else ETIQUETAS_RIEL.en[nid] = antes;
+    }
+  });
+});

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Aprendizaje Institucionalizado (Paso 7 del Benchmarking)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es el séptimo paso del Proceso de Benchmarking de Juran, donde la organización debe enseñar o volver a enseñar las mejores prácticas identificadas para asegurar que se sostengan y evolucionen con el tiempo. Aunque puede parecer repetitivo, es esencial para que la organización se adapte y mejore continuamente por sí misma, cerrando el ciclo del benchmarking con acciones concretas de capacitación interna.",
+  "resumen_teorico": "Es el séptimo paso del proceso de benchmarking, donde la organización debe enseñar o volver a enseñar las mejores prácticas identificadas para asegurar que se sostengan y evolucionen con el tiempo. Aunque puede parecer repetitivo, es esencial para que la organización se adapte y mejore continuamente por sí misma, cerrando el ciclo del benchmarking con acciones concretas de capacitación interna.",
   "pasos_accionables": [
     "Identificar las mejores prácticas descubiertas durante el benchmarking",
     "Diseñar programas de capacitación o recapacitación para transmitir dichas prácticas",
@@ -24,5 +24,26 @@
     "Cuando se han identificado mejores prácticas mediante benchmarking y se requiere institucionalizarlas",
     "Cuando la organización busca sostener mejoras de calidad a largo plazo"
   ],
-  "etiqueta_arbol": "Enseña las Mejores Prácticas"
+  "etiqueta_arbol": "Enseña las Mejores Prácticas",
+  "correcciones": [
+    {
+      "id": "atribucion-007",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Es el séptimo paso del Proceso de Benchmarking de Juran, donde la organización debe enseñar o volver a enseñar las mejores prácticas identificadas para asegurar que se sostengan y evolucionen con el tiempo. Aunque puede parecer repetitivo, es esencial para que la organización se adapte y mejore continuamente por sí misma, cerrando el ciclo del benchmarking con acciones concretas de capacitación interna.",
+      "texto_nuevo": "Es el séptimo paso del proceso de benchmarking, donde la organización debe enseñar o volver a enseñar las mejores prácticas identificadas para asegurar que se sostengan y evolucionen con el tiempo. Aunque puede parecer repetitivo, es esencial para que la organización se adapte y mejore continuamente por sí misma, cerrando el ciclo del benchmarking con acciones concretas de capacitación interna.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Proceso de Benchmarking de Juran"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-006 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

@@ -89,3 +89,18 @@ describe("violacionesFronteraPreview: diagnostico, jamas plan encubierto (§3)",
     expect(violacionesFronteraPreview("1. tema uno\n2. tema dos")).toEqual([]);
   });
 });
+
+// i18n F5: el diagnóstico de una idea en otro idioma lo escribe la IA en ese
+// idioma; la red del vuelo reconoce "esta semana" y las etapas numeradas en
+// cualquiera de los once.
+import { violacionesFronteraPreview as fronteraI18n } from "./previewMundos";
+
+describe("violacionesFronteraPreview en otros idiomas (i18n F5)", () => {
+  it("'this week' en inglés y 'このプラン…ステージ' en japonés cuentan", () => {
+    expect(fronteraI18n("This week, call three clients.").some((v) => v.includes("esta semana"))).toBe(true);
+    expect(fronteraI18n("## ステージ1：顧客を探す").some((v) => v.includes("etapas"))).toBe(true);
+  });
+  it("un diagnóstico limpio en coreano no tiene violaciones", () => {
+    expect(fronteraI18n("## 프로젝트에서 찾은 것\n\n고객이 있습니다.")).toEqual([]);
+  });
+});

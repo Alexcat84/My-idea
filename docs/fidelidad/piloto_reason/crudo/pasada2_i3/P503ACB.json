@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P503ACB",
+  "intento": 0,
+  "usd": 0.15058,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32860,
+  "tokens_out": 957,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P503ACB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2720, 2658, 2837], \"cita\": \"Local workplace factors. One stage upstream from unsafe acts are their immediate mental and physical precursors--such things as poor workplace design, ... the absence of effective supervision, high workload, ... inadequate training and experience, ... inadequate personal protective equipment ... Workplace factors change more rapidly than organizational ones, and so need to be monitored at more frequent intervals.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"Los cinco factores del paso (diseño, carga de trabajo, supervisión, EPP, capacitación) figuran en la lista de factores locales del libro. El libro pide vigilarlos con más frecuencia que los organizacionales. El paso no dice que se documente solo lo local ni que se deje lo organizacional, así que no invierte la prioridad. Solo concreta la vigilancia como 'documentar'.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P503ACB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2720,
+   2658,
+   2837
+  ],
+  "cita": "Local workplace factors. One stage upstream from unsafe acts are their immediate mental and physical precursors--such things as poor workplace design, ... the absence of effective supervision, high workload, ... inadequate training and experience, ... inadequate personal protective equipment ... Workplace factors change more rapidly than organizational ones, and so need to be monitored at more frequent intervals.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "Los cinco factores del paso (diseño, carga de trabajo, supervisión, EPP, capacitación) figuran en la lista de factores locales del libro. El libro pide vigilarlos con más frecuencia que los organizacionales. El paso no dice que se documente solo lo local ni que se deje lo organizacional, así que no invierte la prioridad. Solo concreta la vigilancia como 'documentar'.",
+  "paso_fiel": ""
+ }
+}

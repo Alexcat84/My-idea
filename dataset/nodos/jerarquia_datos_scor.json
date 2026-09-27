@@ -16,7 +16,6 @@
   ],
   "entregable_esperado": "Mapa de tus métricas clasificado en los tres niveles del modelo SCOR, con claridad de quién usa cada uno",
   "nodos_previos": [
-    "lienzo_modelo_negocio",
     "scor_model_operaciones"
   ],
   "nodos_siguientes": [
@@ -38,6 +37,24 @@
       "node_id": "business_intelligence_niveles_datos",
       "titulo": "Sistema de inteligencia de negocio en tres niveles",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-080",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "lienzo_modelo_negocio -> jerarquia_datos_scor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-07-55): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los niveles de datos del modelo SCOR pertenecen a la gestion de cadena de suministro; no usan ni profundizan el lienzo de modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

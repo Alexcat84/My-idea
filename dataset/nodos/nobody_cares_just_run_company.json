@@ -13,14 +13,44 @@
   ],
   "entregable_esperado": "Mentalidad y comunicación enfocada en soluciones accionables durante una crisis, sin justificaciones extensas.",
   "nodos_previos": [
-    "equipo_de_gestion_de_crisis"
+    "equipo_de_gestion_de_crisis",
+    "la_lucha_resiliencia_ceo"
   ],
-  "nodos_siguientes": [
-    "cierre_segun_complejidad_venta"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el fundador/CEO enfrenta un contexto adverso fuera de su control (crisis de mercado, recesión).",
     "Cuando el equipo tiende a justificar el mal desempeño con factores externos en vez de actuar."
   ],
-  "etiqueta_arbol": "A Nadie le Importa, Dirige"
+  "etiqueta_arbol": "A Nadie le Importa, Dirige",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-093",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "nobody_cares_just_run_company -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-17): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Dejar las excusas y dirigir la empresa no tiene relacion con las tecnicas de cierre segun la complejidad de la venta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-nucleo-15",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "la_lucha_resiliencia_ceo -> nobody_cares_just_run_company",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-16, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Después de reconocer La Lucha, el siguiente paso es dejar las excusas y enfocar toda la energía en dirigir la empresa hacia adelante."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

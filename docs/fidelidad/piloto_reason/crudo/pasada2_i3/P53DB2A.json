@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P53DB2A",
+  "intento": 0,
+  "usd": 0.1872,
+  "turnos": 1,
+  "duracion_s": 11.0,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42840,
+  "tokens_out": 792,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P53DB2A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4280, 4288, 4296], \"cita\": \"Both of these functions are strongly influenced by what the technology or the society regards as safe enough. There are a number of different approaches: ... The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta los enfoques de 'safe enough', y cada uno implica un criterio: numérico en de minimis, cualitativo en ALARP o riesgo cero. Fijar el criterio según el enfoque concreta esa idea en la misma dirección. El libro no desaconseja fijar criterios; lo que critica en Challenger es la erosión de los estándares, no su existencia. El paso no añade cifras ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P53DB2A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4280,
+   4288,
+   4296
+  ],
+  "cita": "Both of these functions are strongly influenced by what the technology or the society regards as safe enough. There are a number of different approaches: ... The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta los enfoques de 'safe enough', y cada uno implica un criterio: numérico en de minimis, cualitativo en ALARP o riesgo cero. Fijar el criterio según el enfoque concreta esa idea en la misma dirección. El libro no desaconseja fijar criterios; lo que critica en Challenger es la erosión de los estándares, no su existencia. El paso no añade cifras ni responsables.",
+  "paso_fiel": ""
+ }
+}

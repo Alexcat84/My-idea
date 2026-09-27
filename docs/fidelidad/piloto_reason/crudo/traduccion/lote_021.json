@@ -1,0 +1,129 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_021",
+  "intento": 0,
+  "usd": 0.058573,
+  "turnos": 1,
+  "duracion_s": 15.4,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3706,
+  "tokens_out": 1285,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P9DECCD\", \"consultas\": [\"person model limitations blaming individuals for errors\", \"person model versus system model of accident causation\", \"blame culture fails to address latent organizational failures\"], \"nodo\": \"why the person model dominates safety management\"},\n{\"id\": \"P289002\", \"consultas\": [\"local workplace factors error-producing conditions poor design\", \"measuring local factors workload supervision training equipment\", \"psychological and physical precursors of unsafe acts workplace\"], \"nodo\": \"proactive process measures unsafe acts local and organizational factors\"},\n{\"id\": \"P4D51E7\", \"consultas\": [\"correcting unsafe acts one by one ineffective\", \"regulators should focus on organizational and management factors\", \"local instances of non-compliance versus underlying O&M factors\"], \"nodo\": \"regulatory process model organizational and management factors profile\"},\n{\"id\": \"P317177\", \"consultas\": [\"when to blame individual versus examine the system\", \"culpability decision tree unsafe acts substitution test\", \"distinguishing blameworthy from blameless unsafe acts\"], \"nodo\": \"why the person model dominates safety management\"},\n{\"id\": \"PD4856A\", \"consultas\": [\"reporting culture what incidents and near misses to report\", \"ASRS BASIS reporting scheme near miss reports\", \"ease of making a report reporting criteria\"], \"nodo\": \"engineering a reporting culture near misses confidentiality indemnity\"},\n{\"id\": \"P5D340D\", \"consultas\": [\"regulator conflict between promoting aviation and ensuring safety\", \"Civil Aviation Authority Australia Seaview Monarch accident regulator\", \"regulator protecting commercial viability of operators over safety\"], \"nodo\": \"goal conflicts in regulatory bodies ACAA Young Seaview accidents\"},\n{\"id\": \"P465E81\", \"consultas\": [\"Tripod-Beta preconditions linked to active failures\", \"psychological precursors of unsafe acts general failure types\", \"Tripod-Beta tree failed barriers active failures latent failures\"], \"nodo\": \"Tripod-Beta incident analysis Shell general failure types\"},\n{\"id\": \"P38876A\", \"consultas\": [\"HEART assessed proportion of affect error producing condition\", \"nominal human unreliability multiplied by error producing conditions\", \"Jeremy Williams HEART calculation generic task types\"], \"nodo\": \"HEART human error assessment and reduction technique\"},\n{\"id\": \"P135D20\", \"consultas\": [\"positional paradox managers blame front-line personnel\", \"cognisance of hazards organizational awareness of dangers\", \"managers attribute safety problems to operator carelessness\"], \"nodo\": \"cognisance commitment competence organizational safety awareness\"},\n{\"id\": \"PD471B8\", \"consultas\": [\"violations motivational social factors not lack of knowledge\", \"violation producing conditions low perceived likelihood of detection\", \"training and information do not reduce violations attitudes beliefs\"], \"nodo\": \"violation producing conditions VPCs procedure violations\"},\n{\"id\": \"P1A72AB\", \"consultas\": [\"continuous search for latent conditions not one-off fix\", \"latent conditions present in all systems resident pathogens\", \"proactive identification and removal of latent conditions\"], \"nodo\": \"latent conditions as universal risk organizational processes\"},\n{\"id\": \"PB75CC1\", \"consultas\": [\"normalization of deviance Challenger Diane Vaughan\", \"acceptable risk gradually redefined over successive decisions\", \"outside view external review counteract complacency drift\"], \"nodo\": \"normalization of deviance Vaughan Challenger acceptable risk\"}]\n```",
+ "parseado": [
+  {
+   "id": "P9DECCD",
+   "consultas": [
+    "person model limitations blaming individuals for errors",
+    "person model versus system model of accident causation",
+    "blame culture fails to address latent organizational failures"
+   ],
+   "nodo": "why the person model dominates safety management"
+  },
+  {
+   "id": "P289002",
+   "consultas": [
+    "local workplace factors error-producing conditions poor design",
+    "measuring local factors workload supervision training equipment",
+    "psychological and physical precursors of unsafe acts workplace"
+   ],
+   "nodo": "proactive process measures unsafe acts local and organizational factors"
+  },
+  {
+   "id": "P4D51E7",
+   "consultas": [
+    "correcting unsafe acts one by one ineffective",
+    "regulators should focus on organizational and management factors",
+    "local instances of non-compliance versus underlying O&M factors"
+   ],
+   "nodo": "regulatory process model organizational and management factors profile"
+  },
+  {
+   "id": "P317177",
+   "consultas": [
+    "when to blame individual versus examine the system",
+    "culpability decision tree unsafe acts substitution test",
+    "distinguishing blameworthy from blameless unsafe acts"
+   ],
+   "nodo": "why the person model dominates safety management"
+  },
+  {
+   "id": "PD4856A",
+   "consultas": [
+    "reporting culture what incidents and near misses to report",
+    "ASRS BASIS reporting scheme near miss reports",
+    "ease of making a report reporting criteria"
+   ],
+   "nodo": "engineering a reporting culture near misses confidentiality indemnity"
+  },
+  {
+   "id": "P5D340D",
+   "consultas": [
+    "regulator conflict between promoting aviation and ensuring safety",
+    "Civil Aviation Authority Australia Seaview Monarch accident regulator",
+    "regulator protecting commercial viability of operators over safety"
+   ],
+   "nodo": "goal conflicts in regulatory bodies ACAA Young Seaview accidents"
+  },
+  {
+   "id": "P465E81",
+   "consultas": [
+    "Tripod-Beta preconditions linked to active failures",
+    "psychological precursors of unsafe acts general failure types",
+    "Tripod-Beta tree failed barriers active failures latent failures"
+   ],
+   "nodo": "Tripod-Beta incident analysis Shell general failure types"
+  },
+  {
+   "id": "P38876A",
+   "consultas": [
+    "HEART assessed proportion of affect error producing condition",
+    "nominal human unreliability multiplied by error producing conditions",
+    "Jeremy Williams HEART calculation generic task types"
+   ],
+   "nodo": "HEART human error assessment and reduction technique"
+  },
+  {
+   "id": "P135D20",
+   "consultas": [
+    "positional paradox managers blame front-line personnel",
+    "cognisance of hazards organizational awareness of dangers",
+    "managers attribute safety problems to operator carelessness"
+   ],
+   "nodo": "cognisance commitment competence organizational safety awareness"
+  },
+  {
+   "id": "PD471B8",
+   "consultas": [
+    "violations motivational social factors not lack of knowledge",
+    "violation producing conditions low perceived likelihood of detection",
+    "training and information do not reduce violations attitudes beliefs"
+   ],
+   "nodo": "violation producing conditions VPCs procedure violations"
+  },
+  {
+   "id": "P1A72AB",
+   "consultas": [
+    "continuous search for latent conditions not one-off fix",
+    "latent conditions present in all systems resident pathogens",
+    "proactive identification and removal of latent conditions"
+   ],
+   "nodo": "latent conditions as universal risk organizational processes"
+  },
+  {
+   "id": "PB75CC1",
+   "consultas": [
+    "normalization of deviance Challenger Diane Vaughan",
+    "acceptable risk gradually redefined over successive decisions",
+    "outside view external review counteract complacency drift"
+   ],
+   "nodo": "normalization of deviance Vaughan Challenger acceptable risk"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P0DAF10",
+  "intento": 0,
+  "usd": 0.18492,
+  "turnos": 1,
+  "duracion_s": 13.1,
+  "pared_s": 14.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40730,
+  "tokens_out": 1100,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0DAF10\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1539, 1435, 2716, 3821, 3825, 3829], \"cita\": \"Violations are deviations from safe operating procedures, standards or rules. Such deviations can be either deliberate or erroneous (...). However, we are mostly interested in deliberate violations, where the actions--though not their possible bad consequences--are intended.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro separa errores (involuntarios, informativos) de violaciones (sociales y motivacionales) y pide gestionarlos de forma distinta. El paso lo lleva al análisis organizacional sin añadir datos. Llamar intencionales a las violaciones solo simplifica un matiz: el libro admite violaciones erróneas, pero se centra en las deliberadas. Seguir el paso no conduce a nada que el libro desaconseje.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0DAF10",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1539,
+   1435,
+   2716,
+   3821,
+   3825,
+   3829
+  ],
+  "cita": "Violations are deviations from safe operating procedures, standards or rules. Such deviations can be either deliberate or erroneous (...). However, we are mostly interested in deliberate violations, where the actions--though not their possible bad consequences--are intended.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro separa errores (involuntarios, informativos) de violaciones (sociales y motivacionales) y pide gestionarlos de forma distinta. El paso lo lleva al análisis organizacional sin añadir datos. Llamar intencionales a las violaciones solo simplifica un matiz: el libro admite violaciones erróneas, pero se centra en las deliberadas. Seguir el paso no conduce a nada que el libro desaconseje.",
+  "paso_fiel": ""
+ }
+}

@@ -22,7 +22,6 @@
   "nodos_siguientes": [
     "evaluacion_fit_cultural",
     "creacion_roles_c_level",
-    "encontrar_lead_vc",
     "founder_ceo_succession_process"
   ],
   "condiciones_activacion": [
@@ -40,6 +39,24 @@
       "node_id": "red_fundador_vs_inversor_hiring",
       "titulo": "Fuentes de Contratación: Red del Fundador vs Red del Inversor",
       "fuente": "The Founder's Dilemmas"
+    }
+  ],
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-061",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "fuentes_contratacion_ejecutivos -> encontrar_lead_vc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-18-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las fuentes de contratacion de ejecutivos no preparan asegurar un VC lider. Solo mencionan de pasada a los inversionistas como fuente despues de las rondas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

@@ -60,7 +60,7 @@ describe("titulosDeCiclos", () => {
       ciclo("p2", "seguimiento", "2026-03-20T12:00:00Z"),
       ciclo("p3", "seguimiento", "2026-04-10T12:00:00Z"),
     ]);
-    expect(ts.map((t) => t.titulo)).toEqual(["Tu Plan", "Seguimiento 1", "Seguimiento 2"]);
+    expect(ts.map((t) => t.titulo)).toEqual(["Tu Plan", "Profundización 1", "Profundización 2"]);
   });
 
   it("la posición manda, no la etiqueta de base de datos", () => {
@@ -83,6 +83,22 @@ describe("indiceDeDocumentos", () => {
       CLAVE_EXPEDIENTE,
     ]);
     expect(docs.at(-1)!.subtitulo).toContain("hasta hoy");
+  });
+
+  // i18n F3: el ícono de Descargas no puede salir de leer el título ("Seguimiento…"
+  // solo existe en español); el índice marca el seguimiento con un campo propio.
+  // Ciclo 0 = Tu Plan (no es seguimiento); ciclos 1 y 2 = Seguimiento 1 y 2.
+  it("marca los seguimientos con un campo, no por el título (i18n F3)", () => {
+    const docs = indiceDeDocumentos(
+      [
+        ciclo("p1", "completo", "2026-03-01T12:00:00Z"),
+        ciclo("p2", "seguimiento", "2026-03-20T12:00:00Z"),
+        ciclo("p3", "seguimiento", "2026-04-02T12:00:00Z"),
+      ],
+      null
+    );
+    expect(docs.filter((d) => d.tipo === "ciclo").map((d) => d.seguimiento)).toEqual([false, true, true]);
+    expect(docs.filter((d) => d.tipo !== "ciclo").every((d) => !d.seguimiento)).toBe(true);
   });
 
   it("sin ningún plan no ofrece expediente (no hay desarrollo que contar)", () => {
@@ -177,7 +193,7 @@ describe("expedienteMarkdown", () => {
       "## Tu idea, tal como la escribiste",
       "## Tu idea, ordenada",
       "## Tu Plan",
-      "## Seguimiento 1",
+      "## Profundización 1",
       "## Tu avance",
       "## Tus Números",
       "## Riesgos Bajo Control",
@@ -275,7 +291,7 @@ describe("expedienteMarkdown", () => {
     const md = expedienteMarkdown(datos({ numerosMd: null }));
     const indice = md.slice(md.indexOf("## Contenido"), md.indexOf("---"));
     expect(indice).toContain("- Tu Plan");
-    expect(indice).toContain("- Seguimiento 1");
+    expect(indice).toContain("- Profundización 1");
     expect(indice).not.toContain("- Tus Números");
   });
 
@@ -363,6 +379,13 @@ describe("cicloMarkdown", () => {
 });
 
 describe("nombreArchivo", () => {
+  // i18n F3: en devanagari (y en árabe con signos) las vocales son MARCAS
+  // (\p{M}), no letras: la limpieza las borraba y "विचार" quedaba "वचर".
+  // A mano: "मेरा विचार" -> "मेरा-विचार"; con título "योजना" -> "मेरा-विचार-योजना".
+  it("conserva los signos vocálicos de otras escrituras (i18n F3)", () => {
+    expect(nombreArchivo("मेरा विचार", "योजना")).toBe("मेरा-विचार-योजना");
+  });
+
   it("junta idea y documento en un nombre seguro", () => {
     expect(nombreArchivo("Kits de huerto urbano", "Seguimiento 1")).toBe("kits-de-huerto-urbano-seguimiento-1");
   });

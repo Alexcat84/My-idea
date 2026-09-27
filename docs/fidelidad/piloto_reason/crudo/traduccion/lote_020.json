@@ -1,0 +1,129 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_020",
+  "intento": 0,
+  "usd": 0.061038999999999996,
+  "turnos": 1,
+  "duracion_s": 13.7,
+  "pared_s": 15.1,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3679,
+  "tokens_out": 1422,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PAFB19D\",\n    \"consultas\": [\n      \"organizational denial it can't happen here crisis\",\n      \"rationalization and complacency about disaster possibility management\",\n      \"crisis-prone versus crisis-prepared organizations defensive mindset\"\n    ],\n    \"nodo\": \"business recovery planning after an organizational accident\"\n  },\n  {\n    \"id\": \"P9A1D21\",\n    \"consultas\": [\n      \"blaming front-line operator error in complex technological systems\",\n      \"person approach versus system approach to accidents\",\n      \"active failures sharp end latent conditions blunt end\"\n    ],\n    \"nodo\": \"individual accidents versus organizational accidents distinction\"\n  },\n  {\n    \"id\": \"P4FE180\",\n    \"consultas\": [\n      \"safety management focused on individual unsafe acts only\",\n      \"person model blame culture ignoring systemic latent conditions\",\n      \"lost time injuries individual accidents versus systemic causes\"\n    ],\n    \"nodo\": \"individual accidents versus organizational accidents distinction\"\n  },\n  {\n    \"id\": \"P3C22BE\",\n    \"consultas\": [\n      \"has the pendulum swung too far distal causes\",\n      \"societal economic factors beyond organizational control remedial value\",\n      \"diminishing returns tracing accident causes back regulators society\"\n    ],\n    \"nodo\": \"limits of searching for distal causes pendulum swung too far\"\n  },\n  {\n    \"id\": \"P58568E\",\n    \"consultas\": [\n      \"chain of organizational decisions leading to accident Dryden\",\n      \"latent conditions management decisions Challenger Piper Alpha\",\n      \"tracing accident causal sequence from organizational factors to unsafe acts\"\n    ],\n    \"nodo\": \"systemic failure versus individual error organizational accident causation\"\n  },\n  {\n    \"id\": \"P0FDF51\",\n    \"consultas\": [\n      \"Auftragssystem supervisor training on-the-job coaching\",\n      \"first-line supervisors mentoring reinforcing safe work behaviors\",\n      \"field supervision experience competence beyond standard operating procedures\"\n    ],\n    \"nodo\": \"first-line supervision autonomy Auftragssystem mission-oriented command\"\n  },\n  {\n    \"id\": \"PAE01DA\",\n    \"consultas\": [\n      \"Swiss cheese model holes in defensive layers\",\n      \"defenses-in-depth barriers safeguards weaknesses gaps\",\n      \"accident trajectory through aligned holes in defenses\"\n    ],\n    \"nodo\": \"Swiss cheese model of defenses active failures latent conditions\"\n  },\n  {\n    \"id\": \"PC927DF\",\n    \"consultas\": [\n      \"expected maintenance load designed component lifetimes\",\n      \"unexpected maintenance load design errors operating failures\",\n      \"components wear out at different rates economic reasons\"\n    ],\n    \"nodo\": \"balance between preventive and corrective maintenance\"\n  },\n  {\n    \"id\": \"P59D9F5\",\n    \"consultas\": [\n      \"lost time injury frequency LTIF limitations safety indicator\",\n      \"low LTIF does not predict organizational accident\",\n      \"proactive process measures versus outcome injury statistics\"\n    ],\n    \"nodo\": \"limitations of LTIF as a safety indicator\"\n  },\n  {\n    \"id\": \"P39054B\",\n    \"consultas\": [\n      \"preventive maintenance costs versus corrective maintenance costs curve\",\n      \"resource knee optimal level of preventive maintenance\",\n      \"too much preventive maintenance increases errors and costs\"\n    ],\n    \"nodo\": \"balance between preventive and corrective maintenance cost curves\"\n  },\n  {\n    \"id\": \"P4D51A2\",\n    \"consultas\": [\n      \"omission-prone task steps features identification\",\n      \"omissions after main goal achieved near end of task\",\n      \"reminders for critical steps likely to be omitted\"\n    ],\n    \"nodo\": \"identifying task steps prone to omission errors maintenance\"\n  },\n  {\n    \"id\": \"P5C9E98\",\n    \"consultas\": [\n      \"error management program human factors knowledge principles\",\n      \"error reduction and error containment measures\",\n      \"applying human factors research to error management tools\"\n    ],\n    \"nodo\": \"error management error reduction and error containment\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PAFB19D",
+   "consultas": [
+    "organizational denial it can't happen here crisis",
+    "rationalization and complacency about disaster possibility management",
+    "crisis-prone versus crisis-prepared organizations defensive mindset"
+   ],
+   "nodo": "business recovery planning after an organizational accident"
+  },
+  {
+   "id": "P9A1D21",
+   "consultas": [
+    "blaming front-line operator error in complex technological systems",
+    "person approach versus system approach to accidents",
+    "active failures sharp end latent conditions blunt end"
+   ],
+   "nodo": "individual accidents versus organizational accidents distinction"
+  },
+  {
+   "id": "P4FE180",
+   "consultas": [
+    "safety management focused on individual unsafe acts only",
+    "person model blame culture ignoring systemic latent conditions",
+    "lost time injuries individual accidents versus systemic causes"
+   ],
+   "nodo": "individual accidents versus organizational accidents distinction"
+  },
+  {
+   "id": "P3C22BE",
+   "consultas": [
+    "has the pendulum swung too far distal causes",
+    "societal economic factors beyond organizational control remedial value",
+    "diminishing returns tracing accident causes back regulators society"
+   ],
+   "nodo": "limits of searching for distal causes pendulum swung too far"
+  },
+  {
+   "id": "P58568E",
+   "consultas": [
+    "chain of organizational decisions leading to accident Dryden",
+    "latent conditions management decisions Challenger Piper Alpha",
+    "tracing accident causal sequence from organizational factors to unsafe acts"
+   ],
+   "nodo": "systemic failure versus individual error organizational accident causation"
+  },
+  {
+   "id": "P0FDF51",
+   "consultas": [
+    "Auftragssystem supervisor training on-the-job coaching",
+    "first-line supervisors mentoring reinforcing safe work behaviors",
+    "field supervision experience competence beyond standard operating procedures"
+   ],
+   "nodo": "first-line supervision autonomy Auftragssystem mission-oriented command"
+  },
+  {
+   "id": "PAE01DA",
+   "consultas": [
+    "Swiss cheese model holes in defensive layers",
+    "defenses-in-depth barriers safeguards weaknesses gaps",
+    "accident trajectory through aligned holes in defenses"
+   ],
+   "nodo": "Swiss cheese model of defenses active failures latent conditions"
+  },
+  {
+   "id": "PC927DF",
+   "consultas": [
+    "expected maintenance load designed component lifetimes",
+    "unexpected maintenance load design errors operating failures",
+    "components wear out at different rates economic reasons"
+   ],
+   "nodo": "balance between preventive and corrective maintenance"
+  },
+  {
+   "id": "P59D9F5",
+   "consultas": [
+    "lost time injury frequency LTIF limitations safety indicator",
+    "low LTIF does not predict organizational accident",
+    "proactive process measures versus outcome injury statistics"
+   ],
+   "nodo": "limitations of LTIF as a safety indicator"
+  },
+  {
+   "id": "P39054B",
+   "consultas": [
+    "preventive maintenance costs versus corrective maintenance costs curve",
+    "resource knee optimal level of preventive maintenance",
+    "too much preventive maintenance increases errors and costs"
+   ],
+   "nodo": "balance between preventive and corrective maintenance cost curves"
+  },
+  {
+   "id": "P4D51A2",
+   "consultas": [
+    "omission-prone task steps features identification",
+    "omissions after main goal achieved near end of task",
+    "reminders for critical steps likely to be omitted"
+   ],
+   "nodo": "identifying task steps prone to omission errors maintenance"
+  },
+  {
+   "id": "P5C9E98",
+   "consultas": [
+    "error management program human factors knowledge principles",
+    "error reduction and error containment measures",
+    "applying human factors research to error management tools"
+   ],
+   "nodo": "error management error reduction and error containment"
+  }
+ ]
+}

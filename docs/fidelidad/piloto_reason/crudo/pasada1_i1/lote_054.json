@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_054",
+  "intento": 0,
+  "usd": 0.15248,
+  "turnos": 1,
+  "duracion_s": 12.3,
+  "pared_s": 13.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32435,
+  "tokens_out": 1137,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA7F55D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4394, 4398, 4402], \"razon\": \"La evaluación de los riesgos asociados a los peligros identificados es el segundo paso explícito de la FSA según el libro.\"},\n  {\"id\": \"P1A54E6\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [478, 494, 504, 526], \"razon\": \"El libro condena el doble rol de Leeson (operar y liquidar). Prohibir autoaprobar el propio trabajo es una generalización coherente de la segregación de funciones.\"},\n  {\"id\": \"P0B3833\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4464, 4466, 4476], \"razon\": \"Las visitas de sitio generan instancias de incumplimiento, que son los datos base del modelo. Registrarlas es su primer paso.\"},\n  {\"id\": \"PCE95D9\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [213, 219, 308, 196, 1539, 5557], \"razon\": \"Plantea una dicotomía violación/error que omite las condiciones latentes, también causantes de huecos. Además, el libro señala que hay violaciones erróneas y que los actos inseguros son consecuencias, no causas principales.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA7F55D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4394,
+    4398,
+    4402
+   ],
+   "razon": "La evaluación de los riesgos asociados a los peligros identificados es el segundo paso explícito de la FSA según el libro."
+  },
+  {
+   "id": "P1A54E6",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    478,
+    494,
+    504,
+    526
+   ],
+   "razon": "El libro condena el doble rol de Leeson (operar y liquidar). Prohibir autoaprobar el propio trabajo es una generalización coherente de la segregación de funciones."
+  },
+  {
+   "id": "P0B3833",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4464,
+    4466,
+    4476
+   ],
+   "razon": "Las visitas de sitio generan instancias de incumplimiento, que son los datos base del modelo. Registrarlas es su primer paso."
+  },
+  {
+   "id": "PCE95D9",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    213,
+    219,
+    308,
+    196,
+    1539,
+    5557
+   ],
+   "razon": "Plantea una dicotomía violación/error que omite las condiciones latentes, también causantes de huecos. Además, el libro señala que hay violaciones erróneas y que los actos inseguros son consecuencias, no causas principales."
+  }
+ ]
+}

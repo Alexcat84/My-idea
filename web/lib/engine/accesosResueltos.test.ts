@@ -321,8 +321,9 @@ describe("OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mund
 
   it("el remache: los dos sitios de recorrido piden la pregunta por el ayudante", () => {
     const src = leer("lib/engine/recorrido.ts");
-    expect(src).toContain("preguntaDeNodo(nid, graph, preguntasCache)");
-    expect(src).toContain("preguntaDeNodo(nuevoActualId, graph, preguntasCache)");
+    // i18n F2: los dos sitios pasan además el idioma de la pregunta genérica.
+    expect(src).toContain("preguntaDeNodo(nid, graph, preguntasCache, idioma)");
+    expect(src).toContain("preguntaDeNodo(nuevoActualId, graph, preguntasCache, idioma)");
   });
 
   it("el remache: resumenNodo y preguntaDeNodo resuelven antes de leer", () => {

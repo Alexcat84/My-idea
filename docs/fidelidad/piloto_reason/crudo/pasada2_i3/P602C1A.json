@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P602C1A",
+  "intento": 0,
+  "usd": 0.14501999999999998,
+  "turnos": 1,
+  "duracion_s": 9.4,
+  "pared_s": 10.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32810,
+  "tokens_out": 689,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P602C1A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2583], \"cita\": \"This is something that can afflict technical managers assigned to safety jobs. They treat safety measures like pieces of equipment... But safety measures involve both a product and a process. Simply implementing them is not enough. They have to be watched, worried about, tuned and adjusted.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro atribuye el fenómeno tick-off a los gerentes técnicos y afirma que las medidas de seguridad son producto y proceso. Así respalda 'mandos técnicos' y 'proceso, no solo producto'. No prescribe capacitarlos, pero el paso concreta la corrección en la misma dirección y sin añadir cifras, plazos ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P602C1A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2583
+  ],
+  "cita": "This is something that can afflict technical managers assigned to safety jobs. They treat safety measures like pieces of equipment... But safety measures involve both a product and a process. Simply implementing them is not enough. They have to be watched, worried about, tuned and adjusted.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro atribuye el fenómeno tick-off a los gerentes técnicos y afirma que las medidas de seguridad son producto y proceso. Así respalda 'mandos técnicos' y 'proceso, no solo producto'. No prescribe capacitarlos, pero el paso concreta la corrección en la misma dirección y sin añadir cifras, plazos ni herramientas.",
+  "paso_fiel": ""
+ }
+}

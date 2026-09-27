@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P0C5D88",
+  "intento": 0,
+  "usd": 0.17338,
+  "turnos": 1,
+  "duracion_s": 15.0,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37640,
+  "tokens_out": 1141,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0C5D88\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5603, 5605, 5611, 5639], \"cita\": \"the balance between the risks varies from domain to domain (see Table 10.1). Moreover, this preponderance is not fixed once and for all by the nature of the domain, it can also vary with technological and even societal developments.\", \"datos_sin_respaldo\": [\"referencias históricas como herramienta de comparación\"], \"tambien_anadido\": false, \"razon\": \"El libro sí compara dominios, pero con estimaciones de los cuatro tipos de riesgo (Tabla 10.1), no con referencias históricas. No es contrario: el libro también usa la historia de otros dominios para mostrar riesgos pasados por alto (L5605). Solo avisa de que el perfil cambia con la tecnología y la sociedad. La herramienta concreta es un añadido.\", \"paso_fiel\": \"Comparar el perfil actual de los cuatro tipos de riesgo de tu organización con las estimaciones para otros dominios (como la Tabla 10.1), teniendo en cuenta que ese equilibrio cambia con la tecnología y la sociedad y que el riesgo latente es alto en todos.\"}\n```",
+ "parseado": {
+  "id": "P0C5D88",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5603,
+   5605,
+   5611,
+   5639
+  ],
+  "cita": "the balance between the risks varies from domain to domain (see Table 10.1). Moreover, this preponderance is not fixed once and for all by the nature of the domain, it can also vary with technological and even societal developments.",
+  "datos_sin_respaldo": [
+   "referencias históricas como herramienta de comparación"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro sí compara dominios, pero con estimaciones de los cuatro tipos de riesgo (Tabla 10.1), no con referencias históricas. No es contrario: el libro también usa la historia de otros dominios para mostrar riesgos pasados por alto (L5605). Solo avisa de que el perfil cambia con la tecnología y la sociedad. La herramienta concreta es un añadido.",
+  "paso_fiel": "Comparar el perfil actual de los cuatro tipos de riesgo de tu organización con las estimaciones para otros dominios (como la Tabla 10.1), teniendo en cuenta que ese equilibrio cambia con la tecnología y la sociedad y que el riesgo latente es alto en todos."
+ }
+}

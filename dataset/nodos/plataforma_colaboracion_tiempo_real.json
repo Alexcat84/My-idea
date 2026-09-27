@@ -1,7 +1,7 @@
 {
   "node_id": "plataforma_colaboracion_tiempo_real",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Plataforma de Colaboración en Tiempo Real para Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que cada parte identifique problemas y actúe sin esperar instrucciones de una autoridad central. Se combina con sesiones de 'colaboración masiva' (crowdsourcing) donde múltiples empresas ajustan en vivo el diseño de la cadena, corren simulaciones, y llegan a consenso sobre el plan operativo, generando compromiso genuino de todas las partes.",
@@ -20,11 +20,55 @@
     "coordinacion_colaboracion_cadena_suministro"
   ],
   "nodos_siguientes": [
-    "alcance_profundo_cadena_suministro"
+    "cadena_suministro_respuesta_desastres"
   ],
   "condiciones_activacion": [
     "Si múltiples empresas socias necesitan coordinar operaciones logísticas de forma ágil",
     "Si el negocio enfrenta alta variabilidad de demanda y necesita respuesta rápida coordinada"
   ],
-  "etiqueta_arbol": "Da Visibilidad a tu Cadena"
+  "etiqueta_arbol": "Da Visibilidad a tu Cadena",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-060",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "plataforma_colaboracion_tiempo_real -> alcance_profundo_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-18, lector y verificador de acuerdo)",
+        "motivo": "Una plataforma de colaboracion en tiempo real con los socios no es la puerta natural al control ambiental de los proveedores de segundo y tercer nivel."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "mv-dominio-25",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-27: Una plataforma en la nube con sesiones de colaboración masiva entre fabricantes, logística y retailers es operación de cadena de suministro de especialista. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-entrada-01",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plataforma_colaboracion_tiempo_real -> cadena_suministro_respuesta_desastres",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-01, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Quien trabaja la colaboracion en tiempo real entre actores que actuan sin una autoridad central llega de forma natural al caso extremo de la respuesta a desastres, donde organizaciones diversas tienen que coordinarse sin un mando claro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
+  ]
 }

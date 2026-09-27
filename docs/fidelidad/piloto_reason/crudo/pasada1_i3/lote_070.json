@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_070",
+  "intento": 0,
+  "usd": 0.17728,
+  "turnos": 1,
+  "duracion_s": 22.8,
+  "pared_s": 23.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33400,
+  "tokens_out": 2184,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P8EEF9E\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [5178, 5182, 5208],\n    \"razon\": \"El libro dice que la cultura crea supuestos y premisas homogéneos que coordinan la acción descentralizada ante lo imprevisto. Identificarlos concreta esa idea en su misma dirección.\"\n  },\n  {\n    \"id\": \"P503ACB\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2720, 2724, 293],\n    \"razon\": \"El libro enumera esos factores locales, pero prioriza los organizacionales. Documentar solo lo local, sin subir a lo organizacional, podría invertir esa prioridad.\"\n  },\n  {\n    \"id\": \"P1F10A7\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"análisis genuino de causas raíz\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4714, 4716, 4720, 2905, 2944],\n    \"razon\": \"El libro dice que la evitación de ansiedad alimenta el ciclo de culpa y que el error es el inicio de la búsqueda de causas. 'Causas raíz' podría ser un método con nombre.\"\n  },\n  {\n    \"id\": \"P30B790\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2281, 2287, 2289, 2293],\n    \"razon\": \"El libro presenta 'compel' (cuando procede o es posible) y 'confirm' como criterios secundarios aplicables en muchas situaciones. Evaluar si conviene sumarlos respeta esa condición.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P8EEF9E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5182,
+    5208
+   ],
+   "razon": "El libro dice que la cultura crea supuestos y premisas homogéneos que coordinan la acción descentralizada ante lo imprevisto. Identificarlos concreta esa idea en su misma dirección."
+  },
+  {
+   "id": "P503ACB",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2720,
+    2724,
+    293
+   ],
+   "razon": "El libro enumera esos factores locales, pero prioriza los organizacionales. Documentar solo lo local, sin subir a lo organizacional, podría invertir esa prioridad."
+  },
+  {
+   "id": "P1F10A7",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "análisis genuino de causas raíz"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4714,
+    4716,
+    4720,
+    2905,
+    2944
+   ],
+   "razon": "El libro dice que la evitación de ansiedad alimenta el ciclo de culpa y que el error es el inicio de la búsqueda de causas. 'Causas raíz' podría ser un método con nombre."
+  },
+  {
+   "id": "P30B790",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2281,
+    2287,
+    2289,
+    2293
+   ],
+   "razon": "El libro presenta 'compel' (cuando procede o es posible) y 'confirm' como criterios secundarios aplicables en muchas situaciones. Evaluar si conviene sumarlos respeta esa condición."
+  }
+ ]
+}

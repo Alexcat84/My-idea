@@ -1,0 +1,2832 @@
+[
+ {
+  "id": "n1-condicion-001",
+  "node_id": "alternativa_agency_relationship",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el negocio vende servicios a través de representantes de ventas independientes",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos y vende servicios a través de representantes de ventas independientes",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-021: Clase C sin la condición de operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (la definición de franquicia y el elemento de fee de Estados Unidos), pero ninguna condición dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-002",
+  "node_id": "alternativa_dealership_distributorship",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el negocio es de manufactura o distribución de productos físicos",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos y es de manufactura o distribución de productos físicos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-031: Clase C sin la condición de operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (el elemento de fee de la definición de franquicia de Estados Unidos), pero ninguna condición dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-003",
+  "node_id": "analisis_del_extremo_organizacional",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q029-020: Investigar un accidente ya ocurrido para evitar que se repita es control y mejora de un negocio en marcha, no planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-004",
+  "node_id": "antiboycott_regulations",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si recibes solicitudes contractuales de socios en paises que exigen boicotear a terceros paises",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros paises",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-003: Tiene razon el lector B: el resumen dice que la regulacion obliga si tienes un negocio en Estados Unidos, y ninguna de las dos condiciones lo dice (la segunda nombra a Estados Unidos solo como amigo de los boicoteados), asi que hay que corregir las dos, no solo la primera como proponia A. (arbitro) Motivo: Clase C: la condicion no dice que el nodo solo aplica si tu negocio opera en Estados Unidos, que es a quien obligan las regulaciones antiboicot segun el resumen."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-005",
+  "node_id": "antiboycott_regulations",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Al hacer negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos y hace negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-003: Tiene razon el lector B: el resumen dice que la regulacion obliga si tienes un negocio en Estados Unidos, y ninguna de las dos condiciones lo dice (la segunda nombra a Estados Unidos solo como amigo de los boicoteados), asi que hay que corregir las dos, no solo la primera como proponia A. (arbitro) Motivo: Clase C: mencionar las naciones amigas de Estados Unidos no deja claro que el nodo aplica solo si tu negocio opera alli; tal cual se activaria para un negocio de otro pais."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-006",
+  "node_id": "asistencia_apertura_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el modelo de negocio depende de bienes raíces o ubicación física",
+  "texto_nuevo": "Cuando franquicias un negocio que depende de un local físico y debes definir tu papel en la selección de sitio, arrendamiento, construcción y equipo inicial de cada apertura",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q015-025: La condicion omite que aplica al franquiciante que organiza aperturas. (lector y verificador de acuerdo) Motivo: Depender de una ubicacion fisica no basta: el contenido es el papel del franquiciante en la apertura de cada unidad y activaria el nodo en cualquier negocio con local."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-007",
+  "node_id": "asistencia_embajadas_consulados_comerciales",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "El usuario enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales en el extranjero",
+  "texto_nuevo": "Tu negocio opera en Estados Unidos y enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales o problemas de cobro en el extranjero",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-014: Clase C sin la condición de operar en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (embajadas y consulados de Estados Unidos que atienden a empresas estadounidenses), pero la condición no dice que aplica si tu negocio opera en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-008",
+  "node_id": "auditoria_responsabilidad",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se implementan los requisitos de la familia Audit and Accountability de SP 800-171",
+  "texto_nuevo": "Cuando tu negocio opera o vende en Estados Unidos y debe implementar los requisitos de la familia Audit and Accountability de SP 800-171",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-026: Clase C sin la condición de operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (NIST SP 800-171 de Estados Unidos), pero la condición no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-009",
+  "node_id": "auditorias_proveedores",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si se requiere asegurar cumplimiento normativo o reputacional",
+  "texto_nuevo": "Si necesitas asegurar que tus proveedores críticos cumplen requisitos normativos, ambientales o reputacionales",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q064-017: Tiene razon el lector A: la segunda condicion no menciona a los proveedores, que son el objeto del nodo, y se activaria ante cualquier necesidad de cumplimiento. (arbitro) Motivo: Demasiado amplia: cualquier necesidad de cumplimiento normativo la activaria, pero el contenido trata de auditar a proveedores, sobre todo a los criticos"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-010",
+  "node_id": "buyer_rating_system",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando tienes varios proveedores y no es práctico medir a cada uno por separado",
+  "texto_nuevo": "Cuando varias personas eligen o gestionan proveedores por ti y quieres saber quién necesita más cuidado al seleccionarlos y darles seguimiento",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q010-004: La condicion no refleja que el metodo compara a las personas que compran; el dominio encaja en quality y en compras, asi que se deja. (lector y verificador de acuerdo) Motivo: El metodo mide la tasa de defectos por persona que elige o gestiona proveedores; la condicion no exige que haya varias personas comprando, y a quien compra solo le llegaria un nodo que no puede usar."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-011",
+  "node_id": "canales_comunicacion_estrategicos",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se busca maximizar el impacto de un presupuesto de marketing limitado",
+  "texto_nuevo": "Cuando se busca comunicar el beneficio ambiental de un producto con un presupuesto de marketing limitado",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q075-012: Razon para A: las dos condiciones son genericas y activarian el nodo en cualquier marketing o busqueda de prensa, no solo en la comunicacion verde; B solo corrigio la 0 y dejo la 1, que sufre el mismo defecto. (arbitro) Motivo: Generica de cualquier marketing; no menciona la comunicacion del beneficio ambiental, que es el objeto del nodo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-012",
+  "node_id": "canales_comunicacion_estrategicos",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si se desea generar cobertura mediática orgánica",
+  "texto_nuevo": "Si se desea generar cobertura mediatica organica con una activacion creativa que muestre el beneficio ambiental del producto",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q075-012: Razon para A: las dos condiciones son genericas y activarian el nodo en cualquier marketing o busqueda de prensa, no solo en la comunicacion verde; B solo corrigio la 0 y dejo la 1, que sufre el mismo defecto. (arbitro) Motivo: Generica de cualquier accion de prensa; el nodo solo trata de activaciones creativas ligadas a un beneficio ambiental tangible."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-013",
+  "node_id": "case_study_sistema_servicio_completo",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q044-019: El nodo investiga, prototipa y prueba en vivo con pocas personas el sistema de servicio antes de escalar: es validacion, no operacion de algo que ya funciona. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-014",
+  "node_id": "centro_asesoria_advocacy_center",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando tu negocio licita en un contrato de adquisicion de un gobierno extranjero",
+  "texto_nuevo": "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisicion de un gobierno extranjero",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q001-022: Clase C sin la condición de operar en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (el Advocacy Center apoya a empresas de Estados Unidos), pero la condición no dice que aplica si tu negocio opera en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-015",
+  "node_id": "certificado_de_origen_tratados_libre_comercio",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el mercado destino forma parte de un tratado de libre comercio con EE.UU.",
+  "texto_nuevo": "Si exportas desde Estados Unidos, o vendes hacia allí, y el mercado destino forma parte de un tratado de libre comercio con EE.UU. (como el T-MEC)",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-002: Tenía razón A: basta con que la condición del tratado ate el nodo a exportar desde Estados Unidos o vender allí; la segunda condición puede seguir siendo general, como en otros nodos de clase C. (arbitro) Motivo: Clase C: nombra un tratado con EE.UU. pero no deja claro que el nodo aplica si exportas desde Estados Unidos o vendes hacia allí, que es lo que suponen sus pasos (tratado vigente con Estados Unidos, plazos de conservación de la aduana estadounidense)."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-016",
+  "node_id": "checklist_sistema_stage_gate_primera_clase",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q032-016: Tenia razon el lector A: el nodo presupone un Stage-Gate ya operando (mide su adopcion real, implanta metricas de cumplimiento, designa un gerente de mejora continua y lo revisa cada 3-5 anos) y su entregable es una auditoria del sistema existente, es decir controlar y mejorar lo que ya funciona, no disenarlo; condiciones y dominio core estan bien segun ambos. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-017",
+  "node_id": "ciclo_construir_medir_aprender",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q020-002: El ciclo construir, medir, aprender sirve para poner a prueba una idea con clientes reales, como dice su propia condicion; es validacion, no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-018",
+  "node_id": "ciclo_crear_medir_aprender",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q023-030: El ciclo Crear-Medir-Aprender consiste en probar un producto minimo con clientes para obtener aprendizaje validado, que es validacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-019",
+  "node_id": "cinco_pasos_enfoque_restricciones",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando ya se ha definido el objetivo del sistema y se necesita un plan operativo concreto",
+  "texto_nuevo": "Cuando un cuello de botella en tu operacion o en tu cadena de suministro limita lo que puedes producir o entregar y necesitas un plan concreto para gestionarlo",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q033-028: La condicion no dice cuando aplica el metodo, que es cuando hay un cuello de botella que limita el sistema. (lector y verificador de acuerdo) Motivo: Es tan generica que se activaria ante cualquier plan operativo; no menciona los cuellos de botella, que son la situacion en la que el metodo aplica de verdad."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-020",
+  "node_id": "clausula_antidesviacion",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando estas preparando documentos de embarque para una exportacion comercial",
+  "texto_nuevo": "Cuando estas preparando documentos de embarque para una exportacion comercial desde Estados Unidos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-013: Dos condiciones se activan para cualquier exportador, pero el contenido solo aplica a exportaciones desde Estados Unidos sujetas a las EAR. (lector y verificador de acuerdo) Motivo: Demasiado amplia: la declaracion de control de destino es un requisito de las EAR de Estados Unidos y no aplica a cualquier exportacion comercial."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-021",
+  "node_id": "clausula_antidesviacion",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando preparas la documentacion de transporte internacional",
+  "texto_nuevo": "Cuando preparas la factura comercial y el bill of lading o air waybill de un envio que sale de Estados Unidos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-013: Dos condiciones se activan para cualquier exportador, pero el contenido solo aplica a exportaciones desde Estados Unidos sujetas a las EAR. (lector y verificador de acuerdo) Motivo: Demasiado amplia: se activaria con cualquier documentacion de transporte internacional, no solo con envios que salen de Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-022",
+  "node_id": "cognisance_organizacional",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q087-012: Es un diagnostico y refuerzo de la conciencia del peligro en una organizacion que ya opera (largos periodos sin accidentes, medidas ya implantadas), gestion operativa, no planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-023",
+  "node_id": "compensacion_service_providers",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la startup necesita atraer o retener talento sin suficiente efectivo",
+  "texto_nuevo": "Cuando tu startup opera en Estados Unidos y necesita atraer o retener talento sin suficiente efectivo",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-007: Tenía razón A: con que una condición ate el nodo a operar en Estados Unidos se cumple la clase C; B reescribe también la segunda sin necesidad. (arbitro) Motivo: Clase C: ninguna condición dice que aplica si operas en Estados Unidos, aunque los pasos dependen de 83(b) y de la valuación 409A."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-024",
+  "node_id": "comunicacion_aprendizaje_continuo",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q053-029: El nodo trata de registrar y compartir lo que se aprende durante el Customer Discovery (hipotesis, entrevistas, hallazgos), que es probar la idea con clientes, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-025",
+  "node_id": "comunicacion_del_riesgo",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q093-020: El contenido trata de comunicar el riesgo y asignar roles ante una crisis con simulacros, que es gestión de riesgos y no gestión de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-026",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se implementan los requisitos de la familia Awareness and Training de SP 800-171",
+  "texto_nuevo": "Cuando trabajas como contratista o proveedor del gobierno de Estados Unidos, manejas informacion controlada no clasificada (CUI) y debes cumplir la familia Awareness and Training de SP 800-171",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-029: La unica condicion no explicita que aplica al operar o vender en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C: citar SP 800-171 no deja claro que el nodo aplica si trabajas o vendes al gobierno de Estados Unidos manejando CUI."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-027",
+  "node_id": "condiciones_latentes_largo_plazo",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo.",
+  "texto_nuevo": "Cuando se planifica una auditoria de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q079-017: La tercera condicion describe un uso didactico del caso, no cuando aplica el nodo. (lector y verificador de acuerdo) Motivo: Es una condicion pedagogica (ilustrar un concepto), no una situacion del negocio en la que el contenido aplique."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-028",
+  "node_id": "contextualizacion_datos_sostenibilidad",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando le comunicas métricas técnicas a personas que no son expertas",
+  "texto_nuevo": "Cuando comunicas tus métricas de sostenibilidad o impacto ambiental a personas que no son expertas",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q064-006: Tiene razon el lector A: la condicion no acota a datos de sostenibilidad y dispararia un nodo cuyo entregable es un reporte de sostenibilidad ante cualquier metrica tecnica. (arbitro) Motivo: Demasiado amplia: se activaria con cualquier metrica tecnica (financiera, de calidad), cuando el resumen y el entregable (reporte de sostenibilidad) tratan de dar contexto a datos de sostenibilidad"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-029",
+  "node_id": "contratar_cerrador_de_ventas",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "No aplica antes de tener earlyvangelists y un producto que ya intentas vender: es un problema de escalar ventas, no de empezar",
+  "texto_nuevo": "Si ya tienes earlyvangelists y un producto que intentas vender, pero no logras cerrar los primeros acuerdos con compradores o gerentes de compras",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q097-016: La tercera condición es una exclusión que dice que se trata de escalar ventas, cuando el nodo trata de cerrar los primeros acuerdos. (lector y verificador de acuerdo) Motivo: Es una exclusión, no una situación en la que el nodo aplica, y además contradice el resumen: el cerrador sirve para cerrar los primeros acuerdos, no para escalar ventas."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-030",
+  "node_id": "control_acceso_least_privilege",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se implementan los requisitos de la familia Access Control de SP 800-171",
+  "texto_nuevo": "Cuando trabajas como contratista o proveedor del gobierno de Estados Unidos, manejas informacion controlada no clasificada (CUI) y debes cumplir la familia Access Control de SP 800-171",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-006: La unica condicion no explicita que aplica al operar o vender en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C: citar SP 800-171 no deja claro que el nodo aplica si trabajas o vendes al gobierno de Estados Unidos manejando CUI."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-031",
+  "node_id": "costo_de_calidad",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q081-030: Tenia razon el lector A: los pasos (revision mensual, costo real de inventario, defectos y retrabajo frente a lo presupuestado, asignar quien corrige cada desviacion) son control operativo de un negocio en marcha, que la regla manda a ejecucion; el uso para decidir invertir en prevencion es solo el ultimo paso y no convierte el nodo en diseno del plan. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-032",
+  "node_id": "crear_pitch",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q072-015: Definir y redactar el pitch del proyecto para buscar inversores y socios es preparar la busqueda de recursos, fase planificacion, como la propia condicion lo situa al cerrar la planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-033",
+  "node_id": "critica_behavior_based_safety",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q066-023: Razon para B: el dominio ya es health_safety, asi que A se equivoco al marcarlo mal; la fase es ejecucion porque los pasos y las condiciones parten de un programa de incentivos que ya existe y lo auditan, eliminan practicas y sustituyen metricas, es decir mejoran la gestion operativa de un negocio en marcha. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-034",
+  "node_id": "critica_ground_truth_investigacion",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q075-017: Analizar en retrospectiva algo que ya salio mal es control y mejora de lo que funciona, no planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-035",
+  "node_id": "crowdfunding_legal_exemptions_jobs_act",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si estás considerando recaudar capital a través de plataformas online o crowdfunding.",
+  "texto_nuevo": "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas alli y estas considerando recaudar capital mediante crowdfunding o plataformas online",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-014: La primera condicion no ata el nodo a Estados Unidos; la segunda, al nombrar la SEC, si lo hace. (lector y verificador de acuerdo) Motivo: Clase C: condicion generica sobre crowdfunding que no dice que las exenciones de la JOBS Act aplican si ofreces participaciones en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-036",
+  "node_id": "cumplimiento_inversionistas_acreditados",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa planea vender acciones o levantar capital de terceros",
+  "texto_nuevo": "Cuando tu empresa opera en Estados Unidos, o vas a ofrecer acciones a inversionistas de allí, y planeas vender acciones o levantar capital de terceros",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q002-010: Tenía razón A: una condición que ate el nodo a Estados Unidos basta para la clase C, y la suya cubre también ofrecer acciones a inversionistas de allí; las otras dos de B no son falsas y no hace falta reescribirlas. (arbitro) Motivo: Clase C: ninguna condición dice que aplica si tu empresa opera en Estados Unidos o si ofreces acciones a inversionistas de allí, que es a quien alcanzan sus leyes de valores."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-037",
+  "node_id": "cumplimiento_sarbanes_oxley",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando buscas financiamiento bancario significativo o inversión externa",
+  "texto_nuevo": "Cuando operas en Estados Unidos y buscas financiamiento bancario significativo o inversión externa",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-007: Las condiciones no dicen que SOX aplica si operas o cotizas en Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: SOX es ley estadounidense y la condición se activaría ante cualquier financiamiento en cualquier país."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-038",
+  "node_id": "cumplimiento_sarbanes_oxley",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si tienes un plan a mediano plazo de convertirte en empresa pública",
+  "texto_nuevo": "Si tienes un plan a mediano plazo de convertirte en empresa pública que cotice en Estados Unidos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-007: Las condiciones no dicen que SOX aplica si operas o cotizas en Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: no aclara que SOX aplica a empresas que cotizan en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-039",
+  "node_id": "customer_validation_sales_roadmap",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q093-028: Customer Validation consiste en convertir hipótesis en hechos con ventas reales antes de escalar, lo que es validacion con el mercado y no planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-040",
+  "node_id": "decision_fundador_solo_vs_equipo",
+  "campo": "condiciones_activacion",
+  "indice": 3,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si tienes dudas sobre delegar decisiones clave",
+  "texto_nuevo": "Si dudas entre mantener el control total de las decisiones o compartirlo con socios al fundar tu negocio",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q015-030: La condicion 3 sobre delegar decisiones es demasiado generica y no ata al dilema fundar solo o en equipo. (lector y verificador de acuerdo) Motivo: Dudar sobre delegar decisiones clave es propio de un negocio en marcha con equipo; el nodo trata de cuanto control necesitas al decidir fundar solo o con socios."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-041",
+  "node_id": "deep_dive_workshop",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q013-012: El taller sirve para explorar una idea, prototiparla y probarla con quien vive el problema antes de construir la solucion, lo que es validacion y no operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-042",
+  "node_id": "definicion_metas_engagement",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "environmental",
+  "texto_nuevo": "core",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q095-006: El contenido trata de definir metas y metricas del compromiso del equipo sin ninguna referencia ambiental; encaja en core. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-043",
+  "node_id": "definicion_sistema_calidad_proveedor",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el producto es complejo, regulado o crítico para la seguridad",
+  "texto_nuevo": "Cuando compras a un proveedor un producto complejo, regulado o critico para la seguridad y necesitas exigirle por contrato controles de proceso y un sistema de calidad reconocido",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q104-007: La unica condicion no liga el nodo a la relacion con el proveedor. (lector y verificador de acuerdo) Motivo: No menciona al proveedor: activaria el nodo para cualquier producto complejo aunque lo fabriques tu, cuando el contenido trata de exigir un sistema de calidad al proveedor por contrato"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-044",
+  "node_id": "definiciones_operacionales",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q013-025: Aclara criterios de aceptacion entre inspectores y turnos de un proceso que ya produce y mide su reduccion de defectos: es mejora operativa de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-045",
+  "node_id": "definiciones_operacionales_de_calidad",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q044-014: Resolver disputas recurrentes de calidad con un cliente mediante definiciones operacionales y cartas de control compartidas de forma continua es gestion operativa de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-046",
+  "node_id": "desajuste_tarea_persona",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q075-025: Diagnosticar errores repetidos de un trabajador y corregir el desajuste es gestion operativa de un negocio en marcha, no planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-047",
+  "node_id": "desarrollar_caracteristicas_proceso",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q094-011: Es un paso del modelo de planificacion de la calidad: seleccionar y disenar los procesos capaces de producir las caracteristicas del producto, no operar lo que ya funciona. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-048",
+  "node_id": "desarrollar_caracteristicas_proceso_2",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q036-012: El nodo trata de disenar el proceso de creacion y entrega antes de operarlo (metas, alternativas, diagrama de flujo, diseno final), que es planificacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-049",
+  "node_id": "desarrollar_caracteristicas_producto",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q044-001: Traducir necesidades en caracteristicas priorizadas con metas es diseno del producto dentro del Diseno para la Calidad, no operacion de algo que ya funciona. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-050",
+  "node_id": "desarrollo_caracteristicas_producto",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q018-004: Disenar las caracteristicas del producto o servicio (Quality by Design) es disenar el producto antes de operarlo, por eso es planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-051",
+  "node_id": "desarrollo_en_espiral",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q040-031: El nucleo es construir prototipos y probarlos con clientes reales hasta validar el producto, que es validacion y no gestion operativa. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-052",
+  "node_id": "desconexion_ventas_experiencia",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q032-008: Corregir el traspaso de la venta a la entrega a partir de quejas y bajas de clientes es gestión operativa de un negocio en marcha, así que es ejecución. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-053",
+  "node_id": "descubrir_necesidades_del_cliente",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando cambios en la normativa puedan revelar necesidades actuales u oportunidades nuevas que el producto deba atender",
+  "texto_nuevo": "Cuando lo que el cliente dice que quiere no coincide con el beneficio que realmente busca, o el producto se usa de formas no previstas",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q044-012: La segunda condicion introduce la normativa, que el nodo no toca. (lector y verificador de acuerdo) Motivo: El contenido no trata de cambios normativos; habla de distinguir necesidades declaradas, reales, percibidas y culturales y de investigar usos no previstos del producto."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-054",
+  "node_id": "descuento_aceptaciones_bancarias",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de crédito",
+  "texto_nuevo": "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de cambio a plazo emitida a su comprador extranjero",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q089-015: La condicion confunde el instrumento: dice letra de credito donde el contenido habla de letra de cambio a plazo. (lector y verificador de acuerdo) Motivo: Dice 'letra de credito', que confunde la carta de credito con la letra de cambio; el nodo trata de descontar letras de cambio a plazo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-055",
+  "node_id": "design_scorecard",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si usas o evalúas este tipo de instrumento de puntaje",
+  "texto_nuevo": "Cuando estás diseñando un producto o proceso y necesitas llevar el pulso de su desempeño proyectado y de sus posibles fallas a medida que sumas elementos de diseño",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q087-007: La condicion 0 es circular; la fase ejecucion es discutible (proyecto de diseño Six Sigma) pero defendible. (lector y verificador de acuerdo) Motivo: Es circular y vaga: no dice en que situacion aplica, solo que se usa el instrumento."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-056",
+  "node_id": "determinar_alcance_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se necesita limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas relevantes que manejan CUI",
+  "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-004: La condición no ata el nodo a operar con el gobierno federal de Estados Unidos, como pide la clase C. (lector y verificador de acuerdo) Motivo: Clase C: no dice que SP 800-171 aplica a quien maneja CUI por contratos con el gobierno federal de Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-057",
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q086-001: Tiene razon el lector B: el entregable documenta el proceso actual, el paso 7 lo valida por observacion o entrevistas y las condiciones hablan de entenderlo antes de mejorarlo y de buscar errores o retrasos, lo que es mejorar un proceso que ya funciona (ejecucion), no disenar el plan; condiciones y dominio quality estan bien. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-058",
+  "node_id": "diagrama_flujo_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se inicia el proceso de implementación de SP 800-171 y se necesita entender el alcance de sistemas afectados",
+  "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos, inicias la implementación de SP 800-171 y necesitas entender cómo entra, se mueve y sale el CUI de tus sistemas",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-018: La condición no ata el nodo a operar con el gobierno federal de Estados Unidos, como pide la clase C. (lector y verificador de acuerdo) Motivo: Clase C: no dice que SP 800-171 aplica a quien maneja CUI por contratos con el gobierno federal de Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-059",
+  "node_id": "diseno_en_la_cuarta_dimension",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q088-027: El contenido es disenar la experiencia en el tiempo con storyboards, journeys y escenarios, trabajo de diseno y no de operar lo que ya funciona. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-060",
+  "node_id": "driver_produccion",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q059-012: El nodo trata de disenar la estructura de produccion y almacenamiento y su entregable es un plan con cronograma maestro, que es planificacion y no operacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-061",
+  "node_id": "ejecucion_rapida_de_despidos",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si existe riesgo de filtración de información sensible",
+  "texto_nuevo": "Si ya se tomo la decision de despedir y existe riesgo de que se filtre antes de ejecutarla",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q022-004: La condicion 1 no esta ligada al despido que trata el nodo. (lector y verificador de acuerdo) Motivo: Demasiado generica: cualquier riesgo de filtracion de informacion la dispara, aunque no haya ningun despido decidido."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-062",
+  "node_id": "eleccion_83b",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Justo después de que tú o tus primeros empleados reciban acciones con vesting",
+  "texto_nuevo": "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-001: Tenía razón el lector B: cada condición activa el nodo por sí sola, y la segunda también lo dispararía para una empresa que no tributa en Estados Unidos, así que la clase C exige corregir las dos. (arbitro) Motivo: Clase C: no deja claro que la elección 83(b) solo aplica si tributas en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-063",
+  "node_id": "eleccion_83b",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Antes de cualquier proceso de revisión para una inversión o venta de la empresa",
+  "texto_nuevo": "Antes de cualquier proceso de revisión para una inversión o venta de tu empresa, si tributa en Estados Unidos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-001: Tenía razón el lector B: cada condición activa el nodo por sí sola, y la segunda también lo dispararía para una empresa que no tributa en Estados Unidos, así que la clase C exige corregir las dos. (arbitro) Motivo: Clase C: por sí sola se activaría ante cualquier inversión o venta en cualquier país, sin atarla a tributar en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-064",
+  "node_id": "embudo_get_keep_grow",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q088-007: El contenido es formular hipotesis Get/Keep/Grow sobre el canvas con pruebas pass/fail y medir CAC tras el MVP, es decir probar con el mercado, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-065",
+  "node_id": "emprendimiento_serial",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q090-004: El nodo trata de preparar las decisiones de un negocio nuevo (reparto, equipo, negociación con inversionistas) a partir de lo aprendido, no de operar uno en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-066",
+  "node_id": "entrenar_franquiciados_validacion",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si se necesita fortalecer el proceso de validación",
+  "texto_nuevo": "Si quieres que tus franquiciados actuales hablen bien de la marca a los candidatos y te refieran nuevos interesados",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q094-001: La condicion 1 es ambigua con la fase de validacion del catalogo; se concreta a la validacion de candidatos a franquiciado. (lector y verificador de acuerdo) Motivo: Es ambigua: fuera de contexto se lee como la fase de validacion de la idea con el mercado, cuando el nodo habla de la validacion que hacen los candidatos a franquiciado hablando con los franquiciados actuales."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-067",
+  "node_id": "equipo_de_gestion_de_crisis",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q015-026: Un protocolo de respuesta ante crisis y eventos de riesgo es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-068",
+  "node_id": "equipo_mejora_calidad_2",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si ya tienes varias personas trabajando contigo, incluso si tu negocio tiene personal sindicalizado.",
+  "texto_nuevo": "Si ya tienes varias personas trabajando contigo en distintas areas y quieres que todas participen en mejorar la calidad de tu negocio.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q082-021: Tenia razon el lector A: la condicion 0 se dispara solo por tener personal, sin relacion con formar un equipo de mejora de calidad, y lo del personal sindicalizado no aporta cuando aplica; dominio quality y fase planificacion son correctos, como dicen los dos. (arbitro) Motivo: Se activa con solo tener personal, sin ninguna necesidad de mejorar la calidad, y la mencion al personal sindicalizado no dice cuando aplica el nodo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-069",
+  "node_id": "equity_crowdfunding",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si estás pensando en levantar capital a través de una plataforma online como AngelList",
+  "texto_nuevo": "Si estás pensando en levantar capital en Estados Unidos a través de una plataforma online como AngelList",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-013: Tenía razón el lector B: la segunda condición también activa el nodo por sí sola en cualquier país, y la 'solicitud general' solo tiene sentido bajo las reglas de la SEC, así que la clase C exige atar las dos a Estados Unidos. (arbitro) Motivo: Clase C: las reglas de la SEC solo aplican si levantas capital en Estados Unidos y la condición no lo dice."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-070",
+  "node_id": "equity_crowdfunding",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general'",
+  "texto_nuevo": "Si levantas capital en Estados Unidos y existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general' ante la SEC",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q003-013: Tenía razón el lector B: la segunda condición también activa el nodo por sí sola en cualquier país, y la 'solicitud general' solo tiene sentido bajo las reglas de la SEC, así que la clase C exige atar las dos a Estados Unidos. (arbitro) Motivo: Clase C: la 'solicitud general' es un concepto de las reglas de la SEC y la condición, que activa el nodo por sí sola, no lo ata a Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-071",
+  "node_id": "estrategia_gestion_riesgo_tolerancia",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Al negociar con proveedores el nivel de riesgo aceptable en contratos.",
+  "texto_nuevo": "Cuando la organización no ha definido de forma explícita cuánto riesgo de ciberseguridad y privacidad está dispuesta a aceptar.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q058-018: Tenia razon A: la condicion de negociar con proveedores el riesgo en contratos no sale ni del resumen ni de los pasos, que tratan de fijar la tolerancia al riesgo interna y comunicarla a liderazgo. (arbitro) Motivo: El contenido no habla de proveedores ni de contratos; trata de definir, documentar y comunicar la tolerancia al riesgo de ciberseguridad y privacidad de la propia organizacion."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-072",
+  "node_id": "estructura_sp800171",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el negocio debe implementar controles de seguridad para proteger CUI bajo contrato federal",
+  "texto_nuevo": "Cuando tu negocio tiene un contrato con el gobierno federal de Estados Unidos y debe implementar controles de seguridad para proteger CUI",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-024: Clase C con mencion ambigua (contrato federal) en vez de Estados Unidos; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: dice contrato federal pero no deja claro que es con el gobierno de Estados Unidos, y otros paises federales podrian confundirse."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-073",
+  "node_id": "etapa_pruebas_necesaria",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q013-026: Es una etapa de pruebas (beta, ensayos de campo, pruebas de mercado) previa al lanzamiento y a la inversion en produccion, lo que es validacion y no operar lo que ya funciona. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-074",
+  "node_id": "evaluacion_de_factores_de_riesgo",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q078-021: Evaluar severidad, probabilidad y urgencia de riesgos para priorizarlos es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-075",
+  "node_id": "evaluacion_gestion_riesgos",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q021-031: El contenido es un proceso generico de identificar, evaluar y mitigar riesgos, propio de gestion de riesgos y no de gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-076",
+  "node_id": "evaluacion_preparacion_tecnologica",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "exportacion",
+  "texto_nuevo": "core",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q087-019: El contenido es evaluar la tecnologia para vender en linea (B2B o B2C) sin ninguna referencia a mercados exteriores, asi que no es exportacion sino emprender en general. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-077",
+  "node_id": "evaluar_proceso_completo_no_cada_metrica",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q042-011: Mide durante un mes los aciertos de entregas reales y ajusta metas: es control y mejora de una operación en marcha, no planificación. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-078",
+  "node_id": "evitacion_del_riesgo",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q062-002: El contenido es una estrategia de tratamiento de riesgos (evitar la actividad), no gestion de la calidad: su mundo es gestion de riesgos. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-079",
+  "node_id": "evitar_perdida_situacion_awareness",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se diseña un programa de entrenamiento en factores humanos",
+  "texto_nuevo": "Cuando se redacta o revisa una investigacion de incidente y hay que explicar por que la actuacion del operador tenia sentido en ese momento",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q075-013: Razon para B: ambos aciertan en que la fase es ejecucion (investigar accidentes ya ocurridos es control de una operacion en marcha), pero la condicion de disenar un programa de entrenamiento no sale de los pasos ni del entregable, que son todos de investigacion e informe. (arbitro) Motivo: El contenido no trata de disenar programas de entrenamiento sino de como explicar la actuacion del operador en investigaciones e informes, y su entregable es un informe de investigacion."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-080",
+  "node_id": "evitar_perdida_situacion_awareness",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q075-013: Razon para B: ambos aciertan en que la fase es ejecucion (investigar accidentes ya ocurridos es control de una operacion en marcha), pero la condicion de disenar un programa de entrenamiento no sale de los pasos ni del entregable, que son todos de investigacion e informe. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-081",
+  "node_id": "factores_explicativos_vs_factores_de_cambio",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q048-025: Separar factores explicativos de factores de cambio tras una investigacion de incidentes es controlar y mejorar lo que ya opera, no disenar un plan. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-082",
+  "node_id": "fallar_rapido_prototipado",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q097-029: El nodo trata de crear prototipos rápidos y baratos y probarlos con usuarios reales para validar ideas antes de invertir, y eso es validación, no ejecución. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-083",
+  "node_id": "financiamiento_sba_exportacion",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+  "texto_nuevo": "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-003: Razon para A: basta con que una condicion ancle el nodo a Estados Unidos (como hace Q004-005 del mismo lote); las condiciones 1 y 2 describen bien la necesidad y en la duda quedan ok. (arbitro) Motivo: Clase C Estados Unidos: los programas son de la SBA y ninguna condicion dice que aplican solo si tu empresa opera en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-084",
+  "node_id": "financiamiento_usda_agricola",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "La empresa exporta productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+  "texto_nuevo": "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-028: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: los programas son del USDA de Estados Unidos y la condicion no dice que aplica si exportas desde alli."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-085",
+  "node_id": "folleto_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se necesita material físico de credibilidad para compradores secundarios en el proceso de venta",
+  "texto_nuevo": "Si vendes o piensas vender franquicias en Estados Unidos y necesitas material físico de credibilidad para compradores secundarios (abogados, prestamistas, contadores, cónyuges) en el proceso de venta",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-004: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: el copy del folleto esta regulado en estados de Estados Unidos y la condicion no dice que aplica si vendes franquicias alli."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-086",
+  "node_id": "foreign_corrupt_practices_act",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario negocia con funcionarios de gobiernos extranjeros o partidos políticos",
+  "texto_nuevo": "Si tu empresa es de Estados Unidos u opera allí y negocia con funcionarios de gobiernos extranjeros o partidos políticos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-007: Razon para A en el alcance: un solo anclaje a Estados Unidos basta y la condicion 1 queda ok; tomo la redaccion de B (negocia) porque concuerda con el sujeto tu empresa. (arbitro) Motivo: Clase C Estados Unidos: la FCPA aplica a personas o empresas de Estados Unidos o a actos en su territorio, y ninguna condicion lo dice."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-087",
+  "node_id": "foreign_trade_zones",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si la empresa importa materiales dutiable para ensamblar/manufacturar productos destinados a reexportación",
+  "texto_nuevo": "Si tu empresa opera en Estados Unidos e importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-008: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: las FTZ son sitios dentro de Estados Unidos y la condicion no dice que aplica si operas alli."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-088",
+  "node_id": "fuentes_investigacion_mercado",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando necesitas datos concretos para sustentar tus decisiones de mercado",
+  "texto_nuevo": "Si exportas o piensas exportar desde Estados Unidos y necesitas datos concretos para seleccionar y evaluar tus mercados de exportación",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-027: Clase C sin mencion de Estados Unidos y condicion demasiado general; dominio ok, fase ya leida. (lector y verificador de acuerdo) Motivo: Clase C: las fuentes principales (USA Trade Online, U.S. Commercial Service, USDA) son de Estados Unidos y la condicion no lo dice; ademas es demasiado amplia y no se limita a mercados de exportacion."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-089",
+  "node_id": "garantias_producto_internacional",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el producto requiere soporte postventa o mantenimiento",
+  "texto_nuevo": "Cuando vas a vender en un mercado extranjero un producto que requiere garantía, soporte postventa o mantenimiento",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q066-029: La primera condicion no exige el contexto internacional del que trata el nodo. (lector y verificador de acuerdo) Motivo: Es demasiado general: se activaria con cualquier producto que tenga soporte postventa, aunque no se venda fuera, y el nodo trata de garantias en mercados internacionales."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-090",
+  "node_id": "gestion_configuracion_least_functionality",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se implementan los requisitos de la familia Configuration Management de SP 800-171",
+  "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y debe establecer configuraciones base e inventarios de sus sistemas, deshabilitando funciones, puertos y servicios innecesarios",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-018: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: SP 800-171 y el CUI son del gobierno federal de Estados Unidos y la condicion no dice que aplica si operas alli con ese tipo de contrato."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-091",
+  "node_id": "gestion_contrasenas_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa maneja CUI y necesita establecer controles de acceso robustos.",
+  "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y necesita reglas para crear, compartir y renovar contraseñas de forma segura",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-020: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: el CUI es una categoria del gobierno federal de Estados Unidos y la condicion no lo deja claro; ademas habla de controles de acceso en general y no de contraseñas."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-092",
+  "node_id": "gestion_fluctuaciones_cambiarias_clientes",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario ya exporta y enfrenta apreciación o depreciación significativa del dólar",
+  "texto_nuevo": "Si ya exportas desde Estados Unidos y enfrentas una apreciación o depreciación significativa del dólar",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q004-022: Razon para A: con la condicion 0 anclada a Estados Unidos el nodo cumple la regla de clase C; la condicion 1 describe bien la situacion y en la duda queda ok. (arbitro) Motivo: Clase C Estados Unidos: el nodo trata del dolar y del Ex-Im Bank para exportadores de Estados Unidos, y ninguna condicion lo dice."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-093",
+  "node_id": "gestion_tiempo_lanzamiento_franquicia",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q098-020: El contenido es planificar y estimar el tiempo del franquiciante antes y durante el lanzamiento, con una hoja de ruta como entregable: es planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-094",
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q104-011: El nodo consiste en revisar el plan para que contemple lo que puede salir mal, y su entregable es el plan revisado: es planificacion, no operacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-095",
+  "node_id": "getting_started_media_protection",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa maneja dispositivos de almacenamiento removibles o documentos físicos con CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y manejas dispositivos de almacenamiento removibles o documentos físicos con CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-017: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-096",
+  "node_id": "getting_started_personnel_security",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se contratan, despiden o transfieren empleados con acceso a sistemas que procesan CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y contratas, despides o transfieres empleados con acceso a sistemas que procesan CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-019: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-097",
+  "node_id": "getting_started_physical_protection",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa tiene instalaciones físicas donde se procesa o almacena CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y tienes instalaciones físicas donde se procesa o almacena CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-032: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-098",
+  "node_id": "getting_started_planning",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la organización necesita documentar formalmente sus controles de seguridad para cumplimiento de SP 800-171.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas documentar formalmente tus controles de seguridad para cumplir SP 800-171.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-006: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición cita SP 800-171 pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-099",
+  "node_id": "getting_started_risk_assessment",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se requiere identificar y priorizar riesgos asociados a sistemas con CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas identificar y priorizar riesgos asociados a sistemas con CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-027: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-100",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa depende de proveedores externos para componentes o servicios críticos relacionados con CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y dependes de proveedores externos para componentes o servicios críticos relacionados con CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-010: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-101",
+  "node_id": "getting_started_system_communication_protection",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se necesita proteger comunicaciones de red que transmiten CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y tus comunicaciones de red transmiten CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-004: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la única condición no dice que aplica si operas o vendes en Estados Unidos; la CUI es información del gobierno federal de ese país."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-102",
+  "node_id": "getting_started_system_information_integrity",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se requiere detectar amenazas activas y gestionar el ciclo de vida de la CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas detectar amenazas activas y gestionar el ciclo de vida de la CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-012: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-103",
+  "node_id": "getting_started_system_services_acquisition",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa adquiere nuevos sistemas o contrata servicios externos que procesarán CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y adquieres nuevos sistemas o contratas servicios externos que procesarán CUI.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-023: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-104",
+  "node_id": "handoff_transicion_ventas_cuentas",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el negocio opera con interacciones remotas u online sin contacto físico",
+  "texto_nuevo": "Si tus clientes sienten que pierden la conexión o las expectativas acordadas al pasar del vendedor al equipo que les da el servicio",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q015-006: La condicion 1 (negocio remoto u online) no describe cuando aplica el traspaso. (lector y verificador de acuerdo) Motivo: Operar en remoto u online no es la situacion en la que aplica el traspaso vendedor a cuenta; es una circunstancia tangencial que activaria el nodo en negocios online sin traspaso alguno."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-105",
+  "node_id": "identificacion_autenticacion_mfa",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se implementan los requisitos de la familia Identification and Authentication de SP 800-171",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como proveedor del gobierno federal y debes cumplir los requisitos de identificación y autenticación de SP 800-171",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-003: Clase C sin anclaje explícito a operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición deja claro que aplica si operas o vendes en Estados Unidos; SP 800-171 solo lo sugiere a quien ya la conoce."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-106",
+  "node_id": "identificacion_de_riesgos",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q022-013: La identificacion sistematica de riesgos pertenece a gestion de riesgos, no a gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-107",
+  "node_id": "identificar_caracteristicas_metas_proceso",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q064-010: El nodo disena el proceso (caracteristicas, metas y hoja de calculo de diseno de proceso) antes de operarlo, lo que corresponde a planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-108",
+  "node_id": "implementacion_controles",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando los recursos disponibles son limitados y debes priorizar",
+  "texto_nuevo": "Cuando los recursos para implantar los controles de peligros son limitados y debes decidir cuáles atacar primero",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q071-026: Tiene razón el lector B: la condición 2 no dice que la priorización es sobre el control de peligros (paso 3, 'lo peor primero'), así que dispararía el nodo ante cualquier escasez de recursos; dominio y fase están bien, como coinciden ambos lectores. (arbitro) Motivo: Es demasiado genérica: se activaría ante cualquier escasez de recursos o cualquier priorización, aunque no tenga que ver con implantar controles de peligros en el lugar de trabajo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-109",
+  "node_id": "indice_de_reparabilidad",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+  "texto_nuevo": "Si vendes en Francia productos electrónicos, donde desde 2021 debes puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-007: Clase C sin mención de operar o vender en Francia. (lector y verificador de acuerdo) Motivo: Clase C Francia: ninguna condición dice que el nodo aplica si fabricas o vendes en Francia, donde el índice es obligatorio."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-110",
+  "node_id": "innovacion_tipo_ii",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "core",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q067-027: Es una tecnica de generacion de ideas para productos, servicios o estrategias, emprendimiento general y no gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-111",
+  "node_id": "innovar_transformar_mercados",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q053-002: El contenido es formular una estrategia de innovacion y su entregable es un plan de innovacion estrategica, que es disenar la estrategia, no operarla. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-112",
+  "node_id": "international_buyer_program",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si buscas darle alcance internacional a una feria domestica en Estados Unidos",
+  "texto_nuevo": "Si expones o piensas exponer en una feria comercial en Estados Unidos y quieres reunirte alli con compradores extranjeros",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-028: Tenia razon el lector A: la condicion habla de darle alcance internacional a una feria, que es el papel del organizador, mientras que el nodo aplica al expositor que se inscribe en una feria IBP para reunirse con compradores extranjeros. El texto nuevo sigue anclado a Estados Unidos, como pide la clase C. (arbitro) Motivo: La condicion describe a quien organiza la feria y quiere darle alcance internacional, pero los pasos, el resumen y el entregable son para el expositor que se inscribe en una feria certificada IBP en Estados Unidos y busca compradores extranjeros."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-113",
+  "node_id": "international_partner_search",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si necesitas identificar rapidamente socios estrategicos calificados en un mercado extranjero",
+  "texto_nuevo": "Si operas en Estados Unidos y necesitas identificar rápidamente socios estratégicos calificados en un mercado extranjero",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-029: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición dice que aplica si operas en Estados Unidos, y el servicio lo presta el U.S. Commercial Service a empresas de ese país."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-114",
+  "node_id": "lean_launchpad_web_startup_process",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q065-018: El proceso consiste en redactar hipotesis, montar un sitio de baja fidelidad, llevar trafico para probar segmento y propuesta, probar problema y solucion y pedir dinero: es validacion con el mercado, no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-115",
+  "node_id": "lean_manufacturing",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q078-012: Lean mapea el flujo actual y elimina desperdicios de una operacion manufacturera ya en marcha: es mejorar lo que ya funciona. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-116",
+  "node_id": "lean_six_sigma_roadmap",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q060-031: Tiene razon el lector B: DMAIC con tareas Lean mide, mejora y controla procesos que ya operan (mapas de flujo de valor, kanban, tableros de control, auditorias sostenidas), que es mejorar lo que ya funciona, no disenar el modelo ni el plan del negocio. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-117",
+  "node_id": "licencia_exportacion_regulaciones",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si la empresa está por iniciar su primera exportación",
+  "texto_nuevo": "Si tu empresa opera en Estados Unidos y está por iniciar su primera exportación",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-011: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición dice que aplica si exportas desde Estados Unidos, que es donde rigen EAR, ITAR y OFAC."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-118",
+  "node_id": "local_rationality_principle",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q027-027: Aplicar la racionalidad local al investigar un incidente o accidente ya ocurrido es controlar y mejorar la operación en marcha, no planificar. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-119",
+  "node_id": "mantenimiento_preventivo_orientado_al_cliente",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q100-031: Tenía razón el lector B: el nodo parte de quejas y tiempos de inactividad de un servicio que ya está en marcha, y termina implantando y siguiendo un mantenimiento preventivo. Es mejorar lo que ya funciona, es decir, gestión operativa de ejecución y no diseño del plan del negocio. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-120",
+  "node_id": "mantenimiento_sistema_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y debes cumplir los requisitos de mantenimiento de SP 800-171",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q005-022: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición dice que aplica si operas o vendes en Estados Unidos; SP 800-171 y CUI solo lo sugieren."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-121",
+  "node_id": "marco_legal_comercio_electronico_internacional",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si hay riesgo de que una firma electrónica te genere una disputa de contrato",
+  "texto_nuevo": "Si vendes online a clientes de otros paises y cierras contratos con firma electronica sin saber si ese pais la reconoce",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q104-001: Tiene razon el lector B: la segunda condicion no ata el nodo a la venta online a otros paises, que es el objeto del resumen y del paso 2 (validez de la firma segun el pais destino); dominio y fase coinciden en ambos lectores y son correctos. (arbitro) Motivo: Sola, activa el nodo ante cualquier disputa de firma electronica, incluso en un negocio que solo vende en su propio pais, mientras que el nodo trata de la validez de la firma segun el pais al que vendes online"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-122",
+  "node_id": "matriz_riesgo_conocido_desconocido",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q016-028: Clasificar riesgos por nivel de conocimiento e incertidumbre es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-123",
+  "node_id": "medicion_resultados_marketing_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas",
+  "texto_nuevo": "Cuando recién empiezas a vender franquicias y todavía tienes muy pocas ventas para juzgar qué canales de marketing te funcionan",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q089-010: La segunda condicion no dice que se trate del marketing de franquicias. (lector y verificador de acuerdo) Motivo: Es generica: no dice que se trate de medir el marketing de la venta de franquicias, asi que aplicaria a cualquier negocio nuevo con pocos datos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-124",
+  "node_id": "metodologias_analisis_territorio",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando no tienes suficientes datos históricos de ventas para armar modelos predictivos avanzados",
+  "texto_nuevo": "Cuando necesitas definir el tamaño de los territorios de tus franquicias y no tienes suficientes datos históricos de ventas para armar modelos predictivos avanzados",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q089-005: La unica condicion es demasiado generica: le falta la situacion de definir el territorio de las franquicias. (lector y verificador de acuerdo) Motivo: Solo describe la falta de datos historicos y no dice que haya que definir territorios, asi que se activaria en cualquier negocio con pocos datos de ventas."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-125",
+  "node_id": "metrics_that_matter_framework",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si confundes este análisis con las proyecciones financieras tradicionales de cinco años",
+  "texto_nuevo": "Cuando necesitas saber cuántos meses de efectivo te quedan y a qué ritmo los estás quemando",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q071-005: La condición 2 es una advertencia sobre confundir análisis, no un momento en que el nodo aplique. (lector y verificador de acuerdo) Motivo: Describe una confusión conceptual, no una situación en la que el contenido aplique."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-126",
+  "node_id": "mission_and_operations_planning",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se requiere coordinar múltiples organizaciones sin jerarquía formal",
+  "texto_nuevo": "Cuando necesitas planificar una cadena de suministro ad hoc, como una respuesta a desastres, y elegir el mejor plan de demanda y transporte antes de ejecutarlo",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q099-001: El contenido es planificación logística de una cadena de suministro (demanda por instalación, transporte, modelo y simulación), así que corresponde a entrega y no a core; además la condición 0 es genérica y no dice cuándo aplica. (lector y verificador de acuerdo) Motivo: Es demasiado genérica: sirve para cualquier colaboración entre organizaciones y no nombra lo que el nodo trata, que es planificar una cadena de suministro ad hoc."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-127",
+  "node_id": "modelo_cadena_de_eventos",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q072-010: Reconstruir la secuencia de un accidente ya ocurrido es investigacion y control de la operacion en marcha, fase ejecucion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-128",
+  "node_id": "modelo_simulacion_cadena_suministro_circular",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el emprendimiento involucra economía circular o sostenibilidad como propuesta de valor",
+  "texto_nuevo": "Cuando el emprendimiento involucra una cadena de suministro circular (recoleccion o reutilizacion de materiales) y hay que decidir instalaciones, rutas y vehiculos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q054-021: El contenido es diseno de red logistica (instalaciones, vehiculos, rutas, centro de gravedad), mundo de entrega; y la primera condicion lo activa en cualquier negocio sostenible sin cadena fisica. (lector y verificador de acuerdo) Motivo: Demasiado amplia: activa el nodo en cualquier emprendimiento de sostenibilidad aunque no tenga cadena de suministro fisica que disenar."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-129",
+  "node_id": "new_view_human_error",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q052-016: Tiene razon B: los pasos y el entregable investigan incidentes ya reportados y sus factores sistemicos (herramientas, presiones de produccion), lo que es gestion operativa de la seguridad en un negocio en marcha, es decir, ejecucion. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-130",
+  "node_id": "original_issue_discount_oid",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si estás estructurando una ronda de deuda convertible con cobertura de warrants (warrant coverage)",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos y estás estructurando una ronda de deuda convertible con cobertura de warrants (warrant coverage)",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q006-030: Falta en las condiciones la regla de clase C: que aplica si el negocio opera en EE.UU., donde rige el tratamiento OID. (lector y verificador de acuerdo) Motivo: Nodo de clase C (tratamiento fiscal OID de EE.UU.) y ninguna condicion dice que aplica si tu negocio opera o levanta capital en EE.UU."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-131",
+  "node_id": "owner_earnings",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando necesitas saber cuánto vale realmente tu negocio, para invertir en él o para venderlo",
+  "texto_nuevo": "Cuando necesitas saber cuánto efectivo te deja realmente tu negocio y cuánto podrías retirar sin dañarlo",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q020-016: Tenia razon el lector A: ni el resumen, ni los pasos, ni el entregable hablan de valorar, invertir o vender; hablan del efectivo retirable y de su evolucion entre periodos, asi que la condicion no describe cuando aplica. El dominio core y la fase ejecucion estan bien, como dicen los dos lectores. (arbitro) Motivo: La condicion promete saber cuanto vale el negocio para invertir en el o venderlo, pero el contenido no valora el negocio: mide el efectivo que deja una vez restadas las inversiones de mantenimiento y cuanto se puede retirar sin dañarlo."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-132",
+  "node_id": "paris_convention_prioridad",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario ya presentó una solicitud de patente o marca en EE.UU. y planea expandirse internacionalmente",
+  "texto_nuevo": "Si ya presentaste una primera solicitud de patente o marca en un país miembro del Convenio de París y planeas protegerla en otros países",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q006-001: Tenía razón el lector A: la condición exige una solicitud en EE.UU., cuando el nodo aplica a una primera solicitud en cualquier país miembro del Convenio de París y EE.UU. es solo el ejemplo del paso 1; dominio y fase están bien, y en eso coinciden los dos. (arbitro) Motivo: El contenido cita EE.UU. solo como ejemplo (paso 1: 'ej. EE.UU.'); el derecho de prioridad nace de una primera solicitud en cualquier país miembro del Convenio de París, y la condición convierte el ejemplo en requisito y deja fuera a quien presentó en otro país."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-133",
+  "node_id": "pasivos_vs_operadores",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q105-009: Definir la politica de propiedad aceptada y el tipo de franquiciado dentro de la estrategia de expansion es disenar el modelo, no operar. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-134",
+  "node_id": "plan_de_lanzamiento_al_mercado",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q069-004: El contenido es construir el plan de lanzamiento y sus recursos antes de lanzar (entregable: el plan), no operarlo; es planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-135",
+  "node_id": "plan_de_materiales_colaterales",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q037-025: El plan de colaterales se prepara para iniciar la validacion con clientes y se prueba en campo con A/B tests, como dice su propia condicion; no es operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-136",
+  "node_id": "plan_seguridad_sistema_poam",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se ha completado la evaluación de requisitos y se necesita documentar el estado de implementación",
+  "texto_nuevo": "Cuando vendes o prestas servicios a agencias federales de Estados Unidos, manejas información CUI y ya completaste la autoevaluación de requisitos de SP 800-171, y necesitas documentar su estado de implementación",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q006-026: Falta en las condiciones la regla de clase C: que aplica si trabajas con agencias federales de EE.UU. manejando CUI. (lector y verificador de acuerdo) Motivo: Nodo de clase C (NIST SP 800-171, CUI de agencias federales de EE.UU.) y ninguna condicion dice que aplica solo si trabajas o vendes en EE.UU.; ademas no dice de que evaluacion se trata."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-137",
+  "node_id": "planificacion_gobierno_organizaciones_familiares",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "quality",
+  "texto_nuevo": "core",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q040-003: El gobierno corporativo y la sucesion de un negocio familiar son emprender en general, no gestion de la calidad. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-138",
+  "node_id": "planificacion_itinerario_viaje_negocios",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Tienes tu documentación lista y necesitas organizar un viaje de negocios",
+  "texto_nuevo": "Tienes tu documentación lista y necesitas organizar un viaje de negocios al extranjero",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q099-006: La condición tiene que dejar claro que el viaje es al extranjero. (lector y verificador de acuerdo) Motivo: No dice que el viaje es al extranjero, así que se activaría con cualquier viaje de negocios dentro del país, donde no aplican el intérprete, las tarjetas bilingües, la moneda ni el cambio de horario."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-139",
+  "node_id": "plantea_oferta_como_rango_o_cifra_precisa",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "compras",
+  "texto_nuevo": "core",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q059-032: Tenia razon el lector A: el nodo se escribe desde quien vende y da su precio (el numero mas bajo del rango es lo que esperas recibir, evitar que te empujen hacia abajo), asi que es negociacion de precio de emprender en general y no compras a proveedores. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-140",
+  "node_id": "plantilla_fija_cotizaciones",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q049-029: Tiene razon el lector A: el nodo estandariza como pides y comparas cotizaciones en compras que ya haces (recibes cotizaciones, compras cada mes, sospechas precios distintos), lo que es gestion operativa de un negocio en marcha y no diseno del modelo o del plan, asi que la fase es ejecucion. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-141",
+  "node_id": "posicionamiento_est",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "franquicias",
+  "texto_nuevo": "core",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q052-022: Elegir en qué diferenciarse frente a la competencia es estrategia general de cualquier negocio; el contenido no trata de franquicias. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-142",
+  "node_id": "posicionamiento_por_tipo_de_mercado",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando ya se definió el tipo de mercado en fases anteriores (Chapter 8)",
+  "texto_nuevo": "Cuando ya identificaste si tu mercado es existente, nuevo, clon o re-segmentado y necesitas definir el mensaje de posicionamiento de tu producto",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q019-030: La condición cita un capítulo del libro fuente en lugar de la situación en la que aplica el nodo. (lector y verificador de acuerdo) Motivo: Remite a un capítulo de libro (Chapter 8) y a fases anteriores que el usuario no conoce; no describe una situación real del emprendedor."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-143",
+  "node_id": "presales",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Precaución: éxito en preventa no garantiza escalabilidad del modelo de negocio",
+  "texto_nuevo": "Cuando quieres comprobar la demanda real antes de fabricar o lanzar tu producto, con una campaña de crowdfunding, una preventa propia o cartas de intención de clientes B2B",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q099-031: La condición 1 es una precaución y no una condición de activación. (lector y verificador de acuerdo) Motivo: Es una advertencia sobre la escalabilidad y no una situación en la que el nodo se active."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-144",
+  "node_id": "presentaciones_alta_direccion",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando necesitas que alguien apruebe una iniciativa importante para tu negocio",
+  "texto_nuevo": "Cuando necesitas que alguien apruebe tus proyectos de mejora de la calidad mostrando cuanto cuesta la mala calidad",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q023-031: La primera condicion abarca cualquier iniciativa, mientras que los pasos solo sirven para proyectos de calidad basados en el costo de la mala calidad. (lector y verificador de acuerdo) Motivo: Es demasiado generica: el contenido trata de presentar el costo de la mala calidad para aprobar proyectos de mejora, no cualquier iniciativa."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-145",
+  "node_id": "principio_calidad_mvp",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q069-029: El nodo trata de lanzar un MVP de baja fidelidad para aprender de los primeros clientes antes de invertir en calidad; es validacion, no operación de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-146",
+  "node_id": "producto_como_experimento",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q063-008: El nodo trata de probar el problema y la solucion con un prototipo minimo ante clientes reales antes de construir o lanzar, que es validacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-147",
+  "node_id": "productos_de_servicio",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario fabrica productos durables como carpetas, autos, electrodomésticos o electrónicos",
+  "texto_nuevo": "Si el usuario fabrica productos durables como alfombras, autos, electrodomésticos o electrónicos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q009-002: La condición 0 trae 'carpetas' por 'alfombras', una traducción errónea que desvirtúa el ejemplo. (lector y verificador de acuerdo) Motivo: El ejemplo 'carpetas' es una mala traducción de 'carpets' (alfombras): una carpeta no es un producto durable apto para eco-leasing y el ejemplo confunde sobre cuándo aplica."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-148",
+  "node_id": "programas_ex_im_bank",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si necesitas reducir el riesgo comercial o politico de una venta de exportacion",
+  "texto_nuevo": "Si exportas desde Estados Unidos y necesitas reducir el riesgo comercial o politico de una venta de exportacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q007-026: Tenia razon el lector A: una condicion que ate el nodo a exportar desde Estados Unidos basta para dejar claro el pais en el conjunto, igual que en los nodos de clase C vecinos; las otras tres condiciones describen bien cuando aplica y no hace falta reescribirlas como propone B. (arbitro) Motivo: Clase C de Estados Unidos: ninguna condicion dice que el Ex-Im Bank aplica si exportas desde Estados Unidos, y solo respalda exportaciones de ese pais."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-149",
+  "node_id": "protocepto",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q043-018: El protocept sirve para validar con el cliente la hipótesis de mercado y la viabilidad técnica antes de construir el prototipo completo; es validación, no operación de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-150",
+  "node_id": "pruning_portafolio",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si hay más de 1000 iniciativas activas o el equipo está sobrecargado de multitasking",
+  "texto_nuevo": "Si el equipo esta sobrecargado de multitasking y buena parte de los proyectos activos aporta poco valor estrategico",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q072-031: La segunda condicion exige mas de 1000 iniciativas, un umbral ajeno al contenido; dominio y fase ok. (lector y verificador de acuerdo) Motivo: El umbral de mas de 1000 iniciativas activas no sale del contenido y deja fuera a casi cualquier negocio; el contenido habla de un portafolio cargado de proyectos de poco valor."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-151",
+  "node_id": "pull_no_push",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q015-012: El contenido es formular hipotesis y disenar el experimento minimo para validarlas antes de construir: es validacion, no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-152",
+  "node_id": "que_es_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si la empresa tiene contratos con el gobierno federal u organizaciones que trabajan con el gobierno",
+  "texto_nuevo": "Si la empresa tiene contratos con el gobierno federal de Estados Unidos u organizaciones que trabajan para el",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q007-005: Las condiciones no dejan claro que el nodo aplica solo si contratas con el gobierno federal de Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: gobierno federal es ambiguo (hay otros paises federales); debe decir que aplica si contratas con el gobierno de Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-153",
+  "node_id": "que_es_cui",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario no sabe si maneja información sensible sujeta a regulación federal",
+  "texto_nuevo": "Si la empresa trabaja con el gobierno federal de Estados Unidos y no sabe si maneja informacion sensible sujeta a su regulacion federal",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q007-005: Las condiciones no dejan claro que el nodo aplica solo si contratas con el gobierno federal de Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: sola se activaria para cualquier usuario de cualquier pais, y el CUI solo existe en contratos federales de Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-154",
+  "node_id": "recursos_apoyo_gubernamental_exportacion",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
+  "texto_nuevo": "Cuando tu negocio opera en Estados Unidos, inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q007-023: Tenia razon el lector A: basta con que una condicion ate el nodo a operar en Estados Unidos para que el conjunto deje claro el pais, como hacen los nodos de clase C vecinos (Q007-024 y Q007-025); reescribir las cuatro, como propone B, excede la regla. (arbitro) Motivo: Clase C de Estados Unidos: ninguna condicion dice que el nodo aplica si tu negocio opera en Estados Unidos, y todas las agencias (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank) son de ese pais."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-155",
+  "node_id": "recursos_de_segundo_nivel",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q027-002: El nodo diseña un plan por fases de contratación y financiamiento (qué recursos intermedios usar y cuándo cambiarlos), que es planificar recursos y estrategia, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-156",
+  "node_id": "recursos_externos_seguridad",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando buscas asesoría externa especializada",
+  "texto_nuevo": "Cuando buscas asesoría externa en seguridad laboral, como los servicios de inspección de tu aseguradora de compensación laboral, asociaciones de seguridad de tu sector o un centro de apoyo a pequeños negocios",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q069-021: Tenía razón el lector A: la condición 1 no menciona la seguridad y activaría el nodo ante cualquier asesoría externa, mientras que la condición 0 sí está acotada. El dominio y la fase son correctos. (arbitro) Motivo: No acota el tema: cualquier búsqueda de asesoría externa especializada (legal, fiscal, de marketing) activaría el nodo, que solo trata recursos externos de apoyo en seguridad laboral."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-157",
+  "node_id": "regalos_estrategicos_personalizados",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se quiere empezar con 2 o 3 clientes clave antes de escalar la practica",
+  "texto_nuevo": "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q031-008: Tiene razon el lector A: la condicion 2 repite el paso 10 y habla de 'la practica' como si ya estuviera en marcha, asi que no sirve para activar el nodo; dominio core y fase ejecucion son correctos. (arbitro) Motivo: Copia el paso 10 del metodo (empezar con 2 o 3 clientes antes de escalar) y presupone que ya se aplica la practica; no describe una situacion en la que el nodo aplica."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-158",
+  "node_id": "regla_50_por_ciento",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q078-018: El nodo aplica en etapas tempranas, antes de lanzar, probando canales con personas que no te conocen: es probar la idea con el mercado, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-159",
+  "node_id": "reglas_de_origen_fta_2",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario exporta a un país con el cual EE.UU. tiene un Tratado de Libre Comercio vigente",
+  "texto_nuevo": "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q007-019: La condicion principal no deja claro que el nodo aplica a quien exporta desde Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: exportar a un pais con TLC con EE.UU. no exige exportar desde Estados Unidos; un exportador de otro pais tambien la cumpliria."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-160",
+  "node_id": "reinicio_programa_calidad",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q026-022: Reiniciar un programa de calidad que ya alcanzó sus metas es mejora continua de algo que ya funciona, no diseño inicial: ejecucion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-161",
+  "node_id": "relaciones_publicas_leads_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se busca generar leads de alta calidad y hay presupuesto para asumir un costo por lead alto y poco previsible",
+  "texto_nuevo": "Cuando se busca generar leads de franquicia de alta calidad y se acepta un volumen menor y menos previsible que el de otros canales",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q014-021: Tenia razon el lector B: la condicion 0 atribuye a las relaciones publicas un costo por lead alto que contradice el resumen, que habla de cientos o miles de leads sin gasto directo en publicidad. (arbitro) Motivo: El contenido no dice que el costo por lead de las relaciones publicas sea alto; destaca leads sin gasto directo en publicidad y solo advierte menor volumen y previsibilidad."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-162",
+  "node_id": "reporte_casi_accidentes",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se busca fortalecer la cultura de reporte (Capítulo 9 del libro)",
+  "texto_nuevo": "Cuando se busca fortalecer una cultura de reporte sin represalias sobre eventos que pudieron ser graves",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q102-007: La segunda condicion cita el capitulo del libro fuente; se reescribe sin la referencia. (lector y verificador de acuerdo) Motivo: Arrastra una referencia a la fuente (Capítulo 9 del libro) que no describe la situacion y no tiene sentido para el cliente."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-163",
+  "node_id": "reporte_gerencial_diagnostico_calidad",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q018-003: Diagnosticar con datos de auditoria las fallas de calidad de una planta que ya produce es gestion operativa de un negocio en marcha, por eso es ejecucion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-164",
+  "node_id": "responsabilidad_gerencial_causas_comunes",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q093-024: Trata de gestionar y mejorar de forma continua un sistema de producción ya en marcha (gráficos de control, causas comunes frente a especiales, dejar de culpar al personal), que es ejecucion y no planificacion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-165",
+  "node_id": "responsabilidad_sistemica",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q042-004: Es el análisis de un incidente ya ocurrido y el apoyo a la segunda víctima, gestión operativa de un negocio en marcha, no planificación. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-166",
+  "node_id": "respuesta_incidentes_cui",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si la organización aún no tiene un plan formal de respuesta ante incidentes de seguridad",
+  "texto_nuevo": "Si la organizacion tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q007-006: La segunda condicion no deja claro que aplica solo a quien opera con contratos federales de Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: condicion generica que se activaria en cualquier pais, cuando el plan descrito es el de CUI para contratos federales de Estados Unidos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-167",
+  "node_id": "riesgos_lanzamiento_mvp",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q031-009: El nodo trata de los miedos a lanzar la primera version de prueba (MVP), que es la fase de validacion, no de operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-168",
+  "node_id": "right_of_first_refusal_pro_rata",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q072-014: Tiene razon el lector A: el nodo consiste en diseñar y redactar una clausula del term sheet (quien es inversionista principal, multiplo de pro rata, reasignacion, extincion en la OPI), es decir, diseñar la estructura de financiacion y conseguir recursos, que es planificacion; no es operar, implementar ni controlar un negocio en marcha, asi que ejecucion no se sostiene. Condiciones y dominio core estan bien, en eso coinciden ambos. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-169",
+  "node_id": "roadmap_proyectos_operacionales_12_meses",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando necesitas un plan con cronograma claro para decidir si sigues adelante.",
+  "texto_nuevo": "Cuando quieres mejorar operaciones concretas de tu negocio (pronóstico, inventario, pedidos, entregas o devoluciones) y necesitas priorizarlas en un cronograma con métricas.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q010-016: La segunda condicion no corresponde al contenido; el dominio podria ser entrega, pero core tambien es defendible. (lector y verificador de acuerdo) Motivo: El nodo sirve para aterrizar una estrategia ya elegida en proyectos priorizados de operaciones, no para decidir si seguir adelante con el negocio."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-170",
+  "node_id": "rol_green_belt_six_sigma",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q072-006: Capacitarse como Green Belt y liderar o apoyar proyectos de mejora midiendo su ahorro es mejorar procesos de un negocio en marcha, fase ejecucion. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-171",
+  "node_id": "roles_six_sigma",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando necesitas claridad de responsabilidades para evitar resistencia al cambio",
+  "texto_nuevo": "Cuando necesitas definir quien lidera, patrocina y ejecuta los proyectos Six Sigma en tu negocio para evitar resistencia al cambio",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q022-026: Tenia razon el lector B: la condicion 1 no nombra Six Sigma y activaria el nodo en cualquier cambio organizacional, mientras las condiciones 0 y 2 y todo el contenido (roles Champion, Black Belt, Green Belt) son especificos de Six Sigma; dominio quality y fase planificacion correctos para ambos. (arbitro) Motivo: Suelta es generica: habla de claridad de responsabilidades ante la resistencia al cambio sin ligarla a Six Sigma, y activaria el nodo ante cualquier cambio organizacional, cuando el contenido solo trata los roles de Six Sigma."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-172",
+  "node_id": "scor_model_operaciones",
+  "campo": "condiciones_activacion",
+  "indice": 3,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si hay problemas recurrentes sin causa raíz identificada",
+  "texto_nuevo": "Si hay problemas recurrentes en la cadena de suministro (abastecimiento, fabricación, entrega o devoluciones) sin causa raíz identificada",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q100-021: Tenía razón el lector B: los dos coinciden en que la fase es ejecución porque el nodo mapea, mide y compara operaciones que ya están activas, pero la condición 3 activaría el nodo ante cualquier problema recurrente, y el marco SCOR solo cubre los de la cadena de suministro. (arbitro) Motivo: Es demasiado genérica: activa el nodo ante cualquier problema recurrente, cuando el contenido (mapear Plan, Abastecer, Fabricar, Entregar, Devolver y medir con KPIs SCOR) solo sirve para problemas de la cadena de suministro."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-173",
+  "node_id": "scor_model_operaciones",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q100-021: Tenía razón el lector B: los dos coinciden en que la fase es ejecución porque el nodo mapea, mide y compara operaciones que ya están activas, pero la condición 3 activaría el nodo ante cualquier problema recurrente, y el marco SCOR solo cubre los de la cadena de suministro. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-174",
+  "node_id": "scorecard_de_seleccion_de_proyectos",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si usas o evalúas este tipo de instrumento de puntaje",
+  "texto_nuevo": "Cuando necesitas comparar tus proyectos con criterios explicitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad tecnica y riesgo contra retorno",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q044-020: La primera condicion es circular y no dice cuando aplica. (lector y verificador de acuerdo) Motivo: Es circular: no describe una situacion del emprendedor, solo remite al propio instrumento."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-175",
+  "node_id": "scorecard_descubrimiento_cliente",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si usas o evalúas este tipo de instrumento de puntaje",
+  "texto_nuevo": "Cuando necesitas distinguir entre los clientes entrevistados que muestran entusiasmo real y los que solo sienten curiosidad",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q031-027: La condicion 0 es circular y no dice cuando aplica el scorecard. (lector y verificador de acuerdo) Motivo: Es circular y generica: no describe una situacion del usuario, solo remite al propio instrumento."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-176",
+  "node_id": "segregacion_funciones_trading_settlement",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "health_safety",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q047-011: La segregación de funciones es un control interno contra errores y fraude (caso Barings), propio de gestión de riesgos y no de seguridad y salud en el trabajo. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-177",
+  "node_id": "seguro_inversion_opic",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "La empresa planea construir o equipar instalaciones en un mercado emergente",
+  "texto_nuevo": "Tu empresa opera en Estados Unidos y planea construir o equipar instalaciones en un mercado emergente",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-016: La condicion 0 no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): OPIC solo apoya inversion de empresas estadounidenses y ninguna condicion deja claro que aplica si operas alli"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-178",
+  "node_id": "seleccion_ceo_fundador",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se está preparando documentación para inversionistas",
+  "texto_nuevo": "Cuando vas a presentarte ante inversionistas y los títulos de tu equipo fundador (CEO, CTO, COO) todavía no están definidos o se asignaron por defecto, sin evaluarlos",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q027-029: La tercera condición no tiene relación con decidir quién será CEO. (lector y verificador de acuerdo) Motivo: Preparar documentación para inversionistas no implica que el CEO esté sin decidir; tal como está, activaría el nodo en equipos que ya tienen los títulos resueltos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-179",
+  "node_id": "seleccion_controles",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "planificacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-010: Seleccionar y adaptar controles y documentarlos en un plan de seguridad es diseno del plan de salvaguardas, planificacion, igual que el paso previo de categorizar. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-180",
+  "node_id": "seleccion_de_distribuidor_internacional",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando la empresa decide entrar a un nuevo mercado mediante un socio local",
+  "texto_nuevo": "Cuando tu empresa opera o exporta desde Estados Unidos y decide entrar a un nuevo mercado mediante un distribuidor o representante local",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-001: La condicion 0 no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): ninguna condicion deja claro que aplica si tu empresa opera o exporta desde alli, y el paso 3 depende del U.S. Commercial Service"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-181",
+  "node_id": "seleccion_metodo_transporte_internacional",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si buscas optimizar costos y tiempos de entrega para ganar ventaja competitiva.",
+  "texto_nuevo": "Si exportas y buscas optimizar costos y tiempos de entrega internacional comparando transporte aéreo, marítimo y multimodal.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q025-010: Tenía razón A: el contenido (freight forwarder, booking contract, marcas de exportación, zonas francas) solo aplica al envío internacional, y las condiciones 1 y 3 (y por el mismo motivo la 2) se activarían en negocios que no exportan; dominio y fase están bien, como dicen ambos. (arbitro) Motivo: Demasiado genérica: se activaría en cualquier negocio que quiera bajar costos o tiempos de entrega, aunque no exporte."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-182",
+  "node_id": "seleccion_metodo_transporte_internacional",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando estás planificando el envío físico de tu producto.",
+  "texto_nuevo": "Cuando estás planificando el envío físico de tu producto a un comprador en el extranjero.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q025-010: Tenía razón A: el contenido (freight forwarder, booking contract, marcas de exportación, zonas francas) solo aplica al envío internacional, y las condiciones 1 y 3 (y por el mismo motivo la 2) se activarían en negocios que no exportan; dominio y fase están bien, como dicen ambos. (arbitro) Motivo: No ancla al envío internacional: cualquier envío local de producto la dispara."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-183",
+  "node_id": "seleccion_metodo_transporte_internacional",
+  "campo": "condiciones_activacion",
+  "indice": 3,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si tienes presión de tiempo de entrega o restricciones de costo.",
+  "texto_nuevo": "Si tu envío al comprador extranjero tiene presión de tiempo de entrega o restricciones de costo, o tu carga es voluminosa y necesitas reservar espacio con anticipación.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q025-010: Tenía razón A: el contenido (freight forwarder, booking contract, marcas de exportación, zonas francas) solo aplica al envío internacional, y las condiciones 1 y 3 (y por el mismo motivo la 2) se activarían en negocios que no exportan; dominio y fase están bien, como dicen ambos. (arbitro) Motivo: Demasiado genérica: cualquier presión de plazo o costo la dispara, sin relación con el transporte internacional."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-dominio-184",
+  "node_id": "senales_alerta_no_atendidas",
+  "campo": "dominio",
+  "veredicto": "DOMINIO",
+  "texto_anterior": "health_safety",
+  "texto_nuevo": "risk_management",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q063-011: Tiene razon el lector B: el nodo trata del colapso financiero de Barings, un registro de senales de alerta y umbrales que disparan una revision de riesgo en auditorias de riesgo, y nada de su contenido toca la seguridad y salud en el trabajo; el marco de accidentes organizacionales del libro no basta para que encaje en health_safety, asi que el dominio que le toca es risk_management. Las condiciones y la fase de ejecucion estan bien, en eso coinciden los dos. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo).",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-185",
+  "node_id": "sharp_end_blunt_end",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q019-018: Los pasos y condiciones tratan de investigar un accidente ya ocurrido en una operación en marcha (evento investigado, informe final), que es control y mejora de lo que funciona, no planificación. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-186",
+  "node_id": "teoria_desastres_organizacionales",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "planificacion",
+  "texto_nuevo": "ejecucion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q058-031: Tenia razon B: los pasos (mapear silos existentes, detectar practicas bajo presion, analizar retrospectivamente decisiones pasadas) y las condiciones (organizacion que ya opera, investigacion de un accidente) son diagnostico y control de un negocio en marcha, no diseno de un plan. (arbitro)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-187",
+  "node_id": "trade_fair_certification_program",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Si el usuario desea exhibir en una feria extranjera con respaldo oficial de EE.UU.",
+  "texto_nuevo": "Si tu empresa opera o exporta desde Estados Unidos y quieres exhibir en una feria extranjera dentro de un pabellon oficial de EE.UU.",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-005: La condicion no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): la condicion habla del respaldo oficial de EE.UU. pero no deja claro que aplica solo si tu empresa opera o exporta desde alli, requisito para entrar al pabellon"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-188",
+  "node_id": "uso_del_us_commercial_service",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Estás empezando a exportar y necesitas orientación experta gratuita o de bajo costo",
+  "texto_nuevo": "Tu empresa opera en Estados Unidos, estas empezando a exportar y necesitas orientacion experta gratuita o de bajo costo",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-028: La condicion 0 no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): el U.S. Commercial Service atiende a exportadores de alli y ninguna condicion deja claro que aplica si operas o vendes desde Estados Unidos"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-189",
+  "node_id": "validacion_certificaciones_terceros",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el consumidor necesita atajos de confianza para decidir su compra",
+  "texto_nuevo": "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creible de terceros para decidir su compra",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-015: La condicion 0 es generica y no ata el nodo a sus certificaciones ambientales. (lector y verificador de acuerdo) Motivo: Demasiado generica: no menciona lo ambiental y se activaria ante cualquier necesidad de confianza del consumidor, cuando el nodo trata de certificaciones y sellos ecologicos"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-190",
+  "node_id": "validar_canal_distribucion",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "No aplica si aún no tienes ventas directas previas a clientes finales: primero valida esa demanda antes de buscar el canal indirecto",
+  "texto_nuevo": "Cuando necesitas conseguir órdenes iniciales o compromisos firmes de distribuidores o revendedores para validar tu estrategia de canal",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q014-019: Tenia razon el lector A: la condicion 2 dice cuando no aplica en lugar de cuando aplica y endurece el requisito a ventas directas previas, que el contenido no exige. (arbitro) Motivo: Es una exclusion, no una situacion en la que el nodo aplica, y exige ventas directas previas cuando el resumen y el paso 2 solo piden evidencia de demanda de clientes finales."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-fase-191",
+  "node_id": "valor_vs_desperdicio",
+  "campo": "fase_proyecto",
+  "veredicto": "FASE",
+  "texto_anterior": "ejecucion",
+  "texto_nuevo": "validacion",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q040-016: El contenido trata de validar hipotesis con clientes antes de seguir construyendo, lo que es validacion y no operar un negocio en marcha. (lector y verificador de acuerdo)"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-192",
+  "node_id": "valuacion_409a",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Solo si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí) y vas a otorgar opciones sobre acciones a tus empleados",
+  "texto_nuevo": "Si vas a otorgar opciones sobre acciones a tus empleados y necesitas una valoracion profesional y documentada de su precio",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q008-027: La condicion 0 exige estar constituida en EE.UU., contra la regla de la clase B. (lector y verificador de acuerdo) Motivo: Clase B: la condicion exige que la empresa este constituida en EE.UU., y en clase B las condiciones no deben exigir operar alli"
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-193",
+  "node_id": "viaje_diagnostico_remedial",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando el equipo tiene múltiples hipótesis sin validar",
+  "texto_nuevo": "Cuando el equipo tiene varias teorías sobre la causa de un defecto de calidad y necesita probarlas con datos antes de diseñar un remedio",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q077-021: Tenía razón el lector B: la condición 1 no dice que las hipótesis sean sobre la causa de un problema de calidad, así que el nodo se activaría en cualquier validación de hipótesis de negocio, algo que su contenido no cubre. En dominio (quality) y fase (ejecucion) los dos lectores coinciden y aciertan. (arbitro) Motivo: Demasiado genérica: en un catálogo de emprendimiento, 'múltiples hipótesis sin validar' se cumple ante cualquier hipótesis de negocio o de mercado, cuando el nodo trata de teorías sobre la causa de un defecto de calidad que se prueban con datos."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "n1-condicion-194",
+  "node_id": "video_marketing_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando se busca aumentar tasas de conversión y credibilidad en campañas digitales",
+  "texto_nuevo": "Cuando se busca captar prospectos de franquicia y aumentar la conversión de las campañas digitales con video en el sitio web, YouTube y los Discovery Days",
+  "cita": {
+   "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+   "evidencia": "Q095-001: Razón para el lector A: la única condición vale para cualquier campaña digital, y el nodo trata del video para reclutar franquiciados (Discovery Days, formulario de captura); dominio y fase están bien, como dicen los dos lectores. (arbitro) Motivo: La condicion es generica de cualquier campaña digital: no menciona el video ni que el contenido sirve para captar prospectos de franquicia (Discovery Days, presentaciones a candidatos, sitio web y YouTube de la franquicia)."
+  },
+  "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+  "fecha": "2026-09-27"
+ }
+]

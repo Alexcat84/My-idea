@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Aviso fiscal para pagar impuestos por adelantado sobre tus acciones (elección 83(b))",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Los detalles legales y fiscales varían según tu país, así que verifícalos con un profesional local antes de actuar.",
+  "resumen_teorico": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
   "pasos_accionables": [
     "Identifica a todos los que reciben acciones con vesting, incluido tú mismo y tus primeros empleados",
     "Consulta con un asesor fiscal si te conviene hacer la elección 83(b)",
-    "Presenta la elección 83(b) ante la autoridad fiscal de tu país dentro de los 30 días posteriores a la entrega de las acciones",
-    "Guarda el comprobante de que la enviaste y de que la recibieron",
+    "Presenta la elección 83(b) ante la autoridad fiscal de Estados Unidos dentro de los 30 días posteriores a la entrega de las acciones",
+    "Sugerencia de My Idea: guarda el comprobante de que la enviaste y de que la recibieron",
     "Verifica que todos los que tienen acciones hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa"
   ],
   "entregable_esperado": "Elecciones 83(b) presentadas y guardadas para ti y para todos los que tienen acciones con vesting",
@@ -20,8 +20,91 @@
     "compensacion_service_providers"
   ],
   "condiciones_activacion": [
-    "Justo después de que tú o tus primeros empleados reciban acciones con vesting",
-    "Antes de cualquier proceso de revisión para una inversión o venta de la empresa"
+    "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+    "Antes de cualquier proceso de revisión para una inversión o venta de tu empresa, si tributa en Estados Unidos"
   ],
-  "etiqueta_arbol": "Elige tu Impuesto a Tiempo"
+  "etiqueta_arbol": "Elige tu Impuesto a Tiempo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-031",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Guarda el comprobante de que la enviaste y de que la recibieron",
+      "texto_nuevo": "Sugerencia de My Idea: guarda el comprobante de que la enviaste y de que la recibieron",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4700-L4704",
+        "frase": "Potential investors will ask whether all service providers have filed timely 83(b) elections and will often require the company to make a representation in the operative purchase agreement that all such elections have been made."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. A tiene razon. El libro fija el plazo de 30 dias y dice que no se puede corregir. Anade que los inversionistas preguntan si se presento a tiempo y cuenta el caso de una eleccion sin firmar bajo una pila de papeles. En ningun sitio habla de guardar un comprobante de envio ni un acuse de recibo. Busque en todo el libro proof, receipt, certified, acknowledg, evidence, copy y record, y ninguno trata de la 83(b). El comprobante doble de envio y de recepcion es una practica documental que el libro no respalda, asi que no es solo concretar el texto.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C020-043"
+    },
+    {
+      "id": "saneamiento-t1-j05",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE_DE_CLASE",
+      "texto_anterior": "Presenta la elección 83(b) ante la autoridad fiscal de tu país dentro de los 30 días posteriores a la entrega de las acciones",
+      "texto_nuevo": "Presenta la elección 83(b) ante la autoridad fiscal de Estados Unidos dentro de los 30 días posteriores a la entrega de las acciones",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L18-L33",
+        "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (la eleccion 83(b) es del codigo fiscal de EE.UU.): el paso la mandaba presentar ante la autoridad de tu pais.",
+      "indice": 2,
+      "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-j06",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "INCOHERENTE_DE_CLASE",
+      "texto_anterior": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Los detalles legales y fiscales varían según tu país, así que verifícalos con un profesional local antes de actuar.",
+      "texto_nuevo": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L18-L33",
+        "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C: el resumen prometia verificarlo en tu pais.",
+      "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "n1-condicion-062",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Justo después de que tú o tus primeros empleados reciban acciones con vesting",
+      "texto_nuevo": "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-001: Tenía razón el lector B: cada condición activa el nodo por sí sola, y la segunda también lo dispararía para una empresa que no tributa en Estados Unidos, así que la clase C exige corregir las dos. (arbitro) Motivo: Clase C: no deja claro que la elección 83(b) solo aplica si tributas en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-063",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Antes de cualquier proceso de revisión para una inversión o venta de la empresa",
+      "texto_nuevo": "Antes de cualquier proceso de revisión para una inversión o venta de tu empresa, si tributa en Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-001: Tenía razón el lector B: cada condición activa el nodo por sí sola, y la segunda también lo dispararía para una empresa que no tributa en Estados Unidos, así que la clase C exige corregir las dos. (arbitro) Motivo: Clase C: por sí sola se activaría ante cualquier inversión o venta en cualquier país, sin atarla a tributar en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ]
 }

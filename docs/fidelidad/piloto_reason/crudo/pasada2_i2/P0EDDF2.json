@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0EDDF2",
+  "intento": 0,
+  "usd": 0.151168,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33382,
+  "tokens_out": 882,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0EDDF2\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1934, 1914, 1887, 293], \"cita\": \"maintenance errors--like human failures in any other sphere--are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions. ... communication failures at the shift handover earlier in the evening, together with a breakdown of the permit-to-work system\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta los errores de mantenimiento de estos casos como consecuencia de condiciones latentes. También nombra las categorías del paso: fallos de comunicación en relevos y del permiso de trabajo (Piper Alpha) y procedimientos especiales no estándar (Flight 191). Pide rastrear, desde cada condición local, sus factores organizacionales. Mapearlas por caso concreta esto en la misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0EDDF2",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1934,
+   1914,
+   1887,
+   293
+  ],
+  "cita": "maintenance errors--like human failures in any other sphere--are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions. ... communication failures at the shift handover earlier in the evening, together with a breakdown of the permit-to-work system",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta los errores de mantenimiento de estos casos como consecuencia de condiciones latentes. También nombra las categorías del paso: fallos de comunicación en relevos y del permiso de trabajo (Piper Alpha) y procedimientos especiales no estándar (Flight 191). Pide rastrear, desde cada condición local, sus factores organizacionales. Mapearlas por caso concreta esto en la misma dirección.",
+  "paso_fiel": ""
+ }
+}

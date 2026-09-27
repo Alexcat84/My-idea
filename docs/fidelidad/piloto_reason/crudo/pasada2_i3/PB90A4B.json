@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PB90A4B",
+  "intento": 0,
+  "usd": 0.196072,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45688,
+  "tokens_out": 666,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB90A4B\", \"veredicto\": \"FIEL\", \"lineas\": [275, 293, 4105, 343], \"cita\": \"For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta su propio modelo de causalidad (Fig. 1.6) para la investigación, y BASI lo adoptó como marco. Pide establecer, en cada defensa vulnerada, qué fallos activos y condiciones latentes intervinieron. 'Modelo de Reason' está respaldado. Hablar de 'fallas latentes' en vez de 'condiciones latentes' es solo un matiz terminológico (L343), no una contradicción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB90A4B",
+  "veredicto": "FIEL",
+  "lineas": [
+   275,
+   293,
+   4105,
+   343
+  ],
+  "cita": "For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta su propio modelo de causalidad (Fig. 1.6) para la investigación, y BASI lo adoptó como marco. Pide establecer, en cada defensa vulnerada, qué fallos activos y condiciones latentes intervinieron. 'Modelo de Reason' está respaldado. Hablar de 'fallas latentes' en vez de 'condiciones latentes' es solo un matiz terminológico (L343), no una contradicción.",
+  "paso_fiel": ""
+ }
+}

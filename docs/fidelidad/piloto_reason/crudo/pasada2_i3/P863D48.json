@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P863D48",
+  "intento": 0,
+  "usd": 0.172208,
+  "turnos": 1,
+  "duracion_s": 17.1,
+  "pared_s": 19.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35727,
+  "tokens_out": 1465,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P863D48\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5775, 5781, 2598, 2658, 2767], \"cita\": \"identifying and eliminating latent conditions proactively still offer the best routes to improving system ‘fitness’. But it has to be a continuous process. ... Latent accident-producing conditions are present now. It is not necessary to wait for bad events to find out what they are.\", \"datos_sin_respaldo\": [\"registro de condiciones latentes conocidas\"], \"tambien_anadido\": false, \"razon\": \"La dirección coincide con el libro: actuar de forma proactiva y continua, sin esperar al accidente (L5781, L2767). Pero el libro no propone un registro de condiciones latentes conocidas. Propone chequeos regulares de salud de los procesos organizacionales, con índices y un sistema de información de seguridad, para identificar y eliminar las condiciones latentes. El registro es una herramienta añadida.\", \"paso_fiel\": \"Evaluar de forma regular y proactiva los procesos organizacionales (diseño, capacitación, procedimientos, mantenimiento, presupuesto) para identificar y eliminar condiciones latentes antes de que ocurra un accidente, no solo tras él.\"}\n```",
+ "parseado": {
+  "id": "P863D48",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5775,
+   5781,
+   2598,
+   2658,
+   2767
+  ],
+  "cita": "identifying and eliminating latent conditions proactively still offer the best routes to improving system ‘fitness’. But it has to be a continuous process. ... Latent accident-producing conditions are present now. It is not necessary to wait for bad events to find out what they are.",
+  "datos_sin_respaldo": [
+   "registro de condiciones latentes conocidas"
+  ],
+  "tambien_anadido": false,
+  "razon": "La dirección coincide con el libro: actuar de forma proactiva y continua, sin esperar al accidente (L5781, L2767). Pero el libro no propone un registro de condiciones latentes conocidas. Propone chequeos regulares de salud de los procesos organizacionales, con índices y un sistema de información de seguridad, para identificar y eliminar las condiciones latentes. El registro es una herramienta añadida.",
+  "paso_fiel": "Evaluar de forma regular y proactiva los procesos organizacionales (diseño, capacitación, procedimientos, mantenimiento, presupuesto) para identificar y eliminar condiciones latentes antes de que ocurra un accidente, no solo tras él."
+ }
+}

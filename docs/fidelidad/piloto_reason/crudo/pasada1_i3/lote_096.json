@@ -1,0 +1,90 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_096",
+  "intento": 0,
+  "usd": 0.173952,
+  "turnos": 1,
+  "duracion_s": 22.7,
+  "pared_s": 23.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32978,
+  "tokens_out": 2102,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PC2A10D\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"periódicamente\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [478, 488, 494, 504, 506, 526, 4259],\n    \"razon\": \"El libro no pide auditar roles duales. En Barings el rol dual estaba asignado, no oculto, y la auditoría lo detectó sin corregirlo. Auditar sin actuar repite el fallo.\"\n  },\n  {\n    \"id\": \"P0DAF10\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [1522, 1539, 2716, 3821, 3825, 3829, 5043],\n    \"razon\": \"El libro distingue errores de violaciones, pero dice que las violaciones pueden ser deliberadas o erróneas. Igualar violación con intencional simplifica esa matiz.\"\n  },\n  {\n    \"id\": \"PC1F559\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2866, 2896, 2961],\n    \"razon\": \"El libro critica que la gestión de errores ignore el conocimiento actual de factores humanos y de las ciencias del comportamiento. El paso recoge esa recomendación.\"\n  },\n  {\n    \"id\": \"P1D6384\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"gestión del cambio\", \"liderazgo\", \"comunicación\", \"compras\"],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [2720, 2724, 2750, 2654, 3097, 3330],\n    \"razon\": \"Priorizar factores organizacionales es fiel. Pero el libro clasifica el liderazgo como factor local, no trae gestión del cambio y pide muestrear las seis dimensiones de forma equilibrada.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PC2A10D",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    478,
+    488,
+    494,
+    504,
+    506,
+    526,
+    4259
+   ],
+   "razon": "El libro no pide auditar roles duales. En Barings el rol dual estaba asignado, no oculto, y la auditoría lo detectó sin corregirlo. Auditar sin actuar repite el fallo."
+  },
+  {
+   "id": "P0DAF10",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    1522,
+    1539,
+    2716,
+    3821,
+    3825,
+    3829,
+    5043
+   ],
+   "razon": "El libro distingue errores de violaciones, pero dice que las violaciones pueden ser deliberadas o erróneas. Igualar violación con intencional simplifica esa matiz."
+  },
+  {
+   "id": "PC1F559",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2866,
+    2896,
+    2961
+   ],
+   "razon": "El libro critica que la gestión de errores ignore el conocimiento actual de factores humanos y de las ciencias del comportamiento. El paso recoge esa recomendación."
+  },
+  {
+   "id": "P1D6384",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "gestión del cambio",
+    "liderazgo",
+    "comunicación",
+    "compras"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2720,
+    2724,
+    2750,
+    2654,
+    3097,
+    3330
+   ],
+   "razon": "Priorizar factores organizacionales es fiel. Pero el libro clasifica el liderazgo como factor local, no trae gestión del cambio y pide muestrear las seis dimensiones de forma equilibrada."
+  }
+ ]
+}

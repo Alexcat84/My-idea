@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_028",
+  "intento": 0,
+  "usd": 0.156196,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33069,
+  "tokens_out": 1196,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P512580\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5184, 5186, 5190, 5196], \"razon\": \"El libro dice que una cultura que valora las 'war stories' y la comunicación cara a cara reduce la brecha de variedad requerida y aporta aprendizaje vicario.\"},\n  {\"id\": \"P0F9F64\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5272, 4749, 4695, 2585], \"razon\": \"Reason: la cultura de seguridad se persigue pero rara vez se alcanza; importa más el proceso que el producto; es un ideal hacia el que hay que esforzarse.\"},\n  {\"id\": \"P34DFAC\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2583, 1060, 5641], \"razon\": \"La paradoja posicional (culpar al personal de primera línea) es síntoma de falta de cognisance. Evaluarla concreta el libro en su misma dirección.\"},\n  {\"id\": \"P83AEC8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"cada inspector\", \"lista fija de equipos y procedimientos\", \"en todas las visitas\", \"igual para todas las instalaciones\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4027, 4033, 4039, 3213], \"razon\": \"El libro recoge que una lista fija única choca con la variedad de instalaciones y hace previsibles las inspecciones. Solo menciona una checklist específica para permisos de trabajo; generalizarla es dudoso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P512580",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5184,
+    5186,
+    5190,
+    5196
+   ],
+   "razon": "El libro dice que una cultura que valora las 'war stories' y la comunicación cara a cara reduce la brecha de variedad requerida y aporta aprendizaje vicario."
+  },
+  {
+   "id": "P0F9F64",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5272,
+    4749,
+    4695,
+    2585
+   ],
+   "razon": "Reason: la cultura de seguridad se persigue pero rara vez se alcanza; importa más el proceso que el producto; es un ideal hacia el que hay que esforzarse."
+  },
+  {
+   "id": "P34DFAC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2583,
+    1060,
+    5641
+   ],
+   "razon": "La paradoja posicional (culpar al personal de primera línea) es síntoma de falta de cognisance. Evaluarla concreta el libro en su misma dirección."
+  },
+  {
+   "id": "P83AEC8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cada inspector",
+    "lista fija de equipos y procedimientos",
+    "en todas las visitas",
+    "igual para todas las instalaciones"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4027,
+    4033,
+    4039,
+    3213
+   ],
+   "razon": "El libro recoge que una lista fija única choca con la variedad de instalaciones y hace previsibles las inspecciones. Solo menciona una checklist específica para permisos de trabajo; generalizarla es dudoso."
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
   "node_id": "diseno_sistemico_partes_interesadas",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Diseñar sistemas con muchos intereses en juego (fuerzas ocultas)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
@@ -14,7 +14,6 @@
   ],
   "entregable_esperado": "Un mapa de las personas y fuerzas ocultas involucradas en tu sistema, junto con un análisis de los sacrificios que implica y una propuesta de gobierno que proteja el propósito central de tu proyecto frente a intereses particulares.",
   "nodos_previos": [
-    "search_for_business_model",
     "investigacion_analoga",
     "analisis_y_sintesis"
   ],
@@ -27,5 +26,36 @@
     "Si existen financiadores u otros actores con intereses ocultos que puedan sesgar tu diseño.",
     "Cuando necesitas equilibrar sostenibilidad ambiental con viabilidad económica."
   ],
-  "etiqueta_arbol": "Equilibra tus Partes Interesadas"
+  "etiqueta_arbol": "Equilibra tus Partes Interesadas",
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-118",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> diseno_sistemico_partes_interesadas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-11): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Disenar sistemas a gran escala (biomas, ecosistemas) no se relaciona con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-112",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F24-021: Mapear actores, evaluar los sacrificios y disenar el gobierno del proyecto es disenar el modelo y la estrategia. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

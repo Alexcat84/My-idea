@@ -41,8 +41,13 @@ retroalimentación incluye la percepción de precio. Ninguna pasarela activada.
 
 - Saldo insuficiente: **402 antes del esfuerzo** ("Te quedan X créditos; esto
   cuesta Y. Tu trabajo queda guardado tal como está.").
-- Carrera rara (verificó y otra pestaña gastó): **se entrega igual** y queda en
-  bitácora (`cobro_carrera`). Jamás se cobra de más.
+- Reserva al empezar (AUD-09 M25, migración 042): la sesión aparta el precio de
+  su plan; otra sesión con el saldo ya apartado recibe el 402 ("Tienes X
+  créditos y Y ya están apartados..."). Se cobra a la entrega y se libera si no
+  hay cobro; vence a las 2 horas. Detalle en `ANALISIS_PRECIOS.md` §4.
+- Carrera rara (lo que la reserva no cubre, por ejemplo una reserva vencida):
+  **se entrega igual** y queda en bitácora (`cobro_carrera`). Jamás se cobra de
+  más.
 - Fallo tras un cobro y antes del done: **reembolso automático** con su log
   (`credit_refund_log`). El usuario jamás pierde créditos por fallo nuestro.
 

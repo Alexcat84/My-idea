@@ -22,10 +22,29 @@
   ],
   "nodos_siguientes": [
     "categorias_entusiasmo_cliente",
-    "compromiso_linea_tiempo_cliente"
+    "compromiso_linea_tiempo_cliente",
+    "separa_la_visita_de_evaluacion_de_la_decision_de_compra"
   ],
   "condiciones_activacion": [
     "Cuando el usuario está cerca de cerrar una venta grande y necesita una estrategia estructurada de cierre en lugar de técnicas de presión"
   ],
-  "etiqueta_arbol": "Usa las Cuatro Acciones Clave"
+  "etiqueta_arbol": "Usa las Cuatro Acciones Clave",
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-003",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "obtencion_de_compromiso -> separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
+  ]
 }

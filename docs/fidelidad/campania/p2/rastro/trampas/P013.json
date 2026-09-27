@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Comparación de Métodos de Inversión: Payback, NPV e IRR",
+  "resumen": "Payback, NPV e IRR son tres métodos para decidir si un gasto de capital vale la pena, y pueden llevar a decisiones distintas según cuál se use. El payback mide la rapidez de recuperación, el IRR el porcentaje de retorno y el NPV el valor en dinero de hoy que el proyecto aporta a la empresa, descontando los flujos futuros a la tasa mínima exigida (hurdle rate).",
+  "texto": "Si los métodos entran en conflicto, dar prioridad a la decisión que indica el IRR, porque es más fácil de explicar al equipo y a los inversionistas",
+  "tipo": "CONTRARIO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L3142",
+  "cita": "the net present value method is the best choice when the methods conflict",
+  "explicacion": "El libro dice que ante un conflicto entre métodos hay que elegir el NPV (L3142), y en L3186-L3190 muestra que seguir solo el IRR lleva a la inversión equivocada. Que el IRR sea más fácil de presentar (L3133) es cierto, pero el libro lo deja para la discusión y la presentación, no para decidir. El paso invierte el criterio."
+ },
+ {
+  "titulo": "Razón Corriente y Liquidez de Corto Plazo",
+  "resumen": "La razón corriente compara los activos corrientes (efectivo, cuentas por cobrar, inventario) con los pasivos corrientes que vencen en menos de un año. Puede estar demasiado baja o demasiado alta: muy baja indica que la empresa apenas cubre sus obligaciones, y muy alta sugiere que tiene efectivo ocioso. Los bancos la revisan antes de prestar.",
+  "texto": "Mantener la razón corriente lo más cerca posible de 1 para no dejar efectivo ocioso antes de solicitar un préstamo",
+  "tipo": "CONTRARIO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L2675",
+  "cita": "Most bankers aren’t going to lend money to a company with a current ratio anywhere near 1.",
+  "explicacion": "El libro advierte que una razón corriente cercana a 1 ya es demasiado baja y que con ella la mayoría de los bancos no presta (L2675). También dice que una razón muy por encima de 1 tranquiliza al dueño y que, si baja hacia 1, hay que prestar atención (L2677). El paso toma el riesgo de tener efectivo ocioso y recomienda justo el nivel que el libro señala como peligroso para pedir un crédito."
+ },
+ {
+  "titulo": "Cobertura de Intereses antes de Endeudarse",
+  "resumen": "La cobertura de intereses divide la utilidad operativa (EBIT) entre los gastos de intereses y muestra con qué facilidad la empresa paga los intereses de su deuda. A los bancos les importa tanto como la razón deuda a capital. Un ratio cercano a 1 es mala señal, y uno alto indica que la empresa puede asumir más deuda.",
+  "texto": "Mantener la cobertura de intereses (EBIT entre gastos de intereses) por encima de 3 veces antes de solicitar un nuevo préstamo",
+  "tipo": "ANADIDO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L2632-L2638",
+  "cita": "A ratio that gets too close to 1 is obviously a bad sign: most of a company’s profit is going to pay off interest! A high ratio is generally a sign that the company can afford to take on more debt—or at least that it can make the payments.",
+  "dato": "Umbral mínimo de 3 veces de cobertura de intereses para solicitar un préstamo",
+  "explicacion": "El libro solo dice que un ratio cercano a 1 es mala señal y que uno alto permite asumir más deuda, pero no da ningún umbral numérico. Busqué con Grep 'three times', '3 times', '3x', 'times interest', 'two times', 'twice' y ' 2.0': la única coincidencia es 'two or three times' en L3557, que se refiere a cuántas veces asistir a una clase, no a la cobertura. El umbral de 3 veces es un dato inventado."
+ },
+ {
+  "titulo": "Antigüedad de Cuentas por Cobrar (Aging)",
+  "resumen": "El DSO es un promedio y puede ocultar problemas: una empresa con la mitad de sus cuentas a menos de diez días y la otra mitad a más de noventa tiene un DSO aceptable, pero la mitad de sus clientes no le está pagando. El análisis de antigüedad agrupa las cuentas por cobrar por tramos de días (menos de treinta, de treinta a sesenta, etc.) y conviene revisarlo junto con el DSO.",
+  "texto": "Revisar cada semana el reporte de antigüedad de saldos y enviar a una agencia de cobranza externa toda factura con más de 75 días de atraso",
+  "tipo": "ANADIDO",
+  "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+  "lineas": "L3458-L3462",
+  "cita": "It’s usually worth checking out that analysis as well as your overall DSO number to get the full picture of your receivables.",
+  "dato": "Revisión semanal del aging y envío a una agencia de cobranza externa de las facturas con más de 75 días",
+  "explicacion": "El libro recomienda revisar el análisis de antigüedad junto con el DSO, pero no fija ninguna frecuencia para esa revisión ni habla de agencias de cobranza ni de un plazo de 75 días. Grep de 'collection agenc', 'outside collect', 'external', 'attorney' y 'lawyer' no encuentra nada. 'weekly' aparece solo en otros contextos (reuniones de números en L3563, registro de cheques en L2307), y 'forty-five' y 'seventy-five' no aparecen como días."
+ }
+]

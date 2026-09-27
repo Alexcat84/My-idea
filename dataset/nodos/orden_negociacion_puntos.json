@@ -18,10 +18,29 @@
   ],
   "nodos_siguientes": [
     "seleccion_abogado_venture",
-    "contrarrestar_argumento_mercado"
+    "contrarrestar_argumento_mercado",
+    "plantea_oferta_como_rango_o_cifra_precisa"
   ],
   "condiciones_activacion": [
     "Cuando estás por negociar el acuerdo (term sheet) con un inversor"
   ],
-  "etiqueta_arbol": "Elige el Orden de Negociación"
+  "etiqueta_arbol": "Elige el Orden de Negociación",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-042",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "orden_negociacion_puntos -> plantea_oferta_como_rango_o_cifra_precisa",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C10, lectores de acuerdo)",
+        "motivo": "Tras ordenar los puntos de una negociacion se llega a como plantear la cifra de la oferta."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

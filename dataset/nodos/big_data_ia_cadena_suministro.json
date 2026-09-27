@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Un pipeline de datos con al menos un modelo predictivo activo y un dashboard de KPIs de cadena de suministro",
   "nodos_previos": [
-    "tecnologias_emergentes_cadena_suministro"
+    "tecnologias_emergentes_cadena_suministro",
+    "creacion_data_warehouse"
   ],
   "nodos_siguientes": [
     "marco_analisis_mercado_cadena_suministro"
@@ -23,5 +24,23 @@
     "Cuando la empresa genera grandes volúmenes de datos operativos",
     "Cuando se busca anticipar fallas de producto o problemas de servicio antes de que ocurran"
   ],
-  "etiqueta_arbol": "Predice tu Cadena con Datos"
+  "etiqueta_arbol": "Predice tu Cadena con Datos",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-033",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "creacion_data_warehouse -> big_data_ia_cadena_suministro",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C01, lectores de acuerdo)",
+        "motivo": "Centralizar datos en un repositorio es el paso previo a llevarlos a un data lake con machine learning predictivo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

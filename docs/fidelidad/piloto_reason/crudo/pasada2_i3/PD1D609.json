@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD1D609",
+  "intento": 0,
+  "usd": 0.21202,
+  "turnos": 1,
+  "duracion_s": 17.8,
+  "pared_s": 18.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44590,
+  "tokens_out": 1683,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD1D609\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5639, 5781, 5905, 5907], \"cita\": \"All domains must be assessed as at least ‘high’ in this regard. […] Effective risk management requires the application of different countermeasures targeted at different levels of the system at the same time--and all the time.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro admite que el balance de riesgos varía por dominio. Pero pide contramedidas en todos los niveles a la vez y siempre, y dice que las condiciones latentes son al menos altas en todos los dominios. Priorizar por el tipo predominante (lesiones en minería, operadores en finanzas) relegaría las condiciones latentes, que el libro sitúa como vía principal.\", \"paso_fiel\": \"Repartir los recursos de gestión de riesgo entre los cuatro tipos de riesgo a la vez, ajustando el énfasis al balance propio del dominio, sin limitarse a las lesiones personales y sin relegar nunca las condiciones latentes, que son al menos altas en todos los dominios.\"}\n```",
+ "parseado": {
+  "id": "PD1D609",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5639,
+   5781,
+   5905,
+   5907
+  ],
+  "cita": "All domains must be assessed as at least ‘high’ in this regard. […] Effective risk management requires the application of different countermeasures targeted at different levels of the system at the same time--and all the time.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro admite que el balance de riesgos varía por dominio. Pero pide contramedidas en todos los niveles a la vez y siempre, y dice que las condiciones latentes son al menos altas en todos los dominios. Priorizar por el tipo predominante (lesiones en minería, operadores en finanzas) relegaría las condiciones latentes, que el libro sitúa como vía principal.",
+  "paso_fiel": "Repartir los recursos de gestión de riesgo entre los cuatro tipos de riesgo a la vez, ajustando el énfasis al balance propio del dominio, sin limitarse a las lesiones personales y sin relegar nunca las condiciones latentes, que son al menos altas en todos los dominios."
+ }
+}

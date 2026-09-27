@@ -11,9 +11,9 @@
     "Preparar toda la logística (documentos, paquetes de indemnización) antes de anunciar nada",
     "Ejecutar el despido en el menor tiempo posible tras la decisión final"
   ],
-  "entregable_esperado": "Plan de ejecución de despido con cronograma de máximo 48-72 horas entre decisión y comunicación",
+  "entregable_esperado": "Plan de ejecución de despido con un cronograma que reduzca al mínimo el tiempo entre decisión y ejecución",
   "nodos_previos": [
-    "falta_de_constancia_de_proposito"
+    "proceso_despidos_responsables"
   ],
   "nodos_siguientes": [
     "entrenamiento_de_gerentes_para_despidos",
@@ -21,7 +21,68 @@
   ],
   "condiciones_activacion": [
     "Cuando la empresa ha decidido reducir personal por incumplimiento de metas",
-    "Si existe riesgo de filtración de información sensible"
+    "Si ya se tomo la decision de despedir y existe riesgo de que se filtre antes de ejecutarla"
   ],
-  "etiqueta_arbol": "Ejecuta los Despidos sin Demora"
+  "etiqueta_arbol": "Ejecuta los Despidos sin Demora",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-64",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de ejecución de despido con cronograma de máximo 48-72 horas entre decisión y comunicación",
+      "texto_nuevo": "Plan de ejecución de despido con un cronograma que reduzca al mínimo el tiempo entre decisión y ejecución",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L867",
+        "frase": "the time elapsed between making that decision and executing that decision should be as short as possible"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R059-024 (ANADIDO, lector y verificador de acuerdo): Plazo numérico que el libro no da (búsqueda de 48, 72, forty-eight, seventy-two sin pasajes sobre despidos). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R059-024"
+    },
+    {
+      "id": "t2-arista-056",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "falta_de_constancia_de_proposito -> ejecucion_rapida_de_despidos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-24-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La falta de constancia de proposito (enfermedad mortal de Deming) no prepara la ejecucion rapida de un despido ya decidido; no hay continuidad entre los dos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-07",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "proceso_despidos_responsables -> ejecucion_rapida_de_despidos",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-07, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "El proceso general de despidos ya pide actuar con rapidez para evitar filtraciones; este nodo desarrolla ese punto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-condicion-061",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si existe riesgo de filtración de información sensible",
+      "texto_nuevo": "Si ya se tomo la decision de despedir y existe riesgo de que se filtre antes de ejecutarla",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q022-004: La condicion 1 no esta ligada al despido que trata el nodo. (lector y verificador de acuerdo) Motivo: Demasiado generica: cualquier riesgo de filtracion de informacion la dispara, aunque no haya ningun despido decidido."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ]
 }

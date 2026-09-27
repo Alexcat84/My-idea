@@ -8,20 +8,78 @@
   "pasos_accionables": [
     "Identificar las expresiones de miedo en las personas que trabajan contigo (temor a perder su lugar, a admitir errores, a hacer preguntas)",
     "Crear canales seguros para que cualquiera exprese problemas sin temor a represalias",
-    "Eliminar la evaluación de desempeno punitiva como fuente de miedo",
-    "Analizar las quejas con datos antes de actuar contra una persona o un grupo especifico"
+    "Eliminar la evaluación de desempeño punitiva como fuente de miedo",
+    "Analizar las quejas con datos antes de actuar contra una persona o un grupo específico"
   ],
-  "entregable_esperado": "Diagnostico de las fuentes de miedo en tu negocio y un plan para eliminarlas, con evidencia de canales de comunicación seguros ya funcionando.",
+  "entregable_esperado": "Diagnóstico de las fuentes de miedo en tu negocio y un plan para eliminarlas, con evidencia de canales de comunicación seguros ya funcionando.",
   "nodos_previos": [
     "adopcion_liderazgo"
   ],
   "nodos_siguientes": [
-    "eliminar_barreras_departamentales",
-    "deja_de_ignorar_el_riesgo"
+    "eliminar_barreras_departamentales"
   ],
   "condiciones_activacion": [
     "Cuando las personas ocultan errores por temor a represalias",
     "Cuando tu manera de dirigir se basa en amenazas o presión punitiva"
   ],
-  "etiqueta_arbol": "Elimina el Miedo Interno"
+  "etiqueta_arbol": "Elimina el Miedo Interno",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-031",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "eliminar_miedo -> deja_de_ignorar_el_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por sesgo_optimismo_fundador."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-orto-0933",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Eliminar la evaluación de desempeno punitiva como fuente de miedo",
+      "texto_nuevo": "Eliminar la evaluación de desempeño punitiva como fuente de miedo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-024.paso2: desempeño (Falta la eñe en 'desempeño'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0934",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analizar las quejas con datos antes de actuar contra una persona o un grupo especifico",
+      "texto_nuevo": "Analizar las quejas con datos antes de actuar contra una persona o un grupo específico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-024.paso3: específico (Falta la tilde real en 'específico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0935",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diagnostico de las fuentes de miedo en tu negocio y un plan para eliminarlas, con evidencia de canales de comunicación seguros ya funcionando.",
+      "texto_nuevo": "Diagnóstico de las fuentes de miedo en tu negocio y un plan para eliminarlas, con evidencia de canales de comunicación seguros ya funcionando.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-024.entregable: Diagnóstico (Falta la tilde real en 'Diagnóstico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

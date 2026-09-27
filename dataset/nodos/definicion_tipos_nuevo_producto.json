@@ -1,6 +1,6 @@
 {
   "node_id": "definicion_tipos_nuevo_producto",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Taxonomía de los Seis Tipos de Nuevos Productos",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -30,5 +30,23 @@
     "Al definir métricas de innovación",
     "Si se quiere evaluar el balance de riesgo/innovación del portafolio de productos"
   ],
-  "etiqueta_arbol": "Ubica tu Tipo de Producto"
+  "etiqueta_arbol": "Ubica tu Tipo de Producto",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-095",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-025: Clasifica el portafolio de productos lanzados para definir metricas y balance de riesgo, es analisis estrategico de portafolio y no exploracion de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

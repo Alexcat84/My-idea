@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2D16F2",
+  "intento": 0,
+  "usd": 0.110164,
+  "turnos": 1,
+  "duracion_s": 5.1,
+  "pared_s": 6.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26251,
+  "tokens_out": 258,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P2D16F2\", \"veredicto\": \"FIEL\", \"lineas\": [3199, 3203], \"cita\": \"Once completed, the data are analysed by the software which generates a Failure State Profile--a bar chart--showing the relative cause for concern for each of the 11 GFTs (see Figure 7.4).\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro afirma que el software de Tripod-Delta analiza el checklist completado y genera el Failure State Profile, un grafico de barras con los 11 GFTs. Tanto el nombre del perfil como el uso de software estan respaldados (L3199; figura en L3203). El paso no invierte ni condiciona nada.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P2D16F2",
+  "veredicto": "FIEL",
+  "lineas": [
+   3199,
+   3203
+  ],
+  "cita": "Once completed, the data are analysed by the software which generates a Failure State Profile--a bar chart--showing the relative cause for concern for each of the 11 GFTs (see Figure 7.4).",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro afirma que el software de Tripod-Delta analiza el checklist completado y genera el Failure State Profile, un grafico de barras con los 11 GFTs. Tanto el nombre del perfil como el uso de software estan respaldados (L3199; figura en L3203). El paso no invierte ni condiciona nada.",
+  "paso_fiel": ""
+ }
+}

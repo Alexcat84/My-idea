@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PDB2725",
+  "intento": 0,
+  "usd": 0.1182,
+  "turnos": 1,
+  "duracion_s": 7.9,
+  "pared_s": 9.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26770,
+  "tokens_out": 556,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PDB2725\", \"veredicto\": \"FIEL\", \"lineas\": [3724, 3692], \"cita\": \"The overall probability of grounding at a river bar is obtained by summing the unconditional probabilities of each of three immediate influencing factors\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro obtiene la probabilidad global del 'top event' sumando probabilidades incondicionales, como dice el paso. El paso omite que se suman las de los factores de influencia inmediatos. Es una falta de detalle, no una inversión: el libro no desaconseja nada que el paso mande hacer. Los otros pasos del nodo ya encuadran el cálculo previo por factores.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PDB2725",
+  "veredicto": "FIEL",
+  "lineas": [
+   3724,
+   3692
+  ],
+  "cita": "The overall probability of grounding at a river bar is obtained by summing the unconditional probabilities of each of three immediate influencing factors",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro obtiene la probabilidad global del 'top event' sumando probabilidades incondicionales, como dice el paso. El paso omite que se suman las de los factores de influencia inmediatos. Es una falta de detalle, no una inversión: el libro no desaconseja nada que el paso mande hacer. Los otros pasos del nodo ya encuadran el cálculo previo por factores.",
+  "paso_fiel": ""
+ }
+}

@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_factores_distales_proximales",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Análisis de Factores Proximales y Distales",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -21,5 +21,23 @@
   "condiciones_activacion": [
     "Cuando se busca prevenir recurrencia de incidentes similares en otros contextos de la organización"
   ],
-  "etiqueta_arbol": "Busca Causas más Profundas"
+  "etiqueta_arbol": "Busca Causas más Profundas",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-014",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F08-031: Analiza los factores de un incidente para evitar que se repita en la organizacion en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

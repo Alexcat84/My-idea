@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_071",
+  "intento": 0,
+  "usd": 0.167056,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 18.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33104,
+  "tokens_out": 1732,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC4FBE3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5894, 5896], \"razon\": \"El libro exige planificar la recuperación post-accidente. Cita un programa ya puesto a prueba y que el 80% de los planes fallan la primera vez. 'Específico' es concreción propia.\"},\n  {\"id\": \"P646C78\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5037, 5057, 668], \"razon\": \"El test pide juzgar según cómo se percibieron los hechos en tiempo real y preguntar a los pares 'dadas las circunstancias de entonces'. Evita el sesgo retrospectivo.\"},\n  {\"id\": \"P857031\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4025, 4027, 4014, 692], \"razon\": \"El inspector aceptó que Occidental había 'tidied up' deficiencias que persistían. El libro critica no verificar la implantación de las mejoras acordadas. Va en la misma dirección.\"},\n  {\"id\": \"PD8E378\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2577, 2579], \"razon\": \"El libro plantea si la organización busca ser modelo de buenas prácticas o solo mantenerse un paso por delante de los reguladores. Es un componente motivacional del compromiso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC4FBE3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5894,
+    5896
+   ],
+   "razon": "El libro exige planificar la recuperación post-accidente. Cita un programa ya puesto a prueba y que el 80% de los planes fallan la primera vez. 'Específico' es concreción propia."
+  },
+  {
+   "id": "P646C78",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5037,
+    5057,
+    668
+   ],
+   "razon": "El test pide juzgar según cómo se percibieron los hechos en tiempo real y preguntar a los pares 'dadas las circunstancias de entonces'. Evita el sesgo retrospectivo."
+  },
+  {
+   "id": "P857031",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4025,
+    4027,
+    4014,
+    692
+   ],
+   "razon": "El inspector aceptó que Occidental había 'tidied up' deficiencias que persistían. El libro critica no verificar la implantación de las mejoras acordadas. Va en la misma dirección."
+  },
+  {
+   "id": "PD8E378",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2577,
+    2579
+   ],
+   "razon": "El libro plantea si la organización busca ser modelo de buenas prácticas o solo mantenerse un paso por delante de los reguladores. Es un componente motivacional del compromiso."
+  }
+ ]
+}

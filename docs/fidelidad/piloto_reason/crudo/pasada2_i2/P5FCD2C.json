@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5FCD2C",
+  "intento": 0,
+  "usd": 0.22964400000000001,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53926,
+  "tokens_out": 697,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5FCD2C\", \"veredicto\": \"FIEL\", \"lineas\": [3829, 2716, 4724, 5270], \"cita\": \"Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture, on the one hand, and by improving the credibility, applicability, availability and accuracy of the procedures, on the other.\", \"datos_sin_respaldo\": [], \"razon\": \"L3829 recomienda literalmente cambiar normas, creencias y actitudes además de mejorar los procedimientos. L2716 lo refuerza con contramedidas dirigidas al corazón. L4724 se refiere a cambiar valores colectivos de adultos con un plan maestro. El paso no nombra valores ni excluye las prácticas. Además, L5270 afirma que las prácticas llevan a pensar y creer. No hay contradicción ni datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5FCD2C",
+  "veredicto": "FIEL",
+  "lineas": [
+   3829,
+   2716,
+   4724,
+   5270
+  ],
+  "cita": "Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture, on the one hand, and by improving the credibility, applicability, availability and accuracy of the procedures, on the other.",
+  "datos_sin_respaldo": [],
+  "razon": "L3829 recomienda literalmente cambiar normas, creencias y actitudes además de mejorar los procedimientos. L2716 lo refuerza con contramedidas dirigidas al corazón. L4724 se refiere a cambiar valores colectivos de adultos con un plan maestro. El paso no nombra valores ni excluye las prácticas. Además, L5270 afirma que las prácticas llevan a pensar y creer. No hay contradicción ni datos nuevos.",
+  "paso_fiel": ""
+ }
+}

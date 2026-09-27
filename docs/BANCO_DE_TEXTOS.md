@@ -29,9 +29,10 @@ Destino: `docs/BANCO_DE_TEXTOS.md` (versionado en el repo).
 - "Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito."
 - "Sin plantillas ni formularios. Solo tu idea, en tus palabras."
 - "Tu primera idea empieza aquí." (home vacío)
-- Las 5 etapas: **La Chispa · Claridad · La Exploración · Tu Plan · Manos a la Obra**
+- Los 6 hitos: **La Chispa · Claridad · La Exploración · Tu Plan · Manos a la Obra · Realizado**
+  (el sexto es la celebración; corregido en la AUD-09, que encontró aquí 5)
 - Distintivo final: **Proyecto**
-- Los 7 mundos y sus promesas:
+- Los 9 mundos y sus promesas (fuente: `web/lib/assets/packs_catalog.json`):
   - Calidad y Confianza: "Que tu cliente confíe, vuelva y te recomiende."
   - Seguridad y Personas: "Protege a tu gente y a tu negocio de su peor día."
   - Ambiente y Futuro: "Convierte lo sostenible en ventaja que se nota y se cobra."
@@ -39,6 +40,8 @@ Destino: `docs/BANCO_DE_TEXTOS.md` (versionado en el repo).
   - Vender al Mundo: "Lleva tu producto a clientes de otros países, con método."
   - Multiplica tu Negocio: "Convierte tu negocio probado en muchos que funcionan igual."
   - Riesgos Bajo Control: "Ve venir lo que puede fallar, y decide antes de que decida por ti."
+  - Tu Compra Correcta: "Compra lo que toca, al que toca, al precio que toca."
+  - Del Taller a sus Manos: "Que llegue entero, a tiempo y sin sorpresas de costo."
 - Tus Números: "Tus cifras reales convertidas en margen, punto de equilibrio y escenarios."
 
 ### 2.1 El cierre (proyecto y mundo) — Fase 4.0 §8 / Fase 4.2 §9.2
@@ -563,9 +566,10 @@ tres dicen lo mismo desde un ángulo distinto.
   jamás corría. Hay que **sembrar el estado antes de asertar sobre él**.
 - **Un error que se traga es peor que un error que grita.** El redactor del plan
   atrapaba cualquier fallo y entregaba un plan ensamblado offline, mecánico y
-  sin narración, cerrando la sesión como si nada. Un usuario que pagará 5
-  créditos habría recibido un plan de segunda sin que él, ni nosotros, ni los
-  logs se enteraran jamás.
+  sin narración, cerrando la sesión como si nada. Un usuario que iba a pagar su
+  plan habría recibido uno de segunda sin que él, ni nosotros, ni los logs se
+  enteraran jamás. (Desde la AUD-09, un plan armado sin IA no se cobra y se dice
+  en pantalla: ver `docs/ANALISIS_PRECIOS.md` §4.)
 
 > **El sistema debe preferir fallar ruidoso a mentir calladito.**
 

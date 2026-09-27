@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_026",
+  "intento": 0,
+  "usd": 0.16904799999999998,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34612,
+  "tokens_out": 1530,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD486A8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"personal técnico y gerencial\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1851, 1934, 1820, 5926], \"razon\": \"El libro presenta los casos para mostrar su alcance, no como material de capacitación. Si se enfocan como fallas individuales chocarían con L1934 (condiciones latentes organizacionales).\"},\n  {\"id\": \"P60DA56\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 668, 674, 686, 3985, 3989, 3991, 5692], \"razon\": \"Coherente con las fallas de reporte (Challenger, Barings). Pero el libro advierte del sesgo retrospectivo: una señal solo es aviso si se conoce el desastre.\"},\n  {\"id\": \"PABD8AB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [866, 868, 918, 942], \"razon\": \"El libro atribuye la confusión a no percibir transiciones de modo y a automatización torpe que oculta eventos. El paso concreta esto en la misma dirección.\"},\n  {\"id\": \"PFA3B12\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5250, 5832, 5834, 5892, 5894], \"razon\": \"El libro pregunta por un sistema para costear pérdidas y describe costos indirectos no asegurados. Calcular el costo total va en la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD486A8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "personal técnico y gerencial"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1851,
+    1934,
+    1820,
+    5926
+   ],
+   "razon": "El libro presenta los casos para mostrar su alcance, no como material de capacitación. Si se enfocan como fallas individuales chocarían con L1934 (condiciones latentes organizacionales)."
+  },
+  {
+   "id": "P60DA56",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    668,
+    674,
+    686,
+    3985,
+    3989,
+    3991,
+    5692
+   ],
+   "razon": "Coherente con las fallas de reporte (Challenger, Barings). Pero el libro advierte del sesgo retrospectivo: una señal solo es aviso si se conoce el desastre."
+  },
+  {
+   "id": "PABD8AB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    866,
+    868,
+    918,
+    942
+   ],
+   "razon": "El libro atribuye la confusión a no percibir transiciones de modo y a automatización torpe que oculta eventos. El paso concreta esto en la misma dirección."
+  },
+  {
+   "id": "PFA3B12",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5250,
+    5832,
+    5834,
+    5892,
+    5894
+   ],
+   "razon": "El libro pregunta por un sistema para costear pérdidas y describe costos indirectos no asegurados. Calcular el costo total va en la misma dirección."
+  }
+ ]
+}

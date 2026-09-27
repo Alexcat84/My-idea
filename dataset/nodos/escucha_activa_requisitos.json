@@ -6,12 +6,12 @@
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
   "resumen_teorico": "Cuando alguien te pide algo, ya sea un cliente, un proveedor o quien te encarga una compra, es facil escuchar a medias mientras piensas tu respuesta. La escucha activa consiste en concentrarte por completo en lo que dice la otra persona, dejar de lado otras distracciones, y luego repetirle con tus propias palabras lo que entendiste, incluyendo el tono o la urgencia con que lo dijo. Si tu resumen no coincide con lo que la persona quiso decir, ella misma lo corrige ahi, antes de que el malentendido se convierta en un pedido mal hecho o una compra equivocada. Esta practica simple evita que compres algo que no se necesitaba o que un proveedor entienda otra cosa de lo que le pediste.",
   "pasos_accionables": [
-    "Cuando alguien te pida algo, deja de pensar en tu respuesta y concentrate solo en escuchar.",
+    "Cuando alguien te pida algo, deja de pensar en tu respuesta y concéntrate solo en escuchar.",
     "Repite con tus propias palabras lo que entendiste antes de actuar.",
     "Pregunta directamente si tu resumen coincide con lo que la persona quiso decir.",
-    "Si notas que el otro dejo de escucharte, haz una pausa o una pregunta directa para recuperar su atencion."
+    "Si notas que el otro dejó de escucharte, haz una pausa o una pregunta directa para recuperar su atención."
   ],
-  "entregable_esperado": "Un habito de confirmar en voz alta lo que entendiste antes de hacer un pedido o una compra.",
+  "entregable_esperado": "Un hábito de confirmar en voz alta lo que entendiste antes de hacer un pedido o una compra.",
   "nodos_previos": [
     "preguntas_abiertas_motivacion_proveedor"
   ],
@@ -23,5 +23,51 @@
     "Un proveedor te entrego algo distinto de lo que creias haber pedido.",
     "Sales de una reunion con dudas sobre lo que realmente se acordo."
   ],
-  "etiqueta_arbol": "Escucha y confirma antes de actuar"
+  "etiqueta_arbol": "Escucha y confirma antes de actuar",
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0804",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando alguien te pida algo, deja de pensar en tu respuesta y concentrate solo en escuchar.",
+      "texto_nuevo": "Cuando alguien te pida algo, deja de pensar en tu respuesta y concéntrate solo en escuchar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-017.paso0: concéntrate ('concéntrate' es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0805",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si notas que el otro dejo de escucharte, haz una pausa o una pregunta directa para recuperar su atencion.",
+      "texto_nuevo": "Si notas que el otro dejó de escucharte, haz una pausa o una pregunta directa para recuperar su atención.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-017.paso3: dejó, atención ('dejó' y 'atención' son agudas y llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0806",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un habito de confirmar en voz alta lo que entendiste antes de hacer un pedido o una compra.",
+      "texto_nuevo": "Un hábito de confirmar en voz alta lo que entendiste antes de hacer un pedido o una compra.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-017.entregable: hábito ('hábito' es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

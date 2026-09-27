@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P505914",
+  "intento": 0,
+  "usd": 0.22812400000000002,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 51936,
+  "tokens_out": 1019,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P505914\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1012, 1035, 1724], \"cita\": \"The important issue in many hazardous technologies is not whether to violate, but when to violate--or perhaps, more importantly, when to comply. … Deciding when to do this, though, is a matter of delicate and sometimes fallible judgement.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las reglas son insensibles a las condiciones locales (Ginna, L1035) y que decidir cuándo cumplir exige juicio (L1012). El paso no invita a violar la regla, sino a sumar juicio al cumplimiento, en la misma dirección que el libro. La capacitación concreta cómo aplicarlo sin añadir cifras, plazos ni responsables. No es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P505914",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1012,
+   1035,
+   1724
+  ],
+  "cita": "The important issue in many hazardous technologies is not whether to violate, but when to violate--or perhaps, more importantly, when to comply. … Deciding when to do this, though, is a matter of delicate and sometimes fallible judgement.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las reglas son insensibles a las condiciones locales (Ginna, L1035) y que decidir cuándo cumplir exige juicio (L1012). El paso no invita a violar la regla, sino a sumar juicio al cumplimiento, en la misma dirección que el libro. La capacitación concreta cómo aplicarlo sin añadir cifras, plazos ni responsables. No es contrario.",
+  "paso_fiel": ""
+ }
+}

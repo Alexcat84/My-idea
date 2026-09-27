@@ -1,6 +1,6 @@
 {
   "node_id": "creacion_valor_cliente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Creación de Valor para el Cliente (Shingo)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -23,5 +23,23 @@
     "Cuando se requiere validar que las mejoras internas se traducen en valor real para el cliente",
     "Cuando la organización busca evaluar impactos más allá del beneficiario directo"
   ],
-  "etiqueta_arbol": "Crea Valor para tu Cliente"
+  "etiqueta_arbol": "Crea Valor para tu Cliente",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-072",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F27-021: Es un principio Shingo de excelencia operativa para medir el valor y el impacto de una organizacion en marcha; es ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

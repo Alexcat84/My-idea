@@ -9,6 +9,7 @@
  */
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { describe, expect, it } from "vitest";
 import { BOTON_ESTANDAR, BOTON_PRIMARIO, BOTON_SECUNDARIO } from "@/lib/boton";
 
@@ -58,16 +59,34 @@ describe("dentro de una página, todos los botones son iguales", () => {
     expect(BOTON_PRIMARIO).toBe(BOTON_ESTANDAR);
   });
 
-  it("los botones de cancelar visten como su hermano, no como texto apagado", () => {
+  it("los botones de cancelar visten como su hermano, no como texto apagado", async () => {
     // El fallo que esto caza: un "Cancelar" que se queda en text-dim pelado
     // junto a un botón con caja, que es lo que había antes de la decisión.
     for (const rel of ["ui/DetalleActividad.tsx", "ui/CorregirCifras.tsx", "ui/CuentaCliente.tsx"]) {
       const fuente = leer(rel);
+      // i18n F2: la etiqueta puede venir del catálogo ({t.cancelar},
+      // {t.seguridad.cancelar}...). Se resuelve contra los catálogos que el
+      // archivo importa y cuenta solo si ahí dice "Cancelar" (un "cancelar" en
+      // minúscula es el enlace de texto de una edición en línea, no este botón).
+      const catalogos: unknown[] = [];
+      for (const m of fuente.matchAll(/from "@\/lib\/i18n\/mensajes\/(\w+)"/g)) {
+        const archivo = path.join(RAIZ, "..", "lib", "i18n", "mensajes", `${m[1]}.ts`);
+        const mod = (await import(pathToFileURL(archivo).href)) as Record<string, unknown>;
+        for (const v of Object.values(mod)) if (v && typeof v === "object" && "es" in v) catalogos.push((v as { es: unknown }).es);
+      }
+      const diceCancelar = (ruta: string) =>
+        catalogos.some(
+          (c) =>
+            ruta.split(".").reduce<unknown>((o, k) => (o && typeof o === "object" ? (o as Record<string, unknown>)[k] : undefined), c) ===
+            "Cancelar"
+        );
       // La ETIQUETA del botón, no la palabra suelta: un comentario que diga
       // "Cancelar descarta todo" no es un botón.
       const etiquetas: number[] = [];
-      for (let i = fuente.indexOf("Cancelar"); i > -1; i = fuente.indexOf("Cancelar", i + 1)) {
-        if (fuente.slice(i, i + 45).includes("</button>")) etiquetas.push(i);
+      for (const m of fuente.matchAll(/Cancelar|\{t\.([\w.]+)\}/g)) {
+        if (m[1] !== undefined && !diceCancelar(m[1])) continue;
+        const fin = m.index + m[0].length;
+        if (fuente.slice(fin, fin + 45).includes("</button>")) etiquetas.push(m.index);
       }
       expect(etiquetas.length, `${rel} deberia tener al menos un boton Cancelar`).toBeGreaterThan(0);
       for (const i of etiquetas) {

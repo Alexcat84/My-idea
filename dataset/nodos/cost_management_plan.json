@@ -25,7 +25,6 @@
     "activity_duration_estimates",
     "linea_base_costos",
     "stakeholder_register",
-    "risk_audit",
     "estimacion_costos_actividad",
     "cronograma_proyecto",
     "ejecucion_incremental_transicion_tecnologica"
@@ -43,6 +42,24 @@
       "node_id": "plan_gestion_costos",
       "titulo": "Plan de Gestión de Costos",
       "fuente": "A Project Manager's Book of Forms"
+    }
+  ],
+  "fuentes_internas": [
+    "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-022",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cost_management_plan -> risk_audit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A11, lectores de acuerdo)",
+        "motivo": "El plan de gestion de costos no tiene como continuacion natural la auditoria de riesgos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

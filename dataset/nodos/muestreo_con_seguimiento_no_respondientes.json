@@ -4,22 +4,86 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo estratificado con seguimiento a no respondientes en encuestas de clientes",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Deming propone en su lugar seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
   "pasos_accionables": [
     "Definir una muestra representativa reducida de la población de clientes (ej. 1000 de miles).",
     "Enviar el cuestionario únicamente a esa muestra.",
-    "Realizar seguimiento activo (entrevista personal o telefónica) a quienes no respondan dentro de la muestra.",
+    "Sugerencia de My Idea: realizar seguimiento activo a quienes no respondan dentro de la muestra, con entrevista personal o, si no es posible, por teléfono.",
     "Calcular los intervalos de confianza de los resultados obtenidos.",
     "Aplicar el mismo método a estudios futuros sobre cualquier producto con lista de compradores disponible."
   ],
   "entregable_esperado": "Un diseño de encuesta con muestra representativa y protocolo de seguimiento a no respondientes, junto con resultados con nivel de confianza estadística documentado.",
   "nodos_previos": [
-    "causas_comunes_vs_especiales"
+    "estudio_lealtad_cliente"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si la tasa de respuesta de una encuesta de satisfacción de clientes es baja (ej. 50%).",
     "Si se requiere validar la voz del cliente con rigor estadístico antes de tomar decisiones de producto."
   ],
-  "etiqueta_arbol": "Busca a Quien no Responde"
+  "etiqueta_arbol": "Busca a Quien no Responde",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-047",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar seguimiento activo (entrevista personal o telefónica) a quienes no respondan dentro de la muestra.",
+      "texto_nuevo": "Sugerencia de My Idea: realizar seguimiento activo a quienes no respondan dentro de la muestra, con entrevista personal o, si no es posible, por teléfono.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L5011-L5011",
+        "frase": "then to follow up by personal interview with the nonrespondents"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El libro fija el medio de seguimiento: entrevista personal a quienes no responden dentro de la muestra. Busque telephone y phone en todo el libro y la via telefonica nunca aparece como forma de seguir a los no respondientes (solo sale en otros contextos: companias telefonicas, operadoras, quejas). El seguimiento personal es fiel, pero la opcion telefonica es un canal o herramienta que el libro no pone. No es solo concretar: anade otro medio.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-014"
+    },
+    {
+      "id": "atribucion-124",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Deming propone en su lugar seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "texto_nuevo": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming propone en su lugar"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-013",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "causas_comunes_vs_especiales -> muestreo_con_seguimiento_no_respondientes",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, arbitro de los pares en conflicto): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Distinguir la variacion comun de la especial con graficos de control no lleva a disenar una encuesta con seguimiento a quienes no responden; solo los une el libro."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-14",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "estudio_lealtad_cliente -> muestreo_con_seguimiento_no_respondientes",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-14, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Quien diseña estudios con clientes en lugar de encuestas de satisfacción sigue naturalmente con cómo tomar la muestra y cómo seguir a quienes no responden, para que el estudio no quede sesgado."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

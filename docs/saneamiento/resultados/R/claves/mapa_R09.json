@@ -1,0 +1,620 @@
+{
+ "R09-01-01": {
+  "nodo": "video_marketing_franquicia",
+  "vecino": "tasa_captura_leads",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-01-02": {
+  "nodo": "video_marketing_franquicia",
+  "vecino": "sitio_web_franquicia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-02-01": {
+  "nodo": "consejo_de_calidad_3",
+  "vecino": "reinicio_programa_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-02-02": {
+  "nodo": "consejo_de_calidad_3",
+  "vecino": "programa_mejora_calidad_14_pasos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-02-03": {
+  "nodo": "consejo_de_calidad_3",
+  "vecino": "programa_mejora_calidad_14_pasos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-02-04": {
+  "nodo": "consejo_de_calidad_3",
+  "vecino": "eliminacion_causas_error_4",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-02-05": {
+  "nodo": "consejo_de_calidad_3",
+  "vecino": "reconocimiento_al_desempeno",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-03-01": {
+  "nodo": "tirania_intergeneracional_remota",
+  "vecino": "estrategia_de_tragedia_vs_estrategia_de_cambio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-03-02": {
+  "nodo": "tirania_intergeneracional_remota",
+  "vecino": "reinvencion_diseno_nutrivehiculo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-04-01": {
+  "nodo": "protocolo_reuniones_gate",
+  "vecino": "red_flags_proyectos_en_problemas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-04-02": {
+  "nodo": "protocolo_reuniones_gate",
+  "vecino": "aceleracion_de_gates",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-04-03": {
+  "nodo": "protocolo_reuniones_gate",
+  "vecino": "regla_simplificada_tolerancia_errores",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-04-04": {
+  "nodo": "protocolo_reuniones_gate",
+  "vecino": "definicion_gatekeepers",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-04-05": {
+  "nodo": "protocolo_reuniones_gate",
+  "vecino": "scorecards_criterios_gate",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-05-01": {
+  "nodo": "prevalencia_omisiones",
+  "vecino": "caracteristicas_tareas_propensas_omision",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-05-02": {
+  "nodo": "prevalencia_omisiones",
+  "vecino": "diseno_recordatorios_efectivos_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-05-03": {
+  "nodo": "prevalencia_omisiones",
+  "vecino": "vulnerabilidad_instalacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-05-04": {
+  "nodo": "prevalencia_omisiones",
+  "vecino": "riesgo_actividades_mantenimiento",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-06-01": {
+  "nodo": "calculo_roi",
+  "vecino": "comparacion_metodos_inversion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-06-02": {
+  "nodo": "calculo_roi",
+  "vecino": "analisis_de_ratios_financieros",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-06-03": {
+  "nodo": "calculo_roi",
+  "vecino": "cargos_extraordinarios_bandera_amarilla",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-07-01": {
+  "nodo": "localizacion_internacionalizacion_web",
+  "vecino": "promocion_sitio_web",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-07-02": {
+  "nodo": "localizacion_internacionalizacion_web",
+  "vecino": "seleccion_dominio_web",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-08-01": {
+  "nodo": "decide_criterio_eleccion_proveedor",
+  "vecino": "preguntas_abiertas_motivacion_proveedor",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-08-02": {
+  "nodo": "decide_criterio_eleccion_proveedor",
+  "vecino": "depura_proveedores_sin_respuesta",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-08-03": {
+  "nodo": "decide_criterio_eleccion_proveedor",
+  "vecino": "gestiona_contrato_tras_firma",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-08-04": {
+  "nodo": "decide_criterio_eleccion_proveedor",
+  "vecino": "domina_lo_que_compras",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-08-05": {
+  "nodo": "decide_criterio_eleccion_proveedor",
+  "vecino": "plantilla_fija_cotizaciones",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-08-06": {
+  "nodo": "decide_criterio_eleccion_proveedor",
+  "vecino": "fin_precio_como_criterio_unico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-09-01": {
+  "nodo": "preguntas_situacion",
+  "vecino": "preguntas_problema_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-09-02": {
+  "nodo": "preguntas_situacion",
+  "vecino": "modelo_spin_preguntas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-09-03": {
+  "nodo": "preguntas_situacion",
+  "vecino": "analisis_de_cohortes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-09-04": {
+  "nodo": "preguntas_situacion",
+  "vecino": "estudio_mercado_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-01": {
+  "nodo": "bullseye_framework",
+  "vecino": "critical_path",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-10-02": {
+  "nodo": "bullseye_framework",
+  "vecino": "canales_distribucion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-10-03": {
+  "nodo": "bullseye_framework",
+  "vecino": "anillo_interior_explotar_el_canal_nucleo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-10-04": {
+  "nodo": "bullseye_framework",
+  "vecino": "targeting_blogs_traccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-10-05": {
+  "nodo": "bullseye_framework",
+  "vecino": "traccion_como_metrica_clave",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-06": {
+  "nodo": "bullseye_framework",
+  "vecino": "canales_de_traccion_19",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-07": {
+  "nodo": "bullseye_framework",
+  "vecino": "traction_goal",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-08": {
+  "nodo": "bullseye_framework",
+  "vecino": "regla_50_por_ciento",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-09": {
+  "nodo": "bullseye_framework",
+  "vecino": "fases_traccion_producto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-10": {
+  "nodo": "bullseye_framework",
+  "vecino": "estrategia_plataformas_existentes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-11": {
+  "nodo": "bullseye_framework",
+  "vecino": "programa_afiliados",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-12": {
+  "nodo": "bullseye_framework",
+  "vecino": "critical_path",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-10-13": {
+  "nodo": "bullseye_framework",
+  "vecino": "traction_channel_bias",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-11-01": {
+  "nodo": "manejo_problemas",
+  "vecino": "analisis_causa_raiz_defectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-11-02": {
+  "nodo": "manejo_problemas",
+  "vecino": "resolucion_problemas_niveles_supervision",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-11-03": {
+  "nodo": "manejo_problemas",
+  "vecino": "seguridad_producto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-11-04": {
+  "nodo": "manejo_problemas",
+  "vecino": "accion_correctiva",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-11-05": {
+  "nodo": "manejo_problemas",
+  "vecino": "accion_correctiva_2",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-12-01": {
+  "nodo": "reservas_de_capital_vc",
+  "vecino": "plan_a_b_c_soft_landing",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-12-02": {
+  "nodo": "reservas_de_capital_vc",
+  "vecino": "medical_services_first_aid",
+  "sentido": "previo",
+  "trampa": true
+ },
+ "R09-12-03": {
+  "nodo": "reservas_de_capital_vc",
+  "vecino": "como_ganan_dinero_los_vc",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-12-04": {
+  "nodo": "reservas_de_capital_vc",
+  "vecino": "estructura_fondo_vc",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-13-01": {
+  "nodo": "ironias_de_la_automatizacion",
+  "vecino": "confusion_de_modos_automatizacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-13-02": {
+  "nodo": "ironias_de_la_automatizacion",
+  "vecino": "condiciones_latentes_organizacionales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-14-01": {
+  "nodo": "redemption_rights",
+  "vecino": "conditions_precedent_financing",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-14-02": {
+  "nodo": "redemption_rights",
+  "vecino": "dividends_terms",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-15-01": {
+  "nodo": "decidir_empacar_tu_mismo_o_subcontratar",
+  "vecino": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-15-02": {
+  "nodo": "decidir_empacar_tu_mismo_o_subcontratar",
+  "vecino": "vender_sin_stock_con_drop_shipping",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-16-01": {
+  "nodo": "restricciones_extremas_como_innovacion",
+  "vecino": "lienzo_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-16-02": {
+  "nodo": "restricciones_extremas_como_innovacion",
+  "vecino": "usuarios_extremos_globales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-16-03": {
+  "nodo": "restricciones_extremas_como_innovacion",
+  "vecino": "prototipado_rapido",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-16-04": {
+  "nodo": "restricciones_extremas_como_innovacion",
+  "vecino": "proposito_como_motor_energia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-17-01": {
+  "nodo": "elegir_material_de_relleno_segun_producto",
+  "vecino": "adaptar_empaque_segun_tipo_de_articulo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-17-02": {
+  "nodo": "elegir_material_de_relleno_segun_producto",
+  "vecino": "aplicar_regla_fija_de_colchon_de_relleno",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-17-03": {
+  "nodo": "elegir_material_de_relleno_segun_producto",
+  "vecino": "clasificar_tipo_paquete",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-18-01": {
+  "nodo": "quality_score_optimizacion",
+  "vecino": "retargeting_display",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-18-02": {
+  "nodo": "quality_score_optimizacion",
+  "vecino": "sem_estrategia_ejecucion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-19-01": {
+  "nodo": "pisos_aberturas_paredes_seguridad",
+  "vecino": "escaleras_fijas_seguridad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-19-02": {
+  "nodo": "pisos_aberturas_paredes_seguridad",
+  "vecino": "elevated_surfaces_fall_protection",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-20-01": {
+  "nodo": "el_pre_mortem_imagina_el_fracaso",
+  "vecino": "cuan_probable_y_cuanto_doleria",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-20-02": {
+  "nodo": "el_pre_mortem_imagina_el_fracaso",
+  "vecino": "nombra_tus_suposiciones_fragiles",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-20-03": {
+  "nodo": "el_pre_mortem_imagina_el_fracaso",
+  "vecino": "tecnicas_para_sacar_riesgos_a_la_luz",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-21-01": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "cuestionar_supuestos_financieros",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R09-21-02": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "motor_de_crecimiento",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-21-03": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "producto_mercado_fit_motores",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-21-04": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "enfoque_motor_unico_crecimiento",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-21-05": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "producto_minimo_viable",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-21-06": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "motor_de_crecimiento",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-21-07": {
+  "nodo": "motor_crecimiento_viral",
+  "vecino": "seeding_canal_viral",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-22-01": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "financiamiento_amigos_y_familia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-22-02": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "financiamiento_angel_investors",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-22-03": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "financiamiento_venture_capital",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-22-04": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "gestion_sindicato_inversores",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-22-05": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "jerarquia_firma_vc",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-22-06": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "producto_minimo_viable",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-22-07": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "search_for_business_model",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-22-08": {
+  "nodo": "embudo_secuencial_de_inversores",
+  "vecino": "encontrar_vc_adecuado",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-23-01": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "customer_development_modelo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-23-02": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "desarrollo_de_clientes_customer_development",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-23-03": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "nueve_pecados_capitales_lanzamiento",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-23-04": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "search_for_business_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-23-05": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "stage_gate_system",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-23-06": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "build_measure_learn",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-23-07": {
+  "nodo": "modelo_tradicional_introduccion_producto",
+  "vecino": "curva_atricion_optima",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-24-01": {
+  "nodo": "calificacion_prospectos_award",
+  "vecino": "los_tres_grandes_criterios",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-24-02": {
+  "nodo": "calificacion_prospectos_award",
+  "vecino": "clasificacion_abc_prospectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R09-24-03": {
+  "nodo": "calificacion_prospectos_award",
+  "vecino": "proceso_venta_franquicias",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-24-04": {
+  "nodo": "calificacion_prospectos_award",
+  "vecino": "referidos_franquiciados_existentes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-24-05": {
+  "nodo": "calificacion_prospectos_award",
+  "vecino": "franquicia_unidad_individual",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R09-24-06": {
+  "nodo": "calificacion_prospectos_award",
+  "vecino": "preparar_fdd",
+  "sentido": "previo",
+  "trampa": false
+ }
+}

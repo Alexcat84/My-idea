@@ -6,9 +6,9 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Cuando tu negocio opera en varios paises o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. El modelo tipico ubica a un responsable maximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en areas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
   "pasos_accionables": [
-    "Definir el nivel jerarquico de quien lidera calidad (Chief Quality Officer) y a quien le reporta directamente",
-    "Establecer si la estructura sera centralizada, descentralizada o matricial",
-    "Disenar las funciones globales (Customer Quality, Supplier Quality, Lean Six Sigma, Audit, Project Management)",
+    "Definir el nivel jerárquico de quien lidera calidad (Chief Quality Officer) y a quién le reporta directamente",
+    "Establecer si la estructura será centralizada, descentralizada o matricial",
+    "Diseñar las funciones globales (Customer Quality, Supplier Quality, Lean Six Sigma, Audit, Project Management)",
     "Definir reglas de escalamiento y responsabilidades entre planta, división y función global",
     "Documentar el organigrama y las relaciones de reporte directo e indirecto"
   ],
@@ -25,5 +25,52 @@
   "condiciones_activacion": [
     "Cuando tu negocio opera en varios paises o divisiones y necesitas coordinar la función de calidad a nivel global"
   ],
-  "etiqueta_arbol": "Organiza tu Calidad Global"
+  "etiqueta_arbol": "Organiza tu Calidad Global",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0801",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir el nivel jerarquico de quien lidera calidad (Chief Quality Officer) y a quien le reporta directamente",
+      "texto_nuevo": "Definir el nivel jerárquico de quien lidera calidad (Chief Quality Officer) y a quién le reporta directamente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-014.paso0: jerárquico, quién ('jerárquico' es esdrújula y 'a quién le reporta' es interrogativo indirecto; el relativo 'de quien lidera' se queda sin tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0802",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer si la estructura sera centralizada, descentralizada o matricial",
+      "texto_nuevo": "Establecer si la estructura será centralizada, descentralizada o matricial",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-014.paso1: será ('será' es aguda terminada en vocal y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0803",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disenar las funciones globales (Customer Quality, Supplier Quality, Lean Six Sigma, Audit, Project Management)",
+      "texto_nuevo": "Diseñar las funciones globales (Customer Quality, Supplier Quality, Lean Six Sigma, Audit, Project Management)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-014.paso2: Diseñar (Faltaba la eñe en 'Diseñar'; los términos en inglés se dejan intactos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ]
 }

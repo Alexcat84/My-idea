@@ -11,7 +11,7 @@
     "Verifica que las personas clave (empleados, inversionistas, prensa, clientes) puedan contar la misma historia con sus propias palabras.",
     "Revisa si las quejas recurrentes ('no nos entienden', 'necesitamos mejor marketing') señalan que tu historia o estrategia no está clara."
   ],
-  "entregable_esperado": "La historia completa de tu empresa escrita, contestando por que existe, por que importa, por que unirse, por que comprar y por que invertir, y la comprobacion de que las personas clave la pueden contar con sus propias palabras",
+  "entregable_esperado": "La historia completa de tu empresa escrita, contestando por qué existe, por qué importa, por qué unirse, por qué comprar y por qué invertir, y la comprobación de que las personas clave la pueden contar con sus propias palabras",
   "nodos_previos": [
     "posicionamiento_de_empresa"
   ],
@@ -20,5 +20,23 @@
     "Cuando el posicionamiento ya esta escrito y hace falta el texto largo que lo sostiene",
     "Cuando adentro se repite que nadie los entiende o que hace falta mejor marketing"
   ],
-  "etiqueta_arbol": "Escribe la Historia de tu Empresa"
+  "etiqueta_arbol": "Escribe la Historia de tu Empresa",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0239",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La historia completa de tu empresa escrita, contestando por que existe, por que importa, por que unirse, por que comprar y por que invertir, y la comprobacion de que las personas clave la pueden contar con sus propias palabras",
+      "texto_nuevo": "La historia completa de tu empresa escrita, contestando por qué existe, por qué importa, por qué unirse, por qué comprar y por qué invertir, y la comprobación de que las personas clave la pueden contar con sus propias palabras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-008.entregable: qué (x5), comprobación (Los cinco por qué son interrogativas indirectas y llevan tilde, y a comprobación le falta la suya.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

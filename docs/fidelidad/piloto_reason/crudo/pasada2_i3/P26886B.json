@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P26886B",
+  "intento": 0,
+  "usd": 0.14588399999999999,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32886,
+  "tokens_out": 717,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P26886B\", \"veredicto\": \"FIEL\", \"lineas\": [5037, 5057], \"cita\": \"ask the following question: 'In the light of how events unfolded and were perceived by those involved in real time, is it likely that this new individual would have behaved any differently?' ... A useful addition to the substitution test is to ask of the individual's peers\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"La pregunta de la prueba de sustitución es justamente esa: si otro comparable habría actuado de forma distinta. El libro también propone hacérsela a los pares ('jury' of peers). Las condiciones que el filtro echa en falta (pares comparables y circunstancias reales) las cubren los pasos anteriores del nodo. El orden tras descartar sustancias es solo 'seems appropriate'.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P26886B",
+  "veredicto": "FIEL",
+  "lineas": [
+   5037,
+   5057
+  ],
+  "cita": "ask the following question: 'In the light of how events unfolded and were perceived by those involved in real time, is it likely that this new individual would have behaved any differently?' ... A useful addition to the substitution test is to ask of the individual's peers",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "La pregunta de la prueba de sustitución es justamente esa: si otro comparable habría actuado de forma distinta. El libro también propone hacérsela a los pares ('jury' of peers). Las condiciones que el filtro echa en falta (pares comparables y circunstancias reales) las cubren los pasos anteriores del nodo. El orden tras descartar sustancias es solo 'seems appropriate'.",
+  "paso_fiel": ""
+ }
+}

@@ -6,12 +6,12 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un tunel, construye un embudo con puntos de decision (gates) a lo largo del proceso. En cada gate evaluas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorizacion, por ejemplo NPV), y que plan de accion y recursos necesita la siguiente fase. Usar criterios explicitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas debiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
   "pasos_accionables": [
-    "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)",
-    "Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa",
+    "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
+    "Establece criterios claros y visibles para cada gate: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
     "Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad",
-    "Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go",
-    "Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes",
-    "Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa",
+    "Detente en cada punto de control y toma una decisión explícita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go",
+    "Compromete recursos (tiempo, dinero) solo después de pasar el gate, no antes",
+    "Anota la decisión tomada y el motivo antes de avanzar a la siguiente etapa",
     "En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto",
     "No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir",
     "Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.",
@@ -24,7 +24,7 @@
     "Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.",
     "Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate."
   ],
-  "entregable_esperado": "Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control",
+  "entregable_esperado": "Un mapa de gates con checklist de criterios de decisión y entregables requeridos en cada punto de control",
   "nodos_previos": [
     "calidad_de_ejecucion_proceso_innovacion",
     "diseno_como_plataforma_expansiva",
@@ -102,6 +102,94 @@
       "node_id": "estructura_de_gates",
       "titulo": "Estructura de un Gate Efectivo (Entradas, Criterios, Salidas)",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0309",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)",
+      "texto_nuevo": "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-011.paso0: validación ('validación' necesita tilde; el término inglés 'gates' se deja como está.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0310",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa",
+      "texto_nuevo": "Establece criterios claros y visibles para cada gate: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-011.paso1: está, qué ('está' y 'qué' necesitan la tilde que les faltaba; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0311",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go",
+      "texto_nuevo": "Detente en cada punto de control y toma una decisión explícita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-011.paso3: decisión, explícita ('decisión' y 'explícita' necesitan tilde; los términos en inglés se dejan como están.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0312",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes",
+      "texto_nuevo": "Compromete recursos (tiempo, dinero) solo después de pasar el gate, no antes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-011.paso4: Compromete (Comprometete), después ('Comprometete' era una errata con una sílaba de más: con complemento directo el verbo va sin 'te'; además 'después' lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0313",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control",
+      "texto_nuevo": "Un mapa de gates con checklist de criterios de decisión y entregables requeridos en cada punto de control",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-011.entregable: decisión ('decisión' necesita tilde; los términos en inglés se dejan como están.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "n1-orto-0315",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa",
+      "texto_nuevo": "Anota la decisión tomada y el motivo antes de avanzar a la siguiente etapa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-011.paso5: decisión ('decisión' necesita la tilde que le faltaba.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
     }
   ]
 }

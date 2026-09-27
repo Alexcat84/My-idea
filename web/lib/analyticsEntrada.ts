@@ -8,8 +8,30 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { EntradaAnalytics, ItemAnalytics, MundoAnalytics, PlanCoreAnalytics } from "./analytics";
 import { obtenerModosPorEspacio, type Proyecto } from "./db";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
+import { ETIQUETAS_CICLO } from "./dbContract";
 
-const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
+
+/** AUD-09 M18: una lectura que falla NO es "no hay nada". Antes el Análisis, la
+ * Celebración y el bloque de realidad del seguimiento salían en cero ante un
+ * error transitorio, presentados como verdad. Quien llama lo traduce a un
+ * mensaje honesto; nadie recibe ceros inventados. */
+export class LecturaFallidaError extends Error {
+  constructor(que: string, causa: unknown) {
+    super(`no se pudo leer ${que}`);
+    this.name = "LecturaFallidaError";
+    console.error(`[analytics] no se pudo leer ${que}:`, causa);
+  }
+}
+
+/** El mensaje honesto de una lectura fallida, el mismo en toda ruta que la usa.
+ * El texto vive en el catálogo; la constante es su valor base (una ruta que
+ * lo devuelve elige por idioma con ANALYTICS_INFORME.lecturaFallida). */
+export function mensajeLecturaFallida(idioma: Locale = LOCALE_BASE): string {
+  return elegir(ANALYTICS_INFORME, idioma).lecturaFallida;
+}
+export const MENSAJE_LECTURA_FALLIDA = mensajeLecturaFallida(LOCALE_BASE);
 const esCore = (dominio: string | null | undefined) => !dominio || dominio === "core";
 
 export async function cargarEntradaAnalytics(
@@ -18,16 +40,18 @@ export async function cargarEntradaAnalytics(
   proyecto: Proyecto,
   ahora = new Date().toISOString()
 ): Promise<EntradaAnalytics> {
-  const { data: sesiones } = await supabase.from("sessions").select("id").eq("project_id", projectId);
+  const { data: sesiones, error: errSesiones } = await supabase.from("sessions").select("id").eq("project_id", projectId);
+  if (errSesiones) throw new LecturaFallidaError("las sesiones", errSesiones);
   const idsSesiones = ((sesiones ?? []) as Array<{ id: string }>).map((s) => s.id);
 
-  const { data: planesRaw } = idsSesiones.length
+  const { data: planesRaw, error: errPlanes } = idsSesiones.length
     ? await supabase
         .from("plans")
         .select("id, etiqueta, created_at, baseline_confirmada_at, dominio")
         .in("session_id", idsSesiones)
         .order("created_at", { ascending: true })
-    : { data: [] };
+    : { data: [], error: null };
+  if (errPlanes) throw new LecturaFallidaError("los planes", errPlanes);
   type FilaPlan = {
     id: string;
     etiqueta: string;
@@ -64,15 +88,32 @@ export async function cargarEntradaAnalytics(
   // se recorta y el Análisis sigue; el carril simplemente sale vacío.
   const COLS_ITEMS = "id, plan_id, dominio, etapa, estado, destacado, texto, completed_at, fecha_base, fecha_base_original, protege_item";
   const COLS_VIEJAS = COLS_ITEMS.replace("id, ", "").replace(", protege_item", "");
-  const candidatas = [`${COLS_ITEMS}, no_aplica_motivo`, COLS_ITEMS, `${COLS_VIEJAS}, no_aplica_motivo`, COLS_VIEJAS];
+  // AUD-09 M15: nodos_origen (037) y protege_nodos (041) resuelven la
+  // protección por nodo contra el plan vigente. Si la 041 aún no se aplicó, se
+  // lee sin protege_nodos y el carril resuelve por id, como antes.
+  // Ciclo de replanteamiento, Fase 2: heredado_de (047) para no contar dos
+  // veces lo que un replanteamiento trae hecho; sin la 047, se lee sin ella.
+  const candidatas = [
+    `${COLS_ITEMS}, nodos_origen, protege_nodos, no_aplica_motivo, heredado_de`,
+    `${COLS_ITEMS}, nodos_origen, protege_nodos, no_aplica_motivo`,
+    `${COLS_ITEMS}, nodos_origen, no_aplica_motivo`,
+    `${COLS_ITEMS}, no_aplica_motivo`,
+    COLS_ITEMS,
+    `${COLS_VIEJAS}, no_aplica_motivo`,
+    COLS_VIEJAS,
+  ];
   let itemsRaw: unknown[] | null = null;
+  let ultimoErrorItems: unknown = null;
   for (const cols of candidatas) {
     const r = await supabase.from("checklist_items").select(cols).eq("project_id", projectId);
     if (!r.error) {
       itemsRaw = (r.data ?? []) as unknown[];
       break;
     }
+    ultimoErrorItems = r.error;
   }
+  // Si NINGUNA variante de columnas se pudo leer, no es "sin tareas": es una falla.
+  if (itemsRaw === null) throw new LecturaFallidaError("las tareas", ultimoErrorItems);
   // Fase 4.1 (V3b): ya NO se excluyen los mundos. La entrada los lleva CON su
   // dominio; analytics decide que capa los usa (la universal los ignora para no
   // mover el ritmo del viaje principal; el desglose de cumplimiento los cuenta).
@@ -92,6 +133,10 @@ export async function cargarEntradaAnalytics(
       // adelante vive en analyticsEntrada.test.ts.
       id: i.id,
       protege_item: i.protege_item ?? null,
+      // AUD-09 M15: los nodos de la tarea y los de lo protegido (misma lección
+      // de arriba: opcionales en ItemAnalytics, así que el cruce los vigila).
+      nodos_origen: i.nodos_origen ?? null,
+      protege_nodos: i.protege_nodos ?? null,
       dominio: i.dominio,
       etapa: i.etapa,
       estado: i.estado,
@@ -101,6 +146,7 @@ export async function cargarEntradaAnalytics(
       fecha_base: i.fecha_base,
       fecha_base_original: i.fecha_base_original,
       no_aplica_motivo: (i as { no_aplica_motivo?: string | null }).no_aplica_motivo ?? null,
+      heredado_de: (i as { heredado_de?: string | null }).heredado_de ?? null,
     }));
 
   // project_unlocks puede no existir pre-016: se tolera con lista vacía.
@@ -108,21 +154,19 @@ export async function cargarEntradaAnalytics(
   // aún no está aplicada, el select entero falla — se reintenta sin esas dos
   // columnas y los mundos se leen como abiertos (que es lo que son).
   let mundos: MundoAnalytics[] = [];
-  try {
-    const { data, error } = await supabase
+  const { data: conCierre, error: errCierre } = await supabase
+    .from("project_unlocks")
+    .select("dominio, unlocked_at, completado_at, cierre_motivo")
+    .eq("project_id", projectId);
+  if (!errCierre) mundos = (conCierre ?? []) as MundoAnalytics[];
+  else {
+    const { data: previo, error: errPrevio } = await supabase
       .from("project_unlocks")
-      .select("dominio, unlocked_at, completado_at, cierre_motivo")
+      .select("dominio, unlocked_at")
       .eq("project_id", projectId);
-    if (!error) mundos = (data ?? []) as MundoAnalytics[];
-    else {
-      const { data: previo } = await supabase
-        .from("project_unlocks")
-        .select("dominio, unlocked_at")
-        .eq("project_id", projectId);
-      mundos = (previo ?? []) as MundoAnalytics[];
-    }
-  } catch {
-    mundos = [];
+    // Si tampoco la lectura mínima responde, es una falla, no "sin mundos".
+    if (errPrevio) throw new LecturaFallidaError("los mundos", errPrevio);
+    mundos = (previo ?? []) as MundoAnalytics[];
   }
 
   // "Todo separado" (T3): el modo del CORE viene de project_modos (dual-read del

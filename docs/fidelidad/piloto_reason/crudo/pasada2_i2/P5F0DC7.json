@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5F0DC7",
+  "intento": 0,
+  "usd": 0.15096,
+  "turnos": 1,
+  "duracion_s": 16.3,
+  "pared_s": 17.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31890,
+  "tokens_out": 1170,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5F0DC7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2765, 5688, 5690, 2658], \"cita\": \"The answer must be yes--if complex hazardous organizations continue to rely principally on outcome measures in order to navigate the safety space. [...] A low LTI rate [...] reveals very little about the likelihood of an organizational accident.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro desaconseja apoyarse principalmente en medidas de resultado, como el LTIF, e identifica el LTIF como la métrica dominante. Da prioridad a las medidas proactivas y a los precursores. El paso no pide abandonar el LTIF, solo quitarle el papel principal. Eso es compatible con la asimetría: un LTIF alto sigue siendo una señal útil. Concreta el libro sin contradecirlo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5F0DC7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2765,
+   5688,
+   5690,
+   2658
+  ],
+  "cita": "The answer must be yes--if complex hazardous organizations continue to rely principally on outcome measures in order to navigate the safety space. [...] A low LTI rate [...] reveals very little about the likelihood of an organizational accident.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro desaconseja apoyarse principalmente en medidas de resultado, como el LTIF, e identifica el LTIF como la métrica dominante. Da prioridad a las medidas proactivas y a los precursores. El paso no pide abandonar el LTIF, solo quitarle el papel principal. Eso es compatible con la asimetría: un LTIF alto sigue siendo una señal útil. Concreta el libro sin contradecirlo.",
+  "paso_fiel": ""
+ }
+}

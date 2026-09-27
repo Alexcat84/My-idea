@@ -25,8 +25,8 @@
     "programa_mejora_calidad_14_pasos",
     "programa_make_certain_3",
     "rework_por_el_causante",
-    "decision_aptitud_para_uso",
-    "limites_control_estadistico_vs_tolerancias"
+    "limites_control_estadistico_vs_tolerancias",
+    "decision_aptitud_uso"
   ],
   "nodos_siguientes": [
     "comite_cero_defectos",
@@ -49,6 +49,24 @@
       "node_id": "accion_correctiva_diagnostico_remedio",
       "titulo": "Acción Correctiva: Diagnóstico y Remedio de Problemas Esporádicos",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-137",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "decision_aptitud_para_uso -> accion_correctiva",
+      "texto_nuevo": "decision_aptitud_uso -> accion_correctiva",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a decision_aptitud_para_uso, deprecado; su superviviente es decision_aptitud_uso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ]
 }

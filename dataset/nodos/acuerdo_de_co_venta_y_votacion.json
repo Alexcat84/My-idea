@@ -17,12 +17,28 @@
     "vesting_acciones_fundadores",
     "co_sale_drag_along_agreements"
   ],
-  "nodos_siguientes": [
-    "future_scenarios_planning"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si necesitas alinear tus intereses con los de quienes invirtieron en decisiones de venta",
     "Si quieres evitar que alguno de los socios fundadores venda sus acciones por su cuenta"
   ],
-  "etiqueta_arbol": "Protege tu Venta de Acciones"
+  "etiqueta_arbol": "Protege tu Venta de Acciones",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-001",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "acuerdo_de_co_venta_y_votacion -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-18-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los acuerdos de co-venta y de votacion entre accionistas no preparan la planificacion de escenarios estrategicos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

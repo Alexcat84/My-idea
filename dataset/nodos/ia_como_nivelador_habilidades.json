@@ -20,7 +20,6 @@
     "gestion_alucinaciones_ia"
   ],
   "nodos_siguientes": [
-    "intercambio_de_roles_para_motivacion",
     "desafios_implementacion_ia"
   ],
   "condiciones_activacion": [
@@ -45,6 +44,24 @@
       "node_id": "ia_colaborador_productividad",
       "titulo": "IA como Colaborador de Productividad en Trabajo de Conocimiento",
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ],
+  "fuentes_internas": [
+    "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-071",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ia_como_nivelador_habilidades -> intercambio_de_roles_para_motivacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-01-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La IA como niveladora de habilidades no tiene nada que ver con intercambiar operarios entre areas de una linea de produccion, y no lo prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

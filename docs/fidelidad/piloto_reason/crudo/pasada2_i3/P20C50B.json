@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P20C50B",
+  "intento": 0,
+  "usd": 0.140452,
+  "turnos": 1,
+  "duracion_s": 6.9,
+  "pared_s": 8.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32743,
+  "tokens_out": 474,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P20C50B\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4388, 4394, 4414], \"cita\": \"demonstrate that the potential major hazards of the installation and the risks to the personnel thereon have been identified and appropriate controls provided. … The presentation of the formal safety assessment should take the form of a Safety Case\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que la FSA termina en 'Decisions on which options to select' (L4414) y que se presenta como Safety Case que demuestra que hay controles adecuados (L4388). Documentar ahí la decisión y los controles concreta eso en la misma dirección. El libro respalda el Safety Case y no hay datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P20C50B",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4388,
+   4394,
+   4414
+  ],
+  "cita": "demonstrate that the potential major hazards of the installation and the risks to the personnel thereon have been identified and appropriate controls provided. … The presentation of the formal safety assessment should take the form of a Safety Case",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que la FSA termina en 'Decisions on which options to select' (L4414) y que se presenta como Safety Case que demuestra que hay controles adecuados (L4388). Documentar ahí la decisión y los controles concreta eso en la misma dirección. El libro respalda el Safety Case y no hay datos nuevos.",
+  "paso_fiel": ""
+ }
+}

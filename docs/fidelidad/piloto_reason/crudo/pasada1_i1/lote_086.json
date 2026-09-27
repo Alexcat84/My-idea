@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_086",
+  "intento": 0,
+  "usd": 0.14378400000000002,
+  "turnos": 1,
+  "duracion_s": 11.5,
+  "pared_s": 13.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31426,
+  "tokens_out": 904,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P06A9F5\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2724, 2720, 580, 2596, 5639], \"razon\": \"El libro da prioridad a los factores organizacionales sobre los locales y de primera línea. 'Tanto como' iguala las prioridades y diluye esa jerarquía.\"},\n {\"id\": \"P8EFD24\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4370, 4372], \"razon\": \"COSHH exige probar el equipo respiratorio y la ventilación y registrar cuidadosamente esos exámenes. El paso lo recoge fielmente.\"},\n {\"id\": \"P73EF6F\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2340, 2342, 2354, 1840, 1114], \"razon\": \"El libro sostiene que el riesgo de error crece con la cantidad de mantenimiento y que el mantenimiento no es benigno. Afirmar que cada intervención adicional reduce el riesgo invierte esa tesis.\"},\n {\"id\": \"PA32D93\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3226, 3228, 3332], \"razon\": \"Review y MESH usan escalas de 1 (hardly at all) a 5 (very often indeed) sobre un periodo corto y claramente definido.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P06A9F5",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2724,
+    2720,
+    580,
+    2596,
+    5639
+   ],
+   "razon": "El libro da prioridad a los factores organizacionales sobre los locales y de primera línea. 'Tanto como' iguala las prioridades y diluye esa jerarquía."
+  },
+  {
+   "id": "P8EFD24",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4370,
+    4372
+   ],
+   "razon": "COSHH exige probar el equipo respiratorio y la ventilación y registrar cuidadosamente esos exámenes. El paso lo recoge fielmente."
+  },
+  {
+   "id": "P73EF6F",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2340,
+    2342,
+    2354,
+    1840,
+    1114
+   ],
+   "razon": "El libro sostiene que el riesgo de error crece con la cantidad de mantenimiento y que el mantenimiento no es benigno. Afirmar que cada intervención adicional reduce el riesgo invierte esa tesis."
+  },
+  {
+   "id": "PA32D93",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3226,
+    3228,
+    3332
+   ],
+   "razon": "Review y MESH usan escalas de 1 (hardly at all) a 5 (very often indeed) sobre un periodo corto y claramente definido."
+  }
+ ]
+}

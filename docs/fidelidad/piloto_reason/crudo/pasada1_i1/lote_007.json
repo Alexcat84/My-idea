@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_007",
+  "intento": 0,
+  "usd": 0.153152,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32668,
+  "tokens_out": 1124,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P1ED540\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [520, 668, 674, 678, 682, 686, 688, 692], \"razon\": \"Reason advierte contra el sesgo retrospectivo: el observador sobreestima lo previsible y una señal solo es aviso si sabes qué desastre vendrá. Ninguna señal aislada bastaba.\"},\n  {\"id\": \"P6A6ED9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5894, 5896], \"razon\": \"El libro afirma que las organizaciones preparadas vinculan estrechamente los planes de crisis con los planes de recuperación del negocio.\"},\n  {\"id\": \"PD4CA05\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [1820, 1840, 1943, 1995, 2161], \"razon\": \"Revisar datos propios es razonable, pero el mantenimiento suele crear condiciones latentes que un historial de errores inmediatos puede atribuir a operadores. Riesgo de concluir erróneamente que no es la fuente.\"},\n  {\"id\": \"P94778F\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5603, 5641, 5690, 5907], \"razon\": \"El libro pide aplicar contramedidas y métricas distintas según el tipo de riesgo: LTIF no sirve para latentes, se usan precursores y chequeos de procesos. Extensión coherente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P1ED540",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    520,
+    668,
+    674,
+    678,
+    682,
+    686,
+    688,
+    692
+   ],
+   "razon": "Reason advierte contra el sesgo retrospectivo: el observador sobreestima lo previsible y una señal solo es aviso si sabes qué desastre vendrá. Ninguna señal aislada bastaba."
+  },
+  {
+   "id": "P6A6ED9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5894,
+    5896
+   ],
+   "razon": "El libro afirma que las organizaciones preparadas vinculan estrechamente los planes de crisis con los planes de recuperación del negocio."
+  },
+  {
+   "id": "PD4CA05",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    1820,
+    1840,
+    1943,
+    1995,
+    2161
+   ],
+   "razon": "Revisar datos propios es razonable, pero el mantenimiento suele crear condiciones latentes que un historial de errores inmediatos puede atribuir a operadores. Riesgo de concluir erróneamente que no es la fuente."
+  },
+  {
+   "id": "P94778F",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5603,
+    5641,
+    5690,
+    5907
+   ],
+   "razon": "El libro pide aplicar contramedidas y métricas distintas según el tipo de riesgo: LTIF no sirve para latentes, se usan precursores y chequeos de procesos. Extensión coherente."
+  }
+ ]
+}

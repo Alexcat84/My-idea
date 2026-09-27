@@ -24,6 +24,9 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
     cobrar: vi.fn(async () => 15),
     reembolsar: vi.fn(async () => 20),
     otorgarCortesia: vi.fn(async () => 20),
+    // AUD-09 M25: la reserva de créditos (migración 042).
+    reservarCreditos: vi.fn(async () => ({ reservado: true, disponible: 10 })),
+    resolverReserva: vi.fn(async () => undefined),
   };
 });
 // El gate 2FA tiene su propia cobertura (dosFactores.test + el vuelo de
@@ -31,6 +34,15 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
 vi.mock("@/lib/seguridad", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/lib/seguridad")>()),
   faltaSegundoFactor: async () => false,
+}));
+
+// AUD-09 (tanda 2): el fusible y el límite diario se observan para probar que
+// un rechazo por saldo no los gasta. Por defecto permiten.
+vi.mock("@/lib/rateLimit", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/rateLimit")>()),
+  identidadLimite: () => "id",
+  verificarFusibleGlobal: vi.fn(async () => ({ permitido: true })),
+  verificarLimiteDiario: vi.fn(async () => ({ permitido: true })),
 }));
 
 vi.mock("@/lib/supabase/server", () => ({
@@ -96,9 +108,45 @@ describe("POST /api/session/start", () => {
     expect(res.status).toBe(400);
   });
 
-  it("rechaza texto que supera el maximo de 4000 caracteres", async () => {
-    const res = await POST(requestFalso({ texto: "a".repeat(4001) }));
+  it("rechaza una idea que supera el maximo de 12.000 caracteres (decision del fundador, 27 sep 2026)", async () => {
+    const res = await POST(requestFalso({ texto: "a".repeat(12001) }));
     expect(res.status).toBe(400);
+    // AUD-09 H03: el rechazo dice su límite en palabras de persona (antes
+    // "'texto' supera el maximo...", que la pantalla cambiaba por el genérico).
+    const cuerpo = await res.json();
+    expect(cuerpo.limite).toBe(12000);
+    expect(cuerpo.error).toContain("12.000");
+    expect(cuerpo.error).not.toContain("'texto'");
+  });
+
+  it("sin saldo responde 402 SIN gastar el límite diario ni el fusible (AUD-09)", async () => {
+    const { verificarSaldo } = await import("@/lib/creditos");
+    const rl = await import("@/lib/rateLimit");
+    vi.mocked(rl.verificarLimiteDiario).mockClear();
+    vi.mocked(rl.verificarFusibleGlobal).mockClear();
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: false, creditos: 0 });
+    const res = await POST(requestFalso({ texto: "mi idea" }));
+    expect(res.status).toBe(402);
+    expect(rl.verificarLimiteDiario).not.toHaveBeenCalled();
+    expect(rl.verificarFusibleGlobal).not.toHaveBeenCalled();
+  });
+
+  // UPSTASH CAÍDO (decisión del fundador, 25 sep 2026): la IA se detiene con el
+  // mensaje claro, la reserva se suelta y no se cobra nada.
+  it.each(["fusible", "límite"])("base del contador caída (%s): 503 con el mensaje claro, reserva suelta, cero cobros, IA sin tocar", async (cual) => {
+    const rl = await import("@/lib/rateLimit");
+    const { cobrar, resolverReserva } = await import("@/lib/creditos");
+    vi.mocked(cobrar).mockClear();
+    vi.mocked(resolverReserva).mockClear();
+    const caida = { permitido: false, usados: 0, limite: 0, caido: true };
+    if (cual === "fusible") vi.mocked(rl.verificarFusibleGlobal).mockResolvedValueOnce(caida);
+    else vi.mocked(rl.verificarLimiteDiario).mockResolvedValueOnce(caida);
+    const res = await POST(requestFalso({ texto: "mi idea" }));
+    expect(res.status).toBe(503);
+    expect((await res.json()).error).toBe(rl.MENSAJE_SERVICIO_NO_DISPONIBLE);
+    expect(resolverReserva).toHaveBeenCalledWith(expect.any(String), "liberada");
+    expect(cobrar).not.toHaveBeenCalled();
+    expect(clasificarEntradaFalso).not.toHaveBeenCalled();
   });
 
   it("401 si no hay usuario autenticado", async () => {
@@ -168,12 +216,57 @@ describe("POST /api/session/start", () => {
       tipo: "error_temporal",
       estado: { fase: "esperando_respuesta", ruta: ["design_thinking_fundamentos"] },
       acumulado: acumuladoFalso,
-      opciones: [{ id: "mapeo_capas_diseno", titulo: "Mapeo de capas" }],
+      opciones: [{ id: "mapeo_capas_diseno", etiqueta: "Mapeo de capas" }],
     });
 
     const res = await POST(requestFalso({ texto: "algo" }));
     expect(res.status).toBe(502);
     const sesion = Object.values(estadoFalso.sessions)[0] as Record<string, unknown>;
     expect(sesion.closed_at).toBeNull();
+  });
+});
+
+// AUD-09 M25 (tanda 7A, dinero): la verificación del inicio no apartaba nada;
+// con saldo para UNA exploración se abrían varias en paralelo y solo la primera
+// se cobraba. Ahora se RESERVA al empezar, con la clave del cobro.
+describe("POST /api/session/start: reserva de créditos (AUD-09 M25)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    clasificarEntradaFalso.mockReset().mockResolvedValue({
+      puertaId: "design_thinking_fundamentos",
+      perfilSesion: "perfil inicial",
+      acumulado: acumuladoFalso,
+    });
+    avanzarTurnoFalso.mockReset().mockResolvedValue({
+      tipo: "pregunta",
+      estado: { fase: "esperando_respuesta", ruta: ["design_thinking_fundamentos"] },
+      pregunta: "¿qué vendes?",
+      acumulado: acumuladoFalso,
+      nodosNuevos: [],
+    });
+  });
+
+  it("reserva el precio del plan con la clave del cobro de ESA sesión", async () => {
+    const { reservarCreditos } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockClear();
+    const res = await POST(requestFalso({ texto: "quiero vender macetas" }));
+    expect(res.status).toBe(200);
+    const { session_id } = await res.json();
+    // A MANO: núcleo, primera entrevista -> plan_completo = 10.
+    expect(reservarCreditos).toHaveBeenCalledWith(expect.any(String), `plan:${session_id}`, "plan_completo", 10);
+  });
+
+  it("si otra sesión ya apartó el saldo: 402 sin crear idea ni sesión, sin IA", async () => {
+    const { reservarCreditos, verificarSaldo } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockResolvedValueOnce({ reservado: false, disponible: 0 });
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: true, creditos: 10 });
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: false, creditos: 10, apartados: 10 });
+    const res = await POST(requestFalso({ texto: "quiero vender macetas" }));
+    expect(res.status).toBe(402);
+    expect((await res.json()).error).toContain("apartados");
+    expect(Object.values(estadoFalso.projects)).toHaveLength(0);
+    expect(Object.values(estadoFalso.sessions)).toHaveLength(0);
+    expect(clasificarEntradaFalso).not.toHaveBeenCalled();
   });
 });

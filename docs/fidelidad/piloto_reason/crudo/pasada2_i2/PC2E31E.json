@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC2E31E",
+  "intento": 0,
+  "usd": 0.182076,
+  "turnos": 1,
+  "duracion_s": 8.2,
+  "pared_s": 9.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42204,
+  "tokens_out": 663,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC2E31E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4435, 4448, 4523], \"cita\": \"most regulatory staff possess expertise in technical and operational matters rather than in human and organizational factors. … What regulators often lack, however, are the tools, training and the resources to confront the all-important human and organizational factors\", \"datos_sin_respaldo\": [], \"razon\": \"El libro constata esta carencia del regulador y pide dotarlo de herramientas, formación y recursos. El paso la convierte en una tarea de diagnóstico, en la misma dirección y sin datos nuevos. No prescribe contratar expertos. Por eso la advertencia de que la proporción 80:20 no resolvería el problema no lo contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC2E31E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4435,
+   4448,
+   4523
+  ],
+  "cita": "most regulatory staff possess expertise in technical and operational matters rather than in human and organizational factors. … What regulators often lack, however, are the tools, training and the resources to confront the all-important human and organizational factors",
+  "datos_sin_respaldo": [],
+  "razon": "El libro constata esta carencia del regulador y pide dotarlo de herramientas, formación y recursos. El paso la convierte en una tarea de diagnóstico, en la misma dirección y sin datos nuevos. No prescribe contratar expertos. Por eso la advertencia de que la proporción 80:20 no resolvería el problema no lo contradice.",
+  "paso_fiel": ""
+ }
+}

@@ -20,12 +20,29 @@
     "ejecucion_incremental_transicion_tecnologica"
   ],
   "nodos_siguientes": [
-    "iota_analysis",
-    "ley_de_capacidad_de_sistemas"
+    "iota_analysis"
   ],
   "condiciones_activacion": [
     "Cuando existe riesgo de disrupción tecnológica en la industria del usuario",
     "Cuando se busca identificar oportunidades en nichos especializados antes que la competencia"
   ],
-  "etiqueta_arbol": "Aprovecha Tecnologías Disruptivas"
+  "etiqueta_arbol": "Aprovecha Tecnologías Disruptivas",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-055",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "explotacion_tecnologias_disruptivas -> ley_de_capacidad_de_sistemas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-03-04): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon A. Explotacion de Tecnologias Disruptivas es una estrategia de mercado: detectar nichos y expandirse al mercado masivo. La Ley de Capacidad trata de factores humanos: la carga del operador vuelve al limite de su capacidad. Ninguno de los dos nodos prepara al otro, solo comparten el tema 'tecnologia'. La correccion (el prefijo) no cambio nada: la arista ya era debil antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

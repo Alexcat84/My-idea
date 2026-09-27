@@ -6,13 +6,13 @@
   "fuente": "Requisitos de empaque de los couriers",
   "resumen_teorico": "La caja que uses determina si tu producto llega entero y si pagas de mas por el envio. Una caja gastada, aplastada o sin rigidez ya perdio su capacidad de proteger, sin importar cuanto relleno le pongas adentro. El tamano tambien importa en ambas direcciones: una caja muy ajustada no deja espacio para el acolchado, y una muy grande se aplasta o cuesta mas porque los couriers cobran segun el volumen que ocupa, no solo el peso real. Para contenido pesado o delicado, una caja de doble pared resiste mejor el manejo. Antes de armar tu envio, conviene preguntar directamente a tu courier cual es su metodo para calcular el peso por volumen, porque esa cifra cambia entre empresas y se actualiza con el tiempo.",
   "pasos_accionables": [
-    "Descarta cualquier caja gastada, aplastada o perforada, sin excepcion.",
-    "Elige el tamano que deje espacio para el relleno sin quedar demasiado holgado.",
-    "Usa caja de doble pared cuando el contenido sea pesado o fragil.",
-    "Pregunta a tu courier cual es su formula de peso por volumen antes de armar el envio.",
-    "Revisa el limite de peso impreso en la caja antes de sellarla."
+    "Descarta cualquier caja gastada, aplastada o perforada, sin excepción.",
+    "Elige el tamaño que deje espacio para el relleno sin quedar demasiado holgado.",
+    "Usa caja de doble pared cuando el contenido sea pesado o frágil.",
+    "Pregunta a tu courier cuál es su fórmula de peso por volumen antes de armar el envío.",
+    "Revisa el límite de peso impreso en la caja antes de sellarla."
   ],
-  "entregable_esperado": "Una caja elegida con el tamano y resistencia correctos, sin sobrecosto por peso volumetrico.",
+  "entregable_esperado": "Una caja elegida con el tamaño y resistencia correctos, sin sobrecosto por peso volumétrico.",
   "nodos_previos": [
     "tratar_packaging_costo_marca",
     "disenar_empaque_logistica",
@@ -35,5 +35,93 @@
     "Te cobraron mas de lo esperado por el tamano de la caja aunque el producto pesaba poco",
     "Un producto llego danado porque la caja no tenia el tamano ni la resistencia adecuados"
   ],
-  "etiqueta_arbol": "Elige la caja correcta"
+  "etiqueta_arbol": "Elige la caja correcta",
+  "fuentes_internas": [
+    "Requisitos de empaque de los couriers"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0105",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Descarta cualquier caja gastada, aplastada o perforada, sin excepcion.",
+      "texto_nuevo": "Descarta cualquier caja gastada, aplastada o perforada, sin excepción.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-002.paso0: excepción (Solo se añade la tilde que falta en 'excepción'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0106",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige el tamano que deje espacio para el relleno sin quedar demasiado holgado.",
+      "texto_nuevo": "Elige el tamaño que deje espacio para el relleno sin quedar demasiado holgado.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-002.paso1: tamaño (Solo se corrige la eñe que falta en 'tamaño'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0107",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa caja de doble pared cuando el contenido sea pesado o fragil.",
+      "texto_nuevo": "Usa caja de doble pared cuando el contenido sea pesado o frágil.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-002.paso2: frágil (Solo se añade la tilde que falta en 'frágil'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0108",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tu courier cual es su formula de peso por volumen antes de armar el envio.",
+      "texto_nuevo": "Pregunta a tu courier cuál es su fórmula de peso por volumen antes de armar el envío.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-002.paso3: cuál, fórmula, envío (Solo se añaden tildes que faltaban: 'cuál' (interrogativo indirecto), 'fórmula' y 'envío'; 'courier' se queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0109",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa el limite de peso impreso en la caja antes de sellarla.",
+      "texto_nuevo": "Revisa el límite de peso impreso en la caja antes de sellarla.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-002.paso4: límite (Solo se añade la tilde que falta en 'límite'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0110",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una caja elegida con el tamano y resistencia correctos, sin sobrecosto por peso volumetrico.",
+      "texto_nuevo": "Una caja elegida con el tamaño y resistencia correctos, sin sobrecosto por peso volumétrico.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O011-002.entregable: tamaño, volumétrico (Solo se corrigen la eñe de 'tamaño' y la tilde de 'volumétrico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

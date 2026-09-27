@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB4FECE",
+  "intento": 0,
+  "usd": 0.185456,
+  "turnos": 1,
+  "duracion_s": 8.9,
+  "pared_s": 9.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43009,
+  "tokens_out": 671,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB4FECE\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5748, 271, 263], \"cita\": \"The economic and societal shortcomings, identified--for example--by Legasov (see Chapter 1), are beyond the reach of system managers. From their perspective, such problems are given and immutable, but our main interest must be in the changeable and the controllable.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que los factores económicos y societales quedan fuera del alcance de los gestores del sistema y son 'given and immutable'. También pide limitar el análisis a lo que estos pueden controlar. El paso convierte esa idea en una acción explícita y va en la misma dirección. 'Gestor de riesgo' equivale a 'system managers'/'risk managers' del libro y no añade un rol nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB4FECE",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5748,
+   271,
+   263
+  ],
+  "cita": "The economic and societal shortcomings, identified--for example--by Legasov (see Chapter 1), are beyond the reach of system managers. From their perspective, such problems are given and immutable, but our main interest must be in the changeable and the controllable.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que los factores económicos y societales quedan fuera del alcance de los gestores del sistema y son 'given and immutable'. También pide limitar el análisis a lo que estos pueden controlar. El paso convierte esa idea en una acción explícita y va en la misma dirección. 'Gestor de riesgo' equivale a 'system managers'/'risk managers' del libro y no añade un rol nuevo.",
+  "paso_fiel": ""
+ }
+}

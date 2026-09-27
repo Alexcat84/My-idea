@@ -1,6 +1,6 @@
 {
   "node_id": "swot_business_model_canvas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "SWOT aplicado al Business Model Canvas",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
@@ -26,5 +26,23 @@
     "Si el usuario necesita hacer un chequeo periódico de salud de su modelo de negocio",
     "Si se detectan señales de obsolescencia en el modelo actual"
   ],
-  "etiqueta_arbol": "Cruza tu SWOT con tu Canvas"
+  "etiqueta_arbol": "Cruza tu SWOT con tu Canvas",
+  "fuentes_internas": [
+    "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-307",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-025: Un análisis FODA sobre los bloques del lienzo del modelo de negocio es evaluación estratégica del modelo, no una prueba con clientes ni con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_097",
+  "intento": 0,
+  "usd": 0.1465,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 13.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32395,
+  "tokens_out": 846,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P19B66F\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2905, 2876, 2880, 1934, 5557, 5641, 5035], \"razon\": \"El libro afirma que el error humano es consecuencia, no causa. Identificarlo es solo el inicio de la búsqueda de factores de trabajo y organizacionales.\"},\n  {\"id\": \"P15733D\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [3230, 3332], \"razon\": \"El libro corrige el sesgo agregando datos de muchos encuestados para que se cancelen y preserva el anonimato. El paso propone identificar y corregir individualmente a cada encuestado.\"},\n  {\"id\": \"P755BAD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2311, 2356, 2358, 2367, 2369, 1842], \"razon\": \"El libro sostiene que el contacto manual exigido por programas de mantenimiento anticuados suele ser innecesario. Propone diseñar para eliminarlo dado el aumento de fiabilidad de los componentes.\"},\n  {\"id\": \"P375A8A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3724, 3722], \"razon\": \"El libro dice que la probabilidad global de encallar se obtiene sumando las probabilidades incondicionales de los tres factores influyentes inmediatos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P19B66F",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2905,
+    2876,
+    2880,
+    1934,
+    5557,
+    5641,
+    5035
+   ],
+   "razon": "El libro afirma que el error humano es consecuencia, no causa. Identificarlo es solo el inicio de la búsqueda de factores de trabajo y organizacionales."
+  },
+  {
+   "id": "P15733D",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    3230,
+    3332
+   ],
+   "razon": "El libro corrige el sesgo agregando datos de muchos encuestados para que se cancelen y preserva el anonimato. El paso propone identificar y corregir individualmente a cada encuestado."
+  },
+  {
+   "id": "P755BAD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2311,
+    2356,
+    2358,
+    2367,
+    2369,
+    1842
+   ],
+   "razon": "El libro sostiene que el contacto manual exigido por programas de mantenimiento anticuados suele ser innecesario. Propone diseñar para eliminarlo dado el aumento de fiabilidad de los componentes."
+  },
+  {
+   "id": "P375A8A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3724,
+    3722
+   ],
+   "razon": "El libro dice que la probabilidad global de encallar se obtiene sumando las probabilidades incondicionales de los tres factores influyentes inmediatos."
+  }
+ ]
+}

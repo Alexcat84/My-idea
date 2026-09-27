@@ -1,0 +1,37 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE60316",
+  "intento": 0,
+  "usd": 0.20790799999999998,
+  "turnos": 1,
+  "duracion_s": 13.1,
+  "pared_s": 14.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46172,
+  "tokens_out": 1161,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE60316\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1573, 4244, 4246, 4429, 4448, 4502, 4435, 1575], \"cita\": \"wholly safe behaviour can never be controlled entirely by feedforward prescriptions. [...] The long-term safety benefits of being forced to grapple with these enormously difficult--and still unresolved--sociotechnical issues are undoubtedly greater than any number of purely technical ‘fixes’.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro limita la prescripción a riesgos específicos y conocidos (L4244-4246). Llama 'all-important' a los factores humanos y organizacionales (L4448) y pone el acento en reformar los factores de origen (L4502). L4435 solo matiza que esas disciplinas aún no están maduras; no desaconseja atenderlas. 'Puramente' respeta que las reglas siguen siendo útiles (L1575). Concreta el libro sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE60316",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1573,
+   4244,
+   4246,
+   4429,
+   4448,
+   4502,
+   4435,
+   1575
+  ],
+  "cita": "wholly safe behaviour can never be controlled entirely by feedforward prescriptions. [...] The long-term safety benefits of being forced to grapple with these enormously difficult--and still unresolved--sociotechnical issues are undoubtedly greater than any number of purely technical ‘fixes’.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro limita la prescripción a riesgos específicos y conocidos (L4244-4246). Llama 'all-important' a los factores humanos y organizacionales (L4448) y pone el acento en reformar los factores de origen (L4502). L4435 solo matiza que esas disciplinas aún no están maduras; no desaconseja atenderlas. 'Puramente' respeta que las reglas siguen siendo útiles (L1575). Concreta el libro sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

@@ -18,9 +18,7 @@
   "entregable_esperado": "Tu carta de compromiso firmada con todos los términos clave negociados y calculados por ti (pago por éxito, pago mensual, cláusula de cola, responsabilidad)",
   "nodos_previos": [
     "seleccion_banquero_ma",
-    "contratos_de_servicio_garantia",
-    "gestion_procurement_consumo",
-    "mercado_de_uno_fundraising"
+    "gestion_procurement_consumo"
   ],
   "nodos_siguientes": [
     "no_shop_extension_negotiation"
@@ -28,5 +26,36 @@
   "condiciones_activacion": [
     "Cuando ya elegiste a tu banquero y tienes que formalizar el contrato de servicios de fusiones y adquisiciones"
   ],
-  "etiqueta_arbol": "Negocia tu Carta de Compromiso"
+  "etiqueta_arbol": "Negocia tu Carta de Compromiso",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-021",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "contratos_de_servicio_garantia -> negociacion_carta_compromiso_banquero",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-17-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La carta de compromiso con un banquero de inversion para vender la empresa no tiene relacion con los contratos de servicio bajo la ley Magnuson Moss."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-085",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mercado_de_uno_fundraising -> negociacion_carta_compromiso_banquero",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-18-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Buscar al unico inversionista que diga si es levantar capital; la carta de compromiso con el banquero trata de pagos si hay venta de la empresa, otro proceso que no continua este."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Verificación Paralela para Trabajo Crítico en Servicios",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Para procesos de servicio críticos (bancos, nóminas, tiendas) donde el costo de un error corregido tarde es muy alto, Deming recomienda que dos personas realicen de forma independiente y paralela el mismo cálculo sobre copias limpias y legibles, sin conocer los resultados del otro, y que una máquina compare ambos resultados para detectar discrepancias. La calidad resultante es mucho mejor que el producto de las probabilidades de error individuales (p1×p2), ya que es muy poco probable que ambos cometan el mismo error.",
+  "resumen_teorico": "Para procesos de servicio críticos (bancos, nóminas, tiendas) donde el costo de un error corregido tarde es muy alto, conviene que dos personas realicen de forma independiente y paralela el mismo cálculo sobre copias limpias y legibles, sin conocer los resultados del otro, y que una máquina compare ambos resultados para detectar discrepancias. La calidad resultante es mucho mejor que el producto de las probabilidades de error individuales (p1×p2), ya que es muy poco probable que ambos cometan el mismo error.",
   "pasos_accionables": [
     "Identificar transacciones o cálculos críticos donde el costo de error corregido tarde sea alto (k2 elevado).",
     "Asignar el mismo trabajo a dos personas distintas trabajando de forma independiente sobre copias legibles.",
@@ -21,5 +21,26 @@
     "Cuando se procesan transacciones críticas en servicios (bancos, nóminas, facturación) con alto costo de error tardío",
     "Cuando es difícil detectar errores mediante un solo verificador"
   ],
-  "etiqueta_arbol": "Verifica en Paralelo lo Crítico"
+  "etiqueta_arbol": "Verifica en Paralelo lo Crítico",
+  "correcciones": [
+    {
+      "id": "atribucion-177",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Para procesos de servicio críticos (bancos, nóminas, tiendas) donde el costo de un error corregido tarde es muy alto, Deming recomienda que dos personas realicen de forma independiente y paralela el mismo cálculo sobre copias limpias y legibles, sin conocer los resultados del otro, y que una máquina compare ambos resultados para detectar discrepancias. La calidad resultante es mucho mejor que el producto de las probabilidades de error individuales (p1×p2), ya que es muy poco probable que ambos cometan el mismo error.",
+      "texto_nuevo": "Para procesos de servicio críticos (bancos, nóminas, tiendas) donde el costo de un error corregido tarde es muy alto, conviene que dos personas realicen de forma independiente y paralela el mismo cálculo sobre copias limpias y legibles, sin conocer los resultados del otro, y que una máquina compare ambos resultados para detectar discrepancias. La calidad resultante es mucho mejor que el producto de las probabilidades de error individuales (p1×p2), ya que es muy poco probable que ambos cometan el mismo error.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming recomienda que dos personas"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-031 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

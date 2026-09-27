@@ -14,7 +14,7 @@
   "entregable_esperado": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano.",
   "nodos_previos": [
     "cuando_el_riesgo_se_vuelve_realidad",
-    "planificacion_recuperacion_post_accidente"
+    "plan_de_contingencia_b"
   ],
   "nodos_siguientes": [
     "sigue_operando_pese_al_golpe",
@@ -25,5 +25,36 @@
     "cuando no tienes respaldos ni un plan para volver tras un desastre",
     "cuando dependes de algo que, si lo pierdes, no sabes cómo recuperar"
   ],
-  "etiqueta_arbol": "Plan de Desastre y Recuperación"
+  "etiqueta_arbol": "Plan de Desastre y Recuperación",
+  "fuentes_internas": [
+    "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-015",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> plan_de_desastre_y_recuperacion",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-037",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "planificacion_recuperacion_post_accidente -> plan_de_desastre_y_recuperacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por plan_de_contingencia_b."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

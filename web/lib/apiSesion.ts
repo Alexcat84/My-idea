@@ -8,8 +8,9 @@
  */
 import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import catalogo from "./assets/packs_catalog.json";
+import { mundo } from "./catalogoMundos";
 import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
+import { resolverReserva } from "./creditos";
 import {
   cerrarSesion,
   guardarEstadoSesion,
@@ -19,6 +20,9 @@ import {
   type TurnoRegistrado,
 } from "./db";
 import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { SERVIDOR_SESION } from "./i18n/mensajes/servidorSesion";
 
 /** FASE B (canon 12): el cierre honesto es una CONFESIÓN CON DIGNIDAD, no una
  * disculpa. Título y cuerpo son marco fijo (tono cuidado, con acentos, sin
@@ -29,13 +33,10 @@ import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
  * Compat (amarre 1): además del `cierre` estructurado, la respuesta sigue
  * llevando `mensaje` plano (= el cuerpo), para que cualquier consumidor que
  * solo lea `mensaje` no se rompa. */
-const CIERRE_CAMINO = {
-  titulo: "Por aquí no encuentro un plan que valga tu tiempo.",
-  cuerpo:
-    "Exploré lo que me contaste y, siendo honesto, este ángulo no me da material suficiente para " +
-    "armarte un plan que de verdad te mueva. Prefiero decírtelo a entregarte relleno. No es un no a " +
-    "tu idea: es un no a este camino.",
-};
+function cierreCaminoTexto(idioma: Locale): { titulo: string; cuerpo: string } {
+  const t = elegir(SERVIDOR_SESION, idioma).cierre;
+  return { titulo: t.caminoTitulo, cuerpo: t.caminoCuerpo };
+}
 
 /** El cierre honesto de un mundo que no era para este proyecto (§1).
  *
@@ -45,16 +46,25 @@ const CIERRE_CAMINO = {
  * puede mostrarla, y solo cuando `creditos_devueltos` trae un número respaldado
  * por el ledger. En beta la activación es gratis: no hubo consumo, no hay
  * reembolso que anunciar en el cuerpo. */
-function cierreMundoTexto(dominio: string): { titulo: string; cuerpo: string } {
-  const nombre =
-    (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
-    "Este mundo";
+function cierreMundoTexto(dominio: string, idioma: Locale): { titulo: string; cuerpo: string } {
+  const t = elegir(SERVIDOR_SESION, idioma).cierre;
+  const nombre = mundo(dominio, idioma)?.nombre ?? t.mundoSinNombre;
   return {
-    titulo: `${nombre} no es para esta idea, todavía.`,
-    cuerpo:
-      "Activé y exploré este mundo con lo que hay hoy, y no encontré un subproyecto que te sume sin " +
-      "inventarte trabajo. Antes que darte un checklist de relleno, prefiero parar aquí. Este mundo te " +
-      "sigue esperando: puedes volver a entrar cuando tu proyecto crezca.",
+    titulo: interpolar(t.mundoTitulo, { nombre }),
+    cuerpo: t.mundoCuerpo,
+  };
+}
+
+/** AUD-09 H04: el cierre de un CICLO DE SEGUIMIENTO de un mundo ya trabajado.
+ * No dice que el mundo "no es para esta idea" (lo es: el usuario ya tiene su
+ * plan) ni manda a volver a entrar: dice el hecho, que este ciclo no encontró
+ * una puerta nueva, y que lo que ya tiene sigue intacto. */
+function cierreSeguimientoMundoTexto(dominio: string, idioma: Locale): { titulo: string; cuerpo: string } {
+  const t = elegir(SERVIDOR_SESION, idioma).cierre;
+  const nombre = mundo(dominio, idioma)?.nombre ?? t.seguimientoSinNombre;
+  return {
+    titulo: interpolar(t.seguimientoTitulo, { nombre }),
+    cuerpo: t.seguimientoCuerpo,
   };
 }
 
@@ -74,7 +84,9 @@ export async function responderResultadoTurno(
   /** El recorrido conversado acumulado (parejas pregunta/respuesta), ya con
    * la pareja de ESTE turno si la hubo. Se persiste junto al estado para que
    * el usuario lo vuelva a ver al reentrar y para el análisis de la beta. */
-  turnos: TurnoRegistrado[] = []
+  turnos: TurnoRegistrado[] = [],
+  /** i18n F2: el idioma de la petición, para el cierre honesto. */
+  idioma: Locale = LOCALE_BASE
 ): Promise<NextResponse> {
   await guardarEstadoSesion(supabase, sessionId, {
     recorrido: resultado.estado,
@@ -102,13 +114,16 @@ export async function responderResultadoTurno(
     );
     await mergeNumerosProyecto(supabase, projectId, resultado.estado.numerosDetectadosSesion);
     await mergeTipoOferta(supabase, projectId, resultado.estado.tipoOfertaSesion, resultado.estado.unidadVentaSesion);
+    // AUD-09 M25: sin plan no hay cobro; lo que la sesión apartó al empezar se
+    // suelta ya (si no apartó nada, no hace nada).
+    await resolverReserva(`plan:${sessionId}`, "liberada");
 
     // Fase 4.3 §1: un mundo solo cierra cuando NINGUNA de sus puertas era
     // compatible con el perfil (el motor ya re-eligio todo lo que pudo).
     const cierre = resultado.cierreMundo;
     // Fase 4.3.2: DOS cosas distintas, que la regla de claims obliga a separar.
-    //  (1) `unlock_revertido` — HECHO real: se borra la fila y el usuario puede
-    //      volver a entrar al mundo. No es una afirmación de dinero.
+    //  (1) `unlock_revertido` — HECHO real. Desde la AUD-09 (H04) siempre false:
+    //      la fila del mundo no se borra jamás.
     //  (2) `creditos_devueltos` — AFIRMACIÓN DE DINERO: cuántos créditos se le
     //      devolvieron. Solo puede tener valor si un evento del ledger lo
     //      respalda. En beta la activación es gratis (no hubo consumo): null.
@@ -124,20 +139,27 @@ export async function responderResultadoTurno(
     // respalda, no se afirma.
     const creditosDevueltos: number | null = null;
     if (cierre) {
-      // Revertir el unlock: real hoy, sin ledger. El mundo vuelve a estar
-      // disponible para reintentarlo cuando el proyecto crezca.
-      await supabase.from("project_unlocks").delete().eq("project_id", projectId).eq("dominio", cierre.dominio);
+      // AUD-09 H04 (decisión del fundador, 25 sep 2026: NADA SE BORRA JAMÁS).
+      // Antes aquí se BORRABA la fila del mundo: en el seguimiento de un mundo
+      // ya pagado se iban el sello de compra, el cierre y el diagnóstico. La
+      // fila se queda; volver a entrar ya lo permite world/start mientras no
+      // haya diagnóstico, y con diagnóstico rigen sus reglas de siempre.
       await registrarBitacora(supabase, projectId, "mundo_incompatible", {
         mundo: cierre.dominio,
         motivo: cierre.motivo,
-        unlock_revertido: true,
+        es_seguimiento: resultado.estado.esSeguimiento === true,
+        unlock_revertido: false,
         creditos_devueltos: creditosDevueltos,
       });
     }
 
     // Canon 12: el cierre estructurado. El "porque" es el motivo REAL del
     // interprete (glass box), no prosa generica; null si no lo hubo.
-    const cierreTexto = cierre ? cierreMundoTexto(cierre.dominio) : CIERRE_CAMINO;
+    const cierreTexto = !cierre
+      ? cierreCaminoTexto(idioma)
+      : resultado.estado.esSeguimiento
+        ? cierreSeguimientoMundoTexto(cierre.dominio, idioma)
+        : cierreMundoTexto(cierre.dominio, idioma);
     const porque = cierre ? cierre.motivo : resultado.cierreCamino?.motivo ?? null;
 
     return NextResponse.json({
@@ -158,7 +180,8 @@ export async function responderResultadoTurno(
       // que un consumidor viejo que solo lea `mensaje` no se rompa ni se quede mudo.
       mensaje: cierreTexto.cuerpo,
       dominio: cierre?.dominio ?? null,
-      unlock_revertido: Boolean(cierre),
+      // AUD-09 H04: la fila del mundo ya no se borra jamás.
+      unlock_revertido: false,
       // El claim de dinero: null en beta. La UI solo muestra la línea de
       // reembolso si esto trae un número.
       creditos_devueltos: creditosDevueltos,

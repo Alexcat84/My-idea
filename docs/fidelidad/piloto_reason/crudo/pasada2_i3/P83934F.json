@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P83934F",
+  "intento": 0,
+  "usd": 0.20790799999999998,
+  "turnos": 1,
+  "duracion_s": 8.6,
+  "pared_s": 9.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48662,
+  "tokens_out": 663,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P83934F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5742, 5748, 263], \"cita\": \"Individual factors alone have only a small to moderate value for all three goals and that, overall, workplace and organizational factors contribute the most added value. There are diminishing returns on more remote influences, particularly with regard to countermeasures and risk management.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"Reason afirma que los factores de lugar de trabajo y organizacionales aportan el mayor valor añadido, aunque lo llama 'highly speculative'. El paso lo traduce en asignación de recursos de investigación, en la misma dirección. Enfocar no equivale a excluir lo individual: el libro pide un término medio y la investigación sigue partiendo de los actos inseguros (L293). No añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P83934F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5742,
+   5748,
+   263
+  ],
+  "cita": "Individual factors alone have only a small to moderate value for all three goals and that, overall, workplace and organizational factors contribute the most added value. There are diminishing returns on more remote influences, particularly with regard to countermeasures and risk management.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "Reason afirma que los factores de lugar de trabajo y organizacionales aportan el mayor valor añadido, aunque lo llama 'highly speculative'. El paso lo traduce en asignación de recursos de investigación, en la misma dirección. Enfocar no equivale a excluir lo individual: el libro pide un término medio y la investigación sigue partiendo de los actos inseguros (L293). No añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

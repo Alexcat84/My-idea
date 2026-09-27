@@ -1,6 +1,6 @@
 {
   "node_id": "enfasis_en_utilidades_corto_plazo",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Énfasis en Utilidades de Corto Plazo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -17,8 +17,7 @@
   "entregable_esperado": "Política interna que priorice indicadores de sostenibilidad y calidad sobre utilidades trimestrales",
   "nodos_previos": [
     "falta_de_constancia_de_proposito",
-    "enfermedades_mortales_gestion",
-    "garantia_devolucion_dinero"
+    "enfermedades_mortales_gestion"
   ],
   "nodos_siguientes": [
     "evaluacion_de_desempeno_merito"
@@ -38,6 +37,37 @@
       "node_id": "enfasis_en_ganancias_corto_plazo",
       "titulo": "Énfasis en Ganancias de Corto Plazo",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-070",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "garantia_devolucion_dinero -> enfasis_en_utilidades_corto_plazo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-21, lector y verificador de acuerdo)",
+        "motivo": "Una garantia de devolucion para dar confianza al comprador no conduce a la critica de Deming a las utilidades de corto plazo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-fase-123",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-016: Corrige practicas de gestion de una empresa en marcha (presion trimestral, contabilidad de fin de periodo), es gestion operativa y no validacion con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ]
 }

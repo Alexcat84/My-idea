@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF0B55E",
+  "intento": 0,
+  "usd": 0.16195600000000002,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36309,
+  "tokens_out": 836,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF0B55E\", \"veredicto\": \"FIEL\", \"lineas\": [2654, 2658], \"cita\": \"This, in turn, guides the selection of which organizational processes to sample proactively on a regular basis. ... The number of such diagnostic checks ranges typically from around eight to 16 and will vary from one type of system to another\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda seleccionar, a partir de los patrones del análisis de múltiples eventos, los procesos que se muestrean proactivamente como 'vital signs', y cifra esos chequeos en torno a 8-16. Presentar ese rango típico como pauta de diseño y omitir su fin (hallar 2-3 procesos urgentes) se aparta solo en el detalle, no contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF0B55E",
+  "veredicto": "FIEL",
+  "lineas": [
+   2654,
+   2658
+  ],
+  "cita": "This, in turn, guides the selection of which organizational processes to sample proactively on a regular basis. ... The number of such diagnostic checks ranges typically from around eight to 16 and will vary from one type of system to another",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda seleccionar, a partir de los patrones del análisis de múltiples eventos, los procesos que se muestrean proactivamente como 'vital signs', y cifra esos chequeos en torno a 8-16. Presentar ese rango típico como pauta de diseño y omitir su fin (hallar 2-3 procesos urgentes) se aparta solo en el detalle, no contradice.",
+  "paso_fiel": ""
+ }
+}

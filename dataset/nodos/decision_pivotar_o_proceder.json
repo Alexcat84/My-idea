@@ -38,17 +38,16 @@
     "preservar_efectivo_buscar_modelo",
     "sales_roadmap_vs_sales_force",
     "filosofia_validacion_clientes",
-    "manifiesto_regla4_iteraciones_pivotes",
-    "tipo_mercado_curva_ingresos",
     "prototipado_modelos_negocio",
-    "lienzo_modelo_negocio"
+    "lienzo_modelo_negocio",
+    "pivote_estrategico",
+    "market_type_revenue_growth"
   ],
   "nodos_siguientes": [
     "customer_creation",
     "customer_discovery",
     "lienzo_modelo_negocio",
     "fuentes_financiamiento_startup",
-    "dilema_riqueza_vs_control",
     "customer_validation",
     "validar_modelo_negocio_hechos",
     "validar_modelo_financiero",
@@ -83,6 +82,50 @@
       "node_id": "revalidar_modelo_negocio",
       "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-031",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decision_pivotar_o_proceder -> dilema_riqueza_vs_control",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-12-20): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Pivotar o proceder al validar clientes no prepara la eleccion entre riqueza y control; no comparten tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-149",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "manifiesto_regla4_iteraciones_pivotes -> decision_pivotar_o_proceder",
+      "texto_nuevo": "pivote_estrategico -> decision_pivotar_o_proceder",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a manifiesto_regla4_iteraciones_pivotes, deprecado; su superviviente es pivote_estrategico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-150",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "tipo_mercado_curva_ingresos -> decision_pivotar_o_proceder",
+      "texto_nuevo": "market_type_revenue_growth -> decision_pivotar_o_proceder",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a tipo_mercado_curva_ingresos, deprecado; su superviviente es market_type_revenue_growth."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ]
 }

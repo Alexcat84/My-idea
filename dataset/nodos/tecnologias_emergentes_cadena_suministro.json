@@ -1,7 +1,7 @@
 {
   "node_id": "tecnologias_emergentes_cadena_suministro",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Combinación de Tecnologías Emergentes para Cadenas Ágiles",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El verdadero potencial de tecnologías como robots industriales, manufactura aditiva (impresión 3D), vehículos autónomos, drones e IoT se logra cuando se combinan entre sí, no usándolas aisladamente. Empresas como Walmart y Amazon lograron ventajas competitivas dominantes al combinar prácticas logísticas complementarias. La combinación de estas tecnologías permite fábricas flexibles que ajustan rápidamente su producción, almacenes automatizados y entregas más precisas y rápidas.",
@@ -22,5 +22,23 @@
     "Cuando la empresa maneja volúmenes crecientes de producto físico",
     "Cuando existe presión competitiva por mayor velocidad de entrega"
   ],
-  "etiqueta_arbol": "Combina Tecnologías para Ser Ágil"
+  "etiqueta_arbol": "Combina Tecnologías para Ser Ágil",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-33",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-37: Combinar robots, impresión 3D, vehículos autónomos y drones en la cadena es estrategia de operaciones avanzada que solo interesa a quien entra a fondo en logística. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
+  ]
 }

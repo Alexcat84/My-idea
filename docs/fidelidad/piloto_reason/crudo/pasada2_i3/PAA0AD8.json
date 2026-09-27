@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PAA0AD8",
+  "intento": 0,
+  "usd": 0.216588,
+  "turnos": 1,
+  "duracion_s": 20.0,
+  "pared_s": 21.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52852,
+  "tokens_out": 259,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PAA0AD8\", \"veredicto\": \"FIEL\", \"lineas\": [4478, 4492], \"cita\": \"These ratings are then summed over all the instances in that particular collection (either from a single inspection or several) to generate an Organizational Factor Profile (see Figure 8.3).\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice literalmente que las calificaciones de los factores O&M se suman sobre todas las instancias de la coleccion para generar el Perfil de Factores Organizacionales. El nombre del perfil figura en el libro, asi que no es un dato anadido. El paso reproduce la instruccion sin alterar su sentido ni sus condiciones.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PAA0AD8",
+  "veredicto": "FIEL",
+  "lineas": [
+   4478,
+   4492
+  ],
+  "cita": "These ratings are then summed over all the instances in that particular collection (either from a single inspection or several) to generate an Organizational Factor Profile (see Figure 8.3).",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice literalmente que las calificaciones de los factores O&M se suman sobre todas las instancias de la coleccion para generar el Perfil de Factores Organizacionales. El nombre del perfil figura en el libro, asi que no es un dato anadido. El paso reproduce la instruccion sin alterar su sentido ni sus condiciones.",
+  "paso_fiel": ""
+ }
+}

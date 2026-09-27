@@ -1,0 +1,94 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_068",
+  "intento": 0,
+  "usd": 0.177268,
+  "turnos": 1,
+  "duracion_s": 22.9,
+  "pared_s": 23.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33687,
+  "tokens_out": 2126,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PBD3235\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [194, 196, 293, 2905, 4105, 5710, 5712, 5763], \"razon\": \"El libro respalda buscar factores organizacionales y regulatorios aguas arriba. Matiz: advierte que el péndulo pudo ir demasiado lejos al rastrear factores remotos.\"},\n {\"id\": \"P978D50\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1834, 1838, 1840, 1987, 1991, 2161, 2250, 971, 975], \"razon\": \"El libro prioriza el mantenimiento por ser a la vez manual, crítico y frecuente. 'Tareas críticas' es ambiguo: el cliente podría priorizar solo por criticidad. Los controles de firma pueden fallar.\"},\n {\"id\": \"PB83FCC\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"personal de seguridad\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3989, 3991, 4161, 4165, 4806, 4908], \"razon\": \"El libro valora separar a quien recibe los reportes de la autoridad operativa o regulatoria. Su remedio al conflicto regulador fue una agencia independiente, no canales de reporte.\"},\n {\"id\": \"P72FB54\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"auditorías aleatorias\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [409, 433, 435, 967, 969, 971, 975], \"razon\": \"El libro critica firmar sin verificar y la falta de inspección separada. Respalda verificar, pero el carácter aleatorio de las auditorías no aparece en el libro.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PBD3235",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    194,
+    196,
+    293,
+    2905,
+    4105,
+    5710,
+    5712,
+    5763
+   ],
+   "razon": "El libro respalda buscar factores organizacionales y regulatorios aguas arriba. Matiz: advierte que el péndulo pudo ir demasiado lejos al rastrear factores remotos."
+  },
+  {
+   "id": "P978D50",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1834,
+    1838,
+    1840,
+    1987,
+    1991,
+    2161,
+    2250,
+    971,
+    975
+   ],
+   "razon": "El libro prioriza el mantenimiento por ser a la vez manual, crítico y frecuente. 'Tareas críticas' es ambiguo: el cliente podría priorizar solo por criticidad. Los controles de firma pueden fallar."
+  },
+  {
+   "id": "PB83FCC",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "personal de seguridad"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3989,
+    3991,
+    4161,
+    4165,
+    4806,
+    4908
+   ],
+   "razon": "El libro valora separar a quien recibe los reportes de la autoridad operativa o regulatoria. Su remedio al conflicto regulador fue una agencia independiente, no canales de reporte."
+  },
+  {
+   "id": "P72FB54",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "auditorías aleatorias"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    409,
+    433,
+    435,
+    967,
+    969,
+    971,
+    975
+   ],
+   "razon": "El libro critica firmar sin verificar y la falta de inspección separada. Respalda verificar, pero el carácter aleatorio de las auditorías no aparece en el libro."
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA99418",
+  "intento": 0,
+  "usd": 0.206596,
+  "turnos": 1,
+  "duracion_s": 12.5,
+  "pared_s": 13.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46169,
+  "tokens_out": 1096,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA99418\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5832, 5790, 5250], \"cita\": \"A joint loss costing study was carried out by the HSE and Chevron covering 13 weeks typical operations on one of the latter's platforms in the North Sea. Although there were no serious incidents during that period, the costs accruing from a whole range of minor classified incidents amounted to £1 million.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe el estudio conjunto HSE-Chevron sobre incidentes menores (L5832). También elogia el 'loss costing' en el sector petrolero (L5790) y pregunta qué sistema de costeo de pérdidas tiene la organización (L5250). No lo formula como instrucción explícita, pero el paso lo concreta en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA99418",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5832,
+   5790,
+   5250
+  ],
+  "cita": "A joint loss costing study was carried out by the HSE and Chevron covering 13 weeks typical operations on one of the latter's platforms in the North Sea. Although there were no serious incidents during that period, the costs accruing from a whole range of minor classified incidents amounted to £1 million.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe el estudio conjunto HSE-Chevron sobre incidentes menores (L5832). También elogia el 'loss costing' en el sector petrolero (L5790) y pregunta qué sistema de costeo de pérdidas tiene la organización (L5250). No lo formula como instrucción explícita, pero el paso lo concreta en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,520 @@
+# Lote R001: 49 nodos a leer contra su libro (titulo, etiqueta, resumen, entregable, condiciones)
+
+### R001-001
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Cultura Flexible en Organizaciones de Alta Confiabilidad
+- etiqueta: Adapta tu Estructura al Riesgo
+- resumen: Las organizaciones de alta confiabilidad (high-reliability organizations) poseen la capacidad de reconfigurarse ante operaciones de alto ritmo o ciertos tipos de peligro. Una cultura flexible implica pasar del modo jerárquico convencional a una estructura profesional más plana, donde el control pasa a los expertos en la tarea presentes en el lugar, para luego revertir al modo burocrático tradicional una vez pasada la emergencia. Esta adaptabilidad depende crucialmente del respeto por las habilidades, experiencia y capacidades del personal de primera línea, respeto que debe ganarse mediante una inversión importante en capacitación.
+- entregable: Protocolo de gestión de crisis con reglas claras de transferencia temporal de autoridad a expertos operativos
+- condiciones:
+  - condiciones[0]: Cuando la organización opera en entornos de alto riesgo con necesidad de respuesta rápida
+  - condiciones[1]: Cuando la estructura jerárquica retrasa decisiones críticas de seguridad
+
+### R001-002
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Condiciones Latentes de Largo Plazo en Infraestructura
+- etiqueta: Vigila Riesgos Dormidos Años
+- resumen: El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador —en este caso, la eliminación de castores y una temporada lluviosa— la activa, causando un accidente. Esto resalta que las auditorías de riesgo deben considerar el historial de diseño original de la infraestructura, no solo su mantenimiento reciente.
+- entregable: Informe de auditoría histórica de infraestructura crítica identificando condiciones latentes de origen antiguo.
+- condiciones:
+  - condiciones[0]: Cuando se investiga una falla de infraestructura antigua
+  - condiciones[1]: Cuando se evalúan riesgos de sistemas con largo historial operativo
+  - condiciones[2]: Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo.
+
+### R001-003
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Cultura de Narrativas para Reducir la Brecha de Variedad Requerida
+- etiqueta: Narra para Entender la Complejidad
+- resumen: Las tecnologías peligrosas enfrentan el problema de 'requisite variety': la complejidad del sistema supera la capacidad de quienes deben controlarlo, causando diagnósticos incompletos y remedios miopes. Una cultura que valora las 'historias de guerra' (war stories), la comunicación cara a cara y equipos de trabajo diversos aumenta el conocimiento colectivo sobre errores potenciales y mejora la confianza para manejarlos, funcionando como sustituto del aprendizaje por ensayo-error, que es limitado en sistemas de alto riesgo.
+- entregable: Repositorio de historias/casos de incidentes y un protocolo de reuniones de intercambio de experiencias entre equipos
+- condiciones:
+  - condiciones[0]: Cuando el sistema es demasiado complejo para que los operadores capten toda la información relevante
+  - condiciones[1]: Cuando el aprendizaje por ensayo-error es inviable o peligroso
+  - condiciones[2]: Cuando los equipos tienden a ser homogéneos y pierden capacidad de detección de anomalías
+
+### R001-004
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Enfoque Situacional vs. Personal en la Gestión de Errores
+- etiqueta: Enfócate en la Situación
+- resumen: Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos son los eslabones menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más eficaz y sostenible corregir las condiciones de trabajo, procesos y tareas que producen errores, en lugar de enfocarse solo en corregir a las personas.
+- entregable: Guía de decisión personal para intervenciones de error que priorice mejoras situacionales sobre medidas disciplinarias individuales
+- condiciones:
+  - condiciones[0]: Al decidir cómo responder a un error humano detectado
+  - condiciones[1]: Cuando tiendes a resolver errores solo con medidas disciplinarias individuales
+  - condiciones[2]: Cuando estás diseñando tu propio proceso de gestión de errores
+
+### R001-005
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Calcular el peso dimensional antes de cotizar
+- etiqueta: Calcula el peso dimensional
+- resumen: Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre paises, y tambien puede cambiar de un ano a otro, asi que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamano real de tu producto.
+- entregable: El peso facturable real de tu paquete, calculado con el divisor vigente de tu courier, listo para cotizar sin sorpresas.
+- condiciones:
+  - condiciones[0]: Te sorprendio una factura de envio mas alta de lo que esperabas segun el peso de tu producto.
+  - condiciones[1]: Estas eligiendo el tamano de caja para un producto liviano pero voluminoso.
+  - condiciones[2]: Vas a cotizar un envio nuevo y no sabes si te cobraran por peso real o por volumen.
+
+### R001-006
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Identificación de Pasos de Tarea Propensos a la Omisión
+- etiqueta: Detecta Pasos Fáciles de Omitir
+- resumen: Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional del paso (no está señalado por la acción anterior), ocurrencia después de alcanzado el objetivo principal, cercanía al final de la tarea, ocultamiento del ítem, cambios recientes de práctica, instalación de múltiples ítems similares, y dependencia de condiciones previas. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.
+- entregable: Lista de pasos de tarea marcados por nivel de riesgo de omisión con justificación de características presentes
+- condiciones:
+  - condiciones[0]: Cuando se documentan o rediseñan procedimientos de mantenimiento altamente proceduralizados
+  - condiciones[1]: Cuando se busca anticipar puntos de falla antes de que ocurran incidentes
+
+### R001-007
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Ingeniería de una Cultura de Reporte
+- etiqueta: Fomenta que Reporten los Errores
+- resumen: Una cultura de reporte es un clima organizacional en el que las personas están dispuestas a reportar sus propios errores y cuasi-accidentes (near-misses). Basado en programas exitosos como el ASRS de NASA y BASIS de British Airways, se identifican cinco factores clave para lograrlo: (1) indemnidad contra procesos disciplinarios, (2) confidencialidad o des-identificación, (3) separación entre la agencia que recolecta reportes y quienes tienen autoridad disciplinaria, (4) retroalimentación rápida, útil y accesible a la comunidad reportante, y (5) facilidad para hacer el reporte. La confianza es el fundamento más importante de un programa de reporte exitoso.
+- entregable: Sistema de reporte de incidentes implementado con políticas de confidencialidad, indemnidad y retroalimentación documentadas
+- condiciones:
+  - condiciones[0]: Cuando la organización carece de datos sobre incidentes y cuasi-accidentes
+  - condiciones[1]: Cuando los trabajadores no reportan errores por miedo a represalias
+  - condiciones[2]: Al diseñar o mejorar un sistema de gestión de seguridad
+
+### R001-008
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Árbol de Decisión para Determinar Culpabilidad de Actos Inseguros
+- etiqueta: Evalúa la Culpa con Claridad
+- resumen: Herramienta estructurada para evaluar la culpabilidad de un acto inseguro tras un accidente o incidente. Considera si las acciones y consecuencias fueron intencionadas (sabotaje/criminal), si hubo abuso de sustancias, si se violaron procedimientos deliberadamente, y aplica la 'prueba de sustitución' para determinar si un compañero con capacitación similar habría actuado igual. Distingue entre errores del sistema (deficiencias de entrenamiento/procedimientos) y negligencia individual real.
+- entregable: Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión
+- condiciones:
+  - condiciones[0]: Después de un accidente o incidente grave donde se identificó un acto inseguro individual
+  - condiciones[1]: Cuando se debe decidir si aplicar sanciones disciplinarias
+
+### R001-009
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Cognisance: Conciencia Organizacional del Peligro
+- etiqueta: Mantén Conciencia de tus Peligros
+- resumen: Además del compromiso y la competencia, una organización necesita 'cognisance': una conciencia correcta y permanente de los peligros que amenazan sus operaciones. Dos síntomas revelan su ausencia: la 'paradoja posicional' (los directivos, con mayor autonomía decisional, culpan de los problemas de seguridad al personal de primera línea que solo sigue procedimientos) y el 'fenómeno del tick-off' (tratar las medidas de seguridad como equipos que se instalan y se marcan como completados, ignorando que son procesos que requieren vigilancia y ajuste continuo). Las organizaciones cognitivamente conscientes entienden que la 'guerra de la seguridad' es una lucha continua sin victoria final, y que un largo período sin accidentes graves señala mayor peligro, no paz.
+- entregable: Diagnóstico organizacional que identifique la presencia de paradoja posicional o fenómeno tick-off, con plan de acción correctivo
+- condiciones:
+  - condiciones[0]: Cuando la organización lleva mucho tiempo sin accidentes graves y existe complacencia
+  - condiciones[1]: Cuando los directivos culpan sistemáticamente al personal de línea por fallos de seguridad
+  - condiciones[2]: Cuando las medidas de seguridad se implementan pero no se revisan ni ajustan
+
+### R001-010
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Diferencias entre Documentación de Mantenimiento de Línea y de Base
+- etiqueta: Documenta tu Mantenimiento Correctamente
+- resumen: El mantenimiento de línea (tareas rápidas, no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo diseñados para personal experimentado, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso), se genera una brecha peligrosa en las defensas del sistema.
+- entregable: Procedimiento formal de traspaso de trabajo con hojas de etapa documentadas.
+- condiciones:
+  - condiciones[0]: Cuando una organización transfiere tareas incompletas entre turnos o departamentos diferentes
+  - condiciones[1]: Cuando se detectan diferencias culturales/procedimentales entre áreas operativas
+
+### R001-011
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Caso de Estudio: Grietas Pequeñas en Sistema de Mantenimiento (Boeing 737)
+- etiqueta: Cuida los Pequeños Detalles
+- resumen: Caso real donde la falta de personal en turnos de mantenimiento línea y base llevó a un intercambio informal de tareas de inspección (borescopio) sin documentación escrita adecuada. La combinación de escasez de personal, ausencia de procedimientos de traspaso claros entre turnos, y personal supervisor realizando tareas técnicas fuera de su rutina, resultó en la omisión de reinstalar cubiertas del rotor, casi causando un accidente catastrófico. Ilustra cómo pequeñas grietas cotidianas (no solo grandes negligencias) pueden alinear una trayectoria de accidente.
+- entregable: Informe de causas raíz del near-miss con recomendaciones específicas de control de dotación y traspaso de turnos
+- condiciones:
+  - condiciones[0]: Cuando se investiga un near-miss en mantenimiento u operaciones con múltiples turnos
+  - condiciones[1]: Al evaluar riesgos de escasez de personal y su impacto en la seguridad operacional
+
+### R001-012
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Diseño de Recordatorios Efectivos para Prevenir Omisiones
+- etiqueta: Evita Omisiones con Buenos Recordatorios
+- resumen: Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.
+- entregable: Sistema de recordatorios documentado con checklist de verificación implementado en los pasos críticos de tus tareas de mantenimiento.
+- condiciones:
+  - condiciones[0]: Cuando detectas omisiones recurrentes en procedimientos de mantenimiento o inspección
+  - condiciones[1]: Cuando una tarea tiene múltiples pasos secuenciales fáciles de olvidar
+  - condiciones[2]: Cuando identificas un paso crítico con alta probabilidad de omisión
+  - condiciones[3]: Cuando buscas reducir costos y accidentes asociados a fallas de mantenimiento
+
+### R001-013
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Tipología de Culturas de Seguridad de Westrum
+- etiqueta: Reconoce tu Tipo de Cultura
+- resumen: Ron Westrum distinguió tres tipos de cultura organizacional según cómo manejan la información relacionada con la seguridad: patológica (no quiere saber, castiga a los mensajeros, oculta fallos), burocrática (puede no enterarse, responsabilidad compartimentada, reparaciones locales) y generativa (busca activamente la información, entrena y recompensa a los mensajeros, responsabilidad compartida, reformas de fondo ante fallos). Las organizaciones de alta confiabilidad poseen 'imaginación requisita' (requisite imagination): una diversidad de pensamiento que iguala la variedad de escenarios de falla posibles.
+- entregable: Diagnóstico documentado del tipo de cultura de seguridad de la organización y plan de transición hacia una cultura generativa.
+- condiciones:
+  - condiciones[0]: Cuando se evalúa el clima organizacional respecto a la seguridad.
+  - condiciones[1]: Cuando se busca mejorar el reporte de incidentes y casi-accidentes.
+
+### R001-014
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Acolchado según la forma de la pieza
+- etiqueta: Acolcha según la forma
+- resumen: No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.
+- entregable: Un metodo de acolchado especifico segun la forma de cada producto que envias.
+- condiciones:
+  - condiciones[0]: Envias piezas con bordes filosos, curvas o formas que no encajan en una caja simple
+  - condiciones[1]: Te han llegado quejas de piezas rayadas o rotas por el tipo de relleno usado
+  - condiciones[2]: Vendes productos de formas muy distintas y usas el mismo empaque para todos
+
+### R001-015
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Defensas Peligrosas: Paradojas de las Barreras de Seguridad
+- etiqueta: Barreras que Crean Nuevos Riesgos
+- resumen: Las defensas, barreras y salvaguardas diseñadas para proteger contra un tipo de peligro pueden exponer a sus usuarios a otros tipos de riesgo no previstos por quienes las crearon —ilustrado históricamente con la armadura de placas en la batalla de Agincourt (1415), que protegía de armas penetrantes pero volvía a los caballeros indefensos al caer al suelo. En sistemas de alta tecnología, las defensas redundantes y diversas han reducido eventos adversos en términos absolutos, pero han transformado la naturaleza de los accidentes que sí ocurren y la relación entre componentes humanos y técnicos del sistema. Es esencial que gestores y operadores comprendan tanto las ventajas como los peligros de las defensas multicapa.
+- entregable: Análisis crítico de las defensas de seguridad actuales de la organización, identificando efectos secundarios no deseados.
+- condiciones:
+  - condiciones[0]: Cuando se diseñan o revisan sistemas de defensa/protección en procesos de alto riesgo.
+  - condiciones[1]: Cuando se investigan incidentes en los que una medida de seguridad contribuyó paradójicamente al daño.
+
+### R001-016
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: El Modelo del Iceberg de Costos Ocultos de los Accidentes
+- etiqueta: Mira lo Oculto del Accidente
+- resumen: Los costos visibles de un accidente (recuperables por seguro) representan solo una fracción del costo real: por cada libra recuperada del seguro, entre 5 y 50 libras adicionales se pierden en costos indirectos no asegurados (daño a productos, planta, equipos, costos legales, retrasos de producción, horas extra, tiempo de investigación, y daño reputacional/moral). Grandes eventos en la industria petroquímica (Piper Alpha, Exxon Valdez) han costado miles de millones de dólares. Esto refuerza que la gestión de seguridad no es un costo sino una inversión que previene pérdidas catastróficas para tu negocio.
+- entregable: Análisis de costo total de incidentes (directos + indirectos) que sustente la decisión de invertir en gestión de riesgos
+- condiciones:
+  - condiciones[0]: Cuando necesitas justificar el presupuesto para gestión de riesgos
+  - condiciones[1]: Al preparar un caso de negocio para invertir en seguridad de procesos
+
+### R001-017
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Compensación de Riesgo (Risk Homeostasis)
+- etiqueta: Cuidado con la Falsa Seguridad
+- resumen: Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.
+- entregable: Un informe de auditoría que identifique casos de compensación de riesgo dentro de la organización.
+- condiciones:
+  - condiciones[0]: Cuando se introduce nueva tecnología de seguridad y se observa un cambio de comportamiento operativo hacia mayor riesgo.
+
+### R001-018
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Efectos de la Recompensa y el Castigo en el Comportamiento Seguro
+- etiqueta: Recompensa Rápido, Castiga con Cuidado
+- resumen: Las recompensas son el medio más poderoso para cambiar el comportamiento, pero solo si se entregan de forma cercana en tiempo y lugar a la conducta deseada. Los castigos retrasados generalmente no mejoran el comportamiento y generan resentimiento. Sin embargo, sancionar a los pocos infractores graves (ej. reincidentes o negligentes deliberados) protege la moral del equipo y refuerza los límites de comportamiento aceptable, fortaleciendo la percepción de una cultura justa.
+- entregable: Esquema de incentivos y sanciones alineado con principios de refuerzo conductual
+- condiciones:
+  - condiciones[0]: Al diseñar políticas de reconocimiento y disciplina en seguridad laboral
+
+### R001-019
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: El Ciclo de la Culpa (Blame Cycle)
+- etiqueta: Evita Culpar sin Razón
+- resumen: El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces cometen los peores errores en las circunstancias equivocadas es el punto de partida para romperlo.
+- entregable: Un documento o política personal de gestión de errores que identifique causas sistémicas y rompa explícitamente el ciclo de culpa en lugar de solo señalar al individuo.
+- condiciones:
+  - condiciones[0]: Cuando respondes a errores repetidos únicamente con sanciones cada vez más duras
+  - condiciones[1]: Cuando los incidentes se repiten a pesar de advertencias o sanciones anteriores
+  - condiciones[2]: Al diseñar tu propio sistema o cultura de reporte justo de errores
+  - condiciones[3]: Cuando se observa apatía o resignación del personal frente a problemas de seguridad recurrentes
+
+### R001-020
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Sellar cajas con el método de cinta en H
+- etiqueta: Sella cajas con el método H
+- resumen: Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.
+- entregable: Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.
+- condiciones:
+  - condiciones[0]: Sellas tus cajas con cinta delgada o con cordel porque es lo que tienes a mano.
+  - condiciones[1]: Has tenido paquetes que llegaron abiertos o con las esquinas despegadas.
+  - condiciones[2]: Envías productos pesados y no sabes si tu sellado actual va a resistir.
+
+### R001-021
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Confusión de Modos en Sistemas Automatizados
+- etiqueta: Entiende tu Sistema Automatizado
+- resumen: Los sistemas de control automatizados, diseñados para eliminar errores humanos de bajo nivel (deslices, lapsus), pueden en cambio generar errores de nivel superior más graves. La confusión de modos ocurre cuando el operador evalúa erróneamente el modo activo del sistema o no percibe una transición de modo. Woods y Sarter identificaron que estos sistemas aumentan la carga de memoria, dificultan compartir la conciencia situacional en equipos, y pueden ocultar eventos importantes debido a su complejidad y múltiples modos operativos.
+- entregable: Informe de auditoría de automatización con matriz de modos operativos y riesgos de confusión asociados
+- condiciones:
+  - condiciones[0]: Cuando la organización opera sistemas altamente automatizados (aviación, plantas nucleares, anestesia)
+  - condiciones[1]: Si se han reportado incidentes de confusión operador-máquina
+
+### R001-022
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Prueba tu empaque antes de escalar envios
+- etiqueta: Prueba tu empaque antes de escalar
+- resumen: Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presion de altitud y manejo brusco pueden danar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos dias, sin costo. Esto te evita descubrir una falla de diseno despues de haber comprado cien cajas iguales o de haber perdido mercancia en transito. La prueba tambien sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por danos y rechazos en bodega. Pregunta a tu proveedor de envios si ofrece este servicio y en que consiste antes de escalar volumen.
+- entregable: Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o que debes cambiar.
+- condiciones:
+  - condiciones[0]: Estas por firmar un acuerdo de volumen con un courier y quieres asegurar que tu caja no falle.
+  - condiciones[1]: Ya tuviste productos danados en transito y no sabes si el problema es el empaque o el manejo.
+  - condiciones[2]: Vas a cambiar de proveedor de cajas o de material de relleno y no sabes si sigue funcionando igual.
+
+### R001-023
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Empacar flores y plantas sin agua
+- etiqueta: Empaca flores sin agua
+- resumen: Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La tecnica central es simple: nunca cargar agua en el envio. Vacia floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de carton para que no se desplace en transito. Cuando envies varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparacion reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.
+- entregable: Una caja de flores o plantas lista para despachar sin riesgo de fuga ni movimiento interno.
+- condiciones:
+  - condiciones[0]: Vendes arreglos florales o plantas en maceta por internet y los envias por courier.
+  - condiciones[1]: Te preocupa que la tierra o el agua se derrame durante el transporte.
+  - condiciones[2]: Empacas orquideas u otras flores delicadas que se dañan facil al rozarse.
+
+### R001-024
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Modelo de Autorregulación en Seguridad Laboral
+- etiqueta: Define tus Propias Reglas de Seguridad
+- resumen: Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El Informe Robens identificó que el exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y propuso fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.
+- entregable: Sistema de gestión de seguridad interno documentado que traduzca los objetivos legales de seguridad en procedimientos concretos y participativos
+- condiciones:
+  - condiciones[0]: Cuando la organización debe cumplir con legislación basada en objetivos (goal-setting) en lugar de reglas detalladas
+  - condiciones[1]: Cuando se busca fortalecer la cultura de seguridad interna más allá del cumplimiento mínimo legal
+
+### R001-025
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)
+- etiqueta: Define tu Riesgo Aceptable
+- resumen: Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Cada organización o sociedad debe elegir el marco que mejor se adapte a su contexto tecnológico, económico y cultural, entendiendo que la definición de 'seguridad suficiente' es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa.
+- entregable: Marco de referencia documentado que defina el criterio de riesgo aceptable adoptado por la organización, con su justificación
+- condiciones:
+  - condiciones[0]: Cuando se debe justificar formalmente un nivel de riesgo aceptado ante reguladores o stakeholders
+  - condiciones[1]: Cuando se diseñan políticas de seguridad que requieren un criterio explícito de 'seguridad suficiente'
+
+### R001-026
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Autonomía e Interdependencia en la Relación Regulador-Regulado
+- etiqueta: Entiende tu Relación con el Regulador
+- resumen: Basado en el análisis de Diane Vaughan sobre el accidente del Challenger, este concepto explica cómo la relación entre reguladores y organizaciones reguladas está inevitablemente limitada por su naturaleza organizacional autónoma. Ambas partes filtran información, y los reguladores dependen de las organizaciones reguladas para obtener información, lo que genera negociación y compromiso en lugar de sanciones estrictas. Esto no es un 'fallo' regulatorio sino un patrón sistemático generado por la estructura de las relaciones interorganizacionales.
+- entregable: Diagnóstico documentado de las limitaciones estructurales en el proceso de supervisión regulatoria de la organización, identificando puntos ciegos de información
+- condiciones:
+  - condiciones[0]: Cuando se diseña o evalúa un sistema de supervisión regulatoria externa
+  - condiciones[1]: Cuando se sospecha de captura regulatoria o relaciones demasiado cercanas entre inspector e inspeccionado
+
+### R001-027
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Elegir sobre o caja según el tamaño final del paquete
+- etiqueta: Decide entre sobre o caja
+- resumen: Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (en la guía de FedEx, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande; si lo supera, va en caja. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.
+- entregable: Un criterio escrito de tamaño final armado y su formato correspondiente, sobre o caja, para tu catálogo.
+- condiciones:
+  - condiciones[0]: Envías productos pequeños siempre en caja grande y sientes que gastas de más.
+  - condiciones[1]: No sabes si tu courier acepta sobres reforzados para tu tipo de producto.
+  - condiciones[2]: Tu catálogo tiene productos de tamaños muy distintos y usas un solo tipo de empaque para todos.
+
+### R001-028
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Empacar perecederos con aislante y refrigerante
+- etiqueta: Empaca perecederos en frio
+- resumen: Los productos perecederos pueden pasar por temperaturas o humedad extremas en el camino, asi que el empaque tiene que dar proteccion termica y estabilidad. Usa contenedores de espuma aislante con paredes de al menos 1,5 pulgadas de grosor, mete en bolsas impermeables de minimo 2 mil lo que pueda derretirse, descongelarse o soltar liquido, y coloca el contenedor de espuma dentro de una caja exterior resistente. Para refrigerar entre 0 y 16 grados usa geles refrigerantes, y para lo congelado usa hielo seco, que en transporte aereo es mercancia peligrosa; nunca uses hielo seco con mariscos vivos como langostas. Empaca para un transito minimo de 30 horas, envia por servicios nocturnos y evita que el viaje caiga en fin de semana o en feriado.
+- entregable: Un empaque aislado y refrigerado para tus perecederos, preparado para al menos 30 horas de transito y, si decides usar un servicio de dos dias, calculado para 12 horas menos que el compromiso de entrega.
+- condiciones:
+  - condiciones[0]: Vas a enviar alimentos, flores, mariscos o productos que deben llegar frios o congelados.
+  - condiciones[1]: Te han llegado productos derretidos, descongelados o con fugas de liquido.
+  - condiciones[2]: No sabes si usar geles refrigerantes o hielo seco para tu envio.
+
+### R001-029
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Evitar materiales blandos como contenedor final
+- etiqueta: No uses bolsas como contenedor final
+- resumen: No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plasticas, sobres de papel y cajas de carton delgado no soportan la manipulacion, la humedad ni los cambios de presion de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envios regulados, como muestras clinicas o mercancias que necesitan trato especial, donde la norma exige un contenedor rigido de carton corrugado, madera, metal o plastico resistente. La leccion practica es simple: lo blando puede ir adentro como proteccion, pero lo que toca el exterior del envio y da la forma final tiene que ser rigido, o el paquete se puede quedar sin recoger.
+- entregable: Un envio con contenedor exterior rigido que el courier acepta sin objeciones.
+- condiciones:
+  - condiciones[0]: Piensas ahorrar usando un sobre o una bolsa en vez de caja.
+  - condiciones[1]: Envias muestras, liquidos o mercancia que podria necesitar empaque especial.
+  - condiciones[2]: Te han rechazado o retenido un paquete por el tipo de empaque exterior.
+
+### R001-030
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Defensas en Profundidad: Protección o Ocultamiento Peligroso
+- etiqueta: Cuidado con Ocultar Riesgos
+- resumen: La filosofía de defensas en profundidad se basa en la redundancia y diversidad de capas de protección, asumiendo independencia causal entre ellas. Sin embargo, Jens Rasmussen señaló la 'falacia de las defensas en profundidad': estas capas pueden ocultar errores y fallas latentes, permitiendo que se acumulen condiciones peligrosas sin ser detectadas ni corregidas. Charles Perrow, en su teoría de accidentes normales, argumentó que la redundancia aumenta la complejidad interactiva, opacidad del sistema, y genera una falsa sensación de seguridad que impulsa a operar con mayor riesgo (más rápido, con peor clima, etc.).
+- entregable: Mapa de capas de defensa del sistema con análisis de independencia real y puntos ciegos de detección
+- condiciones:
+  - condiciones[0]: Cuando el sistema depende de múltiples capas de protección redundantes
+  - condiciones[1]: Si ha ocurrido un accidente donde fallaron varias defensas simultáneamente
+
+### R001-031
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Medir la salud de seguridad con Tripod-Delta
+- etiqueta: Mide tus fallas de fondo
+- resumen: Tripod-Delta mide la salud de seguridad de una operacion sin depender de las estadisticas de accidentes: en lugar de perseguir las lesiones con tiempo perdido una por una, evalua once Tipos Generales de Falla (GFT), las condiciones organizacionales y del lugar de trabajo que provocan los actos inseguros. Los indicadores de cada GFT los crean los propios especialistas de la tarea, y en cada medicion el programa elige 20 indicadores por GFT y arma una lista de 220 preguntas que responde alguien de la plantilla, por ejemplo un supervisor de perforacion. El resultado es un Perfil de Estado de Falla en barras que senala los dos o tres GFT que mas atencion necesitan. Las sesiones de medicion se hacen normalmente cada mes, y la tarea de la linea de mando es gestionar el perfil y no arreglar indicadores sueltos, porque los indicadores son solo sintomas.
+- entregable: Un Perfil de Estado de Falla de tu operacion con los dos o tres Tipos Generales de Falla peores y un plan de accion para corregirlos.
+- condiciones:
+  - condiciones[0]: Cuando tu unica medida de seguridad es el conteo de lesiones con tiempo perdido y quieres adelantarte a los accidentes.
+  - condiciones[1]: Si cada incidente se corrige con un arreglo puntual y los problemas vuelven a aparecer en otra forma.
+  - condiciones[2]: Cuando necesitas priorizar en que condiciones de la organizacion invertir primero.
+
+### R001-032
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Ingeniería de una Cultura Justa
+- etiqueta: Construye una Cultura Justa
+- resumen: Una cultura justa es un atmósfera de confianza en la que se anima y hasta se recompensa a las personas por proporcionar información esencial relacionada con la seguridad, pero en la que también se tiene claridad sobre dónde trazar la línea entre comportamiento aceptable e inaceptable. No es lo mismo que una cultura de 'no culpa' (no-blame), ya que ciertos actos inseguros egregios (abuso de sustancias, incumplimiento imprudente, sabotaje) sí ameritan sanciones. El desafío está en discriminar entre estas pocas 'malas conductas' verdaderas y la mayoría de actos inseguros donde la atribución de culpa no es apropiada ni útil. Se basa en el análisis de tres elementos de la acción humana: intención, acción y consecuencias.
+- entregable: Política de cultura justa documentada con criterios claros de discriminación entre error humano y conducta sancionable
+- condiciones:
+  - condiciones[0]: Cuando existe ambigüedad sobre qué comportamientos deben ser sancionados
+  - condiciones[1]: Cuando los trabajadores desconfían del sistema de sanciones disciplinarias
+  - condiciones[2]: Al diseñar políticas de manejo de errores en la organización
+  - condiciones[3]: Cuando buscas que tu equipo reporte errores de forma voluntaria
+
+### R001-033
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Supervisión de Primera Línea con Autonomía (Auftragssystem)
+- etiqueta: Da Autonomía a tus Supervisores
+- resumen: Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que esa persona conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti.
+- entregable: Programa de desarrollo para la persona que supervisa el trabajo en el terreno, con criterios de autonomía y tu respaldo documentado
+- condiciones:
+  - condiciones[0]: Cuando el trabajo se hace en condiciones que dificultan estar supervisando todo el tiempo desde un solo punto
+  - condiciones[1]: Cuando las tareas exigen juicio propio más allá de lo que cubre cualquier procedimiento escrito
+  - condiciones[2]: Cuando se busca reducir comportamientos incorrectos habituales con intervención directa en el lugar
+
+### R001-034
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Componentes de la Cultura de Seguridad
+- etiqueta: Construye una Cultura de Seguridad
+- resumen: La cultura de seguridad es el resultado de los valores, actitudes, competencias y patrones de comportamiento que determinan tu compromiso con la salud y la seguridad. Se compone de cuatro subcomponentes criticos que interactuan entre si: cultura de reporte, cultura justa, cultura flexible y cultura de aprendizaje. Juntos crean una cultura informada, en la que tu y las personas que te ayudan tienen conocimiento actualizado sobre los factores humanos, tecnicos, organizacionales y ambientales que determinan la seguridad del conjunto.
+- entregable: Diagnostico documentado del estado de la cultura de seguridad de tu negocio con plan de accion para fortalecer cada subcomponente
+- condiciones:
+  - condiciones[0]: Cuando buscas prevenir accidentes a gran escala en tu negocio
+  - condiciones[1]: Cuando detectas que las medidas tradicionales de seguridad no reducen los accidentes
+  - condiciones[2]: Al iniciar un diagnostico de seguridad en tu negocio
+
+### R001-035
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Clasificación de Riesgos por Dominio Operacional
+- etiqueta: Clasifica tus Riesgos por Dominio
+- resumen: Todos los dominios peligrosos comparten cuatro tipos de riesgo: lesiones personales, errores de operadores clave, condiciones latentes y riesgos a terceros. El balance entre estos riesgos varía según el dominio (nuclear, aviación, construcción, minería, servicios financieros, etc.) y puede cambiar con la tecnología y la sociedad. Sin embargo, el riesgo de condiciones latentes es consistentemente alto en todos los dominios, ya que los procesos organizacionales genéricos (planificación, presupuesto, mantenimiento, gestión) son comunes a cualquier sistema técnico complejo.
+- entregable: Matriz de clasificación de riesgos por tipo (personal, operador, latente, terceros) específica para la organización, con nivel estimado de cada uno
+- condiciones:
+  - condiciones[0]: Cuando la organización opera en un sector de alto riesgo (nuclear, oil&gas, aviación, salud) y necesita evaluar su exposición real
+  - condiciones[1]: Cuando existe sospecha de que el enfoque de seguridad está enfocado en el riesgo equivocado
+  - condiciones[2]: Después de un incidente que muestre un tipo de riesgo que no habías tomado en cuenta, por ejemplo el riesgo para terceros
+
+### R001-036
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Cultura de Aprendizaje Organizacional
+- etiqueta: Aprende de tus Propios Errores
+- resumen: Una cultura de aprendizaje es la voluntad y competencia de una organización para extraer las conclusiones correctas de su sistema de información de seguridad, y la disposición a implementar reformas importantes cuando se indica su necesidad. Es el subcomponente final que cierra el ciclo de la cultura de seguridad, transformando la información recolectada en acciones concretas de mejora del sistema.
+- entregable: Proceso institucionalizado de revisión y aplicación de lecciones aprendidas con evidencia de reformas implementadas
+- condiciones:
+  - condiciones[0]: Cuando la organización recolecta datos de seguridad pero no actúa sobre ellos
+  - condiciones[1]: Al cerrar el ciclo de mejora continua en gestión de seguridad organizacional
+  - condiciones[2]: Cuando pospones reformas de seguridad por tareas 'más urgentes'
+  - condiciones[3]: Cuando quieres evitar repetir errores que ya identificaste
+
+### R001-037
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Reconocer productos que en realidad son mercancía peligrosa
+- etiqueta: Detecta mercancía peligrosa oculta
+- resumen: Muchos productos comunes se clasifican como mercancia peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterias, aerosoles y solventes entran en esta categoria porque pueden generar reacciones quimicas o electricas riesgosas durante el transporte. Vender algo asi sin identificarlo correctamente puede provocar que el courier rechace el envio o, peor, que provoque un incidente en transito. Cada tipo de mercancia peligrosa tiene un numero y nombre de clasificacion oficial que debe usarse para empacarlo, marcarlo y declararlo. Ademas, quien despacha estos envios sin la capacitacion adecuada puede enfrentar sanciones, asi que identificar el producto antes de escalar volumen es un paso que no se puede saltar.
+- entregable: Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.
+- condiciones:
+  - condiciones[0]: Vendes perfumes, pinturas, baterias o aerosoles y no sabes si necesitan tramite especial.
+  - condiciones[1]: Un courier te rechazo un envio sin darte una explicacion clara.
+  - condiciones[2]: Estas por escalar ventas de un producto que contiene liquidos o electricidad.
+
+### R001-038
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Asegurar carga pesada sobre una base para montacargas
+- etiqueta: Asegura la carga pesada
+- resumen: Un envio que califica como carga debe empacarse para que se puedan apilar otros paquetes encima. Todo envio de 151 libras o mas va sobre una base apta para montacargas y compatible con transpaleta, nunca sobre tarimas de carton corrugado o de fibra, y el producto no debe sobresalir de la tarima por ningun lado. La carga se sujeta a la tarima con flejes en ambas direcciones y pelicula estirable: una tarima asegurada solo con pelicula no se acepta. Una pieza unica de mas de 150 libras se fleja por todos sus lados con fleje metalico o plastico resistente, salvo que vaya dentro de un contenedor rigido de madera contrachapada o metal con cierres o abrazaderas exteriores; pegamento, clavos o tornillos no bastan.
+- entregable: Una tarima armada con base para montacargas, flejes en ambas direcciones y pelicula estirable, sin producto que sobresalga, lista para que el courier la acepte como carga.
+- condiciones:
+  - condiciones[0]: Vas a enviar piezas o lotes de mas de 150 libras que ya no caben como paquete normal.
+  - condiciones[1]: Te rechazaron o danaron una tarima que solo iba envuelta en pelicula estirable.
+  - condiciones[2]: Exportas carga sobre tarimas de madera y necesitas que lleven el sello de tratamiento NIMF 15 que exige la aduana de destino.
+
+### R001-039
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Procedimiento Continuo de Control de Sustancias Peligrosas (COSHH)
+- etiqueta: Controla Sustancias Peligrosas Siempre
+- resumen: Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de otras leyes de seguridad, exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.
+- entregable: Sistema documentado y operativo de gestión continua de sustancias peligrosas, con registros de monitoreo, capacitación y vigilancia de salud
+- condiciones:
+  - condiciones[0]: Cuando la organización maneja sustancias químicas o agentes peligrosos en el lugar de trabajo
+  - condiciones[1]: Cuando se requiere cumplimiento continuo (no puntual) de normativa de sustancias peligrosas
+
+### R001-040
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Condiciones Productoras de Error (EPCs)
+- etiqueta: Identifica lo que Provoca Errores
+- resumen: Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea, derivada de una amplia revisión de literatura en factores humanos. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.
+- entregable: Lista priorizada de EPCs presentes en el entorno laboral con sus factores multiplicadores de riesgo
+- condiciones:
+  - condiciones[0]: Cuando se desea identificar causas raíz de errores en el lugar de trabajo
+  - condiciones[1]: Si se está diseñando un plan de mitigación de riesgos operacionales
+
+### R001-041
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Valorar factores locales y organizacionales con MESH
+- etiqueta: Valora lo que frena tu trabajo
+- resumen: MESH (Managing Engineering Safety Health), creado para el mantenimiento aeronautico, pide a quienes hacen el trabajo que valoren en una escala de 1 (casi nada) a 5 (muy a menudo) cuanto les han afectado ciertos problemas del lugar de trabajo o de la organizacion en un periodo corto o en unos pocos trabajos concretos. Los factores organizacionales los valoran los gerentes tecnicos cada mes, y a veces cada trimestre; los factores locales los valora entre un 20 y un 30 por ciento de la plantilla que hace el trabajo manual, elegida al azar, que entra de forma anonima indicando solo su categoria, oficio y lugar, normalmente cada semana. Los resultados se resumen en diagramas de barras para identificar los dos o tres factores que mas necesitan correccion y seguir su evolucion. El sistema solo funciona si los evaluadores ven que la direccion actua sobre sus valoraciones; si no se ve nada, se deja de evaluar y el sistema muere.
+- entregable: Un perfil de barras de los factores locales y organizacionales de tu area de mantenimiento, con los dos o tres factores a corregir primero, que cumpla los requisitos de medicion del desempeno de la norma ISO 45001.
+- condiciones:
+  - condiciones[0]: Cuando diriges un area de mantenimiento y no sabes que problemas del lugar de trabajo estan afectando mas a tus tecnicos.
+  - condiciones[1]: Si los indicadores de si o no te dan poca informacion porque casi siempre salen igual.
+  - condiciones[2]: Cuando necesitas que la plantilla opine sobre las condiciones de trabajo sin miedo a ser identificada.
+
+### R001-042
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Distinción entre Accidentes Individuales y Organizacionales
+- etiqueta: Distingue Accidentes Individuales y Organizacionales
+- resumen: Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con causas y consecuencias localizadas (por ejemplo resbalones o caídas) y efectos limitados; y los organizacionales, un fenómeno moderno, raro pero catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que afecta a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.
+- entregable: Un documento de clasificación de incidentes históricos de la organización según tipo (individual/organizacional), con actores involucrados e implicaciones para el análisis.
+- condiciones:
+  - condiciones[0]: Cuando la organización opera tecnología peligrosa y necesita definir el alcance de su gestión de riesgos.
+  - condiciones[1]: Si el análisis de incidentes solo culpa al trabajador de primera línea sin considerar factores organizacionales.
+  - condiciones[2]: Cuando ocurre un accidente en un sistema tecnológico complejo y se necesita determinar el alcance de la investigación.
+
+### R001-043
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Cultura como Mecanismo de Descentralización Coordinada
+- etiqueta: Deja que la Cultura Coordine
+- resumen: Una cultura organizacional fuerte crea un conjunto homogéneo de supuestos y premisas de decisión que, al ser invocados localmente, preservan la coordinación sin necesidad de vigilancia constante. Esto contrasta con la centralización por reglas o jerarquía, que exige alta supervisión y es ineficaz ante emergencias sin precedentes. La cultura permite el cumplimiento sin vigilancia porque las personas comparten los mismos marcos mentales de decisión.
+- entregable: Documento de valores y supuestos compartidos de la organización que sirvan como base para la toma de decisiones descentralizada
+- condiciones:
+  - condiciones[0]: Cuando la organización opera en múltiples unidades descentralizadas que requieren coordinación
+  - condiciones[1]: Cuando el exceso de reglas y supervisión resulta ineficiente o costoso
+  - condiciones[2]: Cuando se enfrentan emergencias sin precedente que las normas no cubren
+
+### R001-044
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Casos Históricos de Accidentes Organizacionales Causados por Mantenimiento
+- etiqueta: Aprende de Desastres por Mantenimiento
+- resumen: Múltiples desastres icónicos (Apollo 13, Flixborough, Three Mile Island, American Flight 191, Bhopal, JAL 123, Piper Alpha, Clapham Junction, Phillips 66) tuvieron como causa raíz o factor agravante fallas de mantenimiento: conexiones erróneas, tuberías improvisadas, válvulas mal cerradas, procedimientos de reparación no estándar, comunicación deficiente en cambios de turno. Estos casos evidencian que los errores de mantenimiento no son fallas aisladas de competencia individual, sino consecuencias de condiciones latentes organizacionales.
+- entregable: Documento de lecciones aprendidas basado en casos históricos, aplicado al contexto organizacional propio
+- condiciones:
+  - condiciones[0]: Cuando se diseña un programa de capacitación en seguridad de mantenimiento
+  - condiciones[1]: Cuando se justifica ante la dirección la inversión en gestión de riesgos de mantenimiento
+
+### R001-045
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Conflicto de Objetivos en Organismos Reguladores
+- etiqueta: Vigila Conflictos en tu Regulador
+- resumen: Ilustrado por el caso de la ACAA australiana (accidentes de Young y Seaview), este concepto describe cómo un regulador financiado o influenciado por las mismas empresas que supervisa puede desarrollar un sesgo hacia proteger la viabilidad comercial del operador en lugar de priorizar la seguridad pública. Este conflicto de intereses estructural debilita la capacidad de vigilancia efectiva y puede llevar a la inacción ante señales claras de riesgo.
+- entregable: Diagnóstico de independencia estructural de la función de seguridad y propuesta de separación de roles
+- condiciones:
+  - condiciones[0]: Cuando el área de seguridad depende económicamente de las mismas entidades que regula
+  - condiciones[1]: Cuando se detecta renuencia a sancionar a operadores por razones de viabilidad comercial
+
+### R001-046
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Condiciones Latentes en Sistemas Complejos
+- etiqueta: Detecta Debilidades Ocultas Antiguas
+- resumen: Las condiciones latentes son debilidades preexistentes y a menudo antiguas dentro de un sistema (fallas de diseño, construcción, mantenimiento, capacitación, supervisión) que permanecen dormidas hasta que interactúan con factores desencadenantes locales para producir un accidente organizacional. A diferencia de los fallos activos (errores y violaciones de quienes están en la 'línea de fuego'), las condiciones latentes no son necesarias ni suficientes por sí solas, pero están siempre presentes en sistemas complejos. El caso del descarrilamiento de Nakina (1992) ilustra esto: una vía férrea construida en 1916 sobre una presa de castores inestable colapsó 76 años después sin que hubiera errores activos de la tripulación o del personal de mantenimiento.
+- entregable: Un registro de condiciones latentes identificadas en la organización, priorizado por nivel de riesgo y urgencia de corrección.
+- condiciones:
+  - condiciones[0]: Cuando se investiga un accidente y se buscan causas raíz más allá del error humano inmediato.
+  - condiciones[1]: Cuando se diseña un sistema de gestión de riesgos a largo plazo.
+
+### R001-047
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Condiciones Latentes como Riesgo Universal
+- etiqueta: Revisa Riesgos en Todo Proceso
+- resumen: A diferencia de otros tipos de riesgo, las condiciones latentes son consistentemente altas en todos los dominios operacionales, porque los procesos organizacionales genéricos (planificación, presupuesto, mantenimiento, comunicación) son comunes a cualquier sistema técnico, y es en estos procesos donde se siembran las semillas de futuros desastres. Las condiciones latentes están presentes en el sistema independientemente de si ocurre o no un accidente; su detección depende más de los recursos de la investigación que de la 'enfermedad' real del sistema. Son importantes porque se combinan con factores locales para romper defensas, pueden identificarse y eliminarse proactivamente antes del evento, y los disparadores locales son difíciles de anticipar.
+- entregable: Programa continuo de identificación y remediación de condiciones latentes con responsables y cronograma definido
+- condiciones:
+  - condiciones[0]: Cuando la organización considera que 'no le aplica' la seguridad porque no maneja riesgos físicos evidentes
+  - condiciones[1]: Al diseñar un sistema de gestión de seguridad que abarque más que el cumplimiento normativo básico
+
+### R001-048
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+- titulo: Cultura Organizacional Flexible
+- etiqueta: Cambia de Modo Según Demanda
+- resumen: Capacidad de una organización para adaptar su estructura de autoridad según las demandas operativas: pasando de un modo burocrático y jerárquico en operaciones rutinarias a un modo colegiado basado en experticia técnica durante picos de alta demanda o crisis. Requiere una centralización cultural previa (valores y supuestos compartidos) que permita la coordinación descentralizada sin necesidad de vigilancia constante.
+- entregable: Plan de desarrollo cultural que incluya mecanismos de transición de autoridad y fomento de diversidad de equipos
+- condiciones:
+  - condiciones[0]: Cuando la organización enfrenta operaciones con picos de demanda o emergencias frecuentes
+  - condiciones[1]: Al diseñar programas de gestión de crisis en entornos de alto riesgo
+
+### R001-049
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\Supply chain\HowToPack_fxcom.txt
+- titulo: Colocar y usar etiquetas de manejo correctamente
+- etiqueta: Pon la etiqueta donde se vea
+- resumen: Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientacion durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posicion preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.
+- entregable: Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan al courier.
+- condiciones:
+  - condiciones[0]: Reutilizas cajas viejas para ahorrar y no sabes que hacer con las etiquetas anteriores.
+  - condiciones[1]: Envias algo fragil y quieres avisar al courier sin depender solo de eso.
+  - condiciones[2]: Has tenido paquetes retrasados porque la etiqueta quedo tapada o mal puesta.

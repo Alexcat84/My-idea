@@ -1,0 +1,770 @@
+{
+ "R01-01-01": {
+  "nodo": "proceso_diseno_modelo_negocio_5_fases",
+  "vecino": "fase_mobilizar_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-01-02": {
+  "nodo": "proceso_diseno_modelo_negocio_5_fases",
+  "vecino": "fase_entendimiento_investigacion_mercado",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-01-03": {
+  "nodo": "proceso_diseno_modelo_negocio_5_fases",
+  "vecino": "economia_circular_como_modelo_de_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-01-04": {
+  "nodo": "proceso_diseno_modelo_negocio_5_fases",
+  "vecino": "fase_implementacion_modelo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-01-05": {
+  "nodo": "proceso_diseno_modelo_negocio_5_fases",
+  "vecino": "business_model_environment_mapping",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-02-01": {
+  "nodo": "calculo_de_aranceles_importacion",
+  "vecino": "fijacion_precio_exportacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-02-02": {
+  "nodo": "calculo_de_aranceles_importacion",
+  "vecino": "elaboracion_pro_forma_invoice",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-02-03": {
+  "nodo": "calculo_de_aranceles_importacion",
+  "vecino": "reglas_de_origen_fta_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-02-04": {
+  "nodo": "calculo_de_aranceles_importacion",
+  "vecino": "gestion_fluctuaciones_cambiarias_clientes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-03-01": {
+  "nodo": "cultura_justa_3",
+  "vecino": "safety_i_safety_ii",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-03-02": {
+  "nodo": "cultura_justa_3",
+  "vecino": "investigacion_new_view",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-04-01": {
+  "nodo": "traction_channel_bias",
+  "vecino": "bullseye_framework",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-04-02": {
+  "nodo": "traction_channel_bias",
+  "vecino": "targeting_blogs_traccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-04-03": {
+  "nodo": "traction_channel_bias",
+  "vecino": "critical_path",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-05-01": {
+  "nodo": "evaluar_proceso_completo_no_cada_metrica",
+  "vecino": "definir_tu_propio_pedido_perfecto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-06-01": {
+  "nodo": "quality_control_vs_quality_assurance",
+  "vecino": "violaciones_procedimentales_por_sobreespecificacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-06-02": {
+  "nodo": "quality_control_vs_quality_assurance",
+  "vecino": "defensas_peligrosas_paradojas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-07-01": {
+  "nodo": "equipos_pequenos_vs_grandes",
+  "vecino": "identificar_pensadores_de_diseno_internos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-07-02": {
+  "nodo": "equipos_pequenos_vs_grandes",
+  "vecino": "romper_vision_en_experimentos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-07-03": {
+  "nodo": "equipos_pequenos_vs_grandes",
+  "vecino": "equipo_forma_t",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-07-04": {
+  "nodo": "equipos_pequenos_vs_grandes",
+  "vecino": "brief_de_diseno",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-07-05": {
+  "nodo": "equipos_pequenos_vs_grandes",
+  "vecino": "equipo_multifuncional_real",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-08-01": {
+  "nodo": "disenar_empaque_logistica",
+  "vecino": "tratar_packaging_costo_marca",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-08-02": {
+  "nodo": "disenar_empaque_logistica",
+  "vecino": "elegir_caja_correcta",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-08-03": {
+  "nodo": "disenar_empaque_logistica",
+  "vecino": "ofrecer_puntos_recogida",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-08-04": {
+  "nodo": "disenar_empaque_logistica",
+  "vecino": "revisar_necesidades_de_empaque",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-08-05": {
+  "nodo": "disenar_empaque_logistica",
+  "vecino": "diseno_producto_cadena_suministro",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-09-01": {
+  "nodo": "ocho_factores_exito_criticos",
+  "vecino": "producto_unico_superior",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-09-02": {
+  "nodo": "ocho_factores_exito_criticos",
+  "vecino": "stage_gate_system",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-09-03": {
+  "nodo": "ocho_factores_exito_criticos",
+  "vecino": "mantener_puntaje_innovacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-09-04": {
+  "nodo": "ocho_factores_exito_criticos",
+  "vecino": "siete_razones_fracaso_productos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-10-01": {
+  "nodo": "benchmarking_proceso",
+  "vecino": "clasificacion_benchmarking",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-10-02": {
+  "nodo": "benchmarking_proceso",
+  "vecino": "recoleccion_validacion_datos_benchmarking",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-10-03": {
+  "nodo": "benchmarking_proceso",
+  "vecino": "decide_phase_roadmap",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-10-04": {
+  "nodo": "benchmarking_proceso",
+  "vecino": "roadmap_despliegue_lean_six_sigma",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-10-05": {
+  "nodo": "benchmarking_proceso",
+  "vecino": "dmadv_fase_verificacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-10-06": {
+  "nodo": "benchmarking_proceso",
+  "vecino": "ciclo_adaptativo_inteligencia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-11-01": {
+  "nodo": "modelo_servqual",
+  "vecino": "framework_efectividad_procesos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-11-02": {
+  "nodo": "modelo_servqual",
+  "vecino": "medicion_capacidad_servicio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-11-03": {
+  "nodo": "modelo_servqual",
+  "vecino": "supuestos_de_procedimientos",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R01-12-01": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "evaluacion_de_factores_de_riesgo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-12-02": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "caza_las_oportunidades_no_solo_amenazas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-12-03": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "evalua_la_gravedad_sin_autoengano",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-12-04": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "evaluacion_gestion_riesgos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-12-05": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "evitacion_del_riesgo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-12-06": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "un_dueno_para_cada_riesgo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-12-07": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "prevencion_de_groupthink_en_evaluacion_de_riesgos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-12-08": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "teoremas_probabilidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-12-09": {
+  "nodo": "identificacion_de_riesgos",
+  "vecino": "distribucion_weibull",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-13-01": {
+  "nodo": "preguntas_clave_armadura_organizacional",
+  "vecino": "abandonar_arreglos_rapidos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-13-02": {
+  "nodo": "preguntas_clave_armadura_organizacional",
+  "vecino": "trabajo_como_imaginado_vs_trabajo_como_hecho",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-13-03": {
+  "nodo": "preguntas_clave_armadura_organizacional",
+  "vecino": "insight_de_wald",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-14-01": {
+  "nodo": "pre_control_estadistico",
+  "vecino": "graficos_control_tiradas_cortas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-14-02": {
+  "nodo": "pre_control_estadistico",
+  "vecino": "capacidad_proceso_concepto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-15-01": {
+  "nodo": "ofrecer_puntos_recogida",
+  "vecino": "segmentar_clientes_nivel_servicio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-15-02": {
+  "nodo": "ofrecer_puntos_recogida",
+  "vecino": "decidir_cobro_velocidad_ventana_entrega",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-15-03": {
+  "nodo": "ofrecer_puntos_recogida",
+  "vecino": "disenar_empaque_logistica",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-15-04": {
+  "nodo": "ofrecer_puntos_recogida",
+  "vecino": "detectar_prioridad_cliente_entrega",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-15-05": {
+  "nodo": "ofrecer_puntos_recogida",
+  "vecino": "decidir_vender_solo_online_o_tambien_tienda_fisica",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-16-01": {
+  "nodo": "programa_do_one_thing",
+  "vecino": "construccion_capacidad_empleados",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-16-02": {
+  "nodo": "programa_do_one_thing",
+  "vecino": "definicion_metas_engagement",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-01": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "perfeccionismo_vs_valor",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-02": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "estudio_mercado_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-03": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "modelo_costo_optimo_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-04": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "trilogia_de_juran",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-05": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "metodologia_medicion_copq",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-06": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "roi_proyectos_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-07": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "six_sigma_dmaic",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-08": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "calculo_roi_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-09": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "programa_mejora_calidad_14_pasos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-10": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "accion_correctiva",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-11": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "programa_make_certain",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-12": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "cero_defectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-13": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "punto_equilibrio_calidad_inspeccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-14": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "calidad_de_diseno_vs_produccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-15": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "control_estadistico_de_procesos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-16": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "causas_comunes_vs_especiales",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-17": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "conciencia_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-18": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "concepto_programa_catorce_pasos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-19": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "equipo_mejora_calidad_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-20": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "sistema_medicion_kpi",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-21": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "auditoria_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-22": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "impacto_calidad_ingresos_costos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-23": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "carryover_fallas_producto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-24": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "medidas_productividad_no_mejoran",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-17-25": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "doble_significado_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-26": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "trilogia_de_juran",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-27": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "evaluacion_riesgo_calidad_organizacional",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-28": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "proyectos_vitales_pocos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-29": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "alineacion_estrategica_despliegue",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-30": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "rejilla_madurez_gestion_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-31": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "definicion_calidad_conformidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-32": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "capacidad_de_proceso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-33": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "calidad_de_diseno_vs_produccion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-34": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "diseno_de_calidad_desde_planificacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-35": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "medicion_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-36": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "concepto_quality_is_free",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-37": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "politica_formal_de_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-38": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "critica_acceptable_quality_level",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-39": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "modelo_costo_optimo_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-40": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "calidad_de_ejecucion_proceso_innovacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-41": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "definicion_calidad_fitness_for_purpose",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-42": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "categorizacion_ranking_proyectos_cubetas",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R01-17-43": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "definiciones_operacionales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-44": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "control_estadistico_proceso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-17-45": {
+  "nodo": "costo_de_mala_calidad_copq",
+  "vecino": "innovacion_tras_control_estadistico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-18-01": {
+  "nodo": "transformacion_gerencial_para_la_calidad",
+  "vecino": "circulos_calidad_qc",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-18-02": {
+  "nodo": "transformacion_gerencial_para_la_calidad",
+  "vecino": "relaciones_largo_plazo_con_proveedores",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-18-03": {
+  "nodo": "transformacion_gerencial_para_la_calidad",
+  "vecino": "cuestionario_autoevaluacion_gerencial_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-19-01": {
+  "nodo": "procedimientos_definidos_en_servicios",
+  "vecino": "contacto_con_el_cliente",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-19-02": {
+  "nodo": "procedimientos_definidos_en_servicios",
+  "vecino": "adaptacion_14_puntos_servicio_medico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-19-03": {
+  "nodo": "procedimientos_definidos_en_servicios",
+  "vecino": "sistema_responsabilidad_gerencial",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-20-01": {
+  "nodo": "comunicacion_interna_post_despido_ejecutivo",
+  "vecino": "auditorias_gerenciales_periodicas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-20-02": {
+  "nodo": "comunicacion_interna_post_despido_ejecutivo",
+  "vecino": "preparacion_conversacion_despido_ejecutivo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-21-01": {
+  "nodo": "design_principles",
+  "vecino": "create_a_concept",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-21-02": {
+  "nodo": "design_principles",
+  "vecino": "identificar_brechas_gaps",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-21-03": {
+  "nodo": "design_principles",
+  "vecino": "bundle_ideas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-22-01": {
+  "nodo": "analisis_trafico_competitivo",
+  "vecino": "capturar_conocimiento_de_mercado",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-22-02": {
+  "nodo": "analisis_trafico_competitivo",
+  "vecino": "herramientas_de_activacion_web",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-22-03": {
+  "nodo": "analisis_trafico_competitivo",
+  "vecino": "metricas_de_adquisicion_activacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-22-04": {
+  "nodo": "analisis_trafico_competitivo",
+  "vecino": "inteligencia_de_anuncios_de_la_competencia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-22-05": {
+  "nodo": "analisis_trafico_competitivo",
+  "vecino": "ganar_comprension_del_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-22-06": {
+  "nodo": "analisis_trafico_competitivo",
+  "vecino": "analisis_de_sensibilidad_riesgo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-23-01": {
+  "nodo": "perfeccionismo_vs_valor",
+  "vecino": "cero_defectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-23-02": {
+  "nodo": "perfeccionismo_vs_valor",
+  "vecino": "superioridad_calidad_market_share",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-23-03": {
+  "nodo": "perfeccionismo_vs_valor",
+  "vecino": "costo_de_mala_calidad_copq",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R01-24-01": {
+  "nodo": "arbol_decision_culpabilidad",
+  "vecino": "prueba_sustitucion_johnston",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R01-24-02": {
+  "nodo": "arbol_decision_culpabilidad",
+  "vecino": "cultura_justa",
+  "sentido": "previo",
+  "trampa": false
+ }
+}

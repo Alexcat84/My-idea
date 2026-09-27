@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P301706",
+  "intento": 0,
+  "usd": 0.162992,
+  "turnos": 1,
+  "duracion_s": 22.2,
+  "pared_s": 23.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31108,
+  "tokens_out": 1928,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P301706\", \"veredicto\": \"CONTRARIO\", \"lineas\": [4060, 4182, 4418, 4523], \"cita\": \"As elsewhere, the deregulation of the airline industry in 1978 has not made the regulators’ work any easier. ... Running in parallel with these moves towards deregulation, there has been--predictably--a steady erosion of the HSC/HSE’s budget.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro nunca trata la reducción de la carga regulatoria como una meta que haya que equilibrar. La desregulación aparece siempre como perjudicial: más carga para el regulador con menos recursos (Dryden, FAA) y erosión del presupuesto del HSE. Su conclusión es dar al regulador legislación, recursos y herramientas. El paso invierte esa valoración. Lo que sí valora son los objetivos de seguridad frente a reglas prescriptivas, no una carga menor.\", \"paso_fiel\": \"Asegurar que el paso hacia la autorregulación se acompañe de legislación, recursos, formación y herramientas suficientes para que el regulador mantenga una vigilancia efectiva, sin tratar la reducción de la carga regulatoria como un objetivo en sí misma.\"}\n```",
+ "parseado": {
+  "id": "P301706",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   4060,
+   4182,
+   4418,
+   4523
+  ],
+  "cita": "As elsewhere, the deregulation of the airline industry in 1978 has not made the regulators’ work any easier. ... Running in parallel with these moves towards deregulation, there has been--predictably--a steady erosion of the HSC/HSE’s budget.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro nunca trata la reducción de la carga regulatoria como una meta que haya que equilibrar. La desregulación aparece siempre como perjudicial: más carga para el regulador con menos recursos (Dryden, FAA) y erosión del presupuesto del HSE. Su conclusión es dar al regulador legislación, recursos y herramientas. El paso invierte esa valoración. Lo que sí valora son los objetivos de seguridad frente a reglas prescriptivas, no una carga menor.",
+  "paso_fiel": "Asegurar que el paso hacia la autorregulación se acompañe de legislación, recursos, formación y herramientas suficientes para que el regulador mantenga una vigilancia efectiva, sin tratar la reducción de la carga regulatoria como un objetivo en sí misma."
+ }
+}

@@ -22,7 +22,6 @@
     "mapa_satisfaccion_importancia",
     "analisis_licitaciones_no_ganadas",
     "establecer_metas_de_calidad_basadas_en_mercado",
-    "preguntas_situacion",
     "marco_analisis_mercado_cadena_suministro",
     "pronostico_de_demanda_variables"
   ],
@@ -30,5 +29,23 @@
     "Cuando la organización experimenta declive en participación de mercado",
     "Si existen quejas de clientes pero no se conoce la causa raíz percibida"
   ],
-  "etiqueta_arbol": "Compara tu Calidad Competitiva"
+  "etiqueta_arbol": "Compara tu Calidad Competitiva",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-052",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estudio_mercado_calidad -> preguntas_situacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-09-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El estudio de mercado sobre la posición competitiva en calidad no prepara las preguntas de situación en una llamada de venta SPIN. La relación no se sostiene."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

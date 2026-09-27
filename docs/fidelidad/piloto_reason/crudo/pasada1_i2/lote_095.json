@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_095",
+  "intento": 0,
+  "usd": 0.17572000000000002,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35700,
+  "tokens_out": 1646,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P408DCE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5190, 5198, 5200, 666], \"razon\": \"El libro recomienda grupos de personas divergentes (especialidad, experiencia, género) porque, al juntar sus observaciones, ven más en conjunto. El paso coincide.\"},\n  {\"id\": \"P1655BC\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1851, 1934, 2654, 204, 44, 5605], \"razon\": \"Va en la dirección del libro, pero este usa casos de dominios diversos y pide buscar condiciones latentes, no detalles superficiales. Limitarse al sector propio podría estrechar el aprendizaje.\"},\n  {\"id\": \"P1EE06A\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"entre 8 y 16 chequeos\"], \"clase\": \"FIEL\", \"lineas\": [2658, 2654, 3209], \"razon\": \"El libro da de 8 a 16 como cifra típica que varía según el sistema; el paso la vuelve un rango fijo. Omite que la meta es aislar los 2-3 procesos más urgentes.\"},\n  {\"id\": \"P5239D3\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [293, 198, 200, 263, 5748, 582], \"razon\": \"El libro apoya rastrear aguas arriba, pero la relación es de muchos a muchos. Advierte rendimientos decrecientes y pide limitar el análisis a lo controlable. Rastrear cada condición hasta una sola decisión choca con eso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P408DCE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5190,
+    5198,
+    5200,
+    666
+   ],
+   "razon": "El libro recomienda grupos de personas divergentes (especialidad, experiencia, género) porque, al juntar sus observaciones, ven más en conjunto. El paso coincide."
+  },
+  {
+   "id": "P1655BC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1851,
+    1934,
+    2654,
+    204,
+    44,
+    5605
+   ],
+   "razon": "Va en la dirección del libro, pero este usa casos de dominios diversos y pide buscar condiciones latentes, no detalles superficiales. Limitarse al sector propio podría estrechar el aprendizaje."
+  },
+  {
+   "id": "P1EE06A",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "entre 8 y 16 chequeos"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2658,
+    2654,
+    3209
+   ],
+   "razon": "El libro da de 8 a 16 como cifra típica que varía según el sistema; el paso la vuelve un rango fijo. Omite que la meta es aislar los 2-3 procesos más urgentes."
+  },
+  {
+   "id": "P5239D3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    293,
+    198,
+    200,
+    263,
+    5748,
+    582
+   ],
+   "razon": "El libro apoya rastrear aguas arriba, pero la relación es de muchos a muchos. Advierte rendimientos decrecientes y pide limitar el análisis a lo controlable. Rastrear cada condición hasta una sola decisión choca con eso."
+  }
+ ]
+}

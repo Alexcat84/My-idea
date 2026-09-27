@@ -7,15 +7,14 @@
   "resumen_teorico": "Transformación de los estandares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeno y calidad. Es el tipo de cambio mas dificil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.",
   "pasos_accionables": [
     "Revisar la visión, misión y valores de tu negocio",
-    "Alinear como eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir",
+    "Alinear cómo eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir",
     "Reforzar de manera constante los nuevos comportamientos con reconocimiento y recompensas",
     "No dejar a nadie fuera del cambio, ni siquiera a ti mismo",
-    "Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar toma anos"
+    "Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar toma años"
   ],
   "entregable_esperado": "Plan de transformación cultural con las formas de elegir, formar y reconocer a tu gente alineadas, y con mecanismos de refuerzo definidos",
   "nodos_previos": [
-    "six_sigma_dmaic",
-    "proceso_despidos_responsables"
+    "six_sigma_dmaic"
   ],
   "nodos_siguientes": [
     "resistencia_al_cambio",
@@ -27,5 +26,51 @@
     "Cuando las mejoras de proceso no se sostienen porque falta una cultura de calidad",
     "Cuando arrancas una iniciativa de largo plazo como Six Sigma"
   ],
-  "etiqueta_arbol": "Transforma la Cultura de tu Equipo"
+  "etiqueta_arbol": "Transforma la Cultura de tu Equipo",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-045",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proceso_despidos_responsables -> breakthrough_cultural",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-12, lector y verificador de acuerdo)",
+        "motivo": "Ejecutar despidos cuidando la cultura no se continua en la transformacion cultural hacia metas de calidad; coinciden solo en la palabra cultura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-orto-0224",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Alinear como eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir",
+      "texto_nuevo": "Alinear cómo eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-013.paso1: cómo (Solo añade la tilde de cómo, que es interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0225",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar toma anos",
+      "texto_nuevo": "Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar toma años",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-013.paso4: años (Corrige anos por años, una falta real de eñe.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

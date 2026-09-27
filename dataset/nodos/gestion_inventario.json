@@ -26,10 +26,29 @@
     "programacion_entregas_delivery_scheduling",
     "clasifica_tu_inventario",
     "driver_de_inventario",
-    "ratios_eficiencia_inventario"
+    "ratios_eficiencia_inventario",
+    "manufactura_aditiva_bajo_demanda"
   ],
   "condiciones_activacion": [
     "Cuando la empresa tiene exceso de inventario o capital de trabajo atado en stock"
   ],
-  "etiqueta_arbol": "Libera Efectivo de tu Inventario"
+  "etiqueta_arbol": "Libera Efectivo de tu Inventario",
+  "fuentes_internas": [
+    "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-12",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_inventario -> manufactura_aditiva_bajo_demanda",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-13, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "El reto de minimizar inventario sin quiebres de stock conduce a la impresión 3D como forma de fabricar bajo demanda en vez de almacenar variantes."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

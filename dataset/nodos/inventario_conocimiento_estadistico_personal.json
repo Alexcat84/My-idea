@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Inventario y Aprovechamiento del Conocimiento Estadístico Interno",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming señala que muchas empresas tienen empleados con formación estadística avanzada (maestrías, autoestudio) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+  "resumen_teorico": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, autoestudio) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
   "pasos_accionables": [
     "Realizar un mapeo del personal con formación o interés en estadística, matemáticas o teoría de probabilidad",
     "Identificar oportunidades para que estas personas trabajen bajo la guía de un líder estadístico competente",
@@ -22,5 +22,26 @@
   "condiciones_activacion": [
     "Cuando la organización busca fortalecer sus capacidades de análisis estadístico sin contratar personal externo"
   ],
-  "etiqueta_arbol": "Aprovecha el Talento Interno"
+  "etiqueta_arbol": "Aprovecha el Talento Interno",
+  "correcciones": [
+    {
+      "id": "atribucion-109",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming señala que muchas empresas tienen empleados con formación estadística avanzada (maestrías, autoestudio) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+      "texto_nuevo": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, autoestudio) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming señala que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-005 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

@@ -6,11 +6,11 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervencion sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atencion) que en el fondo siguen culpando al individuo. Además requiere un estándar que solo aparece en retrospectiva, reduce fenomenos complejos a estadisticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoria de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
   "pasos_accionables": [
-    "Revisa el lenguaje que usas en tus reportes de incidentes para detectar eufemismos de 'error humano' como falta de atencion, no priorizar la seguridad o actos inseguros.",
-    "Cuestiona cualquier estadistica del tipo 'X% de los incidentes son por error humano' y pide que te expliquen que condiciones de fondo la explican.",
-    "Evita que quien maneje el personal convierta las investigaciones de seguridad en una evaluacion de desempeno individual."
+    "Revisa el lenguaje que usas en tus reportes de incidentes para detectar eufemismos de 'error humano' como falta de atención, no priorizar la seguridad o actos inseguros.",
+    "Cuestiona cualquier estadística del tipo 'X% de los incidentes son por error humano' y pide que te expliquen qué condiciones de fondo la explican.",
+    "Evita que quien maneje el personal convierta las investigaciones de seguridad en una evaluación de desempeño individual."
   ],
-  "entregable_esperado": "Un checklist de senales de alerta aplicado a tu negocio, revisando como investigas los incidentes, como aplicas la disciplina y quien es responsable de la seguridad.",
+  "entregable_esperado": "Un checklist de señales de alerta aplicado a tu negocio, revisando cómo investigas los incidentes, cómo aplicas la disciplina y quién es responsable de la seguridad.",
   "nodos_previos": [
     "old_view_vs_new_view_human_error"
   ],
@@ -22,5 +22,65 @@
     "Cuando tu, o quien lidere, atribuye un incidente a 'falta de cuidado' o a 'no seguir el procedimiento' por parte de alguien del equipo.",
     "Cuando decides quien debe encargarse de investigar los incidentes de seguridad en tu negocio."
   ],
-  "etiqueta_arbol": "Corrige las Condiciones del Sistema"
+  "etiqueta_arbol": "Corrige las Condiciones del Sistema",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0892",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa el lenguaje que usas en tus reportes de incidentes para detectar eufemismos de 'error humano' como falta de atencion, no priorizar la seguridad o actos inseguros.",
+      "texto_nuevo": "Revisa el lenguaje que usas en tus reportes de incidentes para detectar eufemismos de 'error humano' como falta de atención, no priorizar la seguridad o actos inseguros.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-014.paso0: atencion (A 'atencion' le faltaba la tilde y no se cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0893",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuestiona cualquier estadistica del tipo 'X% de los incidentes son por error humano' y pide que te expliquen que condiciones de fondo la explican.",
+      "texto_nuevo": "Cuestiona cualquier estadística del tipo 'X% de los incidentes son por error humano' y pide que te expliquen qué condiciones de fondo la explican.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-014.paso1: estadistica, que (Se añaden las tildes de 'estadística' y del interrogativo indirecto 'qué'; el 'que' conjuntivo queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0894",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita que quien maneje el personal convierta las investigaciones de seguridad en una evaluacion de desempeno individual.",
+      "texto_nuevo": "Evita que quien maneje el personal convierta las investigaciones de seguridad en una evaluación de desempeño individual.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-014.paso2: evaluacion, desempeno (Se corrigen la tilde de 'evaluación' y la eñe de 'desempeño'; el 'quien' relativo queda sin tilde, como debe ser.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0895",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un checklist de senales de alerta aplicado a tu negocio, revisando como investigas los incidentes, como aplicas la disciplina y quien es responsable de la seguridad.",
+      "texto_nuevo": "Un checklist de señales de alerta aplicado a tu negocio, revisando cómo investigas los incidentes, cómo aplicas la disciplina y quién es responsable de la seguridad.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-014.entregable: senales, como, como, quien (Se corrigen la eñe de 'señales' y las tildes de los interrogativos indirectos 'cómo' y 'quién'; 'checklist' no se toca.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

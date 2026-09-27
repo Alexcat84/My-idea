@@ -1,6 +1,6 @@
 {
   "node_id": "rol_green_belt_six_sigma",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Tu papel con entrenamiento básico en Six Sigma (Green Belt)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Cuando necesitas ampliar el número de personas capacitadas en Six Sigma dentro de tu negocio"
   ],
-  "etiqueta_arbol": "Forma a tus Colaboradores Clave"
+  "etiqueta_arbol": "Forma a tus Colaboradores Clave",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-170",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q072-006: Capacitarse como Green Belt y liderar o apoyar proyectos de mejora midiendo su ahorro es mejorar procesos de un negocio en marcha, fase ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

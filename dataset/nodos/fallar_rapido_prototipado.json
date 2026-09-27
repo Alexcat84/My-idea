@@ -1,6 +1,6 @@
 {
   "node_id": "fallar_rapido_prototipado",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Fallar Rápido, Fallar Seguido (Cultura de Prototipado)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Cuando el equipo tarda demasiado en materializar una idea o teme mostrar trabajo inacabado."
   ],
-  "etiqueta_arbol": "Falla Rápido, Aprende Rápido"
+  "etiqueta_arbol": "Falla Rápido, Aprende Rápido",
+  "fuentes_internas": [
+    "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-082",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q097-029: El nodo trata de crear prototipos rápidos y baratos y probarlos con usuarios reales para validar ideas antes de invertir, y eso es validación, no ejecución. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

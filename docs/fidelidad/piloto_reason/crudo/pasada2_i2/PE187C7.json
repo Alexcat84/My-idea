@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE187C7",
+  "intento": 0,
+  "usd": 0.132984,
+  "turnos": 1,
+  "duracion_s": 11.7,
+  "pared_s": 12.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 28431,
+  "tokens_out": 963,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE187C7\", \"veredicto\": \"FIEL\", \"lineas\": [3747, 3763], \"cita\": \"Section 4 takes the form of a contributing factors checklist that must be completed for each of the errors identified in Section 3. These include: information, equipment, tools or parts, aircraft design and configuration, job or task, qualifications and skills, individual performance, environment and facilities, organizational environment, supervision, communication.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que la Sección 4 es un checklist de factores contribuyentes que debe completarse. Las categorías del paso son un subconjunto de las del libro; 'capacitación' traduce razonablemente 'qualifications and skills'. Omitir algunas categorías y la mención 'para cada error de la Sección 3' es una diferencia de detalle. No invierte nada ni añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE187C7",
+  "veredicto": "FIEL",
+  "lineas": [
+   3747,
+   3763
+  ],
+  "cita": "Section 4 takes the form of a contributing factors checklist that must be completed for each of the errors identified in Section 3. These include: information, equipment, tools or parts, aircraft design and configuration, job or task, qualifications and skills, individual performance, environment and facilities, organizational environment, supervision, communication.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que la Sección 4 es un checklist de factores contribuyentes que debe completarse. Las categorías del paso son un subconjunto de las del libro; 'capacitación' traduce razonablemente 'qualifications and skills'. Omitir algunas categorías y la mención 'para cada error de la Sección 3' es una diferencia de detalle. No invierte nada ni añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

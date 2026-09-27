@@ -16,12 +16,28 @@
   "nodos_previos": [
     "ingenieria_de_prompts_efectiva"
   ],
-  "nodos_siguientes": [
-    "ia_en_supply_chain"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se necesita tomar una decisión de negocio compleja con ayuda de IA",
     "Cuando una respuesta simple de la IA resulta superficial o poco confiable"
   ],
-  "etiqueta_arbol": "Haz que la IA Razone"
+  "etiqueta_arbol": "Haz que la IA Razone",
+  "fuentes_internas": [
+    "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-016",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prompting_cadena_de_pensamiento -> ia_en_supply_chain",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A47, lectores de acuerdo)",
+        "motivo": "Una tecnica de prompting no tiene como continuacion la IA aplicada a la cadena de suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
+  ]
 }

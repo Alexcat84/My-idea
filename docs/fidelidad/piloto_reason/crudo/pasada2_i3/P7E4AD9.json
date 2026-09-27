@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P7E4AD9",
+  "intento": 0,
+  "usd": 0.201648,
+  "turnos": 1,
+  "duracion_s": 12.9,
+  "pared_s": 13.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44952,
+  "tokens_out": 1092,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7E4AD9\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2957, 2948, 5041, 5085], \"cita\": \"Such claims raise a crucial question for all those in the business of minimizing potentially dangerous errors: which is the easiest to remedy, the person or the situation?\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro plantea la misma decisión (persona o situación) y ofrece base para decidirla: preferencia situacional en plantilla capacitada y árbol de culpabilidad. El paso concreta esa decisión sin invertirla ni mandar a centrarse en la persona. No añade cifras, plazos, herramientas ni responsables. La sospecha de contrario no se sostiene: omitir el matiz no lleva a hacer lo desaconsejado.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7E4AD9",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2957,
+   2948,
+   5041,
+   5085
+  ],
+  "cita": "Such claims raise a crucial question for all those in the business of minimizing potentially dangerous errors: which is the easiest to remedy, the person or the situation?",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro plantea la misma decisión (persona o situación) y ofrece base para decidirla: preferencia situacional en plantilla capacitada y árbol de culpabilidad. El paso concreta esa decisión sin invertirla ni mandar a centrarse en la persona. No añade cifras, plazos, herramientas ni responsables. La sospecha de contrario no se sostiene: omitir el matiz no lleva a hacer lo desaconsejado.",
+  "paso_fiel": ""
+ }
+}

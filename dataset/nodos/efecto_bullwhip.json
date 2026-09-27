@@ -1,7 +1,7 @@
 {
   "node_id": "efecto_bullwhip",
-  "fase_proyecto": "validacion",
-  "dominio": "core",
+  "fase_proyecto": "ejecucion",
+  "dominio": "compras",
   "titulo_concepto": "Detectar y calcular el costo del efecto látigo en tu cadena de suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El efecto látigo (bullwhip) pasa cuando un cambio pequeño en lo que pide el cliente final se va agrandando a medida que sube por tu cadena de proveedores, y cada eslabón termina con una idea distinta de cuánta demanda real hay. Primero te quedas corto de inventario, después te sobra. Antes de gastar en resolverlo, tienes que medir qué tan grande es el efecto en tu caso y calcular cuánto te cuesta en producción, transporte, inventario y ventas que pierdes por no tener producto.",
@@ -15,7 +15,7 @@
   ],
   "entregable_esperado": "Un cálculo claro de cuánto te cuesta el efecto látigo en tu negocio, que te sirva para decidir si conviene invertir en mejor visibilidad de datos con tus proveedores",
   "nodos_previos": [
-    "impacto_estado_resultados_en_balance"
+    "gestion_procurement_consumo"
   ],
   "nodos_siguientes": [
     "sistema_visibilidad_cadena_suministro_low_cost",
@@ -25,5 +25,62 @@
     "Cuando ves que tu inventario sube y baja sin explicación clara a lo largo de tu cadena",
     "Antes de decidir si invertir en sistemas para compartir datos o coordinarte con proveedores"
   ],
-  "etiqueta_arbol": "Detecta el Efecto Látigo"
+  "etiqueta_arbol": "Detecta el Efecto Látigo",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-118",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-007: Medir y costear el efecto latigo en una cadena de suministro que ya opera es controlar y mejorar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "mv-dominio-10",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-13: Medir y costear el efecto látigo a lo largo de varios eslabones solo le sirve a quien opera dentro de una cadena de suministro con inventario, no a un servicio o una app. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-020",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "impacto_estado_resultados_en_balance -> efecto_bullwhip",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A30, lectores de acuerdo)",
+        "motivo": "El impacto del estado de resultados en el balance es contable y no conduce al efecto latigo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-entrada-03",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_procurement_consumo -> efecto_bullwhip",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-03, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Diagnostico_efecto_latigo es casi un duplicado del nodo, asi que elijo el seguimiento de consumo esperado contra consumo real: quien ya detecta desviaciones en lo que compra pasa de forma natural a medir cuanto se amplifican sus pedidos y cuanto le cuesta eso."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
+  ]
 }

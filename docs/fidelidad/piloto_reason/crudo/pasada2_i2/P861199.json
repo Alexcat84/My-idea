@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P861199",
+  "intento": 0,
+  "usd": 0.19893999999999998,
+  "turnos": 1,
+  "duracion_s": 15.1,
+  "pared_s": 16.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43160,
+  "tokens_out": 1315,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P861199\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2322, 2340, 2354], \"cita\": \"This is the orthodox engineering view. It is summarized in Figure 5.5 that shows how the optimum level of preventive maintenance can be determined by summing the costs... Unfortunately, this orthodoxy presumes that all--or at least most--maintenance activities are essentially benign.\", \"datos_sin_respaldo\": [], \"razon\": \"Reason presenta el optimo por curvas de costo como la vision ortodoxa y la critica porque supone un mantenimiento benigno. Advierte que un nivel fijado solo por consideraciones economicas acaba dominado por el riesgo de error. El paso fija el optimo solo con costos y omite esa condicion esencial.\", \"paso_fiel\": \"Usar las curvas de costo de mantenimiento preventivo y correctivo solo como punto de partida, y fijar el nivel optimo despues de sumar el riesgo de que cada intervencion introduzca errores humanos que danen el sistema.\"}\n```",
+ "parseado": {
+  "id": "P861199",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2322,
+   2340,
+   2354
+  ],
+  "cita": "This is the orthodox engineering view. It is summarized in Figure 5.5 that shows how the optimum level of preventive maintenance can be determined by summing the costs... Unfortunately, this orthodoxy presumes that all--or at least most--maintenance activities are essentially benign.",
+  "datos_sin_respaldo": [],
+  "razon": "Reason presenta el optimo por curvas de costo como la vision ortodoxa y la critica porque supone un mantenimiento benigno. Advierte que un nivel fijado solo por consideraciones economicas acaba dominado por el riesgo de error. El paso fija el optimo solo con costos y omite esa condicion esencial.",
+  "paso_fiel": "Usar las curvas de costo de mantenimiento preventivo y correctivo solo como punto de partida, y fijar el nivel optimo despues de sumar el riesgo de que cada intervencion introduzca errores humanos que danen el sistema."
+ }
+}

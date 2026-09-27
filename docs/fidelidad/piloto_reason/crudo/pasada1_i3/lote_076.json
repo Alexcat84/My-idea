@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_076",
+  "intento": 0,
+  "usd": 0.18932,
+  "turnos": 1,
+  "duracion_s": 27.2,
+  "pared_s": 28.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34795,
+  "tokens_out": 2507,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5EA355\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"personal de seguridad\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4806, 4908, 3989, 4161, 4165], \"razon\": \"El libro respalda canales de reporte independientes. Pero su remedio al conflicto regulador es separar estructuralmente la agencia (L4161). El paso concreta un rol no explícito.\"},\n  {\"id\": \"PC207C2\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"mentoría\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5182, 5204, 5208, 4769, 4693], \"razon\": \"Weick y Reason exigen centralizar primero, con una cultura jerárquica disciplinada y confianza en los SOPs. El paso podría leerse como relegar las reglas. La mentoría no aparece.\"},\n  {\"id\": \"PC085CB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5254, 5258, 2579, 5270], \"razon\": \"El libro pregunta literalmente qué presupuesto, cuánto personal y a cuántos niveles del CEO está quien recopila y analiza la información de seguridad.\"},\n  {\"id\": \"P2D03A8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"en cada auditoría\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5775, 5781, 2750, 2638, 3209, 3075], \"razon\": \"El libro apoya identificar y seguir las condiciones latentes. Pero Tripod aconseja gestionar perfiles y no indicadores sueltos. El paso añade una frecuencia ligada a auditorías.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5EA355",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "personal de seguridad"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4806,
+    4908,
+    3989,
+    4161,
+    4165
+   ],
+   "razon": "El libro respalda canales de reporte independientes. Pero su remedio al conflicto regulador es separar estructuralmente la agencia (L4161). El paso concreta un rol no explícito."
+  },
+  {
+   "id": "PC207C2",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "mentoría"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5182,
+    5204,
+    5208,
+    4769,
+    4693
+   ],
+   "razon": "Weick y Reason exigen centralizar primero, con una cultura jerárquica disciplinada y confianza en los SOPs. El paso podría leerse como relegar las reglas. La mentoría no aparece."
+  },
+  {
+   "id": "PC085CB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5254,
+    5258,
+    2579,
+    5270
+   ],
+   "razon": "El libro pregunta literalmente qué presupuesto, cuánto personal y a cuántos niveles del CEO está quien recopila y analiza la información de seguridad."
+  },
+  {
+   "id": "P2D03A8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "en cada auditoría"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5775,
+    5781,
+    2750,
+    2638,
+    3209,
+    3075
+   ],
+   "razon": "El libro apoya identificar y seguir las condiciones latentes. Pero Tripod aconseja gestionar perfiles y no indicadores sueltos. El paso añade una frecuencia ligada a auditorías."
+  }
+ ]
+}

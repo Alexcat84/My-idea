@@ -6,26 +6,24 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicacion: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones suboptimas y cede las mejores a franquiciados para mejorar la validacion del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validacion ante futuros franquiciados y velocidad de crecimiento, por lo que la eleccion depende de tu capital disponible y tu plan de salida.",
   "pasos_accionables": [
-    "Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
-    "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
-    "Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno",
+    "Decide si continuarás abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
+    "Analiza tu capital disponible y tu plan de salida para orientar la elección de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
+    "Selecciona la estrategia de ubicación, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, según tus objetivos de validación, riesgo y retorno",
     "Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment",
-    "Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados",
+    "Evalúa el impacto de la estrategia elegida en la validación y satisfacción de futuros franquiciados",
     "Documenta la estrategia en tu plan de marketing de franquicia, incluyendo el uso de ubicaciones corporativas como centros de entrenamiento o soporte si aplica, y en especial las de en mercados distantes"
   ],
-  "entregable_esperado": "Documento de estrategia de ubicacion que define la mezcla entre locales corporativos y franquiciados, el criterio de asignacion de mercados y el uso de ubicaciones corporativas como soporte.",
+  "entregable_esperado": "Documento de estrategia de ubicación que define la mezcla entre locales corporativos y franquiciados, el criterio de asignación de mercados y el uso de ubicaciones corporativas como soporte.",
   "nodos_previos": [
     "estrategia_mercados_geograficos",
-    "preguntas_clave_decision_franquiciar",
     "alternativa_operaciones_propias",
     "franquicia_mas_crecimiento_corporativo_hibrido",
-    "prevenir_franquicias_inadvertidas"
+    "prevenir_franquicias_inadvertidas",
+    "evaluacion_necesidad_franquiciar"
   ],
   "nodos_siguientes": [
     "segmentacion_perfil_franquiciado",
-    "mix_medios_marketing_franquicia",
-    "decision_marca_comun_branding",
-    "evaluacion_necesidad_franquiciar"
+    "mix_medios_marketing_franquicia"
   ],
   "condiciones_activacion": [
     "Cuando ya decidiste franquiciar tu negocio y tambien planeas mantener o abrir locales propios",
@@ -49,5 +47,148 @@
       "titulo": "Combinar Crecimiento Corporativo y Franquiciado como Estrategia Dual",
       "fuente": "Franchise Your Business - Mark Siebert"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-002",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
+      "texto_nuevo": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1278, L3503, L3511",
+        "frase": "Franchisors with limited capital may want to reserve fewer markets for corporate growth."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon A. La primera mitad del paso (analizar capital y plan de salida para elegir la estrategia) sale de L3511. La coletilla, en cambio, pide garantizar recursos dedicados suficientes a los dos canales, y el libro dice otra cosa. Con capital limitado aconseja reservar menos mercados a lo corporativo (L3511). A los franquiciadores pequenos les aconseja poner lo corporativo en segundo plano uno o dos anos (L1278) y concentrar todos los recursos en la franquicia (L3503). Solo pide asegurar recursos suficientes al programa de franquicia, y eso para empresas grandes (L1278). Busque adequate resources, dedicated resources, both channels y cannibaliz: ningun pasaje apoya repartir recursos suficientes a ambos canales. B leyo como generalizacion lo que el libro limita al canal de franquicia.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-048"
+    },
+    {
+      "id": "t2-arista-087",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mix_ubicaciones_corporativas_franquicia -> decision_marca_comun_branding",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-11-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: decidir si construir una marca comun es un paso previo a elegir estructura de expansion, anterior a repartir ubicaciones entre locales propios y franquicias."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-088",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mix_ubicaciones_corporativas_franquicia -> evaluacion_necesidad_franquiciar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-11-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: evaluar si hace falta franquiciar es previo a definir la mezcla de locales corporativos y franquiciados, que ya da por hecho que se franquicia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-160",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_necesidad_franquiciar -> estrategia_ubicacion_franquicia_corporativa",
+      "texto_nuevo": "evaluacion_necesidad_franquiciar -> mix_ubicaciones_corporativas_franquicia",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a estrategia_ubicacion_franquicia_corporativa, deprecado; su superviviente es mix_ubicaciones_corporativas_franquicia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-179",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "preguntas_clave_decision_franquiciar -> mix_ubicaciones_corporativas_franquicia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a preguntas_clave_decision_franquiciar, deprecado; su superviviente es evaluacion_necesidad_franquiciar."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0756",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
+      "texto_nuevo": "Decide si continuarás abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-009.paso0: continuarás (Solo se añade la tilde que falta en el futuro continuarás.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0757",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
+      "texto_nuevo": "Analiza tu capital disponible y tu plan de salida para orientar la elección de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-009.paso1: elección (Solo se añade la tilde que falta en elección.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0758",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno",
+      "texto_nuevo": "Selecciona la estrategia de ubicación, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, según tus objetivos de validación, riesgo y retorno",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-009.paso2: ubicación, según, validación (Solo se añaden las tildes que faltan en ubicación, según y validación; los términos en inglés quedan intactos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0759",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados",
+      "texto_nuevo": "Evalúa el impacto de la estrategia elegida en la validación y satisfacción de futuros franquiciados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-009.paso4: Evalúa, validación, satisfacción (Solo se añaden las tildes que faltan en Evalúa, validación y satisfacción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0760",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documento de estrategia de ubicacion que define la mezcla entre locales corporativos y franquiciados, el criterio de asignacion de mercados y el uso de ubicaciones corporativas como soporte.",
+      "texto_nuevo": "Documento de estrategia de ubicación que define la mezcla entre locales corporativos y franquiciados, el criterio de asignación de mercados y el uso de ubicaciones corporativas como soporte.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O066-009.entregable: ubicación, asignación (Solo se añaden las tildes que faltan en ubicación y asignación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
   ]
 }

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF2DCC7",
+  "intento": 0,
+  "usd": 0.123816,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26844,
+  "tokens_out": 822,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF2DCC7\", \"veredicto\": \"FIEL\", \"lineas\": [3395, 3397], \"cita\": \"consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question. Having done this, the nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro manda consultar la lista de EPCs, decidir cuáles afectan a la actividad y usar su factor multiplicador, que da entre paréntesis. El paso solo pide seleccionarlos con su peso. No ordena aplicar el peso completo ni suprimir la tarea genérica, así que no contradice el matiz de la proporción juzgada.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF2DCC7",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "cita": "consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question. Having done this, the nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro manda consultar la lista de EPCs, decidir cuáles afectan a la actividad y usar su factor multiplicador, que da entre paréntesis. El paso solo pide seleccionarlos con su peso. No ordena aplicar el peso completo ni suprimir la tarea genérica, así que no contradice el matiz de la proporción juzgada.",
+  "paso_fiel": ""
+ }
+}

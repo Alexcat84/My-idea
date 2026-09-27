@@ -16,12 +16,31 @@
     "ceo_de_guerra_vs_paz"
   ],
   "nodos_siguientes": [
-    "fuentes_contratacion_ejecutivos"
+    "fuentes_contratacion_ejecutivos",
+    "coraje_decision_ceo"
   ],
   "condiciones_activacion": [
     "Cuando el equipo directivo se paraliza esperando 'más información' antes de decidir.",
     "Cuando una decisión importante será impopular entre empleados, inversionistas o clientes pero es necesaria.",
     "En momentos de crisis donde el tiempo para decidir es limitado."
   ],
-  "etiqueta_arbol": "Decide con Información Incompleta"
+  "etiqueta_arbol": "Decide con Información Incompleta",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-04",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "toma_decisiones_bajo_incertidumbre -> coraje_decision_ceo",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-04, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Las decisiones difíciles e impopulares con información incompleta llevan a ver que lo que se pone a prueba es el coraje; coraje_en_decisiones_dificiles no sirve como predecesor porque parece un duplicado del propio nodo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
+  ]
 }

@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3CFB19",
+  "intento": 0,
+  "usd": 0.170236,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38599,
+  "tokens_out": 792,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P3CFB19\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [967, 971, 443], \"cita\": \"no member of the Quality Assurance department was available during night-time hours to assess the adequacy of working practices. […] The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como factor común que no había personal de QA disponible de noche, y que esa ausencia, junto con la falta de inspección separada, permitió firmar trabajos incompletos. El paso convierte esa crítica en una acción en la misma dirección. No presenta el QA como suficiente ni sustituye la inspección independiente, que cubren otros pasos del nodo.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P3CFB19",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   967,
+   971,
+   443
+  ],
+  "cita": "no member of the Quality Assurance department was available during night-time hours to assess the adequacy of working practices. […] The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como factor común que no había personal de QA disponible de noche, y que esa ausencia, junto con la falta de inspección separada, permitió firmar trabajos incompletos. El paso convierte esa crítica en una acción en la misma dirección. No presenta el QA como suficiente ni sustituye la inspección independiente, que cubren otros pasos del nodo.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_033",
+  "intento": 0,
+  "usd": 0.15648,
+  "turnos": 1,
+  "duracion_s": 16.7,
+  "pared_s": 17.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31540,
+  "tokens_out": 1516,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8858FE\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [5037, 5057, 5059], \"razon\": \"L5037 respalda el paso. Pero 'respuesta negativa' es ambiguo: en la formulación de L5057, un 'no' exige revisar deficiencias sistémicas y, si no aparecen, considerar negligencia.\"},\n  {\"id\": \"P5673EE\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [271, 273, 5742, 5748], \"razon\": \"El libro dice que los factores económicos y societales están fuera del alcance de los gestores y son 'dados e inmutables'; el interés principal es lo controlable.\"},\n  {\"id\": \"P8D29A6\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4810, 4910, 4912, 4914], \"razon\": \"La retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante es uno de los cinco factores; ASRS y BASIS la enfatizan.\"},\n  {\"id\": \"P30EACA\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [96, 105, 1133, 306], \"razon\": \"El libro describe como dañina la conversión de ganancias protectoras en ventaja productiva. Impedir que aumente la exposición neta al riesgo sigue esa misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8858FE",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    5037,
+    5057,
+    5059
+   ],
+   "razon": "L5037 respalda el paso. Pero 'respuesta negativa' es ambiguo: en la formulación de L5057, un 'no' exige revisar deficiencias sistémicas y, si no aparecen, considerar negligencia."
+  },
+  {
+   "id": "P5673EE",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    271,
+    273,
+    5742,
+    5748
+   ],
+   "razon": "El libro dice que los factores económicos y societales están fuera del alcance de los gestores y son 'dados e inmutables'; el interés principal es lo controlable."
+  },
+  {
+   "id": "P8D29A6",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4810,
+    4910,
+    4912,
+    4914
+   ],
+   "razon": "La retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante es uno de los cinco factores; ASRS y BASIS la enfatizan."
+  },
+  {
+   "id": "P30EACA",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    96,
+    105,
+    1133,
+    306
+   ],
+   "razon": "El libro describe como dañina la conversión de ganancias protectoras en ventaja productiva. Impedir que aumente la exposición neta al riesgo sigue esa misma dirección."
+  }
+ ]
+}

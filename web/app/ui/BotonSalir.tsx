@@ -1,9 +1,13 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { SESION } from "@/lib/i18n/mensajes/sesion";
 import { createClient } from "@/lib/supabase/client";
 
 export function BotonSalir() {
+  const t = elegir(SESION, useIdioma());
   const router = useRouter();
   return (
     <button
@@ -15,7 +19,7 @@ export function BotonSalir() {
       }}
       className="text-sm text-dim hover:text-ink"
     >
-      Salir
+      {t.salir}
     </button>
   );
 }

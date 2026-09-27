@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PAED150",
+  "intento": 0,
+  "usd": 0.162988,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37112,
+  "tokens_out": 727,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PAED150\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [413, 435], \"cita\": \"the shift managers involved in both accidents were also in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala como condicion latente que el supervisor pudiera firmar su propio trabajo sin inspeccion adicional, porque eso eliminaba una oportunidad de detectar el error. Limitarlo sigue esa misma direccion. El rol de supervisor esta respaldado. La critica a 'escribir otro procedimiento' se refiere a prohibir actos puntuales del ultimo suceso, no a corregir esta condicion latente.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PAED150",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   413,
+   435
+  ],
+  "cita": "the shift managers involved in both accidents were also in a position to sign off their own incomplete work, thus removing an important opportunity for detecting the error.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala como condicion latente que el supervisor pudiera firmar su propio trabajo sin inspeccion adicional, porque eso eliminaba una oportunidad de detectar el error. Limitarlo sigue esa misma direccion. El rol de supervisor esta respaldado. La critica a 'escribir otro procedimiento' se refiere a prohibir actos puntuales del ultimo suceso, no a corregir esta condicion latente.",
+  "paso_fiel": ""
+ }
+}

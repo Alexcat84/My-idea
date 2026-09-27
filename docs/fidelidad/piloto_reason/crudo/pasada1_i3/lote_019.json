@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_019",
+  "intento": 0,
+  "usd": 0.173796,
+  "turnos": 1,
+  "duracion_s": 16.8,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35314,
+  "tokens_out": 1627,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P70361F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5176, 5178, 5182, 5208, 4769], \"razon\": \"Concuerda con cumplimiento sin vigilancia (L5178). Pero el libro condiciona: descentralización temporal, cultura jerárquica previa y fuerte dependencia de supervisores de primera línea; 'sin supervisión directa' podría chocar.\"},\n  {\"id\": \"P2BDE69\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4714, 4720], \"razon\": \"El libro describe la indefensión aprendida como cultura disfuncional que impulsa el ciclo de la culpa; detectar sus síntomas concreta esa idea en la misma dirección.\"},\n  {\"id\": \"P0DC5C7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2583], \"razon\": \"El libro define el tick-off: medidas tratadas como equipo que se instala y se marca como hecho, cuando requieren vigilarse y ajustarse como proceso.\"},\n  {\"id\": \"PD938FB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4406, 4410, 4414], \"razon\": \"El tercer paso de la FSA es considerar formas alternativas de gestionar los riesgos; el paso lo reproduce.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P70361F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5176,
+    5178,
+    5182,
+    5208,
+    4769
+   ],
+   "razon": "Concuerda con cumplimiento sin vigilancia (L5178). Pero el libro condiciona: descentralización temporal, cultura jerárquica previa y fuerte dependencia de supervisores de primera línea; 'sin supervisión directa' podría chocar."
+  },
+  {
+   "id": "P2BDE69",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4714,
+    4720
+   ],
+   "razon": "El libro describe la indefensión aprendida como cultura disfuncional que impulsa el ciclo de la culpa; detectar sus síntomas concreta esa idea en la misma dirección."
+  },
+  {
+   "id": "P0DC5C7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2583
+   ],
+   "razon": "El libro define el tick-off: medidas tratadas como equipo que se instala y se marca como hecho, cuando requieren vigilarse y ajustarse como proceso."
+  },
+  {
+   "id": "PD938FB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4406,
+    4410,
+    4414
+   ],
+   "razon": "El tercer paso de la FSA es considerar formas alternativas de gestionar los riesgos; el paso lo reproduce."
+  }
+ ]
+}

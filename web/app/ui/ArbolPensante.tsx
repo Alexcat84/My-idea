@@ -18,6 +18,10 @@
  * se desliza hacia arriba.
  */
 import { useEffect, useRef } from "react";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { ARBOL_PENSANTE } from "@/lib/i18n/mensajes/arbolPensante";
 
 export interface NodoArbol {
   id: string;
@@ -60,6 +64,7 @@ function PuntoRiel({ activo, lleno }: { activo: boolean; lleno: boolean }) {
 }
 
 export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
+  const t = elegir(ARBOL_PENSANTE, useIdioma());
   const marco = useRef<HTMLDivElement>(null);
 
   // C3: el punto actual siempre a la vista; el historial se desliza.
@@ -72,7 +77,7 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
     <div aria-live="polite">
       <div
         ref={marco}
-        className="max-h-[min(60vh,520px)] overflow-y-auto overscroll-contain pr-1"
+        className="max-h-[min(60vh,520px)] overflow-y-auto overscroll-contain pe-1"
         style={{ scrollbarWidth: "thin", maskImage: "linear-gradient(180deg, transparent 0, black 18px)" }}
       >
         <div className="relative flex flex-col">
@@ -135,10 +140,10 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                         {n.salto && (
                           <span
                             aria-hidden
-                            className="mr-1.5 inline-block h-1.5 w-1.5 rotate-45 border-[1.5px] border-accent align-baseline"
+                            className="me-1.5 inline-block h-1.5 w-1.5 rotate-45 border-[1.5px] border-accent align-baseline"
                           />
                         )}
-                        {n.salto ? "fue un salto" : n.nota}
+                        {n.salto ? t.fueUnSalto : n.nota}
                       </span>
                     )}
                   </span>
@@ -162,7 +167,7 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
       </div>
       {generando && (
         <p className="mt-2 text-xs text-dim">
-          generando{etiquetaGenerando ? `: ${etiquetaGenerando}` : "…"}
+          {etiquetaGenerando ? interpolar(t.generandoCon, { etiqueta: etiquetaGenerando }) : t.generando}
         </p>
       )}
     </div>

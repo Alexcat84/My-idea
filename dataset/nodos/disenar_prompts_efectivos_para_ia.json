@@ -16,9 +16,7 @@
     "adoptar_co_inteligencia_ia",
     "ingenieria_de_prompts_efectiva"
   ],
-  "nodos_siguientes": [
-    "prueba_hipotesis"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se necesita practicar pitch de ventas o negociación antes de reuniones reales",
     "Si se requiere generar contenido o simulaciones de manera rápida y económica"
@@ -26,5 +24,23 @@
   "ids_alias": [
     "diseñar_prompts_efectivos_para_ia"
   ],
-  "etiqueta_arbol": "Diseña Prompts que Funcionen"
+  "etiqueta_arbol": "Diseña Prompts que Funcionen",
+  "fuentes_internas": [
+    "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-054",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "disenar_prompts_efectivos_para_ia -> prueba_hipotesis",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-02, lector y verificador de acuerdo)",
+        "motivo": "Disenar prompts para simulaciones con IA no lleva de forma natural a la prueba de hipotesis estadistica; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
+  ]
 }

@@ -17,7 +17,6 @@
   ],
   "nodos_siguientes": [
     "sistema_manejo_quejas",
-    "no_shop_extension_negotiation",
     "adquisicion_estrategica_resolver_crisis",
     "reuniones_diarias_eliminar_bloqueos"
   ],
@@ -25,5 +24,23 @@
     "Cuando un cliente representa la mayor parte de los ingresos y amenaza con cancelar",
     "Cuando cumplir los requerimientos explícitos no será suficiente para salvar la relación"
   ],
-  "etiqueta_arbol": "Sorprende con Valor Inesperado"
+  "etiqueta_arbol": "Sorprende con Valor Inesperado",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-038",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "descubrir_valor_inesperado_cliente -> no_shop_extension_negotiation",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-22-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Descubrir el exciting value de un cliente critico (gestion de expectativas) no prepara la negociacion de la extension del no-shop en la venta de la empresa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

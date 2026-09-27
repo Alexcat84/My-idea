@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P88E7EF",
+  "intento": 0,
+  "usd": 0.182552,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41453,
+  "tokens_out": 837,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P88E7EF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5217, 4757, 2658], \"cita\": \"observing (noticing, attending, heeding, tracking), reflecting (analysing, interpreting, diagnosing) ... a safety information system that collects, analyses and disseminates information from incidents and near-misses as well as from regular proactive checks on the system's vital signs\", \"datos_sin_respaldo\": [], \"razon\": \"El libro define la cultura de aprendizaje como observar y reflexionar (analizar, diagnosticar), dentro de un sistema de información que recoge y analiza incidentes y chequeos regulares. 'Momentos regulares' no fija una frecuencia concreta: el libro dice que depende del proceso. El paso concreta esto en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P88E7EF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5217,
+   4757,
+   2658
+  ],
+  "cita": "observing (noticing, attending, heeding, tracking), reflecting (analysing, interpreting, diagnosing) ... a safety information system that collects, analyses and disseminates information from incidents and near-misses as well as from regular proactive checks on the system's vital signs",
+  "datos_sin_respaldo": [],
+  "razon": "El libro define la cultura de aprendizaje como observar y reflexionar (analizar, diagnosticar), dentro de un sistema de información que recoge y analiza incidentes y chequeos regulares. 'Momentos regulares' no fija una frecuencia concreta: el libro dice que depende del proceso. El paso concreta esto en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

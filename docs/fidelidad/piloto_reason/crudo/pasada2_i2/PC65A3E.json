@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC65A3E",
+  "intento": 0,
+  "usd": 0.20184,
+  "turnos": 1,
+  "duracion_s": 8.3,
+  "pared_s": 9.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47510,
+  "tokens_out": 590,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC65A3E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4027, 4029, 4176], \"cita\": \"A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala como deficiencia que el inspector no tenía experiencia en procedimientos de permiso de trabajo y no inspeccionó sistemas críticos como el diluvio o las bombas contra incendio. También cita la falta de formación de los inspectores de la FAA como factor de accidentes. Capacitarlos concreta esa lección en la misma dirección, sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC65A3E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4027,
+   4029,
+   4176
+  ],
+  "cita": "A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala como deficiencia que el inspector no tenía experiencia en procedimientos de permiso de trabajo y no inspeccionó sistemas críticos como el diluvio o las bombas contra incendio. También cita la falta de formación de los inspectores de la FAA como factor de accidentes. Capacitarlos concreta esa lección en la misma dirección, sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

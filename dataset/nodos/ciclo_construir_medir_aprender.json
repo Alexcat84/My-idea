@@ -1,6 +1,6 @@
 {
   "node_id": "ciclo_construir_medir_aprender",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Ciclo Construir, Medir, Aprender",
   "fuente": "The Lean Startup - Eric Ries",
@@ -27,5 +27,23 @@
   "condiciones_activacion": [
     "Si ya tienes una idea que quieres poner a prueba y necesitas un proceso para validarla paso a paso"
   ],
-  "etiqueta_arbol": "Decide si Pivotar o Perseverar"
+  "etiqueta_arbol": "Decide si Pivotar o Perseverar",
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-017",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q020-002: El ciclo construir, medir, aprender sirve para poner a prueba una idea con clientes reales, como dice su propia condicion; es validacion, no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

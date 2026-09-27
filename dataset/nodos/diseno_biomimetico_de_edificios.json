@@ -1,6 +1,6 @@
 {
   "node_id": "diseno_biomimetico_de_edificios",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Diseño Biomimético de Edificios (Inspirado en la Naturaleza)",
   "fuente": "Cradle to Cradle - Michael Braungart",
@@ -26,5 +26,23 @@
   "ids_alias": [
     "diseño_biomimético_de_edificios"
   ],
-  "etiqueta_arbol": "Inspírate en la Naturaleza al Construir"
+  "etiqueta_arbol": "Inspírate en la Naturaleza al Construir",
+  "fuentes_internas": [
+    "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-108",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-007: El contenido es diseñar un edificio o espacio y su entregable es un brief de diseño arquitectonico, lo que corresponde a planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

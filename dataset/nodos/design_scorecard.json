@@ -18,9 +18,28 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Si usas o evalúas este tipo de instrumento de puntaje",
+    "Cuando estás diseñando un producto o proceso y necesitas llevar el pulso de su desempeño proyectado y de sus posibles fallas a medida que sumas elementos de diseño",
     "Cuando necesitas ver si tu diseño avanza hacia los objetivos de calidad que te propusiste",
     "Cuando necesitas datos concretos para decidir si tu diseño está listo"
   ],
-  "etiqueta_arbol": "Mide y Predice tu Diseño"
+  "etiqueta_arbol": "Mide y Predice tu Diseño",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-055",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si usas o evalúas este tipo de instrumento de puntaje",
+      "texto_nuevo": "Cuando estás diseñando un producto o proceso y necesitas llevar el pulso de su desempeño proyectado y de sus posibles fallas a medida que sumas elementos de diseño",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q087-007: La condicion 0 es circular; la fase ejecucion es discutible (proyecto de diseño Six Sigma) pero defendible. (lector y verificador de acuerdo) Motivo: Es circular y vaga: no dice en que situacion aplica, solo que se usa el instrumento."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

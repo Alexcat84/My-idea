@@ -1,6 +1,6 @@
 {
   "node_id": "cuestionar_supuestos_financieros",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Cuestionar los Supuestos Financieros de Terceros",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -23,5 +23,23 @@
     "Cuando la organización rechaza una inversión sostenible basándose en modelos financieros tradicionales.",
     "Si se necesita justificar una excepción a la tasa mínima de retorno (hurdle rate) habitual."
   ],
-  "etiqueta_arbol": "Cuestiona los Números de Otros"
+  "etiqueta_arbol": "Cuestiona los Números de Otros",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-078",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F22-029: Rebatir supuestos de modelos financieros para justificar una inversion y su tasa minima de retorno es trabajo de plan y recursos. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

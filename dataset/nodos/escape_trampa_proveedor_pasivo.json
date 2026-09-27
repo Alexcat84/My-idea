@@ -6,13 +6,13 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Cuando el area de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se convierte en un simple contador de datos, mientras tu castigas a quienes reportan incidentes, lo que hace que dejen de contarte lo que pasa. La solucion es que esa area tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numericas periodicas.",
   "pasos_accionables": [
-    "Asegurar personas y dinero propios para el area de seguridad, sin que dependan de los altibajos de la producción",
-    "Exigir que el area de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
+    "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
+    "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
     "Eliminar las metas semanales, mensuales o trimestrales de seguridad basadas en cifras",
     "Mantener personal con experiencia operativa real, evitando que un solo tipo de profesional domine el equipo",
     "Capacitar al personal de seguridad para investigar incidentes, gestionarlos y presentar informes"
   ],
-  "entregable_esperado": "Plan para reestructurar el area de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
+  "entregable_esperado": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
   "nodos_previos": [
     "diseno_departamento_seguridad_efectivo"
   ],
@@ -23,5 +23,51 @@
     "Cuando el area de seguridad solo recibe datos pero no puede actuar",
     "Cuando hay miedo a reportar por temor a represalias"
   ],
-  "etiqueta_arbol": "Actúa, no Solo Reportes"
+  "etiqueta_arbol": "Actúa, no Solo Reportes",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0195",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurar personas y dinero propios para el area de seguridad, sin que dependan de los altibajos de la producción",
+      "texto_nuevo": "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O017-028.paso0: área (Solo se añade la tilde que faltaba en área.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0196",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Exigir que el area de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
+      "texto_nuevo": "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O017-028.paso1: área (Solo se añade la tilde que faltaba en área.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0197",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Plan para reestructurar el area de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
+      "texto_nuevo": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O017-028.entregable: área (Solo se añade la tilde que faltaba en área.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

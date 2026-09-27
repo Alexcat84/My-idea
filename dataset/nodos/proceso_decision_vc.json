@@ -17,8 +17,7 @@
   "nodos_previos": [
     "encontrar_lead_vc",
     "carta_de_intencion_loi",
-    "jerarquia_firma_vc",
-    "no_shop_agreement"
+    "jerarquia_firma_vc"
   ],
   "nodos_siguientes": [
     "term_sheet_negociacion",
@@ -40,6 +39,24 @@
       "node_id": "proceso_diligencia_vc",
       "titulo": "Debida Diligencia del Inversor (Due Diligence)",
       "fuente": "Venture Deals - Brad Feld"
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-092",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "no_shop_agreement -> proceso_decision_vc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-06-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el proceso de decisión del VC (presentaciones, due diligence informal, identificar al socio que decide) ocurre antes del term sheet. La cláusula de exclusividad se firma con el term sheet, así que ese nodo la prepara y no la sigue."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

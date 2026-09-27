@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento Agrícola del USDA/FAS",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+  "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 24 meses mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
   "pasos_accionables": [
     "Determinar si el producto exportado es agrícola y elegible para programas USDA",
     "Seleccionar el programa adecuado según el plazo y tipo de transacción (GSM-102, SCGP o FGP)",
@@ -19,7 +19,42 @@
     "seguro_inversion_opic"
   ],
   "condiciones_activacion": [
-    "La empresa exporta productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado"
+    "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado"
   ],
-  "etiqueta_arbol": "Financia tus Exportaciones Agrícolas"
+  "etiqueta_arbol": "Financia tus Exportaciones Agrícolas",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p14",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_DESACTUALIZADO",
+      "texto_anterior": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+      "texto_nuevo": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 24 meses mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 7 U.S.C. 5622(a) (Agricultural Trade Act of 1978, sec. 202(a), GSM-102 Export Credit Guarantee Program), desarrollado en",
+        "fichero": "https://www.govinfo.gov/link/uscode/7/5622",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "The Commodity Credit Corporation may guarantee the repayment of credit made available to finance commercial export sales of agricultural commodities, including processed agricultural products and high-value agricultural products, from privately owned stocks on credit terms that do not exceed a 24-month period."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de hasta 3 años correspondía al GSM-102 anterior a las reformas: la Farm Bill de 2008 derogó el GSM-103 (hasta 10 años) y la Agricultural Act of 2014 redujo el tope legal del GSM-102 a 24 meses, tras el acuerdo con Brasil en la disputa del algodón ante la OMC. La cita se tomó del PDF oficia",
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "n1-condicion-084",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La empresa exporta productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+      "texto_nuevo": "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-028: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: los programas son del USDA de Estados Unidos y la condicion no dice que aplica si exportas desde alli."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ]
 }

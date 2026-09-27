@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Programa de Catorce Pasos para la Mejora de la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Descrito por Crosby como la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Aunque el detalle completo se desarrolla más adelante en el libro, se presenta aquí como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
+  "resumen_teorico": "Considerado la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Se presenta como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
   "pasos_accionables": [
     "Adaptar el programa de catorce pasos a la realidad y madurez de cada unidad de negocio.",
     "Iniciar con unidades piloto para generar casos de éxito antes de expandir a toda la corporación.",
     "Documentar resultados tempranos para usarlos como evidencia en seminarios internos.",
-    "Dar seguimiento sostenido durante varios años, ya que la adopción plena toma tiempo (4-5 años según Crosby)."
+    "Dar seguimiento sostenido durante varios años, ya que la adopción plena toma tiempo (se estima en 4-5 años)."
   ],
   "entregable_esperado": "Un plan piloto de implementación del programa de catorce pasos en al menos una unidad de negocio, con métricas de seguimiento.",
   "nodos_previos": [
@@ -24,5 +24,44 @@
     "Cuando ya existe compromiso directivo pero falta un mecanismo operativo estructurado de mejora.",
     "Cuando se requiere un programa replicable en múltiples unidades de una corporación."
   ],
-  "etiqueta_arbol": "Sigue los Catorce Pasos"
+  "etiqueta_arbol": "Sigue los Catorce Pasos",
+  "correcciones": [
+    {
+      "id": "atribucion-032",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Dar seguimiento sostenido durante varios años, ya que la adopción plena toma tiempo (4-5 años según Crosby).",
+      "texto_nuevo": "Dar seguimiento sostenido durante varios años, ya que la adopción plena toma tiempo (se estima en 4-5 años).",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "(4-5 años según Crosby)"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "indice": 3,
+      "auditoria": "Clasificacion U3-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "atribucion-033",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Descrito por Crosby como la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Aunque el detalle completo se desarrolla más adelante en el libro, se presenta aquí como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
+      "texto_nuevo": "Considerado la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Se presenta como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Descrito por Crosby como",
+          "Aunque el detalle completo se desarrolla más adelante en el libro"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: confirmador corrige."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

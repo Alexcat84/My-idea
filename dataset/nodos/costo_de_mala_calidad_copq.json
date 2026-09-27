@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa maduro de calidad puede bajar a menos de 2.5% de ventas. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
   "pasos_accionables": [
     "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad",
     "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
@@ -29,7 +29,6 @@
     "concepto_quality_is_free",
     "politica_formal_de_calidad",
     "critica_acceptable_quality_level",
-    "modelo_costo_optimo_calidad",
     "calidad_de_ejecucion_proceso_innovacion",
     "definicion_calidad_fitness_for_purpose",
     "definiciones_operacionales",
@@ -49,12 +48,10 @@
     "accion_correctiva",
     "programa_make_certain",
     "cero_defectos",
-    "quality_management_maturity_grid",
     "punto_equilibrio_calidad_inspeccion",
     "calidad_de_diseno_vs_produccion",
     "control_estadistico_de_procesos",
     "causas_comunes_vs_especiales",
-    "costo_de_calidad_2",
     "conciencia_calidad",
     "concepto_programa_catorce_pasos",
     "equipo_mejora_calidad_2",
@@ -62,7 +59,9 @@
     "auditoria_negocio",
     "impacto_calidad_ingresos_costos",
     "carryover_fallas_producto",
-    "medidas_productividad_no_mejoran"
+    "medidas_productividad_no_mejoran",
+    "costo_de_calidad_3",
+    "rejilla_madurez_gestion_calidad"
   ],
   "condiciones_activacion": [
     "Cuando sospechas que los fallos internos o externos están afectando tu rentabilidad",
@@ -188,5 +187,80 @@
       "titulo": "Costo Oculto de la Mala Calidad y el Retrabajo",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-10",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa maduro de calidad puede bajar a menos de 2.5% de ventas. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "texto_nuevo": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L1225, L25849",
+        "frase": "For service organizations the average is about 30 percent of operating expenses, varying from 25 to 40 percent depending on service complexity. / the COPQ was in the range of 15 to 20 percent for manufacturing organizations, with many achieving even lower levels as the result of systematic programs to reduce it"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R037-041 (CONTRARIO, lector y verificador de acuerdo): Cambia el 30% de promedio a maximo, en contradiccion con el rango del libro. / R037-041 (ANADIDO, lector y verificador de acuerdo): Cifra de 2.5% de ventas que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R037-041, R037-041"
+    },
+    {
+      "id": "t2-arista-089",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "modelo_costo_optimo_calidad -> costo_de_mala_calidad_copq",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-17-39): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon el lector B. El Modelo de Costo Optimo grafica curvas de costo de fallas y de evaluacion y prevencion, que son justo las categorias que define el COPQ. Por tanto el COPQ prepara el modelo y el modelo va DESPUES, como ya dice R01-17-03 con el mismo vecino. Esta arista pone al mismo nodo ANTES, asi que el orden esta invertido y contradice a la otra. La correccion de fidelidad no toco nada de esto: el fragmento de resumen antes y ahora es identico, por lo que el fallo viene de antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-143",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "costo_de_la_calidad_coq -> costo_de_calidad_3",
+      "texto_nuevo": "costo_de_mala_calidad_copq -> costo_de_calidad_3",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a costo_de_la_calidad_coq, deprecado; su superviviente es costo_de_mala_calidad_copq."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-144",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "costo_de_mala_calidad_copq -> quality_management_maturity_grid",
+      "texto_nuevo": "costo_de_mala_calidad_copq -> rejilla_madurez_gestion_calidad",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a quality_management_maturity_grid, deprecado; su superviviente es rejilla_madurez_gestion_calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-145",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "costo_de_mala_calidad_copq -> costo_de_calidad_2",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a costo_de_calidad_2, deprecado; su superviviente es costo_de_calidad_3."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

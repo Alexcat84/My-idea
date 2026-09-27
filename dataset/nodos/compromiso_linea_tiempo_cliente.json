@@ -10,7 +10,7 @@
     "Comunicar explícitamente el cronograma y las condiciones de decisión",
     "Solicitar un compromiso de respuesta sí/no al finalizar el plazo",
     "Documentar y dar seguimiento a la fecha comprometida",
-    "Descartar o re-clasificar a los prospectos que no confirman compromiso",
+    "Descartar o reclasificar a los prospectos que no confirman compromiso",
     "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto",
     "Documentar el acuerdo de cierre por escrito con el cliente"
   ],
@@ -23,8 +23,8 @@
     "obtencion_de_compromiso"
   ],
   "nodos_siguientes": [
-    "modelo_spin_preguntas",
-    "rendicion_de_cuentas_del_equipo"
+    "rendicion_de_cuentas_del_equipo",
+    "clasificacion_leads_abc"
   ],
   "condiciones_activacion": [
     "Si hay prospectos indefinidos que consumen tiempo sin decisión clara",
@@ -39,6 +39,51 @@
       "node_id": "tacticas_cierre_ventas",
       "titulo": "Tácticas de Cierre de Ventas",
       "fuente": "Traction - Gabriel Weinberg"
+    }
+  ],
+  "fuentes_internas": [
+    "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-014",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "compromiso_linea_tiempo_cliente -> modelo_spin_preguntas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-03-25): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el compromiso con linea de tiempo es una tecnica de cierre que va despues de la investigacion SPIN, no la prepara (el mismo vecino figura tambien como posterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-02",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "compromiso_linea_tiempo_cliente -> clasificacion_leads_abc",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-02, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Pedir al prospecto un plazo de compra claro lleva directamente a clasificar los leads por plazo de cierre y a repartir el tiempo de venta según esa clasificación."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-orto-0431",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Descartar o re-clasificar a los prospectos que no confirman compromiso",
+      "texto_nuevo": "Descartar o reclasificar a los prospectos que no confirman compromiso",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O036-021.paso4: re-clasificar (El prefijo 're-' va unido a la palabra ('reclasificar') y no lleva guion; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ]
 }

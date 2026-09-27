@@ -1,6 +1,6 @@
 {
   "node_id": "lean_six_sigma_roadmap",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Roadmap Lean Six Sigma (DMAIC con tareas Lean)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -23,5 +23,23 @@
     "Cuando se requiere un marco estructurado para combinar Lean y Six Sigma en un proyecto de mejora",
     "Cuando la organización busca sostenibilidad en las mejoras más allá de un evento puntual"
   ],
-  "etiqueta_arbol": "Sigue el Camino de Mejora Continua"
+  "etiqueta_arbol": "Sigue el Camino de Mejora Continua",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-116",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q060-031: Tiene razon el lector B: DMAIC con tareas Lean mide, mejora y controla procesos que ya operan (mapas de flujo de valor, kanban, tableros de control, auditorias sostenidas), que es mejorar lo que ya funciona, no disenar el modelo ni el plan del negocio. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

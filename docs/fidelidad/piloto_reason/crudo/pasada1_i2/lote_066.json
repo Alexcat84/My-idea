@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_066",
+  "intento": 0,
+  "usd": 0.17000400000000002,
+  "turnos": 1,
+  "duracion_s": 19.4,
+  "pared_s": 20.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32981,
+  "tokens_out": 1904,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC65A3E\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"inspectores\", \"procedimientos de permiso de trabajo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4025, 4027, 4039], \"razon\": \"El inspector no tenía experiencia en procedimientos de permiso de trabajo ni tenía la checklist. Capacitarlo va en la misma dirección, aunque Cullen además cuestiona el tipo de inspección.\"},\n  {\"id\": \"PF51157\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Net Promoter Score\", \"cada accidente\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [5834, 5892], \"razon\": \"El libro incluye el daño reputacional como intangible y dice que probablemente se refleja en el precio de la acción. El Net Promoter Score es una herramienta que el libro no menciona.\"},\n  {\"id\": \"P4C2C14\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1085, 1089, 1095, 1141, 1145, 1149, 866], \"razon\": \"El libro atribuye la causa a la desconfianza por falsas alarmas y avisa que las defensas añadidas pueden causar el próximo accidente. En el Trident ya había un piloto monitor.\"},\n  {\"id\": \"PFA9235\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4302, 4308], \"razon\": \"El Informe Robens pide más participación de los trabajadores y critica el modelo de la Factories Act por no involucrarlos. Hablar de 'diseño' concreta esa idea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC65A3E",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "inspectores",
+    "procedimientos de permiso de trabajo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4025,
+    4027,
+    4039
+   ],
+   "razon": "El inspector no tenía experiencia en procedimientos de permiso de trabajo ni tenía la checklist. Capacitarlo va en la misma dirección, aunque Cullen además cuestiona el tipo de inspección."
+  },
+  {
+   "id": "PF51157",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Net Promoter Score",
+    "cada accidente"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    5834,
+    5892
+   ],
+   "razon": "El libro incluye el daño reputacional como intangible y dice que probablemente se refleja en el precio de la acción. El Net Promoter Score es una herramienta que el libro no menciona."
+  },
+  {
+   "id": "P4C2C14",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1085,
+    1089,
+    1095,
+    1141,
+    1145,
+    1149,
+    866
+   ],
+   "razon": "El libro atribuye la causa a la desconfianza por falsas alarmas y avisa que las defensas añadidas pueden causar el próximo accidente. En el Trident ya había un piloto monitor."
+  },
+  {
+   "id": "PFA9235",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4302,
+    4308
+   ],
+   "razon": "El Informe Robens pide más participación de los trabajadores y critica el modelo de la Factories Act por no involucrarlos. Hablar de 'diseño' concreta esa idea."
+  }
+ ]
+}

@@ -18,8 +18,9 @@ Verificado en código, no en promesas:
   ciclo de caja) con recálculos gratis de por vida por idea.
 - Los documentos: plan, cada seguimiento, expediente completo y bitácora
   (lessons learned) en .md y PDF, gratis por ser tuyos.
-- Los mundos: 7 dominios complementarios (riesgos, calidad, HSEQ, seguridad
-  digital…) con preview diagnóstico GRATIS y plan de dominio pagado.
+- Los mundos: 9 dominios complementarios (riesgos, calidad, HSEQ, seguridad
+  digital, compras, entrega…) con preview diagnóstico GRATIS y plan de dominio
+  pagado.
 - La honestidad como feature: sin cifras inventadas, reembolso ledger-atado,
   precios en una sola fuente.
 
@@ -106,6 +107,50 @@ sobre el producto real que se venderá: la percepción de precio incluida.
 La allowlist SIGUE siendo la puerta de acceso (beta por invitación); lo que
 muere es el regalo automático al primer login. La cortesía PÚBLICA
 post-lanzamiento sigue siendo decisión pendiente, a tomar con telemetría.
+
+### Cuándo se cobra: solo lo entregado (decisión del fundador, 25 sep 2026)
+Se verifica el saldo al EMPEZAR y se cobra al FINAL, solo si se entregó lo
+prometido. **Un plan armado sin IA no se cobra**: cuando la redacción con IA
+no ocurre (hoy, el único caso es el tope de trabajo de la conversación), el
+plan se ensambla sin narrar, se entrega gratis y la pantalla lo dice con un
+aviso honesto: es una versión básica y no se cobró. El aviso sigue ahí al
+recargar. En código: `web/app/api/session/[id]/plan/route.ts` (el cobro solo
+corre si hubo texto del redactor) y `AVISO_VERSION_BASICA` en
+`web/lib/engine/planRedactor.ts`. Nace de la AUD-09 (hallazgo H02), donde ese
+plan se cobraba completo y el aviso nunca llegaba a la pantalla.
+
+**Regenerar el plan básico (25 sep 2026).** Es una SESIÓN NUEVA con su
+presupuesto completo, que parte del perfil ya capturado (sin repetir la
+entrevista): `POST /api/session/[id]/regenerar` la prepara y el plan sale por
+la ruta de siempre. Se cobra el precio normal SOLO si la IA entrega; si vuelve
+a fallar, otra vez gratis con el mismo aviso. El plan nuevo pasa a vigente y el
+básico queda archivado con sus tareas, visible en el historial (el mecanismo de
+reemplazo de planes de siempre: el último plan del espacio manda).
+
+**Un sello de pago solo existe si hubo pago (25 sep 2026).** El plan básico de
+un mundo NO escribe `plan_pagado_at`: se marca con su propio campo,
+`project_unlocks.plan_basico_at` (migración 039), y el mundo ofrece "Generar el
+plan completo", que es la regeneración de arriba. Tampoco sella la compra la
+carrera rara (plan entregado sin poder cobrar).
+
+**La reserva de créditos (decisión del fundador, 25 sep 2026).** Verificar al
+empezar ya no solo mira el saldo: lo APARTA. Al empezar la sesión (exploración,
+seguimiento o regeneración) se reserva el precio de su plan con la misma clave
+de su cobro (`plan:{sessionId}`); la entrega renueva esa reserva antes de gastar
+un token (y una compra de mundo reserva ahí), la marca cobrada al cobrar y la
+libera si no cobra: plan sin IA, carrera, fallo, o una sesión que termina sin
+plan. El disponible es el saldo menos lo apartado por otras sesiones en curso,
+así que con saldo para UNA entrega ya no se abren varias en paralelo (antes
+todas se entregaban y solo la primera se cobraba: la "carrera rara" duraba toda
+la generación). Una reserva vence a las 2 horas (`MINUTOS_RESERVA`): una sesión
+abandonada no aparta créditos para siempre. **La promesa visible no cambia:**
+mismos precios, se cobra al final y solo lo entregado; el único texto nuevo es
+el 402 cuando hay saldo apartado ("Tienes X créditos y Y ya están apartados para
+un plan que tienes en curso"). La reserva no mueve el saldo: el cobro sigue
+siendo el de siempre, atómico e idempotente. En código: migración 042
+(`credit_reservas`, `reservar_creditos`, `resolver_reserva`) y
+`reservarCreditos` / `resolverReserva` en `web/lib/creditos.ts`. Nace de la
+AUD-09 (hallazgo M25).
 
 ## 5. SENSIBILIDAD LATAM (para decidir después, no ahora)
 $14.99 USD es accesible-premium en MX/CO/CL, caro en CentAm/BO/VE. Opciones

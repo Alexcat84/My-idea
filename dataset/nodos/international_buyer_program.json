@@ -7,12 +7,12 @@
   "resumen_teorico": "El Programa Internacional de Compradores (IBP) del Departamento de Comercio de Estados Unidos apoya ferias comerciales nacionales destacadas con productos de alto potencial de exportacion, atrayendo compradores extranjeros para que asistan. Si participas como expositor, recibes reuniones con compradores previamente evaluados, promocion en el Export Interest Directory, acceso a contactos comerciales, asesoria de exportacion y el uso de un centro de negocios internacional en el mismo lugar del evento.",
   "pasos_accionables": [
     "Identifica una feria certificada bajo el programa IBP que sea relevante para tu sector",
-    "Inscribete como expositor en la feria que elijas",
+    "Inscríbete como expositor en la feria que elijas",
     "Aprovecha el Export Interest Directory para dar a conocer tu negocio a nivel internacional",
     "Usa el centro de negocios internacional del lugar para tus reuniones privadas",
-    "Pide asesoria de exportacion y ayuda para encontrar compradores a los expertos presentes en el evento"
+    "Pide asesoría de exportación y ayuda para encontrar compradores a los expertos presentes en el evento"
   ],
-  "entregable_esperado": "Tu participacion confirmada como expositor en una feria certificada IBP, con reuniones ya agendadas",
+  "entregable_esperado": "Tu participación confirmada como expositor en una feria certificada IBP, con reuniones ya agendadas",
   "nodos_previos": [
     "participacion_ferias_comerciales"
   ],
@@ -20,7 +20,67 @@
     "trade_fair_certification_program"
   ],
   "condiciones_activacion": [
-    "Si buscas darle alcance internacional a una feria domestica en Estados Unidos"
+    "Si expones o piensas exponer en una feria comercial en Estados Unidos y quieres reunirte alli con compradores extranjeros"
   ],
-  "etiqueta_arbol": "Atrae Compradores en Ferias"
+  "etiqueta_arbol": "Atrae Compradores en Ferias",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-112",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si buscas darle alcance internacional a una feria domestica en Estados Unidos",
+      "texto_nuevo": "Si expones o piensas exponer en una feria comercial en Estados Unidos y quieres reunirte alli con compradores extranjeros",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-028: Tenia razon el lector A: la condicion habla de darle alcance internacional a una feria, que es el papel del organizador, mientras que el nodo aplica al expositor que se inscribe en una feria IBP para reunirse con compradores extranjeros. El texto nuevo sigue anclado a Estados Unidos, como pide la clase C. (arbitro) Motivo: La condicion describe a quien organiza la feria y quiere darle alcance internacional, pero los pasos, el resumen y el entregable son para el expositor que se inscribe en una feria certificada IBP en Estados Unidos y busca compradores extranjeros."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0081",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Inscribete como expositor en la feria que elijas",
+      "texto_nuevo": "Inscríbete como expositor en la feria que elijas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-016.paso1: Inscríbete (Falta la tilde en 'Inscríbete', esdrújula.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0082",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide asesoria de exportacion y ayuda para encontrar compradores a los expertos presentes en el evento",
+      "texto_nuevo": "Pide asesoría de exportación y ayuda para encontrar compradores a los expertos presentes en el evento",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-016.paso4: asesoría, exportación (Faltan las tildes en 'asesoría' y 'exportación'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0083",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu participacion confirmada como expositor en una feria certificada IBP, con reuniones ya agendadas",
+      "texto_nuevo": "Tu participación confirmada como expositor en una feria certificada IBP, con reuniones ya agendadas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-016.entregable: participación (Falta la tilde en 'participación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

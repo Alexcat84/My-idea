@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P012736",
+  "intento": 0,
+  "usd": 0.183536,
+  "turnos": 1,
+  "duracion_s": 11.6,
+  "pared_s": 12.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41199,
+  "tokens_out": 937,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P012736\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1943, 1945, 2109, 2127, 2131, 2139, 3745], \"cita\": \"Although it may obscure the underlying cognitive mechanisms, this kind of information is both widely available and easy to interpret. [...] Such breakdowns of performance problems by activity can be very revealing, as will be shown below.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro valora clasificar fallos por sus consecuencias y hace él mismo ese análisis sobre 122 fallos de una aerolínea: halla omisiones, sujeciones incompletas y tapas sueltas o ausentes. MEDA ofrece análisis de tendencias. El 'no hace falta insistir' (L2161) se refiere al argumento del libro, no desaconseja analizar datos propios. El paso concreta en la misma dirección, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P012736",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1943,
+   1945,
+   2109,
+   2127,
+   2131,
+   2139,
+   3745
+  ],
+  "cita": "Although it may obscure the underlying cognitive mechanisms, this kind of information is both widely available and easy to interpret. [...] Such breakdowns of performance problems by activity can be very revealing, as will be shown below.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro valora clasificar fallos por sus consecuencias y hace él mismo ese análisis sobre 122 fallos de una aerolínea: halla omisiones, sujeciones incompletas y tapas sueltas o ausentes. MEDA ofrece análisis de tendencias. El 'no hace falta insistir' (L2161) se refiere al argumento del libro, no desaconseja analizar datos propios. El paso concreta en la misma dirección, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

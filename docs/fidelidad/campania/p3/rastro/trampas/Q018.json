@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Lectura Conjunta de Gráficos X-bar y R",
+  "resumen": "Los gráficos X-bar y R (o s) se colocan uno encima del otro para que la media y el rango de cada subgrupo queden en la misma vertical. Se observa si uno o ambos indican falta de control y se buscan patrones no aleatorios.",
+  "texto": "Interpretar primero el gráfico X-bar y usarlo como referencia para leer el gráfico R/s",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L18722",
+  "cita": "Usually, the R (or s) chart is interpreted first because the range or standard deviation is used in calculating limits for the X-bar chart.",
+  "dato": "",
+  "explicacion": "El libro dice que normalmente se interpreta primero el gráfico R (o s), porque el rango o la desviación estándar se usa para calcular los límites del X-bar. El paso invierte ese orden."
+ },
+ {
+  "titulo": "Histograma de Mediciones del Proceso",
+  "resumen": "El histograma muestra la forma, el centrado y la dispersión de las mediciones de un proceso. Se construye a partir de una distribución de frecuencia y su patrón de variación sugiere teorías de causa.",
+  "texto": "Construir el histograma con un mínimo de 15 mediciones para detectar pronto el patrón de variación",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L11864",
+  "cita": "As a general rule, at least 40 measurements are needed for the histogram to reveal the basic pattern of variation. Histograms based on too few measurements can lead to incorrect conclusions because the shape of the histogram may be incomplete without the observer realizing it.",
+  "dato": "",
+  "explicacion": "El libro da como umbral al menos 40 mediciones y advierte que los histogramas con pocas mediciones llevan a conclusiones erróneas. El paso baja el umbral a 15, justo lo que el libro señala como fuente de error (también en L19458: 'at least 40 data points')."
+ },
+ {
+  "titulo": "Priorización de Causas en el FMEA",
+  "resumen": "El FMEA combina frecuencia de ocurrencia, severidad y probabilidad de detección de cada modo de falla en un número de prioridad de riesgo (RPN). Las causas con RPN más alto se atacan primero y cada remedio se valida.",
+  "texto": "Diseñar acciones/remedios solo para las causas con RPN igual o superior a 100",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L18284",
+  "cita": "10. Design action/remedy for only those “vital few” causes with the highest risk factors. Reduce the level of failure to a rate that is acceptable.",
+  "dato": "Umbral de RPN igual o superior a 100",
+  "explicacion": "El libro manda actuar sobre las pocas causas vitales con los factores de riesgo más altos, pero no fija ningún umbral numérico de RPN. Grep de 'RPN of', 'RPN above', '100 or' y de RPN junto a 100 no devuelve nada; el umbral de 100 es inventado."
+ },
+ {
+  "titulo": "Retroalimentación Oportuna al Trabajador",
+  "resumen": "Para el autocontrol, la retroalimentación al trabajador debe leerse de un vistazo, tratar solo los pocos defectos importantes y controlables por él, llegar a tiempo y dar información suficiente para guiar la acción correctiva.",
+  "texto": "Revisar la retroalimentación con cada trabajador en una reunión de 15 minutos al inicio de cada turno",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L22736",
+  "cita": "• Provide prompt information about symptoms and causes. Timeliness is a basic test of good feedback; the closer the system is to “real time” signaling, the better.",
+  "dato": "Reunión de 15 minutos al inicio de cada turno",
+  "explicacion": "El libro pide retroalimentación oportuna, lo más cercana posible al tiempo real, pero no prescribe reuniones de 15 minutos ni una frecuencia por turno. Grep de '15 minutes', 'fifteen minutes', '15-minute', 'huddle', 'start of each shift', 'start of the shift' y 'beginning of the shift' no devuelve nada."
+ }
+]

@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P81DA9C",
+  "intento": 0,
+  "usd": 0.09146399999999999,
+  "turnos": 1,
+  "duracion_s": 6.7,
+  "pared_s": 7.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 20411,
+  "tokens_out": 491,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P81DA9C\", \"veredicto\": \"FIEL\", \"lineas\": [2259, 2263, 2267, 2271, 2275, 2279, 2281], \"cita\": \"These five characteristics are universal criteria for a good reminder. They are applicable in virtually all situations.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro enumera exactamente cinco características de un buen recordatorio: conspicuous, contiguous, context, content y check. Las llama criterios universales aplicables en casi todas las situaciones. El dato '5 criterios universales' está respaldado literalmente. La condición previa de identificar los pasos propensos a omisión figura en otro paso del nodo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P81DA9C",
+  "veredicto": "FIEL",
+  "lineas": [
+   2259,
+   2263,
+   2267,
+   2271,
+   2275,
+   2279,
+   2281
+  ],
+  "cita": "These five characteristics are universal criteria for a good reminder. They are applicable in virtually all situations.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro enumera exactamente cinco características de un buen recordatorio: conspicuous, contiguous, context, content y check. Las llama criterios universales aplicables en casi todas las situaciones. El dato '5 criterios universales' está respaldado literalmente. La condición previa de identificar los pasos propensos a omisión figura en otro paso del nodo.",
+  "paso_fiel": ""
+ }
+}

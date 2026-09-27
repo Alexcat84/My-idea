@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P934AB5",
+  "intento": 0,
+  "usd": 0.22663999999999998,
+  "turnos": 1,
+  "duracion_s": 11.2,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52555,
+  "tokens_out": 821,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P934AB5\", \"veredicto\": \"FIEL\", \"lineas\": [3829, 2977, 4765], \"cita\": \"Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture, on the one hand, and by improving the credibility, applicability, availability and accuracy of the procedures, on the other.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda literalmente abordar las violaciones cambiando normas, actitudes y cultura. Considera la sanción de eficacia limitada, pero la admite en casos graves (L2977, L4765), lo que concuerda con 'no solo mediante sanción'. Omitir la mejora de procedimientos deja el paso incompleto, no contrario. L4724 habla de valores, no de normas ni prácticas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P934AB5",
+  "veredicto": "FIEL",
+  "lineas": [
+   3829,
+   2977,
+   4765
+  ],
+  "cita": "Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture, on the one hand, and by improving the credibility, applicability, availability and accuracy of the procedures, on the other.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda literalmente abordar las violaciones cambiando normas, actitudes y cultura. Considera la sanción de eficacia limitada, pero la admite en casos graves (L2977, L4765), lo que concuerda con 'no solo mediante sanción'. Omitir la mejora de procedimientos deja el paso incompleto, no contrario. L4724 habla de valores, no de normas ni prácticas.",
+  "paso_fiel": ""
+ }
+}

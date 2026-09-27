@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5B8D01",
+  "intento": 0,
+  "usd": 0.187808,
+  "turnos": 1,
+  "duracion_s": 12.2,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42302,
+  "tokens_out": 930,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P5B8D01\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2905, 2907, 2924], \"cita\": \"human error is one of a long-established list of ‘causes’ used by the press and accident investigators. But human error is a consequence not a cause. […] Psychologists call it the fundamental attribution error. […] We must recognize the following basic facts about human nature and error.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro nombra a los investigadores de accidentes entre quienes tratan el error humano como causa. Explica que esto se debe al error fundamental de atribución y pide reconocer ese sesgo para salir del ciclo de culpa. No habla de formación, pero entrenarlos concreta esa idea en la misma dirección. No es la formación correctiva de operarios que el libro desaconseja.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P5B8D01",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2905,
+   2907,
+   2924
+  ],
+  "cita": "human error is one of a long-established list of ‘causes’ used by the press and accident investigators. But human error is a consequence not a cause. […] Psychologists call it the fundamental attribution error. […] We must recognize the following basic facts about human nature and error.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro nombra a los investigadores de accidentes entre quienes tratan el error humano como causa. Explica que esto se debe al error fundamental de atribución y pide reconocer ese sesgo para salir del ciclo de culpa. No habla de formación, pero entrenarlos concreta esa idea en la misma dirección. No es la formación correctiva de operarios que el libro desaconseja.",
+  "paso_fiel": ""
+ }
+}

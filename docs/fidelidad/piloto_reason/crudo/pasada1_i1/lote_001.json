@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_001",
+  "intento": 0,
+  "usd": 0.160808,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33057,
+  "tokens_out": 1429,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P73A756\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4060, 4182, 4416, 4418, 4431, 4433, 4454], \"razon\": \"El libro presenta la desregulación críticamente: más carga, menos presupuesto, vigilancia fallida. El paso trata la reducción de carga como meta legítima que hay que equilibrar, cosa que el libro no respalda.\"},\n  {\"id\": \"P95E305\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4765, 4906, 4989, 4987, 4820], \"razon\": \"El libro pide principios acordados, línea clara y criterios conocidos por todos. Comunicar las políticas va en esa dirección, aunque la confianza también se gana con la práctica.\"},\n  {\"id\": \"PAE1A89\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5204, 4769, 5208], \"razon\": \"El libro dice: seleccionar y formar supervisores con experiencia extensa del trabajo y conocimiento ('sitewise') de peligros obvios y menos obvios.\"},\n  {\"id\": \"P253159\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5503, 5641, 5907, 3829, 5055, 2922], \"razon\": \"El libro admite el modelo personal para riesgos de lesión individual y para violaciones (normas, actitudes). Limitar las medidas personales a la mala conducta generaliza en exceso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P73A756",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4060,
+    4182,
+    4416,
+    4418,
+    4431,
+    4433,
+    4454
+   ],
+   "razon": "El libro presenta la desregulación críticamente: más carga, menos presupuesto, vigilancia fallida. El paso trata la reducción de carga como meta legítima que hay que equilibrar, cosa que el libro no respalda."
+  },
+  {
+   "id": "P95E305",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4765,
+    4906,
+    4989,
+    4987,
+    4820
+   ],
+   "razon": "El libro pide principios acordados, línea clara y criterios conocidos por todos. Comunicar las políticas va en esa dirección, aunque la confianza también se gana con la práctica."
+  },
+  {
+   "id": "PAE1A89",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5204,
+    4769,
+    5208
+   ],
+   "razon": "El libro dice: seleccionar y formar supervisores con experiencia extensa del trabajo y conocimiento ('sitewise') de peligros obvios y menos obvios."
+  },
+  {
+   "id": "P253159",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5503,
+    5641,
+    5907,
+    3829,
+    5055,
+    2922
+   ],
+   "razon": "El libro admite el modelo personal para riesgos de lesión individual y para violaciones (normas, actitudes). Limitar las medidas personales a la mala conducta generaliza en exceso."
+  }
+ ]
+}

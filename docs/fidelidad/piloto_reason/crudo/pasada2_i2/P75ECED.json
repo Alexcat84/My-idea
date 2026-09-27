@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P75ECED",
+  "intento": 0,
+  "usd": 0.250176,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58514,
+  "tokens_out": 806,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P75ECED\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5208], \"cita\": \"It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. More important, when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance.\", \"datos_sin_respaldo\": [], \"razon\": \"Weick, citado por Reason, afirma que la cultura mantiene coordinadas las operaciones descentralizadas y logra el cumplimiento sin vigilancia. Evaluar si esa coherencia se da concreta esa idea en la misma dirección. El paso no ordena descentralizar siempre ni prescindir de los supervisores de primera línea, así que no invierte las condiciones del libro. Tampoco añade cifras, plazos ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P75ECED",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5208
+  ],
+  "cita": "It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. More important, when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance.",
+  "datos_sin_respaldo": [],
+  "razon": "Weick, citado por Reason, afirma que la cultura mantiene coordinadas las operaciones descentralizadas y logra el cumplimiento sin vigilancia. Evaluar si esa coherencia se da concreta esa idea en la misma dirección. El paso no ordena descentralizar siempre ni prescindir de los supervisores de primera línea, así que no invierte las condiciones del libro. Tampoco añade cifras, plazos ni responsables.",
+  "paso_fiel": ""
+ }
+}

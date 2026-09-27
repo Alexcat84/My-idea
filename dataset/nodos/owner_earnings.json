@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ganancias del propietario (Owner Earnings)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Es una métrica creada por Warren Buffett que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+  "resumen_teorico": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
   "pasos_accionables": [
     "Calcula el flujo de caja operativo de tu negocio",
     "Resta los gastos de capital que necesitas para mantener el negocio, no para crecerlo",
@@ -20,7 +20,42 @@
     "flujo_de_caja_libre"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas saber cuánto vale realmente tu negocio, para invertir en él o para venderlo"
+    "Cuando necesitas saber cuánto efectivo te deja realmente tu negocio y cuánto podrías retirar sin dañarlo"
   ],
-  "etiqueta_arbol": "Calcula tus Ganancias Reales"
+  "etiqueta_arbol": "Calcula tus Ganancias Reales",
+  "correcciones": [
+    {
+      "id": "atribucion-129",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Es una métrica creada por Warren Buffett que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+      "texto_nuevo": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "una métrica creada por Warren Buffett"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-025 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-condicion-131",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando necesitas saber cuánto vale realmente tu negocio, para invertir en él o para venderlo",
+      "texto_nuevo": "Cuando necesitas saber cuánto efectivo te deja realmente tu negocio y cuánto podrías retirar sin dañarlo",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q020-016: Tenia razon el lector A: ni el resumen, ni los pasos, ni el entregable hablan de valorar, invertir o vender; hablan del efectivo retirable y de su evolucion entre periodos, asi que la condicion no describe cuando aplica. El dominio core y la fase ejecucion estan bien, como dicen los dos lectores. (arbitro) Motivo: La condicion promete saber cuanto vale el negocio para invertir en el o venderlo, pero el contenido no valora el negocio: mide el efectivo que deja una vez restadas las inversiones de mantenimiento y cuanto se puede retirar sin dañarlo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ],
+  "fuentes_internas": [
+    "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ]
 }

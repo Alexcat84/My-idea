@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P161466",
+  "intento": 0,
+  "usd": 0.169744,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36571,
+  "tokens_out": 1173,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P161466\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5639, 2596, 2724, 5907], \"cita\": \"Technical systems of whatever kind inevitably share a large number of common processes: forecasting, planning, scheduling, budgeting, specifying new equipment (and sometimes designing and building it), operating, maintaining, managing, communicating and the like. And it is within these processes that the seeds of future disasters are sown\", \"datos_sin_respaldo\": [], \"razon\": \"El libro sitúa en diseño, especificación de equipos y formación el origen de las condiciones latentes. Los considera área prioritaria (L2724), pero pide no ignorar a individuos y actuar en todos los niveles a la vez (L5907). Pedir que se inspeccionen 'tanto como' la primera línea va en la misma dirección: no invierte la prioridad, solo difiere en el grado.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P161466",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5639,
+   2596,
+   2724,
+   5907
+  ],
+  "cita": "Technical systems of whatever kind inevitably share a large number of common processes: forecasting, planning, scheduling, budgeting, specifying new equipment (and sometimes designing and building it), operating, maintaining, managing, communicating and the like. And it is within these processes that the seeds of future disasters are sown",
+  "datos_sin_respaldo": [],
+  "razon": "El libro sitúa en diseño, especificación de equipos y formación el origen de las condiciones latentes. Los considera área prioritaria (L2724), pero pide no ignorar a individuos y actuar en todos los niveles a la vez (L5907). Pedir que se inspeccionen 'tanto como' la primera línea va en la misma dirección: no invierte la prioridad, solo difiere en el grado.",
+  "paso_fiel": ""
+ }
+}

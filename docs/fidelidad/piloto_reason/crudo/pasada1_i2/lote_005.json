@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_005",
+  "intento": 0,
+  "usd": 0.17406,
+  "turnos": 1,
+  "duracion_s": 22.4,
+  "pared_s": 23.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33405,
+  "tokens_out": 2022,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF3BB6E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [393, 413, 443, 447], \"razon\": \"El libro señala como condición latente no tener forma de vigilar y ajustar la plantilla a la carga, sobre todo en turnos nocturnos. Auditar concreta eso en la misma dirección.\"},\n  {\"id\": \"PF025FE\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Formarla (supervisora de primera línea, implícito)\"], \"clase\": \"FIEL\", \"lineas\": [1450, 1456, 4769, 5204, 5208, 5174], \"razon\": \"L5204 lo respalda casi literalmente. Pero el libro limita la autonomía a ciertas circunstancias y exige antes una cultura jerárquica disciplinada; el paso omite esas condiciones.\"},\n  {\"id\": \"PEC43EE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2577, 2579, 5692], \"razon\": \"L2579 distingue buscar ser modelo de seguridad frente a ir un paso por delante del regulador. El paso pide evaluar justo esa motivación.\"},\n  {\"id\": \"P2964AE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2823, 2833, 2837, 2948, 3813, 3825, 5061, 1129], \"razon\": \"El libro define la reducción de errores y recomienda actuar sobre tareas, situaciones e información. El entrenamiento aparece entre medidas aceptadas. Nada contradice el paso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF3BB6E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    393,
+    413,
+    443,
+    447
+   ],
+   "razon": "El libro señala como condición latente no tener forma de vigilar y ajustar la plantilla a la carga, sobre todo en turnos nocturnos. Auditar concreta eso en la misma dirección."
+  },
+  {
+   "id": "PF025FE",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Formarla (supervisora de primera línea, implícito)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    1450,
+    1456,
+    4769,
+    5204,
+    5208,
+    5174
+   ],
+   "razon": "L5204 lo respalda casi literalmente. Pero el libro limita la autonomía a ciertas circunstancias y exige antes una cultura jerárquica disciplinada; el paso omite esas condiciones."
+  },
+  {
+   "id": "PEC43EE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2577,
+    2579,
+    5692
+   ],
+   "razon": "L2579 distingue buscar ser modelo de seguridad frente a ir un paso por delante del regulador. El paso pide evaluar justo esa motivación."
+  },
+  {
+   "id": "P2964AE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2823,
+    2833,
+    2837,
+    2948,
+    3813,
+    3825,
+    5061,
+    1129
+   ],
+   "razon": "El libro define la reducción de errores y recomienda actuar sobre tareas, situaciones e información. El entrenamiento aparece entre medidas aceptadas. Nada contradice el paso."
+  }
+ ]
+}

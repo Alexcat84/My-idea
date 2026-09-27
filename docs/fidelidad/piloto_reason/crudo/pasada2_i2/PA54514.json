@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA54514",
+  "intento": 0,
+  "usd": 0.154724,
+  "turnos": 1,
+  "duracion_s": 6.3,
+  "pared_s": 7.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36601,
+  "tokens_out": 416,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA54514\", \"veredicto\": \"FIEL\", \"lineas\": [582, 2767], \"cita\": \"We cannot hope to solve all of our problems in one go. Resources are always limited. But we can target and then address the latent conditions most in need of urgent attention within a given period.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso reproduce casi literalmente L582: los recursos son limitados, no se puede resolver todo de una vez y hay que atender en cada período las condiciones latentes más urgentes. 'En cada período' equivale a 'within a given period'; no es un dato nuevo. L2767 confirma que hay que desplegar los recursos limitados en los problemas más urgentes.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA54514",
+  "veredicto": "FIEL",
+  "lineas": [
+   582,
+   2767
+  ],
+  "cita": "We cannot hope to solve all of our problems in one go. Resources are always limited. But we can target and then address the latent conditions most in need of urgent attention within a given period.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso reproduce casi literalmente L582: los recursos son limitados, no se puede resolver todo de una vez y hay que atender en cada período las condiciones latentes más urgentes. 'En cada período' equivale a 'within a given period'; no es un dato nuevo. L2767 confirma que hay que desplegar los recursos limitados en los problemas más urgentes.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "d27-arista-01",
+  "operacion": "TEJER",
+  "desde": "colaboracion_cadena_suministro",
+  "hacia": "equipo_conjunto_de_mejora_con_proveedores",
+  "motivo": "Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico.",
+  "evidencia": "Pasada C del saneamiento (C-A, lectores de acuerdo)",
+  "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el puente a calidad se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "d27-arista-02",
+  "operacion": "QUITAR",
+  "desde": "colaboracion_transporte_ctm",
+  "hacia": "equipo_conjunto_de_mejora_con_proveedores",
+  "motivo": "El puente a calidad deja de salir de colaboracion_transporte_ctm, que pasa a entrega; lo reemplaza colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores.",
+  "evidencia": "Decision del fundador del 27 sep 2026, punto 1",
+  "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista de entrega a calidad que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "d27-arista-03",
+  "operacion": "TEJER",
+  "desde": "coordinacion_colaboracion_cadena_suministro",
+  "hacia": "collaboration_enablers",
+  "motivo": "Tras entender que la coordinacion entre empresas es una ventaja competitiva frente al control unilateral, lo natural es preguntar que habilitadores humanos y tecnologicos hacen que esa colaboracion funcione.",
+  "evidencia": "Pasada C del saneamiento (C-B, lectores de acuerdo)",
+  "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el nodo del nucleo que solo entraba por colaboracion_transporte_ctm recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "d27-arista-04",
+  "operacion": "QUITAR",
+  "desde": "definicion_alineacion_cadena_suministro",
+  "hacia": "colaboracion_transporte_ctm",
+  "motivo": "La definicion general de cadena de suministro y su alineacion con la estrategia es demasiado amplia para que consolidar embarques con otras empresas sea su continuacion natural.",
+  "evidencia": "Pasada C del saneamiento (C-C2, lectores de acuerdo)",
+  "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "d27-arista-05",
+  "operacion": "QUITAR",
+  "desde": "outsourcing_cadena_suministro",
+  "hacia": "colaboracion_transporte_ctm",
+  "motivo": "El outsourcing trata de ceder operaciones no centrales a especialistas, mientras que la gestion colaborativa de transporte une a empresas pares para consolidar carga, asi que no es su siguiente paso natural.",
+  "evidencia": "Pasada C del saneamiento (C-C3, lectores de acuerdo)",
+  "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "d27-arista-06",
+  "operacion": "QUITAR",
+  "desde": "gestion_de_conflictos_cofundadores",
+  "hacia": "enfoque_situacional_vs_personal",
+  "motivo": "Los dos lectores de la pasada P juzgaron debil este puente: los conflictos entre cofundadores no llevan al enfoque situacional de la seguridad.",
+  "evidencia": "Pasada P del saneamiento (P2-08)",
+  "decision": "Decisiones del fundador del 27 sep 2026, punto 2: se rechaza el puente.",
+  "fecha": "2026-09-27"
+ }
+]

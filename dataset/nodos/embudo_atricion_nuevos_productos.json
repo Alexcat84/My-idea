@@ -1,6 +1,6 @@
 {
   "node_id": "embudo_atricion_nuevos_productos",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "El Embudo de Atrición de Nuevos Productos (Odds 7 a 1)",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -25,5 +25,23 @@
     "Cuando se necesita justificar la cantidad de ideas necesarias para lograr un éxito comercial",
     "Si la empresa no mide sus tasas de fracaso"
   ],
-  "etiqueta_arbol": "Cuenta tus Ideas Filtradas"
+  "etiqueta_arbol": "Cuenta tus Ideas Filtradas",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-122",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F08-027: Mide las tasas de atricion reales del pipeline de innovacion de la empresa frente al benchmark, que es controlar un proceso existente. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

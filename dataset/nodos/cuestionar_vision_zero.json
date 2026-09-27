@@ -21,7 +21,29 @@
   ],
   "condiciones_activacion": [
     "Si adoptaste una política formal de cero accidentes o cero daños",
-    "Si necesitas justificar una inversión en seguridad antes de decidir"
+    "Si vas a decidir en qué invertir en seguridad y solo miras tu cifra de accidentes"
   ],
-  "etiqueta_arbol": "Cuestiona la Meta de Cero"
+  "etiqueta_arbol": "Cuestiona la Meta de Cero",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c11-1",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Si necesitas justificar una inversión en seguridad antes de decidir",
+      "texto_nuevo": "Si vas a decidir en qué invertir en seguridad y solo miras tu cifra de accidentes",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L3578",
+        "frase": "If we want to make investments in safety, we normally specify the kinds of things that we want engineers, experts, managers, directors, supervisors and workers to do to organize work, communicate about it, write standards for it. We focus on what they need to manipulate, or on the manipulated or independent variable, in other words."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro no trata cómo justificar un gasto en seguridad. Lo único que dice sobre invertir en seguridad (L3578) es que la inversión se define por lo que la gente hace, es decir, por las variables que controlas, y no por el resultado. Eso mismo dicen el resumen, los pasos 0 y 3 y el entregable. La condición nueva conserva la decisión de invertir como disparador, pero ahora activa el nodo cuando esa decisión se guía solo por la cifra de accidentes, que es el error que el nodo corrige (L3565: \"Zero vision is defined by its dependent variable: the outcome\").",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C11 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ]
 }

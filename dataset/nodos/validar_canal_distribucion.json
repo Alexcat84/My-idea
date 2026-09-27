@@ -30,7 +30,7 @@
   "condiciones_activacion": [
     "Si el modelo de negocio depende de canales de distribución indirectos como retail, mayoristas o representantes",
     "Cuando ya cuentas con evidencia de demanda real de clientes finales",
-    "No aplica si aún no tienes ventas directas previas a clientes finales: primero valida esa demanda antes de buscar el canal indirecto"
+    "Cuando necesitas conseguir órdenes iniciales o compromisos firmes de distribuidores o revendedores para validar tu estrategia de canal"
   ],
   "etiqueta_arbol": "Valida tus Socios de Canal",
   "ids_alias": [
@@ -41,6 +41,25 @@
       "node_id": "test_sell_channel_partners",
       "titulo": "Probar Venta a Través de Canales (Test Sell Channel Partners)",
       "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-190",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No aplica si aún no tienes ventas directas previas a clientes finales: primero valida esa demanda antes de buscar el canal indirecto",
+      "texto_nuevo": "Cuando necesitas conseguir órdenes iniciales o compromisos firmes de distribuidores o revendedores para validar tu estrategia de canal",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q014-019: Tenia razon el lector A: la condicion 2 dice cuando no aplica en lugar de cuando aplica y endurece el requisito a ventas directas previas, que el contenido no exige. (arbitro) Motivo: Es una exclusion, no una situacion en la que el nodo aplica, y exige ventas directas previas cuando el resumen y el paso 2 solo piden evidencia de demanda de clientes finales."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
     }
   ]
 }

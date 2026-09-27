@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Entrenamiento en Función del Control Estadístico",
+  "resumen": "La carta de control indica cuándo el trabajo de una persona ha llegado al estado de control estadístico. Ese dato sirve para decidir si más entrenamiento todavía ayuda o si ya no rinde, y para dirigir los recursos de capacitación hacia donde sí producen mejora.",
+  "texto": "Si el trabajador ya alcanzó control estadístico en su tarea, reforzar su entrenamiento en esa misma tarea para seguir reduciendo su variación",
+  "tipo": "CONTRARIO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L6054",
+  "cita": "He has completed his learning of that particular job. It is not economical to try to provide further training of the same kind.",
+  "dato": "",
+  "explicacion": "El libro dice lo contrario: cuando el trabajo alcanza control estadístico, la persona ya completó su aprendizaje de esa tarea y no es económico darle más entrenamiento del mismo tipo; solo ayuda si aún no está en control (L6058) o si aprende otra tarea. El paso invierte la condición."
+ },
+ {
+  "titulo": "Inspección de Lotes Entrantes en Estado de Caos",
+  "resumen": "Cuando la calidad de los lotes que llegan oscila de forma amplia e impredecible alrededor del punto de equilibrio k1/k2, se está en un estado de caos. Mientras se trabaja para salir de él, hay que decidir qué hacer con los lotes que siguen llegando sin elevar el costo total.",
+  "texto": "Tomar una muestra de cada lote entrante y, según una regla de aceptación, decidir si el resto pasa directo a producción o se criba al 100%",
+  "tipo": "CONTRARIO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L9370",
+  "cita": "Samples and any rule for use of samples will place some lots on the wrong side of the break-even point, the unfortunate result of which is to maximize the total cost for a lot misplaced.",
+  "dato": "",
+  "explicacion": "Deming describe justamente esta tentación (probar muestras y decidir por una regla si se criba el resto) y advierte que cualquier regla basada en muestras coloca lotes del lado equivocado del punto de equilibrio y maximiza el costo total. Como alternativa propone la inspección al 100% o las reglas de Joyce Orsini (L9372), no el muestreo por lote."
+ },
+ {
+  "titulo": "Equipos conjuntos cliente-proveedor para diseño de componentes",
+  "resumen": "La calidad de las partes se construye antes de que salgan de la puerta del proveedor. Deming recomienda formar equipos con el proveedor elegido, ingeniero de diseño, ingeniero de proceso, manufactura y ventas desde etapas tempranas, con tiempo suficiente para hacer bien el trabajo, en lugar de que ingeniería diseñe y compras solo contrate.",
+  "texto": "Limitar cada equipo conjunto a un máximo de seis integrantes para agilizar las decisiones de diseño",
+  "tipo": "ANADIDO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L936",
+  "cita": "Teams composed of experts from the supplier chosen for this material (part or component); plus your own design engineer, process engineer, manufacturing, sales, or any other knowledge that is needed",
+  "dato": "Tope de seis integrantes por equipo conjunto",
+  "explicacion": "El libro dice quién compone el equipo y deja abierta la lista (\"or any other knowledge that is needed\"), pero no fija ningún tamaño máximo. Grep en todo el texto: no hay \"six members\", \"maximum of six\" ni \"at most six\"; las únicas \"six people\" (L2379, L2403) son del experimento de las cuentas rojas."
+ },
+ {
+  "titulo": "Estructura de Reporte Dual para Especialistas Estadísticos",
+  "resumen": "Los estadísticos de línea trabajan dentro de las divisiones y responden a dos autoridades: al jefe de la división por el trabajo diario y al líder de metodología estadística por la calidad de su trabajo estadístico y su formación continua. Si faltan estadísticos, el líder decide cómo repartir las actividades.",
+  "texto": "Asignar a cada estadístico de línea un máximo de tres divisiones, para que no se diluya su trabajo",
+  "tipo": "ANADIDO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L10545",
+  "cita": "It may be necessary, because of a shortage of statistical people, but subject to decision of the statistical leader, to place two or more activities under one statistician.",
+  "dato": "Tope de tres divisiones por estadístico de línea",
+  "explicacion": "El libro solo dice que, si faltan estadísticos, se pueden poner dos o más actividades bajo uno solo, y que esa decisión es del líder estadístico. No fija ningún tope numérico. Grep: no aparecen \"three activities\", \"three divisions\" ni \"maximum of\" en este contexto (el único \"maximum of\" es de 54 emergencias, L8665)."
+ }
+]

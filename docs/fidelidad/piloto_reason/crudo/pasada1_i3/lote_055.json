@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_055",
+  "intento": 0,
+  "usd": 0.16189599999999998,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 18.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32914,
+  "tokens_out": 1512,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8551CB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [271, 273, 5742, 5748], \"razon\": \"El libro dice que los factores sociales y economicos quedan fuera del alcance de los gestores y que interesa lo cambiable y controlable. El paso va en esa direccion.\"},\n  {\"id\": \"P3B92CF\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"LTIF\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5688, 5690, 5692, 2487], \"razon\": \"Coincide con el libro, pero este limita la critica a LTIF bajos; un LTIF alto si indica un sistema enfermo. Hay que revisar si el paso generaliza esa condicion.\"},\n  {\"id\": \"PD9CE2F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784, 293], \"razon\": \"Tripod-Beta empieza por el resultado final, una perdida o dano a un target, y trabaja hacia atras.\"},\n  {\"id\": \"PAD8E33\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5043, 1539, 5055], \"razon\": \"Para el libro, las preguntas clave del arbol son de intencion: si accion y consecuencias fueron intencionadas, se trata de conducta criminal o sabotaje.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8551CB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    271,
+    273,
+    5742,
+    5748
+   ],
+   "razon": "El libro dice que los factores sociales y economicos quedan fuera del alcance de los gestores y que interesa lo cambiable y controlable. El paso va en esa direccion."
+  },
+  {
+   "id": "P3B92CF",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "LTIF"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5688,
+    5690,
+    5692,
+    2487
+   ],
+   "razon": "Coincide con el libro, pero este limita la critica a LTIF bajos; un LTIF alto si indica un sistema enfermo. Hay que revisar si el paso generaliza esa condicion."
+  },
+  {
+   "id": "PD9CE2F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "Tripod-Beta empieza por el resultado final, una perdida o dano a un target, y trabaja hacia atras."
+  },
+  {
+   "id": "PAD8E33",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5043,
+    1539,
+    5055
+   ],
+   "razon": "Para el libro, las preguntas clave del arbol son de intencion: si accion y consecuencias fueron intencionadas, se trata de conducta criminal o sabotaje."
+  }
+ ]
+}

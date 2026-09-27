@@ -227,3 +227,38 @@ describe("interpretarMultiSalto: presupuesto excedido se propaga como resultado=
     expect(cliente.messages.create).not.toHaveBeenCalled();
   });
 });
+
+// i18n F5, remedio de F1: en una idea escrita en otro idioma, la brújula busca
+// con la respuesta traducida al español (el índice está en español).
+describe("interpretarMultiSalto: la brújula busca en español (remedio de F1)", () => {
+  beforeEach(() => {
+    buscarAfinesFalso.mockReset();
+    buscarAfinesFalso.mockResolvedValue([]);
+  });
+
+  it("idea en coreano: primero se traduce la respuesta y la brújula recibe el español", async () => {
+    const traduccion = {
+      content: [{ type: "text", text: "me preocupa hablar con clientes" }],
+      usage: { input_tokens: 10, output_tokens: 5, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 },
+    };
+    const { cliente } = clienteFalso([traduccion, new Error("corta aquí")]);
+    await interpretarMultiSalto({
+      client: cliente as never, actualId, graph, visitados: new Set([actualId]),
+      perfilSesion: "p", textoOriginal: "t", preguntaHecha: "?", respuestaUsuario: "고객과 이야기하는 게 걱정돼요",
+      repreguntasDisponibles: true, preguntasCache, ultimasPreguntas: [], historialMensajes: null, acumulado: usoVacio(),
+      idiomaSalida: "ko",
+    });
+    expect(buscarAfinesFalso.mock.calls[0][0]).toBe("me preocupa hablar con clientes");
+  });
+
+  it("idea en español: la brújula recibe la respuesta tal cual y no hay llamada extra", async () => {
+    const { cliente } = clienteFalso([new Error("corta aquí")]);
+    await interpretarMultiSalto({
+      client: cliente as never, actualId, graph, visitados: new Set([actualId]),
+      perfilSesion: "p", textoOriginal: "t", preguntaHecha: "?", respuestaUsuario: "me preocupan los clientes",
+      repreguntasDisponibles: true, preguntasCache, ultimasPreguntas: [], historialMensajes: null, acumulado: usoVacio(),
+    });
+    expect(buscarAfinesFalso.mock.calls[0][0]).toBe("me preocupan los clientes");
+    expect(cliente.messages.create).toHaveBeenCalledTimes(1);
+  });
+});

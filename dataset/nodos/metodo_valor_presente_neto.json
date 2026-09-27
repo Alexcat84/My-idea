@@ -31,7 +31,6 @@
   "nodos_siguientes": [
     "tasa_interna_retorno_irr",
     "gestion_capital_trabajo",
-    "analisis_varianza_financiera",
     "comparacion_metodos_inversion",
     "monetizacion_npv_caso_negocio",
     "analisis_de_gastos_de_capital",
@@ -53,6 +52,24 @@
       "node_id": "valor_presente",
       "titulo": "Valor Presente (Present Value)",
       "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+    }
+  ],
+  "fuentes_internas": [
+    "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-086",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "metodo_valor_presente_neto -> analisis_varianza_financiera",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-12-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El VPN evalua inversiones de capital; no prepara el analisis de varianza presupuesto contra real, que se apoya en el estado de resultados y en porcentajes de cambio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

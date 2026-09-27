@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P966EA1",
+  "intento": 0,
+  "usd": 0.17070400000000002,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36636,
+  "tokens_out": 1208,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P966EA1\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2726, 2730, 2748, 2750], \"cita\": \"This is not a problem so long as sufficient and even-handed attention is given to the main subsystems underpinning organizational safety. [...] What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.\", \"datos_sin_respaldo\": [\"ISO 45001\", \"estructura de solo cuatro factores (gestión, técnicos, procedimentales y de formación) como organización de la medición\"], \"tambien_anadido\": true, \"razon\": \"El libro exige muestrear las seis dimensiones con atención equilibrada. El paso organiza la medición en solo cuatro. Omite los factores específicos de seguridad y la cultura, que el libro sitúa en el núcleo e impregnando todas las demás. Seguirlo deja sin muestrear dimensiones esenciales. ISO 45001 no aparece en el libro (1997).\", \"paso_fiel\": \"Organizar la medición proactiva de modo que se muestreen, con atención equilibrada, las seis dimensiones principales: cultura (núcleo que impregna todas), factores específicos de seguridad, gestión, factores técnicos, procedimientos y formación.\"}\n```",
+ "parseado": {
+  "id": "P966EA1",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2726,
+   2730,
+   2748,
+   2750
+  ],
+  "cita": "This is not a problem so long as sufficient and even-handed attention is given to the main subsystems underpinning organizational safety. [...] What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.",
+  "datos_sin_respaldo": [
+   "ISO 45001",
+   "estructura de solo cuatro factores (gestión, técnicos, procedimentales y de formación) como organización de la medición"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro exige muestrear las seis dimensiones con atención equilibrada. El paso organiza la medición en solo cuatro. Omite los factores específicos de seguridad y la cultura, que el libro sitúa en el núcleo e impregnando todas las demás. Seguirlo deja sin muestrear dimensiones esenciales. ISO 45001 no aparece en el libro (1997).",
+  "paso_fiel": "Organizar la medición proactiva de modo que se muestreen, con atención equilibrada, las seis dimensiones principales: cultura (núcleo que impregna todas), factores específicos de seguridad, gestión, factores técnicos, procedimientos y formación."
+ }
+}

@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Retroalimentación del Cliente y del Empleado para Mejorar el Sistema",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "A traves del caso de Reimer Express Lines, Deming muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erroneamente a que esa persona rinde mal.",
+  "resumen_teorico": "El caso de Reimer Express Lines muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erroneamente a que esa persona rinde mal.",
   "pasos_accionables": [
-    "Preguntale de forma simple y abierta a quien te ayuda en el negocio como entiende el servicio o el trabajo que hace",
-    "Acompana en persona a quien hace la tarea operativa para ver con tus propios ojos los problemas reales",
+    "Pregúntale de forma simple y abierta a quien te ayuda en el negocio cómo entiende el servicio o el trabajo que hace",
+    "Acompaña en persona a quien hace la tarea operativa para ver con tus propios ojos los problemas reales",
     "Anota y revisa las quejas que se repiten antes de concluir que el bajo rendimiento es culpa de la persona",
     "Corrige las causas del sistema que encuentres y comunica los cambios que hiciste"
   ],
@@ -22,5 +22,54 @@
     "Cuando le achacas un bajo rendimiento a alguien sin antes investigar las causas del sistema",
     "Si notas mucha frustración en quien trabaja contigo en el día a día y no tienes una forma clara de escucharla"
   ],
-  "etiqueta_arbol": "Escucha a Clientes y Empleados"
+  "etiqueta_arbol": "Escucha a Clientes y Empleados",
+  "correcciones": [
+    {
+      "id": "atribucion-159",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "A traves del caso de Reimer Express Lines, Deming muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erroneamente a que esa persona rinde mal.",
+      "texto_nuevo": "El caso de Reimer Express Lines muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erroneamente a que esa persona rinde mal.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming muestra como"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-014 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0904",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale de forma simple y abierta a quien te ayuda en el negocio como entiende el servicio o el trabajo que hace",
+      "texto_nuevo": "Pregúntale de forma simple y abierta a quien te ayuda en el negocio cómo entiende el servicio o el trabajo que hace",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-033.paso0: Pregúntale, cómo (Faltan tildes reales en Pregúntale y en cómo (interrogativo indirecto); el relativo quien sigue sin tilde, que es correcto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0905",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Acompana en persona a quien hace la tarea operativa para ver con tus propios ojos los problemas reales",
+      "texto_nuevo": "Acompaña en persona a quien hace la tarea operativa para ver con tus propios ojos los problemas reales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-033.paso1: Acompaña (Falta la eñe en Acompaña; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

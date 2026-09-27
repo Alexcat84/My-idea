@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P22F704",
+  "intento": 0,
+  "usd": 0.132528,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 28502,
+  "tokens_out": 926,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P22F704\", \"veredicto\": \"FIEL\", \"lineas\": [3747, 3763], \"cita\": \"Section 4 takes the form of a contributing factors checklist that must be completed for each of the errors identified in Section 3. These include: information, equipment, tools or parts, aircraft design and configuration, job or task, qualifications and skills, individual performance, environment and facilities, organizational environment, supervision, communication.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe la Sección 4 como un checklist de factores contribuyentes, y todas las categorías del paso figuran en él. 'Capacitación' traduce aceptablemente 'qualifications and skills'. Omitir 'para cada error de la Sección 3' y abreviar la lista son desvíos de detalle: no invierten ni contradicen lo que dice el libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P22F704",
+  "veredicto": "FIEL",
+  "lineas": [
+   3747,
+   3763
+  ],
+  "cita": "Section 4 takes the form of a contributing factors checklist that must be completed for each of the errors identified in Section 3. These include: information, equipment, tools or parts, aircraft design and configuration, job or task, qualifications and skills, individual performance, environment and facilities, organizational environment, supervision, communication.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe la Sección 4 como un checklist de factores contribuyentes, y todas las categorías del paso figuran en él. 'Capacitación' traduce aceptablemente 'qualifications and skills'. Omitir 'para cada error de la Sección 3' y abreviar la lista son desvíos de detalle: no invierten ni contradicen lo que dice el libro.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_001",
+  "intento": 0,
+  "usd": 0.057452,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3702,
+  "tokens_out": 1232,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P48B4B6\", \"consultas\": [\"shift handover procedures line maintenance base maintenance\", \"incomplete work packages transferred between shifts night shift\", \"task cards documentation for less experienced maintenance personnel\"], \"nodo\": \"line maintenance versus base maintenance documentation\"}, {\"id\": \"PEFE28D\", \"consultas\": [\"normalization of deviance Challenger O-ring erosion accepted risk\", \"Diane Vaughan incremental acceptance of anomalies as normal\", \"tolerated minor incidents gradual redefinition of acceptable risk\"], \"nodo\": \"normalization of deviance Vaughan Challenger\"}, {\"id\": \"P815253\", \"consultas\": [\"error management naming blaming shaming exhortations disciplinary sanctions\", \"fear appeals posters warnings do not reduce errors\", \"punishment ineffective for unintended errors moral issue\"], \"nodo\": \"error management error reduction and error containment\"}, {\"id\": \"P5C2B69\", \"consultas\": [\"informed culture reporting culture just culture flexible culture learning culture\", \"engineering a safety culture four subcomponents\", \"measuring safety culture assessment of organizational safety health\"], \"nodo\": \"components of safety culture informed culture\"}, {\"id\": \"PAEA054\", \"consultas\": [\"Westrum pathological bureaucratic generative organizations information flow\", \"messengers shot punished whistle-blowers discouraged\", \"generative culture trains and rewards messengers near-miss reporting\"], \"nodo\": \"Westrum typology of organizational safety cultures\"}, {\"id\": \"P60F478\", \"consultas\": [\"person model versus system model of error management\", \"cannot change the human condition can change conditions work\", \"redesign of tasks tools procedures rather than retraining individuals\"], \"nodo\": \"situational versus person approach to error management\"}, {\"id\": \"P1595B5\", \"consultas\": [\"Tripod-Beta incident analysis tree target hazard event\", \"working backwards from loss to failed defences preconditions\", \"Tripod-Beta general failure types active failures latent failures\"], \"nodo\": \"Tripod-Beta incident analysis tool Shell\"}, {\"id\": \"P7E82FD\", \"consultas\": [\"functions of defences awareness understanding warning restoration protection containment escape\", \"hard defences soft defences layers barriers safeguards procedures\", \"defences-in-depth fallacy Rasmussen concealment latent conditions\"], \"nodo\": \"defences-in-depth protection and concealment of latent failures\"}, {\"id\": \"P04CB03\", \"consultas\": [\"procedures restrict permitted actions necessary violations to get job done\", \"procedural overspecification accumulating rules after each accident\", \"compliance space shrinking rules not matching real working conditions\"], \"nodo\": \"procedural violations due to overspecification of rules\"}, {\"id\": \"P3C6EAE\", \"consultas\": [\"accident cost iceberg insured uninsured costs ratio\", \"hidden indirect costs of accidents HSE study\", \"loss of reputation business and morale after major accidents\"], \"nodo\": \"iceberg model hidden costs of accidents\"}, {\"id\": \"PADA820\", \"consultas\": [\"active failures and latent conditions distinction\", \"resident pathogens dormant latent conditions management decisions\", \"unsafe acts front-line operators versus organizational factors\"], \"nodo\": \"active failures and latent conditions\"}, {\"id\": \"P5481DB\", \"consultas\": [\"Robens Report self-regulation Health and Safety at Work Act 1974\", \"goal-setting legislation versus prescriptive Factories Act rules\", \"management commitment to safety at all levels of organization\"], \"nodo\": \"self-regulation model occupational safety Robens\"}]",
+ "parseado": [
+  {
+   "id": "P48B4B6",
+   "consultas": [
+    "shift handover procedures line maintenance base maintenance",
+    "incomplete work packages transferred between shifts night shift",
+    "task cards documentation for less experienced maintenance personnel"
+   ],
+   "nodo": "line maintenance versus base maintenance documentation"
+  },
+  {
+   "id": "PEFE28D",
+   "consultas": [
+    "normalization of deviance Challenger O-ring erosion accepted risk",
+    "Diane Vaughan incremental acceptance of anomalies as normal",
+    "tolerated minor incidents gradual redefinition of acceptable risk"
+   ],
+   "nodo": "normalization of deviance Vaughan Challenger"
+  },
+  {
+   "id": "P815253",
+   "consultas": [
+    "error management naming blaming shaming exhortations disciplinary sanctions",
+    "fear appeals posters warnings do not reduce errors",
+    "punishment ineffective for unintended errors moral issue"
+   ],
+   "nodo": "error management error reduction and error containment"
+  },
+  {
+   "id": "P5C2B69",
+   "consultas": [
+    "informed culture reporting culture just culture flexible culture learning culture",
+    "engineering a safety culture four subcomponents",
+    "measuring safety culture assessment of organizational safety health"
+   ],
+   "nodo": "components of safety culture informed culture"
+  },
+  {
+   "id": "PAEA054",
+   "consultas": [
+    "Westrum pathological bureaucratic generative organizations information flow",
+    "messengers shot punished whistle-blowers discouraged",
+    "generative culture trains and rewards messengers near-miss reporting"
+   ],
+   "nodo": "Westrum typology of organizational safety cultures"
+  },
+  {
+   "id": "P60F478",
+   "consultas": [
+    "person model versus system model of error management",
+    "cannot change the human condition can change conditions work",
+    "redesign of tasks tools procedures rather than retraining individuals"
+   ],
+   "nodo": "situational versus person approach to error management"
+  },
+  {
+   "id": "P1595B5",
+   "consultas": [
+    "Tripod-Beta incident analysis tree target hazard event",
+    "working backwards from loss to failed defences preconditions",
+    "Tripod-Beta general failure types active failures latent failures"
+   ],
+   "nodo": "Tripod-Beta incident analysis tool Shell"
+  },
+  {
+   "id": "P7E82FD",
+   "consultas": [
+    "functions of defences awareness understanding warning restoration protection containment escape",
+    "hard defences soft defences layers barriers safeguards procedures",
+    "defences-in-depth fallacy Rasmussen concealment latent conditions"
+   ],
+   "nodo": "defences-in-depth protection and concealment of latent failures"
+  },
+  {
+   "id": "P04CB03",
+   "consultas": [
+    "procedures restrict permitted actions necessary violations to get job done",
+    "procedural overspecification accumulating rules after each accident",
+    "compliance space shrinking rules not matching real working conditions"
+   ],
+   "nodo": "procedural violations due to overspecification of rules"
+  },
+  {
+   "id": "P3C6EAE",
+   "consultas": [
+    "accident cost iceberg insured uninsured costs ratio",
+    "hidden indirect costs of accidents HSE study",
+    "loss of reputation business and morale after major accidents"
+   ],
+   "nodo": "iceberg model hidden costs of accidents"
+  },
+  {
+   "id": "PADA820",
+   "consultas": [
+    "active failures and latent conditions distinction",
+    "resident pathogens dormant latent conditions management decisions",
+    "unsafe acts front-line operators versus organizational factors"
+   ],
+   "nodo": "active failures and latent conditions"
+  },
+  {
+   "id": "P5481DB",
+   "consultas": [
+    "Robens Report self-regulation Health and Safety at Work Act 1974",
+    "goal-setting legislation versus prescriptive Factories Act rules",
+    "management commitment to safety at all levels of organization"
+   ],
+   "nodo": "self-regulation model occupational safety Robens"
+  }
+ ]
+}

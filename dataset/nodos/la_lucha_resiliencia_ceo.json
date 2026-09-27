@@ -18,11 +18,44 @@
   ],
   "nodos_siguientes": [
     "cultura_transparencia_organizacional",
-    "no_jugar_con_probabilidades"
+    "no_jugar_con_probabilidades",
+    "manejo_psicologia_ceo",
+    "nobody_cares_just_run_company"
   ],
   "condiciones_activacion": [
     "Cuando el negocio atraviesa una crisis existencial",
     "Cuando el fundador experimenta agotamiento, dudas o aislamiento severo"
   ],
-  "etiqueta_arbol": "Resiste Tu Peor Momento"
+  "etiqueta_arbol": "Resiste Tu Peor Momento",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-11",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "la_lucha_resiliencia_ceo -> manejo_psicologia_ceo",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-12, lectores de acuerdo): raiz de 3 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Reconocer La Lucha como estado normal del fundador lleva directamente a gestionar la propia psicología del CEO, con urgencia pero sin culpa emocional."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "n1-nucleo-15",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "la_lucha_resiliencia_ceo -> nobody_cares_just_run_company",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-16, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Después de reconocer La Lucha, el siguiente paso es dejar las excusas y enfocar toda la energía en dirigir la empresa hacia adelante."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

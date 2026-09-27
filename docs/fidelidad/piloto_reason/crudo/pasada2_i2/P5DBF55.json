@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5DBF55",
+  "intento": 0,
+  "usd": 0.127368,
+  "turnos": 1,
+  "duracion_s": 5.8,
+  "pared_s": 7.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29777,
+  "tokens_out": 413,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P5DBF55\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5031, 5035, 5037], \"cita\": \"one failure to perform in accordance with those standards is enough to justify dismissal. [...] This ‘hang them all’ judgement is unsatisfactory in many respects. It ignores the ubiquity of error as well as the situational factors that promote it. [...] A much sounder guideline is Neil Johnston’s substitution test.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso convierte en norma la regla de Lord Denning, que el libro cita solo para rechazarla ('hang them all'): ignora la ubicuidad del error y sus factores situacionales. El libro propone en su lugar el test de sustitución y el árbol de culpabilidad, y afirma que la mayoría de actos inseguros (quizá 90%) no son culpables.\", \"paso_fiel\": \"Antes de sancionar un fallo en una tarea crítica para la seguridad, aplicar el test de sustitución y el árbol de culpabilidad, y reservar las sanciones severas, como el despido, para los pocos actos temerarios, negligentes, malintencionados o de abuso de sustancias.\"}",
+ "parseado": {
+  "id": "P5DBF55",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5031,
+   5035,
+   5037
+  ],
+  "cita": "one failure to perform in accordance with those standards is enough to justify dismissal. [...] This ‘hang them all’ judgement is unsatisfactory in many respects. It ignores the ubiquity of error as well as the situational factors that promote it. [...] A much sounder guideline is Neil Johnston’s substitution test.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso convierte en norma la regla de Lord Denning, que el libro cita solo para rechazarla ('hang them all'): ignora la ubicuidad del error y sus factores situacionales. El libro propone en su lugar el test de sustitución y el árbol de culpabilidad, y afirma que la mayoría de actos inseguros (quizá 90%) no son culpables.",
+  "paso_fiel": "Antes de sancionar un fallo en una tarea crítica para la seguridad, aplicar el test de sustitución y el árbol de culpabilidad, y reservar las sanciones severas, como el despido, para los pocos actos temerarios, negligentes, malintencionados o de abuso de sustancias."
+ }
+}

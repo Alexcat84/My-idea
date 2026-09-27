@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Resolución de Problemas por Alcance (Regla 85-13-2)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Crosby observa que más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+  "resumen_teorico": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
   "pasos_accionables": [
     "Clasificar cada problema que detectas según cuánta ayuda realmente necesita para resolverse",
     "Resolver tú mismo, sin pedir ayuda, el 85% de los problemas que puedes atender donde los notas",
@@ -22,5 +22,26 @@
     "Cuando conviertes en un asunto grande algo que podrías resolver tú mismo en el momento",
     "Cuando no tienes claro qué problemas puedes resolver solo y cuáles necesitan ayuda externa"
   ],
-  "etiqueta_arbol": "Resuelve Problemas en su Nivel"
+  "etiqueta_arbol": "Resuelve Problemas en su Nivel",
+  "correcciones": [
+    {
+      "id": "atribucion-155",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Crosby observa que más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+      "texto_nuevo": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Crosby observa que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

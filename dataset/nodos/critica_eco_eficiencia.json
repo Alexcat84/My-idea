@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Por qué 'Ser Menos Malo' No Es Suficiente (Crítica a la Eco-Eficiencia)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Braungart argumenta que un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave').",
+  "resumen_teorico": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave').",
   "pasos_accionables": [
     "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reciclaje, compensación)",
     "Evaluar si estas estrategias abordan la causa raíz o solo mitigan síntomas",
@@ -51,5 +51,26 @@
       "titulo": "Los Límites de la Eco-Eficiencia ('Ser Menos Malo')",
       "fuente": "Cradle to Cradle - Michael Braungart"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-044",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Braungart argumenta que un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave').",
+      "texto_nuevo": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave').",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Braungart argumenta que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-002 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Cradle to Cradle - Michael Braungart"
   ]
 }

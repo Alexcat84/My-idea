@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PADB492",
+  "intento": 0,
+  "usd": 0.17496,
+  "turnos": 1,
+  "duracion_s": 9.0,
+  "pared_s": 10.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40830,
+  "tokens_out": 582,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PADB492\", \"veredicto\": \"FIEL\", \"lineas\": [2905, 293, 263, 5748], \"cita\": \"And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it. For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro manda buscar, acto por acto, las condiciones locales que provocaron el error y luego los factores organizacionales previos (L293). También dice que identificar el error es solo el inicio de la búsqueda (L2905). El libro limita el alcance a lo controlable (L263, L5748), pero el paso no pide una búsqueda ilimitada, así que no lo contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PADB492",
+  "veredicto": "FIEL",
+  "lineas": [
+   2905,
+   293,
+   263,
+   5748
+  ],
+  "cita": "And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it. For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro manda buscar, acto por acto, las condiciones locales que provocaron el error y luego los factores organizacionales previos (L293). También dice que identificar el error es solo el inicio de la búsqueda (L2905). El libro limita el alcance a lo controlable (L263, L5748), pero el paso no pide una búsqueda ilimitada, así que no lo contradice.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,159 @@
+[
+ {
+  "id": "saneamiento-t1-j01",
+  "node_id": "calculo_roi_franquiciado_2",
+  "campo": "condiciones_activacion",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+  "texto_nuevo": "Cuando vas a ofrecer tu franquicia y necesitas mostrar el retorno que obtendrá quien la compre",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L24",
+   "frase": "El ejemplo es de un pais, pero la clase existe en casi todos. El nodo lo dice y manda buscar lo propio"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: calcular el retorno del franquiciado es metodo universal y el FDD es el ejemplo de EE.UU.; la condicion de solo EE.UU. lo contradecia.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)",
+  "indice": 0
+ },
+ {
+  "id": "saneamiento-t1-j02",
+  "node_id": "regla_disponibilidad_previa_venta",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse. Si vendes fuera de Estados Unidos, revisa cual es la norma equivalente en tu propio mercado, porque puede variar.",
+  "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse.",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (Magnuson-Moss): el resumen cerraba con la formula de equivalente local.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-j03",
+  "node_id": "cumplimiento_can_spam",
+  "campo": "condiciones_activacion",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Si la empresa utiliza campañas de correo electrónico comercial dirigidas a consumidores en EE.UU. u otros mercados con normativa similar",
+  "texto_nuevo": "Si la empresa envía campañas de correo electrónico comercial a consumidores en EE.UU.",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (CAN-SPAM): la condicion abria el nodo a otros mercados con normativa similar.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)",
+  "indice": 0
+ },
+ {
+  "id": "saneamiento-t1-j04",
+  "node_id": "cumplimiento_can_spam",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM y regulaciones locales equivalentes",
+  "texto_nuevo": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (CAN-SPAM): el entregable prometia regulaciones locales equivalentes.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-j05",
+  "node_id": "eleccion_83b",
+  "campo": "pasos_accionables",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Presenta la elección 83(b) ante la autoridad fiscal de tu país dentro de los 30 días posteriores a la entrega de las acciones",
+  "texto_nuevo": "Presenta la elección 83(b) ante la autoridad fiscal de Estados Unidos dentro de los 30 días posteriores a la entrega de las acciones",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (la eleccion 83(b) es del codigo fiscal de EE.UU.): el paso la mandaba presentar ante la autoridad de tu pais.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)",
+  "indice": 2
+ },
+ {
+  "id": "saneamiento-t1-j06",
+  "node_id": "eleccion_83b",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Los detalles legales y fiscales varían según tu país, así que verifícalos con un profesional local antes de actuar.",
+  "texto_nuevo": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L33",
+   "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C: el resumen prometia verificarlo en tu pais.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-j07",
+  "node_id": "vesting_acciones_fundadores",
+  "campo": "pasos_accionables",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Presenta la eleccion fiscal 83(b) dentro de los 30 días siguientes a la emisión de tus acciones",
+  "texto_nuevo": "Si tu empresa está constituida en Estados Unidos, presenta la eleccion fiscal 83(b) dentro de los 30 días siguientes a la emisión de tus acciones",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L24",
+   "frase": "El ejemplo es de un pais, pero la clase existe en casi todos. El nodo lo dice y manda buscar lo propio"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: el vesting es universal y la eleccion 83(b) es el ejemplo de EE.UU.; el paso la imponia a todos.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)",
+  "indice": 1
+ },
+ {
+  "id": "saneamiento-t1-j08",
+  "node_id": "vesting_acciones_fundadores",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo comun: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a un calendario similar, a menudo con crédito por el tiempo que ya trabajaste, y conviene presentar la eleccion fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleracion si la empresa cambia de manos: de un solo gatillo, que libera todo de inmediato, o de doble gatillo -la mas usada en capital de riesgo- que exige el cambio de control y un despido sin causa en un plazo, normalmente 13 meses. Verifica estos detalles con un profesional en tu pais.",
+  "texto_nuevo": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo comun: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a un calendario similar, a menudo con crédito por el tiempo que ya trabajaste, y, si tu empresa está constituida en Estados Unidos, conviene presentar la eleccion fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleracion si la empresa cambia de manos: de un solo gatillo, que libera todo de inmediato, o de doble gatillo -la mas usada en capital de riesgo- que exige el cambio de control y un despido sin causa en un plazo, normalmente 13 meses. Verifica estos detalles con un profesional en tu pais.",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L24",
+   "frase": "El ejemplo es de un pais, pero la clase existe en casi todos. El nodo lo dice y manda buscar lo propio"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: el resumen imponia la 83(b) a todos.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-j09",
+  "node_id": "vesting_acciones_fundadores",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE_DE_CLASE",
+  "texto_anterior": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada y condiciones de aceleracion claramente definidas",
+  "texto_nuevo": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada si tu empresa está en Estados Unidos y condiciones de aceleracion claramente definidas",
+  "cita": {
+   "libro": "POLITICA_MARCO_PAIS",
+   "fichero": "docs/POLITICA_MARCO_PAIS.md",
+   "lineas": "L18-L24",
+   "frase": "El ejemplo es de un pais, pero la clase existe en casi todos. El nodo lo dice y manda buscar lo propio"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: el entregable imponia la 83(b) a todos.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+ }
+]

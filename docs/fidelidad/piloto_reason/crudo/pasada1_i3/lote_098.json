@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_098",
+  "intento": 0,
+  "usd": 0.15282,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32425,
+  "tokens_out": 1156,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF36A73\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [83, 96, 105, 306, 1076, 1133], \"razon\": \"El libro describe convertir mejoras de protección en ventaja productiva como compensación de riesgo peligrosa que lleva a accidentes; el paso aconseja justamente hacerlo.\"},\n  {\"id\": \"PD8744D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2322, 2340, 2342], \"razon\": \"El paso adopta el cálculo de costo óptimo, la visión ortodoxa que el libro critica por suponer mantenimiento benigno e ignorar el riesgo de error humano.\"},\n  {\"id\": \"PE3CD95\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2583, 2585], \"razon\": \"Concreta el 'tick-off phenomenon': las medidas deben vigilarse y ajustarse, no solo marcarse como hechas. El libro no habla de auditar, pero va en su dirección.\"},\n  {\"id\": \"P1FC70D\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"IBM Maximo\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1991], \"razon\": \"Los tres criterios (contacto directo, criticidad, frecuencia) son del libro, pero la herramienta IBM Maximo no aparece en él.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF36A73",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    83,
+    96,
+    105,
+    306,
+    1076,
+    1133
+   ],
+   "razon": "El libro describe convertir mejoras de protección en ventaja productiva como compensación de riesgo peligrosa que lleva a accidentes; el paso aconseja justamente hacerlo."
+  },
+  {
+   "id": "PD8744D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2322,
+    2340,
+    2342
+   ],
+   "razon": "El paso adopta el cálculo de costo óptimo, la visión ortodoxa que el libro critica por suponer mantenimiento benigno e ignorar el riesgo de error humano."
+  },
+  {
+   "id": "PE3CD95",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2583,
+    2585
+   ],
+   "razon": "Concreta el 'tick-off phenomenon': las medidas deben vigilarse y ajustarse, no solo marcarse como hechas. El libro no habla de auditar, pero va en su dirección."
+  },
+  {
+   "id": "P1FC70D",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "IBM Maximo"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977,
+    1991
+   ],
+   "razon": "Los tres criterios (contacto directo, criticidad, frecuencia) son del libro, pero la herramienta IBM Maximo no aparece en él."
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
   "node_id": "programacion_entregas_delivery_scheduling",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Programación de Entregas: Directas vs. Milk Run",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Existen dos métodos principales de entrega: las entregas directas (de un origen a un destino, simples pero eficientes solo cuando el EOQ del receptor coincide con la carga de transporte completa) y las entregas milk run (de un origen a múltiples destinos o viceversa, más complejas de programar pero más eficientes en el uso del transporte y menor costo de recepción cuando las cantidades individuales son menores a una carga completa). La elección depende de la relación entre el EOQ de cada ubicación receptora y la capacidad del modo de transporte.",
@@ -20,10 +20,10 @@
     "gestion_inventario"
   ],
   "nodos_siguientes": [
-    "customer_retention_tactics",
     "colaboracion_transporte_ctm",
     "crossdocking",
-    "driver_transporte"
+    "driver_transporte",
+    "tratar_packaging_costo_marca"
   ],
   "condiciones_activacion": [
     "Cuando el negocio tiene múltiples puntos de entrega y busca reducir costos logísticos",
@@ -38,6 +38,50 @@
       "node_id": "milk_run_deliveries",
       "titulo": "Entregas Milk Run",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-104",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "programacion_entregas_delivery_scheduling -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Programar entregas directas o milk run es logistica y no tiene relacion con retener clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-009",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "programacion_entregas_delivery_scheduling -> tratar_packaging_costo_marca",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "mv-dominio-27",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-08: Diseñar rutas milk run con EOQ y matriz de ahorros es ruteo de transporte avanzado que solo necesita quien opera distribución a fondo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
     }
   ]
 }

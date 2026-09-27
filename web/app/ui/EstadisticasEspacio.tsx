@@ -14,25 +14,32 @@
  * LineaAvance arriba: esto es su lectura numérica, no los repite.
  */
 import type { CapaUniversal } from "@/lib/analytics";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { decimal } from "@/lib/i18n/formato";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { rico } from "@/lib/i18n/rico";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 import { BarraAvance } from "./BarraAvance";
 import { DistribucionEstados, EsfuerzoPorEtapa, RitmoSemanal, Tile } from "./GraficosAnalisis";
 
 export function EstadisticasEspacio({ universal, titulos }: { universal: CapaUniversal; titulos: Record<number, string> }) {
+  const idioma = useIdioma();
+  const tx = elegir(ANALISIS, idioma);
+  const t = tx.estadisticas;
   const u = universal;
-  const nombreEtapa = (n: number) => titulos[n] ?? `Etapa ${n}`;
+  const nombreEtapa = (n: number) => titulos[n] ?? interpolar(tx.comun.etapaN, { n });
 
   // Aún sin plan ni acciones: nada que medir todavía (mensaje sereno, sin ruido).
   if (u.accionesVigente.total === 0 && u.accionesHechas === 0) {
     return (
-      <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-        Aún no hay estadísticas de este espacio. En cuanto marques acciones, aquí verás tu ritmo, tu racha y tu avance.
-      </p>
+      <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">{t.sinDatos}</p>
     );
   }
 
   return (
     <div className="mt-6 flex flex-col gap-6">
-      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tus estadísticas</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.titulo}</p>
 
       {u.accionesVigente.total > 0 && (
         <div className="rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
@@ -42,16 +49,17 @@ export function EstadisticasEspacio({ universal, titulos }: { universal: CapaUni
 
       {/* Las cifras del espacio (azul piensa), misma tile que el Análisis. */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Tile valor={String(u.duracionTotalDias)} etiqueta="días de duración" color="var(--accent)" />
-        <Tile valor={u.ritmoAccionesPorSemana.toFixed(1)} etiqueta="acciones por semana" color="var(--accent)" />
-        <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" color="var(--accent)" />
-        <Tile valor={String(u.ciclosDePlan)} etiqueta={u.ciclosDePlan === 1 ? "ciclo de plan" : "ciclos de plan"} color="var(--accent)" />
+        <Tile valor={String(u.duracionTotalDias)} etiqueta={t.diasDuracion} color="var(--accent)" />
+        <Tile valor={decimal(idioma, u.ritmoAccionesPorSemana, 1)} etiqueta={t.accionesPorSemana} color="var(--accent)" />
+        <Tile valor={String(u.rachaMasLargaDias)} etiqueta={t.diasRacha} color="var(--accent)" />
+        <Tile valor={String(u.ciclosDePlan)} etiqueta={plural(idioma, u.ciclosDePlan, t.cicloDePlan)} color="var(--accent)" />
       </div>
 
       {u.retiradas.length > 0 && (
         <p className="text-[13px] text-dim">
-          Retiradas (no aplican): <span className="font-semibold text-ink">{u.retiradas.length}</span>. Decidiste que no corren
-          para este espacio; quedan en tu expediente con su motivo.
+          {rico(interpolar(t.retiradas, { n: u.retiradas.length }), {
+            b: (c) => <span className="font-semibold text-ink">{c}</span>,
+          })}
         </p>
       )}
 

@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P8234A9",
+  "intento": 0,
+  "usd": 0.165364,
+  "turnos": 1,
+  "duracion_s": 8.2,
+  "pared_s": 9.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38191,
+  "tokens_out": 630,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8234A9\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [413, 435, 971, 973], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [\"norma ISO 55001\"], \"razon\": \"El libro respalda el fondo del paso. Muestra que la autofirma sin inspección separada eliminó una oportunidad clave de detectar el error y advierte contra suprimir la inspección independiente. En cambio, no menciona ninguna norma ISO 55001; esa norma es de 2014, posterior al libro, y trata de gestión de activos.\", \"paso_fiel\": \"Exigir una inspección separada e independiente en las tareas críticas de mantenimiento, sin aceptar como única prueba la firma de quien ejecutó el trabajo.\"}\n```",
+ "parseado": {
+  "id": "P8234A9",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   413,
+   435,
+   971,
+   973
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [
+   "norma ISO 55001"
+  ],
+  "razon": "El libro respalda el fondo del paso. Muestra que la autofirma sin inspección separada eliminó una oportunidad clave de detectar el error y advierte contra suprimir la inspección independiente. En cambio, no menciona ninguna norma ISO 55001; esa norma es de 2014, posterior al libro, y trata de gestión de activos.",
+  "paso_fiel": "Exigir una inspección separada e independiente en las tareas críticas de mantenimiento, sin aceptar como única prueba la firma de quien ejecutó el trabajo."
+ }
+}

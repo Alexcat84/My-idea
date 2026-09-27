@@ -6,9 +6,9 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Quien se encarga de investigación, diseno, compras, ventas y producción en tu negocio debe conocer los problemas que enfrentan las otras partes con los materiales y las especificaciones. Si cada parte trabaja aislada, sin mirar el conjunto, tu negocio entero puede fracasar aunque cada quien crea que esta haciendo un trabajo excelente por su cuenta.",
   "pasos_accionables": [
-    "Procura que diseno, ventas, producción y atención trabajen juntos desde el inicio de cada proyecto, aunque las hagas tu mismo o las manejen distintas personas",
-    "Crea una forma sencilla de llevar lo que escuchas de tus clientes o de quien atiende de vuelta a quien fabrica y a quien disena",
-    "Evita cambiar el diseno a ultimo momento sin avisar a quien produce",
+    "Procura que diseño, ventas, producción y atención trabajen juntos desde el inicio de cada proyecto, aunque las hagas tú mismo o las manejen distintas personas",
+    "Crea una forma sencilla de llevar lo que escuchas de tus clientes o de quien atiende de vuelta a quien fabrica y a quien diseña",
+    "Evita cambiar el diseño a último momento sin avisar a quien produce",
     "Usa las quejas tempranas, como las de cobros o pagos, como información para mejorar la calidad"
   ],
   "entregable_esperado": "Una forma sencilla de que las distintas partes de tu negocio trabajen en equipo, con un proceso claro para que la información fluya entre ellas",
@@ -23,5 +23,52 @@
     "Cuando cada parte de tu negocio parece funcionar bien por separado, pero el negocio en conjunto no",
     "Cuando pierdes dinero o clientes por falta de comunicación entre diseno, producción y atención"
   ],
-  "etiqueta_arbol": "Rompe Barreras entre Áreas"
+  "etiqueta_arbol": "Rompe Barreras entre Áreas",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0253",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Procura que diseno, ventas, producción y atención trabajen juntos desde el inicio de cada proyecto, aunque las hagas tu mismo o las manejen distintas personas",
+      "texto_nuevo": "Procura que diseño, ventas, producción y atención trabajen juntos desde el inicio de cada proyecto, aunque las hagas tú mismo o las manejen distintas personas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-016.paso0: diseño, tú (Solo corrige la eñe de diseño y la tilde del pronombre tú.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0254",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea una forma sencilla de llevar lo que escuchas de tus clientes o de quien atiende de vuelta a quien fabrica y a quien disena",
+      "texto_nuevo": "Crea una forma sencilla de llevar lo que escuchas de tus clientes o de quien atiende de vuelta a quien fabrica y a quien diseña",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-016.paso1: diseña (Solo corrige la eñe de diseña.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0255",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita cambiar el diseno a ultimo momento sin avisar a quien produce",
+      "texto_nuevo": "Evita cambiar el diseño a último momento sin avisar a quien produce",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-016.paso2: diseño, último (Solo corrige la eñe de diseño y la tilde de último.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ]
 }

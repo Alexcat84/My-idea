@@ -23,6 +23,9 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
     cobrar: vi.fn(async () => 15),
     reembolsar: vi.fn(async () => 20),
     otorgarCortesia: vi.fn(async () => 20),
+    // AUD-09 M25: la reserva de créditos (migración 042).
+    reservarCreditos: vi.fn(async () => ({ reservado: true, disponible: 10 })),
+    resolverReserva: vi.fn(async () => undefined),
   };
 });
 // El gate 2FA tiene su propia cobertura (dosFactores.test + el vuelo de
@@ -32,6 +35,22 @@ vi.mock("@/lib/seguridad", async (importOriginal) => ({
   faltaSegundoFactor: async () => false,
 }));
 
+// AUD-09 M26: para reproducir una falla ENTRE guardar el plan y cerrar la
+// sesión, insertarChecklist puede fallar una vez a pedido (por defecto, real).
+let fallarChecklistUnaVez = false;
+vi.mock("@/lib/db", async (importOriginal) => {
+  const real = await importOriginal<typeof import("@/lib/db")>();
+  return {
+    ...real,
+    insertarChecklist: async (...a: Parameters<typeof real.insertarChecklist>) => {
+      if (fallarChecklistUnaVez) {
+        fallarChecklistUnaVez = false;
+        throw new Error("falla simulada al escribir el checklist");
+      }
+      return real.insertarChecklist(...a);
+    },
+  };
+});
 vi.mock("@/lib/supabase/server", () => ({
   createClient: vi.fn(async () => supabaseFalso),
 }));
@@ -42,6 +61,7 @@ vi.mock("@/lib/anthropicClient", () => ({
 }));
 
 import { POST } from "./route";
+import { cobrar } from "@/lib/creditos";
 
 function ctxFalso(id: string) {
   return { params: Promise.resolve({ id }) };
@@ -224,6 +244,8 @@ describe("POST /api/session/[id]/plan", () => {
 
     expect(texto).toContain("event: error");
     expect(texto).not.toContain("event: done");
+    // AUD-09 B07a: el evento de error no lleva el mensaje interno al cliente.
+    expect(texto).not.toContain("overload persistente");
     // La sesion sigue viva: el recorrido esta persistido y reintentar re-lanza
     // SOLO la redaccion, sin repetirle la entrevista al usuario.
     expect(estadoFalso.sessions["s1"].closed_at).toBeFalsy();
@@ -251,13 +273,273 @@ describe("POST /api/session/[id]/plan", () => {
     };
 
     const res = await POST(requestFalso(), ctxFalso("s1"));
-    const texto = await res.text();
-    expect(texto).toContain("event: aviso");
-    const match = texto.match(/event: done\ndata: (.+)\n\n/);
-    expect(match).toBeTruthy();
-    expect(JSON.parse(match![1]).markdown).toContain("# Tu plan de accion");
+    const done = await leerEventoDone(res);
+    // AUD-09 H02: el aviso ya no es un evento interno que la pantalla ignoraba;
+    // viaja en el done, marcado como version basica.
+    expect(done.version_basica).toBe(true);
+    expect(String(done.markdown)).toContain("# Tu plan de acción");
     expect(estadoFalso.sessions["s1"].closed_at).toBeTruthy();
     // Ni un solo intento al modelo: el presupuesto se corta ANTES.
     expect(messagesStreamFalso).not.toHaveBeenCalled();
+  });
+
+  // AUD-09 H02, politica del fundador (25 sep 2026): se verifica al empezar y
+  // se cobra al final SOLO si se entrego lo prometido. Un plan armado sin IA
+  // no es lo prometido: se entrega gratis, con un aviso honesto en pantalla.
+  // Antes se cobraba completo y el aviso (un evento que la pantalla ignoraba)
+  // hablaba en jerga interna.
+  it("un plan armado sin IA NO se cobra y lleva su aviso honesto en el done", async () => {
+    vi.mocked(cobrar).mockClear();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase(),
+        acumulado: {
+          ...acumuladoVacio,
+          uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } },
+        },
+      },
+    };
+
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    const done = await leerEventoDone(res);
+    expect(cobrar).not.toHaveBeenCalled();
+    expect(done.version_basica).toBe(true);
+    expect(done.creditos_restantes).toBeNull();
+    expect(String(done.aviso)).toMatch(/no se te cobró/i);
+    // El techo SI se cruzo: la sesion lo registra (antes quedaba en false).
+    expect(estadoFalso.sessions["s1"].presupuesto_excedido).toBe(true);
+  });
+
+  // AUD-09, decision del fundador (25 sep 2026): UN SELLO DE PAGO SOLO EXISTE
+  // SI HUBO PAGO. Un plan basico de mundo no escribe plan_pagado_at; se marca
+  // con su propio campo (plan_basico_at) y el mundo ofrece el plan completo.
+  function sembrarMundo(acumulado: Record<string, unknown>) {
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.projectUnlocks.push({ project_id: "p1", dominio: "quality", resumen_md: "diag", plan_pagado_at: null });
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      dominio: "quality",
+      closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado },
+    };
+  }
+  const acumuladoAgotado = {
+    ...acumuladoVacio,
+    uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } },
+  };
+
+  it("un plan BASICO de mundo no sella la compra: se marca con plan_basico_at", async () => {
+    sembrarMundo(acumuladoAgotado);
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    const fila = estadoFalso.projectUnlocks[0];
+    expect(fila.plan_pagado_at ?? null).toBeNull();
+    expect(fila.plan_basico_at).toBeTruthy();
+    expect(estadoFalso.bitacora.some((e) => e.tipo === "preview_a_compra")).toBe(false);
+  });
+
+  it("un plan de mundo redactado con IA y cobrado SI sella la compra", async () => {
+    sembrarMundo(acumuladoVacio);
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join("\n")));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    expect(estadoFalso.projectUnlocks[0].plan_pagado_at).toBeTruthy();
+  });
+
+  // AUD-09 H05: PREVIEW_MUNDOS_PLAN §4, "si el proyecto cambio de ciclo entre
+  // preview y compra, el plan se genera con el estado vivo ACTUAL". La compra
+  // usaba el perfil congelado del preview y, al comprimir sin estado anterior,
+  // pisaba projects.estado_vivo (lo aprendido en el ciclo del nucleo se perdia)
+  // y ponia la fase del proyecto en la del ultimo nodo del mundo.
+  it("comprar un mundo tras un ciclo del nucleo usa el estado vivo ACTUAL y no lo pisa", async () => {
+    estadoFalso.projects["p1"] = {
+      id: "p1",
+      session_count: 3,
+      titulo: null,
+      numeros_proyecto: {},
+      estado_vivo: "E2: ya vende 30 macetas al mes tras el seguimiento",
+      fase_actual: "ejecucion",
+    };
+    estadoFalso.projectUnlocks.push({ project_id: "p1", dominio: "quality", resumen_md: "diag", plan_pagado_at: null });
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      dominio: "quality",
+      closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase({ perfilSesion: "E1: vende 12 macetas al mes." }),
+        acumulado: acumuladoVacio,
+      },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join("\n")));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    // el redactor recibio el estado actual
+    const payload = JSON.stringify(messagesStreamFalso.mock.calls[0][0]);
+    expect(payload).toContain("E2: ya vende 30 macetas");
+    // el estado vivo del proyecto conserva lo del ciclo del nucleo
+    const proyecto = estadoFalso.projects["p1"] as Record<string, unknown>;
+    expect(String(proyecto.estado_vivo)).toContain("E2: ya vende 30 macetas");
+    // y la fase del proyecto es la del nucleo, no la del mundo
+    expect(proyecto.fase_actual).toBe("ejecucion");
+  });
+
+  it("un plan redactado con IA SI se cobra, sin aviso de version basica", async () => {
+    vi.mocked(cobrar).mockClear();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join("\n")));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    const done = await leerEventoDone(res);
+    // Calculo a mano: nucleo, primera entrevista -> plan_completo = 10.
+    expect(cobrar).toHaveBeenCalledWith("user-fake", "plan_completo", 10, "plan:s1");
+    expect(done.version_basica).toBe(false);
+  });
+});
+
+// AUD-09 M25 (tanda 7A, dinero): la entrega renueva la reserva de SU sesión
+// (clave plan:{sessionId}) antes de gastar un token, la marca COBRADA al cobrar
+// y la LIBERA cuando no cobra (plan sin IA).
+describe("POST /api/session/[id]/plan: reserva de créditos (AUD-09 M25)", () => {
+  beforeEach(async () => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+    const c = await import("@/lib/creditos");
+    vi.mocked(c.reservarCreditos).mockClear();
+    vi.mocked(c.resolverReserva).mockClear();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+  });
+
+  it("con IA: renueva la reserva de su clave, cobra y la marca cobrada", async () => {
+    const { reservarCreditos, resolverReserva } = await import("@/lib/creditos");
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join(String.fromCharCode(10))));
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    // A MANO: núcleo, primera entrevista -> plan_completo = 10.
+    expect(reservarCreditos).toHaveBeenCalledWith("user-fake", "plan:s1", "plan_completo", 10);
+    expect(resolverReserva).toHaveBeenCalledWith("plan:s1", "cobrada");
+  });
+
+  it("sin IA (plan básico): no cobra y LIBERA la reserva", async () => {
+    const { resolverReserva } = await import("@/lib/creditos");
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase(),
+        acumulado: { ...acumuladoVacio, uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } } },
+      },
+    };
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    expect(resolverReserva).toHaveBeenCalledWith("plan:s1", "liberada");
+  });
+
+  it("si el saldo ya está apartado por otra sesión: 402 antes de gastar un token", async () => {
+    const { reservarCreditos } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockResolvedValueOnce({ reservado: false, disponible: 0 });
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    expect(res.status).toBe(402);
+    expect(messagesStreamFalso).not.toHaveBeenCalled();
+  });
+});
+
+// AUD-09 M26 (tanda 7A, datos): la sospecha era que, si algo falla ENTRE
+// guardarPlan y cerrarSesion, el reintento crea un segundo plan y su checklist.
+// Decisión del fundador: primero reproducirlo; si no se reproduce, se documenta
+// y no se toca el código. Esta prueba es la reproducción.
+describe("reintento tras una falla entre guardar el plan y cerrar la sesión (AUD-09 M26)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join(String.fromCharCode(10))));
+  });
+
+  it("el reintento no deja dos planes de la misma sesión", async () => {
+    fallarChecklistUnaVez = true;
+    const primero = await (await POST(requestFalso(), ctxFalso("s1"))).text();
+    expect(primero).toMatch(/event: error/);
+    // la sesión sigue abierta: el usuario puede reintentar
+    expect(estadoFalso.sessions["s1"].closed_at).toBeNull();
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    const planesDeLaSesion = estadoFalso.plans.filter((p) => (p as { session_id?: string }).session_id === "s1");
+    expect(planesDeLaSesion).toHaveLength(1);
+  });
+});
+
+
+// i18n F5: el plan de una idea en coreano lo redacta la IA en coreano, con los
+// rótulos de estructura en español (los marcadores neutros que leen el
+// checklist y la pantalla). Una sesión de antes de F5 va como siempre.
+describe("POST /api/session/[id]/plan: el idioma de la idea (i18n F5)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+  });
+
+  function sembrar(recorrido: Record<string, unknown>) {
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: { recorrido, acumulado: acumuladoVacio },
+    };
+  }
+
+  const raw = '# 화분 판매 계획\n\n## Etapa 1: 수요 확인\n\n**Esta semana:** 5명에게 물어보세요.\n\n===JSON===\n{"familias_tratadas": []}';
+
+  it("idea en coreano: el redactor recibe la regla de idioma con los rótulos fijos", async () => {
+    sembrar(estadoRecorridoBase({ idioma: "ko" }));
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(raw));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    const sistema = (messagesStreamFalso.mock.calls[0][0] as { system: Array<{ text: string }> }).system;
+    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma;
+    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
+    expect(sistema[2].text).toContain("«## Etapa N:»");
+    // Decisión del fundador (26 sep 2026): la acción de cada etapa es "Primera acción".
+    expect(sistema[2].text).toContain("«**Primera acción:**»");
+    expect(sistema[2].text).not.toContain("Esta semana");
+  });
+
+  it("sesión de antes de F5 (sin idioma): un solo bloque, como siempre", async () => {
+    sembrar(estadoRecorridoBase());
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(raw));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    const sistema = (messagesStreamFalso.mock.calls[0][0] as { system: unknown[] }).system;
+    expect(sistema).toHaveLength(2); // prompt y regla sin fuentes (26 sep 2026);
+  });
+
+  it("el checklist sale del plan en coreano gracias a los rótulos fijos", async () => {
+    sembrar(estadoRecorridoBase({ idioma: "ko" }));
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(raw));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    expect(estadoFalso.checklistItems.map((i) => i.texto)).toContain("5명에게 물어보세요.");
   });
 });

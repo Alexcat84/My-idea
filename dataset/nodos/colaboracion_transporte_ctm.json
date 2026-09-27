@@ -1,7 +1,7 @@
 {
   "node_id": "colaboracion_transporte_ctm",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Gestión Colaborativa de Transporte (CTM)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (hasta 25% según el caso Just Born). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
@@ -15,14 +15,11 @@
   ],
   "entregable_esperado": "Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado",
   "nodos_previos": [
-    "outsourcing_cadena_suministro",
     "programacion_entregas_delivery_scheduling",
     "collaboration_roadblocks",
-    "definicion_alineacion_cadena_suministro",
     "stakeholder_mapping_wheel"
   ],
   "nodos_siguientes": [
-    "equipo_conjunto_de_mejora_con_proveedores",
     "collaboration_enablers",
     "scorecard_desempeno_cadena_suministro"
   ],
@@ -41,6 +38,63 @@
       "node_id": "collaborative_transportation_management",
       "titulo": "Collaborative Transportation Management (CTM)",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "d27-dominio-1",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada M del saneamiento (docs/saneamiento/resultados/M)",
+        "evidencia": "Consolidacion de embarques y red de distribucion es logistica y transporte, no emprender en general. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: colaboracion_transporte_ctm pasa a entrega."
+    },
+    {
+      "id": "d27-arista-02",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "colaboracion_transporte_ctm -> equipo_conjunto_de_mejora_con_proveedores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Decision del fundador del 27 sep 2026, punto 1",
+        "motivo": "El puente a calidad deja de salir de colaboracion_transporte_ctm, que pasa a entrega; lo reemplaza colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista de entrega a calidad que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "d27-arista-04",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "definicion_alineacion_cadena_suministro -> colaboracion_transporte_ctm",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada C del saneamiento (C-C2, lectores de acuerdo)",
+        "motivo": "La definicion general de cadena de suministro y su alineacion con la estrategia es demasiado amplia para que consolidar embarques con otras empresas sea su continuacion natural."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+    },
+    {
+      "id": "d27-arista-05",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "outsourcing_cadena_suministro -> colaboracion_transporte_ctm",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada C del saneamiento (C-C3, lectores de acuerdo)",
+        "motivo": "El outsourcing trata de ceder operaciones no centrales a especialistas, mientras que la gestion colaborativa de transporte une a empresas pares para consolidar carga, asi que no es su siguiente paso natural."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
     }
   ]
 }

@@ -18,10 +18,29 @@
   ],
   "nodos_siguientes": [
     "ia_en_supply_chain",
-    "getting_started_supply_chain_risk_management"
+    "getting_started_supply_chain_risk_management",
+    "optimizacion_tecnologia_cadena_suministro"
   ],
   "condiciones_activacion": [
     "Si la empresa requiere capacidades analíticas avanzadas para planificación estratégica de la cadena de suministro"
   ],
-  "etiqueta_arbol": "Integra tus Sistemas de Suministro"
+  "etiqueta_arbol": "Integra tus Sistemas de Suministro",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-001",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "supply_chain_management_systems -> optimizacion_tecnologia_cadena_suministro",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B01, lectores de acuerdo)",
+        "motivo": "Los sistemas SCM con capacidad analitica son la base tecnologica tras la cual se entra a dashboards e integracion de impactos ambientales."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    }
+  ]
 }

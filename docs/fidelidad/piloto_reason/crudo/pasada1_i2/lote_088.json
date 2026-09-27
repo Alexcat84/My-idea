@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_088",
+  "intento": 0,
+  "usd": 0.165804,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33461,
+  "tokens_out": 1598,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P25BED1\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2250, 2224, 2998], \"razon\": \"El libro propone identificar de antemano los pasos vulnerables a omisión contando los rasgos de cada paso discreto; desglosar en pasos concreta ese análisis.\"},\n  {\"id\": \"P210F94\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"IBM Maximo\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1991], \"razon\": \"Los tres criterios vienen del libro, que los aplica a clases de actividad; IBM Maximo no aparece en la fuente.\"},\n  {\"id\": \"P2826AF\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4987, 4989, 5063, 5057], \"razon\": \"El libro sitúa el error negligente en una zona gris que exige juicio cuidadoso y habla de principios acordados; el paso lo pone al otro lado de una línea tajante.\"},\n  {\"id\": \"PCB1F9B\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"EPC\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3397], \"razon\": \"L3395 dice literalmente que la probabilidad nominal se multiplica por una proporción juzgada del factor EPC correspondiente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P25BED1",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2250,
+    2224,
+    2998
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables a omisión contando los rasgos de cada paso discreto; desglosar en pasos concreta ese análisis."
+  },
+  {
+   "id": "P210F94",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "IBM Maximo"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977,
+    1991
+   ],
+   "razon": "Los tres criterios vienen del libro, que los aplica a clases de actividad; IBM Maximo no aparece en la fuente."
+  },
+  {
+   "id": "P2826AF",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4987,
+    4989,
+    5063,
+    5057
+   ],
+   "razon": "El libro sitúa el error negligente en una zona gris que exige juicio cuidadoso y habla de principios acordados; el paso lo pone al otro lado de una línea tajante."
+  },
+  {
+   "id": "PCB1F9B",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "EPC"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "L3395 dice literalmente que la probabilidad nominal se multiplica por una proporción juzgada del factor EPC correspondiente."
+  }
+ ]
+}

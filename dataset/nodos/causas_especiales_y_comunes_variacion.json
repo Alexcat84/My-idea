@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Causas Especiales y Comunes de Variación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Shewhart denominó causas 'asignables' y 'no asignables'; Deming las llamó 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+  "resumen_teorico": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
   "pasos_accionables": [
     "Analizar si la desviación observada tiene origen en una sola variable dominante (especial) o en múltiples variables menores (común)",
     "Si es causa especial: activar acción correctiva inmediata vía PDCA",
@@ -25,5 +25,27 @@
     "Cuando se detecta una diferencia entre el desempeño real y la meta de calidad",
     "Si existe confusión sobre si se debe corregir o mejorar el proceso"
   ],
-  "etiqueta_arbol": "Diagnostica tu Variación de Proceso"
+  "etiqueta_arbol": "Diagnostica tu Variación de Proceso",
+  "correcciones": [
+    {
+      "id": "atribucion-020",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Shewhart denominó causas 'asignables' y 'no asignables'; Deming las llamó 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+      "texto_nuevo": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Shewhart denominó causas 'asignables' y 'no asignables'",
+          "Deming las llamó 'especiales' y 'comunes'"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-027 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

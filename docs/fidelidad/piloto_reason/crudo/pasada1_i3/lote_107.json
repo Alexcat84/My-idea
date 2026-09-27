@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_107",
+  "intento": 0,
+  "usd": 0.129928,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 24817,
+  "tokens_out": 1533,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P89D6D0\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [409, 1834, 1838, 2028, 2060, 2129, 2131, 2139, 2161, 3745],\n    \"razon\": \"El libro afirma que la instalación y las omisiones predominan (tapas, fijaciones). Analizar históricos concreta ese análisis, cercano a la tendencia MEDA, sin datos nuevos.\"\n  },\n  {\n    \"id\": \"P59A204\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"los pocos operadores que controlan el sistema\"],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [204, 1820, 2594, 2876, 2880, 2905, 2973, 2985, 5582, 5639, 5641, 5907],\n    \"razon\": \"El libro dice que un error aislado rara vez causa un accidente organizacional. Pide centrarse en condiciones latentes y actuar en todos los niveles; los actos inseguros no pueden eliminarse.\"\n  },\n  {\n    \"id\": \"PD76F0C\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"simulacros\", \"antes de que ocurra un evento real\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [5894, 5896, 1674, 1678],\n    \"razon\": \"El libro dice que el 80% de los planes fallan la primera vez, pero el plan del banco se probó con un atentado real. No menciona simulacros; queda sin cobertura directa.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P89D6D0",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    409,
+    1834,
+    1838,
+    2028,
+    2060,
+    2129,
+    2131,
+    2139,
+    2161,
+    3745
+   ],
+   "razon": "El libro afirma que la instalación y las omisiones predominan (tapas, fijaciones). Analizar históricos concreta ese análisis, cercano a la tendencia MEDA, sin datos nuevos."
+  },
+  {
+   "id": "P59A204",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "los pocos operadores que controlan el sistema"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    204,
+    1820,
+    2594,
+    2876,
+    2880,
+    2905,
+    2973,
+    2985,
+    5582,
+    5639,
+    5641,
+    5907
+   ],
+   "razon": "El libro dice que un error aislado rara vez causa un accidente organizacional. Pide centrarse en condiciones latentes y actuar en todos los niveles; los actos inseguros no pueden eliminarse."
+  },
+  {
+   "id": "PD76F0C",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "simulacros",
+    "antes de que ocurra un evento real"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    5894,
+    5896,
+    1674,
+    1678
+   ],
+   "razon": "El libro dice que el 80% de los planes fallan la primera vez, pero el plan del banco se probó con un atentado real. No menciona simulacros; queda sin cobertura directa."
+  }
+ ]
+}

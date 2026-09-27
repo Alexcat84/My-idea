@@ -14,7 +14,6 @@
   "entregable_esperado": "Acuerdo de inversión claro (documento o conversación explícita) que defina expectativas, riesgos y el tipo de relación financiera (deuda, equity o donación)",
   "nodos_previos": [
     "mvp_catalogo_tecnicas",
-    "producto_minimo_viable",
     "embudo_secuencial_de_inversores"
   ],
   "nodos_siguientes": [
@@ -26,5 +25,23 @@
     "El startup está en etapa muy temprana sin tracción demostrable",
     "El fundador ya invirtió sus propios ahorros y necesita capital adicional"
   ],
-  "etiqueta_arbol": "Busca Apoyo de Amigos y Familia"
+  "etiqueta_arbol": "Busca Apoyo de Amigos y Familia",
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-101",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "producto_minimo_viable -> financiamiento_amigos_y_familia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-03-18): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La financiacion de amigos y familia no usa, continua ni profundiza el MVP. A lo sumo iria antes, para arrancar, y no despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

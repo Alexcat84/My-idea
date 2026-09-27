@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3B331C",
+  "intento": 0,
+  "usd": 0.20489200000000002,
+  "turnos": 1,
+  "duracion_s": 9.7,
+  "pared_s": 10.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47613,
+  "tokens_out": 722,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3B331C\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4027, 4176, 4448, 4039], \"cita\": \"A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como deficiencia que el inspector de Piper Alpha no tenía experiencia en permisos de trabajo (L4027). También cita la falta de formación de los inspectores como factor en accidentes (L4176) y la carencia de training de los reguladores (L4448). Cullen cuestiona el tipo de inspección, pero no desaconseja formar a los inspectores. El paso concreta esto en la misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3B331C",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4027,
+   4176,
+   4448,
+   4039
+  ],
+  "cita": "A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como deficiencia que el inspector de Piper Alpha no tenía experiencia en permisos de trabajo (L4027). También cita la falta de formación de los inspectores como factor en accidentes (L4176) y la carencia de training de los reguladores (L4448). Cullen cuestiona el tipo de inspección, pero no desaconseja formar a los inspectores. El paso concreta esto en la misma dirección.",
+  "paso_fiel": ""
+ }
+}

@@ -6,9 +6,9 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Cuando vendes franquicias, tu presupuesto de marketing tiene que cubrir al menos seis meses antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto mas inviertas cada mes en publicidad, mas rápido cerraras tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitaras un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
   "pasos_accionables": [
-    "Define cuantas franquicias quieres vender en el primer año",
+    "Define cuántas franquicias quieres vender en el primer año",
     "Pregunta el precio de publicidad en tu mercado y calcula el presupuesto que necesitas según esa meta",
-    "Reserva un colchon de flujo de caja para al menos 6 meses de publicidad antes de esperar recuperar el dinero",
+    "Reserva un colchón de flujo de caja para al menos 6 meses de publicidad antes de esperar recuperar el dinero",
     "Revisa tu gasto en publicidad contra el ritmo real de ventas y ajusta si hace falta"
   ],
   "entregable_esperado": "Presupuesto de marketing y flujo de caja proyectado para los primeros 6 a 12 meses de venta de franquicias",
@@ -23,5 +23,38 @@
     "Cuando estas diseñando el presupuesto financiero inicial para lanzar tu programa de franquicias",
     "Si estas subestimando los costos de marketing que necesitas para atraer franquiciados"
   ],
-  "etiqueta_arbol": "Planea tu Publicidad y Caja"
+  "etiqueta_arbol": "Planea tu Publicidad y Caja",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0166",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define cuantas franquicias quieres vender en el primer año",
+      "texto_nuevo": "Define cuántas franquicias quieres vender en el primer año",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-003.paso0: cuántas (Cuántas lleva tilde porque es interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0167",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reserva un colchon de flujo de caja para al menos 6 meses de publicidad antes de esperar recuperar el dinero",
+      "texto_nuevo": "Reserva un colchón de flujo de caja para al menos 6 meses de publicidad antes de esperar recuperar el dinero",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-003.paso2: colchón (Solo añade la tilde que faltaba en colchón.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ]
 }

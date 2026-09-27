@@ -1,6 +1,6 @@
 {
   "node_id": "ecuacion_de_valor_cliente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Ecuación de Valor del Cliente",
   "fuente": "SPIN Selling - Neil Rackham",
@@ -25,5 +25,23 @@
     "Cuando el precio o costo de la solución es alto en relación al problema percibido por el cliente",
     "Cuando se recibe la objeción 'es demasiado caro' o 'no vale la pena el esfuerzo de cambiar'"
   ],
-  "etiqueta_arbol": "Equilibra Esfuerzo y Valor Percibido"
+  "etiqueta_arbol": "Equilibra Esfuerzo y Valor Percibido",
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-117",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F07-014: Manejar la balanza de valor y la objecion de precio en una oportunidad de venta en curso es operacion comercial. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

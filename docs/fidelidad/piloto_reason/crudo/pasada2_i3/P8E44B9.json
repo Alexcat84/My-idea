@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8E44B9",
+  "intento": 0,
+  "usd": 0.18174400000000002,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41201,
+  "tokens_out": 847,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8E44B9\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3589, 3623], \"cita\": \"As before, he created a limited list of generic violation behaviours, each with their associated nominal probabilities for females--unlike errors, there is a large gender effect in non-compliance.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta la Tabla 7.3 de Williams como lista de conductas genéricas de violación. La construye 'as before', en analogía con HEART, cuyo primer paso es encajar la actividad en una categoría genérica (L3395). Clasificar la violación según esas categorías concreta ese uso en la misma dirección. No introduce datos nuevos. No aplicar el ajuste x1.4 para hombres no contradice el libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8E44B9",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3395,
+   3589,
+   3623
+  ],
+  "cita": "As before, he created a limited list of generic violation behaviours, each with their associated nominal probabilities for females--unlike errors, there is a large gender effect in non-compliance.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta la Tabla 7.3 de Williams como lista de conductas genéricas de violación. La construye 'as before', en analogía con HEART, cuyo primer paso es encajar la actividad en una categoría genérica (L3395). Clasificar la violación según esas categorías concreta ese uso en la misma dirección. No introduce datos nuevos. No aplicar el ajuste x1.4 para hombres no contradice el libro.",
+  "paso_fiel": ""
+ }
+}

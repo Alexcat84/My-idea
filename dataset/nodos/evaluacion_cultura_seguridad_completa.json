@@ -1,10 +1,10 @@
 {
   "node_id": "evaluacion_cultura_seguridad_completa",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Evaluación de la Cultura de Seguridad Más Allá de sus Componentes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. Reason plantea que la cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Se sugiere una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, y tratamiento de la información organizacional.",
+  "resumen_teorico": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. La cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Se sugiere una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, y tratamiento de la información organizacional.",
   "pasos_accionables": [
     "Responder honestamente las preguntas clave: ¿quién en la junta directiva es responsable de la seguridad organizacional?, ¿se discute en reuniones regulares de alto nivel?",
     "Evaluar el presupuesto, personal y nivel jerárquico del área que recopila y analiza información de seguridad",
@@ -24,5 +24,39 @@
     "Cuando se requiere una auditoría profunda más allá de indicadores superficiales como LTIF",
     "Antes de certificar o declarar el éxito de un programa de cultura de seguridad"
   ],
-  "etiqueta_arbol": "Ve Más Allá de lo Básico"
+  "etiqueta_arbol": "Ve Más Allá de lo Básico",
+  "correcciones": [
+    {
+      "id": "atribucion-090",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. Reason plantea que la cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Se sugiere una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, y tratamiento de la información organizacional.",
+      "texto_nuevo": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. La cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Se sugiere una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, y tratamiento de la información organizacional.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Reason plantea que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-018 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-148",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-025: Es una auditoría o autodiagnóstico de la cultura de seguridad de una organización en funcionamiento, no una prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ]
 }

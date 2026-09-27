@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PB03810",
+  "intento": 0,
+  "usd": 0.232064,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54581,
+  "tokens_out": 687,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB03810\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2342, 2356, 1934], \"cita\": \"The data reported earlier on the causes of inflight engine shutdowns show that all of the most common contributing factors are associated with human rather than 'unaided' technical failures.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro compara fallos humanos con fallos técnicos 'no asistidos' y dice que lo que importa es la proporción relativa de ambos riesgos (L2342). El paso concreta ese análisis sin añadir cifras, plazos ni herramientas. No lo contradice: el libro recuerda que el error es consecuencia de factores previos (L1934), pero eso no invalida cuantificar la proporción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB03810",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2342,
+   2356,
+   1934
+  ],
+  "cita": "The data reported earlier on the causes of inflight engine shutdowns show that all of the most common contributing factors are associated with human rather than 'unaided' technical failures.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro compara fallos humanos con fallos técnicos 'no asistidos' y dice que lo que importa es la proporción relativa de ambos riesgos (L2342). El paso concreta ese análisis sin añadir cifras, plazos ni herramientas. No lo contradice: el libro recuerda que el error es consecuencia de factores previos (L1934), pero eso no invalida cuantificar la proporción.",
+  "paso_fiel": ""
+ }
+}

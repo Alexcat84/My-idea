@@ -3,7 +3,17 @@
  * ui/PlanDocumento.tsx para poder probarlo). PURO: sin React, sin DOM.
  * Respeta el markdown REAL del motor: no inventa estructura, solo pliega la
  * que viene, y rescata la que el modelo emitio en prosa densa.
+ *
+ * i18n F2: los literales en español de las expresiones regulares ("Etapa",
+ * "Primera acción", "Esta semana", "El lunes", "Entregable", "Pasos", "_Plan completo_", "Este
+ * plan se alimentó") son CLAVES DE LECTURA del markdown que escribe el motor,
+ * no texto de pantalla: no van al catálogo. Solo va la etiqueta que el parser
+ * agrega ("Los números que necesitas").
  */
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { PLAN_DOCUMENTO } from "./i18n/mensajes/planDocumento";
+import { pintarRotulo } from "./i18n/rotulosPlan";
+
 export type TipoSeccion = "etapa" | "cierre" | "otro";
 
 /** Fase 3.9 C8: un bloque de pasos con su sub-encabezado (o null si la lista
@@ -21,7 +31,15 @@ export interface Seccion {
   descripcion: string;
   bloquesPasos: BloquePasos[];
   entregable: string | null;
+  /** La acción concreta del tramo: "**Primera acción:**" (decisión del
+   * fundador, 26 sep 2026) o, en los planes guardados antes, "**Esta
+   * semana:**"; en la sección de números, "**El lunes que viene:**". El nombre
+   * del campo se quedó por compatibilidad; la pantalla lo rotula "Primera acción". */
   estaSemana: string | null;
+  /** La acción vino de un rótulo VIEJO con plazo ("Esta semana", "El lunes que
+   * viene") de un plan guardado. Decisión del fundador (27 sep 2026): en la vista
+   * del plan ese contenido ya no se muestra; solo la "Primera acción". */
+  accionVieja: boolean;
 }
 
 export interface PlanParseado {
@@ -52,22 +70,26 @@ function recortarBloque(cuerpo: string, etiqueta: RegExp): { valor: string | nul
   return { valor: m[0].trim(), resto };
 }
 
-export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion {
+export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: Locale = LOCALE_BASE): Seccion {
   const mEtapa = tituloCrudo.match(/^Etapa\s+(\d+)\s*[:.·-]?\s*(.*)$/i);
   const numero = mEtapa ? mEtapa[1].padStart(2, "0") : null;
-  const titulo = (mEtapa ? mEtapa[2].trim() : tituloCrudo) || tituloCrudo;
+  // i18n F5: los títulos que son marcadores neutros (la sección de números, lo
+  // que falta) se pintan en el idioma de quien lee.
+  const titulo = (mEtapa ? mEtapa[2].trim() : pintarRotulo(tituloCrudo, "encabezado", idioma)) || tituloCrudo;
   const esCierre = /sosten|n[úu]meros|no cubr|qu[ée] sigue/i.test(tituloCrudo);
 
   let cuerpo = contenido.replace(/\n---\s*$/g, "\n").trim();
 
-  // 1) La acción concreta del tramo (va al final): "Esta semana" o su
+  // 1) La acción concreta del tramo (va al final): "Primera acción" (o el
+  //    rótulo viejo "Esta semana" de los planes guardados, el mismo campo) o su
   //    equivalente en la sección de números ("El lunes que viene").
-  const RE_SEMANA = /\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*[\s\S]*?(?=\n\s*\n|$)/i;
+  const RE_SEMANA = /\*\*(?:Primera acci[oó]n|Esta semana|El lunes(?: que viene)?):?\*\*[\s\S]*?(?=\n\s*\n|$)/i;
   const es = recortarBloque(cuerpo, RE_SEMANA);
   cuerpo = es.resto;
   let estaSemana = es.valor
-    ? es.valor.replace(/^\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
+    ? es.valor.replace(/^\*\*(?:Primera acci[oó]n|Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
     : null;
+  let accionVieja = es.valor ? !/^\*\*Primera acci[oó]n/i.test(es.valor.trim()) : false;
 
   // 2) "Entregable" — el artefacto que queda.
   const ent = recortarBloque(cuerpo, /\*\*Entregable:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
@@ -85,7 +107,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
   for (const linea of cuerpo.split("\n")) {
     const lab = linea.match(/^\s*\*\*\s*([^*]*[Pp]asos[^*]*?)\s*:?\s*\*\*\s*(.*)$/);
     if (lab) {
-      bloque = { label: lab[1].trim(), pasos: [] };
+      bloque = { label: pintarRotulo(lab[1].trim(), "negrita", idioma), pasos: [] };
       bloquesPasos.push(bloque);
       if (lab[2]?.trim()) bloque.pasos.push(lab[2].trim());
       continue;
@@ -121,9 +143,10 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
   //    ("**Nota crítica:**") jamás dispara esto.
   if (tipo === "cierre") {
     if (!estaSemana) {
-      const m = descripcion.match(/(?:^|\.\s+)((?:El lunes|Esta semana)\b[\s\S]*)$/i);
+      const m = descripcion.match(/(?:^|\.\s+)((?:El lunes|Esta semana|Primera acci[oó]n)(?![\p{L}])[\s\S]*)$/iu);
       if (m && m[1].trim().length > 30) {
         estaSemana = m[1].trim();
+        accionVieja = !/^Primera acci[oó]n/i.test(estaSemana);
         descripcion = descripcion.slice(0, (m.index ?? 0) + (m[0].length - m[1].length)).trim();
       }
     }
@@ -138,7 +161,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
           const hasta = i + 1 < marcas.length ? marcas[i + 1].inicio : descripcion.length;
           return `**${mk.label}:** ${descripcion.slice(mk.fin, hasta).trim()}`;
         });
-        bloquesPasos.push({ label: "Los números que necesitas", pasos: items });
+        bloquesPasos.push({ label: elegir(PLAN_DOCUMENTO, idioma).losNumerosQueNecesitas, pasos: items });
         descripcion = descripcion.slice(0, marcas[0].inicio).trim();
       }
     }
@@ -152,16 +175,17 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
     bloquesPasos: bloquesPasos.filter((b) => b.pasos.length > 0),
     entregable,
     estaSemana,
+    accionVieja,
   };
 }
 
-export function parsearPlan(md: string): PlanParseado {
+export function parsearPlan(md: string, idioma: Locale = LOCALE_BASE): PlanParseado {
   let etiqueta: string | null = null;
   const cuerpo: string[] = [];
   for (const linea of md.split("\n")) {
     const l = linea.trim();
     if (!etiqueta && /^_Plan (completo|inicial|de seguimiento|seguimiento)_$/i.test(l)) {
-      etiqueta = l.replaceAll("_", "");
+      etiqueta = pintarRotulo(l.replaceAll("_", ""), "etiqueta", idioma);
       continue;
     }
     // La procedencia se descarta: es interna (ver sinProcedencia).
@@ -194,7 +218,7 @@ export function parsearPlan(md: string): PlanParseado {
     else intro.push(linea);
   }
 
-  const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido));
+  const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido, idioma));
   const introTxt = intro.join("\n").replace(/\n---\s*$/g, "").trim();
   return { etiqueta, titulo, intro: introTxt, secciones };
 }

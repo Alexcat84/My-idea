@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_034",
+  "intento": 0,
+  "usd": 0.15483599999999997,
+  "turnos": 1,
+  "duracion_s": 13.6,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32684,
+  "tokens_out": 1205,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PBF81EB\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5894, 5834, 5892, 81, 688, 692], \"razon\": \"El libro enfatiza lo que la seguridad ahorra. Pero advierte costos ocultos e intangibles y accidentes percibidos como imposibles; un costo-beneficio puede subestimarlos. Revisar.\"},\n  {\"id\": \"P5450A8\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [478, 494, 504, 526], \"razon\": \"El libro señala como principio básico separar estrictamente trading y settlements. Llama 'ill-judged' al doble rol de Leeson.\"},\n  {\"id\": \"PE467F3\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5184, 5186, 5196, 4773], \"razon\": \"Weick, citado por Reason, valora las war stories, el storytelling y la comunicación cara a cara para reducir la brecha de variedad requerida.\"},\n  {\"id\": \"P852C75\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2311, 2369, 2358], \"razon\": \"El libro llama 'más duradero' al diseño de instalación única, pero 'más fundamental' eliminar el contacto manual. Priorizar poka-yoke podría invertir ese orden.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PBF81EB",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5894,
+    5834,
+    5892,
+    81,
+    688,
+    692
+   ],
+   "razon": "El libro enfatiza lo que la seguridad ahorra. Pero advierte costos ocultos e intangibles y accidentes percibidos como imposibles; un costo-beneficio puede subestimarlos. Revisar."
+  },
+  {
+   "id": "P5450A8",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    478,
+    494,
+    504,
+    526
+   ],
+   "razon": "El libro señala como principio básico separar estrictamente trading y settlements. Llama 'ill-judged' al doble rol de Leeson."
+  },
+  {
+   "id": "PE467F3",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5184,
+    5186,
+    5196,
+    4773
+   ],
+   "razon": "Weick, citado por Reason, valora las war stories, el storytelling y la comunicación cara a cara para reducir la brecha de variedad requerida."
+  },
+  {
+   "id": "P852C75",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2311,
+    2369,
+    2358
+   ],
+   "razon": "El libro llama 'más duradero' al diseño de instalación única, pero 'más fundamental' eliminar el contacto manual. Priorizar poka-yoke podría invertir ese orden."
+  }
+ ]
+}

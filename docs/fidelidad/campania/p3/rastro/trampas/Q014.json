@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Gráficos de Control y Ajuste del Proceso",
+  "resumen": "Uso de los límites de control, calculados con leyes de probabilidad, para separar la variación por causas comunes de la variación por causas especiales, y decidir cuándo conviene investigar el proceso y cuándo hay que dejarlo como está.",
+  "texto": "Ajustar el proceso cada vez que un punto se aleje de la media, aunque quede dentro de los límites de control",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L18647",
+  "cita": "Random variation within the control limits means that only common (random) causes are present; the amount of variation has stabilized, and minor process adjustments (tampering) should be avoided.",
+  "explicacion": "El libro dice que la variación dentro de los límites de control solo refleja causas comunes y que los ajustes menores (tampering) deben evitarse; el paso manda justo lo contrario, ajustar ante cualquier desvío dentro de los límites."
+ },
+ {
+  "titulo": "Priorización de Proyectos de Mejora por Impacto",
+  "resumen": "Criterios para ordenar las nominaciones de proyectos de mejora según lo que más beneficia a la organización: retorno de inversión, magnitud del avance posible, urgencia, facilidad tecnológica, salud de la línea de producto y resistencia probable al cambio.",
+  "texto": "Dar prioridad a varios proyectos pequeños frente a un único proyecto grande para repartir el avance",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L6666",
+  "cita": "The amount of potential breakthrough. One large project will take priority over several small ones.",
+  "explicacion": "El libro establece que un proyecto grande tiene prioridad sobre varios pequeños según el criterio de magnitud del avance posible; el paso invierte esa regla."
+ },
+ {
+  "titulo": "Depuración de la Mortalidad Infantil del Producto",
+  "resumen": "Estrategias para el periodo de mortalidad infantil de la curva de la bañera, cuando los fallos tempranos vienen de errores de diseño o fabricación, mal uso o mala aplicación, y pueden provocarse en el banco de pruebas antes de que el producto llegue al servicio.",
+  "texto": "Someter cada unidad a un burn-in de 96 horas antes del envío para depurar los fallos tempranos",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L20117",
+  "cita": "Sometimes it is possible to “debug” the product by a simulated use test or by overstressing (in electronics this is known as burn-in).",
+  "dato": "burn-in de 96 horas aplicado a cada unidad antes del envío",
+  "explicacion": "El libro respalda el burn-in y el sobreesfuerzo para depurar la mortalidad infantil, pero no da ninguna duración ni exige aplicarlo a todas las unidades; Grep no encuentra '96 hours' ni '96-hour' en el texto."
+ },
+ {
+  "titulo": "Detección de Valores Atípicos en Datos Experimentales",
+  "resumen": "Revisión de los datos antes del análisis para localizar observaciones incoherentes con el resto del conjunto, usando pruebas formales o un intervalo de L desviaciones estándar, y eliminándolas solo cuando se pueda rastrear una causa específica.",
+  "texto": "Aplicar la prueba de Grubbs a cada observación sospechosa para confirmar si es un valor atípico",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L19419",
+  "cita": "Numerous tests are available to detect outliers, that is, “observation(s) [or (a)subset of observations] which appear to be inconsistent with the remainder of that set of data” (Barnett and Lewis 1994).",
+  "dato": "prueba de Grubbs",
+  "explicacion": "El libro dice que existen numerosas pruebas para detectar outliers y describe el intervalo de L desviaciones estándar, pero nunca nombra la prueba de Grubbs; Grep de 'grubb' en todo el texto no da ninguna coincidencia."
+ }
+]

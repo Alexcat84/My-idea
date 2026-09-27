@@ -9,10 +9,10 @@
     "Clasificar los actos inseguros observados por tipo (errores vs. violaciones) y vincularlos al tipo de actividad",
     "Documentar factores locales del lugar de trabajo: diseño, carga de trabajo, supervisión, EPP, capacitación",
     "Priorizar la evaluación de factores organizacionales (gestión del cambio, liderazgo, comunicación, compras)",
-    "Muestrear periódicamente los seis dimensiones clave: cultura, entrenamiento, gestión, temas de seguridad, procedimientos y factores técnicos",
+    "Muestrear periódicamente las seis dimensiones clave: cultura, entrenamiento, gestión, temas de seguridad, procedimientos y factores técnicos",
     "Usar cada medición para identificar procesos urgentes y rastrear la efectividad de medidas correctivas previas"
   ],
-  "entregable_esperado": "Matriz de medición proactiva con indicadores para cada uno de los seis dimensiones organizacionales",
+  "entregable_esperado": "Matriz de medición proactiva con indicadores para cada una de las seis dimensiones organizacionales",
   "nodos_previos": [
     "medidas_reactivas_proactivas",
     "metas_de_seguridad_correctas"
@@ -24,5 +24,37 @@
     "Cuando se necesita decidir qué procesos organizacionales medir con recursos limitados",
     "Al diseñar un sistema integral de salud de seguridad organizacional"
   ],
-  "etiqueta_arbol": "Mide tus Procesos a Tiempo"
+  "etiqueta_arbol": "Mide tus Procesos a Tiempo",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0925",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Muestrear periódicamente los seis dimensiones clave: cultura, entrenamiento, gestión, temas de seguridad, procedimientos y factores técnicos",
+      "texto_nuevo": "Muestrear periódicamente las seis dimensiones clave: cultura, entrenamiento, gestión, temas de seguridad, procedimientos y factores técnicos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-012.paso3: las ('los seis dimensiones' es una errata de concordancia; 'dimensiones' es femenino y se corrige solo el artículo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0926",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Matriz de medición proactiva con indicadores para cada uno de los seis dimensiones organizacionales",
+      "texto_nuevo": "Matriz de medición proactiva con indicadores para cada una de las seis dimensiones organizacionales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-012.entregable: una, las (Errata de concordancia con 'dimensiones', que es femenino ('uno/los' pasan a 'una/las'); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

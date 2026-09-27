@@ -16,12 +16,28 @@
     "preguntas_need_payoff",
     "cuatro_etapas_llamada_de_ventas"
   ],
-  "nodos_siguientes": [
-    "divergencia_de_motivaciones_en_exit"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando usas técnicas de cierre agresivas y no te están dando buenos resultados en ventas grandes",
     "Si tu ciclo de venta requiere varios pasos antes de llegar al pedido final"
   ],
-  "etiqueta_arbol": "Busca un Avance Real"
+  "etiqueta_arbol": "Busca un Avance Real",
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-094",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "obtencion_compromiso -> divergencia_de_motivaciones_en_exit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-13-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Conseguir un avance en una venta compleja (tecnica comercial) no prepara la divergencia de motivaciones de los cofundadores ante un exit. Son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

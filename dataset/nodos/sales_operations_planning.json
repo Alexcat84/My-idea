@@ -16,7 +16,8 @@
   "nodos_previos": [
     "drum_buffer_rope",
     "estandarizacion_codigos_producto_epc",
-    "mitigacion_efecto_latigo"
+    "mitigacion_efecto_latigo",
+    "pronostico_de_demanda_variables"
   ],
   "nodos_siguientes": [
     "colaboracion_cadena_suministro",
@@ -26,5 +27,23 @@
     "Cuando la empresa necesita un proceso recurrente para balancear oferta y demanda",
     "Si los planes anuales fijos no logran adaptarse a la volatilidad del mercado"
   ],
-  "etiqueta_arbol": "Equilibra tu Oferta y Demanda"
+  "etiqueta_arbol": "Equilibra tu Oferta y Demanda",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-044",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "pronostico_de_demanda_variables -> sales_operations_planning",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C12, lectores de acuerdo)",
+        "motivo": "El S&OP equilibra oferta y demanda agregadas, lo que parte de entender el pronostico de demanda; se evita proceso_sop_mop por ser casi duplicado."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "lente_sostenibilidad_finanzas",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Aplicar un Lente de Sostenibilidad al Análisis Financiero",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -23,5 +23,23 @@
   "condiciones_activacion": [
     "Si el área financiera de la empresa no ha integrado criterios de sostenibilidad en su análisis"
   ],
-  "etiqueta_arbol": "Mira tus Finanzas con Sostenibilidad"
+  "etiqueta_arbol": "Mira tus Finanzas con Sostenibilidad",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-202",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F21-017: Integrar la sostenibilidad en el analisis financiero, las inversiones y la busqueda de capital es estrategia y recursos, no exploracion de la idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PC0A424",
+  "intento": 0,
+  "usd": 0.196396,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45659,
+  "tokens_out": 688,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC0A424\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5174, 5178], \"cita\": \"shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro afirma que la autoridad revierte al modo burocrático cuando pasa la emergencia o baja el ritmo (L4769, L5174). Fijar criterios de reversión concreta esa condición en su misma dirección. La advertencia de Weick (L5178) se refiere a gestionar la emergencia misma con reglas, no a señalar su fin. El paso no añade cifras, plazos ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC0A424",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5174,
+   5178
+  ],
+  "cita": "shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro afirma que la autoridad revierte al modo burocrático cuando pasa la emergencia o baja el ritmo (L4769, L5174). Fijar criterios de reversión concreta esa condición en su misma dirección. La advertencia de Weick (L5178) se refiere a gestionar la emergencia misma con reglas, no a señalar su fin. El paso no añade cifras, plazos ni responsables.",
+  "paso_fiel": ""
+ }
+}

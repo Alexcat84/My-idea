@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P90EE23",
+  "intento": 0,
+  "usd": 0.17993199999999998,
+  "turnos": 1,
+  "duracion_s": 8.8,
+  "pared_s": 10.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42383,
+  "tokens_out": 520,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P90EE23\", \"veredicto\": \"FIEL\", \"lineas\": [2652, 2654], \"cita\": \"To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda analizar varios eventos con un marco clasificatorio común, no casos aislados (L2652-2654). El paso omite 'domain-related', pero los incidentes pasados de la propia organización ya son del mismo dominio. El libro no advierte contra mezclar dominios, así que la omisión es de detalle y no invierte nada. No añade cifras, plazos ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P90EE23",
+  "veredicto": "FIEL",
+  "lineas": [
+   2652,
+   2654
+  ],
+  "cita": "To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda analizar varios eventos con un marco clasificatorio común, no casos aislados (L2652-2654). El paso omite 'domain-related', pero los incidentes pasados de la propia organización ya son del mismo dominio. El libro no advierte contra mezclar dominios, así que la omisión es de detalle y no invierte nada. No añade cifras, plazos ni herramientas.",
+  "paso_fiel": ""
+ }
+}

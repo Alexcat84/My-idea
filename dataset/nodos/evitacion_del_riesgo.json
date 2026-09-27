@@ -1,7 +1,7 @@
 {
   "node_id": "evitacion_del_riesgo",
   "fase_proyecto": "planificacion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Evitación del Riesgo (Risk Avoidance)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Estrategia de gestión de riesgos que consiste en evitar completamente una práctica o actividad cuando el riesgo es demasiado alto, el costo de gestionarlo es prohibitivo, o el beneficio no justifica la exposición. Requiere sopesar si el beneficio potencial amerita aceptar el riesgo o si es mejor abstenerse por completo.",
@@ -21,5 +21,23 @@
     "Cuando el riesgo identificado tiene consecuencias potenciales severas e inaceptables",
     "Cuando el costo de mitigación supera ampliamente el beneficio del proyecto"
   ],
-  "etiqueta_arbol": "Evita Riesgos Demasiado Altos"
+  "etiqueta_arbol": "Evita Riesgos Demasiado Altos",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-078",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q062-002: El contenido es una estrategia de tratamiento de riesgos (evitar la actividad), no gestion de la calidad: su mundo es gestion de riesgos. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    }
+  ]
 }

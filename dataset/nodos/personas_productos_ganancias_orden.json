@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Tus prácticas para cuidar a tu gente escritas y claras (por ejemplo: con qué frecuencia hablas uno a uno con cada persona, qué esperas de un buen lugar para trabajar).",
   "nodos_previos": [
-    "cultura_organizacional_calidad"
+    "cultura_organizacional_calidad",
+    "hr_calidad_gestion"
   ],
   "nodos_siguientes": [
     "buen_lugar_para_trabajar"
@@ -22,5 +23,23 @@
     "Cuando tu negocio está creciendo y necesitas ordenar tus prioridades de gestión.",
     "Cuando notas señales de mal ambiente en tu equipo (gente que se va, desmotivación)."
   ],
-  "etiqueta_arbol": "Prioriza Gente, Producto y Ganancia"
+  "etiqueta_arbol": "Prioriza Gente, Producto y Ganancia",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-17",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "hr_calidad_gestion -> personas_productos_ganancias_orden",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-18, lectores de acuerdo): raiz de 4 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Revisar sistemáticamente cómo se gestiona a las personas conduce al principio de priorizar primero a la gente, luego los productos y al final las ganancias."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

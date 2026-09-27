@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PAC3703",
+  "intento": 0,
+  "usd": 0.16492800000000002,
+  "turnos": 1,
+  "duracion_s": 16.0,
+  "pared_s": 17.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34277,
+  "tokens_out": 1391,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PAC3703\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [213, 1435, 1539, 219, 293], \"cita\": \"Active failures can create gaps in the defences in at least two ways. First, front-line personnel may deliberately disable certain defences in order to achieve local operational objectives. [...] Second, front-line operators may unwittingly fail in their role as one of the system's most important lines of defence.\", \"datos_sin_respaldo\": [], \"razon\": \"Pone en práctica la distinción de L213 (huecos deliberados o involuntarios). Las etiquetas violación/error vienen del propio libro (L1435). No es contrario: L1539 admite violaciones erróneas y L219/L293 añaden condiciones latentes, pero son matices. El paso no manda cerrar la investigación ahí; los demás pasos cubren toda la secuencia.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PAC3703",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   213,
+   1435,
+   1539,
+   219,
+   293
+  ],
+  "cita": "Active failures can create gaps in the defences in at least two ways. First, front-line personnel may deliberately disable certain defences in order to achieve local operational objectives. [...] Second, front-line operators may unwittingly fail in their role as one of the system's most important lines of defence.",
+  "datos_sin_respaldo": [],
+  "razon": "Pone en práctica la distinción de L213 (huecos deliberados o involuntarios). Las etiquetas violación/error vienen del propio libro (L1435). No es contrario: L1539 admite violaciones erróneas y L219/L293 añaden condiciones latentes, pero son matices. El paso no manda cerrar la investigación ahí; los demás pasos cubren toda la secuencia.",
+  "paso_fiel": ""
+ }
+}

@@ -30,9 +30,9 @@ import { HojaImpresion, FilaPapel } from "./HojaImpresion";
  *    cae en 24-20+5 = 9. Mismo eje que la espina → la línea pasa por el centro.
  * La comparten viñetas (ul) y pasos de etapa (ol). */
 const RIEL_CLASES =
-  "relative pl-6 papel-espina " +
+  "relative ps-6 papel-espina " +
   "[&>li]:relative " +
-  "[&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[20px] [&>li]:before:top-[6px] " +
+  "[&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-start-[20px] [&>li]:before:top-[6px] " +
   "[&>li]:before:h-2.5 [&>li]:before:w-2.5 [&>li]:before:rounded-full [&>li]:before:bg-accent";
 
 const COMPONENTES: Components = {
@@ -113,7 +113,7 @@ const COMPONENTES: Components = {
   blockquote: ({ children }) => (
     <blockquote
       className="my-4 rounded-[10px] bg-surface-2 px-4 py-3 text-[14px] leading-[1.65] text-dim [&_p]:!my-0"
-      style={{ borderLeft: "2px solid var(--accent)" }}
+      style={{ borderInlineStart: "2px solid var(--accent)" }}
     >
       {children}
     </blockquote>
@@ -143,7 +143,7 @@ const COMPONENTES: Components = {
     </div>
   ),
   th: ({ children }) => (
-    <th className="border-b border-hairline bg-surface-2 px-3 py-2 text-left font-semibold">{children}</th>
+    <th className="border-b border-hairline bg-surface-2 px-3 py-2 text-start font-semibold">{children}</th>
   ),
   td: ({ children }) => <td className="border-b border-hairline px-3 py-2 align-top">{children}</td>,
 };

@@ -6,8 +6,11 @@
  * rescate y códigos de correo pendientes; deja el intento en la bitácora.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import {
-  AVISO_2FA,
+  aviso2FA,
   desafioSuperadoEnSesion,
   estadoSeguridad,
   ipDelRequest,
@@ -17,16 +20,18 @@ import {
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const t = elegir(SERVIDOR_CUENTA, idioma).comun;
   const sesion = await sesionRealDeCookies();
   if (!sesion) {
-    return NextResponse.json({ error: "necesitas tu cuenta para esto" }, { status: 401 });
+    return NextResponse.json({ error: t.necesitasCuenta }, { status: 401 });
   }
   const userId = sesion.user.id;
   const estado = await estadoSeguridad(userId);
   if (!estado.habilitado) return NextResponse.json({ ok: true, omitido: true });
 
   if (!(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const admin = createAdminClient();
@@ -43,11 +48,17 @@ export async function POST(request: Request) {
     .eq("user_id", userId);
   if (error) {
     console.error("[2fa/desactivar] fallo:", error.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: t.algoSeAtoro }, { status: 500 });
   }
 
-  await admin.from("two_factor_recovery_codes").delete().eq("user_id", userId);
-  await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
+  const { error: errEscritura1 } = await admin.from("two_factor_recovery_codes").delete().eq("user_id", userId);
+  if (errEscritura1) {
+    console.error("[app/api/cuenta/2fa/desactivar/route.ts] delete two_factor_recovery_codes fallo:", errEscritura1);
+  }
+  const { error: errEscritura2 } = await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
+  if (errEscritura2) {
+    console.error("[app/api/cuenta/2fa/desactivar/route.ts] delete two_factor_email_codes fallo:", errEscritura2);
+  }
   await registrarIntento2FA(userId, ipDelRequest(request), true, sesion.sessionId);
 
   return NextResponse.json({ ok: true });

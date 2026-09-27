@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P713B0A",
+  "intento": 0,
+  "usd": 0.15468400000000002,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33626,
+  "tokens_out": 1009,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P713B0A\", \"veredicto\": \"FIEL\", \"lineas\": [293, 198, 200, 273, 5742], \"cita\": \"For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it. Any one local condition could be the product of a number of different organizational factors\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide rastrear cada condición local hasta los factores organizacionales previos (L293). También sitúa el origen de las condiciones latentes en decisiones de diseñadores y gerentes (L198). Los rendimientos decrecientes afectan a influencias remotas (regulador, sociedad), no a este nivel organizacional. 'Decisión' no implica mala decisión (L200). Las causas múltiples son solo un matiz de detalle.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P713B0A",
+  "veredicto": "FIEL",
+  "lineas": [
+   293,
+   198,
+   200,
+   273,
+   5742
+  ],
+  "cita": "For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it. Any one local condition could be the product of a number of different organizational factors",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide rastrear cada condición local hasta los factores organizacionales previos (L293). También sitúa el origen de las condiciones latentes en decisiones de diseñadores y gerentes (L198). Los rendimientos decrecientes afectan a influencias remotas (regulador, sociedad), no a este nivel organizacional. 'Decisión' no implica mala decisión (L200). Las causas múltiples son solo un matiz de detalle.",
+  "paso_fiel": ""
+ }
+}

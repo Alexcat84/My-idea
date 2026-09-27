@@ -142,8 +142,8 @@ describe("POST /api/organizer", () => {
     expect(res.status).toBe(400);
   });
 
-  it("rechaza texto que supera el maximo de 4000 caracteres", async () => {
-    const res = await POST(requestFalso({ texto: "a".repeat(4001) }));
+  it("rechaza una idea que supera el maximo de 12.000 caracteres (decision del fundador, 27 sep 2026)", async () => {
+    const res = await POST(requestFalso({ texto: "a".repeat(12001) }));
     expect(res.status).toBe(400);
   });
 
@@ -197,5 +197,52 @@ describe("POST /api/organizer", () => {
     const sesion = Object.values(estadoFalso.sessions)[0] as Record<string, unknown>;
     expect(sesion.closed_at).toBeTruthy();
     expect(estadoFalso.plans).toHaveLength(0);
+  });
+
+  // AUD-09 B07a (tanda 7A, seguridad): el 502 devolvía el mensaje interno del
+  // error ("fallo el organizador con IA: <e.message>"). El detalle va al log;
+  // al cliente, palabras de persona.
+  it("el 502 no filtra el mensaje interno del error", async () => {
+    messagesCreateFalso.mockRejectedValueOnce(new Error("fallo de red simulado: clave sk-xxx"));
+    const res = await POST(requestFalso({ texto: "otra idea más" }));
+    expect(res.status).toBe(502);
+    const cuerpo = await res.json();
+    expect(cuerpo.error).not.toContain("fallo de red simulado");
+    expect(cuerpo.error).not.toContain("sk-");
+  });
+});
+
+// i18n F5 (D2): la Claridad de una idea escrita en coreano la escribe la IA en
+// coreano y su documento sale con los títulos en coreano, aunque la interfaz
+// esté en español.
+import { MOTOR_ORGANIZADOR } from "@/lib/i18n/mensajes/motorOrganizador";
+
+describe("POST /api/organizer: el idioma de la idea (i18n F5)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoVacio();
+    messagesCreateFalso.mockReset();
+    getUserFalso.mockReset();
+    getUserFalso.mockResolvedValue({ data: { user: { id: "user-fake" } } });
+  });
+
+  it("idea en coreano: regla de idioma para la IA, documento en coreano, proyecto en coreano", async () => {
+    messagesCreateFalso.mockResolvedValueOnce(
+      respuestaClaudeFalsa({
+        idea_en_una_frase: "동네 빵집",
+        etapa_detectada: "ideacion",
+        lo_que_ya_tienes_claro: [],
+        lo_que_estas_asumiendo_sin_saberlo: [],
+        areas_que_cubriria_tu_plan_completo: [],
+      })
+    );
+    const res = await POST(requestFalso({ texto: "우리 동네에서 빵을 팔고 싶어요" }));
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    const sistema = (messagesCreateFalso.mock.calls[0][0] as { system: Array<{ text: string }> }).system;
+    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma;
+    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
+    expect(body.markdown.split("\n")[0]).toBe(MOTOR_ORGANIZADOR.ko.markdown.titulo);
+    const proyecto = Object.values(estadoFalso.projects)[0] as Record<string, unknown>;
+    expect(proyecto.idioma).toBe("ko");
   });
 });

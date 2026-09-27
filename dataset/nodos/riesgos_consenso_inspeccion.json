@@ -16,8 +16,7 @@
   ],
   "entregable_esperado": "Sistema de registro independiente y comparación posterior implementado entre inspectores/certificadores, con gráfico de seguimiento de acuerdos/desacuerdos.",
   "nodos_previos": [
-    "administracion_de_inspeccion",
-    "gestion_testimonios"
+    "administracion_de_inspeccion"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -33,6 +32,24 @@
       "node_id": "comparacion_inspectores_independientes",
       "titulo": "Comparación Sistemática de Dos o Más Inspectores Independientes",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-044",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_testimonios -> riesgos_consenso_inspeccion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-11, lector y verificador de acuerdo)",
+        "motivo": "Redactar testimonios de clientes no tiene relacion con el consenso entre inspectores de calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ]
 }

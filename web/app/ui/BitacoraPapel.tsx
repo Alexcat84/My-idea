@@ -11,8 +11,13 @@
  * Misma verdad que el .md: sale de las mismas `entradas`. El .md descargable
  * sigue siendo texto (bitacoraMarkdown); esto es solo su vestido en papel.
  */
+import { partirMotivo } from "@/lib/i18n/comillas";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
-import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+import { ordenCronologico, type EntradaBitacora } from "@/lib/bitacoraCliente";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolarEn } from "@/lib/i18n/elision";
+import { DOCUMENTOS_PAPEL } from "@/lib/i18n/mensajes/documentosPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 
 const AZUL = "#3B6BE8";
@@ -52,34 +57,44 @@ function aFilas(entradas: EntradaBitacora[]): Fila[] {
   return filas;
 }
 
-/** Colorea la cita del motivo (": «…»") en el color dado. */
+/** Colorea la cita del motivo (": «…»" en español; cada idioma con sus comillas) en el color dado. */
 function conMotivo(texto: string, color: string) {
-  const m = texto.match(/^([\s\S]*?): («[\s\S]*»)$/);
+  const m = partirMotivo(texto);
   if (!m) return texto;
   return (
     <>
-      {m[1]}: <span style={{ color }}>{m[2]}</span>
+      {m[0]}
+      {m[1]}
+      <span style={{ color }}>{m[2]}</span>
     </>
   );
 }
 
 /** El CONTENIDO de la bitácora (sin andamio), para componerlo en el Expediente
  * o como documento suelto. */
-export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
+export function ContenidoBitacora({ entradas: recibidas }: { entradas: EntradaBitacora[] }) {
+  // Papel (PDF de la bitácora y secuencia del Expediente): siempre cronológico,
+  // del más antiguo al más reciente (decisión del fundador, 26 sep 2026).
+  const entradas = ordenCronologico(recibidas);
+  const idioma = useIdioma();
+  const t = elegir(DOCUMENTOS_PAPEL, idioma).bitacora;
   const filas = aFilas(entradas);
   const cerrada = entradas.some((e) => e.peso === "cierre");
   const rango =
     entradas.length > 0
-      ? `Del ${fechaHumanaConAno(entradas[0].fecha)} al ${fechaHumanaConAno(entradas[entradas.length - 1].fecha)}, día por día, tal como quedó registrado. Si moviste una fecha, la original sigue aquí: nada se reescribe.`
+      ? interpolarEn(idioma, t.rango, {
+          desde: fechaHumanaConAno(entradas[0].fecha, idioma),
+          hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma),
+        })
       : "";
 
   return (
               <div data-cuerpo-papel>
                 <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "1.6px", textTransform: "uppercase", color: AZUL }}>
-                  La secuencia de tu viaje
+                  {t.laSecuencia}
                 </p>
                 <h3 style={{ margin: "22px 0 0", fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 27, fontWeight: 700, letterSpacing: "-0.3px", color: TINTA }}>
-                  La secuencia de tu viaje
+                  {t.laSecuencia}
                 </h3>
                 {rango && <p style={{ margin: "12px 0 0", fontSize: 14.5, lineHeight: 1.7, color: "#4B4E55" }}>{rango}</p>}
 
@@ -96,9 +111,9 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                         aria-hidden
                         style={{
                           position: "absolute",
-                          left: 7,
+                          insetInlineStart: 7,
                           width: 1,
-                          transform: "translateX(-50%)",
+                          transform: "translateX(calc(-50% * var(--sentido)))",
                           background: verde ? VERDE : AZUL,
                           top: esPrimera ? centro : 0,
                           ...(esUltima ? { height: centro } : { bottom: 0 }),
@@ -107,10 +122,10 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                     );
                     if (f.tipo === "dia") {
                       return (
-                        <div key={`d-${i}`} style={{ position: "relative", paddingLeft: 30, paddingBottom: 7, breakInside: "avoid" }}>
+                        <div key={`d-${i}`} style={{ position: "relative", paddingInlineStart: 30, paddingBottom: 7, breakInside: "avoid" }}>
                           {tramo}
-                          <span style={{ position: "absolute", left: 7, top: 5, transform: "translateX(-50%)", width: 7, height: 7, borderRadius: "50%", background: f.cierre ? VERDE : AZUL }} />
-                          <div style={{ fontSize: 15, fontWeight: 700, color: f.cierre ? VERDE : TINTA }}>{fechaHumanaConAno(f.fecha)}</div>
+                          <span style={{ position: "absolute", insetInlineStart: 7, top: 5, transform: "translateX(calc(-50% * var(--sentido)))", width: 7, height: 7, borderRadius: "50%", background: f.cierre ? VERDE : AZUL }} />
+                          <div style={{ fontSize: 15, fontWeight: 700, color: f.cierre ? VERDE : TINTA }}>{fechaHumanaConAno(f.fecha, idioma)}</div>
                         </div>
                       );
                     }
@@ -119,12 +134,12 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                     const color = e.peso === "retirada" ? RETIRADO : e.peso === "cierre" ? VERDE : TINTA;
                     const puntoColor = e.peso === "retirada" ? RETIRADO : e.peso === "cierre" ? VERDE : AZUL_CLARO;
                     return (
-                      <div key={`e-${i}`} style={{ position: "relative", paddingLeft: 30, paddingBottom: finDeDia || esUltima ? 16 : 6 }}>
+                      <div key={`e-${i}`} style={{ position: "relative", paddingInlineStart: 30, paddingBottom: finDeDia || esUltima ? 16 : 6 }}>
                         {tramo}
-                        <span style={{ position: "absolute", left: 7, top: 7, transform: "translateX(-50%)", width: 6, height: 6, borderRadius: "50%", background: puntoColor }} />
+                        <span style={{ position: "absolute", insetInlineStart: 7, top: 7, transform: "translateX(calc(-50% * var(--sentido)))", width: 6, height: 6, borderRadius: "50%", background: puntoColor }} />
                         <div style={{ fontSize: 13.5, lineHeight: 1.6, fontWeight: esHito ? 700 : 400, color }}>
                           {f.conHora && (
-                            <span style={{ color: TERCIARIA, fontVariantNumeric: "tabular-nums", marginRight: 8 }}>{hora(e.fecha)}</span>
+                            <span style={{ color: TERCIARIA, fontVariantNumeric: "tabular-nums", marginInlineEnd: 8 }}>{hora(e.fecha)}</span>
                           )}
                           {conMotivo(e.texto, e.peso === "cierre" ? VERDE : e.peso === "retirada" ? "#6B6E75" : color)}
                         </div>
@@ -134,7 +149,7 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                 </div>
 
                 <p style={{ margin: "26px 0 0", fontSize: 12.5, lineHeight: 1.6, color: TERCIARIA }}>
-                  Esta es tu historia tal como quedó registrada, día por día. Puedes descargarla aparte cuando quieras.
+                  {t.pie}
                 </p>
               </div>
   );
@@ -145,7 +160,7 @@ export function BitacoraPapel({
   nombreIdea,
   oculto,
   pagina,
-  pieTitulo = "Mi bitácora",
+  pieTitulo,
 }: {
   entradas: EntradaBitacora[];
   nombreIdea: string;
@@ -155,8 +170,9 @@ export function BitacoraPapel({
   /** el rótulo del pie (por defecto "Mi bitácora"; "Expediente" al componer) */
   pieTitulo?: string;
 }) {
+  const t = elegir(DOCUMENTOS_PAPEL, useIdioma());
   return (
-    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={pieTitulo} oculto={oculto}>
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={pieTitulo ?? t.pieMiBitacora} oculto={oculto}>
       <FilaPapel pagina={pagina}>
         <ContenidoBitacora entradas={entradas} />
       </FilaPapel>

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB59D37",
+  "intento": 0,
+  "usd": 0.163916,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36669,
+  "tokens_out": 862,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB59D37\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [565, 5779, 5781], \"cita\": \"Organizational accidents involve the interaction of latent conditions with local triggering factors. Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers in the vicinity of rail tracks... Second, it had been an unusually wet summer\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta en Nakina justo esa interaccion entre una politica de la empresa (eliminar castores) y un factor natural (verano lluvioso). El paso la generaliza sin datos nuevos. No es contrario: no propone rastrear disparadores como via principal. Es un paso de auditoria junto a otros centrados en condiciones latentes, que el libro prefiere (L5779-5781).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB59D37",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   565,
+   5779,
+   5781
+  ],
+  "cita": "Organizational accidents involve the interaction of latent conditions with local triggering factors. Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers in the vicinity of rail tracks... Second, it had been an unusually wet summer",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta en Nakina justo esa interaccion entre una politica de la empresa (eliminar castores) y un factor natural (verano lluvioso). El paso la generaliza sin datos nuevos. No es contrario: no propone rastrear disparadores como via principal. Es un paso de auditoria junto a otros centrados en condiciones latentes, que el libro prefiere (L5779-5781).",
+  "paso_fiel": ""
+ }
+}

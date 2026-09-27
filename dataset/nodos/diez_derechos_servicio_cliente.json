@@ -6,9 +6,9 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "Este marco resume en diez puntos lo que una entrega bien hecha debe garantizar: la cantidad correcta, el costo correcto, el producto correcto, al cliente correcto, con la calidad correcta, en el tiempo correcto, en el lugar correcto, en la condicion correcta, con el cumplimiento correcto de reglas y normas, y con un origen etico y ambiental correcto. No es una lista decorativa: cada punto suele representar solo una fraccion pequeña del costo total de vender, pero pesa mucho en si el cliente vuelve a comprarte o no. Usarla como checklist te permite revisar tu propia operacion punto por punto, en lugar de confiar solo en la sensacion de que 'todo va bien'.",
   "pasos_accionables": [
-    "Escribe en una hoja los diez elementos: cantidad, costo, producto, cliente correcto, calidad, tiempo, lugar, condicion, cumplimiento y origen etico.",
-    "Revisa tu ultimo mes de entregas y marca en cuales de esos diez fallaste al menos una vez.",
-    "Elige los dos o tres derechos donde fallas mas seguido y enfocate primero en corregirlos.",
+    "Escribe en una hoja los diez elementos: cantidad, costo, producto, cliente correcto, calidad, tiempo, lugar, condición, cumplimiento y origen ético.",
+    "Revisa tu último mes de entregas y marca en cuáles de esos diez fallaste al menos una vez.",
+    "Elige los dos o tres derechos donde fallas más seguido y enfócate primero en corregirlos.",
     "Comparte esta lista con quien te ayude a empacar o despachar para que todos sepan que se revisa."
   ],
   "entregable_esperado": "Una lista personal de los diez elementos de servicio que definen si tu entrega fue buena o mala.",
@@ -23,5 +23,52 @@
     "Quieres auditar tu propia operacion de entrega sin depender solo de la intuicion.",
     "Estas armando por primera vez una politica de servicio para tu negocio."
   ],
-  "etiqueta_arbol": "Los diez derechos de tu entrega"
+  "etiqueta_arbol": "Los diez derechos de tu entrega",
+  "fuentes_internas": [
+    "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0779",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe en una hoja los diez elementos: cantidad, costo, producto, cliente correcto, calidad, tiempo, lugar, condicion, cumplimiento y origen etico.",
+      "texto_nuevo": "Escribe en una hoja los diez elementos: cantidad, costo, producto, cliente correcto, calidad, tiempo, lugar, condición, cumplimiento y origen ético.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-027.paso0: condición, ético (Tildes que faltaban de verdad en condición y ético; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0780",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa tu ultimo mes de entregas y marca en cuales de esos diez fallaste al menos una vez.",
+      "texto_nuevo": "Revisa tu último mes de entregas y marca en cuáles de esos diez fallaste al menos una vez.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-027.paso1: último, cuáles (Tildes que faltaban de verdad en último y cuáles (interrogativo indirecto); no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0781",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige los dos o tres derechos donde fallas mas seguido y enfocate primero en corregirlos.",
+      "texto_nuevo": "Elige los dos o tres derechos donde fallas más seguido y enfócate primero en corregirlos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O068-027.paso2: más, enfócate (Tildes que faltaban de verdad en más y enfócate; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ]
 }

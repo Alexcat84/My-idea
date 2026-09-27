@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE3B923",
+  "intento": 0,
+  "usd": 0.214836,
+  "turnos": 1,
+  "duracion_s": 12.3,
+  "pared_s": 13.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49074,
+  "tokens_out": 927,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE3B923\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [868, 856, 870], \"cita\": \"In order to keep ‘ahead’ of the aircraft, flight crews must not only know which mode they are in, but also how the FMS selects new modes. This is sometimes a tall order\", \"datos_sin_respaldo\": [], \"razon\": \"El libro exige que la tripulación sepa en qué modo está y cómo el sistema selecciona nuevos modos. Además atribuye el 18% de los errores a no entender la automatización y recoge a Bainbridge sobre invertir en formación. 'Tall order' marca dificultad, no ineficacia. El paso no presenta la formación como vía única frente al rediseño y no añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE3B923",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   868,
+   856,
+   870
+  ],
+  "cita": "In order to keep ‘ahead’ of the aircraft, flight crews must not only know which mode they are in, but also how the FMS selects new modes. This is sometimes a tall order",
+  "datos_sin_respaldo": [],
+  "razon": "El libro exige que la tripulación sepa en qué modo está y cómo el sistema selecciona nuevos modos. Además atribuye el 18% de los errores a no entender la automatización y recoge a Bainbridge sobre invertir en formación. 'Tall order' marca dificultad, no ineficacia. El paso no presenta la formación como vía única frente al rediseño y no añade datos.",
+  "paso_fiel": ""
+ }
+}

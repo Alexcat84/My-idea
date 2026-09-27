@@ -21,7 +21,26 @@
     "sipoc"
   ],
   "condiciones_activacion": [
-    "Cuando el producto es complejo, regulado o crítico para la seguridad"
+    "Cuando compras a un proveedor un producto complejo, regulado o critico para la seguridad y necesitas exigirle por contrato controles de proceso y un sistema de calidad reconocido"
   ],
-  "etiqueta_arbol": "Exige Calidad a tus Proveedores"
+  "etiqueta_arbol": "Exige Calidad a tus Proveedores",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-043",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el producto es complejo, regulado o crítico para la seguridad",
+      "texto_nuevo": "Cuando compras a un proveedor un producto complejo, regulado o critico para la seguridad y necesitas exigirle por contrato controles de proceso y un sistema de calidad reconocido",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q104-007: La unica condicion no liga el nodo a la relacion con el proveedor. (lector y verificador de acuerdo) Motivo: No menciona al proveedor: activaria el nodo para cualquier producto complejo aunque lo fabriques tu, cuando el contenido trata de exigir un sistema de calidad al proveedor por contrato"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

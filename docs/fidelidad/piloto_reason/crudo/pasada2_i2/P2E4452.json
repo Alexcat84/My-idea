@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P2E4452",
+  "intento": 0,
+  "usd": 0.131988,
+  "turnos": 1,
+  "duracion_s": 7.0,
+  "pared_s": 8.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30262,
+  "tokens_out": 547,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2E4452\", \"veredicto\": \"FIEL\", \"lineas\": [4261, 4014, 4211], \"cita\": \"Regulators, being human beings, tend to establish personal relationships with the regulated--they get to like the people they oversee and come to sympathize with their problems on a personal level--and this sometimes compromises their ability to identify, report or sanction violations.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala este riesgo (L4261). También critica la relación 'cosy' del Railway Inspectorate (L4014) y las acusaciones de relaciones 'overly collusive' (L4211). El paso solo pide reconocer el riesgo de la cercanía excesiva y no manda reducir el contacto, así que no choca con L4125, que critica la falta de trato personal. Tampoco añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2E4452",
+  "veredicto": "FIEL",
+  "lineas": [
+   4261,
+   4014,
+   4211
+  ],
+  "cita": "Regulators, being human beings, tend to establish personal relationships with the regulated--they get to like the people they oversee and come to sympathize with their problems on a personal level--and this sometimes compromises their ability to identify, report or sanction violations.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala este riesgo (L4261). También critica la relación 'cosy' del Railway Inspectorate (L4014) y las acusaciones de relaciones 'overly collusive' (L4211). El paso solo pide reconocer el riesgo de la cercanía excesiva y no manda reducir el contacto, así que no choca con L4125, que critica la falta de trato personal. Tampoco añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

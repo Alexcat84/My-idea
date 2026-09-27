@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P508499",
+  "intento": 0,
+  "usd": 0.18047600000000003,
+  "turnos": 1,
+  "duracion_s": 23.2,
+  "pared_s": 24.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34569,
+  "tokens_out": 2110,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P508499\", \"veredicto\": \"CONTRARIO\", \"lineas\": [263, 271, 273], \"cita\": \"Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro fija el límite del análisis sobre todo por lo que los gestores pueden controlar ('our main interest must be in the changeable and the controllable'). La fiabilidad de la evidencia aparece solo como limitación y razón adicional (L263, L273). El paso la vuelve criterio prioritario e invierte esa prioridad. Así puede cortar el análisis donde abunda la evidencia, cerca de los actos del operador.\", \"paso_fiel\": \"Fijar los límites del análisis principalmente en los factores que los gestores del sistema pueden razonablemente controlar, teniendo en cuenta además que la cantidad y fiabilidad de la evidencia disminuyen al alejarse del suceso.\"}\n```",
+ "parseado": {
+  "id": "P508499",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   263,
+   271,
+   273
+  ],
+  "cita": "Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro fija el límite del análisis sobre todo por lo que los gestores pueden controlar ('our main interest must be in the changeable and the controllable'). La fiabilidad de la evidencia aparece solo como limitación y razón adicional (L263, L273). El paso la vuelve criterio prioritario e invierte esa prioridad. Así puede cortar el análisis donde abunda la evidencia, cerca de los actos del operador.",
+  "paso_fiel": "Fijar los límites del análisis principalmente en los factores que los gestores del sistema pueden razonablemente controlar, teniendo en cuenta además que la cantidad y fiabilidad de la evidencia disminuyen al alejarse del suceso."
+ }
+}

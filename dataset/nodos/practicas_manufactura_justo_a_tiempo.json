@@ -12,7 +12,7 @@
     "Haz del orden y la limpieza extrema una costumbre de calidad en tu día a día",
     "Entrena a quienes trabajan contigo para hacer mantenimiento básico y revisar la calidad de lo que producen"
   ],
-  "entregable_esperado": "Una prueba piloto de entrega justo a tiempo y de grupos de mejora continua en un area de tu producción",
+  "entregable_esperado": "Una prueba piloto de entrega justo a tiempo y de grupos de mejora continua en un área de tu producción",
   "nodos_previos": [
     "relacion_largo_plazo_proveedor_unico"
   ],
@@ -23,5 +23,23 @@
     "Cuando hay exceso de inventario o desperdicio en tu operación",
     "Si buscas mejorar la productividad involucrando mas a quienes trabajan contigo"
   ],
-  "etiqueta_arbol": "Aplica Manufactura Justo a Tiempo"
+  "etiqueta_arbol": "Aplica Manufactura Justo a Tiempo",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0680",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una prueba piloto de entrega justo a tiempo y de grupos de mejora continua en un area de tu producción",
+      "texto_nuevo": "Una prueba piloto de entrega justo a tiempo y de grupos de mejora continua en un área de tu producción",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-027.entregable: área (Faltaba la tilde de área y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

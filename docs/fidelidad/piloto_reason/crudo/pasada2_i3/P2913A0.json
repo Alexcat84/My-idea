@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2913A0",
+  "intento": 0,
+  "usd": 0.154948,
+  "turnos": 1,
+  "duracion_s": 20.2,
+  "pared_s": 21.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29532,
+  "tokens_out": 1841,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2913A0\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4798, 4824, 4765], \"cita\": \"Indemnity against disciplinary proceedings--as far as it is practicable. […] it is essential to protect informants and their colleagues as far as possible from disciplinary actions taken on the basis of their reports. But there will be limits upon this indemnity.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro fija la indemnidad como primer factor de una cultura de reporte, y el paso lo lleva a la práctica en esa misma dirección. No dice que la indemnidad sea total ni incondicional. 'Honestos' limita el alcance a reportes de buena fe, y el diseño puede incluir los límites del libro. No es contrario, pero conviene que la corrección haga explícitos esos límites.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2913A0",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4798,
+   4824,
+   4765
+  ],
+  "cita": "Indemnity against disciplinary proceedings--as far as it is practicable. […] it is essential to protect informants and their colleagues as far as possible from disciplinary actions taken on the basis of their reports. But there will be limits upon this indemnity.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro fija la indemnidad como primer factor de una cultura de reporte, y el paso lo lleva a la práctica en esa misma dirección. No dice que la indemnidad sea total ni incondicional. 'Honestos' limita el alcance a reportes de buena fe, y el diseño puede incluir los límites del libro. No es contrario, pero conviene que la corrección haga explícitos esos límites.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P14DCA6",
+  "intento": 0,
+  "usd": 0.21521600000000002,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47549,
+  "tokens_out": 1251,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P14DCA6\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4769, 5178, 5208], \"cita\": \"shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.\", \"datos_sin_respaldo\": [\"Sistema de Comando de Incidentes\"], \"razon\": \"El libro respalda el traspaso temporal del control a los expertos en el lugar y la vuelta posterior a la jerarquía (L4769, L5174). No menciona el Sistema de Comando de Incidentes. Tampoco lo desaconseja: solo dice que esa flexibilidad se construye con premisas culturales compartidas y formación, no con reglas o estandarización. Por eso es una herramienta añadida, no un contrario.\", \"paso_fiel\": \"Preparar a la organización para que, en emergencias, el control pase a los expertos en la tarea presentes en el lugar, sobre todo a supervisores de primera línea formados y respetados, y vuelva después a la jerarquía habitual, apoyándose en valores y premisas compartidos y en una fuerte inversión en formación.\"}\n```",
+ "parseado": {
+  "id": "P14DCA6",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4769,
+   5178,
+   5208
+  ],
+  "cita": "shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.",
+  "datos_sin_respaldo": [
+   "Sistema de Comando de Incidentes"
+  ],
+  "razon": "El libro respalda el traspaso temporal del control a los expertos en el lugar y la vuelta posterior a la jerarquía (L4769, L5174). No menciona el Sistema de Comando de Incidentes. Tampoco lo desaconseja: solo dice que esa flexibilidad se construye con premisas culturales compartidas y formación, no con reglas o estandarización. Por eso es una herramienta añadida, no un contrario.",
+  "paso_fiel": "Preparar a la organización para que, en emergencias, el control pase a los expertos en la tarea presentes en el lugar, sobre todo a supervisores de primera línea formados y respetados, y vuelva después a la jerarquía habitual, apoyándose en valores y premisas compartidos y en una fuerte inversión en formación."
+ }
+}

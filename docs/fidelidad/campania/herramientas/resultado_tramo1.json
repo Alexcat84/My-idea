@@ -1,0 +1,2134 @@
+[
+ {
+  "lote": "DK1",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 111,
+    "esperados": 111,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 6,
+  "fielMuestreados": 13,
+  "fielDiscutidos": [
+   "DK1-001",
+   "DK1-016",
+   "DK1-064",
+   "DK1-074",
+   "DK1-082"
+  ],
+  "cuenta": {
+   "ANADIDO": 2,
+   "OPERATIVO": 36,
+   "FIEL": 69
+  },
+  "noFiel": [
+   {
+    "id": "DK1-059",
+    "veredicto": "ANADIDO",
+    "lineas": "L3525-L3525",
+    "frase_clave": "the union representative asked a subsequent group to write “yes” on a piece of paper if they were afraid to report injuries.",
+    "dato": "entrevistas anonimas como metodo para evaluar el clima de reporte",
+    "texto_fiel": "Pregunta a tus trabajadores si tienen miedo de reportar lesiones, por ejemplo pidiéndoles que lo indiquen por escrito sin identificarse, y por qué.",
+    "razon": "El libro no habla de entrevistas anonimas (Grep de anonym solo da L591, sobre el reporte confidencial). Su ejemplo es preguntar en las reuniones de turno y luego pedir la respuesta por escrito.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-073",
+    "veredicto": "ANADIDO",
+    "lineas": "L3111; L2970",
+    "frase_clave": "Safety bureaucracies are often organized around lagging indicators: measuring that which has already been. The predictive value of most lagging indicators is known to be poor.",
+    "dato": "Los indicadores adelantados y la proporción adelantados frente a rezagados. El Grep de leading solo devuelve usos ajenos ('leading edge', 'leading to'); el libro solo habla de indicadores rezagados.",
+    "razon": "A tenía razón. El libro solo nombra los indicadores rezagados (L3111) y opone una gestión 'reactive, lagging' a una 'proactive' (L2970). Nunca habla de indicadores adelantados ni de una proporción entre ambos. El paso mete una herramienta concreta (esa proporción) que el libro no respalda.",
+    "texto_fiel": "Evaluar cuánto se apoya la gestión de seguridad en indicadores rezagados (lagging), que miden lo que ya ocurrió y cuyo valor predictivo es pobre",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK1-002",
+    "veredicto": "OPERATIVO",
+    "lineas": "L294-L304",
+    "frase_clave": "But does that help in the long run--or even the short run? It doesn’t.",
+    "texto_fiel": "Pregúntate si las medidas que aplicaste, como sacar a las 'manzanas podridas', poner más reglas, pedir más vigilancia o sustituir personas por tecnología, ayudaron de verdad a largo o incluso a corto plazo.",
+    "razon": "El libro hace esa misma pregunta sobre las medidas de la Vieja Vision y la responde. Convertirla en una evaluacion propia concreta lo que dice.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-007",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3565-L3578",
+    "frase_clave": "It is not defined by its control variables: the safety inputs that everyone in the organization makes.",
+    "texto_fiel": "Pon el foco en lo que tú y tu organización hacen (las aportaciones a la seguridad que controlan), no solo en el resultado medido en accidentes.",
+    "razon": "El libro critica definir la seguridad por la variable dependiente y no por las variables de control. No habla de disenar indicadores.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-008",
+    "veredicto": "OPERATIVO",
+    "lineas": "L646-L646",
+    "frase_clave": "So make sure you have people involved in the aftermath of an incident who know the messy details, and who have credibility in the eyes of other practitioners.",
+    "texto_fiel": "Asegurar que en el análisis posterior al incidente participen personas que conozcan los detalles reales del trabajo y tengan credibilidad ante otros trabajadores.",
+    "razon": "El libro pide involucrar a esas personas. Recoger sus testimonios va en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-009",
+    "veredicto": "OPERATIVO",
+    "lineas": "L572-L580",
+    "frase_clave": "ask him to write up his account of what happened and why. And then to publish this account widely throughout the company.",
+    "texto_fiel": "Difundir en la organización lo aprendido del incidente, por ejemplo el relato de quien lo vivió, sin estigmatizar a los involucrados.",
+    "razon": "El libro apoya difundir relatos en toda la empresa y advierte contra estigmatizar a los involucrados (L3593-L3599).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-011",
+    "veredicto": "OPERATIVO",
+    "lineas": "L4410-L4410",
+    "frase_clave": "who are willing to expose and acknowledge the constraints that make these claims possible.",
+    "texto_fiel": "Reconoce de forma explícita las limitaciones y el alcance de tus propias conclusiones al analizar lo sucedido.",
+    "razon": "El libro dice que tu mirada es subjetiva y limitada (L2553) y valora exponer las limitaciones del analisis (L4410, L1107). Dejarlo por escrito es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-012",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3960-L3960",
+    "frase_clave": "you will have to start seeing it as the effect of problems deeper inside your organization. Not as the simple cause of all your trouble.",
+    "texto_fiel": "Cuestionar si esa solución atribuye la falla solo a individuos en lugar de verla como efecto de problemas más profundos de la organización.",
+    "razon": "La accion es fiel, pero 'causa raiz sistemica' choca con L1942-L1946 (There is no “root” cause). Se reescribe sin ese termino.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-013",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3274-L3274",
+    "frase_clave": "Connecting the task to a cause larger than it, or the person doing that task, is a third inner motivator.",
+    "texto_fiel": "Conectar cada tarea con una causa más amplia que la tarea y que la persona que la realiza.",
+    "razon": "El libro habla de una causa mayor, no necesariamente de un proposito organizacional. El paso lo estrecha.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-014",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3426-L3433",
+    "frase_clave": "Terms that try to explain so much, end up explaining little.",
+    "texto_fiel": "Precisar qué se entiende por 'cultura' en cada caso, porque un término que lo cubre todo explica poco.",
+    "razon": "El libro advierte que la cultura de seguridad lo abarca todo y pide operacionalizar las etiquetas (L1821). Definir aspectos concretos es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-017",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2399-L2401",
+    "frase_clave": "Adapting procedures in the face of either unanticipated complexity or a vulnerability to making other errors. But people may not be entirely successful at adapting the procedure",
+    "texto_fiel": "Entender cuándo una adaptación del procedimiento es una inversión en seguridad y cuándo forma parte de una deriva que va reduciendo los márgenes.",
+    "razon": "El libro muestra adaptaciones que crean seguridad (L2437) y la deriva que erosiona los margenes (L2457). No pide diferenciarlas de forma expresa.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-022",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2377-L2381",
+    "frase_clave": "The difference between large changes and small changes are easy to note on a round dial.",
+    "texto_fiel": "Evaluar si la representación permite ver de un vistazo tendencias y la magnitud de los cambios, como la aguja sobre una escala fija.",
+    "razon": "El libro describe la ventaja del dial para ver tendencias y magnitudes. Convertirlo en una evaluacion es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-027",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1989-L1989",
+    "frase_clave": "Allow the reader to understand what made the difference on the day of the accident. ... Do not rely on ‘human error’ or “unsafe acts” to explain the difference--that is the cheap way out.",
+    "texto_fiel": "Explica qué marcó la diferencia ese día, por qué las cosas se salieron de control esa vez, sin recurrir al 'error humano' como explicación fácil.",
+    "razon": "El libro habla de lo que marco la diferencia ese dia, no de lo que alguien hizo distinto. El paso reduce la explicacion a una accion propia.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-031",
+    "veredicto": "OPERATIVO",
+    "lineas": "L589-L591",
+    "frase_clave": "Confidential means that the reporter is known, but only, for example, for safety people--not to people who could create career jeopardy",
+    "texto_fiel": "Establecer un sistema de reporte de incidentes que no exponga a quien reporta a castigo ni a represalias en su carrera.",
+    "razon": "El libro apoya reportar sin represalias (L591, L3952), pero no habla de un sistema 'libre de castigo' ni lo iguala a just culture, que critica cuando es un programa de categorias (L604-L631).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-036",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3533-L3535",
+    "frase_clave": "Some companies have cash prizes for those who do not report incidents or injuries and offer bonus payments to managers whose departments report low numbers of negative events.",
+    "texto_fiel": "Revisa los programas de incentivos de seguridad para ver si desincentivan el reporte de lesiones, como premios grupales que se pierden si alguien reporta o bonos a jefes por cifras bajas.",
+    "razon": "Auditar es una concrecion. 'Perdida de bonos' no esta literal en el libro: habla de perdida de premios y de horas extra.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-037",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2082-L2084",
+    "frase_clave": "The aim of a distal reach is to explore how aspects of training, documentation ... may all have influenced what people at the sharp end saw as making sense",
+    "texto_fiel": "Trazar cómo aspectos de la organización, la regulación y la industria influyeron en lo que ocurrió en el extremo agudo.",
+    "razon": "Concreta el alcance distal y el flowchart (L1979). Se evita 'cadena' porque el libro critica el modelo de cadena de eventos (L2782-L2800).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-045",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2393-L2395",
+    "frase_clave": "Situations may (and often do) occur where multiple procedures need to be applied at once ... But items in these various procedures may contradict one another.",
+    "texto_fiel": "Identificar situaciones en que hubo que aplicar varios procedimientos a la vez y sus pasos se contradecían.",
+    "razon": "El libro describe el fenomeno. Documentar casos es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-047",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3558-L3580",
+    "frase_clave": "there is nothing actionable (no manipulated variables) in a mere call to zero that they can identify and work with.",
+    "texto_fiel": "Revisa tu compromiso de 'cero accidentes' y habla de qué pueden hacer y controlar tú y tu equipo, porque la meta por sí sola no dice qué hacer.",
+    "razon": "El libro pide revisar la vision cero y dice que no ofrece nada que se pueda hacer. Traducirla en acciones es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-057",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3539-L3539",
+    "frase_clave": "Experts and industry officials suggest that rate-based programs may discourage reporting of injuries and illnesses",
+    "texto_fiel": "Revisa los programas basados en tasas de incidentes, que pueden desincentivar el reporte, y pon el foco en las condiciones de trabajo y en lo que la organización hace por la seguridad.",
+    "razon": "El libro critica los programas basados en tasas y los objetivos numericos (L3074), pero no propone metricas de proceso para sustituirlos.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-062",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3535-L3546",
+    "frase_clave": "Each month that no one reports an injury, all workers receive prizes ... Behavioral safety programs can harm social cohesion and workplace solidarity.",
+    "texto_fiel": "Resiste los premios grupales que se pierden cuando alguien reporta un incidente, porque desincentivan el reporte y dañan la solidaridad.",
+    "razon": "El libro critica estos premios (Resist behavioral safety interventions, L3514) pero no ordena eliminarlos.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-067",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3123-L3123",
+    "frase_clave": "the more they become “fantasy documents.” Fantasy documents bear no relation to actual work or actual operational expertise.",
+    "texto_fiel": "Revisar si los procedimientos de seguridad guardan relación con el trabajo real o se han vuelto 'documentos de fantasía'.",
+    "razon": "El libro describe el riesgo. Auditarlo es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-070",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3535-L3535",
+    "frase_clave": "the injured worker had to wear a fluorescent yellow vest for a week. ... But the vest identified the worker as the safety problem. Worse, it stigmatized the worker",
+    "texto_fiel": "Resiste prácticas que estigmaticen a trabajadores lesionados, como obligarlos a llevar una señal visible ante el resto del equipo.",
+    "razon": "El libro critica la practica pero no ordena eliminarla.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-075",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3758-L3768",
+    "frase_clave": "You want to peg your investments in safety to the level of safety the particular activity has already attained.",
+    "texto_fiel": "Elegir la estrategia que corresponde a esa categoría: competencia en las inseguras, estandarización en las más seguras, compromiso de la dirección y reporte de incidentes en las seguras, y entender el trabajo normal y lo que da resiliencia en las ultra seguras.",
+    "razon": "El paso omite la estrategia para las actividades ultra seguras (L3766), donde el reporte de incidentes puede dejar de ayudar. 'Han funcionado' lo respalda L3781.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-076",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2381-L2381",
+    "frase_clave": "Yet in a speed tape, this principle is violated ... One advantage of a speed tape versus a round dial is its more parsimonious use of cockpit real estate, but for that gain, there are costs",
+    "dato": "redisenar displays",
+    "texto_fiel": "Identificar displays que violan el principio de la parte móvil y tener en cuenta sus costes para el monitoreo, sabiendo que toda forma de representar la información tiene ventajas y desventajas.",
+    "razon": "El libro describe la violacion y sus costes pero no pide redisenar, y advierte que todo diseno abre nuevas vias de fallo (L2353, L2371). Va en la direccion de cambiar las herramientas (L138).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-084",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3768-L3768",
+    "frase_clave": "You want to peg your investments in safety to the level of safety the particular activity has already attained.",
+    "dato": "nivel de madurez",
+    "texto_fiel": "Ajustar las inversiones en seguridad al nivel de seguridad que la actividad ya ha alcanzado.",
+    "razon": "El libro habla del nivel de seguridad alcanzado, no de madurez.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-086",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1944-L1957",
+    "frase_clave": "a large number of contributory factors are necessary and only jointly sufficient ... Selective. There are only so many things you can label “causal”",
+    "dato": "exhaustivamente",
+    "texto_fiel": "Documentar los múltiples factores organizacionales, técnicos y humanos que fueron necesarios y solo conjuntamente suficientes, sabiendo que toda selección de causas es selectiva.",
+    "razon": "El libro apoya documentar muchos factores, pero dice que la red causal no tiene fin y que toda seleccion es selectiva. 'Exhaustivamente' no cabe.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-090",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3753-L3764",
+    "frase_clave": "In these safe systems, incident reporting is worthwhile, as the ingredients of incidents (dress rehearsals) tend to show up in accidents.",
+    "texto_fiel": "Analizar los cuasi-accidentes para aprender de ellos: en sistemas seguros sus ingredientes suelen aparecer en los accidentes, aunque en los ultra seguros los incidentes ya no predicen bien los accidentes.",
+    "razon": "El libro respalda los precursores en sistemas seguros, pero advierte que la causa comun pierde validez cuanto mas seguro es el sistema (L2761, L3766). El paso generaliza sin esa condicion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-093",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2592-L2592",
+    "frase_clave": "Sure, we can compare our outside/hindsight knowledge of the situation with operators’ inside knowledge. ... But that is not a useful norm.",
+    "texto_fiel": "Evita usar lo que sabes ahora como norma para juzgar lo que sabía la persona que decidió en ese momento.",
+    "razon": "El libro no prohibe comparar. Lo que rechaza es usar el conocimiento retrospectivo como norma.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-094",
+    "veredicto": "OPERATIVO",
+    "lineas": "L129-L133",
+    "frase_clave": "there were big differences between the numbers and the kinds of errors each of the two groups observed. ... Observed ‘human errors’ were not errors to those “committing” them.",
+    "texto_fiel": "Tener en cuenta que operadores expertos y observadores externos pueden clasificar el mismo comportamiento de forma distinta: lo que unos ven como error puede ser una estrategia deliberada.",
+    "razon": "El libro relata el estudio pero no pide hacer esa comparacion. El paso lo convierte en un metodo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-098",
+    "veredicto": "OPERATIVO",
+    "lineas": "L584-L586",
+    "frase_clave": "The problem wasn’t negligent mechanics, it was a poorly designed logbook. ... The bottom line: discipline without understanding the problem is ineffective.",
+    "texto_fiel": "Revisa casos en que sancionar a alguien no resolvió el problema, porque no se entendió ni se cambió lo que lo causaba.",
+    "razon": "El libro trae ejemplos (tambien el DC-10, L2796-L2798) pero no pide llevar un registro.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-100",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3567-L3569",
+    "frase_clave": "Zero vision implies that everything is preventable ... Zero visions can stigmatize incidents and those involved in them.",
+    "texto_fiel": "Ten presente que la meta de cero accidentes da por hecho que todo es prevenible, y que eso puede estigmatizar a los involucrados cuando algo sale mal.",
+    "razon": "El paso concreta como advertencia de uso lo que el libro explica.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-107",
+    "veredicto": "OPERATIVO",
+    "lineas": "L467-L476",
+    "frase_clave": "Testing workers and carefully vetting and selecting them, excluding the accident-prone ones ... a trace for employers and others to base hiring and firing decisions on.",
+    "dato": "sin analisis contextual",
+    "texto_fiel": "Evitar usar perfiles de 'propensión a accidentes' para decisiones de contratación o despido, ya que los trabajadores no están expuestos al mismo riesgo y sus tasas no se pueden comparar.",
+    "razon": "El libro descarta la propension como explicacion (L476, L484). La condicion 'sin analisis contextual' no esta en el libro y sugiere que, con analisis, el perfil valdria.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-110",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3396-L3398",
+    "frase_clave": "Studies culture with qualitative methods such as observations, interviews ... Studies culture with quantitative methods such as surveys, measurements, questionnaires",
+    "texto_fiel": "Ver qué métodos se usan para estudiar la cultura, cualitativos (observaciones, entrevistas) o cuantitativos (encuestas, cuestionarios), como señal de la visión que predomina.",
+    "razon": "La Tabla 7.1 asocia cada vision a sus metodos. Usarlo como evaluacion es una concrecion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK1-001",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3268-L3279",
+    "frase_clave": "Engaging people with an external drive \"to be safe\" through posters, reminders, stickers and campaigns denies or downplays the existence or relevance or power of this internal motivation.",
+    "razon": "B tenía razón. El libro critica las campañas externas (L3268) y los palos y zanahorias (L3279). También dice que pedir más vigilancia con pósters y eslóganes no ayuda y tiene consecuencias negativas (L304-L310). No da la orden de evitarlas ni pone el matiz 'solo', así que el paso concreta en la misma dirección sin datos nuevos. No es FIEL literal.",
+    "texto_fiel": "Evitar apoyarse en campañas externas de seguridad (pósters, recordatorios, pegatinas) o en palos y zanahorias, porque niegan o minimizan la motivación interna que las personas ya tienen",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK1-016",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3533-L3539",
+    "frase_clave": "Others disincentivize reporting of incidents and injuries by taking away perquisites (loss of overtime opportunities) or stigmatization like mandatory drug testing after an incident.",
+    "razon": "B tenía razón. El libro afirma que esas políticas desincentivan el reporte (L3533). Cita al GAO: las pruebas de drogas y alcohol tras un incidente pueden desanimar a reportar (L3539), y añade 'you are not alone' (L3537). No manda evaluarlo; pedir la evaluación es concreción en la misma dirección.",
+    "texto_fiel": "Evalúa si las políticas posteriores a un incidente, como las pruebas de drogas y alcohol obligatorias tras el incidente, desincentivan el reporte de incidentes y lesiones",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK1-064",
+    "veredicto": "OPERATIVO",
+    "lineas": "L646; L519",
+    "frase_clave": "So make sure you have people involved in the aftermath of an incident who know the messy details, and who have credibility in the eyes of other practitioners.",
+    "razon": "B tenía razón. El libro lo pide en positivo: incluir a quienes conocen los detalles del trabajo. Advierte que quienes juzgan a menudo no conocen el trabajo, y entre ellos incluye a los supervisores, no solo a actores externos (L646, L519). El paso lo pone en negativo y lo limita a 'actores externos': concreción en la misma dirección, sin dato nuevo.",
+    "texto_fiel": "Asegurar que tras un incidente participen personas que conozcan los detalles del trabajo real y tengan credibilidad ante los demás practicantes, y que no juzguen solo quienes no conocen ese trabajo (supervisores, inspectores, policía, jueces)",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK1-074",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3756-L3766",
+    "frase_clave": "The actions you can successfully implement toward a New View safety culture depend on how safe that part of your system already is.",
+    "razon": "B tenía razón. El libro define las bandas por la tasa de muertes o lesiones graves por actividad (L3758) y pide ajustar la inversión al nivel ya alcanzado (L3766). No habla de 'datos históricos' ni manda determinar la banda. Es concreción en la misma dirección.",
+    "texto_fiel": "Determinar en qué banda de seguridad está hoy tu actividad (insegura, más segura, segura, ultra segura) según cuántas personas mata o hiere gravemente por actividad",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK1-082",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2433-L2449; L1890",
+    "frase_clave": "Safety improvements come from organizations monitoring and understanding the gap between procedures and practice",
+    "razon": "B tenía razón. El libro pide vigilar y entender la brecha entre procedimiento y práctica (L2433). Muestra al piloto experimentado que adapta el procedimiento para ganar tiempo para las tareas siguientes (L1890, L2437), y dice que la experiencia enseña a manejar tareas concurrentes (L2447). No habla de 'carga de trabajo real' ni centra el análisis en los veteranos, así que es concreción en su dirección.",
+    "texto_fiel": "Analizar cómo los operadores adaptan los procedimientos de forma localmente pragmática para gestionar tareas concurrentes, entendiendo la brecha entre procedimiento y práctica",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "DK2",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 110,
+    "esperados": 110,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 7,
+  "fielMuestreados": 13,
+  "fielDiscutidos": [
+   "DK2-022",
+   "DK2-030",
+   "DK2-074",
+   "DK2-082",
+   "DK2-095"
+  ],
+  "cuenta": {
+   "CONTRARIO": 1,
+   "OPERATIVO": 33,
+   "FIEL": 72
+  },
+  "noFiel": [
+   {
+    "id": "DK2-043",
+    "veredicto": "CONTRARIO",
+    "lineas": "L604-L631",
+    "frase_clave": "But who gets to say what is white, grey and black in your organization? ... there is no pre-existing line between the categories. There are only people who draw it. ... Sure, you can try to create a \"just culture\" program based on categories. But sooner or later you will run into all the problems describe above.",
+    "dato": "definir criterios de conducta sancionable frente a error del sistema",
+    "razon": "El libro desaconseja los programas de cultura justa basados en categorias y lineas de culpabilidad; no hay pasaje que las respalde (buscado culpab, sanction, draw the line).",
+    "texto_fiel": "En lugar de fijar categorías de conducta sancionable, preguntar qué es responsable y no quién, con personas que conozcan el trabajo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-073",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1737-L1740; L1702-L1704",
+    "frase_clave": "micro-matching fragments of behavior with these various standards explains nothing--it only judges.",
+    "razon": "Va en la misma direccion, pero 'como unica explicacion' suaviza el libro, que dice que no explican nada.",
+    "texto_fiel": "No usar 'estándares de buena práctica' aplicados a posteriori para explicar el comportamiento: no lo explican, solo lo juzgan",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-026",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1756-L1758",
+    "frase_clave": "Their similarity is entirely in the eye of you, the retrospective beholder.",
+    "razon": "El libro afirma que la similitud es enteramente del investigador; el paso lo convierte en algo que hay que verificar.",
+    "texto_fiel": "Reconocer que la 'similitud' entre fragmentos está en los ojos del investigador retrospectivo, no en la situación",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-078",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1888",
+    "frase_clave": "Combine this with a system that, in many aircraft, never warns pilots that their spoilers are not armed; ... whose difference between armed and not-armed may be all of one inch",
+    "razon": "Convierte en instruccion general los rasgos del ejemplo de los spoilers; misma direccion, sin datos nuevos.",
+    "texto_fiel": "Identificar en el sistema la ausencia de avisos y los mandos o indicaciones poco distinguibles, como en el caso de los spoilers",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-032",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2019-L2023; L2027",
+    "frase_clave": "explanatory factors which explain the data from one particular sequence of events",
+    "razon": "El libro distingue los factores explicativos; listarlos es una concrecion operativa.",
+    "texto_fiel": "Distinguir en la investigación los factores explicativos, que explican esa secuencia concreta de eventos",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-037",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2029",
+    "frase_clave": "The change factor came when someone identified that more than 80 percent of the injuries occurred during unscheduled maintenance along the dusty roads of the mine",
+    "razon": "Generaliza el ejemplo de la mina; misma direccion.",
+    "texto_fiel": "Buscar, como en el caso de la mina, dónde se concentran los incidentes para encontrar una palanca de cambio real",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-006",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2196-L2204",
+    "frase_clave": "There is no right or wrong here. Only hindsight can show you ... you need to acknowledge the existence and importance of this balancing act.",
+    "razon": "El libro pide reconocer el equilibrio, no evaluarlo, porque solo la retrospectiva dice cual era el correcto.",
+    "texto_fiel": "Reconocer el equilibrio entre 'vagabundeo temático' y fijación cognitiva que enfrentaban las personas dentro de la situación",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-011",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2174-L2194",
+    "frase_clave": "People have to make provisional assessments of what is going on based on partial and uncertain data. ... These factors supported their interpretation of the situation",
+    "razon": "Concreta el analisis del caso del combustible; misma direccion.",
+    "texto_fiel": "Identificar la interpretación provisional inicial y qué datos la apoyaban en ese momento",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-069",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2180; L2202",
+    "frase_clave": "This explanation ... may persist and can get transformed into an assumption that is then taken for granted.",
+    "razon": "Concreta lo que el libro describe; misma direccion.",
+    "texto_fiel": "Documentar qué datos nuevos apuntaban a otra explicación y por qué la interpretación inicial persistió",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-068",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2209-L2211",
+    "frase_clave": "the dual demands of maintaining process integrity while diagnosing the problem, increased crew workload.",
+    "razon": "El libro liga las demandas duales a la carga de trabajo; extenderlo a las decisiones es una concrecion.",
+    "texto_fiel": "Documentar cómo las demandas duales (mantener el proceso y diagnosticar) aumentaron la carga de trabajo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-015",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2259",
+    "frase_clave": "investigators found how \"the captain and the first officer had been continuously awake for at least 16 hours.\"",
+    "razon": "Convierte el ejemplo del informe en instruccion; misma direccion.",
+    "texto_fiel": "Registrar en las investigaciones cuánto tiempo llevaban despiertos los operadores, como en el caso citado por el libro",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-024",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2430-L2433",
+    "frase_clave": "Safety improvements come from organizations monitoring and understanding the gap between procedures and practice",
+    "razon": "Tiene razon A. La accion es literal de L2433, pero 'sistematicamente' y el parentesis 'no solo cuando hay accidentes' son una condicion que ese pasaje no pone. Esa condicion se apoya en otros pasajes: L2978 (Safety II, entender el trabajo normal), L3863 (distancia entre el trabajo imaginado y el real) y L3865 (mantener viva la discusion del riesgo aunque todo parezca seguro). Es una concrecion en la misma direccion y sin dato nuevo.",
+    "texto_fiel": "Monitorear y entender la brecha entre procedimiento escrito y practica real, tambien en el trabajo normal y no solo tras incidentes o accidentes",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK2-035",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2941; L2949-L2965",
+    "frase_clave": "This is why high-reliability organizations (HRO) deal with risk by remaining chronically uneasy.",
+    "razon": "El libro propone inquietud cronica y visibilidad directiva; 'mecanismos de retroalimentacion' concreta sin dato nuevo.",
+    "texto_fiel": "Mantener una inquietud crónica y presencia de la dirección en la primera línea para advertir la normalización de desviaciones",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-008",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2515; L2556-L2568; L2626",
+    "frase_clave": "it is now being used by others (media, the judiciary) to condemn operators ... Avoid the use of these novel ways of saying 'human error' altogether",
+    "razon": "Misma direccion, pero el libro pide evitar el termino del todo, no solo como sustituto en lo legal.",
+    "texto_fiel": "Rechazar el uso de 'pérdida de conciencia situacional' como explicación, también en contextos legales o disciplinarios, donde sirve para condenar a los operadores",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-110",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2535-L2541",
+    "frase_clave": "Your job is to go down into the tunnel with them, and to understand their awareness.",
+    "razon": "Tiene razon A. El libro pide bajar al tunel y entender por que tenia sentido lo que hicieron (L2539, L430). Los elementos del paso estan en L1026-L1032: senales observadas, opciones que creian tener, influencias operativas u organizativas. Pero el libro separa disponibilidad de observabilidad (L1730-L1732) y critica imponer a la historia los datos disponibles (L1722), que es justo el vicio de la 'perdida de conciencia situacional'. Por eso 'que informacion tenia disponible' debe pasar a lo que observaba. No es CONTRARIO, porque el metodo de Klein tambien compara datos disponibles y observados (L1022).",
+    "texto_fiel": "Reconstruir el 'tunel' del operador: que senales observo de verdad (no solo que datos estaban disponibles), que influencias operativas u organizativas pesaban y que opciones creia tener, sin conocer el resultado",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK2-072",
+    "veredicto": "OPERATIVO",
+    "lineas": "L526-L530",
+    "frase_clave": "Into one ear the airlines lecture, \"Never break regulations ... Never compromise safety.\" Yet in the other they whisper, \"Don't cost us time. Don't waste our money.\"",
+    "razon": "El libro habla de exigencias contrapuestas y de falta de autoridad; 'tus propias reglas' y 'recursos' concretan sin dato nuevo.",
+    "texto_fiel": "Revisa si te exigen a la vez rapidez y seguridad sin darte autoridad plena sobre las decisiones que llevan al resultado",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-060",
+    "veredicto": "OPERATIVO",
+    "lineas": "L544; L589-L597; L654",
+    "frase_clave": "Fear of prosecution stifles the flow of information about such conditions. ... A confidential reporting scheme might help you get details about events which would otherwise elude you.",
+    "razon": "Misma direccion; el libro no habla de politicas como tales, pero si de reporte confidencial y del efecto del castigo.",
+    "texto_fiel": "Proteger a quien reporta incidentes, por ejemplo con reportes confidenciales, para que el miedo a la sanción no frene la información",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-018",
+    "veredicto": "OPERATIVO",
+    "lineas": "L930; L942",
+    "frase_clave": "The proximal nature of reactions to failure means that expensive organizational lessons can go unlearned.",
+    "razon": "El libro pide mirar el extremo romo; 'documentar' es una concrecion sin dato nuevo.",
+    "texto_fiel": "Recoger en el análisis las lecciones del sistema (políticas, prioridades, diseño), no solo las acciones de la persona más cercana",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-049",
+    "veredicto": "OPERATIVO",
+    "lineas": "L910; L928",
+    "frase_clave": "Reactions to failure focus firstly and predominantly on those people who were closest to producing or potentially avoiding the mishap.",
+    "razon": "Convierte la descripcion del sesgo en una comprobacion; misma direccion.",
+    "texto_fiel": "Comprobar si la reacción al fallo se centra solo en las personas más cercanas en tiempo y lugar al suceso",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-058",
+    "veredicto": "OPERATIVO",
+    "lineas": "L922; L940",
+    "frase_clave": "the drivers' union had been complaining about its lack of visibility ... 160 reported cases of Uncommanded Flying Control Movement ... were not looked into seriously.",
+    "razon": "Generaliza los ejemplos de Ladbroke Grove y del helicoptero; misma direccion.",
+    "texto_fiel": "Buscar vulnerabilidades del sistema ya señaladas antes, como quejas o casos reportados que no se estudiaron",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-004",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2858",
+    "frase_clave": "It turned out, however, that this ward actually began having more medication adverse events.",
+    "razon": "El libro muestra el efecto con los eventos adversos de la sala; medir antes y despues es una concrecion sin cifra ni herramienta.",
+    "texto_fiel": "Comprobar si, tras añadir un control redundante, los eventos adversos aumentan en lugar de bajar, como en la sala del hospital",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-084",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2858",
+    "frase_clave": "barriers consisting of people who know each other (and each other's work) are not independent at all. They interact in ways to actually erode both.",
+    "razon": "El libro describe la falacia pero no propone un rediseno; es una concrecion en su misma direccion.",
+    "texto_fiel": "Revisar los procesos de verificación para que las barreras humanas no sean personas que se conocen y confían en el trabajo del otro",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-079",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3979-L3981",
+    "frase_clave": "how organizational models about the sources of risk, and organizational plans for how to deal with risk, may have been wrong or incomplete. Hard fixes change something fundamental about the organization.",
+    "razon": "El libro lista lo que el fallo puede mostrar y pide arreglos de fondo; 'actualizar' es una concrecion.",
+    "texto_fiel": "Revisar y cambiar los modelos organizacionales sobre el riesgo si el fallo muestra que eran erróneos o incompletos",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-014",
+    "veredicto": "OPERATIVO",
+    "lineas": "L4126; L3971",
+    "frase_clave": "such gradual shifts are necessary for an organization to adapt and survive in a competitive environment, to explore and experiment with better, more efficient ways of doing things.",
+    "razon": "El libro presenta esa exploracion como necesaria y ligada a la deriva; el paso la concreta sin dato nuevo.",
+    "texto_fiel": "Examinar cómo la exploración y experimentación en busca de eficiencia desplaza poco a poco el equilibrio con la seguridad",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-040",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2941; L4126",
+    "frase_clave": "the gradual normalization of what was previously seen as deviant or unacceptable.",
+    "razon": "'Sin evaluacion critica' no esta en el libro; misma direccion.",
+    "texto_fiel": "Identificar prácticas antes vistas como inaceptables que se han vuelto normales con el tiempo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-102",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2849; L2926",
+    "frase_clave": "What about the historical trajectory in an organization along which the nature and extent of risk was renegotiated?",
+    "razon": "Concreta lo que el libro describe; misma direccion.",
+    "texto_fiel": "Reconstruir la trayectoria histórica de pequeños pasos por la que se renegoció el riesgo aceptable",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-020",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3220-L3224",
+    "frase_clave": "Operational expertise is indispensible ... But an ability to step back from those messy details and view the complex organizational web ... is necessary too.",
+    "razon": "Es un paso preparatorio que el libro deja implicito; sin dato nuevo.",
+    "texto_fiel": "Identificar quiénes aportan la experiencia operativa y quiénes la visión del conjunto organizacional",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-021",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3220",
+    "frase_clave": "they, too, can miss potentially dangerous side effects of the way they have adapted their work to meet those constraints.",
+    "razon": "Concreta lo que el libro describe; misma direccion.",
+    "texto_fiel": "Examinar qué efectos secundarios peligrosos pueden tener las adaptaciones locales del trabajo, invisibles para los propios expertos",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-104",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3224",
+    "frase_clave": "a constructive interplay or conversation between line and staff, between experts and others is probably necessary.",
+    "razon": "El libro pide la conversacion; 'regular' es una concrecion sin frecuencia concreta.",
+    "texto_fiel": "Crear espacios de conversación constructiva entre línea y staff",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK2-022",
+    "veredicto": "OPERATIVO",
+    "lineas": "L526-L530",
+    "frase_clave": "If an entire system is crying out for operators to be efficient, how can you then turn around after the occasional failure and all of a sudden demand that they should have been thorough all along instead?",
+    "razon": "Tiene razon B. El libro describe los ETTO como consecuencia del desajuste autoridad-responsabilidad y de las metas en conflicto (L528-L530, L2493, L2891), pero no manda identificarlos en el propio trabajo. El paso lo concreta en la misma direccion y sin dato nuevo. Como no es literal, no es FIEL.",
+    "texto_fiel": "Identifica los compromisos entre eficiencia y minuciosidad (ETTO) que las metas en conflicto imponen a tu trabajo",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK2-030",
+    "veredicto": "OPERATIVO",
+    "lineas": "L4155-L4155",
+    "frase_clave": "One of the difficult questions is how to make accountability and learning work in each other's favor.",
+    "razon": "Tiene razon B. El libro no plantea un balance entre dos fuerzas opuestas, sino una accountability que fomente el aprendizaje (L607: every step toward accountability should serve that goal; tambien L662 y L4155). 'Balancear' reformula esa idea sin invertirla ni anadir datos. No es CONTRARIO: el propio libro cita 'Just culture: Balancing safety and accountability' (L675, L4159). Como no es literal, queda en OPERATIVO.",
+    "texto_fiel": "Hacer que la accountability y el aprendizaje trabajen a favor el uno del otro: que cada paso hacia la accountability sirva al aprendizaje y no frene que la gente comparta honestamente sus preocupaciones de seguridad",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK2-074",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3650-L3654",
+    "frase_clave": "Charles Perrow explained how the potential for failure is a structural property of complex, interactive and tightly coupled systems.",
+    "razon": "Tiene razon B. El libro expone la tesis de Perrow (L3650-L3654) y la recomienda como lectura sobre deriva y complejidad (L4128, de donde sale la frase clave), pero no manda revisar nada. Convertirla en paso de revision concreta el texto en su misma direccion y sin datos nuevos.",
+    "texto_fiel": "Revisar como, segun Perrow, la complejidad interactiva y el acoplamiento estrecho hacen del potencial de fallo una propiedad estructural del sistema",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK2-082",
+    "veredicto": "OPERATIVO",
+    "lineas": "L495-L499",
+    "frase_clave": "The less discretionary space people have in their work (that is, the less room they have to adjust their styles, their communication around it, their input into it, their attention to it), the more this responsibility would probably fall on the organization.",
+    "razon": "Tiene razon B. El libro pide preguntarse en quien recae la responsabilidad del desajuste (L495) y usa el espacio discrecional como criterio (L499), pero no formula el paso de evaluarlo. El paso lo concreta sin dato nuevo.",
+    "texto_fiel": "Evaluar cuanto espacio discrecional tiene el trabajador para ajustar su estilo, su comunicacion, su aporte y su atencion, para decidir si resolver el desajuste le toca a el o a la organizacion",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK2-095",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3285-L3291",
+    "frase_clave": "a decision process where people can participate and which they feel is something they have contributed to.",
+    "razon": "Tiene razon B. El libro lista ese atributo de los equipos de alto desempeno y constata que pocas organizaciones de seguridad lo aplican ('So there is room to develop and improve!', L3291). No dice literalmente 'involucrar al equipo en las decisiones de seguridad': el paso lo concreta en la misma direccion.",
+    "texto_fiel": "Dar al equipo un proceso de decision de seguridad en el que pueda participar y sienta que ha contribuido",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "DK3",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 114,
+    "esperados": 114,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 4,
+  "fielMuestreados": 15,
+  "fielDiscutidos": [
+   "DK3-001",
+   "DK3-039",
+   "DK3-086"
+  ],
+  "cuenta": {
+   "OPERATIVO": 19,
+   "ANADIDO": 3,
+   "FIEL": 88
+  },
+  "noFiel": [
+   {
+    "id": "DK3-003",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2231-L2239",
+    "frase_clave": "make sure that your timeline shows which cues came in when",
+    "razon": "El libro pide ordenar las senales en la linea de tiempo segun cuando llegaron y su fuerza; 'clasificar cada senal' es una concrecion en la misma direccion.",
+    "texto_fiel": "Asegurar que la linea de tiempo muestre que senales llegaron y cuando, cuales fueron tempranas y fuertes y cuales tardias, mas debiles y ambiguas",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-007",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2821-L2837",
+    "frase_clave": "latent errors, or conditions buried inside the organization that lie dormant for a long time",
+    "razon": "El libro describe las condiciones latentes y da ejemplos (L316, Bhopal), pero advierte que buscarlas todas puede volverse inutil (837 'latent pathogens'). El paso aplica el concepto a tu negocio.",
+    "texto_fiel": "Buscar las condiciones latentes de la organizacion (diseno deficiente, mantenimiento defectuoso, falta de formacion) que contribuyeron al suceso, sin pretender contarlas todas para predecir",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-009",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2325-L2337",
+    "frase_clave": "Mode error... Getting lost in display architectures... Data overload",
+    "razon": "El libro enumera estos problemas como cosas que pueden pasar; 'auditar la interfaz' concreta en la misma direccion.",
+    "texto_fiel": "Revisar si en el trabajo con la tecnologia aparecen error de modo, perdida en la arquitectura de pantallas o sobrecarga de datos",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-012",
+    "veredicto": "ANADIDO",
+    "lineas": "L2384-L2388",
+    "frase_clave": "every system always operates at its capacity. Improvements in the form of new technology get stretched in some way",
+    "dato": "limites organizacionales que eviten explotar al maximo cada mejora tecnologica",
+    "razon": "El libro presenta la ley como algo que siempre ocurre ('effective leaders will exploit every new advance to the limit') y pide hacer visible la erosion de margenes (L3084, L3089). No propone limites organizacionales. Busque margin, limit y capacity y no hay nada que lo respalde.",
+    "texto_fiel": "Reconocer que cada mejora tecnologica tiende a estirarse hasta devolver al sistema al limite de su capacidad, y hacer visible como se erosionan los margenes de seguridad",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-024",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2949-L2957",
+    "frase_clave": "suppress minority viewpoints, even though these could show more clearly where risk brews",
+    "razon": "El libro pide no suprimir las opiniones minoritarias y crear esa funcion (L3867); 'mecanismos formales' concreta en la misma direccion.",
+    "texto_fiel": "Evitar suprimir las opiniones minoritarias y dar a alguien la autoridad y credibilidad para contradecir las interpretaciones comunes sobre el riesgo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-030",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2827-L2827",
+    "frase_clave": "Defenses that could have stopped or mitigated the further evolution of events either did not exist or came up short.",
+    "razon": "El libro muestra defensas inexistentes o insuficientes (Bhopal) y habla de documentos de fantasia (L3123); el paso lo convierte en una evaluacion de tu negocio.",
+    "texto_fiel": "Comprobar si las defensas previstas existian y funcionaban o se quedaban cortas, y si los procedimientos son 'documentos de fantasia' sin relacion con el trabajo real",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-032",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3709-L3719",
+    "frase_clave": "the fewer incidents a construction site reported, the higher its fatality rate was",
+    "razon": "El libro cita estudios de industria; aplicarlo a la propia organizacion es concrecion en la misma direccion.",
+    "texto_fiel": "Tener presente que en construccion y aviacion menos incidentes reportados se asocian con mas fatalidades, y mirar asi las propias cifras",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-042",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2331-L2331",
+    "frase_clave": "Where people work together on one (automated) process, they have to invest in common ground by telling one another what they tell the computer, and double-checking each other's work.",
+    "razon": "El libro describe la falta de coordinacion de entradas como problema tipico; 'verificar mecanismos' concreta en la misma direccion.",
+    "texto_fiel": "Revisar si quienes trabajan sobre un mismo proceso automatizado se dicen lo que introducen en el ordenador y verifican el trabajo del otro",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-051",
+    "veredicto": "ANADIDO",
+    "lineas": "L1522-L1522",
+    "frase_clave": "either from talking to the people, if still possible, or their colleagues",
+    "dato": "familiares o testigos cercanos como fuentes para el relato del evento",
+    "razon": "El libro nombra como fuentes a los propios implicados y a sus colegas (tambien L644-L646). Busque family, relative, witness y widow: la viuda del epilogo (L4431) aparece como un gesto de cuidado despues del informe, no como fuente de la investigacion.",
+    "texto_fiel": "Involucrar a colegas que conozcan los detalles del trabajo para respaldar con evidencia convergente el relato del evento",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-053",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3674-L3674",
+    "frase_clave": "Low numbers of negatives might feed the illusion that risk is under control.",
+    "razon": "El libro pide mostrar a la organizacion como se engana a si misma (L3089); dirigirlo a la direccion es una concrecion.",
+    "texto_fiel": "Mostrar a la organizacion que pocos incidentes pueden alimentar la ilusion de que el riesgo esta bajo control",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-056",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2384-L2388",
+    "frase_clave": "Improvements in the form of new technology get stretched in some way, pushing operators back to the edge of the operational envelope",
+    "razon": "El libro describe la ley; anticiparla antes de implantar la tecnologia es concrecion en la misma direccion.",
+    "texto_fiel": "Al introducir nueva tecnologia, anticipar que se usara para exigir mas del operador y no para aliviarlo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-057",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2340-L2346",
+    "frase_clave": "How can they see that something is not happening? ... many systems do not support mode awareness very well",
+    "razon": "El libro plantea que cuesta notar los no-eventos y que los sistemas ayudan poco; revisar el diseno concreta en la misma direccion.",
+    "texto_fiel": "Revisar si el diseno del sistema ayuda a notar que algo no esta ocurriendo o solo muestra etiquetas de estado",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-063",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2821-L2821",
+    "frase_clave": "We have both hard and soft defenses (or barriers) in place, consisting of, for example, blast walls, or procedures.",
+    "razon": "El libro describe las defensas del modelo; inventariarlas en tu negocio es aplicarlo en la misma direccion.",
+    "texto_fiel": "Reconocer que las actividades criticas se protegen con defensas duras (muros, barreras) y blandas (procedimientos)",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-073",
+    "veredicto": "OPERATIVO",
+    "lineas": "L4109-L4109",
+    "frase_clave": "He went back to the official investigation and started to question not only their conclusions, but where they looked for evidence.",
+    "razon": "El libro elogia los relatos revisionistas; aplicarlo a las investigaciones propias es una concrecion.",
+    "texto_fiel": "Volver sobre investigaciones anteriores y cuestionar sus conclusiones y donde buscaron la evidencia, como hacen los relatos revisionistas",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-077",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2386-L2388",
+    "frase_clave": "these advances were used to demand more from the operator",
+    "razon": "El libro describe el fenomeno; vigilarlo es concrecion en la misma direccion.",
+    "texto_fiel": "Observar si las mejoras tecnologicas se usan para exigir mas del operador en lugar de aliviar su carga",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-083",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3161-L3163",
+    "frase_clave": "Whoever is boss or safety manager, gets to say / Whoever is expert and knows the work, gets to say",
+    "razon": "El libro da la tabla y pide usar el contraste en tu entorno (L19); 'mapear el poder de decision' es una concrecion.",
+    "texto_fiel": "Usar el contraste Old View / New View para ver si en tu organizacion decide el jefe o responsable de seguridad o quien es experto y conoce el trabajo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-088",
+    "veredicto": "ANADIDO",
+    "lineas": "L2335-L2348",
+    "frase_clave": "Something that is not happening is not a good trigger for human (or even machine) intervention.",
+    "dato": "Diseñar alertas que se activen ante la falta de cambio: el libro no propone alertas ni alarmas por ausencia de cambio. Dice que también a las máquinas les cuesta detectar los no-eventos y avisa de que los ordenadores generan avisos automáticos que saturan el puesto.",
+    "razon": "Tiene razón B. Busqué alert, alarm, warning, annunciat, non-event y absence of change en todo el libro: no hay ninguna recomendación de diseñar alertas por ausencia de cambio. El libro describe el problema (L2342-L2346). Su única indicación de diseño es dar a sense of the system's current and intended behavior (L2348), y advierte que los avisos automáticos clutter a workspace (L2335). La crítica al sistema que no avisa de los spoilers sin armar (L1888) es un ejemplo de contexto, no una propuesta general. La alerta es una herramienta concreta que el libro no pone, así que es ANADIDO y no OPERATIVO como dice A.",
+    "texto_fiel": "Tener en cuenta que a las personas (y también a las máquinas) les cuesta mucho notar la falta de cambio, y que muchos sistemas solo muestran una etiqueta del modo en lugar de dar a los operadores una idea del comportamiento actual y previsto del sistema.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK3-093",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2348-L2348",
+    "frase_clave": "Automation surprises are often the end-result: the system did something that the user had not expected.",
+    "razon": "El libro define el concepto; revisar incidentes pasados es concrecion en la misma direccion.",
+    "texto_fiel": "Buscar en los sucesos 'sorpresas de automatizacion', en las que el sistema hizo algo que el usuario no esperaba",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-094",
+    "veredicto": "OPERATIVO",
+    "lineas": "L652-L654",
+    "frase_clave": "The question becomes: what should we do about the problem and who should be accountable for implementing those changes",
+    "razon": "El libro pide rendicion de cuentas hacia delante; 'planes de mejora colaborativos' concreta en la misma direccion.",
+    "texto_fiel": "Pasar de la rendicion de cuentas hacia atras (sancion) a la rendicion hacia delante: que hacer con el problema y quien implanta los cambios",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-096",
+    "veredicto": "OPERATIVO",
+    "lineas": "L4109-L4109",
+    "frase_clave": "He went back to the official investigation and started to question not only their conclusions, but where they looked for evidence.",
+    "razon": "El libro recomienda el relato revisionista como ejemplo; contrastarlo con la investigacion oficial es una concrecion.",
+    "texto_fiel": "Leer relatos revisionistas, como el de Snook sobre los Black Hawks, que cuestionan las conclusiones oficiales y donde se busco la evidencia",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK3-001",
+    "veredicto": "OPERATIVO",
+    "lineas": "L180-L193",
+    "frase_clave": "If your organization has investigations and disciplinary actions resorting under the same department, or the same group of people, then that is a pretty strong clue that the Old View reigns.",
+    "razon": "Tiene razón B. El libro no dice literalmente que haya que diseñar el proceso separado. Da como síntoma de Old View que investigación y disciplina dependan del mismo departamento o grupo, y que RRHH trate las investigaciones como revisiones de desempeño (a call for change). Dice además que la investigación New View no es revisión de desempeño ni trata de disciplina o culpa (L417-L419). Separar los procesos concreta eso en la misma dirección sin dato nuevo. No es FIEL porque añade la acción de diseño que el libro solo deja implícita.",
+    "texto_fiel": "Mantener la investigación fuera del departamento o grupo que aplica medidas disciplinarias y no tratarla como una revisión de desempeño: una investigación New View no es una revisión de desempeño ni trata de disciplina o culpa.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK3-039",
+    "veredicto": "OPERATIVO",
+    "lineas": "L648-L662",
+    "frase_clave": "Restorative justice fosters dialogue between the actor and the surrounding community (for example, of colleagues), rather than a break in relationships through sanction and punishment.",
+    "razon": "Tiene razón B. El libro pide Explore the potential for restorative justice (L648). Dice que la respuesta should heal y que fomente el diálogo en lugar de romper relaciones (L650), y que incluya relationships restored (L662). Diseñar procesos de respuesta centrados en diálogo y reparación concreta eso en su misma dirección. No es FIEL literal porque el libro pide explorar su potencial, no diseñar procesos.",
+    "texto_fiel": "Explorar la posibilidad de una justicia restaurativa en la respuesta a incidentes: que la respuesta sane en lugar de hacer daño, que fomente el diálogo entre el implicado y sus colegas y que busque prevenir la repetición y restaurar las relaciones.",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "DK4",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 105,
+    "esperados": 105,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 7,
+  "fielMuestreados": 12,
+  "fielDiscutidos": [
+   "DK4-070"
+  ],
+  "cuenta": {
+   "OPERATIVO": 29,
+   "ANADIDO": 3,
+   "FIEL": 69
+  },
+  "noFiel": [
+   {
+    "id": "DK4-002",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2244-L2248",
+    "frase_clave": "Soft and hard gates (for example, 1,000 feet, 500 feet), when set in context of the end of a flight at a busy, major airport on a scheduled flight, become norms against which to plan and negotiate the actual approach",
+    "razon": "El libro describe los gates y los criterios de aproximación estabilizada. Revisarlos es concretar lo que dice, y el añadido \"u operación\" generaliza sin aportar datos nuevos.",
+    "texto_fiel": "Revisar qué criterios formales (soft y hard gates, por ejemplo 1.000 o 500 pies) definían cuándo había que interrumpir la aproximación por no estar estabilizada",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-006",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3991; L767",
+    "frase_clave": "walk your colleagues, your managers or your stakeholders through some of the material in chapters 1 and 2 of The Field Guide. Help them understand the different views of human error, help them recognize their own reactions to failure",
+    "razon": "El libro no habla de entrenar a los investigadores. Sí habla de guiar a los colegas por el material para que reconozcan sus propias reacciones: va en la misma dirección y no añade datos.",
+    "texto_fiel": "Recorrer con los investigadores el material sobre retrospectiva y reacciones al fallo para que reconozcan su propio sesgo retrospectivo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-007",
+    "veredicto": "OPERATIVO",
+    "lineas": "L171",
+    "frase_clave": "This leads to nonsensical statements like \"85 percent of our incidents or accidents are due to 'human error'.\"",
+    "razon": "El libro descalifica ese tipo de cifras. Pedir que te expliquen las condiciones de fondo concreta la idea (L17: \"ask 'is that so?'\") sin añadir datos.",
+    "texto_fiel": "Cuestiona cualquier estadística del tipo 'X% de los incidentes son por error humano': trata el 'error humano' como una atribución hecha a posteriori, no como una categoría que se pueda contar aparte de su contexto.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-011",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3634-L3648",
+    "frase_clave": "functional decentralization",
+    "razon": "El libro solo menciona la descentralización funcional como un requisito HRO. Evaluarla y limitarla a las decisiones de seguridad concreta la idea sin añadir datos.",
+    "texto_fiel": "Evaluar el grado de descentralización funcional de la organización, uno de los requisitos que exige la teoría HRO.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-012",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2441-L2447",
+    "frase_clave": "If other tasks intrude in, for example, checklist reading, or checklist reading intrudes in other tasks, there is no written guidance available on how priority should be given (or not) to the intervening tasks.",
+    "razon": "El libro señala que falta guía escrita sobre interrupciones y tareas paralelas, aunque advierte que pocas interrupciones se pueden anticipar por escrito. Rediseñar las guías concreta esa idea en la misma dirección.",
+    "texto_fiel": "Revisar cómo tratan las guías escritas las interrupciones, las tareas concurrentes y la prioridad entre tareas, sabiendo que no todas las eventualidades caben en un procedimiento.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-014",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3139-L3145; L3109",
+    "frase_clave": "Incentive structures around the absence of negatives can get people to suppress bad news, or to fudge injury or incident numbers.",
+    "razon": "El libro cuenta un caso de reclasificación entre LTI y MTI. La auditoría concreta esa idea. Además, las categorías del libro son de tiempo perdido y de tratamiento médico, no de gravedad.",
+    "texto_fiel": "Revisar cómo se clasifican las lesiones (tiempo perdido, tratamiento médico) para detectar si se reclasifican para no romper la racha de días sin lesiones.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-018",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3689-L3709",
+    "frase_clave": "workplace signs that track the number of hours or days without a losttime or recordable injury. This encourages numbers games;",
+    "texto_fiel": "Revisar si existen 'rachas' o señales públicas de días sin incidentes que puedan incentivar el ocultamiento",
+    "razon": "Tenía razón A. El libro pone esos carteles entre las formas de conseguir cifras bajas (L3689, L3697), cuenta la racha de 297 días manipulada (L3141-L3145) y dice que eso produce subregistro (L3709). Pero no manda revisar si existen: el paso añade la acción de revisar, que concreta la idea en su misma dirección sin datos nuevos. No es FIEL porque añade una acción; se queda como está.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK4-019",
+    "veredicto": "ANADIDO",
+    "lineas": "L656-L658",
+    "frase_clave": "Strong social and organizational support systems for second victims (psychological first aid, debriefings, follow-up), have proven critical to contain the negative consequences",
+    "dato": "a mediano y largo plazo",
+    "texto_fiel": "Ofrecer seguimiento a los afectados",
+    "razon": "Tenía razón B. El libro respalda el seguimiento (follow-up) pero no le da ningún horizonte temporal. Busqué follow-up, follow up, long-term, long term, longer term, medium y months: el único medium or longer term (L310) habla de carteles de vigilancia, no de segundas víctimas. El plazo mediano y largo es un dato que el libro no pone; se quita.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK4-027",
+    "veredicto": "OPERATIVO",
+    "lineas": "L549; L2082-L2084",
+    "frase_clave": "others have responsibility to ensure that required resources are available",
+    "razon": "El libro apoya examinar los recursos y el entrenamiento como factores distales. Pero advierte (L163, L4041) contra explicar un error con otro error de la supervisión, así que el paso se mantiene con ese matiz.",
+    "texto_fiel": "Evaluar cómo los recursos, el entrenamiento y otras condiciones del sistema contribuyeron al evento, sin convertirlos en nuevos \"errores\" de otras personas.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-033",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3630; L3861",
+    "frase_clave": "structural secrecy associated with bureaucratic organization, where information does not cross the boundaries of the various silos in which work is done and administered",
+    "razon": "El libro describe el secreto estructural entre silos. Mapearlos concreta la idea sin añadir datos.",
+    "texto_fiel": "Identificar los silos donde la información no cruza fronteras (secreto estructural) y puede ocultar señales de riesgo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-034",
+    "veredicto": "OPERATIVO",
+    "lineas": "L591",
+    "frase_clave": "Confidential means that the reporter is known, but only, for example, for safety people--not to people who could create career jeopardy (for example, supervisors, line managers).",
+    "razon": "Para el libro, el personal de seguridad es solo un ejemplo de quién conoce la identidad del informante. \"Gestionado solo por\" endurece un poco esa idea, sin añadir datos.",
+    "texto_fiel": "Establecer un canal de reporte confidencial (no anónimo) en el que la identidad del informante solo la conozca, por ejemplo, el personal de seguridad, y no los supervisores ni los mandos de línea.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-035",
+    "veredicto": "ANADIDO",
+    "lineas": "L1728-L1734",
+    "frase_clave": "data observability: what would have been observable given the features of the interface and the multiple interleaving tasks, goals, interests, knowledge and even culture of the people looking at it.",
+    "dato": "el volumen de información disperso entre los participantes",
+    "texto_fiel": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, dado cómo se presentaba la información y las tareas, metas, intereses y conocimientos que tenías entre manos a la vez",
+    "razon": "Tenía razón B. La distinción entre disponible y observable es literal del libro (también L2063-L2067), y L2073 habla de la gran cantidad de indicaciones que pedían atención, pero en ningún sitio aparece la información repartida entre los participantes como factor de observabilidad (busqué distributed, dispersed, scattered, spread, volume; distributed solo sale en L2367, sobre la memoria de velocidades repartida por la cabina). A reconoce que el factor no está y reescribe el paso, así que su propio análisis lleva a ANADIDO: el paso añade un factor que hay que corregir.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK4-038",
+    "veredicto": "OPERATIVO",
+    "lineas": "L547-L549",
+    "frase_clave": "A systems approach understands that each component or contributor in a system has specific responsibilities to help attain the system's overall goals.",
+    "razon": "El libro afirma que cada componente tiene responsabilidades. Mapearlas concreta la idea sin añadir datos.",
+    "texto_fiel": "Identificar las responsabilidades específicas de cada componente o actor del sistema (no solo las del individuo involucrado en el incidente).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-041",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2439-L2449",
+    "frase_clave": "It is possible to write such guidance only if a number of assumptions are made about the environment in which the guidance is to be followed.",
+    "razon": "El libro expone los tres supuestos. Revisar los procedimientos con ellos concreta la idea sin añadir datos.",
+    "texto_fiel": "Revisar los procedimientos existentes para ver dónde suponen un entorno lineal, predecible y controlable.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-043",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2059-L2061; L742",
+    "frase_clave": "Such remarks or questions have no role to play, however, in explaining why people did what they did.",
+    "razon": "El libro reconoce que esas preguntas sirven para prepararse, aunque no para explicar lo ocurrido. Por eso se matiza la prohibición absoluta, sin cambiar la dirección.",
+    "texto_fiel": "Para explicar lo que pasó, no te quedes en '¿por qué no hice...?' o '¿por qué no hizo...?': es una pregunta contrafactual que, con el resultado ya conocido, hace parecer obvia la respuesta y no explica por qué se hizo lo que se hizo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-044",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2483-L2487; L3319",
+    "frase_clave": "Find out what organizational history or pressures exist behind these routine departures from the routine",
+    "razon": "El libro pide rastrear la historia de las desviaciones, pero advierte que se trata de explicarlas, no de juzgarlas en retrospectiva.",
+    "texto_fiel": "Revisar la historia y las presiones que hay detrás de las desviaciones que se volvieron rutina (normalización de la desviación), sin juzgarlas desde fuera ni en retrospectiva.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-051",
+    "veredicto": "ANADIDO",
+    "lineas": "L2447-L2449",
+    "frase_clave": "Interleaving unpracticed tasks, particularly those that involve novel or unexpected aspects leads often to errors of omission.",
+    "dato": "capacitación de los equipos como herramienta",
+    "texto_fiel": "Tener en cuenta que intercalar tareas no practicadas, sobre todo con aspectos nuevos o inesperados, lleva a menudo a errores de omisión, y que las personas tienden a subestimar su propia vulnerabilidad al error en esas circunstancias",
+    "razon": "Tenía razón B. El libro describe el mecanismo y dice que los pilotos aprenden a manejar tareas simultáneas sobre todo con la experiencia, pero tienden a subestimar su vulnerabilidad (L2447). No propone capacitar para esto; ninguna búsqueda de training junto a concurrent, interrupt o multitask da resultado. No es CONTRARIO: el reentrenamiento como arreglo rápido falso (L3954) se refiere a reentrenar a los implicados en un incidente, no a este punto. A describe lo mismo que B y aun así marca OPERATIVO; la herramienta capacitación es un dato añadido.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK4-057",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3650-L3656; L2865",
+    "frase_clave": "The risk of having an accident is a fixed, structural property of the complexity of the systems we choose to build and operate.",
+    "razon": "El libro no habla de rediseñar para reducir el acoplamiento. Sí atribuye el riesgo a la complejidad y al acoplamiento del sistema que se elige construir (\"The safest part is the one we could leave off\"), así que va en la misma dirección.",
+    "texto_fiel": "Considerar si el sistema que se decide construir y operar puede ser menos complejo y menos estrechamente acoplado, ya que de eso depende su riesgo estructural.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-059",
+    "veredicto": "OPERATIVO",
+    "lineas": "L723-L742; L3991",
+    "frase_clave": "To understand failure, you first have to understand your own reactions to failure.",
+    "razon": "El libro pide reconocer y contener las propias reacciones al fallo. \"Entrenar\" concreta la idea sin añadir datos.",
+    "texto_fiel": "Ayudar a los investigadores a reconocer en su propio análisis estas reacciones al fallo para que no les impidan comprenderlo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-061",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3650-L3654",
+    "frase_clave": "Interactive complexity ... Tight coupling",
+    "razon": "El libro expone los rasgos que señala Perrow. Evaluarlos concreta la idea sin añadir datos.",
+    "texto_fiel": "Evaluar la complejidad interactiva y el acoplamiento estrecho de los sistemas que opera la organización.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-064",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2449",
+    "frase_clave": "In many real-world situations, pilots cannot delay or defer one task long enough to complete another one fully. This means that multiple tasks need to be interleaved",
+    "razon": "El libro pide entender ese contraste. Las observaciones de campo son una forma de hacerlo que no añade datos.",
+    "texto_fiel": "Contrastar el trabajo real, con sus tareas intercaladas, con el trabajo prescrito por procedimientos y checklists.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-068",
+    "veredicto": "OPERATIVO",
+    "lineas": "L942; L1981; L1994",
+    "frase_clave": "This means zooming out, away from looking just at the sharp end, and incorporating blunt end policies and priorities and design choices",
+    "razon": "El libro pide ver ambos extremos y ve con recelo las recomendaciones dirigidas solo al extremo agudo. El paso concreta la idea sin añadir datos.",
+    "texto_fiel": "Incluir en el informe recomendaciones que alcancen también al extremo romo (políticas, prioridades, diseño), no solo al extremo agudo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-072",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3650-L3656",
+    "frase_clave": "The only way to achieve a zero vision in such a system is to dismantle it, and not use it altogether. Which is what Perrow essentially recommended us to do with nuclear power generation.",
+    "razon": "El libro recoge la conclusión de Perrow. Convertirla en una decisión entre continuar, rediseñar o desmantelar concreta la idea sin añadir datos.",
+    "texto_fiel": "Considerar, con Perrow, que en sistemas muy complejos y estrechamente acoplados el riesgo es estructural y que la única forma de llegar a cero es desmantelarlos.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-076",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3926",
+    "frase_clave": "with over two-thirds of all citations handed out by workplace safety inspectors directed at workers or immediate supervisors",
+    "razon": "El libro describe la tendencia. Revisarla en el propio negocio concreta la idea sin añadir datos.",
+    "texto_fiel": "Revisa sobre quién recaen las sanciones o llamadas de atención por seguridad en tu negocio: ¿los trabajadores y supervisores directos, o quienes organizan y dotan de recursos el trabajo?",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-077",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3578; L2970; L3111",
+    "frase_clave": "Outcomes, measured in terms of incidents or accidents, or in terms of indicators of resilience, then are what they are.",
+    "razon": "El libro menciona indicadores de resiliencia y critica tanto los indicadores rezagados como las metas numéricas. Crear indicadores de éxito concreta la idea en esa dirección.",
+    "texto_fiel": "Complementa tus métricas reactivas de fallos con indicadores de lo que sale bien (resiliencia), sin convertirlos en metas numéricas.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-078",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3991; L21",
+    "frase_clave": "walk your colleagues, your managers or your stakeholders through some of the material in chapters 1 and 2 of The Field Guide",
+    "razon": "El libro pide recorrer el material con colegas y directivos. \"Comunicar el cambio de paradigma\" concreta la idea sin añadir datos.",
+    "texto_fiel": "Explicar el contraste entre la Vieja y la Nueva Visión a colegas, directivos y demás implicados para abrir un diálogo sobre el 'error humano'.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-084",
+    "veredicto": "OPERATIVO",
+    "lineas": "L2978-L2978",
+    "frase_clave": "So when you do your next safe work observations, for example, do not walk around telling people how they are supposed to work. Try to understand why they work the way they do, and why it is, or seems, normal for them at the time.",
+    "texto_fiel": "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por que haces las cosas como las haces, no para corregirte de inmediato",
+    "razon": "Tenía razón A. El libro habla de observar el trabajo de otros para entender por qué trabajan así, en vez de decirles cómo deberían trabajar. El paso cambia el objeto y lo aplica al propio trabajo, así que no es FIEL (añade un objeto que el libro no pone). Pero va en la misma dirección y no aporta ningún dato nuevo, así que es OPERATIVO y se queda.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "DK4-085",
+    "veredicto": "OPERATIVO",
+    "lineas": "L591-L597",
+    "frase_clave": "Mike O'Leary and Nick Pidgeon showed how much the formal and confidential reports about the same event can diverge",
+    "razon": "El libro muestra cuánto divergen ambos reportes. Compararlos concreta la idea sin añadir datos.",
+    "texto_fiel": "Comparar lo que recogen los reportes formales y los confidenciales sobre un mismo evento para ver qué información no llega al reporte formal.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-091",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3644-L3648; L2858",
+    "frase_clave": "redundancy of equipment and personnel",
+    "razon": "La redundancia figura en el libro como requisito HRO, pero con la advertencia de que personas que se conocen no son barreras independientes. \"En procesos de alto riesgo\" acota el paso sin añadir datos.",
+    "texto_fiel": "Contar con redundancia de equipos y personal, uno de los requisitos HRO, comprobando que las barreras humanas sean realmente independientes (falacia de la redundancia social).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-100",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3208-L3218",
+    "frase_clave": "A New View of safety would replace or at least complement this, at times, with an alternative set of principles",
+    "razon": "El libro da los principios. \"Rediseñar políticas\" concreta la idea sin añadir datos.",
+    "texto_fiel": "Revisar las políticas de seguridad para reemplazar, o al menos complementar, sus principios con los de la Nueva Visión.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-104",
+    "veredicto": "OPERATIVO",
+    "lineas": "L3137; L3229; L3197-L3199",
+    "frase_clave": "Instead of seeing safety as an ethical responsibility for those who do the dirty and dangerous work, it can become a bureaucratic accountability that is managed upward in the organization.",
+    "razon": "En el libro, la responsabilidad \"hacia abajo\" es hacia quienes hacen el trabajo. Que recaiga en la línea lo dice L3229. El paso mezcla ambas ideas, pero en la misma dirección.",
+    "texto_fiel": "Fomentar que la seguridad sea una responsabilidad ética hacia quienes hacen el trabajo, asumida por la línea que trabaja con el día a día, y no solo una rendición de cuentas hacia arriba.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "DK4-070",
+    "veredicto": "OPERATIVO",
+    "lineas": "L656-L658",
+    "frase_clave": "Strong social and organizational support systems for second victims (psychological first aid, debriefings, follow-up), have proven critical to contain the negative consequences",
+    "texto_fiel": "Realizar debriefings estructurados con los trabajadores involucrados",
+    "razon": "Tenía razón B. El libro nombra los debriefings como apoyo a las segundas víctimas, pero en ese pasaje no dice que sean estructurados. En otro lugar propone un orden de debriefing (Klein, L1014) para la investigación, aunque advierte que no tiene por qué seguir un guion (L1100). Estructurados concreta la idea en su misma dirección sin cifra, plazo ni herramienta nuevos. No es FIEL porque añade ese calificativo; se queda.",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "SB1",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 125,
+    "esperados": 125,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 2,
+  "fielMuestreados": 18,
+  "fielDiscutidos": [
+   "SB1-008",
+   "SB1-113"
+  ],
+  "cuenta": {
+   "ANADIDO": 4,
+   "OPERATIVO": 11,
+   "FIEL": 106
+  },
+  "noFiel": [
+   {
+    "id": "SB1-005",
+    "veredicto": "ANADIDO",
+    "lineas": "L921-L925",
+    "frase_clave": "Train workers who may encounter animals as part of their job duties at least annually on how to protect themselves",
+    "dato": "capacitacion anual sobre mosquitos y garrapatas",
+    "texto_fiel": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y repelente cuando aplique.",
+    "razon": "El libro pide capacitacion anual solo para quien trata con animales. Para mosquitos y garrapatas pide ropa protectora (L923) y repelente (L925), no capacitacion anual. Grep de mosquito y tick: solo L923, L925 y los recursos de L935.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-077",
+    "veredicto": "ANADIDO",
+    "lineas": "L807",
+    "frase_clave": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote or isolated locations when not in use.",
+    "dato": "o ventiladas",
+    "texto_fiel": "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan",
+    "razon": "El libro pide lugares remotos o aislados. Un lugar ventilado como alternativa para guardar toxicos no aparece: Grep de ventilat solo da L217, L613 (inflamables), L853, L891, L1327 y L1649.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-089",
+    "veredicto": "ANADIDO",
+    "lineas": "L549",
+    "frase_clave": "Fire extinguishers receive an annual maintenance check, and the maintenance is recorded.",
+    "dato": "certificado",
+    "texto_fiel": "Programar el mantenimiento anual y dejarlo registrado",
+    "razon": "El libro pide una revision anual registrada, no certificada. Grep de certif: solo la alarma (L581), NIOSH (L917), cables y cadenas (L1099, L1103) y montacargas (L1201).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-098",
+    "veredicto": "ANADIDO",
+    "lineas": "L743-L745",
+    "frase_clave": "Labels are kept on shipped containers; including: product identifier, signal word, hazard statement(s), pictogram(s), precautionary statement(s), and supplier information.",
+    "dato": "según el sistema GHS",
+    "texto_fiel": "Etiquetar los contenedores con identificador del producto, palabra de advertencia, indicaciones de peligro, pictogramas, consejos de prudencia y datos del proveedor",
+    "razon": "El libro enumera los elementos de la etiqueta pero no nombra el GHS. Grep de GHS, Globally y Harmoniz: 0 resultados.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-031",
+    "veredicto": "OPERATIVO",
+    "lineas": "L631",
+    "frase_clave": "Spills of flammable or combustible liquids are cleaned up promptly.",
+    "texto_fiel": "Limpiar con prontitud los derrames de líquidos inflamables o combustibles",
+    "razon": "El libro pide limpiar los derrames con prontitud. Pasarlo a establecer procedimientos concreta la accion en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-046",
+    "veredicto": "OPERATIVO",
+    "lineas": "L69",
+    "frase_clave": "By developing and implementing a safety and health program, you are expressing and documenting your good faith and commitment to protecting your workers' health and safety.",
+    "texto_fiel": "Documenta lo que haces para proteger a tu gente: así dejas constancia de tu buena fe y compromiso",
+    "razon": "La seccion de la clausula (L1829-L1837) no habla de documentar. L69 si respalda documentar la buena fe. La palabra diligencia no aparece (Grep de diligen: 0).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-072",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1565; L1581",
+    "frase_clave": "Holes in the floor, sidewalk, and other walking-working surfaces are repaired properly, covered, and otherwise made safe.",
+    "texto_fiel": "Repara, cubre o asegura los huecos en pisos y pasillos antes de volver a usarlos",
+    "razon": "El libro pide reparar, cubrir o asegurar los huecos, y corregir antes de volver a usar la superficie (L1581). De inmediato concreta eso en la misma direccion sin contradecirlo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-073",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1855-L1863",
+    "frase_clave": "Protection from retaliation means that an employer cannot retaliate by taking \"adverse action\" against workers",
+    "texto_fiel": "Asegúrate de que quien tenga gente a cargo sepa que no se puede tomar represalia contra quien se niega a trabajar por una razón legítima",
+    "razon": "El libro no pide capacitar a los supervisores en esto (Grep de supervisor: solo calor, ergonomia y violencia). La prohibicion de represalias si esta, asi que el paso la concreta en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-081",
+    "veredicto": "OPERATIVO",
+    "lineas": "L83; L91-L93",
+    "frase_clave": "control identified hazards ... to help you determine where challenges exist",
+    "texto_fiel": "Controlar los peligros identificados, empezando por las áreas más críticas de tu negocio",
+    "razon": "El libro pide controlar los peligros identificados y empezar por lo mas critico. Priorizar concreta eso sin datos nuevos.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-083",
+    "veredicto": "OPERATIVO",
+    "lineas": "L683; L329; L701",
+    "frase_clave": "All tools and equipment (both company and worker-owned) used at the workplace are in good condition.",
+    "texto_fiel": "Verificar que todas las herramientas manuales y eléctricas estén en buen estado",
+    "razon": "El libro exige buen estado y pide revisar antes de usar el equipo con cable (L329) y los gatos (L701). Inspeccionar todas con regularidad concreta eso en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-091",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1039; L1049; L1051",
+    "frase_clave": "Pulleys and belts within 7 feet (2.1336 meters) of the floor or working level are properly guarded.",
+    "texto_fiel": "Instalar guardas en puntos de operación, engranajes y cadenas, y en poleas y correas dentro de 7 pies del piso.",
+    "razon": "En el libro el limite de 7 pies vale solo para poleas y correas (L1049) y para aspas (L1047). Los puntos de operacion (L1039) y los engranajes (L1051) se protegen sin ese limite. Tal como esta escrito, el paso puede leerse como si el limite valiera para todo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-110",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1863; L1581",
+    "frase_clave": "a worker has brought the condition to the attention of the employer.",
+    "texto_fiel": "Revisa la condición que te reportaron y corrígela antes de que se vuelva a trabajar en ella",
+    "razon": "El libro no fija plazo para atender lo reportado. Pide corregir las condiciones peligrosas antes de volver a usar (L1581, L1161). De inmediato concreta eso en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-118",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1499",
+    "frase_clave": "Workers face the ladder and maintain three points of contact (two hands and a foot, or two feet and a hand) on the ladder when climbing.",
+    "texto_fiel": "Asegurar que los trabajadores mantengan tres puntos de contacto al subir",
+    "razon": "El libro pide que se mantengan tres puntos de contacto. Capacitar es el medio que lo concreta, sin datos nuevos.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB1-008",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1287-L1297",
+    "frase_clave": "Warning signs are posted where hearing protection is needed.",
+    "razon": "Tiene razon B. El libro pone las señales donde se necesita proteccion auditiva (L1297); el paso sustituye esa condicion por zonas de alto ruido, que el propio libro vincula a la proteccion auditiva (L1287 noisy areas, L1291 high noise areas). Es la misma idea concretada, sin cifra ni dato nuevo, pero no es literal: OPERATIVO.",
+    "texto_fiel": "Colocar señalización de advertencia donde se requiera protección auditiva (zonas de alto ruido).",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB1-113",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1063-L1073",
+    "frase_clave": "A power shut-off switch is provided within reach of the operator's position at each machine.",
+    "razon": "Tiene razon B. El libro trae dos puntos separados: interruptor de corte al alcance del operador en cada maquina (L1063) y botones de paro de emergencia rojos (L1073). El paso los funde en un solo objeto, en la misma direccion y sin dato ajeno al libro (Grep sin otros pasajes sobre emergency stop o shut-off salvo L1623, soldadura). Concrecion combinada: OPERATIVO.",
+    "texto_fiel": "Proveer en cada máquina un interruptor de corte de energía al alcance del operador, y que los botones de paro de emergencia sean de color rojo.",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "SB2",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 121,
+    "esperados": 121,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 7,
+  "fielMuestreados": 16,
+  "fielDiscutidos": [
+   "SB2-027",
+   "SB2-075",
+   "SB2-095",
+   "SB2-109"
+  ],
+  "cuenta": {
+   "OPERATIVO": 18,
+   "ANADIDO": 6,
+   "CONTRARIO": 2,
+   "FIEL": 91
+  },
+  "noFiel": [
+   {
+    "id": "SB2-001",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1855-L1861",
+    "frase_clave": "To help ensure that workers are free to participate in safety and health activities, Section 11(c) of the OSH Act prohibits any person from firing or in any manner retaliating against any worker for exercising rights under the OSH Act.",
+    "razon": "El libro describe el derecho y la prohibición de represalias, pero no pide expresamente al empleador que lo explique (aunque sí pide enseñar sus derechos a los jóvenes, L1747). El paso lo concreta en la misma dirección y sin datos nuevos.",
+    "texto_fiel": "Ten presente, y que lo sepa tu equipo, que la ley prohíbe tomar represalias contra quien ejerce sus derechos de seguridad y salud",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-004",
+    "veredicto": "ANADIDO",
+    "lineas": "L1477-L1481",
+    "frase_clave": "Covers including skylight screens, are able to withstand, without failure, twice the maximum intended load that may be imposed on the cover at any one time.",
+    "dato": "que las barandillas soporten el doble de la carga máxima",
+    "razon": "El libro pide el doble de la carga solo a las cubiertas (L1481). Las barandillas aparecen solo como una forma de proteger la abertura (L1477), sin requisito de carga. Busqué twice, load y guardrail en todo el libro y el requisito nunca se aplica a barandillas.",
+    "texto_fiel": "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-008",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1473-L1477",
+    "frase_clave": "Floor holes are guarded by a cover, a guardrail, or equivalent on all sides (except at stairways or ladder entrances).",
+    "razon": "La lista de autoinspección (L79-L83) implica revisar las aberturas. El paso concreta esa inspección sin datos nuevos.",
+    "texto_fiel": "Revisar que cada abertura de piso de la instalación esté protegida con cubierta, barandilla o equivalente",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-016",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1791",
+    "frase_clave": "SHARP recognizes small business employers who have used consultation services and operate an exemplary safety and health program.",
+    "razon": "El criterio del libro es haber usado la consulta y tener un programa ejemplar. El paso lo concreta como haber aplicado las recomendaciones, en la misma dirección.",
+    "texto_fiel": "Revisa si calificas para el programa SHARP, que reconoce a quienes usaron la consulta y tienen un programa de seguridad ejemplar",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-020",
+    "veredicto": "ANADIDO",
+    "lineas": "L591",
+    "frase_clave": "Standpipes, fire hoses, and fire hose valves, are inspected regularly and tested annually.",
+    "dato": "inspeccionar una vez al año",
+    "razon": "El libro fija la prueba anual, pero para la inspección solo dice regularly, sin frecuencia. El paso vuelve anual también la inspección. En todo el libro no hay frecuencia anual para inspeccionar mangueras.",
+    "texto_fiel": "Inspecciona con regularidad y prueba una vez al año las mangueras y válvulas contra incendio",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-021",
+    "veredicto": "OPERATIVO",
+    "lineas": "L485",
+    "frase_clave": "The plan addresses the types of actions expected of different workers for the various types of potential emergencies.",
+    "razon": "El libro pide que el plan defina las acciones de cada trabajador. Esa sección no habla de capacitar en el plan, aunque va en la misma dirección (L1763: jóvenes preparados para emergencias).",
+    "texto_fiel": "Asegura que el plan diga qué acciones se esperan de cada trabajador según el tipo de emergencia, y que las conozcan",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-022",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1791",
+    "frase_clave": "A worksite receives a deferral from OSHA or State Plan programmed inspections during the period that its SHARP designation is valid.",
+    "razon": "B tiene razón. El libro (L1791, repetido en L1813) habla de aplazar (deferral) las inspecciones programadas mientras la designación sea válida. Decir exento va en la misma dirección, porque durante ese periodo no hay inspecciones programadas. No cambia un umbral, un plazo ni una cifra, ni invierte nada, así que no es CONTRARIO. Exempt solo aparece en L247, y allí se refiere a los registros. Conviene precisar que es un aplazamiento y que depende de que la designación siga vigente.",
+    "texto_fiel": "Si obtienes la designación SHARP, aprovecha que tus inspecciones programadas quedan aplazadas mientras la designación siga vigente",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB2-054",
+    "veredicto": "OPERATIVO",
+    "lineas": "L319",
+    "frase_clave": "Workers who regularly work on or around energized electrical equipment or lines are instructed in cardiopulmonary resuscitation (CPR).",
+    "razon": "El libro limita la RCP a quien trabaja con regularidad junto a equipos energizados. Expuesto a la electricidad es más amplio, pero va en la misma dirección y sin datos nuevos.",
+    "texto_fiel": "Aprender RCP si tú o alguien de tu negocio trabaja con regularidad en o cerca de equipos o líneas con tensión",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-060",
+    "veredicto": "OPERATIVO",
+    "lineas": "L855-L859",
+    "frase_clave": "Rest breaks are provided and their length and frequency are adjusted, as needed.",
+    "razon": "Agua, sombra y descansos están en el libro. Frecuentes concreta una frecuencia que el libro deja ajustar según haga falta, sin dar cifra.",
+    "texto_fiel": "Proveer agua potable, sombra y descansos, ajustando su duración y frecuencia según haga falta",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-065",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1985-L1987",
+    "frase_clave": "Have a penalty reduction policy for small businesses",
+    "razon": "El libro solo dice que OSHA debe tener esa política. Preguntar por ella al recibir una citación lo concreta en la misma dirección.",
+    "texto_fiel": "Ten en cuenta que, por esta ley, OSHA debe tener una política de reducción de multas para pequeños negocios",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-069",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1987",
+    "frase_clave": "Involve small businesses in developing proposed rules expected to significantly affect a large number of small entities through Small Business Advocacy Review Panels.",
+    "razon": "La condición del libro es que la regla afecte de forma significativa a muchas pequeñas entidades. El paso la reduce a que te afecte a ti. Misma dirección, sin cifra nueva.",
+    "texto_fiel": "Si una regla propuesta afectará mucho a un gran número de pequeños negocios, OSHA debe escucharlos en paneles de revisión",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-078",
+    "veredicto": "ANADIDO",
+    "lineas": "L1851",
+    "frase_clave": "Through the Alliance Program, OSHA works with organizations such as trade and professional associations, labor unions, educational institutions, community and faith-based groups, and government agencies",
+    "dato": "Hace de tu negocio una de las partes de una Alianza con asociaciones comerciales o sindicatos. En el libro, la Alianza es entre OSHA y esas organizaciones.",
+    "razon": "B tiene razón. Busqué Alliance en todo el libro: solo aparece en L1851, y siempre como una relación entre OSHA y otras organizaciones. El paso cambia las partes y convierte a las asociaciones o sindicatos en la contraparte de tu negocio, algo concreto que el libro no respalda. No es CONTRARIO porque el libro no desaconseja colaborar con ellas; L1849 dice que empresas y grupos laborales pueden cooperar con OSHA. Tampoco es OPERATIVO, porque confundir las partes es un dato nuevo y no una concreción.",
+    "texto_fiel": "Aprovecha el Programa de Alianzas de OSHA, mediante el cual OSHA trabaja con asociaciones comerciales y profesionales, sindicatos y otras organizaciones para compartir información y recursos de cumplimiento con trabajadores y empleadores",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB2-079",
+    "veredicto": "OPERATIVO",
+    "lineas": "L515-L517",
+    "frase_clave": "Routes (means of egress) to exits, when not immediately apparent, are marked with visible exit signs. / All exits are marked with exit signs that are illuminated",
+    "razon": "El libro pide letrero iluminado en cada salida y señal visible en las rutas solo cuando no son evidentes. El paso lo simplifica como letrero iluminado en todas las rutas.",
+    "texto_fiel": "Marcar todas las salidas con letreros de EXIT iluminados y señalizar las rutas hacia ellas cuando no sean evidentes",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-083",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1987; L1837",
+    "frase_clave": "Be responsive to small business inquiries about complying with the Agency's regulations",
+    "razon": "El libro dice que OSHA debe responder las consultas de los pequeños negocios. Antes de que te citen es un encuadre añadido, sin dato concreto.",
+    "texto_fiel": "Usa los canales de consulta de OSHA para resolver tus dudas sobre cómo cumplir sus normas",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-084",
+    "veredicto": "ANADIDO",
+    "lineas": "L1857-L1859",
+    "frase_clave": "Protection from retaliation means that an employer cannot retaliate by taking \"adverse action\" against workers, such as: ... Disciplining ... falsely accusing the employee of poor performance",
+    "dato": "documentar acciones disciplinarias de forma objetiva",
+    "razon": "El libro no habla de documentar sanciones: enumera la sanción disciplinaria como represalia prohibida. Busqué document y disciplin en todo el libro y esa práctica no aparece.",
+    "texto_fiel": "No tomes acciones disciplinarias ni otras represalias contra quien denunció un problema de seguridad",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-087",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1785",
+    "frase_clave": "employers request a consultation visit from their local Consultation program and determine the scope of the visit. The visit may focus on a single concern at a facility or it may involve a thorough hazard assessment of an entire facility",
+    "razon": "Según el libro, el alcance lo decide el empleador. Junto al consultor añade quién decide, en la misma dirección.",
+    "texto_fiel": "Decide el alcance de la visita: un problema puntual o una evaluación completa de tu local",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-091",
+    "veredicto": "CONTRARIO",
+    "lineas": "L265",
+    "frase_clave": "All work-related fatalities are reported to OSHA within 8 hours. All work-related in-patient hospitalizations, amputations, and loss of an eye are reported to OSHA within 24 hours.",
+    "dato": "de inmediato",
+    "razon": "El libro da un plazo concreto para la fatalidad (8 horas en EE. UU.), no de inmediato: el plazo está cambiado. En el libro, immediate nunca se aplica al reporte de fatalidades.",
+    "texto_fiel": "Reporta una fatalidad en muy pocas horas y una hospitalizacion, amputacion o perdida de ojo en el plazo algo mayor que fije tu mercado",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-092",
+    "veredicto": "ANADIDO",
+    "lineas": "L581",
+    "frase_clave": "Fire alarm system has been certified, is in proper working condition, and is tested annually.",
+    "dato": "certificar una vez al año",
+    "razon": "El libro fija la prueba anual, pero la certificación no lleva frecuencia. Busqué certif en todo el libro y no hay certificación anual de alarmas.",
+    "texto_fiel": "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-093",
+    "veredicto": "OPERATIVO",
+    "lineas": "L325",
+    "frase_clave": "Cord-connected, electrically operated tools and equipment are effectively grounded or of the approved double insulated type.",
+    "razon": "El libro admite el doble aislamiento como alternativa y el paso solo pide conexión a tierra. Misma dirección, sin datos nuevos.",
+    "texto_fiel": "Asegurar que las herramientas y equipos eléctricos con cable estén conectados a tierra o sean de doble aislamiento aprobado",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-103",
+    "veredicto": "ANADIDO",
+    "lineas": "L1861",
+    "frase_clave": "Workers who believe an employer has retaliated against them for exercising their safety and health rights should contact their local OSHA office right away. A worker must file a retaliation complaint with OSHA within 30 calendar days",
+    "dato": "Hace al empleador responsable de ayudar a presentar la queja. El libro deja la queja en manos del trabajador.",
+    "razon": "A tiene razón. El libro (L1861, repetido en L1879) dice que el trabajador debe contactar a OSHA de inmediato y presentar la queja en un plazo de 30 días. Ningún pasaje le da al empleador el papel de ayudarle. La vara clasifica como ANADIDO un responsable que el libro no respalda, y eso es lo que añade el paso. No es CONTRARIO: el libro no desaconseja ayudar, y hablar del plazo legal no contradice los 30 días.",
+    "texto_fiel": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto y se cuenta en días calendario",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB2-106",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1855-L1859",
+    "frase_clave": "Section 11(c) of the OSH Act prohibits any person from firing or in any manner retaliating against any worker for exercising rights under the OSH Act.",
+    "razon": "El libro establece la prohibición legal. Una política interna la concreta en la misma dirección, sin cifra ni plazo nuevos.",
+    "texto_fiel": "Asegura que en tu negocio nadie tome represalias contra quien plantea o denuncia un problema de seguridad",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-119",
+    "veredicto": "CONTRARIO",
+    "lineas": "L1479",
+    "frase_clave": "Toeboards are installed around the edges of permanent floor holes where persons may pass below the hole.",
+    "dato": "donde transite personal",
+    "razon": "El libro pone el rodapié cuando pueden pasar personas por debajo de la abertura (protege de objetos que caen, L1441). El paso cambia la condición a donde transite personal.",
+    "texto_fiel": "Colocar rodapiés en los bordes de las aberturas permanentes cuando pueda pasar gente por debajo",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "SB2-027",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1851",
+    "frase_clave": "Most OSHA Strategic Partnerships are based out of local OSHA Area or Regional Offices.",
+    "razon": "B tiene razón. El libro dice que la mayoría de las Asociaciones Estratégicas salen de las oficinas de área o regionales locales, pero no dice que haya que contactarlas. Contactarlas es la concreción natural, en la misma dirección y sin dato nuevo. No es FIEL porque añade la acción de contactar.",
+    "texto_fiel": "Si te interesa una Asociación Estratégica, ten en cuenta que la mayoría salen de las Oficinas de Área o Regionales de OSHA de tu zona; puedes contactarlas para explorarla",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB2-075",
+    "veredicto": "OPERATIVO",
+    "lineas": "L869-L879",
+    "frase_clave": "Recognizing the signs and symptoms of heat-related injuries and illnesses. ... Administering first aid and CPR for heat-related illness.",
+    "razon": "B tiene razón. El libro pide capacitar en reconocer las enfermedades por calor en general y en dar primeros auxilios y RCP ante ellas. Hablar de golpe de calor reduce el objeto a un solo caso (stroke solo aparece en L519 y con otro sentido), así que no es FIEL. Aun así va en la misma dirección y no añade cifra ni condición.",
+    "texto_fiel": "Capacitar a supervisores y trabajadores, en un idioma que entiendan, en reconocer los signos y síntomas de las lesiones y enfermedades relacionadas con el calor y en dar primeros auxilios y RCP ante ellas",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB2-095",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1729",
+    "frase_clave": "If required by state law, all workers under 18 have a valid work permit issued by their school district or another designated agency.",
+    "razon": "B tiene razón. El libro pide que los menores de 18 tengan un permiso de trabajo válido cuando la ley lo exija. El paso lo convierte en la tarea de obtener el permiso y no menciona a los menores de 18, aunque el nodo trata de trabajadores jóvenes. Va en la misma dirección y no añade cifra ni condición. No llega a FIEL por el cambio de acción, pero es una concreción válida.",
+    "texto_fiel": "Asegurarte de que, si la ley de tu país o región lo exige, todos los trabajadores menores de 18 años tengan un permiso de trabajo válido emitido por la autoridad designada",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "SB2-109",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1783",
+    "frase_clave": "work with employers to identify safety and health hazards in workplaces and how to fix them.",
+    "razon": "B tiene razón. El libro dice que los consultores trabajan con los empleadores para identificar los peligros y ver cómo corregirlos, y que los asesoran para cumplir las normas. No dice literalmente que haya que aplicar sus recomendaciones. Ponerlas en práctica es la concreción directa, en la misma dirección y sin dato nuevo: OPERATIVO, no FIEL.",
+    "texto_fiel": "Trabaja con el consultor para identificar los peligros de seguridad y salud de tu lugar de trabajo y corregirlos como te indique",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "FX1",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 48,
+    "esperados": 48,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 4,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 4,
+  "fielMuestreados": 4,
+  "fielDiscutidos": [
+   "FX1-001"
+  ],
+  "cuenta": {
+   "OPERATIVO": 15,
+   "CONTRARIO": 3,
+   "ANADIDO": 2,
+   "FIEL": 24
+  },
+  "noFiel": [
+   {
+    "id": "FX1-003",
+    "veredicto": "OPERATIVO",
+    "lineas": "L63-L83",
+    "frase_clave": "Measure the length, height, and width of the package. / Multiply length by width by height in inches.",
+    "razon": "El libro manda medir las tres dimensiones en pulgadas; 'en las unidades que use tu courier' generaliza sin dato nuevo.",
+    "texto_fiel": "Mide el largo, ancho y alto de tu caja en pulgadas.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-007",
+    "veredicto": "OPERATIVO",
+    "lineas": "L579-L579",
+    "frase_clave": "When shipping multiple orchids, secure the pots in the shipping carton with enough space to keep plants separated during shipment. Contact between the plants' blooms and leaves can lead to damage.",
+    "razon": "El libro lo dice para varias orquideas; el paso lo extiende a cualquier planta, en la misma direccion y sin dato nuevo.",
+    "texto_fiel": "Si envias varias orquideas, deja espacio entre las macetas para que hojas y flores no se toquen entre si.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-008",
+    "veredicto": "OPERATIVO",
+    "lineas": "L949-L949",
+    "frase_clave": "Chipboard or paperboard boxes, paper envelopes, and plastic bags are unacceptable outer packaging.",
+    "razon": "El libro lista los empaques exteriores inaceptables y avisa que pueden rechazarse (L1249); preguntar al courier antes de la recoleccion concreta eso sin dato nuevo.",
+    "texto_fiel": "Confirma en las guias de tu courier que empaques exteriores no acepta antes de despachar.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-010",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1749-L1749",
+    "frase_clave": "All require a completed Shipper's Declaration for Dangerous Goods form.",
+    "razon": "El libro exige completar la documentacion (tambien L1317); 'guardarla junto con cada envio' concreta eso sin dato nuevo.",
+    "texto_fiel": "Completa la Declaracion del Expedidor de Mercancias Peligrosas y la documentacion que exige cada envio de este tipo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-013",
+    "veredicto": "CONTRARIO",
+    "lineas": "L181-L185",
+    "frase_clave": "Use pressure-sensitive plastic tape, water-activated paper tape (minimum 60-lb. grade), or water-activated reinforced tape that is at least 2\" wide. / Do not use cellophane tape, duct tape, masking tape, string, or rope to seal packages.",
+    "dato": "Descartar la cinta de papel engomado, que el libro acepta como cinta de papel activada con agua; la envoltura de papel tampoco aparece en el libro.",
+    "razon": "El paso desaconseja una cinta que el libro admite de forma expresa.",
+    "texto_fiel": "Descarta cinta de celofan, cinta de ducto, cinta de enmascarar, cordel o soga como metodo de sellado.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-015",
+    "veredicto": "ANADIDO",
+    "lineas": "L879-L879",
+    "frase_clave": "We encourage you to submit a sample of your packaging for testing and evaluation.",
+    "dato": "Repetir la prueba al cambiar de proveedor de cajas o de relleno.",
+    "razon": "Busque retest, again, change y supplier: el libro nunca pide repetir la prueba cuando cambia el proveedor o el material.",
+    "texto_fiel": "Envia a prueba una muestra de tu empaque antes de usarlo en tus envios.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-017",
+    "veredicto": "CONTRARIO",
+    "lineas": "L99-L99",
+    "frase_clave": "For express shipments smaller than 7\" x 4\" x 2\", use a FedEx Express packaging option (L991: minimum acceptable package size)",
+    "dato": "Tamano minimo definido por el propio remitente, cuando el libro fija el minimo aceptable del courier en 7 x 4 x 2 pulgadas.",
+    "razon": "Cambia el umbral: el libro da un valor fijo del courier, no uno que defina el remitente.",
+    "texto_fiel": "Mide el paquete ya armado: si es menor a 7 x 4 x 2 pulgadas, usa un sobre o bolsa del courier o metelo en una caja exterior mas grande; si no, usa caja.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-019",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1307-L1307",
+    "frase_clave": "Secure transmissions and other parts weighing more than 150 lbs. to a forkliftable base compatible with pallet-jack usage. Banding to a pallet or bracing inside a corrugated container helps prevent damage in handling.",
+    "razon": "Va en la misma direccion que el libro; 'base firme' y 'piezas pesadas' dejan vagos la base apta para montacargas y el umbral de 150 lbs, pero no los cambian.",
+    "texto_fiel": "En piezas de mas de 150 libras, asegura la pieza a una base apta para montacargas o con flejes a una tarima.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-022",
+    "veredicto": "ANADIDO",
+    "lineas": "L201-L201",
+    "frase_clave": "While we cannot ensure compliance with markings such as \"Up\" arrows or \"This End Up,\" properly placing the shipping label increases your chance for the preferred orientation.",
+    "dato": "Etiqueta de 'fragil', que el libro no recomienda ni menciona.",
+    "razon": "Busque fragile: solo describe articulos, nunca una etiqueta de manejo; el libro menciona flechas y This End Up sin recomendarlas.",
+    "texto_fiel": "Si marcas la caja con flechas o 'este lado arriba', ten presente que el courier no garantiza que se respeten.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-023",
+    "veredicto": "OPERATIVO",
+    "lineas": "L463-L463",
+    "frase_clave": "Apply at least three strips of pressure-sensitive adhesive plastic tape that is at least 2\" wide to both the top and bottom of the carton.",
+    "razon": "Tiene razon B. El libro fija tres tiras como minimo (\"at least\", repetido en L627, L723, L783, L1459 y L1687), lo que admite anadir mas. En todo el texto liga el peso a reforzar el empaque (L97 \"Use double-wall boxes for heavier items\"; L247 una caja \"of proper size and strength for the weight\"; L1261 \"depending on the weight of the part\"). El paso concreta ese minimo en la misma direccion, sin cifra, plazo, herramienta ni norma nueva. A acierta en que el libro no ata el numero de tiras al peso, pero eso no es un dato concreto nuevo ni contradice nada: es inferencia operativa.",
+    "texto_fiel": "Aplica al menos tres tiras de cinta plastica adhesiva sensible a la presion, de al menos 2 pulgadas (5 cm) de ancho, en la tapa y en el fondo de la caja. Como es un minimo, puedes anadir mas tiras si el paquete es mas pesado.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "FX1-026",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1225-L1287",
+    "frase_clave": "Pad all sharp edges, corners ... / Box cylindrical parts that can be packaged in tubes ... / When preparing irregular-shaped parts for shipment, tape cushioning material securely",
+    "razon": "El libro trata cada forma por separado; identificar la forma primero concreta esa logica sin dato nuevo.",
+    "texto_fiel": "Fijate si tu pieza tiene bordes filosos, es cilindrica o tiene forma irregular antes de elegir como acolcharla.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-028",
+    "veredicto": "OPERATIVO",
+    "lineas": "L991-L991",
+    "frase_clave": "when the sturdy outer packaging of your properly packaged shipment is smaller than 7\" x 4\" x 2\"",
+    "razon": "El libro decide sobre el envio ya empacado; el paso convierte eso en un paso previo.",
+    "texto_fiel": "Empaca por completo tu envio con su proteccion y mide el paquete terminado antes de decidir el contenedor.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-031",
+    "veredicto": "OPERATIVO",
+    "lineas": "L85-L85",
+    "frase_clave": "Divide by 139 for U.S., Puerto Rico, and international shipments.",
+    "razon": "El libro da el divisor del courier; preguntarselo al courier va en la misma direccion.",
+    "texto_fiel": "Confirma el divisor de peso dimensional de tu courier (en esta guia, 139 para envios de EE. UU., Puerto Rico e internacionales).",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-034",
+    "veredicto": "CONTRARIO",
+    "lineas": "L1277-L1279",
+    "frase_clave": "Box cylindrical parts that can be packaged in tubes with adequate dunnage such as padding at the ends and loose- peanuts to prevent puncturing through the end closures.",
+    "razon": "Tiene razon B. El libro manda encajar (\"Box\") las piezas cilindricas con relleno como cacahuates sueltos y presenta el tubo y la caja corrugada como opciones equivalentes (L1279: \"if the item cannot be packaged in a tube or corrugated box\"). Para las piezas en general pide rellenar la caja con cacahuates sueltos (L1253). Busque en todo el libro tube, cylind, loose y peanut: ningun pasaje dice que el tubo sea preferible a la caja ni desaconseja la caja con relleno suelto. Los tubos de L1361, L1411 y L1423 son piezas internas de disenos de empaque para carroceria, y los cylinders de L949 y L1087 solo figuran como material aceptable de empaque exterior. El paso invierte lo que sostiene el texto al descartar una opcion que el libro prescribe. A lo leyo como un simple contraste, pero \"en vez de\" excluye lo que el libro manda.",
+    "dato": "El paso descarta la caja con relleno suelto para piezas cilindricas (\"usa tubos en vez de caja rectangular con relleno suelto\"). En cambio, el libro abre la instruccion con \"Box cylindrical parts\", usa cacahuates sueltos como relleno y trata el tubo y la caja corrugada como alternativas.",
+    "texto_fiel": "Empaca las piezas cilindricas o tubulares en caja o en tubo, con relleno adecuado (acolchado en los extremos y cacahuates sueltos) para que no perforen los cierres de los extremos.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "FX1-035",
+    "veredicto": "OPERATIVO",
+    "lineas": "L501-L501",
+    "frase_clave": "You and your FedEx account executive should expect testing results via email in approximately five to seven business days",
+    "razon": "Ajustar el empaque segun el resultado es la consecuencia natural (L879); 'grosor de caja o relleno' concreta eso sin dato nuevo.",
+    "texto_fiel": "Espera los resultados de la prueba y ajusta tu empaque segun lo que indiquen.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-036",
+    "veredicto": "OPERATIVO",
+    "lineas": "L203-L203",
+    "frase_clave": "To avoid scanning issues, do not apply tape over the shipping label.",
+    "razon": "El libro solo habla de cinta; 'papeles' amplia en la misma direccion.",
+    "texto_fiel": "No pongas cinta sobre la etiqueta de envio, para evitar problemas de escaneo.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-039",
+    "veredicto": "OPERATIVO",
+    "lineas": "L991-L991",
+    "frase_clave": "smaller than 7\" x 4\" x 2\" (minimum acceptable package size)",
+    "razon": "El libro da un unico minimo aceptable del courier; preguntarlo va en la misma direccion, aunque el paso supone dos minimos distintos.",
+    "texto_fiel": "Confirma el tamano minimo aceptado por tu courier (en esta guia, 7 x 4 x 2 pulgadas); por debajo de el, usa un sobre o bolsa del courier.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-040",
+    "veredicto": "OPERATIVO",
+    "lineas": "L525-L525",
+    "frase_clave": "Secure contents inside the shipping container, because directional arrows cannot always be honored",
+    "razon": "El libro manda asegurar el contenido en vez de confiar en las flechas; 'acolchado' concreta eso sin dato nuevo.",
+    "texto_fiel": "Asegura el contenido dentro de la caja, porque las flechas de orientacion no siempre se pueden respetar.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-043",
+    "veredicto": "OPERATIVO",
+    "lineas": "L87-L87",
+    "frase_clave": "Your chargeable weight is the greater of the actual weight or the dimensional weight.",
+    "razon": "El libro fija el peso que se cobra; 'antes de cotizar con el cliente' anade contexto comercial sin dato nuevo.",
+    "texto_fiel": "Toma el mayor de los dos numeros como el peso por el que te cobraran el envio.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "FX1-047",
+    "veredicto": "OPERATIVO",
+    "lineas": "L99-L99",
+    "frase_clave": "Place small packages inside a larger outer box. For express shipments smaller than 7\" x 4\" x 2\", use a FedEx Express packaging option, or you can purchase other packaging at a FedEx Office location.",
+    "razon": "Tiene razon A. El libro preve dos formatos segun el tamano (L99): los paquetes pequenos van dentro de una caja exterior mas grande y, por debajo de 7 x 4 x 2 pulgadas, en el empaque del courier, que tambien se puede comprar en su oficina. Tener ambos disponibles concreta eso en la misma direccion, sin cifra, plazo, herramienta, responsable, norma ni frecuencia nuevos. B acierta en que las palabras inventario y stock no aparecen, pero que falte la palabra no convierte en dato nuevo una accion practica que sale de lo que dice el libro. El umbral debe ser el del libro (7 x 4 x 2 pulgadas) y no uno propio, por eso el texto fiel lo fija.",
+    "texto_fiel": "Ten a mano los dos formatos que preve el libro. Para envios menores de 7 x 4 x 2 pulgadas, usa el empaque del courier (o el que se compra en su oficina) o una caja exterior mas grande; para el resto, una caja resistente.",
+    "decidido_por": "arbitro"
+   }
+  ]
+ },
+ {
+  "lote": "O56",
+  "historial": [
+   {
+    "intento": 1,
+    "pasos": 125,
+    "esperados": 125,
+    "recall": {
+     "total": 4,
+     "cazadas": 4,
+     "detectadas": 4,
+     "fallos": []
+    }
+   }
+  ],
+  "recallVerificador": {
+   "total": 4,
+   "cazadas": 3,
+   "detectadas": 4,
+   "fallos": []
+  },
+  "desacuerdos": 2,
+  "fielMuestreados": 18,
+  "fielDiscutidos": [
+   "O56-090"
+  ],
+  "cuenta": {
+   "OPERATIVO": 10,
+   "ANADIDO": 4,
+   "FIEL": 107
+  },
+  "noFiel": [
+   {
+    "id": "O56-003",
+    "veredicto": "OPERATIVO",
+    "lineas": "L1013-L1031",
+    "frase_clave": "The general contractor gives contractors, subcontractors, and staffing agencies the right to conduct site visits and inspections and to access injury and illness records",
+    "texto_fiel": "Informa a contratistas y agencias como contactarte para reportar incidentes y dales derecho a hacer visitas e inspecciones y a acceder a los registros de lesiones",
+    "razon": "El libro da a los contratistas el derecho a inspeccionar y a acceder a los registros, y les dice a quien reportar. El paso lo concreta como un canal y un acceso entre las partes, en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-025",
+    "veredicto": "OPERATIVO",
+    "lineas": "L597",
+    "frase_clave": "Identify foreseeable emergency scenarios and nonroutine tasks, taking into account the types of material and equipment in use and the location within the facility.",
+    "texto_fiel": "Identificar escenarios de emergencia previsibles según los materiales y equipos en uso y la ubicación dentro de la instalación",
+    "razon": "El libro dice materiales y equipos en uso y ubicacion. El paso cambia equipos por tipo de instalacion, en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-026",
+    "veredicto": "ANADIDO",
+    "lineas": "L735-L741",
+    "frase_clave": "Develop or modify plans to control hazards that may arise in emergency situations.",
+    "dato": "La condicion cuando no exista uno vigente, que el libro no pone y que ademas no encaja con actualizar",
+    "texto_fiel": "Desarrollar o modificar planes para controlar los peligros que puedan surgir en situaciones de emergencia",
+    "razon": "Tiene razon B. El libro (L737, Action item 4) pide desarrollar o modificar planes de emergencia sin condicion alguna; L593 solo dice que hay que desarrollar planes y procedimientos. El paso restringe la accion a un caso (cuando no exista uno vigente) que el libro no pone y que no casa con actualizar. Grep de existing plan, in place, current plan, revise y update sin respaldo. Ningun pasaje dice lo opuesto, asi que no es CONTRARIO.",
+    "decidido_por": "arbitro"
+   },
+   {
+    "id": "O56-029",
+    "veredicto": "OPERATIVO",
+    "lineas": "L507; L753",
+    "frase_clave": "Be sure to document inspections so you can later verify that hazardous conditions are corrected.",
+    "texto_fiel": "Corregir los peligros encontrados en las inspecciones según las prioridades del plan de control",
+    "razon": "El libro pide comprobar que se corrigio lo hallado en las inspecciones y aplicar los controles segun el plan. El paso lo concreta.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-039",
+    "veredicto": "OPERATIVO",
+    "lineas": "L775",
+    "frase_clave": "Conduct regular inspections (and industrial hygiene monitoring, if indicated) to confirm that engineering controls are operating as designed.",
+    "texto_fiel": "Realizar inspecciones regulares, y monitoreo de higiene industrial cuando haga falta, para confirmar que los controles de ingeniería funcionan como se diseñaron",
+    "razon": "El paso omite la condicion if indicated del monitoreo y lo vuelve regular sin condicion. Va en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-042",
+    "veredicto": "ANADIDO",
+    "lineas": "L501; L537",
+    "frase_clave": "Before changing operations, workstations, or workflow; making major organizational changes; or introducing new equipment, materials, or processes, seek the input of workers and evaluate the planned changes",
+    "dato": "nuevos oficios (llegada de oficios al sitio)",
+    "texto_fiel": "Anticipa revisiones cuando cambien los procesos o puestos, se desgasten equipos o herramientas, o introduzcas equipos, materiales o procesos nuevos",
+    "razon": "El libro de la fila (OSHA3885, industria general) no habla de la llegada de oficios; eso esta en el libro de construccion. Busque trade y craft en OSHA3885: solo aparece trade associations.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-044",
+    "veredicto": "ANADIDO",
+    "lineas": "L593; L605-L607",
+    "frase_clave": "Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities, also present potential hazards.",
+    "dato": "izajes criticos o vertidos de concreto",
+    "texto_fiel": "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
+    "razon": "OSHA3885 solo cita el mantenimiento infrecuente y los arranques o paradas. Busque lift, crane, concrete y pour: el unico resultado es heavy lifting, en su sentido ergonomico.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-056",
+    "veredicto": "OPERATIVO",
+    "lineas": "L749",
+    "frase_clave": "Conduct emergency drills to ensure that procedures and equipment provide adequate protection during emergency situations.",
+    "texto_fiel": "Realizar simulacros de emergencia para comprobar que los procedimientos y equipos protegen de forma adecuada",
+    "razon": "El libro pide simulacros sin fijar frecuencia. Periodicos concreta eso sin dar una cifra.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-068",
+    "veredicto": "ANADIDO",
+    "lineas": "L505-L509",
+    "frase_clave": "Include all areas and activities in these inspections, such as storage and warehousing, facility and equipment maintenance, purchasing and office functions",
+    "dato": "excavaciones y trabajo en altura",
+    "texto_fiel": "Programa inspecciones regulares de todas las operaciones, equipos, áreas de trabajo e instalaciones, incluyendo almacenamiento, mantenimiento y actividades de contratistas",
+    "razon": "OSHA3885 no nombra excavaciones ni trabajo en altura; son del libro de construccion. Busque excavat, trench, height, staging y scaffold: solo aparece work above shoulder height, en su sentido ergonomico.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-094",
+    "veredicto": "OPERATIVO",
+    "lineas": "L965-L969",
+    "frase_clave": "take prompt action to correct the problem and prevent its recurrence",
+    "texto_fiel": "Corregir con prontitud cualquier deficiencia detectada y evitar que se repita",
+    "razon": "El libro pide corregir con prontitud. Quien se encarga y para cuando no aparece en esta seccion, aunque asignar responsables y plazos si esta en L281. Misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-101",
+    "veredicto": "OPERATIVO",
+    "lineas": "L465; L451; L479",
+    "frase_clave": "Collect, organize, and review information with workers to determine what types of hazards may be present and which workers may be exposed",
+    "texto_fiel": "Organiza y revisa con tus trabajadores la información recopilada para saber qué peligros hay, quién está expuesto y qué patrones de lesiones o enfermedades se repiten",
+    "razon": "El libro organiza la informacion para saber que peligros hay y quien esta expuesto. Los patrones vienen de L451 y L479. Misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-122",
+    "veredicto": "OPERATIVO",
+    "lineas": "L271; L89",
+    "frase_clave": "Be visible in operations and set an example by following the same safety procedures you expect workers to follow. Begin work meetings with a discussion or review of safety and health indicators",
+    "texto_fiel": "Dar ejemplo siguiendo tú mismo los procedimientos de seguridad que esperas de tu equipo, y abrir las reuniones de trabajo repasando temas de seguridad",
+    "razon": "OSHA3885 no habla de charlas breves (las toolbox talks solo estan en el libro de construccion), pero si de abrir las reuniones con seguridad y de hablar de ella a diario. Misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-123",
+    "veredicto": "OPERATIVO",
+    "lineas": "L849; L873",
+    "frase_clave": "As a starting point, consider providing the OSHA 30-hour construction safety course, or a similar course.",
+    "texto_fiel": "Considera, como punto de partida, un curso de seguridad más largo para quienes dirigen o supervisan y uno más corto para los trabajadores, verificando qué opciones existen en tu país",
+    "razon": "El libro propone cursos de 30 y 10 horas segun el rol. No habla de certificacion, pero va en la misma direccion.",
+    "decidido_por": "lector y verificador de acuerdo"
+   },
+   {
+    "id": "O56-090",
+    "veredicto": "OPERATIVO",
+    "lineas": "L119-L133",
+    "frase_clave": "Inspect the job site with workers and ask them to identify any activity, piece of equipment, or material that concerns them.",
+    "dato": "Fusiona los puntos 4, 5 y 6 y atribuye a la inspeccion conjunta el fin de recoger ideas de mejora, que el libro recoge conversando con los trabajadores",
+    "texto_fiel": "Capacita a tus trabajadores en identificar y controlar peligros; inspecciona el sitio con ellos pidiendoles que senalen lo que les preocupa, y conversa con ellos sobre ideas de mejora de seguridad a lo largo del proyecto",
+    "razon": "Tiene razon B. El libro separa formar (4, L119), inspeccionar con los trabajadores para que senalen lo que les preocupa (5, L125) y recoger ideas conversando (6, L131: Talk with workers about ideas on safety improvements throughout the project). El paso los junta y cambia un poco el fin de la inspeccion, pero va en la misma direccion y no trae cifra, plazo, herramienta ni responsable nuevos. No es FIEL por la fusion, pero se queda.",
+    "decidido_por": "arbitro"
+   }
+  ]
+ }
+]

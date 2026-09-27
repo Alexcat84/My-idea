@@ -19,6 +19,8 @@ export interface EstadoFalso {
   bitacora: Record<string, unknown>[];
   /** "Todo separado" (migracion 032): el modo del camino por espacio. */
   projectModos: Record<string, unknown>[];
+  /** AUD-09 M04 (migracion 040): las actas de cierre, una fila por cierre. */
+  projectActas: Record<string, unknown>[];
   contadorProject: number;
   contadorSession: number;
   contadorPlan: number;
@@ -34,6 +36,7 @@ export function estadoFalsoVacio(): EstadoFalso {
     projectUnlocks: [],
     bitacora: [],
     projectModos: [],
+    projectActas: [],
     contadorProject: 0,
     contadorSession: 0,
     contadorPlan: 0,
@@ -42,11 +45,27 @@ export function estadoFalsoVacio(): EstadoFalso {
 
 interface Builder {
   _insert?: Record<string, unknown> | Record<string, unknown>[];
+  /** AUD-09: `.delete()` (hoy solo lo resuelve project_unlocks). */
+  _delete?: boolean;
   _update?: Record<string, unknown>;
   _upsert?: Record<string, unknown>;
   _filters: Record<string, unknown>;
   _single: boolean;
   _order?: { col: string; ascending: boolean };
+  /** `.in(col, valores)`: hoy lo resuelven plans y checklist_items. */
+  _in?: Record<string, unknown[]>;
+}
+
+/** Aplica los `.in()` de una lectura y, si se pide, su `.order()` (solo el
+ * último: el fake no encadena órdenes, por eso checklist_items no lo usa). */
+function filtrarInYOrden<T extends Record<string, unknown>>(rows: T[], b: Builder, conOrden = true): T[] {
+  let out = rows;
+  for (const [col, vals] of Object.entries(b._in ?? {})) out = out.filter((r) => vals.includes(r[col]));
+  if (conOrden && b._order) {
+    const { col, ascending } = b._order;
+    out = [...out].sort((a, c) => (ascending ? 1 : -1) * String(a[col] ?? "").localeCompare(String(c[col] ?? "")));
+  }
+  return out;
 }
 
 function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
@@ -77,7 +96,10 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
   if (nombre === "sessions") {
     if (b._insert) {
       estado.contadorSession++;
-      const id = `session-${estado.contadorSession}`;
+      // AUD-09 M25: la ruta puede traer el id ya generado (la reserva de
+      // créditos se hace con él ANTES de crear la sesión).
+      const idDado = Array.isArray(b._insert) ? undefined : (b._insert.id as string | undefined);
+      const id = idDado ?? `session-${estado.contadorSession}`;
       estado.sessions[id] = { id, ruta: [], costo_usd: 0, presupuesto_excedido: false, closed_at: null, estado_recorrido: null, ...b._insert };
       return { data: b._single ? { id } : [{ id }], error: null };
     }
@@ -100,16 +122,21 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
       return { data: b._single ? { id } : [{ id }], error: null };
     }
     if (b._update) {
-      // Fase 3.8: la ruta baseline sella plans.baseline_confirmada_at.
-      const id = b._filters.id as string | undefined;
-      const fila = estado.plans.find((r) => (r as { id?: string }).id === id);
+      // Fase 3.8: la ruta baseline sella plans.baseline_confirmada_at. AUD-09
+      // M34: se respetan TODOS los filtros (un null del .is() casa con ausente).
+      const fila = estado.plans.find((r) =>
+        Object.entries(b._filters).every(([c, v]) =>
+          v === null ? (r as Record<string, unknown>)[c] == null : (r as Record<string, unknown>)[c] === v
+        )
+      );
       if (fila) Object.assign(fila, b._update);
       return { data: null, error: null };
     }
-    let rows = estado.plans;
+    let rows = estado.plans as Record<string, unknown>[];
     for (const [col, val] of Object.entries(b._filters)) {
       rows = rows.filter((r) => (r as Record<string, unknown>)[col] === val);
     }
+    rows = filtrarInYOrden(rows, b);
     if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
     return { data: rows, error: null };
   }
@@ -130,6 +157,7 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     for (const [col, val] of Object.entries(b._filters)) {
       rows = rows.filter((r) => r[col] === val);
     }
+    rows = filtrarInYOrden(rows, b, false);
     // .single() en una lectura (Fase 3.8/4.8: la ruta lee el ítem PREVIO para
     // preservar la fecha_base y comparar contra la bitácora) devuelve la fila,
     // no un array. Se devuelve una COPIA: en una BD real la lectura es un
@@ -148,10 +176,14 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     // se identifica por el par, igual que su UNIQUE en la 016.
     let rows = estado.projectUnlocks;
     for (const [col, val] of Object.entries(b._filters)) {
-      rows = rows.filter((r) => r[col] === val);
+      rows = rows.filter((r) => (val === null ? (r[col] ?? null) === null : r[col] === val));
     }
     if (b._update) {
       for (const fila of rows) Object.assign(fila, b._update);
+      return { data: null, error: null };
+    }
+    if (b._delete) {
+      estado.projectUnlocks = estado.projectUnlocks.filter((r) => !rows.includes(r));
       return { data: null, error: null };
     }
     if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
@@ -185,6 +217,22 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     }
     return { data: rows, error: null };
   }
+  if (nombre === "project_actas") {
+    if (b._insert) {
+      const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
+      for (const f of filas) {
+        estado.projectActas.push({ id: `acta-${estado.projectActas.length + 1}`, created_at: new Date().toISOString(), ...f });
+      }
+      return { data: null, error: null };
+    }
+    let rows = estado.projectActas;
+    for (const [col, val] of Object.entries(b._filters)) rows = rows.filter((r) => r[col] === val);
+    if (b._order) {
+      const { col, ascending } = b._order;
+      rows = [...rows].sort((a, c) => (ascending ? 1 : -1) * String(a[col] ?? "").localeCompare(String(c[col] ?? "")));
+    }
+    return { data: rows, error: null };
+  }
   if (nombre === "project_nodes") {
     if (b._insert) {
       const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
@@ -210,6 +258,10 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
       builder._update = payload;
       return builder;
     },
+    delete() {
+      builder._delete = true;
+      return builder;
+    },
     upsert(payload: Record<string, unknown>) {
       builder._upsert = payload;
       return builder;
@@ -219,6 +271,16 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
     },
     eq(col: string, val: unknown) {
       builder._filters[col] = val;
+      return builder;
+    },
+    // AUD-09: `.is(col, null)` (el sello idempotente WHERE ... IS NULL). Se
+    // guarda como filtro; project_unlocks lo lee con "ausente cuenta como null".
+    is(col: string, val: unknown) {
+      builder._filters[col] = val;
+      return builder;
+    },
+    in(col: string, vals: unknown[]) {
+      builder._in = { ...(builder._in ?? {}), [col]: vals };
       return builder;
     },
     limit() {

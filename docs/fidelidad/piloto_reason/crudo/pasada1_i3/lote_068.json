@@ -1,0 +1,89 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_068",
+  "intento": 0,
+  "usd": 0.16896799999999998,
+  "turnos": 1,
+  "duracion_s": 17.0,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34432,
+  "tokens_out": 1562,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P37313C\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"inspectores\", \"personal de la empresa regulada\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4261, 4211, 4194, 4125, 4265], \"razon\": \"L4261 respalda el riesgo de captura, pero L4125 critica la falta de relación cercana y L4265 dice que el compromiso no es un fallo. Choque de matiz.\"},\n {\"id\": \"P7CB431\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"ante cada cambio de modo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [868, 918, 942, 896, 1149, 1141], \"razon\": \"El libro diagnostica transiciones de modo no percibidas, pero no prescribe esa solución. Alertas en cada cambio podrían añadir complejidad o carga (L1149, L1141). No se puede descartar.\"},\n {\"id\": \"P77A683\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1145, 459, 1133, 2638, 2650, 2648, 582], \"razon\": \"L1145 advierte que eliminar la causa del accidente previo puede contribuir al siguiente. El libro prioriza las condiciones latentes y organizacionales sobre reparar la capa concreta que falló.\"},\n {\"id\": \"P1CC77D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5701, 5639, 5633, 225, 580, 692], \"razon\": \"El libro afirma que las condiciones latentes son universales y aplicables a bancos y aseguradoras (Barings). Excluir finanzas y administración invierte su tesis.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P37313C",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "inspectores",
+    "personal de la empresa regulada"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4261,
+    4211,
+    4194,
+    4125,
+    4265
+   ],
+   "razon": "L4261 respalda el riesgo de captura, pero L4125 critica la falta de relación cercana y L4265 dice que el compromiso no es un fallo. Choque de matiz."
+  },
+  {
+   "id": "P7CB431",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "ante cada cambio de modo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    868,
+    918,
+    942,
+    896,
+    1149,
+    1141
+   ],
+   "razon": "El libro diagnostica transiciones de modo no percibidas, pero no prescribe esa solución. Alertas en cada cambio podrían añadir complejidad o carga (L1149, L1141). No se puede descartar."
+  },
+  {
+   "id": "P77A683",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1145,
+    459,
+    1133,
+    2638,
+    2650,
+    2648,
+    582
+   ],
+   "razon": "L1145 advierte que eliminar la causa del accidente previo puede contribuir al siguiente. El libro prioriza las condiciones latentes y organizacionales sobre reparar la capa concreta que falló."
+  },
+  {
+   "id": "P1CC77D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5701,
+    5639,
+    5633,
+    225,
+    580,
+    692
+   ],
+   "razon": "El libro afirma que las condiciones latentes son universales y aplicables a bancos y aseguradoras (Barings). Excluir finanzas y administración invierte su tesis."
+  }
+ ]
+}

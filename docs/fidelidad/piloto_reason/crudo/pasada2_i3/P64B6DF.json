@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P64B6DF",
+  "intento": 0,
+  "usd": 0.213388,
+  "turnos": 1,
+  "duracion_s": 13.1,
+  "pared_s": 14.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47652,
+  "tokens_out": 1139,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P64B6DF\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4769, 5178, 5208], \"cita\": \"it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.\", \"datos_sin_respaldo\": [\"Sistema de Comando de Incidentes\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda que el control pase a los expertos en el lugar y que después se vuelva a la jerarquía. No menciona el Sistema de Comando de Incidentes, que es una herramienta añadida. El libro no desaconseja esa herramienta. La advertencia de Weick sobre reglas y estandarización no la contradice expresamente, así que no es CONTRARIO.\", \"paso_fiel\": \"Preparar a la organización para que, en emergencias u operaciones de alto ritmo, el control pase a los expertos en la tarea presentes en el lugar y vuelva después al modo jerárquico habitual, apoyándose en una cultura compartida y en la formación de los supervisores de primera línea.\"}\n```",
+ "parseado": {
+  "id": "P64B6DF",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4769,
+   5178,
+   5208
+  ],
+  "cita": "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.",
+  "datos_sin_respaldo": [
+   "Sistema de Comando de Incidentes"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda que el control pase a los expertos en el lugar y que después se vuelva a la jerarquía. No menciona el Sistema de Comando de Incidentes, que es una herramienta añadida. El libro no desaconseja esa herramienta. La advertencia de Weick sobre reglas y estandarización no la contradice expresamente, así que no es CONTRARIO.",
+  "paso_fiel": "Preparar a la organización para que, en emergencias u operaciones de alto ritmo, el control pase a los expertos en la tarea presentes en el lugar y vuelva después al modo jerárquico habitual, apoyándose en una cultura compartida y en la formación de los supervisores de primera línea."
+ }
+}

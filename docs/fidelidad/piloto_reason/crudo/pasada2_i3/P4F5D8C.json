@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P4F5D8C",
+  "intento": 0,
+  "usd": 0.192712,
+  "turnos": 1,
+  "duracion_s": 8.6,
+  "pared_s": 9.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44693,
+  "tokens_out": 697,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4F5D8C\", \"veredicto\": \"FIEL\", \"lineas\": [5057, 5037], \"cita\": \"It seems appropriate to apply Johnston’s substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled … If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda aplicar la prueba de sustitución de Johnston y que responda un ‘jury’ de pares (L5057, L5037). El paso no invierte el orden que fija el libro: solo no lo menciona. Además, los pasos previos del nodo ya tratan las sustancias y el incumplimiento deliberado. Ambos datos del paso tienen respaldo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P4F5D8C",
+  "veredicto": "FIEL",
+  "lineas": [
+   5057,
+   5037
+  ],
+  "cita": "It seems appropriate to apply Johnston’s substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled … If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda aplicar la prueba de sustitución de Johnston y que responda un ‘jury’ de pares (L5057, L5037). El paso no invierte el orden que fija el libro: solo no lo menciona. Además, los pasos previos del nodo ya tratan las sustancias y el incumplimiento deliberado. Ambos datos del paso tienen respaldo.",
+  "paso_fiel": ""
+ }
+}

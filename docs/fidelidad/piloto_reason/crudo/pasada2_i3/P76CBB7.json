@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P76CBB7",
+  "intento": 0,
+  "usd": 0.23078800000000002,
+  "turnos": 1,
+  "duracion_s": 8.5,
+  "pared_s": 9.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54662,
+  "tokens_out": 607,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P76CBB7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4360, 4372], \"cita\": \"They also laid down a 'rolling procedure' for the identification, assessment and control of risk. ... Testing of respiratory equipment, ventilation and the like, and keeping careful records of these examinations.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro incluye en el procedimiento COSHH probar equipos respiratorios y ventilación y registrar cuidadosamente los resultados. No dice 'periódicamente', pero el carácter de 'rolling procedure' implica repetición. Es una frecuencia genérica sin cifra ni plazo, así que concreta el libro en su misma dirección sin añadir datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P76CBB7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4360,
+   4372
+  ],
+  "cita": "They also laid down a 'rolling procedure' for the identification, assessment and control of risk. ... Testing of respiratory equipment, ventilation and the like, and keeping careful records of these examinations.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro incluye en el procedimiento COSHH probar equipos respiratorios y ventilación y registrar cuidadosamente los resultados. No dice 'periódicamente', pero el carácter de 'rolling procedure' implica repetición. Es una frecuencia genérica sin cifra ni plazo, así que concreta el libro en su misma dirección sin añadir datos nuevos.",
+  "paso_fiel": ""
+ }
+}

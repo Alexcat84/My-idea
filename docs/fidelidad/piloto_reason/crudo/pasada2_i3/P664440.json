@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P664440",
+  "intento": 0,
+  "usd": 0.210144,
+  "turnos": 1,
+  "duracion_s": 12.4,
+  "pared_s": 13.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47541,
+  "tokens_out": 999,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P664440\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3153, 494, 4464, 550, 4502], \"cita\": \"Organization. This concerns organizational deficiencies that blur safety responsibilities and allow warning signs to be overlooked.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala que las responsabilidades difusas dejan pasar señales de alerta (L3153). En Barings, Leeson era 'responsabilidad de otro' (L494) y una carta de SIMEX no se atendió (L550). También prevé seguimiento de cada hallazgo hasta su rectificación (L4464). El paso no sustituye la integración conjunta; solo la complementa. No añade cifras, plazos ni roles.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P664440",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3153,
+   494,
+   4464,
+   550,
+   4502
+  ],
+  "cita": "Organization. This concerns organizational deficiencies that blur safety responsibilities and allow warning signs to be overlooked.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala que las responsabilidades difusas dejan pasar señales de alerta (L3153). En Barings, Leeson era 'responsabilidad de otro' (L494) y una carta de SIMEX no se atendió (L550). También prevé seguimiento de cada hallazgo hasta su rectificación (L4464). El paso no sustituye la integración conjunta; solo la complementa. No añade cifras, plazos ni roles.",
+  "paso_fiel": ""
+ }
+}

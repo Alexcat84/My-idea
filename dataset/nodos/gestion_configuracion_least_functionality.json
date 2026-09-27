@@ -19,7 +19,26 @@
     "identificacion_autenticacion_mfa"
   ],
   "condiciones_activacion": [
-    "Cuando se implementan los requisitos de la familia Configuration Management de SP 800-171"
+    "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y debe establecer configuraciones base e inventarios de sus sistemas, deshabilitando funciones, puertos y servicios innecesarios"
   ],
-  "etiqueta_arbol": "Configura tus Sistemas al Mínimo"
+  "etiqueta_arbol": "Configura tus Sistemas al Mínimo",
+  "fuentes_internas": [
+    "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-090",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se implementan los requisitos de la familia Configuration Management de SP 800-171",
+      "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y debe establecer configuraciones base e inventarios de sus sistemas, deshabilitando funciones, puertos y servicios innecesarios",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-018: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: SP 800-171 y el CUI son del gobierno federal de Estados Unidos y la condicion no dice que aplica si operas alli con ese tipo de contrato."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

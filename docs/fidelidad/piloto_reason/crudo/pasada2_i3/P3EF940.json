@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3EF940",
+  "intento": 0,
+  "usd": 0.253628,
+  "turnos": 1,
+  "duracion_s": 22.8,
+  "pared_s": 23.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52717,
+  "tokens_out": 2138,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3EF940\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5067, 5077, 4765, 5063], \"cita\": \"Delayed punishments have negative effects: they generally do not lead to improved behaviour and can induce resentment in both the punished and the could-be-punished. [...] But there are other factors that argue strongly in favour of punishing the few who commit egregious unsafe acts.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro constata que el castigo diferido no mejora la conducta, pero no lo convierte en regla. Con 'But' defiende sancionar a los pocos infractores graves, sanción que llega tras investigación y juicio. Como norma general, 'evitar sanciones tardías' elimina esa excepción y llevaría a no sancionar a esos infractores graves, contra L5077 y L4765.\", \"paso_fiel\": \"No recurrir al castigo diferido para corregir los actos inseguros ordinarios, pero sancionar, aunque sea tras la investigación, a los pocos autores de actos inseguros graves (imprudencia, negligencia, consumo de sustancias o reincidencia).\"}\n```",
+ "parseado": {
+  "id": "P3EF940",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5067,
+   5077,
+   4765,
+   5063
+  ],
+  "cita": "Delayed punishments have negative effects: they generally do not lead to improved behaviour and can induce resentment in both the punished and the could-be-punished. [...] But there are other factors that argue strongly in favour of punishing the few who commit egregious unsafe acts.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro constata que el castigo diferido no mejora la conducta, pero no lo convierte en regla. Con 'But' defiende sancionar a los pocos infractores graves, sanción que llega tras investigación y juicio. Como norma general, 'evitar sanciones tardías' elimina esa excepción y llevaría a no sancionar a esos infractores graves, contra L5077 y L4765.",
+  "paso_fiel": "No recurrir al castigo diferido para corregir los actos inseguros ordinarios, pero sancionar, aunque sea tras la investigación, a los pocos autores de actos inseguros graves (imprudencia, negligencia, consumo de sustancias o reincidencia)."
+ }
+}

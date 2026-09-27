@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P10E872",
+  "intento": 0,
+  "usd": 0.153376,
+  "turnos": 1,
+  "duracion_s": 7.3,
+  "pared_s": 8.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35624,
+  "tokens_out": 544,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P10E872\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5572, 5603, 5692], \"cita\": \"For any hazardous technology there are potentially four primary risk areas. These will, of course, vary in significance from domain to domain.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro define los cuatro tipos de riesgo (personal, operador clave, condiciones latentes, terceros) y los estima por dominio en la Tabla 10.1. También pide conocer las distintas variedades de riesgo. Nunca manda hacer este mapeo para una organización concreta, pero el paso lo aplica en la misma dirección y no añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P10E872",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5572,
+   5603,
+   5692
+  ],
+  "cita": "For any hazardous technology there are potentially four primary risk areas. These will, of course, vary in significance from domain to domain.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro define los cuatro tipos de riesgo (personal, operador clave, condiciones latentes, terceros) y los estima por dominio en la Tabla 10.1. También pide conocer las distintas variedades de riesgo. Nunca manda hacer este mapeo para una organización concreta, pero el paso lo aplica en la misma dirección y no añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

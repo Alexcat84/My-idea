@@ -4,16 +4,16 @@
   "dominio": "quality",
   "titulo_concepto": "Distorsión por Muestreo Mecánico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+  "resumen_teorico": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede producir diferencias que la teoría de probabilidad no cubre; esa diferencia no es un sesgo, sino la diferencia entre dos métodos de selección. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
   "pasos_accionables": [
     "Evalúa si tu método actual de muestreo usa selección aleatoria o mecánica",
-    "Si usas un instrumento físico para muestrear, documenta y calibra el sesgo propio de esa herramienta",
-    "Si es posible, implementa selección por números aleatorios generados formalmente para eliminar sesgos",
+    "Si usas un instrumento físico para muestrear, registra el promedio acumulado que produce esa herramienta como dato del proceso",
+    "Si es posible, implementa selección por números aleatorios generados formalmente para evitar la distorsión del muestreo mecánico",
     "Si no puedes aplicar muestreo aleatorio, considera inspeccionar el 100% de una selección aleatoria de lotes",
     "Registra las características del instrumento o método de muestreo como parte de tus datos",
     "Documenta cualquier cambio en el método de muestreo como posible causa de puntos fuera de control"
   ],
-  "entregable_esperado": "Protocolo de muestreo documentado que especifique el método usado, su justificación y su posible sesgo frente al ideal aleatorio.",
+  "entregable_esperado": "Protocolo de muestreo documentado que especifique el método usado, su justificación y la diferencia que produce frente a la selección por números aleatorios.",
   "nodos_previos": [
     "concepto_variacion_estadistica",
     "experimento_cuentas_rojas"
@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando detectes discrepancias entre el promedio esperado y el observado en tus inspecciones",
-    "Cuando sospeches que tu método de muestreo introduce sesgo",
+    "Cuando sospeches que tu método de muestreo distorsiona el promedio del proceso",
     "Cuando diseñes un sistema de muestreo de calidad para inspección de lotes"
   ],
   "etiqueta_arbol": "Muestrea Siempre al Azar",
@@ -36,5 +36,93 @@
       "titulo": "Muestreo Aleatorio vs Muestreo Mecánico",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-17",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+      "texto_nuevo": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede producir diferencias que la teoría de probabilidad no cubre; esa diferencia no es un sesgo, sino la diferencia entre dos métodos de selección. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L8070-L8092",
+        "frase": "The difference between the accumulated and 10 is often alluded to by people in the audience as bias. No, this difference is not bias. It is the difference between two methods of selection: (1) mechanical sampling, used here; (2) selection by random numbers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R047-001 (CONTRARIO, arbitro): Tenía razón el lector A. Deming niega literalmente que la diferencia sea sesgo (L8070) y en L6659 insiste en tratar una diferencia de método no como sesgo. Busqué bias, biased y distort en todo el libro y ningún pasaje llama sesgo al efecto del muestreo mecánico; el libro habla de distorsión (L8089, L8092). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R047-001"
+    },
+    {
+      "id": "saneamiento-t1-c02-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Si usas un instrumento físico para muestrear, documenta y calibra el sesgo propio de esa herramienta",
+      "texto_nuevo": "Si usas un instrumento físico para muestrear, registra el promedio acumulado que produce esa herramienta como dato del proceso",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L8064-L8066",
+        "frase": "As a matter of fact, the cumulated average for paddle No. 2 over many experiments in the past has settled down to 9.4 red beads per lot of 50. Paddle No. 1, used for 30 years, shows an average of 11.3. || The paddle is an important piece of information about the process."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Deming no manda calibrar un sesgo de la paleta. Dice que la diferencia no es sesgo (L8070), anota el promedio acumulado de cada paleta (9,4 y 11,3) y trata la paleta como información del proceso. El paso queda así, alineado con el resumen, que es fiel al libro.",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c02-2",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Si es posible, implementa selección por números aleatorios generados formalmente para eliminar sesgos",
+      "texto_nuevo": "Si es posible, implementa selección por números aleatorios generados formalmente para evitar la distorsión del muestreo mecánico",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L8092",
+        "frase": "The only safe plan is use of random numbers for selection of items from a lot, but it must be admitted that use of random numbers will in many cases not be practicable."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro llama distorsión, no sesgo, a lo que produce el muestreo mecánico (encabezado de L8089) y presenta los números aleatorios como el único plan seguro. Se dice 'evitar' y no 'eliminar' porque el libro reserva 'eliminate possible distortion' para la inspección del 100 % de una selección aleatoria de lotes, que ya es el paso 3.",
+      "indice": 2,
+      "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c02-3",
+      "fecha": "2026-09-26",
+      "campo": "entregable_esperado",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Protocolo de muestreo documentado que especifique el método usado, su justificación y su posible sesgo frente al ideal aleatorio.",
+      "texto_nuevo": "Protocolo de muestreo documentado que especifique el método usado, su justificación y la diferencia que produce frente a la selección por números aleatorios.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L8070",
+        "frase": "The difference between the accumulated and 10 is often alluded to by people in the audience as bias. No, this difference is not bias. It is the difference between two methods of selection: (1) mechanical sampling, used here; (2) selection by random numbers."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El entregable llamaba sesgo justo a lo que el libro dice expresamente que no es sesgo, sino la diferencia entre dos métodos de selección. Se ajusta a esa formulación, igual que el resumen.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c02-4",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Cuando sospeches que tu método de muestreo introduce sesgo",
+      "texto_nuevo": "Cuando sospeches que tu método de muestreo distorsiona el promedio del proceso",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L8089-L8092",
+        "frase": "Mechanical sampling will distort the process average || It is a fact that the cumulated average of proportion defective calculated from inspection of samples drawn by inspectors, however conscientious they be, may not be a good approximation to the process average."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La condición repetía la idea de sesgo que el libro rechaza. Deming lo llama distorsión del promedio del proceso, y la condición pasa a decir eso.",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

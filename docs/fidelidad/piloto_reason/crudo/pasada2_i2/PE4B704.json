@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE4B704",
+  "intento": 0,
+  "usd": 0.20254,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 18.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41725,
+  "tokens_out": 1782,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE4B704\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2716, 3825, 3829], \"cita\": \"Errors arise from informational problems. They are best tackled by improving the available information--either in the person's head or in the workplace. Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture\", \"datos_sin_respaldo\": [], \"razon\": \"El libro reserva la formación y la información en el puesto para los errores, que son problemas informativos. Para las violaciones, que son motivacionales, pide contramedidas dirigidas 'al corazón, no a la cabeza': cambiar normas, actitudes y cultura, y mejorar los procedimientos. El paso aplica a las violaciones como vía principal el remedio propio de los errores.\", \"paso_fiel\": \"Reducir las violaciones de procedimiento cambiando las normas, creencias, actitudes y cultura de quienes las cometen, y mejorando la credibilidad, aplicabilidad, disponibilidad y precisión de los procedimientos.\"}\n```",
+ "parseado": {
+  "id": "PE4B704",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2716,
+   3825,
+   3829
+  ],
+  "cita": "Errors arise from informational problems. They are best tackled by improving the available information--either in the person's head or in the workplace. Violations, however, are social and motivational problems. They are best addressed by changing people's norms, beliefs, attitudes and culture",
+  "datos_sin_respaldo": [],
+  "razon": "El libro reserva la formación y la información en el puesto para los errores, que son problemas informativos. Para las violaciones, que son motivacionales, pide contramedidas dirigidas 'al corazón, no a la cabeza': cambiar normas, actitudes y cultura, y mejorar los procedimientos. El paso aplica a las violaciones como vía principal el remedio propio de los errores.",
+  "paso_fiel": "Reducir las violaciones de procedimiento cambiando las normas, creencias, actitudes y cultura de quienes las cometen, y mejorando la credibilidad, aplicabilidad, disponibilidad y precisión de los procedimientos."
+ }
+}

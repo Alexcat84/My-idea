@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Matriz 'Ways to Grow' (Gestión de Portafolio de Innovación)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Herramienta desarrollada por Diego Rodriguez y Ryan Jacoby (IDEO) para evaluar el balance de los esfuerzos de innovación de una organización. Cruza dos ejes: ofertas (existentes a nuevas) y usuarios (existentes a nuevos), generando cuatro cuadrantes: innovación incremental (base existente-usuarios existentes), evolutiva (extensión en un eje) y revolucionaria (nuevo producto-nuevo usuario, la más riesgosa pero de mayor impacto).",
+  "resumen_teorico": "Herramienta desarrollada en IDEO para evaluar el balance de los esfuerzos de innovación de una organización. Cruza dos ejes: ofertas (existentes a nuevas) y usuarios (existentes a nuevos), generando cuatro cuadrantes: innovación incremental (base existente-usuarios existentes), evolutiva (extensión en un eje) y revolucionaria (nuevo producto-nuevo usuario, la más riesgosa pero de mayor impacto).",
   "pasos_accionables": [
     "Mapear todos los proyectos de innovación actuales de la organización en la matriz",
     "Clasificar cada proyecto según su posición en los ejes oferta/usuario",
-    "Identificar si existe sobre-concentración en el cuadrante incremental",
+    "Identificar si existe sobreconcentración en el cuadrante incremental",
     "Asignar deliberadamente recursos a los cuatro cuadrantes para diversificar el riesgo",
     "Revisar periódicamente el balance del portafolio ante eventos de tipo 'Black Swan'"
   ],
@@ -29,5 +29,40 @@
     "Si se busca protección ante disrupciones inesperadas del mercado (Black Swans)",
     "Para evaluar el riesgo/retorno de la cartera completa de proyectos"
   ],
-  "etiqueta_arbol": "Equilibra tu Portafolio de Innovación"
+  "etiqueta_arbol": "Equilibra tu Portafolio de Innovación",
+  "correcciones": [
+    {
+      "id": "atribucion-182",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Herramienta desarrollada por Diego Rodriguez y Ryan Jacoby (IDEO) para evaluar el balance de los esfuerzos de innovación de una organización. Cruza dos ejes: ofertas (existentes a nuevas) y usuarios (existentes a nuevos), generando cuatro cuadrantes: innovación incremental (base existente-usuarios existentes), evolutiva (extensión en un eje) y revolucionaria (nuevo producto-nuevo usuario, la más riesgosa pero de mayor impacto).",
+      "texto_nuevo": "Herramienta desarrollada en IDEO para evaluar el balance de los esfuerzos de innovación de una organización. Cruza dos ejes: ofertas (existentes a nuevas) y usuarios (existentes a nuevos), generando cuatro cuadrantes: innovación incremental (base existente-usuarios existentes), evolutiva (extensión en un eje) y revolucionaria (nuevo producto-nuevo usuario, la más riesgosa pero de mayor impacto).",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "desarrollada por Diego Rodriguez y Ryan Jacoby"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-017 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0316",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar si existe sobre-concentración en el cuadrante incremental",
+      "texto_nuevo": "Identificar si existe sobreconcentración en el cuadrante incremental",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-013.paso2: sobreconcentración (Según la norma ortográfica, el prefijo 'sobre-' se escribe unido a la palabra, sin guion.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "Change by Design, Revised and U - Tim Brown"
+  ]
 }

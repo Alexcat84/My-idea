@@ -7,9 +7,13 @@
  * códigos de rescate. El intento exitoso se registra con el session_id.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { SERVIDOR_DOS_FACTORES } from "@/lib/i18n/mensajes/servidorDosFactores";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { generateRecoveryCodes, hashEmailCode, hashRecoveryCodes } from "@/lib/dosFactores";
 import {
-  AVISO_2FA,
+  aviso2FA,
   candado2FAActivo,
   desafioSuperadoEnSesion,
   estadoSeguridad,
@@ -22,19 +26,22 @@ import {
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const c = elegir(SERVIDOR_CUENTA, idioma).comun;
+  const t = elegir(SERVIDOR_DOS_FACTORES, idioma);
   const sesion = await sesionRealDeCookies();
   if (!sesion) {
-    return NextResponse.json({ error: "necesitas tu cuenta para esto" }, { status: 401 });
+    return NextResponse.json({ error: c.necesitasCuenta }, { status: 401 });
   }
   let body: { code?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: c.cuerpoInvalido }, { status: 400 });
   }
   const codigo = typeof body.code === "string" ? normalizarCodigo(body.code) : "";
   if (codigo.length !== 6) {
-    return NextResponse.json({ error: "el código son 6 dígitos" }, { status: 400 });
+    return NextResponse.json({ error: t.seisDigitos }, { status: 400 });
   }
 
   const userId = sesion.user.id;
@@ -42,7 +49,7 @@ export async function POST(request: Request) {
 
   if (await candado2FAActivo(userId)) {
     return NextResponse.json(
-      { error: "Demasiados intentos. Espera 15 minutos y vuelve a intentar." },
+      { error: t.demasiadosIntentos },
       { status: 423 }
     );
   }
@@ -52,13 +59,13 @@ export async function POST(request: Request) {
   // candado: exige el desafío superado (review de seguridad del commit).
   const previo = await estadoSeguridad(userId);
   if (previo.habilitado && !(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const codeSecret = process.env.TWO_FACTOR_EMAIL_CODE_SECRET?.trim();
   if (!codeSecret) {
     console.error("[2fa/email/verificar] TWO_FACTOR_EMAIL_CODE_SECRET ausente");
-    return NextResponse.json({ error: "el código por correo no está disponible ahora" }, { status: 503 });
+    return NextResponse.json({ error: t.correoNoDisponible }, { status: 503 });
   }
 
   const admin = createAdminClient();
@@ -73,19 +80,19 @@ export async function POST(request: Request) {
     .maybeSingle();
   if (filaError) {
     console.error("[2fa/email/verificar] fallo la lectura:", filaError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
   if (!fila) {
-    return NextResponse.json({ error: "Pide un código nuevo: no hay ninguno vigente." }, { status: 400 });
+    return NextResponse.json({ error: t.sinCodigoVigente }, { status: 400 });
   }
   if (new Date(fila.expires_at as string).getTime() < Date.now()) {
-    return NextResponse.json({ error: "Ese código ya venció. Pide uno nuevo." }, { status: 400 });
+    return NextResponse.json({ error: t.codigoVencido }, { status: 400 });
   }
 
   const esperado = hashEmailCode(codigo, codeSecret).toLowerCase();
   if (!secureEqualHex(esperado, String(fila.code_hash).trim().toLowerCase())) {
     await registrarIntento2FA(userId, ip, false);
-    return NextResponse.json({ error: "Ese código no coincide. Vuelve a intentarlo." }, { status: 401 });
+    return NextResponse.json({ error: t.noCoincide }, { status: 401 });
   }
 
   const { error: consumeError } = await admin
@@ -95,7 +102,7 @@ export async function POST(request: Request) {
     .eq("user_id", userId);
   if (consumeError) {
     console.error("[2fa/email/verificar] fallo el consumo:", consumeError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
 
   // Alta del método email: siempre 'email' y sin secreto TOTP a medias
@@ -112,7 +119,7 @@ export async function POST(request: Request) {
   });
   if (altaError) {
     console.error("[2fa/email/verificar] fallo el alta:", altaError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
 
   await registrarIntento2FA(userId, ip, true, sesion.sessionId);
@@ -125,7 +132,7 @@ export async function POST(request: Request) {
   });
   if (rpcError) {
     console.error("[2fa/email/verificar] fallo la rotacion de codigos:", rpcError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true, recoveryCodes });

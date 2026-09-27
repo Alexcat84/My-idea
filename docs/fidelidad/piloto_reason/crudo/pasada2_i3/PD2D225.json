@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD2D225",
+  "intento": 0,
+  "usd": 0.201656,
+  "turnos": 1,
+  "duracion_s": 14.3,
+  "pared_s": 15.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43734,
+  "tokens_out": 1336,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD2D225\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4989, 5037, 5057, 5641, 5907], \"cita\": \"A prerequisite for engineering a just culture is an agreed set of principles for drawing the line between acceptable and unacceptable actions. ... When applied to the appropriate risks, both the person approach and its tools have shown themselves to be valuable.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide principios acordados para trazar la linea y ofrece criterios concretos: el test de sustitucion, el arbol de culpabilidad y el ajuste de cada modelo a su tipo de riesgo. El paso concreta eso en su misma direccion y sin datos nuevos. No excluye actuar a la vez en varios niveles (L5907), asi que no contradice el libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD2D225",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4989,
+   5037,
+   5057,
+   5641,
+   5907
+  ],
+  "cita": "A prerequisite for engineering a just culture is an agreed set of principles for drawing the line between acceptable and unacceptable actions. ... When applied to the appropriate risks, both the person approach and its tools have shown themselves to be valuable.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide principios acordados para trazar la linea y ofrece criterios concretos: el test de sustitucion, el arbol de culpabilidad y el ajuste de cada modelo a su tipo de riesgo. El paso concreta eso en su misma direccion y sin datos nuevos. No excluye actuar a la vez en varios niveles (L5907), asi que no contradice el libro.",
+  "paso_fiel": ""
+ }
+}

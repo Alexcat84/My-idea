@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Regla de Inspección Todo-o-Nada (All-or-None Rules)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Concepto que viene del análisis de punto de equilibrio: cuando la calidad de lo que recibes se ubica siempre del mismo lado de un punto de equilibrio (k1/k2), lo óptimo es un extremo total, cero inspección o inspección al 100 por ciento, y no revisar solo una muestra parcial. Deming cuestiona las reglas arbitrarias que le impones a quien te provee, por ejemplo 'una pieza defectuosa y rechazo todo el lote', porque ignoran esta lógica de costos y pueden subir el costo total sin mejorar realmente la calidad, sobre todo si el material ya entró a producción antes de terminar de revisarlo.",
+  "resumen_teorico": "Concepto que viene del análisis de punto de equilibrio: cuando la calidad de lo que recibes se ubica siempre del mismo lado de un punto de equilibrio (k1/k2), lo óptimo es un extremo total, cero inspección o inspección al 100 por ciento, y no revisar solo una muestra parcial. Las reglas arbitrarias que le impones a quien te provee, por ejemplo 'una pieza defectuosa y rechazo todo el lote', son cuestionables porque ignoran esta lógica de costos y pueden subir el costo total sin mejorar realmente la calidad, sobre todo si el material ya entró a producción antes de terminar de revisarlo.",
   "pasos_accionables": [
     "Revisa si el proceso de calidad de lo que te llega está en control estadístico",
     "Si p es menor que k1/k2, elimina la inspección de entrada y pon el esfuerzo en mejorar la relación con quien te provee",
@@ -23,5 +23,26 @@
     "Cuando tienes una regla fija para rechazar lotes que no está basada en costos reales",
     "Cuando necesitas tener claro, con números, si conviene pasar de revisar una muestra a inspeccionar todo o nada"
   ],
-  "etiqueta_arbol": "Elige un Extremo de Inspección"
+  "etiqueta_arbol": "Elige un Extremo de Inspección",
+  "correcciones": [
+    {
+      "id": "atribucion-148",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Concepto que viene del análisis de punto de equilibrio: cuando la calidad de lo que recibes se ubica siempre del mismo lado de un punto de equilibrio (k1/k2), lo óptimo es un extremo total, cero inspección o inspección al 100 por ciento, y no revisar solo una muestra parcial. Deming cuestiona las reglas arbitrarias que le impones a quien te provee, por ejemplo 'una pieza defectuosa y rechazo todo el lote', porque ignoran esta lógica de costos y pueden subir el costo total sin mejorar realmente la calidad, sobre todo si el material ya entró a producción antes de terminar de revisarlo.",
+      "texto_nuevo": "Concepto que viene del análisis de punto de equilibrio: cuando la calidad de lo que recibes se ubica siempre del mismo lado de un punto de equilibrio (k1/k2), lo óptimo es un extremo total, cero inspección o inspección al 100 por ciento, y no revisar solo una muestra parcial. Las reglas arbitrarias que le impones a quien te provee, por ejemplo 'una pieza defectuosa y rechazo todo el lote', son cuestionables porque ignoran esta lógica de costos y pueden subir el costo total sin mejorar realmente la calidad, sobre todo si el material ya entró a producción antes de terminar de revisarlo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming cuestiona las reglas arbitrarias"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-033 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

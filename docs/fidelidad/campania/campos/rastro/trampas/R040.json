@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Preparación de un Evento de Mejora Rápida (Kaizen)",
+  "etiqueta": "Prepara tu Evento Kaizen",
+  "resumen": "Antes de un Evento de Mejora Rápida, el experto en Lean o Black Belt acuerda con la dirección el área en la que se va a enfocar la mejora. Entre uno y tres días antes del evento arma el equipo, facilita la redacción del charter y reúne todos los datos posibles del área: diagramas de flujo, rendimientos, tiempos de ciclo y de cambio, inventarios y demanda del cliente. Durante la semana del evento el equipo valida el mapa de flujo de valor actual y diseña el estado futuro.",
+  "entregable": "Charter del evento, equipo multifuncional conformado y paquete de datos del área (flujos, rendimientos, tiempos de ciclo, inventarios y demanda) listo para la semana del evento",
+  "condiciones": [
+   "Cuando la dirección ya eligió un área concreta para un evento Kaizen de una semana",
+   "Cuando necesitas que el equipo llegue al evento con los datos del proceso ya reunidos"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "13214",
+  "cita": "One to three weeks prior to conducting the event the expert assembles the team, facilitates development of a charter and gathers as much data as possible surrounding the area to be improved",
+  "dato": "Entre uno y tres días antes del evento arma el equipo",
+  "explicacion": "El libro fija la preparación (armar el equipo, el charter y los datos) de una a tres SEMANAS antes del evento; el resumen la reduce a uno a tres días, cambiando el plazo que da el libro."
+ },
+ {
+  "titulo": "Gráfico de Suma Acumulada (CUSUM) para Detectar Desvíos Pequeños",
+  "etiqueta": "Detecta Desvíos Pequeños con CUSUM",
+  "resumen": "El gráfico CUSUM registra en orden cronológico la suma acumulada de las desviaciones de un estadístico de muestra respecto de un valor de referencia, como la especificación nominal u objetivo. Cada punto contiene información de todas las observaciones, por lo que es especialmente útil para detectar desplazamientos pequeños del promedio del proceso, de 0,5 a 2 sigma. Se grafican por separado la suma acumulada superior y la inferior: si la superior supera el límite superior hubo un desplazamiento hacia arriba, y si la inferior cae bajo el límite inferior, hacia abajo.",
+  "entregable": "Gráfico CUSUM con el valor objetivo definido, la desviación estándar calculada, una línea de referencia en cero y límites de control en ±3s, con las sumas acumuladas superior e inferior graficadas por separado",
+  "condiciones": [
+   "Cuando sospechas que el promedio de tu proceso se está corriendo poco a poco respecto del objetivo",
+   "Cuando necesitas vigilar el proceso contra un valor objetivo y no contra su promedio real"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "20654",
+  "cita": "Draw a reference line at zero and upper and lower control limits (UCL and LCL respectively) at ±4s.",
+  "dato": "límites de control en ±3s",
+  "explicacion": "En el método CUSUM del libro los límites de control se trazan en ±4s; el entregable los pone en ±3s (el valor de los gráficos Shewhart), cambiando el umbral que da el libro."
+ },
+ {
+  "titulo": "Hojas de Verificación para Registrar Datos",
+  "etiqueta": "Registra Datos con una Hoja de Verificación",
+  "resumen": "La hoja de verificación es un tipo de gráfico o tabla con un formato pensado para recolectar y analizar datos y sacar conclusiones inmediatas sobre patrones y tendencias. Se titula con el nombre del ítem o proceso analizado, se decide si el análisis puede hacerse de inmediato o si hace falta observar y, en ese caso, se anota el periodo; se indica quién hace el análisis, cuándo, dónde y por qué, se listan en una columna las subcategorías que se van a contar y se registran las marcas en grupos de hasta 5.",
+  "entregable": "Hoja de verificación titulada, con el periodo de observación, los datos de quién, cuándo, dónde y por qué, la lista de subcategorías y el conteo de marcas agrupadas de a cinco",
+  "condiciones": [
+   "Cuando notas más quejas de lo habitual sobre un producto y necesitas saber qué partes fallan y en qué cantidad",
+   "Cuando vas a observar el proceso durante un periodo mínimo de dos semanas antes de sacar conclusiones"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "18155",
+  "cita": "Determine if an immediate analysis can be completed or if observation of the subject is necessary to gather the date. If so, record the time period.",
+  "dato": "durante un periodo mínimo de dos semanas",
+  "explicacion": "El libro solo pide anotar el periodo de observación si hace falta observar; no fija ninguna duración mínima. Grep de 'two weeks', '2 weeks' y '14 days' en todo el libro: la única aparición es 'two weeks' en la línea 15239 (analogía del médico sobre mantener las mejoras), sin relación con las hojas de verificación. La cifra es añadida."
+ },
+ {
+  "titulo": "Análisis de Modos y Efectos de Falla (FMEA) de Proceso",
+  "etiqueta": "Anticipa Fallas con un FMEA",
+  "resumen": "El FMEA ayuda a identificar las formas posibles en que pueden ocurrir fallas y sus efectos, a priorizarlas según su riesgo y a dar seguimiento a las acciones para reducirlo. En una planilla se listan los modos de falla, sus causas y su efecto en el cliente, el producto y el sistema; se puntúan ocurrencia, severidad y detección con una tabla de valores asignados, y se multiplican para obtener el número de prioridad de riesgo. Se diseñan acciones solo para las causas con número de prioridad de riesgo igual o mayor a 100, y luego se valida cada acción.",
+  "entregable": "Planilla FMEA de nueve columnas con modos de falla, causas, efectos, puntajes de ocurrencia, severidad y detección, número de prioridad de riesgo y acciones validadas para las causas prioritarias",
+  "condiciones": [
+   "Cuando una falla en un componente de tu servicio puede afectar directa o indirectamente a tus clientes",
+   "Cuando necesitas decidir qué riesgos atacar primero con recursos limitados"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "18284",
+  "cita": "Design action/remedy for only those “vital few” causes with the highest risk factors. Reduce the level of failure to a rate that is acceptable.",
+  "dato": "Se diseñan acciones solo para las causas con número de prioridad de riesgo igual o mayor a 100",
+  "explicacion": "El libro manda actuar sobre los pocos vitales con los factores de riesgo más altos, sin ningún umbral numérico. Grep de 'RPN', 'risk priority' y 'risk factor' en todo el libro (líneas 4857, 18282, 18284, 23348): ninguna da un corte de 100 ni otra cifra; el umbral es un añadido."
+ }
+]

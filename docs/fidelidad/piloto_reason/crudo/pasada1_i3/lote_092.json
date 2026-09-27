@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_092",
+  "intento": 0,
+  "usd": 0.16146,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33270,
+  "tokens_out": 1419,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P4F5D8C\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"jurado de pares\", \"prueba de sustitución\"], \"clase\": \"FIEL\", \"lineas\": [5037, 5055, 5057], \"razon\": \"El libro respalda la prueba con un 'jurado' de pares, pero la sitúa después de descartar sustancias e incumplimiento deliberado. El paso omite ese orden.\"},\n{\"id\": \"P54D718\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [580, 2547, 2596, 2652, 2654], \"razon\": \"El libro pide analizar varios eventos con un marco común y usa procesos conocidos genéricamente. Advierte contra centrarse en sucesos aislados y contra depender del historial propio cuando hay pocos accidentes.\"},\n{\"id\": \"P0B8BBB\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"HEART\", \"Tabla 7.2\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3547, 3549], \"razon\": \"El libro dice literalmente que el punto de partida es asignar la actividad a una tarea genérica de la Tabla 7.2.\"},\n{\"id\": \"P3D36EF\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2250, 2340, 2342, 2369], \"razon\": \"El libro sostiene que el mantenimiento preventivo y el correctivo pueden introducir errores, y que se pueden identificar de antemano los pasos propensos a error. El paso lo concreta en la misma dirección.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P4F5D8C",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "jurado de pares",
+    "prueba de sustitución"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5037,
+    5055,
+    5057
+   ],
+   "razon": "El libro respalda la prueba con un 'jurado' de pares, pero la sitúa después de descartar sustancias e incumplimiento deliberado. El paso omite ese orden."
+  },
+  {
+   "id": "P54D718",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    580,
+    2547,
+    2596,
+    2652,
+    2654
+   ],
+   "razon": "El libro pide analizar varios eventos con un marco común y usa procesos conocidos genéricamente. Advierte contra centrarse en sucesos aislados y contra depender del historial propio cuando hay pocos accidentes."
+  },
+  {
+   "id": "P0B8BBB",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "HEART",
+    "Tabla 7.2"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3547,
+    3549
+   ],
+   "razon": "El libro dice literalmente que el punto de partida es asignar la actividad a una tarea genérica de la Tabla 7.2."
+  },
+  {
+   "id": "P3D36EF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2250,
+    2340,
+    2342,
+    2369
+   ],
+   "razon": "El libro sostiene que el mantenimiento preventivo y el correctivo pueden introducir errores, y que se pueden identificar de antemano los pasos propensos a error. El paso lo concreta en la misma dirección."
+  }
+ ]
+}

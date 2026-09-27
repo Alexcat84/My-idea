@@ -1,0 +1,568 @@
+{
+ "_nota": "Lista canonica de las fuentes del dataset (el campo `fuente` de los nodos) con los TITULOS por los que se reconoce cada libro o guia, en su idioma original y en su edicion en espanol cuando existe. REGLA ESTRICTA (fundador, 26 sep 2026): el cliente NUNCA ve el titulo de un libro ni un autor citado como fuente; las fuentes viven SOLO en metadatos internos (este fichero, `fuente` de cada nodo, vigencia.json). La guarda engine/test_fuentes_de_cara.py falla si uno de estos titulos aparece en un texto de cara al cliente. Los autores quedan aqui como metadato interno: la cita a un autor como fuente la barre la correccion declarada, no una busqueda lexica (un concepto con nombre propio, como el ciclo de Deming, es vocabulario y se queda). Las normas y estandares con nombre (NIST SP 800-171, ISTA 3P) son vocabulario regulatorio, no titulos de libro, y no se listan.",
+ "_vocabulario": "Un titulo que ademas es el nombre de un concepto o de un metodo del oficio (green to gold, quality is free, co-inteligencia, el metodo Lean Startup, SPIN Selling) es vocabulario y se queda, como el ciclo de Deming. Para esos libros la guarda solo reconoce la forma inequivoca del titulo (con su subtitulo, o 'el libro X'); la cita del libro como fuente la quita la correccion declarada (docs/saneamiento/tandas/saneamiento-atribuciones.json).",
+ "_igual_a": "Una fuente con `igual_a` es otra forma de escribir el mismo libro: fuentes_internas la cuenta como ese libro.",
+ "fuentes": {
+  "Juran's Quality Handbook_ The C - Joseph A. Defeo": {
+   "titulos": [
+    "Juran's Quality Handbook",
+    "Manual de calidad de Juran"
+   ],
+   "autores": [
+    "Juran",
+    "Defeo"
+   ]
+  },
+  "The Green to Gold Business Play - Daniel C. Esty": {
+   "titulos": [
+    "Green to Gold: How Smart Companies",
+    "Green to Gold Business Playbook"
+   ],
+   "autores": [
+    "Esty",
+    "Winston"
+   ]
+  },
+  "Franchise Your Business - Mark Siebert": {
+   "titulos": [
+    "Franchise Your Business"
+   ],
+   "autores": [
+    "Siebert"
+   ]
+  },
+  "The Startup Owner's Manual - Blank, Steve": {
+   "titulos": [
+    "The Startup Owner's Manual",
+    "Startup Owner's Manual",
+    "El manual del emprendedor"
+   ],
+   "autores": [
+    "Blank",
+    "Dorf"
+   ]
+  },
+  "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev": {
+   "titulos": [
+    "Out of the Crisis",
+    "Salir de la crisis"
+   ],
+   "autores": [
+    "Deming"
+   ]
+  },
+  "Winning at New Products - Robert G. Cooper": {
+   "titulos": [
+    "Winning at New Products"
+   ],
+   "autores": [
+    "Cooper"
+   ]
+  },
+  "Venture Deals - Brad Feld": {
+   "titulos": [
+    "Venture Deals"
+   ],
+   "autores": [
+    "Feld",
+    "Mendelson"
+   ]
+  },
+  "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)": {
+   "titulos": [
+    "A Basic Guide to Exporting",
+    "Basic Guide to Exporting"
+   ],
+   "autores": []
+  },
+  "The Founder's Dilemmas - Wasserman, Noam": {
+   "titulos": [
+    "The Founder's Dilemmas",
+    "Founder's Dilemmas",
+    "Los dilemas del fundador"
+   ],
+   "autores": [
+    "Wasserman"
+   ]
+  },
+  "The Field Guide to Understandin - Dekker, Sidney": {
+   "titulos": [
+    "Field Guide to Understanding Human Error",
+    "Field Guide to Understanding 'Human Error'"
+   ],
+   "autores": [
+    "Dekker"
+   ]
+  },
+  "Essentials of Supply Chain Management - Michael H. Hugos": {
+   "titulos": [
+    "Essentials of Supply Chain Management"
+   ],
+   "autores": [
+    "Hugos"
+   ]
+  },
+  "Managing the Risks of Organizat - Reason, J. T_": {
+   "titulos": [
+    "Managing the Risks of Organizational Accidents"
+   ],
+   "autores": [
+    "Reason"
+   ]
+  },
+  "The Hard Thing About Hard Things - Ben Horowitz": {
+   "titulos": [
+    "The Hard Thing About Hard Things",
+    "Hard Thing About Hard Things",
+    "Lo difícil de las cosas difíciles"
+   ],
+   "autores": [
+    "Horowitz"
+   ]
+  },
+  "Quality is free _ the art of making quality certain -- Philip B_ Crosby": {
+   "titulos": [
+    "Quality is Free: The Art",
+    "La calidad no cuesta: el arte"
+   ],
+   "autores": [
+    "Crosby"
+   ]
+  },
+  "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe": {
+   "titulos": [
+    "Financial Intelligence for Entrepreneurs",
+    "Inteligencia financiera para emprendedores"
+   ],
+   "autores": [
+    "Berman",
+    "Knight"
+   ]
+  },
+  "The Lean Startup - Eric Ries": {
+   "titulos": [
+    "The Lean Startup"
+   ],
+   "autores": [
+    "Ries"
+   ]
+  },
+  "Change by Design, Revised and U - Tim Brown": {
+   "titulos": [
+    "Change by Design"
+   ],
+   "autores": [
+    "Brown"
+   ]
+  },
+  "Assembling Tomorrow: A Guide to Designing a Thriving Future": {
+   "titulos": [
+    "Assembling Tomorrow"
+   ],
+   "autores": []
+  },
+  "A Project Manager's Book of Forms - Cynthia Stackpole Snyder": {
+   "titulos": [
+    "Project Manager's Book of Forms"
+   ],
+   "autores": [
+    "Snyder",
+    "Stackpole"
+   ]
+  },
+  "Never Lose a Customer Again - Joey Coleman": {
+   "titulos": [
+    "Never Lose a Customer Again"
+   ],
+   "autores": [
+    "Coleman"
+   ]
+  },
+  "Traction - Gabriel Weinberg": {
+   "titulos": [
+    "Traction: How Any Startup",
+    "Traction: A Startup Guide"
+   ],
+   "autores": [
+    "Weinberg",
+    "Mares"
+   ]
+  },
+  "Cradle to Cradle - Michael Braungart": {
+   "titulos": [
+    "Cradle to Cradle: Remaking",
+    "De la cuna a la cuna: rediseñando"
+   ],
+   "autores": [
+    "Braungart",
+    "McDonough"
+   ]
+  },
+  "Business Model Generation - Osterwalder, Alexander": {
+   "titulos": [
+    "Business Model Generation",
+    "Generación de modelos de negocio"
+   ],
+   "autores": [
+    "Osterwalder",
+    "Pigneur"
+   ]
+  },
+  "Value Proposition Design": {
+   "titulos": [
+    "Value Proposition Design",
+    "Diseñando la propuesta de valor"
+   ],
+   "autores": [
+    "Osterwalder",
+    "Pigneur"
+   ]
+  },
+  "Co-Intelligence_ Living and Wor - Ethan Mollick": {
+   "titulos": [
+    "Co-Intelligence: Living and Working",
+    "Co-Inteligencia: vivir y trabajar"
+   ],
+   "autores": [
+    "Mollick"
+   ]
+  },
+  "The Art of Thought - Wallas, Graham": {
+   "titulos": [
+    "The Art of Thought",
+    "El arte del pensamiento"
+   ],
+   "autores": [
+    "Wallas"
+   ]
+  },
+  "The Art of Thought - Graham Wallas": {
+   "igual_a": "The Art of Thought - Wallas, Graham",
+   "titulos": [
+    "The Art of Thought",
+    "El arte del pensamiento"
+   ],
+   "autores": [
+    "Wallas"
+   ]
+  },
+  "SPIN Selling - Neil Rackham": {
+   "titulos": [
+    "SPIN Selling: ",
+    "el libro SPIN Selling"
+   ],
+   "autores": [
+    "Rackham"
+   ]
+  },
+  "Edwards et al., Managing Project Risks": {
+   "titulos": [
+    "Managing Project Risks"
+   ],
+   "autores": [
+    "Edwards"
+   ]
+  },
+  "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)": {
+   "titulos": [
+    "Procurement Project Management Success"
+   ],
+   "autores": [
+    "Lindstrom"
+   ]
+  },
+  "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer": {
+   "titulos": [
+    "Small Business Primer"
+   ],
+   "autores": []
+  },
+  "The field guide to human-centered design": {
+   "titulos": [
+    "Field Guide to Human-Centered Design"
+   ],
+   "autores": []
+  },
+  "Chris Voss, Rompe la barrera del no": {
+   "titulos": [
+    "Rompe la barrera del no",
+    "Never Split the Difference"
+   ],
+   "autores": [
+    "Voss"
+   ]
+  },
+  "OSHA3885": {
+   "titulos": [
+    "OSHA 3885",
+    "OSHA3885"
+   ],
+   "autores": []
+  },
+  "OSHA3886": {
+   "titulos": [
+    "OSHA 3886",
+    "OSHA3886"
+   ],
+   "autores": []
+  },
+  "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management": {
+   "titulos": [
+    "Handbook of Logistics and Distribution Management"
+   ],
+   "autores": [
+    "Rushton",
+    "Croucher"
+   ]
+  },
+  "DeMarco y Lister, Waltzing with Bears": {
+   "titulos": [
+    "Waltzing with Bears"
+   ],
+   "autores": [
+    "DeMarco",
+    "Lister"
+   ]
+  },
+  "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide": {
+   "titulos": [
+    "Small Enterprise Quick Start Guide"
+   ],
+   "autores": []
+  },
+  "Businessperson's Guide to Federal Warranty Law": {
+   "titulos": [
+    "Businessperson's Guide to Federal Warranty Law"
+   ],
+   "autores": []
+  },
+  "Hubbard, The Failure of Risk Management": {
+   "titulos": [
+    "The Failure of Risk Management",
+    "Failure of Risk Management"
+   ],
+   "autores": [
+    "Hubbard"
+   ]
+  },
+  "Guia de empaque para envios (FedEx)": {
+   "titulos": [],
+   "autores": []
+  },
+  "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)": {
+   "titulos": [
+    "E-Logistics"
+   ],
+   "autores": [
+    "Cullinane"
+   ]
+  },
+  "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses": {
+   "titulos": [
+    "Getting Started with the NIST Privacy Framework"
+   ],
+   "autores": []
+  },
+  "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide": {
+   "titulos": [
+    "Small Business Quick-Start Guide",
+    "Small Business Quick Start Guide"
+   ],
+   "autores": []
+  },
+  "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)": {
+   "titulos": [
+    "Cybersecurity for Small Business: Understanding"
+   ],
+   "autores": []
+  },
+  "Max Muller, Essentials of Inventory Management": {
+   "titulos": [
+    "Essentials of Inventory Management"
+   ],
+   "autores": [
+    "Muller"
+   ]
+  },
+  "ISTA 3P, Protocolo de ensayo de empaque para paqueteria": {
+   "titulos": [],
+   "autores": []
+  },
+  "Guia visual de empaque": {
+   "titulos": [],
+   "autores": []
+  },
+  "Requisitos de empaque de los couriers": {
+   "titulos": [],
+   "autores": []
+  },
+  "DHL Express, Guia de empaque": {
+   "titulos": [],
+   "autores": []
+  },
+  "Guia de empaque para transporte": {
+   "titulos": [],
+   "autores": []
+  },
+  "SMALL_BUSINESS": {
+   "titulos": [],
+   "autores": []
+  },
+  "The Field Guide to Understandin - Dekker, Sidney;": {
+   "igual_a": "The Field Guide to Understandin - Dekker, Sidney",
+   "titulos": [
+    "Field Guide to Understanding Human Error",
+    "Field Guide to Understanding 'Human Error'"
+   ],
+   "autores": [
+    "Dekker"
+   ]
+  },
+  "The Startup Owner's Manual - Steve Blank": {
+   "igual_a": "The Startup Owner's Manual - Blank, Steve",
+   "titulos": [
+    "The Startup Owner's Manual",
+    "Startup Owner's Manual",
+    "El manual del emprendedor"
+   ],
+   "autores": [
+    "Blank",
+    "Dorf"
+   ]
+  },
+  "The Founder's Dilemmas": {
+   "igual_a": "The Founder's Dilemmas - Wasserman, Noam",
+   "titulos": [
+    "The Founder's Dilemmas",
+    "Founder's Dilemmas",
+    "Los dilemas del fundador"
+   ],
+   "autores": [
+    "Wasserman"
+   ]
+  },
+  "Financial Intelligence for Entrepreneurs": {
+   "igual_a": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "titulos": [
+    "Financial Intelligence for Entrepreneurs",
+    "Inteligencia financiera para emprendedores"
+   ],
+   "autores": [
+    "Berman",
+    "Knight"
+   ]
+  },
+  "Business Model Generation (Osterwalder)": {
+   "igual_a": "Business Model Generation - Osterwalder, Alexander",
+   "titulos": [
+    "Business Model Generation",
+    "Generación de modelos de negocio"
+   ],
+   "autores": [
+    "Osterwalder",
+    "Pigneur"
+   ]
+  },
+  "A Project Manager's Book of Forms": {
+   "igual_a": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "titulos": [
+    "Project Manager's Book of Forms"
+   ],
+   "autores": [
+    "Snyder",
+    "Stackpole"
+   ]
+  },
+  "Change by Design": {
+   "igual_a": "Change by Design, Revised and U - Tim Brown",
+   "titulos": [
+    "Change by Design"
+   ],
+   "autores": [
+    "Brown"
+   ]
+  },
+  "The Startup Owner's Manual": {
+   "igual_a": "The Startup Owner's Manual - Blank, Steve",
+   "titulos": [
+    "The Startup Owner's Manual",
+    "Startup Owner's Manual",
+    "El manual del emprendedor"
+   ],
+   "autores": [
+    "Blank",
+    "Dorf"
+   ]
+  },
+  "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)": {
+   "titulos": [
+    "Waltzing with Bears"
+   ],
+   "autores": [
+    "DeMarco",
+    "Lister"
+   ]
+  },
+  "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)": {
+   "titulos": [
+    "Waltzing with Bears"
+   ],
+   "autores": [
+    "DeMarco",
+    "Lister"
+   ]
+  },
+  "The Hard Thing About Hard Thing - Ben Horowitz": {
+   "igual_a": "The Hard Thing About Hard Things - Ben Horowitz",
+   "titulos": [
+    "The Hard Thing About Hard Things",
+    "Hard Thing About Hard Things",
+    "Lo difícil de las cosas difíciles"
+   ],
+   "autores": [
+    "Horowitz"
+   ]
+  },
+  "Essentials of Supply Chain Mana - Michael H. Hugos": {
+   "igual_a": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "titulos": [
+    "Essentials of Supply Chain Management"
+   ],
+   "autores": [
+    "Hugos"
+   ]
+  },
+  "Venture Deals": {
+   "igual_a": "Venture Deals - Brad Feld",
+   "titulos": [
+    "Venture Deals"
+   ],
+   "autores": [
+    "Feld",
+    "Mendelson"
+   ]
+  },
+  "The Hard Thing About Hard Things": {
+   "igual_a": "The Hard Thing About Hard Things - Ben Horowitz",
+   "titulos": [
+    "The Hard Thing About Hard Things",
+    "Hard Thing About Hard Things",
+    "Lo difícil de las cosas difíciles"
+   ],
+   "autores": [
+    "Horowitz"
+   ]
+  },
+  "Business Model Generation - Osterwalder": {
+   "igual_a": "Business Model Generation - Osterwalder, Alexander",
+   "titulos": [
+    "Business Model Generation",
+    "Generación de modelos de negocio"
+   ],
+   "autores": [
+    "Osterwalder",
+    "Pigneur"
+   ]
+  }
+ }
+}

@@ -1,6 +1,6 @@
 {
   "node_id": "voces_externas_credibles",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Incorporación de Voces Externas Creíbles",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -24,5 +24,23 @@
     "Cuando el argumento interno carece de credibilidad o enfrenta escepticismo.",
     "Si se necesita reforzar la urgencia de un proyecto sostenible con evidencia externa."
   ],
-  "etiqueta_arbol": "Suma Voces Externas Confiables"
+  "etiqueta_arbol": "Suma Voces Externas Confiables",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-325",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-014: Tiene razon A: reunir testimonios y expertos para persuadir a publicos internos es armar el argumento del caso de negocio, no probar la idea con clientes o con el mercado. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

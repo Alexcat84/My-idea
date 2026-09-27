@@ -1,6 +1,6 @@
 {
   "node_id": "etapa_pruebas_necesaria",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Cuándo necesitas una etapa de pruebas separada antes de invertir en grande",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -22,5 +22,23 @@
     "Si tu proyecto es de gran envergadura, alto costo o larga duración",
     "Si necesitas invertir dinero en equipo de producción antes de lanzar"
   ],
-  "etiqueta_arbol": "Separa tus Pruebas Finales"
+  "etiqueta_arbol": "Separa tus Pruebas Finales",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-073",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q013-026: Es una etapa de pruebas (beta, ensayos de campo, pruebas de mercado) previa al lanzamiento y a la inversion en produccion, lo que es validacion y no operar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

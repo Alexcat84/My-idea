@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Autocontrol (Self-Control) y Controlabilidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Estudios de Juran mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
+  "resumen_teorico": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Hay estudios que mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
   "pasos_accionables": [
     "Verificar que el proceso tenga capacidad real para cumplir las metas fijadas",
     "Dar a quien ejecuta el trabajo manera de conocer las metas y su desempeño real",
@@ -43,5 +43,26 @@
       "titulo": "Concepto de Autocontrol de la Persona que te Ayuda",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-009",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Estudios de Juran mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
+      "texto_nuevo": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Hay estudios que mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Estudios de Juran mostraron que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-018 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ]
 }

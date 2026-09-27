@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_071",
+  "intento": 0,
+  "usd": 0.155948,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32977,
+  "tokens_out": 1202,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PC2A95E\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5037, 5057, 668, 674, 678], \"razon\": \"El test pide juzgar según cómo los implicados percibieron los hechos en tiempo real. 'Condiciones reales' podría incluir datos conocidos después, y el libro advierte del sesgo retrospectivo.\"},\n {\"id\": \"P350A65\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2716, 1945, 3825, 3829], \"razon\": \"El libro valora conocer la naturaleza y variedad de los actos inseguros, vinculada al tipo de actividad, y distingue errores de violaciones porque requieren gestión distinta.\"},\n {\"id\": \"P5D6EA3\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 3784], \"razon\": \"Cita casi literal: para cada defensa vulnerada o eludida hay que establecer qué fallas activas y condiciones latentes intervinieron.\"},\n {\"id\": \"P394D4B\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4757, 4773, 2658, 4868, 2598], \"razon\": \"El libro pide un sistema de información que recoja, analice y difunda datos de incidentes y chequeos proactivos regulares. Cita reuniones mensuales de análisis. Misma dirección, sin choque.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PC2A95E",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5037,
+    5057,
+    668,
+    674,
+    678
+   ],
+   "razon": "El test pide juzgar según cómo los implicados percibieron los hechos en tiempo real. 'Condiciones reales' podría incluir datos conocidos después, y el libro advierte del sesgo retrospectivo."
+  },
+  {
+   "id": "P350A65",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2716,
+    1945,
+    3825,
+    3829
+   ],
+   "razon": "El libro valora conocer la naturaleza y variedad de los actos inseguros, vinculada al tipo de actividad, y distingue errores de violaciones porque requieren gestión distinta."
+  },
+  {
+   "id": "P5D6EA3",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    3784
+   ],
+   "razon": "Cita casi literal: para cada defensa vulnerada o eludida hay que establecer qué fallas activas y condiciones latentes intervinieron."
+  },
+  {
+   "id": "P394D4B",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4757,
+    4773,
+    2658,
+    4868,
+    2598
+   ],
+   "razon": "El libro pide un sistema de información que recoja, analice y difunda datos de incidentes y chequeos proactivos regulares. Cita reuniones mensuales de análisis. Misma dirección, sin choque."
+  }
+ ]
+}

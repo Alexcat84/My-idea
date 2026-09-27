@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P7DE25A",
+  "intento": 0,
+  "usd": 0.17262799999999998,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39677,
+  "tokens_out": 696,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7DE25A\", \"veredicto\": \"FIEL\", \"lineas\": [3784, 293], \"cita\": \"The next step is to establish why a particular defence failed. This may be due to either active or latent failures\", \"datos_sin_respaldo\": [], \"razon\": \"En Tripod-Beta, el libro plantea el paso siguiente como establecer por qué falló la defensa, por fallo activo o latente. El paso repite esa misma disyuntiva. L293 pide considerar ambos tipos, pero el paso no excluye que concurran, así que no contradice el libro. No añade ningún dato concreto.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7DE25A",
+  "veredicto": "FIEL",
+  "lineas": [
+   3784,
+   293
+  ],
+  "cita": "The next step is to establish why a particular defence failed. This may be due to either active or latent failures",
+  "datos_sin_respaldo": [],
+  "razon": "En Tripod-Beta, el libro plantea el paso siguiente como establecer por qué falló la defensa, por fallo activo o latente. El paso repite esa misma disyuntiva. L293 pide considerar ambos tipos, pero el paso no excluye que concurran, así que no contradice el libro. No añade ningún dato concreto.",
+  "paso_fiel": ""
+ }
+}

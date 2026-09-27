@@ -1,0 +1,644 @@
+{
+ "R02-01-01": {
+  "nodo": "fallo_regulatorio_por_recursos_insuficientes",
+  "vecino": "inspecciones_superficiales_y_muestreo_incompleto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-01-02": {
+  "nodo": "fallo_regulatorio_por_recursos_insuficientes",
+  "vecino": "normalizacion_de_la_desviacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-02-01": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "vacios_conocimiento_cliente",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-02-02": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "law_of_shitty_click_throughs",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-02-03": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "fase_affirm_buyers_remorse",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-02-04": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "necesidad_mantener_informado",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-02-05": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "social_ads_indirect_response",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-02-06": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "scorecard_desempeno_cadena_suministro",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-02-07": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "descubrir_necesidades_del_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-02-08": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "senales_de_compra_en_venta_grande",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-02-09": {
+  "nodo": "sistema_manejo_quejas",
+  "vecino": "descubrir_valor_inesperado_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-03-01": {
+  "nodo": "self_regulation_deregulation_tradeoffs",
+  "vecino": "regulatory_process_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-03-02": {
+  "nodo": "self_regulation_deregulation_tradeoffs",
+  "vecino": "safety_case_evaluacion_formal",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-04-01": {
+  "nodo": "business_materiality_assessment",
+  "vecino": "stakeholder_mapping_wheel",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-04-02": {
+  "nodo": "business_materiality_assessment",
+  "vecino": "priorizacion_issues",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-04-03": {
+  "nodo": "business_materiality_assessment",
+  "vecino": "issue_spotting_ambiental",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-04-04": {
+  "nodo": "business_materiality_assessment",
+  "vecino": "audio_analysis_framework",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-04-05": {
+  "nodo": "business_materiality_assessment",
+  "vecino": "priorizacion_iniciativas_sostenibilidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-05-01": {
+  "nodo": "estrategia_redes_sociales_franquicias",
+  "vecino": "programa_de_referidos_de_franquiciados",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-05-02": {
+  "nodo": "estrategia_redes_sociales_franquicias",
+  "vecino": "seo_para_captacion_de_franquiciados",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-06-01": {
+  "nodo": "gestion_desempeno_feedback",
+  "vecino": "hr_calidad_gestion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-06-02": {
+  "nodo": "gestion_desempeno_feedback",
+  "vecino": "deuda_de_gestion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-06-03": {
+  "nodo": "gestion_desempeno_feedback",
+  "vecino": "integracion_agresiva_ejecutivo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-07-01": {
+  "nodo": "el_riesgo_eres_tu",
+  "vecino": "plan_b_antes_de_necesitarlo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-07-02": {
+  "nodo": "el_riesgo_eres_tu",
+  "vecino": "sigue_operando_pese_al_golpe",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-07-03": {
+  "nodo": "el_riesgo_eres_tu",
+  "vecino": "las_formas_en_que_los_proyectos_mueren",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-07-04": {
+  "nodo": "el_riesgo_eres_tu",
+  "vecino": "sigue_operando_pese_al_golpe",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-08-01": {
+  "nodo": "gestion_de_aguas_pluviales_con_techos_verdes",
+  "vecino": "diseno_biomimetico_de_edificios",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-09-01": {
+  "nodo": "soporte_segunda_victima",
+  "vecino": "reacciones_al_fallo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-09-02": {
+  "nodo": "soporte_segunda_victima",
+  "vecino": "responsabilidad_prospectiva",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-09-03": {
+  "nodo": "soporte_segunda_victima",
+  "vecino": "justicia_restaurativa",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-10-01": {
+  "nodo": "rotacion_equipo_fundador",
+  "vecino": "founder_ceo_succession_process",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-10-02": {
+  "nodo": "rotacion_equipo_fundador",
+  "vecino": "criterios_equity_split",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-10-03": {
+  "nodo": "rotacion_equipo_fundador",
+  "vecino": "fuentes_contratacion_ejecutivos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-10-04": {
+  "nodo": "rotacion_equipo_fundador",
+  "vecino": "transicion_organizacional_fluido_a_formal",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-10-05": {
+  "nodo": "rotacion_equipo_fundador",
+  "vecino": "gestion_de_conflictos_cofundadores",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-10-06": {
+  "nodo": "rotacion_equipo_fundador",
+  "vecino": "three_rs_equilibrium",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-11-01": {
+  "nodo": "aprender_haciendo_dfe",
+  "vecino": "metas_desmaterializacion_energia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-11-02": {
+  "nodo": "aprender_haciendo_dfe",
+  "vecino": "marcos_pensamiento_dfe",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-11-03": {
+  "nodo": "aprender_haciendo_dfe",
+  "vecino": "equipos_multifuncionales_dfe",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-12-01": {
+  "nodo": "asociacion_de_ideas",
+  "vecino": "pensamiento_no_guiado_vs_regulado",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-12-02": {
+  "nodo": "asociacion_de_ideas",
+  "vecino": "reglas_brainstorming",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-12-03": {
+  "nodo": "asociacion_de_ideas",
+  "vecino": "coordinacion_organica_de_elementos_independientes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-12-04": {
+  "nodo": "asociacion_de_ideas",
+  "vecino": "reinvencion_diseno_nutrivehiculo",
+  "sentido": "previo",
+  "trampa": true
+ },
+ "R02-12-05": {
+  "nodo": "asociacion_de_ideas",
+  "vecino": "wallas_intimacion_fringe_consciousness",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-13-01": {
+  "nodo": "el_riesgo_del_entorno_que_no_controlas",
+  "vecino": "caza_las_oportunidades_no_solo_amenazas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-13-02": {
+  "nodo": "el_riesgo_del_entorno_que_no_controlas",
+  "vecino": "cultura_que_habla_del_riesgo_sin_miedo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-13-03": {
+  "nodo": "el_riesgo_del_entorno_que_no_controlas",
+  "vecino": "riesgo_del_negocio_o_del_proyecto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-13-04": {
+  "nodo": "el_riesgo_del_entorno_que_no_controlas",
+  "vecino": "mas_grande_mas_complejo_mas_riesgo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-14-01": {
+  "nodo": "deadlines_como_herramienta_convergencia",
+  "vecino": "prototipado_rapido",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-14-02": {
+  "nodo": "deadlines_como_herramienta_convergencia",
+  "vecino": "butterfly_test_convergencia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-14-03": {
+  "nodo": "deadlines_como_herramienta_convergencia",
+  "vecino": "brief_de_diseno",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-14-04": {
+  "nodo": "deadlines_como_herramienta_convergencia",
+  "vecino": "pensamiento_convergente_divergente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-15-01": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "search_for_business_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-15-02": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "aprendizaje_validado",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-15-03": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "data_integrity_forecasting",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-15-04": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "enfoque_motor_unico_crecimiento",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-15-05": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "backlog_evolutivo_y_cronograma_flexible",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-15-06": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "search_for_business_model",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-15-07": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "proposito_como_motor_energia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-15-08": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "regla_de_minimis",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R02-15-09": {
+  "nodo": "vision_estrategia_producto_pivote",
+  "vecino": "customer_validation_sales_roadmap",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-16-01": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "rol_green_belt_six_sigma",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-16-02": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "dmaic_fase_select",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-16-03": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "roles_equipo_proyecto_six_sigma",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-16-04": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "certificacion_belts_six_sigma",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-16-05": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "entrenamiento_para_breakthrough",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-16-06": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "mejora_continua_del_proceso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-16-07": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "roadmap_despliegue_lean_six_sigma",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-16-08": {
+  "nodo": "rol_black_belt_six_sigma",
+  "vecino": "rol_facilitador_equipos_mejora",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-17-01": {
+  "nodo": "proposito_como_motor_energia",
+  "vecino": "lienzo_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-17-02": {
+  "nodo": "proposito_como_motor_energia",
+  "vecino": "vision_estrategia_producto_pivote",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-17-03": {
+  "nodo": "proposito_como_motor_energia",
+  "vecino": "aprender_desde_el_amor_empatia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-17-04": {
+  "nodo": "proposito_como_motor_energia",
+  "vecino": "restricciones_extremas_como_innovacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-17-05": {
+  "nodo": "proposito_como_motor_energia",
+  "vecino": "compromiso_organismico_en_la_accion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-17-06": {
+  "nodo": "proposito_como_motor_energia",
+  "vecino": "esfuerzo_y_energia_intelectual",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-18-01": {
+  "nodo": "activos_intangibles_amortizacion",
+  "vecino": "lectura_balance_general",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-18-02": {
+  "nodo": "activos_intangibles_amortizacion",
+  "vecino": "depreciacion_y_amortizacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-19-01": {
+  "nodo": "reporte_sostenibilidad_digital",
+  "vecino": "validacion_externa_reportes",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-19-02": {
+  "nodo": "reporte_sostenibilidad_digital",
+  "vecino": "dialogo_stakeholders",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-19-03": {
+  "nodo": "reporte_sostenibilidad_digital",
+  "vecino": "comunicacion_interna_empleados",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-19-04": {
+  "nodo": "reporte_sostenibilidad_digital",
+  "vecino": "transparencia_crisis_reputacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-19-05": {
+  "nodo": "reporte_sostenibilidad_digital",
+  "vecino": "estrategia_eco_advantage",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-20-01": {
+  "nodo": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "vecino": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-20-02": {
+  "nodo": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "vecino": "reconocer_mercancia_peligrosa_disfrazada",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-20-03": {
+  "nodo": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "vecino": "probar_empaque_antes_de_escalar_envios",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-20-04": {
+  "nodo": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "vecino": "simular_riesgos_transito_antes_de_enviar",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-20-05": {
+  "nodo": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "vecino": "clasificar_tipo_paquete",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-20-06": {
+  "nodo": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "vecino": "decidir_empacar_tu_mismo_o_subcontratar",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-21-01": {
+  "nodo": "sellar_cajas_metodo_cinta_en_h",
+  "vecino": "adaptar_empaque_segun_tipo_de_articulo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-21-02": {
+  "nodo": "sellar_cajas_metodo_cinta_en_h",
+  "vecino": "empacar_flores_plantas_sin_agua",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-21-03": {
+  "nodo": "sellar_cajas_metodo_cinta_en_h",
+  "vecino": "etiqueta_duplicada_dentro_del_paquete",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-21-04": {
+  "nodo": "sellar_cajas_metodo_cinta_en_h",
+  "vecino": "evitar_materiales_blandos_contenedor_final",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-21-05": {
+  "nodo": "sellar_cajas_metodo_cinta_en_h",
+  "vecino": "proteger_fragiles_caja_dentro_de_caja",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-22-01": {
+  "nodo": "social_ads_indirect_response",
+  "vecino": "sistema_manejo_quejas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-22-02": {
+  "nodo": "social_ads_indirect_response",
+  "vecino": "creacion_contenido_compartible",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-22-03": {
+  "nodo": "social_ads_indirect_response",
+  "vecino": "retargeting_display",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-22-04": {
+  "nodo": "social_ads_indirect_response",
+  "vecino": "herramientas_online_canal_fisico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-23-01": {
+  "nodo": "seleccion_hacer_o_comprar",
+  "vecino": "seleccion_fuente_unica_multiple",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-23-02": {
+  "nodo": "seleccion_hacer_o_comprar",
+  "vecino": "especificacion_requisitos_proveedores",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-23-03": {
+  "nodo": "seleccion_hacer_o_comprar",
+  "vecino": "equipo_conjunto_de_mejora_con_proveedores",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-24-01": {
+  "nodo": "sitio_web_franquicia",
+  "vecino": "tasa_captura_leads",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-24-02": {
+  "nodo": "sitio_web_franquicia",
+  "vecino": "video_marketing_franquicia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-24-03": {
+  "nodo": "sitio_web_franquicia",
+  "vecino": "reduccion_riesgo_percibido",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R02-24-04": {
+  "nodo": "sitio_web_franquicia",
+  "vecino": "propuesta_valor_franquicia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-24-05": {
+  "nodo": "sitio_web_franquicia",
+  "vecino": "calificacion_prospectos_marketing",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R02-24-06": {
+  "nodo": "sitio_web_franquicia",
+  "vecino": "multiples_compradores_influyentes",
+  "sentido": "previo",
+  "trampa": false
+ }
+}

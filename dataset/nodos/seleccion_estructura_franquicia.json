@@ -9,8 +9,8 @@
     "Evalúa qué velocidad de crecimiento necesitas para cumplir tus metas.",
     "Analiza el retorno económico que da cada unidad.",
     "Determina cuánto soporte puedes dar realmente a tus franquiciados.",
-    "Evalúa si tu negocio funciona con un dueño pasivo o necesita que el dueño opere.",
-    "Analiza qué tan fragmentado está tu mercado y cuánta competencia hay por franquiciados.",
+    "Evalúa si tu negocio funciona con un dueño pasivo o necesita que el dueño opere, y si puedes agrupar varias unidades en una misma zona.",
+    "Analiza qué tan fragmentado está tu mercado, cuánta competencia hay por franquiciados y qué propuesta de valor les ofreces.",
     "Elige una o varias estructuras y anota por qué las elegiste."
   ],
   "entregable_esperado": "Un documento donde decides tu estructura de franquicia y explicas por qué, basado en los ocho factores clave que revisaste.",
@@ -41,5 +41,44 @@
   "ids_alias": [
     "eleccion_estructura_oferta"
   ],
-  "etiqueta_arbol": "Elige tu Estructura de Franquicia"
+  "etiqueta_arbol": "Elige tu Estructura de Franquicia",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c22-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Evalúa si tu negocio funciona con un dueño pasivo o necesita que el dueño opere.",
+      "texto_nuevo": "Evalúa si tu negocio funciona con un dueño pasivo o necesita que el dueño opere, y si puedes agrupar varias unidades en una misma zona.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1628-L1630",
+        "frase": "Does your business lend itself to passive ownership?\n\nAre you able to cluster units effectively?"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En L1620-L1636 el libro da exactamente ocho factores para elegir la estructura. El entregable dice 'ocho factores', así que es el campo fiel. Los pasos cubren solo seis. Aquí se añade el factor que falta, 'Are you able to cluster units effectively?', al paso que sigue el mismo orden del libro.",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO pasada K, ficha C22 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c22-2",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Analiza qué tan fragmentado está tu mercado y cuánta competencia hay por franquiciados.",
+      "texto_nuevo": "Analiza qué tan fragmentado está tu mercado, cuánta competencia hay por franquiciados y qué propuesta de valor les ofreces.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1632-L1636",
+        "frase": "How fragmented is the competitive market?\n\nWhat is the degree of competition for your targeted franchisee?\n\nWhat is your value position for your targeted franchisee?"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Falta el octavo factor del libro, 'What is your value position for your targeted franchisee?'. Con este cambio y el del paso 3, los pasos revisan los ocho factores que nombra el entregable, en el mismo orden que la lista del libro.",
+      "indice": 4,
+      "auditoria": "SANEAMIENTO pasada K, ficha C22 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ]
 }

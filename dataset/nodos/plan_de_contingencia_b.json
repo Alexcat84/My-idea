@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Plan de Contingencia B mediante Pregunta Inversa",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Ante una crisis inminente, preguntarse '¿qué es lo peor que puede pasar?' suele generar ansiedad sin producir soluciones. Horowitz propone una pregunta más productiva: '¿qué haría si eso peor ya hubiera pasado?'. Esta reformulación permite identificar un Plan B viable (en su caso, separar el activo de software Opsware del negocio de cloud computing en quiebra) sin necesidad de esperar a tocar fondo. Permite diseñar una ruta de escape o pivote mientras aún hay tiempo y recursos para ejecutarla de forma controlada.",
+  "resumen_teorico": "Ante una crisis inminente, preguntarse '¿qué es lo peor que puede pasar?' suele generar ansiedad sin producir soluciones. Una pregunta más productiva es: '¿qué haría si eso peor ya hubiera pasado?'. Esta reformulación permite identificar un Plan B viable (por ejemplo, separar el activo de software Opsware del negocio de cloud computing en quiebra) sin necesidad de esperar a tocar fondo. Permite diseñar una ruta de escape o pivote mientras aún hay tiempo y recursos para ejecutarla de forma controlada.",
   "pasos_accionables": [
     "Identificar el peor escenario posible de forma concreta y específica",
     "Preguntarse qué acción se tomaría si ese escenario ya hubiera ocurrido",
@@ -19,11 +19,75 @@
   "nodos_siguientes": [
     "negociacion_con_plazos_artificiales",
     "pivote_estrategico",
-    "necesidad_vs_deseo_en_ma"
+    "necesidad_vs_deseo_en_ma",
+    "plan_de_desastre_y_recuperacion",
+    "plan_b_antes_de_necesitarlo",
+    "respuesta_estrategica_a_amenaza_competitiva"
   ],
   "condiciones_activacion": [
     "Cuando el modelo de negocio actual muestra señales claras de inviabilidad futura",
     "Cuando existe un activo (tecnología, propiedad intelectual, equipo) que podría sobrevivir independientemente del negocio principal"
   ],
-  "etiqueta_arbol": "Pregúntate: Ya Pasó lo Peor"
+  "etiqueta_arbol": "Pregúntate: Ya Pasó lo Peor",
+  "correcciones": [
+    {
+      "id": "atribucion-133",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Ante una crisis inminente, preguntarse '¿qué es lo peor que puede pasar?' suele generar ansiedad sin producir soluciones. Horowitz propone una pregunta más productiva: '¿qué haría si eso peor ya hubiera pasado?'. Esta reformulación permite identificar un Plan B viable (en su caso, separar el activo de software Opsware del negocio de cloud computing en quiebra) sin necesidad de esperar a tocar fondo. Permite diseñar una ruta de escape o pivote mientras aún hay tiempo y recursos para ejecutarla de forma controlada.",
+      "texto_nuevo": "Ante una crisis inminente, preguntarse '¿qué es lo peor que puede pasar?' suele generar ansiedad sin producir soluciones. Una pregunta más productiva es: '¿qué haría si eso peor ya hubiera pasado?'. Esta reformulación permite identificar un Plan B viable (por ejemplo, separar el activo de software Opsware del negocio de cloud computing en quiebra) sin necesidad de esperar a tocar fondo. Permite diseñar una ruta de escape o pivote mientras aún hay tiempo y recursos para ejecutarla de forma controlada.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Horowitz propone",
+          "en su caso,"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-011 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-puente-015",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> plan_de_desastre_y_recuperacion",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-018",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> plan_b_antes_de_necesitarlo",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-nucleo-20",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> respuesta_estrategica_a_amenaza_competitiva",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-21, arbitro): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tenia razon el lector B: el plan B ante una crisis inminente, trazado mientras aun hay tiempo y recursos para pivotar de forma controlada, desemboca de forma directa en ejecutar un pivote rapido ante una amenaza existencial. Ademas ambos nodos vienen de la misma experiencia de crisis de Horowitz. El pivote como hipotesis estrategica es un marco generico de Lean y no apunta a la urgencia ni a la amenaza competitiva."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ]
 }

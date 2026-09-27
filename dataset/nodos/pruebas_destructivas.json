@@ -18,11 +18,28 @@
     "establecimiento_capacidad_proceso"
   ],
   "nodos_siguientes": [
-    "deteccion_defectos_raros_control_estadistico",
-    "detectar_empaque_poco_rigido"
+    "deteccion_defectos_raros_control_estadistico"
   ],
   "condiciones_activacion": [
     "Cuando el atributo de calidad a probar destruye la muestra o unidad probada"
   ],
-  "etiqueta_arbol": "Controla Calidad sin Destruir Todo"
+  "etiqueta_arbol": "Controla Calidad sin Destruir Todo",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-029",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "pruebas_destructivas -> detectar_empaque_poco_rigido",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por regla_disponibilidad_previa_venta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

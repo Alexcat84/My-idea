@@ -6,11 +6,11 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En muchos países existen entidades que ofrecen pólizas que cubren entre el 90 y el 100% del riesgo, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago mas atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
   "pasos_accionables": [
-    "Evalua el riesgo de impago de tus compradores internacionales antes de darles crédito.",
-    "Averigua en tu país que entidad ofrece seguro de crédito a la exportación (bancos de exportación e importación, agencias de desarrollo o similares) y explora tus opciones.",
-    "Elige entre una póliza Single-Buyer (para un comprador especifico) o Multi-Buyer (para varios compradores con términos de cuenta abierta).",
+    "Evalúa el riesgo de impago de tus compradores internacionales antes de darles crédito.",
+    "Averigua en tu país qué entidad ofrece seguro de crédito a la exportación (bancos de exportación e importación, agencias de desarrollo o similares) y explora tus opciones.",
+    "Elige entre una póliza Single-Buyer (para un comprador específico) o Multi-Buyer (para varios compradores con términos de cuenta abierta).",
     "Consulta si tienes derecho a algún descuento por contar ya con un préstamo de capital de trabajo relacionado con exportación.",
-    "Pregunta si existe algún producto de decisión rápida para montos menores, y revisa que plazos y límites aplican en tu mercado."
+    "Pregunta si existe algún producto de decisión rápida para montos menores, y revisa qué plazos y límites aplican en tu mercado."
   ],
   "entregable_esperado": "Póliza de seguro de crédito a la exportación contratada, con documentación de cobertura para tus cuentas por cobrar en el extranjero.",
   "nodos_previos": [
@@ -36,5 +36,66 @@
   "ids_alias": [
     "seguro_credito_exportacion_eximbank"
   ],
-  "etiqueta_arbol": "Asegura tu Crédito de Exportación"
+  "etiqueta_arbol": "Asegura tu Crédito de Exportación",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0511",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua el riesgo de impago de tus compradores internacionales antes de darles crédito.",
+      "texto_nuevo": "Evalúa el riesgo de impago de tus compradores internacionales antes de darles crédito.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-030.paso0: Evalúa (Falta la tilde en Evalúa.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0512",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Averigua en tu país que entidad ofrece seguro de crédito a la exportación (bancos de exportación e importación, agencias de desarrollo o similares) y explora tus opciones.",
+      "texto_nuevo": "Averigua en tu país qué entidad ofrece seguro de crédito a la exportación (bancos de exportación e importación, agencias de desarrollo o similares) y explora tus opciones.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-030.paso1: qué (qué es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0513",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige entre una póliza Single-Buyer (para un comprador especifico) o Multi-Buyer (para varios compradores con términos de cuenta abierta).",
+      "texto_nuevo": "Elige entre una póliza Single-Buyer (para un comprador específico) o Multi-Buyer (para varios compradores con términos de cuenta abierta).",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-030.paso2: específico (Falta la tilde en específico; los términos en inglés se dejan igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0514",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta si existe algún producto de decisión rápida para montos menores, y revisa que plazos y límites aplican en tu mercado.",
+      "texto_nuevo": "Pregunta si existe algún producto de decisión rápida para montos menores, y revisa qué plazos y límites aplican en tu mercado.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-030.paso4: qué (qué es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

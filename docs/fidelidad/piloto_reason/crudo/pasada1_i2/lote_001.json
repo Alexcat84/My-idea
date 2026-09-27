@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_001",
+  "intento": 0,
+  "usd": 0.16524,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 19.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33090,
+  "tokens_out": 1644,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P505BB7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [204, 225, 252, 263, 1878, 1896, 1914, 1923], \"razon\": \"El libro presenta los casos como condiciones latentes organizacionales corregibles. Comparar con la propia organización concreta esa idea en su misma dirección, sin datos nuevos.\"},\n  {\"id\": \"P231438\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4693, 4695, 4724, 5270], \"razon\": \"El libro dice que la cultura organizacional se forma por prácticas compartidas manejables. Identificarlas es un paso operativo coherente; L5270 advierte que poseerlas no basta, sin chocar.\"},\n  {\"id\": \"PFE3912\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4274, 4306, 4308, 4314, 4433], \"razon\": \"La autorregulación da libertad para elegir los medios y pide mejores sistemas internos de organización de seguridad. El paso concreta eso en la misma dirección.\"},\n  {\"id\": \"P625761\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"análisis geotécnicos\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [567, 584, 582, 5763], \"razon\": \"El libro llama a Nakina un caso muy especial, virtualmente indetectable, y pide priorizar con recursos limitados. Generalizar análisis profundos a toda infraestructura crítica podría convertir en regla lo que el libro limita.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P505BB7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    204,
+    225,
+    252,
+    263,
+    1878,
+    1896,
+    1914,
+    1923
+   ],
+   "razon": "El libro presenta los casos como condiciones latentes organizacionales corregibles. Comparar con la propia organización concreta esa idea en su misma dirección, sin datos nuevos."
+  },
+  {
+   "id": "P231438",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4693,
+    4695,
+    4724,
+    5270
+   ],
+   "razon": "El libro dice que la cultura organizacional se forma por prácticas compartidas manejables. Identificarlas es un paso operativo coherente; L5270 advierte que poseerlas no basta, sin chocar."
+  },
+  {
+   "id": "PFE3912",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4274,
+    4306,
+    4308,
+    4314,
+    4433
+   ],
+   "razon": "La autorregulación da libertad para elegir los medios y pide mejores sistemas internos de organización de seguridad. El paso concreta eso en la misma dirección."
+  },
+  {
+   "id": "P625761",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "análisis geotécnicos"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    567,
+    584,
+    582,
+    5763
+   ],
+   "razon": "El libro llama a Nakina un caso muy especial, virtualmente indetectable, y pide priorizar con recursos limitados. Generalizar análisis profundos a toda infraestructura crítica podría convertir en regla lo que el libro limita."
+  }
+ ]
+}

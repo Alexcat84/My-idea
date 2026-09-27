@@ -10,7 +10,7 @@
     "Solicitar referencias comerciales y bancarias del intermediario",
     "Negociar el nivel de control que la empresa retendrá (reportes, aprobación de publicidad), y el alcance de responsabilidades delegadas",
     "Evaluar si el intermediario tomará título de la mercancía o actuará solo como comisionista",
-    "Formalizar el acuerdo especificando comisión, exclusividad y duración, y el modelo de compensacion entre comisión, salario o retención",
+    "Formalizar el acuerdo especificando comisión, exclusividad y duración, y el modelo de compensación entre comisión, salario o retención",
     "Evaluar si la empresa tiene recursos internos para exportar directamente"
   ],
   "entregable_esperado": "Contrato o acuerdo firmado con el intermediario seleccionado, incluyendo términos de comisión, territorio y mecanismos de control y reporte.",
@@ -36,6 +36,25 @@
       "node_id": "intermediarios_exportacion",
       "titulo": "Intermediarios de Exportación (EMC/ETC)",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0792",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Formalizar el acuerdo especificando comisión, exclusividad y duración, y el modelo de compensacion entre comisión, salario o retención",
+      "texto_nuevo": "Formalizar el acuerdo especificando comisión, exclusividad y duración, y el modelo de compensación entre comisión, salario o retención",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O070-016.paso4: compensación (El único cambio es la tilde que faltaba en \"compensacion\", que pasa a \"compensación\"; el resto del texto coincide con el original.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ]
 }

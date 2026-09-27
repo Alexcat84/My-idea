@@ -6,13 +6,13 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Muchas personas limitan el concepto de 'sistema' a la maquinaria y el procesamiento de datos, ignorando que a quien eliges para ayudarte, como los entrenas, como los acompanas y las ayudas que les das también son parte del sistema. Tu eres responsable del sistema completo; la persona que te ayuda solo puede dar lo que el sistema le permite dar. La mejora real requiere que simplifiques procesos, mejores la forma en que entrenas y entiendas donde y por que ocurren los errores.",
   "pasos_accionables": [
-    "Identifica todos los componentes del sistema mas alla de la maquinaria: a quien eliges para ayudarte, como lo entrenas, como lo acompanas, los procedimientos que sigues",
+    "Identifica todos los componentes del sistema más allá de la maquinaria: a quién eliges para ayudarte, cómo lo entrenas, cómo lo acompañas, los procedimientos que sigues",
     "Simplifica procesos complejos que generan errores (por ejemplo, esquemas de descuentos complicados)",
-    "Recopila datos sobre frecuencia, ubicación y causa de errores especificos",
+    "Recopila datos sobre frecuencia, ubicación y causa de errores específicos",
     "Implementa entrenamiento continuo y retroalimentación basada en los datos del sistema",
-    "Asume la responsabilidad sobre los resultados, en lugar de atribuir los fallos unicamente a quien te ayuda"
+    "Asume la responsabilidad sobre los resultados, en lugar de atribuir los fallos únicamente a quien te ayuda"
   ],
-  "entregable_esperado": "Diagnostico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tu lideras",
+  "entregable_esperado": "Diagnóstico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tú lideras",
   "nodos_previos": [
     "causas_comunes_vs_especiales"
   ],
@@ -23,5 +23,65 @@
     "Cuando atribuyas los problemas de calidad exclusivamente al desempeno de quien te ayuda",
     "Cuando existan altos niveles de error sistematico en tus procesos administrativos u operativos"
   ],
-  "etiqueta_arbol": "Amplía tu Idea de Sistema"
+  "etiqueta_arbol": "Amplía tu Idea de Sistema",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0643",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica todos los componentes del sistema mas alla de la maquinaria: a quien eliges para ayudarte, como lo entrenas, como lo acompanas, los procedimientos que sigues",
+      "texto_nuevo": "Identifica todos los componentes del sistema más allá de la maquinaria: a quién eliges para ayudarte, cómo lo entrenas, cómo lo acompañas, los procedimientos que sigues",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-003.paso0: más, allá, quién, cómo, cómo, acompañas (Añade las tildes de más, allá, quién y cómo (interrogativos indirectos) y la eñe de acompañas; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0644",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recopila datos sobre frecuencia, ubicación y causa de errores especificos",
+      "texto_nuevo": "Recopila datos sobre frecuencia, ubicación y causa de errores específicos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-003.paso2: específicos (Específicos es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0645",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asume la responsabilidad sobre los resultados, en lugar de atribuir los fallos unicamente a quien te ayuda",
+      "texto_nuevo": "Asume la responsabilidad sobre los resultados, en lugar de atribuir los fallos únicamente a quien te ayuda",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-003.paso4: únicamente (Únicamente lleva tilde y el relativo quien queda sin tilde, como corresponde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0646",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diagnostico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tu lideras",
+      "texto_nuevo": "Diagnóstico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tú lideras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-003.entregable: Diagnóstico, tú (Diagnóstico lleva tilde y tú, como pronombre personal, también.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

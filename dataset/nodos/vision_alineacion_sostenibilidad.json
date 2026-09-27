@@ -7,7 +7,7 @@
   "resumen_teorico": "Una iniciativa de sostenibilidad solo funciona si nace de una visión clara, coherente con tu estrategia de negocio y comunicada con convicción. Elige el marco conceptual (sostenibilidad, medio ambiente, responsabilidad social) que mejor encaje con tu forma de operar y tu propósito como fundador. La evidencia muestra que estas iniciativas prosperan cuando surgen de tu liderazgo directo, no como esfuerzos aislados de algún colaborador. Combina una meta aspiracional de largo plazo ('North Star', como el 'zero waste' de DuPont) que inspire innovación, con objetivos operativos concretos y medibles de corto plazo. La consistencia entre lo que dices sobre sostenibilidad y tus prioridades reales de negocio (costos, crecimiento) evita contradicciones internas y da credibilidad a tu propuesta.",
   "pasos_accionables": [
     "Elige el marco conceptual que mejor se ajuste a tu forma de operar (sostenibilidad, medio ambiente, responsabilidad social, stewardship)",
-    "Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar, y articulala públicamente",
+    "Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar, y articúlala públicamente",
     "Verifica que esa visión sea coherente con tu estrategia de negocio y no genere contradicciones",
     "Define una meta aspiracional de largo plazo ('North Star') que motive innovación",
     "Establece metas operativas concretas y medibles de corto plazo",
@@ -16,8 +16,7 @@
   "entregable_esperado": "Documento de visión de sostenibilidad con metas de largo y corto plazo, definido y comunicado por ti como fundador.",
   "nodos_previos": [
     "benchmarking_prioritizacion_sostenibilidad",
-    "plan_accion_corto_mediano_largo_plazo",
-    "incentivos_reconocimiento_sostenibilidad"
+    "plan_accion_corto_mediano_largo_plazo"
   ],
   "nodos_siguientes": [
     "estrategia_eco_advantage",
@@ -46,6 +45,38 @@
       "node_id": "liderazgo_ceo_sostenibilidad",
       "titulo": "Liderazgo Top-Down en Sostenibilidad",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-073",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-19-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el nodo dice que los incentivos sirven cuando ya existe una estrategia de sostenibilidad, asi que la vision y alineacion estrategica lo prepara, no va despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0257",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar, y articulala públicamente",
+      "texto_nuevo": "Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar, y articúlala públicamente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-030.paso1: articúlala (Solo añade la tilde que falta en la esdrújula articúlala.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
     }
   ]
 }

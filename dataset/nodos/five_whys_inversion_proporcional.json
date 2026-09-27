@@ -48,5 +48,36 @@
       "titulo": "Los Cinco Porqués (Five Whys)",
       "fuente": "The Lean Startup - Eric Ries"
     }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-16",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "five_whys_inversion_proporcional -> regla_simplificada_tolerancia_errores",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-16, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Es una versión simplificada de los Cinco Porqués con inversión proporcional, pensada para equipos que todavía no pueden aplicar el proceso completo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-entrada-19",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "five_whys_inversion_proporcional -> regla_simplificada_tolerancia_errores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Gate 0, OP-C-05: par bidireccional sin veredicto de lectura (26 sep 2026)",
+        "motivo": "La entrada elegida en E-16 formaba un par de ida y vuelta con regla_simplificada_tolerancia_errores -> five_whys_inversion_proporcional: la regla simplificada va antes del proceso completo, no despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_098",
+  "intento": 0,
+  "usd": 0.176976,
+  "turnos": 1,
+  "duracion_s": 18.8,
+  "pared_s": 20.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34899,
+  "tokens_out": 1869,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P38EB48\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"periódicas\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2598, 5639, 580, 582], \"razon\": \"El libro pide medir y mejorar con regularidad los procesos genéricos, en cualquier dominio. 'Periódicas' es una frecuencia vaga que conviene verificar.\"},\n{\"id\": \"P98A3F6\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"pares\"], \"clase\": \"FIEL\", \"lineas\": [5266, 5055, 5270], \"razon\": \"Recoge casi literalmente las preguntas de L5266 sobre la participación de pares y la apelación interna. El libro también menciona a representantes sindicales.\"},\n{\"id\": \"P5A403C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2556, 2568, 2579, 4749, 4691], \"razon\": \"El libro cita las presiones reguladoras como impulso hacia la resistencia y la cultura de seguridad como motor. Hay que comprender esas fuerzas para navegar.\"},\n{\"id\": \"P159EB0\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4464, 4476, 4478, 4502], \"razon\": \"Las visitas de sitio generan instancias de incumplimiento, que son los datos brutos del modelo. El libro las subordina a la reforma de los factores O&M.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P38EB48",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "periódicas"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2596,
+    2598,
+    5639,
+    580,
+    582
+   ],
+   "razon": "El libro pide medir y mejorar con regularidad los procesos genéricos, en cualquier dominio. 'Periódicas' es una frecuencia vaga que conviene verificar."
+  },
+  {
+   "id": "P98A3F6",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "pares"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5266,
+    5055,
+    5270
+   ],
+   "razon": "Recoge casi literalmente las preguntas de L5266 sobre la participación de pares y la apelación interna. El libro también menciona a representantes sindicales."
+  },
+  {
+   "id": "P5A403C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2556,
+    2568,
+    2579,
+    4749,
+    4691
+   ],
+   "razon": "El libro cita las presiones reguladoras como impulso hacia la resistencia y la cultura de seguridad como motor. Hay que comprender esas fuerzas para navegar."
+  },
+  {
+   "id": "P159EB0",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4464,
+    4476,
+    4478,
+    4502
+   ],
+   "razon": "Las visitas de sitio generan instancias de incumplimiento, que son los datos brutos del modelo. El libro las subordina a la reforma de los factores O&M."
+  }
+ ]
+}

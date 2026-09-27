@@ -1,0 +1,86 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_103",
+  "intento": 0,
+  "usd": 0.162516,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33689,
+  "tokens_out": 1388,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PAF37D4\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [808, 832, 868, 1114, 1129, 31, 302], \"razon\": \"El libro afirma que las defensas crean peligros imprevistos y que la automatización cambió la relación humano-sistema, con nuevas vulnerabilidades como la confusión de modos.\"},\n  {\"id\": \"PD82131\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5557, 5559, 5781, 5905, 5907, 293], \"razon\": \"El modelo organizacional trata la integridad de las defensas y las condiciones latentes. El libro recomienda identificarlas y eliminarlas de forma proactiva y combinar los modelos.\"},\n  {\"id\": \"P28784A\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"la persona que supervisa el trabajo\"], \"clase\": \"FIEL\", \"lineas\": [5204, 5208, 4769], \"razon\": \"El libro pide seleccionar y formar supervisores de primera línea con amplia experiencia y conocedores del lugar y sus peligros. El paso omite la formación, pero no contradice.\"},\n  {\"id\": \"PA0A4EE\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"antes de iniciar cualquier investigación\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [323, 5684, 293, 2652, 2654, 1934], \"razon\": \"El libro dice que la línea no es tajante y que los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar puede cerrar prematuramente el análisis organizacional.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PAF37D4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    808,
+    832,
+    868,
+    1114,
+    1129,
+    31,
+    302
+   ],
+   "razon": "El libro afirma que las defensas crean peligros imprevistos y que la automatización cambió la relación humano-sistema, con nuevas vulnerabilidades como la confusión de modos."
+  },
+  {
+   "id": "PD82131",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5557,
+    5559,
+    5781,
+    5905,
+    5907,
+    293
+   ],
+   "razon": "El modelo organizacional trata la integridad de las defensas y las condiciones latentes. El libro recomienda identificarlas y eliminarlas de forma proactiva y combinar los modelos."
+  },
+  {
+   "id": "P28784A",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "la persona que supervisa el trabajo"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5204,
+    5208,
+    4769
+   ],
+   "razon": "El libro pide seleccionar y formar supervisores de primera línea con amplia experiencia y conocedores del lugar y sus peligros. El paso omite la formación, pero no contradice."
+  },
+  {
+   "id": "PA0A4EE",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "antes de iniciar cualquier investigación"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    323,
+    5684,
+    293,
+    2652,
+    2654,
+    1934
+   ],
+   "razon": "El libro dice que la línea no es tajante y que los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar puede cerrar prematuramente el análisis organizacional."
+  }
+ ]
+}

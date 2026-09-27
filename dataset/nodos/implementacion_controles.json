@@ -25,7 +25,7 @@
   "condiciones_activacion": [
     "Cuando el plan de control de peligros ha sido aprobado y está listo para ejecutarse",
     "Cuando necesitas ejecutar medidas correctivas identificadas en inspecciones",
-    "Cuando los recursos disponibles son limitados y debes priorizar"
+    "Cuando los recursos para implantar los controles de peligros son limitados y debes decidir cuáles atacar primero"
   ],
   "etiqueta_arbol": "Aplica tus Controles Ya",
   "ids_alias": [
@@ -36,6 +36,26 @@
       "node_id": "implementacion_controles_2",
       "titulo": "Implementación de Controles Seleccionados en el Sitio",
       "fuente": "OSHA3886"
+    }
+  ],
+  "fuentes_internas": [
+    "OSHA3885",
+    "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-108",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando los recursos disponibles son limitados y debes priorizar",
+      "texto_nuevo": "Cuando los recursos para implantar los controles de peligros son limitados y debes decidir cuáles atacar primero",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q071-026: Tiene razón el lector B: la condición 2 no dice que la priorización es sobre el control de peligros (paso 3, 'lo peor primero'), así que dispararía el nodo ante cualquier escasez de recursos; dominio y fase están bien, como coinciden ambos lectores. (arbitro) Motivo: Es demasiado genérica: se activaría ante cualquier escasez de recursos o cualquier priorización, aunque no tenga que ver con implantar controles de peligros en el lugar de trabajo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
     }
   ]
 }

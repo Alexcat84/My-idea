@@ -1,6 +1,6 @@
 {
   "node_id": "medir_residuos_empresa",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Medición de Residuos de la Empresa",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -24,5 +24,23 @@
     "Si la empresa produce residuos sólidos, líquidos o peligrosos y no los ha auditado antes",
     "Si se busca reducir costos de tratamiento, reciclaje o disposición"
   ],
-  "etiqueta_arbol": "Mide los Residuos de Empresa"
+  "etiqueta_arbol": "Mide los Residuos de Empresa",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-218",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F28-027: La auditoría de residuos mide y controla la operación de una empresa en marcha para bajar costos. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

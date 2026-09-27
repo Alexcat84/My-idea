@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Equipos Relampago con Facilitador Dedicado",
+  "etiqueta": "Acelera con un Equipo Relampago",
+  "resumen": "Variante acelerada del equipo de proyecto de calidad, nacida en el St. Joseph's Hospital de Paterson cuando la alta direccion vio que el TQM avanzaba demasiado lento. Se agrega un facilitador dedicado y experimentado que da mas guia y direccion de lo habitual y maneja la dinamica del grupo, mientras el propio equipo se encarga de procesar los datos entre reuniones. El equipo paso de la primera reunion a documentar causas raiz en 1 semana.",
+  "entregable": "Equipo relampago constituido con facilitador dedicado asignado, problema acotado y causas raiz documentadas",
+  "condiciones": [
+   "Cuando la direccion necesita resultados rapidos y los equipos de mejora avanzan demasiado lento",
+   "Ante demoras de flujo en un proceso critico como la atencion de urgencias"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "1761",
+  "cita": "In the interest of speed, the facilitator took responsibility for the processing of data between meetings, thus reducing the time that elapsed between team meetings.",
+  "dato": "mientras el propio equipo se encarga de procesar los datos entre reuniones",
+  "explicacion": "El libro dice que era el facilitador, no el equipo, quien se encargaba de procesar los datos entre reuniones, y que justo eso acortaba el tiempo entre una reunion y la siguiente. El resumen le pasa esa tarea al equipo y contradice la razon por la que el metodo es rapido."
+ },
+ {
+  "titulo": "Protocolo de Comunicacion Rapida ante Eventos de Crisis",
+  "etiqueta": "Avisa Rapido en una Crisis",
+  "resumen": "Ante un riesgo hay que actuar rapido. Primero se define que constituye una crisis para la organizacion (en la industria alimentaria, haber producido un alimento que pueda danar al consumidor). Luego se exige que el aviso llegue al equipo de crisis en menos de 30 minutos, se aplica la regla de 'dos personas en la caja' para que nadie ponga en riesgo a la empresa por si solo, y se agradece a quien escala una alerta aunque resulte falsa.",
+  "entregable": "Protocolo escrito de crisis con definicion de evento, plazo de aviso de 30 minutos, regla de dos personas y preguntas guia para decidir",
+  "condiciones": [
+   "Cuando la investigacion de un posible incidente ha reunido todos los hechos y hay que decidir si notificar al equipo de crisis",
+   "Si la empresa fabrica productos que pueden causar dano al consumidor"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "12391",
+  "cita": "This means that we cannot wait for an investigation or for the team to gather all of the facts. As soon as a crisis event is identified it is communicated.",
+  "dato": "Cuando la investigacion de un posible incidente ha reunido todos los hechos y hay que decidir si notificar al equipo de crisis",
+  "explicacion": "La condicion hace que el aviso al equipo de crisis dependa de que la investigacion haya terminado y reunido todos los hechos. El libro dice lo contrario: no se puede esperar a una investigacion ni a tener todos los hechos, y el aviso se da en cuanto se detecta el evento, dentro de los 30 minutos."
+ },
+ {
+  "titulo": "Estratificacion de Datos para Localizar la Causa",
+  "etiqueta": "Separa tus Datos por Categorias",
+  "resumen": "La estratificacion separa los datos en categorias (por proveedor, turno, maquina, etc.) para ver cuales contribuyen mas al problema. Se eligen las variables de estratificacion, se definen categorias discretas o por rangos, se ordenan las observaciones, se calcula el fenomeno en cada categoria y se muestran los resultados, normalmente con graficas de barras, repitiendo para otras variables y haciendo una segunda estratificacion si conviene.",
+  "entregable": "Grafica de barras por estrato con al menos 50 observaciones por categoria e identificacion de la categoria que mas contribuye al problema",
+  "condiciones": [
+   "Cuando un problema de calidad tiene varias fuentes posibles, como distintos proveedores o turnos",
+   "Durante el analisis de sintomas para decidir que categoria atacar primero"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "18780",
+  "cita": "4. Calculate the phenomenon being measured for each category. These calculations can be a count of the number of observations in the category, an average value for those observations or a display (like a histogram) for each category.",
+  "dato": "con al menos 50 observaciones por categoria",
+  "explicacion": "El libro describe los pasos de la estratificacion (lineas 18774 a 18786) sin fijar un numero minimo de observaciones por categoria. El minimo de 50 es inventado. Con Grep no aparecen 'at least 50', '50 observations', 'fifty', 'per category' ni 'per stratum'. La unica regla parecida del libro son 20 a 30 muestras para calcular limites de control (linea 18673), que es otra cosa."
+ },
+ {
+  "titulo": "Planificacion de un Estudio de Capacidad del Proceso",
+  "etiqueta": "Planifica tu Estudio de Capacidad",
+  "resumen": "Antes de recoger datos se aclara para que se hace el estudio: responder a un cliente que pide un indice de capacidad o mejorar la calidad. En procesos complejos se describe el proceso, se fijan las condiciones de cada variable, se asegura que cada caracteristica tenga al menos una variable de ajuste, se evalua el error de medicion, se usan graficas de control para ver la estabilidad y se prepara un plan de recoleccion de al menos 100 mediciones consecutivas que conserve el orden. El objetivo final es mejorar el proceso, no solo calcular un indice.",
+  "entregable": "Plan del estudio de capacidad con descripcion del proceso, condiciones de las variables, plan de recoleccion de datos y metodos de analisis definidos",
+  "condiciones": [
+   "Cuando un cliente solicita un indice de capacidad del proceso",
+   "Si se buscan niveles de defectos de 1 a 10 partes por millon en un proceso complejo"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "20773",
+  "cita": "7. Prepare a data collection plan, including adequate sample size that documents results on quality characteristics along with the process conditions (e.g., values of all process variables) and preserves information on the order of measurements so that trends can be evaluated.",
+  "dato": "un plan de recoleccion de al menos 100 mediciones consecutivas",
+  "explicacion": "El libro solo pide un tamano de muestra adecuado y que se conserve el orden de las mediciones, sin dar ninguna cifra. Las 100 mediciones consecutivas son inventadas. Con Grep no aparecen 'at least 100', '100 consecutive', '100 measurements' ni '100 samples'. Ademas, la linea 20968 pide que las mediciones consecutivas no esten correlacionadas, no que haya un numero minimo."
+ }
+]

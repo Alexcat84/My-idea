@@ -16,10 +16,29 @@
     "ceo_puente_interino"
   ],
   "nodos_siguientes": [
-    "evaluacion_balanceada_de_ejecutivos"
+    "evaluacion_balanceada_de_ejecutivos",
+    "proceso_contratacion_ejecutivos_sin_experiencia"
   ],
   "condiciones_activacion": [
     "Cuando tienes que evaluar o contratar a alguien para un puesto clave y no tienes claro qué significa 'buen desempeño' en esa función"
   ],
-  "etiqueta_arbol": "Exige un Estándar Alto"
+  "etiqueta_arbol": "Exige un Estándar Alto",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-19",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "establecer_estandar_alto_desempeno -> proceso_contratacion_ejecutivos_sin_experiencia",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-20, lectores de acuerdo): raiz de 6 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Fijar un estándar alto y exigirlo aunque uno no sepa hacer el trabajo desemboca en cómo contratar un buen ejecutivo para una función que nunca se ejerció."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

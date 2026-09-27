@@ -1,0 +1,90 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_046",
+  "intento": 0,
+  "usd": 0.16206399999999999,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32991,
+  "tokens_out": 1505,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P30581C\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Comité de Auditoría del directorio\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [520, 504, 668, 686, 4215, 3153], \"razon\": \"L520 respalda revisar las señales en conjunto. El libro no asigna la tarea a un Comité de Auditoría, la auditoría de Barings falló (L504) y advierte del sesgo retrospectivo (L668, L686, L4215).\"},\n  {\"id\": \"P661559\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5200, 666, 5184, 5178], \"razon\": \"El libro recomienda equipos divergentes en especialidad y experiencia. Los equipos homogéneos 'ven cosas muy similares' y carecen de variedad requerida (L5200). El paso invierte la recomendación.\"},\n  {\"id\": \"P5A7ED6\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"al menos 48 horas antes\", \"tarjetas paso a paso\", \"firmas de reensamblaje\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [417, 419, 423, 451, 453, 401], \"razon\": \"Las tarjetas y firmas aparecen en L419 y L453. El plazo de 48 h no está en el libro y choca con el papeleo de línea, generado justo antes (L417), y con traspasos imprevistos (L401, L423).\"},\n  {\"id\": \"PF8D883\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [310, 1056, 1068, 1072, 1114, 1123, 1149, 2650], \"razon\": \"Romper la alineación sigue L310 y L2650. Pero reforzar o añadir capas puede aumentar la complejidad y la opacidad ('fallacy of defences-in-depth', L1056, L1072, L1149).\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P30581C",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Comité de Auditoría del directorio"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    520,
+    504,
+    668,
+    686,
+    4215,
+    3153
+   ],
+   "razon": "L520 respalda revisar las señales en conjunto. El libro no asigna la tarea a un Comité de Auditoría, la auditoría de Barings falló (L504) y advierte del sesgo retrospectivo (L668, L686, L4215)."
+  },
+  {
+   "id": "P661559",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5200,
+    666,
+    5184,
+    5178
+   ],
+   "razon": "El libro recomienda equipos divergentes en especialidad y experiencia. Los equipos homogéneos 'ven cosas muy similares' y carecen de variedad requerida (L5200). El paso invierte la recomendación."
+  },
+  {
+   "id": "P5A7ED6",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "al menos 48 horas antes",
+    "tarjetas paso a paso",
+    "firmas de reensamblaje"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    417,
+    419,
+    423,
+    451,
+    453,
+    401
+   ],
+   "razon": "Las tarjetas y firmas aparecen en L419 y L453. El plazo de 48 h no está en el libro y choca con el papeleo de línea, generado justo antes (L417), y con traspasos imprevistos (L401, L423)."
+  },
+  {
+   "id": "PF8D883",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    310,
+    1056,
+    1068,
+    1072,
+    1114,
+    1123,
+    1149,
+    2650
+   ],
+   "razon": "Romper la alineación sigue L310 y L2650. Pero reforzar o añadir capas puede aumentar la complejidad y la opacidad ('fallacy of defences-in-depth', L1056, L1072, L1149)."
+  }
+ ]
+}

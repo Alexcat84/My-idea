@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_089",
+  "intento": 0,
+  "usd": 0.15633599999999997,
+  "turnos": 1,
+  "duracion_s": 12.8,
+  "pared_s": 13.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32579,
+  "tokens_out": 1301,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0FF48E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4394, 4396, 4398, 4400, 4402], \"razon\": \"El segundo paso de la FSA del MSA es literalmente evaluar los riesgos asociados a los peligros identificados.\"},\n  {\"id\": \"P714EE0\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2658], \"razon\": \"El libro dice que la frecuencia depende de la velocidad de cambio y que los factores del lugar de trabajo se vigilan más a menudo.\"},\n  {\"id\": \"P0C6646\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [252, 2965, 2823, 2829, 3813, 3829], \"razon\": \"Coincide con el principio 3. Matiz: el error puede moderarse y la gestión incluye medidas individuales; las violaciones se abordan cambiando normas y cultura.\"},\n  {\"id\": \"PC18660\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5061, 5057, 5063], \"razon\": \"El libro incluye 'Any previous?', pero aclara que el historial no determina la culpabilidad del acto actual. Solo indica formación correctiva u orientación profesional. El paso omite esa condición.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0FF48E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4394,
+    4396,
+    4398,
+    4400,
+    4402
+   ],
+   "razon": "El segundo paso de la FSA del MSA es literalmente evaluar los riesgos asociados a los peligros identificados."
+  },
+  {
+   "id": "P714EE0",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2658
+   ],
+   "razon": "El libro dice que la frecuencia depende de la velocidad de cambio y que los factores del lugar de trabajo se vigilan más a menudo."
+  },
+  {
+   "id": "P0C6646",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    252,
+    2965,
+    2823,
+    2829,
+    3813,
+    3829
+   ],
+   "razon": "Coincide con el principio 3. Matiz: el error puede moderarse y la gestión incluye medidas individuales; las violaciones se abordan cambiando normas y cultura."
+  },
+  {
+   "id": "PC18660",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5061,
+    5057,
+    5063
+   ],
+   "razon": "El libro incluye 'Any previous?', pero aclara que el historial no determina la culpabilidad del acto actual. Solo indica formación correctiva u orientación profesional. El paso omite esa condición."
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P83ED59",
+  "intento": 0,
+  "usd": 0.171028,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36497,
+  "tokens_out": 1252,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P83ED59\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2748, 2750], \"cita\": \"This is not a problem so long as sufficient and even-handed attention is given to the main subsystems underpinning organizational safety. [...] What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pone como condición esencial muestrear las seis dimensiones con atención equilibrada. La cultura está en el núcleo e impregna todas (L2748). El paso organiza la medición solo en cuatro y deja fuera cultura y factores específicos de seguridad. Además añade ISO 45001, que el libro no menciona.\", \"paso_fiel\": \"Organizar la medición proactiva de modo que se muestreen, con atención equilibrada, las seis dimensiones principales: cultura, formación, gestión, factores específicos de seguridad, procedimientos y factores técnicos.\"}\n```",
+ "parseado": {
+  "id": "P83ED59",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2748,
+   2750
+  ],
+  "cita": "This is not a problem so long as sufficient and even-handed attention is given to the main subsystems underpinning organizational safety. [...] What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pone como condición esencial muestrear las seis dimensiones con atención equilibrada. La cultura está en el núcleo e impregna todas (L2748). El paso organiza la medición solo en cuatro y deja fuera cultura y factores específicos de seguridad. Además añade ISO 45001, que el libro no menciona.",
+  "paso_fiel": "Organizar la medición proactiva de modo que se muestreen, con atención equilibrada, las seis dimensiones principales: cultura, formación, gestión, factores específicos de seguridad, procedimientos y factores técnicos."
+ }
+}

@@ -7,13 +7,23 @@
  *   - Cada "## " del motor es una BARRA-TOPIC colapsada que, al desplegarse,
  *     muestra la data estructurada en contenedores: descripción, Pasos como
  *     una mini-línea de puntos (sutil pero visual), y Entregable en su caja.
- *   - La ACCIÓN concreta ("Esta semana") va al FINAL de cada tramo, nunca al
+ *   - La ACCIÓN concreta ("Primera acción") va al FINAL de cada tramo, nunca al
  *     inicio; y el cierre es un CTA concreto (Empezar / Manos a la Obra).
  * El parser respeta el markdown REAL del motor: no inventa estructura, solo
  * pliega la que viene. Colores: azul piensa, verde ejecuta (REGLAS_Y_TOKENS).
+ *
+ * i18n F6 (D2): el plan es un documento y sigue el idioma del PROYECTO
+ * (`idiomaDocumento`): sus rótulos (Pasos, Entregable, Primera acción, "N
+ * etapas") van en ese idioma; la barra lateral y los botones, en el de la
+ * interfaz. Sin `idiomaDocumento`, todo en el de la interfaz, como antes.
  */
 import { Markdown } from "./Markdown";
+import { PapelEnIdioma, useIdiomaInterfaz } from "./PapelEnIdioma";
 
+import { elegir, type ActiveLocale } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { PLAN_DOCUMENTO } from "@/lib/i18n/mensajes/planDocumento";
 import { parsearPlan, type Seccion } from "@/lib/planParser";
 
 /** Pasos como mini-línea de puntos (canon 04 en pequeño): sutil pero visual. */
@@ -31,7 +41,7 @@ function PasosLista({ pasos }: { pasos: string[] }) {
             {i < pasos.length - 1 && (
               // del borde inferior de este punto al borde superior del siguiente
               <span
-                className="absolute left-[2.5px] top-4 w-px"
+                className="absolute start-[2.5px] top-4 w-px"
                 style={{ bottom: "-8px", background: "rgba(77,124,254,0.28)" }}
               />
             )}
@@ -53,13 +63,16 @@ function CajaEstaSemana({
   contenido,
   grande,
   onEmpezar,
-  etiqueta = "Esta semana",
+  etiqueta,
 }: {
   contenido: string;
   grande?: boolean;
   onEmpezar?: () => void;
   etiqueta?: string;
 }) {
+  const t = elegir(PLAN_DOCUMENTO, useIdioma());
+  // El botón es de la app, no del documento: va en el idioma de la interfaz.
+  const tUi = elegir(PLAN_DOCUMENTO, useIdiomaInterfaz());
   return (
     <div
       className={"rounded-[12px] bg-surface " + (grande ? "px-7 py-[26px]" : "px-4 py-4")}
@@ -67,7 +80,9 @@ function CajaEstaSemana({
     >
       <p className="mb-2 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
         <span className="anima-green-pulse h-[9px] w-[9px] rounded-full bg-done" />
-        {etiqueta}
+        {/* "Primera acción" (decisión del fundador, 26 sep 2026): también en los
+            planes viejos, cuyo rótulo era "Esta semana". */}
+        {etiqueta ?? t.primeraAccion}
       </p>
       <div className={grande ? "text-[17px] font-semibold leading-normal [text-wrap:pretty] sm:text-[19px]" : "text-[13.5px] leading-[1.6] [text-wrap:pretty]"}>
         <Markdown>{contenido}</Markdown>
@@ -78,7 +93,7 @@ function CajaEstaSemana({
           data-no-print
           className="mt-[18px] rounded-[10px] bg-done px-[22px] py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90"
         >
-          Empezar con esto
+          {tUi.empezarConEsto}
         </button>
       )}
     </div>
@@ -88,6 +103,7 @@ function CajaEstaSemana({
 /** Una barra-topic desplegable (acordeón nativo <details>): colapsada por
  * defecto; al abrir muestra la data estructurada y la acción al final. */
 function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
+  const t = elegir(PLAN_DOCUMENTO, useIdioma());
   return (
     <details
       {...(abierta ? { open: true } : {})}
@@ -124,20 +140,22 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
         )}
         {s.bloquesPasos.map((b, bi) => (
           <div key={bi}>
-            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{b.label ?? "Pasos"}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{b.label ?? t.pasos}</p>
             <PasosLista pasos={b.pasos} />
           </div>
         ))}
         {s.entregable && (
           <div data-caja-entregable className="rounded-[10px] border border-hairline px-4 py-3" style={{ background: "#141419" }}>
-            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">Entregable</p>
+            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">{t.entregable}</p>
             <div className="text-[13.5px] leading-[1.55] text-ink [text-wrap:pretty]">
               <Markdown>{s.entregable}</Markdown>
             </div>
           </div>
         )}
         {/* La acción concreta, SIEMPRE al final del tramo. */}
-        {s.estaSemana && <CajaEstaSemana contenido={s.estaSemana} />}
+        {/* Solo la Primera acción: lo que era "Esta semana" en un plan viejo ya
+            no se muestra (decisión del fundador, 27 sep 2026). */}
+        {s.estaSemana && !s.accionVieja && <CajaEstaSemana contenido={s.estaSemana} />}
       </div>
     </details>
   );
@@ -149,6 +167,7 @@ export function PlanDocumento({
   onEmpezar,
   onVerBitacora,
   nodosFuente,
+  idiomaDocumento,
 }: {
   md: string;
   nombreIdea: string;
@@ -158,71 +177,82 @@ export function PlanDocumento({
   onVerBitacora?: () => void;
   /** canon 05: nodos del recorrido → sidebar "Construido con tu recorrido". */
   nodosFuente?: string[];
+  /** i18n F6 (D2): el idioma del proyecto, en que va el cuerpo del plan. */
+  idiomaDocumento?: ActiveLocale;
 }) {
-  const plan = parsearPlan(md);
+  const idiomaUi = useIdioma();
+  const idioma = idiomaDocumento ?? idiomaUi;
+  // `t` rotula el documento; `tUi`, la barra lateral (navegación de la app).
+  const t = elegir(PLAN_DOCUMENTO, idioma);
+  const tUi = elegir(PLAN_DOCUMENTO, idiomaUi);
+  const plan = parsearPlan(md, idioma);
   const etapas = plan.secciones.filter((s) => s.tipo === "etapa");
   // La acción de la etapa 1 (el corazón del producto): SIEMPRE visible arriba,
   // fuera de los acordeones. Su copia también vive al final de su tramo.
-  const primeraAccion =
-    etapas.find((s) => s.estaSemana)?.estaSemana ?? plan.secciones.find((s) => s.estaSemana)?.estaSemana ?? null;
+  // Solo de un rótulo "Primera acción": el contenido de "Esta semana" de un plan
+  // viejo ya no se muestra (decisión del fundador, 27 sep 2026).
+  const conAccion = (s: (typeof plan.secciones)[number]) => Boolean(s.estaSemana) && !s.accionVieja;
+  const primeraAccion = etapas.find(conAccion)?.estaSemana ?? plan.secciones.find(conAccion)?.estaSemana ?? null;
 
   const documento = (
-    <div className="min-w-0 flex-1" data-plan-print>
-      {/* encabezado del documento (canon 05) */}
-      <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
-        <div className="mb-3 flex items-center gap-2">
-          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-          {/* CONFIDENCIAL: jamás exponer la maquinaria (conteo de nodos,
-              grafo, conceptos). El usuario solo ve que su plan salió de SU
-              recorrido. */}
-          <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
-          </span>
-        </div>
-        {/* La descarga (.md / PDF) del plan y de todo el desarrollo vive
-            centralizada en "Tus documentos"; aquí ya no se duplica. */}
-      </div>
-      {plan.titulo && (
-        <h2 className="anima-plan-in text-[26px] font-bold leading-[1.25] tracking-[-0.02em] [text-wrap:balance] sm:text-[32px]" style={{ animationDelay: "0.1s" }}>
-          {plan.titulo}
-        </h2>
-      )}
-      {plan.intro && (
-        <div data-prosa-plan className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
-          <Markdown>{plan.intro}</Markdown>
-        </div>
-      )}
-      {etapas.length > 0 && (
-        <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
-          {etapas.length} {etapas.length === 1 ? "etapa" : "etapas"} · cada barra muestra su entregable; despliégala para los pasos y la acción
-        </p>
-      )}
-
-      {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
-      {primeraAccion && (
-        <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
-          <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta="Tu primera acción" />
-        </div>
-      )}
-
-      {/* barras-topic (acordeones): TODAS colapsadas en la primera vista
-          (decisión del fundador: nunca desplegado; el lector abre la que quiere). */}
-      <div className="mt-6 flex flex-col gap-3">
-        {plan.secciones.map((s, i) => (
-          <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
-            <BarraTopic s={s} />
+    <PapelEnIdioma idioma={idiomaDocumento}>
+      <div className="min-w-0 flex-1" data-plan-print>
+        {/* encabezado del documento (canon 05) */}
+        <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
+          <div className="mb-3 flex items-center gap-2">
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+            {/* CONFIDENCIAL: jamás exponer la maquinaria (conteo de nodos,
+                grafo, conceptos). El usuario solo ve que su plan salió de SU
+                recorrido. */}
+            <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+              {t.generadoDeTuRecorrido}{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
+            </span>
           </div>
-        ))}
-      </div>
+          {/* La descarga (.md / PDF) del plan y de todo el desarrollo vive
+              centralizada en "Tus documentos"; aquí ya no se duplica. */}
+        </div>
+        {plan.titulo && (
+          <h2 className="anima-plan-in text-[26px] font-bold leading-[1.25] tracking-[-0.02em] [text-wrap:balance] sm:text-[32px]" style={{ animationDelay: "0.1s" }}>
+            {plan.titulo}
+          </h2>
+        )}
+        {plan.intro && (
+          <div data-prosa-plan className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
+            <Markdown>{plan.intro}</Markdown>
+          </div>
+        )}
+        {etapas.length > 0 && (
+          <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
+            {interpolar(t.metaEtapas, { etapas: plural(idioma, etapas.length, t.etapas) })}
+          </p>
+        )}
 
-      {/* Pie del PDF: se repite en cada página e identifica la idea. Oculto
-          en pantalla (la hoja de impresión lo enciende); reemplaza el pie
-          codificado del navegador (URL y fecha). */}
-      <div data-print-pie className="hidden">
-        <span>{plan.titulo || nombreIdea}</span>
-        <span>My Idea</span>
+        {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
+        {primeraAccion && (
+          <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
+            <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta={t.tuPrimeraAccion} />
+          </div>
+        )}
+
+        {/* barras-topic (acordeones): TODAS colapsadas en la primera vista
+            (decisión del fundador: nunca desplegado; el lector abre la que quiere). */}
+        <div className="mt-6 flex flex-col gap-3">
+          {plan.secciones.map((s, i) => (
+            <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
+              <BarraTopic s={s} />
+            </div>
+          ))}
+        </div>
+
+        {/* Pie del PDF: se repite en cada página e identifica la idea. Oculto
+            en pantalla (la hoja de impresión lo enciende); reemplaza el pie
+            codificado del navegador (URL y fecha). */}
+        <div data-print-pie className="hidden">
+          <span>{plan.titulo || nombreIdea}</span>
+          <span>My Idea</span>
+        </div>
       </div>
-    </div>
+    </PapelEnIdioma>
   );
 
   // Fase 4.8 — MI BITÁCORA como primer punto del sidebar (arriba a la derecha):
@@ -230,13 +260,13 @@ export function PlanDocumento({
   // recorrido (en ambos layouts).
   const tarjetaBitacora = onVerBitacora ? (
     <div className="mb-6 rounded-panel border border-accent/40 bg-accent/5 p-4" data-no-print>
-      <p className="text-[13.5px] font-semibold text-accent">Mi bitácora</p>
-      <p className="mt-1 text-[12px] leading-relaxed text-dim">La historia de tu viaje, paso a paso.</p>
+      <p className="text-[13.5px] font-semibold text-accent">{tUi.miBitacora}</p>
+      <p className="mt-1 text-[12px] leading-relaxed text-dim">{tUi.historiaDeTuViaje}</p>
       <button
         onClick={onVerBitacora}
         className="mt-2.5 w-full rounded-[10px] border border-accent/40 bg-accent/10 py-2 text-[12.5px] font-semibold text-accent hover:bg-accent/20"
       >
-        Ver mi bitácora
+        {tUi.verMiBitacora}
       </button>
     </div>
   ) : null;
@@ -248,7 +278,7 @@ export function PlanDocumento({
     return (
       <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
         {documento}
-        <aside className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7" style={{ animationDelay: "0.5s" }}>
+        <aside className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-s lg:border-hairline lg:ps-7" style={{ animationDelay: "0.5s" }}>
           {tarjetaBitacora}
         </aside>
       </section>
@@ -260,11 +290,11 @@ export function PlanDocumento({
     <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
       {documento}
       <aside
-        className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7"
+        className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-s lg:border-hairline lg:ps-7"
         style={{ animationDelay: "0.5s" }}
       >
         {tarjetaBitacora}
-        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Construido con tu recorrido</p>
+        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{tUi.construidoConTuRecorrido}</p>
         <ul className="flex flex-col gap-4">
           {nodosFuente.map((n, i) => (
             <li key={i} className="flex items-start gap-3">
@@ -281,7 +311,7 @@ export function PlanDocumento({
         {/* Canon 05: la nota de recálculo bajo una hairline — el plan no es
             una lápida, se vuelve a la entrevista cuando el mundo cambia. */}
         <p className="mt-6 border-t border-hairline pt-5 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
-          ¿Cambia algo en el mundo real? Vuelve a la entrevista cuando quieras: el plan se recalcula desde donde estés.
+          {tUi.notaRecalculo}
         </p>
       </aside>
     </section>

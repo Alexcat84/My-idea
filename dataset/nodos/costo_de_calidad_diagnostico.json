@@ -1,6 +1,6 @@
 {
   "node_id": "costo_de_calidad_diagnostico",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Evolución del Costo de Calidad como Indicador de Madurez",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -24,5 +24,23 @@
     "Cuando necesitas decidir si destinar recursos a un programa de prevención",
     "Al evaluar si tu negocio esta subestimando su costo real de no calidad"
   ],
-  "etiqueta_arbol": "Mide tu Madurez en Calidad"
+  "etiqueta_arbol": "Mide tu Madurez en Calidad",
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-071",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F28-031: Sigue en el tiempo el costo de calidad de un negocio en operación como medida de control y mejora. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

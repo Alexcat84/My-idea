@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_073",
+  "intento": 0,
+  "usd": 0.177712,
+  "turnos": 1,
+  "duracion_s": 19.2,
+  "pared_s": 20.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35158,
+  "tokens_out": 1854,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE2D411\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4478, 4494, 4512], \"razon\": \"El libro dice que inspecciones posteriores generan nuevos perfiles y que su sucesión permite a regulador y regulado seguir el progreso de las reformas.\"},\n  {\"id\": \"PF67703\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3591, 3607, 3623, 3625, 3629, 3633, 3637, 3829], \"razon\": \"El libro evalúa el contexto de incumplimiento mediante VPCs y conductas genéricas. El paso es vago y podría leerse como auditoría legal, pero no invierte nada.\"},\n  {\"id\": \"PC40AA8\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Tipos Generales de Fallo (GFTs)\"], \"clase\": \"FIEL\", \"lineas\": [3784, 293], \"razon\": \"Tripod-Beta: las precondiciones son producto de fallos latentes; se describen y se identifican los GFTs asociados.\"},\n  {\"id\": \"P12BD11\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [963, 967, 969, 971, 973, 975, 977], \"razon\": \"El libro advierte que suprimir la inspección separada abrió huecos, pero también dice que la calidad no se 'inspecciona'. Hay un matiz sobre el peso de la inspección y el acotamiento a 'tareas críticas'.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE2D411",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4478,
+    4494,
+    4512
+   ],
+   "razon": "El libro dice que inspecciones posteriores generan nuevos perfiles y que su sucesión permite a regulador y regulado seguir el progreso de las reformas."
+  },
+  {
+   "id": "PF67703",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3591,
+    3607,
+    3623,
+    3625,
+    3629,
+    3633,
+    3637,
+    3829
+   ],
+   "razon": "El libro evalúa el contexto de incumplimiento mediante VPCs y conductas genéricas. El paso es vago y podría leerse como auditoría legal, pero no invierte nada."
+  },
+  {
+   "id": "PC40AA8",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Tipos Generales de Fallo (GFTs)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "Tripod-Beta: las precondiciones son producto de fallos latentes; se describen y se identifican los GFTs asociados."
+  },
+  {
+   "id": "P12BD11",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    963,
+    967,
+    969,
+    971,
+    973,
+    975,
+    977
+   ],
+   "razon": "El libro advierte que suprimir la inspección separada abrió huecos, pero también dice que la calidad no se 'inspecciona'. Hay un matiz sobre el peso de la inspección y el acotamiento a 'tareas críticas'."
+  }
+ ]
+}

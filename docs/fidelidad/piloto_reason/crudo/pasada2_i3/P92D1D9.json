@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P92D1D9",
+  "intento": 0,
+  "usd": 0.173116,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36619,
+  "tokens_out": 1332,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P92D1D9\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [198, 569, 582, 5781], \"cita\": \"latent conditions--such as poor design, gaps in supervision, undetected manufacturing defects or maintenance failures, unworkable procedures, clumsy automation, shortfalls in training, less than adequate tools and equipment--may be present for many years before they combine with local circumstances and active failures\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las condiciones latentes, como el mal diseño, pueden persistir muchos años (Nakina: 76 años, construcción de 1916) y pide identificarlas y hacerlas visibles de forma proactiva. 'Décadas' queda respaldado por esos 'many years' y los 76 años. Reason no prescribe auditar el diseño antiguo, pero el paso concreta su recomendación en la misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P92D1D9",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   198,
+   569,
+   582,
+   5781
+  ],
+  "cita": "latent conditions--such as poor design, gaps in supervision, undetected manufacturing defects or maintenance failures, unworkable procedures, clumsy automation, shortfalls in training, less than adequate tools and equipment--may be present for many years before they combine with local circumstances and active failures",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las condiciones latentes, como el mal diseño, pueden persistir muchos años (Nakina: 76 años, construcción de 1916) y pide identificarlas y hacerlas visibles de forma proactiva. 'Décadas' queda respaldado por esos 'many years' y los 76 años. Reason no prescribe auditar el diseño antiguo, pero el paso concreta su recomendación en la misma dirección.",
+  "paso_fiel": ""
+ }
+}

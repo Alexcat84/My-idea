@@ -1,6 +1,6 @@
 {
   "node_id": "heat_maps_eye_tracking",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Heat Maps y Eye Tracking",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -23,5 +23,23 @@
     "Cuando los usuarios visitan el sitio pero no hacen clic en los CTAs esperados",
     "Cuando se sospecha que elementos importantes están mal ubicados en la página"
   ],
-  "etiqueta_arbol": "Ve Dónde Miran tus Usuarios"
+  "etiqueta_arbol": "Ve Dónde Miran tus Usuarios",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-183",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F09-006: Instala heat maps en el funnel de un sitio en marcha y reubica CTAs: es optimizar lo que ya opera. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

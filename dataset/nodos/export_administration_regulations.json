@@ -6,14 +6,14 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Las EAR regulan la exportacion y reexportacion de artículos por razones de seguridad nacional, no proliferacion, politica exterior y escasez. Dependiendo de las caracteristicas técnicas de tu producto, su destino, uso final y usuario final, puede que necesites una licencia de exportacion del BIS (Bureau of Industry and Security) del Departamento de Comercio de EE.UU. Esta mecanica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulacion vigente en tu jurisdiccion antes de actuar.",
   "pasos_accionables": [
-    "Determina la clasificacion de tu producto según el Export Control Classification Number (ECCN)",
-    "Consulta el chart de las EAR para verificar si necesitas licencia según el pais destino",
-    "Verifica el uso final y quien sera el usuario final de tu producto",
-    "Si tienes dudas, solicita una clasificacion de mercancia u opinion consultiva al BIS",
-    "Aplica por la licencia de exportacion si resulta necesaria",
+    "Determina la clasificación de tu producto según el Export Control Classification Number (ECCN)",
+    "Consulta el chart de las EAR para verificar si necesitas licencia según el país destino",
+    "Verifica el uso final y quién será el usuario final de tu producto",
+    "Si tienes dudas, solicita una clasificación de mercancía u opinión consultiva al BIS",
+    "Aplica por la licencia de exportación si resulta necesaria",
     "Contacta a la oficina local del U.S. Commercial Service para que te asesoren"
   ],
-  "entregable_esperado": "Clasificacion ECCN de tu producto y determinacion documentada de si necesitas licencia de exportacion, junto con la licencia obtenida si aplica",
+  "entregable_esperado": "Clasificación ECCN de tu producto y determinación documentada de si necesitas licencia de exportación, junto con la licencia obtenida si aplica",
   "nodos_previos": [
     "exportacion_de_servicios",
     "control_exportaciones_bis"
@@ -38,6 +38,94 @@
       "node_id": "regulaciones_exportacion_ear",
       "titulo": "Regulaciones de Administración de Exportaciones (EAR) y Licencias",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0807",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina la clasificacion de tu producto según el Export Control Classification Number (ECCN)",
+      "texto_nuevo": "Determina la clasificación de tu producto según el Export Control Classification Number (ECCN)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-023.paso0: clasificación ('clasificación' es aguda terminada en n y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0808",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consulta el chart de las EAR para verificar si necesitas licencia según el pais destino",
+      "texto_nuevo": "Consulta el chart de las EAR para verificar si necesitas licencia según el país destino",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-023.paso1: país ('país' lleva tilde para romper el hiato; 'chart' y 'EAR' se dejan intactos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0809",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Verifica el uso final y quien sera el usuario final de tu producto",
+      "texto_nuevo": "Verifica el uso final y quién será el usuario final de tu producto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-023.paso2: quién, será ('quién' es interrogativo indirecto y 'será' es aguda; los dos llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0810",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes dudas, solicita una clasificacion de mercancia u opinion consultiva al BIS",
+      "texto_nuevo": "Si tienes dudas, solicita una clasificación de mercancía u opinión consultiva al BIS",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-023.paso3: clasificación, mercancía, opinión ('clasificación' y 'opinión' son agudas en n, y 'mercancía' lleva tilde por el hiato.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0811",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplica por la licencia de exportacion si resulta necesaria",
+      "texto_nuevo": "Aplica por la licencia de exportación si resulta necesaria",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-023.paso4: exportación ('exportación' es aguda terminada en n y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0812",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasificacion ECCN de tu producto y determinacion documentada de si necesitas licencia de exportacion, junto con la licencia obtenida si aplica",
+      "texto_nuevo": "Clasificación ECCN de tu producto y determinación documentada de si necesitas licencia de exportación, junto con la licencia obtenida si aplica",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-023.entregable: Clasificación, determinación, exportación (Las tres palabras en -ción son agudas terminadas en n y llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

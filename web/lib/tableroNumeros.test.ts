@@ -93,6 +93,19 @@ describe("escenariosFilas: ganancia NETA de fijos, y base solo si hay volumen de
   });
 });
 
+// AUD-09 M43 (tanda 7B, confianza): sin costos fijos, la tabla tomaba los fijos
+// como 0 y pintaba la CONTRIBUCIÓN bajo "Ganancia", que se lee como neta de
+// fijos. KITS sin fijos: capacidad plena 30 ; contribución 30 x 170 = 5100 ; la
+// ganancia neta NO se puede calcular (faltan los fijos): sin cifra, y se dice.
+// Es la misma regla de la palanca de volumen (H12: una sola cifra).
+describe("sin fijos no hay ganancia neta que mostrar (AUD-09 M43)", () => {
+  it("kits sin fijos: la fila no inventa la ganancia y dice qué falta", () => {
+    const t = armarTablero(numeros({ costo_materiales_unidad: 100, horas_por_unidad: 4, valor_hora: 20, precio_tentativo: 350, capacidad_semanal: 7.5 }));
+    const plena = t.escenariosFilas.find((f) => f.nombre === "A capacidad plena");
+    expect(plena).toEqual({ nombre: "A capacidad plena", sub: "30 al mes", ganancia: null, sinCifra: "falta tu gasto fijo del mes" });
+  });
+});
+
 describe("cicloDias: el ciclo de caja aparece y sale de faltantes al darlo", () => {
   const base = { costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38, costos_fijos_mensuales: 200, capacidad_semanal: 5 };
 
@@ -111,5 +124,34 @@ describe("cicloDias: el ciclo de caja aparece y sale de faltantes al darlo", () 
     expect(t.faltantes).not.toContain("dias_inventario");
     expect(t.faltantes).not.toContain("dias_cobro_clientes");
     expect(t.faltantes).not.toContain("dias_pago_proveedores");
+  });
+});
+
+// AUD-09 H12: una sola cifra con una sola fuente. La palanca de volumen
+// redondeaba las unidades hacia arriba (por encima de la capacidad) y calculaba
+// su propia ganancia; la tabla usaba el escenario de capacidad plena. En la
+// misma pantalla: "45 al mes, te quedan $6.450" contra "44 al mes, $6.300".
+import { armarTablero as armarParaH12 } from "./tableroNumeros";
+
+describe("la palanca de volumen y la fila de capacidad plena dicen lo mismo (AUD-09 H12)", () => {
+  it("unidades y ganancia salen del mismo escenario", () => {
+    // A MANO: costo 180 (materiales, sin horas), precio 350 -> margen 170.
+    //   unidades a capacidad plena: 11 por semana × 4 = 44 (nunca más que la capacidad)
+    //   margen del mes: 44 × 170 = 7.480; menos fijos 1.200 = 6.280
+    //   redondeo humano (paso de 50 desde 1.000): 6.300
+    // Antes la palanca daba 45 (44 redondeado a paso de 5) y 45 × 170 − 1.200 = 6.450.
+    const t = armarParaH12({
+      costo_materiales_unidad: { valor: 180, unidad: null, texto_original: "" },
+      horas_por_unidad: { valor: 0, unidad: null, texto_original: "" },
+      valor_hora: { valor: 0, unidad: null, texto_original: "" },
+      precio_tentativo: { valor: 350, unidad: null, texto_original: "" },
+      costos_fijos_mensuales: { valor: 1200, unidad: null, texto_original: "" },
+      capacidad_semanal: { valor: 11, unidad: null, texto_original: "" },
+    } as never);
+    const fila = t.escenariosFilas.find((f) => f.nombre === "A capacidad plena");
+    expect(fila?.sub).toBe("44 al mes");
+    expect(fila?.ganancia).toBe(6300);
+    expect(t.palancas.volumen.meta).toBe(44);
+    expect(t.palancas.volumen.gananciaResultante).toBe(6300);
   });
 });

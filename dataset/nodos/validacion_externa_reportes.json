@@ -1,6 +1,6 @@
 {
   "node_id": "validacion_externa_reportes",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Validación Externa de Reportes de Sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -24,5 +24,23 @@
     "Si la empresa cuenta con recursos para certificación externa",
     "Si se necesita reforzar credibilidad ante escrutinio público intenso"
   ],
-  "etiqueta_arbol": "Valida tus Reportes con Terceros"
+  "etiqueta_arbol": "Valida tus Reportes con Terceros",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-317",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F11-028: Obtener certificacion o respaldo externo de reportes de sostenibilidad de una empresa en marcha es gestion operativa, no prueba de la idea con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "scor_model_operaciones",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Modelo SCOR: Marco de Operaciones de Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
@@ -16,7 +16,6 @@
   ],
   "entregable_esperado": "Mapa de procesos de cadena de suministro clasificado bajo el modelo SCOR con métricas base definidas",
   "nodos_previos": [
-    "lienzo_modelo_negocio",
     "medicion_de_calidad_en_manufactura",
     "metricas_servicio_cliente_bts_bto"
   ],
@@ -29,7 +28,7 @@
     "Cuando la empresa ya tiene operaciones activas y necesita evaluarlas sistemáticamente",
     "Si se busca comparar desempeño contra competidores o estándares de industria",
     "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos",
-    "Si hay problemas recurrentes sin causa raíz identificada"
+    "Si hay problemas recurrentes en la cadena de suministro (abastecimiento, fabricación, entrega o devoluciones) sin causa raíz identificada"
   ],
   "etiqueta_arbol": "Estandariza tu Desempeño Logístico",
   "ids_alias": [
@@ -40,6 +39,51 @@
       "node_id": "framework_scor_plan_source_make_deliver",
       "titulo": "Framework SCOR: Plan, Source, Make, Deliver",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-083",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "lienzo_modelo_negocio -> scor_model_operaciones",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-07-57): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El marco SCOR de operaciones de cadena de suministro no tiene relacion directa con el lienzo de modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-condicion-172",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si hay problemas recurrentes sin causa raíz identificada",
+      "texto_nuevo": "Si hay problemas recurrentes en la cadena de suministro (abastecimiento, fabricación, entrega o devoluciones) sin causa raíz identificada",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q100-021: Tenía razón el lector B: los dos coinciden en que la fase es ejecución porque el nodo mapea, mide y compara operaciones que ya están activas, pero la condición 3 activaría el nodo ante cualquier problema recurrente, y el marco SCOR solo cubre los de la cadena de suministro. (arbitro) Motivo: Es demasiado genérica: activa el nodo ante cualquier problema recurrente, cuando el contenido (mapear Plan, Abastecer, Fabricar, Entregar, Devolver y medir con KPIs SCOR) solo sirve para problemas de la cadena de suministro."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 3
+    },
+    {
+      "id": "n1-fase-173",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q100-021: Tenía razón el lector B: los dos coinciden en que la fase es ejecución porque el nodo mapea, mide y compara operaciones que ya están activas, pero la condición 3 activaría el nodo ante cualquier problema recurrente, y el marco SCOR solo cubre los de la cadena de suministro. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ]
 }

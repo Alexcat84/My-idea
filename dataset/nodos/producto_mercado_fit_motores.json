@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Encajar con tu mercado (product/market fit): mídelo con tu motor de crecimiento",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "El concepto de encajar con el mercado (product/market fit), acuñado por Marc Andreessen, describe el momento en que tu producto conecta con un mercado amplio. Ries propone hacerlo más riguroso: cada motor de crecimiento tiene una métrica concreta que te dice si estás cerca de lograr ese encaje (por ejemplo, un coeficiente viral de 0.9 o más indica que estás cerca del éxito). Pivotar no es un fracaso, y lograr ese encaje no significa que dejes de pivotar. Tienes que mirar la dirección y el ritmo de progreso, no los números que solo se ven bien (vanity metrics), usando el ciclo de construir, medir y aprender.",
+  "resumen_teorico": "El concepto de encajar con el mercado (product/market fit) describe el momento en que tu producto conecta con un mercado amplio. Se puede hacer más riguroso: cada motor de crecimiento tiene una métrica concreta que te dice si estás cerca de lograr ese encaje (por ejemplo, un coeficiente viral de 0.9 o más indica que estás cerca del éxito). Pivotar no es un fracaso, y lograr ese encaje no significa que dejes de pivotar. Tienes que mirar la dirección y el ritmo de progreso, no los números que solo se ven bien (vanity metrics), usando el ciclo de construir, medir y aprender.",
   "pasos_accionables": [
     "Define la métrica concreta de tu motor de crecimiento elegido",
     "Registra cómo cambia esa métrica con el tiempo, no solo su valor en un momento dado",
-    "Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual",
+    "Sugerencia de My Idea: compara también tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual",
     "Usa la contabilidad de la innovación (innovation accounting) para decidir si estás cerca de encajar con el mercado o necesitas pivotar"
   ],
   "entregable_esperado": "Un tablero de seguimiento (dashboard) que muestre la tendencia de tu métrica clave a lo largo de varios períodos",
@@ -26,5 +26,44 @@
     "Cuando te preguntas si ya encajaste con tu mercado",
     "Cuando necesitas decidir entre perseverar o pivotar basándote en tendencias reales, no en números que solo se ven bien"
   ],
-  "etiqueta_arbol": "Mide tu Encaje con Motores"
+  "etiqueta_arbol": "Mide tu Encaje con Motores",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-051",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual",
+      "texto_nuevo": "Sugerencia de My Idea: compara también tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "L2549-L2553",
+        "frase": "What really matters is not the raw numbers or vanity metrics but the direction and degree of progress."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide mirar la direccion y el grado de progreso de tu propia startup ciclo a ciclo; compararlo con otros negocios o referencias del mercado no lo recomienda el libro (el caso A frente a B solo ilustra la tendencia).",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C103-045"
+    },
+    {
+      "id": "atribucion-139",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El concepto de encajar con el mercado (product/market fit), acuñado por Marc Andreessen, describe el momento en que tu producto conecta con un mercado amplio. Ries propone hacerlo más riguroso: cada motor de crecimiento tiene una métrica concreta que te dice si estás cerca de lograr ese encaje (por ejemplo, un coeficiente viral de 0.9 o más indica que estás cerca del éxito). Pivotar no es un fracaso, y lograr ese encaje no significa que dejes de pivotar. Tienes que mirar la dirección y el ritmo de progreso, no los números que solo se ven bien (vanity metrics), usando el ciclo de construir, medir y aprender.",
+      "texto_nuevo": "El concepto de encajar con el mercado (product/market fit) describe el momento en que tu producto conecta con un mercado amplio. Se puede hacer más riguroso: cada motor de crecimiento tiene una métrica concreta que te dice si estás cerca de lograr ese encaje (por ejemplo, un coeficiente viral de 0.9 o más indica que estás cerca del éxito). Pivotar no es un fracaso, y lograr ese encaje no significa que dejes de pivotar. Tienes que mirar la dirección y el ritmo de progreso, no los números que solo se ven bien (vanity metrics), usando el ciclo de construir, medir y aprender.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "acuñado por Marc Andreessen",
+          "Ries propone hacerlo más riguroso"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-023 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ]
 }

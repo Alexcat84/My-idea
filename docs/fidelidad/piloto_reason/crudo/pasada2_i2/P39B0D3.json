@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P39B0D3",
+  "intento": 0,
+  "usd": 0.199688,
+  "turnos": 1,
+  "duracion_s": 8.5,
+  "pared_s": 9.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46947,
+  "tokens_out": 595,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P39B0D3\", \"veredicto\": \"FIEL\", \"lineas\": [4340, 4388], \"cita\": \"Updating of the report following any significant changes. / The presentation of the formal safety assessment should take the form of a Safety Case, which would be updated at regular intervals and on the occurrence of a major change of circumstances.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro exige actualizar el Safety Case tras cualquier cambio significativo (CIMAH) o cambio mayor de circunstancias (Cullen). El paso omite la actualización a intervalos regulares, pero no la contradice: seguirlo no lleva a hacer nada que el libro desaconseje. Es una aplicación parcial, no un contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P39B0D3",
+  "veredicto": "FIEL",
+  "lineas": [
+   4340,
+   4388
+  ],
+  "cita": "Updating of the report following any significant changes. / The presentation of the formal safety assessment should take the form of a Safety Case, which would be updated at regular intervals and on the occurrence of a major change of circumstances.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro exige actualizar el Safety Case tras cualquier cambio significativo (CIMAH) o cambio mayor de circunstancias (Cullen). El paso omite la actualización a intervalos regulares, pero no la contradice: seguirlo no lleva a hacer nada que el libro desaconseje. Es una aplicación parcial, no un contrario.",
+  "paso_fiel": ""
+ }
+}

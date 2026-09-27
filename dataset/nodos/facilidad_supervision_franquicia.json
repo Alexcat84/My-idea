@@ -1,6 +1,6 @@
 {
   "node_id": "facilidad_supervision_franquicia",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Facilidad de Supervisión del Franquiciante",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -21,5 +21,23 @@
   "condiciones_activacion": [
     "Si el franquiciante busca enfocarse en estrategia en lugar de operaciones diarias"
   ],
-  "etiqueta_arbol": "Simplifica tu Supervisión"
+  "etiqueta_arbol": "Simplifica tu Supervisión",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-161",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-012: Disenar el protocolo de supervision por KPIs y el reparto de responsabilidades entre franquiciante y franquiciado es disenar el modelo operativo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

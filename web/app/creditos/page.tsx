@@ -20,9 +20,19 @@
  */
 import Link from "next/link";
 import { mundosVisibles } from "@/lib/catalogoMundos";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CREDITOS } from "@/lib/i18n/mensajes/creditos";
+import { PACKS_RECARGA } from "@/lib/i18n/mensajes/packsRecarga";
+import { rico } from "@/lib/i18n/rico";
+import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { PACKS, PRECIOS } from "@/lib/precios";
+import { apartadoDe } from "@/lib/creditos";
+import { leerSaldo } from "@/lib/saldo";
+import { textoChipSaldo } from "@/lib/textoSaldo";
 import { createClient } from "@/lib/supabase/server";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
 export const dynamic = "force-dynamic";
 
@@ -36,24 +46,24 @@ function Paloma() {
 }
 
 // El costo, siempre a la derecha del nombre (píldora azul).
-function Costo({ cifra }: { cifra: number }) {
+function Costo({ cifra, etiqueta }: { cifra: number; etiqueta: string }) {
   return (
     <span className="inline-flex flex-none items-center gap-1.5 rounded-full border border-accent/35 bg-accent/[0.22] px-2.5 py-1">
       <strong className="text-[14px] font-extrabold tabular-nums text-ink">{cifra}</strong>
-      <span className="text-[11.5px] font-semibold text-[#BFD0F5]">créditos</span>
+      <span className="text-[11.5px] font-semibold text-[#BFD0F5]">{etiqueta}</span>
     </span>
   );
 }
 
-// Una línea de "lo que incluye": prefijo en negrita + resto.
-function Incluye({ items }: { items: [string, string][] }) {
+// Una línea de "lo que incluye": prefijo en negrita (<b> del catálogo) + resto.
+function Incluye({ items }: { items: string[] }) {
   return (
     <div className="flex flex-col gap-2.5 pt-1">
-      {items.map(([fuerte, resto]) => (
-        <div key={fuerte} className="flex items-start gap-2.5">
+      {items.map((item) => (
+        <div key={item} className="flex items-start gap-2.5">
           <Paloma />
           <span className="text-[13px] leading-relaxed text-[#E2E6F0] [text-wrap:pretty]">
-            <strong className="font-semibold text-ink">{fuerte}</strong> {resto}
+            {rico(item, { b: (c) => <strong className="font-semibold text-ink">{c}</strong> })}
           </span>
         </div>
       ))}
@@ -61,20 +71,9 @@ function Incluye({ items }: { items: [string, string][] }) {
   );
 }
 
-const INCLUYE_PLAN: [string, string][] = [
-  ["El plan:", "tus etapas, con sus entregables, tus tareas y tus fechas de un vistazo."],
-  ["Manos a la obra:", "ejecuta tu plan. Marca lo hecho, añade tus notas y ve tu avance en tiempo real. Incluido, siempre."],
-  ["Tus Números:", "el tablero de tu idea (margen, punto de equilibrio, escenarios). Corrige cifras y recalcula cuando quieras."],
-  ["Tus documentos:", "tu plan y cada resumen, en archivo y PDF, para leer o guardar."],
-  ["Tu bitácora:", "la historia de tu viaje, cada decisión, guardada en orden."],
-];
-
-const INCLUYE_MUNDO: [string, string][] = [
-  ["Su plan y su Manos a la obra:", "las etapas, tareas y fechas de ese frente, listas para ejecutar igual que tu viaje."],
-  ["Todo lo del mundo, por separado:", "su avance, sus documentos y su bitácora, solo de ese frente."],
-  ["Y suma al general:", "cada mundo se refleja también en la vista completa de tu proyecto. Ves el frente solo, o el panorama entero."],
-  ["Un mismo proyecto:", "no es otra cuenta ni otra idea."],
-];
+// Lo que incluye cada plan vive en el catálogo (CREDITOS.incluyePlan e
+// incluyeMundo). AUD-09 M47: la vista global que se prometía en el del mundo
+// ya no existe (BANCO §7.1); la única lectura de la idea entera es el Expediente.
 
 // Estilo de cada escalón de recarga (calco de los cuatro del diseño).
 function estiloRecarga(i: number, destacado: boolean) {
@@ -111,30 +110,47 @@ function estiloRecarga(i: number, destacado: boolean) {
 }
 
 export default async function Creditos() {
+  const idioma = await idiomaDeCookies();
+  const t = elegir(CREDITOS, idioma);
+  const tPacks = elegir(PACKS_RECARGA, idioma);
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   const cuentaReal = Boolean(user && !esInvitadoInvisible(user));
-  let saldo = 0;
-  if (cuentaReal) {
-    const { data: cuenta } = await supabase.from("credit_accounts").select("creditos_total").maybeSingle();
-    saldo = (cuenta as { creditos_total: number } | null)?.creditos_total ?? 0;
+  // AUD-09 M21: lectura única; si falla, null y se dice (nunca un 0 falso).
+  let saldo: number | null = 0;
+  if (cuentaReal) saldo = await leerSaldo(supabase);
+  // AUD-09 M31: lo reservado por una sesión en curso (M25). La barra dice lo
+  // disponible; el héroe, el saldo y cuánto está reservado. Si las reservas no
+  // se leen, no se inventa un disponible.
+  let reservados: number | null = 0;
+  if (cuentaReal && user && saldo !== null) {
+    try {
+      reservados = await apartadoDe(user.id);
+    } catch (e) {
+      console.error("[creditos] no se pudieron leer las reservas:", e);
+      reservados = null;
+    }
   }
+  const textoSaldo = saldo !== null && reservados !== null ? textoChipSaldo(Math.max(0, saldo - reservados), reservados, idioma) : null;
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
       {/* Barra: dónde estoy y cuánto tengo */}
       <header className="sticky top-0 z-30 flex h-[58px] items-center gap-3 border-b border-hairline px-5 sm:px-6" style={{ background: "rgba(0,0,0,0.82)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
         <Link href="/ideas" className="text-[13px] text-dim hover:text-ink">
-          Mis ideas /
+          {t.misIdeas}
         </Link>
-        <span className="text-[14.5px] font-semibold">Créditos</span>
+        <span className="text-[14.5px] font-semibold">{t.titulo}</span>
         <span className="flex-1" />
         <div className="flex items-center gap-2 rounded-full border border-accent/35 bg-accent/[0.08] px-3 py-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          <span className="text-[12.5px] font-semibold tabular-nums text-[#DCE7FF]">{saldo} créditos</span>
+          <span className="text-[12.5px] font-semibold tabular-nums text-[#DCE7FF]">
+            {textoSaldo ? interpolar(t.disponibles, { saldo: textoSaldo.principal }) : t.saldoNoDisponible}
+          </span>
         </div>
+        <SelectorIdioma compacto />
       </header>
 
       <main className="mx-auto flex w-full max-w-[1180px] flex-1 flex-col gap-12 px-4 py-10 sm:px-8">
@@ -147,46 +163,47 @@ export default async function Creditos() {
                 "linear-gradient(135deg, rgba(77,124,254,0.14) 0%, rgba(77,124,254,0.03) 55%, rgba(255,255,255,0.01) 100%)",
             }}
           >
-            <div className="text-[11px] font-bold uppercase tracking-[1.6px] text-[#8FB0FF]">Tu saldo</div>
-            <div className="flex items-baseline gap-3">
-              <span className="text-[84px] font-extrabold leading-[0.85] tracking-[-0.04em] tabular-nums sm:text-[96px]">
-                {saldo}
-              </span>
-              <span className="text-[18px] text-dim">créditos</span>
-            </div>
+            <div className="text-[11px] font-bold uppercase tracking-[1.6px] text-[#8FB0FF]">{t.heroe.tuSaldo}</div>
+            {saldo === null ? (
+              <p className="max-w-xs text-[15px] text-warn">{t.heroe.noPudeLeer}</p>
+            ) : (
+              <div className="flex items-baseline gap-3">
+                <span className="text-[84px] font-extrabold leading-[0.85] tracking-[-0.04em] tabular-nums sm:text-[96px]">
+                  {saldo}
+                </span>
+                <span className="text-[18px] text-dim">{t.creditos}</span>
+              </div>
+            )}
+            {textoSaldo?.reservados && <p className="text-[13px] text-dim">{textoSaldo.reservados}</p>}
           </div>
           <p className="mt-4 max-w-md text-center text-[12.5px] leading-relaxed text-dim">
             {cuentaReal
-              ? "Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra nada."
-              : "Tus créditos viven en tu cuenta. Entra o crea la tuya para sumar y usar créditos."}
+              ? t.heroe.garantiaCuenta
+              : t.heroe.sinCuenta}
           </p>
         </section>
 
         {/* ── SUMAR CRÉDITOS: las cuatro recargas (provisional) ───────────── */}
         <section className="anima-plan-in flex flex-col items-center gap-6" style={{ animationDelay: "0.05s" }}>
-          <h2 className="text-center text-[22px] font-bold tracking-tight">Sumar créditos</h2>
+          <h2 className="text-center text-[22px] font-bold tracking-tight">{t.sumar.titulo}</h2>
           <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PACKS.map((pack, i) => {
               const s = estiloRecarga(i, Boolean(pack.destacado));
               return (
                 <article
-                  key={pack.nombre}
+                  key={pack.clave}
                   className={`flex flex-col items-center gap-4 rounded-panel border p-6 text-center ${s.caja}`}
                   style={{ background: s.fondo }}
                 >
-                  {pack.destacado && (
-                    <span className="absolute -top-2.5 left-1/2 flex h-[22px] -translate-x-1/2 items-center rounded-full bg-accent px-3 text-[11px] font-extrabold text-[#04102C]">
-                      El más elegido
-                    </span>
-                  )}
+                  {/* AUD-09 B03a: sin la chapa de "más elegido" (ningún dato la respalda). */}
                   <span
                     className={`flex h-[54px] w-[54px] items-center justify-center rounded-full border text-[20px] font-extrabold tabular-nums ${s.ficha}`}
                   >
                     {pack.creditos}
                   </span>
                   <span className="flex flex-col gap-1">
-                    <span className="text-[15px] font-semibold">{pack.nombre}</span>
-                    <span className={`text-[12.5px] ${s.cantidad}`}>{pack.creditos} créditos</span>
+                    <span className="text-[15px] font-semibold">{tPacks[pack.clave].nombre}</span>
+                    <span className={`text-[12.5px] ${s.cantidad}`}>{interpolar(t.sumar.nCreditos, { n: pack.creditos })}</span>
                   </span>
                   <span className="text-[30px] font-extrabold leading-none tracking-[-0.025em] tabular-nums">
                     ${pack.usd}
@@ -196,7 +213,7 @@ export default async function Creditos() {
                     disabled
                     className="mt-1 flex w-full cursor-not-allowed items-center justify-center rounded-[11px] border border-hairline py-2.5 text-[12.5px] font-semibold text-dim/70"
                   >
-                    La compra se abre pronto
+                    {t.sumar.compraPronto}
                   </button>
                 </article>
               );
@@ -206,12 +223,13 @@ export default async function Creditos() {
 
         {/* ── USA TUS CRÉDITOS: lo gratis, luego los tres planes ──────────── */}
         <section className="anima-plan-in flex flex-col items-center gap-6 border-t border-hairline pt-10" style={{ animationDelay: "0.1s" }}>
-          <h2 className="text-center text-[22px] font-bold tracking-tight">Usa tus créditos según lo que necesites</h2>
+          <h2 className="text-center text-[22px] font-bold tracking-tight">{t.usar.titulo}</h2>
 
           <p className="max-w-3xl text-center text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">
-            <strong className="text-ink">La Claridad</strong> es <strong className="text-done">gratis</strong>: tu idea
-            ordenada, la frase, lo que tienes y lo que asumes. El <strong className="text-ink">diagnóstico de un mundo</strong>{" "}
-            también es <strong className="text-done">gratis</strong>: el primer vistazo de ese frente.
+            {rico(t.usar.gratis, {
+              b: (c) => <strong className="text-ink">{c}</strong>,
+              g: (c) => <strong className="text-done">{c}</strong>,
+            })}
           </p>
 
           <div className="grid w-full grid-cols-1 items-start gap-4 lg:grid-cols-3">
@@ -221,28 +239,27 @@ export default async function Creditos() {
               style={{ background: "linear-gradient(180deg, rgba(77,124,254,0.09) 0%, rgba(77,124,254,0.02) 100%)" }}
             >
               <span className="inline-flex self-start items-center rounded-full bg-accent/20 px-2.5 py-1 text-[11px] font-bold text-[#DCE7FF]">
-                Tu proyecto
+                {t.proyecto.etiqueta}
               </span>
 
               <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[16px] font-bold">Tu Plan</span>
-                  <Costo cifra={PRECIOS.plan_completo} />
+                  <span className="text-[16px] font-bold">{t.proyecto.plan}</span>
+                  <Costo cifra={PRECIOS.plan_completo} etiqueta={t.creditos} />
                 </div>
                 <span className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-                  Tu viaje completo, de la idea a hacerla realidad: el plan y todo para llevarlo a cabo.
+                  {t.proyecto.planTexto}
                 </span>
-                <Incluye items={INCLUYE_PLAN} />
+                <Incluye items={t.incluyePlan} />
               </div>
 
               <div className="flex flex-col gap-3 border-t border-hairline pt-4">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[16px] font-bold">Un cambio de rumbo</span>
-                  <Costo cifra={PRECIOS.seguimiento} />
+                  <span className="text-[16px] font-bold">{t.proyecto.cambioRumbo}</span>
+                  <Costo cifra={PRECIOS.seguimiento} etiqueta={t.creditos} />
                 </div>
                 <span className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-                  Cuando la realidad te mueve el plan y necesitas replantear sin empezar de cero: cuentas qué pasó, se
-                  conserva lo que ya lograste y tu viaje se rehace desde ahí.
+                  {t.proyecto.cambioRumboTexto}
                 </span>
               </div>
             </article>
@@ -253,28 +270,27 @@ export default async function Creditos() {
               style={{ background: "linear-gradient(180deg, rgba(77,124,254,0.09) 0%, rgba(77,124,254,0.02) 100%)" }}
             >
               <span className="inline-flex self-start items-center rounded-full bg-accent/20 px-2.5 py-1 text-[11px] font-bold text-[#DCE7FF]">
-                Un mundo
+                {t.mundo.etiqueta}
               </span>
 
               <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[16px] font-bold">El plan de un mundo</span>
-                  <Costo cifra={PRECIOS.mundo_activar} />
+                  <span className="text-[16px] font-bold">{t.mundo.plan}</span>
+                  <Costo cifra={PRECIOS.mundo_activar} etiqueta={t.creditos} />
                 </div>
                 <span className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-                  Un frente entero de tu negocio (calidad, riesgos, seguridad…), con su propio espacio dentro de tu mismo
-                  proyecto.
+                  {t.mundo.planTexto}
                 </span>
-                <Incluye items={INCLUYE_MUNDO} />
+                <Incluye items={t.incluyeMundo} />
               </div>
 
               <div className="flex flex-col gap-3 border-t border-hairline pt-4">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[16px] font-bold">Un cambio de rumbo en un mundo</span>
-                  <Costo cifra={PRECIOS.mundo_seguimiento} />
+                  <span className="text-[16px] font-bold">{t.mundo.cambioRumbo}</span>
+                  <Costo cifra={PRECIOS.mundo_seguimiento} etiqueta={t.creditos} />
                 </div>
                 <span className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-                  Lo mismo dentro de ese frente, cuando ahí necesitas replantear el rumbo.
+                  {t.mundo.cambioRumboTexto}
                 </span>
               </div>
             </article>
@@ -285,11 +301,11 @@ export default async function Creditos() {
               style={{ background: "linear-gradient(180deg, rgba(77,124,254,0.09) 0%, rgba(77,124,254,0.02) 100%)" }}
             >
               <span className="inline-flex self-start items-center rounded-full bg-accent/20 px-2.5 py-1 text-[11px] font-bold text-[#DCE7FF]">
-                Los mundos que puedes desbloquear
+                {t.mundosPorDesbloquear}
               </span>
 
               <div className="flex flex-col gap-3.5">
-                {mundosVisibles().map((mundo) => (
+                {mundosVisibles(false, idioma).map((mundo) => (
                   <div key={mundo.clave} className="flex flex-col gap-0.5">
                     <span className="text-[13.5px] font-bold text-ink">{mundo.nombre}</span>
                     <span className="text-[12.5px] leading-snug text-dim [text-wrap:pretty]">{mundo.promesa}</span>

@@ -193,7 +193,7 @@ const MUNDO: AnalyticsMundo = {
 };
 
 describe("construirBloqueRealidadMundo — habla del MUNDO, no del proyecto", () => {
-  const b = construirBloqueRealidadMundo(MUNDO, base(), "Calidad y Confianza")!;
+  const b = construirBloqueRealidadMundo(MUNDO, base(), "Calidad y Confianza", "fechas")!;
 
   it("se presenta con el nombre humano del mundo", () => {
     expect(b).toContain("Mi realidad medida en «Calidad y Confianza»");
@@ -241,9 +241,27 @@ describe("construirBloqueRealidadMundo — habla del MUNDO, no del proyecto", ()
   });
 });
 
+// AUD-09 M10 (tanda 5, mezcla núcleo y mundos): el bloque de un MUNDO leía el
+// modo del NÚCLEO. Cada espacio tiene su modo (project_modos, T3): con el núcleo
+// "a mi ritmo" y el mundo "con fechas", el motor recibía "Elegí llevar esto a mi
+// ritmo" y perdía el cumplimiento del mundo; al revés, lo juzgaba contra fechas
+// que el usuario abandonó.
+describe("construirBloqueRealidadMundo usa el modo DEL MUNDO (AUD-09 M10)", () => {
+  it("núcleo a mi ritmo, mundo con fechas: juzga el mundo contra sus fechas", () => {
+    const b = construirBloqueRealidadMundo(MUNDO, base({ modoCamino: "ritmo" }), "Calidad y Confianza", "fechas")!;
+    expect(b).toContain("a tiempo");
+    expect(b).not.toContain("Elegí llevar esto a mi ritmo");
+  });
+  it("núcleo con fechas, mundo a mi ritmo: no juzga el mundo contra fechas", () => {
+    const b = construirBloqueRealidadMundo(MUNDO, base({ modoCamino: "fechas" }), "Calidad y Confianza", "ritmo")!;
+    expect(b).toContain("Elegí llevar esto a mi ritmo");
+    expect(b).not.toContain("desviación");
+  });
+});
+
 describe("construirBloqueRealidadMundo — bordes", () => {
   it("en modo a mi ritmo NO juzga el mundo contra fechas", () => {
-    const b = construirBloqueRealidadMundo(MUNDO, base({ modoCamino: "ritmo" }), "Calidad y Confianza")!;
+    const b = construirBloqueRealidadMundo(MUNDO, base({ modoCamino: "ritmo" }), "Calidad y Confianza", "ritmo")!;
     expect(b).toContain("0.9 acciones por semana");
     expect(b).toContain("Elegí llevar esto a mi ritmo");
     expect(b).not.toContain("a tiempo");
@@ -253,7 +271,7 @@ describe("construirBloqueRealidadMundo — bordes", () => {
 
   it("mundo sin fechas propias: ritmo sí, cumplimiento no", () => {
     const sinFechas = { ...MUNDO, cumplimiento: null };
-    const b = construirBloqueRealidadMundo(sinFechas, base(), "Calidad y Confianza")!;
+    const b = construirBloqueRealidadMundo(sinFechas, base(), "Calidad y Confianza", "fechas")!;
     expect(b).toContain("4 de 9 acciones de este mundo");
     expect(b).not.toContain("a tiempo");
   });
@@ -264,6 +282,6 @@ describe("construirBloqueRealidadMundo — bordes", () => {
       universal: { ...MUNDO.universal, accionesHechas: 0, planVigenteAt: null, diasSinAvance: null },
       cumplimiento: null,
     };
-    expect(construirBloqueRealidadMundo(vacio, base(), "Calidad y Confianza")).toBeNull();
+    expect(construirBloqueRealidadMundo(vacio, base(), "Calidad y Confianza", "fechas")).toBeNull();
   });
 });

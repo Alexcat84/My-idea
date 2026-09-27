@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_047",
+  "intento": 0,
+  "usd": 0.172328,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 18.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34077,
+  "tokens_out": 1801,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P83934F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5742, 5740, 5748, 263, 271, 293], \"razon\": \"Coincide con L5742. Matiz: Reason llama 'altamente especulativos' esos valores y pide un 'término medio' que no descuide lo psicológico/proximal. Priorizar podría excluir niveles.\"},\n  {\"id\": \"P3114FB\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Tipos Generales de Fallo (GFTs)\"], \"clase\": \"FIEL\", \"lineas\": [3784, 3782], \"razon\": \"L3784: las precondiciones son producto de fallos latentes identificables y se identifican los GFTs asociados. Coincide con el paso.\"},\n  {\"id\": \"P13167E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2224, 2250, 2259], \"razon\": \"L2250: identificar de antemano los pasos más vulnerables contando sus rasgos provocadores de omisión. El paso los etiqueta como 'críticos', que es una concreción operativa.\"},\n  {\"id\": \"PF4ACB1\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"entrenamiento recurrente\", \"escenarios de fallo simulado\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [852, 856], \"razon\": \"El libro pide práctica continua y mayor inversión en entrenamiento (L852, L856). No menciona simulación de fallos ni programas recurrentes: es un método añadido, aunque va en la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P83934F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5742,
+    5740,
+    5748,
+    263,
+    271,
+    293
+   ],
+   "razon": "Coincide con L5742. Matiz: Reason llama 'altamente especulativos' esos valores y pide un 'término medio' que no descuide lo psicológico/proximal. Priorizar podría excluir niveles."
+  },
+  {
+   "id": "P3114FB",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Tipos Generales de Fallo (GFTs)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    3782
+   ],
+   "razon": "L3784: las precondiciones son producto de fallos latentes identificables y se identifican los GFTs asociados. Coincide con el paso."
+  },
+  {
+   "id": "P13167E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2224,
+    2250,
+    2259
+   ],
+   "razon": "L2250: identificar de antemano los pasos más vulnerables contando sus rasgos provocadores de omisión. El paso los etiqueta como 'críticos', que es una concreción operativa."
+  },
+  {
+   "id": "PF4ACB1",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "entrenamiento recurrente",
+    "escenarios de fallo simulado"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    852,
+    856
+   ],
+   "razon": "El libro pide práctica continua y mayor inversión en entrenamiento (L852, L856). No menciona simulación de fallos ni programas recurrentes: es un método añadido, aunque va en la misma dirección."
+  }
+ ]
+}

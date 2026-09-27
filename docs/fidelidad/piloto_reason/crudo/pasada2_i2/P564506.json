@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P564506",
+  "intento": 0,
+  "usd": 0.202444,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46626,
+  "tokens_out": 797,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P564506\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [478, 494, 504, 526, 4757], \"cita\": \"This breached one of the basic principles of the securities business which was to keep the settlements and trading activities strictly separate. … expressed some concern at the lack of segregation between BFS’s front (trading) and back (settlement) offices. … regular proactive checks on the system’s vital signs\", \"datos_sin_respaldo\": [], \"razon\": \"El libro condena el rol dual. Presenta la falta de segregación, detectada por la auditoría interna, como una señal de alarma. También describe la confusión sobre el puesto real de Leeson y recomienda comprobaciones proactivas regulares. 'Periódicamente' no fija ninguna frecuencia concreta. En Barings falló actuar sobre lo detectado, no la auditoría, así que el paso no contradice al libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P564506",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   478,
+   494,
+   504,
+   526,
+   4757
+  ],
+  "cita": "This breached one of the basic principles of the securities business which was to keep the settlements and trading activities strictly separate. … expressed some concern at the lack of segregation between BFS’s front (trading) and back (settlement) offices. … regular proactive checks on the system’s vital signs",
+  "datos_sin_respaldo": [],
+  "razon": "El libro condena el rol dual. Presenta la falta de segregación, detectada por la auditoría interna, como una señal de alarma. También describe la confusión sobre el puesto real de Leeson y recomienda comprobaciones proactivas regulares. 'Periódicamente' no fija ninguna frecuencia concreta. En Barings falló actuar sobre lo detectado, no la auditoría, así que el paso no contradice al libro.",
+  "paso_fiel": ""
+ }
+}

@@ -1,6 +1,6 @@
 {
   "node_id": "retention_metrics",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Métricas de Retención",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -24,7 +24,6 @@
     "estrategia_crecimiento_clientes",
     "factores_valoracion_startup",
     "experiencia_del_cliente_proactiva",
-    "lienzo_modelo_negocio",
     "valor_de_vida_del_cliente"
   ],
   "condiciones_activacion": [
@@ -41,6 +40,37 @@
       "node_id": "customer_retention_metrics_webmobile",
       "titulo": "Monitoreo de Métricas de Retención Web/Mobile",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-113",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "retention_metrics -> lienzo_modelo_negocio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-07-67): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: las metricas de retencion miden clientes de un negocio en marcha; no preparan el diseno del lienzo, en todo caso vendrian despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-280",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F02-028: Con una base de usuarios activa, montar un tablero de retencion y medir campanas es controlar y mejorar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ]
 }

@@ -53,6 +53,22 @@ interface EnlaceCrudo {
 
 /** Parsea el array JSON del enlazador. Robusto a fences y a prosa alrededor;
  * ignora lo que no tenga la forma mínima (no lo arregla, lo deja fuera). */
+/**
+ * AUD-09 M15: los NODOS de lo que protege una respuesta, copiados de la tarea
+ * del núcleo al nacer el enlace (su nodos_origen). Con ellos la protección se
+ * resuelve contra el plan vigente cuando el núcleo abre otro ciclo con ids
+ * nuevos. null = sistémica, protegido sin nodos (plan anterior a la 037) o
+ * ausente: se resolverá solo por id. Pura.
+ */
+export function nodosDeLoProtegido(
+  protegeItem: string | null,
+  filasNucleo: ReadonlyArray<{ id: string; nodos_origen?: string[] | null }>
+): string[] | null {
+  if (!protegeItem) return null;
+  const nodos = filasNucleo.find((f) => f.id === protegeItem)?.nodos_origen ?? null;
+  return nodos && nodos.length > 0 ? [...nodos] : null;
+}
+
 export function parsearEnlaces(texto: string): EnlaceCrudo[] {
   const m = texto.match(/\[[\s\S]*\]/);
   if (!m) return [];

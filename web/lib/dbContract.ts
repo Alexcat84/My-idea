@@ -13,8 +13,19 @@
 export const SESSIONS_TIPO = ["gratuito", "inicial", "seguimiento", "reporte"] as const;
 export type SessionTipo = (typeof SESSIONS_TIPO)[number];
 
-export const PLANS_ETIQUETA = ["organizador", "inicial", "completo", "seguimiento", "reporte_numeros"] as const;
+export const PLANS_ETIQUETA = ["organizador", "inicial", "completo", "seguimiento", "reporte_numeros", "replanteamiento"] as const;
 export type PlanEtiqueta = (typeof PLANS_ETIQUETA)[number];
+
+/** Los planes que son un CICLO del viaje (el primero y cada ciclo posterior).
+ * Ciclo de replanteamiento, Fase 2 (migración 047): 'seguimiento' es
+ * "Profundizar mi plan" y 'replanteamiento' es "Replantear mi camino". Toda
+ * lista de etiquetas de ciclo sale de aquí, no se reteclea. */
+export const ETIQUETAS_CICLO: readonly string[] = ["inicial", "completo", "seguimiento", "replanteamiento"] satisfies readonly PlanEtiqueta[];
+
+/** ¿Es un ciclo POSTERIOR al primer plan (profundización o replanteamiento)? */
+export function esCicloPosterior(etiqueta: string | null | undefined): boolean {
+  return etiqueta === "seguimiento" || etiqueta === "replanteamiento";
+}
 
 /** project_nodes.tipo: cobertura del nodo. 'salto' (migration 012) es un
  * subtipo documentado de 'conversado' -- llegada por salto semantico con
@@ -64,6 +75,18 @@ export type ChecklistEstado = (typeof CHECKLIST_ESTADO)[number];
  * denominador honesto en toda superficie. */
 export const ESTADOS_ACTIVOS = CHECKLIST_ESTADO.filter((e) => e !== "no_aplica");
 export const esActivo = (estado: ChecklistEstado) => estado !== "no_aplica";
+
+/** AUD-09 M01: la cuenta honesta ÚNICA del avance (BANCO §5, "X de N activas").
+ * El denominador son las ACTIVAS; las retiradas (no_aplica) salen del avance y
+ * se cuentan aparte. La usan el encabezado, los chips, /ideas y Manos a la Obra. */
+export function cuentaHonesta(items: ReadonlyArray<{ estado: string }>): { hechos: number; total: number; retiradas: number } {
+  const activas = items.filter((i) => i.estado !== "no_aplica");
+  return {
+    hechos: activas.filter((i) => i.estado === "hecho").length,
+    total: activas.length,
+    retiradas: items.length - activas.length,
+  };
+}
 
 /** Dominios válidos de sessions/plans/checklist_items (Fase 3.5, migration
  * 016): core + packs. Sin fila en project_unlocks, un dominio de pack no

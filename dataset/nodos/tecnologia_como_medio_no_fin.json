@@ -23,11 +23,30 @@
     "estrategia_innovacion_producto"
   ],
   "nodos_siguientes": [
-    "producto_unico_superior"
+    "producto_unico_superior",
+    "cloud_computing_supply_chain"
   ],
   "condiciones_activacion": [
     "Cuando estás por adoptar una nueva tecnología o un sistema de gestión",
     "Cuando sientes la presión de modernizar sin tener claro para qué"
   ],
-  "etiqueta_arbol": "Usa la Tecnología con Propósito"
+  "etiqueta_arbol": "Usa la Tecnología con Propósito",
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-02",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "tecnologia_como_medio_no_fin -> cloud_computing_supply_chain",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-02, lectores de acuerdo): raiz de 6 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tras asumir que la tecnología solo vale si sirve al cliente a costo razonable, el paso natural es conocer la nube como la infraestructura que hace asequibles las demás tecnologías de la cadena."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

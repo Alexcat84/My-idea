@@ -1,0 +1,63 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_098",
+  "intento": 0,
+  "usd": 0.15358,
+  "turnos": 1,
+  "duracion_s": 10.8,
+  "pared_s": 13.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34040,
+  "tokens_out": 871,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P37698F\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4695], \"razon\": \"El libro dice que las conversiones dramáticas tras un accidente suelen ser efímeras. La cultura surge gradualmente de medidas prácticas persistentes.\"},\n{\"id\": \"PD29853\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4989, 5057, 5085, 5266], \"razon\": \"El libro pide principios acordados y un enfoque consistente. Pero asigna el juicio a una junta disciplinaria y a un 'jurado' de pares, no solo a supervisores y gestores. Matiz dudoso.\"},\n{\"id\": \"P020C21\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5639, 5701, 580, 277], \"razon\": \"El libro dice que las condiciones latentes son un riesgo universal, aplicable también a bancos y finanzas, y que surgen en presupuestos y gestión. Excluirlas invierte esto.\"},\n{\"id\": \"P48ED84\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3690, 3692], \"razon\": \"El diagrama de influencia se desarrolla mediante discusión estructurada con un grupo de expertos del dominio, guiados por un facilitador.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P37698F",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4695
+   ],
+   "razon": "El libro dice que las conversiones dramáticas tras un accidente suelen ser efímeras. La cultura surge gradualmente de medidas prácticas persistentes."
+  },
+  {
+   "id": "PD29853",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4989,
+    5057,
+    5085,
+    5266
+   ],
+   "razon": "El libro pide principios acordados y un enfoque consistente. Pero asigna el juicio a una junta disciplinaria y a un 'jurado' de pares, no solo a supervisores y gestores. Matiz dudoso."
+  },
+  {
+   "id": "P020C21",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5639,
+    5701,
+    580,
+    277
+   ],
+   "razon": "El libro dice que las condiciones latentes son un riesgo universal, aplicable también a bancos y finanzas, y que surgen en presupuestos y gestión. Excluirlas invierte esto."
+  },
+  {
+   "id": "P48ED84",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3690,
+    3692
+   ],
+   "razon": "El diagrama de influencia se desarrolla mediante discusión estructurada con un grupo de expertos del dominio, guiados por un facilitador."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC78276",
+  "intento": 0,
+  "usd": 0.164156,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36369,
+  "tokens_out": 934,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC78276\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [65, 67, 77], \"cita\": \"In an ideal world, the level of protection should match the hazards of the productive operations--the parity zone. [...] Thus, low-hazard ventures will require less protection per productive unit than will high-hazard ventures.\", \"datos_sin_respaldo\": [\"al menos el 8% del presupuesto operativo\"], \"razon\": \"El libro pide que la protección se ajuste al peligro: las operaciones de alto peligro necesitan más protección por unidad y deben operar por encima de la zona de paridad. No da ningún porcentaje. Como el paso fija un mínimo ('al menos') y no un techo, no contradice esa dirección. Solo añade una cifra sin respaldo.\", \"paso_fiel\": \"Dimensionar los recursos de protección según la peligrosidad de cada operación productiva, de modo que las líneas de alto peligro reciban más protección por unidad producida y operen por encima de la zona de paridad.\"}\n```",
+ "parseado": {
+  "id": "PC78276",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   65,
+   67,
+   77
+  ],
+  "cita": "In an ideal world, the level of protection should match the hazards of the productive operations--the parity zone. [...] Thus, low-hazard ventures will require less protection per productive unit than will high-hazard ventures.",
+  "datos_sin_respaldo": [
+   "al menos el 8% del presupuesto operativo"
+  ],
+  "razon": "El libro pide que la protección se ajuste al peligro: las operaciones de alto peligro necesitan más protección por unidad y deben operar por encima de la zona de paridad. No da ningún porcentaje. Como el paso fija un mínimo ('al menos') y no un techo, no contradice esa dirección. Solo añade una cifra sin respaldo.",
+  "paso_fiel": "Dimensionar los recursos de protección según la peligrosidad de cada operación productiva, de modo que las líneas de alto peligro reciban más protección por unidad producida y operen por encima de la zona de paridad."
+ }
+}

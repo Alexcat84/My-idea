@@ -4,18 +4,18 @@
   "dominio": "core",
   "titulo_concepto": "Del Producto Vendido al Servicio de Acceso",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podria entregarse como acceso a un servicio. No se contesta con una opinion. Se evalua si el producto se puede reformular asi, se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta), y se prueba con un piloto que mida uso y retencion en vez de unidades vendidas. Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribucion y la recoleccion que la venta de propiedad no tenia.",
+  "resumen_teorico": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podria entregarse como acceso a un servicio. No se contesta con una opinion. Se evalua si el producto se puede reformular asi y se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta). Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribucion y la recoleccion que la venta de propiedad no tenia.",
   "pasos_accionables": [
     "Evaluar si tu producto podría transformarse en un modelo de acceso/servicio en lugar de venta de propiedad",
     "Identificar barreras de adopción específicas (confianza, disponibilidad, conveniencia, costo)",
-    "Diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención",
+    "Sugerencia de My Idea: diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención",
     "Analizar el impacto en la cadena de suministro (ej: necesidad de mantenimiento, redistribución, recolección)",
     "Analizar si tu producto puede reformularse como acceso a un servicio en lugar de venta de un bien",
     "Identificar barreras de adopción del cliente (propiedad vs. renta, confianza, disponibilidad)",
     "Diseñar las tres interfaces de usuario: humano-computadora, humano-máquina y humano-humano",
     "Evaluar el modelo desde la óptica de economía circular (cerrar, ralentizar, intensificar, reducir o desmaterializar ciclos)"
   ],
-  "entregable_esperado": "La evaluacion de tu producto como servicio de acceso, con las barreras de adopcion identificadas, el piloto disenado con sus metricas de uso y retencion, y el impacto medido sobre tu cadena de suministro",
+  "entregable_esperado": "La evaluación de tu producto como servicio de acceso, con las barreras de adopción identificadas, el piloto diseñado con sus métricas de uso y retención, y el impacto medido sobre tu cadena de suministro",
   "nodos_previos": [
     "transicion_producto_a_experiencia"
   ],
@@ -24,5 +24,56 @@
     "Cuando te preguntas si tu producto se vende mejor como acceso o suscripcion que como propiedad",
     "Antes de comprometer la cadena de suministro a un modelo de acceso, porque el mantenimiento, la redistribucion y la recoleccion no estaban en el de venta"
   ],
-  "etiqueta_arbol": "Evalua Vender Acceso"
+  "etiqueta_arbol": "Evalua Vender Acceso",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-030",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención",
+      "texto_nuevo": "Sugerencia de My Idea: diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L463-L491",
+        "frase": "it has sparked new sharing economy and Product-as-a-Service business models"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro describe la servitizacion pero no propone un piloto ni metricas de uso y retencion; buscado retention, retain y pilot sin hallarlo para este caso.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C091-082"
+    },
+    {
+      "id": "fidelidad-t8-031",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podria entregarse como acceso a un servicio. No se contesta con una opinion. Se evalua si el producto se puede reformular asi, se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta), y se prueba con un piloto que mida uso y retencion en vez de unidades vendidas. Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribucion y la recoleccion que la venta de propiedad no tenia.",
+      "texto_nuevo": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podria entregarse como acceso a un servicio. No se contesta con una opinion. Se evalua si el producto se puede reformular asi y se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta). Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribucion y la recoleccion que la venta de propiedad no tenia.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L463-L491",
+        "frase": "it has sparked new sharing economy and Product-as-a-Service business models"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el piloto de Product-as-a-Service con métricas de uso y retención, que el libro no propone; al ser ANADIDO práctico (Sugerencia de My Idea en el paso 2), se quita del resumen teórico. El entregable y el resto de pasos se dejan.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C091-082"
+    },
+    {
+      "id": "n1-orto-0590",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La evaluacion de tu producto como servicio de acceso, con las barreras de adopcion identificadas, el piloto disenado con sus metricas de uso y retencion, y el impacto medido sobre tu cadena de suministro",
+      "texto_nuevo": "La evaluación de tu producto como servicio de acceso, con las barreras de adopción identificadas, el piloto diseñado con sus métricas de uso y retención, y el impacto medido sobre tu cadena de suministro",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-037.entregable: evaluación, adopción, diseñado, métricas, retención (Corrige tildes y la eñe de diseñado; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ]
 }

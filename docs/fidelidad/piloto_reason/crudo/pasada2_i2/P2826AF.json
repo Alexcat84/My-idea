@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P2826AF",
+  "intento": 0,
+  "usd": 0.216836,
+  "turnos": 1,
+  "duracion_s": 17.9,
+  "pared_s": 19.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45469,
+  "tokens_out": 1748,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2826AF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4987, 4989, 4765, 5063], \"cita\": \"unreasonably reckless, negligent or even malevolent behaviour of particular individuals. The difficulty lies in discriminating between these few truly ‘bad behaviours’ and the vast majority of unsafe acts … A prerequisite for engineering a just culture is an agreed set of principles for drawing the line between acceptable and unacceptable actions.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro exige trazar con claridad la línea entre lo aceptable y lo inaceptable. Agrupa lo negligente y lo malévolo entre las pocas malas conductas reales. La zona gris de L5063 matiza cómo aplicar la línea, pero no la contradice. Ponerla por escrito concreta los principios acordados sin añadir datos. Hay sospecha de contrario, pero es infundada.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2826AF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4987,
+   4989,
+   4765,
+   5063
+  ],
+  "cita": "unreasonably reckless, negligent or even malevolent behaviour of particular individuals. The difficulty lies in discriminating between these few truly ‘bad behaviours’ and the vast majority of unsafe acts … A prerequisite for engineering a just culture is an agreed set of principles for drawing the line between acceptable and unacceptable actions.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro exige trazar con claridad la línea entre lo aceptable y lo inaceptable. Agrupa lo negligente y lo malévolo entre las pocas malas conductas reales. La zona gris de L5063 matiza cómo aplicar la línea, pero no la contradice. Ponerla por escrito concreta los principios acordados sin añadir datos. Hay sospecha de contrario, pero es infundada.",
+  "paso_fiel": ""
+ }
+}

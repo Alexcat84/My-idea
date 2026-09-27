@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Cuánto te va a costar terminar (Estimación al Completar o EAC)",
+  "resumen": "Pronóstico del costo total del proyecto al terminar, calculado a partir del desempeño de costo y cronograma hasta la fecha, con la justificación del método elegido.",
+  "texto": "Si esperas que el CPI se mantenga igual el resto del proyecto, calcula el EAC como AC + (BAC - EV)",
+  "tipo": "CONTRARIO",
+  "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+  "lineas": "L5094",
+  "cita": "If the CPI is expected to remain the same for the remainder of the project: EAC = BAC / CPI",
+  "explicacion": "El libro dice que, si el CPI se mantiene igual el resto del proyecto, el EAC es BAC / CPI. El paso usa en ese mismo caso AC + (BAC - EV), la fórmula que supone que el trabajo restante se hará al ritmo presupuestado. Es decir, justo la condición contraria."
+ },
+ {
+  "titulo": "Aceptación Formal de Entregables",
+  "resumen": "Documentación de la aceptación de los entregables por el cliente o el patrocinador, tras verificar su corrección y validar que cumplen los criterios de aceptación acordados.",
+  "texto": "Solicitar la firma de aceptación solo al cierre del proyecto completo, no sobre entregables parciales",
+  "tipo": "CONTRARIO",
+  "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+  "lineas": "L5249",
+  "cita": "Formal Acceptance can be done periodically throughout the project, as with partial or interim deliverables, or for the project as a whole.",
+  "explicacion": "El libro dice que la aceptación formal puede hacerse de forma periódica a lo largo del proyecto, también sobre entregables parciales o intermedios. El paso limita la aceptación al cierre y excluye expresamente los entregables parciales."
+ },
+ {
+  "titulo": "Registro de Supuestos y Restricciones",
+  "resumen": "Registro de los supuestos y las restricciones del proyecto, con su categoría, su responsable, la fecha límite de validación, las acciones y el estado de cada ítem.",
+  "texto": "Revisar el registro cada dos semanas para validar los supuestos que siguen activos",
+  "tipo": "ANADIDO",
+  "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+  "lineas": "L1097-L1099",
+  "cita": "Due date The date by which the assumption needs to be validated.",
+  "dato": "Frecuencia de revisión del registro de supuestos: cada dos semanas",
+  "explicacion": "El libro pide un responsable y una fecha límite para validar cada supuesto (L1097-L1099), pero no fija ninguna frecuencia de revisión del registro. Un Grep en todo el texto no encuentra 'two weeks', 'biweekly', 'every other week', 'fortnight' ni '14 days'. La única aparición de 'weekly' (L2939) habla de histogramas de recursos."
+ },
+ {
+  "titulo": "Criterios para Elegir a tus Proveedores (Source Selection Criteria)",
+  "resumen": "Conjunto de criterios ponderados para calificar las propuestas de los proveedores y elegir al que obtenga el puntaje total más alto.",
+  "texto": "Reparte la importancia entre esos puntos hasta que sumen el 100%, sin que el precio pase del 30%",
+  "tipo": "ANADIDO",
+  "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+  "lineas": "L3579",
+  "cita": "2. A weight is assigned to each criterion. The sum of all the criteria must equal 100 percent.",
+  "dato": "Tope del 30% para el peso del criterio de precio",
+  "explicacion": "El libro solo exige que los pesos de todos los criterios sumen el 100% (L3579, y lo repite en L3637). Menciona el precio como criterio habitual (L3603), pero no le pone ningún peso máximo. Un Grep de '30%', '30 percent' y 'thirty percent' no da resultados. Las únicas apariciones de '30' son un plazo de 30 días (L2698) y el rango de probabilidad 20-40% (L3109)."
+ }
+]

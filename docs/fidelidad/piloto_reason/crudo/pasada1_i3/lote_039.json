@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_039",
+  "intento": 0,
+  "usd": 0.1659,
+  "turnos": 1,
+  "duracion_s": 19.3,
+  "pared_s": 20.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32860,
+  "tokens_out": 1723,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB08D27\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5894, 5896], \"razon\": \"El libro afirma que las organizaciones preparadas para crisis vinculan estrechamente los planes de crisis con los de recuperación del negocio.\"},\n  {\"id\": \"P1C7808\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [417, 419, 421, 453], \"razon\": \"El libro dice que línea y base requieren paquetes distintos, con fichas breves en línea. Exigir documentación completa en toda tarea generaliza, y L421 señala que los manuales son difíciles de usar.\"},\n  {\"id\": \"PEF7A3F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [423, 451, 1914, 4027, 459], \"razon\": \"Coincide con la falta de procedimiento de traspaso línea-base. Pero L423 lo matiza (traspasos raros) y L459 anuncia que el cap. 3 cuestiona cambiar procedimientos como respuesta.\"},\n  {\"id\": \"PDB2725\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3722, 3724], \"razon\": \"El libro suma las probabilidades incondicionales, pero solo de los factores de influencia inmediatos. El paso omite esa condición y podría llevar a sumar todos los nodos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB08D27",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5894,
+    5896
+   ],
+   "razon": "El libro afirma que las organizaciones preparadas para crisis vinculan estrechamente los planes de crisis con los de recuperación del negocio."
+  },
+  {
+   "id": "P1C7808",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    417,
+    419,
+    421,
+    453
+   ],
+   "razon": "El libro dice que línea y base requieren paquetes distintos, con fichas breves en línea. Exigir documentación completa en toda tarea generaliza, y L421 señala que los manuales son difíciles de usar."
+  },
+  {
+   "id": "PEF7A3F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    423,
+    451,
+    1914,
+    4027,
+    459
+   ],
+   "razon": "Coincide con la falta de procedimiento de traspaso línea-base. Pero L423 lo matiza (traspasos raros) y L459 anuncia que el cap. 3 cuestiona cambiar procedimientos como respuesta."
+  },
+  {
+   "id": "PDB2725",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3722,
+    3724
+   ],
+   "razon": "El libro suma las probabilidades incondicionales, pero solo de los factores de influencia inmediatos. El paso omite esa condición y podría llevar a sumar todos los nodos."
+  }
+ ]
+}

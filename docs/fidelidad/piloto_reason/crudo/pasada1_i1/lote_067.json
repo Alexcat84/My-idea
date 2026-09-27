@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_067",
+  "intento": 0,
+  "usd": 0.161964,
+  "turnos": 1,
+  "duracion_s": 14.1,
+  "pared_s": 15.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34521,
+  "tokens_out": 1194,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD08C40\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [2520, 2535, 2547, 2568, 2598, 2658], \"razon\": \"El libro pide fijar la posicion actual. El paso omite que requiere medidas de proceso proactivas: los accidentes revelan poco sobre la posicion (L2547). Riesgo de evaluar con resultados.\"},\n  {\"id\": \"P29C227\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5234, 2583, 4777, 4695, 2748], \"razon\": \"El libro advierte que contar componentes no basta: la cultura es mas que la suma (L5234) y critica el tick-off (L2583). Unos indicadores tipo checklist pueden chocar con esto.\"},\n  {\"id\": \"P7D20FF\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3395, 3547, 3549], \"razon\": \"HEART asigna a cada tipo de tarea generica una probabilidad nominal de error (Tabla 7.2). El punto de partida es encajar la actividad en un tipo.\"},\n  {\"id\": \"P24AA32\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [852, 856], \"razon\": \"Bainbridge: las habilidades se pierden sin practica y los sistemas automatizados mas exitosos requieren mas inversion en entrenamiento. La simulacion de fallos es una extension coherente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD08C40",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    2520,
+    2535,
+    2547,
+    2568,
+    2598,
+    2658
+   ],
+   "razon": "El libro pide fijar la posicion actual. El paso omite que requiere medidas de proceso proactivas: los accidentes revelan poco sobre la posicion (L2547). Riesgo de evaluar con resultados."
+  },
+  {
+   "id": "P29C227",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5234,
+    2583,
+    4777,
+    4695,
+    2748
+   ],
+   "razon": "El libro advierte que contar componentes no basta: la cultura es mas que la suma (L5234) y critica el tick-off (L2583). Unos indicadores tipo checklist pueden chocar con esto."
+  },
+  {
+   "id": "P7D20FF",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3395,
+    3547,
+    3549
+   ],
+   "razon": "HEART asigna a cada tipo de tarea generica una probabilidad nominal de error (Tabla 7.2). El punto de partida es encajar la actividad en un tipo."
+  },
+  {
+   "id": "P24AA32",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    852,
+    856
+   ],
+   "razon": "Bainbridge: las habilidades se pierden sin practica y los sistemas automatizados mas exitosos requieren mas inversion en entrenamiento. La simulacion de fallos es una extension coherente."
+  }
+ ]
+}

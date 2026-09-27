@@ -1,6 +1,6 @@
 {
   "node_id": "metodologia_evaluacion_entrenamiento_ventas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Las tres pruebas para saber si un método de ventas realmente funciona (test 1-2-3)",
   "fuente": "SPIN Selling - Neil Rackham",
@@ -29,5 +29,23 @@
     "Cuando quieras medir si una capacitación comercial realmente da resultados",
     "Si tienes dudas sobre si un método de ventas de verdad funciona"
   ],
-  "etiqueta_arbol": "Valida tu Método de Ventas"
+  "etiqueta_arbol": "Valida tu Método de Ventas",
+  "fuentes_internas": [
+    "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-222",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F05-015: Mide con un grupo de control si la capacitación del equipo comercial propio mejora las ventas, lo que es controlar y mejorar la operación y no validar con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

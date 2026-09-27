@@ -1,6 +1,6 @@
 {
   "node_id": "seleccion_representante_extranjero",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "exportacion",
   "titulo_concepto": "Checklist para Seleccionar un Representante o Distribuidor Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -32,5 +32,23 @@
     "Si estás evaluando varios candidatos para representar tu producto en el extranjero",
     "Si no tienes un método estructurado para elegir socios comerciales"
   ],
-  "etiqueta_arbol": "Evalúa a tu Representante Extranjero"
+  "etiqueta_arbol": "Evalúa a tu Representante Extranjero",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-294",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F28-020: Elegir un representante o distribuidor extranjero es decidir socios y recursos para la estrategia de exportación, no probar la idea en el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

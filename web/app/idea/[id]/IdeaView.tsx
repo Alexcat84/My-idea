@@ -32,29 +32,48 @@ import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
-import { PRECIOS } from "@/lib/precios";
+import { mensajeAdopcionPendiente } from "@/lib/constants";
+import { cuentaHonesta, esCicloPosterior } from "@/lib/dbContract";
+import { estadoEspacio } from "@/lib/esperaEspacio";
+import { finDeEntrevista } from "@/lib/finDeEntrevista";
+import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
+import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
+import { urlSinParametro } from "@/lib/urlSinParametro";
+import { avisoPrecioExploracion } from "@/lib/avisoExploracion";
+import { etapaDeIdea } from "@/lib/etapaIdea";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { mundo as mundoDe, nombreDeMundo } from "@/lib/catalogoMundos";
 import type { CapacidadSemanal, ChecklistEstado } from "@/lib/dbContract";
 import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { idiomaDeDocumentos } from "@/lib/i18n/idiomaDocumento";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
+import { IDEA_VIEW } from "@/lib/i18n/mensajes/ideaView";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
-const NOTA_SILENCIOSO = "cubierto por lo que contaste";
-const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
-/** Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre. Esto es la red
- * por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así, la
- * pantalla habla. Jamás muda. */
-const MENSAJE_CIERRE_RESPALDO =
-  "Hasta aquí puedo acompañarte por este camino. Tu idea queda guardada tal como está.";
+// i18n F2: la nota de los nodos silenciosos (t.notaSilencioso) y el mensaje de
+// respaldo del cierre (t.cierreRespaldo) viven en el catálogo de la vista.
+// Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre; el respaldo es la
+// red por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así,
+// la pantalla habla. Jamás muda.
+/** AUD-09 H09: la carga del checklist no espera para siempre. */
+const LIMITE_CHECKLIST_MS = 20_000;
 
 interface DetalleIdea {
   idea: {
     id: string;
     nombre: string;
     entrada_original: string;
+    /** i18n F6 (D2): el idioma del proyecto (projects.idioma, 046). null en
+     * una idea de antes de F5: se lee como español (idiomaDelProyecto). */
+    idioma?: string | null;
     modo_camino?: "ritmo" | "fechas" | null;
     /** "Todo separado" (T3c): el modo POR ESPACIO (mapa dominio→modo). El core
      * también viene en modo_camino (dual-read); aquí el core y cada mundo. */
@@ -64,9 +83,11 @@ interface DetalleIdea {
     realizada_at?: string | null;
     /** Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto. */
     created_at?: string | null;
+    exploracion_at?: string | null;
   };
   organizador: { contenido_md: string; created_at?: string | null } | null;
-  plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+  /** AUD-09 H02: aviso del plan armado sin IA (null si fue redactado). */
+  plan: { etiqueta: string; contenido_md: string; created_at: string; aviso?: string | null; session_id?: string } | null;
   reporte: { contenido_md: string; created_at: string } | null;
   reporte_en_curso: { pregunta: string } | null;
   entrevista: {
@@ -74,7 +95,9 @@ interface DetalleIdea {
     pregunta: string | null;
     listo_para_plan: boolean;
     dominio?: string;
-    ruta: Array<{ id: string; etiqueta: string; modo: string }>;
+    /** AUD-09 H01: el tipo de la sesión decide qué ofrece el final y a qué precio. */
+    es_seguimiento?: boolean;
+    ruta: Array<{ id: string; etiqueta: string; avisos?: string[]; modo: string }>;
     /** El recorrido conversado ya guardado: se repinta al reentrar. */
     turnos?: Array<{ pregunta: string; respuesta: string }>;
   } | null;
@@ -92,7 +115,12 @@ interface DetalleIdea {
     resumen_md?: string | null;
     resumen_at?: string | null;
     plan_pagado_at?: string | null;
-    plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+    /** AUD-09 (migración 039): la marca del plan básico (no es sello de pago). */
+    plan_basico_at?: string | null;
+    plan: { etiqueta: string; contenido_md: string; created_at: string; session_id?: string } | null;
+    /** Ciclo de replanteamiento, Fase 2: los planes anteriores del mundo, con la
+     * misma forma que `historial` (hechas y relato). Opcional. */
+    historial?: PlanHistorial[];
   }>;
   historial?: PlanHistorial[];
 }
@@ -102,6 +130,8 @@ interface NodoNuevo {
   /** La etiqueta_arbol: lo ÚNICO que el servidor manda para nombrar un tema.
    * El nombre técnico del concepto se queda adentro (decisión del fundador). */
   etiqueta: string;
+  /** Los avisos del nodo (jurisdiccion y vigencia), ya en el idioma de la interfaz. */
+  avisos?: string[];
   modo: string;
 }
 
@@ -125,24 +155,24 @@ interface QA {
   respuesta: string;
 }
 
-function nodoArbolDesdeRuta(n: { id: string; etiqueta: string; modo: string }, idx: number): NodoArbol {
+function nodoArbolDesdeRuta(
+  n: { id: string; etiqueta: string; modo: string },
+  idx: number,
+  notaSilencioso: string
+): NodoArbol {
   return {
     id: `${idx}-${n.id}`,
     label: n.etiqueta,
     atenuado: n.modo === "silencioso",
     salto: n.modo === "salto",
-    nota: n.modo === "silencioso" ? NOTA_SILENCIOSO : undefined,
+    nota: n.modo === "silencioso" ? notaSilencioso : undefined,
   };
 }
 
-const NOMBRE_MUNDO = Object.fromEntries(
-  (catalogo as { packs: Array<{ clave: string; nombre: string; promesa: string }> }).packs.map((p) => [
-    p.clave,
-    { nombre: p.nombre, promesa: p.promesa },
-  ])
-);
-
 export function IdeaView({ projectId }: { projectId: string }) {
+  const idioma = useIdioma();
+  const t = elegir(IDEA_VIEW, idioma);
+  const tc = elegir(CLARIDAD, idioma);
   const router = useRouter();
   const searchParams = useSearchParams();
   const quiereEntrevista = searchParams.get("entrevista") === "1";
@@ -175,11 +205,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // AUD-09 M31: el chip del saldo se vuelve a pedir cuando esta vista cambia el
+  // saldo (al empezar una sesión aparta; al entregarse el plan cobra).
+  const [versionSaldo, setVersionSaldo] = useState(0);
+  const avisarSaldo = () => setVersionSaldo((v) => v + 1);
 
   // --- entrevista ---
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [pregunta, setPregunta] = useState<string | null>(null);
   const [cintillo, setCintillo] = useState<string | null>(null);
+  const [avisosCintillo, setAvisosCintillo] = useState<string[]>([]);
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
   /** Fase 4.3 §2: el cierre honesto en pantalla (null = no hubo cierre). */
@@ -200,15 +235,32 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
   const contadorNodos = useRef(0);
   const [dominioEntrevista, setDominioEntrevista] = useState<string>("core");
+  // AUD-09 H01: el espacio Y el tipo de la sesión deciden el final de la
+  // entrevista (plan o diagnóstico) y su precio, con la misma regla del cobro.
+  const [esSeguimientoEntrevista, setEsSeguimientoEntrevista] = useState(false);
+  const fin = finDeEntrevista(dominioEntrevista, esSeguimientoEntrevista);
 
   // --- plan ---
   const [generandoPlan, setGenerandoPlan] = useState(false);
   const [etiquetaEtapa, setEtiquetaEtapa] = useState<string | undefined>();
   const [planMd, setPlanMd] = useState<string | null>(null);
+  // AUD-09 H02: el plan armado sin IA llega con su aviso honesto (no se cobró).
+  const [avisoPlan, setAvisoPlan] = useState<string | null>(null);
+  // AUD-09: la sesión del plan a la vista y si es de seguimiento, para
+  // regenerarlo si es básico (sesión nueva; se cobra solo si la IA entrega).
+  const [planSesionId, setPlanSesionId] = useState<string | null>(null);
+  const [planEsSeguimiento, setPlanEsSeguimiento] = useState(false);
   // Fix (retry del stream del plan): si la redaccion muere tras los reintentos
   // del servidor, se guarda con que reintentarla. La sesion y el recorrido YA
   // estan persistidos: reintentar re-lanza SOLO la redaccion, nunca la entrevista.
-  const [planFallido, setPlanFallido] = useState<{ sid: string; contexto?: string } | null>(null);
+  // Ciclo de replanteamiento: el reintento lleva también el espacio y el camino
+  // elegido, para que la redacción repetida sea la misma que falló.
+  const [planFallido, setPlanFallido] = useState<{
+    sid: string;
+    contexto?: string;
+    destino?: { dominio: string; esSeguimiento: boolean };
+    camino?: string;
+  } | null>(null);
   const arrancoRef = useRef(false);
   // true desde que el usuario pide el plan de la sesion actual: los turnos
   // tardios de esa sesion ya no reabren la entrevista (carrera C0 bis).
@@ -245,23 +297,36 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
+  // AUD-09 H09: la carga del checklist tiene tiempo límite y, si falla, deja un
+  // mensaje con reintento. Antes se tragaba el fallo y la vista se quedaba en
+  // "Cargando tu espacio…" para siempre.
+  const [errorChecklist, setErrorChecklist] = useState<string | null>(null);
   const cargarChecklist = useCallback(async () => {
+    setErrorChecklist(null);
+    const control = new AbortController();
+    const limite = setTimeout(() => control.abort(), LIMITE_CHECKLIST_MS);
     try {
-      const res = await fetch(`/api/project/${projectId}/checklist`);
+      const res = await fetch(`/api/project/${projectId}/checklist`, { signal: control.signal });
       if (res.ok) setChecklist((await res.json()) as ChecklistData);
+      else setErrorChecklist((await leerRechazo(res, idioma)).mensaje);
     } catch {
-      /* el checklist es progresivo: sin él, la vista Manos avisa sola */
+      setErrorChecklist(t.errores.cargarEspacio);
+    } finally {
+      clearTimeout(limite);
     }
-  }, [projectId]);
+  }, [projectId, t, idioma]);
 
   function agregarNodos(nuevos: NodoNuevo[] | undefined) {
     if (!nuevos?.length) return;
     setNodos((prev) => [
       ...prev,
-      ...nuevos.map((n) => nodoArbolDesdeRuta(n, contadorNodos.current++)),
+      ...nuevos.map((n) => nodoArbolDesdeRuta(n, contadorNodos.current++, t.notaSilencioso)),
     ]);
     const conversado = [...nuevos].reverse().find((n) => n.modo !== "silencioso");
-    if (conversado) setCintillo(conversado.etiqueta);
+    if (conversado) {
+      setCintillo(conversado.etiqueta);
+      setAvisosCintillo(conversado.avisos ?? []);
+    }
   }
 
   function procesarTurno(data: RespuestaTurno) {
@@ -297,11 +362,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setCierre({
         tipo: c?.tipo ?? (salio.dominio ? "mundo" : "camino"),
         titulo: c?.titulo ?? null,
-        cuerpo: c?.cuerpo ?? data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
+        cuerpo: c?.cuerpo ?? data.mensaje ?? t.cierreRespaldo,
         porque: c?.porque ?? null,
         creditosDevueltos: data.creditos_devueltos ?? null,
       });
     }
+  }
+
+  /** AUD-09 H03: el rechazo del servidor llega tal cual (saldo, doble factor,
+   * texto largo, fusible, límites). El genérico solo si no dio razón. Con el
+   * doble factor pendiente, se abre el desafío y se vuelve a `volverA`. */
+  async function mostrarRechazo(res: Response, volverA: string) {
+    const r = await leerRechazo(res, idioma);
+    setError(r.mensaje);
+    if (r.tipo === "segundo_factor") void irAlDesafio(volverA);
   }
 
   /** Canon 12: "Explorar otro ángulo" tras un cierre de camino core: relanza
@@ -320,11 +394,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
         router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
         return;
       }
-      if (inicio.status === 429) setError(((await inicio.json()) as { error: string }).error);
-      else if (!inicio.ok) setError(ERROR_GENERICO);
-      else procesarTurno((await inicio.json()) as RespuestaTurno);
+      if (!inicio.ok) await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
+      else {
+        procesarTurno((await inicio.json()) as RespuestaTurno);
+        avisarSaldo();
+      }
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.sinConexion);
     } finally {
       setEnviando(false);
     }
@@ -332,19 +408,36 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   /** Fase 4.5: re-lee el detalle sin tocar el resto del estado (para refrescar
    * mundos tras un diagnóstico o una compra). */
-  async function refrescarDetalle() {
+  async function refrescarDetalle(): Promise<DetalleIdea | null> {
     try {
       const res = await fetch(`/api/idea/${projectId}`);
-      if (res.ok) setDetalle((await res.json()) as DetalleIdea);
+      if (!res.ok) return null;
+      const d = (await res.json()) as DetalleIdea;
+      setDetalle(d);
+      return d;
     } catch {
-      /* silencioso: el refresco es cortesía, no la acción principal */
+      /* el refresco es cortesía, no la acción principal */
+      return null;
     }
+  }
+
+  /** AUD-09 M13: tras entregarse el plan de un MUNDO, la vista del núcleo vuelve
+   * a su propio plan (recargado) y el usuario aterriza en el espacio del mundo,
+   * donde vive ese plan. Antes el plan del mundo ocupaba el lugar de "Tu Plan". */
+  async function volverAlMundo(dominio: string) {
+    const det = await refrescarDetalle();
+    setPlanMd(det?.plan?.contenido_md ?? null);
+    setAvisoPlan(det?.plan?.aviso ?? null);
+    setPlanSesionId(det?.plan?.session_id ?? null);
+    setPlanEsSeguimiento(esCicloPosterior(det?.plan?.etiqueta));
+    void cargarChecklist();
+    irAMundo(dominio);
   }
 
   /** Fase 4.5: la entrevista del preview terminó. Se redacta el diagnóstico
    * (gratis, Sonnet) y el escaparate vive en la sección del mundo en Manos. */
   async function verDiagnostico() {
-    if (!sessionId || dominioEntrevista === "core") return;
+    if (!sessionId || !fin.esDiagnostico) return;
     setEnviando(true);
     setError(null);
     try {
@@ -355,7 +448,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       });
       const data = (await res.json()) as { error?: string };
       if (!res.ok) {
-        setError(data.error ?? ERROR_GENERICO);
+        setError(data.error ?? errorGenerico(idioma));
         return;
       }
       // El escaparate queda persistido: salir de la entrevista, refrescar los
@@ -367,26 +460,72 @@ export function IdeaView({ projectId }: { projectId: string }) {
       await refrescarDetalle();
       irAManos();
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.sinConexion);
     } finally {
       setEnviando(false);
     }
   }
 
   /** Fase 4.5: la COMPRA. Genera el plan del mundo DESDE la sesión del preview
-   * (sin re-entrevistar) y refresca los mundos al terminar. El cobro (3
-   * créditos) vive en la entrega, dentro de la ruta del plan (ancla ETAPA 2). */
+   * (sin re-entrevistar) y refresca los mundos al terminar. El cobro
+   * (PRECIOS.mundo_activar) vive en la entrega, dentro de la ruta del plan. */
   async function comprarPlanMundo(dominio: string, sid: string) {
     setVistaManos(false);
     setVistaMundo(false);
     setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(false);
+    const planPrevio = planMd;
     setPlanMd(null);
-    await generarPlan(sid);
-    await refrescarDetalle();
+    const r = await generarPlan(sid, undefined, { dominio, esSeguimiento: false });
+    if (r === "rechazado") {
+      // AUD-09 H03: sin saldo (u otro rechazo con razón) la compra no ocurre:
+      // el plan del núcleo vuelve a su lugar y se regresa al espacio del mundo.
+      setListoParaPlan(false);
+      setPlanMd(planPrevio);
+      setVistaMundo(true);
+    }
+    // Entregado: volverAlMundo (dentro de generarPlan) ya recargó el plan del
+    // núcleo y llevó al espacio del mundo (AUD-09 M13).
+  }
+
+  /** AUD-09 (decisión del fundador, 25 sep 2026): regenerar un plan básico.
+   * El servidor prepara una SESIÓN NUEVA con presupuesto completo desde el
+   * perfil ya capturado (sin repetir la entrevista); el plan sale por la ruta
+   * de siempre, que cobra solo si la IA entrega. El plan nuevo pasa a vigente
+   * y el básico queda archivado con sus tareas. */
+  async function regenerarPlan(sid: string, dominio: string, esSeguimiento: boolean) {
+    setError(null);
+    setEnviando(true);
+    let nueva: string | null = null;
+    try {
+      const res = await fetch(`/api/session/${sid}/regenerar`, { method: "POST" });
+      if (!res.ok) {
+        await mostrarRechazo(res, `/idea/${projectId}`);
+        return;
+      }
+      nueva = ((await res.json()) as { session_id: string }).session_id;
+      avisarSaldo();
+    } catch {
+      setError(t.errores.sinConexion);
+      return;
+    } finally {
+      setEnviando(false);
+    }
+    const planPrevio = planMd;
+    setVistaManos(false);
+    setVistaMundo(false);
+    setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(esSeguimiento);
+    setSessionId(nueva);
+    setPlanMd(null);
+    const r = await generarPlan(nueva, undefined, { dominio, esSeguimiento });
+    if (r === "rechazado") setPlanMd(planPrevio);
+    else if (dominio === "core") await refrescarDetalle();
   }
 
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
-  function entrarASesionNueva(data: RespuestaTurno, dominio: string) {
+  function entrarASesionNueva(data: RespuestaTurno, dominio: string, esSeguimiento: boolean) {
+    avisarSaldo();
     setCierre(null);
     setNodos([]);
     contadorNodos.current = 0;
@@ -399,13 +538,68 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaManos(false);
     setVistaMundo(false);
     setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(esSeguimiento);
     planPedidoRef.current = false;
     procesarTurno(data);
   }
 
+  /** Ciclo de replanteamiento, Fase 2: "Replantear mi camino" terminó (POST
+   * replantear creó la sesión, apartó el precio y la persona eligió un camino).
+   * Se prepara la vista como al entrar a una sesión nueva de seguimiento del
+   * espacio, pero SIN entrevista: se va directo a redactar el plan con el
+   * camino. El SSE, el cobro y la pantalla de "generando" son los de siempre. */
+  async function replanteamientoListo(sid: string, dominio: string, caminoId: string) {
+    avisarSaldo();
+    setError(null);
+    setCierre(null);
+    setNodos([]);
+    contadorNodos.current = 0;
+    setRecorrido([]);
+    setListoParaPlan(false);
+    setTemasPendientes(null);
+    setTarjetaContextoFinal(false);
+    setContextoFinal("");
+    setPregunta(null);
+    const planPrevio = planMd;
+    setPlanMd(null);
+    setVistaManos(false);
+    setVistaMundo(false);
+    setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(true);
+    setSessionId(sid);
+    planPedidoRef.current = false;
+    const r = await generarPlan(sid, undefined, { dominio, esSeguimiento: true }, caminoId);
+    if (r === "rechazado") {
+      // El rechazo ya se dijo (mostrarRechazo). No hay entrevista a la que
+      // volver: se regresa al espacio con el plan de antes en su lugar, y no
+      // se deja abierta la oferta de la entrevista (que no llevaría el camino).
+      setListoParaPlan(false);
+      setPlanMd(planPrevio);
+      if (dominio === "core") irAManos();
+      else irAMundo(dominio);
+    } else if (dominio === "core") {
+      // La Historia (el plan anterior con su relato y sus hechas) se relee.
+      await refrescarDetalle();
+    }
+    // Mundo entregado: volverAlMundo (dentro de generarPlan) ya recargó y llevó
+    // al espacio del mundo.
+  }
+
   const generarPlan = useCallback(
-    async (sid: string, contextoExtra?: string) => {
-      if (generandoPlan) return;
+    async (
+      sid: string,
+      contextoExtra?: string,
+      // AUD-09 M13: el espacio del plan viaja explícito. Quien llama justo
+      // después de cambiar el estado vería el valor viejo del closure.
+      destino?: { dominio: string; esSeguimiento: boolean },
+      // Ciclo de replanteamiento, Fase 2: el camino elegido en "Replantear mi
+      // camino". La ruta del plan lo toma como el recorrido de la sesión.
+      camino?: string
+    ): Promise<"rechazado" | "entregado_o_fallido" | "ocupado"> => {
+      if (generandoPlan) return "ocupado";
+      const dominioPlan = destino?.dominio ?? dominioEntrevista;
+      const esSeguimientoPlan = destino?.esSeguimiento ?? esSeguimientoEntrevista;
+      let entregadoEnMundo = false;
       planPedidoRef.current = true;
       setGenerandoPlan(true);
       setPregunta(null);
@@ -417,18 +611,26 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setListoParaPlan(false);
       setError(null);
       setPlanFallido(null);
+      setAvisoPlan(null);
       try {
         // Phase 3.7.2: el contexto final opcional viaja al redactor.
         const res = await fetch(`/api/session/${sid}/plan`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(contextoExtra ? { contexto_final: contextoExtra } : {}),
+          body: JSON.stringify({
+            ...(contextoExtra ? { contexto_final: contextoExtra } : {}),
+            ...(camino ? { camino } : {}),
+          }),
         });
         if (!res.ok || !res.body) {
-          setError(ERROR_GENERICO);
+          // AUD-09 H03: el rechazo (saldo, doble factor) se dice tal cual, y la
+          // oferta del plan vuelve: la entrevista ya hecha no se pierde detrás
+          // de la Claridad ni se reabre otra exploración.
+          await mostrarRechazo(res, `/idea/${projectId}`);
           setGenerandoPlan(false);
+          setListoParaPlan(true);
           planPedidoRef.current = false;
-          return;
+          return "rechazado" as const;
         }
         // Árbol de etapas: cada encabezado "## " que llega por el stream
         // REAL enciende un punto (regla de oro: cero teatro).
@@ -456,28 +658,39 @@ export function IdeaView({ projectId }: { projectId: string }) {
               setNodos((prev) => [...prev, { id: `etapa-${prev.length}`, label: titulo }]);
             }
           } else if (evento === "done") {
-            const d = data as { markdown: string };
-            setPlanMd(d.markdown);
-            // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
-            void cargarChecklist();
+            avisarSaldo();
+            const d = data as { markdown: string; aviso?: string | null; session_id?: string };
+            if (dominioPlan === "core") {
+              setPlanMd(d.markdown);
+              setAvisoPlan(d.aviso ?? null);
+              setPlanSesionId(d.session_id ?? null);
+              setPlanEsSeguimiento(esSeguimientoPlan);
+              // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
+              void cargarChecklist();
+            } else {
+              entregadoEnMundo = true;
+            }
           } else if (evento === "error") {
-            setError(
-              "no pudimos terminar de escribir tu plan; lo que contaste está guardado, así que no hay que repetir nada"
-            );
-            setPlanFallido({ sid, contexto: contextoExtra });
+            setError(t.errores.planSinTerminar);
+            setPlanFallido({ sid, contexto: contextoExtra, destino, camino });
             planPedidoRef.current = false;
           }
         });
       } catch {
-        setError("la conexión se cortó mientras armábamos tu plan; tu recorrido quedó guardado");
-        setPlanFallido({ sid, contexto: contextoExtra });
+        setError(t.errores.planConexionCortada);
+        setPlanFallido({ sid, contexto: contextoExtra, destino, camino });
         planPedidoRef.current = false;
       } finally {
         setGenerandoPlan(false);
         setEtiquetaEtapa(undefined);
       }
+      if (entregadoEnMundo) await volverAlMundo(dominioPlan);
+      return "entregado_o_fallido" as const;
     },
-    [generandoPlan, cargarChecklist]
+    // volverAlMundo se redefine en cada render y solo usa setters y rutas del
+    // proyecto: incluirlo solo recrearía generarPlan en cada render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [generandoPlan, cargarChecklist, projectId, esSeguimientoEntrevista, dominioEntrevista, t]
   );
 
   // Carga inicial + arranque de entrevista si venimos del organizador.
@@ -488,7 +701,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
       try {
         const res = await fetch(`/api/idea/${projectId}`);
         if (!res.ok) {
-          setError(res.status === 404 ? "esa idea no existe o no es tuya" : ERROR_GENERICO);
+          // AUD-09 H07: si la adopción de las ideas del invitado quedó
+          // pendiente, esa es la razón y se dice (no "no es tuya").
+          setError(
+            res.status === 404
+              ? searchParams.get("adopcion") === "pendiente"
+                ? mensajeAdopcionPendiente(idioma)
+                : t.errores.ideaNoExiste
+              : errorGenerico(idioma)
+          );
           setCargando(false);
           return;
         }
@@ -498,11 +719,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
         setModos(d.idea.modos ?? {});
         setCapacidades(d.idea.capacidades ?? {});
         setRealizadaAt(d.idea.realizada_at ?? null);
-        // Una idea ya realizada abre en su Celebración (salvo que la URL
-        // pida otra vista explícita).
-        if (d.idea.realizada_at && !quiereManos && !quiereAnalisis) setVistaCelebracion(true);
+        // Una idea ya realizada abre en su Celebración, salvo que la URL pida
+        // CUALQUIER vista explícita (AUD-09 M09: antes solo miraba Manos y
+        // Análisis, y recargar el hub de un mundo abierto caía en la Celebración).
+        if (d.idea.realizada_at && !searchParams.get("vista")) setVistaCelebracion(true);
         if (d.plan) {
           setPlanMd(d.plan.contenido_md);
+          setAvisoPlan(d.plan.aviso ?? null);
+          setPlanSesionId(d.plan.session_id ?? null);
+          setPlanEsSeguimiento(esCicloPosterior(d.plan.etiqueta));
           void cargarChecklist();
         }
         if (d.entrevista) {
@@ -510,16 +735,24 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setPregunta(d.entrevista.pregunta);
           setListoParaPlan(d.entrevista.listo_para_plan);
           setDominioEntrevista(d.entrevista.dominio ?? "core");
-          setNodos(d.entrevista.ruta.map(nodoArbolDesdeRuta));
+          setEsSeguimientoEntrevista(d.entrevista.es_seguimiento === true);
+          setNodos(d.entrevista.ruta.map((n, i) => nodoArbolDesdeRuta(n, i, t.notaSilencioso)));
           contadorNodos.current = d.entrevista.ruta.length;
           // El recorrido conversado ya guardado: al reentrar a la idea se
           // repinta en vez de arrancar vacío (antes solo vivía en pantalla).
           if (d.entrevista.turnos?.length) setRecorrido(d.entrevista.turnos);
           const conversado = [...d.entrevista.ruta].reverse().find((n) => n.modo !== "silencioso");
-          if (conversado) setCintillo(conversado.etiqueta);
+          if (conversado) {
+            setCintillo(conversado.etiqueta);
+            setAvisosCintillo(conversado.avisos ?? []);
+          }
         } else if (quiereEntrevista && !d.plan) {
           // Arranque: la entrevista sobre ESTA idea (el motor nunca
           // re-pregunta la idea inicial: se la mandamos como contexto).
+          // AUD-09 M30: el parámetro se CONSUME aquí. Si se quedaba en la URL,
+          // recargar tras un cierre honesto arrancaba otra exploración y gastaba
+          // un arranque del día sin que nadie lo pidiera.
+          router.replace(urlSinParametro(`/idea/${projectId}`, searchParams.toString(), "entrevista"));
           setEnviando(true);
           const inicio = await fetch("/api/session/start", {
             method: "POST",
@@ -530,17 +763,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
             router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
             return;
           }
-          if (inicio.status === 429) {
-            setError(((await inicio.json()) as { error: string }).error);
-          } else if (!inicio.ok) {
-            setError(ERROR_GENERICO);
+          if (!inicio.ok) {
+            await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
           } else {
             procesarTurno((await inicio.json()) as RespuestaTurno);
+            avisarSaldo();
           }
           setEnviando(false);
         }
       } catch {
-        setError("no pudimos cargar tu idea; revisa tu internet e intenta de nuevo");
+        setError(t.errores.cargarIdea);
       } finally {
         setCargando(false);
       }
@@ -548,8 +780,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectId]);
 
-  async function responder(respuesta: string) {
-    if (!sessionId || !pregunta) return;
+  // AUD-09 M27: devuelve si el turno llegó; la tarjeta vacía el campo solo
+  // entonces (si falla, lo escrito se queda para reintentar).
+  async function responder(respuesta: string): Promise<boolean> {
+    if (!sessionId || !pregunta) return false;
     setEnviando(true);
     setError(null);
     const preguntaActual = pregunta;
@@ -560,13 +794,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
         body: JSON.stringify({ respuesta }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
-        return;
+        await mostrarRechazo(res, `/idea/${projectId}`);
+        return false;
       }
       setRecorrido((prev) => [...prev, { pregunta: preguntaActual, respuesta }]);
       procesarTurno((await res.json()) as RespuestaTurno);
+      return true;
     } catch {
-      setError("no pudimos enviar tu respuesta; revisa tu internet e intenta de nuevo");
+      setError(t.errores.enviarRespuesta);
+      return false;
     } finally {
       setEnviando(false);
     }
@@ -587,13 +823,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
         body: JSON.stringify({ respuesta: "__seguimos_explorando__" }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        await mostrarRechazo(res, `/idea/${projectId}`);
         setListoParaPlan(true);
         return;
       }
       procesarTurno((await res.json()) as RespuestaTurno);
     } catch {
-      setError("no pudimos continuar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.continuar);
       setListoParaPlan(true);
     } finally {
       setEnviando(false);
@@ -641,12 +877,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Fase 4.8: la bitácora como página en vivo. Se llega desde las páginas de
   // desarrollo (el plan, Manos a la Obra, los mundos); "Volver" regresa a donde
   // se estaba.
-  function irABitacora(dominio?: string) {
+  // AUD-09 M14: la bitácora se lee por espacio; sin dominio es la del núcleo (lo
+  // global es solo el Expediente, BANCO §7.1).
+  function irABitacora(dominio: string = "core") {
     setOrigenBitacora(vistaManos || enObra ? "manos" : "plan");
     setVistaBitacora(true);
-    // "Todo separado" (T4): con dominio, la bitácora del mundo (filtro de servidor).
-    setVistaDominio(dominio ?? null);
-    const q = dominio ? `?vista=bitacora&dominio=${dominio}` : "?vista=bitacora";
+    // "Todo separado" (T4): la bitácora del espacio (filtro de servidor).
+    setVistaDominio(dominio);
+    const q = `?vista=bitacora&dominio=${dominio}`;
     router.replace(`/idea/${projectId}${q}`, { scroll: false });
   }
   function volverDeBitacora() {
@@ -739,18 +977,22 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   if (cargando) {
-    return <p className="px-6 py-12 text-dim">Cargando tu idea…</p>;
+    return <p className="px-6 py-12 text-dim">{t.cargandoIdea}</p>;
   }
   if (!detalle) {
     return (
       <div className="px-6 py-12">
-        <p className="text-warn">{error ?? ERROR_GENERICO}</p>
+        <p className="text-warn">{error ?? errorGenerico(idioma)}</p>
         <Link href="/ideas" className="mt-4 inline-block text-accent">
-          Volver a mis ideas
+          {t.volverAMisIdeas}
         </Link>
       </div>
     );
   }
+
+  // i18n F6 (D2): el plan en pantalla sigue el idioma del proyecto, como los
+  // documentos que se descargan; el cromo de la app, el de la interfaz.
+  const idiomaDoc = idiomaDeDocumentos({ idioma: detalle.idea.idioma }, idioma);
 
   const entrevistaActiva = Boolean(pregunta) || enviando || listoParaPlan;
   const mostrarArbol = nodos.length > 0 && (entrevistaActiva || generandoPlan);
@@ -759,42 +1001,56 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Progreso real del checklist (para stepper, chips y fila de potenciadores).
   const coreVigente = checklist ? grupoVigente(checklist, "core") : null;
   const itemsCore = coreVigente?.etapas.flatMap((e) => e.items) ?? [];
-  const hechosCore = itemsCore.filter((i) => i.estado === "hecho").length;
-  const enObra = itemsCore.some((i) => i.estado !== "pendiente") || detalle.plan?.etiqueta === "seguimiento";
+  // AUD-09 M01: la cuenta honesta única (las retiradas no cuentan en el total).
+  const cuentaCore = cuentaHonesta(itemsCore);
+  const enObra = itemsCore.some((i) => i.estado !== "pendiente") || esCicloPosterior(detalle.plan?.etiqueta);
   const unlocks = detalle.unlocks ?? [];
   const progresoMundos: Record<string, { hechos: number; total: number } | null> = {};
   for (const u of unlocks) {
     const g = checklist ? grupoVigente(checklist, u) : null;
     const items = g?.etapas.flatMap((e) => e.items) ?? [];
-    progresoMundos[u] = g
-      ? { hechos: items.filter((i) => i.estado === "hecho").length, total: items.length }
-      : null;
+    progresoMundos[u] = g ? (({ hechos, total }) => ({ hechos, total }))(cuentaHonesta(items)) : null;
   }
 
-  // Etapa canónica para el stepper: solo verdad del motor.
+  // Etapa canónica para el stepper: solo verdad del motor. AUD-09 B10: la
+  // regla única (etapaDeIdea, la misma de /ideas); un seguimiento abierto ya no
+  // vuelve a "La Exploración", y una sesión de mundo no hace retroceder el viaje.
+  const entrevistaDeNucleo = entrevistaActiva && dominioEntrevista === "core";
+  const etapaBase = etapaDeIdea({
+    conPlan: Boolean(planMd || detalle.plan),
+    enObra: vistaManos || enObra,
+    explorandoNucleo: entrevistaDeNucleo && !esSeguimientoEntrevista,
+    seguimientoAbierto: entrevistaDeNucleo && esSeguimientoEntrevista,
+    ordenada: Boolean(detalle.organizador),
+  });
   let etapaStepper: number;
   let pensandoStepper = false;
   let etiquetaStepper: string | undefined;
   if (generandoPlan) {
     etapaStepper = 4;
     pensandoStepper = true;
-    etiquetaStepper = "Tu Plan · en camino…";
+    etiquetaStepper = t.stepper.planEnCamino;
   } else if (entrevistaActiva) {
-    etapaStepper = 3;
+    etapaStepper = etapaBase;
     pensandoStepper = Boolean(pregunta) || enviando;
     etiquetaStepper =
       dominioEntrevista !== "core"
-        ? `${NOMBRE_MUNDO[dominioEntrevista]?.nombre ?? dominioEntrevista} · en curso…`
-        : "La Exploración · en curso…";
-  } else if (vistaManos || enObra) {
+        ? interpolar(t.stepper.mundoEnCurso, { mundo: nombreDeMundo(dominioEntrevista, idioma) })
+        : esSeguimientoEntrevista
+          ? t.stepper.profundizacionEnCurso
+          : t.stepper.exploracionEnCurso;
+  } else if (etapaBase === 5) {
     etapaStepper = 5;
-    etiquetaStepper = itemsCore.length > 0 ? `Manos a la Obra · ${hechosCore}/${itemsCore.length}` : "Manos a la Obra";
-  } else if (planMd) {
+    etiquetaStepper =
+      cuentaCore.total > 0
+        ? interpolar(t.stepper.manosConProgreso, { hechos: cuentaCore.hechos, total: cuentaCore.total })
+        : t.stepper.manos;
+  } else if (etapaBase === 4) {
     etapaStepper = 4;
-    etiquetaStepper = "Tu Plan · listo";
+    etiquetaStepper = t.stepper.planListo;
   } else {
-    etapaStepper = 2;
-    etiquetaStepper = detalle.organizador ? "Claridad · lista" : undefined;
+    etapaStepper = etapaBase;
+    etiquetaStepper = detalle.organizador ? t.stepper.claridadLista : undefined;
   }
 
   const arbol = (
@@ -814,12 +1070,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
       ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.etiqueta)
       : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
 
+  // AUD-09 M12: el espacio a la vista. Es la llave de Manos a la Obra: cada
+  // espacio monta su propia instancia y su estado (pospuesto, recalcular,
+  // selector de modo) no se contagia al otro.
+  const espacioActivo = vistaMundo && hubDominio ? hubDominio : "core";
+
   const mundosParaObra = unlocks.map((dominio) => {
     const m = detalle.mundos?.find((x) => x.dominio === dominio);
     return {
       dominio,
-      nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
-      promesa: NOMBRE_MUNDO[dominio]?.promesa ?? "",
+      nombre: nombreDeMundo(dominio, idioma),
+      promesa: mundoDe(dominio, idioma)?.promesa ?? "",
       plan: m?.plan ?? null,
       completadoAt: m?.completado_at ?? null,
       // Fase 4.5: el escaparate del preview viaja a la sección del mundo.
@@ -827,6 +1088,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
       resumenAt: m?.resumen_at ?? null,
       previewSessionId: m?.preview_session_id ?? null,
       planPagadoAt: m?.plan_pagado_at ?? null,
+      planBasicoAt: m?.plan_basico_at ?? null,
+      historial: m?.historial ?? [],
     };
   });
 
@@ -852,7 +1115,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       <header className="sticky top-0 z-30 flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6" style={{ background: "rgba(0,0,0,0.82)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
         <div className="flex min-w-0 items-center gap-2.5">
           <Link href="/ideas" className="shrink-0 text-[13px] text-dim hover:text-ink">
-            Mis ideas /
+            {t.misIdeas}
           </Link>
           <span className="truncate text-[14.5px] font-semibold">{detalle.idea.nombre}</span>
           {realizadaAt && (
@@ -860,15 +1123,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
               <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
                 <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="var(--done)" strokeWidth="2" fill="none" />
               </svg>
-              Proyecto
+              {t.proyecto}
             </span>
           )}
         </div>
         <span className="flex-1" />
         {/* ETAPA 2: el saldo, discreto (canon 07). Solo con cuenta real. */}
-        <ChipSaldo />
+        <ChipSaldo version={versionSaldo} />
         <div className="hidden md:block">
-          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} realizada={Boolean(realizadaAt)} />
+          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} realizada={Boolean(realizadaAt)} idioma={idioma} />
         </div>
         <span
           className={
@@ -878,6 +1141,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         >
           {etiquetaStepper}
         </span>
+        <SelectorIdioma compacto />
       </header>
 
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
@@ -888,10 +1152,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 ya esta persistida y no se repite. */}
             {planFallido && !generandoPlan && (
               <button
-                onClick={() => generarPlan(planFallido.sid, planFallido.contexto)}
+                onClick={() => generarPlan(planFallido.sid, planFallido.contexto, planFallido.destino, planFallido.camino)}
                 className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
               >
-                Intentar de nuevo
+                {t.intentarDeNuevo}
               </button>
             )}
           </div>
@@ -912,7 +1176,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
             dominio={vistaDominio ?? undefined}
             nombreEspacio={mundosParaObra.find((m) => m.dominio === vistaDominio)?.nombre}
           />
-        ) : vistaCelebracion ? (
+        ) : vistaCelebracion && realizadaAt ? (
+          // AUD-09 M09: la Celebración solo existe con el cierre. Sin él, un
+          // ?vista=celebracion cae a la vista de siempre (y su "Reabrir" ya no
+          // puede escribir una reapertura falsa).
           <Celebracion
             projectId={projectId}
             onVerAnalisis={() => irAAnalisis()}
@@ -964,12 +1231,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
               />
             ) : (
               <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
-                ← Ver el plan
+                {t.verElPlan}
               </button>
             )}
             <ManosALaObra
+              key={espacioActivo}
               projectId={projectId}
               planMd={planMd}
+              idiomaDocumento={idiomaDoc}
               planCreatedAt={detalle.plan?.created_at ?? itemsCore[0]?.created_at ?? new Date().toISOString()}
               checklist={checklist}
               historial={detalle.historial ?? []}
@@ -1031,23 +1300,42 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     : prev
                 );
               }}
-              onSeguimientoIniciado={(data) => entrarASesionNueva(data as RespuestaTurno, "core")}
-              onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
+              onSeguimientoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, true)}
+              onReplanteamientoListo={(sid, dominio, camino) => void replanteamientoListo(sid, dominio, camino)}
+              onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, false)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
-              soloDominio={vistaMundo && hubDominio ? hubDominio : "core"}
+              onRegenerarPlanMundo={(dominio, sid, esSeg) => void regenerarPlan(sid, dominio, esSeg)}
+              soloDominio={espacioActivo}
               caraInicial={caraInicial}
               onCaraCambio={actualizarCara}
               proyectoCreatedAt={detalle.idea.created_at ?? null}
               organizadorAt={detalle.organizador?.created_at ?? null}
+              exploracionAt={detalle.idea.exploracion_at ?? null}
+              etapaIdea={etapaBase}
               realizadaAt={realizadaAt}
             />
           </>
-        ) : vistaManos || vistaMundo ? (
-          // Campaña "Espacios": Manos/Mundo ya está pedido pero planMd/checklist
-          // aún cargan. NO caer a la vista del plan como fallback: eso causaba el
-          // parpadeo plan→Manos al abrir una idea. Un placeholder discreto hasta
-          // que la vista real esté lista.
-          <p className="px-1 py-20 text-dim">Cargando tu espacio…</p>
+        ) : (vistaManos || vistaMundo) &&
+          estadoEspacio({ hayPlan: Boolean(planMd), hayChecklist: Boolean(checklist), errorChecklist }) !== "sin_plan" ? (
+          // Campaña "Espacios": Manos/Mundo ya está pedido pero el checklist aún
+          // carga. NO caer a la vista del plan como fallback: eso causaba el
+          // parpadeo plan→Manos al abrir una idea. AUD-09 H09: la espera tiene
+          // salida. Sin plan no hay espacio que esperar (se cae a la vista de la
+          // idea, con su Claridad y su camino al plan), y si el checklist falló,
+          // se dice y se ofrece reintentar.
+          errorChecklist ? (
+            <div className="px-1 py-20">
+              <p className="text-sm text-warn">{errorChecklist}</p>
+              <button
+                onClick={() => void cargarChecklist()}
+                className="mt-4 rounded-[10px] border border-hairline px-4 py-2 text-sm text-ink hover:border-white/25"
+              >
+                {t.intentarDeNuevo}
+              </button>
+            </div>
+          ) : (
+            <p className="px-1 py-20 text-dim">{t.cargandoEspacio}</p>
+          )
         ) : (
           // Fase 4.3.2: el riel pasa de 190px a 260px — a 190 las etiquetas del
           // recorrido se cortaban ("Identifica tus Supue…"); hay espacio de
@@ -1058,12 +1346,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
               <>
                 <div className="hidden sm:block">
                   <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                    Recorrido de la idea
+                    {t.recorridoDeLaIdea}
                   </p>
                   {arbol}
                 </div>
                 <div className="sm:hidden">
-                  <Acordeon titulo="Recorrido de la idea" abierto={generandoPlan}>
+                  <Acordeon titulo={t.recorridoDeLaIdea} abierto={generandoPlan}>
                     {arbol}
                   </Acordeon>
                 </div>
@@ -1101,14 +1389,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {pregunta && !tarjetaContextoFinal && (
                 <TarjetaPregunta
                   cintillo={cintillo}
+                  avisos={avisosCintillo}
                   pregunta={pregunta}
                   enviando={enviando}
                   onEnviar={responder}
-                  textoBoton="Enviar"
+                  textoBoton={t.enviar}
                 />
               )}
               {!pregunta && enviando && (
-                <p className="text-sm text-dim">Pensando la siguiente pregunta…</p>
+                <p className="text-sm text-dim">{t.pensandoPregunta}</p>
               )}
 
               {/* Phase 3.7.2 — tarjeta intermedia (canon 04): contexto final
@@ -1116,7 +1405,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {tarjetaContextoFinal && !generandoPlan && !planMd && (
                 <div className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
                   <p className="text-[19px] font-semibold leading-normal [text-wrap:pretty]">
-                    ¿Algo más que quieras que tu plan tome en cuenta?
+                    {t.contextoFinal.pregunta}
                   </p>
                   <div className="mt-5">
                     <CampoConVoz
@@ -1124,7 +1413,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       valor={contextoFinal}
                       onCambio={setContextoFinal}
                       filas={3}
-                      placeholder="Opcional: escríbelo o díctalo…"
+                      placeholder={t.contextoFinal.placeholder}
                     />
                   </div>
                   <BotonHeroe
@@ -1135,7 +1424,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     }}
                     className="mt-5 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                   >
-                    Armar mi plan · {PRECIOS.plan_completo} créditos
+                    {interpolar(t.contextoFinal.armarPlan, { n: fin.costo })}
                   </BotonHeroe>
                 </div>
               )}
@@ -1148,16 +1437,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <div className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
                   <p className="mb-3.5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-                    {temasPendientes === null ? "Suficiente para avanzar" : "Tu recorrido hasta aquí"}
+                    {temasPendientes === null ? t.oferta.suficiente : t.oferta.tuRecorrido}
                   </p>
                   <p className="text-[19px] font-semibold leading-normal [text-wrap:pretty]">
-                    {temasPendientes === null
-                      ? "Con lo que me contaste alcanza: vamos a tu plan."
-                      : "Con lo que me contaste puedo armar tu plan."}
+                    {temasPendientes === null ? t.oferta.alcanza : t.oferta.puedoArmar}
                   </p>
                   {temasPendientes !== null && temasPendientes.length > 0 && (
                     <>
-                      <p className="mt-3.5 text-[13.5px] text-dim">Si quieres, seguimos explorando:</p>
+                      <p className="mt-3.5 text-[13.5px] text-dim">{t.oferta.siQuieres}</p>
                       <div className="mt-2.5 flex flex-wrap gap-2">
                         {temasPendientes.map((tema) => (
                           <span
@@ -1172,22 +1459,22 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     </>
                   )}
                   {temasPendientes !== null && temasPendientes.length === 0 && (
-                    <p className="mt-3.5 text-[13.5px] text-dim">Cubrimos lo esencial de punta a punta.</p>
+                    <p className="mt-3.5 text-[13.5px] text-dim">{t.oferta.cubrimos}</p>
                   )}
                   {/* Fase 4.5: en un MUNDO, la entrevista completa no vende un
                       plan a ciegas: entrega el DIAGNÓSTICO gratis (el
                       escaparate). El plan se compra después, desde él. */}
                   {temasPendientes === null ? (
                     <BotonHeroe
-                      onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                      onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                       disabled={enviando}
                       className="mt-6 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                     >
-                      {dominioEntrevista === "core"
-                        ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
+                      {!fin.esDiagnostico
+                        ? interpolar(t.oferta.generarPlan, { n: fin.costo })
                         : enviando
-                          ? "Redactando tu diagnóstico…"
-                          : "Ver mi diagnóstico · gratis"}
+                          ? t.oferta.redactandoDiagnostico
+                          : t.oferta.verDiagnosticoGratis}
                     </BotonHeroe>
                   ) : (
                     <div className="mt-6 flex gap-3">
@@ -1197,30 +1484,26 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        Seguimos explorando
+                        {t.oferta.seguimosExplorando}
                       </button>
                       <button
-                        onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                        onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                         disabled={enviando}
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        {dominioEntrevista === "core"
-                          ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
-                          : "Ver mi diagnóstico"}
+                        {!fin.esDiagnostico ? interpolar(t.oferta.generarPlan, { n: fin.costo }) : t.oferta.verDiagnostico}
                       </button>
                     </div>
                   )}
                   <p className="mt-4 text-center text-xs text-dim opacity-80">
-                    {dominioEntrevista === "core" ? (
+                    {!fin.esDiagnostico ? (
                       // La promesa del cobro, en el momento de decidir (canon de
                       // creditos): se descuenta A LA ENTREGA, y si algo falla no
                       // se cobra. El precio va en el boton; esto es la garantia.
-                      "Se descuentan al entregarse tu plan. Si algo falla, no se cobra nada."
+                      t.oferta.garantia
                     ) : (
-                      <>
-                        El diagnóstico es gratis. Su plan, si lo quieres: {PRECIOS.mundo_activar} créditos.
-                      </>
+                      interpolar(t.oferta.diagnosticoGratis, { n: PRECIOS.mundo_activar })
                     )}
                   </p>
                 </div>
@@ -1228,12 +1511,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
               {puedeGenerarPlan && pregunta && !tarjetaContextoFinal && (
                 <button
-                  onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                  onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                   className="self-start text-sm text-dim hover:text-ink"
                 >
-                  {dominioEntrevista === "core"
-                    ? "Generar mi plan con lo que ya conté"
-                    : "Ver mi diagnóstico con lo que ya conté"}
+                  {!fin.esDiagnostico ? t.oferta.generarConLoContado : t.oferta.diagnosticoConLoContado}
                 </button>
               )}
 
@@ -1249,20 +1530,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         style={{ borderColor: "rgba(77,124,254,0.2)", borderTopColor: "var(--accent)" }}
                       />
                     </span>
-                    Tu Plan · en camino
+                    {t.generando.enCamino}
                   </p>
                   <p className="mt-3 text-[17px] font-medium leading-relaxed">
-                    {etiquetaEtapa ? `Escribiendo: ${etiquetaEtapa}` : "Armando tu plan por etapas."}
+                    {etiquetaEtapa ? interpolar(t.generando.escribiendo, { etapa: etiquetaEtapa }) : t.generando.armando}
                   </p>
                   <p className="mt-1.5 text-sm text-dim">
-                    Cada etapa se enciende en el recorrido cuando queda escrita de verdad.
+                    {t.generando.nota}
                   </p>
                 </div>
               )}
 
               {/* Recorrido releíble (no chat) */}
               {recorrido.length > 0 && (
-                <Acordeon titulo={`Recorrido (${recorrido.length})`}>
+                <Acordeon titulo={interpolar(t.recorridoConteo, { n: recorrido.length })}>
                   <ol className="space-y-4">
                     {recorrido.map((qa, i) => (
                       <li key={i} className="border-b border-hairline pb-3 last:border-0 last:pb-0">
@@ -1274,6 +1555,22 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 </Acordeon>
               )}
 
+              {/* AUD-09 H02: un plan armado sin IA se dice, no se esconde. */}
+              {avisoPlan && planMd && (
+                <div role="status" className="rounded-panel border border-hairline bg-surface p-4">
+                  <p className="text-sm text-warn">{avisoPlan}</p>
+                  {planSesionId && (
+                    <BotonHeroe
+                      onClick={() => void regenerarPlan(planSesionId, dominioEntrevista, planEsSeguimiento)}
+                      disabled={enviando || generandoPlan}
+                      className="mt-3 rounded-[10px] px-5 py-2.5 text-sm font-semibold"
+                    >
+                      {interpolar(t.regenerarPlan, { n: montoDelPlan(dominioEntrevista, planEsSeguimiento) })}
+                    </BotonHeroe>
+                  )}
+                </div>
+              )}
+
               {/* Plan como documento (canon 05) */}
               {planMd && (
                 <PlanDocumento
@@ -1282,6 +1579,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   onEmpezar={() => irAManos()}
                   onVerBitacora={irABitacora}
                   nodosFuente={nodosFuente}
+                  idiomaDocumento={idiomaDoc}
                 />
               )}
 
@@ -1299,7 +1597,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     onClick={() => irAManos()}
                     className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-semibold text-accent hover:bg-accent/20"
                   >
-                    Pasar a Manos a la Obra
+                    {t.pasarAManos}
                   </button>
                 </div>
               )}
@@ -1307,6 +1605,24 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {/* Tus Números ya NO va aquí como fila aparte: es un potenciador
                   como los demás y vive PRIMERO en la grilla "Potencia tu idea"
                   (regla del fundador: sin trato distinto). */}
+
+              {/* AUD-09 M28: la idea quedó guardada pero su organizador falló (no
+                  hay Claridad). Antes la página abría vacía y sin salida: ahora
+                  se dice y se ofrece ordenarla, reusando esta misma idea. */}
+              {!entrevistaActiva && !planMd && !generandoPlan && !detalle.organizador && (
+                <div className="rounded-panel border border-hairline bg-surface p-6">
+                  <p className="text-[15px] font-semibold">{t.sinOrdenar.titulo}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-dim [text-wrap:pretty]">
+                    {interpolar(t.sinOrdenar.cita, { texto: detalle.idea.entrada_original })}
+                  </p>
+                  <Link
+                    href={`/nueva?idea=${projectId}`}
+                    className="mt-4 inline-flex rounded-[10px] border border-accent/50 px-5 py-2.5 text-[14px] font-semibold text-accent hover:bg-accent/10"
+                  >
+                    {t.sinOrdenar.ordenarAhora}
+                  </Link>
+                </div>
+              )}
 
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
               {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
@@ -1327,23 +1643,26 @@ export function IdeaView({ projectId }: { projectId: string }) {
             router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
             return;
           }
-          if (inicio.status === 429) {
-                            setError(((await inicio.json()) as { error: string }).error);
-                          } else if (!inicio.ok) {
-                            setError(ERROR_GENERICO);
+          if (!inicio.ok) {
+                            await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
                           } else {
                             procesarTurno((await inicio.json()) as RespuestaTurno);
+                            avisarSaldo();
                           }
                         } catch {
-                          setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+                          setError(t.errores.sinConexion);
                         } finally {
                           setEnviando(false);
                         }
                       }}
                       className="rounded-[10px] px-5 py-3 font-medium"
                     >
-                      Explorar estas suposiciones
+                      {tc.explorarSuposiciones}
                     </BotonHeroe>
+                    {/* AUD-09 M32: el aviso de precio del canon 03, antes de empezar. */}
+                    <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+                      {avisoPrecioExploracion(idioma)}
+                    </p>
                   </div>
                 </>
               )}

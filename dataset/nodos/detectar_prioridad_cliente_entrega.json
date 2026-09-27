@@ -1,21 +1,19 @@
 {
   "node_id": "detectar_prioridad_cliente_entrega",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "entrega",
   "titulo_concepto": "Detectar lo que el cliente realmente prioriza en la entrega",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: casi la mitad de los carritos se abandonan por dudas sobre la entrega. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+  "resumen_teorico": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: en una encuesta, casi la mitad de los compradores admitio haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
   "pasos_accionables": [
-    "Pregunta a tus ultimos diez compradores que les preocupo mas de la entrega.",
-    "Activa notificaciones automaticas por mensaje de texto cuando despaches cada pedido.",
-    "Ofrece un rango de entrega de pocas horas en vez de decir en los proximos dias.",
-    "Publica un numero de rastreo que el cliente pueda consultar por su cuenta.",
-    "Simplifica el proceso de devolucion antes de que un cliente lo necesite."
+    "Pregunta a tus últimos diez compradores qué les preocupó más de la entrega.",
+    "Activa notificaciones automáticas por mensaje de texto cuando despaches cada pedido.",
+    "Ofrece un rango de entrega de pocas horas en vez de decir en los próximos días.",
+    "Publica un número de rastreo que el cliente pueda consultar por su cuenta.",
+    "Simplifica el proceso de devolución antes de que un cliente lo necesite."
   ],
-  "entregable_esperado": "Una lista de las tres prioridades reales de entrega de tu cliente, con un metodo simple para avisar y rastrear cada pedido.",
-  "nodos_previos": [
-    "venta_interna_cliente"
-  ],
+  "entregable_esperado": "Una lista de las tres prioridades reales de entrega de tu cliente, con un método simple para avisar y rastrear cada pedido.",
+  "nodos_previos": [],
   "nodos_siguientes": [
     "decidir_cobro_velocidad_ventana_entrega",
     "ofrecer_puntos_recogida",
@@ -28,5 +26,135 @@
     "Vendes por primera vez en linea y no sabes que tan estricto ser con los tiempos de entrega.",
     "Recibes quejas de clientes que dicen no haber sabido cuando llegaria su pedido."
   ],
-  "etiqueta_arbol": "Descubre que espera tu cliente"
+  "etiqueta_arbol": "Descubre que espera tu cliente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-14",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: casi la mitad de los carritos se abandonan por dudas sobre la entrega. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+      "texto_nuevo": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: en una encuesta, casi la mitad de los compradores admitio haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L200",
+        "frase": "nearly half of the respondents admitted to abandoning an online 'shopping cart' prior to purchase, due to issues with the delivery solution offered"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R052-040 (CONTRARIO, lector y verificador de acuerdo): Cambia la base de la cifra: de casi la mitad de los encuestados a casi la mitad de los carritos, lo que es una tasa de abandono distinta. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R052-040"
+    },
+    {
+      "id": "t2-arista-132",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "venta_interna_cliente -> detectar_prioridad_cliente_entrega",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-10-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Ensayar al comprador para la venta interna en ventas complejas B2B no prepara la deteccion de prioridades de entrega en venta en linea. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-104",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-007: Negocio que ya vende en linea y ajusta avisos, rastreo y devoluciones de sus pedidos: operacion y mejora de la entrega. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0875",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus ultimos diez compradores que les preocupo mas de la entrega.",
+      "texto_nuevo": "Pregunta a tus últimos diez compradores qué les preocupó más de la entrega.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso0: últimos, qué, preocupó, más (Faltaban tildes en últimos, qué, preocupó y más; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0876",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Activa notificaciones automaticas por mensaje de texto cuando despaches cada pedido.",
+      "texto_nuevo": "Activa notificaciones automáticas por mensaje de texto cuando despaches cada pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso1: automáticas (Faltaba la tilde en automáticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0877",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ofrece un rango de entrega de pocas horas en vez de decir en los proximos dias.",
+      "texto_nuevo": "Ofrece un rango de entrega de pocas horas en vez de decir en los próximos días.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso2: próximos (Faltaban las tildes de próximos y días.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0878",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Publica un numero de rastreo que el cliente pueda consultar por su cuenta.",
+      "texto_nuevo": "Publica un número de rastreo que el cliente pueda consultar por su cuenta.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso3: número (Faltaba la tilde en número.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0879",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Simplifica el proceso de devolucion antes de que un cliente lo necesite.",
+      "texto_nuevo": "Simplifica el proceso de devolución antes de que un cliente lo necesite.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso4: devolución (Faltaba la tilde en devolución.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0880",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de las tres prioridades reales de entrega de tu cliente, con un metodo simple para avisar y rastrear cada pedido.",
+      "texto_nuevo": "Una lista de las tres prioridades reales de entrega de tu cliente, con un método simple para avisar y rastrear cada pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.entregable: método (Faltaba la tilde en método.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
+  ]
 }

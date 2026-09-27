@@ -20,7 +20,7 @@
     "term_sheet_negociacion"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa planea vender acciones o levantar capital de terceros",
+    "Cuando tu empresa opera en Estados Unidos, o vas a ofrecer acciones a inversionistas de allí, y planeas vender acciones o levantar capital de terceros",
     "Cuando existe presión de familiares o amigos para invertir en la startup",
     "Cuando estás por levantar capital de inversionistas privados"
   ],
@@ -33,6 +33,25 @@
       "node_id": "inversionistas_acreditados",
       "titulo": "Cumplimiento de Normas de Inversionistas Acreditados",
       "fuente": "Venture Deals"
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-036",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la empresa planea vender acciones o levantar capital de terceros",
+      "texto_nuevo": "Cuando tu empresa opera en Estados Unidos, o vas a ofrecer acciones a inversionistas de allí, y planeas vender acciones o levantar capital de terceros",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q002-010: Tenía razón A: una condición que ate el nodo a Estados Unidos basta para la clase C, y la suya cubre también ofrecer acciones a inversionistas de allí; las otras dos de B no son falsas y no hace falta reescribirlas. (arbitro) Motivo: Clase C: ninguna condición dice que aplica si tu empresa opera en Estados Unidos o si ofreces acciones a inversionistas de allí, que es a quien alcanzan sus leyes de valores."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

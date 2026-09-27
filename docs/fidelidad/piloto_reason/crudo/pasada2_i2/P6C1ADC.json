@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P6C1ADC",
+  "intento": 0,
+  "usd": 0.15523599999999999,
+  "turnos": 1,
+  "duracion_s": 8.2,
+  "pared_s": 9.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35209,
+  "tokens_out": 720,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P6C1ADC\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5582, 5781, 2594, 5641], \"cita\": \"it is unlikely that such an event could arise as the result of a single error on the part of the operator(s). … identifying and eliminating latent conditions proactively still offer the best routes to improving system ‘fitness’.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que un error aislado de los operadores clave difícilmente causa un accidente organizacional. También dice que los actos inseguros no pueden eliminarse del todo (L2594) y que la mejor vía es eliminar las condiciones latentes. El paso invierte esa prioridad y pone como vía principal un objetivo que el libro declara inalcanzable.\", \"paso_fiel\": \"Concentrar la prevención de accidentes organizacionales en identificar y eliminar proactivamente las condiciones latentes, y tratar los errores de los operadores clave como consecuencias que conviene contener con defensas, no como algo que se pueda eliminar.\"}",
+ "parseado": {
+  "id": "P6C1ADC",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5582,
+   5781,
+   2594,
+   5641
+  ],
+  "cita": "it is unlikely that such an event could arise as the result of a single error on the part of the operator(s). … identifying and eliminating latent conditions proactively still offer the best routes to improving system ‘fitness’.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que un error aislado de los operadores clave difícilmente causa un accidente organizacional. También dice que los actos inseguros no pueden eliminarse del todo (L2594) y que la mejor vía es eliminar las condiciones latentes. El paso invierte esa prioridad y pone como vía principal un objetivo que el libro declara inalcanzable.",
+  "paso_fiel": "Concentrar la prevención de accidentes organizacionales en identificar y eliminar proactivamente las condiciones latentes, y tratar los errores de los operadores clave como consecuencias que conviene contener con defensas, no como algo que se pueda eliminar."
+ }
+}

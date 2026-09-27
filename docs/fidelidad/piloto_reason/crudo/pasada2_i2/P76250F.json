@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P76250F",
+  "intento": 0,
+  "usd": 0.223584,
+  "turnos": 1,
+  "duracion_s": 6.4,
+  "pared_s": 7.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53661,
+  "tokens_out": 447,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P76250F\", \"veredicto\": \"FIEL\", \"lineas\": [3747, 3751, 3755, 3759], \"cita\": \"Sections 1--3 deal with the question 'What happened?'. [...] Section 1 gathers information about the airline, aircraft type, engine type, time of day [...] Section 2 describes the nature of the event [...] Section 3 classifies the nature of the lapse.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro asigna a las Secciones 1-3 de MEDA la pregunta 'qué ocurrió'. La Sección 1 recoge la aerolínea, la 2 el tipo de evento y la 3 la naturaleza del lapso. El paso reproduce esa estructura sin añadir datos ni cambiar su sentido.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P76250F",
+  "veredicto": "FIEL",
+  "lineas": [
+   3747,
+   3751,
+   3755,
+   3759
+  ],
+  "cita": "Sections 1--3 deal with the question 'What happened?'. [...] Section 1 gathers information about the airline, aircraft type, engine type, time of day [...] Section 2 describes the nature of the event [...] Section 3 classifies the nature of the lapse.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro asigna a las Secciones 1-3 de MEDA la pregunta 'qué ocurrió'. La Sección 1 recoge la aerolínea, la 2 el tipo de evento y la 3 la naturaleza del lapso. El paso reproduce esa estructura sin añadir datos ni cambiar su sentido.",
+  "paso_fiel": ""
+ }
+}

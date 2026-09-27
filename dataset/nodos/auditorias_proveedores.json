@@ -21,7 +21,26 @@
   ],
   "condiciones_activacion": [
     "Si existe un código de conducta pero falta verificación",
-    "Si se requiere asegurar cumplimiento normativo o reputacional"
+    "Si necesitas asegurar que tus proveedores críticos cumplen requisitos normativos, ambientales o reputacionales"
   ],
-  "etiqueta_arbol": "Verifica a tus Proveedores de Verdad"
+  "etiqueta_arbol": "Verifica a tus Proveedores de Verdad",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-009",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si se requiere asegurar cumplimiento normativo o reputacional",
+      "texto_nuevo": "Si necesitas asegurar que tus proveedores críticos cumplen requisitos normativos, ambientales o reputacionales",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q064-017: Tiene razon el lector A: la segunda condicion no menciona a los proveedores, que son el objeto del nodo, y se activaria ante cualquier necesidad de cumplimiento. (arbitro) Motivo: Demasiado amplia: cualquier necesidad de cumplimiento normativo la activaria, pero el contenido trata de auditar a proveedores, sobre todo a los criticos"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ]
 }

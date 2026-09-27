@@ -19,8 +19,7 @@
   "nodos_previos": [
     "fijacion_precio_exportacion",
     "incoterms_reglas_comerciales_internacionales",
-    "calculo_de_aranceles_importacion",
-    "carta_de_credito_letter_of_credit"
+    "calculo_de_aranceles_importacion"
   ],
   "nodos_siguientes": [
     "documentacion_exportacion",
@@ -30,5 +29,23 @@
     "Cuando el usuario recibe una consulta o solicitud de cotización de un comprador internacional.",
     "Si el comprador necesita el documento para solicitar licencia de importación o abrir carta de crédito."
   ],
-  "etiqueta_arbol": "Redacta tu Cotización Formal"
+  "etiqueta_arbol": "Redacta tu Cotización Formal",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-012",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "carta_de_credito_letter_of_credit -> elaboracion_pro_forma_invoice",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-19-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el comprador usa la pro forma invoice para abrir la carta de credito, asi que la pro forma va antes que la L/C y no despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

@@ -9,7 +9,7 @@
     "Después de aplicar una respuesta, mide de nuevo el riesgo: bajó lo suficiente o no.",
     "Si no bajó a un nivel aceptable, decide qué respuesta adicional le das.",
     "Cuando un riesgo se materializó o el entorno cambió, actualiza su probabilidad e impacto.",
-    "Cierra el riesgo solo cuando de verdad esté dentro de lo que aceptas, no antes."
+    "Si el riesgo tratado aún no está dentro de lo que aceptas, sigue tratándolo; y no lo cierres hasta que ya no pueda afectar tus objetivos."
   ],
   "entregable_esperado": "Cada riesgo tratado reevaluado contra tu criterio, con la decisión de darlo por controlado o darle otra vuelta.",
   "nodos_previos": [
@@ -20,12 +20,62 @@
   ],
   "nodos_siguientes": [
     "guarda_lo_que_aprendiste_de_cada_golpe",
-    "el_riesgo_cambia_con_el_tiempo"
+    "el_riesgo_cambia_con_el_tiempo",
+    "risk_audit"
   ],
   "condiciones_activacion": [
     "cuando aplicaste una respuesta pero no comprobaste si funcionó",
     "cuando das por resuelto un riesgo sin volver a mirarlo",
     "cuando sigues temiendo un riesgo que en realidad ya bajó"
   ],
-  "etiqueta_arbol": "Vuelve a Medir Después del Susto"
+  "etiqueta_arbol": "Vuelve a Medir Después del Susto",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cierra el riesgo solo cuando de verdad esté dentro de lo que aceptas, no antes.",
+      "texto_nuevo": "Si el riesgo tratado aun no esta dentro de lo que aceptas, sigue tratandolo; y no lo cierres hasta que ya no pueda afectar tus objetivos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L5886-L5886",
+        "frase": "monitoring will also signal situations where particular risk uncertainties can no longer affect the achievement of project objectives for the project stakeholder. Those risks can then be ‘closed off’"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, un riesgo dentro de los limites aceptables se retiene y se sigue vigilando (L5818, L6030); solo se cierra cuando ya no puede ocurrir o su impacto ceso (L8598). El paso cambia el criterio de cierre.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-042"
+    },
+    {
+      "id": "n1-orto-0270",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si el riesgo tratado aun no esta dentro de lo que aceptas, sigue tratandolo; y no lo cierres hasta que ya no pueda afectar tus objetivos.",
+      "texto_nuevo": "Si el riesgo tratado aún no está dentro de lo que aceptas, sigue tratándolo; y no lo cierres hasta que ya no pueda afectar tus objetivos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-031.paso3: aún, está, tratándolo (Solo añade tildes que faltaban: aún (con sentido de todavía), está y tratándolo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "mv-entrada-05",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "vuelve_a_medir_despues_del_susto -> risk_audit",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-05, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Al reevaluar si cada respuesta funciono se pasa de forma natural a auditar el conjunto: los eventos ocurridos, las respuestas aplicadas y el proceso completo de gestion de riesgos (descarto tu_gestion_de_riesgo_funciona porque es casi un duplicado)."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
+  ],
+  "fuentes_internas": [
+    "Edwards et al., Managing Project Risks"
+  ]
 }

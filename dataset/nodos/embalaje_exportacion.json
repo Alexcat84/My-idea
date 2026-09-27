@@ -18,12 +18,29 @@
     "seleccion_agente_carga_internacional"
   ],
   "nodos_siguientes": [
-    "etiquetado_exportacion",
-    "tratar_packaging_costo_marca"
+    "etiquetado_exportacion"
   ],
   "condiciones_activacion": [
     "Si tu producto va a viajar por barco o avión a otro país",
     "Si ya te han llegado reportes de envíos dañados o perdidos"
   ],
-  "etiqueta_arbol": "Protege tu Mercancía al Embalar"
+  "etiqueta_arbol": "Protege tu Mercancía al Embalar",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-028",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "embalaje_exportacion -> tratar_packaging_costo_marca",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por programacion_entregas_delivery_scheduling."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

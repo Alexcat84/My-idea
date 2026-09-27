@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Pensamiento Autoiniciado sin Estímulo Externo",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Wallas argumenta que el pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular). La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes, sino que puede cultivarse deliberadamente como una actividad mental autónoma.",
+  "resumen_teorico": "El pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular). La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes, sino que puede cultivarse deliberadamente como una actividad mental autónoma.",
   "pasos_accionables": [
     "Reservar tiempo regular para pensar deliberadamente sobre un problema, sin esperar a que surja un estímulo externo o una necesidad urgente.",
     "No descartar procesos de pensamiento que no producen un resultado visible inmediato; permitir periodos de reflexión sin output tangible.",
@@ -21,5 +21,26 @@
     "Cuando el usuario depende excesivamente de estímulos externos (investigación, referencias) para generar ideas y no reserva tiempo de reflexión pura.",
     "Cuando un proyecto requiere incubación de ideas antes de la etapa de validación."
   ],
-  "etiqueta_arbol": "Piensa sin Esperar un Estímulo"
+  "etiqueta_arbol": "Piensa sin Esperar un Estímulo",
+  "correcciones": [
+    {
+      "id": "atribucion-130",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Wallas argumenta que el pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular). La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes, sino que puede cultivarse deliberadamente como una actividad mental autónoma.",
+      "texto_nuevo": "El pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular). La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes, sino que puede cultivarse deliberadamente como una actividad mental autónoma.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Wallas argumenta que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-007 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Art of Thought - Wallas, Graham"
+  ]
 }

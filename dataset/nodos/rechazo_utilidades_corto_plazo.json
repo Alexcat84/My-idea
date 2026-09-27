@@ -1,10 +1,10 @@
 {
   "node_id": "rechazo_utilidades_corto_plazo",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Las Utilidades a Corto Plazo No Son Índice de Buena Gestión",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming advierte que los beneficios y dividendos a corto plazo no son indicadores confiables del desempeño de la gestión, ya que pueden lograrse recortando mantenimiento, investigación, o mediante adquisiciones, sin mejorar la posición competitiva real de la empresa. La verdadera medida de éxito es si habrá dividendos y competitividad en 3, 5 y 10 años.",
+  "resumen_teorico": "Los beneficios y dividendos a corto plazo no son indicadores confiables del desempeño de la gestión, ya que pueden lograrse recortando mantenimiento, investigación, o mediante adquisiciones, sin mejorar la posición competitiva real de la empresa. La verdadera medida de éxito es si habrá dividendos y competitividad en 3, 5 y 10 años.",
   "pasos_accionables": [
     "Evaluar si las utilidades actuales provienen de recortes en investigación, mantenimiento o inversión",
     "Establecer indicadores de desempeño de largo plazo además de los financieros trimestrales",
@@ -21,5 +21,39 @@
   "condiciones_activacion": [
     "Cuando la dirección o inversores presionan por resultados financieros inmediatos a costa de calidad e innovación futura"
   ],
-  "etiqueta_arbol": "No Midas Éxito por Utilidades Rápidas"
+  "etiqueta_arbol": "No Midas Éxito por Utilidades Rápidas",
+  "correcciones": [
+    {
+      "id": "atribucion-147",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming advierte que los beneficios y dividendos a corto plazo no son indicadores confiables del desempeño de la gestión, ya que pueden lograrse recortando mantenimiento, investigación, o mediante adquisiciones, sin mejorar la posición competitiva real de la empresa. La verdadera medida de éxito es si habrá dividendos y competitividad en 3, 5 y 10 años.",
+      "texto_nuevo": "Los beneficios y dividendos a corto plazo no son indicadores confiables del desempeño de la gestión, ya que pueden lograrse recortando mantenimiento, investigación, o mediante adquisiciones, sin mejorar la posición competitiva real de la empresa. La verdadera medida de éxito es si habrá dividendos y competitividad en 3, 5 y 10 años.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming advierte que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U2-011 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-269",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-030: Evaluar si las utilidades de una empresa con inversores vienen de recortes y proteger la inversion en I+D es control de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

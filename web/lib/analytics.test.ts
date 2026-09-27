@@ -26,6 +26,7 @@ import {
   resumenEspacioMd,
   type EntradaAnalytics,
 } from "./analytics";
+import { instantaneaDeActa } from "./acta";
 
 function iso(d: string) {
   return `${d}T12:00:00Z`;
@@ -40,6 +41,8 @@ const BASE: EntradaAnalytics = {
     { id: "p2", etiqueta: "seguimiento", created_at: iso("2026-04-01"), baseline_confirmada_at: null },
   ],
   mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20") }],
+  // AUD-09 M37: el mundo CUENTA porque tiene su plan (el mismo día en que se abrió).
+  planesMundo: [{ id: "pq1", etiqueta: "completo", created_at: iso("2026-03-20"), baseline_confirmada_at: null, dominio: "quality" }],
   items: [
     { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "A", completed_at: iso("2026-03-10"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
     { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "B", completed_at: iso("2026-03-13"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
@@ -370,13 +373,16 @@ describe("informeMarkdown — acta de cierre (§8)", () => {
     expect(md).not.toContain("## Acta de cierre");
   });
 
-  it("realizado: abre con el acta, el estado final y el porcentaje", () => {
+  it("realizado SIN acta guardada: no se inventa un acta; se muestra el estado actual", () => {
+    // AUD-09 M04: el acta es la FOTO guardada al cerrar (project_actas). Sin
+    // ella, lo que hay es el estado de hoy, y se llama así.
     // accionesVigente = items del plan vigente (p2). En BASE todos los items
     // son de p1, asi que el vigente (p2) tiene 0 de 0 -> sin porcentaje.
     const md = informeMarkdown("Mi idea", calcularAnalytics(BASE), iso("2026-05-01"));
-    expect(md).toContain("## Acta de cierre");
-    expect(md).toContain("**Proyecto realizado** el 2026-05-01");
-    expect(md).toContain("Acciones al cerrar: **0 de 0**");
+    expect(md).not.toContain("## Acta de cierre");
+    expect(md).toContain("## Estado actual");
+    expect(md).toContain("Idea realizada el 2026-05-01");
+    expect(md).toContain("Acciones hoy: **0 de 0**");
   });
 
   it("con motivo, el informe lo cita en la voz del usuario", () => {
@@ -387,9 +393,9 @@ describe("informeMarkdown — acta de cierre (§8)", () => {
     expect(md).toContain("> Ya validé lo que necesitaba saber.");
   });
 
-  it("sin motivo (cerro sin escribir), el acta existe pero no inventa cita", () => {
+  it("sin motivo (cerro sin escribir), el estado actual no inventa cita", () => {
     const md = informeMarkdown("Mi idea", calcularAnalytics(BASE), iso("2026-05-01"));
-    expect(md).toContain("## Acta de cierre");
+    expect(md).toContain("## Estado actual");
     expect(md).not.toContain("### Por qué la cerraste aquí");
   });
 });
@@ -697,7 +703,7 @@ describe("informeMarkdown — el acta dice cómo quedaron los mundos (Fase 4.2 �
 
   it("un mundo ABIERTO se nombra abierto, con su avance real", () => {
     const md = informeMarkdown("Mi idea", calcularAnalytics(CON_SUBPROYECTO), iso("2026-05-01"), nombres);
-    expect(md).toContain("- Calidad y Confianza: **3 de 4** (75%), abierta");
+    expect(md).toContain("- Calidad y Confianza: **3 de 4** (75%), abierto");
   });
 
   it("un mundo COMPLETADO se nombra con su fecha de cierre", () => {
@@ -788,5 +794,65 @@ describe("carrilProteccion (P4): lectura pura que jamás toca las medidas", () =
   it("un enlace a un ítem que ya no existe no inventa marca", () => {
     const huerfana = { ...RESPUESTA, protege_item: "no-existe" };
     expect(calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, huerfana] }).carrilProteccion).toEqual([]);
+  });
+
+  // AUD-09 M15: la protección apunta al NODO. Un ciclo nuevo del núcleo (p3)
+  // renace la tarea con otro id y en otra etapa; la marca se ancla a la tarea
+  // del plan VIGENTE que comparte el nodo, no a la del ciclo viejo.
+  describe("con un ciclo nuevo del núcleo (AUD-09 M15)", () => {
+    const CICLO_NUEVO: EntradaAnalytics = {
+      ...CORE_CON_ID,
+      planesCore: [
+        ...CORE_CON_ID.planesCore,
+        { id: "p3", etiqueta: "seguimiento", created_at: iso("2026-04-10"), baseline_confirmada_at: null },
+      ],
+      items: [
+        ...CORE_CON_ID.items.map((i) => (i.id === "core-3" ? { ...i, nodos_origen: ["precio_de_venta"] } : i)),
+        { id: "c3-1", plan_id: "p3", etapa: 3, estado: "pendiente", destacado: false, texto: "Fija tu precio", completed_at: null, fecha_base: iso("2026-04-25"), fecha_base_original: null, nodos_origen: ["precio_de_venta"] },
+      ],
+    };
+    // A MANO: fecha base de la respuesta 20-abr; chispa 01-mar → 31 días de
+    // marzo + 19 de abril = 50 días. Etapa: la de c3-1 en el plan vigente = 3.
+    const RESP_CICLO = { ...RESPUESTA, fecha_base: iso("2026-04-20"), protege_item: "core-3", protege_nodos: ["precio_de_venta"] };
+
+    it("la marca se ancla a la tarea vigente del mismo nodo (etapa 3, día 50)", () => {
+      const carril = calcularAnalytics({ ...CICLO_NUEVO, items: [...CICLO_NUEVO.items, RESP_CICLO] }).carrilProteccion;
+      expect(carril).toEqual([
+        { etapa: 3, dia: 50, hecho: false, dominio: "risk_management", texto: "Consigue un proveedor alterno" },
+      ]);
+    });
+
+    it("si el nodo no está en el plan vigente, no se ancla a la tarea del ciclo viejo", () => {
+      const huerfana = { ...RESP_CICLO, protege_nodos: ["nodo_que_se_fue"] };
+      expect(calcularAnalytics({ ...CICLO_NUEVO, items: [...CICLO_NUEVO.items, huerfana] }).carrilProteccion).toEqual([]);
+    });
+  });
+});
+
+// AUD-09 M37 (tanda 7B, confianza): un clic en la tarjeta de un mundo crea su
+// fila (abrirlo es gratis) y ya contaba como "Mundo activado" en la
+// Celebración, sumaba en "Mundos: N" y salía en el acta como "0 de 0, abierto".
+// Un mundo cuenta cuando tiene SU plan; su hito lleva la fecha de ese plan.
+describe("un mundo cuenta cuando tiene su plan (AUD-09 M37)", () => {
+  const SOLO_CLIC: EntradaAnalytics = { ...BASE, mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20") }], planesMundo: [] };
+  const CON_PLAN: EntradaAnalytics = {
+    ...SOLO_CLIC,
+    planesMundo: [{ id: "pm1", etiqueta: "completo", created_at: iso("2026-03-25"), baseline_confirmada_at: null, dominio: "quality" }],
+  };
+
+  it("un mundo solo abierto no es un hito, no suma y no sale en el acta", () => {
+    const a = calcularAnalytics(SOLO_CLIC);
+    expect(a.hitos.some((h) => h.tipo === "mundo")).toBe(false);
+    expect(a.universal.mundos).toBe(0);
+    expect(instantaneaDeActa(a, "core").mundos).toEqual([]);
+    expect(informeMarkdown("Mi idea", a, iso("2026-05-01"), (d) => d)).not.toContain("quality");
+  });
+
+  it("con su plan: hito con la fecha del plan (25-mar), suma 1 y sale en el acta", () => {
+    const a = calcularAnalytics(CON_PLAN);
+    const hito = a.hitos.find((h) => h.tipo === "mundo");
+    expect(hito?.fecha).toBe(iso("2026-03-25"));
+    expect(a.universal.mundos).toBe(1);
+    expect(instantaneaDeActa(a, "core").mundos.map((m) => m.dominio)).toEqual(["quality"]);
   });
 });

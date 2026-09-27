@@ -1,0 +1,39 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P4C7E22",
+  "intento": 0,
+  "usd": 0.20468,
+  "turnos": 1,
+  "duracion_s": 26.0,
+  "pared_s": 27.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39175,
+  "tokens_out": 2399,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4C7E22\", \"veredicto\": \"CONTRARIO\", \"lineas\": [1085, 1095, 1141, 1145, 1035, 1006, 1089], \"cita\": \"Measures designed to eliminate a conspicuous cause of some previous accident can contribute to the next one. […] cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna.\", \"datos_sin_respaldo\": [\"protocolos que impidan la desactivación unilateral de alarmas críticas\", \"verificación cruzada como requisito para desactivar alarmas\"], \"tambien_anadido\": true, \"razon\": \"El libro atribuye la desconexión del stick-shaker a la desconfianza causada por falsas alarmas repetidas. Advierte que prohibir de forma general la respuesta implicada en el accidente anterior puede causar el siguiente, como pasó de TMI a Ginna. El Trident ya llevaba un piloto monitor. El paso ataca el acto del operador y deja la causa sin tratar.\", \"paso_fiel\": \"Atacar la causa de la desconfianza eliminando las activaciones falsas de las alarmas críticas para que recuperen su credibilidad, en lugar de añadir procedimientos que prohíban de forma general una respuesta humana que en escenarios imprevistos podría ser la acertada.\"}\n```",
+ "parseado": {
+  "id": "P4C7E22",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   1085,
+   1095,
+   1141,
+   1145,
+   1035,
+   1006,
+   1089
+  ],
+  "cita": "Measures designed to eliminate a conspicuous cause of some previous accident can contribute to the next one. […] cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna.",
+  "datos_sin_respaldo": [
+   "protocolos que impidan la desactivación unilateral de alarmas críticas",
+   "verificación cruzada como requisito para desactivar alarmas"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro atribuye la desconexión del stick-shaker a la desconfianza causada por falsas alarmas repetidas. Advierte que prohibir de forma general la respuesta implicada en el accidente anterior puede causar el siguiente, como pasó de TMI a Ginna. El Trident ya llevaba un piloto monitor. El paso ataca el acto del operador y deja la causa sin tratar.",
+  "paso_fiel": "Atacar la causa de la desconfianza eliminando las activaciones falsas de las alarmas críticas para que recuperen su credibilidad, en lugar de añadir procedimientos que prohíban de forma general una respuesta humana que en escenarios imprevistos podría ser la acertada."
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P8A1187",
+  "intento": 0,
+  "usd": 0.19065600000000002,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40959,
+  "tokens_out": 1341,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8A1187\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2568, 2520, 2638, 2658, 2765], \"cita\": \"If they were to rely entirely on outcome measures, organizations would probably move passively to and fro across the central zone like pieces of flotsam. Effective safety management means actively navigating the safety space\", \"datos_sin_respaldo\": [], \"razon\": \"El libro opone la navegación activa, basada en medir regularmente los procesos, a dejarse llevar pasivamente por las medidas de resultado y los accidentes. Lo que rechaza es la pasividad, no el aprendizaje reactivo. 'Continuo' concreta los chequeos regulares, cuya frecuencia depende de la velocidad de cambio de cada proceso. No es una cifra ni un dato nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8A1187",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2568,
+   2520,
+   2638,
+   2658,
+   2765
+  ],
+  "cita": "If they were to rely entirely on outcome measures, organizations would probably move passively to and fro across the central zone like pieces of flotsam. Effective safety management means actively navigating the safety space",
+  "datos_sin_respaldo": [],
+  "razon": "El libro opone la navegación activa, basada en medir regularmente los procesos, a dejarse llevar pasivamente por las medidas de resultado y los accidentes. Lo que rechaza es la pasividad, no el aprendizaje reactivo. 'Continuo' concreta los chequeos regulares, cuya frecuencia depende de la velocidad de cambio de cada proceso. No es una cifra ni un dato nuevo.",
+  "paso_fiel": ""
+ }
+}

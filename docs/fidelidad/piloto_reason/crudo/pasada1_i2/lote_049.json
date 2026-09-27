@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_049",
+  "intento": 0,
+  "usd": 0.16921599999999998,
+  "turnos": 1,
+  "duracion_s": 16.9,
+  "pared_s": 17.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34079,
+  "tokens_out": 1645,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC080E0\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [192, 194, 196, 213, 291, 293], \"razon\": \"El libro respalda identificar actos inseguros, pero advierte no cerrar la investigación ahí (L194, L196). Además, los actos inseguros no son condición necesaria (L291). Riesgo de detenerse en el extremo agudo.\"},\n  {\"id\": \"P4F7AF5\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4478, 4484, 4494, 3209, 2596, 2556, 4714], \"razon\": \"El libro respalda seguir las reformas con perfiles sucesivos. Pero si la efectividad se mide con accidentes o resultados, chocaría: los accidentes son indicadores poco fiables y conviene medir procesos.\"},\n  {\"id\": \"PB5B692\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [158, 308, 162, 1058], \"razon\": \"El libro define las defensas duras y blandas, pero no recomienda evaluar ni buscar un balance entre ellas. No se puede descartar que el paso añada un criterio ajeno a la fuente.\"},\n  {\"id\": \"P4BC463\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4693, 4695, 4722, 4724, 5270, 5217], \"razon\": \"El libro sostiene que la cultura se diseña introduciendo prácticas y sistemas. Solo matiza que poseerlos no basta (L5270) y que actuar es lo difícil.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC080E0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    192,
+    194,
+    196,
+    213,
+    291,
+    293
+   ],
+   "razon": "El libro respalda identificar actos inseguros, pero advierte no cerrar la investigación ahí (L194, L196). Además, los actos inseguros no son condición necesaria (L291). Riesgo de detenerse en el extremo agudo."
+  },
+  {
+   "id": "P4F7AF5",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4478,
+    4484,
+    4494,
+    3209,
+    2596,
+    2556,
+    4714
+   ],
+   "razon": "El libro respalda seguir las reformas con perfiles sucesivos. Pero si la efectividad se mide con accidentes o resultados, chocaría: los accidentes son indicadores poco fiables y conviene medir procesos."
+  },
+  {
+   "id": "PB5B692",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    158,
+    308,
+    162,
+    1058
+   ],
+   "razon": "El libro define las defensas duras y blandas, pero no recomienda evaluar ni buscar un balance entre ellas. No se puede descartar que el paso añada un criterio ajeno a la fuente."
+  },
+  {
+   "id": "P4BC463",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4693,
+    4695,
+    4722,
+    4724,
+    5270,
+    5217
+   ],
+   "razon": "El libro sostiene que la cultura se diseña introduciendo prácticas y sistemas. Solo matiza que poseerlos no basta (L5270) y que actuar es lo difícil."
+  }
+ ]
+}

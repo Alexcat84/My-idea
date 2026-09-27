@@ -16,7 +16,7 @@
   "nodos_previos": [
     "preguntas_abiertas_motivacion_proveedor",
     "autoacusacion_antes_mala_noticia",
-    "contacto_con_el_cliente"
+    "negociacion_contratos_proveedores"
   ],
   "nodos_siguientes": [
     "gestiona_contrato_tras_firma"
@@ -26,5 +26,36 @@
     "Descubriste que un proveedor sabe algo de tu negocio que tú no le dijiste.",
     "Un familiar o empleado le prometió algo a un proveedor sin consultarte."
   ],
-  "etiqueta_arbol": "Un solo contacto con cada proveedor"
+  "etiqueta_arbol": "Un solo contacto con cada proveedor",
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-004",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "negociacion_contratos_proveedores -> punto_unico_contacto_proveedores",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-022",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "contacto_con_el_cliente -> punto_unico_contacto_proveedores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

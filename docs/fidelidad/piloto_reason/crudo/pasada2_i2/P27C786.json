@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P27C786",
+  "intento": 0,
+  "usd": 0.21692799999999998,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 14.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48017,
+  "tokens_out": 1243,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P27C786\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5176, 5208], \"cita\": \"it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta el paso de autoridad jerárquica a experta como rasgo de las HRO y pregunta cómo diseñarlo ('how can it be engineered?'). El paso no exige hacerlo por reglas. Solo omite un detalle: la condición previa de una cultura jerárquica fuerte y la inversión en supervisores. Concreta el libro en su misma dirección, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P27C786",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5176,
+   5208
+  ],
+  "cita": "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta el paso de autoridad jerárquica a experta como rasgo de las HRO y pregunta cómo diseñarlo ('how can it be engineered?'). El paso no exige hacerlo por reglas. Solo omite un detalle: la condición previa de una cultura jerárquica fuerte y la inversión en supervisores. Concreta el libro en su misma dirección, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

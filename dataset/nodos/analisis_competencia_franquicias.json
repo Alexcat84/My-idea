@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_competencia_franquicias",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Analizar a Fondo a los Competidores Directos de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -24,5 +24,23 @@
   "condiciones_activacion": [
     "Antes de definir el USP o cuando se detecta pérdida de prospectos frente a competidores"
   ],
-  "etiqueta_arbol": "Estudia a tus Competidores Reales"
+  "etiqueta_arbol": "Estudia a tus Competidores Reales",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-010",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-017: Razon para B: es un analisis competitivo (FDDs, entrevistas a franquiciados de la competencia) para definir el USP del franquiciador, es decir, estrategia de posicionamiento; no pone a prueba la idea propia con clientes, asi que validacion no se sostiene como defendible. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

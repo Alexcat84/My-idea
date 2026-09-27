@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P091436",
+  "intento": 0,
+  "usd": 0.15594,
+  "turnos": 1,
+  "duracion_s": 8.5,
+  "pared_s": 9.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35855,
+  "tokens_out": 626,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P091436\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [293, 310], \"cita\": \"For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. […] When the gaps produced by active failures ‘line up’ with those created by latent conditions, a ‘window of opportunity’ exists for an accident trajectory\", \"datos_sin_respaldo\": [], \"razon\": \"En el nodo, el paso es análisis retrospectivo de un incidente (el entregable es una línea de tiempo del incidente). El libro manda establecer, en cada defensa rota, qué fallas activas y condiciones latentes intervinieron, y define la ventana como su alineación. El paso lo concreta sin añadir datos ni pedir que se anticipe la alineación.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P091436",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   293,
+   310
+  ],
+  "cita": "For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. […] When the gaps produced by active failures ‘line up’ with those created by latent conditions, a ‘window of opportunity’ exists for an accident trajectory",
+  "datos_sin_respaldo": [],
+  "razon": "En el nodo, el paso es análisis retrospectivo de un incidente (el entregable es una línea de tiempo del incidente). El libro manda establecer, en cada defensa rota, qué fallas activas y condiciones latentes intervinieron, y define la ventana como su alineación. El paso lo concreta sin añadir datos ni pedir que se anticipe la alineación.",
+  "paso_fiel": ""
+ }
+}

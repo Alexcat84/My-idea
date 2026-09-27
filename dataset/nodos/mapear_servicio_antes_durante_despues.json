@@ -6,10 +6,10 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir como el cliente hace su pedido y que politicas conoce; durante el envio, el plazo, la confirmacion y el seguimiento; y despues de la entrega, las devoluciones, la garantia y los reclamos. Muchos negocios pequenos solo piensan en el momento del envio y descuidan los otros dos, lo cual genera confusion cuando algo sale mal. Mapear estos tres momentos, aunque sea de forma simple, te permite ver donde tienes un proceso claro y donde estas improvisando cada vez que surge un problema, y asi decidir por donde empezar a mejorar.",
   "pasos_accionables": [
-    "Escribe que pasa antes de que el cliente compre: como pide, que le respondes, que politica ve.",
-    "Escribe que pasa durante el envio: plazo, confirmacion, seguimiento del pedido.",
-    "Escribe que pasa despues de entregar: devoluciones, garantia, manejo de reclamos.",
-    "Marca en cuales de los tres momentos no tienes un proceso claro y resuelve ese primero."
+    "Escribe qué pasa antes de que el cliente compre: cómo pide, qué le respondes, qué política ve.",
+    "Escribe qué pasa durante el envío: plazo, confirmación, seguimiento del pedido.",
+    "Escribe qué pasa después de entregar: devoluciones, garantía, manejo de reclamos.",
+    "Marca en cuáles de los tres momentos no tienes un proceso claro y resuelve ese primero."
   ],
   "entregable_esperado": "Un mapa simple de los tres momentos del servicio con los huecos identificados.",
   "nodos_previos": [
@@ -23,5 +23,66 @@
     "No sabes que decirle al cliente cuando pregunta por su pedido en camino",
     "Te das cuenta que solo piensas en el envio y olvidas que pasa despues de entregar"
   ],
-  "etiqueta_arbol": "Cubre todo el ciclo de servicio"
+  "etiqueta_arbol": "Cubre todo el ciclo de servicio",
+  "fuentes_internas": [
+    "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0898",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe que pasa antes de que el cliente compre: como pide, que le respondes, que politica ve.",
+      "texto_nuevo": "Escribe qué pasa antes de que el cliente compre: cómo pide, qué le respondes, qué política ve.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-040.paso0: que, como, que, que, politica (Se añaden las tildes de los interrogativos indirectos y de 'política'; el 'de que' conjuntivo queda bien sin tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0899",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe que pasa durante el envio: plazo, confirmacion, seguimiento del pedido.",
+      "texto_nuevo": "Escribe qué pasa durante el envío: plazo, confirmación, seguimiento del pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-040.paso1: que, envio, confirmacion (A 'qué', 'envío' y 'confirmación' les faltaban las tildes y no se cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0900",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe que pasa despues de entregar: devoluciones, garantia, manejo de reclamos.",
+      "texto_nuevo": "Escribe qué pasa después de entregar: devoluciones, garantía, manejo de reclamos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-040.paso2: que, despues, garantia (A 'qué', 'después' y 'garantía' les faltaban las tildes y no se cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0901",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marca en cuales de los tres momentos no tienes un proceso claro y resuelve ese primero.",
+      "texto_nuevo": "Marca en cuáles de los tres momentos no tienes un proceso claro y resuelve ese primero.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-040.paso3: cuales (A 'cuáles', interrogativo indirecto, le faltaba la tilde y no se cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

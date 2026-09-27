@@ -18,7 +18,26 @@
     "getting_started_physical_protection"
   ],
   "condiciones_activacion": [
-    "Cuando se contratan, despiden o transfieren empleados con acceso a sistemas que procesan CUI."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y contratas, despides o transfieres empleados con acceso a sistemas que procesan CUI."
   ],
-  "etiqueta_arbol": "Verifica la Confianza del Personal"
+  "etiqueta_arbol": "Verifica la Confianza del Personal",
+  "fuentes_internas": [
+    "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-096",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se contratan, despiden o transfieren empleados con acceso a sistemas que procesan CUI.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y contratas, despides o transfieres empleados con acceso a sistemas que procesan CUI.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-019: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCA613E",
+  "intento": 0,
+  "usd": 0.14512,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31945,
+  "tokens_out": 867,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCA613E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4068, 4072, 3981, 4027, 4039], \"cita\": \"no audit of F-28 operations, | no approved Airplane Operating Manual or Flight Operations Manual, | superficial to the point of being of little use as a test of safety on the platform. They did not reveal a number of clear cut and readily ascertainable deficiencies.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro no manda verificar cada capa, pero describe su fallo en Dryden: sin auditoria y sin manual aprobado. En Piper Alpha el inspector acepto sin comprobar que las deficiencias estaban corregidas. 'Actualizado' encaja con los documentos obsoletos de NASA (L3981). L4033 no desaconseja el paso: es la defensa del Director, que Cullen rechaza (L4039).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCA613E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4068,
+   4072,
+   3981,
+   4027,
+   4039
+  ],
+  "cita": "no audit of F-28 operations, | no approved Airplane Operating Manual or Flight Operations Manual, | superficial to the point of being of little use as a test of safety on the platform. They did not reveal a number of clear cut and readily ascertainable deficiencies.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro no manda verificar cada capa, pero describe su fallo en Dryden: sin auditoria y sin manual aprobado. En Piper Alpha el inspector acepto sin comprobar que las deficiencias estaban corregidas. 'Actualizado' encaja con los documentos obsoletos de NASA (L3981). L4033 no desaconseja el paso: es la defensa del Director, que Cullen rechaza (L4039).",
+  "paso_fiel": ""
+ }
+}

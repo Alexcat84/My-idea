@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P673EDC",
+  "intento": 0,
+  "usd": 0.147344,
+  "turnos": 1,
+  "duracion_s": 12.2,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31806,
+  "tokens_out": 1006,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P673EDC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5037, 5057], \"cita\": \"Substitute the individual concerned for someone else coming from the same domain of activity and possessing comparable qualifications and experience. [...] If the answer given by a 'jury' of peers is 'yes', then the error is probably blameless.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide comparar con alguien de cualificación y experiencia comparables y consultar a los pares como 'jurado'. Formar ese grupo concreta el test sin añadir datos. No es contrario al caso Clapham: allí el test falla y el libro manda revisar déficits sistémicos de formación, algo que este paso no impide.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P673EDC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5037,
+   5057
+  ],
+  "cita": "Substitute the individual concerned for someone else coming from the same domain of activity and possessing comparable qualifications and experience. [...] If the answer given by a 'jury' of peers is 'yes', then the error is probably blameless.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide comparar con alguien de cualificación y experiencia comparables y consultar a los pares como 'jurado'. Formar ese grupo concreta el test sin añadir datos. No es contrario al caso Clapham: allí el test falla y el libro manda revisar déficits sistémicos de formación, algo que este paso no impide.",
+  "paso_fiel": ""
+ }
+}

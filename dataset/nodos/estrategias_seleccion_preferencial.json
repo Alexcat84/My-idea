@@ -1,6 +1,6 @@
 {
   "node_id": "estrategias_seleccion_preferencial",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Preferencias de Selección Consciente (Inteligencia Ecológica, Respeto y Deleite)",
   "fuente": "Cradle to Cradle - Michael Braungart",
@@ -23,5 +23,23 @@
     "Si el usuario debe elegir entre opciones imperfectas y no puede rediseñar el producto completo todavía.",
     "Si el usuario busca comunicar compromiso ambiental sin caer en greenwashing."
   ],
-  "etiqueta_arbol": "Elige con Conciencia y Respeto"
+  "etiqueta_arbol": "Elige con Conciencia y Respeto",
+  "fuentes_internas": [
+    "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-142",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F16-007: Trata de criterios para elegir materiales y proveedores, una decision de diseno y recursos, no una prueba con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

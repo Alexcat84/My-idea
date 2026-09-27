@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P944E0A",
+  "intento": 0,
+  "usd": 0.18102000000000001,
+  "turnos": 1,
+  "duracion_s": 30.1,
+  "pared_s": 31.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31085,
+  "tokens_out": 2834,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P944E0A\", \"veredicto\": \"CONTRARIO\", \"lineas\": [4429, 4308, 4431, 4435], \"cita\": \"The long-term safety benefits of being forced to grapple with these enormously difficult--and still unresolved--sociotechnical issues are undoubtedly greater than any number of purely technical ‘fixes’. The process is more valuable than the product.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso exige madurez previa para autorregularse. El libro invierte ese orden: la autorregulación (hacer el Safety Case, a menudo por primera vez) es lo que genera comprensión y mejoras, y la llama un 'enorme plus'. La dificultad que señala recae en los reguladores, no en la madurez de la organización. Condicionarla a madurez invierte la causalidad.\", \"paso_fiel\": \"Asumir la elaboración y actualización del Safety Case como el ejercicio que obliga a la organización a comprender a fondo sus riesgos sociotécnicos, sin esperar a tener una madurez previa, porque el proceso vale más que el producto.\"}\n```",
+ "parseado": {
+  "id": "P944E0A",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   4429,
+   4308,
+   4431,
+   4435
+  ],
+  "cita": "The long-term safety benefits of being forced to grapple with these enormously difficult--and still unresolved--sociotechnical issues are undoubtedly greater than any number of purely technical ‘fixes’. The process is more valuable than the product.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso exige madurez previa para autorregularse. El libro invierte ese orden: la autorregulación (hacer el Safety Case, a menudo por primera vez) es lo que genera comprensión y mejoras, y la llama un 'enorme plus'. La dificultad que señala recae en los reguladores, no en la madurez de la organización. Condicionarla a madurez invierte la causalidad.",
+  "paso_fiel": "Asumir la elaboración y actualización del Safety Case como el ejercicio que obliga a la organización a comprender a fondo sus riesgos sociotécnicos, sin esperar a tener una madurez previa, porque el proceso vale más que el producto."
+ }
+}

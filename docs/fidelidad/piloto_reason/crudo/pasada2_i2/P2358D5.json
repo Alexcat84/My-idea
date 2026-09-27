@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P2358D5",
+  "intento": 0,
+  "usd": 0.10892800000000001,
+  "turnos": 1,
+  "duracion_s": 6.2,
+  "pared_s": 7.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 25347,
+  "tokens_out": 377,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P2358D5\", \"veredicto\": \"CONTRARIO\", \"lineas\": [3163, 3199, 3213], \"cita\": \"These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] This means that the instruments are built and owned by those actually carrying out the core business.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que los indicadores los crean especialistas de tarea (quienes gestionan y operan a diario la actividad) en grupos de trabajo. Dice que Tripod-Delta es de abajo arriba y que los instrumentos pertenecen a quienes hacen el trabajo. Encargarlos a expertos externos centrales sin el personal operativo invierte esa recomendacion.\", \"paso_fiel\": \"Pedir a especialistas de tarea (quienes gestionan y operan a diario cada actividad), trabajando en grupos, que redacten los indicadores observables de cada tipo general de falla, para que los instrumentos los construyan y los hagan suyos quienes realizan el trabajo.\"}",
+ "parseado": {
+  "id": "P2358D5",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   3163,
+   3199,
+   3213
+  ],
+  "cita": "These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] This means that the instruments are built and owned by those actually carrying out the core business.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que los indicadores los crean especialistas de tarea (quienes gestionan y operan a diario la actividad) en grupos de trabajo. Dice que Tripod-Delta es de abajo arriba y que los instrumentos pertenecen a quienes hacen el trabajo. Encargarlos a expertos externos centrales sin el personal operativo invierte esa recomendacion.",
+  "paso_fiel": "Pedir a especialistas de tarea (quienes gestionan y operan a diario cada actividad), trabajando en grupos, que redacten los indicadores observables de cada tipo general de falla, para que los instrumentos los construyan y los hagan suyos quienes realizan el trabajo."
+ }
+}

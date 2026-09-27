@@ -16,7 +16,7 @@
   "nodos_previos": [
     "define_punto_maximo_de_stock",
     "muestra_puntos_en_comun_antes_de_negociar",
-    "calificacion_de_calidad_de_proveedores"
+    "gestion_contratos_desempeno"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -24,5 +24,36 @@
     "Un proveedor te ha fallado antes y no recuerdas con precisión cuántas veces ni en qué.",
     "Se acerca la renovación de un contrato o acuerdo con un proveedor habitual."
   ],
-  "etiqueta_arbol": "Registra cómo cumple tu proveedor"
+  "etiqueta_arbol": "Registra cómo cumple tu proveedor",
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-001",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_contratos_desempeno -> lleva_scorecard_desempeno_proveedor",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-024",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "calificacion_de_calidad_de_proveedores -> lleva_scorecard_desempeno_proveedor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por gestion_contratos_desempeno."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
+  ]
 }

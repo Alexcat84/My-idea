@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P6646B7",
+  "intento": 0,
+  "usd": 0.192856,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43779,
+  "tokens_out": 887,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6646B7\", \"veredicto\": \"FIEL\", \"lineas\": [4314, 2748], \"cita\": \"Good intentions at the board level are useless if managers further down the chain and closer to what happens on the shop floor remain preoccupied exclusively with production problems.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El Informe Robens, citado por el libro, afirma que el compromiso del consejo es inútil si los mandos inferiores solo atienden a la producción. En L2748 Reason sitúa el compromiso en la organización entera, no en un solo directivo. El paso mantiene el papel de la dirección y extiende el compromiso a todos los niveles. No añade cifras, roles ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6646B7",
+  "veredicto": "FIEL",
+  "lineas": [
+   4314,
+   2748
+  ],
+  "cita": "Good intentions at the board level are useless if managers further down the chain and closer to what happens on the shop floor remain preoccupied exclusively with production problems.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El Informe Robens, citado por el libro, afirma que el compromiso del consejo es inútil si los mandos inferiores solo atienden a la producción. En L2748 Reason sitúa el compromiso en la organización entera, no en un solo directivo. El paso mantiene el papel de la dirección y extiende el compromiso a todos los niveles. No añade cifras, roles ni herramientas.",
+  "paso_fiel": ""
+ }
+}

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Los Cuatro Pilares del Programa de Calidad Corporativo",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Basado en la experiencia de Crosby en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+  "resumen_teorico": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
   "pasos_accionables": [
     "Diagnosticar el nivel de participación actual de la dirección en temas de calidad.",
     "Formar consejos o comités de calidad independientes por unidad o región.",
@@ -24,5 +24,26 @@
     "Cuando se busca instalar un programa de calidad a nivel corporativo con múltiples unidades de negocio.",
     "Cuando la organización tiene iniciativas de calidad dispersas sin estructura común."
   ],
-  "etiqueta_arbol": "Sostén tu Programa de Calidad"
+  "etiqueta_arbol": "Sostén tu Programa de Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-030",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Basado en la experiencia de Crosby en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+      "texto_nuevo": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Basado en la experiencia de Crosby en ITT,"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-026 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

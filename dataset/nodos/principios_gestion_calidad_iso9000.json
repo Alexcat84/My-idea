@@ -1,6 +1,6 @@
 {
   "node_id": "principios_gestion_calidad_iso9000",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Ocho Principios de Gestión de Calidad (ISO 9000)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -23,5 +23,23 @@
     "Al iniciar el diseño o rediseño de un sistema de gestión de calidad",
     "Cuando se busca una base conceptual común antes de certificar bajo ISO 9000"
   ],
-  "etiqueta_arbol": "Aplica los Ocho Principios ISO"
+  "etiqueta_arbol": "Aplica los Ocho Principios ISO",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-259",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-003: Sirve para disenar o redisenar el sistema de gestion de calidad con los principios como criterios; es planificacion, no exploracion de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

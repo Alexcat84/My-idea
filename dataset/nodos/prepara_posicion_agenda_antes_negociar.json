@@ -7,21 +7,19 @@
   "resumen_teorico": "Antes de sentarte a negociar con un proveedor, define tus objetivos mas alla del precio: garantias, plazos, calidad, condiciones de entrega. Ordena esos objetivos por importancia y detecta cuales podrias soltar si hace falta ceder algo. Investiga a quien tienes enfrente: quien decide, que le preocupa, como le va a su negocio y a su sector. Esa informacion te permite entender sus intereses reales, no solo su postura inicial. Ademas, quien propone la agenda de la reunion suele marcar el rumbo de la conversacion, asi que preparala tu mismo y compartela con tiempo. Llegar con esta tarea hecha te da margen para ceder en lo secundario sin perder lo esencial, y evita que la presion del momento te haga aceptar condiciones que no puedes sostener.",
   "pasos_accionables": [
     "Escribe en una hoja todos tus objetivos para esta compra, no solo el precio.",
-    "Ordena esos objetivos de mayor a menor prioridad y marca cuales podrias soltar sin problema.",
-    "Busca o pregunta directamente quien toma las decisiones del lado del proveedor.",
-    "Averigua como le va al negocio del proveedor: su industria, su competencia, sus dificultades actuales.",
-    "Redacta la agenda de la reunion de negociacion y enviala con un dia de anticipacion.",
-    "Abre tu la reunion el dia acordado para marcar el ritmo de la conversacion."
+    "Ordena esos objetivos de mayor a menor prioridad y marca cuáles podrías soltar sin problema.",
+    "Busca o pregunta directamente quién toma las decisiones del lado del proveedor.",
+    "Averigua cómo le va al negocio del proveedor: su industria, su competencia, sus dificultades actuales.",
+    "Redacta la agenda de la reunión de negociación y envíala con tiempo para que el proveedor la revise y comente, de modo que la versión final quede publicada al menos un día antes.",
+    "Abre tú la reunión el día acordado para marcar el ritmo de la conversación."
   ],
-  "entregable_esperado": "Una lista priorizada de objetivos de negociacion junto con una agenda escrita lista para enviar al proveedor.",
+  "entregable_esperado": "Una lista priorizada de objetivos de negociación junto con una agenda escrita lista para enviar al proveedor.",
   "nodos_previos": [
     "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
-    "domina_lo_que_compras",
-    "fase_assess"
+    "domina_lo_que_compras"
   ],
   "nodos_siguientes": [
-    "ten_un_checklist_de_clausulas_de_contrato",
-    "clasifica_tu_inventario"
+    "ten_un_checklist_de_clausulas_de_contrato"
   ],
   "condiciones_activacion": [
     "Tienes una reunion agendada con un proveedor para negociar precio o condiciones y no sabes por donde empezar.",
@@ -29,5 +27,122 @@
     "Vas a negociar con alguien que te va a seguir vendiendo en el futuro y no quieres quemar la relacion.",
     "No conoces bien el negocio de tu proveedor y te cuesta entender por que insiste en ciertas condiciones."
   ],
-  "etiqueta_arbol": "Prepara tu postura antes de negociar"
+  "etiqueta_arbol": "Prepara tu postura antes de negociar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-004",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Redacta la agenda de la reunion de negociacion y enviala con un dia de anticipacion.",
+      "texto_nuevo": "Redacta la agenda de la reunión de negociación y envíala con tiempo para que el proveedor la revise y comente, de modo que la versión final quede publicada al menos un día antes.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L4983",
+        "frase": "Make sure to allow enough time for the supplier to thoroughly review the agenda, make comments/changes, and get back to you in time to pub lish the agenda at least one day before the negotiations begin."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, un dia antes es el minimo para publicar la agenda definitiva, despues de que el proveedor la haya revisado. Mandarla solo un dia antes altera el plazo y se salta esa revision.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-079"
+    },
+    {
+      "id": "t2-arista-057",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "fase_assess -> prepara_posicion_agenda_antes_negociar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-15-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La fase Assess describe al cliente potencial evaluandote a ti como vendedor. Este nodo te pone como comprador que negocia con un proveedor, asi que la perspectiva es otra y no lo prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-100",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prepara_posicion_agenda_antes_negociar -> clasifica_tu_inventario",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-09-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el nodo pide clasificar el inventario y fijar metas antes de decidir cuanto comprar; negociar con el proveedor viene despues, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0489",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ordena esos objetivos de mayor a menor prioridad y marca cuales podrias soltar sin problema.",
+      "texto_nuevo": "Ordena esos objetivos de mayor a menor prioridad y marca cuáles podrías soltar sin problema.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-005.paso1: cuáles, podrías (Faltan las tildes en el interrogativo indirecto cuáles y en el condicional podrías.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0490",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca o pregunta directamente quien toma las decisiones del lado del proveedor.",
+      "texto_nuevo": "Busca o pregunta directamente quién toma las decisiones del lado del proveedor.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-005.paso2: quién (quién es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0491",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Averigua como le va al negocio del proveedor: su industria, su competencia, sus dificultades actuales.",
+      "texto_nuevo": "Averigua cómo le va al negocio del proveedor: su industria, su competencia, sus dificultades actuales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-005.paso3: cómo (cómo es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0492",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Abre tu la reunion el dia acordado para marcar el ritmo de la conversacion.",
+      "texto_nuevo": "Abre tú la reunión el día acordado para marcar el ritmo de la conversación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-005.paso5: tú, reunión, día, conversación (Faltan tildes en el pronombre tú y en reunión, día y conversación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0493",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista priorizada de objetivos de negociacion junto con una agenda escrita lista para enviar al proveedor.",
+      "texto_nuevo": "Una lista priorizada de objetivos de negociación junto con una agenda escrita lista para enviar al proveedor.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-005.entregable: negociación (Falta la tilde en negociación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ]
 }

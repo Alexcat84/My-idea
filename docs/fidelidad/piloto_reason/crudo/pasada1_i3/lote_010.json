@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_010",
+  "intento": 0,
+  "usd": 0.162116,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32784,
+  "tokens_out": 1549,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PE5F4D8\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5184, 5186, 5196, 2687, 4757], \"razon\": \"Va en la direccion de las historias de guerra y de difundir cuasi-accidentes. Matiz: el libro valora la conversacion cara a cara y teme sustitutos de la charla; el paso ademas restringe a casos exitosos.\"},\n {\"id\": \"PCC4967\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4695], \"razon\": \"El libro dice que las conversiones dramaticas tras un accidente suelen ser efimeras. La cultura surge de medidas practicas persistentes.\"},\n {\"id\": \"P1CBD1D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 546, 550, 4757, 5254, 668, 686, 688], \"razon\": \"Concreta la idea de que las senales en conjunto debian alertar y el sistema de informacion de seguridad. Matiz: el libro advierte que las senales solo parecen avisos en retrospectiva.\"},\n {\"id\": \"P992DFD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 291, 3784], \"razon\": \"El libro dice literalmente que, por cada defensa vulnerada, hay que establecer que fallas activas y condiciones latentes intervinieron.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PE5F4D8",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5184,
+    5186,
+    5196,
+    2687,
+    4757
+   ],
+   "razon": "Va en la direccion de las historias de guerra y de difundir cuasi-accidentes. Matiz: el libro valora la conversacion cara a cara y teme sustitutos de la charla; el paso ademas restringe a casos exitosos."
+  },
+  {
+   "id": "PCC4967",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4695
+   ],
+   "razon": "El libro dice que las conversiones dramaticas tras un accidente suelen ser efimeras. La cultura surge de medidas practicas persistentes."
+  },
+  {
+   "id": "P1CBD1D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    546,
+    550,
+    4757,
+    5254,
+    668,
+    686,
+    688
+   ],
+   "razon": "Concreta la idea de que las senales en conjunto debian alertar y el sistema de informacion de seguridad. Matiz: el libro advierte que las senales solo parecen avisos en retrospectiva."
+  },
+  {
+   "id": "P992DFD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    291,
+    3784
+   ],
+   "razon": "El libro dice literalmente que, por cada defensa vulnerada, hay que establecer que fallas activas y condiciones latentes intervinieron."
+  }
+ ]
+}

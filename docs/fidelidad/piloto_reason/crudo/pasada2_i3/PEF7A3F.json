@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PEF7A3F",
+  "intento": 0,
+  "usd": 0.163212,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36423,
+  "tokens_out": 876,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PEF7A3F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [423, 451, 1914, 4027], \"cita\": \"Another small crack in the system was the absence of any formal procedure for handing over jobs from line to base maintenance. As a result, no preprepared stage sheets (indicating the prior work performed) were available and the handover briefing was carried out verbally rather than in writing.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta como condicion latente la falta de procedimientos para traspasar trabajo entre linea y base, y los fallos en relevos de turno (Piper Alpha). El paso lo convierte en accion, en la misma direccion. La rareza de estos traspasos (L423) solo explica por que nadie los habia previsto. L459 cuestiona un cambio total de procedimientos, no este.\"}\n```",
+ "parseado": {
+  "id": "PEF7A3F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   423,
+   451,
+   1914,
+   4027
+  ],
+  "cita": "Another small crack in the system was the absence of any formal procedure for handing over jobs from line to base maintenance. As a result, no preprepared stage sheets (indicating the prior work performed) were available and the handover briefing was carried out verbally rather than in writing.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta como condicion latente la falta de procedimientos para traspasar trabajo entre linea y base, y los fallos en relevos de turno (Piper Alpha). El paso lo convierte en accion, en la misma direccion. La rareza de estos traspasos (L423) solo explica por que nadie los habia previsto. L459 cuestiona un cambio total de procedimientos, no este."
+ }
+}

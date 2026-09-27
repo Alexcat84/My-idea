@@ -1,5 +1,5 @@
 {
-  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; regla max 2 por ancla core aplicada; rechazados: 4 usos extra de calidad_de_ejecucion_proceso_innovacion, 2 pares de seed_deals por trampa semantica, 1 redundante de ROI, 1 vago de capacidad). | 2026-08-07: un puente apuntaba a un nodo deprecado por la fusion y se REDIRIGIO a su superviviente. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | ronda 2 de fusion: puente redirigido a su superviviente.",
+  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; regla max 2 por ancla core aplicada; rechazados: 4 usos extra de calidad_de_ejecucion_proceso_innovacion, 2 pares de seed_deals por trampa semantica, 1 redundante de ROI, 1 vago de capacidad). | 2026-08-07: un puente apuntaba a un nodo deprecado por la fusion y se REDIRIGIO a su superviviente. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | ronda 2 de fusion: puente redirigido a su superviviente. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: el puente de colaboracion_transporte_ctm se reancla en colaboracion_cadena_suministro (colaboracion_transporte_ctm pasa a entrega). | 2026-09-27: nodos que salen del nucleo a su mundo (pasadas D y MV del saneamiento).",
   "aprobados": [
     {
       "core": "reglas_brainstorming",
@@ -25,11 +25,6 @@
     {
       "core": "metas_objetivos_smart_innovacion",
       "dominio": "definir_metas_smart_de_proyecto",
-      "score": 0.85
-    },
-    {
-      "core": "voice_of_customer_homework",
-      "dominio": "medicion_servicios",
       "score": 0.85
     },
     {
@@ -63,6 +58,182 @@
       "dominio": "sistema_medicion_kpi",
       "score": 0.83,
       "redirigido_de": "medir_progreso_kpi"
+    },
+    {
+      "core": "definicion_alineacion_cadena_suministro",
+      "dominio": "planificacion_cadena_suministro",
+      "score": 0.7777,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P1-17): Alinear la cadena de suministro con la estrategia se profundiza de forma razonable en planificar con calidad el abastecimiento y los proveedores."
+    },
+    {
+      "core": "rediseno_procesos_negocio_cx",
+      "dominio": "contacto_con_el_cliente",
+      "score": 0.7702,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P3-04): Rediseñar procesos pensando en la experiencia del cliente lleva directo a gestionar a quienes tienen contacto con el cliente en el servicio; ambos dicen que es tarea de toda la organizacion."
+    },
+    {
+      "core": "entrenamiento_gerencial",
+      "dominio": "adopcion_liderazgo",
+      "score": 0.7131,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P2-22): Formar a quienes lideran equipos continua de forma razonable en el principio de Deming de ejercer el liderazgo en vez de vigilar."
+    },
+    {
+      "core": "experiencia_del_cliente_proactiva",
+      "dominio": "contacto_con_el_cliente",
+      "score": 0.6943,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P2-19): De disenar la experiencia del cliente se pasa con naturalidad a gestionar a las personas que tienen contacto directo con el, y asi a la calidad del servicio."
+    },
+    {
+      "core": "scor_model_operaciones",
+      "dominio": "planificacion_cadena_suministro",
+      "score": 0.6821,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P3-15): El proceso Abastecer del modelo SCOR se profundiza de forma razonable en la planificacion de la calidad del abastecimiento."
+    },
+    {
+      "core": "guias_diseno_sistemas_estrategicos",
+      "dominio": "revision_diseno",
+      "score": 0.5721,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P3-08): Evaluar diseños de sistemas antes de construirlos continua de forma razonable en la revision de diseño con usuarios mientras aun se puede cambiar."
+    },
+    {
+      "core": "information_driver_supply_chain",
+      "dominio": "planificacion_cadena_suministro",
+      "score": 0.6769,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P2-04): Ambos hablan de la cadena de suministro y de la relacion con proveedores, pero se pasa de compartir informacion a la estrategia de abastecimiento, y el salto es debil."
+    },
+    {
+      "core": "marco_analisis_mercado_cadena_suministro",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.6498,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P1-06): Tras identificar en que debe destacar la cadena de suministro, trabajar con proveedores en un equipo conjunto es un siguiente paso posible aunque no evidente."
+    },
+    {
+      "core": "descubrir_valor_inesperado_cliente",
+      "dominio": "sistema_manejo_quejas",
+      "score": 0.635,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P1-02): Tiene razon A: el nucleo parte de un cliente critico cuyas expectativas no se cumplen, y un sistema de quejas es la practica de calidad que atiende justo esa insatisfaccion; el vinculo es debil porque uno es proactivo y el otro reactivo, pero el salto se entiende."
+    },
+    {
+      "core": "persuasion_directivos_prioridad_cliente",
+      "dominio": "contacto_con_el_cliente",
+      "score": 0.6125,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P1-22): Quien impulsa la experiencia del cliente encuentra un siguiente paso concreto en gestionar y capacitar al personal de contacto con el cliente."
+    },
+    {
+      "core": "relacion_continua_con_cliente",
+      "dominio": "revolucion_relaciones_proveedores",
+      "score": 0.5896,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P3-10): La relacion continua en la venta grande enlaza de forma debil con la alianza comprador-proveedor, que se ve desde el comprador y desde la calidad."
+    },
+    {
+      "core": "diseno_de_eucatastrofe_organizacional",
+      "dominio": "adopcion_liderazgo",
+      "score": 0.5782,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P3-06): Tiene razon A: no es solo la palabra vigilar, porque ambos nodos piden al lider no usar su poder (ni la IA) para vigilar sino para quitar trabas y devolver valor al trabajo de su gente; el salto a Deming se entiende aunque es debil."
+    },
+    {
+      "core": "requisitos_sistema_retroalimentacion",
+      "dominio": "sistema_de_alarma_de_defectos",
+      "score": 0.5413,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P2-03): Pasar de sistemas de retroalimentacion con datos visibles y autoridad delegada a alarmas de calidad con responsables de actuar tiene logica, pero el nodo del mundo es estrecho (comprador y proveedor)."
+    },
+    {
+      "core": "bucle_retroalimentacion_autoajustable",
+      "dominio": "graficos_control_individuales_operarios",
+      "score": 0.541,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P2-20): El bucle de retroalimentacion que compara el estado con la meta encuentra en los graficos de control un instrumento concreto, pero el nodo del mundo baja al operario individual y no a la cadena."
+    },
+    {
+      "core": "logistica_inversa_retornos",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.5338,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P2-17): Las devoluciones apuntan a causas que hay que corregir en origen, y un equipo conjunto con el proveedor contra problemas cronicos es un siguiente paso posible, aunque debil."
+    },
+    {
+      "core": "coordinacion_colaboracion_cadena_suministro",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.7432,
+      "reanclado_de": "colaboracion_cadena_suministro",
+      "lectura": "Pasada MV del saneamiento (MV-B04, lectores de acuerdo): La colaboracion como ventaja competitiva lleva a formar un equipo conjunto con proveedores."
+    },
+    {
+      "core": "plan_gestion_calidad",
+      "dominio": "metricas_calidad",
+      "score": 0.752,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 3,
+      "lectura": "Pasada MV del saneamiento (MV-A39, lectores de acuerdo): El plan de calidad se concreta en metricas de calidad que luego se controlan."
+    },
+    {
+      "core": "plan_gestion_calidad",
+      "dominio": "quality_audit",
+      "score": 0.7829,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A40, lectores de acuerdo): La auditoria de calidad verifica el cumplimiento del plan de gestion de calidad."
+    },
+    {
+      "core": "planificacion_gobierno_organizaciones_familiares",
+      "dominio": "evaluacion_desempeno_junta_directiva",
+      "score": 0.6163,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A41, lectores de acuerdo): Tras armar una junta directiva profesional, evaluar su desempeno es la continuacion logica del gobierno."
+    }
+  ],
+  "rechazados": [
+    {
+      "core": "voice_of_customer_homework",
+      "dominio": "medicion_servicios",
+      "score": 0.85,
+      "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-135): El trabajo previo de estudio de mercado y analisis tecnico para desarrollar productos no prepara la medicion de la calidad en areas administrativas y de servicio. Son temas distintos."
+    },
+    {
+      "core": "colaboracion_transporte_ctm",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.6415,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P3-09): Colaborar entre empresas en transporte lleva de forma razonable al equipo conjunto comprador-proveedor para mejorar la cadena.",
+      "motivo": "colaboracion_transporte_ctm pasa a entrega (decision del fundador del 27 sep 2026): el puente se reancla en colaboracion_cadena_suministro."
+    },
+    {
+      "core": "colaboracion_cadena_suministro",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.7729,
+      "reanclado_de": "colaboracion_transporte_ctm",
+      "lectura": "Pasada C del saneamiento (C-A, lectores de acuerdo): Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico.",
+      "motivo": "Su ancla colaboracion_cadena_suministro sale del nucleo a compras (pasada D): el puente se reancla en coordinacion_colaboracion_cadena_suministro."
     }
   ]
 }

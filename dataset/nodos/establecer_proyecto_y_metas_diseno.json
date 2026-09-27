@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Vincular el proyecto de diseño con tu estrategia de ventas o de negocio",
     "Redactar un enunciado de meta que incluya el alcance y los resultados que quieres lograr",
-    "Definir quien te va a ayudar en el proyecto y prepararlo para la tarea",
-    "Definir metricas SMART: especificas, medibles, acordadas, realistas y con tiempo definido",
-    "Revisar el avance del proyecto de forma periodica"
+    "Definir quién te va a ayudar en el proyecto y prepararlo para la tarea",
+    "Definir métricas SMART: específicas, medibles, acordadas, realistas y con tiempo definido",
+    "Revisar el avance del proyecto de forma periódica"
   ],
-  "entregable_esperado": "Un enunciado de meta o carta del proyecto de diseño, con responsables definidos y metricas SMART",
+  "entregable_esperado": "Un enunciado de meta o carta del proyecto de diseño, con responsables definidos y métricas SMART",
   "nodos_previos": [
     "juran_quality_by_design"
   ],
@@ -24,5 +24,65 @@
     "Al iniciar cualquier proyecto de diseño o rediseño de producto, servicio o proceso",
     "Cuando no tienes claro el alcance o los objetivos del proyecto"
   ],
-  "etiqueta_arbol": "Define Proyecto y Metas de Diseño"
+  "etiqueta_arbol": "Define Proyecto y Metas de Diseño",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0066",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir quien te va a ayudar en el proyecto y prepararlo para la tarea",
+      "texto_nuevo": "Definir quién te va a ayudar en el proyecto y prepararlo para la tarea",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-026.paso2: quién ('quién' es interrogativo indirecto y lleva tilde; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0067",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir metricas SMART: especificas, medibles, acordadas, realistas y con tiempo definido",
+      "texto_nuevo": "Definir métricas SMART: específicas, medibles, acordadas, realistas y con tiempo definido",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-026.paso3: métricas, específicas ('métricas' y 'específicas' son esdrújulas y llevan tilde; la sigla SMART queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0068",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar el avance del proyecto de forma periodica",
+      "texto_nuevo": "Revisar el avance del proyecto de forma periódica",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-026.paso4: periódica ('periódica' es esdrújula y lleva tilde; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0069",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un enunciado de meta o carta del proyecto de diseño, con responsables definidos y metricas SMART",
+      "texto_nuevo": "Un enunciado de meta o carta del proyecto de diseño, con responsables definidos y métricas SMART",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-026.entregable: métricas ('métricas' es esdrújula y lleva tilde; es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

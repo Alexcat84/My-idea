@@ -1,0 +1,89 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_015",
+  "intento": 0,
+  "usd": 0.17731200000000003,
+  "turnos": 1,
+  "duracion_s": 21.0,
+  "pared_s": 22.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33688,
+  "tokens_out": 2128,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P4C147E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5043, 5057, 5041, 1569, 1618], \"razon\": \"El árbol de Reason pregunta por el incumplimiento deliberado. Exigir procedimientos adecuados coincide con distinguir reglas buenas y malas, y con las violaciones inducidas por el sistema.\"},\n  {\"id\": \"PB34884\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2638, 2767, 2853, 5775, 5781, 1058], \"razon\": \"El libro recomienda medidas proactivas que hagan visibles las condiciones latentes y las eliminen antes del suceso. Advierte que siempre existen y que el proceso es continuo.\"},\n  {\"id\": \"P95998E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1056, 1058, 1068, 1072, 1076, 1149, 1133, 821], \"razon\": \"El paso propone la redundancia como solución. El nodo y el libro advierten que aumenta la complejidad, la opacidad y los fallos de modo común, y que los errores humanos pueden anular varias capas a la vez.\"},\n  {\"id\": \"P268055\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"de forma continua\", \"registro de condiciones latentes\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2658, 2767, 5775, 5781, 3075, 3079, 5763], \"razon\": \"Va en la dirección proactiva del libro. Matices: Reason mide procesos (GFT) y no condiciones sueltas, ajusta la frecuencia al ritmo de cambio y prioriza dos o tres procesos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P4C147E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5043,
+    5057,
+    5041,
+    1569,
+    1618
+   ],
+   "razon": "El árbol de Reason pregunta por el incumplimiento deliberado. Exigir procedimientos adecuados coincide con distinguir reglas buenas y malas, y con las violaciones inducidas por el sistema."
+  },
+  {
+   "id": "PB34884",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2638,
+    2767,
+    2853,
+    5775,
+    5781,
+    1058
+   ],
+   "razon": "El libro recomienda medidas proactivas que hagan visibles las condiciones latentes y las eliminen antes del suceso. Advierte que siempre existen y que el proceso es continuo."
+  },
+  {
+   "id": "P95998E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1056,
+    1058,
+    1068,
+    1072,
+    1076,
+    1149,
+    1133,
+    821
+   ],
+   "razon": "El paso propone la redundancia como solución. El nodo y el libro advierten que aumenta la complejidad, la opacidad y los fallos de modo común, y que los errores humanos pueden anular varias capas a la vez."
+  },
+  {
+   "id": "P268055",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "de forma continua",
+    "registro de condiciones latentes"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2658,
+    2767,
+    5775,
+    5781,
+    3075,
+    3079,
+    5763
+   ],
+   "razon": "Va en la dirección proactiva del libro. Matices: Reason mide procesos (GFT) y no condiciones sueltas, ajusta la frecuencia al ritmo de cambio y prioriza dos o tres procesos."
+  }
+ ]
+}

@@ -16,7 +16,8 @@
   ],
   "entregable_esperado": "Documento de criterios de contratación por función, banco de preguntas de entrevista, y checklist de referencias",
   "nodos_previos": [
-    "adopcion_liderazgo"
+    "adopcion_liderazgo",
+    "establecer_estandar_alto_desempeno"
   ],
   "nodos_siguientes": [
     "analisis_causa_raiz_despido_ejecutivo"
@@ -24,5 +25,23 @@
   "condiciones_activacion": [
     "Cuando el fundador/CEO debe contratar a un ejecutivo para una función que nunca ha desempeñado personalmente"
   ],
-  "etiqueta_arbol": "Contrata Expertos que tú No Eres"
+  "etiqueta_arbol": "Contrata Expertos que tú No Eres",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-19",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "establecer_estandar_alto_desempeno -> proceso_contratacion_ejecutivos_sin_experiencia",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-20, lectores de acuerdo): raiz de 6 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Fijar un estándar alto y exigirlo aunque uno no sepa hacer el trabajo desemboca en cómo contratar un buen ejecutivo para una función que nunca se ejerció."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

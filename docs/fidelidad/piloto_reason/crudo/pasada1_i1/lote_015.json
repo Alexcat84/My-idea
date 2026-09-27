@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_015",
+  "intento": 0,
+  "usd": 0.14876,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33235,
+  "tokens_out": 791,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA034AF\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2905, 196, 1934, 5557], \"razon\": \"El libro dice literalmente que identificar un error es solo el inicio de la búsqueda de causas, no el final.\"},\n  {\"id\": \"P91431F\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2750, 3382, 4478], \"razon\": \"Según el libro, cada medición sirve para identificar los procesos más preocupantes y rastrear la efectividad de medidas correctivas previas.\"},\n  {\"id\": \"P70A024\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2028, 971, 973, 413, 1068, 1072, 2250, 2259], \"razon\": \"La inspección independiente cuenta con apoyo (L971, L413). Pero el libro advierte que la redundancia oculta errores y privilegia recordatorios y análisis de tareas. Conviene revisarlo.\"},\n  {\"id\": \"P86D246\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [81, 105, 306, 1543, 1638, 2493], \"razon\": \"El libro advierte que los atajos habituales sin consecuencias erosionan los márgenes de seguridad y que las violaciones exitosas generan sobreconfianza. El paso aconseja lo contrario.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA034AF",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2905,
+    196,
+    1934,
+    5557
+   ],
+   "razon": "El libro dice literalmente que identificar un error es solo el inicio de la búsqueda de causas, no el final."
+  },
+  {
+   "id": "P91431F",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2750,
+    3382,
+    4478
+   ],
+   "razon": "Según el libro, cada medición sirve para identificar los procesos más preocupantes y rastrear la efectividad de medidas correctivas previas."
+  },
+  {
+   "id": "P70A024",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2028,
+    971,
+    973,
+    413,
+    1068,
+    1072,
+    2250,
+    2259
+   ],
+   "razon": "La inspección independiente cuenta con apoyo (L971, L413). Pero el libro advierte que la redundancia oculta errores y privilegia recordatorios y análisis de tareas. Conviene revisarlo."
+  },
+  {
+   "id": "P86D246",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    81,
+    105,
+    306,
+    1543,
+    1638,
+    2493
+   ],
+   "razon": "El libro advierte que los atajos habituales sin consecuencias erosionan los márgenes de seguridad y que las violaciones exitosas generan sobreconfianza. El paso aconseja lo contrario."
+  }
+ ]
+}

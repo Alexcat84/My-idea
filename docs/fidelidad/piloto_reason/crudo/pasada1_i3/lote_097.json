@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_097",
+  "intento": 0,
+  "usd": 0.167228,
+  "turnos": 1,
+  "duracion_s": 18.5,
+  "pared_s": 19.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32957,
+  "tokens_out": 1770,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD72F0E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4257, 4261, 4263, 4265], \"razon\": \"El paso trata el compromiso como desvío frente al cumplimiento real. Vaughan/Reason dicen que verlo como 'fallo' regulatorio es no entender: es un patrón estructural sistemático.\"},\n  {\"id\": \"PF699C6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3993, 4039, 4060, 4121, 4418], \"razon\": \"El libro documenta recortes de personal y presupuesto que redujeron la supervisión (NASA, Transport Canada, ACAA, HSE). El paso lo concreta en la misma dirección.\"},\n  {\"id\": \"PB7B2FD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4274, 4302, 4306, 4320], \"razon\": \"El libro distingue leyes que especifican medios de leyes orientadas a objetivos (Factories Act frente a HSW Act). El paso operativiza esa distinción como diagnóstico, sin datos nuevos.\"},\n  {\"id\": \"PB13F74\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [67, 83, 96, 1133, 1354, 4525], \"razon\": \"El libro describe la compensación de riesgo pero no propone 'políticas' como remedio. Además es escéptico con las reglas reactivas y advierte del exceso de protección. Remedio sin cobertura.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD72F0E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4257,
+    4261,
+    4263,
+    4265
+   ],
+   "razon": "El paso trata el compromiso como desvío frente al cumplimiento real. Vaughan/Reason dicen que verlo como 'fallo' regulatorio es no entender: es un patrón estructural sistemático."
+  },
+  {
+   "id": "PF699C6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3993,
+    4039,
+    4060,
+    4121,
+    4418
+   ],
+   "razon": "El libro documenta recortes de personal y presupuesto que redujeron la supervisión (NASA, Transport Canada, ACAA, HSE). El paso lo concreta en la misma dirección."
+  },
+  {
+   "id": "PB7B2FD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4274,
+    4302,
+    4306,
+    4320
+   ],
+   "razon": "El libro distingue leyes que especifican medios de leyes orientadas a objetivos (Factories Act frente a HSW Act). El paso operativiza esa distinción como diagnóstico, sin datos nuevos."
+  },
+  {
+   "id": "PB13F74",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    67,
+    83,
+    96,
+    1133,
+    1354,
+    4525
+   ],
+   "razon": "El libro describe la compensación de riesgo pero no propone 'políticas' como remedio. Además es escéptico con las reglas reactivas y advierte del exceso de protección. Remedio sin cobertura."
+  }
+ ]
+}

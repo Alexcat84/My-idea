@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0E43DB",
+  "intento": 0,
+  "usd": 0.18004399999999998,
+  "turnos": 1,
+  "duracion_s": 12.3,
+  "pared_s": 13.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39316,
+  "tokens_out": 1139,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0E43DB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5544, 5546, 2994, 5905], \"cita\": \"they emerge from human-machine mismatches, or poor human engineering ... The practical applications of this approach include: hazard operability studies (HAZOPS), hazard analysis studies (HAZANS), probabilistic risk assessment (PRA), technical safety audits, reliability and maintainability studies (RAMS), human reliability assessment (HRA), cognitive task analyses\", \"datos_sin_respaldo\": [], \"razon\": \"El libro sitúa HAZOPS, PRA y los análisis de tareas cognitivas en el modelo de ingeniería. Ese modelo atribuye los errores a desajustes humano-máquina, y el libro considera estas herramientas parte esencial de la caja del gestor. Pero solo describe el modelo. El paso convierte esa descripción en una instrucción de aplicación, en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0E43DB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5544,
+   5546,
+   2994,
+   5905
+  ],
+  "cita": "they emerge from human-machine mismatches, or poor human engineering ... The practical applications of this approach include: hazard operability studies (HAZOPS), hazard analysis studies (HAZANS), probabilistic risk assessment (PRA), technical safety audits, reliability and maintainability studies (RAMS), human reliability assessment (HRA), cognitive task analyses",
+  "datos_sin_respaldo": [],
+  "razon": "El libro sitúa HAZOPS, PRA y los análisis de tareas cognitivas en el modelo de ingeniería. Ese modelo atribuye los errores a desajustes humano-máquina, y el libro considera estas herramientas parte esencial de la caja del gestor. Pero solo describe el modelo. El paso convierte esa descripción en una instrucción de aplicación, en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

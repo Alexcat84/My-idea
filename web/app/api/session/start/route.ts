@@ -13,42 +13,50 @@
  * fase 2 y el flujo del CLI dependen de el).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
-import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
+import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
+import { crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
+import { nacerIdea } from "@/lib/nacerIdea";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
+import { avisosNodo } from "@/lib/engine/avisos";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
-import { PRECIOS } from "@/lib/precios";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
   const projectIdSolicitado = (body as { project_id?: unknown } | null)?.project_id;
   if (typeof texto !== "string" || texto.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
+    return NextResponse.json({ error: r.faltaTexto }, { status: 400 });
   }
-  if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
+  if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: `'texto' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: mensajeIdeaLarga(idioma), limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }
   if (projectIdSolicitado !== undefined && typeof projectIdSolicitado !== "string") {
-    return NextResponse.json({ error: "'project_id' debe ser un string" }, { status: 400 });
+    return NextResponse.json({ error: r.projectIdNoString }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -56,7 +64,7 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   // ETAPA 2 — LA FRONTERA: la web y el organizador son libres; el login nace
@@ -64,32 +72,56 @@ export async function POST(request: Request) {
   // la UI detecta login_requerido y lleva al login (la idea se adopta al
   // autenticarse, nada se pierde).
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   // Centro de cuenta: con 2FA activo, esta sesión debe haber superado el
   // desafío antes de tocar el motor pagado.
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
-  }
-
-  // Fusible global ANTES de cobrar creditos y de tocar la API.
-  const fusible = await verificarFusibleGlobal(user.email);
-  if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
-  }
-  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
-  if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   // ETAPA 2 — VERIFICAR al inicio (no cobrar): la Exploración cuesta
-  // plan_completo (5). El descuento ocurre A LA ENTREGA del plan (ruta del
+  // PRECIOS.plan_completo. El descuento ocurre A LA ENTREGA del plan (ruta del
   // plan, idempotente). Rechazo limpio antes del esfuerzo del usuario.
   const saldo = await verificarSaldo(user.id, PRECIOS.plan_completo);
   if (!saldo.alcanza) {
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(saldo.creditos, PRECIOS.plan_completo), saldo: saldo.creditos },
+      { error: mensajeSaldoInsuficiente(saldo.creditos, PRECIOS.plan_completo, 0, idioma), saldo: saldo.creditos },
       { status: 402 }
+    );
+  }
+
+  // AUD-09 M25 (decisión del fundador, 25 sep 2026): RESERVA al empezar. El
+  // precio del plan se aparta con la clave de su cobro (plan:{sessionId}), con
+  // el id de la sesión generado aquí: si otra sesión ya apartó el saldo, el
+  // rechazo llega antes de crear nada. Se cobra a la entrega; se libera si no
+  // hay entrega cobrable.
+  const sessionIdNueva = crypto.randomUUID();
+  const claveReserva = `plan:${sessionIdNueva}`;
+  const reserva = await reservarCreditos(user.id, claveReserva, conceptoDelPlan("core", false), PRECIOS.plan_completo);
+  if (!reserva.reservado) {
+    const ahora = await verificarSaldo(user.id, PRECIOS.plan_completo, claveReserva);
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(ahora.creditos, PRECIOS.plan_completo, ahora.apartados, idioma), saldo: ahora.creditos },
+      { status: 402 }
+    );
+  }
+
+  // AUD-09 (tanda 2): el fusible y el límite diario se cuentan DESPUÉS del
+  // saldo. Antes cada clic sin saldo gastaba un arranque del día y un cupo del
+  // fusible sin que nada ocurriera. Siguen antes de tocar la API. Si rechazan,
+  // la reserva se suelta.
+  const fusible = await verificarFusibleGlobal(user.email);
+  if (!fusible.permitido) {
+    await resolverReserva(claveReserva, "liberada");
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
+  }
+  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
+  if (!limite.permitido) {
+    await resolverReserva(claveReserva, "liberada");
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
     );
   }
 
@@ -102,18 +134,22 @@ export async function POST(request: Request) {
   const families = cargarFamilies();
 
   let projectId: string;
+  // i18n F5: el idioma de la IDEA (el de su texto al nacer), en que escribe la IA.
+  let idiomaIdea: string;
   if (projectIdSolicitado) {
     // RLS garantiza que solo se ve el proyecto propio; si no aparece, o
     // no existe o no es de este usuario -- misma respuesta en ambos casos.
     const proyecto = await obtenerProyecto(supabase, projectIdSolicitado);
     if (!proyecto) {
-      return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+      await resolverReserva(claveReserva, "liberada");
+      return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
     }
     projectId = projectIdSolicitado;
+    idiomaIdea = idiomaDelProyecto(proyecto);
   } else {
-    projectId = await crearProyecto(supabase, user.id, texto);
+    ({ projectId, idioma: idiomaIdea } = await nacerIdea(supabase, user.id, texto, idioma));
   }
-  const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto);
+  const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto, null, "core", { id: sessionIdNueva });
 
   // Fase 3.5: dominios recorribles del proyecto (core + unlocks). Un
   // proyecto recién creado no tiene unlocks; y si project_unlocks aún no
@@ -133,12 +169,29 @@ export async function POST(request: Request) {
   const clasificacion = await clasificarEntrada(client, texto, entrySeeds, graph, acumulado);
   acumulado = clasificacion.acumulado;
 
-  const estado = estadoInicial({
+  const estadoBase = estadoInicial({
     actualId: clasificacion.puertaId,
     perfilSesion: clasificacion.perfilSesion,
     textoOriginal: texto,
     dominiosDesbloqueados: dominios,
+    idioma: idiomaIdea,
   });
+  // AUD-09 M17: si la clasificación cayó a su respaldo, queda como evento de la
+  // sesión (caja de vidrio), no solo en el log.
+  const estado = clasificacion.fallback
+    ? {
+        ...estadoBase,
+        fallbackEvents: [
+          ...estadoBase.fallbackEvents,
+          {
+            tipo: "fallback_auto" as const,
+            nodo_actual: "clasificacion",
+            candidato_elegido: clasificacion.puertaId,
+            motivo: clasificacion.fallback,
+          },
+        ],
+      }
+    : estadoBase;
 
   const resultado = await avanzarTurno({
     client,
@@ -149,6 +202,7 @@ export async function POST(request: Request) {
     respuestaUsuario: null,
     acumulado,
     dbSessionId: sessionId,
+    idioma,
   });
 
   // La puerta de entrada vive en la ruta DESDE estadoInicial, asi que el
@@ -156,9 +210,10 @@ export async function POST(request: Request) {
   // para que el arbol del cliente arranque por donde de verdad entro.
   const puerta = {
     id: clasificacion.puertaId,
-    etiqueta: etiquetaArbol(clasificacion.puertaId, graph),
+    etiqueta: etiquetaArbol(clasificacion.puertaId, graph, idioma),
+    avisos: avisosNodo(clasificacion.puertaId, graph, idioma),
     modo: "conversado" as const,
   };
 
-  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta]);
+  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta], [], idioma);
 }

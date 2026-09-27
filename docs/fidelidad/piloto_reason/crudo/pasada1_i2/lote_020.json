@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_020",
+  "intento": 0,
+  "usd": 0.18366,
+  "turnos": 1,
+  "duracion_s": 24.7,
+  "pared_s": 25.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34210,
+  "tokens_out": 2341,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PF88C52\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4773, 2579, 2583, 5219, 3384],\n    \"razon\": \"El libro define la cultura de aprendizaje como voluntad de implementar reformas y el compromiso como recursos. 'Definir procesos de decisión' concreta eso sin datos nuevos. El libro añade que implementar no basta.\"\n  },\n  {\n    \"id\": \"P562CE5\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [293, 285, 279, 2720],\n    \"razon\": \"El libro indica que, para cada acto inseguro identificado, se consideren las condiciones locales que lo moldearon o provocaron, y luego se suba a los factores organizacionales.\"\n  },\n  {\n    \"id\": \"P2E6D9B\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2109, 2113, 2117, 2121, 2125, 1943],\n    \"razon\": \"Reason clasificó 122 lapsos de mantenimiento con esas mismas cuatro categorías. El libro advierte que clasificar por consecuencias oculta los mecanismos cognitivos, pero la considera útil y fácil.\"\n  },\n  {\n    \"id\": \"PB2F743\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"220 ítems\", \"20 por GFT\", \"trimestral\"],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [3199, 3163, 3209, 3384, 3224],\n    \"razon\": \"Las cifras coinciden. El paso omite condiciones esenciales: indicadores creados por especialistas de la tarea y renovados en cada aplicación, gestionar perfiles y actuar sobre los 2-3 peores GFTs. Sin acción visible, el sistema muere.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PF88C52",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4773,
+    2579,
+    2583,
+    5219,
+    3384
+   ],
+   "razon": "El libro define la cultura de aprendizaje como voluntad de implementar reformas y el compromiso como recursos. 'Definir procesos de decisión' concreta eso sin datos nuevos. El libro añade que implementar no basta."
+  },
+  {
+   "id": "P562CE5",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    285,
+    279,
+    2720
+   ],
+   "razon": "El libro indica que, para cada acto inseguro identificado, se consideren las condiciones locales que lo moldearon o provocaron, y luego se suba a los factores organizacionales."
+  },
+  {
+   "id": "P2E6D9B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2109,
+    2113,
+    2117,
+    2121,
+    2125,
+    1943
+   ],
+   "razon": "Reason clasificó 122 lapsos de mantenimiento con esas mismas cuatro categorías. El libro advierte que clasificar por consecuencias oculta los mecanismos cognitivos, pero la considera útil y fácil."
+  },
+  {
+   "id": "PB2F743",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "220 ítems",
+    "20 por GFT",
+    "trimestral"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3199,
+    3163,
+    3209,
+    3384,
+    3224
+   ],
+   "razon": "Las cifras coinciden. El paso omite condiciones esenciales: indicadores creados por especialistas de la tarea y renovados en cada aplicación, gestionar perfiles y actuar sobre los 2-3 peores GFTs. Sin acción visible, el sistema muere."
+  }
+ ]
+}

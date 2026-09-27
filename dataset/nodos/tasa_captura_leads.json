@@ -10,7 +10,7 @@
     "Crear un formulario simple que solicite capital disponible, cronograma y área geográfica de interés",
     "Ofrecer un incentivo tangible (video educativo) a cambio de completar el formulario",
     "Nunca permitir descargas de material sin antes capturar información de contacto",
-    "Implementar sistema de autorespuesta personalizado según el perfil del prospecto"
+    "Implementar sistema de autorrespuesta personalizado según el perfil del prospecto"
   ],
   "entregable_esperado": "Sistema de captura de leads funcionando con formulario e incentivo, integrado a software de gestión de contactos",
   "nodos_previos": [
@@ -23,5 +23,24 @@
   "condiciones_activacion": [
     "Cuando el sitio web genera tráfico pero pocos leads calificados"
   ],
-  "etiqueta_arbol": "Mejora tu Captura de Contactos"
+  "etiqueta_arbol": "Mejora tu Captura de Contactos",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0276",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Implementar sistema de autorespuesta personalizado según el perfil del prospecto",
+      "texto_nuevo": "Implementar sistema de autorrespuesta personalizado según el perfil del prospecto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O023-012.paso4: autorespuesta (Cuando el prefijo auto- va delante de una palabra que empieza por r, la r se duplica (autorretrato, autorrespuesta), así que \"autorespuesta\" es una errata real y la propuesta no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ]
 }

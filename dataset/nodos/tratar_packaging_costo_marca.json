@@ -6,15 +6,15 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "La cantidad de empaque que usas no es un detalle menor: cada capa de carton, plastico o relleno agrega peso, y el peso agregado se traduce en mas costo de envio. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho mas del necesario para proteger el contenido, puede generar una impresion negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envios y pregunta directamente a tus clientes que perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuanto relleno es demasiado.",
   "pasos_accionables": [
-    "Pesa tu paquete actual y calcula cuanto peso agrega solo el empaque.",
-    "Reduce relleno excesivo sin sacrificar la proteccion minima necesaria.",
-    "Pregunta a tus clientes con una encuesta corta si el empaque les parecio excesivo o insuficiente.",
-    "Prueba una versión mas ligera de empaque en un lote pequeño antes de cambiar todo tu proceso."
+    "Pesa tu paquete actual y calcula cuánto peso agrega solo el empaque.",
+    "Reduce relleno excesivo sin sacrificar la protección mínima necesaria.",
+    "Pregunta a tus clientes con una encuesta corta si el empaque les pareció excesivo o insuficiente.",
+    "Prueba una versión más ligera de empaque en un lote pequeño antes de cambiar todo tu proceso."
   ],
-  "entregable_esperado": "Una versión de empaque optimizada en peso con retroalimentacion real de tus clientes.",
+  "entregable_esperado": "Una versión de empaque optimizada en peso con retroalimentación real de tus clientes.",
   "nodos_previos": [
     "disenar_empaque_logistica",
-    "embalaje_exportacion"
+    "programacion_entregas_delivery_scheduling"
   ],
   "nodos_siguientes": [
     "elegir_caja_correcta"
@@ -24,5 +24,105 @@
     "Recibes comentarios de clientes sobre demasiado plastico o carton en el pedido",
     "Quieres diferenciar tu marca con un empaque mas responsable sin subir el costo"
   ],
-  "etiqueta_arbol": "Ajusta el peso de tu empaque"
+  "etiqueta_arbol": "Ajusta el peso de tu empaque",
+  "fuentes_internas": [
+    "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-009",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "programacion_entregas_delivery_scheduling -> tratar_packaging_costo_marca",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-028",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "embalaje_exportacion -> tratar_packaging_costo_marca",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por programacion_entregas_delivery_scheduling."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-orto-0733",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pesa tu paquete actual y calcula cuanto peso agrega solo el empaque.",
+      "texto_nuevo": "Pesa tu paquete actual y calcula cuánto peso agrega solo el empaque.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-006.paso0: cuánto (Falta la tilde de 'cuánto' en esta interrogativa indirecta; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0734",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reduce relleno excesivo sin sacrificar la proteccion minima necesaria.",
+      "texto_nuevo": "Reduce relleno excesivo sin sacrificar la protección mínima necesaria.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-006.paso1: protección, mínima (Faltan las tildes de 'protección' y 'mínima'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0735",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus clientes con una encuesta corta si el empaque les parecio excesivo o insuficiente.",
+      "texto_nuevo": "Pregunta a tus clientes con una encuesta corta si el empaque les pareció excesivo o insuficiente.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-006.paso2: pareció (Falta la tilde de 'pareció'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0736",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prueba una versión mas ligera de empaque en un lote pequeño antes de cambiar todo tu proceso.",
+      "texto_nuevo": "Prueba una versión más ligera de empaque en un lote pequeño antes de cambiar todo tu proceso.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-006.paso3: más (Falta la tilde de 'más' como adverbio; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0737",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una versión de empaque optimizada en peso con retroalimentacion real de tus clientes.",
+      "texto_nuevo": "Una versión de empaque optimizada en peso con retroalimentación real de tus clientes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-006.entregable: retroalimentación (Falta la tilde de 'retroalimentación'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

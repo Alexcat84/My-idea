@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El facilitador es un agente externo al equipo de proyecto que ayuda a mejorar las relaciones humanas, asiste en asuntos fuera del alcance del equipo, apoya a los miembros manteniendo el foco en la meta, cuestiona afirmaciones sin sustento y reporta el progreso a los consejos de calidad. Requiere entrenamiento especializado en construcción de equipos, resolución de conflictos y conocimiento de las herramientas de breakthrough.",
   "pasos_accionables": [
-    "Capacitar al facilitador en team building, resolución de conflictos y comunicación, ademas de herramientas de mejora",
+    "Capacitar al facilitador en team building, resolución de conflictos y comunicación, además de herramientas de mejora",
     "Asignar facilitador de forma parcial durante la fase de arranque del proyecto",
     "Usar preguntas para desafiar teorías sin evidencia dentro del equipo",
     "Reportar avances del equipo a los consejos de calidad periódicamente",
@@ -37,6 +37,25 @@
       "node_id": "rol_facilitador_black_belt",
       "titulo": "Facilitadores y Black Belts en Proyectos de Mejora",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0208",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Capacitar al facilitador en team building, resolución de conflictos y comunicación, ademas de herramientas de mejora",
+      "texto_nuevo": "Capacitar al facilitador en team building, resolución de conflictos y comunicación, además de herramientas de mejora",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-023.paso0: además (Tilde de 'además'; el término en inglés se mantiene.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
     }
   ]
 }

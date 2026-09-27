@@ -26,6 +26,25 @@ describe("destinoPostLogin: solo rutas internas, jamás open-redirect", () => {
     expect(destinoPostLogin("javascript:alert(1)")).toBe("/ideas");
     expect(destinoPostLogin("evil.com")).toBe("/ideas"); // no empieza con /
   });
+
+  // AUD-09 H14: el parser de URL descarta tabuladores y saltos de línea, así
+  // que "/<TAB>/evil.com" pasaba el filtro de la segunda posición y resolvía
+  // a //evil.com, un dominio ajeno. La vara es el ORIGEN tras resolver.
+  it("RECHAZA caracteres de control que el parser de URL descarta", () => {
+    expect(destinoPostLogin("/\t/evil.com")).toBe("/ideas");
+    expect(destinoPostLogin("/\n/evil.com")).toBe("/ideas");
+    expect(destinoPostLogin("/\r/evil.com")).toBe("/ideas");
+    expect(destinoPostLogin("/\t\\evil.com")).toBe("/ideas");
+    expect(destinoPostLogin("/idea/abc\u0000")).toBe("/ideas");
+    expect(destinoPostLogin("/idea/abc\u007f")).toBe("/ideas");
+  });
+
+  it("todo destino aceptado resuelve al mismo origen", () => {
+    const origen = "https://www.myideaproject.com";
+    for (const raw of ["/ideas", "/idea/abc?entrevista=1", "/x/../../evil", "/%2F%2Fevil.com", "/\t/evil.com"]) {
+      expect(new URL(destinoPostLogin(raw), origen).origin).toBe(origen);
+    }
+  });
 });
 
 describe("loginConNext", () => {

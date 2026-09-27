@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P8C2D4F",
+  "intento": 0,
+  "usd": 0.25762,
+  "turnos": 1,
+  "duracion_s": 16.1,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57860,
+  "tokens_out": 1309,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8C2D4F\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4446, 4190, 4261, 4364], \"cita\": \"They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around.\", \"datos_sin_respaldo\": [\"mentor\"], \"razon\": \"El libro respalda que una mirada externa detecta lo que la organización normalizó (L4446, L4190, L4364). No es contrario: no la presenta como ineficaz, solo avisa de que la dependencia y la relación cómoda la debilitan (L4261). El 'asesor' encaja con consultores y expertos externos, pero la figura del mentor no aparece en el libro.\", \"paso_fiel\": \"Busca una revisión externa independiente, como un experto o consultor ajeno a tu operación y sin una relación demasiado cómoda contigo, que detecte las prácticas a las que te has acostumbrado.\"}\n```",
+ "parseado": {
+  "id": "P8C2D4F",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4446,
+   4190,
+   4261,
+   4364
+  ],
+  "cita": "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around.",
+  "datos_sin_respaldo": [
+   "mentor"
+  ],
+  "razon": "El libro respalda que una mirada externa detecta lo que la organización normalizó (L4446, L4190, L4364). No es contrario: no la presenta como ineficaz, solo avisa de que la dependencia y la relación cómoda la debilitan (L4261). El 'asesor' encaja con consultores y expertos externos, pero la figura del mentor no aparece en el libro.",
+  "paso_fiel": "Busca una revisión externa independiente, como un experto o consultor ajeno a tu operación y sin una relación demasiado cómoda contigo, que detecte las prácticas a las que te has acostumbrado."
+ }
+}

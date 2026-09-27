@@ -1,10 +1,10 @@
 {
   "node_id": "calidad_de_diseno_vs_produccion",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Calidad de Diseño vs. Calidad de Producción",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming distingue dos tipos de calidad presentes en cualquier sistema: la calidad de diseño, que son los programas y procedimientos específicos que prometen producir un servicio o producto vendible (lo que el cliente requiere), y la calidad de producción, que es el logro de resultados acordes a la calidad prometida en el diseño. El control de calidad debe trabajar simultáneamente sobre ambos aspectos: no basta con encontrar el error, es necesario encontrar la causa detrás del error y construir un sistema que minimice errores futuros.",
+  "resumen_teorico": "En cualquier sistema hay dos tipos de calidad: la calidad de diseño, que son los programas y procedimientos específicos que prometen producir un servicio o producto vendible (lo que el cliente requiere), y la calidad de producción, que es el logro de resultados acordes a la calidad prometida en el diseño. El control de calidad debe trabajar simultáneamente sobre ambos aspectos: no basta con encontrar el error, es necesario encontrar la causa detrás del error y construir un sistema que minimice errores futuros.",
   "pasos_accionables": [
     "Definir claramente los requisitos del cliente antes de diseñar el producto o servicio",
     "Documentar los procedimientos y programas que garantizan ese diseño",
@@ -25,5 +25,39 @@
     "Cuando se está definiendo un nuevo producto o servicio",
     "Cuando hay discrepancia entre lo que se promete y lo que se entrega"
   ],
-  "etiqueta_arbol": "Distingue Diseño de Producción"
+  "etiqueta_arbol": "Distingue Diseño de Producción",
+  "correcciones": [
+    {
+      "id": "atribucion-016",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming distingue dos tipos de calidad presentes en cualquier sistema: la calidad de diseño, que son los programas y procedimientos específicos que prometen producir un servicio o producto vendible (lo que el cliente requiere), y la calidad de producción, que es el logro de resultados acordes a la calidad prometida en el diseño. El control de calidad debe trabajar simultáneamente sobre ambos aspectos: no basta con encontrar el error, es necesario encontrar la causa detrás del error y construir un sistema que minimice errores futuros.",
+      "texto_nuevo": "En cualquier sistema hay dos tipos de calidad: la calidad de diseño, que son los programas y procedimientos específicos que prometen producir un servicio o producto vendible (lo que el cliente requiere), y la calidad de producción, que es el logro de resultados acordes a la calidad prometida en el diseño. El control de calidad debe trabajar simultáneamente sobre ambos aspectos: no basta con encontrar el error, es necesario encontrar la causa detrás del error y construir un sistema que minimice errores futuros.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming distingue dos tipos de calidad"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-009 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-041",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F26-012: Mide la brecha entre lo disenado y lo producido y busca causas raiz; es control de calidad de la operacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

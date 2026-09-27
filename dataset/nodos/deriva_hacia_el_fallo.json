@@ -1,6 +1,6 @@
 {
   "node_id": "deriva_hacia_el_fallo",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Drift into Failure (Deriva hacia el fallo)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -22,5 +22,23 @@
     "Cuando se sospecha que el riesgo actual es resultado de una deriva gradual y no de un evento único",
     "Al evaluar sistemas complejos y altamente acoplados (Perrow) en busca de vulnerabilidades estructurales"
   ],
-  "etiqueta_arbol": "Frena tu Deriva al Fallo"
+  "etiqueta_arbol": "Frena tu Deriva al Fallo",
+  "fuentes_internas": [
+    "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-101",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F14-001: Analiza la deriva del riesgo en una organizacion que ya opera; es gestion de seguridad operativa, no prueba con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

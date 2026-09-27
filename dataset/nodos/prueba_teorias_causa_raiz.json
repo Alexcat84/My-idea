@@ -1,6 +1,6 @@
 {
   "node_id": "prueba_teorias_causa_raiz",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Prueba de Teorías para Identificar la Causa Raíz",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -23,5 +23,23 @@
   "condiciones_activacion": [
     "Cuando existen múltiples teorías de causa y se requiere determinar cuál es la verdadera causa raíz mediante datos."
   ],
-  "etiqueta_arbol": "Busca la Causa Raíz Real"
+  "etiqueta_arbol": "Busca la Causa Raíz Real",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-263",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F14-014: Probar teorias de causa raiz con datos es mejora de procesos que ya operan, no validacion de mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P301D6A",
+  "intento": 0,
+  "usd": 0.167988,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38137,
+  "tokens_out": 772,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P301D6A\", \"veredicto\": \"FIEL\", \"lineas\": [2658, 3232, 3298], \"cita\": \"Review assesses 16 Railway Problem Factors (RPFs), selected on the basis of extensive field studies. [...] Whereas local factors varied from one workplace to the next [...] the same eight organizational factors were measured throughout the organization\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda el paso y sus dos cifras. Review mide 16 RPF seleccionados mediante estudios de campo. MESH mide ocho factores organizacionales fijos más factores locales que cambian según el lugar de trabajo. Además, L2658 dice que el número de indicadores ronda entre 8 y 16 y varía según el tipo de sistema.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P301D6A",
+  "veredicto": "FIEL",
+  "lineas": [
+   2658,
+   3232,
+   3298
+  ],
+  "cita": "Review assesses 16 Railway Problem Factors (RPFs), selected on the basis of extensive field studies. [...] Whereas local factors varied from one workplace to the next [...] the same eight organizational factors were measured throughout the organization",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda el paso y sus dos cifras. Review mide 16 RPF seleccionados mediante estudios de campo. MESH mide ocho factores organizacionales fijos más factores locales que cambian según el lugar de trabajo. Además, L2658 dice que el número de indicadores ronda entre 8 y 16 y varía según el tipo de sistema.",
+  "paso_fiel": ""
+ }
+}

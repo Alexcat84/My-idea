@@ -46,7 +46,7 @@ describe("evaluarRuta -- mismo caso que el escenario macetas (Fase 2.6-2.9)", ()
     expect(evaluacion.es_completa).toBe(false);
     expect(evaluacion.tiene_viabilidad_economica).toBe(false);
     expect(evaluacion.familias_faltantes).toContain(
-      "si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)"
+      "si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)"
     );
   });
 });

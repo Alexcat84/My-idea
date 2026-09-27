@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P43926F",
+  "intento": 0,
+  "usd": 0.1487,
+  "turnos": 1,
+  "duracion_s": 11.0,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34135,
+  "tokens_out": 608,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P43926F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [118, 120, 150, 158], \"cita\": \"Defences can be categorized both according to the various functions they serve and by the ways in which these functions are achieved. [...] All defences are designed to serve one or more of the following functions\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro clasifica las defensas según siete funciones (L120-L150) y cita como ejemplos barreras físicas, sistemas de seguridad y procedimientos (L158). No manda mapear todas las capas de un sistema concreto, pero hacerlo va en su misma dirección. La cifra 'siete' está respaldada. Matiz: una defensa puede servir a varias funciones a la vez.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P43926F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   118,
+   120,
+   150,
+   158
+  ],
+  "cita": "Defences can be categorized both according to the various functions they serve and by the ways in which these functions are achieved. [...] All defences are designed to serve one or more of the following functions",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro clasifica las defensas según siete funciones (L120-L150) y cita como ejemplos barreras físicas, sistemas de seguridad y procedimientos (L158). No manda mapear todas las capas de un sistema concreto, pero hacerlo va en su misma dirección. La cifra 'siete' está respaldada. Matiz: una defensa puede servir a varias funciones a la vez.",
+  "paso_fiel": ""
+ }
+}

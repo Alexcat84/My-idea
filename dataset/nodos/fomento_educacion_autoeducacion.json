@@ -6,10 +6,10 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "El punto 13 de Deming dice que no alcanza con tener buena gente: hace falta gente que se siga formando, y eso te incluye a ti. Lo que realmente escasea no son las personas capaces sino el conocimiento profundo en cada campo. Estudiar solo lo que resuelve el problema de hoy no es el camino mas sabio; crecer de verdad nace de un conocimiento amplio, no solo de una capacitación puntual.",
   "pasos_accionables": [
-    "Armar un habito de aprendizaje continuo que no dependa de que exista una necesidad urgente para justificarlo",
-    "Estudiar temas amplios, no solo lo tecnico de tu tarea de hoy",
-    "Aceptar que tu también necesitas aprender la nueva forma de llevar tu negocio, no solo pedirselo a quienes te ayudan",
-    "Elegir oportunidades de crecimiento que te permitan aportar algo real a los demas, mas alla del dinero"
+    "Armar un hábito de aprendizaje continuo que no dependa de que exista una necesidad urgente para justificarlo",
+    "Estudiar temas amplios, no solo lo técnico de tu tarea de hoy",
+    "Aceptar que tú también necesitas aprender la nueva forma de llevar tu negocio, no solo pedírselo a quienes te ayudan",
+    "Elegir oportunidades de crecimiento que te permitan aportar algo real a los demás, más allá del dinero"
   ],
   "entregable_esperado": "Un plan personal de aprendizaje continuo que incluya también tu propio crecimiento, no solo el de quienes trabajan contigo",
   "nodos_previos": [
@@ -22,5 +22,66 @@
     "Cuando solo aprendes lo que resuelve el problema inmediato de tu negocio",
     "Si sientes miedo o resistencia a aprender algo nuevo que todavia no dominas"
   ],
-  "etiqueta_arbol": "Fomenta la Educación Continua"
+  "etiqueta_arbol": "Fomenta la Educación Continua",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0348",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Armar un habito de aprendizaje continuo que no dependa de que exista una necesidad urgente para justificarlo",
+      "texto_nuevo": "Armar un hábito de aprendizaje continuo que no dependa de que exista una necesidad urgente para justificarlo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-001.paso0: hábito (Falta real de tilde en hábito; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0349",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estudiar temas amplios, no solo lo tecnico de tu tarea de hoy",
+      "texto_nuevo": "Estudiar temas amplios, no solo lo técnico de tu tarea de hoy",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-001.paso1: técnico (Falta real de tilde en técnico; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0350",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aceptar que tu también necesitas aprender la nueva forma de llevar tu negocio, no solo pedirselo a quienes te ayudan",
+      "texto_nuevo": "Aceptar que tú también necesitas aprender la nueva forma de llevar tu negocio, no solo pedírselo a quienes te ayudan",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-001.paso2: tú, pedírselo (Tildes reales en el pronombre tú y en pedírselo; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0351",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir oportunidades de crecimiento que te permitan aportar algo real a los demas, mas alla del dinero",
+      "texto_nuevo": "Elegir oportunidades de crecimiento que te permitan aportar algo real a los demás, más allá del dinero",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-001.paso3: demás, más, allá (Tildes reales en demás, más y allá; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

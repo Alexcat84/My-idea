@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF025FE",
+  "intento": 0,
+  "usd": 0.26245999999999997,
+  "turnos": 1,
+  "duracion_s": 14.7,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58155,
+  "tokens_out": 1492,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF025FE\", \"veredicto\": \"FIEL\", \"lineas\": [5204, 1450, 5208], \"cita\": \"should be trained to a level where he … could achieve the tactical goals of superior officers, with or without orders. Translating this into a civilian context, it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide formar a la supervisora para lograr los objetivos de sus superiores con o sin órdenes y sin necesitar SOPs. 'No solo seguir reglas' mantiene las reglas. Por eso no omite la cultura jerárquica disciplinada previa (L5208) ni la convierte en regla general. El resto de pasos del nodo cubren experiencia y respaldo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF025FE",
+  "veredicto": "FIEL",
+  "lineas": [
+   5204,
+   1450,
+   5208
+  ],
+  "cita": "should be trained to a level where he … could achieve the tactical goals of superior officers, with or without orders. Translating this into a civilian context, it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide formar a la supervisora para lograr los objetivos de sus superiores con o sin órdenes y sin necesitar SOPs. 'No solo seguir reglas' mantiene las reglas. Por eso no omite la cultura jerárquica disciplinada previa (L5208) ni la convierte en regla general. El resto de pasos del nodo cubren experiencia y respaldo.",
+  "paso_fiel": ""
+ }
+}

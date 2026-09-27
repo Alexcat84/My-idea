@@ -21,8 +21,41 @@
     "partnerships_estrategicos_verdes"
   ],
   "condiciones_activacion": [
-    "Cuando se busca maximizar el impacto de un presupuesto de marketing limitado",
-    "Si se desea generar cobertura mediática orgánica"
+    "Cuando se busca comunicar el beneficio ambiental de un producto con un presupuesto de marketing limitado",
+    "Si se desea generar cobertura mediatica organica con una activacion creativa que muestre el beneficio ambiental del producto"
   ],
-  "etiqueta_arbol": "Elige tus Canales Verdes"
+  "etiqueta_arbol": "Elige tus Canales Verdes",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-011",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se busca maximizar el impacto de un presupuesto de marketing limitado",
+      "texto_nuevo": "Cuando se busca comunicar el beneficio ambiental de un producto con un presupuesto de marketing limitado",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q075-012: Razon para A: las dos condiciones son genericas y activarian el nodo en cualquier marketing o busqueda de prensa, no solo en la comunicacion verde; B solo corrigio la 0 y dejo la 1, que sufre el mismo defecto. (arbitro) Motivo: Generica de cualquier marketing; no menciona la comunicacion del beneficio ambiental, que es el objeto del nodo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-012",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si se desea generar cobertura mediática orgánica",
+      "texto_nuevo": "Si se desea generar cobertura mediatica organica con una activacion creativa que muestre el beneficio ambiental del producto",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q075-012: Razon para A: las dos condiciones son genericas y activarian el nodo en cualquier marketing o busqueda de prensa, no solo en la comunicacion verde; B solo corrigio la 0 y dejo la 1, que sufre el mismo defecto. (arbitro) Motivo: Generica de cualquier accion de prensa; el nodo solo trata de activaciones creativas ligadas a un beneficio ambiental tangible."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ]
 }

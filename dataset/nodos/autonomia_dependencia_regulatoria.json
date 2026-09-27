@@ -1,6 +1,6 @@
 {
   "node_id": "autonomia_dependencia_regulatoria",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Autonomía e Interdependencia en la Relación Regulador-Regulado",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -23,5 +23,23 @@
     "Cuando se diseña o evalúa un sistema de supervisión regulatoria externa",
     "Cuando se sospecha de captura regulatoria o relaciones demasiado cercanas entre inspector e inspeccionado"
   ],
-  "etiqueta_arbol": "Entiende tu Relación con el Regulador"
+  "etiqueta_arbol": "Entiende tu Relación con el Regulador",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-027",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F08-028: Evalua y refuerza la supervision regulatoria y la verificacion independiente de una organizacion que ya opera. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

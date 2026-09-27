@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE21999",
+  "intento": 0,
+  "usd": 0.14246,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31565,
+  "tokens_out": 810,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE21999\", \"veredicto\": \"FIEL\", \"lineas\": [4769, 5208], \"cita\": \"depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide que la organizacion invierta mucho en formacion para ganarse el respeto por las capacidades de la plantilla y de los supervisores de primera linea (L4769, L5208). 'Primera linea' esta respaldado. Decir 'confianza' en lugar de 'respeto' solo cambia un matiz, no el sentido.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE21999",
+  "veredicto": "FIEL",
+  "lineas": [
+   4769,
+   5208
+  ],
+  "cita": "depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide que la organizacion invierta mucho en formacion para ganarse el respeto por las capacidades de la plantilla y de los supervisores de primera linea (L4769, L5208). 'Primera linea' esta respaldado. Decir 'confianza' en lugar de 'respeto' solo cambia un matiz, no el sentido.",
+  "paso_fiel": ""
+ }
+}

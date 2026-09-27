@@ -118,3 +118,75 @@ describe("sinProcedencia (confidencialidad, BANCO §5)", () => {
     expect(JSON.stringify(plan)).not.toMatch(/se aliment/i);
   });
 });
+
+// i18n F5: el plan guardado lleva los marcadores neutros (en español). La
+// pantalla los pinta en el idioma de quien lee: la etiqueta, el título de la
+// sección de números, el de lo que falta y la etiqueta de los pasos.
+import { parsearPlan as parsearI18n } from "./planParser";
+import { rotulosPlan } from "./i18n/rotulosPlan";
+
+describe("parsearPlan: los marcadores neutros se pintan en el idioma de quien lee (i18n F5)", () => {
+  const md = [
+    "_Plan inicial_",
+    "",
+    "# 계획",
+    "",
+    "## Etapa 1: 수요 확인",
+    "",
+    "**Pasos para construir:**",
+    "1. 하나",
+    "",
+    "**Esta semana:** 둘",
+    "",
+    "## ¿Puede sostenerse tu idea? Los números en simple",
+    "",
+    "셋",
+    "",
+    "## Lo que este plan aún no cubre",
+    "- 넷",
+  ].join("\n");
+
+  it("en inglés", () => {
+    const p = parsearI18n(md, "en");
+    const r = rotulosPlan("en");
+    expect(p.etiqueta).toBe(r.etiquetaInicial);
+    expect(p.secciones[0]).toMatchObject({ numero: "01", titulo: "수요 확인", tipo: "etapa", estaSemana: "둘" });
+    expect(p.secciones[0].bloquesPasos[0].label).toBe(r.pasos);
+    expect(p.secciones[1]).toMatchObject({ titulo: r.seccionEconomica, tipo: "cierre" });
+    expect(p.secciones[2]).toMatchObject({ titulo: r.noCubre, tipo: "cierre" });
+  });
+
+  it("en español queda como siempre", () => {
+    const p = parsearI18n(md, "es");
+    expect(p.etiqueta).toBe("Plan inicial");
+    expect(p.secciones[0].bloquesPasos[0].label).toBe("Pasos para construir");
+    expect(p.secciones[1].titulo).toBe("¿Puede sostenerse tu idea? Los números en simple");
+  });
+});
+
+// Decisión del fundador (26 sep 2026): la acción de cada etapa es "**Primera
+// acción:**"; los planes guardados con "**Esta semana:**" siguen leyéndose como
+// el mismo campo (el parser la saca a su caja igual), sin regenerarlos.
+describe("parsearSeccion — Primera acción y el rótulo viejo son el mismo campo", () => {
+  const cuerpo = (rotulo: string) =>
+    ["1. Llama a tres clientes.", "", "**Entregable:** una lista.", "", `${rotulo} Pregúntale a Ana cuánto pagaría.`].join("\n");
+
+  it("el marcador nuevo sale a la caja de la acción", () => {
+    const s = parsearSeccion("Etapa 1: Valida", cuerpo("**Primera acción:**"));
+    expect(s.estaSemana).toBe("Pregúntale a Ana cuánto pagaría.");
+    expect(s.descripcion).not.toContain("Primera acción");
+    expect(s.entregable).toBe("una lista.");
+  });
+
+  it("el viejo da la misma sección, marcada como acción vieja (27 sep 2026: la vista del plan no la muestra)", () => {
+    const viejo = parsearSeccion("Etapa 1: Valida", cuerpo("**Esta semana:**"));
+    const nuevo = parsearSeccion("Etapa 1: Valida", cuerpo("**Primera acción:**"));
+    expect(viejo.accionVieja).toBe(true);
+    expect(nuevo.accionVieja).toBe(false);
+    expect({ ...viejo, accionVieja: false }).toEqual(nuevo);
+  });
+
+  it("también sin tilde", () => {
+    expect(parsearSeccion("Etapa 1: Valida", cuerpo("**Primera accion:**")).estaSemana).toBe("Pregúntale a Ana cuánto pagaría.");
+  });
+});

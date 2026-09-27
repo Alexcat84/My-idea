@@ -20,7 +20,26 @@
     "getting_started_planning"
   ],
   "condiciones_activacion": [
-    "Cuando se requiere detectar amenazas activas y gestionar el ciclo de vida de la CUI."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas detectar amenazas activas y gestionar el ciclo de vida de la CUI."
   ],
-  "etiqueta_arbol": "Cuida la Integridad de Datos"
+  "etiqueta_arbol": "Cuida la Integridad de Datos",
+  "fuentes_internas": [
+    "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-102",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se requiere detectar amenazas activas y gestionar el ciclo de vida de la CUI.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas detectar amenazas activas y gestionar el ciclo de vida de la CUI.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-012: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

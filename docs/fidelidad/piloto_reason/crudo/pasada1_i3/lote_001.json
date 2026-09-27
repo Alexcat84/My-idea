@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_001",
+  "intento": 0,
+  "usd": 0.173748,
+  "turnos": 1,
+  "duracion_s": 24.9,
+  "pared_s": 26.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33397,
+  "tokens_out": 2008,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P254025\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [81, 3965, 3967, 3971, 3973, 3985, 3989, 5134, 4761, 4765], \"razon\": \"El libro describe la erosión gradual y la normalización de la desviación, y valora vigilar e investigar errores menores. El paso concreta esa dirección sin añadir datos.\"},\n  {\"id\": \"P200A86\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"auditorías periódicas\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [277, 580, 582, 2596, 2598, 5639, 5701], \"razon\": \"El libro pide medir regularmente los procesos genéricos y hacer 'health checks' en cualquier dominio. 'Periódicas' es una frecuencia vaga que conviene verificar.\"},\n  {\"id\": \"P16D9FE\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4221, 4223, 4244, 4246, 4219], \"razon\": \"El libro dice que esos éxitos regulatorios valían para accidentes individuales con peligros bien conocidos y que su especificidad no se traslada a accidentes organizacionales. El paso sugiere extrapolar esos principios.\"},\n  {\"id\": \"P8154D3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2583, 1060, 2909, 5641], \"razon\": \"La paradoja posicional es un síntoma de falta de cognisance: los directivos culpan al personal de primera línea. Evaluar esa atribución coincide con lo que dice el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P254025",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    81,
+    3965,
+    3967,
+    3971,
+    3973,
+    3985,
+    3989,
+    5134,
+    4761,
+    4765
+   ],
+   "razon": "El libro describe la erosión gradual y la normalización de la desviación, y valora vigilar e investigar errores menores. El paso concreta esa dirección sin añadir datos."
+  },
+  {
+   "id": "P200A86",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "auditorías periódicas"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    277,
+    580,
+    582,
+    2596,
+    2598,
+    5639,
+    5701
+   ],
+   "razon": "El libro pide medir regularmente los procesos genéricos y hacer 'health checks' en cualquier dominio. 'Periódicas' es una frecuencia vaga que conviene verificar."
+  },
+  {
+   "id": "P16D9FE",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4221,
+    4223,
+    4244,
+    4246,
+    4219
+   ],
+   "razon": "El libro dice que esos éxitos regulatorios valían para accidentes individuales con peligros bien conocidos y que su especificidad no se traslada a accidentes organizacionales. El paso sugiere extrapolar esos principios."
+  },
+  {
+   "id": "P8154D3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2583,
+    1060,
+    2909,
+    5641
+   ],
+   "razon": "La paradoja posicional es un síntoma de falta de cognisance: los directivos culpan al personal de primera línea. Evaluar esa atribución coincide con lo que dice el libro."
+  }
+ ]
+}

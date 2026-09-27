@@ -1,0 +1,90 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_008",
+  "intento": 0,
+  "usd": 0.176092,
+  "turnos": 1,
+  "duracion_s": 21.5,
+  "pared_s": 22.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34233,
+  "tokens_out": 1958,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF3558F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"la dirección\", \"caso de negocio\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [105, 279, 3993, 4039, 4121, 4523, 5254], \"razon\": \"El libro señala la subdotación y la caída de inversión en protección como riesgos, y pregunta por el presupuesto y la plantilla de seguridad. El caso de negocio concreta esto en su misma dirección.\"},\n  {\"id\": \"PF8DA91\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1033, 1145, 4448, 459, 2638, 2650, 4500], \"razon\": \"El libro advierte que parchear lo que falló en el accidente anterior puede causar el siguiente. Pide reformar las condiciones latentes y vigilar dónde surgirán nuevos huecos.\"},\n  {\"id\": \"P6A9804\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"al menos cinco tipos distintos de escenarios de crisis\"], \"clase\": \"FIEL\", \"lineas\": [5894, 5896], \"razon\": \"El libro dice que las organizaciones preparadas planifican para al menos cinco tipos de crisis, vinculadas a la recuperación del negocio. Es un hallazgo descriptivo que el paso convierte en pauta.\"},\n  {\"id\": \"P0EDDF2\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"permisos de trabajo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [196, 198, 451, 580, 1840, 1914, 4027], \"razon\": \"El libro trata los fallos de mantenimiento como consecuencias de condiciones latentes: comunicación en relevos, permisos de trabajo y procedimientos. El mapeo por caso concreta esto.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF3558F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "la dirección",
+    "caso de negocio"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    105,
+    279,
+    3993,
+    4039,
+    4121,
+    4523,
+    5254
+   ],
+   "razon": "El libro señala la subdotación y la caída de inversión en protección como riesgos, y pregunta por el presupuesto y la plantilla de seguridad. El caso de negocio concreta esto en su misma dirección."
+  },
+  {
+   "id": "PF8DA91",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1033,
+    1145,
+    4448,
+    459,
+    2638,
+    2650,
+    4500
+   ],
+   "razon": "El libro advierte que parchear lo que falló en el accidente anterior puede causar el siguiente. Pide reformar las condiciones latentes y vigilar dónde surgirán nuevos huecos."
+  },
+  {
+   "id": "P6A9804",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "al menos cinco tipos distintos de escenarios de crisis"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5894,
+    5896
+   ],
+   "razon": "El libro dice que las organizaciones preparadas planifican para al menos cinco tipos de crisis, vinculadas a la recuperación del negocio. Es un hallazgo descriptivo que el paso convierte en pauta."
+  },
+  {
+   "id": "P0EDDF2",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "permisos de trabajo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    196,
+    198,
+    451,
+    580,
+    1840,
+    1914,
+    4027
+   ],
+   "razon": "El libro trata los fallos de mantenimiento como consecuencias de condiciones latentes: comunicación en relevos, permisos de trabajo y procedimientos. El mapeo por caso concreta esto."
+  }
+ ]
+}

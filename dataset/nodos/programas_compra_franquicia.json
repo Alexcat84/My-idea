@@ -16,12 +16,28 @@
   "nodos_previos": [
     "soporte_continuo_franquicia"
   ],
-  "nodos_siguientes": [
-    "seleccion_consultor_franquicias"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
     "Cuando la red de franquiciados tiene volumen de compra suficiente para negociar con proveedores"
   ],
-  "etiqueta_arbol": "Negocia Compras con Proveedores"
+  "etiqueta_arbol": "Negocia Compras con Proveedores",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-105",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "programas_compra_franquicia -> seleccion_consultor_franquicias",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-12-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los programas de compra y proveedores aprobados de la red son operacion del sistema ya franquiciado. No preparan la eleccion del consultor; el orden esta invertido o la relacion es nula."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

@@ -6,7 +6,7 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Para reducir el riesgo de sorpresas desagradables y facilitar futuras transiciones, el consejo debe realizar evaluaciones periódicas, honestas y documentadas del desempeño del fundador-CEO. Esto construye confianza, provee retroalimentación de desarrollo continua, y sienta las bases para una sucesión más fluida cuando sea necesaria.",
   "pasos_accionables": [
-    "Establecer un calendario formal de revisiones de desempeño del CEO (trimestral o semestral).",
+    "Sugerencia de My Idea: establece un calendario formal de revisiones de desempeño del CEO, por ejemplo trimestral o semestral.",
     "Documentar por escrito fortalezas, debilidades y áreas de mejora del fundador-CEO.",
     "Usar estas revisiones para preparar gradualmente al fundador ante la posibilidad de una futura sucesión.",
     "Vincular las revisiones con métricas objetivas de crecimiento y desempeño organizacional."
@@ -17,12 +17,46 @@
     "manejo_de_quejas_entre_ejecutivos"
   ],
   "nodos_siguientes": [
-    "founder_ceo_succession_process",
-    "comunicacion_honesta_en_crisis_al_equipo"
+    "founder_ceo_succession_process"
   ],
   "condiciones_activacion": [
     "Una vez que los inversores han entrado al consejo de administración.",
     "Cuando se busca prevenir conflictos abruptos en una futura sucesión de CEO."
   ],
-  "etiqueta_arbol": "Evalúa Regularmente al Fundador-CEO"
+  "etiqueta_arbol": "Evalúa Regularmente al Fundador-CEO",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-021",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un calendario formal de revisiones de desempeño del CEO (trimestral o semestral).",
+      "texto_nuevo": "Sugerencia de My Idea: establece un calendario formal de revisiones de desempeño del CEO, por ejemplo trimestral o semestral.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3301",
+        "frase": "should make sure that the board conducts regular, candid, written reviews of the founder-CEO’s performance"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide revisiones regulares, pero no fija su frecuencia. 'Trimestral o semestral' no aparece.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-068"
+    },
+    {
+      "id": "t2-arista-115",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "revisiones_regulares_desempeno_ceo -> comunicacion_honesta_en_crisis_al_equipo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-02-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las revisiones del CEO por el consejo no llevan de forma natural a la comunicacion del CEO con su equipo en una crisis. Lo unico en comun es el rol del CEO. La correccion solo convirtio el calendario en sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ],
+  "fuentes_internas": [
+    "The Founder's Dilemmas - Wasserman, Noam"
+  ]
 }

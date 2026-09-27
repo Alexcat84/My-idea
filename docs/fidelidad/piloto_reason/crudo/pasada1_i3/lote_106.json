@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_106",
+  "intento": 0,
+  "usd": 0.155392,
+  "turnos": 1,
+  "duracion_s": 13.0,
+  "pared_s": 14.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32463,
+  "tokens_out": 1277,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P74F627\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2596, 582, 5781, 3209, 2750], \"razon\": \"El libro compara la gestión de seguridad con un programa de fitness a largo plazo y pide medir y mejorar los procesos de forma regular y continua.\"},\n  {\"id\": \"P89298F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"frecuencia de cada chequeo\"], \"clase\": \"FIEL\", \"lineas\": [2658], \"razon\": \"L2658 dice lo mismo: la frecuencia depende de lo rápido que cambia el proceso, y los factores del lugar de trabajo se vigilan más a menudo que los organizacionales.\"},\n  {\"id\": \"PBB41CB\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"expertos externos\"], \"clase\": \"FIEL\", \"lineas\": [4360, 4364], \"razon\": \"Recoge casi literalmente el paso COSHH de L4364: evaluaciones de riesgo con expertos externos si hace falta. Es la norma que describe el libro.\"},\n  {\"id\": \"PA5654E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2905, 2909, 2888, 2924, 2948], \"razon\": \"El libro critica atribuir el error a rasgos personales como el descuido o la incompetencia. El 'únicamente' respeta que la realidad está en un punto intermedio.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P74F627",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2596,
+    582,
+    5781,
+    3209,
+    2750
+   ],
+   "razon": "El libro compara la gestión de seguridad con un programa de fitness a largo plazo y pide medir y mejorar los procesos de forma regular y continua."
+  },
+  {
+   "id": "P89298F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "frecuencia de cada chequeo"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2658
+   ],
+   "razon": "L2658 dice lo mismo: la frecuencia depende de lo rápido que cambia el proceso, y los factores del lugar de trabajo se vigilan más a menudo que los organizacionales."
+  },
+  {
+   "id": "PBB41CB",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "expertos externos"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4364
+   ],
+   "razon": "Recoge casi literalmente el paso COSHH de L4364: evaluaciones de riesgo con expertos externos si hace falta. Es la norma que describe el libro."
+  },
+  {
+   "id": "PA5654E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2905,
+    2909,
+    2888,
+    2924,
+    2948
+   ],
+   "razon": "El libro critica atribuir el error a rasgos personales como el descuido o la incompetencia. El 'únicamente' respeta que la realidad está en un punto intermedio."
+  }
+ ]
+}

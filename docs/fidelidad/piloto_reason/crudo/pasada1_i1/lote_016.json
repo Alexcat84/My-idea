@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_016",
+  "intento": 0,
+  "usd": 0.171416,
+  "turnos": 1,
+  "duracion_s": 19.1,
+  "pared_s": 20.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34104,
+  "tokens_out": 1750,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P4708DA\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4215, 4257, 4259, 4261, 4265, 4117, 4023, 4446, 973], \"razon\": \"El libro critica la vigilancia insuficiente, pero dice que las visitas solo dan vistazos aislados y que la dependencia es inevitable. El paso podría sugerir que se supera. Revisar matiz.\"},\n{\"id\": \"PB5E738\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [3955, 3957, 3959, 3971, 3985, 668, 686, 520], \"razon\": \"Coincide con la erosión gradual. Pero Vaughan rechaza el marco de 'hacer la vista gorda' y el libro advierte del sesgo retrospectivo sobre las señales. Hay un posible matiz.\"},\n{\"id\": \"P21084D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2905, 2918, 2944, 2876, 2880, 3817, 5037, 4987], \"razon\": \"El libro afirma que el error humano es consecuencia, no causa, y pide buscar factores situacionales y organizacionales. El 'solo' respeta la excepción de conductas temerarias.\"},\n{\"id\": \"P25B95C\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3232, 3332, 3382, 3222, 3228], \"razon\": \"En MESH los evaluadores entran de forma anónima en el ordenador y el programa promedia las valoraciones. Review también usa un programa informático que analiza y archiva los datos.\"}]",
+ "parseado": [
+  {
+   "id": "P4708DA",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4215,
+    4257,
+    4259,
+    4261,
+    4265,
+    4117,
+    4023,
+    4446,
+    973
+   ],
+   "razon": "El libro critica la vigilancia insuficiente, pero dice que las visitas solo dan vistazos aislados y que la dependencia es inevitable. El paso podría sugerir que se supera. Revisar matiz."
+  },
+  {
+   "id": "PB5E738",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    3955,
+    3957,
+    3959,
+    3971,
+    3985,
+    668,
+    686,
+    520
+   ],
+   "razon": "Coincide con la erosión gradual. Pero Vaughan rechaza el marco de 'hacer la vista gorda' y el libro advierte del sesgo retrospectivo sobre las señales. Hay un posible matiz."
+  },
+  {
+   "id": "P21084D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2905,
+    2918,
+    2944,
+    2876,
+    2880,
+    3817,
+    5037,
+    4987
+   ],
+   "razon": "El libro afirma que el error humano es consecuencia, no causa, y pide buscar factores situacionales y organizacionales. El 'solo' respeta la excepción de conductas temerarias."
+  },
+  {
+   "id": "P25B95C",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3232,
+    3332,
+    3382,
+    3222,
+    3228
+   ],
+   "razon": "En MESH los evaluadores entran de forma anónima en el ordenador y el programa promedia las valoraciones. Review también usa un programa informático que analiza y archiva los datos."
+  }
+ ]
+}

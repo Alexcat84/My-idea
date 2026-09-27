@@ -1,6 +1,6 @@
 {
   "node_id": "diferencia_planeacion_mejora",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Diferencia entre Planeación de Calidad y Mejora de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -24,5 +24,23 @@
   "condiciones_activacion": [
     "Al inicio de cualquier iniciativa de calidad, para decidir qué metodología aplicar"
   ],
-  "etiqueta_arbol": "Distingue Planear y Mejorar Calidad"
+  "etiqueta_arbol": "Distingue Planear y Mejorar Calidad",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-107",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F12-022: Tiene razon B: el nodo clasifica iniciativas de calidad (disenar nuevas caracteristicas o reducir fallas en procesos existentes) dentro de una organizacion que ya produce y vende, lo que es gestion operativa y mejora de lo que ya funciona; no es ideacion, y aunque elegir metodologia parece planificar, es un triaje previo dentro de la gestion de calidad de un negocio en marcha. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

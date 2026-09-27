@@ -1,6 +1,6 @@
 {
   "node_id": "deep_dive_workshop",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Deep Dive (Taller Intensivo de Design Thinking)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
@@ -39,6 +39,24 @@
       "node_id": "metodologia_deep_dive",
       "titulo": "El Método 'Deep Dive' (Inmersión Profunda)",
       "fuente": "Change by Design"
+    }
+  ],
+  "fuentes_internas": [
+    "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-041",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q013-012: El taller sirve para explorar una idea, prototiparla y probarla con quien vive el problema antes de construir la solucion, lo que es validacion y no operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ]
 }

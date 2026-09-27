@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Normalización de la Desviación",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Concepto acuñado por Diane Vaughan a partir del accidente del Challenger. Describe cómo, mediante decisiones sucesivas y aparentemente razonables, redefines gradualmente lo que consideras 'riesgo aceptable', hasta que prácticas peligrosas se vuelven norma en tu forma de operar. No es negligencia puntual sino conformidad con criterios que dejaron de ser adecuados, sin que percibas con claridad el momento en que las cosas empezaron a fallar. El patrón incluye erosión gradual de estándares, desatención de tus propias señales de alerta o feedback de calidad, uso de éxitos pasados para justificar riesgos mayores, y una desconexión creciente entre cómo crees que funciona tu negocio y cómo realmente funciona.",
+  "resumen_teorico": "Concepto surgido a partir del accidente del Challenger. Describe cómo, mediante decisiones sucesivas y aparentemente razonables, redefines gradualmente lo que consideras 'riesgo aceptable', hasta que prácticas peligrosas se vuelven norma en tu forma de operar. No es negligencia puntual sino conformidad con criterios que dejaron de ser adecuados, sin que percibas con claridad el momento en que las cosas empezaron a fallar. El patrón incluye erosión gradual de estándares, desatención de tus propias señales de alerta o feedback de calidad, uso de éxitos pasados para justificar riesgos mayores, y una desconexión creciente entre cómo crees que funciona tu negocio y cómo realmente funciona.",
   "pasos_accionables": [
     "Audita tu historial de anomalías o incidentes menores que has tolerado sin corregir",
     "Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio",
-    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad",
+    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de márgenes de seguridad",
     "Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones",
     "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
-    "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+    "Sugerencia de My Idea: busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
     "Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'",
     "Fomentar una cultura donde las pequeñas desviaciones sean visibles y cuestionadas, no normalizadas"
   ],
@@ -50,5 +50,58 @@
       "titulo": "Drift into Failure (Normalización de la Desviación)",
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-12",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+      "texto_nuevo": "Sugerencia de My Idea: busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L4446",
+        "frase": "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El tipo de revisor (mentor o asesor) es un añadido práctico; el libro habla de una mirada cercana a la operación pero ajena a ella, la de los reguladores (L4446). Se reescribe como sugerencia de My Idea. El dato no se repite en otros campos.",
+      "indice": 5,
+      "auditoria": "muestreo A13"
+    },
+    {
+      "id": "atribucion-126",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Concepto acuñado por Diane Vaughan a partir del accidente del Challenger. Describe cómo, mediante decisiones sucesivas y aparentemente razonables, redefines gradualmente lo que consideras 'riesgo aceptable', hasta que prácticas peligrosas se vuelven norma en tu forma de operar. No es negligencia puntual sino conformidad con criterios que dejaron de ser adecuados, sin que percibas con claridad el momento en que las cosas empezaron a fallar. El patrón incluye erosión gradual de estándares, desatención de tus propias señales de alerta o feedback de calidad, uso de éxitos pasados para justificar riesgos mayores, y una desconexión creciente entre cómo crees que funciona tu negocio y cómo realmente funciona.",
+      "texto_nuevo": "Concepto surgido a partir del accidente del Challenger. Describe cómo, mediante decisiones sucesivas y aparentemente razonables, redefines gradualmente lo que consideras 'riesgo aceptable', hasta que prácticas peligrosas se vuelven norma en tu forma de operar. No es negligencia puntual sino conformidad con criterios que dejaron de ser adecuados, sin que percibas con claridad el momento en que las cosas empezaron a fallar. El patrón incluye erosión gradual de estándares, desatención de tus propias señales de alerta o feedback de calidad, uso de éxitos pasados para justificar riesgos mayores, y una desconexión creciente entre cómo crees que funciona tu negocio y cómo realmente funciona.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Concepto acuñado por Diane Vaughan"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-031 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0654",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad",
+      "texto_nuevo": "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de márgenes de seguridad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O057-005.paso2: márgenes (Solo cambia la tilde de 'márgenes', que faltaba de verdad.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_",
+    "The Field Guide to Understandin - Dekker, Sidney"
   ]
 }

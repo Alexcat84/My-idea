@@ -19,12 +19,29 @@
   "nodos_siguientes": [
     "asignacion_recursos_en_gates",
     "gestion_visual_del_pipeline_de_desarrollo",
-    "sistema_gates_go_kill",
-    "gestion_alucinaciones_ia"
+    "sistema_gates_go_kill"
   ],
   "condiciones_activacion": [
     "Cuando la carga administrativa de tu proceso de innovación te quita demasiado tiempo",
     "Si manejas varios proyectos al mismo tiempo"
   ],
-  "etiqueta_arbol": "Automatiza tu Gestión de Innovación"
+  "etiqueta_arbol": "Automatiza tu Gestión de Innovación",
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-006",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "automatizacion_software_gestion_innovacion -> gestion_alucinaciones_ia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-23-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Un software de gestion Stage-Gate no es IA generativa ni prepara el manejo de sus alucinaciones."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

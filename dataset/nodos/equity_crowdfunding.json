@@ -21,8 +21,41 @@
     "crowdfunding_legal_exemptions_jobs_act"
   ],
   "condiciones_activacion": [
-    "Si estás pensando en levantar capital a través de una plataforma online como AngelList",
-    "Si existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general'"
+    "Si estás pensando en levantar capital en Estados Unidos a través de una plataforma online como AngelList",
+    "Si levantas capital en Estados Unidos y existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general' ante la SEC"
   ],
-  "etiqueta_arbol": "Financiamiento Colectivo por Acciones"
+  "etiqueta_arbol": "Financiamiento Colectivo por Acciones",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-069",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si estás pensando en levantar capital a través de una plataforma online como AngelList",
+      "texto_nuevo": "Si estás pensando en levantar capital en Estados Unidos a través de una plataforma online como AngelList",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-013: Tenía razón el lector B: la segunda condición también activa el nodo por sí sola en cualquier país, y la 'solicitud general' solo tiene sentido bajo las reglas de la SEC, así que la clase C exige atar las dos a Estados Unidos. (arbitro) Motivo: Clase C: las reglas de la SEC solo aplican si levantas capital en Estados Unidos y la condición no lo dice."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-070",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general'",
+      "texto_nuevo": "Si levantas capital en Estados Unidos y existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general' ante la SEC",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-013: Tenía razón el lector B: la segunda condición también activa el nodo por sí sola en cualquier país, y la 'solicitud general' solo tiene sentido bajo las reglas de la SEC, así que la clase C exige atar las dos a Estados Unidos. (arbitro) Motivo: Clase C: la 'solicitud general' es un concepto de las reglas de la SEC y la condición, que activa el nodo por sí sola, no lo ata a Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ]
 }

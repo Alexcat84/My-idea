@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P6DCB9A",
+  "intento": 0,
+  "usd": 0.21702000000000002,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 50825,
+  "tokens_out": 686,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6DCB9A\", \"veredicto\": \"FIEL\", \"lineas\": [3794], \"cita\": \"the Tripod-Delta software provides the means to assemble the facts learned in the investigation and to manipulate them onscreen to produce a graphic picture of the event and its causes--an incident tree. […] Once anomalies have been resolved, a draft accident report is automatically generated for final editing\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que el software produce el árbol de incidente y genera un borrador de informe para edición final. Eso es lo que aconseja el paso. Omite la verificación lógica previa, pero no la niega ni invita a saltarla: se aparta solo en el detalle y no lleva a hacer nada que el libro desaconseje. No hay dato nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6DCB9A",
+  "veredicto": "FIEL",
+  "lineas": [
+   3794
+  ],
+  "cita": "the Tripod-Delta software provides the means to assemble the facts learned in the investigation and to manipulate them onscreen to produce a graphic picture of the event and its causes--an incident tree. […] Once anomalies have been resolved, a draft accident report is automatically generated for final editing",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que el software produce el árbol de incidente y genera un borrador de informe para edición final. Eso es lo que aconseja el paso. Omite la verificación lógica previa, pero no la niega ni invita a saltarla: se aparta solo en el detalle y no lleva a hacer nada que el libro desaconseje. No hay dato nuevo.",
+  "paso_fiel": ""
+ }
+}

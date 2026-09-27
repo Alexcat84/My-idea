@@ -6,19 +6,19 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de accion, en lugar de seguir una lista estandar de actividades. Se usan post its para volcar hipotesis en cada area: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposicion, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una version mas estructurada del lienzo en blanco que usan los mas expertos, util para aumentar tu propio compromiso con el plan.",
   "pasos_accionables": [
-    "Completa el canvas con post its en una sesion dedicada",
+    "Completa el canvas con post its en una sesión dedicada",
     "Define los segmentos de clientes objetivo y sus necesidades no resueltas",
     "Mapea tendencias de mercado y competidores relevantes",
     "Articula la propuesta de valor y las soluciones consideradas",
-    "Separa que es hecho comprobado y que es suposicion no probada, y prioriza las brechas criticas a cerrar",
-    "Define las actividades clave: que, cuando y que recursos necesitas"
+    "Separa qué es hecho comprobado y qué es suposición no probada, y prioriza las brechas críticas a cerrar",
+    "Define las actividades clave: qué, cuándo y qué recursos necesitas"
   ],
-  "entregable_esperado": "Un canvas completo del proyecto de innovacion con hipotesis documentadas en cada area, brechas de conocimiento identificadas y un plan de proximos pasos priorizado con tiempos.",
+  "entregable_esperado": "Un canvas completo del proyecto de innovación con hipótesis documentadas en cada área, brechas de conocimiento identificadas y un plan de próximos pasos priorizado con tiempos.",
   "nodos_previos": [
     "modelo_contingencia_riesgo",
     "afinar_frente_difuso_innovacion",
     "value_proposition_canvas",
-    "project_schedule"
+    "cronograma_proyecto"
   ],
   "nodos_siguientes": [
     "technology_platform_evaluation",
@@ -39,6 +39,92 @@
       "node_id": "innovation_project_canvas",
       "titulo": "Innovation Project Canvas",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-146",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "cronograma_proyecto -> innovation_project_canvas",
+      "texto_nuevo": "cronograma_proyecto -> lienzo_proyecto_innovacion",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a innovation_project_canvas, deprecado; su superviviente es lienzo_proyecto_innovacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-172",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "project_schedule -> lienzo_proyecto_innovacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a project_schedule, deprecado; su superviviente es cronograma_proyecto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0394",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Completa el canvas con post its en una sesion dedicada",
+      "texto_nuevo": "Completa el canvas con post its en una sesión dedicada",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O034-004.paso0: sesión (Solo añade la tilde que faltaba en sesión; post its se deja como está.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0395",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Separa que es hecho comprobado y que es suposicion no probada, y prioriza las brechas criticas a cerrar",
+      "texto_nuevo": "Separa qué es hecho comprobado y qué es suposición no probada, y prioriza las brechas críticas a cerrar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O034-004.paso4: qué, qué, suposición, críticas (Todas son tildes reales: qué (interrogativo indirecto), suposición y críticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0396",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define las actividades clave: que, cuando y que recursos necesitas",
+      "texto_nuevo": "Define las actividades clave: qué, cuándo y qué recursos necesitas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O034-004.paso5: qué, cuándo, qué (Todas son tildes reales de interrogativos: qué, cuándo y qué.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0397",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un canvas completo del proyecto de innovacion con hipotesis documentadas en cada area, brechas de conocimiento identificadas y un plan de proximos pasos priorizado con tiempos.",
+      "texto_nuevo": "Un canvas completo del proyecto de innovación con hipótesis documentadas en cada área, brechas de conocimiento identificadas y un plan de próximos pasos priorizado con tiempos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O034-004.entregable: innovación, hipótesis, próximos (Innovación, hipótesis y próximos son faltas reales; también se corrige área, que la propuesta dejó sin tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

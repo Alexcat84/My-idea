@@ -14,16 +14,47 @@
   ],
   "entregable_esperado": "Una decisión clara sobre si vas a crecer y cómo, junto con una proyección de cuánto te va a costar la expansión (nómina, impuestos, beneficios, infraestructura).",
   "nodos_previos": [
-    "gestion_libro_abierto_obm",
     "analisis_flujo_de_valor",
     "analisis_varianza_financiera"
   ],
   "nodos_siguientes": [
-    "estrategias_de_crecimiento_empresarial"
+    "estrategias_de_crecimiento_empresarial",
+    "gestionar_el_riesgo_es_de_adultos"
   ],
   "condiciones_activacion": [
     "Cuando tu negocio ya es rentable y estás pensando en expandirte",
     "Si todavía no has calculado los costos ocultos de contratar más gente"
   ],
-  "etiqueta_arbol": "Elige Crecer a Propósito"
+  "etiqueta_arbol": "Elige Crecer a Propósito",
+  "fuentes_internas": [
+    "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-064",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_libro_abierto_obm -> decision_consciente_de_crecimiento",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-04-02): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon B. Decidir a conciencia si crecer es una decision estrategica del dueno, previa y de base. No es un paso natural despues de abrir los libros a los empleados. Si hay relacion, el orden esta invertido o es solo tangencial (los dos nodos hablan de dinero). La correccion no afecta a esto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-021",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "decision_consciente_de_crecimiento -> gestionar_el_riesgo_es_de_adultos",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
+  ]
 }

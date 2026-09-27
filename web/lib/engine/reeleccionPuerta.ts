@@ -10,7 +10,7 @@
  *
  * El juicio era CORRECTO: ese nodo no es para quien arma tres kits en su casa.
  * Lo que estaba mal era la consecuencia — la sesión se cerraba y el usuario, que
- * había pagado 3 créditos por explorar ESE mundo, se quedaba mirando una
+ * en ese entonces pagaba por explorar ESE mundo, se quedaba mirando una
  * pantalla muda. La semilla la eligió `evaluacionBrecha`, que es ciega al perfil
  * (V2 de la auditoría de paridad); el intérprete la corrige un turno tarde.
  *

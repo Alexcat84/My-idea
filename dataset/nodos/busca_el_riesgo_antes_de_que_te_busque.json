@@ -1,6 +1,6 @@
 {
   "node_id": "busca_el_riesgo_antes_de_que_te_busque",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "El Momento de Identificar Riesgos",
   "fuente": "Edwards et al., Managing Project Risks",
@@ -24,5 +24,23 @@
     "cuando un problema estalló y ya no tenías margen para maniobrar",
     "cuando empiezas una etapa nueva sin preguntarte qué riesgos trae"
   ],
-  "etiqueta_arbol": "Busca el Riesgo Temprano"
+  "etiqueta_arbol": "Busca el Riesgo Temprano",
+  "fuentes_internas": [
+    "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-036",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-021: Fijar un ritmo de identificacion de riesgos por etapa del proyecto es planificacion de la gestion de riesgos, no prueba con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

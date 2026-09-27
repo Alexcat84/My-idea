@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P74653F",
+  "intento": 0,
+  "usd": 0.123652,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 27018,
+  "tokens_out": 779,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P74653F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3332, 3232, 3230], \"cita\": \"By contrast, assessments of local factors are made by between 20--30 per cent of the 'hands on' workforce in any given location. Assessors are selected randomly and each makes regular assessments\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda la cifra del 20-30% de la plantilla operativa, seleccionada al azar, para los factores locales de MESH. El paso la da solo como ejemplo y pide una muestra 'representativa' en lugar de aleatoria, sin detallar que en Review evalúan supervisores y en MESH los factores organizacionales los califican gerentes técnicos. Solo se aparta en el detalle.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P74653F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3332,
+   3232,
+   3230
+  ],
+  "cita": "By contrast, assessments of local factors are made by between 20--30 per cent of the 'hands on' workforce in any given location. Assessors are selected randomly and each makes regular assessments",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda la cifra del 20-30% de la plantilla operativa, seleccionada al azar, para los factores locales de MESH. El paso la da solo como ejemplo y pide una muestra 'representativa' en lugar de aleatoria, sin detallar que en Review evalúan supervisores y en MESH los factores organizacionales los califican gerentes técnicos. Solo se aparta en el detalle.",
+  "paso_fiel": ""
+ }
+}

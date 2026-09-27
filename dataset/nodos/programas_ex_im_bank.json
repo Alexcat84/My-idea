@@ -6,22 +6,22 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportacion, garantias de prestamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y politicos, especialmente en proyectos de bienes de capital como plantas de energia, telecomunicaciones y transporte. La Garantia de Capital de Trabajo cubre la etapa previa a la exportacion, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (100% si tu negocio es de minorias, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantia suele salir mas económica que un prestamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
   "pasos_accionables": [
-    "Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion",
-    "Determina si te conviene mas una garantia de prestamo, que suele ser mas económica, o un prestamo directo de mediano o largo plazo para la venta",
-    "Evalua contratar un seguro de crédito a la exportacion, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
-    "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energia, telecomunicaciones o transporte",
-    "Presenta tu inventario y tus cuentas por cobrar de exportacion como garantia y negocia las tasas de anticipo con el prestamista",
+    "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
+    "Determina si te conviene más una garantía de préstamo, que suele ser más económica, o un préstamo directo de mediano o largo plazo para la venta",
+    "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+    "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
+    "Presenta tu inventario y tus cuentas por cobrar de exportación como garantía y negocia las tasas de anticipo con el prestamista",
     "Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes"
   ],
-  "entregable_esperado": "Tu solicitud o precalificacion completada para un programa del Ex-Im Bank, con la garantia, el prestamo o el seguro y el banco participante ya identificados.",
+  "entregable_esperado": "Tu solicitud o precalificación completada para un programa del Ex-Im Bank, con la garantía, el préstamo o el seguro y el banco participante ya identificados.",
   "nodos_previos": [
     "descuento_aceptaciones_bancarias",
     "decisiones_de_financiamiento_exportacion",
     "trabajo_con_bancos_comerciales",
-    "asistencia_us_commercial_service",
     "enfoques_generales_exportacion",
     "elementos_plan_exportacion_ejemplo",
-    "recursos_apoyo_gubernamental_exportacion"
+    "recursos_apoyo_gubernamental_exportacion",
+    "uso_del_us_commercial_service"
   ],
   "nodos_siguientes": [
     "financiamiento_sba_exportacion",
@@ -30,7 +30,7 @@
     "enfoques_generales_exportacion"
   ],
   "condiciones_activacion": [
-    "Si necesitas reducir el riesgo comercial o politico de una venta de exportacion",
+    "Si exportas desde Estados Unidos y necesitas reducir el riesgo comercial o politico de una venta de exportacion",
     "Si te falta capital de trabajo para producir o cumplir una orden de exportacion",
     "Si tu comprador en el extranjero necesita financiamiento a mediano o largo plazo para bienes de capital",
     "Si tu banco local es reacio a asumir el riesgo de cobro en mercados que no conoce"
@@ -50,6 +50,121 @@
       "node_id": "garantia_capital_trabajo",
       "titulo": "Garantía de Capital de Trabajo (Working Capital Guarantee)",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-183",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "asistencia_us_commercial_service -> programas_ex_im_bank",
+      "texto_nuevo": "uso_del_us_commercial_service -> programas_ex_im_bank",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a asistencia_us_commercial_service, deprecado; su superviviente es uso_del_us_commercial_service."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-condicion-148",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si necesitas reducir el riesgo comercial o politico de una venta de exportacion",
+      "texto_nuevo": "Si exportas desde Estados Unidos y necesitas reducir el riesgo comercial o politico de una venta de exportacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q007-026: Tenia razon el lector A: una condicion que ate el nodo a exportar desde Estados Unidos basta para dejar claro el pais en el conjunto, igual que en los nodos de clase C vecinos; las otras tres condiciones describen bien cuando aplica y no hace falta reescribirlas como propone B. (arbitro) Motivo: Clase C de Estados Unidos: ninguna condicion dice que el Ex-Im Bank aplica si exportas desde Estados Unidos, y solo respalda exportaciones de ese pais."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0209",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina si te conviene mas una garantia de prestamo, que suele ser mas económica, o un prestamo directo de mediano o largo plazo para la venta",
+      "texto_nuevo": "Determina si te conviene más una garantía de préstamo, que suele ser más económica, o un préstamo directo de mediano o largo plazo para la venta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-024.paso1: más, garantía, préstamo, más, préstamo (Tildes reales en más, garantía y préstamo; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0210",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua contratar un seguro de crédito a la exportacion, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+      "texto_nuevo": "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-024.paso2: Evalúa, exportación (Tildes de 'Evalúa' y 'exportación'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0211",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energia, telecomunicaciones o transporte",
+      "texto_nuevo": "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-024.paso3: energía (Tilde de 'energía'; el nombre en inglés se mantiene.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0212",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Presenta tu inventario y tus cuentas por cobrar de exportacion como garantia y negocia las tasas de anticipo con el prestamista",
+      "texto_nuevo": "Presenta tu inventario y tus cuentas por cobrar de exportación como garantía y negocia las tasas de anticipo con el prestamista",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-024.paso4: exportación, garantía (Tildes de 'exportación' y 'garantía'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0213",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu solicitud o precalificacion completada para un programa del Ex-Im Bank, con la garantia, el prestamo o el seguro y el banco participante ya identificados.",
+      "texto_nuevo": "Tu solicitud o precalificación completada para un programa del Ex-Im Bank, con la garantía, el préstamo o el seguro y el banco participante ya identificados.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-024.entregable: precalificación, garantía, préstamo (Tildes de precalificación, garantía y préstamo; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "n1-orto-det-2",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion",
+      "texto_nuevo": "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
+      "cita": {
+        "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+        "evidencia": "Faltas que la pasada O dejo pasar: Garantía, exportación"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
     }
   ]
 }

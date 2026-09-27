@@ -22,8 +22,27 @@
     "riesgo_fiduciario_insolvencia_deuda"
   ],
   "condiciones_activacion": [
-    "Si estás estructurando una ronda de deuda convertible con cobertura de warrants (warrant coverage)",
+    "Si tu negocio opera en Estados Unidos y estás estructurando una ronda de deuda convertible con cobertura de warrants (warrant coverage)",
     "Si el inversionista te pide tanto descuento como warrants al mismo tiempo"
   ],
-  "etiqueta_arbol": "Revisa el Descuento de Emisión"
+  "etiqueta_arbol": "Revisa el Descuento de Emisión",
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-130",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si estás estructurando una ronda de deuda convertible con cobertura de warrants (warrant coverage)",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y estás estructurando una ronda de deuda convertible con cobertura de warrants (warrant coverage)",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q006-030: Falta en las condiciones la regla de clase C: que aplica si el negocio opera en EE.UU., donde rige el tratamiento OID. (lector y verificador de acuerdo) Motivo: Nodo de clase C (tratamiento fiscal OID de EE.UU.) y ninguna condicion dice que aplica si tu negocio opera o levanta capital en EE.UU."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

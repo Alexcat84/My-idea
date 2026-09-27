@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P005692",
+  "intento": 0,
+  "usd": 0.18176,
+  "turnos": 1,
+  "duracion_s": 12.3,
+  "pared_s": 13.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40370,
+  "tokens_out": 1014,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P005692\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1141, 126, 2922], \"cita\": \"Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe este riesgo (L1085, L1141) y cuenta entre las funciones de las defensas crear conciencia de los peligros (L126). No propone formación específica, pero tampoco la desaconseja. L2922 trata de advertencias y sanciones tras errores, no de formación. El paso acompaña al rediseño de alarmas, no lo sustituye. Tampoco añade cifras, plazos ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P005692",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1085,
+   1141,
+   126,
+   2922
+  ],
+  "cita": "Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe este riesgo (L1085, L1141) y cuenta entre las funciones de las defensas crear conciencia de los peligros (L126). No propone formación específica, pero tampoco la desaconseja. L2922 trata de advertencias y sanciones tras errores, no de formación. El paso acompaña al rediseño de alarmas, no lo sustituye. Tampoco añade cifras, plazos ni responsables.",
+  "paso_fiel": ""
+ }
+}

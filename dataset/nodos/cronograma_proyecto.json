@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Cronograma del Proyecto (Project Schedule)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. Ambos formatos incluyen los nombres de los recursos asignados a cada actividad y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
   "pasos_accionables": [
     "Recopilar lista de actividades, diagrama de red y estimaciones de duración",
     "Determinar dependencias entre actividades",
     "Asignar recursos a cada actividad y anotar sus nombres",
     "Calcular fechas de inicio y fin usando software de programación o Gantt",
-    "Seleccionar el formato de presentación segun necesites, diagrama de Gantt o gráfico de hitos",
+    "Seleccionar el formato de presentación según necesites, diagrama de Gantt o gráfico de hitos",
     "Identificar hitos clave para el gráfico de hitos"
   ],
   "entregable_esperado": "Cronograma del proyecto completo en formato de diagrama de Gantt o gráfico de hitos, con fechas de inicio/fin, dependencias y recursos asignados",
@@ -29,11 +29,8 @@
   "nodos_siguientes": [
     "estimacion_costos_actividad",
     "asignacion_agil_de_recursos",
-    "project_charter",
     "linea_base_costos",
-    "activity_duration_estimates",
-    "requirements_management_plan",
-    "innovation_project_canvas"
+    "lienzo_proyecto_innovacion"
   ],
   "condiciones_activacion": [
     "Cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final",
@@ -50,5 +47,92 @@
       "titulo": "Project Schedule",
       "fuente": "A Project Manager's Book of Forms"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-11",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. Ambos formatos incluyen los nombres de los recursos asignados a cada actividad y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+      "texto_nuevo": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "I have an idea/txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "L2023-L2039",
+        "frase": "Another method of showing schedule information is to create a Milestone Chart, which shows only the dates of the important events or key deliverables."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R025-044 (CONTRARIO, lector y verificador de acuerdo): Atribuye al grafico de hitos los nombres de recursos, cuando el libro dice que solo muestra fechas de eventos clave. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R025-044"
+    },
+    {
+      "id": "t2-arista-024",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> activity_duration_estimates",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: las estimaciones de duracion son un insumo del cronograma (el mismo vecino figura tambien como anterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-025",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> project_charter",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el acta de constitucion autoriza el proyecto y precede al cronograma."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-026",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> requirements_management_plan",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el plan de gestion de requisitos es de planificacion temprana y no sigue al cronograma."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-146",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "cronograma_proyecto -> innovation_project_canvas",
+      "texto_nuevo": "cronograma_proyecto -> lienzo_proyecto_innovacion",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a innovation_project_canvas, deprecado; su superviviente es lienzo_proyecto_innovacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0533",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Seleccionar el formato de presentación segun necesites, diagrama de Gantt o gráfico de hitos",
+      "texto_nuevo": "Seleccionar el formato de presentación según necesites, diagrama de Gantt o gráfico de hitos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O045-020.paso4: según (Solo se corrige la tilde que faltaba en 'segun'; el resto del texto se deja igual que el original.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
+  ],
+  "fuentes_internas": [
+    "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
   ]
 }

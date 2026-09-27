@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P625761",
+  "intento": 0,
+  "usd": 0.161272,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36038,
+  "tokens_out": 856,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P625761\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [567, 584, 582], \"cita\": \"There were no visual indications that the roadbed had been undermined, nor could this have been predicted without a detailed geotechnical analysis. Since the track appeared to be stable to those carrying out routine inspections of its exterior features, no such analysis was performed\", \"datos_sin_respaldo\": [], \"razon\": \"El libro atribuye el fallo de Nakina a que solo hubo inspecciones rutinarias del exterior y no un análisis geotécnico detallado. El paso extrae esa lección en la misma dirección y sin datos nuevos. El libro llama al caso 'muy especial' y pide priorizar recursos, pero no desaconseja estos análisis. El paso tampoco los exige para todo ni de una vez.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P625761",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   567,
+   584,
+   582
+  ],
+  "cita": "There were no visual indications that the roadbed had been undermined, nor could this have been predicted without a detailed geotechnical analysis. Since the track appeared to be stable to those carrying out routine inspections of its exterior features, no such analysis was performed",
+  "datos_sin_respaldo": [],
+  "razon": "El libro atribuye el fallo de Nakina a que solo hubo inspecciones rutinarias del exterior y no un análisis geotécnico detallado. El paso extrae esa lección en la misma dirección y sin datos nuevos. El libro llama al caso 'muy especial' y pide priorizar recursos, pero no desaconseja estos análisis. El paso tampoco los exige para todo ni de una vez.",
+  "paso_fiel": ""
+ }
+}

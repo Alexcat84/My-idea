@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Marco de Análogos y Antílogos (Analogs and Antilogs)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Framework propuesto por Randy Komisar para construir estrategia comparando la nueva startup con casos previos. Un 'análogo' es un ejemplo exitoso previo que responde una pregunta clave (ej. el Walkman de Sony demostró que la gente escucharía música con audífonos en público, algo que Steve Jobs no tuvo que validar con el iPod). Un 'antílogo' es un ejemplo que revela un riesgo o pregunta sin resolver (ej. Napster mostró que la gente descargaba música pero no pagaba por ella, lo cual Jobs sí tuvo que resolver). Este ejercicio ayuda a identificar cuáles son los verdaderos saltos de fe de la nueva iniciativa.",
+  "resumen_teorico": "Framework para construir estrategia comparando la nueva startup con casos previos. Un 'análogo' es un ejemplo exitoso previo que responde una pregunta clave (ej. el Walkman de Sony demostró que la gente escucharía música con audífonos en público, algo que Steve Jobs no tuvo que validar con el iPod). Un 'antílogo' es un ejemplo que revela un riesgo o pregunta sin resolver (ej. Napster mostró que la gente descargaba música pero no pagaba por ella, lo cual Jobs sí tuvo que resolver). Este ejercicio ayuda a identificar cuáles son los verdaderos saltos de fe de la nueva iniciativa.",
   "pasos_accionables": [
     "Buscar empresas o productos previos (análogos) que ya hayan validado partes de la hipótesis del negocio",
     "Buscar casos previos (antílogos) que muestren riesgos o preguntas aún sin resolver en la industria",
@@ -22,5 +22,26 @@
     "Cuando se está definiendo la estrategia inicial de un producto y se busca apoyo en comparaciones históricas de mercado",
     "Cuando se necesita convencer a inversionistas del riesgo real (o falta de él) de una idea de negocio"
   ],
-  "etiqueta_arbol": "Compara con Casos Previos"
+  "etiqueta_arbol": "Compara con Casos Previos",
+  "correcciones": [
+    {
+      "id": "atribucion-005",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Framework propuesto por Randy Komisar para construir estrategia comparando la nueva startup con casos previos. Un 'análogo' es un ejemplo exitoso previo que responde una pregunta clave (ej. el Walkman de Sony demostró que la gente escucharía música con audífonos en público, algo que Steve Jobs no tuvo que validar con el iPod). Un 'antílogo' es un ejemplo que revela un riesgo o pregunta sin resolver (ej. Napster mostró que la gente descargaba música pero no pagaba por ella, lo cual Jobs sí tuvo que resolver). Este ejercicio ayuda a identificar cuáles son los verdaderos saltos de fe de la nueva iniciativa.",
+      "texto_nuevo": "Framework para construir estrategia comparando la nueva startup con casos previos. Un 'análogo' es un ejemplo exitoso previo que responde una pregunta clave (ej. el Walkman de Sony demostró que la gente escucharía música con audífonos en público, algo que Steve Jobs no tuvo que validar con el iPod). Un 'antílogo' es un ejemplo que revela un riesgo o pregunta sin resolver (ej. Napster mostró que la gente descargaba música pero no pagaba por ella, lo cual Jobs sí tuvo que resolver). Este ejercicio ayuda a identificar cuáles son los verdaderos saltos de fe de la nueva iniciativa.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Framework propuesto por Randy Komisar"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ]
 }

@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Split Testing (A/B Testing)",
+  "resumen": "Técnica para comparar dos o más versiones de una propuesta de valor (precio, copy, funcionalidades) repartiendo el tráfico entre una opción de control y una opción challenge, y quedarte con la que mejor desempeño obtiene.",
+  "texto": "Cambia varias variables a la vez en la opción challenge para identificar claramente qué produce el mejor desempeño.",
+  "tipo": "CONTRARIO",
+  "libro": "Value Proposition Design",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+  "lineas": "L8757",
+  "cita": "Test a single variation in the challenging option if you want to clearly identify what leads to a better performance.",
+  "dato": "",
+  "explicacion": "El libro dice que, para identificar con claridad qué causa el mejor desempeño, hay que probar UNA sola variación en la opción challenge (para combinar elementos remite al test multivariante, que es otra cosa). El paso invierte la condición: cambiar varias variables a la vez impide saber cuál provocó la mejora."
+ },
+ {
+  "titulo": "Unique Link Tracking",
+  "resumen": "Técnica sencilla para medir el interés genuino de un cliente o socio potencial más allá de lo que dice en una reunión: le compartes un enlace único y rastreable hacia información detallada y observas si lo usa.",
+  "texto": "Si el cliente no abre el enlace en las 72 horas siguientes a la reunión, regístralo como interés bajo.",
+  "tipo": "ANADIDO",
+  "libro": "Value Proposition Design",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+  "lineas": "L8244",
+  "cita": "Track if the customer used the link or not. If the link wasn’t used, it may indicate lack of interest or more important jobs, pains, and gains than those that your idea addresses.",
+  "dato": "plazo de 72 horas para abrir el enlace antes de clasificar el interés como bajo",
+  "explicacion": "El libro solo pide rastrear si el enlace se usó o no, y dice que no usarlo puede indicar falta de interés u otras prioridades. No fija ningún plazo: Grep no encuentra '72' en todo el texto, y 'hours' solo aparece en L3149 (energía solar) y L4052 (observar clientes 10 horas), sin relación con esta técnica."
+ },
+ {
+  "titulo": "Product Backlog y Cronograma Evolutivo",
+  "resumen": "En Agile-Stage-Gate, el backlog de producto y el cronograma se aprueban a alto nivel y de forma tentativa, y se van actualizando y validando a medida que el proyecto avanza y la incertidumbre disminuye.",
+  "texto": "Congela el backlog y el cronograma de la etapa al aprobar el proyecto en el gate para que el equipo trabaje sobre una definición estable.",
+  "tipo": "CONTRARIO",
+  "libro": "Winning at New Products - Robert G. Cooper",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+  "lineas": "L4745",
+  "cita": "they evolve as the project moves forward rather than being fixed at the beginning of the stage when the project is approved.",
+  "dato": "",
+  "explicacion": "Cooper dice que la definición de producto (backlog) y el plan se actualizan y validan constantemente y evolucionan con el proyecto, EN LUGAR DE fijarse al inicio de la etapa cuando se aprueba el proyecto. El paso recomienda justo lo que el libro descarta: congelarlos en el gate."
+ },
+ {
+  "titulo": "Análisis del Flujo de Valor (Value-Stream Analysis)",
+  "resumen": "Técnica lean para acelerar el proceso de idea a lanzamiento: se mapea cómo funciona realmente el proceso de desarrollo, se examina cada actividad y se eliminan las que no agregan valor.",
+  "texto": "Repite el mapeo del flujo de valor cada seis meses para detectar nuevos cuellos de botella en el proceso.",
+  "tipo": "ANADIDO",
+  "libro": "Winning at New Products - Robert G. Cooper",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+  "lineas": "L4047",
+  "cita": "In employing value-stream analysis, a task force creates a map of the value stream for typical development projects in your business",
+  "dato": "repetir el análisis de flujo de valor con una frecuencia de cada seis meses",
+  "explicacion": "El libro describe el mapeo del flujo de valor que hace una task force, pero no dice cada cuánto debe repetirse. Grep: 'six months' solo aparece en L3662, L3668 y L4639 (proyectos BTOM y desarrolladores que se encierran seis meses). Las revisiones 'quarterly or semiannual' de L6034, L6427 y L6931 son revisiones del portafolio, no del flujo de valor. Ninguna línea sobre value-stream menciona un periodo."
+ }
+]

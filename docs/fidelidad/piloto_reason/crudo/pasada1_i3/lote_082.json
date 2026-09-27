@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_082",
+  "intento": 0,
+  "usd": 0.15945199999999998,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33398,
+  "tokens_out": 1293,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P70B606\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"al menos el 8% del presupuesto operativo\", \"líneas de producción clasificadas como de alto peligro\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [65, 67, 77, 79], \"razon\": \"El libro no da ninguna cifra. Pide que la protección iguale al peligro (paridad) y un porcentaje fijo podría chocar con ese ajuste. La cifra 8% es inventada.\"},\n  {\"id\": \"PEF9867\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"grupo de expertos del dominio\"], \"clase\": \"FIEL\", \"lineas\": [3690, 3692], \"razon\": \"El libro dice que el diagrama se desarrolla mediante discusión estructurada con un grupo de expertos del dominio, guiado por un facilitador experimentado.\"},\n  {\"id\": \"P510F55\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2170, 1943, 2259], \"razon\": \"El libro dice que la vía cognitiva es difícil y que sus mecanismos pueden ser imposibles de descubrir. Considera más prometedor el análisis de tareas. El paso manda por la vía desaconsejada.\"},\n  {\"id\": \"P488B64\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"alta gerencia\"], \"clase\": \"FIEL\", \"lineas\": [2687, 4757], \"razon\": \"El libro pide difundir ampliamente los datos de casi accidentes, especialmente en los niveles superiores de la organización.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P70B606",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "al menos el 8% del presupuesto operativo",
+    "líneas de producción clasificadas como de alto peligro"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    65,
+    67,
+    77,
+    79
+   ],
+   "razon": "El libro no da ninguna cifra. Pide que la protección iguale al peligro (paridad) y un porcentaje fijo podría chocar con ese ajuste. La cifra 8% es inventada."
+  },
+  {
+   "id": "PEF9867",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "grupo de expertos del dominio"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3690,
+    3692
+   ],
+   "razon": "El libro dice que el diagrama se desarrolla mediante discusión estructurada con un grupo de expertos del dominio, guiado por un facilitador experimentado."
+  },
+  {
+   "id": "P510F55",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2170,
+    1943,
+    2259
+   ],
+   "razon": "El libro dice que la vía cognitiva es difícil y que sus mecanismos pueden ser imposibles de descubrir. Considera más prometedor el análisis de tareas. El paso manda por la vía desaconsejada."
+  },
+  {
+   "id": "P488B64",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "alta gerencia"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2687,
+    4757
+   ],
+   "razon": "El libro pide difundir ampliamente los datos de casi accidentes, especialmente en los niveles superiores de la organización."
+  }
+ ]
+}

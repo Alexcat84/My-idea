@@ -1,6 +1,6 @@
 {
   "node_id": "estrategia_recoleccion_datos_carbono",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Estrategia de Recolección de Datos de Carbono",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -23,5 +23,23 @@
   "condiciones_activacion": [
     "Si la empresa no tiene un sistema establecido para recolectar datos de energía y combustible"
   ],
-  "etiqueta_arbol": "Recolecta tus Datos de Carbono"
+  "etiqueta_arbol": "Recolecta tus Datos de Carbono",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-140",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F24-031: Montar la recogida de datos de energia y combustible con responsables y plantillas es gestion operativa de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

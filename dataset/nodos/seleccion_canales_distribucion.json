@@ -7,7 +7,7 @@
   "resumen_teorico": "Para cada mercado exterior debe elegirse cuidadosamente un canal de distribución adecuado: representantes de ventas, agentes, distribuidores, minoristas o ventas directas a usuarios finales. Cada canal implica diferentes niveles de control, riesgo, servicio postventa y estructura de compensación. Los distribuidores son el canal más común y consistente entre pequeños exportadores estadounidenses.",
   "pasos_accionables": [
     "Analizar las características del producto y del mercado objetivo",
-    "Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y tambien e-commerce propio o de terceros, franquicia",
+    "Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y también e-commerce propio o de terceros, franquicia",
     "Determinar responsabilidades logísticas, de inventario y servicio postventa de cada canal",
     "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles, y la velocidad de entrada",
     "Seleccionar uno o más canales complementarios en lugar de depender de un único mercado/canal",
@@ -38,6 +38,25 @@
       "node_id": "seleccion_canales_exportacion",
       "titulo": "Selección de Canales de Venta Internacional",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0017",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y tambien e-commerce propio o de terceros, franquicia",
+      "texto_nuevo": "Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y también e-commerce propio o de terceros, franquicia",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-008.paso1: también (Solo se añade la tilde que faltaba en 'también'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
     }
   ]
 }

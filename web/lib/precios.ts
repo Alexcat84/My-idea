@@ -8,6 +8,14 @@
 // hardcodea números. 1 crédito = 1 USD sigue siendo el ancla del ledger, pero
 // NO se le vende al usuario como eslogan. Pagos reales (pasarelas) llegan en la
 // ETAPA 3: por ahora los endpoints validan contra estas constantes.
+//
+// Cuándo se cobra (decisión del fundador, 25 sep 2026): se verifica el saldo
+// al empezar y se cobra al final, SOLO si se entregó lo prometido. Un plan
+// armado sin IA no se cobra: se entrega gratis con un aviso honesto
+// (docs/ANALISIS_PRECIOS.md §4, "Cuándo se cobra: solo lo entregado").
+import { elegir, LOCALE_BASE } from "./i18n/config";
+import { PACKS_RECARGA } from "./i18n/mensajes/packsRecarga";
+
 export const PRECIOS = {
   organizador: 0, // Claridad: el gancho freemium, siempre gratis y sin cuenta
   plan_completo: 10, // Tu Plan (La Exploración) e INCLUYE Tus Números (ver tus_numeros: 0 y §7.1)
@@ -15,9 +23,38 @@ export const PRECIOS = {
   tus_numeros: 0, // INCLUIDO en el plan (decisión jul 2026, ANÁLISIS §4/§7.1): la activación sigue anclada por activado_at, sin cobro
   mundo_activar: 5, // brecha + plan del dominio; el preview (entrevista + diagnóstico) sigue gratis
   mundo_seguimiento: 5, // ciclo de seguimiento dentro de un mundo
+  // Ciclo de replanteamiento, Fase 2 (decisión del fundador, 27 sep 2026): las
+  // dos entradas de Manos a la Obra a 5 "por ahora". "Profundizar mi plan" cobra
+  // seguimiento / mundo_seguimiento; "Replantear mi camino" cobra estos dos, con
+  // su propia clave para poder moverlos por separado cuando se mida su coste real.
+  replanteamiento: 5, // "Replantear mi camino" en el viaje principal
+  mundo_replanteamiento: 5, // "Replantear mi camino" dentro de un mundo
 } as const;
 
 export type ConceptoPrecio = keyof typeof PRECIOS;
+
+/**
+ * La regla de concepto del plan (CUENTAS_DISENO §5, actualizada por la 4.5):
+ *   core + inicial/completo  → plan_completo
+ *   core + seguimiento       → seguimiento
+ *   mundo + inicial/completo → mundo_activar  ← el preview fue GRATIS;
+ *                              lo que se compra es el PLAN, a la entrega.
+ *   mundo + seguimiento      → mundo_seguimiento
+ * Y con esReplanteamiento (ciclo de replanteamiento, Fase 2), el seguimiento
+ * pasa a replanteamiento / mundo_replanteamiento.
+ * Vive aquí, junto a los precios, porque es PURA y la usan los dos lados: el
+ * cobro del servidor y el precio que pinta la pantalla (AUD-09 H01: la
+ * pantalla tecleaba plan_completo y anunciaba 10 donde se cobraban 5).
+ */
+export function conceptoDelPlan(dominio: string, esSeguimiento: boolean, esReplanteamiento = false): ConceptoPrecio {
+  if (esSeguimiento && esReplanteamiento) return dominio === "core" ? "replanteamiento" : "mundo_replanteamiento";
+  if (dominio === "core") return esSeguimiento ? "seguimiento" : "plan_completo";
+  return esSeguimiento ? "mundo_seguimiento" : "mundo_activar";
+}
+
+export function montoDelPlan(dominio: string, esSeguimiento: boolean, esReplanteamiento = false): number {
+  return PRECIOS[conceptoDelPlan(dominio, esSeguimiento, esReplanteamiento)];
+}
 
 /**
  * Recargas de créditos (fase "Catálogo congruente", jul 2026). Congruencia
@@ -27,10 +64,15 @@ export type ConceptoPrecio = keyof typeof PRECIOS;
  * (ANÁLISIS §7). El chip de saldo + el precio en cada compuerta son el contador
  * honesto. La compra con dinero sigue DORMIDA hasta que despierten las pasarelas
  * (ETAPA 3); este catálogo alimenta la pantalla y, cuando despierten, RevenueCat.
+ *
+ * i18n F2: el nombre y el "alcanza para" son texto visible y nacen en el
+ * catálogo (lib/i18n/mensajes/packsRecarga.ts, por `clave`); aquí quedan en
+ * el idioma base para quien los lea directo. Las cifras NO salen de aquí.
  */
+const TEXTO_PACKS = elegir(PACKS_RECARGA, LOCALE_BASE);
 export const PACKS = [
-  { nombre: "Recarga", creditos: 5, usd: 4.99, alcanza: "un seguimiento o un mundo suelto", destacado: false },
-  { nombre: "Básico", creditos: 10, usd: 9.99, alcanza: "tu plan completo, con tus números incluidos", destacado: false },
-  { nombre: "Premium", creditos: 15, usd: 14.99, alcanza: "tu plan y tu primer seguimiento", destacado: true },
-  { nombre: "Profesional", creditos: 30, usd: 29.99, alcanza: "el viaje entero de una idea", destacado: false },
+  { clave: "recarga", nombre: TEXTO_PACKS.recarga.nombre, creditos: 5, usd: 4.99, alcanza: TEXTO_PACKS.recarga.alcanza, destacado: false },
+  { clave: "basico", nombre: TEXTO_PACKS.basico.nombre, creditos: 10, usd: 9.99, alcanza: TEXTO_PACKS.basico.alcanza, destacado: false },
+  { clave: "premium", nombre: TEXTO_PACKS.premium.nombre, creditos: 15, usd: 14.99, alcanza: TEXTO_PACKS.premium.alcanza, destacado: true },
+  { clave: "profesional", nombre: TEXTO_PACKS.profesional.nombre, creditos: 30, usd: 29.99, alcanza: TEXTO_PACKS.profesional.alcanza, destacado: false },
 ] as const;

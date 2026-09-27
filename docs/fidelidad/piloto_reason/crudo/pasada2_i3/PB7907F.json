@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PB7907F",
+  "intento": 0,
+  "usd": 0.133924,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 25471,
+  "tokens_out": 1602,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB7907F\", \"veredicto\": \"CONTRARIO\", \"lineas\": [3209, 3097, 3199], \"cita\": \"The key to using Tripod-Delta is to manage the profiles rather than individual indicators. Because indicators are merely symptoms, fixing them individually rarely ‘cures’ the underlying ‘disease’.\", \"datos_sin_respaldo\": [\"más de 10 años\"], \"tambien_anadido\": true, \"razon\": \"El libro cita la antigüedad del equipo como componente del GFT Hardware (L3097), pero no fija ningún umbral de años. El paso convierte ese síntoma aislado en una regla fija de reemplazo sin condiciones. El libro manda gestionar perfiles y actuar sobre los 2-3 GFT peores, porque arreglar indicadores sueltos rara vez cura la causa.\", \"paso_fiel\": \"Si el Failure State Profile sitúa Hardware entre los 2-3 GFT más críticos, planificar acciones remediales sobre los procesos de fondo de herramientas y equipos (compras, suministro, especificaciones, antigüedad del equipo), en lugar de corregir indicadores sueltos.\"}\n```",
+ "parseado": {
+  "id": "PB7907F",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   3209,
+   3097,
+   3199
+  ],
+  "cita": "The key to using Tripod-Delta is to manage the profiles rather than individual indicators. Because indicators are merely symptoms, fixing them individually rarely ‘cures’ the underlying ‘disease’.",
+  "datos_sin_respaldo": [
+   "más de 10 años"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro cita la antigüedad del equipo como componente del GFT Hardware (L3097), pero no fija ningún umbral de años. El paso convierte ese síntoma aislado en una regla fija de reemplazo sin condiciones. El libro manda gestionar perfiles y actuar sobre los 2-3 GFT peores, porque arreglar indicadores sueltos rara vez cura la causa.",
+  "paso_fiel": "Si el Failure State Profile sitúa Hardware entre los 2-3 GFT más críticos, planificar acciones remediales sobre los procesos de fondo de herramientas y equipos (compras, suministro, especificaciones, antigüedad del equipo), en lugar de corregir indicadores sueltos."
+ }
+}

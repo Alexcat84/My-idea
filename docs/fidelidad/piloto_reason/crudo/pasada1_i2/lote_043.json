@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_043",
+  "intento": 0,
+  "usd": 0.164688,
+  "turnos": 1,
+  "duracion_s": 18.3,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32742,
+  "tokens_out": 1686,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PAF72E6\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2170, 2224, 2228, 2250, 2259], \"razon\": \"El libro propone identificar los pasos propensos de antemano, contando sus rasgos provocadores de omisión (análisis de tarea). Tomar como vía principal el historial de errores se aparta de eso; causas pasadas quizá indescubribles.\"},\n {\"id\": \"P861199\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2322, 2340, 2342], \"razon\": \"El libro presenta ese cálculo como la visión ortodoxa y la critica porque supone un mantenimiento benigno. Aplicarlo sin sumar el riesgo de error humano sigue lo que el libro cuestiona.\"},\n {\"id\": \"P161466\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [580, 2596, 2724, 5639], \"razon\": \"Según el libro, los factores organizacionales son el área prioritaria y los esfuerzos en primera línea son vanos sin cambiarlos. Pedir prioridad 'tanto como' a primera línea diluye esa prioridad.\"},\n {\"id\": \"PE56E59\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5174, 5178, 5208], \"razon\": \"El libro dice que la reversión ocurre 'seamlessly' al pasar la emergencia y que se apoya en la cultura compartida, no en reglas. Fijar criterios explícitos puede chocar con ese matiz.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PAF72E6",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2170,
+    2224,
+    2228,
+    2250,
+    2259
+   ],
+   "razon": "El libro propone identificar los pasos propensos de antemano, contando sus rasgos provocadores de omisión (análisis de tarea). Tomar como vía principal el historial de errores se aparta de eso; causas pasadas quizá indescubribles."
+  },
+  {
+   "id": "P861199",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2322,
+    2340,
+    2342
+   ],
+   "razon": "El libro presenta ese cálculo como la visión ortodoxa y la critica porque supone un mantenimiento benigno. Aplicarlo sin sumar el riesgo de error humano sigue lo que el libro cuestiona."
+  },
+  {
+   "id": "P161466",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    580,
+    2596,
+    2724,
+    5639
+   ],
+   "razon": "Según el libro, los factores organizacionales son el área prioritaria y los esfuerzos en primera línea son vanos sin cambiarlos. Pedir prioridad 'tanto como' a primera línea diluye esa prioridad."
+  },
+  {
+   "id": "PE56E59",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "El libro dice que la reversión ocurre 'seamlessly' al pasar la emergencia y que se apoya en la cultura compartida, no en reglas. Fijar criterios explícitos puede chocar con ese matiz."
+  }
+ ]
+}

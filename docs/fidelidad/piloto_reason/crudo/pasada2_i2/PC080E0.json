@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC080E0",
+  "intento": 0,
+  "usd": 0.18096800000000002,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40897,
+  "tokens_out": 869,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PC080E0\", \"veredicto\": \"FIEL\", \"lineas\": [293, 192, 2905], \"cita\": \"For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro manda identificar las fallas activas (errores y violaciones en el extremo agudo) como paso de la investigación. Advierte no cerrarla ahí (L194, L2905), pero el paso no dice detenerse, y el nodo sigue con las condiciones latentes. Que los actos inseguros no siempre existan (L291) no contradice buscarlos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PC080E0",
+  "veredicto": "FIEL",
+  "lineas": [
+   293,
+   192,
+   2905
+  ],
+  "cita": "For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved. And for each individual unsafe act that is identified, we must consider what local conditions could have shaped or provoked it.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro manda identificar las fallas activas (errores y violaciones en el extremo agudo) como paso de la investigación. Advierte no cerrarla ahí (L194, L2905), pero el paso no dice detenerse, y el nodo sigue con las condiciones latentes. Que los actos inseguros no siempre existan (L291) no contradice buscarlos.",
+  "paso_fiel": ""
+ }
+}

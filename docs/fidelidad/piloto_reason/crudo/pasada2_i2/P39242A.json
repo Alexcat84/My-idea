@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P39242A",
+  "intento": 0,
+  "usd": 0.166792,
+  "turnos": 1,
+  "duracion_s": 12.1,
+  "pared_s": 13.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36718,
+  "tokens_out": 996,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P39242A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2311], \"cita\": \"It should be noted that the reminders described above are not a permanent solution to the omission problem. They are, at best, ‘first aid’ measures... A more lasting solution would be to design components so that they can only be installed in the correct way.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro propone diseñar componentes que solo se instalen correctamente como solución más duradera que los recordatorios. 'Priorizar' respecto a esas medidas de primeros auxilios va en su misma dirección y no desplaza la eliminación del contacto, que es otro paso del nodo. 'Poka-yoke' solo pone nombre al mismo concepto y no añade ningún dato.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P39242A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2311
+  ],
+  "cita": "It should be noted that the reminders described above are not a permanent solution to the omission problem. They are, at best, ‘first aid’ measures... A more lasting solution would be to design components so that they can only be installed in the correct way.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro propone diseñar componentes que solo se instalen correctamente como solución más duradera que los recordatorios. 'Priorizar' respecto a esas medidas de primeros auxilios va en su misma dirección y no desplaza la eliminación del contacto, que es otro paso del nodo. 'Poka-yoke' solo pone nombre al mismo concepto y no añade ningún dato.",
+  "paso_fiel": ""
+ }
+}

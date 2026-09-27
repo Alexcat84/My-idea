@@ -6,13 +6,13 @@
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
   "resumen_teorico": "Cuando disenas o cambias tu empaque, no necesitas un laboratorio certificado para saber si aguantara el viaje: existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia logica y tu puedes copiar esa logica de forma casera. Primero se somete el paquete a caidas desde distintas alturas segun su peso, despues a vibracion simulando el traqueteo del transporte, luego a caidas sobre una esquina o borde para probar puntos debiles, y finalmente, si el contenido es liquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos los golpes que tu paquete recibira entre tu mesa de trabajo y la puerta del cliente.",
   "pasos_accionables": [
-    "Suelta tu paquete cerrado desde la altura de tu cintura sobre una superficie dura, varias veces.",
-    "Agitalo con fuerza dentro de una caja de carton simulando vibracion de varios minutos.",
-    "Dejalo caer sobre una esquina o borde para probar el punto mas debil del empaque.",
-    "Si envias liquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
-    "Abre el paquete despues de cada prueba y registra que se rompio o se movio."
+    "Suelta tu paquete cerrado diez veces sobre una superficie dura, desde una altura que depende de su peso.",
+    "Sugerencia de My Idea: agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
+    "Déjalo caer sobre una esquina o borde para probar el punto más débil del empaque.",
+    "Si envías líquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
+    "Abre el paquete después de cada prueba y registra qué se rompió o se movió."
   ],
-  "entregable_esperado": "Un registro casero de que tan bien resistio tu empaque cada tipo de golpe, antes de despachar en volumen.",
+  "entregable_esperado": "Un registro casero de qué tan bien resistió tu empaque cada tipo de golpe, antes de despachar en volumen.",
   "nodos_previos": [
     "detectar_empaque_poco_rigido",
     "identificar_si_tu_producto_necesita_proteccion_especial"
@@ -25,5 +25,113 @@
     "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se dana.",
     "Vas a lanzar un producto nuevo por primera vez y no tienes historial de danos para guiarte."
   ],
-  "etiqueta_arbol": "Simula golpes de transporte en casa"
+  "etiqueta_arbol": "Simula golpes de transporte en casa",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-011",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Suelta tu paquete cerrado desde la altura de tu cintura sobre una superficie dura, varias veces.",
+      "texto_nuevo": "Suelta tu paquete cerrado diez veces sobre una superficie dura, desde una altura que depende de su peso.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "I have an idea/txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "L215-L239",
+        "frase": "10 Drops - height varies with packaged-product weight"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. ISTA fija 10 caidas desde una altura que depende del peso del paquete. El paso da una altura fija, la de la cintura, y 'varias veces': cambia el parametro que da el libro.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-120"
+    },
+    {
+      "id": "fidelidad-t9-070",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Agitalo con fuerza dentro de una caja de carton simulando vibracion de varios minutos.",
+      "texto_nuevo": "Sugerencia de My Idea: agitalo con fuerza dentro de una caja de carton simulando vibracion de varios minutos.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "I have an idea/txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "L217-L231",
+        "frase": "Random With Top Load ... Overall Grms levels of 0.258 Required ... Random Without Top Load ... Overall Grms levels of 0.232 Required"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. ISTA hace la vibracion aleatoria, con carga superior y sin ella, a niveles de Grms fijados y con equipo de laboratorio (L217-L231). En todo el documento no hay un metodo casero, ni agitar el paquete, ni meterlo dentro de otra caja, ni una duracion en minutos: busque minute, shake, vibrat y home, y las unicas duraciones son 72 horas de acondicionamiento y 8 horas de prueba de fuga. El procedimiento casero y su duracion los pone el paso.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-135"
+    },
+    {
+      "id": "n1-orto-0369",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: agitalo con fuerza dentro de una caja de carton simulando vibracion de varios minutos.",
+      "texto_nuevo": "Sugerencia de My Idea: agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O032-027.paso1: agítalo, cartón, vibración (Las tres tildes que faltan son reales (agítalo, cartón, vibración) y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0370",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dejalo caer sobre una esquina o borde para probar el punto mas debil del empaque.",
+      "texto_nuevo": "Déjalo caer sobre una esquina o borde para probar el punto más débil del empaque.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O032-027.paso2: Déjalo, más (Faltan tildes en Déjalo, más y débil; se añade también 'débil', que la propuesta no marcó en su lista de faltas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0371",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si envias liquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
+      "texto_nuevo": "Si envías líquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O032-027.paso3: envías, líquidos (Las tildes de envías y líquidos son reales y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0372",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Abre el paquete despues de cada prueba y registra que se rompio o se movio.",
+      "texto_nuevo": "Abre el paquete después de cada prueba y registra qué se rompió o se movió.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O032-027.paso4: después, qué, rompió, movió (Las tildes de después, qué (interrogativo indirecto), rompió y movió son reales y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0373",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un registro casero de que tan bien resistio tu empaque cada tipo de golpe, antes de despachar en volumen.",
+      "texto_nuevo": "Un registro casero de qué tan bien resistió tu empaque cada tipo de golpe, antes de despachar en volumen.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O032-027.entregable: qué, resistió (Las tildes de qué (interrogativo indirecto) y resistió son reales y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+  ]
 }

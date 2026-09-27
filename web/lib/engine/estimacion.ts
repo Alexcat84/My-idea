@@ -157,19 +157,6 @@ export async function estimarLoteMayoria(
   return { estimaciones, acumulado: acc };
 }
 
-/** Rango honesto en palabras para una banda (para el detalle de la tarea). Son
- * las MISMAS fronteras del prompt validado; JAMÁS un número de horas inventado. */
-export function rangoDeBanda(banda: Banda | null | undefined): string | null {
-  switch (banda) {
-    case "S":
-      return "~1 h";
-    case "M":
-      return "~2-4 h";
-    case "L":
-      return "una jornada";
-    case "XL":
-      return "varios días";
-    default:
-      return null; // plan viejo o estimación fallida: sin rango, cero invención
-  }
-}
+// rangoDeBanda vive aparte (./rangoBanda): la pinta un componente de cliente, y este modulo importa las
+// instrucciones de la IA, que no llegan al navegador (fundador, 27 sep 2026).
+export { rangoDeBanda } from "./rangoBanda";

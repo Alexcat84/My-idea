@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_012",
+  "intento": 0,
+  "usd": 0.16550399999999998,
+  "turnos": 1,
+  "duracion_s": 15.3,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33981,
+  "tokens_out": 1479,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P798118\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [3993, 4060, 4121, 4418, 4039, 445],\n    \"razon\": \"El libro documenta supervisión mermada por recortes (NASA -71%, Transport Canada, HSE). El paso concreta identificar esas funciones, en la misma dirección y sin datos nuevos.\"\n  },\n  {\n    \"id\": \"PD8E1B6\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4027, 4039, 4033, 4454, 4494],\n    \"razon\": \"Coincide con el caso del inspector sin tiempo para auditoría completa. Pero Cullen cuestiona el tipo de inspección en sí, y el libro pide focalizar recursos limitados en dos o tres factores.\"\n  },\n  {\n    \"id\": \"P747EB4\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [194, 196, 252, 5641, 5582],\n    \"razon\": \"El libro rechaza limitar la investigación al error del operador de primera línea en accidentes organizacionales. Ese enfoque centrado en la persona no mejora la seguridad de sistemas complejos.\"\n  },\n  {\n    \"id\": \"P4F01DC\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"revisiones periódicas\"],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [1031, 1033, 1035],\n    \"razon\": \"El paso busca verificar la aplicabilidad universal de las reglas. El libro dice que los reguladores no pueden prever todos los escenarios ni proscribir universalmente respuestas, porque las reglas son insensibles a condiciones locales.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P798118",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3993,
+    4060,
+    4121,
+    4418,
+    4039,
+    445
+   ],
+   "razon": "El libro documenta supervisión mermada por recortes (NASA -71%, Transport Canada, HSE). El paso concreta identificar esas funciones, en la misma dirección y sin datos nuevos."
+  },
+  {
+   "id": "PD8E1B6",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4027,
+    4039,
+    4033,
+    4454,
+    4494
+   ],
+   "razon": "Coincide con el caso del inspector sin tiempo para auditoría completa. Pero Cullen cuestiona el tipo de inspección en sí, y el libro pide focalizar recursos limitados en dos o tres factores."
+  },
+  {
+   "id": "P747EB4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    194,
+    196,
+    252,
+    5641,
+    5582
+   ],
+   "razon": "El libro rechaza limitar la investigación al error del operador de primera línea en accidentes organizacionales. Ese enfoque centrado en la persona no mejora la seguridad de sistemas complejos."
+  },
+  {
+   "id": "P4F01DC",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "revisiones periódicas"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1031,
+    1033,
+    1035
+   ],
+   "razon": "El paso busca verificar la aplicabilidad universal de las reglas. El libro dice que los reguladores no pueden prever todos los escenarios ni proscribir universalmente respuestas, porque las reglas son insensibles a condiciones locales."
+  }
+ ]
+}

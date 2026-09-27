@@ -1,6 +1,6 @@
 {
   "node_id": "diseno_para_el_medio_ambiente",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Diseño para el Medio Ambiente (DfE)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -25,5 +25,23 @@
     "Si la empresa busca reducir el impacto ambiental de sus productos desde la fase de diseño.",
     "Si se desea generar ingresos adicionales mediante productos más sostenibles."
   ],
-  "etiqueta_arbol": "Incorpora Sostenibilidad desde el Inicio"
+  "etiqueta_arbol": "Incorpora Sostenibilidad desde el Inicio",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-111",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F08-024: Rediseña productos con objetivos y metricas de sostenibilidad y entrega un documento de estrategia: diseñar. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE8374C",
+  "intento": 0,
+  "usd": 0.191436,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43379,
+  "tokens_out": 896,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE8374C\", \"veredicto\": \"FIEL\", \"lineas\": [5236, 5242, 5246], \"cita\": \"Which board members have responsibility for organizational safety--as opposed to conventional health and safety at work concerns? … Is information relating to organizational safety discussed at all regular board meetings--or their high-level equivalent?\", \"datos_sin_respaldo\": [], \"razon\": \"El paso reproduce las dos preguntas con las que Reason responde al gerente que cree tener cultura de seguridad. 'Junta directiva' y 'reuniones regulares de alto nivel' vienen del libro. Omite el contraste con la salud laboral convencional y el 'all', pero conserva 'seguridad organizacional' y no invierte nada. 'Honestamente' concuerda con L5272.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE8374C",
+  "veredicto": "FIEL",
+  "lineas": [
+   5236,
+   5242,
+   5246
+  ],
+  "cita": "Which board members have responsibility for organizational safety--as opposed to conventional health and safety at work concerns? … Is information relating to organizational safety discussed at all regular board meetings--or their high-level equivalent?",
+  "datos_sin_respaldo": [],
+  "razon": "El paso reproduce las dos preguntas con las que Reason responde al gerente que cree tener cultura de seguridad. 'Junta directiva' y 'reuniones regulares de alto nivel' vienen del libro. Omite el contraste con la salud laboral convencional y el 'all', pero conserva 'seguridad organizacional' y no invierte nada. 'Honestamente' concuerda con L5272.",
+  "paso_fiel": ""
+ }
+}

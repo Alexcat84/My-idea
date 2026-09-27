@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Las reservas son el dinero que tu inversionista aparta, en teoria, para futuras rondas de tu empresa. Es un concepto clave que casi nadie te explica: si tu inversionista calculo mal esas reservas y le faltan, puede resistirse a que consigas nuevo financiamiento, limitar cuanto entra, o presionarte para vender la empresa aunque no sea lo mejor para tu negocio. Entender como funcionan las reservas te ayuda a anticipar como se va a comportar tu inversionista en las proximas rondas y a elegir socios con capacidad real de seguir apoyandote.",
   "pasos_accionables": [
-    "Preguntale directamente a tu inversionista que expectativa tiene sobre el capital que tu empresa va a necesitar mas adelante",
-    "Investiga cuantas otras empresas tiene en su cartera y cuanta capacidad real de reservas le queda",
+    "Pregúntale directamente a tu inversionista qué expectativa tiene sobre el capital que tu empresa va a necesitar más adelante",
+    "Investiga cuántas otras empresas tiene en su cartera y cuánta capacidad real de reservas le queda",
     "Presta atención a señales de resistencia a nuevas rondas o presión para vender la empresa",
-    "Considera los terminos que te obligan a seguir poniendo dinero para mantener tus derechos (pay to play) y como afectan la disposicion de tu inversionista a reservar capital"
+    "Considera los términos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y cómo, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas"
   ],
-  "entregable_esperado": "Una evaluación clara de si tu inversionista actual tiene la capacidad y la disposicion para acompanarte en futuras rondas",
+  "entregable_esperado": "Una evaluación clara de si tu inversionista actual tiene la capacidad y la disposición para acompañarte en futuras rondas",
   "nodos_previos": [
     "como_ganan_dinero_los_vc",
     "estructura_fondo_vc"
@@ -23,5 +23,82 @@
     "Cuando necesitas anticipar si tus inversionistas actuales te van a apoyar en rondas futuras",
     "Cuando tu inversionista actual muestra resistencia a que consigas nuevo financiamiento"
   ],
-  "etiqueta_arbol": "Entiende las Reservas de tu Inversor"
+  "etiqueta_arbol": "Entiende las Reservas de tu Inversor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-016",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Considera los terminos que te obligan a seguir poniendo dinero para mantener tus derechos (pay to play) y como afectan la disposicion de tu inversionista a reservar capital",
+      "texto_nuevo": "Considera los terminos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y como, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L1101; L3197",
+        "frase": "In a pay-to-play provision, investors must keep investing pro-ratably in future financings (paying) in order to not have their preferred stock converted to common stock"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro define el pay-to-play como una obligacion del inversionista (L1101, L1133: 'It causes the investors to stand up...'), y en ninguna parte del libro obliga al fundador; el paso dice 'terminos que te obligan a seguir poniendo dinero para mantener tus derechos', invirtiendo a quien obliga. Busque 'pay-to-play' en todo el libro y ningun pasaje apoya esa lectura. La relacion con las reservas si esta en L3197 (mas resistencia a nuevas rondas cuando hay pay-to-play), por lo que el texto fiel conserva esa parte.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-045"
+    },
+    {
+      "id": "n1-orto-0404",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale directamente a tu inversionista que expectativa tiene sobre el capital que tu empresa va a necesitar mas adelante",
+      "texto_nuevo": "Pregúntale directamente a tu inversionista qué expectativa tiene sobre el capital que tu empresa va a necesitar más adelante",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-003.paso0: Pregúntale, qué, más (Faltan las tildes de Pregúntale, qué (interrogativo indirecto) y más; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0405",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Investiga cuantas otras empresas tiene en su cartera y cuanta capacidad real de reservas le queda",
+      "texto_nuevo": "Investiga cuántas otras empresas tiene en su cartera y cuánta capacidad real de reservas le queda",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-003.paso1: cuántas, cuánta (Faltan las tildes de cuántas y cuánta, que son interrogativos indirectos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0406",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Considera los terminos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y como, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas",
+      "texto_nuevo": "Considera los términos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y cómo, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-003.paso3: términos, cómo (Faltan las tildes de términos y cómo; el término en inglés queda intacto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0407",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una evaluación clara de si tu inversionista actual tiene la capacidad y la disposicion para acompanarte en futuras rondas",
+      "texto_nuevo": "Una evaluación clara de si tu inversionista actual tiene la capacidad y la disposición para acompañarte en futuras rondas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-003.entregable: disposición, acompañarte (Falta la tilde de disposición y la eñe de acompañarte.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ]
 }

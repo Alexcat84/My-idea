@@ -1,6 +1,6 @@
 {
   "node_id": "definir_limites_huella_carbono",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Definir Límites de la Huella de Carbono",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -23,5 +23,23 @@
     "Si vas a hacer tu primer análisis de huella de carbono",
     "Si necesitas establecer una línea base antes de fijar tus metas de reducción"
   ],
-  "etiqueta_arbol": "Traza los Límites de tu Huella"
+  "etiqueta_arbol": "Traza los Límites de tu Huella",
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-096",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F27-022: Definir los limites organizacionales, operacionales y temporales y el ano base de la huella de carbono es disenar el alcance del plan; no hay prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

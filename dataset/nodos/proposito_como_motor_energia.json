@@ -1,12 +1,12 @@
 {
   "node_id": "proposito_como_motor_energia",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "El Propósito como Motor de Energía Mental",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Wallas argumenta que la energía mental de una persona se mantiene y crece cuando esta cree que sus acciones tienen una importancia que trasciende el momento inmediato, citando a Bentham, quien sostuvo su productividad durante décadas porque creía que sus escritos eran tan importantes para la humanidad como las órdenes de batalla de un general. De forma similar, el significado descubierto después del hecho (como un científico que años después entiende el impacto de su descubrimiento) puede transformar retroactivamente la energía asociada a una acción pasada. Para el emprendedor, esto sugiere que conectar el trabajo diario (por tedioso que sea) con una visión o misión más amplia es lo que sostiene la energía creativa a largo plazo, mucho más que la acción física o el 'estar ocupado' sin más.",
+  "resumen_teorico": "La energía mental de una persona se mantiene y crece cuando esta cree que sus acciones tienen una importancia que trasciende el momento inmediato, como le ocurrió a Bentham, quien sostuvo su productividad durante décadas porque creía que sus escritos eran tan importantes para la humanidad como las órdenes de batalla de un general. De forma similar, el significado descubierto después del hecho (como un científico que años después entiende el impacto de su descubrimiento) puede transformar retroactivamente la energía asociada a una acción pasada. Para el emprendedor, esto sugiere que conectar el trabajo diario (por tedioso que sea) con una visión o misión más amplia es lo que sostiene la energía creativa a largo plazo, mucho más que la acción física o el 'estar ocupado' sin más.",
   "pasos_accionables": [
-    "Articular explícitamente por escrito la misión o impacto de largo plazo del proyecto/startup",
+    "Sugerencia de My Idea: articular explícitamente por escrito la misión o impacto de largo plazo del proyecto/startup",
     "Vincular cada tarea operativa diaria con esa narrativa de propósito mayor",
     "Revisar y actualizar esa narrativa cuando se reciban señales (feedback de usuarios, resultados) que revelen un impacto no anticipado",
     "Evitar sustituir el pensamiento profundo por 'mera acción física' (activismo sin reflexión) como escape de la incertidumbre"
@@ -19,12 +19,75 @@
   "nodos_siguientes": [
     "lienzo_modelo_negocio",
     "vision_estrategia_producto_pivote",
-    "aprender_desde_el_amor_empatia",
-    "restricciones_extremas_como_innovacion"
+    "aprender_desde_el_amor_empatia"
   ],
   "condiciones_activacion": [
     "Cuando el fundador experimenta agotamiento o pérdida de motivación en fases largas de ejecución",
     "Si el equipo actúa (pivota, lanza features) sin conexión clara con una visión de largo plazo"
   ],
-  "etiqueta_arbol": "Encuentra un Propósito que Trascienda"
+  "etiqueta_arbol": "Encuentra un Propósito que Trascienda",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-043",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Articular explícitamente por escrito la misión o impacto de largo plazo del proyecto/startup",
+      "texto_nuevo": "Sugerencia de My Idea: articular explícitamente por escrito la misión o impacto de largo plazo del proyecto/startup",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L603-L603",
+        "frase": "had he not always retained his belief that the movements of his pen and the efforts and discoveries of his brain were acts as important to mankind as the battle-orders of a general"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon A. El libro habla de mantener la creencia en la importancia del propio trabajo. Busque 'mission', 'in writing', 'write down' y 'written statement': el libro solo habla de escribir los pensamientos marginales y las ideas surgidas en conferencias (L537, L547), nunca de redactar una mision o proposito. Ponerlo por escrito es un formato o herramienta practica que el libro no respalda.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C129-055"
+    },
+    {
+      "id": "atribucion-142",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Wallas argumenta que la energía mental de una persona se mantiene y crece cuando esta cree que sus acciones tienen una importancia que trasciende el momento inmediato, citando a Bentham, quien sostuvo su productividad durante décadas porque creía que sus escritos eran tan importantes para la humanidad como las órdenes de batalla de un general. De forma similar, el significado descubierto después del hecho (como un científico que años después entiende el impacto de su descubrimiento) puede transformar retroactivamente la energía asociada a una acción pasada. Para el emprendedor, esto sugiere que conectar el trabajo diario (por tedioso que sea) con una visión o misión más amplia es lo que sostiene la energía creativa a largo plazo, mucho más que la acción física o el 'estar ocupado' sin más.",
+      "texto_nuevo": "La energía mental de una persona se mantiene y crece cuando esta cree que sus acciones tienen una importancia que trasciende el momento inmediato, como le ocurrió a Bentham, quien sostuvo su productividad durante décadas porque creía que sus escritos eran tan importantes para la humanidad como las órdenes de batalla de un general. De forma similar, el significado descubierto después del hecho (como un científico que años después entiende el impacto de su descubrimiento) puede transformar retroactivamente la energía asociada a una acción pasada. Para el emprendedor, esto sugiere que conectar el trabajo diario (por tedioso que sea) con una visión o misión más amplia es lo que sostiene la energía creativa a largo plazo, mucho más que la acción física o el 'estar ocupado' sin más.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Wallas argumenta que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-017 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-106",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proposito_como_motor_energia -> restricciones_extremas_como_innovacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-16-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El propósito como motor de energía mental (Wallas, Bentham) no prepara la innovación bajo restricciones económicas extremas (Aravind, IDE). Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-262",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F11-013: Tiene razon el lector B: el nodo sirve para sostener la energia del fundador en fases largas de ejecucion, vinculando cada tarea operativa diaria y el roadmap con el proposito y revisandolo con feedback de usuarios y resultados, asi que describe operar un proyecto en marcha y no explorar la idea. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "The Art of Thought - Wallas, Graham"
+  ]
 }

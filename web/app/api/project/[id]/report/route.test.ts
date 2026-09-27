@@ -25,6 +25,29 @@ vi.mock("@/lib/engine/reporteFlow", () => ({
   avanzarReporte: (...args: unknown[]) => avanzarReporteFalso(...args),
 }));
 
+// AUD-09 (tanda 1): /report narra con Sonnet, así que pasa por los mismos
+// controles que toda llamada a la IA: doble factor, plan (Tus Números va
+// incluido en el plan), fusible global y límite diario. Por defecto todo
+// permite; cada prueba de control cambia UNO.
+let faltaSegundo = false;
+vi.mock("@/lib/seguridad", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/seguridad")>()),
+  faltaSegundoFactor: async () => faltaSegundo,
+}));
+const fusibleFalso = vi.fn(async () => ({ permitido: true }));
+const limiteFalso = vi.fn(async () => ({ permitido: true }));
+vi.mock("@/lib/rateLimit", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/rateLimit")>()),
+  identidadLimite: () => "id",
+  verificarFusibleGlobal: (...a: unknown[]) => fusibleFalso(...(a as [])),
+  verificarLimiteDiario: (...a: unknown[]) => limiteFalso(...(a as [])),
+}));
+let planCore: string | null = "plan-core-1";
+vi.mock("@/lib/db", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/db")>()),
+  obtenerPlanCoreVigente: async () => planCore,
+}));
+
 import { POST } from "./route";
 
 const acumuladoFalso = { uso: {}, uso_por_componente: {}, presupuesto_excedido: false };
@@ -46,6 +69,63 @@ describe("POST /api/project/[id]/report", () => {
     supabaseFalso = crearSupabaseFalso(estadoFalso);
     iniciarReporteFalso.mockReset();
     avanzarReporteFalso.mockReset();
+    faltaSegundo = false;
+    planCore = "plan-core-1";
+    fusibleFalso.mockReset().mockImplementation(async () => ({ permitido: true }));
+    limiteFalso.mockReset().mockImplementation(async () => ({ permitido: true }));
+  });
+
+  describe("los controles de toda llamada a la IA (AUD-09)", () => {
+    it("403 si falta el segundo factor, y no llama a la IA", async () => {
+      estadoFalso.projects["p1"] = { id: "p1", numeros_proyecto: {}, estado_reporte: null };
+      faltaSegundo = true;
+      const res = await POST(requestFalso(), ctxFalso("p1"));
+      expect(res.status).toBe(403);
+      expect(iniciarReporteFalso).not.toHaveBeenCalled();
+    });
+
+    it("409 si la idea aún no tiene plan (Tus Números va incluido en el plan)", async () => {
+      estadoFalso.projects["p1"] = { id: "p1", numeros_proyecto: {}, estado_reporte: null };
+      planCore = null;
+      const res = await POST(requestFalso(), ctxFalso("p1"));
+      expect(res.status).toBe(409);
+      expect(iniciarReporteFalso).not.toHaveBeenCalled();
+    });
+
+    it("503 con el fusible global activo", async () => {
+      estadoFalso.projects["p1"] = { id: "p1", numeros_proyecto: {}, estado_reporte: null };
+      fusibleFalso.mockImplementation(async () => ({ permitido: false }));
+      const res = await POST(requestFalso(), ctxFalso("p1"));
+      expect(res.status).toBe(503);
+      expect(iniciarReporteFalso).not.toHaveBeenCalled();
+    });
+
+    it("429 con el límite diario agotado", async () => {
+      estadoFalso.projects["p1"] = { id: "p1", numeros_proyecto: {}, estado_reporte: null };
+      limiteFalso.mockImplementation(async () => ({ permitido: false }));
+      const res = await POST(requestFalso(), ctxFalso("p1"));
+      expect(res.status).toBe(429);
+      expect(iniciarReporteFalso).not.toHaveBeenCalled();
+    });
+
+    it("el límite se cuenta al EMPEZAR, no en cada respuesta de la misma entrevista", async () => {
+      estadoFalso.projects["p1"] = {
+        id: "p1",
+        numeros_proyecto: {},
+        estado_reporte: { estado: { fase: "preguntando" }, acumulado: acumuladoFalso },
+      };
+      avanzarReporteFalso.mockResolvedValueOnce({
+        tipo: "pregunta",
+        estado: { fase: "preguntando", idx: 1 },
+        pregunta: "¿Y tus costos fijos?",
+        acumulado: acumuladoFalso,
+        numeros: {},
+        tipoOfertaActualizado: null,
+      });
+      const res = await POST(requestFalso({ respuesta: "20" }), ctxFalso("p1"));
+      expect(res.status).toBe(200);
+      expect(limiteFalso).not.toHaveBeenCalled();
+    });
   });
 
   it("401 si no hay usuario autenticado", async () => {

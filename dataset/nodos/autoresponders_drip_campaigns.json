@@ -6,7 +6,7 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "El internet genera un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas.",
   "pasos_accionables": [
-    "Integrar el sistema de autorespuesta con el software de gestión de contactos (CRM)",
+    "Integrar el sistema de autorrespuesta con el software de gestión de contactos (CRM)",
     "Crear mensajes diferenciados según variables clave (capital disponible, timeline, ubicación)",
     "Configurar notificaciones (BCC) al equipo de ventas para prospectos altamente calificados",
     "Revisar y pulir la redacción para mantener profesionalismo y cumplimiento regulatorio"
@@ -21,5 +21,24 @@
   "condiciones_activacion": [
     "Cuando el volumen de leads supera la capacidad de seguimiento manual del equipo de ventas"
   ],
-  "etiqueta_arbol": "Automatiza tus Mensajes de Seguimiento"
+  "etiqueta_arbol": "Automatiza tus Mensajes de Seguimiento",
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0913",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Integrar el sistema de autorespuesta con el software de gestión de contactos (CRM)",
+      "texto_nuevo": "Integrar el sistema de autorrespuesta con el software de gestión de contactos (CRM)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-002.paso0: autorrespuesta (Tras el prefijo auto- la r se duplica: autorrespuesta.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
+  ]
 }

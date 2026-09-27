@@ -1,0 +1,64 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_009",
+  "intento": 0,
+  "usd": 0.15362399999999998,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34356,
+  "tokens_out": 810,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P228943\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5037, 5057, 5055], \"razon\": \"El libro propone la prueba de sustitución de Johnston y usar un 'jurado' de pares para responderla; el paso lo recoge fielmente.\"},\n  {\"id\": \"P58B998\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [443, 4121, 3993, 4060, 5254], \"razon\": \"El libro critica no ajustar la dotación a la carga de trabajo y valora la carga como inalcanzable; calcularla es una extensión coherente.\"},\n  {\"id\": \"P96A2D2\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [852, 856], \"razon\": \"Bainbridge sostiene que los sistemas automatizados más exitosos, con rara intervención manual, requieren la mayor inversión en entrenamiento; el paso aconseja reducirla.\"},\n  {\"id\": \"P5CE3C7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3784, 3782], \"razon\": \"El libro dice que las precondiciones derivan de fallos latentes identificables y que se identifican los GFTs asociados.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P228943",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5037,
+    5057,
+    5055
+   ],
+   "razon": "El libro propone la prueba de sustitución de Johnston y usar un 'jurado' de pares para responderla; el paso lo recoge fielmente."
+  },
+  {
+   "id": "P58B998",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    443,
+    4121,
+    3993,
+    4060,
+    5254
+   ],
+   "razon": "El libro critica no ajustar la dotación a la carga de trabajo y valora la carga como inalcanzable; calcularla es una extensión coherente."
+  },
+  {
+   "id": "P96A2D2",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    852,
+    856
+   ],
+   "razon": "Bainbridge sostiene que los sistemas automatizados más exitosos, con rara intervención manual, requieren la mayor inversión en entrenamiento; el paso aconseja reducirla."
+  },
+  {
+   "id": "P5CE3C7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3784,
+    3782
+   ],
+   "razon": "El libro dice que las precondiciones derivan de fallos latentes identificables y que se identifican los GFTs asociados."
+  }
+ ]
+}

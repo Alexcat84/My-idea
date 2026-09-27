@@ -1,0 +1,1445 @@
+[
+ {
+  "node_id": "analisis_distribucion_poisson_para_capacidad",
+  "paso": 2,
+  "titulo": "Uso de la Distribución de Poisson para Planificar Capacidad ante Eventos Aleatorios",
+  "resumen": "Cuando los eventos (como averías de equipo) son independientes y no forman reacciones en cadena, su frecuencia diaria sigue una distribución de Poisson. Conociendo el promedio histórico, se puede calcular la desviación estándar (raíz del promedio) y establecer límites superiores para planificar recursos (ej. número de mecánicos) que cubran la mayoría de los escenarios sin sobredimensionar permanentemente.",
+  "texto": "Calcular el promedio diario de eventos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-088"
+ },
+ {
+  "node_id": "analisis_distribucion_poisson_para_capacidad",
+  "paso": 4,
+  "titulo": "Uso de la Distribución de Poisson para Planificar Capacidad ante Eventos Aleatorios",
+  "resumen": "Cuando los eventos (como averías de equipo) son independientes y no forman reacciones en cadena, su frecuencia diaria sigue una distribución de Poisson. Conociendo el promedio histórico, se puede calcular la desviación estándar (raíz del promedio) y establecer límites superiores para planificar recursos (ej. número de mecánicos) que cubran la mayoría de los escenarios sin sobredimensionar permanentemente.",
+  "texto": "Establecer límites superiores (ej. promedio + 2 o 3 sigma) para dimensionar recursos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-073"
+ },
+ {
+  "node_id": "analisis_distribucion_poisson_para_capacidad",
+  "paso": 5,
+  "titulo": "Uso de la Distribución de Poisson para Planificar Capacidad ante Eventos Aleatorios",
+  "resumen": "Cuando los eventos (como averías de equipo) son independientes y no forman reacciones en cadena, su frecuencia diaria sigue una distribución de Poisson. Conociendo el promedio histórico, se puede calcular la desviación estándar (raíz del promedio) y establecer límites superiores para planificar recursos (ej. número de mecánicos) que cubran la mayoría de los escenarios sin sobredimensionar permanentemente.",
+  "texto": "Graficar los datos reales en un gráfico de corridas para confirmar aleatoriedad y ajustar el modelo si es necesario",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-021"
+ },
+ {
+  "node_id": "analisis_variacion_desempeno_servicio",
+  "paso": 2,
+  "titulo": "Análisis Estadístico de Variación en el Desempeño del Servicio",
+  "resumen": "El desempeño de un servicio (como la puntualidad de un tren) no puede juzgarse por una sola observación, sino que requiere un estudio estadístico histórico mediante gráficos de corrida y distribuciones de tiempos. Esto permite distinguir entre un sistema que cumple en promedio pero con alta variabilidad (desperdicio de recursos), uno con baja variabilidad (eficiente), uno donde el sistema está en control pero no puede cumplir la especificación (problema de diseño), y uno en caos total.",
+  "texto": "Construir un gráfico de corrida o histograma de distribución de tiempos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-113"
+ },
+ {
+  "node_id": "analisis_variacion_desempeno_servicio",
+  "paso": 3,
+  "titulo": "Análisis Estadístico de Variación en el Desempeño del Servicio",
+  "resumen": "El desempeño de un servicio (como la puntualidad de un tren) no puede juzgarse por una sola observación, sino que requiere un estudio estadístico histórico mediante gráficos de corrida y distribuciones de tiempos. Esto permite distinguir entre un sistema que cumple en promedio pero con alta variabilidad (desperdicio de recursos), uno con baja variabilidad (eficiente), uno donde el sistema está en control pero no puede cumplir la especificación (problema de diseño), y uno en caos total.",
+  "texto": "Clasificar el tipo de desempeño según la forma de la distribución (centrado con alta/baja variabilidad, desalineado, caótico)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-055"
+ },
+ {
+  "node_id": "ausencia_valor_verdadero",
+  "paso": 1,
+  "titulo": "Ausencia de Valor Verdadero en Mediciones",
+  "resumen": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+  "texto": "Reconocer que cualquier especificación de calidad que uses depende del método de medición que elijas.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-069"
+ },
+ {
+  "node_id": "ausencia_valor_verdadero",
+  "paso": 4,
+  "titulo": "Ausencia de Valor Verdadero en Mediciones",
+  "resumen": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+  "texto": "Acordar con la otra parte (tu cliente o proveedor) un método estándar que sirva de referencia común.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-037"
+ },
+ {
+  "node_id": "calidad_del_servicio",
+  "paso": 1,
+  "titulo": "Calidad y Productividad en Organizaciones de Servicio",
+  "resumen": "Los mismos 14 puntos y principios de mejora aplicables a manufactura son válidos para servicios (hoteles, bancos, salud, transporte, etc.), sector que emplea a la mayoría de la fuerza laboral. Las organizaciones de servicio suelen tener mercados cautivos, gran volumen de transacciones y papeleo, y muchas oportunidades de error. A diferencia de manufactura, el trabajador de servicio frecuentemente no percibe que su trabajo es 'un producto', lo que dificulta la conciencia de calidad.",
+  "texto": "Aplicar los 14 puntos de gestión también en áreas de servicio, no solo producción",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-051"
+ },
+ {
+  "node_id": "calidad_del_servicio",
+  "paso": 3,
+  "titulo": "Calidad y Productividad en Organizaciones de Servicio",
+  "resumen": "Los mismos 14 puntos y principios de mejora aplicables a manufactura son válidos para servicios (hoteles, bancos, salud, transporte, etc.), sector que emplea a la mayoría de la fuerza laboral. Las organizaciones de servicio suelen tener mercados cautivos, gran volumen de transacciones y papeleo, y muchas oportunidades de error. A diferencia de manufactura, el trabajador de servicio frecuentemente no percibe que su trabajo es 'un producto', lo que dificulta la conciencia de calidad.",
+  "texto": "Concientizar a los empleados de servicio de que su trabajo constituye un producto que impacta al cliente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-086"
+ },
+ {
+  "node_id": "calidad_del_servicio",
+  "paso": 4,
+  "titulo": "Calidad y Productividad en Organizaciones de Servicio",
+  "resumen": "Los mismos 14 puntos y principios de mejora aplicables a manufactura son válidos para servicios (hoteles, bancos, salud, transporte, etc.), sector que emplea a la mayoría de la fuerza laboral. Las organizaciones de servicio suelen tener mercados cautivos, gran volumen de transacciones y papeleo, y muchas oportunidades de error. A diferencia de manufactura, el trabajador de servicio frecuentemente no percibe que su trabajo es 'un producto', lo que dificulta la conciencia de calidad.",
+  "texto": "Establecer procedimientos definidos y actualizados, ya que su ausencia es fuente común de errores",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-044"
+ },
+ {
+  "node_id": "calificacion_de_proveedores_por_capacidad",
+  "paso": 1,
+  "titulo": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
+  "resumen": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, Deming sugiere que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+  "texto": "Descartar procesos de calificación basados solo en checklists genéricos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-083"
+ },
+ {
+  "node_id": "calificacion_de_proveedores_por_capacidad",
+  "paso": 2,
+  "titulo": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
+  "resumen": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, Deming sugiere que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+  "texto": "Solicitar evidencia de inversión en investigación y desarrollo del proveedor",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-109"
+ },
+ {
+  "node_id": "calificacion_de_proveedores_por_capacidad",
+  "paso": 3,
+  "titulo": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
+  "resumen": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, Deming sugiere que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+  "texto": "Revisar el historial de desarrollo de producto y mejora continua del proveedor",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-064"
+ },
+ {
+  "node_id": "capacidad_de_proceso_2",
+  "paso": 2,
+  "titulo": "Capacidad de Proceso mediante Monitoreo Estadístico",
+  "resumen": "Cada unidad estudiada (un operador humano, una máquina o un sistema) debe ser monitoreada durante un período de tiempo para determinar su capacidad de proceso: lo que puede hacer predeciblemente bajo las condiciones actuales. Esta capacidad usualmente puede determinarse en unos tres meses mediante cartas de control. Si la dirección determina que la capacidad del proceso no está dentro de límites aceptables, debe actuar sobre el proceso o sistema, ya que la calidad no puede exceder la capacidad del sistema y no puede ser inspeccionada dentro del producto, debe ser construida en él.",
+  "texto": "Recolectar datos de desempeño durante un período representativo (aprox. 3 meses)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-090"
+ },
+ {
+  "node_id": "capacidad_de_proceso_2",
+  "paso": 5,
+  "titulo": "Capacidad de Proceso mediante Monitoreo Estadístico",
+  "resumen": "Cada unidad estudiada (un operador humano, una máquina o un sistema) debe ser monitoreada durante un período de tiempo para determinar su capacidad de proceso: lo que puede hacer predeciblemente bajo las condiciones actuales. Esta capacidad usualmente puede determinarse en unos tres meses mediante cartas de control. Si la dirección determina que la capacidad del proceso no está dentro de límites aceptables, debe actuar sobre el proceso o sistema, ya que la calidad no puede exceder la capacidad del sistema y no puede ser inspeccionada dentro del producto, debe ser construida en él.",
+  "texto": "Si no lo está, intervenir sobre el sistema (no sobre el individuo)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-005"
+ },
+ {
+  "node_id": "capacidad_del_proceso",
+  "paso": 1,
+  "titulo": "Capacidad del Proceso",
+  "resumen": "Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.",
+  "texto": "Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-017"
+ },
+ {
+  "node_id": "capacidad_del_proceso",
+  "paso": 2,
+  "titulo": "Capacidad del Proceso",
+  "resumen": "Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.",
+  "texto": "Calcular la media y el rango promedio del proceso estable",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-097"
+ },
+ {
+  "node_id": "capacidad_del_proceso",
+  "paso": 3,
+  "titulo": "Capacidad del Proceso",
+  "resumen": "Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.",
+  "texto": "Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-119"
+ },
+ {
+  "node_id": "categorias_de_material_entrante",
+  "paso": 1,
+  "titulo": "Categorías de Brechas en el Desempeño de Materiales Entrantes",
+  "resumen": "Deming clasifica todo lote de material que te llega en cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+  "texto": "Clasificar todos los lotes de material entrante según las cuatro categorías definidas",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-081"
+ },
+ {
+  "node_id": "categorias_de_material_entrante",
+  "paso": 3,
+  "titulo": "Categorías de Brechas en el Desempeño de Materiales Entrantes",
+  "resumen": "Deming clasifica todo lote de material que te llega en cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+  "texto": "Antes de decidir sobre un material cuestionable, juntar la mirada de quien compra, quien produce y quien puede evaluarlo técnicamente, aunque seas tú quien cumpla varios de esos roles",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-038"
+ },
+ {
+  "node_id": "categorias_de_material_entrante",
+  "paso": 5,
+  "titulo": "Categorías de Brechas en el Desempeño de Materiales Entrantes",
+  "resumen": "Deming clasifica todo lote de material que te llega en cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+  "texto": "Revisar las especificaciones de compra cuando el problema recurrente sea de origen técnico, no del proveedor",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-077"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 2,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-046"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 3,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-123"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 4,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-034"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 5,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-036"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 7,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-066"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 8,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-020"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 9,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-089"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 10,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-063"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 12,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Comunicar a los equipos que el objetivo es identificar problemas, no culpables",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-103"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 13,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-121"
+ },
+ {
+  "node_id": "causas_comunes_vs_especiales",
+  "paso": 15,
+  "titulo": "Causas Comunes vs Causas Especiales de Variación",
+  "resumen": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "texto": "Analizar la distribución de errores o defectos entre todas las personas usando limites de control",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-111"
+ },
+ {
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "paso": 1,
+  "titulo": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
+  "resumen": "Deming contrasta el 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "texto": "Diseñar el producto considerando uniformidad, no solo color/forma/tamaño",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-022"
+ },
+ {
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "paso": 2,
+  "titulo": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
+  "resumen": "Deming contrasta el 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "texto": "Fabricarlo y probarlo en línea de producción y laboratorio",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-015"
+ },
+ {
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "paso": 3,
+  "titulo": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
+  "resumen": "Deming contrasta el 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "texto": "Ponerlo en el mercado",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-093"
+ },
+ {
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "paso": 4,
+  "titulo": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
+  "resumen": "Deming contrasta el 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "texto": "Probarlo en servicio real: averiguar qué piensa el usuario y por qué el no-usuario no lo compró",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-075"
+ },
+ {
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "paso": 5,
+  "titulo": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
+  "resumen": "Deming contrasta el 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "texto": "Repetir el ciclo indefinidamente, incorporando aprendizajes de cada vuelta",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-053"
+ },
+ {
+  "node_id": "ciclo_shewhart_pdsa",
+  "paso": 3,
+  "titulo": "Ciclo de Shewhart (PDSA) para la Mejora Continua",
+  "resumen": "El ciclo de Shewhart (conocido en Japón como ciclo de Deming) es un procedimiento iterativo de cuatro pasos —Plan, Do, Study, Act— usado para mejorar cualquier etapa de un proceso o para investigar una causa especial detectada por señal estadística. El paso de estudio de resultados busca aprender cómo mejorar el producto o servicio futuro; los resultados favorables pueden repetirse el ciclo bajo condiciones ambientales distintas para validar su robustez.",
+  "texto": "Estudiar los resultados obtenidos y comparar con lo esperado (Study)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-107"
+ },
+ {
+  "node_id": "ciclo_shewhart_pdsa",
+  "paso": 5,
+  "titulo": "Ciclo de Shewhart (PDSA) para la Mejora Continua",
+  "resumen": "El ciclo de Shewhart (conocido en Japón como ciclo de Deming) es un procedimiento iterativo de cuatro pasos —Plan, Do, Study, Act— usado para mejorar cualquier etapa de un proceso o para investigar una causa especial detectada por señal estadística. El paso de estudio de resultados busca aprender cómo mejorar el producto o servicio futuro; los resultados favorables pueden repetirse el ciclo bajo condiciones ambientales distintas para validar su robustez.",
+  "texto": "Repetir el ciclo bajo condiciones ambientales diferentes para confirmar la validez de los resultados",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-039"
+ },
+ {
+  "node_id": "circulos_calidad_qc",
+  "paso": 2,
+  "titulo": "Círculos de Calidad (Tú Debes Actuar)",
+  "resumen": "Los círculos de calidad son grupos de personas que trabajan contigo y que detectan problemas de calidad y proponen soluciones. Su éxito depende por completo de que tú actúes sobre lo que proponen: si el círculo habla y nadie hace nada, se apaga solo. En Japón nacen de manera informal, por iniciativa de quienes trabajan; en Estados Unidos suelen volverse una estructura formal impuesta desde arriba, lo que les resta fuerza. No son una solución mágica: no pueden arreglar problemas de diseño, de especificaciones o de formación, porque esas decisiones son tuyas.",
+  "texto": "Deja que las personas que trabajan contigo elijan los temas y proyectos que quieren resolver",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-098"
+ },
+ {
+  "node_id": "circulos_calidad_qc",
+  "paso": 4,
+  "titulo": "Círculos de Calidad (Tú Debes Actuar)",
+  "resumen": "Los círculos de calidad son grupos de personas que trabajan contigo y que detectan problemas de calidad y proponen soluciones. Su éxito depende por completo de que tú actúes sobre lo que proponen: si el círculo habla y nadie hace nada, se apaga solo. En Japón nacen de manera informal, por iniciativa de quienes trabajan; en Estados Unidos suelen volverse una estructura formal impuesta desde arriba, lo que les resta fuerza. No son una solución mágica: no pueden arreglar problemas de diseño, de especificaciones o de formación, porque esas decisiones son tuyas.",
+  "texto": "Evita convertir el círculo en una estructura formal y burocrática",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-028"
+ },
+ {
+  "node_id": "circulos_calidad_qc",
+  "paso": 5,
+  "titulo": "Círculos de Calidad (Tú Debes Actuar)",
+  "resumen": "Los círculos de calidad son grupos de personas que trabajan contigo y que detectan problemas de calidad y proponen soluciones. Su éxito depende por completo de que tú actúes sobre lo que proponen: si el círculo habla y nadie hace nada, se apaga solo. En Japón nacen de manera informal, por iniciativa de quienes trabajan; en Estados Unidos suelen volverse una estructura formal impuesta desde arriba, lo que les resta fuerza. No son una solución mágica: no pueden arreglar problemas de diseño, de especificaciones o de formación, porque esas decisiones son tuyas.",
+  "texto": "Reconoce los logros del grupo por encima de premios en dinero para una sola persona",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-116"
+ },
+ {
+  "node_id": "circulos_de_calidad_para_mejora_operativa",
+  "paso": 1,
+  "titulo": "Círculos de Calidad para Resolución de Problemas Operativos",
+  "resumen": "Grupos multidisciplinarios (QC-Circles) formados por ingenieros y técnicos pueden desarrollar enfoques alternativos para resolver problemas operativos costosos, como se ilustra en el caso de una empresa eléctrica que enfrentaba fallos crecientes en cables de transmisión subterránea. Mediante análisis de datos (correlación de cambios químicos con fallos mecánicos), el círculo desarrolló un sistema predictivo de fallos, permitiendo planificar reemplazos preventivos en lugar de reparaciones reactivas costosas, además de rediseñar equipos y métodos de trabajo para mayor seguridad y eficiencia.",
+  "texto": "Formar un equipo multidisciplinario con conocimiento técnico del problema",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-102"
+ },
+ {
+  "node_id": "circulos_de_calidad_para_mejora_operativa",
+  "paso": 2,
+  "titulo": "Círculos de Calidad para Resolución de Problemas Operativos",
+  "resumen": "Grupos multidisciplinarios (QC-Circles) formados por ingenieros y técnicos pueden desarrollar enfoques alternativos para resolver problemas operativos costosos, como se ilustra en el caso de una empresa eléctrica que enfrentaba fallos crecientes en cables de transmisión subterránea. Mediante análisis de datos (correlación de cambios químicos con fallos mecánicos), el círculo desarrolló un sistema predictivo de fallos, permitiendo planificar reemplazos preventivos en lugar de reparaciones reactivas costosas, además de rediseñar equipos y métodos de trabajo para mayor seguridad y eficiencia.",
+  "texto": "Recolectar y analizar datos históricos para encontrar indicadores predictivos de fallo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-018"
+ },
+ {
+  "node_id": "circulos_de_calidad_para_mejora_operativa",
+  "paso": 3,
+  "titulo": "Círculos de Calidad para Resolución de Problemas Operativos",
+  "resumen": "Grupos multidisciplinarios (QC-Circles) formados por ingenieros y técnicos pueden desarrollar enfoques alternativos para resolver problemas operativos costosos, como se ilustra en el caso de una empresa eléctrica que enfrentaba fallos crecientes en cables de transmisión subterránea. Mediante análisis de datos (correlación de cambios químicos con fallos mecánicos), el círculo desarrolló un sistema predictivo de fallos, permitiendo planificar reemplazos preventivos en lugar de reparaciones reactivas costosas, además de rediseñar equipos y métodos de trabajo para mayor seguridad y eficiencia.",
+  "texto": "Desarrollar un sistema de monitoreo estadístico regular (ej. análisis químico anual)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-052"
+ },
+ {
+  "node_id": "circulos_de_calidad_para_mejora_operativa",
+  "paso": 4,
+  "titulo": "Círculos de Calidad para Resolución de Problemas Operativos",
+  "resumen": "Grupos multidisciplinarios (QC-Circles) formados por ingenieros y técnicos pueden desarrollar enfoques alternativos para resolver problemas operativos costosos, como se ilustra en el caso de una empresa eléctrica que enfrentaba fallos crecientes en cables de transmisión subterránea. Mediante análisis de datos (correlación de cambios químicos con fallos mecánicos), el círculo desarrolló un sistema predictivo de fallos, permitiendo planificar reemplazos preventivos en lugar de reparaciones reactivas costosas, además de rediseñar equipos y métodos de trabajo para mayor seguridad y eficiencia.",
+  "texto": "Planificar reemplazos o intervenciones preventivas basadas en probabilidad de fallo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-013"
+ },
+ {
+  "node_id": "circulos_de_calidad_para_mejora_operativa",
+  "paso": 5,
+  "titulo": "Círculos de Calidad para Resolución de Problemas Operativos",
+  "resumen": "Grupos multidisciplinarios (QC-Circles) formados por ingenieros y técnicos pueden desarrollar enfoques alternativos para resolver problemas operativos costosos, como se ilustra en el caso de una empresa eléctrica que enfrentaba fallos crecientes en cables de transmisión subterránea. Mediante análisis de datos (correlación de cambios químicos con fallos mecánicos), el círculo desarrolló un sistema predictivo de fallos, permitiendo planificar reemplazos preventivos en lugar de reparaciones reactivas costosas, además de rediseñar equipos y métodos de trabajo para mayor seguridad y eficiencia.",
+  "texto": "Rediseñar herramientas y métodos de trabajo para mejorar seguridad y eficiencia",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-014"
+ },
+ {
+  "node_id": "circulos_de_calidad_qc_circles",
+  "paso": 5,
+  "titulo": "Círculos de Calidad (Origen con Ishikawa)",
+  "resumen": "Los QC-Circles, formalizados por Dr. K. Ishikawa hacia 1960, son grupos pequeños de trabajadores que colaboran voluntariamente para identificar y eliminar causas especiales de variabilidad en los procesos, y para mejorar el sistema mediante cambios en herramientas, diseño, programación y procesos de producción. Representan la forma natural japonesa de trabajo en equipo y constituyen un mecanismo estructurado para canalizar el conocimiento operativo de los trabajadores hacia la mejora continua. Es responsabilidad de la dirección difundir los éxitos logrados en un círculo hacia otras áreas de la empresa e incluso hacia otras compañías.",
+  "texto": "Compartir los éxitos con otras áreas de la empresa y con otras organizaciones mediante publicaciones, visitas y convenciones",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-112"
+ },
+ {
+  "node_id": "claridad_especificaciones_instrucciones",
+  "paso": 3,
+  "titulo": "Claridad en Especificaciones e Instrucciones como Principio de Calidad",
+  "resumen": "Deming ilustra, usando el ejemplo de las señales de tránsito confusas, cómo la falta de claridad en instrucciones o especificaciones genera errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar. Este principio se extiende a cualquier documento, procedimiento o especificación dentro de una organización.",
+  "texto": "Rediseñar mensajes para que transmitan la acción requerida de forma instantánea e inequívoca",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C082-040"
+ },
+ {
+  "node_id": "colaboracion_industria_gobierno_estandares",
+  "paso": 1,
+  "titulo": "Colaboración Industria-Gobierno en Desarrollo de Estándares",
+  "resumen": "Cuando la industria no desarrolla proactivamente sus propios estándares de seguridad y calidad, el gobierno se ve forzado a imponer regulaciones apresuradas y a menudo mal fundamentadas técnicamente. El ejemplo de Japón muestra cómo la cooperación intensiva entre competidores de una misma industria, trabajando con el gobierno, genera estándares de seguridad y especificaciones técnicas superiores más rápidamente, dando ventaja competitiva nacional. La ausencia de esta colaboración deja al consumidor pagando el costo de la ineficiencia por falta de coordinación.",
+  "texto": "Organizar reuniones sectoriales intensivas y recurrentes entre empresas competidoras para discutir estándares comunes",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-056"
+ },
+ {
+  "node_id": "colaboracion_industria_gobierno_estandares",
+  "paso": 3,
+  "titulo": "Colaboración Industria-Gobierno en Desarrollo de Estándares",
+  "resumen": "Cuando la industria no desarrolla proactivamente sus propios estándares de seguridad y calidad, el gobierno se ve forzado a imponer regulaciones apresuradas y a menudo mal fundamentadas técnicamente. El ejemplo de Japón muestra cómo la cooperación intensiva entre competidores de una misma industria, trabajando con el gobierno, genera estándares de seguridad y especificaciones técnicas superiores más rápidamente, dando ventaja competitiva nacional. La ausencia de esta colaboración deja al consumidor pagando el costo de la ineficiencia por falta de coordinación.",
+  "texto": "Anticipar necesidades regulatorias futuras (seguridad, medio ambiente, eficiencia) y desarrollar estándares técnicos proactivamente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-003"
+ },
+ {
+  "node_id": "colaboracion_industria_gobierno_estandares",
+  "paso": 4,
+  "titulo": "Colaboración Industria-Gobierno en Desarrollo de Estándares",
+  "resumen": "Cuando la industria no desarrolla proactivamente sus propios estándares de seguridad y calidad, el gobierno se ve forzado a imponer regulaciones apresuradas y a menudo mal fundamentadas técnicamente. El ejemplo de Japón muestra cómo la cooperación intensiva entre competidores de una misma industria, trabajando con el gobierno, genera estándares de seguridad y especificaciones técnicas superiores más rápidamente, dando ventaja competitiva nacional. La ausencia de esta colaboración deja al consumidor pagando el costo de la ineficiencia por falta de coordinación.",
+  "texto": "Presentar una voz unificada de la industria ante el gobierno para negociar regulación y políticas de comercio",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-040"
+ },
+ {
+  "node_id": "comparacion_metodos_inspeccion",
+  "paso": 1,
+  "titulo": "Comparación de Costos Entre Métodos de Inspección (Tabla 2x2)",
+  "resumen": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+  "texto": "Seleccionar una muestra de al menos 200 piezas para probar con ambos métodos de inspección.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-075"
+ },
+ {
+  "node_id": "comparacion_metodos_inspeccion",
+  "paso": 2,
+  "titulo": "Comparación de Costos Entre Métodos de Inspección (Tabla 2x2)",
+  "resumen": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+  "texto": "Construir una tabla 2x2 registrando acuerdos y desacuerdos entre el método maestro y el método barato.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-053"
+ },
+ {
+  "node_id": "comparacion_metodos_inspeccion",
+  "paso": 3,
+  "titulo": "Comparación de Costos Entre Métodos de Inspección (Tabla 2x2)",
+  "resumen": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+  "texto": "Calcular el costo del ahorro neto usando la fórmula S = M - C - (n12*k2 + n21*u).",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-118"
+ },
+ {
+  "node_id": "comparacion_metodos_inspeccion",
+  "paso": 5,
+  "titulo": "Comparación de Costos Entre Métodos de Inspección (Tabla 2x2)",
+  "resumen": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+  "texto": "Verificar que ambos métodos de prueba estén en control estadístico antes de sacar conclusiones.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-110"
+ },
+ {
+  "node_id": "compra_por_precio_mas_bajo_como_error",
+  "paso": 1,
+  "titulo": "Riesgo de comprar solo por el precio más bajo",
+  "resumen": "Elegir siempre al proveedor más barato es un riesgo que muchas veces no se ve a tiempo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. Un precio inicial bajo no garantiza calidad y puede esconder costos ocultos mucho mayores que aparecen después, en producción, ensamblaje o servicio.",
+  "texto": "Deja de usar el precio más bajo como el único criterio para decidir a quién le compras",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-033"
+ },
+ {
+  "node_id": "compra_por_precio_mas_bajo_como_error",
+  "paso": 2,
+  "titulo": "Riesgo de comprar solo por el precio más bajo",
+  "resumen": "Elegir siempre al proveedor más barato es un riesgo que muchas veces no se ve a tiempo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. Un precio inicial bajo no garantiza calidad y puede esconder costos ocultos mucho mayores que aparecen después, en producción, ensamblaje o servicio.",
+  "texto": "Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-023"
+ },
+ {
+  "node_id": "compra_por_precio_mas_bajo_como_error",
+  "paso": 3,
+  "titulo": "Riesgo de comprar solo por el precio más bajo",
+  "resumen": "Elegir siempre al proveedor más barato es un riesgo que muchas veces no se ve a tiempo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. Un precio inicial bajo no garantiza calidad y puede esconder costos ocultos mucho mayores que aparecen después, en producción, ensamblaje o servicio.",
+  "texto": "Revisa cómo funcionan juntos los materiales en todo tu proceso, no solo si cumplen la ficha técnica por separado",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-078"
+ },
+ {
+  "node_id": "constancia_de_proposito",
+  "paso": 3,
+  "titulo": "Constancia de Propósito para la Mejora del Producto y Servicio",
+  "resumen": "Primer punto de Deming: comprometerte a largo plazo (10, 20, 30 años) con la mejora continua de tu producto o servicio, priorizando la supervivencia de tu negocio y el empleo de tu gente por encima de las ganancias del trimestre. Implica innovar, invertir en investigación y en tu propia formación, y mejorar constantemente el diseño de lo que ofreces.",
+  "texto": "Evaluar nuevos productos o servicios, materiales, formas de producir y habilidades que vas a necesitar",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-039"
+ },
+ {
+  "node_id": "constancia_de_proposito",
+  "paso": 4,
+  "titulo": "Constancia de Propósito para la Mejora del Producto y Servicio",
+  "resumen": "Primer punto de Deming: comprometerte a largo plazo (10, 20, 30 años) con la mejora continua de tu producto o servicio, priorizando la supervivencia de tu negocio y el empleo de tu gente por encima de las ganancias del trimestre. Implica innovar, invertir en investigación y en tu propia formación, y mejorar constantemente el diseño de lo que ofreces.",
+  "texto": "Comprometerte de forma explícita a no prescindir de nadie por aportar a la calidad y la productividad",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-072"
+ },
+ {
+  "node_id": "consumidor_como_eje_de_produccion",
+  "paso": 1,
+  "titulo": "El Consumidor en la Línea de Producción (Investigación del Consumidor)",
+  "resumen": "Deming plantea que el cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales que Deming enseño en Japón desde 1950.",
+  "texto": "Identifica quién es realmente el consumidor final de tu producto o servicio",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-015"
+ },
+ {
+  "node_id": "consumidor_como_eje_de_produccion",
+  "paso": 2,
+  "titulo": "El Consumidor en la Línea de Producción (Investigación del Consumidor)",
+  "resumen": "Deming plantea que el cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales que Deming enseño en Japón desde 1950.",
+  "texto": "Investiga qué necesita tu cliente y qué cree que necesita",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-016"
+ },
+ {
+  "node_id": "consumidor_como_eje_de_produccion",
+  "paso": 5,
+  "titulo": "El Consumidor en la Línea de Producción (Investigación del Consumidor)",
+  "resumen": "Deming plantea que el cliente es el elemento central de toda la cadena productiva: sin alguien que compre el producto, tu operación carece de sentido. La investigación de las necesidades del consumidor, tanto explícitas como implícitas, y su capacidad de pago deben guiar el diseño de tu producto y servicio. Este fue uno de los principios centrales que Deming enseño en Japón desde 1950.",
+  "texto": "Incluir retroalimentación del consumidor como parte formal del ciclo de producción",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-121"
+ },
+ {
+  "node_id": "contacto_con_el_cliente",
+  "paso": 1,
+  "titulo": "Gestión del Contacto con el Cliente en Organizaciones de Servicio",
+  "resumen": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Deming subraya que la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
+  "texto": "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-103"
+ },
+ {
+  "node_id": "contacto_con_el_cliente",
+  "paso": 2,
+  "titulo": "Gestión del Contacto con el Cliente en Organizaciones de Servicio",
+  "resumen": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Deming subraya que la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
+  "texto": "Priorizar en la contratación la capacidad de trato y servicio al cliente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-037"
+ },
+ {
+  "node_id": "contacto_con_el_cliente",
+  "paso": 4,
+  "titulo": "Gestión del Contacto con el Cliente en Organizaciones de Servicio",
+  "resumen": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Deming subraya que la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
+  "texto": "Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-052"
+ },
+ {
+  "node_id": "control_estadistico_de_inventario_en_transito",
+  "paso": 3,
+  "titulo": "Control estadístico de procesos aplicado a tiempos de tránsito e inventario",
+  "resumen": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos, como se muestra en el ejemplo de la ruta Buffalo-Kansas City, que generó ahorros de 500,000 dólares anuales.",
+  "texto": "Separar las causas especiales (ej. averías) de la variación normal del sistema.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-019"
+ },
+ {
+  "node_id": "control_estadistico_de_inventario_en_transito",
+  "paso": 4,
+  "titulo": "Control estadístico de procesos aplicado a tiempos de tránsito e inventario",
+  "resumen": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos, como se muestra en el ejemplo de la ruta Buffalo-Kansas City, que generó ahorros de 500,000 dólares anuales.",
+  "texto": "Calcular el límite superior de tiempo esperado bajo control estadístico.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-113"
+ },
+ {
+  "node_id": "control_estadistico_de_procesos_en_tiempo_real",
+  "paso": 1,
+  "titulo": "Control Estadístico de Procesos en Tiempo Real",
+  "resumen": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce defectos de 1 en 10 a prácticamente cero, y mejora la satisfacción laboral al dar al trabajador control sobre su propio desempeño.",
+  "texto": "Capacitar a los operadores en el uso e interpretación de cartas de control",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-008"
+ },
+ {
+  "node_id": "control_estadistico_de_procesos_en_tiempo_real",
+  "paso": 3,
+  "titulo": "Control Estadístico de Procesos en Tiempo Real",
+  "resumen": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce defectos de 1 en 10 a prácticamente cero, y mejora la satisfacción laboral al dar al trabajador control sobre su propio desempeño.",
+  "texto": "Permitir que el operador ajuste el proceso solo cuando la carta indique causa especial, no por intuición",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-057"
+ },
+ {
+  "node_id": "control_estadistico_de_procesos_en_tiempo_real",
+  "paso": 4,
+  "titulo": "Control Estadístico de Procesos en Tiempo Real",
+  "resumen": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce defectos de 1 en 10 a prácticamente cero, y mejora la satisfacción laboral al dar al trabajador control sobre su propio desempeño.",
+  "texto": "Compartir la misma carta entre turnos para mantener continuidad del conocimiento del proceso",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-004"
+ },
+ {
+  "node_id": "control_estadistico_del_proceso",
+  "paso": 2,
+  "titulo": "Control Estadístico del Proceso (SPC)",
+  "resumen": "Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.",
+  "texto": "Construir gráficos de control (X-barra y R) con los datos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-025"
+ },
+ {
+  "node_id": "control_estadistico_del_proceso",
+  "paso": 3,
+  "titulo": "Control Estadístico del Proceso (SPC)",
+  "resumen": "Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.",
+  "texto": "Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-044"
+ },
+ {
+  "node_id": "control_estadistico_del_proceso",
+  "paso": 4,
+  "titulo": "Control Estadístico del Proceso (SPC)",
+  "resumen": "Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.",
+  "texto": "Una vez estable, calcular la capacidad real del proceso",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-041"
+ },
+ {
+  "node_id": "control_estadistico_del_proceso",
+  "paso": 7,
+  "titulo": "Control Estadístico del Proceso (SPC)",
+  "resumen": "Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.",
+  "texto": "Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-120"
+ },
+ {
+  "node_id": "control_estadistico_metodo_medicion",
+  "paso": 1,
+  "titulo": "Control Estadístico del Método de Medición (Condición de Validez)",
+  "resumen": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "texto": "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-030"
+ },
+ {
+  "node_id": "control_estadistico_metodo_medicion",
+  "paso": 2,
+  "titulo": "Control Estadístico del Método de Medición (Condición de Validez)",
+  "resumen": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "texto": "Verifica que el rango de variación se mantenga dentro de límites de control estadístico.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-029"
+ },
+ {
+  "node_id": "control_estadistico_metodo_medicion",
+  "paso": 3,
+  "titulo": "Control Estadístico del Método de Medición (Condición de Validez)",
+  "resumen": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "texto": "Compara resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-092"
+ },
+ {
+  "node_id": "control_estadistico_metodo_medicion",
+  "paso": 4,
+  "titulo": "Control Estadístico del Método de Medición (Condición de Validez)",
+  "resumen": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "texto": "Compara resultados entre diferentes instrumentos usados por el mismo operador.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-114"
+ },
+ {
+  "node_id": "control_estadistico_metodo_medicion",
+  "paso": 5,
+  "titulo": "Control Estadístico del Método de Medición (Condición de Validez)",
+  "resumen": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "texto": "Establece criterios de reproducibilidad aceptable antes de iniciar las pruebas.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-119"
+ },
+ {
+  "node_id": "control_estadistico_proceso",
+  "paso": 2,
+  "titulo": "Un proceso estable es la base para innovar (control estadístico de procesos)",
+  "resumen": "Cuando tu proceso tiene una variación predecible y dentro de límites, decimos que está en control estadístico. Eso te permite detectar las causas puntuales que se salen de lo normal y, una vez que las eliminas, tienes una base sólida para innovar técnicamente. El caso de Nashua Corporation muestra esto: al lograr que su proceso de recubrimiento fuera estable, redujo el uso de material y evitó una inversión fuerte en equipo nuevo, generando ahorros anuales importantes (pregunta las cifras equivalentes en tu mercado).",
+  "texto": "Identifica y elimina los puntos fuera de los límites de control, es decir, las causas puntuales de variación.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-099"
+ },
+ {
+  "node_id": "control_estadistico_proceso",
+  "paso": 3,
+  "titulo": "Un proceso estable es la base para innovar (control estadístico de procesos)",
+  "resumen": "Cuando tu proceso tiene una variación predecible y dentro de límites, decimos que está en control estadístico. Eso te permite detectar las causas puntuales que se salen de lo normal y, una vez que las eliminas, tienes una base sólida para innovar técnicamente. El caso de Nashua Corporation muestra esto: al lograr que su proceso de recubrimiento fuera estable, redujo el uso de material y evitó una inversión fuerte en equipo nuevo, generando ahorros anuales importantes (pregunta las cifras equivalentes en tu mercado).",
+  "texto": "Una vez que tu proceso esté bajo control estadístico, usa lo que aprendiste de él para experimentar e innovar, por ejemplo reduciendo insumos o mejorando el diseño, sin perder la estabilidad.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-038"
+ },
+ {
+  "node_id": "control_estadistico_proceso",
+  "paso": 4,
+  "titulo": "Un proceso estable es la base para innovar (control estadístico de procesos)",
+  "resumen": "Cuando tu proceso tiene una variación predecible y dentro de límites, decimos que está en control estadístico. Eso te permite detectar las causas puntuales que se salen de lo normal y, una vez que las eliminas, tienes una base sólida para innovar técnicamente. El caso de Nashua Corporation muestra esto: al lograr que su proceso de recubrimiento fuera estable, redujo el uso de material y evitó una inversión fuerte en equipo nuevo, generando ahorros anuales importantes (pregunta las cifras equivalentes en tu mercado).",
+  "texto": "Evita ajustar tu proceso de forma reactiva por cada medición individual, porque eso aumenta la variación en vez de reducirla.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-100"
+ },
+ {
+  "node_id": "correlacion_cero_muestra_remanente",
+  "paso": 2,
+  "titulo": "Correlación Cero entre Muestra y Remanente en Estado de Control Estadístico",
+  "resumen": "Deming demuestra empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+  "texto": "Realizar experimentos de muestreo (ej. con lotes de prueba) para confirmar independencia entre muestra y remanente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-112"
+ },
+ {
+  "node_id": "correlacion_cero_muestra_remanente",
+  "paso": 3,
+  "titulo": "Correlación Cero entre Muestra y Remanente en Estado de Control Estadístico",
+  "resumen": "Deming demuestra empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+  "texto": "Usar teoría de muestreo solo para fines enumerativos (estimar características poblacionales), no para decisiones de aceptación/rechazo basadas en la muestra",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-101"
+ },
+ {
+  "node_id": "correlacion_cero_muestra_remanente",
+  "paso": 4,
+  "titulo": "Correlación Cero entre Muestra y Remanente en Estado de Control Estadístico",
+  "resumen": "Deming demuestra empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+  "texto": "Aumentar el tamaño de muestra si se requiere mejor estimación de las características del lote completo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-093"
+ },
+ {
+  "node_id": "cribado_prueba_barata",
+  "paso": 1,
+  "titulo": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
+  "resumen": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+  "texto": "Verificar que se cumple la condición pk2 > k1 (inspección al 100% es óptima).",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-094"
+ },
+ {
+  "node_id": "cribado_prueba_barata",
+  "paso": 2,
+  "titulo": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
+  "resumen": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+  "texto": "Diseñar y calibrar una prueba barata que nunca acepte lo que la prueba maestra rechazaría.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-046"
+ },
+ {
+  "node_id": "cribado_prueba_barata",
+  "paso": 3,
+  "titulo": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
+  "resumen": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+  "texto": "Aplicar la prueba barata a todas las n partes, dividiendo en aceptadas (n1) y no aceptadas (n2).",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-080"
+ },
+ {
+  "node_id": "cribado_prueba_barata",
+  "paso": 5,
+  "titulo": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
+  "resumen": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+  "texto": "Calcular el ahorro total: D = n(k1 - k1' - (n2/n)*k1).",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-024"
+ },
+ {
+  "node_id": "definicion_calidad_segun_agente",
+  "paso": 1,
+  "titulo": "La Calidad Depende de Quien la Juzgue",
+  "resumen": "Deming explica que la calidad no tiene una definición única: cambia según quien la juzgue, sea un trabajador, quien dirige la planta, el consumidor, el impresor o el autor. Un mismo producto puede parecerte excelente a ti y deficiente a otra persona involucrada, así que tienes que identificar con claridad que caracteristica de calidad le importa a cada parte.",
+  "texto": "Identifica a todas las personas relevantes que juzgan la calidad de tu producto o servicio (quien lo hace, quien lo dirige, el cliente, quien lo distribuye)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-091"
+ },
+ {
+  "node_id": "definicion_calidad_segun_agente",
+  "paso": 2,
+  "titulo": "La Calidad Depende de Quien la Juzgue",
+  "resumen": "Deming explica que la calidad no tiene una definición única: cambia según quien la juzgue, sea un trabajador, quien dirige la planta, el consumidor, el impresor o el autor. Un mismo producto puede parecerte excelente a ti y deficiente a otra persona involucrada, así que tienes que identificar con claridad que caracteristica de calidad le importa a cada parte.",
+  "texto": "Determina que entiende cada una de ellas por 'buena calidad'",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-026"
+ },
+ {
+  "node_id": "definiciones_operacionales",
+  "paso": 2,
+  "titulo": "Definiciones Operacionales de Calidad Aceptable",
+  "resumen": "Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro de qué constituye un producto aceptable o no aceptable. Crear definiciones operacionales -con ejemplos concretos de trabajo conforme y no conforme- puede reducir drásticamente la proporción de defectos sin inversión en nueva maquinaria ni mano de obra adicional.",
+  "texto": "Desarrollar mediante prueba y error definiciones operacionales claras, con ejemplos físicos o visuales de productos conformes y no conformes.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-111"
+ },
+ {
+  "node_id": "definiciones_operacionales",
+  "paso": 3,
+  "titulo": "Definiciones Operacionales de Calidad Aceptable",
+  "resumen": "Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro de qué constituye un producto aceptable o no aceptable. Crear definiciones operacionales -con ejemplos concretos de trabajo conforme y no conforme- puede reducir drásticamente la proporción de defectos sin inversión en nueva maquinaria ni mano de obra adicional.",
+  "texto": "Publicar y difundir estas definiciones en el área de trabajo para que todos las conozcan.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-005"
+ },
+ {
+  "node_id": "definiciones_operacionales_2",
+  "paso": 1,
+  "titulo": "Definiciones Operacionales (Método, Prueba y Criterio)",
+  "resumen": "Una definición operacional consiste en un método de prueba, una prueba y un criterio para juzgar si una pieza de trabajo se clasifica como defectuosa o aceptable. Es esencial para que diferentes inspectores o trabajadores entiendan y apliquen el mismo criterio, evitando discrepancias como las observadas entre inspectores que califican de manera diferente el mismo producto.",
+  "texto": "Definir claramente el método de prueba a utilizar",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-079"
+ },
+ {
+  "node_id": "definiciones_operacionales_2",
+  "paso": 3,
+  "titulo": "Definiciones Operacionales (Método, Prueba y Criterio)",
+  "resumen": "Una definición operacional consiste en un método de prueba, una prueba y un criterio para juzgar si una pieza de trabajo se clasifica como defectuosa o aceptable. Es esencial para que diferentes inspectores o trabajadores entiendan y apliquen el mismo criterio, evitando discrepancias como las observadas entre inspectores que califican de manera diferente el mismo producto.",
+  "texto": "Documentar la definición de forma comunicable para todo el personal involucrado",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-086"
+ },
+ {
+  "node_id": "definiciones_operacionales_2",
+  "paso": 4,
+  "titulo": "Definiciones Operacionales (Método, Prueba y Criterio)",
+  "resumen": "Una definición operacional consiste en un método de prueba, una prueba y un criterio para juzgar si una pieza de trabajo se clasifica como defectuosa o aceptable. Es esencial para que diferentes inspectores o trabajadores entiendan y apliquen el mismo criterio, evitando discrepancias como las observadas entre inspectores que califican de manera diferente el mismo producto.",
+  "texto": "Verificar que múltiples inspectores apliquen el criterio de manera consistente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-104"
+ },
+ {
+  "node_id": "definiciones_operacionales_3",
+  "paso": 4,
+  "titulo": "Definiciones Operacionales (Traducir Conceptos Abstractos)",
+  "resumen": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+  "texto": "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-018"
+ },
+ {
+  "node_id": "definiciones_operacionales_3",
+  "paso": 5,
+  "titulo": "Definiciones Operacionales (Traducir Conceptos Abstractos)",
+  "resumen": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+  "texto": "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-045"
+ },
+ {
+  "node_id": "definiciones_operacionales_de_calidad",
+  "paso": 2,
+  "titulo": "Definiciones Operacionales de Calidad",
+  "resumen": "Muchas disputas entre proveedor y cliente surgen porque ambas partes no tienen una definición clara y medible de lo que constituye 'calidad aceptable' para un producto o característica. El caso del fabricante de forros de freno muestra que, tras años de conflictos, desarrollar definiciones operacionales conjuntas (medibles mediante cartas de control) eliminó las disputas y alineó expectativas.",
+  "texto": "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-022"
+ },
+ {
+  "node_id": "definiciones_operacionales_defectos",
+  "paso": 3,
+  "titulo": "Definiciones Operacionales para Clasificación de Defectos",
+  "resumen": "Deming recomienda abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector, y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
+  "texto": "Diseñar pruebas estadísticas para validar que las definiciones se aplican de manera consistente entre diferentes inspectores",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-020"
+ },
+ {
+  "node_id": "deteccion_de_lideres_y_rezagados",
+  "paso": 1,
+  "titulo": "Detección de Trabajadores Fuera del Sistema (Líderes y Rezagados)",
+  "resumen": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Ejemplos incluyen soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+  "texto": "Recolectar datos comparables de desempeño de todos los miembros del grupo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-047"
+ },
+ {
+  "node_id": "deteccion_de_lideres_y_rezagados",
+  "paso": 2,
+  "titulo": "Detección de Trabajadores Fuera del Sistema (Líderes y Rezagados)",
+  "resumen": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Ejemplos incluyen soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+  "texto": "Graficar los datos en un gráfico de control con límites superior e inferior",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-031"
+ },
+ {
+  "node_id": "deteccion_de_lideres_y_rezagados",
+  "paso": 4,
+  "titulo": "Detección de Trabajadores Fuera del Sistema (Líderes y Rezagados)",
+  "resumen": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Ejemplos incluyen soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+  "texto": "Investigar causas específicas para los de bajo desempeño (equipo, entrenamiento, salud)",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-028"
+ },
+ {
+  "node_id": "deteccion_defectos_raros_control_estadistico",
+  "paso": 2,
+  "titulo": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
+  "resumen": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+  "texto": "Reemplaza la inspección masiva del producto terminado por mediciones continuas durante el proceso.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-048"
+ },
+ {
+  "node_id": "deteccion_defectos_raros_control_estadistico",
+  "paso": 3,
+  "titulo": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
+  "resumen": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+  "texto": "Diseña un esquema de muestreo pequeño y frecuente (por ejemplo 4 unidades, 25 veces al día) y construye tus cartas X-barra y R con esas mediciones.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-063"
+ },
+ {
+  "node_id": "deteccion_defectos_raros_control_estadistico",
+  "paso": 6,
+  "titulo": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
+  "resumen": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+  "texto": "Decide racionalmente si condenas todo el lote o liberas solo la parte que corresponda según lo que encontraste.",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-071"
+ },
+ {
+  "node_id": "distorsion_muestreo_mecanico",
+  "paso": 3,
+  "titulo": "Distorsión por Muestreo Mecánico",
+  "resumen": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+  "texto": "Si es posible, implementa selección por números aleatorios generados formalmente para eliminar sesgos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-069"
+ },
+ {
+  "node_id": "distorsion_muestreo_mecanico",
+  "paso": 5,
+  "titulo": "Distorsión por Muestreo Mecánico",
+  "resumen": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+  "texto": "Registra las características del instrumento o método de muestreo como parte de tus datos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-065"
+ },
+ {
+  "node_id": "distorsion_muestreo_mecanico",
+  "paso": 6,
+  "titulo": "Distorsión por Muestreo Mecánico",
+  "resumen": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+  "texto": "Documenta cualquier cambio en el método de muestreo como posible causa de puntos fuera de control",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "ficheros": [
+   "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt"
+  ],
+  "origen": "campania_tramo3",
+  "id_primera_lectura": "C083-095"
+ }
+]

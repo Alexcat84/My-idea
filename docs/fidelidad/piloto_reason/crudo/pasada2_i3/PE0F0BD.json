@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE0F0BD",
+  "intento": 0,
+  "usd": 0.16366,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34740,
+  "tokens_out": 1235,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE0F0BD\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2369, 1840, 1934], \"cita\": \"We urgently need a greater awareness on the part of system designers and manufacturers of the varieties of human fallibility and the error-provoking nature of large parts of the maintenance task--especially during installation or reassembly.\", \"datos_sin_respaldo\": [\"personal técnico y gerencial como destinatarios\", \"uso de los casos como material de capacitación\"], \"tambien_anadido\": false, \"razon\": \"El libro sí pide más conciencia sobre la falibilidad humana y el riesgo del mantenimiento, así que el paso va en su dirección y no es contrario. Pero dirige esa conciencia a diseñadores y fabricantes. Además presenta los casos para mostrar condiciones latentes, no como material formativo. Añade un público (técnicos y gerentes) y un uso (capacitación) que el libro no respalda.\", \"paso_fiel\": \"Usar los casos para crear conciencia, sobre todo entre diseñadores y fabricantes del sistema, de que los errores de mantenimiento surgen de condiciones latentes organizativas y de tareas propensas al error, no de falta de competencia individual.\"}\n```",
+ "parseado": {
+  "id": "PE0F0BD",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2369,
+   1840,
+   1934
+  ],
+  "cita": "We urgently need a greater awareness on the part of system designers and manufacturers of the varieties of human fallibility and the error-provoking nature of large parts of the maintenance task--especially during installation or reassembly.",
+  "datos_sin_respaldo": [
+   "personal técnico y gerencial como destinatarios",
+   "uso de los casos como material de capacitación"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro sí pide más conciencia sobre la falibilidad humana y el riesgo del mantenimiento, así que el paso va en su dirección y no es contrario. Pero dirige esa conciencia a diseñadores y fabricantes. Además presenta los casos para mostrar condiciones latentes, no como material formativo. Añade un público (técnicos y gerentes) y un uso (capacitación) que el libro no respalda.",
+  "paso_fiel": "Usar los casos para crear conciencia, sobre todo entre diseñadores y fabricantes del sistema, de que los errores de mantenimiento surgen de condiciones latentes organizativas y de tareas propensas al error, no de falta de competencia individual."
+ }
+}

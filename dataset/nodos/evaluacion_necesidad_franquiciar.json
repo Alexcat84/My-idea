@@ -20,8 +20,7 @@
     "investigacion_desarrollo_concepto",
     "decision_intensidad_capital",
     "costo_de_oportunidad",
-    "mix_ubicaciones_corporativas_franquicia",
-    "leverage_una_sola_franquicia"
+    "principio_apalancamiento_numero_magico"
   ],
   "nodos_siguientes": [
     "marco_name_system_fee",
@@ -33,8 +32,8 @@
     "comprender_definicion_legal_franquicia",
     "alternativa_operaciones_propias",
     "definir_meta_a_5_anos_antes_de_franquiciar",
-    "diferenciacion_estructura_legal_franquicia",
-    "estrategia_ubicacion_franquicia_corporativa"
+    "evitar_copia_estructura_competencia",
+    "mix_ubicaciones_corporativas_franquicia"
   ],
   "condiciones_activacion": [
     "Tienes un negocio exitoso y estás considerando cómo escalarlo",
@@ -75,6 +74,63 @@
       "node_id": "preguntas_clave_decision_franquiciar",
       "titulo": "Preguntas Fundamentales Antes de Decidir Franquiciar",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-088",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mix_ubicaciones_corporativas_franquicia -> evaluacion_necesidad_franquiciar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-11-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: evaluar si hace falta franquiciar es previo a definir la mezcla de locales corporativos y franquiciados, que ya da por hecho que se franquicia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-159",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_necesidad_franquiciar -> diferenciacion_estructura_legal_franquicia",
+      "texto_nuevo": "evaluacion_necesidad_franquiciar -> evitar_copia_estructura_competencia",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a diferenciacion_estructura_legal_franquicia, deprecado; su superviviente es evitar_copia_estructura_competencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-160",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_necesidad_franquiciar -> estrategia_ubicacion_franquicia_corporativa",
+      "texto_nuevo": "evaluacion_necesidad_franquiciar -> mix_ubicaciones_corporativas_franquicia",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a estrategia_ubicacion_franquicia_corporativa, deprecado; su superviviente es mix_ubicaciones_corporativas_franquicia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-161",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "leverage_una_sola_franquicia -> evaluacion_necesidad_franquiciar",
+      "texto_nuevo": "principio_apalancamiento_numero_magico -> evaluacion_necesidad_franquiciar",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a leverage_una_sola_franquicia, deprecado; su superviviente es principio_apalancamiento_numero_magico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ]
 }

@@ -1,0 +1,301 @@
+[
+ {
+  "id": "saneamiento-t1-p01",
+  "node_id": "patent_cooperation_treaty",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Aprovechar el plazo extendido de 18 meses para decidir en qué países completar los requisitos nacionales",
+  "texto_nuevo": "Aprovechar el plazo de 30 meses desde la fecha de prioridad (18 meses más que los 12 del Convenio de París) antes de entrar en la fase nacional de cada país para decidir en qué países completar los requisitos nacionales",
+  "cita": {
+   "libro": "FUENTE OFICIAL: PCT, Artículo 22(1)",
+   "fichero": "https://www.wipo.int/pct/en/texts/articles/a22.html",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "to each designated Office not later than at the expiration of 30 months from the priority date."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). A y B coinciden en IMPRECISO, y es correcto: \"el plazo extendido de 18 meses\" se lee como si el plazo total fuera de 18 meses, cuando la norma fija 30 meses desde la fecha de prioridad (Art. 22(1) PCT, cita comprobada literalmente hoy). Los 18 meses son la extensión respecto al plazo de 12 meses de ",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (arbitro)",
+  "indice": 1
+ },
+ {
+  "id": "saneamiento-t1-p02",
+  "node_id": "exercise_period_opciones",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, aunque algunas empresas han extendido este período hasta 10 años (máximo legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "texto_nuevo": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, porque en Estados Unidos una opción ISO solo conserva su ventaja fiscal si se ejerce dentro de los 3 meses siguientes a tu salida (1 año si sales por incapacidad); el plan puede darte más tiempo, pero lo que ejerzas después tributa como opción no calificada (NSO), aunque algunas empresas han extendido este período hasta 10 años desde la concesión (el máximo legal para las opciones ISO en Estados Unidos, 5 años si tienes más del 10 % del voto; para las opciones no calificadas, los 10 años son la práctica habitual, no un límite legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 26 U.S.C. 422(a)(2) (y 422(c)(6) para incapacidad) ; 26 U.S.C. 422(b)(3) y 422(c)(5)",
+   "fichero": "https://www.govinfo.gov/link/uscode/26/422 ; https://www.govinfo.gov/link/uscode/26/422",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "at all times during the period beginning on the date of the granting of the option and ending on the day 3 months before the date of such exercise, such individual was an employee of either the corporation granting such option || such option by its terms is not exercisable after the expiration of 10 years from the date such option is granted"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Se verificó el texto de 26 U.S.C. 422 en el PDF oficial de govinfo (GPO), generado el 24 feb 2026; no hay reformas posteriores de este punto. uscode.house.gov no respondió (ECONNREFUSED) y ecfr.gov redirigió a una página de desbloqueo. El nodo es de clase B y el plazo es estadounidense, así que el t | La cifra de 10 años sigue vigente, pero el fragmento la presenta como máximo legal general. Solo lo es para las ISO. Omite la excepción de 5 años para quien tiene más del 10 % del voto y no dice que las NSO no tienen tope en esta norma. Verificado en el mismo PDF oficial de govinfo, 26 U.S.C. 422.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+ },
+ {
+  "id": "saneamiento-t1-p03",
+  "node_id": "programa_proteccion_denunciantes",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+  "texto_nuevo": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)), y hasta 180 días según otras leyes federales; verifica el plazo vigente en tu país",
+  "cita": {
+   "libro": "FUENTE OFICIAL: Occupational Safety and Health Act, seccion 11(c)(2) (29 U.S.C. 660(c)(2)); 29 CFR 1977.15(d)(1). Otros plazos federales",
+   "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1977/1977.15 ; https://www.whistleblowers.gov/complaint_page",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Section 11(c)(2) provides that an employee who believes that he has been discriminated against in violation of section 11(c)(1) \"may, within 30 days after such violation occurs,\" file a complaint with the Secretary of Labor."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El nodo no da cifra ni jurisdiccion, asi que el plazo queda a medias. La fuente oficial fija 30 dias para la seccion 11(c) de la ley OSH, que es la que encaja con el mundo health_safety. whistleblowers.gov (OSHA) lista plazos de 30, 60, 90 y 180 dias segun la ley y dice literalmente: \"The time frame",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)",
+  "indice": 2
+ },
+ {
+  "id": "saneamiento-t1-p04",
+  "node_id": "certificado_de_origen_tratados_libre_comercio",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador",
+  "texto_nuevo": "Conservar la documentación de respaldo durante el plazo que fija la aduana: en Estados Unidos, bajo el T-MEC, al menos cinco años desde la importación (importador) o desde que se completó la certificación (exportador o productor); en Canadá, seis años para el importador; otros tratados pueden fijar su propio plazo., y disponible para el importador",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 19 CFR 182.15(a) (importador que reclama trato preferencial USMCA); 19 CFR 182.21(c)(1) (exportador o productor que comp",
+   "fichero": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-19?part=182&section=182.15",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "An importer claiming USMCA preferential tariff treatment for a good must maintain for a minimum of five years from the date of importation of the good, all records and documents that the importer has demonstrating that the good qualifies for preferential tariff treatment under the USMCA, including the certification of origin and records related to transit and transshipment."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). ARBITRAJE: A y B coinciden en todo lo de EE.UU. y ambos tienen razón en ello; abrí hoy la API renderer oficial de ecfr.gov y las dos citas (182.15(a) y 182.21(c)(1)) son literales y vigentes. El nodo no da cifra, remite a 'el periodo requerido por la aduana': correcto pero a medias, de ahí IMPRECISO",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (arbitro)",
+  "indice": 4
+ },
+ {
+  "id": "saneamiento-t1-p05",
+  "node_id": "preparar_fdd",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro",
+  "texto_nuevo": "Establecer el proceso interno para entregar el FDD vigente al menos 14 días naturales antes de que el candidato firme cualquier acuerdo vinculante o pague cualquier cantidad al franquiciador o a una filial (y, si cambias el contrato por tu cuenta de forma sustancial, entregar la versión revisada al menos 7 días naturales antes de la firma)",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 16 CFR 436.2(a) (FTC Franchise Rule, Disclosure Requirements and Prohibitions Concerning Franchising)",
+   "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-01/title-16.xml?part=436&section=436.2 (eCFR, texto vigente a 2026-09-01; pagina de lectura: https://www.ecfr.gov/current/title-16/chapter-I/subchapt",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "(a) For any franchisor to fail to furnish a prospective franchisee with a copy of the franchisor's current disclosure document, as described in subparts C and D of this part, at least 14 calendar-days before the prospective franchisee signs a binding agreement with, or makes any payment to, the franchisor or an affiliate in connection with the proposed franchise sale."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de 14 días sigue vigente, pero el nodo lo ancla a 'la venta' y deja la firma o el cobro solo como 'antes de', cuando la norma cuenta los 14 días naturales precisamente desde el primero de esos dos hechos: la firma de un acuerdo vinculante o cualquier pago. Tampoco dice que son días naturale",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)",
+  "indice": 4
+ },
+ {
+  "id": "saneamiento-t1-p06",
+  "node_id": "registro_reporte_lesiones",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad, un poco mas para hospitalizaciones o amputaciones. Conviene preguntar cuales son las reglas exactas en tu mercado.",
+  "texto_nuevo": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo mas para hospitalizaciones, amputaciones o perdida de un ojo (24 en Estados Unidos). Conviene preguntar cuales son las reglas exactas en tu mercado.",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 29 CFR 1904.39(a)(1) y (a)(2)",
+   "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.39",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Within twenty-four (24) hours after the in-patient hospitalization of one or more employees or an employee's amputation or an employee's loss of an eye, as a result of a work-related incident, you must report the in-patient hospitalization, amputation, or loss of an eye to OSHA."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La proporcion es correcta, pero la frase es vaga y deja fuera la perdida de un ojo, que la norma incluye en el plazo de 24 horas. Como el nodo es de clase B (ejemplo de Estados Unidos), el tono general puede mantenerse, pero la lista de supuestos tiene que estar completa.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+ },
+ {
+  "id": "saneamiento-t1-p07",
+  "node_id": "comprender_definicion_legal_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 en los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 16 CFR 436.8(a)(1) (FTC Franchise Rule, exencion de pago minimo; ultima modificacion sustantiva 2024-07-12)",
+   "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-24/title-16.xml?part=436&section=436.8",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "(1) The total of the required payments, or commitments to make a required payment, to the franchisor or an affiliate that are made any time from before to within six months after commencing operation of the franchisee's business is less than $735."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de seis meses sigue vigente, pero el nodo lo dice a medias: la norma cuenta tambien los pagos hechos antes de abrir (from before to within six months after commencing operation). Ademas, la cifra que acompana al plazo en el nodo ($500) esta DESACTUALIZADA: el eCFR registra ajustes sustantiv",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+ },
+ {
+  "id": "saneamiento-t1-p08",
+  "node_id": "autocertificacion_del_exportador",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Si es múltiple, definir el periodo cobertura en formato mm/dd/yyyy (máximo 12 meses)",
+  "texto_nuevo": "Si es múltiple, indicar en la certificacion el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 19 CFR 10.1004(a)(3)(vii) (KORUS); 19 CFR 182.12(a)(4)(xii) (USMCA)",
+   "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-01/title-19.xml?part=10&section=10.1004",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Multiple shipments of identical goods into the United States that occur within a specified blanket period, not exceeding 12 months, set out in the certification."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El tope de 12 meses es vigente. El formato mm/dd/yyyy no lo impone ni 19 CFR 10.1004 (KORUS) ni 19 CFR 182.12 (USMCA); es convencion de algunos formularios privados, y guias no oficiales de USMCA citan incluso AAAA-MM-DD. Presentarlo como requisito es impreciso: lo legal es el tope de 12 meses y que",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)",
+  "indice": 1
+ },
+ {
+  "id": "saneamiento-t1-p09",
+  "node_id": "certificacion_origen_producto",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Conservar la documentación de respaldo hasta por 5 años en caso de auditoría aduanera",
+  "texto_nuevo": "Conservar la documentación de respaldo durante al menos 5 años (desde la fecha de la certificación si eres exportador o productor; desde la importación si eres importador) en caso de auditoría aduanera",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 19 CFR 182.21(c)(1) (exportador o productor que certifica); 19 CFR 182.15(a) (importador); USMCA Art. 5.8",
+   "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-01/title-19.xml?part=182&section=182.21",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "An exporter or producer who completes a certification of origin or a producer who provides a written representation for a good exported from the United States to Canada or Mexico must maintain, for a period of at least five years after the date the certification was completed, all records and supporting documents relating to the origin of a good for which the certification of origin was completed"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de 5 años sigue vigente, pero la norma lo fija como MÍNIMO (\"at least\" / \"minimum of\"), y el nodo dice \"hasta por 5 años\", que se lee como un máximo. Además, el punto desde el que se cuenta depende del papel: certificación para exportador/productor, importación para importador. ecfr.gov red",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)",
+  "indice": 5
+ },
+ {
+  "id": "saneamiento-t1-p10",
+  "node_id": "auditorias_vigilancia_certificacion",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, normalmente cada seis meses, para confirmar que sigues cumpliendo. Estas revisiones suelen ser más cortas que la auditoría completa, que te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+  "texto_nuevo": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, al menos una vez al año (algunas certificadoras las hacen cada seis meses), para confirmar que sigues cumpliendo. Estas revisiones suelen ser más cortas que la auditoría completa, que te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+  "cita": {
+   "libro": "FUENTE OFICIAL: ISO/IEC 17021-1:2015, apartado 9.1.3.3 (auditorias de seguimiento)",
+   "fichero": "https://european-accreditation.org/sp_accordion_faqs/question-37-12-iso-17021-12015-clause-9-1-3/",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Requirement of ISO/IEC 17021-1 § 9.1.3.3 is explicit: in each calendar year, at least (the CB can have a stricter regime but not an “easier” one), there shall be an audit, whether surveillance or recertification."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). No es un plazo legal de un pais sino un requisito de la norma ISO/IEC 17021-1:2015 que obliga a las certificadoras acreditadas; la sigue vigente (iso.org la marca como 'to be revised', sin edicion nueva publicada a la fecha). La frecuencia semestral es una opcion de algunas certificadoras, no la nor",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+ },
+ {
+  "id": "saneamiento-t1-p11",
+  "node_id": "auditorias_vigilancia_certificacion",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Agenda con el organismo que te certificó las auditorías de seguimiento cada seis meses",
+  "texto_nuevo": "Agenda con el organismo que te certificó las auditorías de seguimiento, al menos una vez al año (la primera, a más tardar 12 meses después de que te certifiquen)",
+  "cita": {
+   "libro": "FUENTE OFICIAL: ISO/IEC 17021-1:2015, apartado 9.1.3.3",
+   "fichero": "https://www.iasonline.org/wp-content/uploads/2021/02/17021-1-2015-Section-9.pdf",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Surveillance audits conducted at least once a calendar year, except in recertification years."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La cita es de la diapositiva de IAS (International Accreditation Service, organismo de acreditacion de EE.UU.) que resume el apartado 9.1.3.3; la misma diapositiva añade: 'Date of the first surveillance audit following initial certification shall not be more than 12 months from the certification dec",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)",
+  "indice": 0
+ },
+ {
+  "id": "saneamiento-t1-p12",
+  "node_id": "auditorias_vigilancia_certificacion",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Planifica con tiempo la auditoría completa de recertificación que te toca cada pocos años",
+  "texto_nuevo": "Planifica con tiempo la auditoría completa de recertificación que te toca cada tres años, antes de que venza el certificado",
+  "cita": {
+   "libro": "FUENTE OFICIAL: ISO/IEC 17021-1:2015, apartados 9.1.3.1 y 9.1.3.2 (ciclo de certificacion de tres años)",
+   "fichero": "https://www.iasonline.org/wp-content/uploads/2021/02/17021-1-2015-Section-9.pdf",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "The first three-year certification cycle begins with the certification decision."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). 'Cada pocos años' no es falso pero se queda a medias: la norma fija un ciclo de tres años. La misma diapositiva de IAS recoge 9.1.3.2: 'surveillance audits in the first and second years following the certification decision, and a recertification audit in the third year prior to expiration of certifi",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)",
+  "indice": 4
+ },
+ {
+  "id": "saneamiento-t1-p13",
+  "node_id": "patentes_startup",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Una patente te da un monopolio de 20 años sobre un invento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
+  "texto_nuevo": "Una patente de invención en Estados Unidos te da un derecho exclusivo sobre un invento que dura hasta 20 años contados desde la fecha en que presentaste la solicitud (no desde que te la conceden), siempre que pagues las tasas de mantenimiento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 35 U.S.C. 154(a)(2)",
+   "fichero": "https://www.uspto.gov/web/offices/pac/mpep/s2701.html",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Subject to the payment of fees under this title, such grant shall be for a term beginning on the date on which the patent issues and ending 20 years from the date on which the application for the patent was filed in the United States or, if the application contains a specific reference to an earlier filed application or applications under section 120, 121, 365(c), or 386(c) from the date on which "
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La cifra de 20 años es correcta, pero el nodo omite que se cuentan desde la presentación de la solicitud y que la vigencia depende del pago de tasas; la vida útil real tras la concesión suele ser menor. Aplica a patentes de utilidad; las de diseño se rigen por 35 U.S.C. 173. MPEP 2701 revisado el 03",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+ },
+ {
+  "id": "saneamiento-t1-p14",
+  "node_id": "financiamiento_usda_agricola",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_DESACTUALIZADO",
+  "texto_anterior": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+  "texto_nuevo": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 24 meses mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 7 U.S.C. 5622(a) (Agricultural Trade Act of 1978, sec. 202(a), GSM-102 Export Credit Guarantee Program), desarrollado en",
+   "fichero": "https://www.govinfo.gov/link/uscode/7/5622",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "The Commodity Credit Corporation may guarantee the repayment of credit made available to finance commercial export sales of agricultural commodities, including processed agricultural products and high-value agricultural products, from privately owned stocks on credit terms that do not exceed a 24-month period."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de hasta 3 años correspondía al GSM-102 anterior a las reformas: la Farm Bill de 2008 derogó el GSM-103 (hasta 10 años) y la Agricultural Act of 2014 redujo el tope legal del GSM-102 a 24 meses, tras el acuerdo con Brasil en la disputa del algodón ante la OMC. La cita se tomó del PDF oficia",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+ },
+ {
+  "id": "saneamiento-t1-p15",
+  "node_id": "programa_proteccion_respiratoria",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Realizar fit-test antes del primer uso y anualmente para respiradores ajustados",
+  "texto_nuevo": "Realizar fit-test antes del primer uso, cada vez que se cambie de pieza facial (talla, estilo, modelo o marca) y al menos anualmente para respiradores ajustados",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 29 CFR 1910.134(f)(2)",
+   "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "The employer shall ensure that an employee using a tight-fitting facepiece respirator is fit tested prior to initial use of the respirator, whenever a different respirator facepiece (size, style, model or make) is used, and at least annually thereafter."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Tiene razon B. Abri hoy osha.gov y la cita de (f)(2) que dan A y B es literal y esta vigente. Los dos plazos que da el nodo (antes del primer uso y anual) son correctos, pero la norma impone un tercer disparador obligatorio: repetir la prueba cada vez que se usa una pieza facial distinta. El propio ",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (arbitro)",
+  "indice": 3
+ },
+ {
+  "id": "saneamiento-t1-p16",
+  "node_id": "programa_proteccion_respiratoria",
+  "campo": "pasos_accionables",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Capacitar a los trabajadores anualmente sobre uso, limitaciones y mantenimiento",
+  "texto_nuevo": "Capacitar a los trabajadores antes de que usen el respirador y de nuevo al menos anualmente (y cuando cambien el puesto o el tipo de respirador o se detecten carencias) sobre uso, limitaciones y mantenimiento",
+  "cita": {
+   "libro": "FUENTE OFICIAL: 29 CFR 1910.134(k)(3) y (k)(5); contenido en (k)(1)",
+   "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "Retraining shall be administered annually, and when the following situations occur:"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Tiene razon B. Verifique hoy en osha.gov que las citas de (k)(5) (\"Retraining shall be administered annually, and when the following situations occur:\") y de (k)(3) son literales y vigentes. La periodicidad anual es correcta, pero el nodo omite la formacion inicial obligatoria antes de exigir el uso",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (arbitro)",
+  "indice": 4
+ },
+ {
+  "id": "saneamiento-t1-p17",
+  "node_id": "elementos_contrato_legal",
+  "campo": "resumen_teorico",
+  "veredicto": "PLAZO_IMPRECISO",
+  "texto_anterior": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos —incluidos aquellos que tomarán más de un año en ejecutarse— se pongan por escrito.",
+  "texto_nuevo": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+  "cita": {
+   "libro": "FUENTE OFICIAL: California Civil Code § 1624(a)(1); equivalente New York General Obligations Law § 5-701(a)(1)",
+   "fichero": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1624",
+   "lineas": "consultada el 26 sep 2026",
+   "frase": "(1) An agreement that by its terms is not to be performed within a year from the making thereof."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). A y B coinciden en estado (IMPRECISO), norma y cita, y ambos tenian razon. Verifique hoy en leginfo.legislature.ca.gov el texto literal de § 1624(a) y (a)(1) ('The following contracts are invalid, unless they, or some note or memorandum thereof, are in writing and subscribed by the party to be charg",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO P21 (arbitro)"
+ }
+]

@@ -1,6 +1,6 @@
 {
   "node_id": "medir_huella_carbono_corporativa",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Medir la Huella de Carbono de tu Negocio",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -48,6 +48,24 @@
       "node_id": "huella_carbono_empresarial",
       "titulo": "Medición de la Huella de Carbono Empresarial",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "fuentes_internas": [
+    "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-217",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-016: Medir el inventario de emisiones de la operacion propia es control de un negocio en marcha, no validacion con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ]
 }

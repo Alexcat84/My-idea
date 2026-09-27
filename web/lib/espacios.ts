@@ -10,6 +10,10 @@
  * para que la UI y los tests nunca discrepen.
  */
 
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { ESPACIOS } from "./i18n/mensajes/espacios";
+
 export const ESPACIO_CORE = "core";
 
 /** El dominio pertenece al core si es nulo o "core"; cualquier otro es un mundo. */
@@ -44,8 +48,8 @@ export function esMundoProteccion(dominio: string | null | undefined): boolean {
  * pinta la pantalla del escaparate. Si vivieran en dos sitios, algún día dirían
  * cosas distintas.
  */
-export function murallaSinPlan(nombreDelMundo: string): string {
-  return `Primero genera el plan de tu idea: tu mundo de ${nombreDelMundo} se construirá sobre él.`;
+export function murallaSinPlan(nombreDelMundo: string, idioma: Locale = LOCALE_BASE): string {
+  return interpolar(elegir(ESPACIOS, idioma).murallaSinPlan, { mundo: nombreDelMundo });
 }
 
 /**

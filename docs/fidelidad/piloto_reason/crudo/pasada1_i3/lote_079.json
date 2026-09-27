@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_079",
+  "intento": 0,
+  "usd": 0.16982,
+  "turnos": 1,
+  "duracion_s": 20.4,
+  "pared_s": 21.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33020,
+  "tokens_out": 1887,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P004CB3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2884, 2922, 2977, 3817], \"razon\": \"El libro critica apoyarse en exhortaciones y sanciones: tienen eficacia muy limitada y pueden hacer más daño que bien. El paso va en la misma dirección.\"},\n{\"id\": \"PF3488D\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"auditorías aleatorias\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [967, 971, 975, 3465], \"razon\": \"El libro señala la falta de inspección independiente y de personal de QA. No menciona auditorías aleatorias, y un muestreo podría sustituir indebidamente la inspección separada.\"},\n{\"id\": \"PF38E06\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [248, 261, 263, 293], \"razon\": \"El libro rastrea causas hasta el operador, el fabricante y el regulador, pero pide reglas de parada: limitar el análisis a lo controlable. 'Todos los actores' puede chocar con ese límite.\"},\n{\"id\": \"P14A42A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [819, 2671, 2675, 2679], \"razon\": \"El libro presenta los casi-accidentes como 'free lessons' que vacunan al sistema, si se sacan conclusiones correctas y se actúa sobre ellas.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P004CB3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2884,
+    2922,
+    2977,
+    3817
+   ],
+   "razon": "El libro critica apoyarse en exhortaciones y sanciones: tienen eficacia muy limitada y pueden hacer más daño que bien. El paso va en la misma dirección."
+  },
+  {
+   "id": "PF3488D",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "auditorías aleatorias"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    967,
+    971,
+    975,
+    3465
+   ],
+   "razon": "El libro señala la falta de inspección independiente y de personal de QA. No menciona auditorías aleatorias, y un muestreo podría sustituir indebidamente la inspección separada."
+  },
+  {
+   "id": "PF38E06",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    248,
+    261,
+    263,
+    293
+   ],
+   "razon": "El libro rastrea causas hasta el operador, el fabricante y el regulador, pero pide reglas de parada: limitar el análisis a lo controlable. 'Todos los actores' puede chocar con ese límite."
+  },
+  {
+   "id": "P14A42A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    819,
+    2671,
+    2675,
+    2679
+   ],
+   "razon": "El libro presenta los casi-accidentes como 'free lessons' que vacunan al sistema, si se sacan conclusiones correctas y se actúa sobre ellas."
+  }
+ ]
+}

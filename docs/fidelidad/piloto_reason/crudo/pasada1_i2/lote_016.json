@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_016",
+  "intento": 0,
+  "usd": 0.158244,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32936,
+  "tokens_out": 1325,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5F040F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5503, 5594, 5641, 5701, 5905, 5907], \"razon\": \"El libro pide que los modelos coexistan (L5503, L5905). Pero elegir modelo por riesgo predominante choca con L5641/L5907: modelos ingeniería/organizacional sirven también para lesiones y aplicarse siempre.\"},\n  {\"id\": \"P99E5F6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5497, 5641, 5688, 5690, 5701, 5907], \"razon\": \"El libro advierte que centrarse en lesiones personales (LTIF) oculta los riesgos organizacionales y que el modelo persona es una barrera.\"},\n  {\"id\": \"P38409A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2198, 2208, 2210, 2214, 2218, 2222, 2224, 2250], \"razon\": \"El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisión; la lista coincide.\"},\n  {\"id\": \"P12BB28\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [198, 200, 293, 2720, 3784, 5559, 5781], \"razon\": \"El libro sitúa el origen de las condiciones latentes en decisiones de nivel superior (recursos, capacitación, diseño, falta de personal) y pide rastrearlas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5F040F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5503,
+    5594,
+    5641,
+    5701,
+    5905,
+    5907
+   ],
+   "razon": "El libro pide que los modelos coexistan (L5503, L5905). Pero elegir modelo por riesgo predominante choca con L5641/L5907: modelos ingeniería/organizacional sirven también para lesiones y aplicarse siempre."
+  },
+  {
+   "id": "P99E5F6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5497,
+    5641,
+    5688,
+    5690,
+    5701,
+    5907
+   ],
+   "razon": "El libro advierte que centrarse en lesiones personales (LTIF) oculta los riesgos organizacionales y que el modelo persona es una barrera."
+  },
+  {
+   "id": "P38409A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2198,
+    2208,
+    2210,
+    2214,
+    2218,
+    2222,
+    2224,
+    2250
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisión; la lista coincide."
+  },
+  {
+   "id": "P12BB28",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    198,
+    200,
+    293,
+    2720,
+    3784,
+    5559,
+    5781
+   ],
+   "razon": "El libro sitúa el origen de las condiciones latentes en decisiones de nivel superior (recursos, capacitación, diseño, falta de personal) y pide rastrearlas."
+  }
+ ]
+}

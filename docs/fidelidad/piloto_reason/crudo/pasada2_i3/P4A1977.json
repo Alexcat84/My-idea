@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P4A1977",
+  "intento": 0,
+  "usd": 0.101084,
+  "turnos": 1,
+  "duracion_s": 11.2,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 20176,
+  "tokens_out": 1019,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4A1977\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5690, 5905, 5907], \"cita\": \"non-injury events--such as the number of leaks of combustible materials--are much more diagnostic of the integrity of the system as a whole. It is these precursor events, along with regular checks upon the quality of the underlying processes (see Chapter 7), that show where the high-potential risks are located.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que, con LTIF bajo, los precursores y los chequeos de los procesos subyacentes diagnostican mejor la integridad del sistema. También pide mantener métricas de cada modelo sin ignorar las lesiones (L5905, L5907). 'Complementarias al LTIF' sigue esa dirección. 'Process safety indicators' es solo una etiqueta genérica (el libro cita CCPS 'Process Safety'), no una cifra, herramienta ni norma nueva.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P4A1977",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5690,
+   5905,
+   5907
+  ],
+  "cita": "non-injury events--such as the number of leaks of combustible materials--are much more diagnostic of the integrity of the system as a whole. It is these precursor events, along with regular checks upon the quality of the underlying processes (see Chapter 7), that show where the high-potential risks are located.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que, con LTIF bajo, los precursores y los chequeos de los procesos subyacentes diagnostican mejor la integridad del sistema. También pide mantener métricas de cada modelo sin ignorar las lesiones (L5905, L5907). 'Complementarias al LTIF' sigue esa dirección. 'Process safety indicators' es solo una etiqueta genérica (el libro cita CCPS 'Process Safety'), no una cifra, herramienta ni norma nueva.",
+  "paso_fiel": ""
+ }
+}

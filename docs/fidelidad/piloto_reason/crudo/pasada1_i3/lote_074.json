@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_074",
+  "intento": 0,
+  "usd": 0.156016,
+  "turnos": 1,
+  "duracion_s": 14.3,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32464,
+  "tokens_out": 1308,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P669901\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2598, 2769], \"razon\": \"El libro afirma que avanzar hacia más seguridad no es difícil y que sostener las mejoras es muy difícil. 'Comunicar' solo lo concreta, en la misma dirección.\"},\n  {\"id\": \"P1EB846\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3230, 3332], \"razon\": \"El libro agrega datos de muchas personas para que los sesgos se cancelen, preservando el anonimato; en MESH el acceso es anónimo. El paso exige identificar y corregir a cada encuestado.\"},\n  {\"id\": \"P35AEF7\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2547, 2568, 2638, 2765], \"razon\": \"El libro pide medidas reactivas y proactivas, pero advierte que las de resultado dicen muy poco con tasas bajas. 'Complementaria' podría leerse como igual peso.\"},\n  {\"id\": \"P4632AF\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [852, 856], \"razon\": \"Invierte a Bainbridge: los sistemas automatizados más exitosos, con rara intervención manual, son los que más inversión en entrenamiento requieren.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P669901",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2598,
+    2769
+   ],
+   "razon": "El libro afirma que avanzar hacia más seguridad no es difícil y que sostener las mejoras es muy difícil. 'Comunicar' solo lo concreta, en la misma dirección."
+  },
+  {
+   "id": "P1EB846",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3230,
+    3332
+   ],
+   "razon": "El libro agrega datos de muchas personas para que los sesgos se cancelen, preservando el anonimato; en MESH el acceso es anónimo. El paso exige identificar y corregir a cada encuestado."
+  },
+  {
+   "id": "P35AEF7",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2547,
+    2568,
+    2638,
+    2765
+   ],
+   "razon": "El libro pide medidas reactivas y proactivas, pero advierte que las de resultado dicen muy poco con tasas bajas. 'Complementaria' podría leerse como igual peso."
+  },
+  {
+   "id": "P4632AF",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    852,
+    856
+   ],
+   "razon": "Invierte a Bainbridge: los sistemas automatizados más exitosos, con rara intervención manual, son los que más inversión en entrenamiento requieren."
+  }
+ ]
+}

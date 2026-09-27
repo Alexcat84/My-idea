@@ -12,6 +12,10 @@
  * de calendario no dependa de la zona horaria del servidor.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { FECHA_BASE_ORIGEN, type FechaBaseOrigen } from "@/lib/dbContract";
 import { obtenerProyecto } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
@@ -45,16 +49,19 @@ function parsear(body: unknown): { plan_id: string; fechas: EntradaFecha[] } | n
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).baseline;
 
   let cuerpo: unknown;
   try {
     cuerpo = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo JSON inválido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoJsonInvalido }, { status: 400 });
   }
   const datos = parsear(cuerpo);
   if (!datos) {
-    return NextResponse.json({ error: "falta plan_id o fechas mal formadas" }, { status: 400 });
+    return NextResponse.json({ error: t.faltaPlanOFechas }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -62,11 +69,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   // Estado previo de los ítems de este plan: para preservar la PRIMERA
@@ -83,6 +90,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   );
 
   const ahora = new Date().toISOString();
+  // AUD-09 (tanda 5): toda escritura que falla deja rastro. Antes estos updates
+  // no miraban su error y la ruta respondía "confirmadas: N" aunque no se
+  // hubiera guardado nada.
+  let fallos = 0;
   for (const f of datos.fechas) {
     const prev = prevPorId.get(f.item_id);
     const cambios: Record<string, unknown> = {
@@ -93,16 +104,33 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     if (prev?.fecha_base && !prev.fecha_base_original) {
       cambios.fecha_base_original = prev.fecha_base;
     }
-    await supabase.from("checklist_items").update(cambios).eq("id", f.item_id).eq("project_id", projectId);
+    const { error: errEscritura1 } = await supabase.from("checklist_items").update(cambios).eq("id", f.item_id).eq("project_id", projectId);
+    if (errEscritura1) {
+      console.error("[app/api/project/[id]/baseline/route.ts] update checklist_items fallo:", errEscritura1);
+      fallos += 1;
+    }
+  }
+
+  if (fallos > 0) {
+    return NextResponse.json({ error: r.noPudeGuardarFechas, fallidas: fallos }, { status: 500 });
   }
 
   // Sella la baseline del ciclo. RLS de plans (user_id) garantiza propiedad.
+  // AUD-09 M34: el sello es el del PRIMER cierre de fechas. Re-confirmar (un
+  // recálculo) ya no lo pisa: la bitácora conserva cuándo quedó sellada.
+  const { data: planPrevio } = await supabase.from("plans").select("baseline_confirmada_at").eq("id", datos.plan_id);
+  const selloPrevio =
+    ((planPrevio ?? []) as Array<{ baseline_confirmada_at?: string | null }>)[0]?.baseline_confirmada_at ?? null;
+  if (selloPrevio) {
+    return NextResponse.json({ ok: true, baseline_confirmada_at: selloPrevio, confirmadas: datos.fechas.length });
+  }
   const { error: errorPlan } = await supabase
     .from("plans")
     .update({ baseline_confirmada_at: ahora })
-    .eq("id", datos.plan_id);
+    .eq("id", datos.plan_id)
+    .is("baseline_confirmada_at", null);
   if (errorPlan) {
-    return NextResponse.json({ error: "no pudimos sellar la línea base" }, { status: 500 });
+    return NextResponse.json({ error: t.noPudimosSellar }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true, baseline_confirmada_at: ahora, confirmadas: datos.fechas.length });

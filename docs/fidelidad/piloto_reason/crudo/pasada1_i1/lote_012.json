@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_012",
+  "intento": 0,
+  "usd": 0.155476,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32539,
+  "tokens_out": 1266,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA72B64\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4773, 5219, 2579, 3384, 2583], \"razon\": \"El libro exige voluntad e implementación de reformas y recursos. Definir procesos de decisión es una extensión razonable. Matiz: implementar no basta, hay que vigilar y ajustar (L2583).\"},\n  {\"id\": \"P5009DC\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3784, 293], \"razon\": \"Tripod-Beta parte de la pérdida y retrocede para determinar la naturaleza de la defensa o defensas fallidas y el peligro.\"},\n  {\"id\": \"PA19023\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2648, 2652, 2654], \"razon\": \"El análisis de muchos incidentes con un marco común revela patrones recurrentes de causa-efecto en las condiciones locales y organizacionales.\"},\n  {\"id\": \"PEFDC8D\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [520, 668, 686, 4215, 3153], \"razon\": \"El libro subraya que las señales, aisladas, no alertan y solo pesan en conjunto. El seguimiento señal por señal puede omitir esa integración. Además, las señales solo se reconocen en retrospectiva.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA72B64",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4773,
+    5219,
+    2579,
+    3384,
+    2583
+   ],
+   "razon": "El libro exige voluntad e implementación de reformas y recursos. Definir procesos de decisión es una extensión razonable. Matiz: implementar no basta, hay que vigilar y ajustar (L2583)."
+  },
+  {
+   "id": "P5009DC",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "Tripod-Beta parte de la pérdida y retrocede para determinar la naturaleza de la defensa o defensas fallidas y el peligro."
+  },
+  {
+   "id": "PA19023",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2648,
+    2652,
+    2654
+   ],
+   "razon": "El análisis de muchos incidentes con un marco común revela patrones recurrentes de causa-efecto en las condiciones locales y organizacionales."
+  },
+  {
+   "id": "PEFDC8D",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    520,
+    668,
+    686,
+    4215,
+    3153
+   ],
+   "razon": "El libro subraya que las señales, aisladas, no alertan y solo pesan en conjunto. El seguimiento señal por señal puede omitir esa integración. Además, las señales solo se reconocen en retrospectiva."
+  }
+ ]
+}

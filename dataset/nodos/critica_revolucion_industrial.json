@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Crítica al Diseño de la Revolución Industrial",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Usando la metáfora del Titanic, Braungart argumenta que la infraestructura industrial actual fue construida sin un diseño intencional coherente con la naturaleza, resultando en un sistema que produce toxicidad, residuos irrecuperables, regulaciones excesivas y erosión de la diversidad. Este análisis retrospectivo sirve como punto de partida para entender por qué se necesita un rediseño fundamental (Cradle to Cradle) en lugar de ajustes incrementales al sistema existente.",
+  "resumen_teorico": "La metáfora del Titanic ilustra que la infraestructura industrial actual fue construida sin un diseño intencional coherente con la naturaleza, resultando en un sistema que produce toxicidad, residuos irrecuperables, regulaciones excesivas y erosión de la diversidad. Este análisis retrospectivo sirve como punto de partida para entender por qué se necesita un rediseño fundamental (Cradle to Cradle) en lugar de ajustes incrementales al sistema existente.",
   "pasos_accionables": [
     "Analizar el sistema de producción actual del proyecto como si tuviera que 'diseñarse retrospectivamente'",
     "Listar las consecuencias negativas no intencionadas del sistema actual",
@@ -20,5 +20,26 @@
   "condiciones_activacion": [
     "Cuando el usuario necesita justificar ante stakeholders por qué se requiere un cambio estructural y no solo mejoras incrementales"
   ],
-  "etiqueta_arbol": "Repiensa el Diseño Industrial Actual"
+  "etiqueta_arbol": "Repiensa el Diseño Industrial Actual",
+  "correcciones": [
+    {
+      "id": "atribucion-045",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Usando la metáfora del Titanic, Braungart argumenta que la infraestructura industrial actual fue construida sin un diseño intencional coherente con la naturaleza, resultando en un sistema que produce toxicidad, residuos irrecuperables, regulaciones excesivas y erosión de la diversidad. Este análisis retrospectivo sirve como punto de partida para entender por qué se necesita un rediseño fundamental (Cradle to Cradle) en lugar de ajustes incrementales al sistema existente.",
+      "texto_nuevo": "La metáfora del Titanic ilustra que la infraestructura industrial actual fue construida sin un diseño intencional coherente con la naturaleza, resultando en un sistema que produce toxicidad, residuos irrecuperables, regulaciones excesivas y erosión de la diversidad. Este análisis retrospectivo sirve como punto de partida para entender por qué se necesita un rediseño fundamental (Cradle to Cradle) en lugar de ajustes incrementales al sistema existente.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Braungart argumenta que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U2-010 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Cradle to Cradle - Michael Braungart"
+  ]
 }

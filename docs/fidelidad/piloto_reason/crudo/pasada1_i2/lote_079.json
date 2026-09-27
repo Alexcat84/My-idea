@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_079",
+  "intento": 0,
+  "usd": 0.161992,
+  "turnos": 1,
+  "duracion_s": 15.0,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33803,
+  "tokens_out": 1339,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P688A20\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [261, 263, 5712, 5726, 5742, 5748], \"razon\": \"El libro plantea reglas de parada: limitar el análisis a lo que los gestores pueden controlar. Los factores remotos rinden cada vez menos para el remedio.\"},\n  {\"id\": \"PA4E597\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2224, 2250, 2259], \"razon\": \"El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisión. Etiquetarlos como 'críticos' concreta esa idea en la misma dirección.\"},\n  {\"id\": \"PAD9755\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"grupo de expertos del dominio\", \"diagrama de influencia\"], \"clase\": \"FIEL\", \"lineas\": [3690, 3692], \"razon\": \"Es literal en L3690. El libro precisa además que los expertos conozcan la operación y la política, y que haya un facilitador experimentado; el paso omite ambos matices.\"},\n  {\"id\": \"P14E34C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2583, 2585], \"razon\": \"El 'fenómeno del tick-off' describe medidas que se marcan como hechas sin vigilarlas. El libro no prescribe auditar, pero el paso concreta la idea en su misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P688A20",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    261,
+    263,
+    5712,
+    5726,
+    5742,
+    5748
+   ],
+   "razon": "El libro plantea reglas de parada: limitar el análisis a lo que los gestores pueden controlar. Los factores remotos rinden cada vez menos para el remedio."
+  },
+  {
+   "id": "PA4E597",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2224,
+    2250,
+    2259
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisión. Etiquetarlos como 'críticos' concreta esa idea en la misma dirección."
+  },
+  {
+   "id": "PAD9755",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "grupo de expertos del dominio",
+    "diagrama de influencia"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3690,
+    3692
+   ],
+   "razon": "Es literal en L3690. El libro precisa además que los expertos conozcan la operación y la política, y que haya un facilitador experimentado; el paso omite ambos matices."
+  },
+  {
+   "id": "P14E34C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2583,
+    2585
+   ],
+   "razon": "El 'fenómeno del tick-off' describe medidas que se marcan como hechas sin vigilarlas. El libro no prescribe auditar, pero el paso concreta la idea en su misma dirección."
+  }
+ ]
+}

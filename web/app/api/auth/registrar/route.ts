@@ -7,17 +7,23 @@
  * adopción corren al confirmar (bienvenidaTrasLogin), no aquí.
  */
 import { NextResponse } from "next/server";
-import { estaEnAllowlist } from "@/lib/cuentas";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
+import { estaEnAllowlist, registrarAdopcionPendiente } from "@/lib/cuentas";
+import { esInvitadoInvisible } from "@/lib/identidad";
 import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
 import { validarPassword } from "@/lib/password";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const t = elegir(SERVIDOR_CUENTA, idioma);
   let body: { email?: unknown; password?: unknown; next?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: t.comun.cuerpoInvalido }, { status: 400 });
   }
   const email = String(body.email ?? "").trim().toLowerCase();
   const password = String(body.password ?? "");
@@ -27,9 +33,9 @@ export async function POST(request: Request) {
   // URL). /auth/callback la lee al confirmar. Validado como ruta interna.
   const next = destinoPostLogin(typeof body.next === "string" ? body.next : null);
   if (!email || !email.includes("@") || email.length > 254) {
-    return NextResponse.json({ error: "escribe un correo valido" }, { status: 400 });
+    return NextResponse.json({ error: t.comun.correoInvalido }, { status: 400 });
   }
-  const problema = validarPassword(password);
+  const problema = validarPassword(password, idioma);
   if (problema) return NextResponse.json({ error: problema }, { status: 400 });
 
   // La allowlist de beta gatea el registro (quién puede tener cuenta).
@@ -38,7 +44,7 @@ export async function POST(request: Request) {
     invitado = await estaEnAllowlist(email);
   } catch {
     return NextResponse.json(
-      { error: "algo se atoro de nuestro lado; intenta de nuevo en un momento" },
+      { error: t.comun.algoSeAtoroMomento },
       { status: 500 }
     );
   }
@@ -49,21 +55,30 @@ export async function POST(request: Request) {
 
   const origen = new URL(request.url).origin;
   const supabase = await createClient();
+  // AUD-09 H07: la identidad invisible que ESTE navegador trae (la cookie es la
+  // prueba de posesión), para anotarla en la cuenta nueva.
+  const {
+    data: { user: previo },
+  } = await supabase.auth.getUser();
+  const anonId = previo && esInvitadoInvisible(previo) ? previo.id : null;
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { emailRedirectTo: `${origen}/auth/callback` },
+    // i18n F6 (D4): el idioma de la interfaz queda en user_metadata.idioma; el
+    // Send Email Hook (api/auth/hook-correo) lo lee para mandar el correo de
+    // confirmación en ese idioma.
+    options: { emailRedirectTo: `${origen}/auth/callback`, data: { idioma } },
   });
   if (error) {
     const msg = error.message.toLowerCase();
     if (msg.includes("rate") && msg.includes("limit")) {
       return NextResponse.json(
-        { error: "Demasiados intentos por ahora. Espera unos minutos y vuelve a intentar." },
+        { error: t.registrar.demasiadosIntentos },
         { status: 429 }
       );
     }
     console.error("[registrar] signUp fallo:", error.message);
-    return NextResponse.json({ error: "no pudimos crear tu cuenta; intenta de nuevo en un momento" }, { status: 500 });
+    return NextResponse.json({ error: t.registrar.noPudimosCrear }, { status: 500 });
   }
 
   // signUp con un correo YA registrado no da error: devuelve un usuario con
@@ -72,6 +87,18 @@ export async function POST(request: Request) {
   const identities = data.user?.identities ?? [];
   if (identities.length === 0) {
     return NextResponse.json({ creado: true, yaExistia: true, invitado: true });
+  }
+
+  // AUD-09 H07: la adopción queda anotada en la cuenta nueva (app_metadata, que
+  // solo escribe el servidor), así la confirmación desde CUALQUIER navegador
+  // adopta las ideas del invitado. Si no se puede anotar, se dice fuerte; en el
+  // mismo navegador la cookie sigue sirviendo.
+  if (anonId && data.user?.id) {
+    try {
+      await registrarAdopcionPendiente(data.user.id, anonId);
+    } catch (e) {
+      console.error(`[registrar] no se pudo anotar la adopcion pendiente de ${anonId}:`, e);
+    }
   }
 
   // Cuenta NUEVA (se envió el correo de confirmación): si el registro vino de

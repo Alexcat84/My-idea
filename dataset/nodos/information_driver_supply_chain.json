@@ -10,7 +10,7 @@
     "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
     "Implementa un sistema (EDI, ERP o dashboard) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
     "Usa esos datos para ajustar tus programaciones semanales de producción, inventario y transporte",
-    "Genera pronósticos tácticos mensuales y estratégicos anuales a partir de la información recopilada"
+    "Sugerencia de My Idea: genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada"
   ],
   "entregable_esperado": "Mapa de flujo de información en tu cadena de suministro, con los puntos de mejora identificados, que alimente tus decisiones de producción, inventario, ubicación y transporte",
   "nodos_previos": [
@@ -20,7 +20,9 @@
   "nodos_siguientes": [
     "definicion_alineacion_cadena_suministro",
     "trade_off_responsividad_eficiencia",
-    "planificacion_cadena_suministro"
+    "planificacion_cadena_suministro",
+    "iot_big_data_supply_chain",
+    "sop_colaborativo"
   ],
   "condiciones_activacion": [
     "Si operas con múltiples proveedores o distribuidores y necesitas optimizar tus decisiones",
@@ -37,5 +39,53 @@
       "titulo": "Driver de Información: Coordinación y Pronóstico en la Cadena de Suministro",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-028",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Genera pronósticos tácticos mensuales y estratégicos anuales a partir de la información recopilada",
+      "texto_nuevo": "Sugerencia de My Idea: genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L226",
+        "frase": "Available information is used to make tactical forecasts to guide the setting of monthly and quarterly production schedules and timetables. Information is also used for strategic forecasts to guide decisions about whether to build new facilities, enter a new market, or exit an existing market."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de pronosticos tacticos para programas mensuales y trimestrales y de pronosticos estrategicos para decisiones de instalaciones y mercados, pero no les asigna frecuencia anual; la periodicidad anual es un dato anadido (frecuencia).",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C090-004"
+    },
+    {
+      "id": "n1-nucleo-10",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "information_driver_supply_chain -> iot_big_data_supply_chain",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-11, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien entiende la información como conector de la cadena sigue con IoT y big data como forma de capturarla de manera continua y granular."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "mv-arista-045",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "information_driver_supply_chain -> sop_colaborativo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C13, lectores de acuerdo)",
+        "motivo": "La informacion como base de coordinacion y pronostico precede a convertir datos en un plan S&OP compartido; se evita proceso_sop_mop por duplicado."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
   ]
 }

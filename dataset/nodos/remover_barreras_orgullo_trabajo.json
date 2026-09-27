@@ -6,14 +6,14 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "El Punto 12 de Deming dice que tu, como responsable de tu negocio, debes eliminar las barreras que impiden a las personas que trabajan contigo sentir orgullo por lo que hacen. Estas barreras incluyen evaluaciones injustas, materiales o herramientas defectuosas, falta de mantenimiento, instrucciones poco claras, presion por cumplir cuotas en vez de cuidar la calidad, y no escuchar las sugerencias de quienes hacen el trabajo. Cuando estas barreras se mantienen, aparecen la desmotivacion, el ausentismo y la desconfianza hacia ti, y eso golpea directamente la calidad y la productividad.",
   "pasos_accionables": [
-    "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras especificas a su desempeño",
-    "Clasificar las barreras identificadas según su origen: materiales, equipos, supervision, comunicacion",
-    "Priorizar las barreras y definir quien se encarga de eliminar cada una",
-    "Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras",
+    "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras específicas a su desempeño",
+    "Clasificar las barreras identificadas según su origen: materiales, equipos, supervisión, comunicación",
+    "Priorizar las barreras y definir quién se encarga de eliminar cada una",
+    "Crear un canal simple de retroalimentación continua para dar seguimiento a las mejoras",
     "Clasificar barreras según sean responsabilidad de gestión o del sistema",
     "Reemplazar carteles y exhortaciones por comunicación real de avances"
   ],
-  "entregable_esperado": "Lista priorizada de barreras identificadas, con un plan de accion y quien se encarga de resolver cada una",
+  "entregable_esperado": "Lista priorizada de barreras identificadas, con un plan de acción y quién se encarga de resolver cada una",
   "nodos_previos": [
     "eliminar_cuotas_numericas_trabajadores",
     "eliminar_metas_numericas_gerencia",
@@ -36,6 +36,80 @@
       "node_id": "barreras_orgullo_trabajo",
       "titulo": "Remoción de Barreras al Orgullo por el Trabajo",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0813",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras especificas a su desempeño",
+      "texto_nuevo": "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras específicas a su desempeño",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-024.paso0: específicas ('específicas' es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0814",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasificar las barreras identificadas según su origen: materiales, equipos, supervision, comunicacion",
+      "texto_nuevo": "Clasificar las barreras identificadas según su origen: materiales, equipos, supervisión, comunicación",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-024.paso1: supervisión, comunicación ('supervisión' y 'comunicación' son agudas terminadas en n y llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0815",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Priorizar las barreras y definir quien se encarga de eliminar cada una",
+      "texto_nuevo": "Priorizar las barreras y definir quién se encarga de eliminar cada una",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-024.paso2: quién ('quién' es interrogativo indirecto tras 'definir' y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0816",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras",
+      "texto_nuevo": "Crear un canal simple de retroalimentación continua para dar seguimiento a las mejoras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-024.paso3: retroalimentación ('retroalimentación' es aguda terminada en n y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0817",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lista priorizada de barreras identificadas, con un plan de accion y quien se encarga de resolver cada una",
+      "texto_nuevo": "Lista priorizada de barreras identificadas, con un plan de acción y quién se encarga de resolver cada una",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-024.entregable: acción, quién ('acción' lleva tilde con toda seguridad; 'quién' es un interrogativo indirecto elíptico, coherente con 'definir quién se encarga' del paso 2.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -18,10 +18,29 @@
   ],
   "nodos_siguientes": [
     "team_member_performance_assessment",
-    "evaluacion_desempeno_proyectos"
+    "evaluacion_desempeno_proyectos",
+    "definicion_metas_engagement"
   ],
   "condiciones_activacion": [
     "Si se requiere mejorar la capacidad del equipo para lograr objetivos del proyecto"
   ],
-  "etiqueta_arbol": "Evalúa el Desempeño de tu Equipo"
+  "etiqueta_arbol": "Evalúa el Desempeño de tu Equipo",
+  "fuentes_internas": [
+    "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-036",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "team_performance_assessment -> definicion_metas_engagement",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C04, lectores de acuerdo)",
+        "motivo": "Evaluar la moral y cohesion del equipo precede a definir metas y decisiones de compromiso."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

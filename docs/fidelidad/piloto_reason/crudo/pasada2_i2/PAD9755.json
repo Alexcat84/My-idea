@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PAD9755",
+  "intento": 0,
+  "usd": 0.120884,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 27851,
+  "tokens_out": 474,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PAD9755\", \"veredicto\": \"FIEL\", \"lineas\": [3690], \"cita\": \"First, the Influence Diagram is developed by means of a structured discussion with a group of experts--in this case, marine specialists, though comparable experts would be required for other domains--who have a detailed knowledge of both the operational realities and the broader policy issues.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro fija como primera etapa del IDA desarrollar el diagrama mediante discusión estructurada con un grupo de expertos del dominio. El paso omite que conozcan operación y política; omitirlo no lleva a hacer nada que el libro desaconseje. El facilitador aparece en la cuantificación (L3692), no en esta etapa.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PAD9755",
+  "veredicto": "FIEL",
+  "lineas": [
+   3690
+  ],
+  "cita": "First, the Influence Diagram is developed by means of a structured discussion with a group of experts--in this case, marine specialists, though comparable experts would be required for other domains--who have a detailed knowledge of both the operational realities and the broader policy issues.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro fija como primera etapa del IDA desarrollar el diagrama mediante discusión estructurada con un grupo de expertos del dominio. El paso omite que conozcan operación y política; omitirlo no lleva a hacer nada que el libro desaconseje. El facilitador aparece en la cuantificación (L3692), no en esta etapa.",
+  "paso_fiel": ""
+ }
+}

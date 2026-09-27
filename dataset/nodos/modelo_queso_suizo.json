@@ -1,6 +1,6 @@
 {
   "node_id": "modelo_queso_suizo",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Modelo del Queso Suizo de las Defensas",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Cuando se investiga un accidente organizacional o se quiere anticipar posibles trayectorias de fallo."
   ],
-  "etiqueta_arbol": "Vigila los Huecos de tus Defensas"
+  "etiqueta_arbol": "Vigila los Huecos de tus Defensas",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-229",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F09-018: Mapear defensas, investigar accidentes pasados y monitorear huecos es gestión de seguridad de una organización en marcha; no prueba nada con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

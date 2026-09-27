@@ -1,6 +1,6 @@
 {
   "node_id": "mantenimiento_preventivo_orientado_al_cliente",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Programa de Mantenimiento Preventivo Basado en Voz del Cliente",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -23,5 +23,23 @@
     "Cuando existen quejas recurrentes sobre downtime o calidad de servicio",
     "Cuando se necesita justificar ante la dirección una inversión en prevención"
   ],
-  "etiqueta_arbol": "Escucha al Cliente y Previene"
+  "etiqueta_arbol": "Escucha al Cliente y Previene",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-119",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q100-031: Tenía razón el lector B: el nodo parte de quejas y tiempos de inactividad de un servicio que ya está en marcha, y termina implantando y siguiendo un mantenimiento preventivo. Es mejorar lo que ya funciona, es decir, gestión operativa de ejecución y no diseño del plan del negocio. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
+  ]
 }

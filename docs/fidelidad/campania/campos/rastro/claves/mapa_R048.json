@@ -1,0 +1,315 @@
+{
+ "R048-001": {
+  "real": true,
+  "node_id": "falacia_culpa_trabajadores",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-002": {
+  "real": true,
+  "node_id": "mantenimiento_preventivo_orientado_al_cliente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-003": {
+  "real": true,
+  "node_id": "insuficiencia_especificaciones",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-004": {
+  "real": true,
+  "node_id": "evaluacion_de_desempeno_merito",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-005": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Separar los errores del sistema de los de cada conductor",
+   "etiqueta": "No Culpes al Conductor del Sistema",
+   "resumen": "En una empresa de transporte, 150 conductores cometieron 617 errores en un ano. Modelando los errores como cuentas extraidas al azar de un cuenco, se calculan limites de control: los conductores por encima del limite superior (mas de 11 errores) son una causa especial, mientras que el resto mide las perdidas del propio sistema, que suponen el 82 por ciento de los errores. Antes de criticar al grupo de arriba conviene averiguar si trabajaban rutas mas dificiles o largas. Enviar la misma carta por cada error, sea el primero o el decimoquinto, desmoraliza a quien solo refleja fallos del sistema.",
+   "entregable": "Distribucion de errores por conductor con limites de control calculados, separando a los conductores fuera del sistema de los que pertenecen a el, y revision de rutas del grupo por encima del limite.",
+   "condiciones": [
+    "Cuando la empresa envia la misma carta de advertencia por cada error sin importar el historial del conductor",
+    "Cuando la flota tiene al menos 100 conductores activos todo el ano, minimo que exige el modelo de cuentas para que los limites sean validos"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "condiciones",
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "8591-8599",
+   "cita": "There were 150 drivers that worked all year long. Figure 43 shows the distribution of the 150 drivers by number of mistakes, all 7 mistakes combined.",
+   "dato": "al menos 100 conductores activos todo el ano, minimo que exige el modelo de cuentas para que los limites sean validos",
+   "explicacion": "El libro solo describe el caso de 150 conductores y no fija ningun tamano minimo de flota para aplicar el modelo; el requisito de 100 conductores es una cifra inventada (Grep de '100 drivers', 'at least 100' y 'hundred drivers' sin coincidencias en ese sentido)."
+  }
+ },
+ "R048-006": {
+  "real": true,
+  "node_id": "limitaciones_analisis_costo_beneficio",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-007": {
+  "real": true,
+  "node_id": "falacia_meta_numerica_sin_metodo",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-008": {
+  "real": true,
+  "node_id": "entrenamiento_y_control_estadistico",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-009": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Proveedor unico con relacion a largo plazo",
+   "etiqueta": "Elige un Proveedor por Pieza",
+   "resumen": "Una relacion a largo plazo entre comprador y proveedor es necesaria para la mejor economia: un proveedor que solo espera negocio a corto plazo no puede innovar ni abaratar su proceso. Aunque dos proveedores envien material excelente, habra diferencias, y cambiar de uno a otro cuesta desde 15 minutos hasta semanas de produccion. Por eso conviene avanzar hacia un solo proveedor por pieza, exigiendo como requisito previo que tenga la certificacion ISO 9001, y esperar que los proveedores compitan por ser elegidos como proveedor unico. Tambien se simplifican la contabilidad y el papeleo.",
+   "entregable": "Mapa de piezas con su numero actual de proveedores y plan para concentrar cada una en un unico proveedor con relacion de lealtad y confianza.",
+   "condiciones": [
+    "Cuando una misma pieza se compra a varios proveedores y la produccion sufre al cambiar de material",
+    "Cuando la compra se adjudica solo por el precio mas bajo"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "804-806",
+   "cita": "A worthy customer should expect his suppliers, if they are wise and looking ahead with constancy of purpose, to compete for selection as the single supplier.",
+   "dato": "exigiendo como requisito previo que tenga la certificacion ISO 9001",
+   "explicacion": "El libro no menciona ninguna norma ISO ni certificacion del proveedor como requisito para elegirlo; la norma es un anadido (Grep de 'ISO' y '9001' sin coincidencias; 'certif' solo aparece en otros contextos)."
+  }
+ },
+ "R048-010": {
+  "real": true,
+  "node_id": "mito_departamento_control_calidad",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-011": {
+  "real": true,
+  "node_id": "falacia_recompensa_loteria",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-012": {
+  "real": true,
+  "node_id": "mejora_del_sistema_responsabilidad_gerencial",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-013": {
+  "real": true,
+  "node_id": "limitaciones_intervalos_confianza",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-014": {
+  "real": true,
+  "node_id": "falsos_comienzos_mejora_calidad",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-015": {
+  "real": true,
+  "node_id": "estandares_voluntarios",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-016": {
+  "real": true,
+  "node_id": "mejora_de_proceso_como_via_a_productividad",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-017": {
+  "real": true,
+  "node_id": "fin_precio_como_criterio_unico",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-018": {
+  "real": true,
+  "node_id": "inspeccion_optima_proceso",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-019": {
+  "real": true,
+  "node_id": "estudio_desempeno_run_charts_servicios",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-020": {
+  "real": true,
+  "node_id": "grafico_de_corrida_run_chart",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-021": {
+  "real": true,
+  "node_id": "inventario_conocimiento_estadistico_personal",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-022": {
+  "real": true,
+  "node_id": "mejora_continua_del_proceso",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-023": {
+  "real": true,
+  "node_id": "innovacion_tras_control_estadistico",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-024": {
+  "real": true,
+  "node_id": "investigacion_necesidades_consumidor",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-025": {
+  "real": true,
+  "node_id": "falacia_problemas_diferentes",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-026": {
+  "real": true,
+  "node_id": "fomento_educacion_autoeducacion",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-027": {
+  "real": true,
+  "node_id": "graficos_de_control_uso",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-028": {
+  "real": true,
+  "node_id": "limites_control_por_juicio_error",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-029": {
+  "real": true,
+  "node_id": "investigacion_del_consumidor",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-030": {
+  "real": true,
+  "node_id": "falta_de_constancia_de_proposito",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-031": {
+  "real": true,
+  "node_id": "importancia_de_la_capacitacion",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-032": {
+  "real": true,
+  "node_id": "limites_de_especificacion_vs_limites_de_control",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-033": {
+  "real": true,
+  "node_id": "equipos_conjuntos_diseno_proveedor",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-034": {
+  "real": true,
+  "node_id": "medidas_productividad_no_mejoran",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-035": {
+  "real": true,
+  "node_id": "institucionalizar_capacitacion",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-036": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Alternativas a la evaluacion anual por merito",
+   "etiqueta": "Lidera en Vez de Calificar",
+   "resumen": "En lugar de la calificacion anual por merito, Deming propone que el lider sea un colega que aconseja y aprende con su gente dia a dia, que distinga con calculos sencillos quien esta fuera del sistema por el lado bueno, por el lado malo o dentro de el, y que no ordene a quienes pertenecen al sistema. Los aumentos de sueldo siguen la formula de la empresa (por ejemplo, antiguedad) y no el puesto en un ranking. Ademas, el lider sostiene una entrevista larga de alrededor de una hora con cada empleado al menos una vez al ano, no para criticar sino para ayudar y entenderse mejor.",
+   "entregable": "Plan de sustitucion de la evaluacion anual con formula salarial no basada en ranking, calendario de entrevistas individuales y analisis de quien esta dentro o fuera del sistema.",
+   "condiciones": [
+    "Cuando la empresa ordena a sus empleados de mejor a peor en la revision anual",
+    "Cuando los aumentos de sueldo dependen del puesto de cada persona en el ranking del grupo"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "2565",
+   "cita": "7. Hold a long interview with every employee, three or four hours, at least once a year, not for criticism, but for help and better understanding on the part of everybody.",
+   "dato": "una entrevista larga de alrededor de una hora con cada empleado al menos una vez al ano",
+   "explicacion": "El libro pide una entrevista de tres o cuatro horas con cada empleado; el resumen reduce la duracion a una hora, cambiando la cifra que da el libro."
+  }
+ },
+ "R048-037": {
+  "real": true,
+  "node_id": "estudio_mezclas_multiples_fuentes",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-038": {
+  "real": true,
+  "node_id": "falacia_cero_defectos",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-039": {
+  "real": true,
+  "node_id": "mejora_continua_del_sistema",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-040": {
+  "real": true,
+  "node_id": "gestion_participativa_qc_circle_supervisores",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-041": {
+  "real": true,
+  "node_id": "mal_uso_histograma_vs_carta_control",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-042": {
+  "real": true,
+  "node_id": "gestion_miedo_reportes",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-043": {
+  "real": true,
+  "node_id": "estandarizacion_industrial_voluntaria",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-044": {
+  "real": true,
+  "node_id": "los_14_puntos_deming",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-045": {
+  "real": true,
+  "node_id": "estructura_reporte_dual_estadistico",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-046": {
+  "real": true,
+  "node_id": "experimento_cuentas_rojas",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-047": {
+  "real": true,
+  "node_id": "graficos_control_individuales_operarios",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ },
+ "R048-048": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Reglas de Joyce Orsini para lotes entrantes en estado de caos",
+   "etiqueta": "Inspecciona Lotes en Caos",
+   "resumen": "Cuando la calidad de los lotes entrantes es impredecible y oscila ampliamente a ambos lados del punto de equilibrio k1/k2, estamos en un estado de caos y ninguna distribucion es predecible. En lugar de inspeccionar el 100 por ciento, las reglas de Joyce Orsini reducen el costo total medio: si k2 es al menos 1000 veces k1, inspeccionar todo; si k2 esta entre 10k1 y 1000k1, probar una muestra de 200 piezas; si k2 es menor que 10k1, no inspeccionar. Las muestras sirven ademas como registro continuo de la calidad entrante para el comprador y el proveedor.",
+   "entregable": "Tabla de decision por lote con las reglas de Orsini aplicadas segun la razon k2/k1, que en el tramo intermedio acepte el resto del lote cuando la muestra de 200 piezas tenga como maximo un defectuoso y lo tamice en caso contrario, junto con un grafico del numero de defectuosos muestra a muestra.",
+   "condiciones": [
+    "Cuando los lotes entrantes cruzan el punto de equilibrio k1/k2 con oscilaciones amplias e impredecibles",
+    "Cuando el material llega de dos o mas fuentes de calidad muy distinta usadas sin orden"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "entregable",
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9387-9389",
+   "cita": "Accept the remainder if you find no defective in the sample. Screen the remainder if you encounter a defective item in the sample.",
+   "dato": "acepte el resto del lote cuando la muestra de 200 piezas tenga como maximo un defectuoso y lo tamice en caso contrario",
+   "explicacion": "El libro fija que el resto se acepta solo si la muestra no tiene ningun defectuoso y se tamiza en cuanto aparece uno; el entregable relaja el umbral a un defectuoso tolerado, lo contrario de la regla."
+  }
+ },
+ "R048-049": {
+  "real": true,
+  "node_id": "identificacion_del_verdadero_cliente",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+ }
+}

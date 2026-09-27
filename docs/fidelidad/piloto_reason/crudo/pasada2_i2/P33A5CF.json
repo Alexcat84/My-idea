@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P33A5CF",
+  "intento": 0,
+  "usd": 0.21188,
+  "turnos": 1,
+  "duracion_s": 15.1,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46460,
+  "tokens_out": 1302,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P33A5CF\", \"veredicto\": \"CONTRARIO\", \"lineas\": [261, 263, 271, 273, 293], \"cita\": \"Since time and causality are seamless, they have no natural breakpoints, only artificially imposed ones. … Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda remontarse a los factores organizacionales, pero niega que exista una cadena completa: la causalidad no tiene cortes naturales. Pide limitar el análisis a lo que los gestores pueden controlar, dentro de los límites manejables de la organización (Legasov). Además la relación es muchos-a-muchos, no una cadena única. Pedir la cadena completa elimina esa condición esencial.\", \"paso_fiel\": \"Documentar las decisiones y los factores organizacionales que contribuyeron al incidente, remontándose desde las defensas fallidas y las condiciones locales, y limitando el alcance a aquello que los gestores del sistema pueden razonablemente controlar.\"}\n```",
+ "parseado": {
+  "id": "P33A5CF",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   261,
+   263,
+   271,
+   273,
+   293
+  ],
+  "cita": "Since time and causality are seamless, they have no natural breakpoints, only artificially imposed ones. … Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda remontarse a los factores organizacionales, pero niega que exista una cadena completa: la causalidad no tiene cortes naturales. Pide limitar el análisis a lo que los gestores pueden controlar, dentro de los límites manejables de la organización (Legasov). Además la relación es muchos-a-muchos, no una cadena única. Pedir la cadena completa elimina esa condición esencial.",
+  "paso_fiel": "Documentar las decisiones y los factores organizacionales que contribuyeron al incidente, remontándose desde las defensas fallidas y las condiciones locales, y limitando el alcance a aquello que los gestores del sistema pueden razonablemente controlar."
+ }
+}

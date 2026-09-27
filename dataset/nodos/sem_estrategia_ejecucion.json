@@ -28,8 +28,30 @@
     "retargeting_display"
   ],
   "condiciones_activacion": [
-    "Cuando ya definiste tus métricas base de clics, costo por clic y costo por conversión, y quieres escalar la prueba",
+    "Cuando empiezas con la publicidad en buscadores y quieres obtener tus primeras métricas base con una prueba pequeña y de bajo costo",
     "Cuando quieres validar tus mensajes de producto antes de invertir en desarrollarlo por completo"
   ],
-  "etiqueta_arbol": "Ejecuta tu Campaña de Búsqueda"
+  "etiqueta_arbol": "Ejecuta tu Campaña de Búsqueda",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c23-1",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Cuando ya definiste tus métricas base de clics, costo por clic y costo por conversión, y quieres escalar la prueba",
+      "texto_nuevo": "Cuando empiezas con la publicidad en buscadores y quieres obtener tus primeras métricas base con una prueba pequeña y de bajo costo",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\marketing_y_crecimiento\\Traction - Gabriel Weinberg.txt",
+        "lineas": "L1244",
+        "frase": "Matthew told us that someone just starting out in this channel should begin testing just four ads. Four ads will give you a good baseline for the performance of SEM as a whole, while still allowing you to test different messaging, demographics, and landing pages."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro sitúa este proceso al principio del canal: quien empieza prueba solo cuatro anuncios para CONSEGUIR la línea base (L1244), y usa el SEM para obtener datos tempranos de forma controlada con presupuestos pequeños (L1209). La optimización y el escalado vienen después, solo si la prueba promete (L1246), y las primeras pruebas no serán rentables (L1298). La condición actual presuponía la línea base ya hecha y el deseo de escalar, lo que contradice los pasos 6, 8 y 9 y el propio libro. Se cambia solo esa condición; el resto del nodo es fiel.",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO pasada K, ficha C23 (lector, verificador ciego y arbitro)"
+    }
+  ],
+  "fuentes_internas": [
+    "Traction - Gabriel Weinberg"
+  ]
 }

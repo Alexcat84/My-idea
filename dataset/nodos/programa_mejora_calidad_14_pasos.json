@@ -4,16 +4,16 @@
   "dominio": "quality",
   "titulo_concepto": "Programa de Mejora de Calidad (14 pasos)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Es el procedimiento estructurado de 14 pasos que constituye el núcleo metodológico de Crosby, e incluye: tu compromiso con la calidad, armar un pequeño equipo de mejora, medir la calidad, calcular el costo de la no calidad, generar conciencia de calidad, aplicar acción correctiva, planificar un Día de Cero Defectos, entrenar a quienes supervisan tareas, celebrar ese día, fijar metas, eliminar las causas de los errores, reconocer los logros, crear espacios de conversación sobre calidad y repetir el ciclo. Se vuelve parte de la cultura permanente de tu negocio cuando lo aplicas con constancia.",
+  "resumen_teorico": "Es el procedimiento estructurado de 14 pasos que constituye el núcleo de este método de calidad, e incluye: tu compromiso con la calidad, armar un pequeño equipo de mejora, medir la calidad, calcular el costo de la no calidad, generar conciencia de calidad, aplicar acción correctiva, planificar un Día de Cero Defectos, entrenar a quienes supervisan tareas, celebrar ese día, fijar metas, eliminar las causas de los errores, reconocer los logros, crear espacios de conversación sobre calidad y repetir el ciclo. Se vuelve parte de la cultura permanente de tu negocio cuando lo aplicas con constancia.",
   "pasos_accionables": [
     "Comprometerte tú mismo con la calidad, de forma explícita y visible",
-    "Reunir a un pequeño equipo que impulse la mejora, aunque sea de dos o tres personas",
+    "Reunir a un equipo que impulse la mejora, con alguien que represente a cada área de tu negocio",
     "Definir cómo vas a medir la calidad y el costo de la no calidad",
     "Generar conciencia de calidad en todos los que trabajan contigo",
     "Aplicar acción correctiva de forma sistemática cuando detectes fallas",
     "Planificar y llevar a cabo un Día de Cero Defectos",
     "Fijar metas, eliminar las causas de los errores, reconocer los logros y repetir el ciclo, entrenando a quienes coordinan equipos",
-    "Establece medidas de calidad en todas las areas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números."
+    "Establece medidas de calidad en todas las áreas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números."
   ],
   "entregable_esperado": "Plan de implementación de los 14 pasos documentado con responsables y cronograma",
   "nodos_previos": [
@@ -25,7 +25,8 @@
     "estilo_gerencial_ballet_vs_hockey",
     "consejo_de_calidad_3",
     "zero_defects_concepto",
-    "mejora_calidad_crosby"
+    "mejora_calidad_crosby",
+    "concepto_quality_is_free"
   ],
   "nodos_siguientes": [
     "cero_defectos",
@@ -56,5 +57,84 @@
       "titulo": "Programa de Mejora de Calidad (Los Catorce Pasos)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-048",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunir a un pequeño equipo que impulse la mejora, aunque sea de dos o tres personas",
+      "texto_nuevo": "Reunir a un equipo que impulse la mejora, con alguien que represente a cada area de tu negocio",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L2101-L2113",
+        "frase": "The chairperson should assemble a team representing each department, and together they should examine the purpose of the program and the concepts involved."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro forma el equipo con representantes de cada departamento y no fija ningun tamano. La cifra de dos o tres personas no aparece; lo que el libro llama 'three or four members' es el comite ad hoc de Cero Defectos, otro grupo distinto.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C100-060"
+    },
+    {
+      "id": "atribucion-141",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Es el procedimiento estructurado de 14 pasos que constituye el núcleo metodológico de Crosby, e incluye: tu compromiso con la calidad, armar un pequeño equipo de mejora, medir la calidad, calcular el costo de la no calidad, generar conciencia de calidad, aplicar acción correctiva, planificar un Día de Cero Defectos, entrenar a quienes supervisan tareas, celebrar ese día, fijar metas, eliminar las causas de los errores, reconocer los logros, crear espacios de conversación sobre calidad y repetir el ciclo. Se vuelve parte de la cultura permanente de tu negocio cuando lo aplicas con constancia.",
+      "texto_nuevo": "Es el procedimiento estructurado de 14 pasos que constituye el núcleo de este método de calidad, e incluye: tu compromiso con la calidad, armar un pequeño equipo de mejora, medir la calidad, calcular el costo de la no calidad, generar conciencia de calidad, aplicar acción correctiva, planificar un Día de Cero Defectos, entrenar a quienes supervisan tareas, celebrar ese día, fijar metas, eliminar las causas de los errores, reconocer los logros, crear espacios de conversación sobre calidad y repetir el ciclo. Se vuelve parte de la cultura permanente de tu negocio cuando lo aplicas con constancia.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "que constituye el núcleo metodológico de Crosby"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U2-015 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-141",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "concepto_quality_is_free -> programa_catorce_pasos_crosby",
+      "texto_nuevo": "concepto_quality_is_free -> programa_mejora_calidad_14_pasos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a programa_catorce_pasos_crosby, deprecado; su superviviente es programa_mejora_calidad_14_pasos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0140",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reunir a un equipo que impulse la mejora, con alguien que represente a cada area de tu negocio",
+      "texto_nuevo": "Reunir a un equipo que impulse la mejora, con alguien que represente a cada área de tu negocio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-010.paso1: área (Tilde real en 'área'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0141",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establece medidas de calidad en todas las areas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números.",
+      "texto_nuevo": "Establece medidas de calidad en todas las áreas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-010.paso7: áreas (Tilde real en 'áreas'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 7
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
   ]
 }

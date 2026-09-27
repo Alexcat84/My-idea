@@ -1,6 +1,6 @@
 {
   "node_id": "establecer_vision_organizacional",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Establecimiento de Visión, Misión y Estrategias",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -29,5 +29,23 @@
     "Cuando tu negocio no tiene una dirección clara hacia dónde ir",
     "Al empezar a construir la estrategia de tu negocio desde cero"
   ],
-  "etiqueta_arbol": "Define tu Visión y Misión"
+  "etiqueta_arbol": "Define tu Visión y Misión",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-135",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F05-021: Definir visión, misión, estrategias y metas anuales con un plan que las baje a proyectos es planificación estratégica. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

@@ -96,13 +96,88 @@ html {
 .lh0:hover { color: #f5f6f8 !important; background: rgba(255, 255, 255, 0.06) !important; }
 .lh1:hover { color: #f5f6f8 !important; border-color: rgba(77, 124, 254, 0.65) !important; background: rgba(77, 124, 254, 0.12) !important; box-shadow: 0 0 20px rgba(77, 124, 254, 0.28) !important; }
 .lh2:hover { background: #5e8bff !important; }
-.lh3:hover { color: #5e82e0 !important; }
-.lh4:hover { background: #5e8bff !important; box-shadow: 0 0 54px rgba(77, 124, 254, 0.55) !important; }
 .lh5:hover { color: #f5f6f8 !important; }
 .lh6:hover { border-color: rgba(77, 124, 254, 0.38) !important; box-shadow: 0 0 46px rgba(77, 124, 254, 0.1) !important; }
 .lh7:hover { background: #ffffff !important; }
 .lh8:hover { background: #5e8bff !important; box-shadow: 0 0 44px rgba(77, 124, 254, 0.5) !important; }
 .lh9:hover { border-color: rgba(255, 255, 255, 0.34) !important; }
+
+/* ===== Hero de la portada: la masa (ui/portada/HeroMasa.tsx) =====
+   El degradado del fondo es el mismo que pinta el shader de composicion
+   (masa/glsl.ts, FONDO_CSS): el lienzo entra en fundido, sin salto. */
+.portada-hero {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 64px);
+  height: calc(100svh - 64px);
+  min-height: 420px;
+  background: radial-gradient(circle at 50% 50%, #0b0a14 0%, #050409 38%, #000000 72%);
+  container-type: size;
+}
+.portada-masa {
+  position: absolute;
+  inset: 0;
+}
+.portada-masa-lienzo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.1s ease-out;
+}
+/* Nivel "fija" (sin WebGL o equipo que no sostiene ni las particulas) y
+   sin JavaScript: la masa en reposo como imagen. Solo se descarga si aplica. */
+.portada-masa[data-nivel="fija"]::after,
+.portada-masa-fija {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100cqmin;
+  height: 100cqmin;
+  transform: translate(-50%, -50%);
+  background: url("/portada/masa-reposo.webp") center / contain no-repeat;
+  -webkit-mask-image: radial-gradient(closest-side, #000 84%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 84%, transparent 100%);
+}
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.landing .portada-cta {
+  position: absolute;
+  left: 50%;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(170, 176, 210, 0.26);
+  background: rgba(8, 8, 14, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #c9cddc;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: color 180ms ease-out, border-color 180ms ease-out, box-shadow 180ms ease-out;
+}
+.landing .portada-cta:hover,
+.landing .portada-cta:focus-visible {
+  color: #ffffff;
+  border-color: rgba(77, 124, 254, 0.65);
+  box-shadow: 0 0 24px rgba(77, 124, 254, 0.28);
+}
 
 /* ===== accesibilidad: sin animaciones para quien las pide quietas
    (el JS de Landing.tsx también congela canvas/tipeo con esta señal) ===== */

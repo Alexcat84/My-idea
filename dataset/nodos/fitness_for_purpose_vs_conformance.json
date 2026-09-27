@@ -1,6 +1,6 @@
 {
   "node_id": "fitness_for_purpose_vs_conformance",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Fitness for Purpose vs Conformance to Specification",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -22,5 +22,23 @@
     "Cuando existe desconexión entre especificaciones técnicas y satisfacción del cliente",
     "Cuando los reclamos de clientes no se relacionan con fallas de especificación pero sí con experiencia de uso"
   ],
-  "etiqueta_arbol": "Define Calidad desde el Cliente"
+  "etiqueta_arbol": "Define Calidad desde el Cliente",
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-171",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F12-015: Alinear especificaciones y metricas internas de calidad con los reclamos de clientes actuales es mejora de una operacion existente, no exploracion de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

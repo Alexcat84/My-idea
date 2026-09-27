@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PC207C2",
+  "intento": 0,
+  "usd": 0.218936,
+  "turnos": 1,
+  "duracion_s": 19.2,
+  "pared_s": 20.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46284,
+  "tokens_out": 1690,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC207C2\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5178, 5132, 5182, 5184, 5206], \"cita\": \"when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance. This is in sharp contrast to centralisation by rules and regulations ... such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance\", \"datos_sin_respaldo\": [\"mentoría\"], \"tambien_anadido\": false, \"razon\": \"No es contrario. Dice 'en lugar de solo reglas', así que complementa las reglas y no las sustituye. Coincide con Weick (L5178) y con los SOP y la formación de las HRO (L5132, L5182). La formación sí tiene respaldo. La mentoría no aparece: el libro nombra la guía in situ de supervisores, los relatos ('war stories') y la simulación.\", \"paso_fiel\": \"Diseñar mecanismos de transmisión cultural que complementen los procedimientos escritos, sin sustituirlos: formación inicial consolidada con la guía in situ de los supervisores, relatos de experiencias ('war stories') y simulación.\"}\n```",
+ "parseado": {
+  "id": "PC207C2",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5178,
+   5132,
+   5182,
+   5184,
+   5206
+  ],
+  "cita": "when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance. This is in sharp contrast to centralisation by rules and regulations ... such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance",
+  "datos_sin_respaldo": [
+   "mentoría"
+  ],
+  "tambien_anadido": false,
+  "razon": "No es contrario. Dice 'en lugar de solo reglas', así que complementa las reglas y no las sustituye. Coincide con Weick (L5178) y con los SOP y la formación de las HRO (L5132, L5182). La formación sí tiene respaldo. La mentoría no aparece: el libro nombra la guía in situ de supervisores, los relatos ('war stories') y la simulación.",
+  "paso_fiel": "Diseñar mecanismos de transmisión cultural que complementen los procedimientos escritos, sin sustituirlos: formación inicial consolidada con la guía in situ de los supervisores, relatos de experiencias ('war stories') y simulación."
+ }
+}

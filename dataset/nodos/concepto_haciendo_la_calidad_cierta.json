@@ -1,17 +1,17 @@
 {
   "node_id": "concepto_haciendo_la_calidad_cierta",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Haciendo la Calidad Cierta (Making Quality Certain)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Concepto definido por Crosby como 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
+  "resumen_teorico": "Concepto que consiste en 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
   "pasos_accionables": [
-    "Definir de forma simple y sin tecnicismos que significa calidad para tu negocio.",
+    "Definir de forma simple y sin tecnicismos qué significa calidad para tu negocio.",
     "Asumir un rol activo en la calidad, no solo de apoyo pasivo.",
     "Reemplazar la cultura de 'apagar incendios' por una cultura de prevención.",
-    "Establecer una comunicación clara y en ambos sentidos con quien te ayuda sobre que significa calidad."
+    "Establecer una comunicación clara y en ambos sentidos con quien te ayuda sobre qué significa calidad."
   ],
-  "entregable_esperado": "Una definición clara de calidad que tu aceptas y un plan de comunicación para instalarla en tu forma de trabajar.",
+  "entregable_esperado": "Una definición clara de calidad que tú aceptas y un plan de comunicación para instalarla en tu forma de trabajar.",
   "nodos_previos": [
     "concepto_quality_is_free",
     "cinco_suposiciones_erroneas_calidad"
@@ -23,5 +23,80 @@
     "Cuando consideras que la calidad es responsabilidad exclusiva de otra persona o area.",
     "Cuando existe confusión sobre que significa realmente 'calidad' en tu negocio."
   ],
-  "etiqueta_arbol": "Asegura la Calidad Siempre"
+  "etiqueta_arbol": "Asegura la Calidad Siempre",
+  "correcciones": [
+    {
+      "id": "atribucion-031",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Concepto definido por Crosby como 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
+      "texto_nuevo": "Concepto que consiste en 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Concepto definido por Crosby como"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-009 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-060",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F14-011: Instalar una cultura de prevencion de defectos en la forma de trabajar es gestion de calidad de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0142",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir de forma simple y sin tecnicismos que significa calidad para tu negocio.",
+      "texto_nuevo": "Definir de forma simple y sin tecnicismos qué significa calidad para tu negocio.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-002.paso0: qué (Falta real: 'qué' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0143",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer una comunicación clara y en ambos sentidos con quien te ayuda sobre que significa calidad.",
+      "texto_nuevo": "Establecer una comunicación clara y en ambos sentidos con quien te ayuda sobre qué significa calidad.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-002.paso3: qué (Falta real: 'qué' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0144",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una definición clara de calidad que tu aceptas y un plan de comunicación para instalarla en tu forma de trabajar.",
+      "texto_nuevo": "Una definición clara de calidad que tú aceptas y un plan de comunicación para instalarla en tu forma de trabajar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-002.entregable: tú (Falta real: 'tú' es pronombre personal y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

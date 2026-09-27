@@ -29,17 +29,16 @@
     "driver_produccion",
     "arquitectura_tecnica_modular",
     "bucle_retroalimentacion_autoajustable",
-    "colaboracion_transporte_ctm",
     "marco_analisis_mercado_cadena_suministro",
     "gestion_procurement_consumo",
     "gestion_riesgo_cadena_suministro",
-    "ia_en_supply_chain",
     "outsourcing_cadena_suministro",
     "plataforma_colaboracion_masiva",
     "simulacion_de_operaciones_supply_chain",
     "sistema_visibilidad_cadena_suministro_low_cost",
     "vehiculos_autonomos_drones_supply_chain",
-    "planificacion_cadena_suministro"
+    "planificacion_cadena_suministro",
+    "getting_started_supply_chain_risk_management"
   ],
   "condiciones_activacion": [
     "Cuando el usuario está diseñando o rediseñando las operaciones de su negocio.",
@@ -54,6 +53,50 @@
       "node_id": "alineacion_cadena_estrategia_negocio",
       "titulo": "Alineación de la Cadena de Suministro con la Estrategia de Negocio",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "fuentes_internas": [
+    "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "d27-arista-04",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "definicion_alineacion_cadena_suministro -> colaboracion_transporte_ctm",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada C del saneamiento (C-C2, lectores de acuerdo)",
+        "motivo": "La definicion general de cadena de suministro y su alineacion con la estrategia es demasiado amplia para que consolidar embarques con otras empresas sea su continuacion natural."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+    },
+    {
+      "id": "mv-arista-012",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "definicion_alineacion_cadena_suministro -> getting_started_supply_chain_risk_management",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B07, lectores de acuerdo)",
+        "motivo": "Entender que es la cadena y los actores que la forman es el punto tras el cual se entra a gestionar su riesgo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-014",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "definicion_alineacion_cadena_suministro -> ia_en_supply_chain",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A15, lectores de acuerdo)",
+        "motivo": "Puente legitimo, pero el ancla definicion_alineacion_cadena_suministro ya lleva 2 puentes a entrega (ley del ancla)."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

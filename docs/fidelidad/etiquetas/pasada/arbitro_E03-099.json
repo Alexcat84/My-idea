@@ -1,0 +1,42 @@
+{
+  "summary": "Arbitro del unico desacuerdo que dejo el verificador extra de E03 en la pasada de etiquetas; solo lee",
+  "agentCount": 1,
+  "logs": [],
+  "result": {
+    "hallazgo": false,
+    "veredicto": "NINGUNO",
+    "etiqueta_propuesta": "",
+    "razon": "El nodo trata gráficos de control para datos de atributos, es decir, datos de conteo o categóricos (pasa o no pasa): proporción y número de unidades no conformes, y número de defectos por unidad. \"Cuenta tus Defectos por Categoría\" nombra el mismo objeto (defectos contados, datos categóricos) y la misma acción de fondo, contar. Deja fuera el gráfico de control, así que es una etiqueta parcial o vaga, pero no apunta a otro concepto ni dice lo contrario. Es mejorable, no es un hallazgo; en la duda, no es hallazgo."
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Arbitraje"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "arbitro:E03-099",
+      "phaseIndex": 1,
+      "phaseTitle": "Arbitraje",
+      "agentId": "ab47817610329d016",
+      "model": "claude-opus-5-5[1m]",
+      "state": "done",
+      "startedAt": 1790374180282,
+      "queuedAt": 1790374180143,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NINGUNO",
+      "promptPreview": "Eres el ARBITRO de una pasada de fidelidad sobre las etiquetas de cara del catalogo de My-idea (el nombre corto que el usuario ve en el riel: imperativo en tuteo, maximo 6 palabras, sin jerga inglesa ni siglas). Dos lectores independientes no coinciden sobre UN bloque: el bloque E03-099 de C:\\Users\\AlexDesk\\AppData\\Local\\Temp\\claude\\c--Users-AlexDesk-Documents-forja-nodos\\04d37e73-ee9b-40a7-af8e-a…",
+      "promptFramed": true,
+      "lastProgressAt": 1790374189075,
+      "tokens": 29142,
+      "toolCalls": 2,
+      "durationMs": 8793,
+      "resultPreview": "{\"hallazgo\":false,\"veredicto\":\"NINGUNO\",\"etiqueta_propuesta\":\"\",\"razon\":\"El nodo trata gráficos de control para datos de atributos, es decir, datos de conteo o categóricos (pasa o no pasa): proporción y número de unidades no conformes, y número de defectos por unidad. \\\"Cuenta tus Defectos por Categoría\\\" nombra el mismo objeto (defectos contados, datos categóricos) y la misma acción de fondo, con…"
+    }
+  ],
+  "totalTokens": 29142,
+  "totalToolCalls": 2
+}

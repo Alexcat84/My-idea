@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_081",
+  "intento": 0,
+  "usd": 0.166796,
+  "turnos": 1,
+  "duracion_s": 18.3,
+  "pared_s": 19.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32454,
+  "tokens_out": 1849,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P02F6BD\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2669, 2689, 4757, 4761, 4765, 4792, 4820, 4974], \"razon\": \"El libro respalda el sistema y la distinción benigno/casi catastrófico, pero el paso omite confianza, cultura justa, confidencialidad y definición clara de incidente. Sin ellas el sistema fracasa.\"},\n  {\"id\": \"PE86490\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4693, 4706, 5178, 5182, 5208], \"razon\": \"Coincide con Weick y L5208 sobre valores y supuestos compartidos. Choca en matiz con L4693: la cultura organizacional se forma sobre todo por prácticas compartidas, no por valores.\"},\n  {\"id\": \"P76CBB7\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"periódicamente\"], \"clase\": \"FIEL\", \"lineas\": [4360, 4372], \"razon\": \"El procedimiento continuo COSHH incluye probar equipos respiratorios y ventilación y registrar cuidadosamente los resultados. 'Periódicamente' es una frecuencia genérica, sin cifra en el libro.\"},\n  {\"id\": \"P49A470\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"EPCs\", \"lista rankeada de EPCs\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3397, 3659], \"razon\": \"El método HEART consulta la lista jerarquizada de EPCs para decidir qué condiciones afectan a la tarea. El libro presenta esa lista como herramienta valiosa.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P02F6BD",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2669,
+    2689,
+    4757,
+    4761,
+    4765,
+    4792,
+    4820,
+    4974
+   ],
+   "razon": "El libro respalda el sistema y la distinción benigno/casi catastrófico, pero el paso omite confianza, cultura justa, confidencialidad y definición clara de incidente. Sin ellas el sistema fracasa."
+  },
+  {
+   "id": "PE86490",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4693,
+    4706,
+    5178,
+    5182,
+    5208
+   ],
+   "razon": "Coincide con Weick y L5208 sobre valores y supuestos compartidos. Choca en matiz con L4693: la cultura organizacional se forma sobre todo por prácticas compartidas, no por valores."
+  },
+  {
+   "id": "P76CBB7",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4372
+   ],
+   "razon": "El procedimiento continuo COSHH incluye probar equipos respiratorios y ventilación y registrar cuidadosamente los resultados. 'Periódicamente' es una frecuencia genérica, sin cifra en el libro."
+  },
+  {
+   "id": "P49A470",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "EPCs",
+    "lista rankeada de EPCs"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397,
+    3659
+   ],
+   "razon": "El método HEART consulta la lista jerarquizada de EPCs para decidir qué condiciones afectan a la tarea. El libro presenta esa lista como herramienta valiosa."
+  }
+ ]
+}

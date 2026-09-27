@@ -1,7 +1,7 @@
 {
   "node_id": "evaluacion_preparacion_tecnologica",
   "fase_proyecto": "planificacion",
-  "dominio": "exportacion",
+  "dominio": "core",
   "titulo_concepto": "Revisa si tu tecnología está lista para vender en línea (evaluación IT)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Antes de lanzar tus operaciones en línea, evalúa tus necesidades y capacidades de tecnología (IT): tus sistemas actuales, qué partes de tu negocio conviene migrar, si conviene invertir en tecnología nueva según costo y beneficio, y qué medidas de seguridad necesitas frente a ataques informáticos.",
@@ -14,7 +14,8 @@
   "entregable_esperado": "Un documento con la evaluación de tu tecnología, el plan de inversión y las medidas de seguridad que vas a tomar",
   "nodos_previos": [
     "tipos_sitio_web_exportacion",
-    "comercio_electronico_fundamentos"
+    "comercio_electronico_fundamentos",
+    "channels_hypothesis_web_mobile"
   ],
   "nodos_siguientes": [
     "seleccion_dominio_web"
@@ -22,5 +23,36 @@
   "condiciones_activacion": [
     "Si no cuentas con la infraestructura tecnológica adecuada para vender en línea"
   ],
-  "etiqueta_arbol": "Prepara tu Tecnología para Vender"
+  "etiqueta_arbol": "Prepara tu Tecnología para Vender",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-076",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "exportacion",
+      "texto_nuevo": "core",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q087-019: El contenido es evaluar la tecnologia para vender en linea (B2B o B2C) sin ninguna referencia a mercados exteriores, asi que no es exportacion sino emprender en general. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "mv-arista-037",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "channels_hypothesis_web_mobile -> evaluacion_preparacion_tecnologica",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C05, lectores de acuerdo)",
+        "motivo": "Elegido el canal digital de venta, lo siguiente es revisar si la tecnologia esta lista para operar en linea."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
+  ]
 }

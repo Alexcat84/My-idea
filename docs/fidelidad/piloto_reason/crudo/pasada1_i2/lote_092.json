@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_092",
+  "intento": 0,
+  "usd": 0.169632,
+  "turnos": 1,
+  "duracion_s": 17.1,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34503,
+  "tokens_out": 1581,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB5FF8E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2868, 2892], \"razon\": \"El libro critica las prácticas de gestión de errores que no distinguen bien entre factores de error aleatorios y sistemáticos. El paso recomienda justo esa distinción.\"},\n  {\"id\": \"PBC191B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [648, 666, 4765, 5067, 5270], \"razon\": \"Según el libro, a los mensajeros se les forma y recompensa y se necesita imaginación requisita. Formalizar mecanismos concreta esa idea, en su misma dirección.\"},\n  {\"id\": \"PF38290\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4161, 4165, 4194], \"razon\": \"El libro señala que la ACAA se financiaba en parte con los regulados y que eso generó un conflicto de objetivos. Extender la evaluación al área de seguridad interna es una inferencia en la misma dirección.\"},\n  {\"id\": \"P1D20A1\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [520, 668, 674, 678, 686, 688, 692], \"razon\": \"El libro advierte del sesgo retrospectivo: una señal solo es advertencia si se conoce el tipo de desastre, y ninguna señal aislada bastaba. El paso invierte ese criterio.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB5FF8E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2868,
+    2892
+   ],
+   "razon": "El libro critica las prácticas de gestión de errores que no distinguen bien entre factores de error aleatorios y sistemáticos. El paso recomienda justo esa distinción."
+  },
+  {
+   "id": "PBC191B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    648,
+    666,
+    4765,
+    5067,
+    5270
+   ],
+   "razon": "Según el libro, a los mensajeros se les forma y recompensa y se necesita imaginación requisita. Formalizar mecanismos concreta esa idea, en su misma dirección."
+  },
+  {
+   "id": "PF38290",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4109,
+    4161,
+    4165,
+    4194
+   ],
+   "razon": "El libro señala que la ACAA se financiaba en parte con los regulados y que eso generó un conflicto de objetivos. Extender la evaluación al área de seguridad interna es una inferencia en la misma dirección."
+  },
+  {
+   "id": "P1D20A1",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    520,
+    668,
+    674,
+    678,
+    686,
+    688,
+    692
+   ],
+   "razon": "El libro advierte del sesgo retrospectivo: una señal solo es advertencia si se conoce el tipo de desastre, y ninguna señal aislada bastaba. El paso invierte ese criterio."
+  }
+ ]
+}

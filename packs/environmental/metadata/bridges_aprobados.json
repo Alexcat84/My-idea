@@ -1,5 +1,5 @@
 {
-  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; CEPI reducido de 7 a 2 usos legitimos, validar_posicionamiento a 2, rechazado gestion_eco_riesgos por redundancia con mitigacion, y metas publicas/reduccion por casi-duplicado interno del pack). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion del trio: puentes redirigidos.",
+  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; CEPI reducido de 7 a 2 usos legitimos, validar_posicionamiento a 2, rechazado gestion_eco_riesgos por redundancia con mitigacion, y metas publicas/reduccion por casi-duplicado interno del pack). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion del trio: puentes redirigidos. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: nodos que salen del nucleo a su mundo (pasadas D y MV del saneamiento).",
   "aprobados": [
     {
       "core": "validar_posicionamiento_con_analistas",
@@ -62,6 +62,65 @@
       "dominio": "marcos_pensamiento_dfe",
       "score": 0.79,
       "redir_trio_dominio": "frameworks_para_innovacion_eco"
+    },
+    {
+      "core": "supply_chain_management_systems",
+      "dominio": "optimizacion_tecnologia_cadena_suministro",
+      "score": 0.7058,
+      "reanclado_de": "ia_en_supply_chain",
+      "lectura": "Pasada MV del saneamiento (MV-B01, lectores de acuerdo): Los sistemas SCM con capacidad analitica son la base tecnologica tras la cual se entra a dashboards e integracion de impactos ambientales."
+    },
+    {
+      "core": "seleccion_de_proveedores_por_costo_total",
+      "dominio": "alcance_profundo_cadena_suministro",
+      "score": 0.6055,
+      "reanclado_de": "gestion_procurement_consumo",
+      "lectura": "Pasada MV del saneamiento (MV-B03, lectores de acuerdo): Tras gestionar y elegir proveedores directos se llega a extender los requisitos a los niveles 2 y 3."
+    },
+    {
+      "core": "definicion_metas_engagement",
+      "dominio": "programa_do_one_thing",
+      "score": 0.567,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A19, lectores de acuerdo): Definidas las metas de compromiso, pedir una accion simple a cada empleado es un primer programa concreto."
+    },
+    {
+      "core": "definicion_metas_engagement",
+      "dominio": "construccion_capacidad_empleados",
+      "score": 0.5464,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A18, lectores de acuerdo): Tras fijar metas de compromiso, formar a los empleados es un paso posible, pero el nodo del mundo es especifico de sostenibilidad."
+    }
+  ],
+  "rechazados": [
+    {
+      "core": "ia_en_supply_chain",
+      "dominio": "optimizacion_tecnologia_cadena_suministro",
+      "score": 0.6818,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P2-09): De usar IA y datos en la cadena de suministro se pasa bien a la tecnologia para seguir el desempeno ambiental de esa misma cadena.",
+      "motivo": "Su ancla ia_en_supply_chain sale del nucleo a entrega (pasada D): el puente se reancla en supply_chain_management_systems."
+    },
+    {
+      "core": "colaboracion_cadena_suministro",
+      "dominio": "optimizacion_tecnologia_cadena_suministro",
+      "score": 0.6658,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P1-01): Ambos tratan de compartir informacion a lo largo de la cadena de suministro, pero el salto a dashboards verdes y ciclo de vida es un giro de dominio que solo se sostiene debilmente.",
+      "motivo": "Su ancla colaboracion_cadena_suministro sale del nucleo a compras (pasada D): el puente se reancla en supply_chain_management_systems."
+    },
+    {
+      "core": "gestion_procurement_consumo",
+      "dominio": "alcance_profundo_cadena_suministro",
+      "score": 0.6128,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P2-07): Quien analiza que compra y a quien puede seguir hacia los proveedores de segundo y tercer nivel y sus riesgos, pero el foco ambiental hace el paso debil.",
+      "motivo": "Su ancla gestion_procurement_consumo sale del nucleo a compras (pasada D): el puente se reancla en seleccion_de_proveedores_por_costo_total."
     }
   ]
 }

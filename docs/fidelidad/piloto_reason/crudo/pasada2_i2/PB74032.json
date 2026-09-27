@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB74032",
+  "intento": 0,
+  "usd": 0.14534,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32240,
+  "tokens_out": 819,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB74032\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [29, 4244, 4246], \"cita\": \"Legislation targeted at restricting particular types of unsafe acts has had a very large impact. But these are all individual accidents in which the people at risk, the hazards and the dangerous situations are well known. Unfortunately, the same degree of specificity--or even understanding--does not exist for organizational accidents.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro distingue accidentes individuales y organizacionales (L29) y hace depender el éxito regulatorio de esa diferencia (L4244-4246). Clasificar el riesgo antes de regularlo concreta esa distinción en su misma dirección, sin cifras ni herramientas nuevas. El libro no exige una clasificación única ni la prohíbe, y las líneas del matiz citado por el filtro (L323, L5905) no están en el contexto.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB74032",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   29,
+   4244,
+   4246
+  ],
+  "cita": "Legislation targeted at restricting particular types of unsafe acts has had a very large impact. But these are all individual accidents in which the people at risk, the hazards and the dangerous situations are well known. Unfortunately, the same degree of specificity--or even understanding--does not exist for organizational accidents.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro distingue accidentes individuales y organizacionales (L29) y hace depender el éxito regulatorio de esa diferencia (L4244-4246). Clasificar el riesgo antes de regularlo concreta esa distinción en su misma dirección, sin cifras ni herramientas nuevas. El libro no exige una clasificación única ni la prohíbe, y las líneas del matiz citado por el filtro (L323, L5905) no están en el contexto.",
+  "paso_fiel": ""
+ }
+}

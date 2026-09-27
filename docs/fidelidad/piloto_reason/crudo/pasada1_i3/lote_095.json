@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_095",
+  "intento": 0,
+  "usd": 0.16732399999999997,
+  "turnos": 1,
+  "duracion_s": 18.9,
+  "pared_s": 19.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32441,
+  "tokens_out": 1878,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PDFAF6D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2535, 2547, 2568, 2598, 2658], \"razon\": \"El libro respalda fijar la posicion actual. Pero el paso no dice con que medirla, y el libro advierte que las tasas de accidentes revelan poco; exige medidas de proceso.\"},\n  {\"id\": \"P10FA63\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2596, 2598, 2654, 2658, 2767], \"razon\": \"'Para cada proceso' choca con el libro: medir todos no es posible ni apropiado; se muestrea un subconjunto (8-16) para hallar los 2-3 mas urgentes.\"},\n  {\"id\": \"P00D72E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"20-30% del personal operativo\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3228, 3232, 3332], \"razon\": \"El 20-30% aleatorio vale solo para factores locales en MESH. Los factores organizacionales los califican gerentes tecnicos y en Review, supervisores. El libro dice aleatoria, no 'representativa'.\"},\n  {\"id\": \"P9B9392\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4274, 4306, 4308, 4433], \"razon\": \"Concreta la autorregulacion: la ley fija objetivos y el operador define los medios con mejor organizacion interna de seguridad. Va en la misma direccion del libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PDFAF6D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2535,
+    2547,
+    2568,
+    2598,
+    2658
+   ],
+   "razon": "El libro respalda fijar la posicion actual. Pero el paso no dice con que medirla, y el libro advierte que las tasas de accidentes revelan poco; exige medidas de proceso."
+  },
+  {
+   "id": "P10FA63",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2596,
+    2598,
+    2654,
+    2658,
+    2767
+   ],
+   "razon": "'Para cada proceso' choca con el libro: medir todos no es posible ni apropiado; se muestrea un subconjunto (8-16) para hallar los 2-3 mas urgentes."
+  },
+  {
+   "id": "P00D72E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "20-30% del personal operativo"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3228,
+    3232,
+    3332
+   ],
+   "razon": "El 20-30% aleatorio vale solo para factores locales en MESH. Los factores organizacionales los califican gerentes tecnicos y en Review, supervisores. El libro dice aleatoria, no 'representativa'."
+  },
+  {
+   "id": "P9B9392",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4274,
+    4306,
+    4308,
+    4433
+   ],
+   "razon": "Concreta la autorregulacion: la ley fija objetivos y el operador define los medios con mejor organizacion interna de seguridad. Va en la misma direccion del libro."
+  }
+ ]
+}

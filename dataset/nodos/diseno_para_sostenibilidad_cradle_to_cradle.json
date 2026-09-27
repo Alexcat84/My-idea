@@ -6,10 +6,10 @@
   "fuente": "Change by Design, Revised and U - Tim Brown",
   "resumen_teorico": "Inspirado en como funciona la naturaleza y en el caso de Pangea Organics, este concepto te invita a repensar todo el recorrido de tu producto, desde de donde sacas los materiales hasta que el cliente lo desecha, para que en vez de terminar en la basura se convierta en nutriente para un nuevo ciclo. Así cierras el circulo entre lo que produces y lo que se consume.",
   "pasos_accionables": [
-    "Mapea el recorrido completo de tu producto: de donde sacas los materiales, como lo fabricas, como se usa y que pasa cuando se desecha",
-    "Identifica en que punto ese recorrido se convierte en basura en lugar de en recurso",
+    "Mapea el recorrido completo de tu producto: de dónde sacas los materiales, cómo lo fabricas, cómo se usa y qué pasa cuando se desecha",
+    "Identifica en qué punto ese recorrido se convierte en basura en lugar de en recurso",
     "Rediseña materiales o empaques para que se puedan biodegradar o volver a integrarse como nutrientes (por ejemplo, un empaque con semillas)",
-    "Equilibra lo que la gente desea, lo que puedes hacer con tus recursos y lo que te conviene economicamente, pensando en cerrar el ciclo y no solo en el costo inmediato"
+    "Equilibra lo que la gente desea, lo que puedes hacer con tus recursos y lo que te conviene económicamente, pensando en cerrar el ciclo y no solo en el costo inmediato"
   ],
   "entregable_esperado": "Un rediseño de tu producto o empaque que cierre el ciclo completo (de la cuna a la cuna) con bajo impacto ambiental",
   "nodos_previos": [
@@ -22,5 +22,52 @@
     "Cuando quieres reducir el impacto ambiental de un producto fisico",
     "Si tu negocio tiene valores centrales de sostenibilidad que quieres hacer crecer sin traicionarlos"
   ],
-  "etiqueta_arbol": "Diseña de Cuna a Cuna"
+  "etiqueta_arbol": "Diseña de Cuna a Cuna",
+  "fuentes_internas": [
+    "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0620",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapea el recorrido completo de tu producto: de donde sacas los materiales, como lo fabricas, como se usa y que pasa cuando se desecha",
+      "texto_nuevo": "Mapea el recorrido completo de tu producto: de dónde sacas los materiales, cómo lo fabricas, cómo se usa y qué pasa cuando se desecha",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-026.paso0: dónde, cómo, cómo, qué ('dónde', 'cómo' y 'qué' son interrogativos indirectos y llevan tilde; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0621",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica en que punto ese recorrido se convierte en basura en lugar de en recurso",
+      "texto_nuevo": "Identifica en qué punto ese recorrido se convierte en basura en lugar de en recurso",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-026.paso1: qué ('qué' es interrogativo indirecto y lleva tilde; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0622",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Equilibra lo que la gente desea, lo que puedes hacer con tus recursos y lo que te conviene economicamente, pensando en cerrar el ciclo y no solo en el costo inmediato",
+      "texto_nuevo": "Equilibra lo que la gente desea, lo que puedes hacer con tus recursos y lo que te conviene económicamente, pensando en cerrar el ciclo y no solo en el costo inmediato",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O054-026.paso3: económicamente (Faltaba la tilde de 'económicamente'; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
+  ]
 }

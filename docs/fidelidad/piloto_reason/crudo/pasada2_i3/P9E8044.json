@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P9E8044",
+  "intento": 0,
+  "usd": 0.209084,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46271,
+  "tokens_out": 1200,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P9E8044\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5790, 5832, 5250], \"cita\": \"A joint loss costing study was carried out by the HSE and Chevron covering 13 weeks typical operations … the costs accruing from a whole range of minor classified incidents amounted to £1 million.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe el 'loss costing' y el estudio HSE-Chevron, que muestra el alto costo acumulado de incidentes menores. Tambien pregunta que sistema tiene la organizacion para costear las perdidas. No manda explicitamente usar estos estudios. El paso lo convierte en accion en la misma direccion, sin datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P9E8044",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5790,
+   5832,
+   5250
+  ],
+  "cita": "A joint loss costing study was carried out by the HSE and Chevron covering 13 weeks typical operations … the costs accruing from a whole range of minor classified incidents amounted to £1 million.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe el 'loss costing' y el estudio HSE-Chevron, que muestra el alto costo acumulado de incidentes menores. Tambien pregunta que sistema tiene la organizacion para costear las perdidas. No manda explicitamente usar estos estudios. El paso lo convierte en accion en la misma direccion, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_014",
+  "intento": 0,
+  "usd": 0.166092,
+  "turnos": 1,
+  "duracion_s": 16.2,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33523,
+  "tokens_out": 1600,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P64EAD0\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4730, 4734, 5270],\n    \"razon\": \"La confianza mutua y la percepción compartida son rasgos de la definición HSC, no un método de medición. El libro prioriza el sistema de información y advierte que los elementos externos no bastan.\"\n  },\n  {\n    \"id\": \"PD921C2\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [1558, 1630, 1724, 1006, 5055],\n    \"razon\": \"El libro afirma que el cumplimiento no es automáticamente correcto (mispliance, malas reglas). Dar por correcto todo cumplimiento invierte esa tesis.\"\n  },\n  {\n    \"id\": \"P8234A9\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"ISO 55001\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [967, 969, 971, 973, 975],\n    \"razon\": \"El libro apoya la inspección independiente frente a la autofirma, pero no menciona ninguna norma ISO 55001 (posterior a 1997).\"\n  },\n  {\n    \"id\": \"P5B8D01\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"investigadores de accidentes\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2905, 2907, 2909, 2896, 5661],\n    \"razon\": \"El libro explica el error fundamental de atribución y critica la gestión de errores sin base en factores humanos. No prescribe formación explícita, pero va en la misma dirección.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P64EAD0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4730,
+    4734,
+    5270
+   ],
+   "razon": "La confianza mutua y la percepción compartida son rasgos de la definición HSC, no un método de medición. El libro prioriza el sistema de información y advierte que los elementos externos no bastan."
+  },
+  {
+   "id": "PD921C2",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1558,
+    1630,
+    1724,
+    1006,
+    5055
+   ],
+   "razon": "El libro afirma que el cumplimiento no es automáticamente correcto (mispliance, malas reglas). Dar por correcto todo cumplimiento invierte esa tesis."
+  },
+  {
+   "id": "P8234A9",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "ISO 55001"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    967,
+    969,
+    971,
+    973,
+    975
+   ],
+   "razon": "El libro apoya la inspección independiente frente a la autofirma, pero no menciona ninguna norma ISO 55001 (posterior a 1997)."
+  },
+  {
+   "id": "P5B8D01",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "investigadores de accidentes"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2905,
+    2907,
+    2909,
+    2896,
+    5661
+   ],
+   "razon": "El libro explica el error fundamental de atribución y critica la gestión de errores sin base en factores humanos. No prescribe formación explícita, pero va en la misma dirección."
+  }
+ ]
+}

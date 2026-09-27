@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Un plan de pivote de producto con cronograma acelerado, lista de adquisiciones/alianzas necesarias y fecha de lanzamiento definida.",
   "nodos_previos": [
-    "analisis_competitivo_calidad"
+    "analisis_competitivo_calidad",
+    "plan_de_contingencia_b"
   ],
   "nodos_siguientes": [
     "comunicacion_transparente_en_crisis"
@@ -23,5 +24,23 @@
     "Cuando un competidor con más recursos amenaza con eliminar la ventaja de precio o distribución de la startup",
     "Cuando el modelo de ingresos principal de la empresa queda obsoleto por una jugada del mercado"
   ],
-  "etiqueta_arbol": "Reacciona Rápido ante la Amenaza"
+  "etiqueta_arbol": "Reacciona Rápido ante la Amenaza",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-20",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> respuesta_estrategica_a_amenaza_competitiva",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-21, arbitro): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tenia razon el lector B: el plan B ante una crisis inminente, trazado mientras aun hay tiempo y recursos para pivotar de forma controlada, desemboca de forma directa en ejecutar un pivote rapido ante una amenaza existencial. Ademas ambos nodos vienen de la misma experiencia de crisis de Horowitz. El pivote como hipotesis estrategica es un marco generico de Lean y no apunta a la urgencia ni a la amenaza competitiva."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

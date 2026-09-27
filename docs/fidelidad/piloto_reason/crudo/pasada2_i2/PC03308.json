@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC03308",
+  "intento": 0,
+  "usd": 0.165792,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36938,
+  "tokens_out": 902,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC03308\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [419, 453, 2279, 2250], \"cita\": \"the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala como condición latente la falta de firmas paso a paso para el trabajo de reensamblaje (L419, L453). También propone recordatorios que permitan marcar cada acción (L2279). Critica firmar sin inspeccionar (L409), pero no desaconseja las firmas. El paso concreta esta defensa en la misma dirección, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC03308",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   419,
+   453,
+   2279,
+   2250
+  ],
+  "cita": "the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala como condición latente la falta de firmas paso a paso para el trabajo de reensamblaje (L419, L453). También propone recordatorios que permitan marcar cada acción (L2279). Critica firmar sin inspeccionar (L409), pero no desaconseja las firmas. El paso concreta esta defensa en la misma dirección, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

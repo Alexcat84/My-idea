@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Listar todos los proyectos activos en el pipeline de desarrollo",
     "Evaluar cada proyecto contra criterios estratégicos y de valor (usar scorecard)",
-    "Identificar el ~30% de proyectos de menor valor o impacto estratégico",
+    "Identificar aproximadamente un tercio de proyectos de menor valor o impacto estratégico",
     "Ejecutar una decisión de corte (Kill) y reasignar los recursos liberados a proyectos prioritarios",
     "Medir el impacto en tiempo-al-mercado tras la poda"
   ],
-  "entregable_esperado": "Lista depurada de proyectos activos con al menos 30% de reducción, y plan de reasignación de recursos liberados",
+  "entregable_esperado": "Lista depurada de proyectos activos con una reducción de aproximadamente un tercio, y plan de reasignación de recursos liberados",
   "nodos_previos": [
     "gates_sin_dientes_problema",
     "gestion_visual_del_pipeline_de_desarrollo",
@@ -26,7 +26,59 @@
   ],
   "condiciones_activacion": [
     "Cuando el pipeline de proyectos está sobrecargado y el tiempo-al-mercado es excesivo",
-    "Si hay más de 1000 iniciativas activas o el equipo está sobrecargado de multitasking"
+    "Si el equipo esta sobrecargado de multitasking y buena parte de los proyectos activos aporta poco valor estrategico"
   ],
-  "etiqueta_arbol": "Poda tu Portafolio de Proyectos"
+  "etiqueta_arbol": "Poda tu Portafolio de Proyectos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-011",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Identificar el ~30% de proyectos de menor valor o impacto estratégico",
+      "texto_nuevo": "Identificar aproximadamente un tercio de proyectos de menor valor o impacto estratégico",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L6707-L6707",
+        "frase": "experience suggests that in the typical portfolio, roughly one-third of the projects should be cut"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro fija la proporcion a cortar en un tercio y lo repite tres veces (L1966 \"Lopping off the bottom third\", L5674 \"about one-third of the projects underway should be killed\", L5682 \"lop off the bottom third\", L6707). Busque 30 percent y thirty percent: el unico 30 percent del libro es un umbral de IRR (L7106), sin relacion. El paso cambia la cifra del libro a ~30%; por la vara, una cifra o umbral cambiado respecto al libro es CONTRARIO aunque la accion general sea correcta. El arreglo es trivial: volver a un tercio.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-006"
+    },
+    {
+      "id": "fidelidad-t7-012",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Lista depurada de proyectos activos con al menos 30% de reducción, y plan de reasignación de recursos liberados",
+      "texto_nuevo": "Lista depurada de proyectos activos con una reducción de aproximadamente un tercio, y plan de reasignación de recursos liberados",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L6707-L6707",
+        "frase": "experience suggests that in the typical portfolio, roughly one-third of the projects should be cut"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra cambiada del paso 2 (30% en vez de un tercio) y además la pone como mínimo. El libro dice que hay que cortar aproximadamente un tercio de los proyectos (Cooper, L6707).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-006"
+    },
+    {
+      "id": "n1-condicion-150",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si hay más de 1000 iniciativas activas o el equipo está sobrecargado de multitasking",
+      "texto_nuevo": "Si el equipo esta sobrecargado de multitasking y buena parte de los proyectos activos aporta poco valor estrategico",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q072-031: La segunda condicion exige mas de 1000 iniciativas, un umbral ajeno al contenido; dominio y fase ok. (lector y verificador de acuerdo) Motivo: El umbral de mas de 1000 iniciativas activas no sale del contenido y deja fuera a casi cualquier negocio; el contenido habla de un portafolio cargado de proyectos de poco valor."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
+  ],
+  "fuentes_internas": [
+    "Winning at New Products - Robert G. Cooper"
+  ]
 }

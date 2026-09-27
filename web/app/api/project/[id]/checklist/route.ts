@@ -17,6 +17,11 @@
  *        se reescribe.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { BANDA, CHECKLIST_ESTADO, esActivo, type Banda, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
@@ -45,21 +50,28 @@ interface ItemChecklist {
   // detección y su severidad en palabras. Solo los planes de protección los
   // traen; en el resto son null.
   protege_item: string | null;
+  // AUD-09 M15: los nodos de la tarea y los de lo protegido (041): la
+  // protección se resuelve por nodo contra el plan vigente del núcleo.
+  nodos_origen: string[] | null;
+  protege_nodos: string[] | null;
   deteccion: string | null;
   probabilidad: string | null;
   dolor: string | null;
   camino: string | null;
+  // Ciclo de replanteamiento, Fase 2 (047): la tarea original que esta trae
+  // hecha al plan nuevo ("de tu plan anterior"). null en todas las demás.
+  heredado_de: string | null;
   created_at: string;
   updated_at: string;
 }
 
 const COLUMNAS =
-  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, created_at, updated_at";
+  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, nodos_origen, protege_nodos, heredado_de, created_at, updated_at";
 
 /** Las columnas que llegaron con una migración posterior al primer despliegue.
  * Si el código se adelanta a la migración, se leen null en vez de caerse la
  * lectura entera del checklist (patrón de project_unlocks, pre-026). */
-const COLUMNAS_NUEVAS = [", camino", ", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
+const COLUMNAS_NUEVAS = [", heredado_de", ", nodos_origen, protege_nodos", ", camino", ", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
 
 /** Un timestamp ISO válido y no futuro (tolera 1 min de desfase de reloj). */
 function fechaIsoValida(valor: unknown): string | null {
@@ -70,18 +82,19 @@ function fechaIsoValida(valor: unknown): string | null {
   return new Date(t).toISOString();
 }
 
-export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const r = elegir(RUTAS, idiomaDeRequest(request));
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   // Orden cronológico de planes (created_at) para que el grupo VIGENTE de
@@ -110,7 +123,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   }
   if (error) ({ data, error } = await leer(recorte.replace(", no_aplica_motivo", "")));
   if (error) {
-    return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
+    return NextResponse.json({ error: r.noPudimosLeerChecklist }, { status: 500 });
   }
   const items = ((data ?? []) as Array<Partial<ItemChecklist>>).map((i) => ({
     ...i,
@@ -118,10 +131,13 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     banda: i.banda ?? null,
     espera_externa: i.espera_externa ?? null,
     protege_item: i.protege_item ?? null,
+    nodos_origen: i.nodos_origen ?? null,
+    protege_nodos: i.protege_nodos ?? null,
     deteccion: i.deteccion ?? null,
     probabilidad: i.probabilidad ?? null,
     dolor: i.dolor ?? null,
     camino: i.camino ?? null,
+    heredado_de: i.heredado_de ?? null,
   })) as ItemChecklist[];
 
   // Agrupado plan -> etapas (el orden de inserción ya viene garantizado).
@@ -172,6 +188,9 @@ interface CambiosItem {
 
 export async function PATCH(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).checklist;
 
   let body: {
     item_id?: unknown;
@@ -185,18 +204,18 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo JSON inválido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoJsonInvalido }, { status: 400 });
   }
   const itemId = typeof body.item_id === "string" ? body.item_id : null;
   if (!itemId) {
-    return NextResponse.json({ error: "falta item_id" }, { status: 400 });
+    return NextResponse.json({ error: t.faltaItemId }, { status: 400 });
   }
   const cambios: CambiosItem = { updated_at: new Date().toISOString() };
 
   if (body.estado !== undefined) {
     if (typeof body.estado !== "string" || !(CHECKLIST_ESTADO as readonly string[]).includes(body.estado)) {
       return NextResponse.json(
-        { error: `estado inválido; usa uno de: ${CHECKLIST_ESTADO.join(", ")}` },
+        { error: interpolar(t.estadoInvalido, { opciones: CHECKLIST_ESTADO.join(", ") }) },
         { status: 400 }
       );
     }
@@ -204,7 +223,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   }
   if (body.nota !== undefined) {
     if (body.nota !== null && typeof body.nota !== "string") {
-      return NextResponse.json({ error: "nota debe ser texto o null" }, { status: 400 });
+      return NextResponse.json({ error: t.notaInvalida }, { status: 400 });
     }
     cambios.nota = body.nota === null ? null : (body.nota as string).slice(0, 500);
   }
@@ -219,7 +238,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     } else {
       const iso = fechaIsoValida(body.completed_at);
       if (!iso) {
-        return NextResponse.json({ error: "completed_at debe ser una fecha ISO no futura o null" }, { status: 400 });
+        return NextResponse.json({ error: t.completedAtInvalido }, { status: 400 });
       }
       cambios.completed_at = iso;
     }
@@ -237,7 +256,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   //  - se puede editar el motivo de una tarea que ya está en 'no_aplica'.
   if (body.no_aplica_motivo !== undefined) {
     if (body.no_aplica_motivo !== null && typeof body.no_aplica_motivo !== "string") {
-      return NextResponse.json({ error: "no_aplica_motivo debe ser texto o null" }, { status: 400 });
+      return NextResponse.json({ error: t.motivoInvalido }, { status: 400 });
     }
     cambios.no_aplica_motivo =
       body.no_aplica_motivo === null ? null : (body.no_aplica_motivo as string).slice(0, 500).trim() || null;
@@ -250,7 +269,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   // no hay caso de uso, y null es "sin estimar", no una elección del usuario).
   if (body.banda !== undefined) {
     if (typeof body.banda !== "string" || !(BANDA as readonly string[]).includes(body.banda)) {
-      return NextResponse.json({ error: `banda inválida; usa una de: ${BANDA.join(", ")}` }, { status: 400 });
+      return NextResponse.json({ error: interpolar(t.bandaInvalida, { opciones: BANDA.join(", ") }) }, { status: 400 });
     }
     cambios.banda = body.banda as Banda;
   }
@@ -265,7 +284,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     } else if (typeof body.fecha_base === "string" && !Number.isNaN(Date.parse(body.fecha_base))) {
       nuevaFechaBase = new Date(Date.parse(body.fecha_base)).toISOString();
     } else {
-      return NextResponse.json({ error: "fecha_base debe ser una fecha ISO o null" }, { status: 400 });
+      return NextResponse.json({ error: t.fechaBaseInvalida }, { status: 400 });
     }
   }
 
@@ -278,7 +297,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     cambios.banda === undefined
   ) {
     return NextResponse.json(
-      { error: "nada que actualizar: manda estado, nota, completed_at, no_aplica_motivo, fecha_base y/o banda" },
+      { error: t.nadaQueActualizar },
       { status: 400 }
     );
   }
@@ -288,11 +307,11 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   // Se lee el estado previo cuando lo necesita la replanificación (preservar
@@ -360,7 +379,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     .select(colsRet)
     .single();
   if (error || !filaCruda) {
-    return NextResponse.json({ error: "ítem no encontrado" }, { status: 404 });
+    return NextResponse.json({ error: t.itemNoEncontrado }, { status: 404 });
   }
   const data = filaCruda as unknown as {
     id: string;
@@ -407,9 +426,19 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   // Fase 4.8 (bitácora completa): cada decisión del usuario deja rastro.
   if (prev) {
     const nuevoEstado = data.estado as ChecklistEstado;
+    // AUD-09 M34: marcar HECHO deja su propio evento, con la fecha de
+    // realización. Antes la bitácora lo derivaba del completed_at vivo y
+    // desmarcar lo borraba de la historia.
+    if (cambios.estado !== undefined && nuevoEstado === "hecho" && prev.estado !== "hecho") {
+      await registrarBitacora(supabase, projectId, "item_hecho", {
+        item: itemId,
+        dominio: dom,
+        completed_at: (data.completed_at as string | null) ?? null,
+      });
+    }
     // Cambio de estado que NO es el cruce de 'no_aplica' (ya registrado arriba)
-    // ni 'hecho' (su entrada nace de completed_at, no se duplica): empezar,
-    // poner en proceso o volver a pendiente son decisiones que cuentan.
+    // ni 'hecho' (su evento es item_hecho): empezar, poner en proceso o volver a
+    // pendiente son decisiones que cuentan.
     if (
       cambios.estado !== undefined &&
       nuevoEstado !== prev.estado &&

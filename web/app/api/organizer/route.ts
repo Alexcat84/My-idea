@@ -5,8 +5,12 @@
  * igual que el CLI (el modo --gratis tambien persiste, no es efimero).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   llamarClaude,
@@ -15,28 +19,33 @@ import {
   usoVacio,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
+import { actualizarProyecto, cerrarSesion, crearSesion, FASES, guardarPlan } from "@/lib/db";
+import { nacerIdea } from "@/lib/nacerIdea";
+import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).organizador;
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
   if (typeof texto !== "string" || texto.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
+    return NextResponse.json({ error: r.faltaTexto }, { status: 400 });
   }
-  if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
+  if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: `'texto' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: mensajeIdeaLarga(idioma), limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }
@@ -46,17 +55,20 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   const graph = cargarGrafo();
@@ -72,7 +84,7 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const projectId = await crearProyecto(supabase, user.id, texto);
+  const { projectId, idioma: idiomaIdea } = await nacerIdea(supabase, user.id, texto, idioma);
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();
@@ -85,7 +97,7 @@ export async function POST(request: Request) {
       JSON.stringify({ texto_usuario: texto, puertas }),
       MODEL_HAIKU,
       acumulado,
-      { maxTokens: MAX_TOKENS_ORGANIZADOR, componente: "organizador" }
+      { maxTokens: MAX_TOKENS_ORGANIZADOR, componente: "organizador", idiomaSalida: idiomaIdea }
     );
     acumulado = resultado.acumulado;
     data = parsearJson<OrganizadorData>(resultado.texto);
@@ -102,13 +114,15 @@ export async function POST(request: Request) {
       PRESUPUESTO_SESION_USD_DEFAULT
     );
     return NextResponse.json(
-      { error: `fallo el organizador con IA: ${e instanceof Error ? e.message : String(e)}`, project_id: projectId },
+      // AUD-09 B07a: el detalle del error va al log (arriba), nunca al cliente.
+      { error: t.noPudeOrganizar, project_id: projectId },
       { status: 502 }
     );
   }
 
   const limpio = limpiarOrganizador(data);
-  const markdown = construirMarkdown(limpio);
+  // i18n F5 (D2): la Claridad es un documento de la idea: en su idioma.
+  const markdown = construirMarkdown(limpio, idiomaDePlantilla(idiomaIdea, idioma));
   await guardarPlan(supabase, user.id, sessionId, "organizador", markdown, 0, []);
   await cerrarSesion(
     supabase,

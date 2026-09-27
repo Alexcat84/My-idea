@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PDC0FF7",
+  "intento": 0,
+  "usd": 0.235432,
+  "turnos": 1,
+  "duracion_s": 21.4,
+  "pared_s": 22.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49473,
+  "tokens_out": 1877,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDC0FF7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1044, 1050, 821, 1068], \"cita\": \"Major accidents occur when this assumption of mutual independence between the various layers of defence is violated. … For the defensive layers to maintain safety, it is necessary that failures affecting one box will be unrelated to failures affecting other boxes\", \"datos_sin_respaldo\": [], \"razon\": \"Por 'redundancia real' se entiende capas de control causalmente independientes. Eso es justo la condición que el libro exige para que la defensa en profundidad funcione. El libro advierte que añadir capas sin más aumenta la complejidad, los fallos de modo común y la opacidad. Aun así, no desaconseja las defensas redundantes (L821). El paso concreta la condición de independencia sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PDC0FF7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1044,
+   1050,
+   821,
+   1068
+  ],
+  "cita": "Major accidents occur when this assumption of mutual independence between the various layers of defence is violated. … For the defensive layers to maintain safety, it is necessary that failures affecting one box will be unrelated to failures affecting other boxes",
+  "datos_sin_respaldo": [],
+  "razon": "Por 'redundancia real' se entiende capas de control causalmente independientes. Eso es justo la condición que el libro exige para que la defensa en profundidad funcione. El libro advierte que añadir capas sin más aumenta la complejidad, los fallos de modo común y la opacidad. Aun así, no desaconseja las defensas redundantes (L821). El paso concreta la condición de independencia sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

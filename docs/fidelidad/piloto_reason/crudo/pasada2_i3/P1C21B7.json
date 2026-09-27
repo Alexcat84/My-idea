@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1C21B7",
+  "intento": 0,
+  "usd": 0.21921600000000002,
+  "turnos": 1,
+  "duracion_s": 19.5,
+  "pared_s": 20.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46599,
+  "tokens_out": 1641,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1C21B7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4765, 5037, 5061, 5063, 5077, 2948], \"cita\": \"A small proportion of human unsafe acts are egregious (for example, substance abuse, reckless non-compliance, sabotage and so on) and warrant sanctions … they are likely to be endangered by the person’s repeated recklessness or negligence.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro reserva las sanciones para actos atroces o temerarios (L4765, L5063) y para la temeridad o negligencia repetida (L5077). La 'justificación situacional' equivale al test de sustitución (L5037). Para actos inseguros repetidos, el libro también prevé medidas personales como el reentrenamiento (L5061). El paso concreta esto sin invertirlo y no añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P1C21B7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4765,
+   5037,
+   5061,
+   5063,
+   5077,
+   2948
+  ],
+  "cita": "A small proportion of human unsafe acts are egregious (for example, substance abuse, reckless non-compliance, sabotage and so on) and warrant sanctions … they are likely to be endangered by the person’s repeated recklessness or negligence.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro reserva las sanciones para actos atroces o temerarios (L4765, L5063) y para la temeridad o negligencia repetida (L5077). La 'justificación situacional' equivale al test de sustitución (L5037). Para actos inseguros repetidos, el libro también prevé medidas personales como el reentrenamiento (L5061). El paso concreta esto sin invertirlo y no añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

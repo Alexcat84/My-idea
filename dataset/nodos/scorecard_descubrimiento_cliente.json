@@ -31,8 +31,27 @@
     "voc_temprano_en_agile_stage_gate"
   ],
   "condiciones_activacion": [
-    "Si usas o evalúas este tipo de instrumento de puntaje",
+    "Cuando necesitas distinguir entre los clientes entrevistados que muestran entusiasmo real y los que solo sienten curiosidad",
     "Cuando has completado múltiples entrevistas de descubrimiento y necesitas decidir sistemáticamente en qué clientes enfocar tus recursos"
   ],
-  "etiqueta_arbol": "Puntúa el Interés del Cliente"
+  "etiqueta_arbol": "Puntúa el Interés del Cliente",
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-175",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si usas o evalúas este tipo de instrumento de puntaje",
+      "texto_nuevo": "Cuando necesitas distinguir entre los clientes entrevistados que muestran entusiasmo real y los que solo sienten curiosidad",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q031-027: La condicion 0 es circular y no dice cuando aplica el scorecard. (lector y verificador de acuerdo) Motivo: Es circular y generica: no describe una situacion del usuario, solo remite al propio instrumento."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

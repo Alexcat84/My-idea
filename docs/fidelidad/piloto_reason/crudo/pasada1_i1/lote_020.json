@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_020",
+  "intento": 0,
+  "usd": 0.157012,
+  "turnos": 1,
+  "duracion_s": 16.0,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33013,
+  "tokens_out": 1248,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P42F8DB\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2837, 3623, 3625, 3629, 3633, 3637, 3641, 3645, 3649, 3653, 3657, 3659], \"razon\": \"El libro enumera las VPCs con sus pesos y las valora como herramienta para el gestor. También recomienda descubrir y evaluar los factores productores de violaciones.\"},\n{\"id\": \"P96F80A\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [2520, 2547, 2568, 2598, 2658, 2765], \"razon\": \"El libro pide chequeos regulares de la posición. El paso no dice que deban hacerse con medidas de proceso; si se hicieran con accidentes o resultados, chocaría con L2547 y L2765.\"},\n{\"id\": \"P74349B\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2669, 2693, 2769, 5690], \"razon\": \"El libro llama a los reportes de near-miss una ayuda de navegación invaluable. Dice que eventos precursores como las fugas son más diagnósticos que el LTIF.\"},\n{\"id\": \"PED22A7\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4274, 4302, 4306, 4320], \"razon\": \"El libro distingue la legislación que prescribe medios de la que fija objetivos. Revisar qué tipo aplica es una extensión razonable y no choca con nada.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P42F8DB",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2837,
+    3623,
+    3625,
+    3629,
+    3633,
+    3637,
+    3641,
+    3645,
+    3649,
+    3653,
+    3657,
+    3659
+   ],
+   "razon": "El libro enumera las VPCs con sus pesos y las valora como herramienta para el gestor. También recomienda descubrir y evaluar los factores productores de violaciones."
+  },
+  {
+   "id": "P96F80A",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    2520,
+    2547,
+    2568,
+    2598,
+    2658,
+    2765
+   ],
+   "razon": "El libro pide chequeos regulares de la posición. El paso no dice que deban hacerse con medidas de proceso; si se hicieran con accidentes o resultados, chocaría con L2547 y L2765."
+  },
+  {
+   "id": "P74349B",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2669,
+    2693,
+    2769,
+    5690
+   ],
+   "razon": "El libro llama a los reportes de near-miss una ayuda de navegación invaluable. Dice que eventos precursores como las fugas son más diagnósticos que el LTIF."
+  },
+  {
+   "id": "PED22A7",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4274,
+    4302,
+    4306,
+    4320
+   ],
+   "razon": "El libro distingue la legislación que prescribe medios de la que fija objetivos. Revisar qué tipo aplica es una extensión razonable y no choca con nada."
+  }
+ ]
+}

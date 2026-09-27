@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_070",
+  "intento": 0,
+  "usd": 0.170572,
+  "turnos": 1,
+  "duracion_s": 19.7,
+  "pared_s": 21.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32998,
+  "tokens_out": 1929,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P62577B\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"lista rankeada de EPCs\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3397, 3659], \"razon\": \"HEART manda consultar la lista jerarquizada de EPCs y decidir cuales afectan la actividad; el paso lo recoge sin invertirlo.\"},\n{\"id\": \"PABF5B1\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"expertos externos\"], \"clase\": \"FIEL\", \"lineas\": [4360, 4364], \"razon\": \"El procedimiento COSHH incluye hacer evaluaciones de riesgo recurriendo a expertos externos si es necesario, casi literal.\"},\n{\"id\": \"P9EAA76\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1044, 1050, 1068, 1072, 582], \"razon\": \"El libro dice que los accidentes surgen al violarse la supuesta independencia entre capas. Evaluar dependencias ocultas concreta esa idea en la misma direccion.\"},\n{\"id\": \"PFAA9E1\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"responsabilidad clara de seguimiento a cada señal\", \"hasta su cierre\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [520, 3153, 686, 4215], \"razon\": \"L3153 respalda definir responsabilidades, pero el libro insiste en integrar las señales en conjunto, no una a una. El seguimiento individual hasta cierre no aparece en el libro.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P62577B",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "lista rankeada de EPCs"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397,
+    3659
+   ],
+   "razon": "HEART manda consultar la lista jerarquizada de EPCs y decidir cuales afectan la actividad; el paso lo recoge sin invertirlo."
+  },
+  {
+   "id": "PABF5B1",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "expertos externos"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4364
+   ],
+   "razon": "El procedimiento COSHH incluye hacer evaluaciones de riesgo recurriendo a expertos externos si es necesario, casi literal."
+  },
+  {
+   "id": "P9EAA76",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1044,
+    1050,
+    1068,
+    1072,
+    582
+   ],
+   "razon": "El libro dice que los accidentes surgen al violarse la supuesta independencia entre capas. Evaluar dependencias ocultas concreta esa idea en la misma direccion."
+  },
+  {
+   "id": "PFAA9E1",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "responsabilidad clara de seguimiento a cada señal",
+    "hasta su cierre"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    520,
+    3153,
+    686,
+    4215
+   ],
+   "razon": "L3153 respalda definir responsabilidades, pero el libro insiste en integrar las señales en conjunto, no una a una. El seguimiento individual hasta cierre no aparece en el libro."
+  }
+ ]
+}

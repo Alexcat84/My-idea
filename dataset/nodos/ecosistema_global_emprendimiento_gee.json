@@ -1,20 +1,20 @@
 {
   "node_id": "ecosistema_global_emprendimiento_gee",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "exportacion",
   "titulo_concepto": "Construcción del Ecosistema Global de Emprendimiento (GEE)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, publicos y privados, que puede ayudarte a exportar con exito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, camaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo reduce drasticamente el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
   "pasos_accionables": [
-    "Identificar la oficina de comercio exterior de tu gobierno mas cercana (pregunta en tu mercado cual es el equivalente local)",
-    "Contactar la camara de comercio local y el centro de comercio internacional de tu region",
-    "Localizar el centro de desarrollo de pequeños negocios de tu zona y verificar si tiene un asesor especializado en exportacion",
-    "Investigar bancos locales con area de comercio internacional",
+    "Identificar la oficina de comercio exterior de tu gobierno más cercana (pregunta en tu mercado cuál es el equivalente local)",
+    "Contactar la cámara de comercio local y el centro de comercio internacional de tu región",
+    "Localizar el centro de desarrollo de pequeños negocios de tu zona y verificar si tiene un asesor especializado en exportación",
+    "Investigar bancos locales con área de comercio internacional",
     "Sumarte a grupos de comercio internacional en redes profesionales como LinkedIn",
     "Armar un directorio de contactos del GEE con nombres, roles y datos de contacto",
     "Consultar a un asesor voluntario con experiencia para evaluar tu potencial exportador"
   ],
-  "entregable_esperado": "Directorio documentado de al menos 5 a 8 organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+  "entregable_esperado": "Directorio documentado de las organizaciones o contactos de apoyo (lista de verificación GEE) que tienes disponibles",
   "nodos_previos": [
     "decision_estrategica_exportar",
     "desmitificacion_barreras_exportacion",
@@ -41,5 +41,108 @@
       "titulo": "Recursos de apoyo público para negocios que exportan",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-63",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Directorio documentado de al menos 5 a 8 organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+      "texto_nuevo": "Directorio documentado de las organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L211-L215, L251",
+        "frase": "A GEE might consist, for example, of your local Chamber of Commerce, your local World Trade Center, a university with an international business department, some Small Business Development Centers, the U.S. Commercial Service, a bank with international experience, and your state's office of international trade. Just to name a few."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R007-004 (ANADIDO, lector y verificador de acuerdo): El rango de 5 a 8 contactos es una cifra que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R007-004"
+    },
+    {
+      "id": "t2-fase-116",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F01-014: Armar el directorio de apoyos para exportar es reunir recursos para el plan, no validar con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0674",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar la oficina de comercio exterior de tu gobierno mas cercana (pregunta en tu mercado cual es el equivalente local)",
+      "texto_nuevo": "Identificar la oficina de comercio exterior de tu gobierno más cercana (pregunta en tu mercado cuál es el equivalente local)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-011.paso0: más, cuál (Faltaban las tildes de más (adverbio comparativo) y cuál (interrogativo indirecto), y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0675",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contactar la camara de comercio local y el centro de comercio internacional de tu region",
+      "texto_nuevo": "Contactar la cámara de comercio local y el centro de comercio internacional de tu región",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-011.paso1: cámara, región (Faltaban las tildes de cámara y región, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0676",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Localizar el centro de desarrollo de pequeños negocios de tu zona y verificar si tiene un asesor especializado en exportacion",
+      "texto_nuevo": "Localizar el centro de desarrollo de pequeños negocios de tu zona y verificar si tiene un asesor especializado en exportación",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-011.paso2: exportación (Faltaba la tilde de exportación y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0677",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Investigar bancos locales con area de comercio internacional",
+      "texto_nuevo": "Investigar bancos locales con área de comercio internacional",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-011.paso3: área (Faltaba la tilde de área y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0678",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Directorio documentado de las organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+      "texto_nuevo": "Directorio documentado de las organizaciones o contactos de apoyo (lista de verificación GEE) que tienes disponibles",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O058-011.entregable: verificación (Faltaba la tilde de verificación, no cambia nada más y la sigla GEE queda intacta.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
   ]
 }

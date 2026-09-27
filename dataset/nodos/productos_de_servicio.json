@@ -20,8 +20,27 @@
     "fase_de_eliminacion_de_no_comercializables"
   ],
   "condiciones_activacion": [
-    "Si el usuario fabrica productos durables como carpetas, autos, electrodomésticos o electrónicos",
+    "Si el usuario fabrica productos durables como alfombras, autos, electrodomésticos o electrónicos",
     "Si se busca retener materiales valiosos en lugar de perderlos tras la venta"
   ],
-  "etiqueta_arbol": "Vende Servicio, No Producto"
+  "etiqueta_arbol": "Vende Servicio, No Producto",
+  "fuentes_internas": [
+    "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-147",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el usuario fabrica productos durables como carpetas, autos, electrodomésticos o electrónicos",
+      "texto_nuevo": "Si el usuario fabrica productos durables como alfombras, autos, electrodomésticos o electrónicos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q009-002: La condición 0 trae 'carpetas' por 'alfombras', una traducción errónea que desvirtúa el ejemplo. (lector y verificador de acuerdo) Motivo: El ejemplo 'carpetas' es una mala traducción de 'carpets' (alfombras): una carpeta no es un producto durable apto para eco-leasing y el ejemplo confunde sobre cuándo aplica."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

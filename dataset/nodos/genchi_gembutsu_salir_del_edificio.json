@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Genchi Gembutsu: Salir del Edificio",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. Steve Blank popularizó esto para startups como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
+  "resumen_teorico": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. En el mundo de las startups se popularizó como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
   "pasos_accionables": [
     "Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio",
     "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building",
@@ -41,5 +41,26 @@
       "titulo": "Genchi Gembutsu: Ir y Ver por Ti Mismo",
       "fuente": "The Lean Startup - Eric Ries"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-096",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. Steve Blank popularizó esto para startups como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
+      "texto_nuevo": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. En el mundo de las startups se popularizó como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Steve Blank popularizó esto para startups"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-015 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
   ]
 }

@@ -1,17 +1,17 @@
 {
   "node_id": "experimento_cuentas_rojas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Experimento de las Cuentas Rojas (Red Beads)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Experimento didactico de Deming que demuestra que la variación en el desempeno de las personas que trabajan contigo, dentro de un proceso estable, viene del sistema mismo (los materiales, el proceso), no de la voluntad o la habilidad de cada quien. Alguien que un día parece rendir bien y otro día mal puede invertir su resultado al siguiente, mostrando que culpar a una persona por fallas del sistema es un error de quien dirige el negocio.",
   "pasos_accionables": [
-    "Simula el experimento con un grupo de personas que trabajen contigo, usando material homogeneo con un porcentaje fijo de 'defectos' (cuentas rojas)",
-    "Registra el desempeno de cada persona en varias rondas",
-    "Grafica los resultados en un grafico de control y verifica si todos caen dentro de los limites",
+    "Simula el experimento con un grupo de personas que trabajen contigo, usando material homogéneo con un porcentaje fijo de 'defectos' (cuentas rojas)",
+    "Registra el desempeño de cada persona en varias rondas",
+    "Grafica los resultados en un gráfico de control y verifica si todos caen dentro de los límites",
     "Usa los resultados para entender que la variación individual que observas es producto del sistema, no de la persona"
   ],
-  "entregable_esperado": "Una sesión practica documentada, con evidencia (un grafico) de que la variación entre las personas es producto del sistema y no de su desempeno individual.",
+  "entregable_esperado": "Una sesión práctica documentada, con evidencia (un gráfico) de que la variación entre las personas es producto del sistema y no de su desempeño individual.",
   "nodos_previos": [
     "causas_comunes_vs_especiales"
   ],
@@ -23,5 +23,78 @@
     "Cuando tiendes a culpar a alguien en particular por variaciones de calidad que en realidad vienen del sistema",
     "Cuando necesitas una forma sencilla de explicar el concepto de variación del sistema"
   ],
-  "etiqueta_arbol": "Entiende la Variación del Sistema"
+  "etiqueta_arbol": "Entiende la Variación del Sistema",
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-158",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-006: El experimento de las cuentas rojas sirve para gestionar la variación del sistema entre las personas del negocio en marcha, no para validar una idea con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0448",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Simula el experimento con un grupo de personas que trabajen contigo, usando material homogeneo con un porcentaje fijo de 'defectos' (cuentas rojas)",
+      "texto_nuevo": "Simula el experimento con un grupo de personas que trabajen contigo, usando material homogéneo con un porcentaje fijo de 'defectos' (cuentas rojas)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-034.paso0: homogéneo (Homogéneo es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0449",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra el desempeno de cada persona en varias rondas",
+      "texto_nuevo": "Registra el desempeño de cada persona en varias rondas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-034.paso1: desempeño (Errata: falta la eñe en desempeño.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0450",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Grafica los resultados en un grafico de control y verifica si todos caen dentro de los limites",
+      "texto_nuevo": "Grafica los resultados en un gráfico de control y verifica si todos caen dentro de los límites",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-034.paso2: gráfico, límites (Gráfico y límites son esdrújulas y llevan tilde; el verbo grafica queda sin tilde, como corresponde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0451",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una sesión practica documentada, con evidencia (un grafico) de que la variación entre las personas es producto del sistema y no de su desempeno individual.",
+      "texto_nuevo": "Una sesión práctica documentada, con evidencia (un gráfico) de que la variación entre las personas es producto del sistema y no de su desempeño individual.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O038-034.entregable: práctica, gráfico, desempeño (Faltan las tildes en práctica y gráfico y la eñe en desempeño.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

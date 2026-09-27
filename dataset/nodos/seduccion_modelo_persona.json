@@ -1,6 +1,6 @@
 {
   "node_id": "seduccion_modelo_persona",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Por qué el Modelo de Persona Domina la Gestión de Seguridad",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -23,5 +23,23 @@
     "Cuando cada vez que investigas un problema terminas culpando solo a quien estaba más cerca del error",
     "Cuando quieres mejorar la seguridad de tu negocio más allá de solo castigar a alguien"
   ],
-  "etiqueta_arbol": "No Culpes Solo a la Persona"
+  "etiqueta_arbol": "No Culpes Solo a la Persona",
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-290",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-029: Revisa cómo se investigan los errores y se aplican las reglas internas del negocio en marcha, que es gestión operativa de la seguridad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ]
 }

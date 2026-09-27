@@ -17,12 +17,28 @@
     "ciclo_circunstancias_sentimientos_ideas",
     "empatia_capas_de_comprension"
   ],
-  "nodos_siguientes": [
-    "prototipado_rapido"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando tu diseño incluye momentos de decisión crítica para la persona, como una compra, un consentimiento o una elección de salud.",
     "Si tú o quien trabaja contigo están bajo mucha presión y sospechas que las decisiones del proyecto las está dominando el estrés."
   ],
-  "etiqueta_arbol": "Decide Sin Sobrecarga Mental"
+  "etiqueta_arbol": "Decide Sin Sobrecarga Mental",
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-063",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_decisiones_bajo_carga_emocional -> prototipado_rapido",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-19-27): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Decidir con la mente saturada es psicologia de la decision y no tiene relacion con prototipar rapido."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ]
 }

@@ -6,12 +6,12 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "El Advocacy Center del Servicio Comercial de Estados Unidos coordina a 20 agencias del gobierno de EE. UU. para apoyarte cuando tu negocio compite en una licitacion de un gobierno extranjero, sobre todo si el proceso no es transparente o favorece a la competencia extranjera. El apoyo puede incluir visitas de funcionarios, cartas a quienes toman la decision y una accion coordinada entre agencias.",
   "pasos_accionables": [
-    "Identifica si estas participando en una licitacion de un gobierno extranjero",
-    "Evalua si el proceso parece sesgado o poco transparente",
+    "Identifica si estás participando en una licitación de un gobierno extranjero",
+    "Evalúa si el proceso parece sesgado o poco transparente",
     "Contacta al Advocacy Center para pedir apoyo",
     "Coordina con las agencias del gobierno de EE. UU. involucradas"
   ],
-  "entregable_esperado": "Un caso de apoyo abierto con el Advocacy Center para tu licitacion especifica",
+  "entregable_esperado": "Un caso de apoyo abierto con el Advocacy Center para tu licitación específica",
   "nodos_previos": [
     "recursos_apoyo_gubernamental_exportacion"
   ],
@@ -19,8 +19,68 @@
     "cumplimiento_acuerdos_comerciales_tanc"
   ],
   "condiciones_activacion": [
-    "Cuando tu negocio licita en un contrato de adquisicion de un gobierno extranjero",
+    "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisicion de un gobierno extranjero",
     "Cuando sospechas trato desleal en el proceso de licitacion"
   ],
-  "etiqueta_arbol": "Busca Apoyo en Licitaciones"
+  "etiqueta_arbol": "Busca Apoyo en Licitaciones",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-014",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando tu negocio licita en un contrato de adquisicion de un gobierno extranjero",
+      "texto_nuevo": "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisicion de un gobierno extranjero",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-022: Clase C sin la condición de operar en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (el Advocacy Center apoya a empresas de Estados Unidos), pero la condición no dice que aplica si tu negocio opera en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0156",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica si estas participando en una licitacion de un gobierno extranjero",
+      "texto_nuevo": "Identifica si estás participando en una licitación de un gobierno extranjero",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-026.paso0: estás, licitación (Faltas reales: 'estás' y 'licitación' llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0157",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua si el proceso parece sesgado o poco transparente",
+      "texto_nuevo": "Evalúa si el proceso parece sesgado o poco transparente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-026.paso1: Evalúa (Falta real: 'Evalúa' lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0158",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un caso de apoyo abierto con el Advocacy Center para tu licitacion especifica",
+      "texto_nuevo": "Un caso de apoyo abierto con el Advocacy Center para tu licitación específica",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-026.entregable: licitación, específica (Faltas reales: 'licitación' y 'específica' llevan tilde; el nombre propio en inglés queda intacto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

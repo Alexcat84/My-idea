@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P59C1CC",
+  "intento": 0,
+  "usd": 0.17966,
+  "turnos": 1,
+  "duracion_s": 13.0,
+  "pared_s": 14.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39885,
+  "tokens_out": 1006,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P59C1CC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3393, 3395, 3397, 3659], \"cita\": \"The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager's tool box.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro ordena las EPCs por su efecto multiplicador y valora esa jerarquía para comparar su peso relativo. Priorizar las de mayor multiplicador concreta ese uso, en la misma dirección y sin datos nuevos. Omitir la proporción juzgada es solo un matiz de detalle. L2652 trata del análisis reactivo de sucesos aislados, no de HEART.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P59C1CC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3393,
+   3395,
+   3397,
+   3659
+  ],
+  "cita": "The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager's tool box.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro ordena las EPCs por su efecto multiplicador y valora esa jerarquía para comparar su peso relativo. Priorizar las de mayor multiplicador concreta ese uso, en la misma dirección y sin datos nuevos. Omitir la proporción juzgada es solo un matiz de detalle. L2652 trata del análisis reactivo de sucesos aislados, no de HEART.",
+  "paso_fiel": ""
+ }
+}

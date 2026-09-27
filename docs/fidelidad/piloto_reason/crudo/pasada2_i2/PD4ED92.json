@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD4ED92",
+  "intento": 0,
+  "usd": 0.18874000000000002,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42735,
+  "tokens_out": 890,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD4ED92\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4280, 4288, 3965], \"cita\": \"Both of these functions are strongly influenced by what the technology or the society regards as safe enough. There are a number of different approaches: ... The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta los enfoques como formas de definir lo 'suficientemente seguro', algunas con umbral cuantitativo (10^-6) y otras cualitativas. Fijar criterios coherentes con el enfoque solo concreta eso y no añade datos. Lo de NASA (L3965) critica la erosión insidiosa de los estándares, no que existan criterios, así que no es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD4ED92",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4280,
+   4288,
+   3965
+  ],
+  "cita": "Both of these functions are strongly influenced by what the technology or the society regards as safe enough. There are a number of different approaches: ... The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta los enfoques como formas de definir lo 'suficientemente seguro', algunas con umbral cuantitativo (10^-6) y otras cualitativas. Fijar criterios coherentes con el enfoque solo concreta eso y no añade datos. Lo de NASA (L3965) critica la erosión insidiosa de los estándares, no que existan criterios, así que no es contrario.",
+  "paso_fiel": ""
+ }
+}

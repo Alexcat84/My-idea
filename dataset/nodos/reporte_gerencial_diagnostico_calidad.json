@@ -1,18 +1,18 @@
 {
   "node_id": "reporte_gerencial_diagnostico_calidad",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Diagnostico de fallas en el sistema de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming muestra un caso real de diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+  "resumen_teorico": "Un caso real muestra un diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
   "pasos_accionables": [
-    "Recopilar y revisar los datos historicos de auditoria de calidad (defectos mayores y menores) que ya tienes disponibles",
-    "Documentar como funciona realmente la detección de defectos: quien los repara, quien los deja pasar y por que",
-    "Revisar si pagas por pieza producida y evaluar que impacto tiene eso en la calidad",
-    "Escribir un diagnostico claro para ti mismo con los hallazgos, las causas raiz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema",
-    "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de que cuenta como defecto"
+    "Recopilar y revisar los datos históricos de auditoría de calidad (defectos mayores y menores) que ya tienes disponibles",
+    "Documentar cómo funciona realmente la detección de defectos: quién los repara, quién los deja pasar y por qué",
+    "Revisar si pagas por pieza producida y evaluar qué impacto tiene eso en la calidad",
+    "Escribir un diagnóstico claro para ti mismo con los hallazgos, las causas raíz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema",
+    "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de qué cuenta como defecto"
   ],
-  "entregable_esperado": "Un documento de diagnostico con los datos de auditoria, las causas raiz identificadas y un plan de acción para rediseñar tu sistema de calidad",
+  "entregable_esperado": "Un documento de diagnóstico con los datos de auditoría, las causas raíz identificadas y un plan de acción para rediseñar tu sistema de calidad",
   "nodos_previos": [
     "causas_comunes_vs_especiales"
   ],
@@ -25,5 +25,122 @@
     "Cuando tu negocio tiene niveles constantes de defectos y tu única explicación es que falta maquinaria nueva",
     "Cuando tienes datos de auditoria de calidad que nunca has analizado para mejorar algo"
   ],
-  "etiqueta_arbol": "Diagnostica las Fallas de Calidad"
+  "etiqueta_arbol": "Diagnostica las Fallas de Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-154",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming muestra un caso real de diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+      "texto_nuevo": "Un caso real muestra un diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming muestra un caso real"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-024 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "n1-fase-163",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q018-003: Diagnosticar con datos de auditoria las fallas de calidad de una planta que ya produce es gestion operativa de un negocio en marcha, por eso es ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0185",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recopilar y revisar los datos historicos de auditoria de calidad (defectos mayores y menores) que ya tienes disponibles",
+      "texto_nuevo": "Recopilar y revisar los datos históricos de auditoría de calidad (defectos mayores y menores) que ya tienes disponibles",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O016-010.paso0: históricos, auditoría (Faltan las tildes de históricos y auditoría; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0186",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documentar como funciona realmente la detección de defectos: quien los repara, quien los deja pasar y por que",
+      "texto_nuevo": "Documentar cómo funciona realmente la detección de defectos: quién los repara, quién los deja pasar y por qué",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O016-010.paso1: cómo, quién, quién, qué (Son interrogativos indirectos y llevan tilde (cómo, quién, qué); no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0187",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar si pagas por pieza producida y evaluar que impacto tiene eso en la calidad",
+      "texto_nuevo": "Revisar si pagas por pieza producida y evaluar qué impacto tiene eso en la calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O016-010.paso2: qué (El qué interrogativo indirecto lleva tilde; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0188",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribir un diagnostico claro para ti mismo con los hallazgos, las causas raiz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema",
+      "texto_nuevo": "Escribir un diagnóstico claro para ti mismo con los hallazgos, las causas raíz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O016-010.paso3: diagnóstico, raíz (Faltan las tildes de diagnóstico y raíz; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0189",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de que cuenta como defecto",
+      "texto_nuevo": "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de qué cuenta como defecto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O016-010.paso4: qué (El qué interrogativo indirecto lleva tilde; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0190",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un documento de diagnostico con los datos de auditoria, las causas raiz identificadas y un plan de acción para rediseñar tu sistema de calidad",
+      "texto_nuevo": "Un documento de diagnóstico con los datos de auditoría, las causas raíz identificadas y un plan de acción para rediseñar tu sistema de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O016-010.entregable: diagnóstico, auditoría, raíz (Faltan las tildes de diagnóstico, auditoría y raíz; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

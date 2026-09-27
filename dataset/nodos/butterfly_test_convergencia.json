@@ -1,10 +1,10 @@
 {
   "node_id": "butterfly_test_convergencia",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ideacion",
   "dominio": "core",
   "titulo_concepto": "Butterfly Test: Convergencia mediante Post-it Notes",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Técnica inventada por Bill Moggridge en IDEO para extraer el consenso intuitivo de un grupo sobre qué ideas merecen avanzar. Cada participante recibe un número limitado de post-its 'ballot' que coloca sobre las ideas que considera más prometedoras de una pared llena de opciones generadas en brainstorming. No es un proceso democrático puro sino una forma de maximizar la capacidad del equipo para converger en las mejores soluciones.",
+  "resumen_teorico": "Técnica surgida en IDEO para extraer el consenso intuitivo de un grupo sobre qué ideas merecen avanzar. Cada participante recibe un número limitado de post-its 'ballot' que coloca sobre las ideas que considera más prometedoras de una pared llena de opciones generadas en brainstorming. No es un proceso democrático puro sino una forma de maximizar la capacidad del equipo para converger en las mejores soluciones.",
   "pasos_accionables": [
     "Exponer todas las ideas generadas en una pared o superficie visible",
     "Entregar a cada participante una cantidad limitada de post-its como 'votos'",
@@ -25,5 +25,39 @@
     "Cuando el equipo tiene demasiadas ideas y necesita converger en pocas",
     "Cuando se busca evitar el debate interminable o la decisión unilateral"
   ],
-  "etiqueta_arbol": "Vota tus Ideas con Post-its"
+  "etiqueta_arbol": "Vota tus Ideas con Post-its",
+  "correcciones": [
+    {
+      "id": "atribucion-013",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Técnica inventada por Bill Moggridge en IDEO para extraer el consenso intuitivo de un grupo sobre qué ideas merecen avanzar. Cada participante recibe un número limitado de post-its 'ballot' que coloca sobre las ideas que considera más prometedoras de una pared llena de opciones generadas en brainstorming. No es un proceso democrático puro sino una forma de maximizar la capacidad del equipo para converger en las mejores soluciones.",
+      "texto_nuevo": "Técnica surgida en IDEO para extraer el consenso intuitivo de un grupo sobre qué ideas merecen avanzar. Cada participante recibe un número limitado de post-its 'ballot' que coloca sobre las ideas que considera más prometedoras de una pared llena de opciones generadas en brainstorming. No es un proceso democrático puro sino una forma de maximizar la capacidad del equipo para converger en las mejores soluciones.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Técnica inventada por Bill Moggridge"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-002 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-039",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ideacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F02-017: Es la convergencia interna del equipo sobre ideas de un brainstorming antes de prototipar, sin contacto con clientes ni mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Change by Design, Revised and U - Tim Brown"
+  ]
 }

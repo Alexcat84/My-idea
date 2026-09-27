@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P85DB43",
+  "intento": 0,
+  "usd": 0.2064,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46180,
+  "tokens_out": 1084,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P85DB43\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5182, 5206, 5184], \"cita\": \"you first have to centralise so that people are socialised to use similar decision premises and assumptions [...] This is in sharp contrast to centralisation by rules and regulations [...] must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance\", \"datos_sin_respaldo\": [], \"razon\": \"Según Weick, la cultura socializa premisas compartidas, a diferencia de las reglas (L5178). 'En lugar de solo reglas' conserva los SOP que el libro valora (L5182), así que no los contradice. La formación está respaldada (L5204, L5206). La 'mentoría' concreta la guía supervisora sobre el terreno y las historias de guerra (L5184, L5206). No aporta datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P85DB43",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5182,
+   5206,
+   5184
+  ],
+  "cita": "you first have to centralise so that people are socialised to use similar decision premises and assumptions [...] This is in sharp contrast to centralisation by rules and regulations [...] must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance",
+  "datos_sin_respaldo": [],
+  "razon": "Según Weick, la cultura socializa premisas compartidas, a diferencia de las reglas (L5178). 'En lugar de solo reglas' conserva los SOP que el libro valora (L5182), así que no los contradice. La formación está respaldada (L5204, L5206). La 'mentoría' concreta la guía supervisora sobre el terreno y las historias de guerra (L5184, L5206). No aporta datos nuevos.",
+  "paso_fiel": ""
+ }
+}

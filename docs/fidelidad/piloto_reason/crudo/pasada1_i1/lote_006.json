@@ -1,0 +1,74 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_006",
+  "intento": 0,
+  "usd": 0.15473599999999998,
+  "turnos": 1,
+  "duracion_s": 15.0,
+  "pared_s": 17.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32274,
+  "tokens_out": 1282,
+  "error": false
+ },
+ "resultado": "```json\n[\n{\"id\": \"P0334FC\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2650, 2658, 2702, 2767, 5781, 181], \"razon\": \"Controles regulares de huecos respaldados, pero el libro ajusta la frecuencia al ritmo de cambio, no mide las defensas por separado y prioriza pocos procesos.\"},\n{\"id\": \"P1D14A3\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2669, 2671, 2675, 2693, 4757, 4974], \"razon\": \"El libro define los casi accidentes y distingue los benignos (proactivos) de los casi catastróficos (reactivos). Considera valiosos los sistemas de reporte.\"},\n{\"id\": \"P99BE93\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [580, 582, 2596, 2598, 5639, 5701, 3332], \"razon\": \"El libro recomienda medir regularmente procesos genéricos como mantenimiento, planificación y comunicación, y aplicar esto a cualquier dominio.\"},\n{\"id\": \"P45DE46\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [1085, 1095, 1141], \"razon\": \"El libro advierte que las falsas alarmas frecuentes minan la confianza. Auditar su tasa es una extensión coherente, sin choque.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0334FC",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2650,
+    2658,
+    2702,
+    2767,
+    5781,
+    181
+   ],
+   "razon": "Controles regulares de huecos respaldados, pero el libro ajusta la frecuencia al ritmo de cambio, no mide las defensas por separado y prioriza pocos procesos."
+  },
+  {
+   "id": "P1D14A3",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2669,
+    2671,
+    2675,
+    2693,
+    4757,
+    4974
+   ],
+   "razon": "El libro define los casi accidentes y distingue los benignos (proactivos) de los casi catastróficos (reactivos). Considera valiosos los sistemas de reporte."
+  },
+  {
+   "id": "P99BE93",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    580,
+    582,
+    2596,
+    2598,
+    5639,
+    5701,
+    3332
+   ],
+   "razon": "El libro recomienda medir regularmente procesos genéricos como mantenimiento, planificación y comunicación, y aplicar esto a cualquier dominio."
+  },
+  {
+   "id": "P45DE46",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    1085,
+    1095,
+    1141
+   ],
+   "razon": "El libro advierte que las falsas alarmas frecuentes minan la confianza. Auditar su tasa es una extensión coherente, sin choque."
+  }
+ ]
+}

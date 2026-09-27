@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P20BB6D",
+  "intento": 0,
+  "usd": 0.148744,
+  "turnos": 1,
+  "duracion_s": 16.9,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29441,
+  "tokens_out": 1549,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P20BB6D\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4798, 4824, 4765], \"cita\": \"it is essential to protect informants and their colleagues as far as possible from disciplinary actions taken on the basis of their reports. But there will be limits upon this indemnity.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro fija como primer factor la indemnidad disciplinaria 'en lo practicable'. El paso concreta ese factor sin cifras ni roles nuevos. No declara la indemnidad total ni incondicional, y 'diseñar un sistema' deja espacio para fijar sus límites (actos inadvertidos, no temerarios ni delictivos). No manda la amnistía general que el libro rechaza: omite el matiz, pero no lo invierte.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P20BB6D",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4798,
+   4824,
+   4765
+  ],
+  "cita": "it is essential to protect informants and their colleagues as far as possible from disciplinary actions taken on the basis of their reports. But there will be limits upon this indemnity.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro fija como primer factor la indemnidad disciplinaria 'en lo practicable'. El paso concreta ese factor sin cifras ni roles nuevos. No declara la indemnidad total ni incondicional, y 'diseñar un sistema' deja espacio para fijar sus límites (actos inadvertidos, no temerarios ni delictivos). No manda la amnistía general que el libro rechaza: omite el matiz, pero no lo invierte.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE7F8DF",
+  "intento": 0,
+  "usd": 0.19520400000000002,
+  "turnos": 1,
+  "duracion_s": 16.8,
+  "pared_s": 17.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41071,
+  "tokens_out": 1546,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE7F8DF\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2520, 2568, 2596, 2638, 2658], \"cita\": \"If they were to rely entirely on outcome measures, organizations would probably move passively to and fro across the central zone like pieces of flotsam. […] The frequency with which these checks are carried out will depend upon the rate at which the process in question is likely to change.\", \"datos_sin_respaldo\": [\"monitoreo continuo\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda navegar activamente en vez de quedar pasivamente a merced de las corrientes, sin desechar las medidas reactivas, que exige junto a las proactivas (L2638). No es contrario. Pero no habla de monitoreo continuo: pide chequeos regulares de 8-16 indicadores. Su frecuencia depende del ritmo de cambio de cada proceso.\", \"paso_fiel\": \"Implementar navegación activa: medir con regularidad los procesos organizacionales, con una frecuencia según lo rápido que cambie cada uno, en lugar de depender principalmente de los resultados negativos, y seguir aprendiendo de los sucesos pasados.\"}\n```",
+ "parseado": {
+  "id": "PE7F8DF",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2520,
+   2568,
+   2596,
+   2638,
+   2658
+  ],
+  "cita": "If they were to rely entirely on outcome measures, organizations would probably move passively to and fro across the central zone like pieces of flotsam. […] The frequency with which these checks are carried out will depend upon the rate at which the process in question is likely to change.",
+  "datos_sin_respaldo": [
+   "monitoreo continuo"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda navegar activamente en vez de quedar pasivamente a merced de las corrientes, sin desechar las medidas reactivas, que exige junto a las proactivas (L2638). No es contrario. Pero no habla de monitoreo continuo: pide chequeos regulares de 8-16 indicadores. Su frecuencia depende del ritmo de cambio de cada proceso.",
+  "paso_fiel": "Implementar navegación activa: medir con regularidad los procesos organizacionales, con una frecuencia según lo rápido que cambie cada uno, en lugar de depender principalmente de los resultados negativos, y seguir aprendiendo de los sucesos pasados."
+ }
+}

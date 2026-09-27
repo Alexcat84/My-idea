@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Eliminación de causas de error (Paso 11)",
+  "etiqueta": "Quita lo que Causa el Error",
+  "resumen": "Crosby propone que cada persona describa, en un formulario sencillo de una sola página, cualquier problema que le impida hacer su trabajo sin errores. No es un sistema de sugerencias: basta con señalar el problema, y el grupo funcional que corresponda (por ejemplo, ingeniería industrial) se encarga de desarrollar la respuesta. Cuando la gente comprueba que sus problemas se escuchan y se contestan, confía en el canal y el programa puede sostenerse indefinidamente.",
+  "entregable": "Un formulario de una página para reportar causas de error y un registro donde cada problema recibido tiene acuse de recibo en un plazo máximo de 72 horas y un responsable asignado para resolverlo.",
+  "condiciones": [
+   "Cuando tu equipo repite errores que parecen venir de herramientas, instrucciones o procesos y no de descuido.",
+   "Cuando la gente comenta problemas en el pasillo pero no existe un canal formal para hacerlos llegar a quien puede resolverlos."
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+  "lineas": "1631",
+  "cita": "within twenty-four hours. Typical inputs might be",
+  "dato": "acuse de recibo en un plazo máximo de 72 horas",
+  "explicacion": "En el Paso 11 (Error Cause Removal) Crosby dice que es importante que todo problema listado se reconozca rápido, dentro de las veinticuatro horas. El entregable triplica ese plazo a 72 horas. Cambia un plazo que el libro fija de forma explícita."
+ },
+ {
+  "titulo": "Reglas de Joyce Orsini para inspeccionar lotes en estado de caos",
+  "etiqueta": "Inspecciona sin Adivinar",
+  "resumen": "Cuando la calidad de lo que entra da saltos amplios e impredecibles alrededor del punto de equilibrio, Deming presenta las reglas de Joyce Orsini como alternativa simple a la inspección al 100%. Si el costo de que un defectuoso llegue a producción (k2) es al menos 1000 veces el costo de inspeccionar una pieza (k1), inspecciona todo; si está entre 10 y 1000 veces, prueba una muestra de 200 y acepta el resto solo si no aparece ningún defectuoso, o criba el resto si aparece alguno; si es menor de 10 veces, no inspecciones. Las muestras sirven además como registro continuo de la calidad entrante para trabajar el problema con el proveedor.",
+  "entregable": "Una regla de decisión por tipo de pieza entrante, con la relación k2/k1 estimada y un gráfico de defectuosos por muestra que muestre las oscilaciones de calidad día a día.",
+  "condiciones": [
+   "Cuando la calidad de las piezas que recibes es estable y predecible porque el proceso del proveedor ya está en control estadístico.",
+   "Cuando recibes material de dos o más proveedores de calidad muy distinta y no sabes qué partidas revisar."
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "9381",
+  "cita": "A simple alternative to 100 percent inspection in the state of chaos is Joyce Orsini’s rules.",
+  "dato": "Cuando la calidad de las piezas que recibes es estable y predecible porque el proceso del proveedor ya está en control estadístico.",
+  "explicacion": "Deming reserva las reglas de Orsini para el estado de caos, cuando la calidad entrante es impredecible (línea 9363 y siguientes). Para material que viene de un proceso en control estadístico remite a las reglas de todo o nada (línea 7849: 'The all-or-none rules of Chapter 14 apply for minimum total cost of incoming items that come from a process that is in statistical control.'). La condición activa el nodo justo en la situación opuesta a la que da el libro."
+ },
+ {
+  "titulo": "Definición operacional de puntualidad en metas de servicio",
+  "etiqueta": "Define qué es a Tiempo",
+  "resumen": "Una meta como '99% de puntualidad' no significa nada si no se define operacionalmente qué cuenta como llegar a tiempo: cualquiera podría cumplirla si 'a tiempo' fuera llegar dentro de las cuatro horas del horario impreso. Deming recomienda fijar como tolerancia máxima cinco minutos respecto del horario publicado y juzgar el desempeño con un gráfico de corridas de las llegadas día tras día o con la distribución de los tiempos de llegada, no con adjetivos como 'buen servicio'. La misma lógica aplica a los programas de producción y de entrega.",
+  "entregable": "Una definición operacional escrita de 'a tiempo' para tus entregas, con el gráfico de corridas de los tiempos reales de llegada o entrega.",
+  "condiciones": [
+   "Cuando prometes o te exigen un porcentaje de puntualidad sin que nadie haya definido qué cuenta como a tiempo.",
+   "Cuando clientes y equipo discuten si el servicio es 'bueno' o 'malo' sin datos que lo respalden."
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "6901",
+  "cita": "Anyone could guarantee to put a train into Penn Station day after day, 99 days out of 100, if on-time be defined as arrival any time within four hours of the printed timetable.",
+  "dato": "Deming recomienda fijar como tolerancia máxima cinco minutos respecto del horario publicado",
+  "explicacion": "Deming exige una definición operacional de 'a tiempo' y propone juzgar el desempeño con un gráfico de corridas o una distribución de llegadas (líneas 6899 y 10672), pero nunca fija una tolerancia concreta. Grep sin resultados en todo el libro para 'five minutes', '5 minutes' o una tolerancia de puntualidad; el pasaje del tren (10672) solo habla de 'a few minutes or possibly within a few seconds'. La cifra de cinco minutos es un añadido."
+ },
+ {
+  "titulo": "Evaluación del costo de la calidad por el contralor (Paso 4)",
+  "etiqueta": "Que Finanzas Mida el Costo",
+  "resumen": "Las primeras estimaciones del costo de la calidad suelen ser poco fiables y quedarse cortas, así que Crosby pide que la oficina del contralor calcule cifras más precisas, a partir de información detallada sobre qué entra en ese costo. El costo de la calidad no es una medida absoluta de desempeño: indica dónde la acción correctiva será rentable, y cuanto más alto es, más acción correctiva hace falta. Que lo calcule el contralor elimina cualquier sospecha de sesgo y deja instalada una medida del desempeño de la gestión de calidad en el sistema de la empresa.",
+  "entregable": "Un informe del costo de la calidad elaborado por el área de finanzas conforme a los principios de contabilidad generalmente aceptados, separado en prevención, evaluación y fallas, que señale dónde conviene priorizar la acción correctiva.",
+  "condiciones": [
+   "Cuando ya tienes una estimación inicial del costo de hacer las cosas mal, pero la calculó el propio responsable de calidad.",
+   "Cuando necesitas decidir en qué áreas la acción correctiva va a ser más rentable."
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+  "lineas": "1617-1619",
+  "cita": "The comptroller's office must do this. They should be provided with detailed information on what constitutes the cost of quality.",
+  "dato": "conforme a los principios de contabilidad generalmente aceptados",
+  "explicacion": "Crosby solo pide que el contralor calcule el costo de la calidad para quitar sospechas de sesgo (líneas 1617 y 1619) y lo divide en prevención, evaluación y fallas (línea 185). En ningún lugar exige ajustarlo a una norma contable. Grep sin resultados en todo el libro para 'generally accepted' y 'GAAP'. Además, en la línea 1493 advierte que usarlo como medida contable lo desvirtúa. La norma contable es un añadido."
+ }
+]

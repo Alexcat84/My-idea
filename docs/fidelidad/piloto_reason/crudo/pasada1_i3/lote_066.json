@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_066",
+  "intento": 0,
+  "usd": 0.165512,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 18.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33303,
+  "tokens_out": 1615,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P75176E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"trabajadores experimentados\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1006, 1012, 1541, 1543, 1547, 5055], \"razon\": \"El libro no manda consultar. Además separa violaciones rutinarias (atajos por mínimo esfuerzo) de necesarias, y el paso las mezcla. Advierte que los expertos no siempre saben dónde está el borde.\"},\n  {\"id\": \"P478FB8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Safety Case\"], \"clase\": \"FIEL\", \"lineas\": [4340, 4388, 4358], \"razon\": \"El libro respalda actualizar ante cambios significativos. Cullen añade actualizar a intervalos regulares, y el paso lo omite; quien lo siga podría no revisar si no hay cambios.\"},\n  {\"id\": \"PEAFFAB\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"mentor\", \"asesor\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [3971, 4446, 4257, 4259, 668], \"razon\": \"El libro señala la cultura cerrada y el valor de un regulador externo. Mentor o asesor es añadido. Además limita cuánto puede ver un externo (filtrado de información, sesgo retrospectivo).\"},\n  {\"id\": \"P41836E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"poka-yoke\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [2311, 2369, 2356, 1840], \"razon\": \"El libro propone piezas instalables solo correctamente como solución duradera, pero llama más fundamental eliminar el contacto manual. Priorizarlas podría invertir el orden. Poka-yoke no aparece.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P75176E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "trabajadores experimentados"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1006,
+    1012,
+    1541,
+    1543,
+    1547,
+    5055
+   ],
+   "razon": "El libro no manda consultar. Además separa violaciones rutinarias (atajos por mínimo esfuerzo) de necesarias, y el paso las mezcla. Advierte que los expertos no siempre saben dónde está el borde."
+  },
+  {
+   "id": "P478FB8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Safety Case"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4340,
+    4388,
+    4358
+   ],
+   "razon": "El libro respalda actualizar ante cambios significativos. Cullen añade actualizar a intervalos regulares, y el paso lo omite; quien lo siga podría no revisar si no hay cambios."
+  },
+  {
+   "id": "PEAFFAB",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "mentor",
+    "asesor"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    3971,
+    4446,
+    4257,
+    4259,
+    668
+   ],
+   "razon": "El libro señala la cultura cerrada y el valor de un regulador externo. Mentor o asesor es añadido. Además limita cuánto puede ver un externo (filtrado de información, sesgo retrospectivo)."
+  },
+  {
+   "id": "P41836E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "poka-yoke"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2311,
+    2369,
+    2356,
+    1840
+   ],
+   "razon": "El libro propone piezas instalables solo correctamente como solución duradera, pero llama más fundamental eliminar el contacto manual. Priorizarlas podría invertir el orden. Poka-yoke no aparece."
+  }
+ ]
+}

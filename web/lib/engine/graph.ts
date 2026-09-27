@@ -9,6 +9,10 @@
 import masterGraphJson from "../assets/master_graph.json";
 import preguntasCacheJson from "../assets/preguntas_cache.json";
 import entrySeedsJson from "../assets/entry_seeds.json";
+import { ETIQUETAS_RIEL, type IdiomaDerivado } from "../i18n/etiquetasRiel";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { interpolar } from "../i18n/interpolar";
+import { MOTOR } from "../i18n/mensajes/motor";
 
 export const MAX_OPCIONES = 6;
 export const MAX_SUCESORES_NIVEL2 = 4;
@@ -162,16 +166,19 @@ export function resolverId(nid: string, graph: GrafoResoluble): string | null {
 
 /** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
  * árbol, cintillo de la tarjeta) es la etiqueta_arbol -- 4-5 palabras en
- * segunda persona, generada para enamorar. El titulo_concepto (el nombre del
- * libro) solo respalda en el DETALLE del nodo. "La etiqueta enamora, el título
- * respalda".
+ * segunda persona, generada para enamorar. El titulo_concepto es material
+ * interno para la IA y no se pinta en ninguna parte: ningún libro ni autor llega
+ * al cliente (REGLA ESTRICTA del fundador, 26 sep 2026; AGENTS.md).
  *
  * Pasa por el resolutor: una referencia histórica muestra el título de quien la
  * representa hoy. El id crudo ya no lo alcanza ninguna referencia real -- solo
  * un id que jamás existió. */
-export function etiquetaArbol(nid: string, graph: Grafo): string {
+export function etiquetaArbol(nid: string, graph: Grafo, idioma: Locale = LOCALE_BASE): string {
   const real = resolverId(nid, graph) ?? nid;
-  return graph[real]?.etiqueta_arbol ?? graph[real]?.titulo_concepto ?? real;
+  // D3 (i18n F5): fuera del español, la etiqueta DERIVADA de ese idioma; si
+  // faltara (el auditor no lo deja pasar en un nodo vivo), la del grafo.
+  const derivada = idioma === LOCALE_BASE ? undefined : ETIQUETAS_RIEL[idioma as IdiomaDerivado]?.[real];
+  return derivada ?? graph[real]?.etiqueta_arbol ?? graph[real]?.titulo_concepto ?? real;
 }
 
 /** El TÍTULO de un nodo por su id, de cualquier era. Mismo resolutor que
@@ -257,14 +264,19 @@ export function sucesoresNivel(
 
 /** Pregunta abierta pregenerada para este nodo, o una generica si no esta
  * en el cache. */
-export function obtenerPregunta(nodeId: string, node: NodoGrafo, cache: PreguntasCache): string {
+export function obtenerPregunta(
+  nodeId: string,
+  node: NodoGrafo,
+  cache: PreguntasCache,
+  idioma: Locale = LOCALE_BASE
+): string {
   const entry = cache[nodeId];
   if (entry?.pregunta) return entry.pregunta;
-  return (
-    `Pensando en "${node.titulo_concepto}", cuentame en tus palabras ` +
-    "donde estas parado ahora mismo con tu idea y que es lo que mas " +
-    "te preocupa o te entusiasma."
-  );
+  // La genérica nombra el tema por su ETIQUETA (la etiqueta enamora; el título
+  // técnico no se muestra: AGENTS.md), la derivada del idioma si la hay (D3).
+  const derivada = idioma === LOCALE_BASE ? undefined : ETIQUETAS_RIEL[idioma as IdiomaDerivado]?.[nodeId];
+  const tema = derivada ?? node.etiqueta_arbol ?? node.titulo_concepto;
+  return interpolar(elegir(MOTOR, idioma).preguntaGenerica, { titulo: tema });
 }
 
 /**
@@ -276,9 +288,9 @@ export function obtenerPregunta(nodeId: string, node: NodoGrafo, cache: Pregunta
  * generica lanzaba TypeError; y aunque no lanzara, `cache[nid]` no encontraba la
  * pregunta CURADA del superviviente y entregaba la plantilla.
  */
-export function preguntaDeNodo(nid: string, graph: Grafo, cache: PreguntasCache): string {
+export function preguntaDeNodo(nid: string, graph: Grafo, cache: PreguntasCache, idioma: Locale = LOCALE_BASE): string {
   const real = resolverId(nid, graph) ?? nid;
-  return obtenerPregunta(real, graph[real], cache);
+  return obtenerPregunta(real, graph[real], cache, idioma);
 }
 
 export interface ResumenNodo {

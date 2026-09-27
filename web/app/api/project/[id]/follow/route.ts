@@ -31,20 +31,21 @@
  * core+unlocks igual que en el plan original del mundo (world/start:122).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
-import catalogo from "@/lib/assets/packs_catalog.json";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
+import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
-import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
-import { PRECIOS } from "@/lib/precios";
+import { crearSesion, dominiosDesbloqueados, nodosCubiertos } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
-import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
-import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
-import { construirBloqueRealidad, construirBloqueRealidadMundo } from "@/lib/engine/bloqueRealidad";
+import { avisosNodo } from "@/lib/engine/avisos";
+import { LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { candidatosSeguimiento, seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import {
@@ -52,14 +53,30 @@ import {
   itemsDelUltimoPlanDe,
   type FilaChecklist,
 } from "@/lib/engine/seguimientoComposer";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
+import { abrirCiclo, consultarSaldoCiclo, realidadDelCiclo } from "@/lib/cicloApertura";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
+/**
+ * AUD-09 M22: ¿alcanza el saldo para el ritual de este espacio? El canon §5
+ * pide rechazar ANTES de que el usuario escriba su "qué pasó"; Manos a la Obra
+ * pregunta aquí antes de abrir el formulario. Solo mira: no gasta el límite del
+ * día ni aparta créditos (eso lo hace el POST, al empezar de verdad).
+ */
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id: projectId } = await params;
+  const dominio = new URL(request.url).searchParams.get("dominio") || "core";
+  const supabase = await createClient();
+  return consultarSaldoCiclo({ supabase, projectId, dominio, tipo: "profundizar", idioma: idiomaDeRequest(request) });
+}
+
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).follow;
 
   let body: { detalles?: unknown; enfoque?: unknown; dominio?: unknown };
   try {
@@ -71,105 +88,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const enfoque = typeof body.enfoque === "string" ? body.enfoque : null;
   // Fase 4.2: sin dominio, el follow es el de siempre (el viaje core).
   const dominio = typeof body.dominio === "string" && body.dominio ? body.dominio : "core";
-  for (const [campo, valor] of [
-    ["detalles", detalles],
-    ["enfoque", enfoque],
-  ] as const) {
+  for (const valor of [detalles, enfoque]) {
     if (valor && valor.length > MAX_LARGO_TEXTO_USUARIO) {
       return NextResponse.json(
-        { error: `'${campo}' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+        { error: mensajeTextoLargo(idioma), limite: MAX_LARGO_TEXTO_USUARIO },
         { status: 400 }
       );
     }
   }
 
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
-  }
-  // ETAPA 2 (la frontera): el seguimiento es motor pagado; cuenta real.
-  if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
-  }
-  if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
-  }
-  const proyecto = await obtenerProyecto(supabase, projectId);
-  if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
-  }
-
-  // Fase 4.2: el mundo debe existir, estar activado y estar ABIERTO. Igual que
-  // world/start, esto va ANTES de cobrar el arranque: nadie quema una consulta
-  // en un 403.
-  const entradaCatalogo = (catalogo.packs as Array<{ clave: string; nombre: string }>).find(
-    (p) => p.clave === dominio
-  );
-  let nombreMundo = "";
-  if (dominio !== "core") {
-    if (!entradaCatalogo) {
-      return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
-    }
-    nombreMundo = entradaCatalogo.nombre;
-    const { data: unlock } = await supabase
-      .from("project_unlocks")
-      .select("id, completado_at")
-      .eq("project_id", projectId)
-      .eq("dominio", dominio)
-      .limit(1);
-    if (!unlock || unlock.length === 0) {
-      return NextResponse.json(
-        { error: `El mundo "${nombreMundo}" aún no está activado para esta idea.` },
-        { status: 403 }
-      );
-    }
-    // Un mundo cerrado no se replanifica: se reabre primero. El cierre es
-    // reversible de un toque, así que esto no encierra a nadie.
-    if ((unlock[0] as { completado_at?: string | null }).completado_at) {
-      return NextResponse.json(
-        { error: `Diste "${nombreMundo}" por completado. Reábrelo si quieres seguir trabajándolo.` },
-        { status: 409 }
-      );
-    }
-  }
-
-  // ── ANCLA para la ETAPA 2 del frente de cuentas (rama cuentas-y-creditos)
-  // Aqui, y NO antes, va la VERIFICACION de saldo del follow: 2 creditos, TANTO
-  // core como mundo. La fuente de verdad es precios.ts (seguimiento: 2,
-  // mundo_seguimiento: 2) + FLUJO_TRACKING §5 ("2 core / 2 mundo"). Este es el
-  // punto correcto porque, en el caso mundo, el mundo ya se valido (existe, esta
-  // activado y esta abierto): verificar antes cobraria un 403 o un 404. El
-  // patron es el del plan (session/[id]/plan:309): verificar saldo al inicio y
-  // DESCONTAR A LA ENTREGA — el descuento va al final de esta ruta, no aqui.
-  //
-  // Correccion 2026-07-17: un comentario anterior aqui decia "el follow core no
-  // cobra creditos: es el bucle del viaje principal". Eso divergia de precios.ts
-  // (seguimiento: 2) y nadie lo autorizo; el seguimiento core cuesta 2, igual
-  // que el de mundo.
-  //
-  // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
-  const fusible = await verificarFusibleGlobal(user.email);
-  if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
-  }
-  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
-  if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
-  }
-
-  // ETAPA 2 — VERIFICAR al inicio (no cobrar): el seguimiento cuesta 2 (core
-  // o mundo, precios.ts). El descuento ocurre a la entrega del plan del ciclo.
-  const montoFollow = PRECIOS[dominio === "core" ? "seguimiento" : "mundo_seguimiento"];
-  const saldoFollow = await verificarSaldo(user.id, montoFollow);
-  if (!saldoFollow.alcanza) {
-    return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(saldoFollow.creditos, montoFollow), saldo: saldoFollow.creditos },
-      { status: 402 }
-    );
-  }
+  // Ciclo de replanteamiento, Fase 2: las puertas del ciclo (cuenta, doble
+  // factor, idea realizada, muros del mundo, saldo, RESERVA con la clave del
+  // cobro de la sesión que va a nacer, fusible y límite diario) viven en
+  // lib/cicloApertura.ts, las mismas para "Profundizar mi plan" y "Replantear
+  // mi camino". El cobro del seguimiento, core o mundo, ocurre a la ENTREGA de
+  // su plan (session/[id]/plan), al precio de precios.ts.
+  const apertura = await abrirCiclo({ request, supabase, projectId, dominio, tipo: "profundizar", idioma });
+  if (!apertura.ok) return apertura.respuesta;
+  const { user, proyecto, nombreMundo, sessionIdNueva, soltarReserva } = apertura.ciclo;
 
   // (a) El checklist del último plan DEL DOMINIO (por fecha de inserción) con
   // estados y notas — la historia real del avance, sin que el usuario la
@@ -196,13 +133,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let { data: filas, error: errorItems } = await leerFollow(`${COLS_FOLLOW}, no_aplica_motivo`);
   if (errorItems) ({ data: filas, error: errorItems } = await leerFollow(COLS_FOLLOW));
   if (errorItems) {
-    return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
+    await soltarReserva();
+    return NextResponse.json({ error: r.noPudimosLeerChecklist }, { status: 500 });
   }
   const items = itemsDelUltimoPlanDe((filas ?? []) as unknown as FilaChecklist[], dominio);
   // Un mundo sin checklist propio no tiene nada que seguir: primero se explora.
   if (dominio !== "core" && items.length === 0) {
+    await soltarReserva();
     return NextResponse.json(
-      { error: `Primero explora "${nombreMundo}" — su seguimiento nace de su plan.` },
+      { error: interpolar(t.primeroExplora, { mundo: nombreDeMundo(dominio, idioma) }) },
       { status: 409 }
     );
   }
@@ -215,14 +154,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // Fase 4.2: el bloque de un MUNDO se mide con la misma vara pero con SUS
   // datos (analyticsDeMundo: sus items, contra sus fechas, desde su unlock), y
   // del proyecto solo lleva una linea de contexto rotulada.
-  const entradaAnalytics = await cargarEntradaAnalytics(supabase, projectId, proyecto);
-  const analytics = calcularAnalytics(entradaAnalytics);
+  // AUD-09 M18: una lectura fallida se dice (503), no se pinta en cero.
   let bloqueRealidad: string | null;
-  if (dominio === "core") {
-    bloqueRealidad = construirBloqueRealidad(analytics);
-  } else {
-    const aMundo = analyticsDeMundo(entradaAnalytics, dominio);
-    bloqueRealidad = aMundo ? construirBloqueRealidadMundo(aMundo, analytics, nombreMundo) : null;
+  try {
+    bloqueRealidad = await realidadDelCiclo(supabase, projectId, proyecto, dominio, nombreMundo);
+  } catch (e) {
+    await soltarReserva();
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: mensajeLecturaFallida(idioma) }, { status: 503 });
+    throw e;
   }
 
   const mensaje = componerMensajeSeguimiento({ items, detalles, enfoque, bloqueRealidad });
@@ -266,8 +205,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // — un nodo CORE — y el plan del mundo saldría explorando el viaje
     // principal. Antes que eso, se dice la verdad.
     if (hayPuerta.length === 0) {
+      await soltarReserva();
       return NextResponse.json(
-        { error: `Ya recorriste todas las puertas de "${nombreMundo}".` },
+        { error: interpolar(t.puertasRecorridas, { mundo: nombreDeMundo(dominio, idioma) }) },
         { status: 409 }
       );
     }
@@ -276,7 +216,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // El mensaje compuesto es el mensaje_entrada de la sesión: bitácora.
   // La sesión nace con el dominio del mundo: su plan lo hereda y deriva su
   // checklist con él (session/[id]/plan:260), encadenado en el grupo del mundo.
-  const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje, null, dominio);
+  const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje, null, dominio, { id: sessionIdNueva });
 
   const client = createAnthropicClient();
   const acumulado = usoVacio();
@@ -304,6 +244,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     dominiosDesbloqueados: dominios,
     // Fase 4.3: un follow de mundo es una sesion de mundo. Misma regla.
     dominioSesion: dominio,
+    idioma: idiomaDelProyecto(proyecto),
+    // Ciclo de replanteamiento, Fase 2: lo que la persona escribió o dictó
+    // viaja con la sesión y se registra en la bitácora al entregar el plan.
+    ciclo: { tipo: "profundizar", detalles: detalles?.trim() || null, enfoque: enfoque?.trim() || null },
   });
 
   const resultado = await avanzarTurno({
@@ -315,20 +259,21 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     respuestaUsuario: null,
     acumulado: puerta.acumulado,
     dbSessionId: sessionId,
+    idioma,
   });
 
   // Igual que session/start: la puerta vive en la ruta desde estadoInicial
   // y el diff de nodos nuevos no la incluye — se antepone para el árbol.
   const nodoPuerta = {
     id: puerta.puertaId,
-    etiqueta: etiquetaArbol(puerta.puertaId, graph),
+    etiqueta: etiquetaArbol(puerta.puertaId, graph, idioma),
+    avisos: avisosNodo(puerta.puertaId, graph, idioma),
     modo: "conversado" as const,
   };
 
-  // ── ANCLA para la ETAPA 2 del frente de cuentas: el DESCUENTO de los 2
-  // creditos del follow de mundo va aqui (solo si dominio !== "core"). Este es
-  // el punto de entrega: la sesion existe, la puerta esta elegida y el primer
-  // turno esta listo para el usuario. Ni un credito antes: un follow que muere
-  // en el camino no se cobra.
-  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [nodoPuerta]);
+  // El follow NO cobra aqui (corregido en la AUD-09: este comentario decia que el
+  // descuento iba en este punto). El cobro del seguimiento, core o mundo, ocurre
+  // a la ENTREGA de su plan, en session/[id]/plan: un follow que muere en el
+  // camino no se cobra.
+  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [nodoPuerta], [], idioma);
 }

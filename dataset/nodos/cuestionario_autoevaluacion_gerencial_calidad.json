@@ -1,10 +1,10 @@
 {
   "node_id": "cuestionario_autoevaluacion_gerencial_calidad",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Cuestionario de Autoevaluación para la Transformación de Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming propone un extenso conjunto de preguntas para diagnosticar en qué punto estás respecto a los 14 puntos y las enfermedades mortales: constancia de propósito, estabilidad de procesos, relación con proveedores, gestión por objetivos, barreras al orgullo del trabajo, entre otros. Sirve como herramienta de diagnóstico honesto antes de avanzar en cualquier plan de transformación.",
+  "resumen_teorico": "Un extenso conjunto de preguntas te permite diagnosticar en qué punto estás respecto a los 14 puntos de Deming y las enfermedades mortales: constancia de propósito, estabilidad de procesos, relación con proveedores, gestión por objetivos, barreras al orgullo del trabajo, entre otros. Sirve como herramienta de diagnóstico honesto antes de avanzar en cualquier plan de transformación.",
   "pasos_accionables": [
     "Responder con honestidad cada bloque de preguntas, uno por uno",
     "Anotar sin adornos en qué áreas hay obstáculos (constancia de propósito, proveedores, gestión por números, etc.)",
@@ -23,5 +23,39 @@
     "Al iniciar cualquier proceso de transformación de calidad en tu negocio",
     "Cuando necesitas un diagnóstico objetivo de dónde estás respecto a la filosofía de calidad"
   ],
-  "etiqueta_arbol": "Evalúa tu Avance en Calidad"
+  "etiqueta_arbol": "Evalúa tu Avance en Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-051",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming propone un extenso conjunto de preguntas para diagnosticar en qué punto estás respecto a los 14 puntos y las enfermedades mortales: constancia de propósito, estabilidad de procesos, relación con proveedores, gestión por objetivos, barreras al orgullo del trabajo, entre otros. Sirve como herramienta de diagnóstico honesto antes de avanzar en cualquier plan de transformación.",
+      "texto_nuevo": "Un extenso conjunto de preguntas te permite diagnosticar en qué punto estás respecto a los 14 puntos de Deming y las enfermedades mortales: constancia de propósito, estabilidad de procesos, relación con proveedores, gestión por objetivos, barreras al orgullo del trabajo, entre otros. Sirve como herramienta de diagnóstico honesto antes de avanzar en cualquier plan de transformación.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming propone un extenso conjunto de preguntas"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-023 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-079",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F07-026: Autodiagnosticar la gestion de calidad y repetirlo para medir avance es mejora de un negocio que ya opera. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

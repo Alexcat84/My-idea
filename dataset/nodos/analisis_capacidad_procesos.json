@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_capacidad_procesos",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Análisis de Capacidad de Proceso mediante Histogramas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -35,6 +35,24 @@
       "node_id": "histograma_analisis",
       "titulo": "Análisis de Histogramas para Capacidad de Proceso",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-009",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-020: Evaluar la capacidad de un proceso productivo con mediciones y acciones correctivas es control de calidad de la operación, no validación con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ]
 }

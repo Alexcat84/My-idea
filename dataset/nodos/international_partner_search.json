@@ -1,6 +1,6 @@
 {
   "node_id": "international_partner_search",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "exportacion",
   "titulo_concepto": "Búsqueda Internacional de Socios (International Partner Search)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Prepara tus materiales de marketing y el perfil de tu negocio",
     "Solicita el International Partner Search en la oficina local del U.S. Commercial Service, indicando el mercado objetivo y el perfil de socio que buscas",
-    "Recibe y evalua la lista de hasta 5 socios potenciales prescreened en 15 días",
+    "Recibe y evalúa la lista de hasta 5 socios potenciales prescreened en 15 días",
     "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, interprete y apoyo para cerrar el trato",
-    "Pide un informe ICP para verificar la reputacion y las referencias financieras del socio antes de firmar",
+    "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar",
     "Contacta directamente a los socios interesados con la información proporcionada"
   ],
-  "entregable_esperado": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interes confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
+  "entregable_esperado": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
   "nodos_previos": [
     "evaluacion_mercados_objetivo",
     "seleccion_representante_extranjero"
@@ -23,7 +23,7 @@
     "clausula_escape_contrato_representante"
   ],
   "condiciones_activacion": [
-    "Si necesitas identificar rapidamente socios estrategicos calificados en un mercado extranjero",
+    "Si operas en Estados Unidos y necesitas identificar rápidamente socios estratégicos calificados en un mercado extranjero",
     "Si ya elegiste un mercado objetivo y quieres reuniones ya agendadas con compradores o socios",
     "Si necesitas verificar la fiabilidad de una empresa extranjera antes de firmar un acuerdo"
   ],
@@ -42,6 +42,79 @@
       "node_id": "international_company_profile",
       "titulo": "Perfil de Compañía Internacional (ICP)",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-194",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F13-024: Con el mercado ya elegido, se buscan, verifican y contactan socios para cerrar tratos; es implementar la exportacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-condicion-113",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si necesitas identificar rapidamente socios estrategicos calificados en un mercado extranjero",
+      "texto_nuevo": "Si operas en Estados Unidos y necesitas identificar rápidamente socios estratégicos calificados en un mercado extranjero",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-029: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición dice que aplica si operas en Estados Unidos, y el servicio lo presta el U.S. Commercial Service a empresas de ese país."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0767",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recibe y evalua la lista de hasta 5 socios potenciales prescreened en 15 días",
+      "texto_nuevo": "Recibe y evalúa la lista de hasta 5 socios potenciales prescreened en 15 días",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O067-026.paso2: evalua (Solo añade la tilde que faltaba en evalúa; el término en inglés prescreened queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0768",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide un informe ICP para verificar la reputacion y las referencias financieras del socio antes de firmar",
+      "texto_nuevo": "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O067-026.paso4: reputacion (Solo añade la tilde que faltaba en reputación; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0769",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interes confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
+      "texto_nuevo": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O067-026.entregable: interes (Solo añade la tilde que faltaba en interés; los términos en inglés y las siglas quedan igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -1,0 +1,86 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_010",
+  "intento": 0,
+  "usd": 0.167852,
+  "turnos": 1,
+  "duracion_s": 19.7,
+  "pared_s": 21.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31973,
+  "tokens_out": 1998,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P7C8B0F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1573, 4219, 4221, 4244, 4274, 4431, 4500], \"razon\": \"El libro dice que la prescripción no cubre todo y que la legislación va hacia metas y factores humanos y organizacionales. 'Puramente' respeta el matiz.\"},\n  {\"id\": \"P704932\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2547, 2556, 2568, 2594, 2638, 2765], \"razon\": \"El libro pide usar medidas reactivas y proactivas, pero advierte contra apoyarse en medidas de resultado cuando los eventos son raros. Leer 'ambos' como pesos iguales invertiría esa prioridad.\"},\n  {\"id\": \"P109EB6\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1934, 1995, 2342, 2356, 2907], \"razon\": \"El libro usa esos datos pero no recomienda el análisis. Separar error humano de fallo técnico puede tratar el error como causa final, algo que el libro rechaza.\"},\n  {\"id\": \"P983877\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5037, 5041, 5057, 5063, 5641, 5905, 5907], \"razon\": \"El libro da criterios (sustitución, árbol de culpabilidad), pero pide contramedidas en varios niveles a la vez. Plantear persona o sistema como alternativa excluyente choca con eso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P7C8B0F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1573,
+    4219,
+    4221,
+    4244,
+    4274,
+    4431,
+    4500
+   ],
+   "razon": "El libro dice que la prescripción no cubre todo y que la legislación va hacia metas y factores humanos y organizacionales. 'Puramente' respeta el matiz."
+  },
+  {
+   "id": "P704932",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2547,
+    2556,
+    2568,
+    2594,
+    2638,
+    2765
+   ],
+   "razon": "El libro pide usar medidas reactivas y proactivas, pero advierte contra apoyarse en medidas de resultado cuando los eventos son raros. Leer 'ambos' como pesos iguales invertiría esa prioridad."
+  },
+  {
+   "id": "P109EB6",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1934,
+    1995,
+    2342,
+    2356,
+    2907
+   ],
+   "razon": "El libro usa esos datos pero no recomienda el análisis. Separar error humano de fallo técnico puede tratar el error como causa final, algo que el libro rechaza."
+  },
+  {
+   "id": "P983877",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5037,
+    5041,
+    5057,
+    5063,
+    5641,
+    5905,
+    5907
+   ],
+   "razon": "El libro da criterios (sustitución, árbol de culpabilidad), pero pide contramedidas en varios niveles a la vez. Plantear persona o sistema como alternativa excluyente choca con eso."
+  }
+ ]
+}

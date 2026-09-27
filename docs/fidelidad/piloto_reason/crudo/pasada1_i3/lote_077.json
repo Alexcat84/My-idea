@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_077",
+  "intento": 0,
+  "usd": 0.17109999999999997,
+  "turnos": 1,
+  "duracion_s": 20.0,
+  "pared_s": 20.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33155,
+  "tokens_out": 1924,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P2B8458\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [252, 411, 2961, 2965, 3813, 5499], \"razon\": \"El libro repite que no podemos cambiar la condición humana pero sí las condiciones de trabajo. La falibilidad es inevitable, aunque moderable hasta cierto punto.\"},\n  {\"id\": \"PC94C93\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [848, 942, 1033, 1085, 1141, 1149], \"razon\": \"El libro constata la baja vigilancia, pero advierte que diseñar sistemas para compensar la falibilidad humana crea errores nuevos, complejidad y falsas alarmas. No recomienda esta vía.\"},\n  {\"id\": \"P19A050\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [582, 2767, 5775, 5781], \"razon\": \"El libro pide un proceso continuo. Pero el paso omite que no se pueden eliminar todas: hay que priorizar las más urgentes con recursos limitados.\"},\n  {\"id\": \"PD1CFE0\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4223, 4244, 4246, 4302, 4236, 1558], \"razon\": \"El libro respalda la legislación dirigida a actos inseguros concretos cuando los peligros son bien conocidos. Pero parte de sus ejemplos son dispositivos técnicos y critica la regulación prescriptiva fragmentada.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P2B8458",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    252,
+    411,
+    2961,
+    2965,
+    3813,
+    5499
+   ],
+   "razon": "El libro repite que no podemos cambiar la condición humana pero sí las condiciones de trabajo. La falibilidad es inevitable, aunque moderable hasta cierto punto."
+  },
+  {
+   "id": "PC94C93",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    848,
+    942,
+    1033,
+    1085,
+    1141,
+    1149
+   ],
+   "razon": "El libro constata la baja vigilancia, pero advierte que diseñar sistemas para compensar la falibilidad humana crea errores nuevos, complejidad y falsas alarmas. No recomienda esta vía."
+  },
+  {
+   "id": "P19A050",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    582,
+    2767,
+    5775,
+    5781
+   ],
+   "razon": "El libro pide un proceso continuo. Pero el paso omite que no se pueden eliminar todas: hay que priorizar las más urgentes con recursos limitados."
+  },
+  {
+   "id": "PD1CFE0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4223,
+    4244,
+    4246,
+    4302,
+    4236,
+    1558
+   ],
+   "razon": "El libro respalda la legislación dirigida a actos inseguros concretos cuando los peligros son bien conocidos. Pero parte de sus ejemplos son dispositivos técnicos y critica la regulación prescriptiva fragmentada."
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC9E624",
+  "intento": 0,
+  "usd": 0.242332,
+  "turnos": 1,
+  "duracion_s": 19.6,
+  "pared_s": 20.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 51848,
+  "tokens_out": 1747,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC9E624\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2884, 2922, 2977, 4720], \"cita\": \"these have little or no effect upon the error-producing factors, and so errors continue to be involved in incidents and accidents ... the familiar reactions to incidents and events, such as ‘write another procedure’ and ‘blame and train,’ may not actually make the system more resistant\", \"datos_sin_respaldo\": [], \"razon\": \"Va en la dirección del libro: critica depender de sanciones y exhortaciones, a las que atribuye poco o ningún efecto, y señala 'blame and train' como ritual repetido. El 'como única respuesta' se aparta en el detalle: no manda sancionar errores, solo acota su uso. El libro también habla de 'rely heavily' y 'very limited effectiveness'. No añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC9E624",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2884,
+   2922,
+   2977,
+   4720
+  ],
+  "cita": "these have little or no effect upon the error-producing factors, and so errors continue to be involved in incidents and accidents ... the familiar reactions to incidents and events, such as ‘write another procedure’ and ‘blame and train,’ may not actually make the system more resistant",
+  "datos_sin_respaldo": [],
+  "razon": "Va en la dirección del libro: critica depender de sanciones y exhortaciones, a las que atribuye poco o ningún efecto, y señala 'blame and train' como ritual repetido. El 'como única respuesta' se aparta en el detalle: no manda sancionar errores, solo acota su uso. El libro también habla de 'rely heavily' y 'very limited effectiveness'. No añade datos.",
+  "paso_fiel": ""
+ }
+}

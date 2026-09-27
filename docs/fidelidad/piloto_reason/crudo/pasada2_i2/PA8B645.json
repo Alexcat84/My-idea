@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA8B645",
+  "intento": 0,
+  "usd": 0.13708399999999998,
+  "turnos": 1,
+  "duracion_s": 18.5,
+  "pared_s": 19.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26326,
+  "tokens_out": 1589,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA8B645\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3692, 3704, 3706, 3714], \"cita\": \"The process begins with one of the 'bottom influences' (leaf nodes)--that is, a factor that has no external influences shown as impinging upon it. [...] they are given a graded indicator scale that specifies the nature of the evidence to be taken into account.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda asignar razones de influencia (good/poor, used/not used) con escalas graduadas de evidencia, pero solo a los nodos hoja. Los factores con influencias previas se calculan con evaluaciones condicionales ponderadas, que cubre otro paso del nodo. 'A cada factor' es impreciso, no contrario. Conviene reescribirlo: 'a cada factor sin influencias previas (nodos hoja)'.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA8B645",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3692,
+   3704,
+   3706,
+   3714
+  ],
+  "cita": "The process begins with one of the 'bottom influences' (leaf nodes)--that is, a factor that has no external influences shown as impinging upon it. [...] they are given a graded indicator scale that specifies the nature of the evidence to be taken into account.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda asignar razones de influencia (good/poor, used/not used) con escalas graduadas de evidencia, pero solo a los nodos hoja. Los factores con influencias previas se calculan con evaluaciones condicionales ponderadas, que cubre otro paso del nodo. 'A cada factor' es impreciso, no contrario. Conviene reescribirlo: 'a cada factor sin influencias previas (nodos hoja)'.",
+  "paso_fiel": ""
+ }
+}

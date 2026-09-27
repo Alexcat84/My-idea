@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_078",
+  "intento": 0,
+  "usd": 0.17215600000000003,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34639,
+  "tokens_out": 1680,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P63558F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2977, 2981, 3817, 4987, 5077, 5641, 5667, 5675], \"razon\": \"El libro dice que culpar sirve de poco y corta la busqueda causal. Admite sancionar a pocos egregios; el paso no elimina el castigo, solo impide que sustituya al analisis.\"},\n  {\"id\": \"PE0F0BD\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"personal técnico y gerencial\"], \"clase\": \"SIN_COBERTURA\", \"lineas\": [1820, 1842, 1934, 5517], \"razon\": \"El libro usa los casos para mostrar causas organizacionales, no para capacitar. Trata la formacion como contramedida del modelo de persona y apunta a remedios de diseno y organizacion.\"},\n  {\"id\": \"P8861B3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2977, 4765, 4820, 5067, 5077], \"razon\": \"El libro vincula las sanciones con la moral, el resentimiento y la confianza, en ambos sentidos. Evaluar ese impacto concreta lo que dice, en la misma direccion.\"},\n  {\"id\": \"P1E07B6\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1006, 1558, 1630, 1724, 5055], \"razon\": \"El libro afirma que el cumplimiento no es automaticamente correcto (mispliance). Con malas reglas, violar puede ser lo correcto; el paso lo convierte en regla general.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P63558F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2977,
+    2981,
+    3817,
+    4987,
+    5077,
+    5641,
+    5667,
+    5675
+   ],
+   "razon": "El libro dice que culpar sirve de poco y corta la busqueda causal. Admite sancionar a pocos egregios; el paso no elimina el castigo, solo impide que sustituya al analisis."
+  },
+  {
+   "id": "PE0F0BD",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "personal técnico y gerencial"
+   ],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    1820,
+    1842,
+    1934,
+    5517
+   ],
+   "razon": "El libro usa los casos para mostrar causas organizacionales, no para capacitar. Trata la formacion como contramedida del modelo de persona y apunta a remedios de diseno y organizacion."
+  },
+  {
+   "id": "P8861B3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2977,
+    4765,
+    4820,
+    5067,
+    5077
+   ],
+   "razon": "El libro vincula las sanciones con la moral, el resentimiento y la confianza, en ambos sentidos. Evaluar ese impacto concreta lo que dice, en la misma direccion."
+  },
+  {
+   "id": "P1E07B6",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1006,
+    1558,
+    1630,
+    1724,
+    5055
+   ],
+   "razon": "El libro afirma que el cumplimiento no es automaticamente correcto (mispliance). Con malas reglas, violar puede ser lo correcto; el paso lo convierte en regla general."
+  }
+ ]
+}

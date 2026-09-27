@@ -104,33 +104,54 @@ secreto ya committeado: (1) sacarlo del código, (2) rotarlo en el
 servicio de origen, (3) verificar que el flujo sigue vivo con el valor
 nuevo — en ese orden, el mismo día.
 
-## La etiqueta enamora, el título respalda (superficies de navegación)
+## Ningún libro ni autor llega al cliente; las fuentes son metadato interno
 
-**Regla:** en las SUPERFICIES DE NAVEGACIÓN del recorrido (el riel del
-árbol, el cintillo de la tarjeta de pregunta, cualquier lista de nodos por
-la que el usuario "viaja") lo único que se muestra es la `etiqueta_arbol`
-(4-5 palabras, segunda persona, generada para enamorar). El
-`titulo_concepto` (el nombre del libro/marco: "Leap of Faith Assumptions",
-"Build-Measure-Learn") aparece SOLO en el DETALLE de un nodo, junto a su
-fuente, y en tooltips de respaldo. Fallback al título si faltara la
-etiqueta. El helper único es `etiquetaArbol(nid, graph)` en
-`web/lib/engine/graph.ts` — úsalo en todo constructor de nodo de árbol.
+**Regla (REGLA ESTRICTA del fundador, 26 sep 2026):** ningún título de libro ni
+nombre de autor como FUENTE llega a nada que vea el cliente: ni a una pantalla,
+ni a un documento, ni a un correo, ni a una respuesta de la IA. Las fuentes
+viven SOLO en metadatos internos: el campo `fuente` de cada nodo, su
+`fuentes_internas` (todos los libros de los que viene, fusiones incluidas), el
+registro `correcciones`, `dataset/metadata/fuentes_canonicas.json`,
+`vigencia.json` y el inventario interno `docs/internos/INVENTARIO_FUENTES.md`.
+Un concepto con nombre propio es vocabulario del oficio y sí se usa (el ciclo de
+Deming, las cinco fuerzas de Porter); una cita a un autor o a un libro como
+fuente ("según Blank", "en su libro") no, y si aparece en el texto de un nodo
+sale por corrección declarada (veredicto ATRIBUCION de
+`scripts/fidelidad/aplicar_correcciones.py`), sin cambiar el sentido.
 
-**Por qué:** en la Fase 3.9, la sesión real del fundador (auditor HSEQ)
-mostró el riel y el cintillo con `titulo_concepto` verbatim — jerga y
-anglicismos crudos ("earlyvangelists", "Customer Development") en la
-superficie más visible del producto. Los 3,260 `etiqueta_arbol` que se
-generaron por $3.44 estaban sin usar en las dos superficies que más
-importan: `recorrido.ts` devolvía `titulo_concepto` y la UI lo pintaba tal
-cual. Una etiqueta corta y en segunda persona es la diferencia entre un
-producto que habla contigo y uno que te recita una bibliografía.
+**Por qué:** el 26 sep 2026 el aviso de vigencia salió a producción como
+"Según [libro], [año]", dictado por la auditoría del hilo. El fundador lo
+corrigió el mismo día: el producto habla por sí mismo; lo que respalda cada
+nodo es trabajo interno, no bibliografía que se le recita al cliente. Y lo
+interno no viaja al navegador (decisión del 27 sep 2026): antes de esa fecha
+la copia del grafo en web/ llevaba `fuente`, las correcciones con sus citas y la
+procedencia de las fusiones, y las instrucciones de la IA iban en el paquete
+del navegador.
 
-**Cómo aplicarla:** cualquier objeto de nodo que llegue al riel/cintillo
-lleva AMBOS campos — `etiqueta` (para mostrar) y `titulo` (para el detalle
-y el tooltip). Nunca pintes `titulo_concepto` directo en una superficie de
-navegación. Y en el redactor del plan: prohibido citar títulos de nodo
-verbatim cuando traen jerga o anglicismos; el plan habla español llano
-siempre.
+**Cómo aplicarla:**
+- En las SUPERFICIES DE NAVEGACIÓN (el riel del árbol, el cintillo de la
+  tarjeta, cualquier lista de nodos) y en todo texto de cara al cliente, un
+  nodo se nombra por su `etiqueta_arbol` (4-5 palabras, segunda persona). El
+  helper único es `etiquetaArbol(nid, graph)` en `web/lib/engine/graph.ts`.
+  El `titulo_concepto` NO se pinta en ninguna parte (no hay "detalle con su
+  fuente"): es material interno para la IA, y no se modifica por doctrina.
+  La opción de emergencia y el plan sin IA también van por la etiqueta.
+- La IA recibe en TODA llamada el bloque fijo `REGLA_SIN_FUENTES`
+  (`web/lib/reglaSinFuentes.ts`), que `bloquesDeSistema` pone después del
+  prompt cacheado. Ninguna llamada arma su sistema por otro camino.
+- Lo que se copia a web/ es la VISTA WEB de cada asset
+  (`scripts/sync_assets_web.py`): sin `fuente`, `fuentes_internas`,
+  `correcciones` ni `merged_originals`; vigencia solo con el año; jurisdicción
+  solo con país y clase. Un componente de cliente jamás importa el grafo, las
+  instrucciones de la IA ni las listas curadas.
+- Guardas: `engine/test_fuentes_de_cara.py` (ningún título de la lista canónica
+  en un texto de cara al cliente), `engine/test_fuentes_internas.py`
+  (`fuentes_internas` completas y al día), `web/lib/assets/sinInternos.test.ts`
+  (nada interno en los assets ni en el paquete del cliente),
+  `web/lib/reglaSinFuentes.test.ts` (la regla en toda llamada a la IA) y
+  `web/lib/engine/avisos.test.ts` (ningún aviso nombra un libro).
+- Un libro nuevo entra a `fuentes_canonicas.json` con sus títulos antes que su
+  primer nodo; una fusión nueva corre `python scripts/fuentes_internas.py`.
 
 ## Los precios viven en precios.ts; nada más los define (ni canon, ni comentarios)
 

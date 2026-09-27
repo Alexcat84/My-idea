@@ -61,7 +61,9 @@ export async function estaEnAllowlist(email: string): Promise<boolean> {
  * invisible. Si el navegador traía un organizador anónimo, sus proyectos pasan
  * al dueño recién autenticado. `anonId` SIEMPRE debe venir de la sesión que el
  * propio request traía en cookies ANTES de verificar (prueba de posesión),
- * jamás de un parámetro. No bloquea el login si falla; se dice fuerte.
+ * jamás de un parámetro, o de la anotación que el servidor dejó al registrar.
+ * No bloquea el login si falla: se reintenta, se dice fuerte, queda anotada
+ * para el próximo ingreso y el llamador recibe cuántas quedaron pendientes.
  *
  * CORTESÍA RETIRADA (fase "Catálogo congruente", ANÁLISIS §4/§8.3). Ya NO se
  * otorgan créditos automáticos al primer login: la beta trabaja con precios
@@ -72,16 +74,77 @@ export async function estaEnAllowlist(email: string): Promise<boolean> {
  * pública post-lanzamiento se decide con telemetría. La allowlist NO se toca:
  * sigue siendo la puerta de la beta.
  */
-export async function bienvenidaTrasLogin(real: User, anonId: string | null): Promise<void> {
-  if (esInvitadoInvisible(real)) return;
-  if (anonId && anonId !== real.id) {
+export async function bienvenidaTrasLogin(real: User, anonId: string | null): Promise<{ pendientes: number }> {
+  if (esInvitadoInvisible(real)) return { pendientes: 0 };
+  // AUD-09 H07: se adopta en TODO camino de sesión. Además de la identidad que
+  // este navegador traía (la cookie), se adoptan las que quedaron anotadas al
+  // registrarse (app_metadata, que solo escribe el servidor): así la cuenta
+  // confirmada desde otro navegador, o entrada tras recuperar la contraseña,
+  // recibe sus ideas igual.
+  const anotadas = leerPendientes(real.app_metadata);
+  const candidatos = [...new Set([...(anonId && anonId !== real.id ? [anonId] : []), ...anotadas])];
+  if (candidatos.length === 0) return { pendientes: 0 };
+
+  const fallidas: string[] = [];
+  for (const deId of candidatos) {
+    if (!(await adoptarConReintento(deId, real.id))) fallidas.push(deId);
+  }
+  // Lo que falló queda anotado: el próximo ingreso lo reintenta, venga de
+  // donde venga. Lo adoptado se limpia de la lista.
+  if (anotadas.length > 0 || fallidas.length > 0) {
     try {
-      const adoptados = await adoptarProyectosDeUsuario(anonId, real.id);
-      if (adoptados > 0) console.log(`[login] ${adoptados} proyecto(s) adoptado(s) de ${anonId}`);
+      await guardarPendientes(real.id, fallidas);
     } catch (e) {
-      console.error("[login] fallo la adopcion:", e);
+      console.error(`[login] no se pudo anotar la adopcion pendiente de ${real.id}:`, e);
     }
   }
+  if (fallidas.length > 0) {
+    console.error(`[login] ADOPCION PENDIENTE: ${fallidas.length} identidad(es) sin adoptar para ${real.id}`, fallidas);
+  }
+  return { pendientes: fallidas.length };
+}
+
+/** AUD-09 H07: al registrarse, el servidor conoce la identidad invisible del
+ * navegador (la cookie: prueba de posesión) y la deja anotada en la cuenta
+ * nueva, para adoptarla al confirmar desde cualquier navegador. */
+export async function registrarAdopcionPendiente(realId: string, anonId: string): Promise<void> {
+  const admin = createAdminClient();
+  const { data, error } = await admin.auth.admin.getUserById(realId);
+  if (error) throw error;
+  const actuales = leerPendientes(data.user?.app_metadata);
+  if (actuales.includes(anonId)) return;
+  await guardarPendientes(realId, [...actuales, anonId]);
+}
+
+const CLAVE_PENDIENTE = "adopcion_pendiente";
+const INTENTOS_ADOPCION = 3;
+
+function leerPendientes(appMetadata: Record<string, unknown> | undefined | null): string[] {
+  const v = appMetadata?.[CLAVE_PENDIENTE];
+  return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+}
+
+async function guardarPendientes(realId: string, ids: string[]): Promise<void> {
+  const admin = createAdminClient();
+  const { data, error: errLeer } = await admin.auth.admin.getUserById(realId);
+  if (errLeer) throw errLeer;
+  const { error } = await admin.auth.admin.updateUserById(realId, {
+    app_metadata: { ...(data.user?.app_metadata ?? {}), [CLAVE_PENDIENTE]: ids },
+  });
+  if (error) throw error;
+}
+
+async function adoptarConReintento(deId: string, aId: string): Promise<boolean> {
+  for (let intento = 1; intento <= INTENTOS_ADOPCION; intento += 1) {
+    try {
+      const adoptados = await adoptarProyectosDeUsuario(deId, aId);
+      if (adoptados > 0) console.log(`[login] ${adoptados} proyecto(s) adoptado(s) de ${deId}`);
+      return true;
+    } catch (e) {
+      console.error(`[login] fallo la adopcion de ${deId} (intento ${intento}/${INTENTOS_ADOPCION}):`, e);
+    }
+  }
+  return false;
 }
 
 /**

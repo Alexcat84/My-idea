@@ -1,0 +1,129 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_005",
+  "intento": 0,
+  "usd": 0.057006,
+  "turnos": 1,
+  "duracion_s": 13.0,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3651,
+  "tokens_out": 1229,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"PA034AF\", \"consultas\": [\"human error is a consequence not a cause\", \"identifying error is the beginning not the end of search for causes\", \"fundamental attribution error blaming individuals for accidents\"], \"nodo\": \"human error as consequence of organizational and workplace factors\"},\n{\"id\": \"P91431F\", \"consultas\": [\"proactive process measures identify processes most in need of remedial attention\", \"tracking effectiveness of previous remedial measures over time\", \"regular checks on organizational and local workplace factors\"], \"nodo\": \"proactive measurement of unsafe acts, local factors and organizational factors\"},\n{\"id\": \"P70A024\", \"consultas\": [\"installation more error-prone than disassembly in maintenance\", \"reassembly omissions independent inspection before return to service\", \"nuts and bolts many ways to reassemble wrongly errors hidden\"], \"nodo\": \"vulnerability of installation versus disassembly in maintenance errors\"},\n{\"id\": \"P86D246\", \"consultas\": [\"absence of bad outcomes encourages shortcuts and reduced protection\", \"production outweighs protection until accident reveals trade-off\", \"successful violations without incidents erode safety margins\"], \"nodo\": \"balance between production and protection parity\"},\n{\"id\": \"P4708DA\", \"consultas\": [\"regulators dependent on regulated organizations for information\", \"Vaughan autonomy and interdependence regulator and regulated\", \"regulatory inspection independent sources of safety information\"], \"nodo\": \"autonomy and interdependence in regulator-regulated relationship\"},\n{\"id\": \"PB5E738\", \"consultas\": [\"normalization of deviance Challenger O-ring erosion warning signals\", \"gradual redefinition of acceptable risk through incremental decisions\", \"ignoring warning signs and quality feedback drift toward danger\"], \"nodo\": \"normalization of deviance Diane Vaughan Challenger\"},\n{\"id\": \"P21084D\", \"consultas\": [\"blame cycle illusion of free will warnings sanctions\", \"incident reports attributing cause to human action alone\", \"naming blaming shaming ineffective countermeasures error recurs\"], \"nodo\": \"blame cycle and illusion of free will\"},\n{\"id\": \"P25B95C\", \"consultas\": [\"Review and MESH subjective ratings of local and organizational factors\", \"anonymous ratings entered by computer software averaged\", \"aircraft maintenance MESH task specialists five-point scale ratings\"], \"nodo\": \"Review and MESH subjective rating assessment descendants of Tripod-Delta\"},\n{\"id\": \"PB0C59C\", \"consultas\": [\"random versus systematic errors constant error variable error\", \"error management error reduction and error containment\", \"target shooting pattern of shots systematic bias random scatter\"], \"nodo\": \"error management reduction and containment of errors\"},\n{\"id\": \"PD48BA0\", \"consultas\": [\"were the actions and consequences as intended sabotage\", \"decision tree for determining culpability of unsafe acts\", \"substitution test substance abuse deliberate violation of procedures\"], \"nodo\": \"decision tree for determining culpability of unsafe acts\"},\n{\"id\": \"P2728DF\", \"consultas\": [\"why person model dominates blaming individuals more satisfying\", \"punishment and disciplinary action instead of root cause analysis\", \"bad things happen to bad people just world hypothesis\"], \"nodo\": \"why the person model dominates safety management\"},\n{\"id\": \"PDFAB93\", \"consultas\": [\"safety management like long-term fitness program not negative production\", \"lost time injury reduction targets not directly controllable\", \"managing processes rather than negative outcomes continuous improvement\"], \"nodo\": \"setting safety goals process management versus negative outcomes\"}]",
+ "parseado": [
+  {
+   "id": "PA034AF",
+   "consultas": [
+    "human error is a consequence not a cause",
+    "identifying error is the beginning not the end of search for causes",
+    "fundamental attribution error blaming individuals for accidents"
+   ],
+   "nodo": "human error as consequence of organizational and workplace factors"
+  },
+  {
+   "id": "P91431F",
+   "consultas": [
+    "proactive process measures identify processes most in need of remedial attention",
+    "tracking effectiveness of previous remedial measures over time",
+    "regular checks on organizational and local workplace factors"
+   ],
+   "nodo": "proactive measurement of unsafe acts, local factors and organizational factors"
+  },
+  {
+   "id": "P70A024",
+   "consultas": [
+    "installation more error-prone than disassembly in maintenance",
+    "reassembly omissions independent inspection before return to service",
+    "nuts and bolts many ways to reassemble wrongly errors hidden"
+   ],
+   "nodo": "vulnerability of installation versus disassembly in maintenance errors"
+  },
+  {
+   "id": "P86D246",
+   "consultas": [
+    "absence of bad outcomes encourages shortcuts and reduced protection",
+    "production outweighs protection until accident reveals trade-off",
+    "successful violations without incidents erode safety margins"
+   ],
+   "nodo": "balance between production and protection parity"
+  },
+  {
+   "id": "P4708DA",
+   "consultas": [
+    "regulators dependent on regulated organizations for information",
+    "Vaughan autonomy and interdependence regulator and regulated",
+    "regulatory inspection independent sources of safety information"
+   ],
+   "nodo": "autonomy and interdependence in regulator-regulated relationship"
+  },
+  {
+   "id": "PB5E738",
+   "consultas": [
+    "normalization of deviance Challenger O-ring erosion warning signals",
+    "gradual redefinition of acceptable risk through incremental decisions",
+    "ignoring warning signs and quality feedback drift toward danger"
+   ],
+   "nodo": "normalization of deviance Diane Vaughan Challenger"
+  },
+  {
+   "id": "P21084D",
+   "consultas": [
+    "blame cycle illusion of free will warnings sanctions",
+    "incident reports attributing cause to human action alone",
+    "naming blaming shaming ineffective countermeasures error recurs"
+   ],
+   "nodo": "blame cycle and illusion of free will"
+  },
+  {
+   "id": "P25B95C",
+   "consultas": [
+    "Review and MESH subjective ratings of local and organizational factors",
+    "anonymous ratings entered by computer software averaged",
+    "aircraft maintenance MESH task specialists five-point scale ratings"
+   ],
+   "nodo": "Review and MESH subjective rating assessment descendants of Tripod-Delta"
+  },
+  {
+   "id": "PB0C59C",
+   "consultas": [
+    "random versus systematic errors constant error variable error",
+    "error management error reduction and error containment",
+    "target shooting pattern of shots systematic bias random scatter"
+   ],
+   "nodo": "error management reduction and containment of errors"
+  },
+  {
+   "id": "PD48BA0",
+   "consultas": [
+    "were the actions and consequences as intended sabotage",
+    "decision tree for determining culpability of unsafe acts",
+    "substitution test substance abuse deliberate violation of procedures"
+   ],
+   "nodo": "decision tree for determining culpability of unsafe acts"
+  },
+  {
+   "id": "P2728DF",
+   "consultas": [
+    "why person model dominates blaming individuals more satisfying",
+    "punishment and disciplinary action instead of root cause analysis",
+    "bad things happen to bad people just world hypothesis"
+   ],
+   "nodo": "why the person model dominates safety management"
+  },
+  {
+   "id": "PDFAB93",
+   "consultas": [
+    "safety management like long-term fitness program not negative production",
+    "lost time injury reduction targets not directly controllable",
+    "managing processes rather than negative outcomes continuous improvement"
+   ],
+   "nodo": "setting safety goals process management versus negative outcomes"
+  }
+ ]
+}

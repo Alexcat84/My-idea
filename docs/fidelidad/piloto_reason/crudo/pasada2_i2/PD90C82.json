@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD90C82",
+  "intento": 0,
+  "usd": 0.259276,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58169,
+  "tokens_out": 1330,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD90C82\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5174, 5208], \"cita\": \"where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed ... respect must be earned, and this requires a major training investment on the part of the organization.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe el paso del mando a los expertos en picos o emergencias, y su vuelta después. Exige además una gran inversión en formación. El paso concreta esto en formar para reconocer cuándo ceder, en la misma dirección y sin datos nuevos. No suprime la cultura jerárquica previa, que otro paso del nodo cubre, ni lleva a descentralizar sin ella.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD90C82",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5164,
+   5174,
+   5208
+  ],
+  "cita": "where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed ... respect must be earned, and this requires a major training investment on the part of the organization.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe el paso del mando a los expertos en picos o emergencias, y su vuelta después. Exige además una gran inversión en formación. El paso concreta esto en formar para reconocer cuándo ceder, en la misma dirección y sin datos nuevos. No suprime la cultura jerárquica previa, que otro paso del nodo cubre, ni lleva a descentralizar sin ella.",
+  "paso_fiel": ""
+ }
+}

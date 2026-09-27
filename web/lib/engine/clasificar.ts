@@ -20,6 +20,9 @@ export interface ResultadoClasificacion {
   puertaId: string;
   perfilSesion: string;
   acumulado: UsoAcumulado;
+  /** AUD-09 M17: el motivo cuando se usó el respaldo (primera puerta, perfil
+   * vacío); null si la clasificación funcionó. Antes el respaldo era mudo. */
+  fallback: string | null;
 }
 
 export async function clasificarEntrada(
@@ -47,10 +50,18 @@ export async function clasificarEntrada(
     );
     const data = parsearJson<{ puerta_id?: string; perfil_sesion?: string }>(r.texto);
     if (data.puerta_id && entrySeeds.includes(data.puerta_id)) {
-      return { puertaId: data.puerta_id, perfilSesion: (data.perfil_sesion ?? "").trim(), acumulado: r.acumulado };
+      return { puertaId: data.puerta_id, perfilSesion: (data.perfil_sesion ?? "").trim(), acumulado: r.acumulado, fallback: null };
     }
-    return { puertaId: entrySeeds[0], perfilSesion: "", acumulado: r.acumulado };
-  } catch {
-    return { puertaId: entrySeeds[0], perfilSesion: "", acumulado };
+    const motivo = "la clasificación no devolvió una puerta válida";
+    console.error(`[clasificar] ${motivo}; se usa la primera puerta:`, data.puerta_id ?? null);
+    return { puertaId: entrySeeds[0], perfilSesion: "", acumulado: r.acumulado, fallback: motivo };
+  } catch (e) {
+    console.error("[clasificar] la clasificación falló; se usa la primera puerta:", e);
+    return {
+      puertaId: entrySeeds[0],
+      perfilSesion: "",
+      acumulado,
+      fallback: `la clasificación falló: ${e instanceof Error ? e.message : String(e)}`,
+    };
   }
 }

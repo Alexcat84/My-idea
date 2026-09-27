@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P355FAD",
+  "intento": 0,
+  "usd": 0.193916,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42399,
+  "tokens_out": 1216,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P355FAD\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2905, 2907, 2924, 5661], \"cita\": \"So why are people so ready to accept human error as an explanation rather than as something that needs explaining? The answer is deeply rooted in human nature. Psychologists call it the fundamental attribution error.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala que prensa e investigadores aceptan el error humano como causa por el error fundamental de atribución. Para romper el ciclo de culpa dice que hay que reconocer esos hechos. Formar a los investigadores para reconocer el sesgo va en la misma dirección. El rol está respaldado (L2905) y la formación es una concreción genérica. No contradice la crítica al reentrenamiento de operarios.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P355FAD",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2905,
+   2907,
+   2924,
+   5661
+  ],
+  "cita": "So why are people so ready to accept human error as an explanation rather than as something that needs explaining? The answer is deeply rooted in human nature. Psychologists call it the fundamental attribution error.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala que prensa e investigadores aceptan el error humano como causa por el error fundamental de atribución. Para romper el ciclo de culpa dice que hay que reconocer esos hechos. Formar a los investigadores para reconocer el sesgo va en la misma dirección. El rol está respaldado (L2905) y la formación es una concreción genérica. No contradice la crítica al reentrenamiento de operarios.",
+  "paso_fiel": ""
+ }
+}

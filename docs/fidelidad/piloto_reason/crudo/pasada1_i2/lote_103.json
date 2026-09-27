@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_103",
+  "intento": 0,
+  "usd": 0.16572399999999998,
+  "turnos": 1,
+  "duracion_s": 18.8,
+  "pared_s": 20.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32246,
+  "tokens_out": 1837,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE5CDA2\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5053, 5063, 4765], \"razon\": \"El árbol incluye explícitamente la pregunta de 'unauthorized substance' sobre alcohol o drogas en el momento del acto; la mitigación sigue aplicando después.\"},\n  {\"id\": \"PCB3085\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5254, 5258, 2579], \"razon\": \"El libro pregunta quién recopila y analiza la información, a cuántos niveles está del CEO, qué presupuesto anual y cuánto personal tiene.\"},\n  {\"id\": \"P701739\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2594, 2596, 2598, 3055, 5690], \"razon\": \"Coincide con abandonar las metas de producción negativa. Pero el libro mantiene las medidas reactivas y Tripod reduce LTIs indirectamente; 'reemplazar' podría leerse como eliminar los resultados.\"},\n  {\"id\": \"P39242A\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"poka-yoke\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [2311, 2369, 2358], \"razon\": \"El libro propone diseñar componentes instalables solo correctamente, pero llama 'más fundamental' eliminar el contacto manual; 'priorizar' podría invertir el orden. 'Poka-yoke' no aparece en el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE5CDA2",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5053,
+    5063,
+    4765
+   ],
+   "razon": "El árbol incluye explícitamente la pregunta de 'unauthorized substance' sobre alcohol o drogas en el momento del acto; la mitigación sigue aplicando después."
+  },
+  {
+   "id": "PCB3085",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5254,
+    5258,
+    2579
+   ],
+   "razon": "El libro pregunta quién recopila y analiza la información, a cuántos niveles está del CEO, qué presupuesto anual y cuánto personal tiene."
+  },
+  {
+   "id": "P701739",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2594,
+    2596,
+    2598,
+    3055,
+    5690
+   ],
+   "razon": "Coincide con abandonar las metas de producción negativa. Pero el libro mantiene las medidas reactivas y Tripod reduce LTIs indirectamente; 'reemplazar' podría leerse como eliminar los resultados."
+  },
+  {
+   "id": "P39242A",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "poka-yoke"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2311,
+    2369,
+    2358
+   ],
+   "razon": "El libro propone diseñar componentes instalables solo correctamente, pero llama 'más fundamental' eliminar el contacto manual; 'priorizar' podría invertir el orden. 'Poka-yoke' no aparece en el libro."
+  }
+ ]
+}

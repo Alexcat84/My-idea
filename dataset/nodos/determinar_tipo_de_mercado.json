@@ -13,7 +13,7 @@
     "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
     "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío",
     "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
-    "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+    "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
     "Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)",
     "Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas",
     "Escribe un breve documento respondiendo las preguntas clave según el tipo de mercado que elegiste",
@@ -22,7 +22,6 @@
   "entregable_esperado": "Una hipótesis documentada y justificada sobre el tipo de mercado en el que compites (existente, nuevo, re-segmentado o clonado), con sus implicancias estratégicas.",
   "nodos_previos": [
     "diseno_experimentos_hipotesis",
-    "lanzamiento_nuevos_productos_enfoque_problema",
     "board_management_buyin",
     "channels_hypothesis_physical",
     "channels_hypothesis_web_mobile",
@@ -30,10 +29,8 @@
     "capturar_conocimiento_de_mercado",
     "hipotesis_de_canales",
     "lienzo_modelo_negocio",
-    "resegmentacion_mercado_nicho_bajo_costo",
     "seleccion_canal_distribucion",
     "seleccion_canal_fisico",
-    "customer_creation",
     "seleccion_estrategia_pricing"
   ],
   "nodos_siguientes": [
@@ -44,7 +41,6 @@
     "brief_competitivo",
     "entrada_mercado_nuevo",
     "embudo_get_keep_grow",
-    "enfoque_etapa_investigacion",
     "hipotesis_relacion_clientes_web",
     "resegmentacion_mercado_nicho_bajo_costo",
     "actualizar_business_model_canvas_tuneup"
@@ -80,5 +76,79 @@
       "titulo": "Decidir en qué tipo de mercado compites y tu estrategia para hacerlo",
       "fuente": "The Startup Owner's Manual"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-005",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+      "texto_nuevo": "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6078-L6080",
+        "frase": "spend three times the combined sales and marketing budget of that dominant player ... 1.7 times the combined sales and marketing budget of the company you plan to attack"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenía razón el lector B. Las cifras 3x y 1.7x son del libro, pero el paso cambia la base del cálculo en dos puntos. Primero, reduce la base al presupuesto de marketing, cuando el libro dice presupuesto combinado de ventas y marketing, así que el costo de entrada sale más bajo. Segundo, aplica el 1.7x al líder, cuando el libro lo aplica a la empresa que atacas en un mercado con varios participantes (L6136: \"1.7 times that of a competitor in a crowded market\"). El libro solo usa \"del líder\" para el 3x (L6126, \"three times the resources of the market leader\"). En ningún pasaje el libro calcula la entrada sobre el presupuesto de marketing solo. Un umbral con otra base es otro valor para el mismo dato, y eso es CONTRARIO. El lector A lo consideró solo un resumen válido.",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-091"
+    },
+    {
+      "id": "t2-arista-028",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "customer_creation -> determinar_tipo_de_mercado",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: Customer Creation es el tercer paso de Customer Development y sus actividades dependen del tipo de mercado ya definido; deberia ir despues, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-039",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "determinar_tipo_de_mercado -> enfoque_etapa_investigacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Priorizar la etapa de investigacion en la llamada de venta (Huthwaite/SPIN) es tecnica de venta consultiva; no continua la hipotesis de tipo de mercado."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-078",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "lanzamiento_nuevos_productos_enfoque_problema -> determinar_tipo_de_mercado",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Evitar el enfoque bells-and-whistles en la conversacion de venta (Huthwaite) no prepara la determinacion del tipo de mercado; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-111",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "resegmentacion_mercado_nicho_bajo_costo -> determinar_tipo_de_mercado",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-21): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Razon para B. El nodo de hoy presenta la re-segmentacion como uno de los cuatro tipos de mercado y como paso que sale del analisis (\"si el mercado esta dominado por incumbentes fuertes, evaluar re-segmentarlo\"); por tanto va despues, no lo prepara. El sentido correcto ya existe en R05-09-10. No tiene que ver con la correccion del costo de entrada."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
+  ],
+  "fuentes_internas": [
+    "The Startup Owner's Manual - Blank, Steve"
   ]
 }

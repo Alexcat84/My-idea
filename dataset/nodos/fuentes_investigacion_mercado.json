@@ -21,7 +21,26 @@
     "uso_del_us_commercial_service"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas datos concretos para sustentar tus decisiones de mercado"
+    "Si exportas o piensas exportar desde Estados Unidos y necesitas datos concretos para seleccionar y evaluar tus mercados de exportación"
   ],
-  "etiqueta_arbol": "Busca Fuentes para tu Investigación"
+  "etiqueta_arbol": "Busca Fuentes para tu Investigación",
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-088",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando necesitas datos concretos para sustentar tus decisiones de mercado",
+      "texto_nuevo": "Si exportas o piensas exportar desde Estados Unidos y necesitas datos concretos para seleccionar y evaluar tus mercados de exportación",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-027: Clase C sin mencion de Estados Unidos y condicion demasiado general; dominio ok, fase ya leida. (lector y verificador de acuerdo) Motivo: Clase C: las fuentes principales (USA Trade Online, U.S. Commercial Service, USDA) son de Estados Unidos y la condicion no lo dice; ademas es demasiado amplia y no se limita a mercados de exportacion."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
+  ]
 }

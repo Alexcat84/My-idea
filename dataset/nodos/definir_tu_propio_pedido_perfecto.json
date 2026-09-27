@@ -6,12 +6,12 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "Un pedido perfecto es aquel que llega completo, en la cantidad exacta pedida, en la fecha y hora que el cliente esperaba, sin daño ni faltantes ni rechazo, y con la documentacion correcta. Definir esto con precision te da una vara fija para juzgar cada entrega, en lugar de decidir caso por caso si algo 'salio bien'. Existe una version simplificada muy usada, conocida como a tiempo y completo, que junta solo esas dos condiciones cuando no necesitas controlar documentos o facturas. Sea la version completa o la simple, lo importante es escribirla una sola vez y usarla siempre igual, para que tu y quien te ayuda a despachar midan exactamente lo mismo.",
   "pasos_accionables": [
-    "Escribe en cuatro frases que significa para ti un pedido perfecto: cantidad, fecha y hora, estado, documentos.",
-    "Decide si usaras la version simple (a tiempo y completo) o la version completa con documentacion.",
-    "Revisa tus ultimos veinte pedidos y marca cuales cumplieron todas las condiciones a la vez.",
-    "Comparte esta definicion con quien te ayuda a empacar o despachar para medir todos lo mismo."
+    "Escribe en cuatro frases qué significa para ti un pedido perfecto: cantidad, fecha y hora, estado, documentos.",
+    "Decide si usarás la versión simple (a tiempo y completo) o la versión completa con documentación.",
+    "Revisa tus últimos veinte pedidos y marca cuáles cumplieron todas las condiciones a la vez.",
+    "Comparte esta definición con quien te ayuda a empacar o despachar para medir todos lo mismo."
   ],
-  "entregable_esperado": "Una definicion escrita de 'pedido perfecto' que usaras como vara fija para medir cada entrega.",
+  "entregable_esperado": "Una definición escrita de 'pedido perfecto' que usarás como vara fija para medir cada entrega.",
   "nodos_previos": [
     "diez_derechos_servicio_cliente"
   ],
@@ -23,5 +23,79 @@
     "Quieres comparar tu desempeño mes a mes con un criterio fijo.",
     "Un cliente se queja de algo que tu consideras una entrega normal."
   ],
-  "etiqueta_arbol": "Define qué es un pedido perfecto"
+  "etiqueta_arbol": "Define qué es un pedido perfecto",
+  "fuentes_internas": [
+    "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0738",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe en cuatro frases que significa para ti un pedido perfecto: cantidad, fecha y hora, estado, documentos.",
+      "texto_nuevo": "Escribe en cuatro frases qué significa para ti un pedido perfecto: cantidad, fecha y hora, estado, documentos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-017.paso0: qué (Falta la tilde de 'qué' en esta interrogativa indirecta; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0739",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide si usaras la version simple (a tiempo y completo) o la version completa con documentacion.",
+      "texto_nuevo": "Decide si usarás la versión simple (a tiempo y completo) o la versión completa con documentación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-017.paso1: usarás, versión, versión, documentación (Faltan las tildes de 'usarás', 'versión' (dos veces) y 'documentación'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0740",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa tus ultimos veinte pedidos y marca cuales cumplieron todas las condiciones a la vez.",
+      "texto_nuevo": "Revisa tus últimos veinte pedidos y marca cuáles cumplieron todas las condiciones a la vez.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-017.paso2: últimos, cuáles (Faltan las tildes de 'últimos' y de 'cuáles' en esta interrogativa indirecta; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0741",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparte esta definicion con quien te ayuda a empacar o despachar para medir todos lo mismo.",
+      "texto_nuevo": "Comparte esta definición con quien te ayuda a empacar o despachar para medir todos lo mismo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-017.paso3: definición (Falta la tilde de 'definición'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0742",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una definicion escrita de 'pedido perfecto' que usaras como vara fija para medir cada entrega.",
+      "texto_nuevo": "Una definición escrita de 'pedido perfecto' que usarás como vara fija para medir cada entrega.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-017.entregable: definición, usarás (Faltan las tildes de 'definición' y 'usarás'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

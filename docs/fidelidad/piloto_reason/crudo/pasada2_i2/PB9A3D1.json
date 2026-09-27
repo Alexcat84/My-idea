@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB9A3D1",
+  "intento": 0,
+  "usd": 0.174136,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36844,
+  "tokens_out": 1338,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PB9A3D1\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [582, 204, 2767, 5781], \"cita\": \"so that the worst of them, at any one time, can be corrected. … But we can target and then address the latent conditions most in need of urgent attention within a given period.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide priorizar las condiciones latentes más urgentes con recursos limitados (L582, L2767). Las presenta como la mejor vía de mejora (L5781) porque repercuten en varios accidentes futuros (L204). El paso sigue esa dirección sin añadir datos. Solo concreta el criterio de prioridad como impacto futuro. No pide ignorar las fallas activas.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PB9A3D1",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   582,
+   204,
+   2767,
+   5781
+  ],
+  "cita": "so that the worst of them, at any one time, can be corrected. … But we can target and then address the latent conditions most in need of urgent attention within a given period.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide priorizar las condiciones latentes más urgentes con recursos limitados (L582, L2767). Las presenta como la mejor vía de mejora (L5781) porque repercuten en varios accidentes futuros (L204). El paso sigue esa dirección sin añadir datos. Solo concreta el criterio de prioridad como impacto futuro. No pide ignorar las fallas activas.",
+  "paso_fiel": ""
+ }
+}

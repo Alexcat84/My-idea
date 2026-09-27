@@ -12,7 +12,7 @@
     "Anota tus observaciones apenas las tengas y revísalas uno o dos días después",
     "Busca patrones o momentos clave que puedan mejorar la experiencia de tu cliente"
   ],
-  "entregable_esperado": "Tu cuaderno de observacion con lo que viste en el contexto real de tu cliente, anotado en caliente y releido a los dos dias, y los patrones o momentos clave que salieron de ahi para mejorar su experiencia",
+  "entregable_esperado": "Tu cuaderno de observación con lo que viste en el contexto real de tu cliente, anotado en caliente y releído a los dos días, y los patrones o momentos clave que salieron de ahí para mejorar su experiencia",
   "nodos_previos": [
     "voz_del_cliente_voc",
     "investigar_datos_cliente"
@@ -24,5 +24,23 @@
     "Cuando ya reuniste los datos de tu cliente y no sabes que hacer con ellos",
     "Cuando tus decisiones de producto salen de encuestas y de lo que el cliente dice, y nunca de verlo usarlo"
   ],
-  "etiqueta_arbol": "Observa a tu Cliente de Verdad"
+  "etiqueta_arbol": "Observa a tu Cliente de Verdad",
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0716",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu cuaderno de observacion con lo que viste en el contexto real de tu cliente, anotado en caliente y releido a los dos dias, y los patrones o momentos clave que salieron de ahi para mejorar su experiencia",
+      "texto_nuevo": "Tu cuaderno de observación con lo que viste en el contexto real de tu cliente, anotado en caliente y releído a los dos días, y los patrones o momentos clave que salieron de ahí para mejorar su experiencia",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-017.entregable: observación, releído, días, ahí (Faltaban las tildes en observación, releído, días y ahí; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
+  ]
 }

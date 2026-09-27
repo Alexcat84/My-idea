@@ -19,10 +19,41 @@
     "deuda_de_gestion"
   ],
   "nodos_siguientes": [
-    "organizacion_equipos_calidad_servicio"
+    "personas_productos_ganancias_orden"
   ],
   "condiciones_activacion": [
     "Cuando necesitas ir más allá de la administración básica de personas y empezar a cuidar en serio cómo se gestiona a tu equipo"
   ],
-  "etiqueta_arbol": "Vigila la Calidad de tu Gestión"
+  "etiqueta_arbol": "Vigila la Calidad de tu Gestión",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-041",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "hr_calidad_gestion -> organizacion_equipos_calidad_servicio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-08, lector y verificador de acuerdo)",
+        "motivo": "El nodo del nucleo usa la calidad como metafora para revisar la gestion de personas; los equipos de calidad en servicios son otro tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-nucleo-17",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "hr_calidad_gestion -> personas_productos_ganancias_orden",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-18, lectores de acuerdo): raiz de 4 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Revisar sistemáticamente cómo se gestiona a las personas conduce al principio de priorizar primero a la gente, luego los productos y al final las ganancias."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
+  ]
 }

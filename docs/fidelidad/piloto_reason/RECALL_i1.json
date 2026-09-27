@@ -1,0 +1,155 @@
+{
+ "intento": "1",
+ "recall_pasada1_sinteticos": "16/16",
+ "recall_pasada1_conocido": "1/1",
+ "recall_final_sinteticos": "0/16",
+ "recall_final_conocido": "0/1",
+ "reales": 403,
+ "reales_marcados_p1": 135,
+ "tasa_marcado_reales": 0.335,
+ "clases_p1_reales": {
+  "POSIBLE_CONTRARIO": 57,
+  "FIEL": 198,
+  "INFERIDO": 136,
+  "SIN_COBERTURA": 12
+ },
+ "veredictos_p2_reales": {},
+ "contrarios_reales": [],
+ "detalle_vara": [
+  {
+   "sid": "S01",
+   "id": "P05BA04",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S02",
+   "id": "P525911",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S03",
+   "id": "PD10C0A",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S04",
+   "id": "P020C21",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S05",
+   "id": "PC72623",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S06",
+   "id": "PEFC1DA",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S07",
+   "id": "PD471B8",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S08",
+   "id": "PB907F0",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S09",
+   "id": "P4D51E7",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S10",
+   "id": "P86D246",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S11",
+   "id": "P96A2D2",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S12",
+   "id": "P8FE6E3",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S13",
+   "id": "P15733D",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S14",
+   "id": "P73EF6F",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S15",
+   "id": "P30BA1D",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "S16",
+   "id": "P1ED540",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  },
+  {
+   "sid": "conocido",
+   "id": "PFFD0B9",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "-"
+  }
+ ],
+ "coste_pasada1": {
+  "llamadas": 105,
+  "usd": 16.3898,
+  "turnos": 105,
+  "segundos_api": 1463.0,
+  "tokens_in": 3472175,
+  "tokens_out": 125055
+ },
+ "coste_pasada2": {
+  "llamadas": 0,
+  "usd": 0,
+  "turnos": 0,
+  "segundos_api": 0,
+  "tokens_in": 0,
+  "tokens_out": 0
+ }
+}

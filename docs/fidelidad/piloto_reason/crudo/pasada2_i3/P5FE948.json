@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P5FE948",
+  "intento": 0,
+  "usd": 0.149668,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31307,
+  "tokens_out": 1222,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P5FE948\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4261, 4259, 4215, 4117, 4464], \"cita\": \"The regulator’s knowledge of the nature and severity of a safety problem can be manipulated by what the regulated organization chooses to communicate and how this material is presented.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala que depender de la información del regulado debilita la supervisión (L4261). En Monarch critica que solo hubiera inspección documental y ninguna vigilancia en ruta (L4117). Su modelo usa visitas in situ como datos propios (L4464). Admite que estas vías solo dan vistazos parciales, pero no las desaconseja. El paso no dice que eliminen el compromiso estructural ni añade datos concretos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P5FE948",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4261,
+   4259,
+   4215,
+   4117,
+   4464
+  ],
+  "cita": "The regulator’s knowledge of the nature and severity of a safety problem can be manipulated by what the regulated organization chooses to communicate and how this material is presented.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala que depender de la información del regulado debilita la supervisión (L4261). En Monarch critica que solo hubiera inspección documental y ninguna vigilancia en ruta (L4117). Su modelo usa visitas in situ como datos propios (L4464). Admite que estas vías solo dan vistazos parciales, pero no las desaconseja. El paso no dice que eliminen el compromiso estructural ni añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

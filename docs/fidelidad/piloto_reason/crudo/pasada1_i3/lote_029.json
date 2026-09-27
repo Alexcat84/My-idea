@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_029",
+  "intento": 0,
+  "usd": 0.164348,
+  "turnos": 1,
+  "duracion_s": 17.8,
+  "pared_s": 18.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32907,
+  "tokens_out": 1636,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P953981\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1943, 2109, 2111, 2113, 2117, 2121, 2125], \"razon\": \"Reason clasificó 122 fallos de mantenimiento con exactamente esas categorías, y el libro avala clasificar por consecuencias. No recomienda hacerlo explícitamente, pero va en la misma dirección.\"},\n  {\"id\": \"PAA0AD8\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Perfil de Factores Organizacionales\"], \"clase\": \"FIEL\", \"lineas\": [4476, 4478, 4492, 4494], \"razon\": \"El libro dice literalmente que las calificaciones se suman sobre todas las instancias para generar el Organizational Factor Profile.\"},\n  {\"id\": \"P1DBB41\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3690, 3692, 3704, 3706, 3714, 3718, 3722], \"razon\": \"La escala graduada se aplica a los nodos hoja. Los factores con varias influencias se derivan combinando condicionales, no asignándoles una razón directa. 'A cada factor' generaliza y omite el facilitador experto.\"},\n  {\"id\": \"PBB83F3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [204, 582, 2767, 5775, 5781], \"razon\": \"El libro afirma que identificar y eliminar condiciones latentes de forma proactiva es la mejor vía, y que conviene priorizar las más urgentes con recursos limitados.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P953981",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1943,
+    2109,
+    2111,
+    2113,
+    2117,
+    2121,
+    2125
+   ],
+   "razon": "Reason clasificó 122 fallos de mantenimiento con exactamente esas categorías, y el libro avala clasificar por consecuencias. No recomienda hacerlo explícitamente, pero va en la misma dirección."
+  },
+  {
+   "id": "PAA0AD8",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Perfil de Factores Organizacionales"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4476,
+    4478,
+    4492,
+    4494
+   ],
+   "razon": "El libro dice literalmente que las calificaciones se suman sobre todas las instancias para generar el Organizational Factor Profile."
+  },
+  {
+   "id": "P1DBB41",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3690,
+    3692,
+    3704,
+    3706,
+    3714,
+    3718,
+    3722
+   ],
+   "razon": "La escala graduada se aplica a los nodos hoja. Los factores con varias influencias se derivan combinando condicionales, no asignándoles una razón directa. 'A cada factor' generaliza y omite el facilitador experto."
+  },
+  {
+   "id": "PBB83F3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    204,
+    582,
+    2767,
+    5775,
+    5781
+   ],
+   "razon": "El libro afirma que identificar y eliminar condiciones latentes de forma proactiva es la mejor vía, y que conviene priorizar las más urgentes con recursos limitados."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_018",
+  "intento": 0,
+  "usd": 0.159028,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33597,
+  "tokens_out": 1232,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P021C0F\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4244, 4246, 4236, 4274, 1558], \"razon\": \"El libro elogia la legislación dirigida a actos inseguros concretos solo con peligros, personas y situaciones bien conocidos. El paso omite esa condición, y el libro también describe el abandono de reglas prescriptivas.\"},\n  {\"id\": \"P82A964\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4257, 4261, 4263, 4265], \"razon\": \"El paso invita a juzgar el compromiso como falta de cumplimiento. Vaughan afirma que interpretar la negociación y las sanciones leves como 'fallos' regulatorios es no entender el punto, porque son un patrón sistémico.\"},\n  {\"id\": \"P429A37\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [419, 2018, 2028, 2250, 2107], \"razon\": \"El libro señala que faltaban tarjetas paso a paso y firmas de verificación en la reinstalación, y recomienda identificar los pasos propensos a omisión. El paso va en la misma dirección.\"},\n  {\"id\": \"P189CB4\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4806, 4908, 4818], \"razon\": \"El libro enumera explícitamente, como factor de confianza, separar la agencia que recibe los reportes de quienes tienen autoridad disciplinaria.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P021C0F",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4244,
+    4246,
+    4236,
+    4274,
+    1558
+   ],
+   "razon": "El libro elogia la legislación dirigida a actos inseguros concretos solo con peligros, personas y situaciones bien conocidos. El paso omite esa condición, y el libro también describe el abandono de reglas prescriptivas."
+  },
+  {
+   "id": "P82A964",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4257,
+    4261,
+    4263,
+    4265
+   ],
+   "razon": "El paso invita a juzgar el compromiso como falta de cumplimiento. Vaughan afirma que interpretar la negociación y las sanciones leves como 'fallos' regulatorios es no entender el punto, porque son un patrón sistémico."
+  },
+  {
+   "id": "P429A37",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    419,
+    2018,
+    2028,
+    2250,
+    2107
+   ],
+   "razon": "El libro señala que faltaban tarjetas paso a paso y firmas de verificación en la reinstalación, y recomienda identificar los pasos propensos a omisión. El paso va en la misma dirección."
+  },
+  {
+   "id": "P189CB4",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4806,
+    4908,
+    4818
+   ],
+   "razon": "El libro enumera explícitamente, como factor de confianza, separar la agencia que recibe los reportes de quienes tienen autoridad disciplinaria."
+  }
+ ]
+}

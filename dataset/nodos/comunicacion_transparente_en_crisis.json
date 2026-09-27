@@ -23,8 +23,7 @@
   ],
   "nodos_siguientes": [
     "publicidad_tradicional_pr",
-    "reconstruccion_de_equipo_ejecutivo",
-    "pivote_estrategico"
+    "reconstruccion_de_equipo_ejecutivo"
   ],
   "condiciones_activacion": [
     "Cuando un competidor lanza un ataque directo (precio, producto gratuito, etc.) que amenaza el modelo de negocio",
@@ -39,6 +38,24 @@
       "node_id": "liderazgo_frente_crisis_competitiva",
       "titulo": "Liderazgo Visible Durante Ataques Competitivos",
       "fuente": "The Hard Thing About Hard Things"
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-019",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_transparente_en_crisis -> pivote_estrategico",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-07-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Dar la cara ante la prensa y ante los ataques de la competencia no prepara un pivote basado en la evidencia de los clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ]
 }

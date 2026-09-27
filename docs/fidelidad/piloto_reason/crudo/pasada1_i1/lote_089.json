@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_089",
+  "intento": 0,
+  "usd": 0.153288,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32342,
+  "tokens_out": 1196,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P46AA40\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2596, 2598, 2750], \"razon\": \"El libro pide muestrear de forma principiada las seis dimensiones (cultura, entrenamiento, gestion, seguridad, procedimientos, tecnicos) y medir regularmente los procesos.\"},\n  {\"id\": \"PDC189A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4476, 4478, 4492, 4494], \"razon\": \"Las calificaciones 1-5 se suman sobre todas las instancias para generar el Perfil de Factores Organizacionales, como describe el libro.\"},\n  {\"id\": \"P18B4B1\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2250, 2259, 2279, 2289, 975], \"razon\": \"El libro respalda remediar pasos propensos con recordatorios. Pero 'verificaciones' como firmas de cierre choca en matiz con L975: firmar sin comprobar es atajo comun.\"},\n  {\"id\": \"P1C3594\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2170, 2250, 2109, 2127], \"razon\": \"El libro prefiere el analisis de tareas por rasgos que provocan omision, identificados de antemano. Analizar omisiones pasadas de otros es dificil. Revisar historicos como via principal choca en matiz.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P46AA40",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2596,
+    2598,
+    2750
+   ],
+   "razon": "El libro pide muestrear de forma principiada las seis dimensiones (cultura, entrenamiento, gestion, seguridad, procedimientos, tecnicos) y medir regularmente los procesos."
+  },
+  {
+   "id": "PDC189A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4476,
+    4478,
+    4492,
+    4494
+   ],
+   "razon": "Las calificaciones 1-5 se suman sobre todas las instancias para generar el Perfil de Factores Organizacionales, como describe el libro."
+  },
+  {
+   "id": "P18B4B1",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2250,
+    2259,
+    2279,
+    2289,
+    975
+   ],
+   "razon": "El libro respalda remediar pasos propensos con recordatorios. Pero 'verificaciones' como firmas de cierre choca en matiz con L975: firmar sin comprobar es atajo comun."
+  },
+  {
+   "id": "P1C3594",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2170,
+    2250,
+    2109,
+    2127
+   ],
+   "razon": "El libro prefiere el analisis de tareas por rasgos que provocan omision, identificados de antemano. Analizar omisiones pasadas de otros es dificil. Revisar historicos como via principal choca en matiz."
+  }
+ ]
+}

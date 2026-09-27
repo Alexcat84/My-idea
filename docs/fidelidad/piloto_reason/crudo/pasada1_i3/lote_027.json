@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_027",
+  "intento": 0,
+  "usd": 0.167744,
+  "turnos": 1,
+  "duracion_s": 17.4,
+  "pared_s": 18.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33346,
+  "tokens_out": 1718,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P475953\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2535, 2596, 2654, 2583], \"razon\": \"La lista coincide con L2596. Pero el paso omite que el libro pide elegir qué procesos medir a partir del análisis de múltiples eventos, no medirlos todos (L2654).\"},\n  {\"id\": \"P2248BC\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [3747, 3755, 1943, 2170], \"razon\": \"Los fragmentos no muestran la sección de MEDA que tipifica el error ni sus categorías. El libro advierte que las taxonomías causales son difíciles de aplicar para no especialistas.\"},\n  {\"id\": \"PAAE376\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5132, 5162, 5164, 5182, 1724], \"razon\": \"El libro describe la fuerte dependencia de SOPs en las HRO durante la operación rutinaria. Evaluar esa dependencia concreta el tema sin dar una dirección contraria.\"},\n  {\"id\": \"P450D15\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2487, 2489, 2495, 2520, 2765, 5688, 5690], \"razon\": \"El libro distingue medidas de proceso y de resultado y critica depender de las de resultado. Auditar cuáles se usan operativiza esa idea sin añadir datos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P475953",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2535,
+    2596,
+    2654,
+    2583
+   ],
+   "razon": "La lista coincide con L2596. Pero el paso omite que el libro pide elegir qué procesos medir a partir del análisis de múltiples eventos, no medirlos todos (L2654)."
+  },
+  {
+   "id": "P2248BC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    3747,
+    3755,
+    1943,
+    2170
+   ],
+   "razon": "Los fragmentos no muestran la sección de MEDA que tipifica el error ni sus categorías. El libro advierte que las taxonomías causales son difíciles de aplicar para no especialistas."
+  },
+  {
+   "id": "PAAE376",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5132,
+    5162,
+    5164,
+    5182,
+    1724
+   ],
+   "razon": "El libro describe la fuerte dependencia de SOPs en las HRO durante la operación rutinaria. Evaluar esa dependencia concreta el tema sin dar una dirección contraria."
+  },
+  {
+   "id": "P450D15",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2487,
+    2489,
+    2495,
+    2520,
+    2765,
+    5688,
+    5690
+   ],
+   "razon": "El libro distingue medidas de proceso y de resultado y critica depender de las de resultado. Auditar cuáles se usan operativiza esa idea sin añadir datos."
+  }
+ ]
+}

@@ -16,11 +16,56 @@
     "framework_excelencia_operacional"
   ],
   "nodos_siguientes": [
-    "rol_alta_direccion_calidad"
+    "minimizar_politica_organizacional",
+    "tecnica_freaky_friday"
   ],
   "condiciones_activacion": [
     "Cuando surge un conflicto de poder o territorio entre ejecutivos",
     "Si un empleado top performer muestra comportamiento problemático recurrente"
   ],
-  "etiqueta_arbol": "Enfrenta a tus Ejecutivos Clave"
+  "etiqueta_arbol": "Enfrenta a tus Ejecutivos Clave",
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-13",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_confrontacion_ejecutiva -> minimizar_politica_organizacional",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-13, arbitro): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Tenia razon el lector A: el nodo trata de como el CEO genera politica al ceder fuera de proceso ante peticiones de territorio, ascensos y compensacion, que son justo las situaciones que maneja gestion_confrontacion_ejecutiva con procesos claros, asi que es su consecuencia directa; buen_lugar_para_trabajar solo nombra la politica interna como uno de varios sintomas de una mala organizacion y es un paraguas mas generico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-entrada-17",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_confrontacion_ejecutiva -> tecnica_freaky_friday",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-17, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Quien necesita procesos claros para manejar conflictos con sus ejecutivos llega a una técnica concreta para los conflictos entre líderes de equipos: el intercambio de roles."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-puente-066",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_confrontacion_ejecutiva -> rol_alta_direccion_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-16, lector y verificador de acuerdo)",
+        "motivo": "Manejar confrontaciones con ejecutivos y top performers no lleva al rol del dueño en el liderazgo de calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
+  ]
 }

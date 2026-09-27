@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_059",
+  "intento": 0,
+  "usd": 0.172512,
+  "turnos": 1,
+  "duracion_s": 21.2,
+  "pared_s": 22.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32998,
+  "tokens_out": 2026,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P61AC75\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2322, 2340, 2342, 2369],\n    \"razon\": \"El libro critica la vision solo economica y pesa el riesgo de descuido frente al de error del mantenimiento. El paso concreta esa direccion sin datos nuevos.\"\n  },\n  {\n    \"id\": \"P55C46E\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"revisiones periódicas obligatorias\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [105, 2566, 2585, 2650, 4259],\n    \"razon\": \"El libro apoya chequeos regulares, pero pide reforzar defensas precisamente en periodos sin accidentes. 'Independientemente del historial' y 'obligatorias' pueden desviar ese matiz o añadir norma.\"\n  },\n  {\n    \"id\": \"PA855EC\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2208, 2214, 2218, 2222, 2224, 2250],\n    \"razon\": \"El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisiones. Es exactamente lo que aconseja el paso.\"\n  },\n  {\n    \"id\": \"P79C8B7\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4769, 5164, 5174, 5176, 5178, 5208],\n    \"razon\": \"El libro condiciona la transicion a una cultura jerarquica previa, a valores compartidos y a formar supervisores. Dice ademas que las reglas no sirven en emergencias sin precedente; 'diseñar mecanismos' podria omitir esas condiciones.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P61AC75",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2322,
+    2340,
+    2342,
+    2369
+   ],
+   "razon": "El libro critica la vision solo economica y pesa el riesgo de descuido frente al de error del mantenimiento. El paso concreta esa direccion sin datos nuevos."
+  },
+  {
+   "id": "P55C46E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "revisiones periódicas obligatorias"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    105,
+    2566,
+    2585,
+    2650,
+    4259
+   ],
+   "razon": "El libro apoya chequeos regulares, pero pide reforzar defensas precisamente en periodos sin accidentes. 'Independientemente del historial' y 'obligatorias' pueden desviar ese matiz o añadir norma."
+  },
+  {
+   "id": "PA855EC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2208,
+    2214,
+    2218,
+    2222,
+    2224,
+    2250
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisiones. Es exactamente lo que aconseja el paso."
+  },
+  {
+   "id": "P79C8B7",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5176,
+    5178,
+    5208
+   ],
+   "razon": "El libro condiciona la transicion a una cultura jerarquica previa, a valores compartidos y a formar supervisores. Dice ademas que las reglas no sirven en emergencias sin precedente; 'diseñar mecanismos' podria omitir esas condiciones."
+  }
+ ]
+}

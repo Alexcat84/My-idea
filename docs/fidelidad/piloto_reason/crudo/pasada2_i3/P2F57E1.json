@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2F57E1",
+  "intento": 0,
+  "usd": 0.16061999999999999,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35905,
+  "tokens_out": 850,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2F57E1\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2342, 2358, 2369, 1842], \"cita\": \"the likelihood of error will increase as a direct linear function of the amount of maintenance activity. ... the maintainer's touch can harm as well as heal, and the point seems to have been reached in some modern systems when the risks of the former may outweigh the benefits of the latter.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que el riesgo de error crece linealmente con la actividad de mantenimiento. Señala que el contacto innecesario de calendarios anticuados es el mayor peligro, y que dañar un componente sano puede superar al riesgo de no mantenerlo. Afirmar que cada intervención adicional reduce el riesgo invierte esa causalidad. Recomendar más frecuencia en general contradice su conclusión.\", \"paso_fiel\": \"Revisar la frecuencia del mantenimiento preventivo en los equipos críticos comparando el riesgo de fallo por mantenimiento descuidado con el riesgo de error que introduce cada intervención, y eliminar el contacto innecesario que exigen calendarios de mantenimiento anticuados.\"}\n```",
+ "parseado": {
+  "id": "P2F57E1",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2342,
+   2358,
+   2369,
+   1842
+  ],
+  "cita": "the likelihood of error will increase as a direct linear function of the amount of maintenance activity. ... the maintainer's touch can harm as well as heal, and the point seems to have been reached in some modern systems when the risks of the former may outweigh the benefits of the latter.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que el riesgo de error crece linealmente con la actividad de mantenimiento. Señala que el contacto innecesario de calendarios anticuados es el mayor peligro, y que dañar un componente sano puede superar al riesgo de no mantenerlo. Afirmar que cada intervención adicional reduce el riesgo invierte esa causalidad. Recomendar más frecuencia en general contradice su conclusión.",
+  "paso_fiel": "Revisar la frecuencia del mantenimiento preventivo en los equipos críticos comparando el riesgo de fallo por mantenimiento descuidado con el riesgo de error que introduce cada intervención, y eliminar el contacto innecesario que exigen calendarios de mantenimiento anticuados."
+ }
+}

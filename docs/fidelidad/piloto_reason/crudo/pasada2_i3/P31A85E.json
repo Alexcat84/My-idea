@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P31A85E",
+  "intento": 0,
+  "usd": 0.166992,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36148,
+  "tokens_out": 1120,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P31A85E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2687, 4814, 4948], \"cita\": \"the data need to be disseminated widely, particularly among the bean counters in the upper echelons of the organization. The latter have been known to become especially alert when the information relating to each event includes a realistic estimate of its potential financial cost to the organization.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda añadir, en la información de cada evento difundida a la alta dirección, una estimación realista del coste potencial para captar su atención. El paso lo convierte en práctica y lo sitúa en 'cada reporte'. No exige que lo calcule quien informa, así que no choca con la facilidad de reporte (L4814, L4948). No hay dato nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P31A85E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2687,
+   4814,
+   4948
+  ],
+  "cita": "the data need to be disseminated widely, particularly among the bean counters in the upper echelons of the organization. The latter have been known to become especially alert when the information relating to each event includes a realistic estimate of its potential financial cost to the organization.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda añadir, en la información de cada evento difundida a la alta dirección, una estimación realista del coste potencial para captar su atención. El paso lo convierte en práctica y lo sitúa en 'cada reporte'. No exige que lo calcule quien informa, así que no choca con la facilidad de reporte (L4814, L4948). No hay dato nuevo.",
+  "paso_fiel": ""
+ }
+}

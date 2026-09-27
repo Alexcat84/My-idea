@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE2A05E",
+  "intento": 0,
+  "usd": 0.256616,
+  "turnos": 1,
+  "duracion_s": 20.4,
+  "pared_s": 21.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54384,
+  "tokens_out": 1954,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE2A05E\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4769, 5178, 5208], \"cita\": \"shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot … neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent\", \"datos_sin_respaldo\": [\"protocolos formales de transferencia de autoridad\"], \"razon\": \"El libro respalda que, en emergencias u operaciones de alto ritmo, el control pase a los expertos en la tarea presentes en el lugar. Pero lo atribuye a la cultura: premisas compartidas creadas por una jerarquía disciplinada previa y la inversión en supervisores de primera línea. No habla de protocolos, y advierte que las reglas sirven mal ante emergencias sin precedente.\", \"paso_fiel\": \"Preparar a la organización para que, ante operaciones de alto ritmo o emergencias, el control pase a los expertos en la tarea presentes en el lugar (sobre todo los supervisores de primera línea), apoyándose en valores y premisas compartidas y en una fuerte inversión en formación más que en reglas, y que vuelva al modo jerárquico cuando pase la emergencia.\"}\n```",
+ "parseado": {
+  "id": "PE2A05E",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4769,
+   5178,
+   5208
+  ],
+  "cita": "shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot … neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent",
+  "datos_sin_respaldo": [
+   "protocolos formales de transferencia de autoridad"
+  ],
+  "razon": "El libro respalda que, en emergencias u operaciones de alto ritmo, el control pase a los expertos en la tarea presentes en el lugar. Pero lo atribuye a la cultura: premisas compartidas creadas por una jerarquía disciplinada previa y la inversión en supervisores de primera línea. No habla de protocolos, y advierte que las reglas sirven mal ante emergencias sin precedente.",
+  "paso_fiel": "Preparar a la organización para que, ante operaciones de alto ritmo o emergencias, el control pase a los expertos en la tarea presentes en el lugar (sobre todo los supervisores de primera línea), apoyándose en valores y premisas compartidas y en una fuerte inversión en formación más que en reglas, y que vuelva al modo jerárquico cuando pase la emergencia."
+ }
+}

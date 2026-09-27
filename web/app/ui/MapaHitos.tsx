@@ -7,13 +7,21 @@
  * formato que el fundador prefiere para el resumen del Análisis (antes vivía en
  * la bitácora; se movió aquí porque es un análisis real, no un registro).
  */
+import { numeroDeDia } from "@/lib/fechas";
+import { elegir, type Locale } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { HITOS } from "@/lib/i18n/mensajes/hitos";
+
 const AZUL = "#4D7CFE";
 const VERDE = "#3FB950";
-const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 
-function fechaMapa(iso: string): string {
+/** "8 mar": la fecha corta del mapa. El primero del mes, como se escribe en
+ * el idioma ("1º" en italiano, "1er" en francés: numeroDeDia). */
+export function fechaMapa(iso: string, idioma: Locale): string {
+  const t = elegir(HITOS, idioma).mapa;
   const d = new Date(iso);
-  return `${d.getDate()} ${MESES[d.getMonth()]}`;
+  return interpolar(t.fechaCorta, { d: numeroDeDia(d.getDate(), idioma), mes: t.meses[d.getMonth()] });
 }
 
 export interface HitoMapa {
@@ -24,12 +32,14 @@ export interface HitoMapa {
 }
 
 export function MapaHitos({ hitos, cerrada }: { hitos: HitoMapa[]; cerrada: boolean }) {
+  const idioma = useIdioma();
+  const t = elegir(HITOS, idioma).mapa;
   const N = hitos.length;
   if (N === 0) return null;
   const inset = N > 1 ? 100 / (2 * N) : 50;
   return (
     <div>
-      <div className="mb-5 text-[11.5px] font-semibold uppercase tracking-[1.3px] text-dim">Tus hitos, de un vistazo</div>
+      <div className="mb-5 text-[11.5px] font-semibold uppercase tracking-[1.3px] text-dim">{t.titulo}</div>
       <div className="relative overflow-x-auto">
         <div className="relative" style={{ minWidth: N > 6 ? N * 96 : undefined }}>
           <div
@@ -63,7 +73,7 @@ export function MapaHitos({ hitos, cerrada }: { hitos: HitoMapa[]; cerrada: bool
                       }}
                     />
                   </div>
-                  <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha)}</div>
+                  <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha, idioma)}</div>
                   <div className="mt-1 text-[12.5px] font-semibold leading-[1.35]" style={{ color: esCierre ? VERDE : "#F5F6F8" }}>
                     {h.nombre}
                   </div>
@@ -74,7 +84,7 @@ export function MapaHitos({ hitos, cerrada }: { hitos: HitoMapa[]; cerrada: bool
         </div>
       </div>
       <div className="mt-4 text-[11.5px] text-dim">
-        Un paso por hito, en el orden en que ocurrieron. Las distancias reales entre fechas viven en la línea de abajo.
+        {t.nota}
       </div>
     </div>
   );

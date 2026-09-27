@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_100",
+  "intento": 0,
+  "usd": 0.168412,
+  "turnos": 1,
+  "duracion_s": 17.3,
+  "pared_s": 18.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33693,
+  "tokens_out": 1682,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P60ECCE\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4302, 4308, 4761],\n    \"razon\": \"Robens pide mayor implicación de los trabajadores frente al modelo Factories Act. Concretarlo en diseño e implementación va en la misma dirección y no añade datos.\"\n  },\n  {\n    \"id\": \"P39948D\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [1044, 1068, 1072, 4060],\n    \"razon\": \"El libro dice que los accidentes surgen al violarse la independencia entre capas, y Dryden muestra fallos simultáneos por recortes de recursos. El paso concreta esa idea.\"\n  },\n  {\n    \"id\": \"PF2C6F9\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [582, 2767, 4478, 5781],\n    \"razon\": \"El libro dice casi literalmente que, con recursos limitados, hay que atacar las condiciones latentes más urgentes en cada período, sin resolverlas todas de una vez.\"\n  },\n  {\n    \"id\": \"PCF71F4\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2654, 204, 1934, 1851],\n    \"razon\": \"El libro recomienda analizar varios eventos del propio dominio con un marco común para revelar patrones. El paso omite ese marco común, pero sigue la misma dirección.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P60ECCE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4302,
+    4308,
+    4761
+   ],
+   "razon": "Robens pide mayor implicación de los trabajadores frente al modelo Factories Act. Concretarlo en diseño e implementación va en la misma dirección y no añade datos."
+  },
+  {
+   "id": "P39948D",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1044,
+    1068,
+    1072,
+    4060
+   ],
+   "razon": "El libro dice que los accidentes surgen al violarse la independencia entre capas, y Dryden muestra fallos simultáneos por recortes de recursos. El paso concreta esa idea."
+  },
+  {
+   "id": "PF2C6F9",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    582,
+    2767,
+    4478,
+    5781
+   ],
+   "razon": "El libro dice casi literalmente que, con recursos limitados, hay que atacar las condiciones latentes más urgentes en cada período, sin resolverlas todas de una vez."
+  },
+  {
+   "id": "PCF71F4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2654,
+    204,
+    1934,
+    1851
+   ],
+   "razon": "El libro recomienda analizar varios eventos del propio dominio con un marco común para revelar patrones. El paso omite ese marco común, pero sigue la misma dirección."
+  }
+ ]
+}

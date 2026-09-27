@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_022",
+  "intento": 0,
+  "usd": 0.162868,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 17.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33382,
+  "tokens_out": 1467,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P3421E1\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5639, 5701, 5633, 580, 2596], \"razon\": \"El libro afirma que las condiciones latentes son riesgo universal, alto también en servicios financieros, y aplicable a bancos. Excluir finanzas y administración invierte esa recomendación.\"},\n  {\"id\": \"PBDE013\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"puntos de control periódicos\", \"calendario\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3965, 3971, 3973, 2598, 4757, 594], \"razon\": \"El libro describe la erosión gradual de estándares y pide chequeos proactivos regulares. El paso lo concreta con revisiones periódicas sin cifra ni plazo definido.\"},\n  {\"id\": \"PB3809A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2342, 2354, 2358, 2367, 2369, 2311, 1842], \"razon\": \"El libro señala que el contacto físico exigido por programas de mantenimiento obsoletos es a menudo innecesario y peligroso. Evaluar su necesidad va en la misma dirección.\"},\n  {\"id\": \"P722C2A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2585, 105, 306, 594], \"razon\": \"El libro dice literalmente que las organizaciones conscientes ven un largo periodo sin accidentes como peligro aumentado y refuerzan sus defensas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P3421E1",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5639,
+    5701,
+    5633,
+    580,
+    2596
+   ],
+   "razon": "El libro afirma que las condiciones latentes son riesgo universal, alto también en servicios financieros, y aplicable a bancos. Excluir finanzas y administración invierte esa recomendación."
+  },
+  {
+   "id": "PBDE013",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "puntos de control periódicos",
+    "calendario"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3965,
+    3971,
+    3973,
+    2598,
+    4757,
+    594
+   ],
+   "razon": "El libro describe la erosión gradual de estándares y pide chequeos proactivos regulares. El paso lo concreta con revisiones periódicas sin cifra ni plazo definido."
+  },
+  {
+   "id": "PB3809A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2342,
+    2354,
+    2358,
+    2367,
+    2369,
+    2311,
+    1842
+   ],
+   "razon": "El libro señala que el contacto físico exigido por programas de mantenimiento obsoletos es a menudo innecesario y peligroso. Evaluar su necesidad va en la misma dirección."
+  },
+  {
+   "id": "P722C2A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2585,
+    105,
+    306,
+    594
+   ],
+   "razon": "El libro dice literalmente que las organizaciones conscientes ven un largo periodo sin accidentes como peligro aumentado y refuerzan sus defensas."
+  }
+ ]
+}

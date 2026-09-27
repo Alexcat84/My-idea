@@ -1,6 +1,6 @@
 {
   "node_id": "evaluacion_preparacion_empresa_exportar",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "exportacion",
   "titulo_concepto": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -11,12 +11,11 @@
     "Revisa tu experiencia previa: países con los que ya hiciste negocios, consultas recibidas y productos más solicitados",
     "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas",
     "Determina el capital disponible para producción y marketing de exportación y el plazo de retorno que esperas",
-    "Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp"
+    "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado."
   ],
   "entregable_esperado": "Informe de autoevaluación que identifique tus objetivos, experiencia previa, compromiso gerencial, capacidades y brechas de recursos, sirviendo de base para decidir si procedes con la exportación.",
   "nodos_previos": [
-    "evaluacion_potencial_exportador_producto",
-    "decisiones_de_financiamiento_exportacion"
+    "evaluacion_potencial_exportador_producto"
   ],
   "nodos_siguientes": [
     "desarrollo_plan_exportacion",
@@ -37,5 +36,53 @@
       "titulo": "Autoevaluación Gerencial para la Decisión de Exportar",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-009",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp",
+      "texto_nuevo": "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L539",
+        "frase": "take the export readiness assessment, available at export.gov/begin/assessment.asp."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da otra direccion para la misma evaluacion (export.gov, no trade.gov); trade.gov no aparece en el libro. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C015-038"
+    },
+    {
+      "id": "t2-arista-032",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decisiones_de_financiamiento_exportacion -> evaluacion_preparacion_empresa_exportar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-14-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: decidir cómo financiar una operación de exportación (plazo del comprador, costo, capital de trabajo al embarcar) es posterior a evaluar si la empresa está preparada para exportar, no la prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-152",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-020: Autoevaluacion interna de compromiso, capital, personal y capacidad para exportar es evaluacion de recursos y estrategia, no prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
+  ],
+  "fuentes_internas": [
+    "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
   ]
 }

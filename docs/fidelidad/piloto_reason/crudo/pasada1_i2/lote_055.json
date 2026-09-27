@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_055",
+  "intento": 0,
+  "usd": 0.179808,
+  "turnos": 1,
+  "duracion_s": 21.8,
+  "pared_s": 23.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34072,
+  "tokens_out": 2176,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P97CA46\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"seis dimensiones clave\", \"periódicamente\"], \"clase\": \"FIEL\", \"lineas\": [2596, 2598, 2748, 2750], \"razon\": \"El libro pide muestrear con principios las seis dimensiones (cultura, entrenamiento, gestión, seguridad, procedimientos, técnicos) y medir con regularidad. No fija periodicidad concreta.\"},\n  {\"id\": \"P28E0EC\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"grupo de confianza\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5055, 5057, 5063, 5085, 4806], \"razon\": \"El libro habla de 'jurado' de pares y juicio cuidadoso en la zona gris. 'Grupo de confianza' no dice que sean pares; podría formarse con gerencia afín, contra ese matiz.\"},\n  {\"id\": \"P07A552\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784, 3794], \"razon\": \"El software arma el árbol de incidente y genera un borrador del informe para edición final. El paso omite que antes se resuelven las anomalías lógicas; es menor.\"},\n  {\"id\": \"P4E5EBC\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"viceministro de transporte\", \"inspectores de primera línea\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4060, 4092, 4448, 4521, 4523], \"razon\": \"El libro sitúa la causa arriba (alta dirección, gobierno) pero ve a los reguladores como víctimas. Su remedio es dar recursos y herramientas, no culpar. El viceministro no aparece.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P97CA46",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "seis dimensiones clave",
+    "periódicamente"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2596,
+    2598,
+    2748,
+    2750
+   ],
+   "razon": "El libro pide muestrear con principios las seis dimensiones (cultura, entrenamiento, gestión, seguridad, procedimientos, técnicos) y medir con regularidad. No fija periodicidad concreta."
+  },
+  {
+   "id": "P28E0EC",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "grupo de confianza"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5055,
+    5057,
+    5063,
+    5085,
+    4806
+   ],
+   "razon": "El libro habla de 'jurado' de pares y juicio cuidadoso en la zona gris. 'Grupo de confianza' no dice que sean pares; podría formarse con gerencia afín, contra ese matiz."
+  },
+  {
+   "id": "P07A552",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    3794
+   ],
+   "razon": "El software arma el árbol de incidente y genera un borrador del informe para edición final. El paso omite que antes se resuelven las anomalías lógicas; es menor."
+  },
+  {
+   "id": "P4E5EBC",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "viceministro de transporte",
+    "inspectores de primera línea"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4060,
+    4092,
+    4448,
+    4521,
+    4523
+   ],
+   "razon": "El libro sitúa la causa arriba (alta dirección, gobierno) pero ve a los reguladores como víctimas. Su remedio es dar recursos y herramientas, no culpar. El viceministro no aparece."
+  }
+ ]
+}

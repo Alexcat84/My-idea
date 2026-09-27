@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Diagrama de Afinidad",
+  "resumen": "Herramienta que toma muchas ideas generadas por brainstorming y las ordena en grupos con sentido. Se usa al recoger información variada de clientes o empleados, y sirve de preludio al diagrama causa efecto.",
+  "texto": "Agrupar las ideas en categorías de 'temas similares' comentando en voz alta dónde encaja cada tarjeta hasta que el equipo acuerde",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L17853",
+  "cita": "3. Sort into like groups; do this without speaking, based on individual perception.",
+  "explicacion": "El libro pide que la clasificación en grupos se haga sin hablar, según la percepción individual de cada uno; la discusión viene después, en el paso 6, sobre el diagrama ya organizado. El paso invierte la condición y propone agrupar debatiendo en voz alta."
+ },
+ {
+  "titulo": "Análisis del Sistema de Medición (Gauge R&R)",
+  "resumen": "Estudio que separa la variación de la medición en repetibilidad (equipo) y reproducibilidad (evaluadores) para juzgar si el proceso de medición es adecuado antes de usar sus datos en un proyecto de mejora.",
+  "texto": "Aceptar el sistema de medición si la dispersión 5.15σ del R&R no supera el 30 % del rango de especificación",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L19324",
+  "cita": "If 5.15σ is equal to or less than 10 percent of the specification range for the quality characteristic, the measurement process is viewed as acceptable for that characteristic; if the result is greater than 10 percent, the measurement process is viewed as unacceptable.",
+  "explicacion": "El libro fija el umbral de aceptación en el 10 % del rango de especificación y declara inaceptable cualquier valor mayor. El paso cambia el umbral al 30 %, con lo que daría por bueno un sistema de medición que el libro rechaza."
+ },
+ {
+  "titulo": "Disposición de Producto No Conforme",
+  "resumen": "Secuencia planificada que se activa cuando un inspector declara no conforme un lote: retención y cuarentena, investigación de aptitud para el uso y decisión formal de disposición (reparar, reclasificar, desechar o enviar bajo waiver).",
+  "texto": "Marcar el lote como 'hold', enviarlo a cuarentena y cerrar su disposición en un plazo máximo de 72 horas.",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L24448",
+  "cita": "The lot is marked “hold” and is often sent to a special holding area to reduce the risk of mix-ups. The product is put into quarantine.",
+  "dato": "plazo máximo de 72 horas para cerrar la disposición",
+  "explicacion": "El libro describe la retención, la cuarentena y la asignación de un investigador, pero no fija ningún plazo para decidir la disposición. Grep de '72', 'seventy', 'three days' junto a hour/hold/quarantine/disposition sin resultados en ese contexto: el plazo de 72 horas es inventado."
+ },
+ {
+  "titulo": "Diagnóstico de Cambios Esporádicos",
+  "resumen": "Recorrido de diagnóstico para la acción correctiva ante picos esporádicos: centrarse en qué ha cambiado comparando producto y proceso antes y después del problema y reconstruyendo la cronología de eventos.",
+  "texto": "Reconstruir la cronología de eventos de los 5 turnos previos al pico: rotaciones, personal nuevo y acciones de mantenimiento",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L8276",
+  "cita": "Reconstruction of the chronology, which consists of logging on a time scale (of hours, days, etc.) (1) the events that took place in the process before and after the sporadic change—that is, rotation of shifts, new employees on the job, maintenance actions, etc.",
+  "dato": "ventana fija de los 5 turnos previos al pico",
+  "explicacion": "El libro pide registrar en una escala de tiempo (horas, días, etc.) los eventos antes y después del cambio esporádico, sin fijar ninguna ventana y cubriendo también lo ocurrido después. La ventana de 5 turnos no aparece: Grep de 'five shifts', '5 shifts', 'previous ... shifts' y 'shifts before' sin resultados."
+ }
+]

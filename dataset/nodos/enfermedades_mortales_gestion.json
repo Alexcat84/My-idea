@@ -1,14 +1,14 @@
 {
   "node_id": "enfermedades_mortales_gestion",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Las Enfermedades Mortales de la Gestión (Panorama de las Siete)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming identifica siete 'enfermedades mortales' que afectan a la mayoría de los negocios y que impiden avanzar hacia la calidad: falta de constancia en el propósito, obsesión con las ganancias de corto plazo, evaluación de desempeño basada en méritos, cambios frecuentes de responsables, gestión que solo mira las cifras visibles, costos médicos excesivos y costos excesivos por responsabilidad legal. Curarlas exige reconstruir por completo la forma en que gestionas.",
+  "resumen_teorico": "Se identifican siete 'enfermedades mortales' que afectan a la mayoría de los negocios y que impiden avanzar hacia la calidad: falta de constancia en el propósito, obsesión con las ganancias de corto plazo, evaluación de desempeño basada en méritos, cambios frecuentes de responsables, gestión que solo mira las cifras visibles, costos médicos excesivos y costos excesivos por responsabilidad legal. Curarlas exige reconstruir por completo la forma en que gestionas.",
   "pasos_accionables": [
     "Revisar tu negocio e identificar cuáles de las siete enfermedades reconoces en él",
     "Pensar qué impacto tiene cada una en tus números y en cómo trabajas día a día, y en la cultura de tu negocio",
-    "Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor dano de fondo",
+    "Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor daño de fondo",
     "Comprometerte tú, quien decide, con un cambio de fondo a largo plazo en vez de buscar un arreglo rápido"
   ],
   "entregable_esperado": "Un diagnóstico escrito de las enfermedades mortales que ves en tu negocio, con ejemplos concretos y una prioridad clara de por dónde empezar",
@@ -39,5 +39,53 @@
       "titulo": "Las Enfermedades Mortales de la Gestion (Bloqueo de los 14 Puntos)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-078",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming identifica siete 'enfermedades mortales' que afectan a la mayoría de los negocios y que impiden avanzar hacia la calidad: falta de constancia en el propósito, obsesión con las ganancias de corto plazo, evaluación de desempeño basada en méritos, cambios frecuentes de responsables, gestión que solo mira las cifras visibles, costos médicos excesivos y costos excesivos por responsabilidad legal. Curarlas exige reconstruir por completo la forma en que gestionas.",
+      "texto_nuevo": "Se identifican siete 'enfermedades mortales' que afectan a la mayoría de los negocios y que impiden avanzar hacia la calidad: falta de constancia en el propósito, obsesión con las ganancias de corto plazo, evaluación de desempeño basada en méritos, cambios frecuentes de responsables, gestión que solo mira las cifras visibles, costos médicos excesivos y costos excesivos por responsabilidad legal. Curarlas exige reconstruir por completo la forma en que gestionas.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming identifica siete 'enfermedades mortales'"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U2-004 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "t2-fase-124",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F17-030: Diagnostica fallos de gestion de un negocio que ya opera (constancia, evaluacion de desempeno, rotacion, costos) para reformar como se gestiona, es ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0819",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor dano de fondo",
+      "texto_nuevo": "Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor daño de fondo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-003.paso2: daño (Falta la eñe en 'dano'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

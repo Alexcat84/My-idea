@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Adaptación de los 14 Puntos de Deming al Servicio Médico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Batalden y Vorlicky adaptaron los 14 puntos de Deming específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
+  "resumen_teorico": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
   "pasos_accionables": [
     "Definir en términos operacionales qué significa 'servicio al paciente' para la institución",
     "Establecer estándares de servicio a corto y largo plazo",
@@ -24,5 +24,26 @@
     "Cuando una institución de salud busca implementar un sistema de gestión de calidad integral",
     "Si existe alta variabilidad en errores médicos, dosis, o registros incompletos"
   ],
-  "etiqueta_arbol": "Adapta la Calidad a Salud"
+  "etiqueta_arbol": "Adapta la Calidad a Salud",
+  "correcciones": [
+    {
+      "id": "atribucion-001",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Batalden y Vorlicky adaptaron los 14 puntos de Deming específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
+      "texto_nuevo": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Batalden y Vorlicky adaptaron"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-008 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

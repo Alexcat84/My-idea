@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Prevención como Filosofía Central de Gestión de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Crosby define la gestión de calidad como una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra por qué quien gestiona debe estar cerca y jugarse por los resultados, no manejar todo a distancia.",
+  "resumen_teorico": "La gestión de calidad es una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra por qué quien gestiona debe estar cerca y jugarse por los resultados, no manejar todo a distancia.",
   "pasos_accionables": [
     "Destina tiempo y presupuesto propios a actividades preventivas: pruebas, capacitación, inspecciones",
     "Establece controles y revisiones en cada etapa de tu proceso antes de que aparezcan las fallas",
     "Mantente cerca de los resultados de tu negocio, evitando gestionar todo a distancia y sin involucrarte",
-    "Antes de invertir en prevención, ten claro con números concretos el costo y el beneficio para decidir con confianza"
+    "Actúa ahora para cosechar después: no esperes a que una falla te dé la evidencia para invertir en prevención"
   ],
   "entregable_esperado": "Plan de prevención con presupuesto asignado para pruebas, capacitación e inspecciones, y controles establecidos en cada etapa crítica de tu proceso",
   "nodos_previos": [
@@ -21,5 +21,43 @@
     "Al diseñar cómo vas a manejar la calidad en tu negocio",
     "Cuando dudas en invertir en prevención por falta de evidencia inmediata de retorno"
   ],
-  "etiqueta_arbol": "Previene Antes de Corregir"
+  "etiqueta_arbol": "Previene Antes de Corregir",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c21-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Antes de invertir en prevención, ten claro con números concretos el costo y el beneficio para decidir con confianza",
+      "texto_nuevo": "Actúa ahora para cosechar después: no esperes a que una falla te dé la evidencia para invertir en prevención",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L265-L271",
+        "frase": "To accomplish this you have to act now on situations which may cause problems some time from now. Act now for reward later."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro pide actuar hoy sobre problemas futuros (L265; L267: 'Management has to commit money this year to conduct quality testing so there won't be problems two years from now.') y dice que esperar a vivir la falla antes de avanzar es demasiado pedir (L271: 'But to wait until a failure is unassailable before learning from experience and only then advancing one more step is too much to expect of anyone.'). El paso 4 supeditaba la prevención a tener antes números concretos de costo y beneficio, lo contrario de lo que dicen el libro, el resumen y la condición 2. Resumen, pasos 0 a 2, entregable ",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO pasada K, ficha C21 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "atribucion-136",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Crosby define la gestión de calidad como una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra por qué quien gestiona debe estar cerca y jugarse por los resultados, no manejar todo a distancia.",
+      "texto_nuevo": "La gestión de calidad es una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra por qué quien gestiona debe estar cerca y jugarse por los resultados, no manejar todo a distancia.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Crosby define la gestión de calidad como"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U2-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

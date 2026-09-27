@@ -1,0 +1,89 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_043",
+  "intento": 0,
+  "usd": 0.168972,
+  "turnos": 1,
+  "duracion_s": 18.3,
+  "pared_s": 19.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32923,
+  "tokens_out": 1864,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P9059FF\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [65, 67, 77, 79, 2568], \"razon\": \"El libro pide que la protección iguale el peligro productivo (zona de paridad). Mapear ambos concreta esa idea. Advierte que las medidas de protección son difíciles de interpretar.\"},\n  {\"id\": \"P1840CE\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1840, 1991, 1995, 2161, 2487, 5586], \"razon\": \"El libro presenta el mantenimiento como la mayor fuente en todas las tecnologías peligrosas. El paso lo condiciona a confirmarlo con el historial de errores, una medida de resultado poco fiable que puede ocultar condiciones latentes.\"},\n  {\"id\": \"PD3488C\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"seguimiento continuo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2598, 3209, 4478, 4494, 4714], \"razon\": \"El libro sigue el progreso de las reformas con perfiles sucesivos y chequeos regulares. 'Continuo' puede no coincidir con los chequeos periódicos que describe.\"},\n  {\"id\": \"P4613B1\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Sección 1-3\", \"MEDA\", \"aerolínea\", \"tipo de evento\", \"naturaleza del fallo\"], \"clase\": \"FIEL\", \"lineas\": [3747, 3751, 3755, 3759], \"razon\": \"Las secciones 1 a 3 de MEDA responden a 'qué ocurrió': aerolínea, naturaleza del evento y clasificación del fallo. Coincide con el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P9059FF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    65,
+    67,
+    77,
+    79,
+    2568
+   ],
+   "razon": "El libro pide que la protección iguale el peligro productivo (zona de paridad). Mapear ambos concreta esa idea. Advierte que las medidas de protección son difíciles de interpretar."
+  },
+  {
+   "id": "P1840CE",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1840,
+    1991,
+    1995,
+    2161,
+    2487,
+    5586
+   ],
+   "razon": "El libro presenta el mantenimiento como la mayor fuente en todas las tecnologías peligrosas. El paso lo condiciona a confirmarlo con el historial de errores, una medida de resultado poco fiable que puede ocultar condiciones latentes."
+  },
+  {
+   "id": "PD3488C",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "seguimiento continuo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2596,
+    2598,
+    3209,
+    4478,
+    4494,
+    4714
+   ],
+   "razon": "El libro sigue el progreso de las reformas con perfiles sucesivos y chequeos regulares. 'Continuo' puede no coincidir con los chequeos periódicos que describe."
+  },
+  {
+   "id": "P4613B1",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Sección 1-3",
+    "MEDA",
+    "aerolínea",
+    "tipo de evento",
+    "naturaleza del fallo"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3747,
+    3751,
+    3755,
+    3759
+   ],
+   "razon": "Las secciones 1 a 3 de MEDA responden a 'qué ocurrió': aerolínea, naturaleza del evento y clasificación del fallo. Coincide con el libro."
+  }
+ ]
+}

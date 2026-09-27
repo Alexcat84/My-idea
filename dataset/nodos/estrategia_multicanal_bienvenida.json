@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia Multicanal de Bienvenida (6 Herramientas de Comunicación)",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Coleman propone usar sistemáticamente seis canales de comunicación —en persona, email, correo postal, teléfono, video y regalo/presente— para reforzar la relación con el cliente recién adquirido. No es necesario usar los seis, pero evaluar cada uno genera ideas de touchpoints que la mayoría de competidores ignoran, generando una diferenciación notable. Ejemplo: Zogics logró triplicar su tasa de apertura de email y quintuplicar la tasa de reproducción de video simplemente personalizando el thumbnail con el nombre del cliente y una imagen genuina del empleado.",
+  "resumen_teorico": "Conviene usar sistemáticamente seis canales de comunicación (en persona, email, correo postal, teléfono, video y regalo/presente) para reforzar la relación con el cliente recién adquirido. No es necesario usar los seis, pero evaluar cada uno genera ideas de touchpoints que la mayoría de competidores ignoran, generando una diferenciación notable. Ejemplo: Zogics logró triplicar su tasa de apertura de email y quintuplicar la tasa de reproducción de video simplemente personalizando el thumbnail con el nombre del cliente y una imagen genuina del empleado.",
   "pasos_accionables": [
     "Auditar qué canales de comunicación se usan actualmente tras una compra",
     "Diseñar al menos un touchpoint personalizado por canal (video corto, llamada de agradecimiento, nota escrita a mano, empaque temático), incluidos los medios subutilizados como correo físico, video personalizado o regalos significativos",
-    "Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra, y Evitar gestos genéricos (cupones, tazas con logo)",
+    "Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra, y evitar gestos genéricos (cupones, tazas con logo)",
     "Medir tasas de apertura, reproducción o respuesta antes y después de implementar la personalización",
     "Iterar el mensaje y el canal según los resultados obtenidos",
     "Seleccionar deliberadamente qué medio usar según la fase del cliente y el efecto emocional deseado."
@@ -37,5 +37,40 @@
       "titulo": "Los Seis Medios de Comunicación con el Cliente",
       "fuente": "Never Lose a Customer Again - Joey Coleman"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-087",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Coleman propone usar sistemáticamente seis canales de comunicación —en persona, email, correo postal, teléfono, video y regalo/presente— para reforzar la relación con el cliente recién adquirido. No es necesario usar los seis, pero evaluar cada uno genera ideas de touchpoints que la mayoría de competidores ignoran, generando una diferenciación notable. Ejemplo: Zogics logró triplicar su tasa de apertura de email y quintuplicar la tasa de reproducción de video simplemente personalizando el thumbnail con el nombre del cliente y una imagen genuina del empleado.",
+      "texto_nuevo": "Conviene usar sistemáticamente seis canales de comunicación (en persona, email, correo postal, teléfono, video y regalo/presente) para reforzar la relación con el cliente recién adquirido. No es necesario usar los seis, pero evaluar cada uno genera ideas de touchpoints que la mayoría de competidores ignoran, generando una diferenciación notable. Ejemplo: Zogics logró triplicar su tasa de apertura de email y quintuplicar la tasa de reproducción de video simplemente personalizando el thumbnail con el nombre del cliente y una imagen genuina del empleado.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Coleman propone usar sistemáticamente seis canales"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-025 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0114",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra, y Evitar gestos genéricos (cupones, tazas con logo)",
+      "texto_nuevo": "Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra, y evitar gestos genéricos (cupones, tazas con logo)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O012-024.paso2: evitar (La mayúscula a mitad de frase en 'Evitar' es una errata ortográfica real; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
+  ],
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
   ]
 }
