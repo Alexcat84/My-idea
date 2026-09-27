@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Quien lleva la calidad en tu negocio cumple dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estrategicas sobre calidad. Una tendencia clave es que las tareas de calidad que antes se concentraban en una sola persona o area pasen a repartirse entre quienes ejecutan el trabajo en cada area, y que estas personas reciban la formación necesaria para asumirlas.",
   "pasos_accionables": [
-    "Definir que tareas de calidad son del día a día y cuales son nuevas responsabilidades estrategicas",
-    "Identificar que actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada area",
+    "Definir qué tareas de calidad son del día a día y cuáles son nuevas responsabilidades estratégicas",
+    "Identificar qué actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada área",
     "Capacitar a esas personas para que asuman las nuevas responsabilidades de calidad",
-    "Actuar como asesor estrategico en las decisiones de calidad que tu tomas",
+    "Actuar como asesor estratégico en las decisiones de calidad que tú tomas",
     "Supervisar que la estrategia de calidad se cumpla, en coordinación contigo"
   ],
-  "entregable_esperado": "Un plan de transición de responsabilidades de calidad hacia quienes ejecutan el trabajo en cada area, con un programa de capacitación asociado",
+  "entregable_esperado": "Un plan de transición de responsabilidades de calidad hacia quienes ejecutan el trabajo en cada área, con un programa de capacitación asociado",
   "nodos_previos": [
     "consejo_de_calidad",
     "rol_alta_direccion_calidad"
@@ -27,5 +27,62 @@
   "etiqueta_arbol": "Define tu Director de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0258",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir que tareas de calidad son del día a día y cuales son nuevas responsabilidades estrategicas",
+      "texto_nuevo": "Definir qué tareas de calidad son del día a día y cuáles son nuevas responsabilidades estratégicas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-034.paso0: qué, cuáles, estratégicas (Solo añade las tildes de los interrogativos indirectos qué y cuáles y la de estratégicas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0259",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar que actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada area",
+      "texto_nuevo": "Identificar qué actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada área",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-034.paso1: qué, área (Solo añade la tilde del interrogativo indirecto qué y la de área.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0260",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Actuar como asesor estrategico en las decisiones de calidad que tu tomas",
+      "texto_nuevo": "Actuar como asesor estratégico en las decisiones de calidad que tú tomas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-034.paso3: estratégico, tú (Solo añade la tilde de estratégico y la del pronombre tú.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0261",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan de transición de responsabilidades de calidad hacia quienes ejecutan el trabajo en cada area, con un programa de capacitación asociado",
+      "texto_nuevo": "Un plan de transición de responsabilidades de calidad hacia quienes ejecutan el trabajo en cada área, con un programa de capacitación asociado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O021-034.entregable: área (Solo añade la tilde de área.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

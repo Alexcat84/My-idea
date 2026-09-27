@@ -1,7 +1,7 @@
 {
   "node_id": "evaluacion_de_factores_de_riesgo",
   "fase_proyecto": "planificacion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Cuando identificas varios riesgos, conviene ordenarlos para saber cuál atacar primero. Para eso, revisas cada uno según su gravedad, qué tan probable es que ocurra, qué tan rápido golpearía, cuánto indignaría a tus clientes, su complejidad, su alcance y cuánta incertidumbre tiene. Combinando estos factores obtienes una lista clara de prioridades para enfocar tu esfuerzo de prevención.",
@@ -41,6 +41,19 @@
         "evidencia": "F17-028: Prioriza riesgos ya identificados para repartir esfuerzo de prevencion, es planificacion de la gestion de riesgos, no prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-dominio-074",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q078-021: Evaluar severidad, probabilidad y urgencia de riesgos para priorizarlos es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
     }
   ]
 }

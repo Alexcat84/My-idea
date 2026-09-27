@@ -26,7 +26,10 @@
   "nodos_siguientes": [
     "ciclo_virtuoso_datos_electronicos",
     "plataforma_colaboracion_tiempo_real",
-    "collaboration_enablers"
+    "collaboration_enablers",
+    "gestion_beneficios_alianza_sostenible",
+    "equipo_conjunto_de_mejora_con_proveedores",
+    "collaboration_roadblocks"
   ],
   "condiciones_activacion": [
     "Cuando la empresa depende de un ecosistema de proveedores/socios para innovar",
@@ -50,6 +53,45 @@
         "motivo": "Tras entender que la coordinacion entre empresas es una ventaja competitiva frente al control unilateral, lo natural es preguntar que habilitadores humanos y tecnologicos hacen que esa colaboracion funcione."
       },
       "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el nodo del nucleo que solo entraba por colaboracion_transporte_ctm recibe un predecesor del nucleo."
+    },
+    {
+      "id": "n1-nucleo-09",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> gestion_beneficios_alianza_sostenible",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-10, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tras entender que la coordinación con socios vale más que el control unilateral, se sigue con cómo sostener el beneficio compartido de la alianza con métricas valorizadas."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "mv-arista-006",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B04, lectores de acuerdo)",
+        "motivo": "La colaboracion como ventaja competitiva lleva a formar un equipo conjunto con proveedores."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-034",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> collaboration_roadblocks",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C02, lectores de acuerdo)",
+        "motivo": "Tras ver el valor de colaborar en la cadena se llega a los obstaculos que la dificultan."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
     }
   ]
 }

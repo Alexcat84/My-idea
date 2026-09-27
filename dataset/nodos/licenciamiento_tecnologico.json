@@ -6,14 +6,14 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Es un acuerdo contractual donde permites a un licenciatario extranjero usar tus patentes, marcas, derechos de autor, secretos comerciales u otra propiedad intelectual a cambio de una compensación negociada. Te deja entrar a un mercado extranjero rapido, con menor riesgo financiero y legal que instalar una planta propia o participar en una joint venture. A cambio, pierdes parte del control sobre tu tecnologia y suele generar menores ganancias que la exportacion directa, asi que conviene compararlo antes de decidir. Requiere registrar tu propiedad intelectual en cada pais objetivo (herramientas como PCT o el Protocolo de Madrid facilitan proteccion multiple) y contar con asesoria legal especializada tanto en tu pais como en el del licenciatario antes de firmar.",
   "pasos_accionables": [
-    "Identifica que activos de propiedad intelectual son licenciables: patentes, marcas, tecnologia, procesos",
-    "Evalua si el licenciamiento te conviene mas que exportar directamente o instalar operaciones propias",
-    "Registra tus patentes y marcas en cada pais objetivo, considerando PCT y Protocolo de Madrid para proteccion multiple",
-    "Negocia la compensacion (regalia fija, variable o combinada) y el alcance geografico del acuerdo",
-    "Consigue asesoria legal especializada en tu pais y en el del licenciatario antes de firmar",
-    "Redacta el contrato incluyendo control de calidad, territorio, duracion y clausulas de proteccion de tu IP"
+    "Identifica qué activos de propiedad intelectual son licenciables: patentes, marcas, tecnología, procesos",
+    "Evalúa si el licenciamiento te conviene más que exportar directamente o instalar operaciones propias",
+    "Registra tus patentes y marcas en cada país objetivo, considerando PCT y Protocolo de Madrid para protección múltiple",
+    "Negocia la compensación (regalía fija, variable o combinada) y el alcance geográfico del acuerdo",
+    "Consigue asesoría legal especializada en tu país y en el del licenciatario antes de firmar",
+    "Redacta el contrato incluyendo control de calidad, territorio, duración y cláusulas de protección de tu IP"
   ],
-  "entregable_esperado": "Contrato de licenciamiento de tecnologia firmado con terminos claros de compensacion, territorio y duracion, respaldado por el registro de tu propiedad intelectual en el pais del licenciatario.",
+  "entregable_esperado": "Contrato de licenciamiento de tecnología firmado con términos claros de compensación, territorio y duración, respaldado por el registro de tu propiedad intelectual en el país del licenciatario.",
   "nodos_previos": [
     "proteccion_propiedad_intelectual_internacional",
     "proteccion_propiedad_intelectual_2",
@@ -40,5 +40,104 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0634",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica que activos de propiedad intelectual son licenciables: patentes, marcas, tecnologia, procesos",
+      "texto_nuevo": "Identifica qué activos de propiedad intelectual son licenciables: patentes, marcas, tecnología, procesos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.paso0: qué, tecnología (Tildes reales en qué y tecnología; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0635",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua si el licenciamiento te conviene mas que exportar directamente o instalar operaciones propias",
+      "texto_nuevo": "Evalúa si el licenciamiento te conviene más que exportar directamente o instalar operaciones propias",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.paso1: Evalúa, más (Tildes reales en Evalúa y más; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0636",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra tus patentes y marcas en cada pais objetivo, considerando PCT y Protocolo de Madrid para proteccion multiple",
+      "texto_nuevo": "Registra tus patentes y marcas en cada país objetivo, considerando PCT y Protocolo de Madrid para protección múltiple",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.paso2: país, protección (Tildes reales en país, protección y múltiple; la sigla PCT no se toca.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0637",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Negocia la compensacion (regalia fija, variable o combinada) y el alcance geografico del acuerdo",
+      "texto_nuevo": "Negocia la compensación (regalía fija, variable o combinada) y el alcance geográfico del acuerdo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.paso3: compensación, regalía, geográfico (Tildes reales en compensación, regalía y geográfico; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0638",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue asesoria legal especializada en tu pais y en el del licenciatario antes de firmar",
+      "texto_nuevo": "Consigue asesoría legal especializada en tu país y en el del licenciatario antes de firmar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.paso4: asesoría, país (Tildes reales en asesoría y país; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0639",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redacta el contrato incluyendo control de calidad, territorio, duracion y clausulas de proteccion de tu IP",
+      "texto_nuevo": "Redacta el contrato incluyendo control de calidad, territorio, duración y cláusulas de protección de tu IP",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.paso5: duración, cláusulas, protección (Tildes reales en duración, cláusulas y protección; la sigla IP no se toca.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0640",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contrato de licenciamiento de tecnologia firmado con terminos claros de compensacion, territorio y duracion, respaldado por el registro de tu propiedad intelectual en el pais del licenciatario.",
+      "texto_nuevo": "Contrato de licenciamiento de tecnología firmado con términos claros de compensación, territorio y duración, respaldado por el registro de tu propiedad intelectual en el país del licenciatario.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O055-025.entregable: tecnología, términos, compensación, duración, país (Tildes reales en tecnología, términos, compensación, duración y país; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "producto_como_experimento",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "El Experimento Como Primer Producto",
   "fuente": "The Lean Startup - Eric Ries",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Convierte tu Experimento en Producto",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-146",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q063-008: El nodo trata de probar el problema y la solucion con un prototipo minimo ante clientes reales antes de construir o lanzar, que es validacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

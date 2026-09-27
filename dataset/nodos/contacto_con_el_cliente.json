@@ -6,11 +6,11 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Por eso, la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
   "pasos_accionables": [
-    "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo",
+    "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tú mismo",
     "Priorizar en la contratación la capacidad de trato y servicio al cliente",
-    "Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones dificiles",
+    "Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones difíciles",
     "Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio",
-    "Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe"
+    "Revisar cada cierto tiempo qué percepción tiene el cliente sobre el trato que recibe"
   ],
   "entregable_esperado": "Plan de selección y capacitación específico para personal de contacto directo con clientes",
   "nodos_previos": [
@@ -69,6 +69,48 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-orto-0565",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo",
+      "texto_nuevo": "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tú mismo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-015.paso0: tú (Tú es pronombre personal y lleva tilde diacrítica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0566",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones dificiles",
+      "texto_nuevo": "Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones difíciles",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-015.paso2: difíciles (Falta la tilde de difíciles, y el término en inglés queda tal cual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0567",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe",
+      "texto_nuevo": "Revisar cada cierto tiempo qué percepción tiene el cliente sobre el trato que recibe",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-015.paso4: qué (Qué es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ],
   "fuentes_internas": [

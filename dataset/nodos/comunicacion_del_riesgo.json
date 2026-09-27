@@ -1,16 +1,16 @@
 {
   "node_id": "comunicacion_del_riesgo",
   "fase_proyecto": "ejecucion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Hablar del riesgo y tener claro quien hace que en una crisis",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "No puedes actuar ante un riesgo si tu y las personas que trabajan contigo no son conscientes de el. Por eso hablar del riesgo una y otra vez, por distintos canales, es el primer paso critico. Además necesitas tener claro quien hace que cuando llega una crisis, y aprovechar simulacros o problemas pequeños como entrenamiento para responder mejor cuando venga uno de verdad.",
   "pasos_accionables": [
     "Habla del riesgo varias veces y por distintos canales: simulacros, charlas, políticas escritas",
-    "Deja claro que le toca hacer a cada persona de tu equipo si llega una crisis",
-    "Haz simulacros de crisis dandole a tu equipo información incompleta o equivocada, para ver como reacciona",
-    "Después de cada crisis real o simulacro, reunete a revisar que funciono y que no",
-    "Aprovecha los problemas pequeños o los sustos que casi pasan a mayores como practica real"
+    "Deja claro qué le toca hacer a cada persona de tu equipo si llega una crisis",
+    "Haz simulacros de crisis dándole a tu equipo información incompleta o equivocada, para ver cómo reacciona",
+    "Después de cada crisis real o simulacro, reúnete a revisar qué funcionó y qué no",
+    "Aprovecha los problemas pequeños o los sustos que casi pasan a mayores como práctica real"
   ],
   "entregable_esperado": "Plan de comunicación de crisis con roles asignados y calendario de simulacros",
   "nodos_previos": [
@@ -24,5 +24,76 @@
   "etiqueta_arbol": "Comunica el Riesgo con Claridad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-025",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q093-020: El contenido trata de comunicar el riesgo y asignar roles ante una crisis con simulacros, que es gestión de riesgos y no gestión de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "n1-orto-0746",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja claro que le toca hacer a cada persona de tu equipo si llega una crisis",
+      "texto_nuevo": "Deja claro qué le toca hacer a cada persona de tu equipo si llega una crisis",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-038.paso1: qué (Falta la tilde de 'qué' en esta interrogativa indirecta; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0747",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz simulacros de crisis dandole a tu equipo información incompleta o equivocada, para ver como reacciona",
+      "texto_nuevo": "Haz simulacros de crisis dándole a tu equipo información incompleta o equivocada, para ver cómo reacciona",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-038.paso2: dándole, cómo (Faltan las tildes de 'dándole' y 'cómo'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0748",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Después de cada crisis real o simulacro, reunete a revisar que funciono y que no",
+      "texto_nuevo": "Después de cada crisis real o simulacro, reúnete a revisar qué funcionó y qué no",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-038.paso3: reúnete, qué, funcionó, qué (Faltan las tildes de 'reúnete', 'qué' (dos veces) y 'funcionó'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0749",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprovecha los problemas pequeños o los sustos que casi pasan a mayores como practica real",
+      "texto_nuevo": "Aprovecha los problemas pequeños o los sustos que casi pasan a mayores como práctica real",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-038.paso4: práctica (Falta la tilde de 'práctica' como sustantivo; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
   ]
 }

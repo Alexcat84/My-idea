@@ -7,11 +7,11 @@
   "resumen_teorico": "Antes de avanzar hacia estrategias mas ambiciosas de sostenibilidad que también den dinero (green to gold), tienes que asegurarte de cumplir estrictamente las leyes ambientales vigentes. El caso de BP demuestra que hacer marketing verde sin tener resuelto el cumplimiento normativo básico puede resultar catastrofico para tu reputacion y el valor de tu negocio.",
   "pasos_accionables": [
     "Identifica todas las leyes ambientales que te aplican, sean nacionales, regionales o locales",
-    "Consigue a alguien, sea un equipo propio o una consultoria, que sepa de cumplimiento ambiental",
+    "Consigue a alguien, sea un equipo propio o una consultoría, que sepa de cumplimiento ambiental",
     "Revisa tus procesos actuales contra lo que la normativa exige",
     "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde"
   ],
-  "entregable_esperado": "Un reporte de auditoria de cumplimiento normativo ambiental sin brechas criticas pendientes",
+  "entregable_esperado": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas críticas pendientes",
   "nodos_previos": [
     "crear_infraestructura_producto"
   ],
@@ -39,6 +39,33 @@
         "evidencia": "F22-007: Auditar los procesos actuales contra la normativa ambiental y cerrar brechas es control operativo de un negocio en marcha, no validacion con mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0922",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue a alguien, sea un equipo propio o una consultoria, que sepa de cumplimiento ambiental",
+      "texto_nuevo": "Consigue a alguien, sea un equipo propio o una consultoría, que sepa de cumplimiento ambiental",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-033.paso1: consultoría (Falta la tilde en consultoría.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0923",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un reporte de auditoria de cumplimiento normativo ambiental sin brechas criticas pendientes",
+      "texto_nuevo": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas críticas pendientes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-033.entregable: auditoría, críticas (Faltan las tildes en auditoría y críticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

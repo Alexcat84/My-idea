@@ -1,5 +1,21 @@
 # SANEAMIENTO DEL DATASET: LA LISTA COMPLETA DE VERIFICACION (documento vivo)
 
+> **EL DATASET ESTA SANEADO PARA EL CLIENTE.**
+>
+> Nivel 1 cerrado por la decision del fundador del 27 sep 2026 ("dos niveles de saneamiento"): todos sus criterios
+> verificados por su instrumento, con Gate 0 (alcanzabilidad 100 por ciento), el motor, vitest y tsc en verde. La unica
+> pieza del nivel 1 que no depende de este trabajo es el criterio 7 (252 vectores y 66 preguntas de texto viejo, ahora
+> 349 nodos), que por la misma decision espera a que el fundador diga "clave cargada": no toca ningun texto que vea el
+> cliente, solo la busqueda semantica.
+>
+> **Nivel 2, mejora continua (no bloquea esta declaracion)**, cada uno con su ficha y su fecha en `docs/PENDIENTES.md`,
+> seccion 0c:
+> - `n2-aristas-por-lectura`: las aristas que ninguna pasada leyo todavia y las 477 que faltan;
+> - `n2-vigencia-completa`: la campania completa de vigencia de los 305 nodos;
+> - `n2-voz-de-la-casa`: la voz de la casa en los textos que ve el cliente;
+> - `n2-muestra-anadidos-practicos`: una muestra de los anadidos practicos de resumenes y entregables, para decidir si
+>   merecen campania.
+
 *Mandato del fundador (26 sep 2026): **el dataset no se declara saneado hasta cumplir esta lista completa.**
 Cada criterio lleva su instrumento, su estado (VERIFICADO, A MEDIAS, PENDIENTE) y su evidencia (commit, informe,
 cifra). Las cifras sin fuente citada se midieron el 26 sep 2026 sobre `main` en `264fd82e`, solo lectura, con
@@ -13,25 +29,25 @@ integrar todavia.
 
 ## ESTADO DE UN VISTAZO
 
-| # | criterio | estado (27 sep 2026, cierre de la tanda 2) |
+| # | criterio | estado (cierre del nivel 1) |
 |---|---|---|
 | 1 | Duplicados y fusiones | VERIFICADO |
 | 2 | Pasos contra su libro | VERIFICADO |
 | 3 | Etiquetas del riel contra su nodo, y su vigencia en las traducciones | VERIFICADO |
 | 4 | Identificadores | VERIFICADO |
-| 5 | Fuentes | VERIFICADO (y desde el 27 sep: `fuentes_internas` completas por nodo, guarda; ningun libro ni autor llega al cliente, guardas) |
-| 6 | Aristas por lectura | A MEDIAS: leidas las nuevas, los pares bidireccionales, las 2.212 que tocan a los nodos corregidos (R), las 61 del nucleo a un mundo (P) y las entradas nuevas (E, C); quedan sin leer una a una unas 4.900 de las 7.162 aristas vivas, las 477 que faltan, 45 nodos del nucleo inalcanzables andando solo por el nucleo y 240 nodos sin sucesor |
-| 7 | Indice semantico | A MEDIAS: cobertura completa; **252 nodos llevan el vector de su texto viejo**, a la sesion con credencial |
-| 8 | Resumenes y entregables | A MEDIAS: contrarios y anadidos de cifra, plazo o norma, cero; los anadidos practicos no se midieron |
-| 9 | Los 61 puentes al nucleo sin declarar | VERIFICADO (tanda 2 y 27 sep: aprobados igual a aristas en los 9 mundos, ley del ancla en 2, guarda) |
-| 10 | Vigencia de contenido legal, normativo, numerico y de enlaces | A MEDIAS: aviso sin libro en 305 nodos, enlaces comprobados, 21 plazos verificados; el resto es la campania de vigencia |
-| 11 | Jurisdiccion (nodos propios de un pais) | VERIFICADO (tanda 1: 237 nodos con clase, aviso en la tarjeta, guarda) |
-| 12 | Coherencia interna de cada nodo | A MEDIAS: los 25 hallados en los 3.169, corregidos contra su libro; un residuo estimado (unos 19) sin localizar |
-| 13 | Aristas rancias tras las correcciones | VERIFICADO (tanda 2: 136 fuera, 54 recableadas, ningun nodo sin camino) |
-| 14 | Titulos y condiciones de activacion contra su contenido | A MEDIAS: muestra de 300 (0,0 y 0,3 por ciento); el caso hallado, corregido; sin pasada completa (unas 10 condiciones estimadas) |
-| 15 | Fase y dominio de cada nodo | A MEDIAS: fase leida en los 853 de validacion e ideacion (326 corregidas); planificacion y ejecucion (2.635) sin pasada, error de muestra 1 y 3 por ciento (unos 60); dominio, los 2 de la muestra corregidos, unos 20 estimados sin localizar |
-| 16 | Ortografia y voz de la casa | PENDIENTE |
-| 17 | Mundo 11 contra el catalogo | PENDIENTE (en la integracion, por la aduana semantica) |
+| 5 | Fuentes | VERIFICADO (`fuentes_internas` completas; ningun libro ni autor llega al cliente) |
+| 6 | Aristas | VERIFICADO PARA EL CLIENTE: ningun nodo del nucleo sin camino por el nucleo (eran 45); alcanzabilidad 100 por ciento; los 240 sin sucesor, cerrados por diseno. Nivel 2: la lectura de las aristas restantes y las 477 que faltan |
+| 7 | Indice semantico | ESPERA "clave cargada": 349 nodos a re-embeber y 66 preguntas a regenerar |
+| 8 | Resumenes y entregables | VERIFICADO PARA EL CLIENTE (contrarios y anadidos de cifra, plazo o norma: cero). Nivel 2: la muestra de anadidos practicos |
+| 9 | Los 61 puentes al nucleo sin declarar | VERIFICADO (157 puentes en 9 mundos, todos tejidos, ley del ancla en 2, guarda) |
+| 10 | Vigencia | VERIFICADO PARA EL CLIENTE: aviso sin libro en 305 nodos, 21 plazos verificados, enlaces rotos corregidos o retirados. Nivel 2: la campania completa |
+| 11 | Jurisdiccion | VERIFICADO |
+| 12 | Coherencia interna de cada nodo | VERIFICADO (segundo lector ciego sobre los 2.592 que leyo uno solo; los 4 hallados, corregidos contra su libro) |
+| 13 | Aristas rancias tras las correcciones | VERIFICADO |
+| 14 | Titulos y condiciones de activacion | VERIFICADO (condiciones leidas en los 3.169, frontera de pais primero; 114 corregidas) |
+| 15 | Fase y dominio de cada nodo | VERIFICADO (fase leida en los 3.169; dominio leido en los 3.169 y los 35 que salian del nucleo decididos nodo por nodo) |
+| 16 | Ortografia y voz de la casa | ORTOGRAFIA VERIFICADA (1.036 correcciones). Nivel 2: la voz de la casa |
+| 17 | Mundo 11 contra el catalogo | En su integracion: la forja cerro y fundio (tag `forja-mundo-11`, 471 nodos en el pack) |
 ---
 
 ## VERIFICADOS
@@ -389,7 +405,7 @@ en los dos nodos); fase, dominio y coherencia con los veredictos nuevos FASE, DO
    Gate 0; `collaboration_enablers` se alcanza andando solo por el nucleo. Gate 0, motor (32 de 32), vitest (2.017) y
    tsc en verde; 126 puentes aprobados en 9 mundos, todos tejidos.
 
-## ESTADO FINAL: LO QUE FALTA PARA DECLARAR EL DATASET SANEADO
+## ESTADO FINAL DE LA TANDA 2: LO QUE FALTABA (superado: ver NIVEL 1 al final y la declaracion al principio)
 
 Verificados: 1, 2, 3, 4, 5, 9, 11 y 13. **No se declara saneado todavia**: quedan nueve criterios, en este orden de
 peso para el cliente.
@@ -405,4 +421,47 @@ peso para el cliente.
 | 16 | Ortografia y voz de la casa | Pasada de estilo |
 | 7 | 252 vectores de texto viejo y 66 preguntas a regenerar | Sesion con credencial, cuando el fundador diga "clave cargada" |
 | 17 | Mundo 11 contra el catalogo | En la integracion del mundo 11, por la aduana semantica, con sus libros en la lista canonica y sus fuentes internas |
+
+---
+
+## NIVEL 1 "SANEADO PARA EL CLIENTE" (decision del fundador del 27 sep 2026). CERRADO
+
+Todo por correccion declarada en el propio nodo, instrumento y resultados por nodo en `docs/saneamiento/`; Gate 0
+(alcanzabilidad 100 por ciento, 3.169 de 3.169), motor (32 de 32), vitest (2.017) y tsc en verde.
+
+- **15. Fase y dominio (pasada Q, 3.169 nodos, vara calibrada de M, lector con trampas, verificador ciego y arbitro;
+  trampas 206 de 212 y 205 de 208).** 65 fases corregidas en planificacion y ejecucion (validacion e ideacion ya las
+  leyo la F). 50 dominios mal: 15 entre mundos o de vuelta al nucleo, aplicados; **los 35 que sacaban un nodo del
+  nucleo, decididos NODO POR NODO** (decision del fundador) con la prueba "lo necesita cualquier emprendedor aunque nunca
+  active ese mundo?" (pasada D, dos lectores ciegos y arbitro, trampas 4 de 4 y 4 de 4):
+  - **1 se queda en el nucleo**, con su motivo: `criterios_seleccion_proveedores` ("casi cualquier emprendedor tiene que
+    elegir proveedores, un gestor contable, un hosting, un fabricante o una agencia, y comparar con criterios ponderados
+    es la forma general de hacerlo; el mundo de compras lo profundiza");
+  - **34 se mueven a su mundo** (19 a entrega, 10 a compras, 2 a riesgos, 2 a calidad, 1 a seguridad digital), como
+    `colaboracion_transporte_ctm` (pasada MV): de las 58 aristas del nucleo al mundo, 40 son puente (declaradas dentro de
+    la ley del ancla) y 18 salen; 7 puentes que anclaban en un nodo movido a su mismo mundo quedan dentro del mundo; 7 se
+    reanclan en el nucleo por lectura; 13 nodos del nucleo sin camino reciben un predecesor del nucleo y 5 nodos sin
+    entrada, uno de su mismo mundo (pasada R2). Resultado: 157 puentes en 9 mundos, 0 nodos del nucleo sin camino por el
+    nucleo, alcanzabilidad 100 por ciento. Hoy, vivos por mundo: core 1.410, quality 686, environmental 263,
+    health_safety 258, franquicias 181, exportacion 130, entrega 67, risk_management 66, compras 55, seguridad_digital 53.
+- **14. Condiciones de activacion (pasada Q):** 114 condiciones mal en 105 nodos (la muestra estimaba unas 10),
+  reescritas desde el propio contenido del nodo (veredicto COHERENCIA); en los nodos-frontera de pais, la clase C con su
+  condicion de operar alli y la B sin exigirla.
+- **12. Coherencia (pasada K2):** segundo lector ciego sobre los 2.592 nodos que en K leyo uno solo, trampas 162 de 162
+  y 162 de 162. **4 incoherentes** (se estimaban unos 19), corregidos contra su libro por dos lectores ciegos con el libro
+  y un arbitro con cita literal: 10 correcciones en los 4 nodos.
+- **6. Aristas:** los 45 nodos del nucleo inalcanzables andando solo por el nucleo, por 23 raices que recibieron un
+  predecesor del nucleo (pasada N); hoy 0. **Los 240 nodos sin sucesor se CIERRAN como resueltos por diseno** (decision
+  del fundador del 27 sep 2026): el motor les da salida, porque al llegar a un nodo sin sucesor ofrecible el recorrido
+  pasa a `listo_para_plan`.
+- **10. Enlaces rotos:** de los 8 que fallaban, revisados a mano, 4 no eran enlaces rotos (Half.com y `site:dominio.com`
+  son ejemplo y marcador; NIST responde; USDA FAS solo rechaza a los robots) y 4 se corrigieron o retiraron
+  (`saneamiento-n1-enlaces`, veredicto VIGENCIA).
+- **16. Ortografia (pasada O):** 21.649 textos del dataset que ve el cliente (etiquetas, pasos, entregables) y las 3.519
+  preguntas en cache; trampas plantadas 224 de 224; el segundo lector ciego en 1 de cada 5 lotes hallo 3 faltas que el
+  primero no vio sobre 227 (1,3 por ciento). **1.036 correcciones**: 941 en pasos y entregables (veredicto ORTOGRAFIA),
+  87 preguntas y 8 etiquetas (lista `etiquetas_de_cara_v1_ortografia.json`, con sus traducciones reselladas en los diez
+  idiomas).
+- **7.** Espera "clave cargada": 349 nodos a re-embeber (`docs/fidelidad/credencial/nodos_a_reembeber.txt`) y 66
+  preguntas a regenerar.
 

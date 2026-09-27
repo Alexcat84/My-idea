@@ -1,6 +1,6 @@
 {
   "node_id": "critica_behavior_based_safety",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Crítica a los Programas de Seguridad Basados en Comportamiento",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -70,6 +70,19 @@
         "motivo": "Proteger el negocio de siempre de tus experimentos comerciales no tiene relacion con los programas de seguridad basados en el comportamiento."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-fase-033",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q066-023: Razon para B: el dominio ya es health_safety, asi que A se equivoco al marcarlo mal; la fase es ejecucion porque los pasos y las condiciones parten de un programa de incentivos que ya existe y lo auditan, eliminan practicas y sustituyen metricas, es decir mejoran la gestion operativa de un negocio en marcha. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ],
   "fuentes_internas": [

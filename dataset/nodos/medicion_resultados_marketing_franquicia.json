@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define qué vas a medir: costo por lead, costo por aplicación, tasa de cierre y velocidad de cierre",
     "Calcula tu costo por venta, pero interprétalo con cuidado si todavía tienes pocos casos",
-    "Sugerencia de My Idea: usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+    "Sugerencia de My Idea: usa herramientas como AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
     "Mide tu tasa de captura dividiendo los leads que generas entre los visitantes que llegan a la sección de franquicias de tu sitio",
     "Cada tres meses revisa el desempeño y reemplaza el 10-20% de los canales que peor te funcionan",
     "Haz pruebas A/B en tus páginas de aterrizaje y anuncios pagados, asegurándote de tener suficientes casos antes de sacar conclusiones"
@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando necesitas ajustar el presupuesto de marketing de tus franquicias",
-    "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas"
+    "Cuando recién empiezas a vender franquicias y todavía tienes muy pocas ventas para juzgar qué canales de marketing te funcionan"
   ],
   "etiqueta_arbol": "Mide tus Resultados de Marketing",
   "correcciones": [
@@ -43,6 +43,34 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro cita TrafficEstimate.com, Alexa y Google Analytics, pero AdRoll no aparece en el libro.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-102"
+    },
+    {
+      "id": "n1-enlace-1",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "VIGENCIA",
+      "texto_anterior": "Sugerencia de My Idea: usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+      "texto_nuevo": "Sugerencia de My Idea: usa herramientas como AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+      "cita": {
+        "instrumento": "Comprobador de enlaces del saneamiento",
+        "evidencia": "Comprobador de enlaces (docs/saneamiento/ENLACES.md) y revision a mano del 27 sep 2026: TrafficEstimate.com es hoy un dominio de otro sitio sin relacion."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 10: los enlaces rotos, corregidos o retirados.",
+      "indice": 2
+    },
+    {
+      "id": "n1-condicion-123",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas",
+      "texto_nuevo": "Cuando recién empiezas a vender franquicias y todavía tienes muy pocas ventas para juzgar qué canales de marketing te funcionan",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q089-010: La segunda condicion no dice que se trate del marketing de franquicias. (lector y verificador de acuerdo) Motivo: Es generica: no dice que se trate de medir el marketing de la venta de franquicias, asi que aplicaria a cualquier negocio nuevo con pocos datos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

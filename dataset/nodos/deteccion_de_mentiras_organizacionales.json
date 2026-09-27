@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Lista de narrativas de riesgo identificadas y proceso de validación cruzada con datos externos",
   "nodos_previos": [
-    "gestion_miedo_reportes"
+    "gestion_miedo_reportes",
+    "cultura_transparencia_organizacional"
   ],
   "nodos_siguientes": [
     "lead_bullets_no_silver_bullets",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Reconoce las Mentiras Internas",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-06",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cultura_transparencia_organizacional -> deteccion_de_mentiras_organizacionales",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-06, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien adopta la transparencia radical frente a la trampa de la positividad sigue con detectar las mentiras y autoengaños que aparecen cuando la empresa pierde terreno."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

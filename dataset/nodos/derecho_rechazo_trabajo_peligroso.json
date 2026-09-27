@@ -6,12 +6,12 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Un trabajador puede tener el derecho legal de negarse a hacer una tarea si la condicion representa claramente un riesgo de muerte o dano fisico grave, no hay tiempo para que el organismo de seguridad laboral de tu pais inspeccione, y, cuando es posible, el trabajador ya te aviso de esa condicion antes.",
   "pasos_accionables": [
-    "Crea una forma clara para que un trabajador te reporte una condicion insegura antes de negarse a hacer una tarea",
-    "Si tienes a alguien a cargo de otros, ensenale como responder cuando alguien se niega a trabajar por una razon legitima",
-    "Revisa de inmediato la condicion reportada y corrigela",
-    "No tomes ninguna medida disciplinaria contra quien ejerza este derecho de forma legitima"
+    "Crea una forma clara para que un trabajador te reporte una condición insegura antes de negarse a hacer una tarea",
+    "Si tienes a alguien a cargo de otros, enséñale cómo responder cuando alguien se niega a trabajar por una razón legítima",
+    "Revisa de inmediato la condición reportada y corrígela",
+    "No tomes ninguna medida disciplinaria contra quien ejerza este derecho de forma legítima"
   ],
-  "entregable_esperado": "Un procedimiento simple, por escrito, para manejar los casos en que alguien se niega a trabajar por una condicion peligrosa",
+  "entregable_esperado": "Un procedimiento simple, por escrito, para manejar los casos en que alguien se niega a trabajar por una condición peligrosa",
   "nodos_previos": [
     "programa_proteccion_denunciantes",
     "participacion_trabajadores"
@@ -26,5 +26,76 @@
   "etiqueta_arbol": "Puedes Rechazar Trabajo Peligroso",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0264",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea una forma clara para que un trabajador te reporte una condicion insegura antes de negarse a hacer una tarea",
+      "texto_nuevo": "Crea una forma clara para que un trabajador te reporte una condición insegura antes de negarse a hacer una tarea",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-010.paso0: condición (Solo añade la tilde que faltaba en condición.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0265",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes a alguien a cargo de otros, ensenale como responder cuando alguien se niega a trabajar por una razon legitima",
+      "texto_nuevo": "Si tienes a alguien a cargo de otros, enséñale cómo responder cuando alguien se niega a trabajar por una razón legítima",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-010.paso1: enséñale, cómo, razón, legítima (Todos los cambios son faltas reales: la eñe y la tilde de enséñale, y las tildes de cómo, razón y legítima.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0266",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa de inmediato la condicion reportada y corrigela",
+      "texto_nuevo": "Revisa de inmediato la condición reportada y corrígela",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-010.paso2: condición, corrígela (Solo añade las tildes que faltaban en condición y corrígela.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0267",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No tomes ninguna medida disciplinaria contra quien ejerza este derecho de forma legitima",
+      "texto_nuevo": "No tomes ninguna medida disciplinaria contra quien ejerza este derecho de forma legítima",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-010.paso3: legítima (Solo añade la tilde que faltaba en legítima.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0268",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un procedimiento simple, por escrito, para manejar los casos en que alguien se niega a trabajar por una condicion peligrosa",
+      "texto_nuevo": "Un procedimiento simple, por escrito, para manejar los casos en que alguien se niega a trabajar por una condición peligrosa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-010.entregable: condición (Solo añade la tilde que faltaba en condición.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

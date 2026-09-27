@@ -7,7 +7,7 @@
   "resumen_teorico": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto sin intervención de terceros, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Determinar si el embarque es único o parte de envíos múltiples idénticos",
-    "Si es múltiple, indicar en la certificacion el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
+    "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
     "Identificar a la persona con autoridad legal para firmar en nombre de la empresa",
     "Redactar la declaración de certificación conforme al tratado aplicable",
     "Conservar toda la documentación de soporte por si se solicita auditoría"
@@ -41,6 +41,20 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El tope de 12 meses es vigente. El formato mm/dd/yyyy no lo impone ni 19 CFR 10.1004 (KORUS) ni 19 CFR 182.12 (USMCA); es convencion de algunos formularios privados, y guias no oficiales de USMCA citan incluso AAAA-MM-DD. Presentarlo como requisito es impreciso: lo legal es el tope de 12 meses y que",
       "indice": 1,
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "n1-orto-0731",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si es múltiple, indicar en la certificacion el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
+      "texto_nuevo": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O064-023.paso1: certificación (Solo se añade la tilde que faltaba en la primera aparición de 'certificación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

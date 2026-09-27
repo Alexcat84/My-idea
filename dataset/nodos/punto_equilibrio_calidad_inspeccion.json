@@ -8,14 +8,14 @@
   "pasos_accionables": [
     "Calcula k1, el costo de inspeccionar una pieza, y k2, el costo de reparar un ensamble que falla por esa pieza defectuosa",
     "Determina el punto de equilibrio dividiendo k1 entre k2",
-    "Estima la fraccion defectuosa entrante p usando datos historicos del proceso o proveedor en estado de control estadistico",
-    "Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%",
-    "Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio",
-    "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una",
-    "Seleccionar la estrategia de inspeccion segun el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante esta en caos.",
+    "Estima la fracción defectuosa entrante p usando datos históricos del proceso o proveedor en estado de control estadístico",
+    "Compara p contra el punto de equilibrio: si p es menor, elimina la inspección; si p es mayor, aplica inspección al 100%",
+    "Evita planes de muestreo intermedios cuando p esté consistentemente de un lado del punto de equilibrio",
+    "Si manejas varias piezas o proveedores, ordena los términos ki menos K por pi de mayor a menor y aplica la regla a cada una",
+    "Seleccionar la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante está en caos.",
     "Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable."
   ],
-  "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la politica de inspeccion aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
+  "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la política de inspección aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
   "nodos_previos": [
     "control_estadistico_proceso",
     "costo_de_mala_calidad_copq",
@@ -86,6 +86,89 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Segun el resultado de comparar p con k1/k2 el libro solo admite ninguna inspeccion o 100%; incluir el muestreo como opcion contradice la regla todo o nada. El muestreo solo aparece con las reglas de Joyce Orsini en estado de caos.",
       "indice": 6,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-096"
+    },
+    {
+      "id": "n1-orto-0844",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estima la fraccion defectuosa entrante p usando datos historicos del proceso o proveedor en estado de control estadistico",
+      "texto_nuevo": "Estima la fracción defectuosa entrante p usando datos históricos del proceso o proveedor en estado de control estadístico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-016.paso2: fracción, históricos, estadístico (Tildes que faltaban en fracción, históricos y estadístico; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0845",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%",
+      "texto_nuevo": "Compara p contra el punto de equilibrio: si p es menor, elimina la inspección; si p es mayor, aplica inspección al 100%",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-016.paso3: inspección, inspección (Faltaba la tilde en las dos apariciones de inspección; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0846",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio",
+      "texto_nuevo": "Evita planes de muestreo intermedios cuando p esté consistentemente de un lado del punto de equilibrio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-016.paso4: esté (Aquí esté es subjuntivo y lleva tilde; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0847",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una",
+      "texto_nuevo": "Si manejas varias piezas o proveedores, ordena los términos ki menos K por pi de mayor a menor y aplica la regla a cada una",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-016.paso5: términos (Tilde que faltaba en términos; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0848",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Seleccionar la estrategia de inspeccion segun el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante esta en caos.",
+      "texto_nuevo": "Seleccionar la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante está en caos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-016.paso6: inspección, según, está (Tildes que faltaban en inspección, según y está (verbo); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
+    },
+    {
+      "id": "n1-orto-0849",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tabla de costos comparativos que documente, por cada componente o proveedor, la politica de inspeccion aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
+      "texto_nuevo": "Tabla de costos comparativos que documente, por cada componente o proveedor, la política de inspección aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-016.entregable: política, inspección (Tildes que faltaban en política e inspección; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

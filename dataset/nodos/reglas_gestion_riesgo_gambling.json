@@ -22,7 +22,6 @@
   "nodos_siguientes": [
     "stage_gate_system",
     "sistema_gates_go_kill",
-    "cadena_suministro_respuesta_desastres",
     "fundamentos_gestion_riesgo",
     "caza_las_oportunidades_no_solo_amenazas",
     "empieza_con_lo_que_ya_funciona"
@@ -72,6 +71,19 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "mv-arista-031",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reglas_gestion_riesgo_gambling -> cadena_suministro_respuesta_desastres",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A49, lectores de acuerdo)",
+        "motivo": "Las reglas de riesgo para nuevos productos no llevan a cadenas de respuesta a desastres."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

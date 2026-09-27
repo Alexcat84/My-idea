@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Reunir evidencia de amenazas competitivas concretas, como contratos o clientes perdidos",
     "Cuantificar las oportunidades de mejora calculando el costo de la mala calidad en tu negocio",
-    "Definir que tareas no puedes delegar y debes asumir tu mismo",
-    "Establecer revisiones periodicas de tu propio avance",
-    "Reconocer desde el inicio que esto te sumara aproximadamente un 10% mas de trabajo"
+    "Definir qué tareas no puedes delegar y debes asumir tú mismo",
+    "Establecer revisiones periódicas de tu propio avance",
+    "Reconocer desde el inicio que esto te sumará aproximadamente un 10% más de trabajo"
   ],
   "entregable_esperado": "Un documento personal de compromiso con tus tareas definidas y un calendario de revisiones de progreso",
   "nodos_previos": [
@@ -29,5 +29,49 @@
   "etiqueta_arbol": "Involucra a la Alta Dirección",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0071",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir que tareas no puedes delegar y debes asumir tu mismo",
+      "texto_nuevo": "Definir qué tareas no puedes delegar y debes asumir tú mismo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O008-002.paso2: qué, tú (Faltan las tildes de 'qué', que aquí introduce una interrogativa indirecta, y de 'tú', que es pronombre personal; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0072",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer revisiones periodicas de tu propio avance",
+      "texto_nuevo": "Establecer revisiones periódicas de tu propio avance",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O008-002.paso3: periódicas ('periódicas' es esdrújula y lleva tilde; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0073",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconocer desde el inicio que esto te sumara aproximadamente un 10% mas de trabajo",
+      "texto_nuevo": "Reconocer desde el inicio que esto te sumará aproximadamente un 10% más de trabajo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O008-002.paso4: sumará, más (Faltan las tildes de 'sumará' (aguda en vocal) y de 'más' (adverbio de cantidad); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
   ]
 }

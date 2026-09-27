@@ -23,8 +23,7 @@
     "lectura_balance_general",
     "estimate_at_completion_eac",
     "fundamentos_inteligencia_financiera",
-    "punto_equilibrio_unidades",
-    "modelado_simulacion_cadena_suministro"
+    "punto_equilibrio_unidades"
   ],
   "condiciones_activacion": [
     "Cuando se requiere calcular la viabilidad financiera del modelo de negocio"
@@ -32,5 +31,20 @@
   "etiqueta_arbol": "Mapea tu Estructura de Costos",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-019",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estructura_de_costos -> modelado_simulacion_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A25, lectores de acuerdo)",
+        "motivo": "El bloque de estructura de costos del modelo de negocio no sigue con modelar entidades de una cadena de suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
   ]
 }

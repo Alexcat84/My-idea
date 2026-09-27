@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Audita tu historial de anomalías o incidentes menores que has tolerado sin corregir",
     "Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio",
-    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad",
+    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de márgenes de seguridad",
     "Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones",
     "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
     "Sugerencia de My Idea: busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
@@ -84,6 +84,20 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-031 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0654",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad",
+      "texto_nuevo": "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de márgenes de seguridad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O057-005.paso2: márgenes (Solo cambia la tilde de 'márgenes', que faltaba de verdad.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
     }
   ],
   "fuentes_internas": [

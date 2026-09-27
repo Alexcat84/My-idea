@@ -6,11 +6,11 @@
   "fuente": "Businessperson's Guide to Federal Warranty Law",
   "resumen_teorico": "Esto viene de una ley federal de Estados Unidos, la Ley Magnuson Moss de Garantias. Un contrato de servicio es un acuerdo aparte, casi siempre con costo adicional, para dar mantenimiento o reparacion mas alla o en lugar de la garantia normal del producto. La seccion 106 de esa ley te exige dejar claros los terminos y condiciones de ese contrato. Y si decides ofrecerlo, no puedes usarlo como excusa para quitarle al comprador las garantias implicitas que ya tiene el producto que vendiste.",
   "pasos_accionables": [
-    "Redacta los terminos y condiciones del contrato de servicio de forma clara y separada de la garantia base del producto.",
-    "Revisa que ofrecer el contrato de servicio no te lleve, sin darte cuenta, a anular garantias implicitas de forma ilegal.",
-    "Sugerencia de My Idea: define precio, duracion y alcance del contrato de servicio como algo adicional que te puede generar ingresos recurrentes."
+    "Redacta los términos y condiciones del contrato de servicio de forma clara y separada de la garantía base del producto.",
+    "Revisa que ofrecer el contrato de servicio no te lleve, sin darte cuenta, a anular garantías implícitas de forma ilegal.",
+    "Sugerencia de My Idea: define precio, duración y alcance del contrato de servicio como algo adicional que te puede generar ingresos recurrentes."
   ],
-  "entregable_esperado": "Un contrato de servicio listo para ofrecer, con sus terminos claros, como producto adicional de posventa.",
+  "entregable_esperado": "Un contrato de servicio listo para ofrecer, con sus términos claros, como producto adicional de posventa.",
   "nodos_previos": [
     "cumplimiento_magnuson_moss",
     "clasificacion_garantia_full_limited",
@@ -52,6 +52,61 @@
         "motivo": "La carta de compromiso con un banquero de inversion para vender la empresa no tiene relacion con los contratos de servicio bajo la ley Magnuson Moss."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-orto-0860",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redacta los terminos y condiciones del contrato de servicio de forma clara y separada de la garantia base del producto.",
+      "texto_nuevo": "Redacta los términos y condiciones del contrato de servicio de forma clara y separada de la garantía base del producto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-032.paso0: términos, garantía (Solo añade las tildes que faltaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0861",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa que ofrecer el contrato de servicio no te lleve, sin darte cuenta, a anular garantias implicitas de forma ilegal.",
+      "texto_nuevo": "Revisa que ofrecer el contrato de servicio no te lleve, sin darte cuenta, a anular garantías implícitas de forma ilegal.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-032.paso1: garantías, implícitas (Solo añade las tildes que faltaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0862",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: define precio, duracion y alcance del contrato de servicio como algo adicional que te puede generar ingresos recurrentes.",
+      "texto_nuevo": "Sugerencia de My Idea: define precio, duración y alcance del contrato de servicio como algo adicional que te puede generar ingresos recurrentes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-032.paso2: duración (Solo añade la tilde que faltaba en duración.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0863",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un contrato de servicio listo para ofrecer, con sus terminos claros, como producto adicional de posventa.",
+      "texto_nuevo": "Un contrato de servicio listo para ofrecer, con sus términos claros, como producto adicional de posventa.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-032.entregable: términos (Solo añade la tilde que faltaba en términos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

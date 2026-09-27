@@ -26,7 +26,7 @@
   ],
   "condiciones_activacion": [
     "Cuando el pipeline de proyectos está sobrecargado y el tiempo-al-mercado es excesivo",
-    "Si hay más de 1000 iniciativas activas o el equipo está sobrecargado de multitasking"
+    "Si el equipo esta sobrecargado de multitasking y buena parte de los proyectos activos aporta poco valor estrategico"
   ],
   "etiqueta_arbol": "Poda tu Portafolio de Proyectos",
   "correcciones": [
@@ -62,6 +62,20 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra cambiada del paso 2 (30% en vez de un tercio) y además la pone como mínimo. El libro dice que hay que cortar aproximadamente un tercio de los proyectos (Cooper, L6707).",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-006"
+    },
+    {
+      "id": "n1-condicion-150",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si hay más de 1000 iniciativas activas o el equipo está sobrecargado de multitasking",
+      "texto_nuevo": "Si el equipo esta sobrecargado de multitasking y buena parte de los proyectos activos aporta poco valor estrategico",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q072-031: La segunda condicion exige mas de 1000 iniciativas, un umbral ajeno al contenido; dominio y fase ok. (lector y verificador de acuerdo) Motivo: El umbral de mas de 1000 iniciativas activas no sale del contenido y deja fuera a casi cualquier negocio; el contenido habla de un portafolio cargado de proyectos de poco valor."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

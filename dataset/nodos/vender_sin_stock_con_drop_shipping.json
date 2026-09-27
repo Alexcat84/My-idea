@@ -6,13 +6,13 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tu pasas ese pedido al fabricante o mayorista y es el quien empaca y envia directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo util con articulos pesados o voluminosos donde evitas manipular la carga dos veces. El riesgo es que pierdes control sobre lo que el cliente realmente recibe: la calidad del empaque, el tiempo de entrega y el trato quedan en manos de un tercero que no eliges pedido por pedido. Existen proveedores que no cumplen lo prometido, asi que la relacion con quien surte tu mercancia debe evaluarse antes de escalar volumen, no despues de las primeras quejas.",
   "pasos_accionables": [
-    "Contacta fabricantes o mayoristas de tu categoria y pregunta si envian directo al cliente final.",
+    "Contacta fabricantes o mayoristas de tu categoría y pregunta si envían directo al cliente final.",
     "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
-    "Haz un pedido de prueba a tu propio nombre y revisa como llega.",
-    "Deja por escrito quien responde si el envio llega tarde, dañado o incompleto.",
+    "Haz un pedido de prueba a tu propio nombre y revisa cómo llega.",
+    "Deja por escrito quién responde si el envío llega tarde, dañado o incompleto.",
     "Sugerencia de My Idea: revisa cada mes las quejas reales de clientes atribuibles a ese proveedor."
   ],
-  "entregable_esperado": "Un acuerdo escrito con el proveedor de drop-shipping mas el resultado documentado de un pedido de prueba.",
+  "entregable_esperado": "Un acuerdo escrito con el proveedor de drop-shipping más el resultado documentado de un pedido de prueba.",
   "nodos_previos": [
     "decidir_vender_solo_online_o_tambien_tienda_fisica"
   ],
@@ -55,6 +55,61 @@
         "evidencia": "F28-007: Diseña el modelo de entrega y el acuerdo con el proveedor (contacto, pedido de prueba, contrato escrito); ya no es explorar la idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0474",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contacta fabricantes o mayoristas de tu categoria y pregunta si envian directo al cliente final.",
+      "texto_nuevo": "Contacta fabricantes o mayoristas de tu categoría y pregunta si envían directo al cliente final.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O041-020.paso0: categoría, envían (Solo añade las tildes que faltaban en 'categoría' y 'envían'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0475",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz un pedido de prueba a tu propio nombre y revisa como llega.",
+      "texto_nuevo": "Haz un pedido de prueba a tu propio nombre y revisa cómo llega.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O041-020.paso2: cómo (Solo añade la tilde que falta en 'cómo', que aquí introduce una interrogativa indirecta.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0476",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja por escrito quien responde si el envio llega tarde, dañado o incompleto.",
+      "texto_nuevo": "Deja por escrito quién responde si el envío llega tarde, dañado o incompleto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O041-020.paso3: quién, envío (Solo añade las tildes que faltaban en 'quién' (interrogativa indirecta) y en 'envío'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0477",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un acuerdo escrito con el proveedor de drop-shipping mas el resultado documentado de un pedido de prueba.",
+      "texto_nuevo": "Un acuerdo escrito con el proveedor de drop-shipping más el resultado documentado de un pedido de prueba.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O041-020.entregable: más (Solo añade la tilde que falta en 'más', que aquí tiene valor de suma.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

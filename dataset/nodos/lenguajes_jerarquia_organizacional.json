@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "En tu negocio existen dos formas de hablar de un problema: el lenguaje de las cosas (porcentaje de errores, horas de retrabajo) y el lenguaje del dinero (costo, ganancia, retorno). Tu decides con el lenguaje del dinero, pero tu día a día ocurre en el lenguaje de las cosas. Por eso necesitas volverte bilingue: traducir lo que pasa en tu operación a lo que eso significa en plata para poder priorizar bien.",
   "pasos_accionables": [
-    "Identificar en que lenguaje estas describiendo el problema en este momento",
+    "Identificar en qué lenguaje estás describiendo el problema en este momento",
     "Traducir tus metricas operativas (defectos, horas de retrabajo) a terminos de dinero (costo, ganancia)",
     "Practicar hasta que puedas moverte entre ambos lenguajes sin perder claridad"
   ],
@@ -24,5 +24,21 @@
   "etiqueta_arbol": "Habla el Idioma de tu Equipo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0686",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar en que lenguaje estas describiendo el problema en este momento",
+      "texto_nuevo": "Identificar en qué lenguaje estás describiendo el problema en este momento",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O059-001.paso0: qué, estás (Faltan las tildes en el interrogativo indirecto 'qué' y en el verbo 'estás'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
   ]
 }

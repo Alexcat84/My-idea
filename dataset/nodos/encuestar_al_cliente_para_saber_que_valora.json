@@ -6,11 +6,11 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condicion del producto, otros la facilidad para devolver. Adivinar cual pesa mas es un error comun, porque termina imponiendo estandares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un metodo simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo informacion: es la base para decidir despues que vas a medir y monitorear en tu logistica, en lugar de perseguir metricas que a nadie le importan.",
   "pasos_accionables": [
-    "Identifica quien decide realmente la compra entre tus clientes.",
-    "Elige un metodo simple de encuesta segun tu alcance: mensaje, correo o llamada corta.",
-    "Pregunta que aspectos del envio les importan mas: tiempo, condicion, aviso o devolucion facil.",
+    "Identifica quién decide realmente la compra entre tus clientes.",
+    "Elige un método simple de encuesta según tu alcance: mensaje, correo o llamada corta.",
+    "Pregunta qué aspectos del envío les importan más: tiempo, condición, aviso o devolución fácil.",
     "Agrupa las respuestas por tipo de cliente para ver si esperan cosas distintas.",
-    "Usa esos resultados para decidir que vas a medir despues, en lugar de adivinar."
+    "Usa esos resultados para decidir qué vas a medir después, en lugar de adivinar."
   ],
   "entregable_esperado": "Un cuestionario corto ya aplicado a un grupo de clientes con sus respuestas resumidas.",
   "nodos_previos": [
@@ -30,5 +30,63 @@
   "etiqueta_arbol": "Pregunta qué valora tu cliente",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0201",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica quien decide realmente la compra entre tus clientes.",
+      "texto_nuevo": "Identifica quién decide realmente la compra entre tus clientes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-013.paso0: quién (Tilde en el interrogativo indirecto 'quién'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0202",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige un metodo simple de encuesta segun tu alcance: mensaje, correo o llamada corta.",
+      "texto_nuevo": "Elige un método simple de encuesta según tu alcance: mensaje, correo o llamada corta.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-013.paso1: método, según (Faltan las tildes de 'método' y 'según'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0203",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta que aspectos del envio les importan mas: tiempo, condicion, aviso o devolucion facil.",
+      "texto_nuevo": "Pregunta qué aspectos del envío les importan más: tiempo, condición, aviso o devolución fácil.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-013.paso2: qué, envío, más, condición, devolución (Tildes reales (qué, envío, más, condición, devolución y también fácil, que la lista de faltas no nombraba pero la propuesta corrige bien); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0204",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa esos resultados para decidir que vas a medir despues, en lugar de adivinar.",
+      "texto_nuevo": "Usa esos resultados para decidir qué vas a medir después, en lugar de adivinar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-013.paso4: qué, después (Tildes en el interrogativo indirecto 'qué' y en 'después'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
   ]
 }

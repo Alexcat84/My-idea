@@ -1,0 +1,472 @@
+[
+ {
+  "id": "mv-arista-001",
+  "operacion": "TEJER",
+  "desde": "supply_chain_management_systems",
+  "hacia": "optimizacion_tecnologia_cadena_suministro",
+  "motivo": "Los sistemas SCM con capacidad analitica son la base tecnologica tras la cual se entra a dashboards e integracion de impactos ambientales.",
+  "evidencia": "Pasada MV del saneamiento (MV-B01, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-002",
+  "operacion": "QUITAR",
+  "desde": "ia_en_supply_chain",
+  "hacia": "optimizacion_tecnologia_cadena_suministro",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en supply_chain_management_systems.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B01)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-003",
+  "operacion": "QUITAR",
+  "desde": "colaboracion_cadena_suministro",
+  "hacia": "optimizacion_tecnologia_cadena_suministro",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en supply_chain_management_systems.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B02)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-004",
+  "operacion": "TEJER",
+  "desde": "seleccion_de_proveedores_por_costo_total",
+  "hacia": "alcance_profundo_cadena_suministro",
+  "motivo": "Tras gestionar y elegir proveedores directos se llega a extender los requisitos a los niveles 2 y 3.",
+  "evidencia": "Pasada MV del saneamiento (MV-B03, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-005",
+  "operacion": "QUITAR",
+  "desde": "gestion_procurement_consumo",
+  "hacia": "alcance_profundo_cadena_suministro",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en seleccion_de_proveedores_por_costo_total.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B03)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-006",
+  "operacion": "TEJER",
+  "desde": "coordinacion_colaboracion_cadena_suministro",
+  "hacia": "equipo_conjunto_de_mejora_con_proveedores",
+  "motivo": "La colaboracion como ventaja competitiva lleva a formar un equipo conjunto con proveedores.",
+  "evidencia": "Pasada MV del saneamiento (MV-B04, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-007",
+  "operacion": "QUITAR",
+  "desde": "colaboracion_cadena_suministro",
+  "hacia": "equipo_conjunto_de_mejora_con_proveedores",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en coordinacion_colaboracion_cadena_suministro.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B04)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-008",
+  "operacion": "TEJER",
+  "desde": "matriz_probabilidad_impacto",
+  "hacia": "estrategia_gestion_riesgo_tolerancia",
+  "motivo": "La matriz ya introduce cuanto riesgo estas dispuesto a aceptar, que la estrategia formaliza como tolerancia.",
+  "evidencia": "Pasada MV del saneamiento (MV-B05, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-009",
+  "operacion": "QUITAR",
+  "desde": "risk_audit",
+  "hacia": "estrategia_gestion_riesgo_tolerancia",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B05)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-010",
+  "operacion": "TEJER",
+  "desde": "matriz_probabilidad_impacto",
+  "hacia": "fundamentos_gestion_riesgo",
+  "motivo": "Priorizar riesgos por probabilidad e impacto es la entrada a un proceso completo de enmarcar, evaluar, responder y monitorear.",
+  "evidencia": "Pasada MV del saneamiento (MV-B06, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-011",
+  "operacion": "QUITAR",
+  "desde": "gestion_riesgo_cadena_suministro",
+  "hacia": "fundamentos_gestion_riesgo",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B06)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-012",
+  "operacion": "TEJER",
+  "desde": "definicion_alineacion_cadena_suministro",
+  "hacia": "getting_started_supply_chain_risk_management",
+  "motivo": "Entender que es la cadena y los actores que la forman es el punto tras el cual se entra a gestionar su riesgo.",
+  "evidencia": "Pasada MV del saneamiento (MV-B07, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-013",
+  "operacion": "QUITAR",
+  "desde": "gestion_riesgo_cadena_suministro",
+  "hacia": "getting_started_supply_chain_risk_management",
+  "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en definicion_alineacion_cadena_suministro.",
+  "evidencia": "Pasada D y MV del saneamiento (MV-B07)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-014",
+  "operacion": "QUITAR",
+  "desde": "definicion_alineacion_cadena_suministro",
+  "hacia": "ia_en_supply_chain",
+  "motivo": "Puente legitimo, pero el ancla definicion_alineacion_cadena_suministro ya lleva 2 puentes a entrega (ley del ancla).",
+  "evidencia": "Pasada MV del saneamiento (MV-A15, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-015",
+  "operacion": "QUITAR",
+  "desde": "manufactura_aditiva_bajo_demanda",
+  "hacia": "simulacion_de_operaciones_supply_chain",
+  "motivo": "La impresion 3D bajo demanda no conduce naturalmente a la simulacion de operaciones.",
+  "evidencia": "Pasada MV del saneamiento (MV-A35, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-016",
+  "operacion": "QUITAR",
+  "desde": "prompting_cadena_de_pensamiento",
+  "hacia": "ia_en_supply_chain",
+  "motivo": "Una tecnica de prompting no tiene como continuacion la IA aplicada a la cadena de suministro.",
+  "evidencia": "Pasada MV del saneamiento (MV-A47, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-017",
+  "operacion": "QUITAR",
+  "desde": "marco_analisis_mercado_cadena_suministro",
+  "hacia": "compartir_datos_cadena_suministro",
+  "motivo": "Entender el tipo de mercado para priorizar capacidades no sigue con compartir datos entre empresas de la cadena.",
+  "evidencia": "Pasada MV del saneamiento (MV-A36, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-018",
+  "operacion": "QUITAR",
+  "desde": "vehiculos_autonomos_drones_supply_chain",
+  "hacia": "simulacion_de_operaciones_supply_chain",
+  "motivo": "Los drones y vehiculos autonomos no llevan naturalmente a la simulacion de operaciones.",
+  "evidencia": "Pasada MV del saneamiento (MV-A58, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-019",
+  "operacion": "QUITAR",
+  "desde": "estructura_de_costos",
+  "hacia": "modelado_simulacion_cadena_suministro",
+  "motivo": "El bloque de estructura de costos del modelo de negocio no sigue con modelar entidades de una cadena de suministro.",
+  "evidencia": "Pasada MV del saneamiento (MV-A25, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-020",
+  "operacion": "QUITAR",
+  "desde": "impacto_estado_resultados_en_balance",
+  "hacia": "efecto_bullwhip",
+  "motivo": "El impacto del estado de resultados en el balance es contable y no conduce al efecto latigo.",
+  "evidencia": "Pasada MV del saneamiento (MV-A30, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-021",
+  "operacion": "QUITAR",
+  "desde": "alineacion_ti_negocio",
+  "hacia": "simulacion_de_operaciones_supply_chain",
+  "motivo": "Alinear la tecnologia con el Canvas no lleva de forma natural a simular operaciones de supply chain.",
+  "evidencia": "Pasada MV del saneamiento (MV-A02, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-022",
+  "operacion": "QUITAR",
+  "desde": "cost_management_plan",
+  "hacia": "risk_audit",
+  "motivo": "El plan de gestion de costos no tiene como continuacion natural la auditoria de riesgos.",
+  "evidencia": "Pasada MV del saneamiento (MV-A11, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-023",
+  "operacion": "QUITAR",
+  "desde": "posicionamiento_est",
+  "hacia": "propuesta_valor_franquicia",
+  "motivo": "Tiene razon el lector A: elegir en que destacar frente a los clientes es estrategia general, mientras que la propuesta de valor de la franquicia trata del sistema completo que compra un franquiciado. Presupone haber decidido franquiciar, asi que el posicionamiento no es su puerta natural.",
+  "evidencia": "Pasada MV del saneamiento (MV-A44, arbitro)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-024",
+  "operacion": "QUITAR",
+  "desde": "posicionamiento_est",
+  "hacia": "calificacion_prospectos_marketing",
+  "motivo": "Elegir en que ser el mejor no lleva a calificar prospectos de franquicia.",
+  "evidencia": "Pasada MV del saneamiento (MV-A43, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-025",
+  "operacion": "QUITAR",
+  "desde": "mecanismo_resolucion_disputas",
+  "hacia": "contract_close_out",
+  "motivo": "Las disputas de garantia con consumidores no tienen relacion con el cierre de contratos con proveedores.",
+  "evidencia": "Pasada MV del saneamiento (MV-A37, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-026",
+  "operacion": "QUITAR",
+  "desde": "stakeholder_register",
+  "hacia": "risk_audit",
+  "motivo": "El registro de interesados no conduce a la auditoria de riesgos.",
+  "evidencia": "Pasada MV del saneamiento (MV-A53, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-027",
+  "operacion": "QUITAR",
+  "desde": "planificacion_gobierno_organizaciones_familiares",
+  "hacia": "familia_normas_iso_9000",
+  "motivo": "El gobierno de la empresa familiar no conduce a la familia de normas ISO 9000.",
+  "evidencia": "Pasada MV del saneamiento (MV-A42, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-028",
+  "operacion": "QUITAR",
+  "desde": "innovacion_tipo_ii",
+  "hacia": "juran_quality_by_design",
+  "motivo": "La ideacion por mas grande o mas pequeno no lleva al modelo Juran de calidad por diseno.",
+  "evidencia": "Pasada MV del saneamiento (MV-A34, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-029",
+  "operacion": "QUITAR",
+  "desde": "estimate_at_completion_eac",
+  "hacia": "risk_audit",
+  "motivo": "La estimacion al completar no lleva naturalmente a auditar el proceso de riesgos.",
+  "evidencia": "Pasada MV del saneamiento (MV-A23, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-030",
+  "operacion": "QUITAR",
+  "desde": "innovacion_tipo_ii",
+  "hacia": "design_for_six_sigma_dfss",
+  "motivo": "Una tecnica simple de ideacion no tiene como continuacion natural DFSS y DMADV.",
+  "evidencia": "Pasada MV del saneamiento (MV-A33, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-031",
+  "operacion": "QUITAR",
+  "desde": "reglas_gestion_riesgo_gambling",
+  "hacia": "cadena_suministro_respuesta_desastres",
+  "motivo": "Las reglas de riesgo para nuevos productos no llevan a cadenas de respuesta a desastres.",
+  "evidencia": "Pasada MV del saneamiento (MV-A49, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-032",
+  "operacion": "QUITAR",
+  "desde": "embudo_get_keep_grow",
+  "hacia": "metricas_calidad",
+  "motivo": "El embudo de clientes no conduce a las metricas de calidad de proyecto o producto.",
+  "evidencia": "Pasada MV del saneamiento (MV-A21, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-033",
+  "operacion": "TEJER",
+  "desde": "creacion_data_warehouse",
+  "hacia": "big_data_ia_cadena_suministro",
+  "motivo": "Centralizar datos en un repositorio es el paso previo a llevarlos a un data lake con machine learning predictivo.",
+  "evidencia": "Pasada MV del saneamiento (MV-C01, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-034",
+  "operacion": "TEJER",
+  "desde": "coordinacion_colaboracion_cadena_suministro",
+  "hacia": "collaboration_roadblocks",
+  "motivo": "Tras ver el valor de colaborar en la cadena se llega a los obstaculos que la dificultan.",
+  "evidencia": "Pasada MV del saneamiento (MV-C02, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-035",
+  "operacion": "TEJER",
+  "desde": "division_trabajo_humano_ia",
+  "hacia": "combinacion_humano_ia_decision",
+  "motivo": "La division entre tareas repetitivas para la maquina y juicio creativo humano lleva a la combinacion optima de ambos.",
+  "evidencia": "Pasada MV del saneamiento (MV-C03, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-036",
+  "operacion": "TEJER",
+  "desde": "team_performance_assessment",
+  "hacia": "definicion_metas_engagement",
+  "motivo": "Evaluar la moral y cohesion del equipo precede a definir metas y decisiones de compromiso.",
+  "evidencia": "Pasada MV del saneamiento (MV-C04, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-037",
+  "operacion": "TEJER",
+  "desde": "channels_hypothesis_web_mobile",
+  "hacia": "evaluacion_preparacion_tecnologica",
+  "motivo": "Elegido el canal digital de venta, lo siguiente es revisar si la tecnologia esta lista para operar en linea.",
+  "evidencia": "Pasada MV del saneamiento (MV-C05, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-038",
+  "operacion": "TEJER",
+  "desde": "driver_produccion",
+  "hacia": "industrial_robots_automation",
+  "motivo": "Tras disenar fabricas y almacenes en el driver de produccion se llega a automatizarlos con robots.",
+  "evidencia": "Pasada MV del saneamiento (MV-C06, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-039",
+  "operacion": "TEJER",
+  "desde": "reglas_brainstorming",
+  "hacia": "innovacion_tipo_ii",
+  "motivo": "La tecnica se usa en sesiones de brainstorming, cuyas reglas son el paso previo natural.",
+  "evidencia": "Pasada MV del saneamiento (MV-C07, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-040",
+  "operacion": "TEJER",
+  "desde": "pronostico_de_demanda_variables",
+  "hacia": "mitigacion_efecto_latigo",
+  "motivo": "El primer factor del efecto latigo es un pronostico mal basado, asi que se llega tras entender el pronostico de demanda.",
+  "evidencia": "Pasada MV del saneamiento (MV-C08, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-041",
+  "operacion": "TEJER",
+  "desde": "planificacion_sucesion_ceo",
+  "hacia": "planificacion_gobierno_organizaciones_familiares",
+  "motivo": "Tiene razon el lector A: el nodo trata de planificar el relevo al dejar el timon y la entrada gradual de familiares, gerentes y directores externos, que continua de forma natural el dilema de sucesion interna o externa. El candidato del lector B trata de detectar en una startup que el fundador ya no encaja con la etapa, que queda mas lejos.",
+  "evidencia": "Pasada MV del saneamiento (MV-C09, arbitro)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-042",
+  "operacion": "TEJER",
+  "desde": "orden_negociacion_puntos",
+  "hacia": "plantea_oferta_como_rango_o_cifra_precisa",
+  "motivo": "Tras ordenar los puntos de una negociacion se llega a como plantear la cifra de la oferta.",
+  "evidencia": "Pasada MV del saneamiento (MV-C10, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-043",
+  "operacion": "TEJER",
+  "desde": "brief_competitivo",
+  "hacia": "posicionamiento_est",
+  "motivo": "Analizar por que tu producto supera a las alternativas precede a elegir en que ser el mejor y a que renunciar.",
+  "evidencia": "Pasada MV del saneamiento (MV-C11, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-044",
+  "operacion": "TEJER",
+  "desde": "pronostico_de_demanda_variables",
+  "hacia": "sales_operations_planning",
+  "motivo": "El S&OP equilibra oferta y demanda agregadas, lo que parte de entender el pronostico de demanda; se evita proceso_sop_mop por ser casi duplicado.",
+  "evidencia": "Pasada MV del saneamiento (MV-C12, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-045",
+  "operacion": "TEJER",
+  "desde": "information_driver_supply_chain",
+  "hacia": "sop_colaborativo",
+  "motivo": "La informacion como base de coordinacion y pronostico precede a convertir datos en un plan S&OP compartido; se evita proceso_sop_mop por duplicado.",
+  "evidencia": "Pasada MV del saneamiento (MV-C13, lectores de acuerdo)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-046",
+  "operacion": "QUITAR",
+  "desde": "matriz_probabilidad_impacto",
+  "hacia": "fundamentos_gestion_riesgo",
+  "motivo": "matriz_probabilidad_impacto ya anclaba 2 puentes en seguridad digital; el reanclaje de fundamentos_gestion_riesgo pasa a analisis_de_sensibilidad_riesgo.",
+  "evidencia": "Guarda de puentes (engine/test_puentes_tejidos.py): ley del ancla",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2.",
+  "fecha": "2026-09-27"
+ },
+ {
+  "id": "mv-arista-047",
+  "operacion": "TEJER",
+  "desde": "analisis_de_sensibilidad_riesgo",
+  "hacia": "fundamentos_gestion_riesgo",
+  "motivo": "Quien ya identifico y cuantifico los riesgos clave de su proyecto al variar supuestos criticos sigue naturalmente con el ciclo completo de enmarcar, evaluar, responder y monitorear el riesgo.",
+  "evidencia": "Pasada MV del saneamiento (MV-B06, segunda eleccion de un lector)",
+  "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2.",
+  "fecha": "2026-09-27"
+ }
+]

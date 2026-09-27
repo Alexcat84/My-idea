@@ -6,13 +6,13 @@
   "fuente": "Guia de empaque para envios (FedEx)",
   "resumen_teorico": "Muchos productos comunes se clasifican como mercancia peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterias, aerosoles y solventes entran en esta categoria porque pueden generar reacciones quimicas o electricas riesgosas durante el transporte. Vender algo asi sin identificarlo correctamente puede provocar que el courier rechace el envio o, peor, que provoque un incidente en transito. Cada tipo de mercancia peligrosa tiene un numero y nombre de clasificacion oficial que debe usarse para empacarlo, marcarlo y declararlo. Ademas, quien despacha estos envios sin la capacitacion adecuada puede enfrentar sanciones, asi que identificar el producto antes de escalar volumen es un paso que no se puede saltar.",
   "pasos_accionables": [
-    "Revisa si tu producto contiene liquidos inflamables, baterias, aerosoles o quimicos.",
-    "Busca la clasificacion oficial de ese tipo de producto (numero y nombre de envio).",
-    "Pregunta a tu courier si acepta ese producto y bajo que condiciones de empaque.",
-    "Capacitate tu mismo antes de despachar el primer envio de este tipo.",
-    "Guarda la documentacion exigida junto con cada envio de mercancia peligrosa."
+    "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles o químicos.",
+    "Busca la clasificación oficial de ese tipo de producto (número y nombre de envío).",
+    "Pregunta a tu courier si acepta ese producto y bajo qué condiciones de empaque.",
+    "Capacítate tú mismo antes de despachar el primer envío de este tipo.",
+    "Guarda la documentación exigida junto con cada envío de mercancía peligrosa."
   ],
-  "entregable_esperado": "Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.",
+  "entregable_esperado": "Una lista de tus productos marcados como mercancía peligrosa o no, con su clasificación oficial.",
   "nodos_previos": [
     "identificar_si_tu_producto_necesita_proteccion_especial",
     "revisar_necesidades_de_empaque",
@@ -67,6 +67,89 @@
         "evidencia": "F26-016: Clasificar productos como mercancia peligrosa para despacharlos con el courier es logistica operativa de un negocio que ya vende. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0353",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu producto contiene liquidos inflamables, baterias, aerosoles o quimicos.",
+      "texto_nuevo": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles o químicos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-007.paso0: líquidos, baterías, químicos (Tildes reales en líquidos, baterías y químicos; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0354",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca la clasificacion oficial de ese tipo de producto (numero y nombre de envio).",
+      "texto_nuevo": "Busca la clasificación oficial de ese tipo de producto (número y nombre de envío).",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-007.paso1: clasificación, número, envío (Tildes reales en clasificación, número y envío; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0355",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tu courier si acepta ese producto y bajo que condiciones de empaque.",
+      "texto_nuevo": "Pregunta a tu courier si acepta ese producto y bajo qué condiciones de empaque.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-007.paso2: qué (Tilde real en el interrogativo indirecto qué; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0356",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Capacitate tu mismo antes de despachar el primer envio de este tipo.",
+      "texto_nuevo": "Capacítate tú mismo antes de despachar el primer envío de este tipo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-007.paso3: Capacítate, tú, envío (Tildes reales en Capacítate, tú y envío; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0357",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Guarda la documentacion exigida junto con cada envio de mercancia peligrosa.",
+      "texto_nuevo": "Guarda la documentación exigida junto con cada envío de mercancía peligrosa.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-007.paso4: documentación, envío, mercancía (Tildes reales en documentación, envío y mercancía; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0358",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.",
+      "texto_nuevo": "Una lista de tus productos marcados como mercancía peligrosa o no, con su clasificación oficial.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-007.entregable: mercancía, clasificación (Tildes reales en mercancía y clasificación; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

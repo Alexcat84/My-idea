@@ -6,11 +6,11 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "En Estados Unidos existen varias agencias que apoyan a los negocios pequeños que exportan. El U.S. Commercial Service (CS) es el brazo de promocion comercial que depende de Comercio de Estados Unidos; la SBA gestiona programas de financiamiento; los SBDC ofrecen asesoria gratuita si es tu primera vez exportando; USTDA financia estudios de factibilidad en paises en desarrollo si tu producto cumple todos sus criterios: enfrenta competencia subsidiada, es prioridad de desarrollo del pais destino con aval de la embajada de EE.UU. y abre ventas muy superiores al costo de la ayuda; USAID y el Foreign Agricultural Service (FAS) apoyan comodities y asistencia técnica en mercados emergentes; Estado, a traves de su base BIDS, ofrece leads comerciales; y las oficinas estatales de comercio internacional te dan leads y acceso a misiones comerciales. Registrarte en Federal Business Opportunities (FedBizOpps) te permite monitorear contratos de subcontratacion disponibles.",
   "pasos_accionables": [
-    "Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado",
+    "Contacta la oficina local del U.S. Commercial Service para asesoría inicial y estudios de mercado",
     "Consulta con un SBDC cercano si es tu primera experiencia exportadora",
-    "Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion",
+    "Evalúa financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantías de exportación",
     "Verifica si tu producto o servicio califica para financiamiento de USTDA o asistencia de FAS/USAID según tu sector",
-    "Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales",
+    "Regístrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales",
     "Contacta la oficina estatal de comercio internacional para obtener leads y participar en misiones comerciales"
   ],
   "entregable_esperado": "Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.",
@@ -27,7 +27,7 @@
     "uso_del_us_commercial_service"
   ],
   "condiciones_activacion": [
-    "Cuando inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
+    "Cuando tu negocio opera en Estados Unidos, inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
     "Si no sabes por donde empezar en el proceso de exportacion",
     "Si exportas comodities agricolas, servicios tecnicos, o buscas contratos gubernamentales internacionales",
     "Si necesitas financiamiento o apoyo para proyectos de infraestructura en mercados emergentes"
@@ -78,6 +78,62 @@
         "evidencia": "F14-031: Reunir agencias, financiamiento y apoyos para iniciar la exportacion es planificar los recursos de la internacionalizacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-condicion-154",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
+      "texto_nuevo": "Cuando tu negocio opera en Estados Unidos, inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q007-023: Tenia razon el lector A: basta con que una condicion ate el nodo a operar en Estados Unidos para que el conjunto deje claro el pais, como hacen los nodos de clase C vecinos (Q007-024 y Q007-025); reescribir las cuatro, como propone B, excede la regla. (arbitro) Motivo: Clase C de Estados Unidos: ninguna condicion dice que el nodo aplica si tu negocio opera en Estados Unidos, y todas las agencias (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank) son de ese pais."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0024",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado",
+      "texto_nuevo": "Contacta la oficina local del U.S. Commercial Service para asesoría inicial y estudios de mercado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-013.paso0: asesoría (Solo se añade la tilde que faltaba en 'asesoría'; los nombres en inglés quedan intactos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0025",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion",
+      "texto_nuevo": "Evalúa financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantías de exportación",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-013.paso2: Evalúa, garantías, exportación (Solo se añaden las tildes de 'Evalúa', 'garantías' y 'exportación'; las siglas quedan intactas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0026",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales",
+      "texto_nuevo": "Regístrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-013.paso4: Regístrate (Solo se añade la tilde que faltaba en 'Regístrate'; los términos en inglés quedan intactos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ],
   "fuentes_internas": [

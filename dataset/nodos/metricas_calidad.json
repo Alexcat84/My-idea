@@ -1,7 +1,7 @@
 {
   "node_id": "metricas_calidad",
   "fase_proyecto": "planificacion",
-  "dominio": "core",
+  "dominio": "quality",
   "titulo_concepto": "Métricas de Calidad",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Proporcionan mediciones específicas y detalladas sobre un atributo del proyecto, producto o servicio, y cómo debe medirse. Se consultan en el proceso de aseguramiento de calidad y se comparan contra los resultados reales en el proceso de control de calidad para determinar si se requiere acción correctiva.",
@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición",
   "nodos_previos": [
-    "plan_gestion_calidad",
-    "embudo_get_keep_grow"
+    "plan_gestion_calidad"
   ],
   "nodos_siguientes": [
     "formal_acceptance"
@@ -25,5 +24,33 @@
   "etiqueta_arbol": "Define Tus Métricas de Calidad",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-20",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "quality",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-25: Documentar métricas de calidad con ID único para aseguramiento y control de calidad es práctica formal del mundo de calidad, no un paso que todo emprendedor recorra. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-032",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "embudo_get_keep_grow -> metricas_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A21, lectores de acuerdo)",
+        "motivo": "El embudo de clientes no conduce a las metricas de calidad de proyecto o producto."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
   ]
 }

@@ -12,7 +12,7 @@
     "Llamar proactivamente cada día a al menos un franquiciado sin contacto reciente",
     "Prohibir comentarios negativos sobre franquiciados frente a empleados",
     "Usar una plataforma tecnológica para registrar todas las comunicaciones con franquiciados",
-    "Designar un gerente de comunicaciones que centralice y de consistencia a los mensajes del sistema"
+    "Designar un gerente de comunicaciones que centralice y dé consistencia a los mensajes del sistema"
   ],
   "entregable_esperado": "Protocolo de comunicación con franquiciados documentado, incluyendo canales, tiempos de respuesta y responsable designado",
   "nodos_previos": [
@@ -45,5 +45,21 @@
   "etiqueta_arbol": "Comunícate con tus Franquiciados",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0821",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Designar un gerente de comunicaciones que centralice y de consistencia a los mensajes del sistema",
+      "texto_nuevo": "Designar un gerente de comunicaciones que centralice y dé consistencia a los mensajes del sistema",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-013.paso6: dé ('de' es aquí el subjuntivo del verbo dar y lleva tilde diacrítica: 'dé'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
+    }
   ]
 }

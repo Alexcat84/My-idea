@@ -21,10 +21,26 @@
     "getting_started_supply_chain_risk_management"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa adquiere nuevos sistemas o contrata servicios externos que procesarán CUI."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y adquieres nuevos sistemas o contratas servicios externos que procesarán CUI."
   ],
   "etiqueta_arbol": "Evalúa Seguridad Antes de Comprar",
   "fuentes_internas": [
     "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-103",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la empresa adquiere nuevos sistemas o contrata servicios externos que procesarán CUI.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y adquieres nuevos sistemas o contratas servicios externos que procesarán CUI.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-023: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

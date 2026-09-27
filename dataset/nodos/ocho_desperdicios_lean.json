@@ -9,11 +9,11 @@
     "Mapea el proceso actual identificando cada uno de los ocho tipos de desperdicio",
     "Cuantifica el impacto de cada desperdicio detectado",
     "Prioriza la eliminación de los desperdicios de mayor impacto en el flujo de valor",
-    "Diseña contramedidas especificas para cada tipo de desperdicio priorizado",
+    "Diseña contramedidas específicas para cada tipo de desperdicio priorizado",
     "Rediseña el proceso eliminando los pasos sin valor agregado",
     "Mide el impacto de las mejoras en tiempo de ciclo y calidad"
   ],
-  "entregable_esperado": "Lista de desperdicios identificados por categoria, priorizados con plan de acción y metricas de seguimiento.",
+  "entregable_esperado": "Lista de desperdicios identificados por categoría, priorizados con plan de acción y métricas de seguimiento.",
   "nodos_previos": [
     "tres_tipos_desperdicio_tps",
     "lean_manufacturing"
@@ -41,5 +41,34 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0241",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diseña contramedidas especificas para cada tipo de desperdicio priorizado",
+      "texto_nuevo": "Diseña contramedidas específicas para cada tipo de desperdicio priorizado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-025.paso3: específicas (Falta la tilde de específicas, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0242",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lista de desperdicios identificados por categoria, priorizados con plan de acción y metricas de seguimiento.",
+      "texto_nuevo": "Lista de desperdicios identificados por categoría, priorizados con plan de acción y métricas de seguimiento.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-025.entregable: categoría, métricas (Faltan las tildes de categoría y métricas, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

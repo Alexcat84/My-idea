@@ -1,15 +1,10 @@
 {
-  "nota": "Curaduria v1.3.2. Hallazgo estructural: 15/15 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md).",
+  "nota": "Curaduria v1.3.2. Hallazgo estructural: 15/15 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: nodos que salen del nucleo a su mundo (pasadas D y MV del saneamiento).",
   "aprobados": [
     {
       "core": "plan_gestion_riesgos",
       "dominio": "estrategia_gestion_riesgo_tolerancia",
       "score": 0.8791
-    },
-    {
-      "core": "risk_audit",
-      "dominio": "estrategia_gestion_riesgo_tolerancia",
-      "score": 0.8258
     },
     {
       "core": "diseno_conceptual_sistema",
@@ -22,11 +17,6 @@
       "score": 0.7252
     },
     {
-      "core": "gestion_riesgo_cadena_suministro",
-      "dominio": "fundamentos_gestion_riesgo",
-      "score": 0.721
-    },
-    {
       "core": "reglas_gestion_riesgo_gambling",
       "dominio": "fundamentos_gestion_riesgo",
       "score": 0.7168,
@@ -36,11 +26,6 @@
       "core": "plan_gestion_riesgos",
       "dominio": "rmf_paso_preparar",
       "score": 0.7163
-    },
-    {
-      "core": "gestion_riesgo_cadena_suministro",
-      "dominio": "getting_started_supply_chain_risk_management",
-      "score": 0.6953
     },
     {
       "core": "matriz_probabilidad_impacto",
@@ -61,6 +46,55 @@
       "core": "arquitectura_tecnica_modular",
       "dominio": "funcion_identify_inventario_activos",
       "score": 0.6301
+    },
+    {
+      "core": "matriz_probabilidad_impacto",
+      "dominio": "estrategia_gestion_riesgo_tolerancia",
+      "score": 0.7461,
+      "reanclado_de": "risk_audit",
+      "lectura": "Pasada MV del saneamiento (MV-B05, lectores de acuerdo): La matriz ya introduce cuanto riesgo estas dispuesto a aceptar, que la estrategia formaliza como tolerancia."
+    },
+    {
+      "core": "analisis_de_sensibilidad_riesgo",
+      "dominio": "fundamentos_gestion_riesgo",
+      "score": 0.583,
+      "reanclado_de": "gestion_riesgo_cadena_suministro",
+      "lectura": "Pasada MV del saneamiento (MV-B06, segunda eleccion de un lector: la primera, matriz_probabilidad_impacto, ya anclaba 2 puentes en este mundo): Quien ya identifico y cuantifico los riesgos clave de su proyecto al variar supuestos criticos sigue naturalmente con el ciclo completo de enmarcar, evaluar, responder y monitorear el riesgo."
+    },
+    {
+      "core": "definicion_alineacion_cadena_suministro",
+      "dominio": "getting_started_supply_chain_risk_management",
+      "score": 0.6993,
+      "reanclado_de": "gestion_riesgo_cadena_suministro",
+      "lectura": "Pasada MV del saneamiento (MV-B07, lectores de acuerdo): Entender que es la cadena y los actores que la forman es el punto tras el cual se entra a gestionar su riesgo."
+    },
+    {
+      "core": "principio_humano_en_el_loop",
+      "dominio": "gestion_riesgo_seguridad_ia",
+      "score": 0.6904,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A46, lectores de acuerdo): Mantener el control humano sobre la IA lleva a conocer los riesgos de manipulacion como prompt injection."
+    }
+  ],
+  "rechazados": [
+    {
+      "core": "risk_audit",
+      "dominio": "estrategia_gestion_riesgo_tolerancia",
+      "score": 0.8258,
+      "motivo": "Su ancla risk_audit sale del nucleo a risk_management (pasada D): el puente se reancla en matriz_probabilidad_impacto."
+    },
+    {
+      "core": "gestion_riesgo_cadena_suministro",
+      "dominio": "fundamentos_gestion_riesgo",
+      "score": 0.721,
+      "motivo": "Su ancla gestion_riesgo_cadena_suministro sale del nucleo a risk_management (pasada D): el puente se reancla en matriz_probabilidad_impacto."
+    },
+    {
+      "core": "gestion_riesgo_cadena_suministro",
+      "dominio": "getting_started_supply_chain_risk_management",
+      "score": 0.6953,
+      "motivo": "Su ancla gestion_riesgo_cadena_suministro sale del nucleo a risk_management (pasada D): el puente se reancla en definicion_alineacion_cadena_suministro."
     }
   ]
 }

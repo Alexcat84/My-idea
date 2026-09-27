@@ -17,7 +17,9 @@
   "nodos_previos": [
     "future_scenarios_planning"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "amara_law_expectativas_tecnologia"
+  ],
   "condiciones_activacion": [
     "Cuando el negocio depende de tareas que la IA podría absorber y hay que decidir con qué ritmo de avance contar"
   ],
@@ -72,6 +74,19 @@
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "indice": 0,
       "auditoria": "Clasificacion U8-007 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "n1-nucleo-01",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "escenarios_de_evolucion_de_la_ia -> amara_law_expectativas_tecnologia",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-01, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien arma escenarios sobre la velocidad de avance de la IA sigue naturalmente con la Ley de Amara para calibrar expectativas a corto y largo plazo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [

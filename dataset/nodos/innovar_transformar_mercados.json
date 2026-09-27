@@ -1,6 +1,6 @@
 {
   "node_id": "innovar_transformar_mercados",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Innovar y Transformar Mercados",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Transforma Mercados con Sostenibilidad",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-111",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q053-002: El contenido es formular una estrategia de innovacion y su entregable es un plan de innovacion estrategica, que es disenar la estrategia, no operarla. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

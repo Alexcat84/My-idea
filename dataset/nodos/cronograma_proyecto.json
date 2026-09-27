@@ -10,7 +10,7 @@
     "Determinar dependencias entre actividades",
     "Asignar recursos a cada actividad y anotar sus nombres",
     "Calcular fechas de inicio y fin usando software de programación o Gantt",
-    "Seleccionar el formato de presentación segun necesites, diagrama de Gantt o gráfico de hitos",
+    "Seleccionar el formato de presentación según necesites, diagrama de Gantt o gráfico de hitos",
     "Identificar hitos clave para el gráfico de hitos"
   ],
   "entregable_esperado": "Cronograma del proyecto completo en formato de diagrama de Gantt o gráfico de hitos, con fechas de inicio/fin, dependencias y recursos asignados",
@@ -116,6 +116,20 @@
         "motivo": "Referencia de un nodo vivo a innovation_project_canvas, deprecado; su superviviente es lienzo_proyecto_innovacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0533",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Seleccionar el formato de presentación segun necesites, diagrama de Gantt o gráfico de hitos",
+      "texto_nuevo": "Seleccionar el formato de presentación según necesites, diagrama de Gantt o gráfico de hitos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O045-020.paso4: según (Solo se corrige la tilde que faltaba en 'segun'; el resto del texto se deja igual que el original.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ],
   "fuentes_internas": [

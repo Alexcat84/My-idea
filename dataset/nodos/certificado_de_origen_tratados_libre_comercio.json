@@ -7,7 +7,7 @@
   "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-    "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
+    "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
     "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
     "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
     "Conservar la documentación de respaldo durante el plazo que fija la aduana: en Estados Unidos, bajo el T-MEC, al menos cinco años desde la importación (importador) o desde que se completó la certificación (exportador o productor); en Canadá, seis años para el importador; otros tratados pueden fijar su propio plazo., y disponible para el importador"
@@ -23,7 +23,7 @@
     "calculo_contenido_valor_regional"
   ],
   "condiciones_activacion": [
-    "Cuando el mercado destino forma parte de un tratado de libre comercio con EE.UU.",
+    "Si exportas desde Estados Unidos, o vendes hacia allí, y el mercado destino forma parte de un tratado de libre comercio con EE.UU. (como el T-MEC)",
     "Si el comprador solicita trato arancelario preferencial para el producto"
   ],
   "etiqueta_arbol": "Aprovecha Tratados de Libre Comercio",
@@ -71,6 +71,34 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). ARBITRAJE: A y B coinciden en todo lo de EE.UU. y ambos tienen razón en ello; abrí hoy la API renderer oficial de ecfr.gov y las dos citas (182.15(a) y 182.21(c)(1)) son literales y vigentes. El nodo no da cifra, remite a 'el periodo requerido por la aduana': correcto pero a medias, de ahí IMPRECISO",
       "indice": 4,
       "auditoria": "SANEAMIENTO P21 (arbitro)"
+    },
+    {
+      "id": "n1-condicion-015",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el mercado destino forma parte de un tratado de libre comercio con EE.UU.",
+      "texto_nuevo": "Si exportas desde Estados Unidos, o vendes hacia allí, y el mercado destino forma parte de un tratado de libre comercio con EE.UU. (como el T-MEC)",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q002-002: Tenía razón A: basta con que la condición del tratado ate el nodo a exportar desde Estados Unidos o vender allí; la segunda condición puede seguir siendo general, como en otros nodos de clase C. (arbitro) Motivo: Clase C: nombra un tratado con EE.UU. pero no deja claro que el nodo aplica si exportas desde Estados Unidos o vendes hacia allí, que es lo que suponen sus pasos (tratado vigente con Estados Unidos, plazos de conservación de la aduana estadounidense)."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0070",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
+      "texto_nuevo": "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O007-032.paso1: cuál, vías, Artículo, específica, clasificación (Las cinco tildes propuestas son correctas; además añado 'región', que el lector pasó por alto, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

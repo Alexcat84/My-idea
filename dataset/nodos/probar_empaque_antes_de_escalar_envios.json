@@ -6,13 +6,13 @@
   "fuente": "Guia de empaque para envios (FedEx)",
   "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presion de altitud y manejo brusco pueden danar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos dias, sin costo. Esto te evita descubrir una falla de diseno despues de haber comprado cien cajas iguales o de haber perdido mercancia en transito. La prueba tambien sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por danos y rechazos en bodega. Pregunta a tu proveedor de envios si ofrece este servicio y en que consiste antes de escalar volumen.",
   "pasos_accionables": [
-    "Arma una muestra de tu empaque exactamente como la enviarias a un cliente real.",
-    "Preguntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
-    "Envia la muestra marcada como paquete de prueba segun sus instrucciones.",
-    "Espera el resultado y ajusta grosor de caja o relleno segun lo que senalen.",
+    "Arma una muestra de tu empaque exactamente como la enviarías a un cliente real.",
+    "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
+    "Envía la muestra marcada como paquete de prueba según sus instrucciones.",
+    "Espera el resultado y ajusta grosor de caja o relleno según lo que señalen.",
     "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno."
   ],
-  "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o que debes cambiar.",
+  "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
   "nodos_previos": [
     "detectar_empaque_poco_rigido",
     "simular_riesgos_transito_antes_de_enviar",
@@ -57,6 +57,75 @@
         "evidencia": "F24-022: Probar el empaque con el courier para que resista el transporte es un ajuste logistico de la operacion de envios, no una prueba con clientes o mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0341",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Arma una muestra de tu empaque exactamente como la enviarias a un cliente real.",
+      "texto_nuevo": "Arma una muestra de tu empaque exactamente como la enviarías a un cliente real.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-034.paso0: enviarías (Falta la tilde de enviarías; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0342",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
+      "texto_nuevo": "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-034.paso1: Pregúntale (Falta la tilde de Pregúntale; courier se deja igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0343",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envia la muestra marcada como paquete de prueba segun sus instrucciones.",
+      "texto_nuevo": "Envía la muestra marcada como paquete de prueba según sus instrucciones.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-034.paso2: Envía, según (Faltan las tildes de Envía y según; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0344",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Espera el resultado y ajusta grosor de caja o relleno segun lo que senalen.",
+      "texto_nuevo": "Espera el resultado y ajusta grosor de caja o relleno según lo que señalen.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-034.paso3: según, señalen (Faltan la tilde de según y la eñe de señalen; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0345",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o que debes cambiar.",
+      "texto_nuevo": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-034.entregable: qué (Falta la tilde de qué (interrogativo indirecto); no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

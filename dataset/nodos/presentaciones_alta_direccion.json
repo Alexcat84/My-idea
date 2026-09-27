@@ -7,11 +7,11 @@
   "resumen_teorico": "Cuando necesitas que alguien apruebe tu proyecto, la presentación debe conectar con lo que a esa persona le importa, no con lo que a ti te entusiasma. Conviene resumir el costo total de la mala calidad, mostrar donde se concentra, describir los proyectos principales, estimar las ganancias posibles y validar las cifras con quien lleva las finanzas. Evita inflar costos o prometer que el problema llegara a cero, y no fuerces tus primeros proyectos justo en las areas donde sientes mas resistencia.",
   "pasos_accionables": [
     "Resume el costo total estimado de la mala calidad de forma que capte la atención de quien decide",
-    "Muestra donde se concentran esos costos usando tablas o graficos simples",
+    "Muestra dónde se concentran esos costos usando tablas o gráficos simples",
     "Describe los proyectos principales que propones y su retorno estimado",
     "Valida las cifras con quien maneja las finanzas antes de presentarlas",
     "Evita inflar costos con partidas discutibles",
-    "Empieza por las areas donde encuentres mas apertura, sin forzar proyectos donde hay resistencia clara"
+    "Empieza por las áreas donde encuentres más apertura, sin forzar proyectos donde hay resistencia clara"
   ],
   "entregable_esperado": "Una presentación clara con el costo de la mala calidad, los proyectos que propones, el retorno estimado y las cifras ya validadas",
   "nodos_previos": [
@@ -23,11 +23,55 @@
     "metas_negocio_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas que alguien apruebe una iniciativa importante para tu negocio",
+    "Cuando necesitas que alguien apruebe tus proyectos de mejora de la calidad mostrando cuanto cuesta la mala calidad",
     "Cuando sientes resistencia o escepticismo ante tu propuesta"
   ],
   "etiqueta_arbol": "Presenta Bien a la Dirección",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-144",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando necesitas que alguien apruebe una iniciativa importante para tu negocio",
+      "texto_nuevo": "Cuando necesitas que alguien apruebe tus proyectos de mejora de la calidad mostrando cuanto cuesta la mala calidad",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q023-031: La primera condicion abarca cualquier iniciativa, mientras que los pasos solo sirven para proyectos de calidad basados en el costo de la mala calidad. (lector y verificador de acuerdo) Motivo: Es demasiado generica: el contenido trata de presentar el costo de la mala calidad para aprobar proyectos de mejora, no cualquier iniciativa."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0701",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Muestra donde se concentran esos costos usando tablas o graficos simples",
+      "texto_nuevo": "Muestra dónde se concentran esos costos usando tablas o gráficos simples",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-029.paso1: dónde, gráficos (Faltan tildes en dónde, que aquí es interrogativo indirecto, y en gráficos; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0702",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza por las areas donde encuentres mas apertura, sin forzar proyectos donde hay resistencia clara",
+      "texto_nuevo": "Empieza por las áreas donde encuentres más apertura, sin forzar proyectos donde hay resistencia clara",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-029.paso5: áreas, más (Faltan tildes en áreas y más; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    }
   ]
 }

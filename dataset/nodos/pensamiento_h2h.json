@@ -10,7 +10,7 @@
     "Deja de hablar de 'empresas' o 'consumidores' y pregúntate directamente: ¿qué necesita sentir esta persona?",
     "Diseña tus mensajes y procesos pensando en emociones humanas, no en perfiles de cliente."
   ],
-  "entregable_esperado": "Un mapa de las personas (usuarios, quienes influyen, quienes decidien) que participan en la experiencia de compra y uso de tu producto.",
+  "entregable_esperado": "Un mapa de las personas (usuarios, quienes influyen, quienes deciden) que participan en la experiencia de compra y uso de tu producto.",
   "nodos_previos": [
     "empathy_map"
   ],
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Piensa de Humano a Humano",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0052",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un mapa de las personas (usuarios, quienes influyen, quienes decidien) que participan en la experiencia de compra y uso de tu producto.",
+      "texto_nuevo": "Un mapa de las personas (usuarios, quienes influyen, quienes deciden) que participan en la experiencia de compra y uso de tu producto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O006-001.entregable: deciden (Errata real: 'decidien' pasa a 'deciden' y el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "gestion_contratos_desempeno",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Gestión y Seguimiento del Desempeño de Proveedores",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
@@ -40,6 +40,19 @@
         "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "mv-dominio-13",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-12: Montar un sistema de KPIs de proveedores y evaluar VMI es gestión de proveedores a fondo; quien nunca entra en compras puede operar sin él. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
     }
   ]
 }

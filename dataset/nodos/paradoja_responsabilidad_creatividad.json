@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Marco de evaluación de responsabilidad aplicado a un caso específico de incumplimiento en el equipo",
   "nodos_previos": [
-    "cultura_organizacional_calidad"
+    "cultura_organizacional_calidad",
+    "evaluacion_balanceada_de_ejecutivos"
   ],
   "nodos_siguientes": [
     "equipos_alto_desempeno"
@@ -27,5 +28,20 @@
   "etiqueta_arbol": "Equilibra Exigencia y Creatividad",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-16",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "evaluacion_balanceada_de_ejecutivos -> paradoja_responsabilidad_creatividad",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-17, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Evaluar más allá de los resultados lleva al dilema de exigir responsabilidad sin castigar el riesgo razonable, midiendo esfuerzo, promesas y resultados."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

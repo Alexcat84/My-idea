@@ -1,7 +1,7 @@
 {
   "node_id": "risk_audit",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "risk_management",
   "titulo_concepto": "Auditoría de Riesgos",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "La Auditoría de Riesgos evalúa la efectividad del proceso de identificación de riesgos, las respuestas implementadas y el proceso general de gestión de riesgos. Se revisan los eventos de riesgo ocurridos, sus causas, las respuestas aplicadas y su éxito, así como el cumplimiento del proceso de gestión de riesgos y las herramientas utilizadas, identificando buenas prácticas y áreas de mejora.",
@@ -14,15 +14,12 @@
   ],
   "entregable_esperado": "Informe de Auditoría de Riesgos con hallazgos sobre eventos, respuestas y proceso general",
   "nodos_previos": [
-    "stakeholder_register",
-    "cost_management_plan",
-    "estimate_at_completion_eac"
+    "vuelve_a_medir_despues_del_susto"
   ],
   "nodos_siguientes": [
     "lessons_learned",
     "procurement_audit",
-    "quality_audit",
-    "estrategia_gestion_riesgo_tolerancia"
+    "quality_audit"
   ],
   "condiciones_activacion": [
     "Cuando se requiere evaluar la eficacia del proceso de gestión de riesgos durante la ejecución del proyecto"
@@ -30,5 +27,85 @@
   "etiqueta_arbol": "Audita tu Gestión de Riesgos",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-29",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-15: Auditar la efectividad del proceso de gestión de riesgos de un proyecto es práctica formal de especialista; lo general del riesgo no pasa por auditarlo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-009",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "risk_audit -> estrategia_gestion_riesgo_tolerancia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B05)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-arista-022",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cost_management_plan -> risk_audit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A11, lectores de acuerdo)",
+        "motivo": "El plan de gestion de costos no tiene como continuacion natural la auditoria de riesgos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-026",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "stakeholder_register -> risk_audit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A53, lectores de acuerdo)",
+        "motivo": "El registro de interesados no conduce a la auditoria de riesgos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-029",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estimate_at_completion_eac -> risk_audit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A23, lectores de acuerdo)",
+        "motivo": "La estimacion al completar no lleva naturalmente a auditar el proceso de riesgos."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-entrada-05",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "vuelve_a_medir_despues_del_susto -> risk_audit",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-05, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Al reevaluar si cada respuesta funciono se pasa de forma natural a auditar el conjunto: los eventos ocurridos, las respuestas aplicadas y el proceso completo de gestion de riesgos (descarto tu_gestion_de_riesgo_funciona porque es casi un duplicado)."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
   ]
 }

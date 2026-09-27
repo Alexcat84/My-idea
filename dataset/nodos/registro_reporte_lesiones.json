@@ -6,13 +6,13 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo mas para hospitalizaciones, amputaciones o perdida de un ojo (24 en Estados Unidos). Conviene preguntar cuales son las reglas exactas en tu mercado.",
   "pasos_accionables": [
-    "Averigua si tu negocio esta exento o no de los requisitos de registro según su tamano y su actividad",
-    "Registra cada lesion o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
+    "Averigua si tu negocio está exento o no de los requisitos de registro según su tamaño y su actividad",
+    "Registra cada lesión o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
     "Completa un reporte detallado por cada caso registrable",
-    "Prepara el resumen anual y publicalo en el periodo que indique la norma de tu mercado",
-    "Envia electronicamente la información requerida a la autoridad correspondiente según tu tamano y sector",
-    "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
-    "Conserva los registros de lesiones por el tiempo minimo exigido y los registros medicos según corresponda"
+    "Prepara el resumen anual y publícalo en el periodo que indique la norma de tu mercado",
+    "Envía electrónicamente la información requerida a la autoridad correspondiente según tu tamaño y sector",
+    "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalización, amputación o pérdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
+    "Conserva los registros de lesiones por el tiempo mínimo exigido y los registros médicos según corresponda"
   ],
   "entregable_esperado": "Los formularios de registro, reporte de incidente y resumen anual completados, publicados y archivados conforme a los plazos legales de tu mercado.",
   "nodos_previos": [
@@ -75,6 +75,90 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La proporcion es correcta, pero la frase es vaga y deja fuera la perdida de un ojo, que la norma incluye en el plazo de 24 horas. Como el nodo es de clase B (ejemplo de Estados Unidos), el tono general puede mantenerse, pero la lista de supuestos tiene que estar completa.",
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "n1-orto-0505",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Averigua si tu negocio esta exento o no de los requisitos de registro según su tamano y su actividad",
+      "texto_nuevo": "Averigua si tu negocio está exento o no de los requisitos de registro según su tamaño y su actividad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-020.paso0: está, tamaño (Falta la tilde en está y la eñe en tamaño.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0506",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cada lesion o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
+      "texto_nuevo": "Registra cada lesión o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-020.paso1: lesión (Falta la tilde en lesión.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0507",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prepara el resumen anual y publicalo en el periodo que indique la norma de tu mercado",
+      "texto_nuevo": "Prepara el resumen anual y publícalo en el periodo que indique la norma de tu mercado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-020.paso3: publícalo (publícalo es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0508",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envia electronicamente la información requerida a la autoridad correspondiente según tu tamano y sector",
+      "texto_nuevo": "Envía electrónicamente la información requerida a la autoridad correspondiente según tu tamaño y sector",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-020.paso4: Envía, electrónicamente, tamaño (Faltan las tildes en Envía y electrónicamente y la eñe en tamaño.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0509",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
+      "texto_nuevo": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalización, amputación o pérdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-020.paso5: hospitalización, amputación, pérdida (Faltan las tildes en hospitalización, amputación y pérdida.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0510",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conserva los registros de lesiones por el tiempo minimo exigido y los registros medicos según corresponda",
+      "texto_nuevo": "Conserva los registros de lesiones por el tiempo mínimo exigido y los registros médicos según corresponda",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-020.paso6: mínimo, médicos (Faltan las tildes en mínimo y médicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
     }
   ],
   "fuentes_internas": [

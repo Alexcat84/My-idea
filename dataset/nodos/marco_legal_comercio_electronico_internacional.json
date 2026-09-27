@@ -22,10 +22,26 @@
   ],
   "condiciones_activacion": [
     "Si tienes o piensas tener un sitio web donde vendes a otros países",
-    "Si hay riesgo de que una firma electrónica te genere una disputa de contrato"
+    "Si vendes online a clientes de otros paises y cierras contratos con firma electronica sin saber si ese pais la reconoce"
   ],
   "etiqueta_arbol": "Cumple las Leyes Locales",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-121",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si hay riesgo de que una firma electrónica te genere una disputa de contrato",
+      "texto_nuevo": "Si vendes online a clientes de otros paises y cierras contratos con firma electronica sin saber si ese pais la reconoce",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q104-001: Tiene razon el lector B: la segunda condicion no ata el nodo a la venta online a otros paises, que es el objeto del resumen y del paso 2 (validez de la firma segun el pais destino); dominio y fase coinciden en ambos lectores y son correctos. (arbitro) Motivo: Sola, activa el nodo ante cualquier disputa de firma electronica, incluso en un negocio que solo vende en su propio pais, mientras que el nodo trata de la validez de la firma segun el pais al que vendes online"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
   ]
 }

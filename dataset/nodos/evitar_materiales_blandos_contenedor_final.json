@@ -6,13 +6,13 @@
   "fuente": "Guia de empaque para envios (FedEx)",
   "resumen_teorico": "No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plasticas, sobres de papel y cajas de carton delgado no soportan la manipulacion, la humedad ni los cambios de presion de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envios regulados, como muestras clinicas o mercancias que necesitan trato especial, donde la norma exige un contenedor rigido de carton corrugado, madera, metal o plastico resistente. La leccion practica es simple: lo blando puede ir adentro como proteccion, pero lo que toca el exterior del envio y da la forma final tiene que ser rigido, o el paquete se puede quedar sin recoger.",
   "pasos_accionables": [
-    "Revisa si tu contenedor final es rigido antes de despachar, no solo si el producto esta protegido por dentro.",
-    "Descarta bolsas plasticas, sobres de papel o carton delgado como empaque exterior.",
-    "Usa carton corrugado, madera, metal o plastico resistente como contenedor final.",
-    "Si tu producto viene en una bolsa o sobre, metelo dentro de una caja rigida antes de sellar.",
-    "Confirma con tu courier que contenedores rechaza antes de programar la recoleccion."
+    "Revisa si tu contenedor final es rígido antes de despachar, no solo si el producto está protegido por dentro.",
+    "Descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior.",
+    "Usa cartón corrugado, madera, metal o plástico resistente como contenedor final.",
+    "Si tu producto viene en una bolsa o sobre, mételo dentro de una caja rígida antes de sellar.",
+    "Confirma con tu courier qué contenedores rechaza antes de programar la recolección."
   ],
-  "entregable_esperado": "Un envio con contenedor exterior rigido que el courier acepta sin objeciones.",
+  "entregable_esperado": "Un envío con contenedor exterior rígido que el courier acepta sin objeciones.",
   "nodos_previos": [
     "elegir_caja_correcta"
   ],
@@ -27,5 +27,90 @@
   "etiqueta_arbol": "No uses bolsas como contenedor final",
   "fuentes_internas": [
     "Guia de empaque para envios (FedEx)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0462",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu contenedor final es rigido antes de despachar, no solo si el producto esta protegido por dentro.",
+      "texto_nuevo": "Revisa si tu contenedor final es rígido antes de despachar, no solo si el producto está protegido por dentro.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-023.paso0: rígido, está (Solo añade las tildes de rígido y está (verbo).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0463",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Descarta bolsas plasticas, sobres de papel o carton delgado como empaque exterior.",
+      "texto_nuevo": "Descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-023.paso1: plásticas, cartón (Solo añade las tildes de plásticas y cartón.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0464",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa carton corrugado, madera, metal o plastico resistente como contenedor final.",
+      "texto_nuevo": "Usa cartón corrugado, madera, metal o plástico resistente como contenedor final.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-023.paso2: cartón, plástico (Solo añade las tildes de cartón y plástico.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0465",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu producto viene en una bolsa o sobre, metelo dentro de una caja rigida antes de sellar.",
+      "texto_nuevo": "Si tu producto viene en una bolsa o sobre, mételo dentro de una caja rígida antes de sellar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-023.paso3: mételo, rígida (Solo añade las tildes de mételo (esdrújula) y rígida.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0466",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Confirma con tu courier que contenedores rechaza antes de programar la recoleccion.",
+      "texto_nuevo": "Confirma con tu courier qué contenedores rechaza antes de programar la recolección.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-023.paso4: qué, recolección (Solo añade la tilde de qué (interrogativo indirecto) y de recolección; courier queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0467",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un envio con contenedor exterior rigido que el courier acepta sin objeciones.",
+      "texto_nuevo": "Un envío con contenedor exterior rígido que el courier acepta sin objeciones.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-023.entregable: envío, rígido (Solo añade las tildes de envío y rígido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

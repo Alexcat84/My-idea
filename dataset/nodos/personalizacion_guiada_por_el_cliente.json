@@ -11,7 +11,7 @@
     "Entrégale algo tangible o simbólico que represente la decisión que tomó",
     "Cuando tenga sentido, muestra de forma visible lo que tu cliente logró o decidió"
   ],
-  "entregable_esperado": "El mapa de las decisiones de personalizacion que tu cliente puede tomar, el proceso guiado que se las hace faciles, y el objeto tangible o simbolico con el que le devuelves esa decision",
+  "entregable_esperado": "El mapa de las decisiones de personalización que tu cliente puede tomar, el proceso guiado que se las hace fáciles, y el objeto tangible o simbólico con el que le devuelves esa decisión",
   "nodos_previos": [
     "cliente_disena_producto"
   ],
@@ -23,5 +23,20 @@
   "etiqueta_arbol": "Deja Decidir a tu Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0100",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El mapa de las decisiones de personalizacion que tu cliente puede tomar, el proceso guiado que se las hace faciles, y el objeto tangible o simbolico con el que le devuelves esa decision",
+      "texto_nuevo": "El mapa de las decisiones de personalización que tu cliente puede tomar, el proceso guiado que se las hace fáciles, y el objeto tangible o simbólico con el que le devuelves esa decisión",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-034.entregable: personalización, fáciles, simbólico, decisión (Faltan las tildes en 'personalización', 'fáciles', 'simbólico' y 'decisión'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

@@ -22,10 +22,26 @@
     "plan_seguridad_sistema_poam"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas relevantes que manejan CUI"
+    "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten"
   ],
   "etiqueta_arbol": "Define el Alcance de Datos",
   "fuentes_internas": [
     "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-056",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se necesita limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas relevantes que manejan CUI",
+      "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-004: La condición no ata el nodo a operar con el gobierno federal de Estados Unidos, como pide la clase C. (lector y verificador de acuerdo) Motivo: Clase C: no dice que SP 800-171 aplica a quien maneja CUI por contratos con el gobierno federal de Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

@@ -6,10 +6,10 @@
   "fuente": "Edwards et al., Managing Project Risks",
   "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
   "pasos_accionables": [
-    "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderias, no a una etiqueta de color.",
+    "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, no a una etiqueta de color.",
     "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
     "Revisa si dos riesgos con la misma etiqueta en realidad significan cosas muy distintas en dinero o tiempo; si es así, corrige la etiqueta.",
-    "Marca que riesgos improbables pero capaces de hundirte necesitan tu atencion, aunque su probabilidad sea baja.",
+    "Marca qué riesgos improbables pero capaces de hundirte necesitan tu atención, aunque su probabilidad sea baja.",
     "Aplica el mismo criterio de conversión, en dinero, en tiempo o en rango de porcentaje, a todos los riesgos de tu lista, sin excepciones."
   ],
   "entregable_esperado": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
@@ -75,6 +75,34 @@
         "evidencia": "F26-011: Cuantificar probabilidad e impacto de la lista de riesgos es trabajo de plan y gestion de riesgos, no prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0289",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderias, no a una etiqueta de color.",
+      "texto_nuevo": "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, no a una etiqueta de color.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-024.paso0: perderías (Falta la tilde de hiato en 'perderías'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0290",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marca que riesgos improbables pero capaces de hundirte necesitan tu atencion, aunque su probabilidad sea baja.",
+      "texto_nuevo": "Marca qué riesgos improbables pero capaces de hundirte necesitan tu atención, aunque su probabilidad sea baja.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-024.paso3: qué, atención (Faltan las tildes de 'qué' (interrogativo indirecto) y 'atención' (aguda); no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
     }
   ],
   "fuentes_internas": [

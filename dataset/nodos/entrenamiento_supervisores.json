@@ -6,7 +6,7 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "Antes de poner en marcha los pasos del programa, ten una conversacion clara con todas las personas que te ayudan a dirigirlo, para asegurarte de que cada una entienda cada paso lo suficientemente bien como para poder explicarlo a quienes trabajan con ella. La prueba de que realmente lo entendiste es que puedas explicarlo con claridad.",
   "pasos_accionables": [
-    "Diseña una conversacion clara y directa para explicar el programa a todas las personas que te ayudan a dirigir el negocio",
+    "Diseña una conversación clara y directa para explicar el programa a todas las personas que te ayudan a dirigir el negocio",
     "Comprueba que cada persona pueda explicar cada paso del programa con sus propias palabras",
     "Asegura que todos entiendan lo mismo antes de lanzar el programa oficialmente"
   ],
@@ -26,5 +26,21 @@
   "etiqueta_arbol": "Prepara a tus Supervisores Antes",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0874",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diseña una conversacion clara y directa para explicar el programa a todas las personas que te ayudan a dirigir el negocio",
+      "texto_nuevo": "Diseña una conversación clara y directa para explicar el programa a todas las personas que te ayudan a dirigir el negocio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-018.paso0: conversación (Solo añade la tilde que faltaba en conversación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
   ]
 }

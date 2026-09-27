@@ -1,0 +1,352 @@
+[
+ {
+  "id": "D-01",
+  "decision": "NO",
+  "motivo": "Implantar un WMS con picking, packing y hasta robots es operación de almacén de especialista; una tienda pequeña, un servicio o una app nunca lo necesitan.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Un sistema de gestion de almacen con picking, packing y robots solo lo necesita quien opera un almacen de verdad; una consultora o una app nunca lo tocan.",
+  "nodo": "warehouse_management_system",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-02",
+  "decision": "NO",
+  "motivo": "Sincronizar toda una cadena de suministro con tambor, buffers y cuerda es técnica avanzada de logística que solo usa quien gestiona inventario entre varias empresas.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Sincronizar toda una cadena con tambor, buffers y cuerda es tecnica de especialista en logistica; una tienda pequena o un servicio sacan adelante su negocio sin ella.",
+  "nodo": "drum_buffer_rope",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-03",
+  "decision": "NO",
+  "motivo": "Registrarse en GS1 e integrarse con EPCglobal solo lo necesita quien vende producto físico en canales de distribución; un servicio o una app jamás lo toca.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Registrarse en GS1 e integrarse con la red EPCglobal solo le hace falta a quien vende producto fisico en canales que lo exigen; un servicio o una app no lo necesitan.",
+  "nodo": "estandar_gtin_epc",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-06",
+  "decision": "NO",
+  "motivo": "Auditar formalmente los contratos y el proceso de adquisiciones es práctica de gestión de compras de proyecto que un emprendedor que empieza no necesita.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Auditar formalmente contratos y procesos de adquisicion es practica de gestion de compras de proyecto; un emprendedor con pocos proveedores no lo necesita para arrancar.",
+  "nodo": "procurement_audit",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-07",
+  "decision": "NO",
+  "motivo": "Elegir entre barco, tren, tubería, camión o avión y diseñar redes de transporte es decisión logística de especialista, ajena a una tienda pequeña o a un servicio.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Escoger entre barco, ferrocarril, tuberia o avion segun valor del producto es decision de red logistica; una tienda local o un servicio nunca la toman.",
+  "nodo": "driver_transporte",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-08",
+  "decision": "NO",
+  "motivo": "Diseñar rutas milk run con EOQ y matriz de ahorros es ruteo de transporte avanzado que solo necesita quien opera distribución a fondo.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Disenar rutas milk run con matriz de ahorros y EOQ es ruteo de especialista; solo le sirve a quien gestiona entregas a varios destinos.",
+  "nodo": "programacion_entregas_delivery_scheduling",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-09",
+  "decision": "NO",
+  "motivo": "Los habilitadores de colaboración entre empresas de una cadena de suministro (TI avanzada, normas antitrust) solo importan a quien coordina una cadena con socios.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Los habilitadores de colaboracion entre empresas de una cadena de suministro son profundizacion del mundo de compras; un emprendedor que empieza no gestiona alianzas de cadena.",
+  "nodo": "collaboration_enablers",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-10",
+  "decision": "NO",
+  "motivo": "Clasificar compras en estratégicas y MRO y comparar el consumo por categoría y sede es análisis de gasto de compras que profundiza el mundo, no lo que un emprendedor necesita para arrancar.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Clasificar compras estrategicas y MRO y medir consumo por lugar de operacion es analisis de gasto de compras; una app o un servicio de una persona no lo necesitan.",
+  "nodo": "gestion_procurement_consumo",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-11",
+  "decision": "NO",
+  "motivo": "Un scorecard compartido en tiempo real entre todas las empresas de la cadena solo tiene sentido para quien gestiona una cadena de suministro multiempresa.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Un scorecard compartido en tiempo real entre socios de la cadena es herramienta de coordinacion logistica avanzada que un emprendedor comun no usa.",
+  "nodo": "scorecard_desempeno_cadena_suministro",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-12",
+  "decision": "NO",
+  "motivo": "Montar un sistema de KPIs de proveedores y evaluar VMI es gestión de proveedores a fondo; quien nunca entra en compras puede operar sin él.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Seguir KPIs contractuales de proveedores e implantar VMI es gestion de proveedores a fondo; solo lo necesita quien depende de proveedores estrategicos.",
+  "nodo": "gestion_contratos_desempeno",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-13",
+  "decision": "NO",
+  "motivo": "Medir y costear el efecto látigo a lo largo de varios eslabones solo le sirve a quien opera dentro de una cadena de suministro con inventario, no a un servicio o una app.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Calcular el costo del efecto latigo exige una cadena de varios eslabones; un servicio, una app o una tienda pequena no lo enfrentan.",
+  "nodo": "efecto_bullwhip",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-14",
+  "decision": "SI",
+  "motivo": "Casi cualquier emprendedor tiene que elegir proveedores (un gestor contable, un hosting, un fabricante o una agencia), y comparar con criterios ponderados es la forma general de hacerlo; el mundo de compras lo profundiza.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Cualquier emprendedor elige proveedores (la tienda su mayorista, la app su hosting o su agencia) y una tabla simple de criterios ponderados le sirve aunque nunca active el mundo de compras, que lo profundiza.",
+  "nodo": "criterios_seleccion_proveedores",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-15",
+  "decision": "NO",
+  "motivo": "Auditar la efectividad del proceso de gestión de riesgos de un proyecto es práctica formal de especialista; lo general del riesgo no pasa por auditarlo.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Auditar el proceso formal de gestion de riesgos de un proyecto es practica de especialista; el emprendedor comun no lleva ese proceso.",
+  "nodo": "risk_audit",
+  "mundo": "risk_management",
+  "trampa": null
+ },
+ {
+  "id": "D-16",
+  "decision": "NO",
+  "motivo": "Modelar y simular una cadena de suministro con productos, instalaciones, vehículos y rutas en software como SCM Globe es técnica de diseño logístico avanzado.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Modelar y simular una cadena con productos, instalaciones, vehiculos y rutas es tecnica de diseno logistico que solo usa quien entra a fondo en ese mundo.",
+  "nodo": "modelado_simulacion_cadena_suministro",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-17",
+  "decision": "NO",
+  "motivo": "Simular cadenas circulares con centro de gravedad y reportes de P&L por escenario es diseño logístico de especialista, no algo que todo emprendedor recorra.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Simular cadenas circulares con centro de gravedad y reportes de P&L es detalle de especialista logistico, ajeno a una tienda, un servicio o una app.",
+  "nodo": "modelo_simulacion_cadena_suministro_circular",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-18",
+  "decision": "NO",
+  "motivo": "La auditoría independiente contra un plan de calidad, con Change Requests, es práctica formal de gestión de la calidad que solo necesita quien entra a fondo en ese mundo.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "La auditoria de calidad formal con change requests es practica del mundo de calidad; un emprendedor saca adelante su negocio sin auditorias estructuradas.",
+  "nodo": "quality_audit",
+  "mundo": "quality",
+  "trampa": null
+ },
+ {
+  "id": "D-19",
+  "decision": "NO",
+  "motivo": "Defenderse de prompt injection y jailbreaking solo le toca a quien integra IA en su producto; una tienda o un servicio sin IA no lo necesita.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Mitigar prompt injection y jailbreaking solo lo necesita quien integra IA en su producto; una panaderia o un fontanero no lo necesitan.",
+  "nodo": "gestion_riesgo_seguridad_ia",
+  "mundo": "seguridad_digital",
+  "trampa": null
+ },
+ {
+  "id": "D-20",
+  "decision": "NO",
+  "motivo": "Diagnosticar el efecto látigo con el beer game comparando pedidos entre eslabones es análisis de cadena de suministro que solo necesita quien gestiona inventario con socios.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Diagnosticar el efecto latigo con el beer game requiere una cadena de varios eslabones; es tema de especialista en cadena de suministro.",
+  "nodo": "diagnostico_efecto_latigo",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-21",
+  "decision": "NO",
+  "motivo": "Medir el efecto látigo y firmar acuerdos de intercambio de datos POS con socios es colaboración de cadena de suministro, ajena a quien no opera con distribuidores.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Medir el efecto latigo y firmar acuerdos de intercambio de datos POS con socios es colaboracion de cadena avanzada; un emprendedor comun no la necesita.",
+  "nodo": "colaboracion_cadena_suministro",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-22",
+  "decision": "NO",
+  "motivo": "Evaluar el riesgo natural y operativo por país y dimensionar stock de seguridad por instalación es gestión de riesgos de cadena global, no algo que todo emprendedor necesite.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Evaluar riesgo natural y operativo por pais para fijar stock de seguridad es gestion de riesgos de cadena global; un servicio local o una app no lo necesitan.",
+  "nodo": "gestion_riesgo_cadena_suministro",
+  "mundo": "risk_management",
+  "trampa": null
+ },
+ {
+  "id": "D-23",
+  "decision": "NO",
+  "motivo": "Construir visibilidad de inventario y demanda de extremo a extremo entre varios actores de la cadena solo lo necesita quien coordina una cadena de suministro.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Montar visibilidad de inventario end to end entre multiples actores de la cadena es operacion logistica; solo le sirve a quien gestiona inventario compartido.",
+  "nodo": "sistema_visibilidad_cadena_suministro_low_cost",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-24",
+  "decision": "NO",
+  "motivo": "El cierre formal de contrato con análisis de desempeño del proveedor, disputas y firma es procedimiento de gestión de adquisiciones que profundiza el mundo de compras.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "El cierre formal de contrato con informe de desempeno del proveedor es gestion contractual de compras; un emprendedor que empieza no lo necesita.",
+  "nodo": "contract_close_out",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-25",
+  "decision": "NO",
+  "motivo": "Documentar métricas de calidad con ID único para aseguramiento y control de calidad es práctica formal del mundo de calidad, no un paso que todo emprendedor recorra.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Las metricas de calidad documentadas con ID unico para aseguramiento y control son tecnica del mundo de calidad, no un paso que todo emprendedor recorra.",
+  "nodo": "metricas_calidad",
+  "mundo": "quality",
+  "trampa": null
+ },
+ {
+  "id": "D-27",
+  "decision": "NO",
+  "motivo": "Una plataforma en la nube con sesiones de colaboración masiva entre fabricantes, logística y retailers es operación de cadena de suministro de especialista.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Una plataforma en la nube de colaboracion masiva entre socios de la cadena es herramienta logistica avanzada que un emprendedor comun no usa.",
+  "nodo": "plataforma_colaboracion_tiempo_real",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-28",
+  "decision": "NO",
+  "motivo": "Conectarse al GDSN y clasificar con UNSPSC o GPC es estandarización de datos de producto entre socios comerciales, propia de quien distribuye a fondo.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Conectarse al GDSN y usar EPC o GPC entre socios comerciales es estandarizacion de datos de especialista; un servicio o una tienda pequena no la necesitan.",
+  "nodo": "estandarizacion_codigos_producto_epc",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-29",
+  "decision": "NO",
+  "motivo": "Diseñar políticas de racionamiento contra el shortage gaming de distribuidores solo aplica a fabricantes que reparten oferta escasa entre canales.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Politicas de racionamiento ante shortage gaming las necesita un fabricante que reparte producto escaso entre distribuidores, no cualquier emprendedor.",
+  "nodo": "gestion_rationing_shortage_gaming",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-30",
+  "decision": "NO",
+  "motivo": "El M&OP para cadenas de respuesta a desastres con CONOPS es planificación logística muy especializada que casi ningún emprendedor necesita.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "El M&OP para cadenas ad hoc de respuesta a desastres es planificacion de especialista, muy lejos de lo que necesita una tienda, un servicio o una app.",
+  "nodo": "mission_and_operations_planning",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-31",
+  "decision": "NO",
+  "motivo": "Las cadenas de suministro humanitarias con surge capacity y entrenamiento entre gobierno y ONG son un nicho logístico, no algo general del emprendimiento.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Las cadenas de suministro de respuesta a desastres son un caso especializado de logistica humanitaria que casi ningun emprendedor recorre.",
+  "nodo": "cadena_suministro_respuesta_desastres",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-32",
+  "decision": "NO",
+  "motivo": "Compartir datos de demanda y desempeño entre las empresas de una cadena para reducir el efecto látigo es colaboración de cadena de suministro que profundiza el mundo.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Compartir datos de demanda y desempeno entre empresas de la cadena es profundizacion de relaciones con proveedores; un emprendedor comun no lo necesita.",
+  "nodo": "compartir_datos_cadena_suministro",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-33",
+  "decision": "NO",
+  "motivo": "Montar infraestructura IoT, RFID y big data para trazar mercancías es tecnología logística de especialista que una tienda pequeña o un servicio no necesitan.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Montar trazabilidad con RFID, IoT y big data es infraestructura logistica de especialista; un servicio o una app no la necesitan.",
+  "nodo": "iot_big_data_supply_chain",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-35",
+  "decision": "NO",
+  "motivo": "Tenia razon el lector B: el bloque no trata de elegir o tratar con un proveedor en general, sino de negociar contratos formales que comparan el precio unitario con servicios de valor agregado (conexiones electronicas, entregas frecuentes), fijan metas de desempeno con penalizaciones y cuidan la etiqueta intercultural; quien abre una app, un servicio o una tienda pequena saca adelante su negocio sin ese nivel contractual de especialista, que es justo lo que profundiza el mundo de compras.",
+  "decidido_por": "arbitro",
+  "motivo_B": "Negociar contratos con metas de desempeno, penalizaciones y etiqueta intercultural es el nucleo del mundo de compras; el emprendedor comun elige proveedor sin llegar a ese nivel contractual.",
+  "nodo": "negociacion_contratos_proveedores",
+  "mundo": "compras",
+  "trampa": null
+ },
+ {
+  "id": "D-36",
+  "decision": "NO",
+  "motivo": "El crossdocking en centros de distribución con sincronización de camiones es técnica logística de especialista, ajena a quien no opera un centro de distribución.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "El crossdocking en centros de distribucion es tecnica logistica de alto volumen; solo la necesita quien opera distribucion a escala.",
+  "nodo": "crossdocking",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-37",
+  "decision": "NO",
+  "motivo": "Combinar robots, impresión 3D, vehículos autónomos y drones en la cadena es estrategia de operaciones avanzada que solo interesa a quien entra a fondo en logística.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Combinar robots, impresion 3D, vehiculos autonomos e IoT en la cadena es estrategia logistica avanzada que un emprendedor comun no necesita.",
+  "nodo": "tecnologias_emergentes_cadena_suministro",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-38",
+  "decision": "NO",
+  "motivo": "Aplicar IA a pronóstico, ruteo y almacén en la cadena de suministro es profundización logística; un emprendedor sin operación de inventario no lo necesita.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Aplicar IA a pronostico, rutas y almacen de una cadena de suministro es profundizacion logistica; una app o un servicio no gestionan esa cadena.",
+  "nodo": "ia_en_supply_chain",
+  "mundo": "entrega",
+  "trampa": null
+ },
+ {
+  "id": "D-39",
+  "decision": "NO",
+  "motivo": "Simular fábricas, almacenes y redes con datos de ERP/SCM en tres horizontes es diseño de cadena de suministro de especialista, no algo que todo emprendedor recorra.",
+  "decidido_por": "lector y verificador de acuerdo",
+  "motivo_B": "Simular redes, plantas y layouts de almacen con datos ERP es tecnica de especialista en cadena de suministro, ajena al emprendedor comun.",
+  "nodo": "simulacion_de_operaciones_supply_chain",
+  "mundo": "entrega",
+  "trampa": null
+ }
+]

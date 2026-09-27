@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: colaboracion_transporte_ctm entra a entrega; sus aristas del nucleo, leidas (pasada C).",
+  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: colaboracion_transporte_ctm entra a entrega; sus aristas del nucleo, leidas (pasada C). | 2026-09-27: nodos que salen del nucleo a su mundo (pasadas D y MV del saneamiento).",
   "aprobados": [
     {
       "core": "garantias_implicitas_vs_expresas",
@@ -42,21 +42,10 @@
       "reanclado_de": "pruebas_destructivas"
     },
     {
-      "core": "programacion_entregas_delivery_scheduling",
-      "dominio": "tratar_packaging_costo_marca",
-      "score": 0.5916,
-      "reanclado_de": "embalaje_exportacion"
-    },
-    {
       "core": "trade_off_responsividad_eficiencia",
       "dominio": "saber_hasta_donde_mejorar_servicio",
       "score": 0.6459,
       "reanclado_de": "servicio_postventa_internacional"
-    },
-    {
-      "core": "driver_transporte",
-      "dominio": "elegir_modo_transporte_volumen_distancia",
-      "score": 0.7154
     },
     {
       "core": "logistica_inversa_retornos",
@@ -87,11 +76,180 @@
       "lectura": "Pasada C del saneamiento (C-C1, lectores de acuerdo): Quien estudia los obstaculos a la colaboracion encuentra en la gestion colaborativa de transporte un caso logistico concreto donde esos obstaculos (informacion propietaria, falta de estandares) se superan con resultados medibles."
     },
     {
-      "core": "programacion_entregas_delivery_scheduling",
-      "dominio": "colaboracion_transporte_ctm",
-      "score": 0.5952,
+      "core": "estrategia_circular_y_mecanismo_de_retorno",
+      "dominio": "modelo_simulacion_cadena_suministro_circular",
+      "score": 0.7576,
       "declarado_de_arista_existente": true,
-      "lectura": "Pasada C del saneamiento (C-C4, lectores de acuerdo): Quien decide entre entregas directas y milk run para aprovechar cargas completas sigue naturalmente con consolidar embarques junto a otras empresas para llenar el transporte y bajar costos."
+      "fuerza_leida": 3,
+      "lectura": "Pasada MV del saneamiento (MV-A24, lectores de acuerdo): El propio nodo dice que la estrategia circular y el mecanismo de retorno son el insumo de la simulacion circular."
+    },
+    {
+      "core": "ciclo_virtuoso_datos_electronicos",
+      "dominio": "scorecard_desempeno_cadena_suministro",
+      "score": 0.6176,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 3,
+      "lectura": "Pasada MV del saneamiento (MV-A04, lectores de acuerdo): El ciclo virtuoso de datos que fluyen entre empresas es justo lo que habilita los scorecards compartidos de desempeno."
+    },
+    {
+      "core": "cinco_pasos_enfoque_restricciones",
+      "dominio": "drum_buffer_rope",
+      "score": 0.601,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 3,
+      "lectura": "Pasada MV del saneamiento (MV-A05, lectores de acuerdo): Drum-Buffer-Rope es la aplicacion directa de los cinco pasos de la Teoria de Restricciones a la cadena."
+    },
+    {
+      "core": "teoria_de_restricciones",
+      "dominio": "drum_buffer_rope",
+      "score": 0.5889,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 3,
+      "lectura": "Pasada MV del saneamiento (MV-A55, lectores de acuerdo): Drum-Buffer-Rope es el mecanismo de sincronizacion derivado de la Teoria de Restricciones."
+    },
+    {
+      "core": "sop_colaborativo",
+      "dominio": "plataforma_colaboracion_tiempo_real",
+      "score": 0.7496,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A52, lectores de acuerdo): El S&OP colaborativo se ejecuta y llega a consenso a traves de la plataforma de colaboracion en tiempo real."
+    },
+    {
+      "core": "coordinacion_colaboracion_cadena_suministro",
+      "dominio": "plataforma_colaboracion_tiempo_real",
+      "score": 0.7277,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A10, lectores de acuerdo): La plataforma de colaboracion en tiempo real es el medio concreto para coordinar la cadena sin control unilateral."
+    },
+    {
+      "core": "erp_systems",
+      "dominio": "warehouse_management_system",
+      "score": 0.7152,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A22, lectores de acuerdo): El WMS es un sistema operativo especializado que se integra con el ERP en la parte de almacen y logistica."
+    },
+    {
+      "core": "information_driver_supply_chain",
+      "dominio": "iot_big_data_supply_chain",
+      "score": 0.6848,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A32, lectores de acuerdo): Tras entender la informacion como driver, IoT y big data son la via concreta para capturarla en tiempo real."
+    },
+    {
+      "core": "trade_off_responsividad_eficiencia",
+      "dominio": "driver_transporte",
+      "score": 0.676,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A56, lectores de acuerdo): El trade-off entre respuesta y eficiencia se aplica directamente al elegir modo de transporte segun valor."
+    },
+    {
+      "core": "supply_chain_management_systems",
+      "dominio": "ia_en_supply_chain",
+      "score": 0.6744,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A54, lectores de acuerdo): Los sistemas SCM con capacidad analitica se profundizan con IA para pronostico, rutas y almacen."
+    },
+    {
+      "core": "ciclo_virtuoso_datos_electronicos",
+      "dominio": "estandarizacion_codigos_producto_epc",
+      "score": 0.6702,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A03, lectores de acuerdo): Mejorar la precision de los datos entre empresas lleva a estandarizar los identificadores de producto compartidos."
+    },
+    {
+      "core": "gestion_pedidos_order_management",
+      "dominio": "programacion_entregas_delivery_scheduling",
+      "score": 0.6482,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A29, lectores de acuerdo): La gestion de pedidos devuelve fechas de entrega, lo que lleva a programar como se entregan."
+    },
+    {
+      "core": "driver_ubicacion",
+      "dominio": "driver_transporte",
+      "score": 0.6001,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A20, lectores de acuerdo): La ubicacion de instalaciones fija las rutas posibles y lleva directamente al driver de transporte."
+    },
+    {
+      "core": "vehiculos_autonomos_drones_supply_chain",
+      "dominio": "ia_en_supply_chain",
+      "score": 0.681,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A57, lectores de acuerdo): Coordinar rutas de vehiculos autonomos conecta con la optimizacion de rutas por IA, de forma parcial."
+    },
+    {
+      "core": "definicion_alineacion_cadena_suministro",
+      "dominio": "sistema_visibilidad_cadena_suministro_low_cost",
+      "score": 0.6733,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A17, lectores de acuerdo): La visibilidad de extremo a extremo profundiza la coordinacion de la cadena definida, con un salto tecnico importante."
+    },
+    {
+      "core": "definicion_alineacion_cadena_suministro",
+      "dominio": "simulacion_de_operaciones_supply_chain",
+      "score": 0.6717,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A16, lectores de acuerdo): Si la estrategia determina el diseno de la cadena, simular ese diseno antes de invertir es un paso razonable aunque avanzado."
+    },
+    {
+      "core": "precios_todos_los_dias_bajos",
+      "dominio": "drum_buffer_rope",
+      "score": 0.6605,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A45, arbitro): Tiene razon el lector A: los precios estables hacen que se compre segun la necesidad real y facilitan el pronostico, y el Drum Buffer Rope es justamente sincronizar la cadena al ritmo real de la demanda. La continuacion existe aunque es debil, asi que aplica la regla de la duda."
+    },
+    {
+      "core": "alineacion_incentivos_desempeno",
+      "dominio": "drum_buffer_rope",
+      "score": 0.6234,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A01, arbitro): Tiene razon el lector A: los dos nodos tratan la misma cadena de suministro, y quien ve que los incentivos por cuota empujan producto sin demanda real encuentra en el Drum Buffer Rope la forma de sincronizarse con la demanda y cortar el efecto latigo. El vinculo es indirecto, asi que aplica la regla de la duda."
+    },
+    {
+      "core": "pronostico_de_demanda_variables",
+      "dominio": "gestion_rationing_shortage_gaming",
+      "score": 0.6161,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A48, lectores de acuerdo): Las variables de oferta y demanda del pronostico conectan con la distorsion que genera el racionamiento, con vinculo debil."
+    },
+    {
+      "core": "industrial_robots_automation",
+      "dominio": "ia_en_supply_chain",
+      "score": 0.6077,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A31, lectores de acuerdo): La automatizacion con robots toca las operaciones de almacen que la IA en supply chain tambien transforma, con vinculo debil."
+    },
+    {
+      "core": "gestion_inventario",
+      "dominio": "programacion_entregas_delivery_scheduling",
+      "score": 0.5615,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A28, lectores de acuerdo): El tamano de pedido e inventario se relaciona con elegir entregas directas o milk run, pero el vinculo es parcial."
+    },
+    {
+      "core": "combinacion_humano_ia_decision",
+      "dominio": "plataforma_colaboracion_tiempo_real",
+      "score": 0.5097,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada MV del saneamiento (MV-A06, lectores de acuerdo): La combinacion de personas con simulaciones se concreta en las sesiones colaborativas de la plataforma, pero el enlace es tematico y debil."
     }
   ],
   "rechazados": [
@@ -130,6 +288,27 @@
       "dominio": "detectar_prioridad_cliente_entrega",
       "score": 0.7052,
       "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-132): Ensayar al comprador para la venta interna en ventas complejas B2B no prepara la deteccion de prioridades de entrega en venta en linea. Los dos nodos no tienen que ver."
+    },
+    {
+      "core": "programacion_entregas_delivery_scheduling",
+      "dominio": "tratar_packaging_costo_marca",
+      "score": 0.5916,
+      "reanclado_de": "embalaje_exportacion",
+      "motivo": "Su ancla programacion_entregas_delivery_scheduling pasa a entrega (pasada D): la arista queda dentro del mundo."
+    },
+    {
+      "core": "driver_transporte",
+      "dominio": "elegir_modo_transporte_volumen_distancia",
+      "score": 0.7154,
+      "motivo": "Su ancla driver_transporte pasa a entrega (pasada D): la arista queda dentro del mundo."
+    },
+    {
+      "core": "programacion_entregas_delivery_scheduling",
+      "dominio": "colaboracion_transporte_ctm",
+      "score": 0.5952,
+      "declarado_de_arista_existente": true,
+      "lectura": "Pasada C del saneamiento (C-C4, lectores de acuerdo): Quien decide entre entregas directas y milk run para aprovechar cargas completas sigue naturalmente con consolidar embarques junto a otras empresas para llenar el transporte y bajar costos.",
+      "motivo": "Su ancla programacion_entregas_delivery_scheduling pasa a entrega (pasada D): la arista queda dentro del mundo."
     }
   ]
 }

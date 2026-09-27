@@ -9,9 +9,9 @@
     "Pregunta a quien maneja tus sistemas si ya existen bases de datos que puedas usar",
     "Revisa si esos datos son confiables y realmente te sirven",
     "Si no hay datos confiables, diseña un plan para empezar a recolectarlos",
-    "Explica a las personas con las que trabajas por que estas recolectando estos datos, para reducir la resistencia al cambio"
+    "Explica a las personas con las que trabajas por qué estás recolectando estos datos, para reducir la resistencia al cambio"
   ],
-  "entregable_esperado": "Un plan de revisión y recoleccion de datos de calidad, ya validado",
+  "entregable_esperado": "Un plan de revisión y recolección de datos de calidad, ya validado",
   "nodos_previos": [
     "framework_efectividad_procesos"
   ],
@@ -24,5 +24,34 @@
   "etiqueta_arbol": "Busca Datos Antes de Quejarte",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0050",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Explica a las personas con las que trabajas por que estas recolectando estos datos, para reducir la resistencia al cambio",
+      "texto_nuevo": "Explica a las personas con las que trabajas por qué estás recolectando estos datos, para reducir la resistencia al cambio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O005-031.paso3: qué, estás (Faltan las tildes en 'qué' (interrogativo indirecto) y en 'estás' (forma verbal aguda); lo demás no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0051",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan de revisión y recoleccion de datos de calidad, ya validado",
+      "texto_nuevo": "Un plan de revisión y recolección de datos de calidad, ya validado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O005-031.entregable: recolección (Falta la tilde en 'recolección', palabra aguda terminada en n; lo demás no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

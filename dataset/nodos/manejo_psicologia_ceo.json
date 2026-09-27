@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Un set de prácticas personales de autogestión emocional documentadas para sostener el liderazgo bajo presión constante",
   "nodos_previos": [
-    "adopcion_liderazgo"
+    "adopcion_liderazgo",
+    "la_lucha_resiliencia_ceo"
   ],
   "nodos_siguientes": [
     "tecnicas_calma_ceo",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Cuida tu Psicología de CEO",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-11",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "la_lucha_resiliencia_ceo -> manejo_psicologia_ceo",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-12, lectores de acuerdo): raiz de 3 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Reconocer La Lucha como estado normal del fundador lleva directamente a gestionar la propia psicología del CEO, con urgencia pero sin culpa emocional."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

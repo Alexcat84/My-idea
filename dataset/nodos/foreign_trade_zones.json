@@ -19,10 +19,26 @@
     "customs_bonded_warehouses"
   ],
   "condiciones_activacion": [
-    "Si la empresa importa materiales dutiable para ensamblar/manufacturar productos destinados a reexportación"
+    "Si tu empresa opera en Estados Unidos e importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación"
   ],
   "etiqueta_arbol": "Usa Zonas de Comercio Exterior",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-087",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si la empresa importa materiales dutiable para ensamblar/manufacturar productos destinados a reexportación",
+      "texto_nuevo": "Si tu empresa opera en Estados Unidos e importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-008: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: las FTZ son sitios dentro de Estados Unidos y la condicion no dice que aplica si operas alli."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

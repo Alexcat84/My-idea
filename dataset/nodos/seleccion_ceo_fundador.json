@@ -40,7 +40,7 @@
   "condiciones_activacion": [
     "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales",
     "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo, hay tensión sobre quién debe ser CEO, o el equipo está evitando una conversación difícil sobre quién lidera",
-    "Cuando se está preparando documentación para inversionistas"
+    "Cuando vas a presentarte ante inversionistas y los títulos de tu equipo fundador (CEO, CTO, COO) todavía no están definidos o se asignaron por defecto, sin evaluarlos"
   ],
   "etiqueta_arbol": "Elige con Cuidado a Tu CEO",
   "ids_alias": [
@@ -61,5 +61,21 @@
   ],
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-178",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se está preparando documentación para inversionistas",
+      "texto_nuevo": "Cuando vas a presentarte ante inversionistas y los títulos de tu equipo fundador (CEO, CTO, COO) todavía no están definidos o se asignaron por defecto, sin evaluarlos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q027-029: La tercera condición no tiene relación con decidir quién será CEO. (lector y verificador de acuerdo) Motivo: Preparar documentación para inversionistas no implica que el CEO esté sin decidir; tal como está, activaría el nodo en equipos que ya tienen los títulos resueltos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
+    }
   ]
 }

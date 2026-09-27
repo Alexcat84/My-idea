@@ -18,7 +18,8 @@
     "integracion_agresiva_ejecutivo"
   ],
   "nodos_siguientes": [
-    "hr_calidad_gestion"
+    "hr_calidad_gestion",
+    "feedback_efectivo_liderazgo"
   ],
   "condiciones_activacion": [
     "Cuando tu equipo crece a unas 25 personas y todavía no tienes un proceso formal de feedback"
@@ -41,6 +42,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R059-047 (ANADIDO, arbitro): Tiene razón el lector A. Busqué con Grep en todo el libro twenty, 20, twenty people y employs, y no hay ningún umbral de 20. La única cifra ligada a formalizar la gestión del desempeño es veinticinco (L1730), y la condición la mantiene. Por eso no hay un valor distinto que contradiga el libro: lo que sobra es el 20, una cifra añadida. Es ANADIDO y no CONTRARIO. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R059-047"
+    },
+    {
+      "id": "n1-nucleo-08",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_desempeno_feedback -> feedback_efectivo_liderazgo",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-09, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Una vez instalado un proceso de revisiones y feedback, el paso natural es aprender a dar feedback auténtico y efectivo, aunque vaya contra el instinto."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [

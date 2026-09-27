@@ -20,7 +20,8 @@
   "nodos_siguientes": [
     "matriz_asignacion_responsabilidades",
     "getting_started_risk_assessment",
-    "evalua_la_gravedad_sin_autoengano"
+    "evalua_la_gravedad_sin_autoengano",
+    "estrategia_gestion_riesgo_tolerancia"
   ],
   "condiciones_activacion": [
     "Cuando necesitas decidir a qué riesgos ponerle atención primero y con qué recursos",
@@ -43,6 +44,45 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "mv-arista-008",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "matriz_probabilidad_impacto -> estrategia_gestion_riesgo_tolerancia",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B05, lectores de acuerdo)",
+        "motivo": "La matriz ya introduce cuanto riesgo estas dispuesto a aceptar, que la estrategia formaliza como tolerancia."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-010",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "matriz_probabilidad_impacto -> fundamentos_gestion_riesgo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B06, lectores de acuerdo)",
+        "motivo": "Priorizar riesgos por probabilidad e impacto es la entrada a un proceso completo de enmarcar, evaluar, responder y monitorear."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-046",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "matriz_probabilidad_impacto -> fundamentos_gestion_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Guarda de puentes (engine/test_puentes_tejidos.py): ley del ancla",
+        "motivo": "matriz_probabilidad_impacto ya anclaba 2 puentes en seguridad digital; el reanclaje de fundamentos_gestion_riesgo pasa a analisis_de_sensibilidad_riesgo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
     }
   ]
 }

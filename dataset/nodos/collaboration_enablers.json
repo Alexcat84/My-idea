@@ -1,7 +1,7 @@
 {
   "node_id": "collaboration_enablers",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Habilitadores Clave para la Colaboración en Supply Chain",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Para que las iniciativas colaborativas tengan éxito se requieren habilitadores humanos y tecnológicos: interés común, apertura, reconocimiento de prioridades, expectativas claras, liderazgo, cooperación (no castigo), confianza, reparto de beneficios y TI avanzada. Sin estos elementos, la colaboración fracasa ante los obstáculos naturales del negocio tradicional.",
@@ -41,6 +41,19 @@
         "motivo": "Tras entender que la coordinacion entre empresas es una ventaja competitiva frente al control unilateral, lo natural es preguntar que habilitadores humanos y tecnologicos hacen que esa colaboracion funcione."
       },
       "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el nodo del nucleo que solo entraba por colaboracion_transporte_ctm recibe un predecesor del nucleo."
+    },
+    {
+      "id": "mv-dominio-03",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-09: Los habilitadores de colaboración entre empresas de una cadena de suministro (TI avanzada, normas antitrust) solo importan a quien coordina una cadena con socios. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
     }
   ]
 }

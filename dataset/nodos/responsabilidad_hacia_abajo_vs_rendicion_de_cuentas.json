@@ -6,12 +6,12 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Cuando gestionas la seguridad para mostrar buenos números a quien esta por encima de ti, tu sistema de seguridad puede convertirse en un sistema para cubrirte legalmente. Esto incentiva manipular las cifras (como reclasificar lesiones para no romper 'rachas de días sin accidentes') en lugar de asumir una responsabilidad real y etica hacia las personas que hacen el trabajo peligroso.",
   "pasos_accionables": [
-    "Revisar si existen 'rachas' o senales publicas de días sin incidentes que puedan incentivar el ocultamiento",
-    "Auditar la clasificacion de lesiones según su gravedad para detectar manipulacion de categorias",
-    "Redirigir el proposito de tu sistema de seguridad hacia la mejora real, no hacia demostrar cumplimiento",
+    "Revisar si existen 'rachas' o señales públicas de días sin incidentes que puedan incentivar el ocultamiento",
+    "Auditar la clasificación de lesiones según su gravedad para detectar manipulación de categorías",
+    "Redirigir el propósito de tu sistema de seguridad hacia la mejora real, no hacia demostrar cumplimiento",
     "Fomentar que la responsabilidad de la seguridad recaiga en quien supervisa el trabajo día a día, no solo se reporte hacia arriba"
   ],
-  "entregable_esperado": "Politica revisada de gestion de incidentes que elimine incentivos perversos de subreporte",
+  "entregable_esperado": "Política revisada de gestión de incidentes que elimine incentivos perversos de subreporte",
   "nodos_previos": [
     "burocracia_de_seguridad"
   ],
@@ -25,5 +25,62 @@
   "etiqueta_arbol": "Prioriza Personas, No Números",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0828",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar si existen 'rachas' o senales publicas de días sin incidentes que puedan incentivar el ocultamiento",
+      "texto_nuevo": "Revisar si existen 'rachas' o señales públicas de días sin incidentes que puedan incentivar el ocultamiento",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-022.paso0: señales, públicas (Faltan la eñe en 'senales' y la tilde en 'publicas'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0829",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Auditar la clasificacion de lesiones según su gravedad para detectar manipulacion de categorias",
+      "texto_nuevo": "Auditar la clasificación de lesiones según su gravedad para detectar manipulación de categorías",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-022.paso1: clasificación, manipulación, categorías (Faltan las tildes en 'clasificacion', 'manipulacion' y 'categorias'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0830",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redirigir el proposito de tu sistema de seguridad hacia la mejora real, no hacia demostrar cumplimiento",
+      "texto_nuevo": "Redirigir el propósito de tu sistema de seguridad hacia la mejora real, no hacia demostrar cumplimiento",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-022.paso2: propósito (Falta la tilde en 'proposito'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0831",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Politica revisada de gestion de incidentes que elimine incentivos perversos de subreporte",
+      "texto_nuevo": "Política revisada de gestión de incidentes que elimine incentivos perversos de subreporte",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-022.entregable: Política, gestión (Faltan las tildes en 'Politica' y 'gestion'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

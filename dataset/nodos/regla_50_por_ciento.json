@@ -1,6 +1,6 @@
 {
   "node_id": "regla_50_por_ciento",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "La Regla del 50 Por Ciento",
   "fuente": "Traction - Gabriel Weinberg",
@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Divide tu semana en partes iguales entre trabajar en el producto y probar formas de conseguir clientes.",
     "Empieza a probar canales para conseguir clientes incluso antes de lanzar el producto, por ejemplo un blog, mejorar tu posicionamiento en buscadores o armar una lista de espera.",
-    "Usa lo que aprendes de esos experimentos, con personas que todavia no te conocen, para mejorar el producto."
+    "Usa lo que aprendes de esos experimentos, con personas que todavía no te conocen, para mejorar el producto."
   ],
   "entregable_esperado": "Un plan semanal donde repartes tu tiempo entre desarrollar el producto y trabajar en conseguir clientes, escrito desde las primeras etapas del proyecto.",
   "nodos_previos": [
@@ -26,5 +26,34 @@
   "etiqueta_arbol": "Reparte tu Tiempo a la Mitad",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-158",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q078-018: El nodo aplica en etapas tempranas, antes de lanzar, probando canales con personas que no te conocen: es probar la idea con el mercado, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0299",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa lo que aprendes de esos experimentos, con personas que todavia no te conocen, para mejorar el producto.",
+      "texto_nuevo": "Usa lo que aprendes de esos experimentos, con personas que todavía no te conocen, para mejorar el producto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O025-022.paso2: todavía (Falta la tilde de todavía; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
   ]
 }

@@ -17,7 +17,8 @@
   ],
   "entregable_esperado": "Un caso con datos numéricos y ejemplos reales que demuestre el retorno de invertir en experiencia del cliente, listo para presentar a quien decide",
   "nodos_previos": [
-    "seminario_de_exito_para_gerencia"
+    "seminario_de_exito_para_gerencia",
+    "keep_customers_strategy"
   ],
   "nodos_siguientes": [
     "contacto_con_el_cliente"
@@ -44,6 +45,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla del costo de adquisición (300 dólares por cuenta en bancos), pero nunca lo desglosa por canal ni lo pide como paso para convencer a quien decide.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-069"
+    },
+    {
+      "id": "n1-nucleo-18",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "keep_customers_strategy -> persuasion_directivos_prioridad_cliente",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-19, arbitro): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tenia razon el lector B: la estrategia de retencion termina con usar los datos por cohortes para justificar la inversion en experiencia, y el nodo consiste justo en convencer a quien decide con cifras de retencion. El candidato de incentivos habla de redisenar la organizacion, que es mas bien una consecuencia de haber convencido ya a quien decide."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [

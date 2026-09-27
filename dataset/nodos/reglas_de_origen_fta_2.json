@@ -24,7 +24,7 @@
     "reglas_origen_sectoriales"
   ],
   "condiciones_activacion": [
-    "Si el usuario exporta a un país con el cual EE.UU. tiene un Tratado de Libre Comercio vigente",
+    "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
     "Si el producto contiene insumos o componentes de múltiples países"
   ],
   "merged_originals": [
@@ -72,6 +72,20 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): reglas_de_origen_fta_2 vuelve a CLASE C. Regresion medida en docs/SANEAMIENTO_DATASET.md: la campania de fidelidad (fidelidad-t4-011) le puso la formula de la clase B a un nodo-frontera.",
       "indice": 3,
       "auditoria": "SANEAMIENTO_DATASET pasada J"
+    },
+    {
+      "id": "n1-condicion-159",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el usuario exporta a un país con el cual EE.UU. tiene un Tratado de Libre Comercio vigente",
+      "texto_nuevo": "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q007-019: La condicion principal no deja claro que el nodo aplica a quien exporta desde Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: exportar a un pais con TLC con EE.UU. no exige exportar desde Estados Unidos; un exportador de otro pais tambien la cumpliria."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

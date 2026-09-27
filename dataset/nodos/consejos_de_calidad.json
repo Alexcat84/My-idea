@@ -6,13 +6,13 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "Decimo tercer paso del método de catorce pasos. Consiste en buscar espacios regulares de encuentro con otras personas que, como tu, evaluan la calidad de su propio trabajo, para compartir problemas, sentimientos y experiencias. Quien evalua trabajo suele sentirse solo, rodeado de la urgencia diaria, y necesita ese espacio para mantener un criterio y un proposito consistentes.",
   "pasos_accionables": [
-    "Buscar o crear un espacio de encuentro regular con otras personas que evaluan calidad en su propio trabajo o negocio",
+    "Buscar o crear un espacio de encuentro regular con otras personas que evalúan calidad en su propio trabajo o negocio",
     "Dejar que ese espacio defina su propia agenda y sus propios horarios, sin imponerlos",
-    "No cerrar la participación por experiencia o jerarquia, abrirla a quien quiera aportar",
+    "No cerrar la participación por experiencia o jerarquía, abrirla a quien quiera aportar",
     "Si manejas varios negocios o sucursales, fomentar el intercambio entre ellos",
-    "Buscar que ese intercambio te conecte también con otras perspectivas, no solo con quienes piensan igual que tu"
+    "Buscar que ese intercambio te conecte también con otras perspectivas, no solo con quienes piensan igual que tú"
   ],
-  "entregable_esperado": "Espacio de intercambio armado, con encuentros periodicos, agenda propia y participación abierta",
+  "entregable_esperado": "Espacio de intercambio armado, con encuentros periódicos, agenda propia y participación abierta",
   "nodos_previos": [
     "reconocimiento_al_desempeno",
     "eliminacion_causas_error_4",
@@ -29,5 +29,62 @@
   "etiqueta_arbol": "Reúne a tus Equipos de Calidad",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0591",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Buscar o crear un espacio de encuentro regular con otras personas que evaluan calidad en su propio trabajo o negocio",
+      "texto_nuevo": "Buscar o crear un espacio de encuentro regular con otras personas que evalúan calidad en su propio trabajo o negocio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-039.paso0: evalúan (Solo añade la tilde de evalúan.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0592",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No cerrar la participación por experiencia o jerarquia, abrirla a quien quiera aportar",
+      "texto_nuevo": "No cerrar la participación por experiencia o jerarquía, abrirla a quien quiera aportar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-039.paso2: jerarquía (Solo añade la tilde de jerarquía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0593",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Buscar que ese intercambio te conecte también con otras perspectivas, no solo con quienes piensan igual que tu",
+      "texto_nuevo": "Buscar que ese intercambio te conecte también con otras perspectivas, no solo con quienes piensan igual que tú",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-039.paso4: tú (Tú es pronombre personal y lleva tilde diacrítica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0594",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Espacio de intercambio armado, con encuentros periodicos, agenda propia y participación abierta",
+      "texto_nuevo": "Espacio de intercambio armado, con encuentros periódicos, agenda propia y participación abierta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-039.entregable: periódicos (Solo añade la tilde de periódicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

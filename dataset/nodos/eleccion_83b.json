@@ -20,8 +20,8 @@
     "compensacion_service_providers"
   ],
   "condiciones_activacion": [
-    "Justo después de que tú o tus primeros empleados reciban acciones con vesting",
-    "Antes de cualquier proceso de revisión para una inversión o venta de la empresa"
+    "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+    "Antes de cualquier proceso de revisión para una inversión o venta de tu empresa, si tributa en Estados Unidos"
   ],
   "etiqueta_arbol": "Elige tu Impuesto a Tiempo",
   "correcciones": [
@@ -74,6 +74,34 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C: el resumen prometia verificarlo en tu pais.",
       "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "n1-condicion-062",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Justo después de que tú o tus primeros empleados reciban acciones con vesting",
+      "texto_nuevo": "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-001: Tenía razón el lector B: cada condición activa el nodo por sí sola, y la segunda también lo dispararía para una empresa que no tributa en Estados Unidos, así que la clase C exige corregir las dos. (arbitro) Motivo: Clase C: no deja claro que la elección 83(b) solo aplica si tributas en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-063",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Antes de cualquier proceso de revisión para una inversión o venta de la empresa",
+      "texto_nuevo": "Antes de cualquier proceso de revisión para una inversión o venta de tu empresa, si tributa en Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-001: Tenía razón el lector B: cada condición activa el nodo por sí sola, y la segunda también lo dispararía para una empresa que no tributa en Estados Unidos, así que la clase C exige corregir las dos. (arbitro) Motivo: Clase C: por sí sola se activaría ante cualquier inversión o venta en cualquier país, sin atarla a tributar en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

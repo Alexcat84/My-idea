@@ -7,11 +7,11 @@
   "resumen_teorico": "Es un indicador clave de que tan resiliente es tu negocio: mide la distancia entre como tu imaginas que se hacen las cosas en la operacion diaria y como realmente se hacen. Si esa distancia es grande, significa que estas mal calibrado respecto a los riesgos reales que enfrenta tu negocio, y que puede que no estes reconociendo como las personas que hacen el trabajo realmente logran que las cosas salgan bien cada día.",
   "pasos_accionables": [
     "Observar directamente el trabajo en el terreno, no solo revisar los procedimientos escritos",
-    "Conversar con las personas que hacen el trabajo sobre como realmente resuelven los problemas cotidianos",
-    "Comparar los procedimientos oficiales con las practicas reales que documentaste",
+    "Conversar con las personas que hacen el trabajo sobre cómo realmente resuelven los problemas cotidianos",
+    "Comparar los procedimientos oficiales con las prácticas reales que documentaste",
     "Anotar las brechas encontradas como información valiosa para mejorar, no como errores para sancionar"
   ],
-  "entregable_esperado": "Un reporte comparativo entre los procedimientos oficiales y las practicas reales observadas en el trabajo diario",
+  "entregable_esperado": "Un reporte comparativo entre los procedimientos oficiales y las prácticas reales observadas en el trabajo diario",
   "nodos_previos": [
     "insight_de_wald",
     "thin_edge_of_the_wedge"
@@ -26,5 +26,48 @@
   "etiqueta_arbol": "Compara lo Imaginado con lo Real",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0047",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conversar con las personas que hacen el trabajo sobre como realmente resuelven los problemas cotidianos",
+      "texto_nuevo": "Conversar con las personas que hacen el trabajo sobre cómo realmente resuelven los problemas cotidianos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O005-004.paso1: cómo (Falta la tilde en 'cómo', que aquí es interrogativo indirecto; lo demás no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0048",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparar los procedimientos oficiales con las practicas reales que documentaste",
+      "texto_nuevo": "Comparar los procedimientos oficiales con las prácticas reales que documentaste",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O005-004.paso2: prácticas (Falta la tilde en 'prácticas', palabra esdrújula; lo demás no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0049",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un reporte comparativo entre los procedimientos oficiales y las practicas reales observadas en el trabajo diario",
+      "texto_nuevo": "Un reporte comparativo entre los procedimientos oficiales y las prácticas reales observadas en el trabajo diario",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O005-004.entregable: prácticas (Falta la tilde en 'prácticas', palabra esdrújula; lo demás no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

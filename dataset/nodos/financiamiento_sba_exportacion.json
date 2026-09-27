@@ -21,7 +21,7 @@
     "financiamiento_usda_agricola"
   ],
   "condiciones_activacion": [
-    "Necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+    "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
     "Requieres financiamiento rápido y de menor monto a través de Export Express",
     "Necesitas financiar instalaciones o equipo junto con capital de trabajo para exportación"
   ],
@@ -38,5 +38,21 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-083",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+      "texto_nuevo": "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-003: Razon para A: basta con que una condicion ancle el nodo a Estados Unidos (como hace Q004-005 del mismo lote); las condiciones 1 y 2 describen bien la necesidad y en la duda quedan ok. (arbitro) Motivo: Clase C Estados Unidos: los programas son de la SBA y ninguna condicion dice que aplican solo si tu empresa opera en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

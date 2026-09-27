@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Cuando existen roles distintos entre quien vende y quien ejecuta/da servicio",
-    "Si el negocio opera con interacciones remotas u online sin contacto físico"
+    "Si tus clientes sienten que pierden la conexión o las expectativas acordadas al pasar del vendedor al equipo que les da el servicio"
   ],
   "etiqueta_arbol": "Cuida la Entrega del Cliente",
   "fuentes_internas": [
@@ -54,6 +54,20 @@
         "motivo": "Primero se ve que se corta la conexión entre quien vende y quien entrega; el traspaso cuidado entre ventas y gestión de cuentas es la solución que sigue."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-condicion-104",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el negocio opera con interacciones remotas u online sin contacto físico",
+      "texto_nuevo": "Si tus clientes sienten que pierden la conexión o las expectativas acordadas al pasar del vendedor al equipo que les da el servicio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q015-006: La condicion 1 (negocio remoto u online) no describe cuando aplica el traspaso. (lector y verificador de acuerdo) Motivo: Operar en remoto u online no es la situacion en la que aplica el traspaso vendedor a cuenta; es una circunstancia tangencial que activaria el nodo en negocios online sin traspaso alguno."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ]
 }

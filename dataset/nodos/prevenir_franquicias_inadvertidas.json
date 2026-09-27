@@ -22,7 +22,7 @@
     "mix_ubicaciones_corporativas_franquicia"
   ],
   "condiciones_activacion": [
-    "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+    "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
     "Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca",
     "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones",
     "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
@@ -41,5 +41,21 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-coherencia-03",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+      "texto_nuevo": "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Franchise Your Business (Siebert), lineas 2263; 2287: \"In virtually every case, these companies (or their lawyers) simply did not realize they were franchising.\". La condicion excluia justo al publico del nodo: quien crea una franquicia sin saberlo no 'vende ni piensa vender franquicias' (linea 2263: 'Some simply had no clue about franchise law'). Se conserva el ambito de Estados Unidos (el pasaje trata la Regla FTC 436 y leyes estatales de Illinois y Connecticut) y el disparador pasa a ser que terceros usen tu marca. Se toma la redaccion del lector B. Esta correccion solo quita la contradiccion interna; NO decide si el nodo va en el nucleo o en el mundo de franquicias: esa decision es de la pasada nodo por nodo del fundador (prueba de si lo necesita cualquier emprendedor aunque nunca active ese mundo) y aqui no se toca."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 0
+    }
   ]
 }

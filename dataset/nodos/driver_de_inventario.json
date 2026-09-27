@@ -11,7 +11,7 @@
     "Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invertir en flexibilidad de producción.",
     "Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda."
   ],
-  "entregable_esperado": "Los tres niveles de inventario dimensionados, ciclico, de seguridad y estacional, con sus puntos de reorden y la fecha en que se vuelven a revisar con demanda real",
+  "entregable_esperado": "Los tres niveles de inventario dimensionados, cíclico, de seguridad y estacional, con sus puntos de reorden y la fecha en que se vuelven a revisar con demanda real",
   "nodos_previos": [
     "gestion_inventario"
   ],
@@ -23,5 +23,20 @@
   "etiqueta_arbol": "Dimensiona tu Inventario",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0016",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los tres niveles de inventario dimensionados, ciclico, de seguridad y estacional, con sus puntos de reorden y la fecha en que se vuelven a revisar con demanda real",
+      "texto_nuevo": "Los tres niveles de inventario dimensionados, cíclico, de seguridad y estacional, con sus puntos de reorden y la fecha en que se vuelven a revisar con demanda real",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O002-007.entregable: cíclico (Solo se añade la tilde que faltaba en 'cíclico'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

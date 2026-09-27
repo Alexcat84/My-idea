@@ -1,6 +1,6 @@
 {
   "node_id": "desarrollo_en_espiral",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -99,6 +99,19 @@
         "motivo": "La ejecucion precisa de touchpoints es implementacion de una experiencia ya disenada; no prepara el ciclo iterativo de construir, probar y revisar, en todo caso iria despues."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-fase-051",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q040-031: El nucleo es construir prototipos y probarlos con clientes reales hasta validar el producto, que es validacion y no gestion operativa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ],
   "fuentes_internas": [

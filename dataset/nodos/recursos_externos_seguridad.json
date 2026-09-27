@@ -22,10 +22,26 @@
   ],
   "condiciones_activacion": [
     "Cuando tienes recursos limitados para gestionar la seguridad por tu cuenta",
-    "Cuando buscas asesoría externa especializada"
+    "Cuando buscas asesoría externa en seguridad laboral, como los servicios de inspección de tu aseguradora de compensación laboral, asociaciones de seguridad de tu sector o un centro de apoyo a pequeños negocios"
   ],
   "etiqueta_arbol": "Busca Apoyo Externo en Seguridad",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-156",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando buscas asesoría externa especializada",
+      "texto_nuevo": "Cuando buscas asesoría externa en seguridad laboral, como los servicios de inspección de tu aseguradora de compensación laboral, asociaciones de seguridad de tu sector o un centro de apoyo a pequeños negocios",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q069-021: Tenía razón el lector A: la condición 1 no menciona la seguridad y activaría el nodo ante cualquier asesoría externa, mientras que la condición 0 sí está acotada. El dominio y la fase son correctos. (arbitro) Motivo: No acota el tema: cualquier búsqueda de asesoría externa especializada (legal, fiscal, de marketing) activaría el nodo, que solo trata recursos externos de apoyo en seguridad laboral."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
   ]
 }

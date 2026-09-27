@@ -6,9 +6,9 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Es el tercer paso para medir el avance real de tu negocio con números: el momento en que decides si el progreso hacia tu modelo ideal justifica seguir igual (perseverar) o si necesitas un cambio de rumbo serio (pivotar). Si los números clave de tu negocio no se mueven a pesar del esfuerzo, es una señal clara de que necesitas pivotar. Sabes que un pivote funciono porque, después de hacerlo, tus ajustes empiezan a dar mas resultado que antes.",
   "pasos_accionables": [
-    "Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio",
-    "Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)",
-    "Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición",
+    "Compara el progreso de tus métricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio",
+    "Si las métricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)",
+    "Si las métricas no mejoran después de varios intentos, reconoce que no está funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición",
     "Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio",
     "Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores",
     "Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo"
@@ -48,5 +48,49 @@
   ],
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0433",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio",
+      "texto_nuevo": "Compara el progreso de tus métricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O037-003.paso0: métricas (Falta real: a 'metricas' le falta la tilde; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0434",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)",
+      "texto_nuevo": "Si las métricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O037-003.paso1: métricas (Falta real: a 'metricas' le falta la tilde; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0435",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición",
+      "texto_nuevo": "Si las métricas no mejoran después de varios intentos, reconoce que no está funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O037-003.paso2: métricas, está (Faltas reales: a 'metricas' y a 'esta' (verbo) les falta la tilde; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
   ]
 }

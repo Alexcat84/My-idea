@@ -12,7 +12,7 @@
     "Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto",
     "Solo pivota si no encuentras ningún punto brillante tras análisis profundo"
   ],
-  "entregable_esperado": "El analisis de tus clientes mas comprometidos con lo que tienen en comun, tu veredicto escrito de si son adoptadores tempranos o valores atipicos, y la decision de pivotar o perseverar que sale de el",
+  "entregable_esperado": "El análisis de tus clientes más comprometidos con lo que tienen en común, tu veredicto escrito de si son adoptadores tempranos o valores atípicos, y la decisión de pivotar o perseverar que sale de él",
   "nodos_previos": [
     "pivotar_o_perseverar"
   ],
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Busca tus Puntos Brillantes",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0568",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El analisis de tus clientes mas comprometidos con lo que tienen en comun, tu veredicto escrito de si son adoptadores tempranos o valores atipicos, y la decision de pivotar o perseverar que sale de el",
+      "texto_nuevo": "El análisis de tus clientes más comprometidos con lo que tienen en común, tu veredicto escrito de si son adoptadores tempranos o valores atípicos, y la decisión de pivotar o perseverar que sale de él",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-026.entregable: análisis, más, común, atípicos, decisión, él (Faltan las tildes de análisis, más, común, atípicos y decisión, y la de él como pronombre.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

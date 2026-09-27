@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Practicar un liderazgo humilde y escuchar de verdad a las personas que te ayudan",
     "Crear formas concretas de reconocer y mostrar respeto hacia quienes trabajan contigo",
-    "Buscar maneras de dar mas autonomia y participación a las personas que te ayudan",
-    "Revisar que tan seguro se siente el ambiente de trabajo, tanto psicologica como fisicamente"
+    "Buscar maneras de dar más autonomía y participación a las personas que te ayudan",
+    "Revisar qué tan seguro se siente el ambiente de trabajo, tanto psicológica como físicamente"
   ],
-  "entregable_esperado": "Un plan simple para liderar con humildad y respeto, con formas concretas de medir si las personas que te ayudan se sienten valoradas y con mas autonomia",
+  "entregable_esperado": "Un plan simple para liderar con humildad y respeto, con formas concretas de medir si las personas que te ayudan se sienten valoradas y con más autonomía",
   "nodos_previos": [
     "shingo_enterprise_excellence_model"
   ],
@@ -25,5 +25,48 @@
   "etiqueta_arbol": "Lidera con Humildad y Respeto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0030",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Buscar maneras de dar mas autonomia y participación a las personas que te ayudan",
+      "texto_nuevo": "Buscar maneras de dar más autonomía y participación a las personas que te ayudan",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-003.paso2: más, autonomía (Solo añade las tildes que faltaban en más y autonomía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0031",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar que tan seguro se siente el ambiente de trabajo, tanto psicologica como fisicamente",
+      "texto_nuevo": "Revisar qué tan seguro se siente el ambiente de trabajo, tanto psicológica como físicamente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-003.paso3: qué, psicológica, físicamente (Solo añade las tildes que faltaban en qué (interrogativo), psicológica y físicamente.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0032",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan simple para liderar con humildad y respeto, con formas concretas de medir si las personas que te ayudan se sienten valoradas y con mas autonomia",
+      "texto_nuevo": "Un plan simple para liderar con humildad y respeto, con formas concretas de medir si las personas que te ayudan se sienten valoradas y con más autonomía",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O003-003.entregable: más, autonomía (Solo añade las tildes que faltaban en más y autonomía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

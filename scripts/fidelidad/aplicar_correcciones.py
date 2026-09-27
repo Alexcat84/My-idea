@@ -22,7 +22,8 @@ regla, asi que su "cita" es {"regla", "fragmentos"}: la regla que lo ordena y lo
 Los veredictos FASE, DOMINIO y COHERENCIA (saneamiento del dataset, TANDA 2, 26 sep 2026) los declara una pasada de
 lectura contra el propio nodo, no una frase del libro: su "cita" es {"instrumento", "evidencia"}. FASE corrige
 `fase_proyecto` (ideacion, validacion, planificacion o ejecucion), DOMINIO corrige `dominio` (uno de los mundos) y
-COHERENCIA corrige un texto que contradice el resto del propio nodo (por ejemplo, una condicion de activacion).
+COHERENCIA corrige un texto que contradice el resto del propio nodo (por ejemplo, una condicion de activacion), y
+VIGENCIA uno que dejo de ser cierto con el tiempo (un enlace roto o movido, comprobado por un instrumento).
 
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
 vigente, si el nuevo trae guiones largos o medios, si falta la cita, o si el id
@@ -40,7 +41,7 @@ FASES = {"ideacion", "validacion", "planificacion", "ejecucion"}
 DOMINIOS = {"core", "quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias",
             "risk_management", "compras", "entrega"}
 # Declarados por una pasada de lectura contra el propio nodo: su cita es {"instrumento", "evidencia"}.
-POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None}
+POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None, "VIGENCIA": None, "ORTOGRAFIA": None}
 # Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
 # activacion entraron el 24 sep 2026: la pasada contra la fuente sobre los campos
 # que no son pasos (docs/fidelidad/CAMPOS_QUE_LLEGAN.md) llegan a la IA. La etiqueta

@@ -23,11 +23,27 @@
   ],
   "condiciones_activacion": [
     "Cuando decides implementar Six Sigma como método de mejora continua a gran escala",
-    "Cuando necesitas claridad de responsabilidades para evitar resistencia al cambio",
+    "Cuando necesitas definir quien lidera, patrocina y ejecuta los proyectos Six Sigma en tu negocio para evitar resistencia al cambio",
     "Cuando quieres escalar Six Sigma más allá de un proyecto piloto hacia todo tu negocio"
   ],
   "etiqueta_arbol": "Arma tu Estructura Six Sigma",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-171",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando necesitas claridad de responsabilidades para evitar resistencia al cambio",
+      "texto_nuevo": "Cuando necesitas definir quien lidera, patrocina y ejecuta los proyectos Six Sigma en tu negocio para evitar resistencia al cambio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q022-026: Tenia razon el lector B: la condicion 1 no nombra Six Sigma y activaria el nodo en cualquier cambio organizacional, mientras las condiciones 0 y 2 y todo el contenido (roles Champion, Black Belt, Green Belt) son especificos de Six Sigma; dominio quality y fase planificacion correctos para ambos. (arbitro) Motivo: Suelta es generica: habla de claridad de responsabilidades ante la resistencia al cambio sin ligarla a Six Sigma, y activaria el nodo ante cualquier cambio organizacional, cuando el contenido solo trata los roles de Six Sigma."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
   ]
 }

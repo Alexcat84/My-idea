@@ -7,13 +7,13 @@
   "resumen_teorico": "Estados Unidos se opone a los boicots comerciales que paises extranjeros imponen contra naciones amigas. Las regulaciones antiboicot te prohiben, si tienes un negocio en Estados Unidos, participar en boicots extranjeros o apoyarlos: negarte a hacer negocios con empresas en listas negras, discriminar por raza, religion, genero u origen nacional para cumplir un boicot, o dar información sobre tus relaciones comerciales con paises boicoteados. También te exigen reportar al organismo correspondiente cualquier solicitud de cumplimiento de boicot que recibas y hacer publico si la cumpliste o no. Esto refleja la normativa y los acuerdos vigentes en Estados Unidos al momento de esta fuente; confirma el acuerdo y la regulacion vigente en tu jurisdiccion antes de actuar.",
   "pasos_accionables": [
     "Revisar los contratos y solicitudes comerciales de socios o clientes extranjeros para detectar lenguaje de boicot",
-    "Rechazar participar en boicots contra paises amigos de Estados Unidos, incluyendo negarte a hacer negocios con empresas en listas negras",
-    "Evitar acuerdos que discriminen por raza, religion, genero u origen nacional bajo demanda de boicot",
-    "No dar información sobre tus relaciones comerciales con paises boicoteados",
+    "Rechazar participar en boicots contra países amigos de Estados Unidos, incluyendo negarte a hacer negocios con empresas en listas negras",
+    "Evitar acuerdos que discriminen por raza, religión, género u origen nacional bajo demanda de boicot",
+    "No dar información sobre tus relaciones comerciales con países boicoteados",
     "Reportar a la autoridad de comercio que corresponda cualquier solicitud de cumplimiento de boicot que recibas",
-    "Documentar y hacer publico si cumpliste o no con solicitudes de boicot"
+    "Documentar y hacer público si cumpliste o no con solicitudes de boicot"
   ],
-  "entregable_esperado": "Un proceso propio de revision de contratos internacionales para detectar clausulas de boicot, con los reportes presentados a la autoridad correspondiente si aplica",
+  "entregable_esperado": "Un proceso propio de revisión de contratos internacionales para detectar cláusulas de boicot, con los reportes presentados a la autoridad correspondiente si aplica",
   "nodos_previos": [
     "export_administration_regulations",
     "clausula_antidesviacion"
@@ -22,8 +22,8 @@
     "foreign_corrupt_practices_act"
   ],
   "condiciones_activacion": [
-    "Si recibes solicitudes contractuales de socios en paises que exigen boicotear a terceros paises",
-    "Al hacer negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos"
+    "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros paises",
+    "Si tu negocio opera en Estados Unidos y hace negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos"
   ],
   "etiqueta_arbol": "Cumple las Reglas Antiboicot",
   "ids_alias": [
@@ -38,5 +38,104 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-004",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si recibes solicitudes contractuales de socios en paises que exigen boicotear a terceros paises",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros paises",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-003: Tiene razon el lector B: el resumen dice que la regulacion obliga si tienes un negocio en Estados Unidos, y ninguna de las dos condiciones lo dice (la segunda nombra a Estados Unidos solo como amigo de los boicoteados), asi que hay que corregir las dos, no solo la primera como proponia A. (arbitro) Motivo: Clase C: la condicion no dice que el nodo solo aplica si tu negocio opera en Estados Unidos, que es a quien obligan las regulaciones antiboicot segun el resumen."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-005",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Al hacer negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y hace negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-003: Tiene razon el lector B: el resumen dice que la regulacion obliga si tienes un negocio en Estados Unidos, y ninguna de las dos condiciones lo dice (la segunda nombra a Estados Unidos solo como amigo de los boicoteados), asi que hay que corregir las dos, no solo la primera como proponia A. (arbitro) Motivo: Clase C: mencionar las naciones amigas de Estados Unidos no deja claro que el nodo aplica solo si tu negocio opera alli; tal cual se activaria para un negocio de otro pais."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0271",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rechazar participar en boicots contra paises amigos de Estados Unidos, incluyendo negarte a hacer negocios con empresas en listas negras",
+      "texto_nuevo": "Rechazar participar en boicots contra países amigos de Estados Unidos, incluyendo negarte a hacer negocios con empresas en listas negras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-038.paso1: países (Solo añade la tilde que faltaba en países.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0272",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evitar acuerdos que discriminen por raza, religion, genero u origen nacional bajo demanda de boicot",
+      "texto_nuevo": "Evitar acuerdos que discriminen por raza, religión, género u origen nacional bajo demanda de boicot",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-038.paso2: religión, género (Solo añade las tildes que faltaban en religión y género.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0273",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No dar información sobre tus relaciones comerciales con paises boicoteados",
+      "texto_nuevo": "No dar información sobre tus relaciones comerciales con países boicoteados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-038.paso3: países (Solo añade la tilde que faltaba en países.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0274",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documentar y hacer publico si cumpliste o no con solicitudes de boicot",
+      "texto_nuevo": "Documentar y hacer público si cumpliste o no con solicitudes de boicot",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-038.paso5: público (Solo añade la tilde que faltaba en público.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0275",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proceso propio de revision de contratos internacionales para detectar clausulas de boicot, con los reportes presentados a la autoridad correspondiente si aplica",
+      "texto_nuevo": "Un proceso propio de revisión de contratos internacionales para detectar cláusulas de boicot, con los reportes presentados a la autoridad correspondiente si aplica",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-038.entregable: revisión, cláusulas (Solo añade las tildes que faltaban en revisión y cláusulas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

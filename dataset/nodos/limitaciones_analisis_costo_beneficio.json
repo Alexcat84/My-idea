@@ -6,12 +6,12 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
   "pasos_accionables": [
-    "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precision razonable",
+    "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precisión razonable",
     "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
-    "Evita apoyarte en costo/beneficio cuando la decision de diseño ponga en juego la seguridad o la vida de alguien",
-    "Anota los supuestos y los limites de cualquier análisis costo/beneficio que uses para decidir"
+    "Evita apoyarte en costo/beneficio cuando la decisión de diseño ponga en juego la seguridad o la vida de alguien",
+    "Anota los supuestos y los límites de cualquier análisis costo/beneficio que uses para decidir"
   ],
-  "entregable_esperado": "Un informe corto donde queden claros los supuestos y los limites de cualquier análisis costo/beneficio que estes usando en tu proyecto de calidad",
+  "entregable_esperado": "Un informe corto donde queden claros los supuestos y los límites de cualquier análisis costo/beneficio que estés usando en tu proyecto de calidad",
   "nodos_previos": [
     "modelo_costo_optimo_calidad"
   ],
@@ -50,6 +50,61 @@
         "evidencia": "F10-014: Trata de como decidir inversiones y diseno de producto con analisis costo/beneficio y sus limites: decision de plan, no prueba de mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0337",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precision razonable",
+      "texto_nuevo": "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precisión razonable",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.paso0: precisión (Falta la tilde de precisión; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0338",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita apoyarte en costo/beneficio cuando la decision de diseño ponga en juego la seguridad o la vida de alguien",
+      "texto_nuevo": "Evita apoyarte en costo/beneficio cuando la decisión de diseño ponga en juego la seguridad o la vida de alguien",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.paso2: decisión (Falta la tilde de decisión; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0339",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota los supuestos y los limites de cualquier análisis costo/beneficio que uses para decidir",
+      "texto_nuevo": "Anota los supuestos y los límites de cualquier análisis costo/beneficio que uses para decidir",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.paso3: límites (Falta la tilde de límites; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0340",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un informe corto donde queden claros los supuestos y los limites de cualquier análisis costo/beneficio que estes usando en tu proyecto de calidad",
+      "texto_nuevo": "Un informe corto donde queden claros los supuestos y los límites de cualquier análisis costo/beneficio que estés usando en tu proyecto de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-005.entregable: límites, estés (Faltan las tildes de límites y estés; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

@@ -6,13 +6,13 @@
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
   "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipacion que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecera grave o insignificante segun el animo del dia, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. Tambien conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
   "pasos_accionables": [
-    "Decide antes de la prueba que tipo de daño en el producto es inaceptable.",
-    "Decide que nivel de daño superficial en la caja si toleras sin considerarlo falla.",
+    "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
+    "Decide qué nivel de daño superficial en la caja sí toleras sin considerarlo falla.",
     "Anota el estado del producto y del empaque antes de enviarlo o probarlo.",
     "Compara ese registro contra el estado final para saber si hubo una falla real.",
-    "Ajusta tu empaque solo cuando el daño supere el limite que tu mismo definiste."
+    "Ajusta tu empaque solo cuando el daño supere el límite que tú mismo definiste."
   ],
-  "entregable_esperado": "Una lista escrita de que es daño aceptable y que no, lista antes de tu primera prueba de empaque.",
+  "entregable_esperado": "Una lista escrita de qué es daño aceptable y qué no, lista antes de tu primera prueba de empaque.",
   "nodos_previos": [
     "identificar_si_tu_producto_necesita_proteccion_especial",
     "garantias_implicitas_vs_expresas"
@@ -55,6 +55,61 @@
         "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-orto-0417",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide antes de la prueba que tipo de daño en el producto es inaceptable.",
+      "texto_nuevo": "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-036.paso0: qué (Falta la tilde de qué, que es interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0418",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide que nivel de daño superficial en la caja si toleras sin considerarlo falla.",
+      "texto_nuevo": "Decide qué nivel de daño superficial en la caja sí toleras sin considerarlo falla.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-036.paso1: qué, sí (Faltan la tilde de qué (interrogativo indirecto) y la de sí, que aquí es afirmativo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0419",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ajusta tu empaque solo cuando el daño supere el limite que tu mismo definiste.",
+      "texto_nuevo": "Ajusta tu empaque solo cuando el daño supere el límite que tú mismo definiste.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-036.paso4: límite, tú (Faltan la tilde de límite y la de tú, que aquí es pronombre personal.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0420",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista escrita de que es daño aceptable y que no, lista antes de tu primera prueba de empaque.",
+      "texto_nuevo": "Una lista escrita de qué es daño aceptable y qué no, lista antes de tu primera prueba de empaque.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-036.entregable: qué, qué (Faltan las dos tildes de qué, que son interrogativos indirectos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

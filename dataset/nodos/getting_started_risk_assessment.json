@@ -25,7 +25,7 @@
     "getting_started_security_assessment_monitoring"
   ],
   "condiciones_activacion": [
-    "Cuando se requiere identificar y priorizar riesgos asociados a sistemas con CUI."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas identificar y priorizar riesgos asociados a sistemas con CUI."
   ],
   "etiqueta_arbol": "Evalúa tus Riesgos Periódicamente",
   "fuentes_internas": [
@@ -44,6 +44,20 @@
         "evidencia": "F22-016: Evaluacion periodica de riesgos, inventario de activos y monitoreo de vulnerabilidades es control operativo de seguridad, no validacion con mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-condicion-099",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se requiere identificar y priorizar riesgos asociados a sistemas con CUI.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas identificar y priorizar riesgos asociados a sistemas con CUI.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-027: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la condición habla de CUI pero no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

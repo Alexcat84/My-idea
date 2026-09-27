@@ -7,7 +7,7 @@
   "resumen_teorico": "Ciertos sectores industriales cuentan con reglas de origen especiales bajo los FTAs. Los textiles siguen el estándar 'yarn-forward' (hilo hacia adelante), que exige que la producción de hilo y procesos posteriores ocurran en EE.UU. o el país socio. La industria automotriz usa reglas de trazabilidad (tracing) exclusivas de NAFTA. Los químicos utilizan reglas simplificadas comunes para los capítulos 28-39 del HS. Los productos agrícolas pueden estar sujetos a cuotas arancelarias. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el producto pertenece a un sector con reglas especiales (textiles, autos, químicos, agrícola)",
-    "Para textiles, verificar cumplimiento del estándar yarn-forward en otexa.ita.doc.gov",
+    "Para textiles, verificar cumplimiento del estándar yarn-forward en www.trade.gov/otexa",
     "Para agrícolas, consultar cuotas y restricciones en www.fas.usda.gov",
     "Para autos bajo NAFTA, aplicar el método de trazabilidad y RVC por costo neto"
   ],
@@ -24,5 +24,21 @@
   "etiqueta_arbol": "Revisa Reglas por Sector",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-enlace-2",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "VIGENCIA",
+      "texto_anterior": "Para textiles, verificar cumplimiento del estándar yarn-forward en otexa.ita.doc.gov",
+      "texto_nuevo": "Para textiles, verificar cumplimiento del estándar yarn-forward en www.trade.gov/otexa",
+      "cita": {
+        "instrumento": "Comprobador de enlaces del saneamiento",
+        "evidencia": "Comprobador de enlaces (docs/saneamiento/ENLACES.md) y revision a mano del 27 sep 2026: otexa.ita.doc.gov ya no resuelve; OTEXA esta en www.trade.gov/otexa (responde 200)."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 10: los enlaces rotos, corregidos o retirados.",
+      "indice": 1
+    }
   ]
 }

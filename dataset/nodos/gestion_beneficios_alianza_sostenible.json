@@ -17,7 +17,8 @@
   ],
   "entregable_esperado": "Tablero de métricas compartidas con valores monetarios asignados y frecuencia de revisión definida.",
   "nodos_previos": [
-    "formalizar_alianza_estrategica"
+    "formalizar_alianza_estrategica",
+    "coordinacion_colaboracion_cadena_suministro"
   ],
   "nodos_siguientes": [
     "bucle_retroalimentacion_autoajustable"
@@ -44,6 +45,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide rastrear con exactitud los beneficios, pero no fija una frecuencia mensual o trimestral para ese seguimiento.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C090-069"
+    },
+    {
+      "id": "n1-nucleo-09",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> gestion_beneficios_alianza_sostenible",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-10, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tras entender que la coordinación con socios vale más que el control unilateral, se sigue con cómo sostener el beneficio compartido de la alianza con métricas valorizadas."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [
