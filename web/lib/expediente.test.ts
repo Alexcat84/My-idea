@@ -60,7 +60,7 @@ describe("titulosDeCiclos", () => {
       ciclo("p2", "seguimiento", "2026-03-20T12:00:00Z"),
       ciclo("p3", "seguimiento", "2026-04-10T12:00:00Z"),
     ]);
-    expect(ts.map((t) => t.titulo)).toEqual(["Tu Plan", "Seguimiento 1", "Seguimiento 2"]);
+    expect(ts.map((t) => t.titulo)).toEqual(["Tu Plan", "Profundización 1", "Profundización 2"]);
   });
 
   it("la posición manda, no la etiqueta de base de datos", () => {
@@ -193,7 +193,7 @@ describe("expedienteMarkdown", () => {
       "## Tu idea, tal como la escribiste",
       "## Tu idea, ordenada",
       "## Tu Plan",
-      "## Seguimiento 1",
+      "## Profundización 1",
       "## Tu avance",
       "## Tus Números",
       "## Riesgos Bajo Control",
@@ -291,7 +291,7 @@ describe("expedienteMarkdown", () => {
     const md = expedienteMarkdown(datos({ numerosMd: null }));
     const indice = md.slice(md.indexOf("## Contenido"), md.indexOf("---"));
     expect(indice).toContain("- Tu Plan");
-    expect(indice).toContain("- Seguimiento 1");
+    expect(indice).toContain("- Profundización 1");
     expect(indice).not.toContain("- Tus Números");
   });
 

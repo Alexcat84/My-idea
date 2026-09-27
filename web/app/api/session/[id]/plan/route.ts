@@ -58,8 +58,10 @@ import {
   obtenerItemsDePlan,
   obtenerPlanCoreVigente,
   mergeTipoOferta,
+  obtenerPlanVigenteDe,
   obtenerProyecto,
   obtenerSesion,
+  obtenerTareasDePlan,
   registrarBitacora,
   registrarNodos,
   type EstadoSesionPersistido,
@@ -82,6 +84,7 @@ import {
   prepararPlan,
   type PreparacionPlan,
 } from "@/lib/engine/planRedactor";
+import { filasHeredadas, planAnteriorParaIA, relatoDeCiclo, type PlanAnteriorIA } from "@/lib/engine/replanteamiento";
 import { SYSTEM_PLAN } from "@/lib/prompts";
 import { ROTULOS_PLAN } from "@/lib/engine/constants";
 import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
@@ -210,10 +213,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // canal que todo lo que el usuario conto (el perfil de sesion) y queda
   // en la bitacora como contexto_final_usuario.
   let contextoFinal: string | null = null;
+  // Ciclo de replanteamiento, Fase 2: el camino que la persona eligió en el
+  // paso 4 de "Replantear mi camino" (su id: a, b o c).
+  let caminoPedido: string | null = null;
   try {
-    const body = (await request.json()) as { contexto_final?: string };
+    const body = (await request.json()) as { contexto_final?: string; camino?: unknown };
     const texto = (body?.contexto_final ?? "").trim();
     if (texto) contextoFinal = texto.slice(0, 2000);
+    if (typeof body?.camino === "string") caminoPedido = body.camino;
   } catch {
     // sin body: el camino clasico
   }
@@ -228,8 +235,20 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
   // mundo fue gratis: lo que se compra es EL PLAN).
   // 402 limpio antes de gastar un token. El descuento va a la ENTREGA.
   const dominioCobro = ((sesion as { dominio?: string }).dominio ?? "core") as string;
-  const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento);
-  const montoCobro = montoDelPlan(dominioCobro, recorrido.esSeguimiento);
+  // Ciclo de replanteamiento, Fase 2: un replanteamiento no tiene entrevista;
+  // su ruta es la del camino elegido (conceptos que no se conversaron: modo
+  // silencioso). Sin camino no hay plan. Se valida ANTES de apartar nada.
+  const ciclo = recorrido.ciclo;
+  const esReplanteo = ciclo?.tipo === "replantear";
+  if (ciclo?.tipo === "replantear") {
+    const elegido = ciclo.caminos.find((c) => c.id === (caminoPedido ?? ciclo.caminoElegido));
+    if (!elegido) return NextResponse.json({ error: t.eligeCamino }, { status: 400 });
+    ciclo.caminoElegido = elegido.id;
+    recorrido.ruta = [...elegido.nodos];
+    recorrido.modos = elegido.nodos.map(() => "silencioso" as const);
+  }
+  const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento, esReplanteo);
+  const montoCobro = montoDelPlan(dominioCobro, recorrido.esSeguimiento, esReplanteo);
   //
   // AUD-09 M25: la verificación es la RESERVA de esta entrega (clave
   // plan:{sessionId}, la misma del cobro). Si la sesión ya reservó al empezar,
@@ -289,6 +308,17 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
 Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActual}`.trim();
         }
 
+        // Ciclo de replanteamiento, Fase 2: en un ciclo posterior la IA recibe el
+        // plan anterior del espacio (etapas y tareas con su estado, regla 8-ter)
+        // y, al replantear, la historia, lo que se conserva, lo que se suelta y
+        // el camino elegido (regla 8-quater). La cosecha excluye lo que el
+        // proyecto ya cubrió en sesiones anteriores (regla 8).
+        let planAnterior: PlanAnteriorIA | null = null;
+        if (recorrido.esSeguimiento) {
+          const previo = await obtenerPlanVigenteDe(supabase, projectId, dominioCobro, sessionId);
+          if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(supabase, projectId, previo.id));
+        }
+        const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
         const preparacion = prepararPlan(
           recorrido.ruta,
           graph,
@@ -299,7 +329,20 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           recorrido.esSeguimiento,
           recorrido.estadoVivoPrevio,
           // AUD-09 M16: la cosecha de un plan de mundo no recoge nodos de otro mundo.
-          recorrido.dominiosDesbloqueados ? dominiosDelRecorrido(recorrido) : null
+          recorrido.dominiosDesbloqueados ? dominiosDelRecorrido(recorrido) : null,
+          {
+            excluir: recorrido.nodosCubiertosPrevios ?? [],
+            planAnterior,
+            replanteamiento:
+              ciclo?.tipo === "replantear"
+                ? {
+                    historia: ciclo.historia,
+                    se_conserva: ciclo.conserva.map((c) => c.texto),
+                    se_suelta: ciclo.suelta.map((c) => c.texto),
+                    camino_elegido: caminoElegido ? { titulo: caminoElegido.titulo, descripcion: caminoElegido.descripcion } : null,
+                  }
+                : null,
+          }
         );
 
         const { rawTexto, acumulado: acumuladoTrasRedactor, avisoFallback } = await generarTextoPlan(
@@ -365,7 +408,12 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         await mergeNumerosProyecto(supabase, projectId, recorrido.numerosDetectadosSesion);
         await mergeTipoOferta(supabase, projectId, recorrido.tipoOfertaSesion, recorrido.unidadVentaSesion);
 
-        const etiquetaDb = recorrido.esSeguimiento
+        // Ciclo de replanteamiento, Fase 2 (migración 047): "Replantear mi camino"
+        // deja su plan con su propia etiqueta; "Profundizar mi plan" sigue siendo
+        // 'seguimiento'.
+        const etiquetaDb = esReplanteo
+          ? "replanteamiento"
+          : recorrido.esSeguimiento
           ? "seguimiento"
           : resultado.evaluacionCobertura.es_completa
             ? "completo"
@@ -465,8 +513,28 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         // Si el plan ya existía y su checklist alcanzó a escribirse, no se
         // duplica (AUD-09 M26).
         if (!planYaExistia || (await contarItemsDePlan(supabase, projectId, planId)) === 0) {
+          // Ciclo de replanteamiento, Fase 2: lo que "me sigue sirviendo" pasa
+          // al plan nuevo COMO HECHO, enlazado a la original (047).
           await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion,
-            resultado.nodosPorEtapa);
+            resultado.nodosPorEtapa, ciclo?.tipo === "replantear" ? filasHeredadas(ciclo.conserva) : []);
+        }
+        // Ciclo de replanteamiento, Fase 2: lo que la persona escribió o dictó al
+        // pedir el ciclo queda en la bitácora (y de ahí en el Expediente y la
+        // Historia), una sola vez por plan.
+        if (ciclo && !planYaExistia) {
+          await registrarBitacora(
+            supabase,
+            projectId,
+            ciclo.tipo === "replantear" ? "ciclo_replanteado" : "ciclo_profundizado",
+            {
+              dominio: dominioSesion,
+              plan_id: planId,
+              relato: relatoDeCiclo(ciclo),
+              ...(ciclo.tipo === "replantear"
+                ? { camino: caminoElegido?.titulo ?? null, conserva: ciclo.conserva.length, suelta: ciclo.suelta.length }
+                : {}),
+            }
+          );
         }
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];

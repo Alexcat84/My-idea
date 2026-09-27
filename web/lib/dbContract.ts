@@ -13,8 +13,19 @@
 export const SESSIONS_TIPO = ["gratuito", "inicial", "seguimiento", "reporte"] as const;
 export type SessionTipo = (typeof SESSIONS_TIPO)[number];
 
-export const PLANS_ETIQUETA = ["organizador", "inicial", "completo", "seguimiento", "reporte_numeros"] as const;
+export const PLANS_ETIQUETA = ["organizador", "inicial", "completo", "seguimiento", "reporte_numeros", "replanteamiento"] as const;
 export type PlanEtiqueta = (typeof PLANS_ETIQUETA)[number];
+
+/** Los planes que son un CICLO del viaje (el primero y cada ciclo posterior).
+ * Ciclo de replanteamiento, Fase 2 (migración 047): 'seguimiento' es
+ * "Profundizar mi plan" y 'replanteamiento' es "Replantear mi camino". Toda
+ * lista de etiquetas de ciclo sale de aquí, no se reteclea. */
+export const ETIQUETAS_CICLO: readonly string[] = ["inicial", "completo", "seguimiento", "replanteamiento"] satisfies readonly PlanEtiqueta[];
+
+/** ¿Es un ciclo POSTERIOR al primer plan (profundización o replanteamiento)? */
+export function esCicloPosterior(etiqueta: string | null | undefined): boolean {
+  return etiqueta === "seguimiento" || etiqueta === "replanteamiento";
+}
 
 /** project_nodes.tipo: cobertura del nodo. 'salto' (migration 012) es un
  * subtipo documentado de 'conversado' -- llegada por salto semantico con

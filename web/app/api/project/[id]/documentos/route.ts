@@ -50,10 +50,10 @@ import { nombreDeIdea } from "@/lib/ideas";
 import { sinProcedencia } from "@/lib/planParser";
 import { createClient } from "@/lib/supabase/server";
 import { resumenCaminoExpediente } from "@/lib/resumenExpediente";
+import { ETIQUETAS_CICLO } from "@/lib/dbContract";
 
 export const runtime = "nodejs";
 
-const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
 const esCore = (dominio: string | null | undefined) => !dominio || dominio === "core";
 
 type FilaPlan = {
@@ -154,6 +154,19 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   if (errPlanes) throw new LecturaFallidaError("los planes", errPlanes);
   const planes = (planesRaw ?? []) as FilaPlan[];
 
+  // Ciclo de replanteamiento, Fase 2: lo que la persona contó al pedir cada
+  // ciclo (evento ciclo_* con su plan_id) acompaña a su plan en el documento.
+  const relatoDe = new Map<string, string>();
+  const { data: ciclosBitacora } = await supabase
+    .from("project_bitacora")
+    .select("payload")
+    .eq("project_id", projectId)
+    .in("tipo", ["ciclo_profundizado", "ciclo_replanteado"]);
+  for (const c of (ciclosBitacora ?? []) as Array<{ payload?: { plan_id?: unknown; relato?: unknown } }>) {
+    const relato = typeof c.payload?.relato === "string" ? c.payload.relato.trim() : "";
+    if (typeof c.payload?.plan_id === "string" && relato) relatoDe.set(c.payload.plan_id, relato);
+  }
+
   const ciclos: CicloExpediente[] = planes
     .filter((p) => esCore(p.dominio) && ETIQUETAS_CICLO.includes(p.etiqueta))
     // sinProcedencia: los planes viejos llevan grabada la línea de mecánica
@@ -163,6 +176,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
       etiqueta: p.etiqueta,
       createdAt: p.created_at,
       contenidoMd: planEnDoc(p.contenido_md),
+      relato: relatoDe.get(p.id) ?? null,
     }));
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
@@ -179,7 +193,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   const ciclosDeDominio = (dominio: string): CicloExpediente[] =>
     planes
       .filter((p) => p.dominio === dominio && ETIQUETAS_CICLO.includes(p.etiqueta))
-      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: planEnDoc(p.contenido_md) }));
+      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: planEnDoc(p.contenido_md), relato: relatoDe.get(p.id) ?? null }));
   const dominiosMundo = [
     ...new Set(planes.filter((p) => !esCore(p.dominio) && ETIQUETAS_CICLO.includes(p.etiqueta)).map((p) => p.dominio!)),
   ];

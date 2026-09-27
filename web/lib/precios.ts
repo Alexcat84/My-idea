@@ -23,6 +23,12 @@ export const PRECIOS = {
   tus_numeros: 0, // INCLUIDO en el plan (decisión jul 2026, ANÁLISIS §4/§7.1): la activación sigue anclada por activado_at, sin cobro
   mundo_activar: 5, // brecha + plan del dominio; el preview (entrevista + diagnóstico) sigue gratis
   mundo_seguimiento: 5, // ciclo de seguimiento dentro de un mundo
+  // Ciclo de replanteamiento, Fase 2 (decisión del fundador, 27 sep 2026): las
+  // dos entradas de Manos a la Obra a 5 "por ahora". "Profundizar mi plan" cobra
+  // seguimiento / mundo_seguimiento; "Replantear mi camino" cobra estos dos, con
+  // su propia clave para poder moverlos por separado cuando se mida su coste real.
+  replanteamiento: 5, // "Replantear mi camino" en el viaje principal
+  mundo_replanteamiento: 5, // "Replantear mi camino" dentro de un mundo
 } as const;
 
 export type ConceptoPrecio = keyof typeof PRECIOS;
@@ -34,17 +40,20 @@ export type ConceptoPrecio = keyof typeof PRECIOS;
  *   mundo + inicial/completo → mundo_activar  ← el preview fue GRATIS;
  *                              lo que se compra es el PLAN, a la entrega.
  *   mundo + seguimiento      → mundo_seguimiento
+ * Y con esReplanteamiento (ciclo de replanteamiento, Fase 2), el seguimiento
+ * pasa a replanteamiento / mundo_replanteamiento.
  * Vive aquí, junto a los precios, porque es PURA y la usan los dos lados: el
  * cobro del servidor y el precio que pinta la pantalla (AUD-09 H01: la
  * pantalla tecleaba plan_completo y anunciaba 10 donde se cobraban 5).
  */
-export function conceptoDelPlan(dominio: string, esSeguimiento: boolean): ConceptoPrecio {
+export function conceptoDelPlan(dominio: string, esSeguimiento: boolean, esReplanteamiento = false): ConceptoPrecio {
+  if (esSeguimiento && esReplanteamiento) return dominio === "core" ? "replanteamiento" : "mundo_replanteamiento";
   if (dominio === "core") return esSeguimiento ? "seguimiento" : "plan_completo";
   return esSeguimiento ? "mundo_seguimiento" : "mundo_activar";
 }
 
-export function montoDelPlan(dominio: string, esSeguimiento: boolean): number {
-  return PRECIOS[conceptoDelPlan(dominio, esSeguimiento)];
+export function montoDelPlan(dominio: string, esSeguimiento: boolean, esReplanteamiento = false): number {
+  return PRECIOS[conceptoDelPlan(dominio, esSeguimiento, esReplanteamiento)];
 }
 
 /**

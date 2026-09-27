@@ -47,3 +47,20 @@ describe("/ideas usa la misma regla (AUD-09 M29)", () => {
     expect(c.pista).toMatch(/^Una pregunta te espera/);
   });
 });
+
+// Ciclo de replanteamiento, Fase 2: "Replantear mi camino" no tiene entrevista.
+// Su sesión queda abierta entre pedir los caminos y generar el plan; si la
+// persona se va a mitad, al volver NO puede verse como una entrevista con el
+// plan listo (generarlo sin camino no existe).
+describe("un replanteamiento a medias no es una entrevista abierta", () => {
+  it("sesión abierta de replantear, en listo_para_plan: null", () => {
+    expect(
+      estadoEntrevista({ closed_at: null, estado_recorrido: { recorrido: { fase: "listo_para_plan", ciclo: { tipo: "replantear" } } } })
+    ).toBeNull();
+  });
+  it("una profundización abierta sí lo es (tiene entrevista)", () => {
+    expect(
+      estadoEntrevista({ closed_at: null, estado_recorrido: { recorrido: { fase: "listo_para_plan", ciclo: { tipo: "profundizar" } } } })
+    ).toBe("listo_para_plan");
+  });
+});

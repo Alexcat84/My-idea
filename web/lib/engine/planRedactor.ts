@@ -13,6 +13,7 @@
  * Mantenerlo puro hace que toda esta logica se pueda probar sin mockear
  * streaming.
  */
+import type { PlanAnteriorIA } from "./replanteamiento";
 import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
@@ -111,9 +112,13 @@ export function cosecharVecindario(
   perfilSesion: string | null,
   prioridadDeclarada: PrioridadDeclarada | null = null,
   tope = MAX_COSECHA,
-  dominiosDesbloqueados: string[] | null = null
+  dominiosDesbloqueados: string[] | null = null,
+  /** Ciclo de replanteamiento, Fase 2: los conceptos que el proyecto YA cubrió
+   * en sesiones anteriores. La regla 8 de SYSTEM_PLAN promete que el material
+   * "ya excluye lo cubierto"; antes solo se excluía la ruta actual. */
+  excluir: Iterable<string> = []
 ): string[] {
-  const rutaSet = new Set(ruta);
+  const rutaSet = new Set([...ruta, ...excluir]);
   const candidatos = new Set<string>();
   for (const nid of ruta) {
     const n = graph[nid];
@@ -193,6 +198,27 @@ export interface PayloadPlan {
   bloqueo_declarado: string | null;
   es_seguimiento?: true;
   estado_vivo_previo?: string | null;
+  /** Ciclo de replanteamiento, Fase 2: el plan anterior (etapas y tareas con su
+   * estado), para construir encima y no repetir (regla 8-ter). */
+  plan_anterior?: PlanAnteriorIA;
+  /** "Replantear mi camino": la historia, lo que se conserva, lo que se suelta y
+   * el camino elegido (regla 8-quater). */
+  replanteamiento?: BloqueReplanteamiento;
+}
+
+export interface BloqueReplanteamiento {
+  historia: string;
+  se_conserva: string[];
+  se_suelta: string[];
+  camino_elegido: { titulo: string; descripcion: string } | null;
+}
+
+/** Lo que un ciclo posterior añade al armado del plan (Fase 2 del ciclo de
+ * replanteamiento). Todo opcional: un plan sin extras sale como siempre. */
+export interface ExtrasPlan {
+  excluir?: string[];
+  planAnterior?: PlanAnteriorIA | null;
+  replanteamiento?: BloqueReplanteamiento | null;
 }
 
 export interface PreparacionPlan {
@@ -215,7 +241,8 @@ export function prepararPlan(
   prioridadDeclarada: PrioridadDeclarada | null,
   esSeguimiento: boolean,
   estadoVivoPrevio: string | null,
-  dominiosDesbloqueados: string[] | null = null
+  dominiosDesbloqueados: string[] | null = null,
+  extras: ExtrasPlan = {}
 ): PreparacionPlan {
   const evaluacionRuta = evaluarRuta(ruta, families);
   const materialPrincipal = ruta.map((nid) => aMaterial(nid, graph, families));
@@ -227,7 +254,8 @@ export function prepararPlan(
     perfilSesion,
     prioridadDeclarada,
     undefined,
-    dominiosDesbloqueados
+    dominiosDesbloqueados,
+    extras.excluir ?? []
   );
   const materialDeApoyo = cosechaIds.map((nid) => aMaterial(nid, graph, families));
   const tieneMaterialEconomico = [...materialPrincipal, ...materialDeApoyo].some((m) => m.es_viabilidad_economica);
@@ -243,6 +271,8 @@ export function prepararPlan(
     payload.es_seguimiento = true;
     payload.estado_vivo_previo = estadoVivoPrevio;
   }
+  if (extras.planAnterior) payload.plan_anterior = extras.planAnterior;
+  if (extras.replanteamiento) payload.replanteamiento = extras.replanteamiento;
 
   return { payload, cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico };
 }

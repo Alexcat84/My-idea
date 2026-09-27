@@ -58,17 +58,20 @@ interface ItemChecklist {
   probabilidad: string | null;
   dolor: string | null;
   camino: string | null;
+  // Ciclo de replanteamiento, Fase 2 (047): la tarea original que esta trae
+  // hecha al plan nuevo ("de tu plan anterior"). null en todas las demás.
+  heredado_de: string | null;
   created_at: string;
   updated_at: string;
 }
 
 const COLUMNAS =
-  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, nodos_origen, protege_nodos, created_at, updated_at";
+  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, nodos_origen, protege_nodos, heredado_de, created_at, updated_at";
 
 /** Las columnas que llegaron con una migración posterior al primer despliegue.
  * Si el código se adelanta a la migración, se leen null en vez de caerse la
  * lectura entera del checklist (patrón de project_unlocks, pre-026). */
-const COLUMNAS_NUEVAS = [", nodos_origen, protege_nodos", ", camino", ", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
+const COLUMNAS_NUEVAS = [", heredado_de", ", nodos_origen, protege_nodos", ", camino", ", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
 
 /** Un timestamp ISO válido y no futuro (tolera 1 min de desfase de reloj). */
 function fechaIsoValida(valor: unknown): string | null {
@@ -134,6 +137,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     probabilidad: i.probabilidad ?? null,
     dolor: i.dolor ?? null,
     camino: i.camino ?? null,
+    heredado_de: i.heredado_de ?? null,
   })) as ItemChecklist[];
 
   // Agrupado plan -> etapas (el orden de inserción ya viene garantizado).

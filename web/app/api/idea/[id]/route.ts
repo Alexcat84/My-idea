@@ -19,6 +19,7 @@ import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
 import { estadoEntrevista } from "@/lib/entrevistaAbierta";
+import { ETIQUETAS_CICLO } from "@/lib/dbContract";
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
@@ -48,12 +49,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const { data: planes } = idsSesiones.length
     ? await supabase
         .from("plans")
-        .select("session_id, etiqueta, contenido_md, created_at, dominio")
+        .select("id, session_id, etiqueta, contenido_md, created_at, dominio")
         .in("session_id", idsSesiones)
         .order("created_at", { ascending: true })
     : { data: [] };
 
   type FilaPlan = {
+    id?: string;
     session_id: string;
     etiqueta: string;
     contenido_md: string;
@@ -66,7 +68,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const organizador = ultimo((p) => p.etiqueta === "organizador");
   // El plan de la vista es el ÚLTIMO plan CORE: los planes de mundos viven
   // en su propia sección (canon 08), no tapan el viaje principal.
-  const plan = ultimo((p) => esCore(p) && ["inicial", "completo", "seguimiento"].includes(p.etiqueta));
+  const plan = ultimo((p) => esCore(p) && ETIQUETAS_CICLO.includes(p.etiqueta));
   const reporte = ultimo((p) => p.etiqueta === "reporte_numeros");
 
   // Mundos (Fase 3.5/3.6): unlocks del proyecto + último plan por dominio.
@@ -125,9 +127,63 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     unlocksRaw = [];
   }
   const unlocks = unlocksRaw.map((u) => u.dominio);
+
+  // Historia (canon 06): cada plan ANTERIOR al vigente de su espacio, releíble.
+  // Ciclo de replanteamiento, Fase 2 ("lo hecho no se pierde"): con sus tareas
+  // hechas y con lo que la persona contó al pedir ese plan (el evento ciclo_*
+  // con su plan_id). Las copias heredadas no se repiten: salen bajo su original.
+  const anterioresDe = (enEspacio: (p: FilaPlan) => boolean) =>
+    filas.filter((p) => enEspacio(p) && ETIQUETAS_CICLO.includes(p.etiqueta)).slice(0, -1);
+  const anterioresCore = anterioresDe(esCore);
+  const anterioresMundo = new Map(unlocks.map((d) => [d, anterioresDe((p) => p.dominio === d)]));
+  const idsAnteriores = [...anterioresCore, ...[...anterioresMundo.values()].flat()]
+    .map((p) => p.id)
+    .filter((id): id is string => Boolean(id));
+  const hechasDe = new Map<string, Array<{ texto: string; completed_at: string | null }>>();
+  const relatoDe = new Map<string, string>();
+  if (idsAnteriores.length > 0) {
+    // heredado_de llega con la 047: sin ella se lee sin la columna.
+    const leerHechas = (cols: string) =>
+      supabase.from("checklist_items").select(cols).eq("project_id", projectId).in("plan_id", idsAnteriores).eq("estado", "hecho");
+    const conHeredado = await leerHechas("plan_id, texto, completed_at, etapa, orden, heredado_de");
+    const hechas = conHeredado.error ? (await leerHechas("plan_id, texto, completed_at, etapa, orden")).data : conHeredado.data;
+    const ordenadas = ((hechas ?? []) as unknown as Array<{
+      plan_id: string;
+      texto: string;
+      completed_at: string | null;
+      etapa: number;
+      orden: number;
+      heredado_de?: string | null;
+    }>)
+      .filter((h) => !h.heredado_de)
+      .sort((a, c) => a.etapa - c.etapa || a.orden - c.orden);
+    for (const h of ordenadas) {
+      const lista = hechasDe.get(h.plan_id) ?? [];
+      lista.push({ texto: h.texto, completed_at: h.completed_at ?? null });
+      hechasDe.set(h.plan_id, lista);
+    }
+    const { data: ciclos } = await supabase
+      .from("project_bitacora")
+      .select("payload")
+      .eq("project_id", projectId)
+      .in("tipo", ["ciclo_profundizado", "ciclo_replanteado"]);
+    for (const c of (ciclos ?? []) as Array<{ payload?: { plan_id?: unknown; relato?: unknown } }>) {
+      const planId = c.payload?.plan_id;
+      const relato = typeof c.payload?.relato === "string" ? c.payload.relato.trim() : "";
+      if (typeof planId === "string" && relato) relatoDe.set(planId, relato);
+    }
+  }
+  const aHistoria = (p: FilaPlan) => ({
+    etiqueta: p.etiqueta,
+    created_at: p.created_at,
+    contenido_md: p.contenido_md,
+    hechas: (p.id && hechasDe.get(p.id)) || [],
+    relato: (p.id && relatoDe.get(p.id)) || null,
+  });
+
   const mundos = unlocksRaw.map((u) => {
     const planMundo = ultimo(
-      (p) => p.dominio === u.dominio && ["inicial", "completo", "seguimiento"].includes(p.etiqueta)
+      (p) => p.dominio === u.dominio && ETIQUETAS_CICLO.includes(p.etiqueta)
     );
     return {
       dominio: u.dominio,
@@ -140,6 +196,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       resumen_at: u.resumen_at ?? null,
       plan_pagado_at: u.plan_pagado_at ?? null,
       plan_basico_at: u.plan_basico_at ?? null,
+      // Fase 2 del ciclo de replanteamiento: la Historia del mundo.
+      historial: (anterioresMundo.get(u.dominio) ?? []).map(aHistoria),
       plan: planMundo && {
         // AUD-09: la sesión del plan, para regenerarlo si es básico.
         session_id: planMundo.session_id,
@@ -150,16 +208,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     };
   });
 
-  // Historia (canon 06): etiqueta y fecha de cada plan core anterior al
-  // vigente — lo releíble, sin duplicar el contenido pesado.
-  const historialCore = filas.filter(
-    (p) => esCore(p) && ["inicial", "completo", "seguimiento"].includes(p.etiqueta)
-  );
-  const historial = historialCore.slice(0, -1).map((p) => ({
-    etiqueta: p.etiqueta,
-    created_at: p.created_at,
-    contenido_md: p.contenido_md,
-  }));
+  const historial = anterioresCore.map(aHistoria);
 
   // Entrevista abierta: sesión sin cerrar con estado resumible. El dominio
   // etiqueta la exploración de mundo (canon 08) sin cambiar el flujo.

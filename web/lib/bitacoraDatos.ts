@@ -42,15 +42,16 @@ export async function cargarEntradasBitacora(
   const { data: planesRaw } = idsSesiones.length
     ? await supabase
         .from("plans")
-        .select("etiqueta, created_at, dominio, baseline_confirmada_at")
+        .select("id, etiqueta, created_at, dominio, baseline_confirmada_at")
         .in("session_id", idsSesiones)
     : { data: [] };
   const planes = (planesRaw ?? []) as PlanBita[];
 
-  const { data: itemsRaw } = await supabase
-    .from("checklist_items")
-    .select("id, texto, completed_at, dominio")
-    .eq("project_id", projectId);
+  // Ciclo de replanteamiento, Fase 2: heredado_de (047) para no narrar dos
+  // veces lo que un replanteamiento trae hecho; sin la 047, se lee sin ella.
+  const leerItems = (cols: string) => supabase.from("checklist_items").select(cols).eq("project_id", projectId);
+  const conHeredado = await leerItems("id, texto, completed_at, dominio, heredado_de");
+  const itemsRaw = conHeredado.error ? (await leerItems("id, texto, completed_at, dominio")).data : conHeredado.data;
 
   let eventos: EventoBita[] = [];
   try {
@@ -69,11 +70,12 @@ export async function cargarEntradasBitacora(
     realizadaAt: proyecto.realizada_at ?? null,
     sesiones,
     planes,
-    items: ((itemsRaw ?? []) as Array<{ id: string; texto: string; completed_at: string | null; dominio: string | null }>).map((i) => ({
+    items: ((itemsRaw ?? []) as unknown as Array<{ id: string; texto: string; completed_at: string | null; dominio: string | null; heredado_de?: string | null }>).map((i) => ({
       id: i.id,
       texto: i.texto,
       completed_at: i.completed_at,
       dominio: i.dominio ?? null,
+      heredado_de: i.heredado_de ?? null,
     })),
     eventos,
     nombreMundo,

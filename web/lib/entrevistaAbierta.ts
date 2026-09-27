@@ -10,7 +10,11 @@ export function estadoEntrevista(s: {
   estado_recorrido: unknown;
 }): "pregunta" | "listo_para_plan" | null {
   if (s.closed_at || !s.estado_recorrido) return null;
-  const fase = (s.estado_recorrido as { recorrido?: { fase?: string } }).recorrido?.fase;
+  const recorrido = (s.estado_recorrido as { recorrido?: { fase?: string; ciclo?: { tipo?: string } } }).recorrido;
+  const fase = recorrido?.fase;
   if (fase === "cerrada") return null;
+  // Ciclo de replanteamiento, Fase 2: "Replantear mi camino" no tiene
+  // entrevista. Su sesión espera el camino elegido en el ritual, no una pregunta.
+  if (recorrido?.ciclo?.tipo === "replantear") return null;
   return fase === "listo_para_plan" ? "listo_para_plan" : "pregunta";
 }

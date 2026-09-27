@@ -9,7 +9,9 @@ import { describe, expect, it } from "vitest";
 const RUTAS = [
   "organizer/route.ts",
   "organizer/stream/route.ts",
-  "project/[id]/follow/route.ts",
+  // Ciclo de replanteamiento, Fase 2: las puertas del follow y de replantear
+  // viven en un solo sitio, lib/cicloApertura.ts (ver la prueba de abajo).
+  "../../lib/cicloApertura.ts",
   "project/[id]/report/route.ts",
   "project/[id]/world/[pack]/start/route.ts",
   "session/start/route.ts",
@@ -21,6 +23,14 @@ describe("cada ruta de la IA distingue la base caída del tope alcanzado", () =>
     const src = readFileSync(path.join(__dirname, ruta), "utf8");
     expect(src).toMatch(/fusible\.caido \? mensajeServicioNoDisponible\(idioma\) : mensajeFusible\(idioma\)/);
     expect(src).toMatch(/limite\.caido \? mensajeServicioNoDisponible\(idioma\) : mensajeLimite\(limite\.limite, idioma\)/);
-    expect(src).toMatch(/status: limite\.caido \? 503 : 429/);
+    expect(src).toMatch(/limite\.caido \? 503 : 429/);
   });
+
+  it.each(["project/[id]/follow/route.ts", "project/[id]/replantear/route.ts"])(
+    "%s: abre el ciclo por lib/cicloApertura (las mismas puertas)",
+    (ruta) => {
+      const src = readFileSync(path.join(__dirname, ruta), "utf8");
+      expect(src).toMatch(/await abrirCiclo\(/);
+    }
+  );
 });

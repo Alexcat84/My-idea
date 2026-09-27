@@ -32,6 +32,7 @@ interface PromptsShape {
   SYSTEM_REPORTE: string;
   SYSTEM_CLASIFICAR_OFERTA: string;
   SYSTEM_DIAGNOSTICO_MUNDO: string;
+  SYSTEM_CAMINOS: string;
 }
 
 const prompts = promptsJson as PromptsShape;
@@ -48,6 +49,8 @@ export const SYSTEM_ORGANIZADOR = prompts.SYSTEM_ORGANIZADOR;
 export const SYSTEM_REPORTE = prompts.SYSTEM_REPORTE;
 export const SYSTEM_CLASIFICAR_OFERTA = prompts.SYSTEM_CLASIFICAR_OFERTA;
 export const SYSTEM_DIAGNOSTICO_MUNDO = prompts.SYSTEM_DIAGNOSTICO_MUNDO;
+/** Ciclo de replanteamiento, Fase 2: los caminos posibles de "Replantear mi camino". */
+export const SYSTEM_CAMINOS = prompts.SYSTEM_CAMINOS;
 
 /** i18n F5 (DISENO §5): la regla final de los prompts NATIVOS que escriben para
  * la persona. Misma letra que REGLA_IDIOMA_SALIDA de engine/prototipo_motor.py

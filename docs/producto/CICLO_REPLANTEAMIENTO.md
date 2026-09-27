@@ -138,3 +138,59 @@ Como el ciclo hoy sirve para las dos cosas, propongo **dos entradas** en Manos a
 
 Las dos llevan su propia etiqueta en la base (para la bitácora, el Expediente y la Historia) y su
 propia línea en la bitácora. Esto lo decide el fundador antes de empezar la Fase 2.
+
+---
+
+# Fase 2: dos entradas (decisiones del fundador del 27 sep 2026)
+
+Visto del fundador a la Fase 1 con estas decisiones: **dos entradas separadas**, cada una con su
+etiqueta y su línea propia en la bitácora, el Expediente y la Historia; los dos a **5 créditos por
+ahora** (con el coste real medido para decidir si alcanza); lo escrito queda registrado; lo hecho no
+se pierde; la IA recibe el plan anterior; el código excluye lo ya cubierto, como el prompt promete.
+
+## Las dos entradas en Manos a la Obra
+- **"Profundizar mi plan"** (etiqueta `seguimiento`, la de siempre): el ciclo de hoy. Su paso 1 se
+  llama **"Tu avance"** (el checklist deja de llamarse historia). Entrevista y plan como hasta ahora.
+- **"Replantear mi camino"** (etiqueta nueva `replanteamiento`, migración 047): cuatro pasos y
+  **sin entrevista**:
+  1. **Tu historia**, obligatoria, con texto y dictado y preguntas de ayuda suaves.
+  2. **Lo que ya construiste**: cada tarea hecha del plan vigente, "Me sigue sirviendo" o "Ya no
+     aplica" (por omisión, sirve).
+  3. **Caminos posibles**: dos o tres, propuestos por la IA dentro del mismo cobro. Aquí nace la
+     sesión: se aparta el precio y cuentan el fusible y el límite diario.
+  4. **Confirmar y generar**: resumen, precio y la promesa de cobro. Se cobra al entregar el plan.
+
+## Contrato
+- `GET /api/project/[id]/replantear?dominio=` → `{ alcanza, costo }` o 402 (solo mira, como el del
+  follow).
+- `POST /api/project/[id]/replantear` con `{ historia, suelta: string[], dominio }` → `{ session_id,
+  caminos: [{ id, titulo, descripcion }] }`. `historia` obligatoria (400 si falta o pasa de 4.000);
+  `suelta` son ids de tareas hechas del último plan del espacio marcadas "ya no aplica"; las demás
+  hechas se conservan. Mismas puertas que el follow (401, 2FA, 404, idea realizada o mundo cerrado
+  409, saldo 402, reserva `plan:{session_id}`, fusible y límite 503/429). Una sola llamada a Sonnet
+  (`SYSTEM_CAMINOS`) recibe la historia, lo que se conserva y lo que se suelta, el plan anterior, el
+  bloque de realidad y hasta 30 conceptos del grafo **aún no cubiertos**, y devuelve los caminos, cada
+  uno con 3 a 5 de esos conceptos (validados por código). La sesión (tipo `seguimiento`) guarda todo
+  en `estado_recorrido.recorrido.ciclo`.
+- `POST /api/session/[id]/plan` con `{ camino: id }` en una sesión de replanteamiento: la ruta pasa a
+  ser los conceptos del camino (modo `silencioso`, no se conversaron), el plan sale con etiqueta
+  `replanteamiento`, concepto `replanteamiento` / `mundo_replanteamiento` de `precios.ts`, y las
+  tareas conservadas entran al checklist nuevo **como hechas**, con su fecha y su nota, marcadas con
+  `heredado_de` (migración 047) para no contarlas dos veces en el análisis ni en la bitácora.
+
+## Lo común a los dos flujos
+- **Registro**: al entregar el plan, un evento `ciclo_profundizado` o `ciclo_replanteado` en
+  `project_bitacora` con el texto de la persona (`detalles`/`enfoque`, o `historia` y el camino) y
+  el `plan_id`. La bitácora pinta una línea por ciclo ("Profundizaste tu plan" / "Replanteaste tu
+  camino") con su texto citado; el Expediente y la Historia lo muestran junto a su plan.
+- **Lo hecho no se pierde**: la Historia de Manos a la Obra (núcleo y cada mundo) muestra de cada plan
+  anterior sus tareas hechas, además del texto.
+- **La IA recibe el plan anterior**: `plan_anterior` en el payload del redactor (etapas con sus
+  tareas y su estado), con la regla 8-ter de `SYSTEM_PLAN`: construir encima, no repetir lo hecho.
+- **Lo cubierto se excluye**: la cosecha del vecindario (TS y Python) ya no ofrece conceptos que el
+  proyecto cubrió en sesiones anteriores.
+
+## Cómo medir el coste
+Cada sesión guarda su `costo_usd` y el desglose por componente (`costo_desglose`). Con una
+profundización y un replanteamiento reales, la consulta de `docs/FLUJO_TRACKING.md §5` compara las
+dos cifras contra los 5 créditos.

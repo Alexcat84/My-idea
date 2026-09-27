@@ -52,6 +52,20 @@ interface Builder {
   _filters: Record<string, unknown>;
   _single: boolean;
   _order?: { col: string; ascending: boolean };
+  /** `.in(col, valores)`: hoy lo resuelven plans y checklist_items. */
+  _in?: Record<string, unknown[]>;
+}
+
+/** Aplica los `.in()` de una lectura y, si se pide, su `.order()` (solo el
+ * último: el fake no encadena órdenes, por eso checklist_items no lo usa). */
+function filtrarInYOrden<T extends Record<string, unknown>>(rows: T[], b: Builder, conOrden = true): T[] {
+  let out = rows;
+  for (const [col, vals] of Object.entries(b._in ?? {})) out = out.filter((r) => vals.includes(r[col]));
+  if (conOrden && b._order) {
+    const { col, ascending } = b._order;
+    out = [...out].sort((a, c) => (ascending ? 1 : -1) * String(a[col] ?? "").localeCompare(String(c[col] ?? "")));
+  }
+  return out;
 }
 
 function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
@@ -118,10 +132,11 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
       if (fila) Object.assign(fila, b._update);
       return { data: null, error: null };
     }
-    let rows = estado.plans;
+    let rows = estado.plans as Record<string, unknown>[];
     for (const [col, val] of Object.entries(b._filters)) {
       rows = rows.filter((r) => (r as Record<string, unknown>)[col] === val);
     }
+    rows = filtrarInYOrden(rows, b);
     if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
     return { data: rows, error: null };
   }
@@ -142,6 +157,7 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     for (const [col, val] of Object.entries(b._filters)) {
       rows = rows.filter((r) => r[col] === val);
     }
+    rows = filtrarInYOrden(rows, b, false);
     // .single() en una lectura (Fase 3.8/4.8: la ruta lee el ítem PREVIO para
     // preservar la fecha_base y comparar contra la bitácora) devuelve la fila,
     // no un array. Se devuelve una COPIA: en una BD real la lectura es un
@@ -261,6 +277,10 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
     // guarda como filtro; project_unlocks lo lee con "ausente cuenta como null".
     is(col: string, val: unknown) {
       builder._filters[col] = val;
+      return builder;
+    },
+    in(col: string, vals: unknown[]) {
+      builder._in = { ...(builder._in ?? {}), [col]: vals };
       return builder;
     },
     limit() {

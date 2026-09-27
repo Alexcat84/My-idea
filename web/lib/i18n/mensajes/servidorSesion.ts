@@ -11,6 +11,7 @@ const es = {
   },
   plan: {
     noPudeTerminar: "No pude terminar de escribir tu plan. Lo que contaste está guardado; intenta de nuevo.",
+    eligeCamino: "Elige uno de los caminos para generar tu plan.",
   },
   organizador: {
     noPudeOrganizar: "No pude organizar tu idea en este momento. Intenta de nuevo en un rato.",
@@ -51,6 +52,7 @@ const en: typeof es = {
   },
   plan: {
     noPudeTerminar: "I couldn't finish writing your plan. What you told me is saved; try again.",
+    eligeCamino: "Choose one of the paths to generate your plan.",
   },
   organizador: {
     noPudeOrganizar: "I couldn't organize your idea right now. Try again in a little while.",
@@ -90,6 +92,7 @@ const fr: typeof es = {
   },
   plan: {
     noPudeTerminar: "Je n'ai pas pu finir de rédiger ton plan. Ce que tu m'as raconté est enregistré; réessaie.",
+    eligeCamino: "Choisis l'un des chemins pour générer ton plan.",
   },
   organizador: {
     noPudeOrganizar: "Je n'ai pas pu organiser ton idée pour le moment. Réessaie un peu plus tard.",
@@ -119,6 +122,7 @@ const pt: typeof es = {
   },
   plan: {
     noPudeTerminar: "Não consegui terminar de escrever seu plano. O que você contou está salvo; tente de novo.",
+    eligeCamino: "Escolha um dos caminhos para gerar o seu plano.",
   },
   organizador: {
     noPudeOrganizar: "Não consegui organizar sua ideia agora. Tente de novo daqui a pouco.",
@@ -148,6 +152,7 @@ const de: typeof es = {
   },
   plan: {
     noPudeTerminar: "Ich konnte deinen Plan nicht fertig schreiben. Was du erzählt hast, ist gespeichert; versuch es noch einmal.",
+    eligeCamino: "Wähle einen der Wege, um deinen Plan zu erstellen.",
   },
   organizador: {
     noPudeOrganizar: "Ich konnte deine Idee gerade nicht ordnen. Versuch es in einer Weile noch einmal.",
@@ -177,6 +182,7 @@ const it: typeof es = {
   },
   plan: {
     noPudeTerminar: "Non sono riuscito a finire di scrivere il tuo piano. Quello che mi hai raccontato è salvato; riprova.",
+    eligeCamino: "Scegli uno dei percorsi per generare il tuo piano.",
   },
   organizador: {
     noPudeOrganizar: "Non sono riuscito a organizzare la tua idea in questo momento. Riprova tra un po'.",
@@ -206,6 +212,7 @@ const ja: typeof es = {
   },
   plan: {
     noPudeTerminar: "プランを最後まで書けませんでした。話してくれた内容は保存されています。もう一度お試しください。",
+    eligeCamino: "プランを作るには、道すじをひとつ選んでください。",
   },
   organizador: {
     noPudeOrganizar: "今はアイデアを整理できませんでした。少し時間をおいて、もう一度お試しください。",
@@ -235,6 +242,7 @@ const zh: typeof es = {
   },
   plan: {
     noPudeTerminar: "我没能写完你的计划。你说的内容都已保存；请再试一次。",
+    eligeCamino: "请选择其中一条道路来生成你的计划。",
   },
   organizador: {
     noPudeOrganizar: "我暂时没能整理你的想法。请过一会儿再试。",
@@ -264,6 +272,7 @@ const ko: typeof es = {
   },
   plan: {
     noPudeTerminar: "계획을 끝까지 쓰지 못했어요. 들려준 내용은 저장돼 있으니 다시 시도해 주세요.",
+    eligeCamino: "계획을 만들려면 길 하나를 골라 주세요.",
   },
   organizador: {
     noPudeOrganizar: "지금은 아이디어를 정리하지 못했어요. 잠시 후 다시 시도해 주세요.",
@@ -293,6 +302,7 @@ const ar: typeof es = {
   },
   plan: {
     noPudeTerminar: "لم أتمكن من إكمال كتابة خطتكم. ما حدّثتموني به محفوظ؛ حاولوا مرة أخرى.",
+    eligeCamino: "اختاروا أحد الطرق لإنشاء خطتكم.",
   },
   organizador: {
     noPudeOrganizar: "لم أتمكن من ترتيب فكرتكم الآن. حاولوا مرة أخرى بعد قليل.",
@@ -322,6 +332,7 @@ const hi: typeof es = {
   },
   plan: {
     noPudeTerminar: "आपकी योजना पूरी नहीं लिखी जा सकी। आपने जो बताया, वह सहेजा हुआ है; फिर से कोशिश करें।",
+    eligeCamino: "अपनी योजना बनाने के लिए इनमें से एक रास्ता चुनें।",
   },
   organizador: {
     noPudeOrganizar: "अभी आपका विचार व्यवस्थित नहीं हो पाया। थोड़ी देर में फिर से कोशिश करें।",

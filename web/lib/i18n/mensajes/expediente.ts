@@ -8,8 +8,11 @@ const es = {
   ciclos: {
     tuPlan: "Tu Plan",
     tuPlanSubtitulo: "El plan con el que arrancaste",
-    seguimiento: "Seguimiento {{n}}",
-    seguimientoSubtitulo: "Lo que pasó y el plan recalculado",
+    profundizacion: "Profundización {{n}}",
+    profundizacionSubtitulo: "Fuiste más hondo en tu plan",
+    replanteamiento: "Replanteamiento {{n}}",
+    replanteamientoSubtitulo: "Lo que pasó, lo que conservaste y tu camino nuevo",
+    relato: "Lo que contaste: «{{relato}}»",
   },
   indice: {
     analisisTitulo: "Análisis del proyecto",
@@ -81,8 +84,11 @@ const en: typeof es = {
   ciclos: {
     tuPlan: "Your Plan",
     tuPlanSubtitulo: "The plan you started with",
-    seguimiento: "Follow-up {{n}}",
-    seguimientoSubtitulo: "What happened and the recalculated plan",
+    profundizacion: "Deeper dive {{n}}",
+    profundizacionSubtitulo: "You went deeper into your plan",
+    replanteamiento: "Rethink {{n}}",
+    replanteamientoSubtitulo: "What happened, what you kept and your new path",
+    relato: "What you said: “{{relato}}”",
   },
   indice: {
     analisisTitulo: "Project analysis",
@@ -154,8 +160,11 @@ const fr: typeof es = {
   ciclos: {
     tuPlan: "Ton plan",
     tuPlanSubtitulo: "Le plan avec lequel tu as commencé",
-    seguimiento: "Suivi {{n}}",
-    seguimientoSubtitulo: "Ce qui s'est passé et le plan recalculé",
+    profundizacion: "Approfondissement {{n}}",
+    profundizacionSubtitulo: "Ton plan, plus en profondeur",
+    replanteamiento: "Nouveau cap {{n}}",
+    replanteamientoSubtitulo: "Ce qui s'est passé, ce que tu as gardé et ton nouveau chemin",
+    relato: "Ce que tu as raconté : « {{relato}} »",
   },
   indice: {
     analisisTitulo: "Analyse du projet",
@@ -225,8 +234,11 @@ const pt: typeof es = {
   ciclos: {
     tuPlan: "Seu Plano",
     tuPlanSubtitulo: "O plano com que você começou",
-    seguimiento: "Acompanhamento {{n}}",
-    seguimientoSubtitulo: "O que aconteceu e o plano recalculado",
+    profundizacion: "Aprofundamento {{n}}",
+    profundizacionSubtitulo: "Seu plano, mais a fundo",
+    replanteamiento: "Novo rumo {{n}}",
+    replanteamientoSubtitulo: "O que aconteceu, o que você manteve e seu novo caminho",
+    relato: "O que você contou: “{{relato}}”",
   },
   indice: {
     analisisTitulo: "Análise do projeto",
@@ -296,8 +308,11 @@ const de: typeof es = {
   ciclos: {
     tuPlan: "Dein Plan",
     tuPlanSubtitulo: "Der Plan, mit dem du gestartet bist",
-    seguimiento: "Zwischenstand {{n}}",
-    seguimientoSubtitulo: "Was passiert ist und der neu berechnete Plan",
+    profundizacion: "Vertiefung {{n}}",
+    profundizacionSubtitulo: "Dein Plan, tiefer gedacht",
+    replanteamiento: "Neuausrichtung {{n}}",
+    replanteamientoSubtitulo: "Was passiert ist, was du behalten hast, und dein neuer Weg",
+    relato: "Was du erzählt hast: „{{relato}}“",
   },
   indice: {
     analisisTitulo: "Projektanalyse",
@@ -367,8 +382,11 @@ const it: typeof es = {
   ciclos: {
     tuPlan: "Il tuo piano",
     tuPlanSubtitulo: "Il piano da cui è partito tutto",
-    seguimiento: "Revisione {{n}}",
-    seguimientoSubtitulo: "Cosa è successo e il piano ricalcolato",
+    profundizacion: "Approfondimento {{n}}",
+    profundizacionSubtitulo: "Il tuo piano, più a fondo",
+    replanteamiento: "Nuova rotta {{n}}",
+    replanteamientoSubtitulo: "Cosa è successo, cosa hai tenuto e il tuo nuovo percorso",
+    relato: "Quello che hai raccontato: «{{relato}}»",
   },
   indice: {
     analisisTitulo: "Analisi del progetto",
@@ -438,8 +456,11 @@ const ja: typeof es = {
   ciclos: {
     tuPlan: "あなたのプラン",
     tuPlanSubtitulo: "最初に立てたプラン",
-    seguimiento: "フォローアップ{{n}}",
-    seguimientoSubtitulo: "起きたことと、計算し直したプラン",
+    profundizacion: "深掘り{{n}}",
+    profundizacionSubtitulo: "プランをさらに深めたもの",
+    replanteamiento: "見直し{{n}}",
+    replanteamientoSubtitulo: "起きたこと、残したもの、新しい道すじ",
+    relato: "話してくれたこと：「{{relato}}」",
   },
   indice: {
     analisisTitulo: "プロジェクト分析",
@@ -509,8 +530,11 @@ const zh: typeof es = {
   ciclos: {
     tuPlan: "你的计划",
     tuPlanSubtitulo: "你起步时的计划",
-    seguimiento: "跟进 {{n}}",
-    seguimientoSubtitulo: "发生了什么，以及重新计算后的计划",
+    profundizacion: "深化 {{n}}",
+    profundizacionSubtitulo: "更深入的计划",
+    replanteamiento: "重新规划 {{n}}",
+    replanteamientoSubtitulo: "发生了什么、你保留了什么，以及你的新道路",
+    relato: "你说的话：“{{relato}}”",
   },
   indice: {
     analisisTitulo: "项目分析",
@@ -580,8 +604,11 @@ const ko: typeof es = {
   ciclos: {
     tuPlan: "나의 계획",
     tuPlanSubtitulo: "처음 시작할 때 세운 계획",
-    seguimiento: "후속 점검 {{n}}",
-    seguimientoSubtitulo: "그동안 있었던 일과 다시 계산한 계획",
+    profundizacion: "심화 {{n}}",
+    profundizacionSubtitulo: "더 깊게 다듬은 계획",
+    replanteamiento: "재설정 {{n}}",
+    replanteamientoSubtitulo: "있었던 일, 남긴 것, 그리고 새로운 길",
+    relato: "들려준 이야기: “{{relato}}”",
   },
   indice: {
     analisisTitulo: "프로젝트 분석",
@@ -651,8 +678,11 @@ const ar: typeof es = {
   ciclos: {
     tuPlan: "خطتكم",
     tuPlanSubtitulo: "الخطة التي بدأتم بها",
-    seguimiento: "المتابعة {{n}}",
-    seguimientoSubtitulo: "ما حدث والخطة بعد إعادة حسابها",
+    profundizacion: "تعميق {{n}}",
+    profundizacionSubtitulo: "خطتكم بعمق أكبر",
+    replanteamiento: "إعادة توجيه {{n}}",
+    replanteamientoSubtitulo: "ما حدث، وما احتفظتم به، وطريقكم الجديد",
+    relato: "ما حكيتموه: «{{relato}}»",
   },
   indice: {
     analisisTitulo: "تحليل المشروع",
@@ -722,8 +752,11 @@ const hi: typeof es = {
   ciclos: {
     tuPlan: "आपकी योजना",
     tuPlanSubtitulo: "वह योजना जिससे आपने शुरुआत की",
-    seguimiento: "फ़ॉलो-अप {{n}}",
-    seguimientoSubtitulo: "क्या हुआ, और दोबारा बनाई गई योजना",
+    profundizacion: "गहराई {{n}}",
+    profundizacionSubtitulo: "आपकी योजना, और गहराई से",
+    replanteamiento: "नई दिशा {{n}}",
+    replanteamientoSubtitulo: "क्या हुआ, आपने क्या रखा, और आपका नया रास्ता",
+    relato: "आपने जो बताया: “{{relato}}”",
   },
   indice: {
     analisisTitulo: "परियोजना का विश्लेषण",

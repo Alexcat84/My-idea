@@ -46,7 +46,7 @@ import {
   snapshotComoTexto,
   type FilaChecklistSnapshot,
 } from "@/lib/engine/snapshotProyecto";
-import { PACK_CLICKS_PACK } from "@/lib/dbContract";
+import { PACK_CLICKS_PACK, ETIQUETAS_CICLO } from "@/lib/dbContract";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
@@ -103,7 +103,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         .select("id, created_at")
         .in("session_id", sessionIds)
         .eq("dominio", "core")
-        .in("etiqueta", ["inicial", "completo", "seguimiento"])
+        .in("etiqueta", [...ETIQUETAS_CICLO])
         .order("created_at", { ascending: false })
         .limit(1)
     : { data: [] };

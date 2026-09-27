@@ -69,7 +69,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   const dominio = ((sesion as { dominio?: string | null }).dominio ?? "core") as string;
   const esSeguimiento = estado.recorrido.esSeguimiento === true;
-  const costo = montoDelPlan(dominio, esSeguimiento);
+  // Ciclo de replanteamiento, Fase 2: regenerar un replanteamiento cobra su
+  // propia clave (la sesión nueva hereda el ciclo con su camino ya elegido).
+  const esReplanteo = estado.recorrido.ciclo?.tipo === "replantear";
+  const costo = montoDelPlan(dominio, esSeguimiento, esReplanteo);
 
   // El saldo primero: un rechazo por saldo no gasta el arranque del día.
   const saldo = await verificarSaldo(user.id, costo);
@@ -84,7 +87,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // crear nada. Un rechazo posterior suelta la reserva.
   const nuevaId = crypto.randomUUID();
   const claveReserva = `plan:${nuevaId}`;
-  const reserva = await reservarCreditos(user.id, claveReserva, conceptoDelPlan(dominio, esSeguimiento), costo);
+  const reserva = await reservarCreditos(user.id, claveReserva, conceptoDelPlan(dominio, esSeguimiento, esReplanteo), costo);
   if (!reserva.reservado) {
     const ahora = await verificarSaldo(user.id, costo, claveReserva);
     return NextResponse.json(

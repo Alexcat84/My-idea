@@ -33,7 +33,7 @@ import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
 import { mensajeAdopcionPendiente } from "@/lib/constants";
-import { cuentaHonesta } from "@/lib/dbContract";
+import { cuentaHonesta, esCicloPosterior } from "@/lib/dbContract";
 import { estadoEspacio } from "@/lib/esperaEspacio";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
 import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
@@ -118,6 +118,9 @@ interface DetalleIdea {
     /** AUD-09 (migración 039): la marca del plan básico (no es sello de pago). */
     plan_basico_at?: string | null;
     plan: { etiqueta: string; contenido_md: string; created_at: string; session_id?: string } | null;
+    /** Ciclo de replanteamiento, Fase 2: los planes anteriores del mundo, con la
+     * misma forma que `historial` (hechas y relato). Opcional. */
+    historial?: PlanHistorial[];
   }>;
   historial?: PlanHistorial[];
 }
@@ -250,7 +253,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Fix (retry del stream del plan): si la redaccion muere tras los reintentos
   // del servidor, se guarda con que reintentarla. La sesion y el recorrido YA
   // estan persistidos: reintentar re-lanza SOLO la redaccion, nunca la entrevista.
-  const [planFallido, setPlanFallido] = useState<{ sid: string; contexto?: string } | null>(null);
+  // Ciclo de replanteamiento: el reintento lleva también el espacio y el camino
+  // elegido, para que la redacción repetida sea la misma que falló.
+  const [planFallido, setPlanFallido] = useState<{
+    sid: string;
+    contexto?: string;
+    destino?: { dominio: string; esSeguimiento: boolean };
+    camino?: string;
+  } | null>(null);
   const arrancoRef = useRef(false);
   // true desde que el usuario pide el plan de la sesion actual: los turnos
   // tardios de esa sesion ya no reabren la entrevista (carrera C0 bis).
@@ -419,7 +429,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setPlanMd(det?.plan?.contenido_md ?? null);
     setAvisoPlan(det?.plan?.aviso ?? null);
     setPlanSesionId(det?.plan?.session_id ?? null);
-    setPlanEsSeguimiento(det?.plan?.etiqueta === "seguimiento");
+    setPlanEsSeguimiento(esCicloPosterior(det?.plan?.etiqueta));
     void cargarChecklist();
     irAMundo(dominio);
   }
@@ -533,13 +543,58 @@ export function IdeaView({ projectId }: { projectId: string }) {
     procesarTurno(data);
   }
 
+  /** Ciclo de replanteamiento, Fase 2: "Replantear mi camino" terminó (POST
+   * replantear creó la sesión, apartó el precio y la persona eligió un camino).
+   * Se prepara la vista como al entrar a una sesión nueva de seguimiento del
+   * espacio, pero SIN entrevista: se va directo a redactar el plan con el
+   * camino. El SSE, el cobro y la pantalla de "generando" son los de siempre. */
+  async function replanteamientoListo(sid: string, dominio: string, caminoId: string) {
+    avisarSaldo();
+    setError(null);
+    setCierre(null);
+    setNodos([]);
+    contadorNodos.current = 0;
+    setRecorrido([]);
+    setListoParaPlan(false);
+    setTemasPendientes(null);
+    setTarjetaContextoFinal(false);
+    setContextoFinal("");
+    setPregunta(null);
+    const planPrevio = planMd;
+    setPlanMd(null);
+    setVistaManos(false);
+    setVistaMundo(false);
+    setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(true);
+    setSessionId(sid);
+    planPedidoRef.current = false;
+    const r = await generarPlan(sid, undefined, { dominio, esSeguimiento: true }, caminoId);
+    if (r === "rechazado") {
+      // El rechazo ya se dijo (mostrarRechazo). No hay entrevista a la que
+      // volver: se regresa al espacio con el plan de antes en su lugar, y no
+      // se deja abierta la oferta de la entrevista (que no llevaría el camino).
+      setListoParaPlan(false);
+      setPlanMd(planPrevio);
+      if (dominio === "core") irAManos();
+      else irAMundo(dominio);
+    } else if (dominio === "core") {
+      // La Historia (el plan anterior con su relato y sus hechas) se relee.
+      await refrescarDetalle();
+    }
+    // Mundo entregado: volverAlMundo (dentro de generarPlan) ya recargó y llevó
+    // al espacio del mundo.
+  }
+
   const generarPlan = useCallback(
     async (
       sid: string,
       contextoExtra?: string,
       // AUD-09 M13: el espacio del plan viaja explícito. Quien llama justo
       // después de cambiar el estado vería el valor viejo del closure.
-      destino?: { dominio: string; esSeguimiento: boolean }
+      destino?: { dominio: string; esSeguimiento: boolean },
+      // Ciclo de replanteamiento, Fase 2: el camino elegido en "Replantear mi
+      // camino". La ruta del plan lo toma como el recorrido de la sesión.
+      camino?: string
     ): Promise<"rechazado" | "entregado_o_fallido" | "ocupado"> => {
       if (generandoPlan) return "ocupado";
       const dominioPlan = destino?.dominio ?? dominioEntrevista;
@@ -562,7 +617,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
         const res = await fetch(`/api/session/${sid}/plan`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(contextoExtra ? { contexto_final: contextoExtra } : {}),
+          body: JSON.stringify({
+            ...(contextoExtra ? { contexto_final: contextoExtra } : {}),
+            ...(camino ? { camino } : {}),
+          }),
         });
         if (!res.ok || !res.body) {
           // AUD-09 H03: el rechazo (saldo, doble factor) se dice tal cual, y la
@@ -614,13 +672,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
             }
           } else if (evento === "error") {
             setError(t.errores.planSinTerminar);
-            setPlanFallido({ sid, contexto: contextoExtra });
+            setPlanFallido({ sid, contexto: contextoExtra, destino, camino });
             planPedidoRef.current = false;
           }
         });
       } catch {
         setError(t.errores.planConexionCortada);
-        setPlanFallido({ sid, contexto: contextoExtra });
+        setPlanFallido({ sid, contexto: contextoExtra, destino, camino });
         planPedidoRef.current = false;
       } finally {
         setGenerandoPlan(false);
@@ -669,7 +727,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setPlanMd(d.plan.contenido_md);
           setAvisoPlan(d.plan.aviso ?? null);
           setPlanSesionId(d.plan.session_id ?? null);
-          setPlanEsSeguimiento(d.plan.etiqueta === "seguimiento");
+          setPlanEsSeguimiento(esCicloPosterior(d.plan.etiqueta));
           void cargarChecklist();
         }
         if (d.entrevista) {
@@ -945,7 +1003,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const itemsCore = coreVigente?.etapas.flatMap((e) => e.items) ?? [];
   // AUD-09 M01: la cuenta honesta única (las retiradas no cuentan en el total).
   const cuentaCore = cuentaHonesta(itemsCore);
-  const enObra = itemsCore.some((i) => i.estado !== "pendiente") || detalle.plan?.etiqueta === "seguimiento";
+  const enObra = itemsCore.some((i) => i.estado !== "pendiente") || esCicloPosterior(detalle.plan?.etiqueta);
   const unlocks = detalle.unlocks ?? [];
   const progresoMundos: Record<string, { hechos: number; total: number } | null> = {};
   for (const u of unlocks) {
@@ -1031,6 +1089,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       previewSessionId: m?.preview_session_id ?? null,
       planPagadoAt: m?.plan_pagado_at ?? null,
       planBasicoAt: m?.plan_basico_at ?? null,
+      historial: m?.historial ?? [],
     };
   });
 
@@ -1093,7 +1152,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 ya esta persistida y no se repite. */}
             {planFallido && !generandoPlan && (
               <button
-                onClick={() => generarPlan(planFallido.sid, planFallido.contexto)}
+                onClick={() => generarPlan(planFallido.sid, planFallido.contexto, planFallido.destino, planFallido.camino)}
                 className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
               >
                 {t.intentarDeNuevo}
@@ -1242,6 +1301,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 );
               }}
               onSeguimientoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, true)}
+              onReplanteamientoListo={(sid, dominio, camino) => void replanteamientoListo(sid, dominio, camino)}
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, false)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
               onRegenerarPlanMundo={(dominio, sid, esSeg) => void regenerarPlan(sid, dominio, esSeg)}

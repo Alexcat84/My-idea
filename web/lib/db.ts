@@ -10,9 +10,10 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
 import type { UsoAcumulado } from "./costmeter";
-import type { CapacidadSemanal, ModoCamino, ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
+import { ETIQUETAS_CICLO, type CapacidadSemanal, type ChecklistEstado, type ModoCamino, type ModoRuta, type PlanEtiqueta, type ProjectNodeTipo, type SessionTipo } from "./dbContract";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
+import type { FilaHeredada } from "./engine/replanteamiento";
 
 export const FASES = ["ideacion", "validacion", "planificacion", "ejecucion"] as const;
 export type Fase = (typeof FASES)[number];
@@ -674,7 +675,7 @@ export async function obtenerPlanCoreVigente(supabase: SupabaseClient, projectId
     .select("id")
     .in("session_id", ids)
     .eq("dominio", "core")
-    .in("etiqueta", ["inicial", "completo", "seguimiento"])
+    .in("etiqueta", [...ETIQUETAS_CICLO])
     .order("created_at", { ascending: false })
     .limit(1);
   return ((data ?? [])[0] as { id: string } | undefined)?.id ?? null;
@@ -735,10 +736,15 @@ export async function insertarChecklist(
   // verificarProcedenciaEtapas. Aqui solo se PERSISTE: cero API, cero cambios
   // al prompt. Si no viene, cada item guarda null, que se lee como "nacio antes
   // del sensor" y NO como "no vino de ningun nodo".
-  nodosPorEtapa?: Record<string, string[]> | null
+  nodosPorEtapa?: Record<string, string[]> | null,
+  /** Ciclo de replanteamiento, Fase 2 (047): las tareas que "me siguen
+   * sirviendo", HECHAS. Van en la MISMA sentencia que las nuevas: misma fecha de
+   * creación, así su orden negativo las pone primero en la etapa 1 (la lectura
+   * del checklist ordena por fecha, etapa y orden). */
+  heredadas: FilaHeredada[] = []
 ): Promise<void> {
-  if (items.length === 0) return;
-  const filas = items.map((i) => ({
+  if (items.length === 0 && heredadas.length === 0) return;
+  const filasNuevas = items.map((i) => ({
     project_id: projectId,
     plan_id: planId,
     dominio,
@@ -764,6 +770,10 @@ export async function insertarChecklist(
         }
       : {}),
   }));
+  const filas: Array<Record<string, unknown>> = [
+    ...heredadas.map((h) => ({ ...h, project_id: projectId, plan_id: planId, dominio })),
+    ...filasNuevas,
+  ];
   let { error } = await supabase.from("checklist_items").insert(filas);
   // AUD-09 M15: protege_nodos llega con la 041. Si el código corre antes de
   // aplicarla, el plan de protección no se cae: se inserta sin esa columna (la
@@ -781,4 +791,60 @@ export async function insertarChecklist(
       ));
   }
   if (error) throw error;
+}
+
+/** Ciclo de replanteamiento, Fase 2: el plan VIGENTE de un espacio (el último
+ * ciclo: inicial, completo, seguimiento o replanteamiento), sin contar el de la
+ * sesión indicada (en un reintento de la entrega, el plan de esa misma sesión
+ * ya podría existir y no es "el anterior"). */
+export async function obtenerPlanVigenteDe(
+  supabase: SupabaseClient,
+  projectId: string,
+  dominio: string,
+  excluirSessionId?: string
+): Promise<{ id: string; contenido_md: string; created_at: string } | null> {
+  const { data: sesiones } = await supabase.from("sessions").select("id").eq("project_id", projectId);
+  const ids = (sesiones ?? []).map((x: { id: string }) => x.id).filter((id) => id !== excluirSessionId);
+  if (ids.length === 0) return null;
+  const { data } = await supabase
+    .from("plans")
+    .select("id, contenido_md, created_at")
+    .in("session_id", ids)
+    .eq("dominio", dominio)
+    .in("etiqueta", [...ETIQUETAS_CICLO])
+    .order("created_at", { ascending: false })
+    .limit(1);
+  return ((data ?? [])[0] as { id: string; contenido_md: string; created_at: string } | undefined) ?? null;
+}
+
+/** Una tarea de un plan con lo que un ciclo necesita de ella. */
+export interface TareaDePlan {
+  id: string;
+  etapa: number;
+  orden: number;
+  texto: string;
+  destacado: boolean;
+  estado: ChecklistEstado;
+  nota: string | null;
+  completed_at: string | null;
+  no_aplica_motivo?: string | null;
+}
+
+/** Ciclo de replanteamiento, Fase 2: las tareas de un plan, en su orden, para
+ * el plan anterior que recibe la IA y para las hechas que se conservan. */
+export async function obtenerTareasDePlan(supabase: SupabaseClient, projectId: string, planId: string): Promise<TareaDePlan[]> {
+  const columnas = "id, etapa, orden, texto, destacado, estado, nota, completed_at";
+  const leer = (cols: string) =>
+    supabase
+      .from("checklist_items")
+      .select(cols)
+      .eq("project_id", projectId)
+      .eq("plan_id", planId)
+      .order("etapa", { ascending: true })
+      .order("orden", { ascending: true });
+  // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no está.
+  let { data, error } = await leer(`${columnas}, no_aplica_motivo`);
+  if (error) ({ data, error } = await leer(columnas));
+  if (error) throw error;
+  return (data ?? []) as unknown as TareaDePlan[];
 }

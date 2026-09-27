@@ -19,14 +19,18 @@ import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { interpolarEn } from "./i18n/elision";
 import { interpolar } from "./i18n/interpolar";
 import { EXPEDIENTE } from "./i18n/mensajes/expediente";
+import { ETIQUETAS_CICLO } from "./dbContract";
 
-/** Un ciclo del viaje: el plan original o cada seguimiento posterior. */
+/** Un ciclo del viaje: el plan original o cada ciclo posterior. */
 export interface CicloExpediente {
   planId: string;
-  /** 'inicial' | 'completo' | 'seguimiento' */
+  /** 'inicial' | 'completo' | 'seguimiento' (profundizar) | 'replanteamiento' */
   etiqueta: string;
   createdAt: string;
   contenidoMd: string;
+  /** Ciclo de replanteamiento, Fase 2: lo que la persona escribió o dictó al
+   * pedir este ciclo (su evento ciclo_* en la bitácora). */
+  relato?: string | null;
 }
 
 export interface AccionExpediente {
@@ -158,23 +162,27 @@ export function rebajarTitulos(md: string, niveles: number): string {
 
 /**
  * Nombra cada ciclo como lo vive el usuario: el primero es "Tu Plan" y cada
- * uno posterior es un seguimiento numerado. El orden es cronológico, así que
- * la posición manda; la etiqueta de base de datos no se le enseña a nadie.
+ * uno posterior dice cuál fue (Fase 2 del ciclo de replanteamiento): una
+ * profundización o un replanteamiento, numerados por tipo. El orden es
+ * cronológico; la etiqueta de base de datos no se le enseña a nadie.
  */
 export function titulosDeCiclos(
   ciclos: CicloExpediente[],
   idioma: Locale = LOCALE_BASE
 ): Array<{ ciclo: CicloExpediente; titulo: string; subtitulo: string }> {
   const t = elegir(EXPEDIENTE, idioma).ciclos;
+  let profundizaciones = 0;
+  let replanteamientos = 0;
   return ciclos.map((ciclo, i) => {
     if (i === 0) {
       return { ciclo, titulo: t.tuPlan, subtitulo: t.tuPlanSubtitulo };
     }
-    return {
-      ciclo,
-      titulo: interpolar(t.seguimiento, { n: i }),
-      subtitulo: t.seguimientoSubtitulo,
-    };
+    if (ciclo.etiqueta === "replanteamiento") {
+      replanteamientos += 1;
+      return { ciclo, titulo: interpolar(t.replanteamiento, { n: replanteamientos }), subtitulo: t.replanteamientoSubtitulo };
+    }
+    profundizaciones += 1;
+    return { ciclo, titulo: interpolar(t.profundizacion, { n: profundizaciones }), subtitulo: t.profundizacionSubtitulo };
   });
 }
 
@@ -250,11 +258,20 @@ export function indiceDeDocumentos(
   return docs;
 }
 
+/** Ciclo de replanteamiento, Fase 2: lo que la persona contó al pedir el
+ * ciclo, citado en su voz, antes del plan. Nada si no escribió nada. */
+function lineaRelato(ciclo: CicloExpediente, idioma: Locale): string[] {
+  const relato = ciclo.relato?.replace(/\s+/g, " ").trim();
+  if (!relato) return [];
+  return [`> ${interpolar(elegir(EXPEDIENTE, idioma).ciclos.relato, { relato })}`, ""];
+}
+
 /** El markdown de un ciclo suelto, con su portadilla. */
 export function cicloMarkdown(nombre: string, titulo: string, ciclo: CicloExpediente, idioma: Locale = LOCALE_BASE): string {
   const l: string[] = [];
   l.push(`> ${nombre} · ${titulo} · ${fechaHumanaConAno(ciclo.createdAt, idioma)}`);
   l.push("");
+  l.push(...lineaRelato(ciclo, idioma));
   l.push(ciclo.contenidoMd.trim());
   l.push("");
   return l.join("\n");
@@ -372,6 +389,7 @@ export function expedienteMarkdown(d: DatosExpediente, idioma: Locale = LOCALE_B
     l.push("");
     l.push(`_${fechaHumanaConAno(ciclo.createdAt, idioma)}_`);
     l.push("");
+    l.push(...lineaRelato(ciclo, idioma));
     l.push(rebajarTitulos(ciclo.contenidoMd.trim(), 2));
     l.push("");
   }
@@ -472,13 +490,14 @@ export function reporteMundoMarkdown(d: DatosReporteMundo, idioma: Locale = LOCA
   l.push(d.completadoAt ? interpolarEn(idioma, t.estadoTerminado, { fecha: fechaHumanaConAno(d.completadoAt, idioma) }) : tx.estadoEnMarcha);
   l.push("");
 
-  // El plan del mundo + sus seguimientos, con el mismo naming ("Tu Plan",
-  // "Seguimiento N") filtrado a su dominio.
+  // El plan del mundo + sus ciclos, con el mismo naming ("Tu Plan",
+  // "Profundización N", "Replanteamiento N") filtrado a su dominio.
   for (const { ciclo, titulo } of titulosDeCiclos(d.ciclos, idioma)) {
     l.push(`## ${titulo}`);
     l.push("");
     l.push(`_${fechaHumanaConAno(ciclo.createdAt, idioma)}_`);
     l.push("");
+    l.push(...lineaRelato(ciclo, idioma));
     l.push(rebajarTitulos(ciclo.contenidoMd.trim(), 2));
     l.push("");
   }
@@ -530,7 +549,7 @@ export function accionesDelCicloVigente<T extends { plan_id?: string | null; dom
 ): T[] {
   const vigente = new Map<string, { id: string; t: number }>();
   for (const p of planes) {
-    if (!["inicial", "completo", "seguimiento"].includes(p.etiqueta)) continue;
+    if (!ETIQUETAS_CICLO.includes(p.etiqueta)) continue;
     const d = p.dominio || "core";
     const t = new Date(p.created_at).getTime();
     const actual = vigente.get(d);

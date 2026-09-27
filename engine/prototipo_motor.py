@@ -926,6 +926,23 @@ SYSTEM_PLAN = (
     "ir a su ritmo (sin fechas), esta PROHIBIDO mencionar retrasos, "
     "cumplimiento o calendario: no se juzga contra fechas que decidio no "
     "tener.\n"
+    "8-ter. EL PLAN ANTERIOR (ciclo de replanteamiento, Fase 2): si recibes "
+    "plan_anterior (las etapas del plan previo, cada tarea con su estado: hecho, "
+    "en_proceso, empezado, pendiente o no_aplica), el plan nuevo CONSTRUYE "
+    "ENCIMA de el. Prohibido proponer como tarea nueva algo que ya esta hecho, "
+    "aunque sea con otras palabras. Lo que esta en_proceso o empezado continua si "
+    "sigue teniendo sentido, escrito como continuacion y no como si arrancara de "
+    "cero. Lo no_aplica jamas vuelve. Lo pendiente sigue, cambia o cae segun lo "
+    "que la persona cuenta ahora. El plan nuevo no es el anterior con otras "
+    "palabras.\n"
+    "8-quater. EL REPLANTEAMIENTO: si recibes replanteamiento (historia, "
+    "se_conserva, se_suelta, camino_elegido), la persona cambio de rumbo. Justo "
+    "despues del titulo, en lugar de la linea de la regla 8, escribe UNA linea "
+    "que reconozca lo que paso con sus palabras y el camino que eligio. El plan "
+    "sigue camino_elegido. Lo de se_conserva ya esta hecho y le sirve: apoyate en "
+    "eso y no lo pidas otra vez (la app ya lo trae hecho al plan nuevo). Lo de "
+    "se_suelta ya no aplica: prohibido volver a proponerlo o algo equivalente. "
+    "No empieces de cero ni la trates como principiante.\n"
     "9. Cobertura del bloqueo declarado (Fase 2.7): si recibes "
     "bloqueo_declarado no nulo, el plan DEBE darle tratamiento explicito y "
     "accionable — una etapa propia o integrada en una existente, con pasos "
@@ -1106,6 +1123,37 @@ SYSTEM_PLAN = (
     "inventes un id que no viniera en el material recibido)}. No agregues "
     "nada despues de esa linea."
 )
+
+# Ciclo de replanteamiento, Fase 2 (decision del fundador, 27 sep 2026): el paso
+# 3 de "Replantear mi camino". Solo lo usa la web (app/api/project/[id]/
+# replantear); vive aqui porque aqui viven todos los SYSTEM_* y la web los
+# recibe byte a byte por scripts/sync_assets_web.py.
+SYSTEM_CAMINOS = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
+    "Eres el estratega de una app de emprendimiento. Una persona con un proyecto "
+    "en marcha quiere replantear su camino porque algo cambio. Recibes un JSON "
+    "con historia (lo que paso, en sus palabras), se_conserva (lo que ya "
+    "construyo y le sigue sirviendo), se_suelta (lo que ya construyo y ya no "
+    "aplica), plan_anterior (las etapas del plan previo con cada tarea y su "
+    "estado, o null), realidad (su avance medido y su ritmo real, o null), "
+    "estado_vivo (lo que el sistema sabe de su proyecto, o null) y candidatos: "
+    "conceptos de metodo que el proyecto AUN NO ha trabajado, cada uno con id, "
+    "titulo, fase y resumen.\n\n"
+    "Propone DOS o TRES caminos posibles, realmente distintos entre si, que "
+    "partan de su historia y de lo que conserva. Nunca empieces de cero ni "
+    "propongas algo de se_suelta. Cada camino lleva:\n"
+    "- titulo: de 3 a 6 palabras, en segunda persona o como una direccion clara "
+    "(ejemplo: 'Vender por encargo sin local'). PROHIBIDO copiar el titulo de un "
+    "concepto, usar jerga de libro o anglicismos.\n"
+    "- descripcion: una o dos frases en segunda persona (tu), llanas, que digan "
+    "que harias distinto y por que encaja con lo que conto. Sin cifras que no "
+    "esten en lo que recibiste.\n"
+    "- nodos: de 3 a 5 ids de candidatos, en el orden en que conviene "
+    "trabajarlos para ese camino. SOLO ids que esten en candidatos, tal cual.\n\n"
+    "Responde SOLO con JSON valido, sin texto antes ni despues, con esta forma: "
+    '{"caminos": [{"titulo": "...", "descripcion": "...", "nodos": ["id1", "id2", "id3"]}]}'
+)
+
 SYSTEM_PLAN += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_ESTADO_VIVO = (
@@ -2170,7 +2218,8 @@ def _tokens_cosecha(texto):
 MAX_COSECHA_PRIORIDAD = 8
 
 
-def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada=None, tope=MAX_COSECHA):
+def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada=None, tope=MAX_COSECHA,
+                        excluir=None):
     """Expande desde la ruta (conversada + silenciosa) hacia nodos_siguientes y
     nodos_previos adyacentes, sin preguntar nada, y devuelve hasta `tope`
     priorizados por: familia que le falte a la ruta, fase mayoritaria de la
@@ -2178,8 +2227,12 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, priori
     Fase 2.7: si hay prioridad_declarada (el bloqueo que el usuario repitio),
     reserva hasta MAX_COSECHA_PRIORIDAD cupos para nodos afines a esa
     prioridad ANTES de aplicar el puntaje normal, para que el plan tenga
-    material tecnico concreto sobre el frente que el usuario mismo senalo."""
-    ruta_set = set(ruta)
+    material tecnico concreto sobre el frente que el usuario mismo senalo.
+    Ciclo de replanteamiento, Fase 2 (27 sep 2026): `excluir` son los conceptos
+    que el proyecto YA cubrio en sesiones anteriores; la regla 8 de SYSTEM_PLAN
+    promete que el material "ya excluye lo cubierto" y antes solo se excluia la
+    ruta actual."""
+    ruta_set = set(ruta) | set(excluir or ())
     candidatos = set()
     for nid in ruta:
         n = graph[nid]
@@ -2390,7 +2443,7 @@ def _extraer_seccion_economica(cuerpo):
 
 def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id,
                     es_seguimiento=False, estado_vivo_previo=None, prioridad_declarada=None,
-                    registrar_evento=None, numeros_proyecto=None):
+                    registrar_evento=None, numeros_proyecto=None, excluir=None):
     """`evaluacion` (ruta-solo, por tags de node_families) decide QUE
     cosechar (familia faltante como prioridad) - eso se conserva para el
     medidor de oferta previa ("quieres continuar") y para priorizar la
@@ -2414,7 +2467,8 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
         }
 
     material_principal = [a_material(nid) for nid in ruta]
-    cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada)
+    cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada,
+                                      excluir=excluir)
     material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
     tiene_material_economico = any(m["es_viabilidad_economica"] for m in material_principal + material_de_apoyo)
 
@@ -2872,7 +2926,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
                                      estado_vivo_previo=estado_vivo_previo,
                                      prioridad_declarada=prioridad_declarada,
                                      registrar_evento=_registrar_evento,
-                                     numeros_proyecto=numeros_para_plan)
+                                     numeros_proyecto=numeros_para_plan,
+                                     excluir=visitados)
     plan_md = resultado_plan["markdown"]
     print(plan_md)
     SALIDAS_DIR.mkdir(parents=True, exist_ok=True)

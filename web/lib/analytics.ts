@@ -21,6 +21,7 @@ import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { interpolarEn } from "./i18n/elision";
 import { interpolar } from "./i18n/interpolar";
 import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
+import { ETIQUETAS_CICLO } from "./dbContract";
 
 const DIA = 86_400_000;
 
@@ -65,6 +66,10 @@ export interface ItemAnalytics {
   texto?: string;
   /** gestor de estados: el porqué de una tarea retirada (estado 'no_aplica') */
   no_aplica_motivo?: string | null;
+  /** Ciclo de replanteamiento, Fase 2 (047): la tarea original que esta fila
+   * trae hecha al plan nuevo. Cuenta en el plan vigente, NO en la historia (la
+   * original ya está contada bajo su plan). */
+  heredado_de?: string | null;
 }
 
 export interface MundoAnalytics {
@@ -392,7 +397,10 @@ export function capaUniversalDe(
   fin: string,
   mundos: number
 ): CapaUniversal {
-  const completadas = items.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
+  // Ciclo de replanteamiento, Fase 2: la HISTORIA (acciones, ritmo, racha,
+  // series) no cuenta las copias heredadas; la original ya está contada.
+  const historia = items.filter((i) => !i.heredado_de);
+  const completadas = historia.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
   const accionesHechas = completadas.length;
   const duracionTotalDias = Math.max(0, dias(chispa, fin));
   const semanas = duracionTotalDias / 7;
@@ -447,7 +455,7 @@ export function capaUniversalDe(
     rachaMasLargaDias: rachaMasLarga(completadas),
     ciclosDePlan: planes.length,
     mundos,
-    duracionPorEtapa: duracionPorEtapa(items, chispa),
+    duracionPorEtapa: duracionPorEtapa(historia, chispa),
     avancePorSemana,
     avancePorDia,
     accionesPorEtapa,
@@ -515,7 +523,7 @@ export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): An
   };
 }
 
-const ETIQUETAS_CICLO_PLAN = ["inicial", "completo", "seguimiento"];
+const ETIQUETAS_CICLO_PLAN = ETIQUETAS_CICLO;
 
 /**
  * AUD-09 M37: los mundos que CUENTAN (tienen su plan), con la fecha de su primer
@@ -729,7 +737,8 @@ export function construirHitos(
   }
   if (incluirAcciones) {
     for (const it of entrada.items) {
-      if (!it.completed_at) continue;
+      // Una copia heredada no es otra acción: la original ya tiene su hito.
+      if (!it.completed_at || it.heredado_de) continue;
       const cumplimiento =
         it.fecha_base ? clasificarCumplimiento(it.completed_at, it.fecha_base) : undefined;
       hitos.push({

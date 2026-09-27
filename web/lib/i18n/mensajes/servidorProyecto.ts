@@ -43,6 +43,9 @@ const es = {
     mundoCompletado: 'Diste "{{mundo}}" por completado. Reábrelo si quieres seguir trabajándolo.',
     primeroExplora: 'Primero explora "{{mundo}}": su seguimiento nace de su plan.',
     puertasRecorridas: 'Ya recorriste todas las puertas de "{{mundo}}".',
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "Cuéntame qué pasó: sin tu historia no puedo replantear tu camino.",
+    caminosFallidos: "No pude proponerte caminos en este momento. No se cobró nada; intenta de nuevo en un rato.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' debe ser un objeto de campo: valor",
@@ -114,6 +117,9 @@ const en: typeof es = {
     mundoCompletado: 'You marked "{{mundo}}" as completed. Reopen it if you want to keep working on it.',
     primeroExplora: 'Explore "{{mundo}}" first: its follow-up grows out of its plan.',
     puertasRecorridas: 'You\'ve already been through every door in "{{mundo}}".',
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "Tell me what happened: without your story I can't rethink your path.",
+    caminosFallidos: "I couldn't suggest paths right now. Nothing was charged; try again in a little while.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' must be an object of field: value",
@@ -184,6 +190,9 @@ const fr: typeof es = {
     mundoCompletado: "Tu as déclaré « {{mundo}} » terminé. Rouvre-le si tu veux continuer à y travailler.",
     primeroExplora: "Explore d'abord « {{mundo}} » : son suivi naît de son plan.",
     puertasRecorridas: "Tu as déjà franchi toutes les portes de « {{mundo}} ».",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "Raconte-moi ce qui s'est passé : sans ton histoire, je ne peux pas repenser ton chemin.",
+    caminosFallidos: "Je n'ai pas pu te proposer de chemins pour l'instant. Rien n'a été débité ; réessaie dans un moment.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' doit être un objet de la forme champ : valeur",
@@ -252,6 +261,9 @@ const pt: typeof es = {
     mundoCompletado: "Você deu \"{{mundo}}\" por concluído. Reabra-o se quiser continuar trabalhando nele.",
     primeroExplora: "Explore \"{{mundo}}\" primeiro: o acompanhamento dele nasce do plano dele.",
     puertasRecorridas: "Você já percorreu todas as portas de \"{{mundo}}\".",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "Conte o que aconteceu: sem a sua história eu não consigo repensar o seu caminho.",
+    caminosFallidos: "Não consegui propor caminhos agora. Nada foi cobrado; tente de novo daqui a pouco.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' deve ser um objeto de campo: valor",
@@ -320,6 +332,9 @@ const de: typeof es = {
     mundoCompletado: "Du hast „{{mundo}}“ als abgeschlossen markiert. Öffne die Welt wieder, wenn du weiter daran arbeiten möchtest.",
     primeroExplora: "Erkunde zuerst „{{mundo}}“: Der Zwischenstand dieser Welt baut auf ihrem Plan auf.",
     puertasRecorridas: "Du bist schon durch alle Türen von „{{mundo}}“ gegangen.",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "Erzähl mir, was passiert ist: Ohne deine Geschichte kann ich deinen Weg nicht neu denken.",
+    caminosFallidos: "Ich konnte dir gerade keine Wege vorschlagen. Es wurde nichts abgebucht; versuch es gleich noch einmal.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' muss ein Objekt aus Feld: Wert sein",
@@ -388,6 +403,9 @@ const it: typeof es = {
     mundoCompletado: "Hai dato \"{{mundo}}\" per completato. Riaprilo se vuoi continuare a lavorarci.",
     primeroExplora: "Prima esplora \"{{mundo}}\": la sua revisione nasce dal suo piano.",
     puertasRecorridas: "Hai già attraversato tutte le porte di \"{{mundo}}\".",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "Raccontami cos'è successo: senza la tua storia non posso ripensare il tuo percorso.",
+    caminosFallidos: "Non sono riuscito a proporti dei percorsi in questo momento. Non è stato addebitato nulla; riprova tra poco.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' deve essere un oggetto campo: valore",
@@ -456,6 +474,9 @@ const ja: typeof es = {
     mundoCompletado: "「{{mundo}}」は完了にしています。続けて取り組む場合は、再開してください。",
     primeroExplora: "先に「{{mundo}}」を探ってください。フォローアップはそのプランから生まれます。",
     puertasRecorridas: "「{{mundo}}」の扉は、すべて巡り終えました。",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "何があったのか聞かせてください。あなたの話がないと、道すじを考え直せません。",
+    caminosFallidos: "いまは道すじを提案できませんでした。料金はかかっていません。少し時間をおいて、もう一度お試しください。",
   },
   numeros: {
     cifrasNoObjeto: "'numeros'は「項目: 値」形式のオブジェクトである必要があります",
@@ -524,6 +545,9 @@ const zh: typeof es = {
     mundoCompletado: "你已将“{{mundo}}”标记为已完成。如果想继续推进，请重新开启它。",
     primeroExplora: "请先探索“{{mundo}}”：它的跟进源自它的计划。",
     puertasRecorridas: "“{{mundo}}”的每一扇门，你都已经走过了。",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "告诉我发生了什么：没有你的经历，我没法重新规划你的道路。",
+    caminosFallidos: "现在没能为你提出可选的道路。没有扣除任何费用；请稍后再试。",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' 必须是“字段：值”形式的对象",
@@ -592,6 +616,9 @@ const ko: typeof es = {
     mundoCompletado: "“{{mundo}}” 월드를 완료로 표시했어요. 계속 다듬고 싶다면 다시 열어 주세요.",
     primeroExplora: "먼저 “{{mundo}}” 월드를 탐색해 주세요. 후속 점검은 그 계획에서 나와요.",
     puertasRecorridas: "“{{mundo}}” 월드의 문은 이미 모두 둘러봤어요.",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "무슨 일이 있었는지 들려주세요. 이야기가 없으면 길을 다시 세울 수 없어요.",
+    caminosFallidos: "지금은 길을 제안하지 못했어요. 아무것도 차감되지 않았으니 잠시 후 다시 시도해 주세요.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros'는 필드: 값 형태의 객체여야 해요",
@@ -660,6 +687,9 @@ const ar: typeof es = {
     mundoCompletado: "أعلنتم اكتمال «{{mundo}}». أعيدوا فتحه إن أردتم مواصلة العمل عليه.",
     primeroExplora: "استكشفوا «{{mundo}}» أولًا: متابعته تنبثق من خطته.",
     puertasRecorridas: "لقد مررتم بكل أبواب «{{mundo}}».",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "احكوا لي ما حدث: من دون قصتكم لا أستطيع إعادة التفكير في طريقكم.",
+    caminosFallidos: "لم أتمكن من اقتراح طرق الآن. لم يُخصم شيء؛ حاولوا مرة أخرى بعد قليل.",
   },
   numeros: {
     cifrasNoObjeto: "يجب أن تكون 'numeros' كائنًا بصيغة حقل: قيمة",
@@ -728,6 +758,9 @@ const hi: typeof es = {
     mundoCompletado: "आपने “{{mundo}}” को पूरा मान लिया है। अगर इस पर आगे काम करना है, तो इसे फिर से खोलें।",
     primeroExplora: "पहले “{{mundo}}” को खोजें: इसका फ़ॉलो-अप इसकी योजना से बनता है।",
     puertasRecorridas: "“{{mundo}}” के सारे दरवाज़े आपने खोल लिए हैं।",
+    // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
+    historiaObligatoria: "बताइए क्या हुआ: आपकी कहानी के बिना मैं आपका रास्ता दोबारा नहीं सोच सकता।",
+    caminosFallidos: "अभी मैं रास्ते नहीं सुझा सका। कुछ भी नहीं कटा; थोड़ी देर बाद फिर कोशिश करें।",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' एक ऑब्जेक्ट होना चाहिए (फ़ील्ड: मान)",

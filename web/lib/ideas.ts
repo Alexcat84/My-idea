@@ -13,7 +13,7 @@ import { listarProyectos } from "./db";
 import { estadoEntrevista } from "./entrevistaAbierta";
 import { etapaDeIdea } from "./etapaIdea";
 import { fechaSello } from "./fechas";
-import { esActivo, type ChecklistEstado } from "./dbContract";
+import { esActivo, type ChecklistEstado, ETIQUETAS_CICLO } from "./dbContract";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { formaPlural, interpolar } from "./i18n/interpolar";
 import { MIS_IDEAS } from "./i18n/mensajes/misIdeas";
@@ -146,15 +146,15 @@ export async function listarIdeasConEstado(supabase: SupabaseClient, idioma: Loc
     const etiquetas = etiquetasPorProyecto.get(p.id) ?? new Set<string>();
     let estado: EstadoIdea;
     if (entrevistaAbierta.has(p.id)) estado = "En entrevista";
-    else if (etiquetas.has("seguimiento")) estado = "En seguimiento";
+    else if (etiquetas.has("seguimiento") || etiquetas.has("replanteamiento")) estado = "En seguimiento";
     else if (etiquetas.has("inicial") || etiquetas.has("completo")) estado = "Con plan";
     else estado = "Organizada";
 
     // Etapa canónica y chips (canon 3.6): solo lecturas de lo persistido.
-    const conPlan = etiquetas.has("inicial") || etiquetas.has("completo") || etiquetas.has("seguimiento");
+    const conPlan = ETIQUETAS_CICLO.some((e) => etiquetas.has(e));
     const porDominio = progreso.get(p.id) ?? new Map<string, { total: number; hechos: number; empezoAlguno: boolean }>();
     const core = porDominio.get("core");
-    const enObra = Boolean(core?.empezoAlguno) || etiquetas.has("seguimiento");
+    const enObra = Boolean(core?.empezoAlguno) || etiquetas.has("seguimiento") || etiquetas.has("replanteamiento");
 
     const pensando = entrevistaAbierta.has(p.id);
     // AUD-09 M28: sin organizador no hay Claridad (su IA falló): se queda en la

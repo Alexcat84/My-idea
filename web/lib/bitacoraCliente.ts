@@ -32,7 +32,10 @@ export interface SesionBita {
 }
 
 export interface PlanBita {
-  etiqueta: string; // organizador | inicial | completo | seguimiento | reporte_numeros
+  /** Ciclo de replanteamiento, Fase 2: para casar cada ciclo con lo que la
+   * persona contó (evento ciclo_* con su plan_id). Ausente en lecturas viejas. */
+  id?: string;
+  etiqueta: string; // organizador | inicial | completo | seguimiento | replanteamiento | reporte_numeros
   created_at: string;
   dominio: string | null;
   baseline_confirmada_at: string | null;
@@ -45,6 +48,9 @@ export interface ItemBita {
   /** dominio del ítem: null/'core' = viaje principal; otro = un mundo. Sirve
    * para etiquetar en la bitácora QUÉ mundo (mapa de lecciones aprendidas). */
   dominio: string | null;
+  /** Ciclo de replanteamiento, Fase 2 (047): la copia que un replanteamiento
+   * trae hecha. No es otra acción: la original ya tiene su línea. */
+  heredado_de?: string | null;
 }
 
 export interface EventoBita {
@@ -159,11 +165,30 @@ export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE
   const corePlan = masAntiguo(d.planes.filter((p) => esCore(p.dominio) && (p.etiqueta === "completo" || p.etiqueta === "inicial")));
   push(corePlan?.created_at, t.plan, "hito", t.planTitulo);
 
-  // Seguimientos (recálculos del plan), numerados por orden cronológico.
-  const segs = d.planes
-    .filter((p) => esCore(p.dominio) && p.etiqueta === "seguimiento")
-    .sort((a, b) => a.created_at.localeCompare(b.created_at));
-  segs.forEach((p, i) => push(p.created_at, interpolar(t.seguimiento, { n: i + 1 }), "hito", interpolar(t.seguimientoTitulo, { n: i + 1 })));
+  // Ciclo de replanteamiento, Fase 2: cada ciclo posterior con SU nombre
+  // ("Profundizaste tu plan" / "Replanteaste tu camino"), numerado por tipo en
+  // orden cronológico, y con lo que la persona contó al pedirlo (el evento
+  // ciclo_* de su plan), citado en su voz.
+  const relatoDe = new Map<string, string>();
+  for (const e of d.eventos) {
+    if ((e.tipo === "ciclo_profundizado" || e.tipo === "ciclo_replanteado") && typeof e.payload?.plan_id === "string") {
+      const relato = typeof e.payload.relato === "string" ? e.payload.relato.trim() : "";
+      if (relato) relatoDe.set(e.payload.plan_id, relato);
+    }
+  }
+  const conRelato = (texto: string, p: PlanBita) => {
+    const relato = p.id ? relatoDe.get(p.id) : undefined;
+    return relato ? `${texto} ${interpolar(t.contaste, { relato: corto(relato, 160) })}` : texto;
+  };
+  for (const [etiqueta, texto, titulo] of [
+    ["seguimiento", t.profundizaste, t.profundizasteTitulo],
+    ["replanteamiento", t.replanteaste, t.replanteasteTitulo],
+  ] as const) {
+    d.planes
+      .filter((p) => esCore(p.dominio) && p.etiqueta === etiqueta)
+      .sort((a, b) => a.created_at.localeCompare(b.created_at))
+      .forEach((p, i) => push(p.created_at, conRelato(texto, p), "hito", interpolar(titulo, { n: i + 1 })));
+  }
 
   // Línea base sellada: un sello por plan que tenga su marca. El sello pertenece
   // al ESPACIO de su plan (Fase 3), no siempre al core.
@@ -181,11 +206,20 @@ export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE
     push(p.created_at, nums.length > 1 ? interpolar(t.numerosVersion, { n: i + 1 }) : t.numeros, "hito", t.numerosTitulo, esCore(p.dominio) ? "core" : p.dominio),
   );
 
-  // Planes de mundo generados (pertenecen a su mundo).
+  // Planes de mundo generados (pertenecen a su mundo). Un ciclo posterior del
+  // mundo dice cuál fue y lleva lo que la persona contó (Fase 2).
   for (const p of d.planes) {
-    if (!esCore(p.dominio) && (p.etiqueta === "inicial" || p.etiqueta === "completo" || p.etiqueta === "seguimiento")) {
-      push(p.created_at, interpolar(t.planMundo, { mundo: d.nombreMundo(p.dominio!) }), "hito", d.nombreMundo(p.dominio!), p.dominio!);
-    }
+    if (esCore(p.dominio)) continue;
+    const mundo = d.nombreMundo(p.dominio!);
+    const texto =
+      p.etiqueta === "seguimiento"
+        ? conRelato(interpolar(t.profundizasteMundo, { mundo }), p)
+        : p.etiqueta === "replanteamiento"
+          ? conRelato(interpolar(t.replanteasteMundo, { mundo }), p)
+          : p.etiqueta === "inicial" || p.etiqueta === "completo"
+            ? interpolar(t.planMundo, { mundo })
+            : null;
+    if (texto) push(p.created_at, texto, "hito", mundo, p.dominio!);
   }
 
   // Cada acción marcada HECHA, con su fecha de realización. El espacio va en el
@@ -195,7 +229,7 @@ export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE
   // evento existiera) se siguen derivando de completed_at, sin duplicar.
   const hechosConEvento = new Set(d.eventos.filter((e) => e.tipo === "item_hecho").map((e) => String(e.payload?.item)));
   for (const it of d.items)
-    if (it.completed_at && !hechosConEvento.has(it.id))
+    if (it.completed_at && !hechosConEvento.has(it.id) && !it.heredado_de)
       push(it.completed_at, interpolar(t.marcasteHechaCita, { texto: corto(it.texto) }), "accion", undefined, esCore(it.dominio) ? "core" : it.dominio);
 
   // ── Eventos registrados (lista blanca) ────────────────────────────────────

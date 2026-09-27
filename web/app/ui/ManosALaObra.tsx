@@ -3,9 +3,9 @@
 /**
  * ManosALaObra — la etapa 5 (canon 3.6, mockups 06 y 08): el plan
  * convertido en checklist agrupado por etapa (y por mundo cuando hay
- * unlocks), los 4 estados de un toque + "Marcar hecho", el ritual de 3
- * tarjetas de "Continuar mi idea" (checklist → detalles → enfoque), el
- * acordeón Historia y el ritmo. EL VERDE EJECUTA: todo el progreso aquí
+ * unlocks), los 4 estados de un toque + "Marcar hecho", las dos entradas del
+ * ciclo ("Profundizar mi plan": checklist → detalles → enfoque; "Replantear mi
+ * camino": RitualReplantear), el acordeón Historia y el ritmo. EL VERDE EJECUTA: todo el progreso aquí
  * es verde; el azul queda para el ciclo de profundización (pensar).
  *
  * REGLA DE ORO: cada número, barra y check viene de checklist_items
@@ -21,6 +21,7 @@ import { BotonHeroe } from "./BotonHeroe";
 import { DetalleActividad } from "./DetalleActividad";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
+import { RitualReplantear } from "./RitualReplantear";
 import { SelectorEstado } from "./SelectorEstado";
 import {
   CAPACIDAD_SEMANAL,
@@ -33,6 +34,7 @@ import {
   type Probabilidad,
   type FechaBaseOrigen,
   type ModoCamino,
+  esCicloPosterior,
 } from "@/lib/dbContract";
 import {
   CAPACIDAD_DEFAULT,
@@ -102,6 +104,9 @@ export interface ItemChecklistUI {
   probabilidad?: Probabilidad | null;
   dolor?: Dolor | null;
   camino?: Camino | null;
+  /** Ciclo de replanteamiento (migración 047): la tarea vino HECHA del plan
+   * anterior porque la persona la marcó "me sigue sirviendo". null = nació aquí. */
+  heredado_de?: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -129,9 +134,16 @@ export interface ChecklistData {
 }
 
 export interface PlanHistorial {
+  /** 'inicial' | 'completo' (el primer plan) · 'seguimiento' (profundizaste) ·
+   * 'replanteamiento' (replanteaste). */
   etiqueta: string;
   created_at: string;
   contenido_md: string;
+  /** Ciclo de replanteamiento, Fase 2 (lo hecho no se pierde): las tareas que
+   * quedaron hechas en ese plan. Opcional: un servidor viejo no la manda. */
+  hechas?: Array<{ texto: string; completed_at: string | null }>;
+  /** Lo que la persona escribió o dictó al pedir ese ciclo. Opcional. */
+  relato?: string | null;
 }
 
 /**
@@ -165,6 +177,9 @@ interface MundoInfo {
   /** AUD-09 (migración 039): el mundo recibió un plan básico (sin IA, no
    * cobrado). No es una compra: se ofrece "Generar el plan completo". */
   planBasicoAt?: string | null;
+  /** Ciclo de replanteamiento, Fase 2: los planes anteriores de ESTE mundo, con
+   * la misma forma que la Historia del núcleo. Sin él, el mundo no la muestra. */
+  historial?: PlanHistorial[];
 }
 
 interface Props {
@@ -226,6 +241,10 @@ interface Props {
   /** AUD-09 H01: el dominio viaja con el turno; la pantalla de la entrevista
    * pinta el precio del seguimiento DE ESE espacio, no el del núcleo. */
   onSeguimientoIniciado: (turno: unknown, dominio: string) => void;
+  /** Ciclo de replanteamiento, Fase 2: "Replantear mi camino" terminó su paso 4
+   * (la sesión nació en POST replantear y hay un camino elegido). El padre
+   * genera el plan de esa sesión con el camino, sin entrevista. */
+  onReplanteamientoListo: (sessionId: string, dominio: string, caminoId: string) => void;
   /** POST world/start devolvió el primer turno del mundo */
   onMundoIniciado: (turno: unknown, dominio: string) => void;
   /** Fase 4.5: comprar el plan del mundo desde su escaparate (el diagnóstico).
@@ -438,6 +457,13 @@ function FilaItem({
               {item.no_aplica_motivo ? interpolar(t.fila.noAplicaConMotivo, { motivo: item.no_aplica_motivo }) : t.fila.noAplica}
             </span>
           )}
+          {item.heredado_de && (
+            // Ciclo de replanteamiento: traída hecha del plan anterior ("me sigue
+            // sirviendo"). Chip discreto: dice de dónde viene, no pide nada.
+            <span className="mt-1 inline-block rounded-full border border-white/15 px-2.5 py-0.5 text-[11.5px] text-dim">
+              {t.fila.heredada}
+            </span>
+          )}
           {!hecho && !retirada && item.estado !== "pendiente" && (
             <span className="mt-0.5 block text-[12.5px] text-done">{etiquetaEstado[item.estado]}</span>
           )}
@@ -637,12 +663,14 @@ function BloqueSemana({
 }
 
 /** Ritual de 3 tarjetas: checklist → detalles → enfoque (con "No estoy seguro").
+ * Ciclo de replanteamiento, Fase 2: es "Profundizar mi plan" (etiqueta
+ * 'seguimiento'); su hermano para cuando algo cambió es RitualReplantear.
  *
  * Fase 4.2: el mismo ritual sirve al viaje principal y a cada mundo activo —
  * son las MISMAS tres tarjetas. `mundo` (su nombre) es lo único que cambia: de
  * quién habla. Un solo componente, porque un mundo es un subproyecto completo y
  * su seguimiento no es una versión recortada del otro. */
-function RitualContinuar({
+export function RitualContinuar({
   resumen,
   mundo,
   enviando,
@@ -696,7 +724,7 @@ function RitualContinuar({
       {paso === 1 && resumen.hechos > 0 && (
         <>
           <p className="text-[17px] font-medium leading-relaxed">
-            {t.checklistEsHistoria}
+            {t.tuAvance}
           </p>
           <p className="mt-2 text-sm text-dim">
             {mundo
@@ -788,6 +816,71 @@ function RitualContinuar({
       )}
       {error && <p className="mt-3 text-sm text-warn">{error}</p>}
     </div>
+  );
+}
+
+/** La Historia de un espacio (núcleo o mundo): sus planes anteriores. Ciclo de
+ * replanteamiento, Fase 2 (lo hecho no se pierde): cada plan se nombra por su
+ * tipo (nunca con la etiqueta cruda), y dentro va primero lo que la persona
+ * contó al pedir ese ciclo, luego las tareas que hizo con ese plan y al final
+ * el documento. `hechas` y `relato` son opcionales: un servidor viejo no los
+ * manda y la Historia se ve como antes. */
+function HistoriaPlanes({ historial, idiomaDocumento }: { historial: PlanHistorial[]; idiomaDocumento?: ActiveLocale }) {
+  const idioma = useIdioma();
+  const t = elegir(MANOS_A_LA_OBRA, idioma);
+  return (
+    <Acordeon titulo={interpolar(t.nucleo.historia, { n: historial.length })}>
+      <div className="flex flex-col gap-3">
+        {historial.map((h, i) => {
+          const tipo =
+            h.etiqueta === "replanteamiento"
+              ? t.nucleo.histReplanteaste
+              : esCicloPosterior(h.etiqueta)
+                ? t.nucleo.histProfundizaste
+                : t.nucleo.histPrimerPlan;
+          const hechas = h.hechas ?? [];
+          return (
+            <Acordeon key={i} titulo={interpolar(t.nucleo.histCuando, { tipo, cuando: haceCuanto(h.created_at, idioma) })}>
+              <div className="flex flex-col gap-4">
+                {h.relato && (
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{t.nucleo.histRelato}</p>
+                    <blockquote className="mt-1.5 whitespace-pre-line border-s-2 border-accent/40 ps-3 text-[14px] italic text-ink/90">
+                      {h.relato}
+                    </blockquote>
+                  </div>
+                )}
+                {hechas.length > 0 && (
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{t.nucleo.histHechas}</p>
+                    <ul className="mt-1.5 flex flex-col gap-1.5">
+                      {hechas.map((x, k) => (
+                        <li key={k} className="flex items-start gap-2 text-[14px]">
+                          <span aria-hidden className="mt-[3px] text-done">
+                            <svg width="12" height="12" viewBox="0 0 12 12">
+                              <path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </span>
+                          <span className="min-w-0">
+                            <span className="text-ink">{x.texto}</span>
+                            {x.completed_at && (
+                              <span className="ms-2 text-[12.5px] text-done">
+                                {interpolarEn(idioma, t.fila.hechoEl, { fecha: fechaHumanaCorta(x.completed_at, idioma) })}
+                              </span>
+                            )}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                <PlanDocumento md={h.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={tipo} />
+              </div>
+            </Acordeon>
+          );
+        })}
+      </div>
+    </Acordeon>
   );
 }
 
@@ -1561,6 +1654,12 @@ const ICONO_ACCESO = {
       <path d="M18.5 3.5v4.9h-4.9M5.5 20.5v-4.9h4.9" />
     </svg>
   ),
+  // Ciclo de replanteamiento: una bifurcación (otro camino desde donde estás).
+  replantear: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M6 21v-7a4 4 0 0 1 4-4h8" /><path d="M15 6.5l3.5 3.5L15 13.5" /><path d="M6 3v7" />
+    </svg>
+  ),
 } as const;
 
 function TarjetaAcceso({
@@ -1625,6 +1724,7 @@ export function ManosALaObra({
   onVolverEntrevista,
   onItemActualizado,
   onSeguimientoIniciado,
+  onReplanteamientoListo,
   onMundoIniciado,
   onComprarPlanMundo,
   onRegenerarPlanMundo,
@@ -1654,6 +1754,10 @@ export function ManosALaObra({
   // Fase 4.2: el ritual de un mundo (su dominio) y su cierre. Van aparte del
   // core a propósito: dos subproyectos abiertos a la vez no comparten estado.
   const [ritualMundo, setRitualMundo] = useState<string | null>(null);
+  // Ciclo de replanteamiento, Fase 2: "Replantear mi camino", la otra entrada.
+  // Núcleo y mundo por separado, como el ritual de profundizar.
+  const [replanteo, setReplanteo] = useState(false);
+  const [replanteoMundo, setReplanteoMundo] = useState<string | null>(null);
   const [cerrandoMundo, setCerrandoMundo] = useState<string | null>(null);
   const [motivoMundo, setMotivoMundo] = useState("");
   const [guardandoMundo, setGuardandoMundo] = useState(false);
@@ -1915,7 +2019,7 @@ export function ManosALaObra({
     .sort()
     .at(-1);
   const desde = itemsCore.map((i) => i.created_at).sort()[0];
-  const ciclosAjuste = historial.filter((h) => h.etiqueta === "seguimiento").length;
+  const ciclosAjuste = historial.filter((h) => esCicloPosterior(h.etiqueta)).length;
 
   async function elegirModo(dominio: string, modo: ModoCamino) {
     setGuardandoModo(true);
@@ -2089,8 +2193,35 @@ export function ManosALaObra({
     } catch {
       // sin conexión: se abre igual
     }
+    // Una entrada abierta a la vez: profundizar cierra el replanteamiento.
+    setReplanteo(false);
+    setReplanteoMundo(null);
     if (dominio === "core") setRitual(true);
     else setRitualMundo(dominio);
+  }
+
+  // Ciclo de replanteamiento, Fase 2: "Replantear mi camino" también pregunta
+  // ANTES si alcanza el saldo (GET replantear solo mira: no aparta ni gasta el
+  // límite), para no rechazar después de que la persona contó su historia.
+  async function abrirReplanteo(dominio: string) {
+    setError(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/replantear?dominio=${encodeURIComponent(dominio)}`);
+      if (res.status === 401) {
+        window.location.assign(loginConNext(`/idea/${projectId}?vista=manos`));
+        return;
+      }
+      if (!res.ok) {
+        setError((await leerRechazo(res, idioma)).mensaje);
+        return;
+      }
+    } catch {
+      // sin conexión: se abre igual y el paso 3 dirá lo que haga falta
+    }
+    setRitual(false);
+    setRitualMundo(null);
+    if (dominio === "core") setReplanteo(true);
+    else setReplanteoMundo(dominio);
   }
 
   // Fase 4.2: el mismo follow para el viaje principal y para un mundo. El
@@ -2278,24 +2409,39 @@ export function ManosALaObra({
             onCerrar={() => setRitual(false)}
           />
         )}
+        {replanteo && (
+          <RitualReplantear
+            projectId={projectId}
+            dominio={ESPACIO_CORE}
+            items={itemsCore}
+            onListo={(sid, camino) => onReplanteamientoListo(sid, ESPACIO_CORE, camino)}
+            onCerrar={() => setReplanteo(false)}
+          />
+        )}
 
         {/* Fase 4.3.2 (Manos a la Obra a 380): "Contar qué pasó" ARRIBA en móvil.
             Antes vivía SOLO en el aside, que en móvil cae al fondo (~2.800px): la
             puerta principal al seguimiento quedaba enterrada. Esta tarjeta es
             lg:hidden (la del aside es hidden lg:block): la acción sale una vez en
             cada viewport, en su sitio. El azul dispara al motor a repensar. */}
-        {core && cCore.total > 0 && !ritual && !nucleoCerrado && (
-          <div className="lg:hidden">
+        {core && cCore.total > 0 && !ritual && !nucleoCerrado && !replanteo && (
+          <div className="flex flex-col gap-3 lg:hidden">
             <TarjetaAcceso
               icono="ciclo"
-              titulo={t.tarjetas.cicloTitulo}
-              descripcion={t.tarjetas.cicloDesc}
+              titulo={t.tarjetas.profundizarTitulo}
+              descripcion={t.tarjetas.profundizarDesc}
               onClick={() => void abrirRitual("core")}
+            />
+            <TarjetaAcceso
+              icono="replantear"
+              titulo={t.tarjetas.replantearTitulo}
+              descripcion={t.tarjetas.replantearDesc}
+              onClick={() => void abrirReplanteo("core")}
             />
             {entrevistaAbierta && (
               <button
                 onClick={onVolverEntrevista}
-                className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+                className="block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
               >
                 {t.nucleo.volverEntrevista}
               </button>
@@ -2432,18 +2578,18 @@ export function ManosALaObra({
                     {interpolar(t.mundo.planBasico, { mundo: mundo.nombre })}
                   </p>
                   <p className="mt-2 text-[12.5px] text-dim">
-                    {rico(interpolar(t.mundo.usaraSiEntrega, { n: montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento") }), {
+                    {rico(interpolar(t.mundo.usaraSiEntrega, { n: montoDelPlan(mundo.dominio, esCicloPosterior(mundo.plan.etiqueta), mundo.plan.etiqueta === "replanteamiento") }), {
                       b: (c) => <span className="font-semibold text-ink">{c}</span>,
                     })}
                   </p>
                   <BotonHeroe
                     onClick={() =>
                       mundo.plan?.session_id &&
-                      onRegenerarPlanMundo(mundo.dominio, mundo.plan.session_id, mundo.plan.etiqueta === "seguimiento")
+                      onRegenerarPlanMundo(mundo.dominio, mundo.plan.session_id, esCicloPosterior(mundo.plan.etiqueta))
                     }
                     className="mt-3 rounded-[10px] px-5 py-2.5 text-sm font-semibold"
                   >
-                    {interpolar(t.mundo.generarCompleto, { n: montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento") })}
+                    {interpolar(t.mundo.generarCompleto, { n: montoDelPlan(mundo.dominio, esCicloPosterior(mundo.plan.etiqueta), mundo.plan.etiqueta === "replanteamiento") })}
                   </BotonHeroe>
                 </div>
               )}
@@ -2669,6 +2815,18 @@ export function ManosALaObra({
                   />
                 </div>
               )}
+              {grupo && (!esHub || cara === "manos") && !completado && replanteoMundo === mundo.dominio && (
+                <div className="mt-4">
+                  <RitualReplantear
+                    projectId={projectId}
+                    dominio={mundo.dominio}
+                    mundo={mundo.nombre}
+                    items={items}
+                    onListo={(sid, camino) => onReplanteamientoListo(sid, mundo.dominio, camino)}
+                    onCerrar={() => setReplanteoMundo(null)}
+                  />
+                </div>
+              )}
 
               {/* Fase 4.2 §2 — el cierre del mundo: el acta en miniatura. Sobrio
                   a propósito (§2: un momento, no la fiesta): la Celebración
@@ -2735,9 +2893,15 @@ export function ManosALaObra({
                     <div className="flex w-full flex-col gap-3">
                       <TarjetaAcceso
                         icono="ciclo"
-                        titulo={t.tarjetas.cicloTitulo}
-                        descripcion={interpolar(t.mundo.cicloDesc, { mundo: mundo.nombre })}
+                        titulo={t.tarjetas.profundizarTitulo}
+                        descripcion={interpolar(t.mundo.profundizarDesc, { mundo: mundo.nombre })}
                         onClick={() => void abrirRitual(mundo.dominio)}
+                      />
+                      <TarjetaAcceso
+                        icono="replantear"
+                        titulo={t.tarjetas.replantearTitulo}
+                        descripcion={interpolar(t.mundo.replantearDesc, { mundo: mundo.nombre })}
+                        onClick={() => void abrirReplanteo(mundo.dominio)}
                       />
                       <TarjetaAcceso
                         icono="realizar"
@@ -2760,6 +2924,14 @@ export function ManosALaObra({
                   </Acordeon>
                 </div>
               )}
+              {/* Ciclo de replanteamiento, Fase 2: la Historia del mundo, igual
+                  que la del núcleo (lo hecho no se pierde). En su hub, en la
+                  cara "manos". */}
+              {(!esHub || cara === "manos") && (mundo.historial?.length ?? 0) > 0 && (
+                <div className="mt-4">
+                  <HistoriaPlanes historial={mundo.historial ?? []} idiomaDocumento={idiomaDocumento} />
+                </div>
+              )}
             </section>
           );
         })}
@@ -2767,18 +2939,7 @@ export function ManosALaObra({
         {/* Historia: los planes anteriores del core, releíbles. Vive en la cara
             "manos" (o en el modo apilado histórico, sin caras). */}
         {mostrarCore && (!coreEnEspacio || cara === "manos") && historial.length > 0 && (
-          <Acordeon titulo={interpolar(t.nucleo.historia, { n: historial.length })}>
-            <div className="flex flex-col gap-3">
-              {historial.map((h, i) => (
-                <Acordeon
-                  key={i}
-                  titulo={interpolar(t.nucleo.planHistoria, { etiqueta: h.etiqueta, cuando: haceCuanto(h.created_at, idioma) })}
-                >
-                  <PlanDocumento md={h.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={interpolar(t.nucleo.planEtiqueta, { etiqueta: h.etiqueta })} />
-                </Acordeon>
-              ))}
-            </div>
-          </Acordeon>
+          <HistoriaPlanes historial={historial} idiomaDocumento={idiomaDocumento} />
         )}
       </div>
 
@@ -2822,26 +2983,36 @@ export function ManosALaObra({
           onClick={() => onVerDocumentos()}
         />
 
-        {/* "Ciclo de profundización" como TARJETA HERMANA — SOLO desktop (en móvil
-            ya subió arriba con su propia). La tarjeta entera abre el ritual
-            (setRitual); "volver a la entrevista" queda como enlace aparte. Orden
-            (recorrido del fundador): sube sobre "realizar", que cierra el aside. */}
+        {/* Las DOS entradas del ciclo (Fase 2 del replanteamiento: "Profundizar mi
+            plan" y "Replantear mi camino") como TARJETAS HERMANAS, SOLO desktop
+            (en móvil ya subieron arriba con las suyas). Cada tarjeta entera abre
+            su ritual tras preguntar el saldo; "volver a la entrevista" queda como
+            enlace aparte. Orden (recorrido del fundador): suben sobre "realizar",
+            que cierra el aside. */}
         {!nucleoCerrado && (
           <div className="hidden lg:block">
-            <TarjetaAcceso
-              icono="ciclo"
-              titulo={t.tarjetas.cicloTitulo}
-              descripcion={t.tarjetas.cicloDesc}
-              onClick={() => void abrirRitual("core")}
-            />
-            {entrevistaAbierta && (
-              <button
-                onClick={onVolverEntrevista}
-                className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
-              >
-                {t.nucleo.volverEntrevista}
-              </button>
-            )}
+            <div className="flex flex-col gap-3">
+              <TarjetaAcceso
+                icono="ciclo"
+                titulo={t.tarjetas.profundizarTitulo}
+                descripcion={t.tarjetas.profundizarDesc}
+                onClick={() => void abrirRitual("core")}
+              />
+              <TarjetaAcceso
+                icono="replantear"
+                titulo={t.tarjetas.replantearTitulo}
+                descripcion={t.tarjetas.replantearDesc}
+                onClick={() => void abrirReplanteo("core")}
+              />
+              {entrevistaAbierta && (
+                <button
+                  onClick={onVolverEntrevista}
+                  className="block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+                >
+                  {t.nucleo.volverEntrevista}
+                </button>
+              )}
+            </div>
           </div>
         )}
         {nucleoCerrado && (

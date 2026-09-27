@@ -10,8 +10,8 @@ import type { EntradaAnalytics, ItemAnalytics, MundoAnalytics, PlanCoreAnalytics
 import { obtenerModosPorEspacio, type Proyecto } from "./db";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
+import { ETIQUETAS_CICLO } from "./dbContract";
 
-const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
 
 /** AUD-09 M18: una lectura que falla NO es "no hay nada". Antes el Análisis, la
  * Celebración y el bloque de realidad del seguimiento salían en cero ante un
@@ -91,7 +91,10 @@ export async function cargarEntradaAnalytics(
   // AUD-09 M15: nodos_origen (037) y protege_nodos (041) resuelven la
   // protección por nodo contra el plan vigente. Si la 041 aún no se aplicó, se
   // lee sin protege_nodos y el carril resuelve por id, como antes.
+  // Ciclo de replanteamiento, Fase 2: heredado_de (047) para no contar dos
+  // veces lo que un replanteamiento trae hecho; sin la 047, se lee sin ella.
   const candidatas = [
+    `${COLS_ITEMS}, nodos_origen, protege_nodos, no_aplica_motivo, heredado_de`,
     `${COLS_ITEMS}, nodos_origen, protege_nodos, no_aplica_motivo`,
     `${COLS_ITEMS}, nodos_origen, no_aplica_motivo`,
     `${COLS_ITEMS}, no_aplica_motivo`,
@@ -143,6 +146,7 @@ export async function cargarEntradaAnalytics(
       fecha_base: i.fecha_base,
       fecha_base_original: i.fecha_base_original,
       no_aplica_motivo: (i as { no_aplica_motivo?: string | null }).no_aplica_motivo ?? null,
+      heredado_de: (i as { heredado_de?: string | null }).heredado_de ?? null,
     }));
 
   // project_unlocks puede no existir pre-016: se tolera con lista vacía.

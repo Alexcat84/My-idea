@@ -18,6 +18,7 @@
  * es permanente y no depende de que el interprete decida "generar_plan"
  * (ver decision de arquitectura de la Fase 3.0).
  */
+import type { CicloSesion } from "./replanteamiento";
 import type Anthropic from "@anthropic-ai/sdk";
 import { buscarAfines } from "../compass";
 import { llamarClaude, MODEL_HAIKU, type MensajeConversacion, type UsoAcumulado } from "../costmeter";
@@ -102,6 +103,10 @@ export interface EstadoRecorrido {
   /** i18n F5: el idioma de la IDEA (projects.idioma), en que escribe la IA.
    * Ausente en sesiones de antes de F5 = español. */
   idioma?: string;
+  /** Ciclo de replanteamiento, Fase 2: lo que la persona pidió al abrir un ciclo
+   * posterior (profundizar o replantear). Viaja con la sesión hasta la entrega
+   * del plan, donde se registra en la bitácora. Ausente en todo lo demás. */
+  ciclo?: CicloSesion;
 }
 
 /** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de
@@ -127,6 +132,8 @@ export function estadoInicial(params: {
   snapshotNucleo?: string | null;
   /** i18n F5: el idioma de la idea (projects.idioma). */
   idioma?: string;
+  /** Ciclo de replanteamiento, Fase 2. */
+  ciclo?: CicloSesion;
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -153,6 +160,7 @@ export function estadoInicial(params: {
     unidadVentaSesion: null,
     fase: "esperando_respuesta",
     sigamosDirigido: null,
+    ...(params.ciclo ? { ciclo: params.ciclo } : {}),
   };
 }
 

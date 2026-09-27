@@ -12,6 +12,7 @@
  * SOLO server-side (node:crypto).
  */
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { ETIQUETAS_CICLO } from "./dbContract";
 
 function claveHmac(): string {
   const s = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -67,7 +68,7 @@ export interface PlanFeed {
   etiqueta: string;
 }
 
-const ETIQUETAS_DE_PLAN = ["inicial", "completo", "seguimiento"];
+const ETIQUETAS_DE_PLAN = ETIQUETAS_CICLO;
 const dominioDe = (d: string | null | undefined) => (!d ? "core" : d);
 
 /**
