@@ -1,0 +1,161 @@
+[
+ {
+  "id": "m11-muestra-final5-gestionar_personas_equipo-condiciones_activacion-0",
+  "fecha": "2026-09-28",
+  "node_id": "gestionar_personas_equipo",
+  "campo": "condiciones_activacion",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando revisas el apartado de las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo.",
+  "texto_nuevo": "Cuando revisas cómo están las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo.",
+  "decision": "auditoria completa M11 (coherencia): «el apartado» remite a los tres apartados del libro (\"three buckets: purpose, people, and process\", zhuo cap_02 l.125) que el nodo no nombra en ningún campo; se cambia solo ese referente. Las tres preguntas sí tienen antecedente (paso 0, l.135).",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "coherencia"
+  ],
+  "indice": 0,
+  "cita": {
+   "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+   "evidencia": "«el apartado» remite a los tres apartados del libro (\"three buckets: purpose, people, and process\", zhuo cap_02 l.125) que el nodo no nombra en ningún campo; se cambia solo ese referente. Las tres preguntas sí tienen antecedente (paso 0, l.135)."
+  }
+ },
+ {
+  "id": "m11-muestra-final5-recorrer_trece_elementos_proceso_evaluacion_formal-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "recorrer_trece_elementos_proceso_evaluacion_formal",
+  "campo": "resumen_teorico",
+  "veredicto": "VOZ",
+  "texto_anterior": "Ninguna evaluación de desempeño sirve igual a todas las empresas, porque cada una tiene necesidades distintas; por eso, en vez de un modelo de talla única, conviene recorrer con tu equipo las consideraciones clave que hay que tener en cuenta. Son trece: si se pone nota, sus categorías, las escaleras de puesto, cuántas notas, el lenguaje, las consecuencias, el reparto, si se fuerza la curva, la calibración, la frecuencia, si hay proceso de trescientos sesenta grados o solo el juicio del jefe, si es transparente o confidencial, y si es ligero o pesado.",
+  "texto_nuevo": "Ninguna evaluación de desempeño sirve igual a todas las empresas, porque cada una tiene necesidades distintas; por eso, en vez de un modelo de talla única, conviene recorrer con tu equipo las consideraciones clave que hay que tener en cuenta. Son trece: si se pone nota, sus categorías, los niveles de carrera, cuántas notas, el lenguaje, las consecuencias, el reparto, si se fuerza la curva, la calibración, la frecuencia, si hay proceso de trescientos sesenta grados o solo el juicio del jefe, si es transparente o confidencial, y si es ligero o pesado.",
+  "decision": "auditoria completa M11 (calco): \"Job ladders\" (scott cap_14 l.43 y l.95-97: qué se espera en cada nivel, de recién llegado a vicepresidente) calcado como «escaleras de puesto», que en español no se entiende; pasa a «los niveles de carrera» (sin «de cada puesto»: el libro quiere una por función y no una por grupo, l.97). Mismo término que pasos_accionables[3], decidido igual.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "calco"
+  ],
+  "cita": {
+   "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+   "fragmentos": [
+    "las escaleras de puesto"
+   ]
+  }
+ },
+ {
+  "id": "m11-muestra-final5-recorrer_trece_elementos_proceso_evaluacion_formal-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "recorrer_trece_elementos_proceso_evaluacion_formal",
+  "campo": "pasos_accionables",
+  "veredicto": "VOZ",
+  "texto_anterior": "Tres, decide las escaleras de puesto.",
+  "texto_nuevo": "Tres, decide los niveles de carrera.",
+  "decision": "auditoria completa M11 (calco): Calco de \"Job ladders\" (scott cap_14 l.43, l.95-97); igual que en el resumen del nodo.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "calco"
+  ],
+  "indice": 3,
+  "cita": {
+   "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+   "fragmentos": [
+    "decide las escaleras de puesto"
+   ]
+  }
+ },
+ {
+  "id": "m11-muestra-final5-conocer_fuerzas_valores_sesgos_propios-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "conocer_fuerzas_valores_sesgos_propios",
+  "campo": "pasos_accionables",
+  "veredicto": "VOZ",
+  "texto_anterior": "Mira un caso: una directiva que volvía de tres meses de baja por maternidad se vio desbordada por cada pequeña cosa y le pidió a su jefe un entrenador ejecutivo.",
+  "texto_nuevo": "Mira un caso: una directiva que volvía al trabajo tras tener a su primer bebé y pasar tres meses fuera se vio desbordada por cada pequeña cosa y le pidió a su jefe un entrenador ejecutivo.",
+  "decision": "auditoria completa M11 (regionalismo): «baja por maternidad» es forma de España (en buena parte de América «baja» se lee como salida del empleo); el texto final dice lo que dice el libro: \"After I had my first baby, I took three months off from work before returning\" (zhuo cap_06 l.17).",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "regionalismo"
+  ],
+  "indice": 3,
+  "cita": {
+   "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+   "fragmentos": [
+    "de tres meses de baja por maternidad"
+   ]
+  }
+ },
+ {
+  "id": "m11-muestra-final5-priorizar_pocas_cosas_bien-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "priorizar_pocas_cosas_bien",
+  "campo": "entregable_esperado",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Toda lista ordenada por importancia, con lo de arriba atendido antes de bajar, y las cosas de abajo dichas que no.",
+  "texto_nuevo": "Toda lista ordenada por importancia, con lo de arriba atendido antes de bajar, y un no dicho a las otras buenas ideas.",
+  "decision": "auditoria completa M11 (contrario): El libro dice que a lo de abajo de la lista se llega después de atender lo de arriba (\"before you venture further down the list\", l.89); el texto dice que a lo de abajo se le dice que no. El no del foco es a las otras buenas ideas (l.97), no a lo que está en tu lista, y nada en el apartado (l.81-97) manda rechazar lo de abajo.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "contrario"
+  ],
+  "cita": {
+   "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+   "lineas": "fuentes/zhuo_manager/cap_09.md 89, 97",
+   "frase": "Make sure that the things at the top are taken care of before you venture further down the list. / It means saying no to the hundred other good ideas that there are."
+  }
+ },
+ {
+  "id": "m11-muestra-final5-comunicar_vision_jugadores_organizacion-condiciones_activacion-0",
+  "fecha": "2026-09-28",
+  "node_id": "comunicar_vision_jugadores_organizacion",
+  "campo": "condiciones_activacion",
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Cuando estás instalando el método de contratación en tu empresa y necesitas que la organización entera sepa adónde va y por qué, y lo oiga en cada comunicación y no una sola vez.",
+  "texto_nuevo": "Cuando estás instalando en tu empresa el método A de contratación, el de tener un jugador A en cada puesto, y necesitas que la organización entera sepa adónde va y por qué, y lo oiga en cada comunicación y no una sola vez.",
+  "decision": "auditoria completa M11 (coherencia): «el método de contratación» con artículo definido no tiene antecedente en el nodo; el libro es \"HOW TO INSTALL THE A METHOD FOR HIRING IN YOUR COMPANY\" (smart cap_06 l.247) y «método A» es nombre fijado; la glosa sale del propio nodo (paso 3, \"an A Player in every role\", l.259).",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "coherencia"
+  ],
+  "indice": 0,
+  "cita": {
+   "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+   "evidencia": "«el método de contratación» con artículo definido no tiene antecedente en el nodo; el libro es \"HOW TO INSTALL THE A METHOD FOR HIRING IN YOUR COMPANY\" (smart cap_06 l.247) y «método A» es nombre fijado; la glosa sale del propio nodo (paso 3, \"an A Player in every role\", l.259)."
+  }
+ },
+ {
+  "id": "m11-muestra-final5-descubrir_motivacion_sentido_persona-pasos_accionables-12",
+  "fecha": "2026-09-28",
+  "node_id": "descubrir_motivacion_sentido_persona",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Puedes poner el trabajo del equipo en contexto y contar por qué a ti te da sentido, porque eso puede ayudar a otros a encontrar el suyo. Pero recuerda: no todo gira en torno a ti.",
+  "texto_nuevo": "Poner el trabajo del equipo en contexto sí es parte de tu trabajo, y contar por qué a ti te da sentido puede ayudar a otros a encontrar el suyo. Pero recuerda: no todo gira en torno a ti.",
+  "decision": "auditoria completa M11 (matiz): El libro concede que poner el trabajo en contexto ES trabajo del jefe; «puedes» lo vuelve opcional. El «puede ayudar» (\"can help\") sí es del libro y se queda. No es contrario: el texto no niega que sea tu trabajo, pierde esa afirmación.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "matiz"
+  ],
+  "indice": 12,
+  "cita": {
+   "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+   "lineas": "fuentes/scott_radical_candor/cap_06.md 109",
+   "frase": "Sure, it's a boss's job to put the team's work in context, and if you share why the work gives you meaning, that can help others find their own inspiration. But remember, it's not all about you."
+  }
+ },
+ {
+  "id": "m11-muestra-final5-evitar_personalizar_guia_aceptar_personal-pasos_accionables-11",
+  "fecha": "2026-09-28",
+  "node_id": "evitar_personalizar_guia_aceptar_personal",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando lo que tengas que decir sea de verdad personal y no sobre el trabajo, lleva la conversación al efecto sobre los demás y no a la persona, no le dictes la solución porque puede haber una causa que no conoces, y deja claro a la vez que la situación tal como está le está minando un desempeño que por lo demás es sólido.",
+  "texto_nuevo": "Cuando lo que tengas que decir sea de verdad personal y no sobre el trabajo, lleva la conversación al efecto sobre los demás y no a la persona, no le dictes la solución porque puede haber una causa que no conoces, y deja claro a la vez que la situación tal como está le está minando el desempeño.",
+  "decision": "auditoria completa M11 (matiz): Se sostiene solo en parte: el libro da el método como consejo general (\"How not to personalize even when it really is personal\", dentro de los \"tips\" de l.167), así que las tres acciones pueden ir como regla; pero «un desempeño que por lo demás es sólido» es un dato de ese único caso (\"her otherwise strong performance\") vuelto regla para cualquiera. Cambio mínimo: sale esa cláusula, el resto se queda.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "matiz"
+  ],
+  "indice": 11,
+  "cita": {
+   "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+   "lineas": "fuentes/scott_radical_candor/cap_09.md 177",
+   "frase": "I did make clear that the status quo was undermining her otherwise strong performance."
+  }
+ }
+]

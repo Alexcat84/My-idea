@@ -120,3 +120,20 @@ regionalismo, voz y ortografia dentro del tope). Todas las trampas sin marca y e
   m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3, m11-pase4, m11-pase4-barrido,
   m11-muestra-final4.
 - Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5 (tope 10); duros 0, 0, 0, 1 (tope 0).
+
+## Quinto pase y muestra ciega final 5 (28 sep 2026)
+
+- `pase5/`: quinto pase solo sobre lo que fallo en la muestra 4 (invenciones y contrarios), 16 auditores con reparto de
+  semilla 20261016. Cada nodo llevo sus clausulas marcadas por script (2356: causa, efecto, finalidad, procedencia,
+  absolutos, cifras) y el auditor declaro de cada una si el libro la sostiene, con la linea. 26 trampas sin marca, 25
+  cazadas. FALLO DE METODO DECLARADO: las clausulas se calcularon antes de plantar las trampas, asi que el contexto de
+  algunas conservaba el texto original y delataba la trampa (dos auditores lo notaron); en este pase la puntuacion de
+  trampas no prueba ceguera. 33 campos al arbitro (en 4 arbitros por lotes): 32 corregidos (ANADIDO) y 1 que no se
+  sostuvo. Tanda `m11-pase5` (32 en 27 nodos). Un resto que un arbitro senalo fuera de su entrada (el "Por eso" del resumen
+  de aplicar_metodo_promocion_sucesion) lo coteja el orquestador contra smart_who cap_06 397-403 y se sostiene.
+- `muestra_final5/`: 50 nodos con semilla 20261017, 4 trampas sin marca, 3 cazadas. El arbitro confirmo 0 invenciones,
+  1 CONTRARIO ("y las cosas de abajo dichas que no": el libro manda atender lo de arriba antes de bajar y el no va a las
+  otras cien buenas ideas, zhuo cap_09 89 y 97; el orquestador lo coteja y coincide) y 7 del resto: NO CUMPLE por el
+  contrario. Tanda `m11-muestra-final5` (8 en 7 nodos).
+- Reproducibilidad: las dieciseis tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta.
+- Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5, 7 (tope 10); duros 0, 0, 0, 1, 1 (tope 0).

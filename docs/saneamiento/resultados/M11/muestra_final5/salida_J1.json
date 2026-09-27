@@ -1,0 +1,227 @@
+{
+ "lote": "J1",
+ "nodos": [
+  {
+   "node_id": "decidir_aceptar_rechazar_material_defectuoso",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "entregar_problema_dificil_reporte",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "pedir_hechos_decision_evitar_recomendaciones",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "examinar_entorno_expectativas_tecnologia_proveedores_grupos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "resistir_dar_solucion_clasificar_decision_urgencia",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "gestionar_personas_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Cuando revisas el apartado de las personas de tu equipo",
+     "motivo": "\"el apartado\" presupone el marco de tres apartados del libro (propósito, personas, proceso) que no está en el nodo; el lector no sabe de qué apartado se habla.",
+     "fichero": "",
+     "lineas": "",
+     "frase": "",
+     "propuesta": "Cuando revisas cómo están las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo."
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_trece_elementos_proceso_evaluacion_formal",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "las escaleras de puesto",
+     "motivo": "Calco literal de \"job ladders\"; en español no se entiende. Son los niveles de carrera de cada puesto.",
+     "fichero": "",
+     "lineas": "",
+     "frase": "",
+     "propuesta": "Ninguna evaluación de desempeño sirve igual a todas las empresas, porque cada una tiene necesidades distintas; por eso, en vez de un modelo de talla única, conviene recorrer con tu equipo las consideraciones clave que hay que tener en cuenta. Son trece: si se pone nota, sus categorías, los niveles de carrera de cada puesto, cuántas notas, el lenguaje, las consecuencias, el reparto, si se fuerza la curva, la calibración, la frecuencia, si hay proceso de trescientos sesenta grados o solo el juicio del jefe, si es transparente o confidencial, y si es ligero o pesado."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "Tres, decide las escaleras de puesto.",
+     "motivo": "Calco literal de \"job ladders\".",
+     "fichero": "",
+     "lineas": "",
+     "frase": "",
+     "propuesta": "Tres, decide los niveles de carrera de cada puesto."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "invencion",
+     "cita": "y sin haber copiado la evaluación de nadie",
+     "motivo": "El libro solo dice que cada empresa tiene necesidades distintas y que no hay una evaluación única para todas; no pide no copiar la de nadie. Es un criterio añadido.",
+     "fichero": "fuentes/scott_radical_candor/cap_14.md",
+     "lineas": "37",
+     "frase": "As noted, every company has different needs for its performance reviews. This means I can't design a one-size-fits-all performance review, much as I might like to.",
+     "propuesta": "La lista de los trece elementos del proceso recorrida entera, con la decisión de tu empresa tomada en cada uno según sus propias necesidades."
+    }
+   ]
+  },
+  {
+   "node_id": "impedir_punialadas_espalda_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "desplegar_estrategia_tarjeta_puntuacion",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "conocer_fuerzas_valores_sesgos_propios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "regionalismo",
+     "cita": "que volvía de tres meses de baja por maternidad",
+     "motivo": "\"Baja por maternidad\" es forma de España (en América es licencia o incapacidad); se dice de forma neutra.",
+     "fichero": "",
+     "lineas": "",
+     "frase": "",
+     "propuesta": "Mira un caso: una directiva que volvía al trabajo tras tener a su primer bebé y pasar tres meses fuera se vio desbordada por cada pequeña cosa y le pidió a su jefe un entrenador ejecutivo."
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_periodo_direccion_objetivos_retroalimentacion",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "identificar_temas_formacion_tarjetas_decision",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "ayudar_personas_jugar_fortalezas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "invencion",
+     "cita": "y así el equipo rinde mucho más desde el primer mes",
+     "motivo": "Efecto inventado: el libro solo dice que el reconocimiento puede motivar enormemente si se siente genuino y específico; no habla de rendimiento del equipo ni de ningún plazo.",
+     "fichero": "fuentes/zhuo_manager/cap_04.md",
+     "lineas": "227",
+     "frase": "Recognition for hard work, valuable skills, helpful advice, or good values can be hugely motivating if it feels genuine and specific.",
+     "propuesta": "Reconoce aun así el trabajo duro, las habilidades valiosas, el consejo útil o los buenos valores, porque reconocerlos puede motivar enormemente si se siente genuino y específico."
+    }
+   ]
+  },
+  {
+   "node_id": "priorizar_pocas_cosas_bien",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "entregable_esperado",
+     "tipo": "contrario",
+     "cita": "y las cosas de abajo dichas que no",
+     "motivo": "El libro dice atender lo de arriba ANTES de bajar por la lista (lo de abajo se atiende después, no se rechaza); el \"no\" del foco es a las otras buenas ideas, no a lo de abajo de tu lista.",
+     "fichero": "fuentes/zhuo_manager/cap_09.md",
+     "lineas": "89, 97",
+     "frase": "Make sure that the things at the top are taken care of before you venture further down the list. / It means saying no to the hundred other good ideas that there are.",
+     "propuesta": "Toda lista ordenada por importancia, con lo de arriba atendido antes de bajar al resto, y un no dicho a las otras buenas ideas."
+    }
+   ]
+  },
+  {
+   "node_id": "comunicar_vision_jugadores_organizacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Cuando estás instalando el método de contratación en tu empresa",
+     "motivo": "\"el método de contratación\" con artículo definido no tiene antecedente en el nodo: no dice qué método es.",
+     "fichero": "",
+     "lineas": "",
+     "frase": "",
+     "propuesta": "Cuando estás instalando en tu empresa el método A de contratación, el de tener un jugador A en cada puesto, y necesitas que la organización entera sepa adónde va y por qué, y lo oiga en cada comunicación y no una sola vez."
+    }
+   ]
+  },
+  {
+   "node_id": "demostrar_apertura_visiones_distintas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "escalonar_fuentes_informacion_gerencial",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "integrar_peticion_critica_rutina_existente",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "sopesar_consejo_legal_despedir_humildad",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "despedir_persona_respeto_franqueza",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "acoger_inspectores_externos_fuente_aprendizaje",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "repetir_mensaje_invariable_diario_reunion_evento",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "descubrir_motivacion_sentido_persona",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[12]",
+     "tipo": "matiz",
+     "cita": "Puedes poner el trabajo del equipo en contexto",
+     "motivo": "El libro dice que poner el trabajo en contexto SÍ es trabajo del jefe; el paso lo vuelve opcional (\"puedes\").",
+     "fichero": "fuentes/scott_radical_candor/cap_06.md",
+     "lineas": "109",
+     "frase": "Sure, it's a boss's job to put the team's work in context, and if you share why the work gives you meaning, that can help others find their own inspiration. But remember, it's not all about you.",
+     "propuesta": "Poner el trabajo del equipo en contexto sí es parte de tu trabajo, y contar por qué a ti te da sentido puede ayudar a otros a encontrar el suyo. Pero recuerda: no todo gira en torno a ti."
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_horizonte_ventana_replanificacion",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "facilitar_expresion_subordinado_pregunta_mas",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}
