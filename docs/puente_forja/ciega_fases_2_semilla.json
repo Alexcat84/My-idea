@@ -1,0 +1,8 @@
+{
+ "fecha": "2026-09-28",
+ "paso": "paso 4 del protocolo de integracion del mundo 11 (VISTO del fundador: mundo 11 certificado en el paso 3)",
+ "semilla_ciega_fases_2": 20261021,
+ "escrito_antes_de_sortear": true,
+ "diseno": "20 nodos al azar de los 471 del pack limpio (copia con las dieciocho tandas); un lector ciego INDEPENDIENTE (otra instancia, no la sesion que escribio el registro) recibe solo el texto de cada nodo y la vara de fases (docs/PUENTE_FORJA.md, decision 3.a; docs/SOP_EXTRACCION_PACKS.md lineas 52 y 88-100) y declara la fase antes de ver el registro; el destape compara con docs/puente_forja/fases_mundo11.jsonl; cada discrepancia la resuelve un arbitro con las dos lecturas y la vara, y si cambia la fase queda como correccion declarada en el registro",
+ "diferencia_con_la_ciega_1": "la ciega 1 (semilla 20260923) la leyo la misma sesion que el registro y media la estabilidad de la vara; esta mide la independencia de dos lectores"
+}
