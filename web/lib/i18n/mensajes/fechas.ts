@@ -16,7 +16,6 @@ const es = {
   /** "20 de marzo de 2026" */
   diaDeMesAno: "{{d}} de {{mes}} de {{ano}}",
   /** "septiembre de 2026": el encabezado de mes de la bitácora en pantalla */
-  mesAno: "{{mes}} de {{ano}}",
   /** "viernes 20 de marzo" */
   diaSemanaDeMes: "{{dia}} {{d}} de {{mes}}",
   /** "18 de julio, 14:32" */
@@ -37,7 +36,6 @@ const en: typeof es = {
   diaDeMes: "{{mes}} {{d}}",
   /** "March 20, 2026" */
   diaDeMesAno: "{{mes}} {{d}}, {{ano}}",
-  mesAno: "{{mes}} {{ano}}",
   /** "Friday, March 20" */
   diaSemanaDeMes: "{{dia}}, {{mes}} {{d}}",
   /** "July 18, 14:32" */
@@ -69,7 +67,6 @@ const fr: typeof es = {
   ayer: "hier",
   diaDeMes: "{{d}} {{mes}}",
   diaDeMesAno: "{{d}} {{mes}} {{ano}}",
-  mesAno: "{{mes}} {{ano}}",
   diaSemanaDeMes: "{{dia}} {{d}} {{mes}}",
   momento: "{{fecha}} à {{hora}}",
 };
@@ -99,7 +96,6 @@ const pt: typeof es = {
   ayer: "ontem",
   diaDeMes: "{{d}} de {{mes}}",
   diaDeMesAno: "{{d}} de {{mes}} de {{ano}}",
-  mesAno: "{{mes}} de {{ano}}",
   diaSemanaDeMes: "{{dia}}, {{d}} de {{mes}}",
   momento: "{{fecha}}, {{hora}}",
 };
@@ -129,7 +125,6 @@ const de: typeof es = {
   ayer: "gestern",
   diaDeMes: "{{d}}. {{mes}}",
   diaDeMesAno: "{{d}}. {{mes}} {{ano}}",
-  mesAno: "{{mes}} {{ano}}",
   diaSemanaDeMes: "{{dia}}, {{d}}. {{mes}}",
   momento: "{{fecha}}, {{hora}}",
 };
@@ -159,7 +154,6 @@ const it: typeof es = {
   ayer: "ieri",
   diaDeMes: "{{d}} {{mes}}",
   diaDeMesAno: "{{d}} {{mes}} {{ano}}",
-  mesAno: "{{mes}} {{ano}}",
   diaSemanaDeMes: "{{dia}} {{d}} {{mes}}",
   momento: "{{fecha}}, {{hora}}",
 };
@@ -176,7 +170,6 @@ const ja: typeof es = {
   ayer: "昨日",
   diaDeMes: "{{mes}}{{d}}日",
   diaDeMesAno: "{{ano}}年{{mes}}{{d}}日",
-  mesAno: "{{ano}}年{{mes}}",
   diaSemanaDeMes: "{{mes}}{{d}}日（{{dia}}）",
   momento: "{{fecha}} {{hora}}",
 };
@@ -193,7 +186,6 @@ const zh: typeof es = {
   ayer: "昨天",
   diaDeMes: "{{mes}}{{d}}日",
   diaDeMesAno: "{{ano}}年{{mes}}{{d}}日",
-  mesAno: "{{ano}}年{{mes}}",
   diaSemanaDeMes: "{{mes}}{{d}}日 {{dia}}",
   momento: "{{fecha}} {{hora}}",
 };
@@ -210,7 +202,6 @@ const ko: typeof es = {
   ayer: "어제",
   diaDeMes: "{{mes}} {{d}}일",
   diaDeMesAno: "{{ano}}년 {{mes}} {{d}}일",
-  mesAno: "{{ano}}년 {{mes}}",
   diaSemanaDeMes: "{{mes}} {{d}}일 {{dia}}",
   momento: "{{fecha}} {{hora}}",
 };
@@ -240,7 +231,6 @@ const ar: typeof es = {
   ayer: "أمس",
   diaDeMes: "{{d}} {{mes}}",
   diaDeMesAno: "{{d}} {{mes}} {{ano}}",
-  mesAno: "{{mes}} {{ano}}",
   diaSemanaDeMes: "{{dia}} {{d}} {{mes}}",
   momento: "{{fecha}}، {{hora}}",
 };
@@ -270,7 +260,6 @@ const hi: typeof es = {
   ayer: "कल",
   diaDeMes: "{{d}} {{mes}}",
   diaDeMesAno: "{{d}} {{mes}} {{ano}}",
-  mesAno: "{{mes}} {{ano}}",
   diaSemanaDeMes: "{{dia}}, {{d}} {{mes}}",
   momento: "{{fecha}}, {{hora}}",
 };

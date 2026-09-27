@@ -73,7 +73,7 @@ describe("PapelEnIdioma", () => {
 });
 
 describe("PlanDocumento: el cuerpo del plan en el idioma del proyecto, lo de alrededor en el de la interfaz", () => {
-  const MD = ["# Plan", "", "## Etapa 1: 첫 고객", "", "**Pasos:**", "1. 전화하기", "", "**Esta semana:** 전화 한 통"].join("\n");
+  const MD = ["# Plan", "", "## Etapa 1: 첫 고객", "", "**Pasos:**", "1. 전화하기", "", "**Primera acción:** 전화 한 통"].join("\n");
 
   it("idioma del documento coreano, interfaz español", () => {
     const html = renderToStaticMarkup(

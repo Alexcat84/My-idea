@@ -343,30 +343,6 @@ export function ordenCronologico(entradas: EntradaBitacora[]): EntradaBitacora[]
   return [...entradas].sort((a, b) => a.fecha.localeCompare(b.fecha));
 }
 
-/** Un mes de la bitácora en PANTALLA: `fecha` es la de su primera entrada (para
- * el encabezado, `mesConAno`); `entradas`, de la más reciente a la más antigua. */
-export interface MesBitacora {
-  clave: string;
-  fecha: string;
-  entradas: EntradaBitacora[];
-}
-
-/**
- * El orden de la PANTALLA (decisión del fundador, 26 sep 2026): lo más reciente
- * ARRIBA, agrupado por mes (local, año incluido: enero de 2025 y enero de 2026
- * son dos grupos). Es el inverso exacto del orden cronológico de los documentos.
- */
-export function mesesDeBitacora(entradas: EntradaBitacora[]): MesBitacora[] {
-  const meses: MesBitacora[] = [];
-  for (const e of ordenCronologico(entradas).reverse()) {
-    const clave = fechaInputLocal(new Date(e.fecha)).slice(0, 7);
-    const ultimo = meses[meses.length - 1];
-    if (ultimo && ultimo.clave === clave) ultimo.entradas.push(e);
-    else meses.push({ clave, fecha: e.fecha, entradas: [e] });
-  }
-  return meses;
-}
-
 /** El cuerpo de la secuencia (agrupado por día), sin portada: lo comparten el
  * documento suelto y la sección del expediente. La hora solo aparece en los
  * días con 2+ entradas (regla del historial). `nivel` es el de los subtítulos
