@@ -4,7 +4,8 @@
 // igual, con banda null, en vez de romper el nacimiento del plan.
 import { describe, expect, it } from "vitest";
 import { crearSupabaseFalso, estadoFalsoVacio } from "./testUtils/fakeSupabase";
-import { crearProyecto, insertarChecklist } from "./db";
+import { crearProyecto, guardarEstadoSesion, insertarChecklist } from "./db";
+import type { EstadoSesionPersistido } from "./db";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 function falso() {
@@ -139,5 +140,42 @@ describe("crearProyecto: guarda el idioma de la idea (i18n F5, 046)", () => {
       }),
     } as unknown as SupabaseClient;
     await expect(crearProyecto(client, "u1", "x", "es")).rejects.toMatchObject({ code: "23505" });
+  });
+});
+
+// Costes del vuelo del 27 sep 2026: una sesion que se queda a medias (el usuario
+// la deja, o un seguimiento que no llega a plan) gastaba de verdad (turno, puerta
+// avanzada) pero su columna costo_usd se quedaba en 0, porque solo la escribia
+// el cierre. Cada turno guarda ahora tambien el coste y su desglose.
+//
+// A mano, con los precios de costmeter.ts (Haiku 1 $ entrada / 5 $ salida por
+// millon; lectura de cache al 10 %): 1000 in + 200 out + 10000 cache_read =
+//   1000/1e6 * 1 + 200/1e6 * 5 + 10000/1e6 * 1 * 0.1 = 0.001 + 0.001 + 0.001 = 0.003
+describe("guardarEstadoSesion: cada turno deja el coste en la sesion", () => {
+  it("escribe costo_usd y costo_desglose junto al estado", async () => {
+    let escrito: Record<string, unknown> | null = null;
+    const client = {
+      from: () => ({
+        update: (payload: Record<string, unknown>) => {
+          escrito = payload;
+          return { eq: async () => ({ error: null }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    const estado = {
+      recorrido: {},
+      acumulado: {
+        uso: { "claude-haiku-4-5": { in: 1000, out: 200, cache_read: 10000, cache_write: 0, llamadas: 2 } },
+        uso_por_componente: { turnos: 0.002, clasificacion: 0.001 },
+        presupuesto_excedido: false,
+      },
+      turnos: [],
+      ultimaPregunta: "¿Que te preocupa?",
+    } as unknown as EstadoSesionPersistido;
+    await guardarEstadoSesion(client, "s1", estado);
+    expect(escrito).not.toBeNull();
+    expect(escrito!.estado_recorrido).toBe(estado);
+    expect(escrito!.costo_usd as number).toBeCloseTo(0.003, 10);
+    expect(escrito!.costo_desglose).toEqual({ turnos: 0.002, clasificacion: 0.001 });
   });
 });

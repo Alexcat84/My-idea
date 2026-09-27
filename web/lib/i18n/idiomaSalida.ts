@@ -13,8 +13,9 @@
  */
 import { nombreIdiomaParaIA } from "./detectarIdioma";
 import { REGLA_SIN_FUENTES } from "../reglaSinFuentes";
+import { REGLA_CONTEXTO_USUARIO } from "../reglaContextoUsuario";
 
-export type BloqueSistema = { type: "text"; text: string; cache_control?: { type: "ephemeral" } };
+export type BloqueSistema = { type: "text"; text: string; cache_control?: { type: "ephemeral"; ttl?: "5m" | "1h" } };
 
 export function reglaIdiomaSalida(codigo: string | null | undefined, rotulosFijos: readonly string[] = []): string | null {
   if (!codigo || codigo === "es") return null;
@@ -35,17 +36,21 @@ export function reglaIdiomaSalida(codigo: string | null | undefined, rotulosFijo
   return partes.join(" ");
 }
 
-/** El `system` de una llamada: el prompt cacheado; después, sin marca de caché, la
- * regla SIN FUENTES (REGLA ESTRICTA del fundador, 26 sep 2026: la IA jamás cita un
- * libro ni un autor como fuente) y, fuera del español, la regla del idioma de salida. */
+/** El `system` de una llamada, ordenado para el caché (contexto de la entrevista,
+ * principio 3, 28 sep 2026): primero lo FIJO, idéntico para todos los usuarios y
+ * cacheado 1 hora: el prompt, la regla SIN FUENTES (REGLA ESTRICTA del fundador, 26
+ * sep 2026) y la REGLA ÚNICA del contexto del usuario (28 sep 2026). La marca va en
+ * el último bloque fijo, así el caché cubre los tres. Después, sin marca, lo que
+ * varía por idioma: fuera del español, la regla del idioma de salida. */
 export function bloquesDeSistema(
   system: string,
   idiomaSalida?: string | null,
   rotulosFijos: readonly string[] = []
 ): BloqueSistema[] {
   const bloques: BloqueSistema[] = [
-    { type: "text", text: system, cache_control: { type: "ephemeral" } },
+    { type: "text", text: system },
     { type: "text", text: REGLA_SIN_FUENTES },
+    { type: "text", text: REGLA_CONTEXTO_USUARIO, cache_control: { type: "ephemeral", ttl: "1h" } },
   ];
   const regla = reglaIdiomaSalida(idiomaSalida, rotulosFijos);
   if (regla) bloques.push({ type: "text", text: regla });

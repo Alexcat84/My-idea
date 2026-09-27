@@ -518,12 +518,12 @@ describe("POST /api/session/[id]/plan: el idioma de la idea (i18n F5)", () => {
     const res = await POST(requestFalso(), ctxFalso("s1"));
     await leerEventoDone(res);
     const sistema = (messagesStreamFalso.mock.calls[0][0] as { system: Array<{ text: string }> }).system;
-    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma;
-    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
-    expect(sistema[2].text).toContain("«## Etapa N:»");
+    expect(sistema).toHaveLength(4); // prompt, sin fuentes, regla de contexto (28 sep 2026), idioma;
+    expect(sistema[3].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
+    expect(sistema[3].text).toContain("«## Etapa N:»");
     // Decisión del fundador (26 sep 2026): la acción de cada etapa es "Primera acción".
-    expect(sistema[2].text).toContain("«**Primera acción:**»");
-    expect(sistema[2].text).not.toContain("Esta semana");
+    expect(sistema[3].text).toContain("«**Primera acción:**»");
+    expect(sistema[3].text).not.toContain("Esta semana");
   });
 
   it("sesión de antes de F5 (sin idioma): un solo bloque, como siempre", async () => {
@@ -532,7 +532,7 @@ describe("POST /api/session/[id]/plan: el idioma de la idea (i18n F5)", () => {
     const res = await POST(requestFalso(), ctxFalso("s1"));
     await leerEventoDone(res);
     const sistema = (messagesStreamFalso.mock.calls[0][0] as { system: unknown[] }).system;
-    expect(sistema).toHaveLength(2); // prompt y regla sin fuentes (26 sep 2026);
+    expect(sistema).toHaveLength(3); // prompt, sin fuentes y regla de contexto (28 sep 2026);
   });
 
   it("el checklist sale del plan en coreano gracias a los rótulos fijos", async () => {

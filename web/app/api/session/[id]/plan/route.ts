@@ -19,7 +19,6 @@
  * sin IA (el ensamblado offline) NO se cobra: se entrega gratis, marcado como
  * version basica y con un aviso honesto que la pantalla muestra.
  */
-import type Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 import { elegir } from "@/lib/i18n/config";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
@@ -29,11 +28,7 @@ import { garantizarTerminal } from "@/lib/streamTerminal";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import {
   costoAcumuladoUsd,
-  MODEL,
-  PresupuestoExcedidoError,
   PRESUPUESTO_SESION_USD_DEFAULT,
-  registrarUso,
-  type UsoAcumulado,
 } from "@/lib/costmeter";
 import {
   cobrar,
@@ -79,87 +74,16 @@ import {
   avisoVersionBasica,
   comprimirEstadoVivo,
   extraerTitulo,
-  filtrarDeltaAntesDeAutodeclaracion,
   finalizarPlan,
   prepararPlan,
-  type PreparacionPlan,
 } from "@/lib/engine/planRedactor";
 import { filasHeredadas, planAnteriorParaIA, relatoDeCiclo, type PlanAnteriorIA } from "@/lib/engine/replanteamiento";
-import { SYSTEM_PLAN } from "@/lib/prompts";
-import { ROTULOS_PLAN } from "@/lib/engine/constants";
 import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
-import { bloquesDeSistema } from "@/lib/i18n/idiomaSalida";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
+import { generarTextoPlan } from "@/lib/engine/redactorPlan";
 
 const INTERVALO_HEARTBEAT_MS = 15_000;
-
-// Reintento del redactor (hermano del fix del organizador). El plan se genera
-// en el momento de MAYOR inversion emocional del usuario -- acaba de terminar su
-// entrevista -- y es un momento PAGADO (PRECIOS.plan_completo): un hipo transitorio
-// de la API no puede costarle su plan. El SDK reintenta la conexion inicial pero
-// NO un fallo a mitad de stream: eso lo cubre esta red.
-const BACKOFFS_PLAN_MS = [0, 1000, 3000];
-
-async function generarTextoPlan(
-  client: Anthropic,
-  preparacion: PreparacionPlan,
-  acumulado: UsoAcumulado,
-  onDelta: (texto: string) => void,
-  /** Un intento previo pinto etapas en el arbol de espera y murio: el cliente
-   * debe DESCARTARLAS antes de que el intento nuevo pinte las suyas (el texto
-   * nuevo no es el mismo). Anunciar una sola vez, la leccion del organizador. */
-  onReinicio: () => void,
-  /** i18n F5: el idioma de la IDEA (el plan sigue al proyecto, D2). */
-  idiomaSalida: string | null = null
-): Promise<{ rawTexto: string | null; acumulado: UsoAcumulado; avisoFallback: string | null }> {
-  if (costoAcumuladoUsd(acumulado) >= PRESUPUESTO_SESION_USD_DEFAULT) {
-    return { rawTexto: null, acumulado, avisoFallback: "presupuesto de sesion ya excedido, ensamblo sin narrar" };
-  }
-  let ultimoError: unknown = null;
-  for (let intento = 0; intento < BACKOFFS_PLAN_MS.length; intento += 1) {
-    if (BACKOFFS_PLAN_MS[intento] > 0) {
-      await new Promise((r) => setTimeout(r, BACKOFFS_PLAN_MS[intento]));
-      onReinicio();
-    }
-    try {
-      const stream = client.messages.stream({
-        model: MODEL,
-        max_tokens: 5000,
-        system: bloquesDeSistema(SYSTEM_PLAN, idiomaSalida, ROTULOS_PLAN),
-        messages: [{ role: "user", content: JSON.stringify(preparacion.payload) }],
-      });
-      // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
-      // autodeclaracion de cobertura interna (regla 11 de SYSTEM_PLAN), no
-      // contenido para mostrar en vivo. Filtro NUEVO por intento: es con estado.
-      const filtro = filtrarDeltaAntesDeAutodeclaracion(onDelta);
-      stream.on("text", filtro.onChunk);
-      const mensajeFinal = await stream.finalMessage();
-      filtro.finalizar();
-      const nuevoAcumulado = registrarUso(acumulado, MODEL, mensajeFinal.usage, "plan");
-      const rawTexto = mensajeFinal.content
-        .filter((b): b is Anthropic.TextBlock => b.type === "text")
-        .map((b) => b.text)
-        .join("");
-      return { rawTexto, acumulado: nuevoAcumulado, avisoFallback: null };
-    } catch (e) {
-      // El presupuesto no es un hipo: reintentar solo quemaria mas. Es el UNICO
-      // caso que sigue ensamblando offline, que para eso existe.
-      if (e instanceof PresupuestoExcedidoError) {
-        return { rawTexto: null, acumulado, avisoFallback: `fallo el redactor con IA, ensamblo offline: ${e.message}` };
-      }
-      ultimoError = e;
-      console.error(`[plan] intento ${intento + 1}/${BACKOFFS_PLAN_MS.length} fallo:`, e);
-    }
-  }
-  // Agotados los reintentos: LANZA. Antes se degradaba en silencio a un
-  // ensamblado offline -- un plan mecanico, sin narracion, entregado como si
-  // nada en el momento que mas le importa al usuario (y que pronto le cuesta 5
-  // creditos). Es mejor decirlo y ofrecerle reintentar SOLO la redaccion: su
-  // sesion y su recorrido ya estan persistidos, la entrevista no se repite.
-  console.error("[plan] redactor agotado tras reintentos", { ultimoError });
-  throw ultimoError instanceof Error ? ultimoError : new Error(String(ultimoError));
-}
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: sessionId } = await params;

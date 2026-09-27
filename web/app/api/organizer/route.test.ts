@@ -239,8 +239,8 @@ describe("POST /api/organizer: el idioma de la idea (i18n F5)", () => {
     expect(res.status).toBe(200);
     const body = await res.json();
     const sistema = (messagesCreateFalso.mock.calls[0][0] as { system: Array<{ text: string }> }).system;
-    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma;
-    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
+    expect(sistema).toHaveLength(4); // prompt, sin fuentes, regla de contexto (28 sep 2026), idioma;
+    expect(sistema[3].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
     expect(body.markdown.split("\n")[0]).toBe(MOTOR_ORGANIZADOR.ko.markdown.titulo);
     const proyecto = Object.values(estadoFalso.projects)[0] as Record<string, unknown>;
     expect(proyecto.idioma).toBe("ko");
