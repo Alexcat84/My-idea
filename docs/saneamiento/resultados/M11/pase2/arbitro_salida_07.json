@@ -1,0 +1,198 @@
+{
+ "lote": "07",
+ "campos": [
+  {
+   "node_id": "dimensionar_numero_subordinados_medio_dia_semanal",
+   "campo": "pasos_accionables[10]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con lo que ese arreglo evita: que te veas empujado a quedarte sin tarea en tu puesto o a meterte en el trabajo de otros.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco",
+    "coherencia"
+   ],
+   "motivo": "«La jubilación en el puesto» calca «on-the-job retirement» (el resumen ya dice «quedarte sin tarea»), y el paso salta a una tercera persona, «el jefe de planta», que en el nodo eres tú.",
+   "fragmentos": [
+    "el jefe de planta se vea empujado",
+    "la jubilación en el puesto",
+    "meterse"
+   ]
+  },
+  {
+   "node_id": "dimensionar_numero_subordinados_medio_dia_semanal",
+   "campo": "pasos_accionables[9]",
+   "decision": "corregido",
+   "texto_final": "Comprueba lo que ese arreglo te deja: el jefe de la otra sección sigue a tu cargo y has sumado a las personas que tendría a su cargo el jefe de la sección que asumiste, y monta el organigrama de forma que esas personas no aparezcan al mismo nivel de organización que el jefe de la otra sección, porque se lo tomaría a mal.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "«Colócalo» no tiene antecedente claro y «el jefe que ya estaba» no se ha presentado; quien se lo tomaría a mal es el jefe de la otra sección (Grove cap_04, 299: «the manufacturing manager... something he would surely take exception to»)."
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "campo": "pasos_accionables[4]",
+   "decision": "actual",
+   "motivo": "No se sostiene: la frase ya concuerda en plural con «la gente» por el sentido en «no quieren» y «no encajan», y «ellos» remite sin ambigüedad a la gente; la propuesta dejaría la misma frase mezclando plural y singular.",
+   "texto_final": "Pasa la lista de lo que las erosiona: no dar a la gente la guía que necesita para tener éxito en su trabajo; meter a la gente en papeles que no quieren o para los que no encajan bien; y empujar a la gente a conseguir resultados que ellos ven como poco realistas."
+  },
+  {
+   "node_id": "dimensionar_plantilla_administrativa_pronostico",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Pronostica la demanda de trabajo futura y ajusta después a ese pronóstico la producción de tu fábrica administrativa.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "motivo": "«La salida» como traducción de «output» es calco; en una fábrica u operación que entrega algo pasa a «la producción» (decisión del orquestador), como ya dice el resumen.",
+   "fragmentos": [
+    "la salida"
+   ]
+  },
+  {
+   "node_id": "rechazar_contratacion_tibia",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Que todos los entrevistadores digan que sí parece una buena señal, pero cuando nadie está entusiasmado esa unanimidad esconde una contratación tibia: un candidato sin fallos evidentes que tampoco deslumbra en nada y por el que nadie pelearía. Como contratar ya es de por sí una apuesta, alguien que difícilmente fracasará pero probablemente tampoco aportará mucho no compensa el riesgo. Por eso conviene apostar por quien tiene detrás a un defensor apasionado: una opinión dividida en la que quienes dicen que sí insisten en querer trabajar con esa persona suele indicar que trae algo muy valorado.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "motivo": "El libro pone la probabilidad en las dos mitades («not likely»); el resumen la afirmaba como hecho en la segunda.",
+   "fichero": "fuentes/zhuo_manager/cap_08.md",
+   "lineas": "155",
+   "frase": "While they’re not likely to bomb, they’re also not likely to add much."
+  },
+  {
+   "node_id": "rechazar_contratacion_tibia",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Rechaza cualquier contratación tibia, porque toda contratación es ya de por sí una apuesta: no es probable que la persona contratada así fracase, pero tampoco es probable que aporte mucho.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "Tras los dos puntos, «fracasen» y «aporten» no tienen sujeto presentado (el sujeto a la vista es «toda contratación»); se nombra a la persona contratada de forma tibia (el libro: «they», los contratados tibios, zhuo cap_08, 155)."
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Cada entrevista trae su propio momento de venta: si la abres anunciando que primero quieres conocer a la persona y después darle la ocasión de conocerte a ti y a tu empresa, el tramo final de preguntas queda reservado para vender, siempre que sigas viendo potencial. Lo que el candidato pregunta ahí es información de venta: si alguien pregunta si se paga la formación continua, sabes que quiere mejorar sus puntos flojos y que cuanto mejor sea esa oferta, más probable es su sí. Escuchar durante la entrevista te da una idea más clara de cómo enmarcar la oferta final.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "motivo": "El libro dice que atender a lo que dice el candidato da una idea más clara de cómo enmarcar la oferta, no que diga cómo hacerlo.",
+   "fichero": "fuentes/smart_who/cap_06.md",
+   "lineas": "167",
+   "frase": "By paying attention to what the candidate says during the interview, you’ll have a clearer idea how to frame the offer that ultimately will attract that person to your company."
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Vende hacia el final de cada entrevista, que es donde suele caer la venta dentro del proceso de entrevistas.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "motivo": "«Típicamente» por «typically» es calco; «suele» conserva el matiz.",
+   "fragmentos": [
+    "típicamente cae"
+   ]
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Pasa a vender en el tiempo de preguntas del final, siempre que sigas viendo potencial en el candidato.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "motivo": "«Ponte el sombrero de vendedor» calca palabra a palabra «put on your sales hat».",
+   "fragmentos": [
+    "Ponte el sombrero de vendedor"
+   ]
+  },
+  {
+   "node_id": "ejercer_poder_posicion_etapa_decision_clara",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Comprueba que el proceso se desarrolló bien hasta ese punto: que quien decide lo hace con el beneficio completo de la discusión libre, en la que todos los puntos de vista, hechos, opiniones y juicios se expusieron sin el prejuicio del poder de posición.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "«Venir bien» significa convenir, no avanzar correctamente; el libro dice «has proceeded correctly» (Grove cap_06, 61)."
+  },
+  {
+   "node_id": "detectar_arreglar_fallo_etapa_menor_valor",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Aplícalo a la contratación: si vas a descartar a un candidato, intenta decidirlo en la entrevista del campus en vez de en el transcurso de la visita a la planta, y ahorra el coste del viaje y el tiempo del candidato y de los entrevistadores.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "El imperativo ordenaba descartar al candidato; el libro pone una condición («if we can decide that we don’t want...», Grove cap_02, 75): lo que se regula es el momento del descarte. «Entrevista del campus» no se toca: «campus» es de uso normal en español."
+  },
+  {
+   "node_id": "contactar_despedido_mes_despues",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Y ten presente que es duro despedir, pero también es duro dejar un trabajo, y que a veces tu trabajo al frente del equipo es hablar con total franqueza cuando algo simplemente no funciona.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "«Para qué sirve» no tiene referente claro y lo que sigue no es un propósito sino la reflexión del libro (Scott cap_10, 201)."
+  },
+  {
+   "node_id": "fijar_proceso_trabajo_equipo",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "No cuentes con ahorrarte el tiempo de coordinación: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto más grande es el equipo más tiempo hace falta. Por mucho talento que haya, nadie sabe leer la mente de los demás.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco",
+    "voz"
+   ],
+   "motivo": "La última frase calca «As talented as we are, mind reading is not a core human competency» y mete un nosotros («seamos») en un nodo en tú.",
+   "fragmentos": [
+    "Por listos que seamos, leer la mente no es una competencia humana básica."
+   ]
+  },
+  {
+   "node_id": "avisar_organizador_reunion_prescindible",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "No esperes a que la reunión muera sola. Esa reunión de los miércoles terminó solo cuando llegó una reorganización mayor del equipo, y años después dos de sus asistentes descubrieron que los dos habían pensado que era una pérdida de tiempo, y se preguntaron por qué no lo habían reconocido entonces y la habían cerrado antes.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion",
+    "coherencia"
+   ],
+   "motivo": "«Siempre» no está en el libro; y «una reunión así» presentaba como otra la misma reunión de los miércoles del paso anterior.",
+   "fichero": "fuentes/zhuo_manager/cap_07.md",
+   "lineas": "287",
+   "frase": "Some years later, I was talking with a colleague who happened to be in that same meeting with me, and we both realized that we thought the meeting was a waste of time."
+  },
+  {
+   "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Ten como objetivo último convencerte de que estás logrando lo que te propusiste.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "motivo": "«Satisfacerte a ti mismo de que» calca «satisfy yourself that»; en español es convencerte de que, como ya dicen el resumen y el entregable.",
+   "fragmentos": [
+    "satisfacerte a ti mismo"
+   ]
+  }
+ ]
+}

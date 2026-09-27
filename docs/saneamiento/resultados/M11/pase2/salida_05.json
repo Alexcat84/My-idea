@@ -1,0 +1,482 @@
+{
+ "lote": "05",
+ "nodos": [
+  {
+   "node_id": "despedir_persona_franqueza_radical",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "Para llegar con la cabeza en el sitio correcto",
+     "motivo": "Calco de \"to be in the right frame of mind\": \"con la cabeza en el sitio correcto\" no es giro español; lo natural es \"con la actitud adecuada\" o \"con la cabeza en su sitio\".",
+     "propuesta": "Para llegar con la actitud adecuada, primer recordatorio: acuérdate de un trabajo en el que tú fuiste malo y piensa en lo contento que estás de no estar ya en él. Un ejemplo: alguien que pasó un verano de cajera de banco haciendo mal las cuentas de cabeza, y cuya jefa no la despidió sino que la animó a intentarlo más, con lo que lo que era un problema de cálculo empezó a sentirse como un defecto de carácter."
+    }
+   ]
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "un huevo de tres minutos se convierte fácilmente en uno de seis",
+     "motivo": "El libro dice \"could easily become\": es una posibilidad, no algo que ocurre siempre (el propio resumen lo dice bien: \"puede acabar saliendo en seis\").",
+     "fichero": "fuentes/grove_high_output/cap_02.md",
+     "lineas": "51",
+     "frase": "If you didn't adjust your production flow to account for the queue, your three-minute egg could easily become a six-minute egg.",
+     "propuesta": "Cuenta el tiempo de espera dentro del flujo y no solo el tiempo de la operación, porque en una cocina que sirve desayunos, si no ajustas el flujo por la cola del tostador, un huevo de tres minutos puede convertirse fácilmente en uno de seis."
+    }
+   ]
+  },
+  {
+   "node_id": "variar_frecuencia_inspeccion_nivel_calidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "inspeccionar siempre con la misma frecuencia es gastar de más cuando todo va bien y mirar poco cuando empieza a ir mal",
+     "motivo": "El pasaje solo dice que, como la calidad varía, es de sentido común variar la frecuencia, y que la ventaja es menos coste y menos interferencia en el flujo. Que la frecuencia fija haga \"mirar poco cuando empieza a ir mal\" es un efecto que el libro no afirma.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "143",
+     "frase": "Because quality levels vary over time, it is only common sense to vary how often we inspect. [...] The advantage here is still lower costs and even less interference with the production flow.",
+     "propuesta": "La calidad no se queda quieta en el tiempo, así que tiene lógica que la frecuencia de inspección tampoco se quede quieta. Si la frecuencia sigue al nivel de calidad, aflojando tras semanas sin problemas y apretando en cuanto aparecen hasta que la calidad vuelve a su nivel alto, el aseguramiento cuesta menos y estorba menos al flujo de producción. Es solo sentido común, pero casi no se usa, y la razón probable es la costumbre de seguir haciendo las cosas como siempre."
+    }
+   ]
+  },
+  {
+   "node_id": "ejecutar_embudo_reclutamiento_escala",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "para que los candidatos potenciales quieran más venir a entrevistarse",
+     "motivo": "El libro dice \"are more likely to want to interview\": se busca que sea más probable que quieran venir; \"quieran más venir\" pierde el matiz y además suena forzado.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "243",
+     "frase": "Can you host events so that prospective candidates are more likely to want to interview?",
+     "propuesta": "Busca además oportunidades de hacer tu embudo más eficiente con estas preguntas: ¿puedes retocar tu correo inicial para que resulte más atractivo y te responda más gente? ¿Puedes organizar eventos para que sea más probable que los candidatos potenciales quieran venir a entrevistarse? ¿Puedes idear mejores preguntas que te den más información sobre un candidato?"
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "que juegue un papel en ayudar al equipo a crecer y prosperar",
+     "motivo": "Calco literal de \"play a role in helping\": \"jugar un papel en ayudar\" no es construcción española.",
+     "propuesta": "Rompe el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que ponga de su parte para ayudar al equipo a crecer y prosperar."
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_semana_cuarenta_horas_jefe",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "unas semanas tendrás ocho horas",
+     "motivo": "El libro dice \"some weeks you may have eight hours\": es una posibilidad, no una previsión segura.",
+     "fichero": "fuentes/scott_radical_candor/cap_12.md",
+     "lineas": "51",
+     "frase": "so some weeks you may have eight hours of work associated with your core responsibilities as a boss, others twelve others five.",
+     "propuesta": "Cuenta con esta horquilla por esas rachas: puede que unas semanas tengas ocho horas de trabajo asociado a tus responsabilidades nucleares como jefe, otras doce, otras cinco."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "matiz",
+     "cita": "aunque es probable que gastes la mayor parte en lidiar con lo imprevisible",
+     "motivo": "Anécdota vuelta regla: el libro lo cuenta como su propia experiencia (\"if you're like me\"), no como lo probable para cualquiera. El resumen ya lo dice bien (\"hay quien gasta la mayor parte\").",
+     "fichero": "fuentes/scott_radical_candor/cap_03.md",
+     "lineas": "17",
+     "frase": "Hopefully you can claim them as your own, though if you're like me you'll have to use most of them to deal with the unpredictable.",
+     "propuesta": "Cuenta las otras quince horas que quedan en una semana laboral de cuarenta: ojalá puedas reclamarlas como tuyas, aunque hay quien acaba gastando la mayor parte en lidiar con lo imprevisible."
+    }
+   ]
+  },
+  {
+   "node_id": "elogiar_trabajo_especifico_contexto",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "puede resultar vago e inútil, y hasta sonar insincero aunque la otra persona sepa que te importa",
+     "motivo": "Causa cambiada: en el caso, la falta de porqué hizo el elogio vago e inútil, pero la insinceridad vino de que el otro no creyó que lo sintiera (\"you hate sports\"), como dice bien el paso 1 (\"el problema de fondo resultó ser otro\"). El resumen atribuye la insinceridad a quedarse en el hecho.",
+     "fichero": "fuentes/scott_radical_candor/cap_05.md",
+     "lineas": "77",
+     "frase": "He replied, \"Well, the real problem is that I don't think you meant it—you hate sports.\" [...] It wasn't just that I'd been vague and unhelpful. He knew I cared about him, but he thought my praise was insincere.",
+     "propuesta": "Un elogio que se queda en el hecho, sin decir por qué admiras lo que admiras, puede resultar vago e inútil; y si la otra persona no cree que lo sientes, suena insincero aunque sepa que te importa. Dar un elogio con sentido es difícil, y por eso importa fijarte en cómo aterriza en quien lo recibe. Si cae plano, vuelve a intentarlo con más contexto: la ocasión concreta, lo que admiras, el efecto que tiene en ti y lo que ha aportado al trabajo común. En un caso así, la segunda versión, contextualizada, más personal y concreta, sí llegó como un elogio franco de verdad."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "pegando lo que le habían mandado sus jefes",
+     "motivo": "\"sus jefes\" se lee como los jefes del que manda el correo (sus superiores); en el libro son los directivos que trabajaban para él quienes le mandaron las justificaciones (\"asking all the managers who worked for him\").",
+     "fichero": "fuentes/scott_radical_candor/cap_05.md",
+     "lineas": "165",
+     "propuesta": "No copies y pegues las justificaciones que te mandan sin leerlas. Un jefe felicitó por correo a setenta personas de un equipo de seiscientas pegando las justificaciones que le habían mandado los jefes que trabajaban para él, y en una de esas líneas publicó el sueldo de una persona, que estaba cincuenta por ciento por debajo de mercado, y que era riesgo de fuga."
+    }
+   ]
+  },
+  {
+   "node_id": "convertir_cualquiera_mentor",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "compadecerse de los retos compartidos",
+     "motivo": "Calco de \"commiserate over shared challenges\": en español uno se compadece de personas, no de retos.",
+     "propuesta": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque son una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, desahogarse sobre los retos que comparten e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "Y sus respuestas le han dado forma directamente a cómo lleva su propio equipo: por una recomendación suya, mantiene",
+     "motivo": "Posesivos y sujeto ambiguos entre las dos amigas (\"sus respuestas\", \"su propio equipo\", \"recomendación suya\", \"mantiene\"): no queda claro quién lleva el equipo ni quién mantiene las horas de puertas abiertas. Además \"le han dado forma\" calca \"shaped\".",
+     "propuesta": "Ten delante lo concreto que puede llegar a ser eso: una de esas amigas construye cultura de forma fantástica y consigue cultivar en su equipo una sensación de calidez, camaradería y cuidado digna de admirar. A lo largo de los años, otra del grupo le ha hecho docenas de preguntas sobre cómo lo hace: cómo conduce sus reuniones, qué herramientas usa para comunicarse con su equipo amplio, cómo se las arregla para extender esa sensación de conexión a las oficinas remotas. Y las respuestas de la primera han marcado directamente cómo lleva la segunda su propio equipo: por una recomendación de su amiga, mantiene bloques semanales de horas de puertas abiertas."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "una habilidad aguda para ver lo mejor de cada uno",
+     "motivo": "Calco de \"a keen ability\": \"habilidad aguda\" no se dice en español.",
+     "propuesta": "Y no lo limites a quien tenga tu mismo trabajo: aunque no lo tengan, la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Quizá un colega es un reclutador excepcional, quizá otra es muy buena vendiendo sus ideas, quizá alguien de tu equipo es la persona más creativa que conoces, quizá tu jefe tiene un don especial para ver lo mejor de cada uno."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "está dentro de los derechos de la gente decir que no porque están ocupados o porque no saben cómo ayudarte",
+     "motivo": "Calco de \"it's well within people's rights\"; lo español es \"estar en su derecho\". Además \"la gente... están... saben\" rompe la concordancia.",
+     "propuesta": "Ten presente que, como estás pidiendo un favor, la gente está en su derecho de decir que no porque está ocupada o porque no sabe cómo ayudarte. Dales las gracias igualmente."
+    }
+   ]
+  },
+  {
+   "node_id": "comunicar_vision_jugadores_organizacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Lanzar una visión clara",
+     "motivo": "Calco de \"cast a clear vision\": una visión no se \"lanza\" en español; se plantea o se transmite.",
+     "propuesta": "Transmitir una visión clara de jugadores A y reforzarla en cada comunicación"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "Lanzas una visión clara",
+     "motivo": "Calco de \"cast a clear vision\" (ver el título).",
+     "propuesta": "Cuando decides llenar cada puesto con los mejores, toda la organización tiene que saber adónde va, y eso no se consigue con un anuncio aislado. Transmites una visión clara y la refuerzas en cada comunicación con el equipo amplio, con un mensaje concreto como vamos a ganar con jugadores A, vamos a tener éxito porque tenemos un jugador A en cada puesto, o nuestra gente servirá a los clientes mucho mejor que la competencia porque todos son jugadores A. Después respaldas esas palabras con actos que muestren cómo esa visión está transformando al equipo."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "Lanza una visión clara para la organización.",
+     "motivo": "Calco de \"cast a clear vision for the organization\".",
+     "propuesta": "Transmite una visión clara para la organización."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "como en el ejemplo de la fábrica que viste antes",
+     "motivo": "Referente que no existe: ni el nodo ni el pasaje del libro traen ningún ejemplo de una fábrica; el libro solo da el mensaje. Sobra entero.",
+     "fichero": "fuentes/smart_who/cap_06.md",
+     "lineas": "259",
+     "propuesta": "O con este otro: vamos a tener éxito porque tenemos un jugador A en cada puesto."
+    }
+   ]
+  },
+  {
+   "node_id": "rechazar_conducta_toxica_entrevista",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "Vigila que hable mal de empleadores anteriores",
+     "motivo": "\"Vigilar que + subjuntivo\" en español significa cuidar de que algo ocurra (\"vigila que no se queme\"): \"Vigila que hable mal\" se lee como asegurarte de que el candidato lo haga. Se trata de estar atento a si lo hace (\"be on the lookout for\").",
+     "propuesta": "Fíjate en si habla mal de empleadores anteriores, con frases como «mi último jefe era terrible»."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "Vigila que culpe a otros",
+     "motivo": "\"Vigilar que + subjuntivo\" en español significa cuidar de que algo ocurra (\"vigila que no se queme\"): \"Vigila que culpe a otros\" se lee como asegurarte de que el candidato lo haga. Se trata de estar atento a si lo hace (\"be on the lookout for\").",
+     "propuesta": "Fíjate en si culpa a otros de los fracasos con los que estuvo asociado, con frases como «mi último proyecto no salió bien por la política interna»."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "Vigila que insulte a otros grupos de personas",
+     "motivo": "\"Vigilar que + subjuntivo\" en español significa cuidar de que algo ocurra (\"vigila que no se queme\"): \"Vigila que insulte\" se lee como asegurarte de que el candidato lo haga. Se trata de estar atento a si lo hace (\"be on the lookout for\").",
+     "propuesta": "Fíjate en si insulta a otros grupos de personas, con frases como «los de ventas eran unos payasos»."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "Vigila que pregunte qué puede hacer la empresa por él",
+     "motivo": "\"Vigilar que + subjuntivo\" en español significa cuidar de que algo ocurra (\"vigila que no se queme\"): \"Vigila que pregunte\" se lee como asegurarte de que el candidato lo haga. Se trata de estar atento a si lo hace (\"be on the lookout for\").",
+     "propuesta": "Fíjate en si pregunta qué puede hacer la empresa por él en vez de al revés, con frases como «esto me parece un paso adelante para mi carrera»."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "Vigila que aparezca con mucha arrogancia",
+     "motivo": "\"Vigilar que + subjuntivo\" en español significa cuidar de que algo ocurra (\"vigila que no se queme\"): \"Vigila que aparezca\" se lee como asegurarte de que el candidato lo haga. Se trata de estar atento a si lo hace (\"be on the lookout for\").",
+     "propuesta": "Fíjate en si se muestra muy arrogante o con poca conciencia de sí mismo, con frases como «me atrajo este puesto porque parece que aquí hace falta alguien de verdad veterano»."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "aparezca con mucha arrogancia o poca conciencia de sí mismo",
+     "motivo": "Calco de \"coming across with high arrogance\": \"aparecer con arrogancia\" no es español; es mostrarse o dar la impresión.",
+     "propuesta": "Fíjate en si se muestra muy arrogante o con poca conciencia de sí mismo, con frases como «me atrajo este puesto porque parece que aquí hace falta alguien de verdad veterano»."
+    }
+   ]
+  },
+  {
+   "node_id": "diagnosticar_nivel_motivacion_reaccion_aumento_salario",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "cómo se compara contra lo que recibieron otros",
+     "motivo": "Calco de \"compare against\"/\"stack up against\": en español se compara con, no contra (el resumen y el paso 2 ya dicen \"se compara con\").",
+     "propuesta": "Ubicar a alguien en la jerarquía motivacional según si le importa la suma absoluta de un aumento de sueldo o cómo se compara con lo que recibieron otros"
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "la comparación de ese aumento contra el de otros",
+     "motivo": "Calco de \"against\": la comparación es con el de otros.",
+     "propuesta": "El nivel motivacional de la persona (fisiológico o de seguridad, o bien estima o reconocimiento, o autorrealización), leído de si le importa la suma absoluta del aumento o la comparación de ese aumento con el de otros, y no una suposición sin esa evidencia."
+    }
+   ]
+  },
+  {
+   "node_id": "contrastar_motivos_querer_gestionar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "En muchas organizaciones no se crece sin gestionar personas",
+     "motivo": "El libro dice que el crecimiento \"will hit a ceiling\": se crece hasta un techo, no que no se crezca. El paso 1 lo dice bien (\"choca con un techo\").",
+     "fichero": "fuentes/zhuo_manager/cap_02.md",
+     "lineas": "241",
+     "frase": "In many organizations, your ability to grow in your career will hit a ceiling unless you start managing people.",
+     "propuesta": "Progresar, decidir con libertad o que te lo pidieran son motivos comunes para dirigir, pero según las circunstancias la gestión puede no ser el mejor camino hacia esas metas. En muchas organizaciones el crecimiento topa con un techo si no gestionas personas, pero en otras hay caminos de ascenso sin gestionar a nadie, y ahí dirigir es un cambio de camino y no un ascenso. Quien dirige decide para el equipo y rinde cuentas; una directiva aprendió en su primer equipo que los mejores resultados salen de inspirar y no de mandar. Y la obligación no basta como razón: queda saber si de verdad quieres."
+    }
+   ]
+  },
+  {
+   "node_id": "probar_banquillo_vacaciones_largas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "mucho señala la capa que hay que reforzar",
+     "motivo": "El libro dice \"could use some shoring up\" (le vendría bien un refuerzo), no que haya que reforzarla; el paso 3 conserva el matiz.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "277",
+     "frase": "If the answer is, \"Hmm, my manager would need to do a lot,\" then that's a sign your next layer of leadership could use some shoring up.",
+     "propuesta": "Un equipo que funciona sin ti durante meses es una de las señales más fuertes de buen liderazgo: tus lugartenientes pueden tomar el mando y no eres un punto único de fallo. Preguntar a cada líder cuánto tendría que intervenir su jefe si se fuera unas largas vacaciones mide eso de forma directa: poco significa buen banquillo, mucho señala una capa a la que le vendría bien un refuerzo. No te quita valor, porque hasta los mejores pueden mejorar y tú sigues multiplicando a tu gente. Y un banquillo fuerte te libera para el siguiente problema grande que tu equipo puede asumir."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "una idea de qué capa de liderazgo hay que reforzar",
+     "motivo": "Mismo matiz que el resumen: \"could use some shoring up\" es que le vendría bien un refuerzo.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "277",
+     "frase": "then that's a sign your next layer of leadership could use some shoring up.",
+     "propuesta": "Una lectura de si cada líder es un punto único de fallo, y una idea de a qué capa de liderazgo le vendría bien un refuerzo."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "contéstale así: pregúntate si",
+     "motivo": "\"Contéstale así: pregúntate\" mezcla a quién se habla: la respuesta al otro es una pregunta para ti. En el libro la pregunta es para el lector (\"ask yourself\"). Además \"así que sigues viendo\" vuelve descripción lo que el libro da como deber (\"you should still see\").",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "283",
+     "propuesta": "Si alguien te objeta que un equipo que tiene éxito sin ti significa que tú no aportas valor, pregúntate si incluso a los mejores líderes se les puede entrenar para rendir todavía mejor. La respuesta es que sí, rotundamente, así que deberías seguir viendo tu trabajo como el de un multiplicador para tu gente."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "atacar la siguiente colina grande del horizonte",
+     "motivo": "Calco literal de \"tackle the next big hill on the horizon\"; el resumen y el paso 8 ya lo dicen en español (\"el siguiente problema grande\").",
+     "propuesta": "Usa lo que un banquillo fuerte te libera para abordar el siguiente gran reto que tengas por delante. Cuando una red social hoy enorme todavía se llevaba desde un cuarto de residencia universitaria, su fundador escribía personalmente la mayor parte del código del servicio, y contratar a sus primeros ingenieros no lo dejó obsoleto, solo le dejó centrar su atención en otras cosas: extender el servicio a otras universidades, desarrollar funciones nuevas y contratar a otros líderes que trabajaran con él."
+    }
+   ]
+  },
+  {
+   "node_id": "criticar_trabajo_evitar_desanimo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "puede actuar sobre ella",
+     "motivo": "Calcos: \"actuar sobre ella\" (act on it) y \"devolverla a la vía\" (get them back on track), que además deja ambiguo si \"la\" es la crítica o la persona.",
+     "propuesta": "Una crítica sirve cuando la persona puede aprovecharla sin sentir que la atacan. Por eso se dirige al trabajo y no a quien lo hizo: culpar a un rasgo de la persona es más fácil que mirar el contexto de lo que hace, pero ayuda mucho menos. Decirlo con claridad, explicar por qué y volver a encarrilar a la persona, sin poner en duda tu confianza en su capacidad, le da algo concreto que corregir. Y el modo cuenta: con humildad, en persona y enseguida, en privado, sobre una relación ya cuidada y con más elogio que crítica, la crítica llega como ayuda y no desanima."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "devolver a la persona a la vía",
+     "motivo": "Calco literal de \"get them back on track\"; en español es encarrilar o volver a encauzar.",
+     "propuesta": "No te quedes en decir que el trabajo no vale, ni siquiera dicho con suavidad. Hay que decirlo muy claramente, articular por qué y volver a encarrilar a la persona."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "la vía de vuelta señalada",
+     "motivo": "Calco de \"back on track\" (ver el paso 2).",
+     "propuesta": "La crítica dicha sobre el trabajo y no sobre la persona, con el porqué articulado y el camino para volver a encarrilarse señalado, en privado y en persona, sin dejar en duda tu confianza en su capacidad y sin dejar demasiado margen de interpretación."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "cómo funcionan las cosas ahí dentro",
+     "motivo": "\"Ahí dentro\" no tiene antecedente en el paso ni en el nodo (en el caso era la empresa a la que acababa de llegar).",
+     "fichero": "fuentes/scott_radical_candor/cap_05.md",
+     "lineas": "127",
+     "propuesta": "Sé humilde, sobre todo si acabas de llegar a la organización y no entiendes todavía cómo funcionan las cosas en ella: ese fue el primer problema de aquel correo."
+    }
+   ]
+  },
+  {
+   "node_id": "escuchar_entender_critica_dominar_defensa",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "voz",
+     "cita": "puede disparar en nosotros la respuesta de pelea, huida o bloqueo, incluso cuando la hemos pedido",
+     "motivo": "Primera persona del plural en vez de tú; el resto del nodo, resumen incluido, habla de tú.",
+     "propuesta": "Parte de lo que pasa: recibir crítica puede disparar en ti la respuesta de pelea, huida o bloqueo, incluso cuando la has pedido."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "que ya de por sí no nos gusta de nosotros mismos",
+     "motivo": "Primera persona del plural en vez de tú, como en el paso 0.",
+     "propuesta": "Cuenta con que no solo cuesta la crítica injusta: la crítica justa, sobre todo cuando toca algo que ya de por sí no te gusta de ti mismo, también cuesta."
+    }
+   ]
+  },
+  {
+   "node_id": "alentar_asuntos_corazon_vigilar_final_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "matiz",
+     "cita": "contra el que se suelta cerca del final",
+     "motivo": "El libro dice \"more often than not, these come near the end\": la mayoría de las veces, no siempre (el resumen y el paso 6 lo conservan).",
+     "fichero": "fuentes/grove_high_output/cap_05.md",
+     "lineas": "53",
+     "frase": "More often than not, these come near the end of a meeting.",
+     "propuesta": "Alentar en la reunión individual los asuntos de corazón a corazón con tres preguntas, y ponerse en guardia contra el que suele soltarse cerca del final"
+    }
+   ]
+  },
+  {
+   "node_id": "celebrar_pequenias_victorias",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "en vez de pensar qué es lo que no estoy haciendo bien, pon el foco",
+     "motivo": "La frase salta de tú a yo sin marcar la cita: \"pensar qué es lo que no estoy haciendo bien\" dentro de una frase en tú. Va entre comillas como pregunta que te haces.",
+     "propuesta": "Rompe ese ciclo negativo contándote una historia distinta: en vez de preguntarte «¿qué no estoy haciendo bien?», pon el foco en todas las maneras en que estás ganando."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "una de sus entradas de blog recientes le había tocado la fibra y la había compartido con todo su equipo",
+     "motivo": "Sujeto que cambia sin marca: gramaticalmente \"la había compartido\" tiene por sujeto \"una de sus entradas\"; quien la compartió y dio las gracias es la colega, y \"sus\"/\"le\" quedan ambiguos entre las dos.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "341",
+     "propuesta": "Ten delante de dónde sale la idea: en un periodo especialmente difícil, una directiva le contó a una colega lo ahogada que se sentía, porque no conseguía contratar lo bastante rápido para todos los proyectos que necesitaban dirección de diseño y cada día sentía la presión de ser el cuello de botella. La colega le recordó que por duras que estuvieran las cosas, no todo lo que hacía era un fracaso: a la colega le había tocado la fibra una entrada de blog reciente de la directiva, la había compartido con todo su equipo y le dio las gracias por escribirla."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "Unas veces celebraba una reunión a solas en la que le dio a alguien un consejo útil, otros días se daba crédito",
+     "motivo": "Calco de \"I'd celebrate a 1:1\": en español \"celebrar una reunión\" es convocarla o tenerla, así que se lee que tenía reuniones, no que las celebraba como victoria. \"Se daba crédito\" calca \"gave myself credit\".",
+     "propuesta": "Monta un diario de pequeñas victorias, que es lo que ella hizo: cada día apunta algo que hiciste y de lo que estés orgulloso, aunque sea pequeño. Unas veces celebraba haberle dado a alguien un consejo útil en una reunión a solas, otros días se reconocía el mérito de haber conducido una reunión productiva, y una vez, en un día especialmente duro, apuntó que había conseguido responder a unos cuantos correos a tiempo."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "Cuando necesites construir tu confianza",
+     "motivo": "Calco de \"build your confidence\"; la confianza en uno mismo se gana o se refuerza (el resumen dice \"cuando necesites confianza\").",
+     "propuesta": "Y ten delante este dato: los estudios muestran que si escribes cada noche cinco cosas por las que estés agradecido, a la larga te vas a sentir más feliz. Cuando necesites reforzar tu confianza, haz lo mismo poniendo el foco en todas las cosas que sí estás haciendo bien."
+    }
+   ]
+  },
+  {
+   "node_id": "calcular_embudo_reclutamiento_propio",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz",
+     "cita": "para estar seguro de que cuanto más tiempo y energía dedicas a reclutar, más rinde",
+     "motivo": "Anécdota vuelta regla: el libro cuenta que pensar así le dio seguridad a la autora (\"made me confident\"); el paso lo da como garantía para cualquiera.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "219",
+     "frase": "Thinking about things this way made me confident that the more time and energy I spend on recruiting, the more it pays off, even if a few specific instances here and there don't work out.",
+     "propuesta": "Usa esa ecuación para ganar confianza: a una directiva pensar así le dio la seguridad de que cuanto más tiempo y energía dedicaba a reclutar, más rendía, aunque unos cuantos casos concretos aquí y allá no salieran."
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_opinion_otros_mejorar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "recíbela con gracia",
+     "motivo": "Calco de \"receive it graciously\": \"con gracia\" en español evoca humor o donaire, no buena disposición.",
+     "propuesta": "Da siempre las gracias por la opinión. Aunque no estés de acuerdo con lo que te digan, recíbela con buena disposición y reconoce que costó esfuerzo darla."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "si los demás te encuentran defensivo",
+     "motivo": "Calco de \"if others find you defensive\"; en español es \"si te ven a la defensiva\" (como ya dice el resumen).",
+     "propuesta": "Cuenta con lo que pasa si no lo haces: si los demás te ven a la defensiva, vas a recibir menos opinión en el futuro, y eso solo va a perjudicar tu crecimiento."
+    }
+   ]
+  },
+  {
+   "node_id": "facilitar_despido_tres_cosas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "lo que crea una política de oficina extrañísima",
+     "motivo": "Calco de \"office politics\": \"política de oficina\" se lee como una norma de la oficina; lo que el libro describe son intrigas o juegos de poder internos.",
+     "propuesta": "Reconoce ahí el primer efecto: algunos resuelven los problemas de desempeño encasquetando a los miembros del equipo que fallan a colegas que no sospechan nada, lo que crea unas intrigas internas extrañísimas."
+    }
+   ]
+  },
+  {
+   "node_id": "repetir_mensaje_invariable_diario_reunion_evento",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "lote": "07",
+ "nodos": [
+  {
+   "node_id": "dirigir_reunion_revision_trabajo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "dimensionar_numero_subordinados_medio_dia_semanal",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "que el jefe de planta se vea empujado",
+     "motivo": "El sujeto cambia de persona: todo el procedimiento va en tú (el jefe de planta eres tú, que asumiste una de las secciones) y este paso pasa a una tercera persona, «el jefe de planta», que el nodo no presenta como tal.",
+     "propuesta": "Cuenta con lo que ese arreglo evita: que te veas empujado a quedarte sin tarea en tu puesto o a meterte en el trabajo de otros."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "calco",
+     "cita": "la jubilación en el puesto",
+     "motivo": "Calco palabra a palabra de «on-the-job retirement»; en español llano es quedarse sin tarea en el puesto (el resumen del nodo ya lo dice así).",
+     "propuesta": "Cuenta con lo que ese arreglo evita: que te veas empujado a quedarte sin tarea en tu puesto o a meterte en el trabajo de otros."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "coherencia",
+     "cita": "y colócalo de forma que esas personas no aparezcan al mismo nivel de organización que el jefe que ya estaba",
+     "motivo": "Referente ambiguo: «colócalo» no tiene antecedente claro (¿el arreglo?, ¿el jefe?) y «el jefe que ya estaba» no se ha presentado; quien se lo tomaría a mal es el jefe de la otra sección (en el libro, el jefe de producción).",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "301",
+     "frase": "The arrangement, shown below, does not have the engineers appearing to be at the same organizational level as the manufacturing manager—something he would surely take exception to.",
+     "propuesta": "Comprueba lo que ese arreglo te deja: el jefe de la otra sección sigue a tu cargo y has sumado a las personas que tendría a su cargo el jefe de la sección que asumiste, y monta el organigrama de forma que esas personas no aparezcan al mismo nivel de organización que el jefe de la otra sección, porque se lo tomaría a mal."
+    }
+   ]
+  },
+  {
+   "node_id": "transitar_pionero_equipo_nuevo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "empujar a la gente a conseguir resultados que ellos ven como poco realistas",
+     "motivo": "Falta de concordancia: el sujeto es «la gente» (singular) y el verbo pasa a un «ellos» sin antecedente plural.",
+     "propuesta": "Pasa la lista de lo que las erosiona: no dar a la gente la guía que necesita para tener éxito en su trabajo; meter a la gente en papeles que no quieren o para los que no encajan bien; y empujar a la gente a conseguir resultados que ve como poco realistas."
+    }
+   ]
+  },
+  {
+   "node_id": "dimensionar_plantilla_administrativa_pronostico",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "la salida de tu fábrica administrativa",
+     "motivo": "«Salida» es calco de «output»; en español es la producción (el resumen del nodo ya dice «ajustar a ella la producción»).",
+     "propuesta": "Pronostica la demanda de trabajo futura y ajusta después a ese pronóstico la producción de tu fábrica administrativa."
+    }
+   ]
+  },
+  {
+   "node_id": "rechazar_contratacion_tibia",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "alguien que difícilmente fracasará pero tampoco aportará mucho",
+     "motivo": "El libro pone el mismo matiz de probabilidad en las dos mitades («not likely»); el resumen lo conserva en la primera («difícilmente») y afirma la segunda como hecho: «tampoco aportará mucho».",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "155",
+     "frase": "While they’re not likely to bomb, they’re also not likely to add much.",
+     "propuesta": "Que todos los entrevistadores digan que sí parece una buena señal, pero cuando nadie está entusiasmado esa unanimidad esconde una contratación tibia: un candidato sin fallos evidentes que tampoco deslumbra en nada y por el que nadie pelearía. Como contratar ya es de por sí una apuesta, alguien que difícilmente fracasará pero probablemente tampoco aportará mucho no compensa el riesgo. Por eso conviene apostar por quien tiene detrás a un defensor apasionado: una opinión dividida en la que quienes dicen que sí insisten en querer trabajar con esa persona suele indicar que trae algo muy valorado."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "toda contratación es ya de por sí una apuesta: no es probable que fracasen",
+     "motivo": "Sujeto sin antecedente: tras los dos puntos el sujeto gramatical es «toda contratación», y los verbos en plural («fracasen», «aporten») hablan de unas personas que la frase no presenta (las contratadas de forma tibia).",
+     "propuesta": "Rechaza cualquier contratación tibia, porque toda contratación es ya de por sí una apuesta: no es probable que esas personas fracasen, pero tampoco es probable que aporten mucho."
+    }
+   ]
+  },
+  {
+   "node_id": "agrupar_interrupciones_subordinados_reuniones_regulares",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "Escuchar durante la entrevista te dice cómo enmarcar la oferta final.",
+     "motivo": "El libro dice que prestando atención tendrás una idea más clara de cómo enmarcar la oferta, no que la escucha te diga cómo hacerlo; el paso 3 del propio nodo conserva el matiz y el resumen lo pierde.",
+     "fichero": "fuentes/smart_who/cap_06.md",
+     "lineas": "167",
+     "frase": "By paying attention to what the candidate says during the interview, you’ll have a clearer idea how to frame the offer that ultimately will attract that person to your company.",
+     "propuesta": "Cada entrevista trae su propio momento de venta: si la abres anunciando que primero quieres conocer a la persona y después darle la ocasión de conocerte a ti y a tu empresa, el tramo final de preguntas queda reservado para vender, siempre que sigas viendo potencial. Lo que el candidato pregunta ahí es información de venta: si alguien pregunta si se paga la formación continua, sabes que quiere mejorar sus puntos flojos y que cuanto mejor sea esa oferta, más probable es su sí. Escuchar durante la entrevista te da una idea más clara de cómo enmarcar la oferta final."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "donde típicamente cae la venta",
+     "motivo": "«Típicamente» es calco de «typically»; en español llano, «suele caer».",
+     "propuesta": "Vende hacia el final de cada entrevista, que es donde suele caer la venta dentro del proceso de entrevistas."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "como en el ejemplo de la fábrica que viste antes",
+     "motivo": "Referente que no existe en el nodo ni en el pasaje: no hay ningún ejemplo de una fábrica; el libro solo remite a que ya lo escribió antes («As we wrote earlier»), que además es voz de libro. Sale entero.",
+     "fichero": "fuentes/smart_who/cap_06.md",
+     "lineas": "165",
+     "frase": "As we wrote earlier, we recommend you set up each session by saying something like this",
+     "propuesta": "Monta cada sesión diciendo algo así: nos gustaría dedicar la primera parte de esta entrevista a conocerte, y después nos gustaría darte la oportunidad de conocernos a nosotros."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "Ponte el sombrero de vendedor",
+     "motivo": "Calco palabra a palabra de «put on your sales hat».",
+     "propuesta": "Pasa a vender en el tiempo de preguntas del final, siempre que sigas viendo potencial en el candidato."
+    }
+   ]
+  },
+  {
+   "node_id": "ejercer_poder_posicion_etapa_decision_clara",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "Comprueba que el proceso vino bien hasta ese punto",
+     "motivo": "«Venir bien» en español significa convenir o resultar oportuno, no avanzar correctamente; la frase dice otra cosa que «proceeded correctly».",
+     "fichero": "fuentes/grove_high_output/cap_06.md",
+     "lineas": "61",
+     "frase": "If the decision-making process has proceeded correctly up to this point",
+     "propuesta": "Comprueba que el proceso se desarrolló bien hasta ese punto: que quien decide lo hace con el beneficio completo de la discusión libre, en la que todos los puntos de vista, hechos, opiniones y juicios se expusieron sin el prejuicio del poder de posición."
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_recompensar_uso_metodo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "responder_primer_aviso_renuncia_subordinado",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "detectar_arreglar_fallo_etapa_menor_valor",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "decide que no quieres a un candidato en la entrevista del campus",
+     "motivo": "Tal como está, el imperativo ordena rechazar a un candidato; el libro plantea una condición («si podemos decidir que no lo queremos»): lo que se regula es el momento de descartar, no el descarte. Además, «entrevista del campus» es calco de «campus interview».",
+     "fichero": "fuentes/grove_high_output/cap_02.md",
+     "lineas": "75",
+     "frase": "Likewise, if we can decide that we don’t want a college candidate at the time of the campus interview rather than during the course of a plant visit, we save the cost of the trip and the time of both the candidate and the interviewers.",
+     "propuesta": "Aplícalo a la contratación: si vas a descartar a un candidato, intenta decidirlo en la entrevista en la universidad en vez de en el transcurso de la visita a la planta, y ahorra el coste del viaje y el tiempo del candidato y de los entrevistadores."
+    }
+   ]
+  },
+  {
+   "node_id": "priorizar_lista_entrenamiento_subordinados",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "contactar_despedido_mes_despues",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "Y ten presente para qué sirve:",
+     "motivo": "«Para qué sirve» no tiene referente claro (¿el contacto?, ¿el despido?) y lo que sigue no es un propósito sino una reflexión sobre lo duro que es despedir y dejar un trabajo.",
+     "propuesta": "Y ten presente que es duro despedir, pero también es duro dejar un trabajo, y que a veces tu trabajo al frente del equipo es hablar con total franqueza cuando algo simplemente no funciona."
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_proceso_trabajo_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "Por listos que seamos, leer la mente no es una competencia humana básica.",
+     "motivo": "Traducción palabra a palabra de «As talented as we are, mind reading is not a core human competency»; además, el «seamos» mete un nosotros en un nodo en tú.",
+     "propuesta": "No cuentes con ahorrarte el tiempo de coordinación: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto más grande es el equipo más tiempo hace falta. Por mucho talento que haya, nadie sabe leer la mente de los demás."
+    }
+   ]
+  },
+  {
+   "node_id": "decir_normas_participacion_voz_alta",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "avisar_organizador_reunion_prescindible",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "En un caso real, una reunión así de los miércoles",
+     "motivo": "La reunión de los miércoles ya se presentó en el paso anterior («una reunión de los miércoles que una directiva temía»); aquí se cuenta como si fuera otra («una reunión así»). Es la misma. De paso, el «siempre» no está en el libro.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "285-287",
+     "frase": "Thankfully, the meeting series eventually ended with a larger team reorganization. Some years later, I was talking with a colleague who happened to be in that same meeting with me, and we both realized that we thought the meeting was a waste of time.",
+     "propuesta": "No esperes a que la reunión muera sola. Esa reunión de los miércoles terminó solo cuando llegó una reorganización mayor del equipo, y años después dos de sus asistentes descubrieron que los dos habían pensado que era una pérdida de tiempo, y se preguntaron por qué no lo habían reconocido entonces y la habían cerrado antes."
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_decision_dificil_valores",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "satisfacerte a ti mismo de que estás logrando",
+     "motivo": "Calco palabra a palabra de «satisfy yourself that»; en español es convencerte de que (el resumen y el entregable del nodo ya lo dicen así).",
+     "propuesta": "Ten como objetivo último convencerte de que estás logrando lo que te propusiste."
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_reclutadores_externos",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}
