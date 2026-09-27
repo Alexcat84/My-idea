@@ -160,6 +160,19 @@ export interface EventoConsultaSinTraducir {
   idioma: string | null;
 }
 
+/** CONSTRUCCION 2 (28 sep 2026): el par de la pregunta de la cache y la que se mostro, con lo que busca, para que
+ * el juez de la prueba de coherencia compare con la base. `salida` dice si fue la adaptada, la neutral o la base
+ * (un nodo aun sin neutral); `motivo`, por que no salio la adaptada. */
+export interface EventoAdaptacionPregunta {
+  tipo: "adaptacion_pregunta";
+  nodo: string;
+  de: string;
+  a: string;
+  busca: string | null;
+  salida: "adaptada" | "neutral" | "base_sin_neutral";
+  motivo?: string;
+}
+
 export type EventoInterprete =
   | EventoConsultaSinTraducir
   | EventoFallback
@@ -167,6 +180,7 @@ export type EventoInterprete =
   | EventoPuertaReelegida
   | EventoMundoIncompatible
   | EventoAnclajeProteccion
+  | EventoAdaptacionPregunta
   | EventoRegeneracionPlanBasico;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */

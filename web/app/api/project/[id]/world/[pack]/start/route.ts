@@ -36,7 +36,7 @@ import {
   registrarBitacora,
 } from "@/lib/db";
 import { idiomaDelProyecto, idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
-import { preguntaEnIdioma } from "@/lib/engine/preguntaEnIdioma";
+import { adaptarResultadoTurno } from "@/lib/engine/adaptadorPregunta";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
 import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
@@ -279,28 +279,23 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // explorar ESTE mundo) ni preguntaDirigida (el mismo estado_vivo hacía
   // que la reescritura se comiera al nodo). Desde el turno 2, el
   // intérprete manda como siempre.
-  // i18n F5 (D3): la cacheada está en español; en una idea escrita en otro
-  // idioma, la IA la expresa en ese idioma (misma intención; si falla, queda la
-  // cacheada). La genérica sale en el idioma de las plantillas.
+  // CONSTRUCCION 2 (28 sep 2026): la cacheada es una pregunta BASE; pasa por el adaptador, que la dice a esta
+  // persona (todo lo del nucleo y de los mundos anteriores) y en el idioma de su idea. Si falla, sale la neutral.
+  // La genérica sale en el idioma de las plantillas y tambien se adapta.
   const idiomaIdea = idiomaDelProyecto(proyecto);
-  const cruda = obtenerPregunta(semillaId, graph[semillaId], preguntasCache, idiomaDePlantilla(idiomaIdea, idioma));
-  const adaptada =
-    preguntasCache[semillaId]?.pregunta === cruda
-      ? await preguntaEnIdioma(createAnthropicClient(), cruda, idiomaIdea, usoVacio())
-      : { pregunta: cruda, acumulado: usoVacio() };
-  const pregunta = adaptada.pregunta;
-  const estadoConPregunta = {
-    ...estado,
-    preguntaPendiente: pregunta,
-    ultimasPreguntas: [pregunta],
-  };
-  const resultado = {
-    tipo: "pregunta" as const,
-    estado: estadoConPregunta,
-    pregunta,
-    acumulado: adaptada.acumulado,
-    nodosNuevos: [],
-  };
+  const idiomaPlantilla = idiomaDePlantilla(idiomaIdea, idioma);
+  const cruda = obtenerPregunta(semillaId, graph[semillaId], preguntasCache, idiomaPlantilla);
+  const resultado = await adaptarResultadoTurno(
+    createAnthropicClient(),
+    {
+      tipo: "pregunta" as const,
+      estado: { ...estado, preguntaPendiente: cruda, ultimasPreguntas: [cruda] },
+      pregunta: cruda,
+      acumulado: usoVacio(),
+      nodosNuevos: [],
+    },
+    { graph, preguntasCache, idiomaPlantilla }
+  );
 
   const puerta = {
     id: semillaId,

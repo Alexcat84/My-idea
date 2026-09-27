@@ -32,7 +32,7 @@ import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { avisosNodo } from "./avisos";
-import { preguntaEnIdioma } from "./preguntaEnIdioma";
+import { adaptarResultadoTurno } from "./adaptadorPregunta";
 import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import { contextoDeSesion, fichaVacia, fusionarFicha, type FichaContexto } from "./memoria";
@@ -413,33 +413,14 @@ export interface AvanzarTurnoParams {
 }
 
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
-  return adaptarPreguntaDelCache(params, await avanzarTurnoBase(params));
-}
-
-/**
- * D3 (i18n F5): si el turno termina en la pregunta CACHEADA del nodo (en
- * español) y la idea está en otro idioma, la IA la expresa en ese idioma, y
- * esa versión queda como pendiente y en el historial anti-repetición (lo que
- * la persona leyó).
- */
-async function adaptarPreguntaDelCache(params: AvanzarTurnoParams, r: ResultadoTurno): Promise<ResultadoTurno> {
-  const idiomaSalida = r.estado.idioma;
-  if (r.tipo !== "pregunta" || !idiomaSalida || idiomaSalida === "es") return r;
-  const actual = r.estado.ruta[r.estado.ruta.length - 1];
-  const cruda = actual ? params.preguntasCache[resolverId(actual, params.graph) ?? actual]?.pregunta : undefined;
-  if (!cruda || r.pregunta !== cruda) return r;
-  const t = await preguntaEnIdioma(params.client, cruda, idiomaSalida, r.acumulado);
-  if (!t.traducida) return { ...r, acumulado: t.acumulado };
-  return {
-    ...r,
-    pregunta: t.pregunta,
-    acumulado: t.acumulado,
-    estado: {
-      ...r.estado,
-      preguntaPendiente: t.pregunta,
-      ultimasPreguntas: r.estado.ultimasPreguntas.map((q) => (q === cruda ? t.pregunta : q)),
-    },
-  };
+  // CONSTRUCCION 2 (28 sep 2026): si el turno sale con la pregunta de la cache del ultimo nodo, sea por el camino
+  // que sea (re-eleccion, respaldo, dirigida fallida, copia literal), pasa por el adaptador: la dice a esta persona
+  // y en el idioma de su idea. Nunca sale la base cruda si el nodo tiene su neutral (lib/engine/adaptadorPregunta).
+  return adaptarResultadoTurno(params.client, await avanzarTurnoBase(params), {
+    graph: params.graph,
+    preguntasCache: params.preguntasCache,
+    idiomaPlantilla: idiomaDePlantilla(params.estado.idioma ?? "es", params.idioma ?? LOCALE_BASE),
+  });
 }
 
 async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTurno> {

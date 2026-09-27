@@ -115,24 +115,37 @@ export const SYSTEM_REFORMULADOR_PROTECCION = [
 ].join("\n") + REGLA_IDIOMA_SALIDA;
 
 /**
- * SYSTEM_TRADUCIR_PREGUNTA — D3 (i18n F5): fuera del español, las preguntas del
- * grafo las adapta la IA. Las cacheadas están en español; cuando una llega
- * cruda a una idea escrita en otro idioma, Haiku la expresa en ese idioma. El
- * idioma llega en el bloque posterior de IDIOMA DE SALIDA (lib/i18n/idiomaSalida).
+ * SYSTEM_ADAPTAR_PREGUNTA — CONSTRUCCION 2 (decision del fundador, 28 sep 2026): el adaptador de preguntas
+ * (lib/engine/adaptadorPregunta.ts). Toda pregunta que sale de la cache pasa por Haiku, que la dice a esta persona
+ * y en el idioma de su idea: cambia la forma, nunca el fondo. Sustituye a SYSTEM_TRADUCIR_PREGUNTA (adapta y
+ * traduce a la vez). El idioma llega en el bloque posterior de IDIOMA DE SALIDA (lib/i18n/idiomaSalida).
  *
- * PROCEDENCIA: nace en TS, como el reformulador: no viene del sync de Python
- * (el motor de Python habla español).
+ * PROCEDENCIA: nace en TS, como el reformulador: no viene del sync de Python.
  */
-export const SYSTEM_TRADUCIR_PREGUNTA = [
+export const SYSTEM_ADAPTAR_PREGUNTA = [
   "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas:",
   "usa comas, dos puntos o parentesis.",
   "",
-  "Recibes UNA pregunta de una entrevista de emprendimiento, escrita en espanol.",
-  "Expresala en el idioma de salida: la MISMA intencion y el mismo contenido, en",
-  "segunda persona, calida y natural, como la escribiria una persona nativa. No",
-  "agregues ni quites nada, no expliques teoria, no cambies QUE se pregunta.",
+  "Eres el ADAPTADOR de preguntas de una entrevista de emprendimiento. Recibes:",
+  "- pregunta_base: la pregunta de un concepto del material, escrita para cualquiera;",
+  "- sirve_para_elegir_entre: los temas entre los que la respuesta ayuda a elegir despues;",
+  "- y, en el contexto del proyecto, quien es la persona (su ficha de contexto) y lo",
+  "  que ya conto.",
   "",
-  "Responde SOLO el texto de la pregunta, sin comillas y sin JSON.",
+  "Tu trabajo es decir ESA pregunta a ESTA persona. Cambia la FORMA, nunca el FONDO:",
+  "- lo que la pregunta busca averiguar no cambia, y su respuesta tiene que servir para",
+  "  elegir entre los mismos temas;",
+  "- ajusta los roles y la situacion a la ficha: si la base supone un jefe, un equipo,",
+  "  recursos humanos o una empresa grande que la persona no tiene, habla de quien lo",
+  "  cumple en su caso o preguntalo en condicional;",
+  "- usa lo que la persona ya conto para que la pregunta hable de su caso concreto, sin",
+  "  repetirselo;",
+  "- tutea en espanol neutro, nada de voseo (tienes, quieres, puedes);",
+  "- UNA sola pregunta, en segunda persona, calida y natural, sin explicar teoria antes.",
+  "No agregues preguntas nuevas ni quites partes de la base.",
+  "",
+  "Responde SOLO este JSON, sin una palabra mas:",
+  "{\"pregunta\": \"la pregunta adaptada\", \"busca\": \"en una linea, que busca averiguar la pregunta\"}",
 ].join("\n") + REGLA_IDIOMA_SALIDA;
 
 /**
