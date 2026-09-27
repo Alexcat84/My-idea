@@ -138,3 +138,10 @@ export function aperturaDeSesion(proyecto: {
     ficha: m.ficha,
   };
 }
+
+/** El contexto completo para una llamada suelta de una sesion: la foto del proyecto y la ficha actual. null si la
+ * sesion es anterior a la memoria. */
+export function contextoDeSesion(estado: { contextoProyecto?: string | null; ficha?: FichaContexto | null }): string | null {
+  const partes = [estado.contextoProyecto ?? null, estado.ficha ? textoFichaActual(estado.ficha) : null].filter(Boolean);
+  return partes.length > 0 ? partes.join("\n\n") : null;
+}

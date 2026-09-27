@@ -121,7 +121,9 @@ export async function estimarLoteMayoria(
   client: Anthropic,
   items: ItemAEstimar[],
   acumulado: UsoAcumulado,
-  opts: { componente?: string; presupuestoUsd?: number } = {}
+  opts: { componente?: string; presupuestoUsd?: number } = {},
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoEstimacion> {
   if (items.length === 0) return { estimaciones: [], acumulado };
   const userText = construirUserText(items);
@@ -134,6 +136,7 @@ export async function estimarLoteMayoria(
     try {
       const r = await llamarClaude(client, SYSTEM_ESTIMACION_BANDA, userText, MODEL, acc, {
         maxTokens,
+        contexto,
         componente: opts.componente ?? "estimacion_banda",
         presupuestoUsd: opts.presupuestoUsd ?? 5,
       });

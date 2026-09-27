@@ -59,7 +59,7 @@ import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_CAMINOS } from "@/lib/prompts";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
-import { aperturaDeSesion } from "@/lib/engine/memoria";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -219,6 +219,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           maxTokens: 1200,
           componente: "caminos",
           idiomaSalida,
+          contexto: contextoDeSesion(aperturaDeSesion(proyecto)),
         });
         acumulado = r.acumulado;
         caminos = validarCaminos(parsearJson(r.texto), candidatosIds);

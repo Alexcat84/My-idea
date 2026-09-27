@@ -30,7 +30,9 @@ export async function clasificarEntrada(
   texto: string,
   entrySeeds: string[],
   graph: Grafo,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoClasificacion> {
   const puertas = entrySeeds.map((s) => ({
     id: s,
@@ -46,7 +48,7 @@ export async function clasificarEntrada(
       JSON.stringify({ texto_usuario: texto, puertas }),
       MODEL_HAIKU,
       acumulado,
-      { maxTokens: 400, componente: "clasificacion" }
+      { maxTokens: 400, componente: "clasificacion", contexto }
     );
     const data = parsearJson<{ puerta_id?: string; perfil_sesion?: string }>(r.texto);
     if (data.puerta_id && entrySeeds.includes(data.puerta_id)) {

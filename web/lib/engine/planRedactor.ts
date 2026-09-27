@@ -741,7 +741,9 @@ export async function comprimirEstadoVivo(
   conceptosNuevosTitulos: string[],
   acumulado: UsoAcumulado,
   /** i18n F5: el estado vivo es memoria del proyecto: en el idioma de la idea. */
-  idiomaSalida: string | null = null
+  idiomaSalida: string | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<{ estadoVivo: string; acumulado: UsoAcumulado }> {
   try {
     const ctx = {
@@ -751,6 +753,7 @@ export async function comprimirEstadoVivo(
     };
     const r = await llamarClaude(client, SYSTEM_ESTADO_VIVO, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
       maxTokens: 700,
+      contexto,
       componente: "estado_vivo",
       idiomaSalida,
     });

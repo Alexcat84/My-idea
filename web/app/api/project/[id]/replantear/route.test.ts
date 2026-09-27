@@ -49,8 +49,11 @@ let respuestaIA: (candidatos: string[]) => string = (c) =>
       { titulo: "Feria del barrio", descripcion: "Un puesto.", nodos: [c[2], c[3]] },
     ],
   });
-const create = vi.fn(async (req: { messages: Array<{ content: string }> }) => {
-  const ctx = JSON.parse(req.messages[0].content) as { candidatos: Array<{ id: string }> };
+// Principio 1 (28 sep 2026): el mensaje lleva dos bloques, el contexto del proyecto (cache de 1 hora) y el turno.
+type Bloque = { text: string; cache_control?: { ttl?: string } };
+const turnoDe = (req: { messages: Array<{ content: Bloque[] }> }) => req.messages[0].content.at(-1)!.text;
+const create = vi.fn(async (req: { messages: Array<{ content: Bloque[] }> }) => {
+  const ctx = JSON.parse(turnoDe(req)) as { candidatos: Array<{ id: string }> };
   return {
     content: [{ type: "text", text: respuestaIA(ctx.candidatos.map((x) => x.id)) }],
     usage: { input_tokens: 1000, output_tokens: 200 },
@@ -172,7 +175,11 @@ describe("POST replantear: el paso 3 de Replantear mi camino", () => {
     expect(caminos[0].nodos).not.toContain("inventado");
     // Una sola llamada a la IA, que ve la historia y el plan anterior.
     expect(create).toHaveBeenCalledTimes(1);
-    const ctx = JSON.parse(create.mock.calls[0][0].messages[0].content);
+    const ctx = JSON.parse(turnoDe(create.mock.calls[0][0]));
+    // y ve tambien la memoria del proyecto, en su bloque de 1 hora
+    const contexto = create.mock.calls[0][0].messages[0].content[0];
+    expect(contexto.text).toMatch(/^CONTEXTO DEL PROYECTO/);
+    expect(contexto.cache_control?.ttl).toBe("1h");
     expect(ctx.historia).toBe("Se cayó el local.");
     expect(ctx.se_conserva).toEqual(["Hablar con 5 panaderías"]);
     expect(ctx.se_suelta).toEqual(["Rentar un local"]);

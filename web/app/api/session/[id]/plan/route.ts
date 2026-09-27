@@ -69,6 +69,7 @@ import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshot
 import { esMundoProteccion } from "@/lib/espacios";
 import { cargarGrafo, conceptosDeRuta, faseDeNodo } from "@/lib/engine/graph";
 import { dominiosDelRecorrido } from "@/lib/engine/recorrido";
+import { contextoDeSesion } from "@/lib/engine/memoria";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
   avisoVersionBasica,
@@ -125,6 +126,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const families = cargarFamilies();
   const client = createAnthropicClient();
   const { recorrido, acumulado } = estadoPersistido;
+  // Principio 1 (28 sep 2026): el contexto completo de la sesion viaja a todas las
+  // llamadas del plan (redactor, estado vivo, estimacion, enlace, juez).
+  const contextoCompleto = contextoDeSesion(recorrido);
   const projectId = sesion.project_id;
   // i18n F5 (D2): el plan sigue el idioma de la IDEA. La IA escribe en él;
   // lo que arma el código sin IA, en él si es de los once y si no en el de la
@@ -275,7 +279,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           acumulado,
           (texto) => enviar("delta", { texto }),
           () => enviar("reinicio", { motivo: "reintentando la redaccion" }),
-          idiomaSalida
+          idiomaSalida,
+          { contexto: contextoCompleto }
         );
         // AUD-09 H02: sin texto del redactor, el plan sale del ensamblado
         // offline. No es lo prometido: no se cobra y se dice en pantalla.
@@ -321,7 +326,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           // El unico camino offline es el techo de la sesion: queda registrado
           // (antes presupuesto_excedido nunca se marcaba en ningun lugar).
           versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor,
-          idiomaSalida
+          idiomaSalida,
+          contextoCompleto
         );
 
         const nodosConTipo: NodoConTipo[] = [
@@ -375,7 +381,7 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         let itemsChecklist: Parameters<typeof insertarChecklist>[3] = itemsDerivados;
         let acumuladoTrasEstimacion = acumuladoFinal;
         try {
-          const est = await estimarLoteMayoria(client, itemsDerivados, acumuladoFinal);
+          const est = await estimarLoteMayoria(client, itemsDerivados, acumuladoFinal, {}, contextoCompleto);
           acumuladoTrasEstimacion = est.acumulado;
           itemsChecklist = itemsDerivados.map((it, i) => ({
             ...it,
@@ -408,7 +414,9 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
             client,
             itemsDerivados.map((i) => ({ texto: i.texto, etapa: i.etapa })),
             snapshot,
-            acumuladoTrasEstimacion
+            acumuladoTrasEstimacion,
+            {},
+            contextoCompleto
           );
           acumuladoTrasEstimacion = enlace.acumulado;
           itemsChecklist = itemsChecklist.map((it, i) => ({
@@ -466,7 +474,9 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           client,
           eventosSesion,
           graph,
-          acumuladoTrasEstimacion
+          acumuladoTrasEstimacion,
+          undefined,
+          contextoCompleto
         );
 
         const rutaConModos = recorrido.ruta.map((nid, i) => ({ node_id: nid, tipo: recorrido.modos[i] }));

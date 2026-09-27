@@ -27,6 +27,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { costoAcumuladoUsd, llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_REFORMULADOR_PROTECCION } from "../prompts";
 import type { EventoInterprete } from "./interprete";
+import { contextoDeSesion, type FichaContexto } from "./memoria";
 
 /** Una pregunta es una línea corta. Más allá de esto, lo que volvió no es una
  * pregunta anclada: es el modelo explicando teoría, y se descarta. */
@@ -70,7 +71,9 @@ export async function anclarPregunta(
   snapshotTexto: string | null,
   acumulado: UsoAcumulado,
   /** i18n F5: `idiomaSalida`, el idioma de la idea. */
-  opts: { presupuestoUsd?: number; idiomaSalida?: string | null } = {}
+  opts: { presupuestoUsd?: number; idiomaSalida?: string | null } = {},
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoAnclaje> {
   const sinAnclar = (fallo: string | null): ResultadoAnclaje => ({
     pregunta,
@@ -92,7 +95,7 @@ export async function anclarPregunta(
       // a un modelo menor abarata justo lo que se ve.
       MODEL,
       acumulado,
-      { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5, idiomaSalida: opts.idiomaSalida }
+      { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5, idiomaSalida: opts.idiomaSalida, contexto }
     );
     const texto = r.texto.trim();
     if (!esPreguntaUsable(texto)) {
@@ -131,6 +134,9 @@ export async function anclarResultadoTurno<
       fallbackEvents: EventoInterprete[];
       /** i18n F5: el idioma de la idea (EstadoRecorrido.idioma). */
       idioma?: string;
+      /** Principio 1 (28 sep 2026): la memoria de la sesion (EstadoRecorrido). */
+      contextoProyecto?: string | null;
+      ficha?: FichaContexto;
     };
   }
 >(
@@ -143,10 +149,15 @@ export async function anclarResultadoTurno<
     return { resultado, acumulado, anclaje: null };
   }
   const original = resultado.pregunta;
-  const anclaje = await anclarPregunta(client, original, resultado.estado.snapshotNucleo, acumulado, {
-    ...opts,
-    idiomaSalida: resultado.estado.idioma ?? null,
-  });
+  const anclaje = await anclarPregunta(
+    client,
+    original,
+    resultado.estado.snapshotNucleo,
+    acumulado,
+    { ...opts, idiomaSalida: resultado.estado.idioma ?? null },
+    // Principio 1 (28 sep 2026): el contexto completo de la sesion.
+    contextoDeSesion(resultado.estado)
+  );
 
   // El PAR va siempre a los eventos de la sesion, se haya anclado o no: es lo
   // que le permite al fundador muestrear si la intencion sobrevivio, y lo que

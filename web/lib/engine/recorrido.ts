@@ -35,7 +35,7 @@ import { avisosNodo } from "./avisos";
 import { preguntaEnIdioma } from "./preguntaEnIdioma";
 import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
-import { fichaVacia, fusionarFicha, textoFichaActual, type FichaContexto } from "./memoria";
+import { contextoDeSesion, fichaVacia, fusionarFicha, type FichaContexto } from "./memoria";
 import {
   interpretarMultiSalto,
   type EventoInterprete,
@@ -114,13 +114,6 @@ export interface EstadoRecorrido {
   contextoProyecto?: string | null;
   /** Principio 1: la ficha de contexto de la persona, actualizada cada turno. */
   ficha?: FichaContexto;
-}
-
-/** Principio 1: el contexto completo para una llamada suelta de la sesion: la foto
- * del proyecto y la ficha actual. null si la sesion es anterior a la memoria. */
-export function contextoDeSesion(estado: Pick<EstadoRecorrido, "contextoProyecto" | "ficha">): string | null {
-  const partes = [estado.contextoProyecto ?? null, estado.ficha ? textoFichaActual(estado.ficha) : null].filter(Boolean);
-  return partes.length > 0 ? partes.join("\n\n") : null;
 }
 
 /** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de

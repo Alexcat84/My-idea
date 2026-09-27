@@ -56,7 +56,7 @@ import {
 import { cargarFamilies } from "@/lib/readiness";
 import { abrirCiclo, consultarSaldoCiclo, realidadDelCiclo } from "@/lib/cicloApertura";
 import { createClient } from "@/lib/supabase/server";
-import { aperturaDeSesion } from "@/lib/engine/memoria";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -232,7 +232,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     cubiertos,
     entrySeeds,
     acumulado,
-    dominiosPuerta
+    dominiosPuerta,
+    // Principio 1 (28 sep 2026): la memoria del proyecto.
+    contextoDeSesion(aperturaDeSesion(proyecto))
   );
 
   const estado = estadoInicial({

@@ -6,6 +6,7 @@ import { describe, expect, it } from "vitest";
 import {
   agregarAlHilo,
   aperturaDeSesion,
+  contextoDeSesion,
   fichaVacia,
   fusionarFicha,
   memoriaDe,
@@ -95,5 +96,16 @@ describe("aperturaDeSesion", () => {
     expect(a.ficha.papel).toBe("dueno");
     expect(a.contextoProyecto).toContain("Quiero vender macetas");
     expect(a.contextoProyecto).toContain("[core] P: ¿Que vendes? R: Macetas");
+  });
+});
+
+describe("contextoDeSesion", () => {
+  it("une la foto del proyecto y la ficha actual, en ese orden, con una linea en blanco", () => {
+    const ficha = fichaVacia();
+    expect(contextoDeSesion({ contextoProyecto: "FOTO", ficha })).toBe(["FOTO", textoFichaActual(ficha)].join(String.fromCharCode(10, 10)));
+  });
+
+  it("una sesion de antes de la memoria (sin foto ni ficha) no manda contexto", () => {
+    expect(contextoDeSesion({})).toBeNull();
   });
 });

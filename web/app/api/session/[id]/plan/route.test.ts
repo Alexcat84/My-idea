@@ -543,3 +543,51 @@ describe("POST /api/session/[id]/plan: el idioma de la idea (i18n F5)", () => {
     expect(estadoFalso.checklistItems.map((i) => i.texto)).toContain("5명에게 물어보세요.");
   });
 });
+
+// PRINCIPIO 1 (28 sep 2026): el contexto completo de la sesion (la memoria del proyecto
+// y la ficha de este momento) viaja al redactor en su propio bloque, con cache de 1 hora,
+// antes del material del plan.
+describe("POST /api/session/[id]/plan: el redactor recibe el contexto completo (Principio 1)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+  });
+
+  it("la memoria del proyecto y la ficha actual van en un bloque de 1 hora antes del material", async () => {
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase({
+          contextoProyecto: "CONTEXTO DEL PROYECTO\nIdea original: taller de macetas con dos empleados",
+          ficha: {
+            papel: "dueno",
+            tiene_jefe: false,
+            equipo: { personas: 2, descripcion: null },
+            sector: null,
+            etapa: null,
+            prioridad_declarada: null,
+            dijo_textual: [],
+          },
+        }),
+        acumulado: acumuladoVacio,
+      },
+    };
+    messagesStreamFalso.mockReturnValueOnce(
+      streamFalsoExitoso('# Plan\n\n## Etapa 1: Probar\n\n**Primera acción:** llama a 5 viveros.\n\n===JSON===\n{"familias_tratadas": []}')
+    );
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    const mensajes = (messagesStreamFalso.mock.calls[0][0] as {
+      messages: Array<{ content: Array<{ text: string; cache_control?: { ttl?: string } }> }>;
+    }).messages;
+    const bloques = mensajes[0].content;
+    expect(bloques.length).toBeGreaterThanOrEqual(2);
+    expect(bloques[0].text).toContain("taller de macetas con dos empleados");
+    expect(bloques[0].text).toContain("FICHA DE CONTEXTO ACTUAL");
+    expect(bloques[0].text).toContain('"tiene_jefe": false');
+    expect(bloques[0].cache_control?.ttl).toBe("1h");
+  });
+});

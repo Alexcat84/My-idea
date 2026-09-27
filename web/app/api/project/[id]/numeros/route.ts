@@ -41,6 +41,7 @@ import { narrarReporte } from "@/lib/engine/reporte";
 import { cifrasCambiaron, mensajeTopeRenarracion, TOPE_RENARRACION_DIA, veredictoNumeros } from "@/lib/numerosVivo";
 import { armarTablero } from "@/lib/tableroNumeros";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -346,7 +347,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         mensaje = mensajeTopeRenarracion(idioma);
       } else {
         const client = createAnthropicClient();
-        const r = await narrarReporte(client, guardado.tablero.reporte, numeros, tipoOferta, usoVacio());
+        const r = await narrarReporte(
+          client,
+          guardado.tablero.reporte,
+          numeros,
+          tipoOferta,
+          usoVacio(),
+          undefined,
+          null,
+          contextoDeSesion(aperturaDeSesion(proyecto))
+        );
         if (r.sinIA) {
           // AUD-09 M20: un texto sin IA no es una narración. No se guarda como
           // tal (así tampoco cuenta contra el tope diario) y se dice.

@@ -40,7 +40,9 @@ export async function evaluarCalidadSesion(
   decisiones: Array<EventoInterprete | Record<string, unknown>>,
   graph: Grafo,
   acumulado: UsoAcumulado,
-  muestreo?: number
+  muestreo?: number,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<{ calidad: VeredictoJuez | null; acumulado: UsoAcumulado }> {
   const tasaMuestreo = muestreo ?? leerMuestreo();
   if (Math.random() >= tasaMuestreo) {
@@ -69,6 +71,7 @@ export async function evaluarCalidadSesion(
   try {
     const r = await llamarClaude(client, SYSTEM_JUEZ_SESION, JSON.stringify({ turnos }), MODEL_HAIKU, acumulado, {
       maxTokens: 400,
+      contexto,
       componente: "juez_sesion",
     });
     const calidad = parsearJson<VeredictoJuez>(r.texto);

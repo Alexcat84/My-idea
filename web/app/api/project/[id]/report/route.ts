@@ -37,6 +37,7 @@ import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDispon
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
@@ -113,7 +114,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       { status: limite.caido ? 503 : 429 }
     );
     }
-    resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio(), idioma, idiomaDelProyecto(proyecto));
+    resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio(), idioma, idiomaDelProyecto(proyecto), contextoDeSesion(aperturaDeSesion(proyecto)));
   } else {
     if (!proyecto.estado_reporte) {
       return NextResponse.json(
@@ -128,7 +129,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       respuesta,
       proyecto.estado_reporte.acumulado,
       idioma,
-      idiomaDelProyecto(proyecto)
+      idiomaDelProyecto(proyecto),
+      contextoDeSesion(aperturaDeSesion(proyecto))
     );
   }
 

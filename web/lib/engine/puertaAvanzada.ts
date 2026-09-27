@@ -78,7 +78,9 @@ export async function seleccionarPuertaAvanzada(
   cubiertos: Set<string>,
   entrySeeds: string[],
   acumulado: UsoAcumulado,
-  dominiosDesbloqueados: string[] | null = null
+  dominiosDesbloqueados: string[] | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoPuertaAvanzada> {
   const candidatosIds = candidatosSeguimiento(
     mensajeNuevo,
@@ -105,6 +107,7 @@ export async function seleccionarPuertaAvanzada(
     try {
       const r = await llamarClaude(client, SYSTEM_PUERTA_AVANZADA, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
         maxTokens: 400,
+        contexto,
         componente: "clasificacion",
       });
       const data = parsearJson<{ puerta_id?: string; perfil_sesion?: string }>(r.texto);

@@ -34,7 +34,7 @@ import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
-import { aperturaDeSesion } from "@/lib/engine/memoria";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export async function POST(request: Request) {
   const idioma = idiomaDeRequest(request);
@@ -171,7 +171,7 @@ export async function POST(request: Request) {
   const client = createAnthropicClient();
   let acumulado = usoVacio();
 
-  const clasificacion = await clasificarEntrada(client, texto, entrySeeds, graph, acumulado);
+  const clasificacion = await clasificarEntrada(client, texto, entrySeeds, graph, acumulado, contextoDeSesion(apertura));
   acumulado = clasificacion.acumulado;
 
   const estadoBase = estadoInicial({
