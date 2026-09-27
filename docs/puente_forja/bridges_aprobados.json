@@ -1,5 +1,5 @@
 {
-  "nota": "Puentes del mundo 11 Primer Equipo, horneados el 23 sep 2026 como en todo pack, con el pack entrega (packs/entrega/metadata/bridges_aprobados.json, extraccion del 2026-08-07) como modelo: 15 aprobados, ninguna ancla del nucleo pasa de 2 (max real 2), todas las anclas vivas y de dominio core (ley del ancla). DIFERENCIA DECLARADA con el modelo: alli el score salia de la similitud Voyage de bridges_propuestos.json; aqui los nodos del mundo 11 no tienen vector (el indice se construye en la integracion, con credencial), asi que cada par se eligio POR LECTURA del titulo, la condicion y el entregable de los dos nodos, y el score va null con su motivo escrito. integrar_packs.py consume core y dominio, no el score.",
+  "nota": "Puentes del mundo 11 Primer Equipo, horneados el 23 sep 2026 como en todo pack, con el pack entrega (packs/entrega/metadata/bridges_aprobados.json, extraccion del 2026-08-07) como modelo: 15 aprobados, ninguna ancla del nucleo pasa de 2 (max real 2), todas las anclas vivas y de dominio core (ley del ancla). DIFERENCIA DECLARADA con el modelo: alli el score salia de la similitud Voyage de bridges_propuestos.json; aqui los nodos del mundo 11 no tienen vector (el indice se construye en la integracion, con credencial), asi que cada par se eligio POR LECTURA del titulo, la condicion y el entregable de los dos nodos, y el score va null con su motivo escrito. integrar_packs.py consume core y dominio, no el score. RELECTURA DEL PASO 4 (28 sep 2026): con el texto limpio del pack (dieciocho tandas) un lector releyo los 15 puentes (13 se sostienen, 2 no) y propuso 4 sustituciones; un verificador independiente aprobo 3 y rechazo 1 (el puente de reuniones_uno_a_uno se queda). Los 3 que salen quedan en 'rechazados' con su motivo. Grove entra con un puente. Evidencia en docs/puente_forja/paso4/.",
   "aprobados": [
     {
       "core": "decision_fundador_solo_vs_equipo",
@@ -8,10 +8,11 @@
       "motivo": "la decision de formar equipo abre la pregunta de si dirigirlo es tu camino"
     },
     {
-      "core": "decision_fundador_solo_vs_equipo",
+      "core": "hiring_blueprints",
       "dominio": "aplicar_metodo_ghsmart_contratacion",
       "score": null,
-      "motivo": "decidido formar equipo, el paso siguiente es contratar al primero con metodo"
+      "motivo": "elegido el modelo con que vas a reclutar, pagar y controlar a tus primeros empleados no fundadores, el paso siguiente es contratarlos con el metodo de cuatro pasos",
+      "entra_el": "2026-09-28, paso 4 (relectura con verificador independiente)"
     },
     {
       "core": "contratar_por_fortaleza",
@@ -62,16 +63,18 @@
       "motivo": "el proceso de revisiones del nucleo se disena elemento por elemento"
     },
     {
-      "core": "proceso_despidos_responsables",
+      "core": "analisis_causa_raiz_despido_ejecutivo",
       "dominio": "decidir_momento_despedir_persona",
       "score": null,
-      "motivo": "antes de ejecutar un despido hay que decidir si ha llegado el momento"
+      "motivo": "antes de la decision final de despedir a un lider que no cumple, contestar las tres preguntas que dicen si ha llegado el momento y nombrar la mentira que lo retrasa",
+      "entra_el": "2026-09-28, paso 4 (relectura con verificador independiente)"
     },
     {
       "core": "entrenamiento_gerencial",
-      "dominio": "pasar_direccion_directa_indirecta",
+      "dominio": "priorizar_lista_entrenamiento_subordinados",
       "score": null,
-      "motivo": "entrenar a quienes lideran es el paso de dirigir directamente a dirigir por otros"
+      "motivo": "entrenar es el trabajo del jefe, y se empieza por la lista priorizada de en que entrenar, preguntada a tu gente y contrastada con quien puede ensenar",
+      "entra_el": "2026-09-28, paso 4 (relectura con verificador independiente)"
     },
     {
       "core": "programacion_cultura_empresarial",
@@ -92,5 +95,30 @@
       "motivo": "elegida la forma de decidir, repartir las decisiones entre los mas cercanos a los hechos"
     }
   ],
-  "rechazados": []
+  "rechazados": [
+    {
+      "core": "decision_fundador_solo_vs_equipo",
+      "dominio": "aplicar_metodo_ghsmart_contratacion",
+      "score": null,
+      "motivo": "decidido formar equipo, el paso siguiente es contratar al primero con metodo",
+      "rechazado_el": "2026-09-28",
+      "motivo_rechazo": "paso 4, relectura de puentes con el texto limpio: El puente actual no se sostiene (un socio no es un puesto). Se conserva el nodo del mundo y se le da el ancla correcta: hiring_blueprints se activa \"al iniciar la contratacion de los primeros empleados no fundadores\", que es exactamente cuando hace falta el metodo A."
+    },
+    {
+      "core": "proceso_despidos_responsables",
+      "dominio": "decidir_momento_despedir_persona",
+      "score": null,
+      "motivo": "antes de ejecutar un despido hay que decidir si ha llegado el momento",
+      "rechazado_el": "2026-09-28",
+      "motivo_rechazo": "paso 4, relectura de puentes con el texto limpio: El puente actual no se sostiene (recorte colectivo contra despido por desempeno). El nucleo nuevo se activa \"antes de tomar la decision final de despedir a un lider\" que no cumple, que es el caso individual que el nodo del mundo resuelve."
+    },
+    {
+      "core": "entrenamiento_gerencial",
+      "dominio": "pasar_direccion_directa_indirecta",
+      "score": null,
+      "motivo": "entrenar a quienes lideran es el paso de dirigir directamente a dirigir por otros",
+      "rechazado_el": "2026-09-28",
+      "motivo_rechazo": "paso 4, relectura de puentes con el texto limpio: Claramente mejor: el nucleo cita a Andy Grove (\"entrenar es el trabajo del jefe\") y el nodo de High Output Management se activa \"cuando decides abrazar el entrenamiento como tarea propia y necesitas decidir por donde empezar\". El puente actual tenia el orden invertido. El ancla no cambia de cuenta."
+    }
+  ]
 }

@@ -400,3 +400,41 @@ Ese dia: se regenera el pack con `scripts/importar_forja.py --salida packs` (el 
 desde la forja completa, se clasifican solo los ids nuevos que el informe liste sin fase, se
 corre `integrar_packs.py --ejecutar` con credencial y con el fundador delante, y se cablean el
 dominio, las semillas y la brecha a la web.
+
+## PASO 4 DEL PROTOCOLO DE INTEGRACION (28 sep 2026, tras el VISTO del fundador: mundo 11 certificado en el paso 3)
+
+> La ciega de 20 fases con semilla nueva escrita antes de sortear, y la relectura de los puentes al nucleo (ley del
+> ancla, maximo 2 por ancla, cero aristas a deprecados).
+
+**La ciega de fases 2.** Semilla `20261021`, escrita y committeada antes de sortear (`ciega_fases_2_semilla.json`,
+commit `08b5ca7f`). 20 nodos al azar de los 471 del pack limpio. A diferencia de la ciega 1, que leyo la misma sesion
+que escribio el registro, esta la leyo un LECTOR INDEPENDIENTE que solo vio el texto de cada nodo y la vara
+(`paso4/vara_fases.md`, la de la DECISION 3.a y el SOP), y declaro las 20 fases antes de cualquier destape
+(`paso4/ciega_fases_2_declaraciones.json`). Destape contra el registro (`paso4/ciega_fases_2_destape.json`):
+**17 de 20 coinciden.** Las tres discrepancias son de la frontera planificacion y ejecucion, y un arbitro las resolvio
+con las dos lecturas y la vara (`paso4/arbitro_fases_*.json`): las tres quedan en `ejecucion` porque el entregable y la
+condicion de activacion son de algo en curso, no de una estructura previa. Dos cambian el registro, con
+`correccion_declarada` y `fase_anterior`: `organizar_jornada_entrevistas_candidato` y `montar_reunion_gran_debate`
+(planificacion a ejecucion); `abastecer_flujo_candidatos` se queda en ejecucion. Reparto final: 270 ejecucion, 149
+planificacion, 39 validacion, 13 ideacion.
+
+**La relectura de puentes.** Los 15 puentes se habian elegido cuando el pack tenia tres libros y el texto sin limpiar.
+Un lector releyo los 15 con el texto limpio de los dos extremos y el catalogo del nucleo vivo (1410 nodos)
+(`paso4/puentes_relectura.json`): 13 se sostienen, 2 no (`decision_fundador_solo_vs_equipo` habla de socios, no de
+contratar para un puesto; `proceso_despidos_responsables` es un recorte colectivo, no un despido por desempeno), y
+propuso 4 sustituciones. Un verificador independiente (`paso4/verificador_puentes_salida.json`) aprobo 3 y rechazo 1
+(el puente `reuniones_uno_a_uno` a `dirigir_reunion_individual_semanal` se queda: es la continuacion mas directa).
+Entran `hiring_blueprints` a `aplicar_metodo_ghsmart_contratacion`, `analisis_causa_raiz_despido_ejecutivo` a
+`decidir_momento_despedir_persona` y `entrenamiento_gerencial` a `priorizar_lista_entrenamiento_subordinados` (Grove
+entra con un puente). Los tres que salen quedan en `rechazados` con su motivo. Ley del ancla sobre el conjunto final:
+15 puentes, 14 anclas, maximo 2 por ancla, todas `core` y vivas. Aristas del pack: 436, todas internas, 0 a ids
+deprecados o alias, 0 rotas, 0 sin reciproca; ningun acoplamiento mundo a mundo. Gerber y Marquet siguen sin puente
+porque ninguno de sus nodos era claramente mejor que un puente que se sostiene.
+
+**Seco con el paso 4 aplicado** (`scripts/importar_forja.py`): 471 nodos al pack, 0 colisiones, 0 aristas rotas, 0 sin
+reciproca, 0 fases vacias (registro de 471 ids), 0 fuentes fuera de lista, lista blanca sin fallas, puentes 15 con 0
+problemas, 8 semillas y brecha de 8 fases sin nodos fuera del pack.
+
+**Queda para el paso 5**, con la clave: la integracion con `integrar_packs.py --ejecutar` y la compuerta semantica, las
+dieciocho tandas m11-* aplicadas sobre el pack importado, y las dos entradas de jurisdiccion y vigencia de los nodos de
+EE. UU. y Canada (`docs/saneamiento/resultados/M11/jurisdiccion_vigencia_m11.json`) a `dataset/metadata/`.
