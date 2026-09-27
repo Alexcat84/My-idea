@@ -193,7 +193,7 @@ export async function POST(request: Request) {
           }
         });
         const mensajeFinal = await claudeStream.finalMessage();
-        acumulado = registrarUso(acumulado, MODEL_HAIKU, mensajeFinal.usage, "organizador");
+        acumulado = registrarUso(acumulado, MODEL_HAIKU, mensajeFinal.usage, "organizador", mensajeFinal.stop_reason ?? null);
         if (mensajeFinal.stop_reason === "max_tokens") throw new OrganizadorTruncado();
         const textoModelo = mensajeFinal.content
           .filter((b): b is Anthropic.TextBlock => b.type === "text")

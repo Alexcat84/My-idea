@@ -237,6 +237,48 @@ Un objeto estructurado, no prosa, que viaja completo a **toda** llamada a la IA:
 
 ---
 
+## FASE 3. Lo construido (rama `contexto-entrevista`, con el visto del 28 sep 2026)
+
+Cada bloque entró con sus pruebas en rojo primero y las dos suites, tsc y el guardián en verde. **Ninguna llamada a la
+API real** desde la regla del fundador del 28 sep 2026: todo se verificó con clientes simulados, y lo que necesita la
+IA queda preparado para la corrida final.
+
+| Bloque | Commit | Qué entra |
+|---|---|---|
+| 1 | `fdd7f389` | Contabilidad del caché (escritura 1 h y 5 min, lectura) por llamada; `costo_usd` con sus tarifas; toda llamada mira el corte por tokens, reintenta con el doble y, si vuelve a cortarse, falla con aviso; regla única en el prefijo fijo |
+| 2 | `f183fc32` | Las tareas del checklist se guardan completas; solo se acortan al mostrarlas |
+| 3 | `d5fcb898` | Memoria del proyecto (`projects.memoria`, migración 049 **sin aplicar**): ficha e hilo; el intérprete actualiza la ficha en su misma llamada; cada sesión abre con la foto del proyecto |
+| 4 | `b94a8328` | El contexto completo viaja a toda llamada a la IA con un proyecto detrás (el organizador, la primera de todas, solo tiene el texto de la idea, que ya recibe) |
+| 5 | `bcfb19ed` | El adaptador de preguntas y el generador que solo añade |
+| 6 | `ecd08a01` | La prioridad declarada, regla en código |
+| 7 | este | Reglas de la casa 2 a 5 y el criterio de papeles en el juez de sesión |
+
+**Lo que cambió respecto a la propuesta de la FASE 2:**
+
+- **C, "si no se puede adaptar, el nodo se salta": retirado.** El Principio 2 lo prohíbe: ningún nodo se salta por el
+  papel de la persona, todos se adaptan. No hay marca `supone` ni filtro en `esOfrecible`.
+- **B, las 199 preguntas en voseo: no se regeneran.** El adaptador las dice en tuteo neutro al momento, y su versión
+  neutral también. Las bases no se tocan.
+- **B, la salida segura antes de la corrida final.** Las versiones neutrales y las preguntas de los 40 nodos se generan
+  en la corrida final (`engine/build_question_cache.py --faltantes` y `--neutrales`). Hasta entonces, si el adaptador
+  falla, sale la base y el evento lo dice (`base_sin_neutral`). La prueba `cacheNeutrales.test.ts` guarda la cifra
+  (2.940 bases vivas sin neutral, 40 nodos sin pregunta): solo puede bajar.
+- **B, el adaptador también cubre la genérica** de un nodo sin pregunta, y corre en español, no solo fuera: la base ya
+  no sale cruda en ningún idioma. Tarda como mucho 8 segundos antes de dar paso a la salida segura.
+- **D, la medida de "atiende la prioridad"** es el coseno contra la prioridad en el mismo índice semántico, con el umbral
+  ya calibrado de la brújula (0,30). La prioridad se embebe una vez por texto. Si el modelo elige un destino que no la
+  atiende sin `paso_previo`, se le pide otra vez con el motivo; si insiste, el respaldo elige el que mejor la atiende.
+  La prioridad pasa de una sesión a la siguiente desde la ficha.
+- **A, "el historial se recorta a los últimos N turnos": no se hizo.** El historial crece por el final para que el caché
+  acierte (regla de la casa 4); recortarlo cambiaría el prefijo en cada turno. Se revisará con los costes de la
+  corrida final.
+
+**Lo que falta:** la prueba de coherencia (E), con el umbral ya fijado por el fundador (0 desajustes de papel, como
+mucho 1 de contexto por cada 10 preguntas, al menos el 95 % de las adaptadas fieles a su base, todas las trampas
+cazadas), y la corrida final entera.
+
+---
+
 ## Lo que sigue en pie en paralelo
 
 - **`.env`:** el fundador lo retira. No se ha vuelto a usar la clave desde su decisión. El **vuelo completo** (todas las

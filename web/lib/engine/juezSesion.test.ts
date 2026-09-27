@@ -121,3 +121,35 @@ describe("evaluarCalidadSesion (Fase 3.1)", () => {
     expect(turnos[0].destino).toEqual([graph[superviviente].titulo_concepto]);
   });
 });
+
+// REGLAS_DE_LA_CASA regla 1 y bloque 7 (28 sep 2026): toda rubrica que juzga preguntas lleva el criterio de papeles
+// y contexto. El juez de sesion ve ahora la pregunta de cada turno y el par base/adaptada del adaptador, y devuelve
+// los desajustes de papel (una pregunta que supone un jefe, recursos humanos o un equipo que la ficha contradice).
+describe("evaluarCalidadSesion: el criterio de papeles y contexto", () => {
+  it("ve la pregunta de cada turno y las adaptadas, y devuelve los desajustes de papel", async () => {
+    const create = vi.fn<(kwargs: { messages: Array<{ content: string }> }) => Promise<unknown>>(async () =>
+      respuestaClaudeFalsa({
+        pertinencia_transiciones: 4,
+        repeticion_detectada: false,
+        señales_fuera_de_material: [],
+        desajustes_de_papel: ["¿Qué le dirías a tu propio jefe?"],
+        comentario: "supone un jefe a un dueño",
+      })
+    );
+    const conPregunta = [
+      { ...decisiones[1], pregunta: "¿Qué le dirías a tu propio jefe?" },
+      { tipo: "adaptacion_pregunta", nodo: nodoId, de: "¿Base?", a: "¿Adaptada?", busca: "x", salida: "adaptada" },
+    ];
+    const { calidad } = await evaluarCalidadSesion({ messages: { create } } as never, conPregunta, graph, usoVacio(), 1);
+    const enviado = JSON.parse(create.mock.calls[0][0].messages[0].content);
+    expect(enviado.turnos[0].pregunta).toBe("¿Qué le dirías a tu propio jefe?");
+    expect(enviado.preguntas_adaptadas).toEqual([{ base: "¿Base?", mostrada: "¿Adaptada?" }]);
+    expect(calidad?.desajustes_de_papel).toEqual(["¿Qué le dirías a tu propio jefe?"]);
+  });
+
+  it("la rubrica del juez lleva el criterio", async () => {
+    const { SYSTEM_JUEZ_SESION } = await import("../prompts");
+    expect(SYSTEM_JUEZ_SESION).toContain("desajustes_de_papel");
+    expect(SYSTEM_JUEZ_SESION).toContain("ficha");
+  });
+});
