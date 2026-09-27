@@ -1,0 +1,157 @@
+{
+ "lote": "18",
+ "campos": [
+  {
+   "node_id": "aplicar_metodo_ghsmart_contratacion",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en el puesto. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del puesto te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fragmentos": [
+    "logre en el papel",
+    "desempeño A del papel"
+   ],
+   "motivo": "\"role\" vertido como \"papel\": \"logre en el papel\" se lee como \"sobre el papel\"; el nodo usa \"puesto\" (smart_who/cap_02.md:121)."
+  },
+  {
+   "node_id": "repartir_equipo_cartera_horizontes",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que ningún asesor aconsejaría poner todo el dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_09.md",
+   "lineas": "229",
+   "frase": "Just as no financial advisor would recommend putting all your money into one kind of asset, neither should you tackle projects with one kind of time horizon.",
+   "motivo": "El libro dice que ningún asesor recomendaría poner todo el dinero en un solo activo, no que nadie lo haga. El matiz de \"can be completed\"/\"may take months\" no se sostiene: describe la categoría de plazo de cada tercio, sin matiz perdido."
+  },
+  {
+   "node_id": "usar_banco_nueve_preguntas_entrevista",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que sueles disponer.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_15.md",
+   "lineas": "27",
+   "frase": "The means at your disposal typically consist of an hour or two of interview time and a check of the candidate’s references.",
+   "motivo": "El libro dice que la hora o dos de entrevista es lo habitual (\"typically\"); la condición lo daba como lo que siempre tienes."
+  },
+  {
+   "node_id": "pasear_organizacion_hallar_problemas_pequenios",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Si diriges a otros jefes no puedes oír a cientos, y demasiadas veces eres el último en enterarte de que algo va mal, en general no porque te escondan los problemas, sino porque solo te traen lo que creen importante. Una hora semanal paseando te deja ver lo que no ves desde la mesa, hablar con quien hace tiempo que no oyes y hallar problemas pequeños que quizá importan más de lo que otros creen. Enseñas con el ejemplo: ver lo pequeño, y quizá arreglarlo tú, es lo mejor para acabar con la idea de «esto no es mi trabajo», y si cuidas lo pequeño, a todos les importa más y algo de lo grande mejora.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_11.md",
+   "lineas": "265",
+   "frase": "Second, being aware of small problems and maybe even rolling up your sleeves and fixing them yourself is the best way to kill the “it’s not my job” or, worse, the “that’s beneath me” mentality on your team.",
+   "motivo": "Lo mejor según el libro es ser consciente de los problemas pequeños y quizá incluso arreglarlos; el resumen dejaba solo el arreglo, que era lo opcional. Se quita \"de personas\" para no pasar de 600."
+  },
+  {
+   "node_id": "comparar_motivacion_resultado_papel",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Quien dirige es juzgado por los resultados del equipo que lleva, así que su trabajo es lo que más ayude al equipo a tener éxito, aunque sea poco lucido: formar o contratar, frenar a quien crea problemas, montar un plan si nadie sabe qué hacer. Ese trabajo cambia con las metas, la gente y los procesos. Si te mueve el resultado, probablemente esa variación no te moleste; si hay una actividad que no quieres soltar, tus metas pueden chocar con lo que el equipo más necesita. Lo que más pesa es si te mueve más el resultado que un papel concreto, y un sí rotundo puede compensar casi cualquier cosa.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "\"le ayude\" se leía referido a quien dirige; el libro habla de lo que ayuda al equipo (\"whatever most helps them succeed\", zhuo_manager/cap_02.md:211). \"La pregunta que más pesa\" pasa a \"Lo que más pesa\" para no pasar de 600."
+  },
+  {
+   "node_id": "comparar_motivacion_resultado_papel",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Ten presente que esta pregunta es más importante que cualquier otra que te hagas sobre si la gestión es tu camino, y que un sí rotundo aquí puede compensar casi cualquier cosa: por eso hay líderes de fortalezas y temperamentos muy distintos al frente de empresas. Lo que tienen en común es que su prioridad número uno es que el equipo que llevan tenga éxito, y que están dispuestos a adaptarse para ser el líder que su organización necesita.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fragmentos": [
+    "de fuerzas y temperamentos"
+   ],
+   "motivo": "\"strengths\" de una persona son \"fortalezas\", no \"fuerzas\" (zhuo_manager/cap_02.md:215)."
+  },
+  {
+   "node_id": "preferir_inspeccion_proceso_prueba_destructiva",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Si no quieres pagar a alguien por leerla, puedes automatizar esa lectura: conectar un aparato que haga sonar un aviso en cuanto el parámetro varíe un grado o dos.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_02.md",
+   "lineas": "67",
+   "frase": "To avoid having to pay someone to read the thermometer, you could connect an electronic gadget to it that would set off bells anytime the temperature varied by a degree or two.",
+   "motivo": "En el libro el aviso automático es una opción dentro del ejemplo (\"you could connect\"); el paso lo daba como orden."
+  },
+  {
+   "node_id": "centrar_debate_ideas_fuera_egos",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Nada roba más tiempo ni estorba más la búsqueda de la mejor respuesta que el ego. Cuando la discusión se vuelve ganar, mi idea contra la tuya o defender a un equipo, la gente deja de mirar los hechos. Intervenir, impedir que alguien se adueñe de una idea y recordar que la meta es la mejor respuesta como equipo devuelve el debate a su sitio, y, si hace falta, unas reglas dichas al principio lo sostienen. Cambiar los papeles funciona porque obliga a defender la posición contraria, y saberlo de antemano hace que todos escuchen con más atención.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_07.md",
+   "lineas": "227",
+   "frase": "If you have to, set ground rules at the beginning of the meeting",
+   "motivo": "Las reglas al principio son un recurso para cuando hace falta (\"If you have to\"), no lo que siempre sostiene el debate."
+  },
+  {
+   "node_id": "repartir_tiempo_atencion_mejores_equipo",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Gestionar según las fortalezas también vale para el equipo: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quizá sientas que debes volcarte en quien se atasca y quien va bien no suele pedir ayuda. La cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_04.md",
+   "lineas": "235",
+   "frase": "If you have five people on your team, four of whom are doing well and one who isn’t, you may feel like you should focus most of your time and energy on the struggling report because you want to “fix” the problem.",
+   "motivo": "El libro dice que quizá sientas que debes volcarte en quien se atasca; el resumen lo daba como hecho y ponía a quien se atasca a reclamar. Se quitan \"entero\" y \"Pero\" para no pasar de 600."
+  },
+  {
+   "node_id": "vivir_valores_propios_evitar_listarlos",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Obligar a la gente a escribir y compartir sus valores parece una forma de centrarla, pero conviene desconfiar de ese ejercicio: algo que se forja durante toda una vida puede sentirse abaratado, pide poner en palabras lo que a otros les parece imposible explicitar con sentido, toca creencias que muchos viven como privadas y puede abrir brechas en vez de ayudar a encontrar lo común, e incluso obligar a alguien a mentir sobre sus valores. Lo que sí sirve es mantenerte en contacto con los tuyos y demostrarlos en cómo diriges, no escribirlos en un papel.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_08.md",
+   "lineas": "99",
+   "frase": "Second, while some people find it helpful to articulate their values explicitly, others feel that it’s impossible to do this in a meaningful way.",
+   "motivo": "El libro dice que a otros les parece imposible hacerlo con sentido; el resumen lo volvía un no poder o no querer de \"muchos\"."
+  },
+  {
+   "node_id": "definir_quien_responde_cada_cosa",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "No confíes en las buenas intenciones. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fortalezas se complementarían bien.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fragmentos": [
+    "sus fuerzas se complementarían"
+   ],
+   "motivo": "\"strengths\" de una persona son \"fortalezas\", no \"fuerzas\" (zhuo_manager/cap_09.md:109)."
+  }
+ ]
+}

@@ -12,5 +12,18 @@
   "trampas_sin_marca_por_auditor": 2,
   "umbral_en_50_nodos": "invencion 0, contrario 0; matiz + calco + coherencia como maximo 10, contando dentro de ese tope tambien regionalismo, voz y ortografia (lectura estricta: el fundador no los nombro y no se dejan fuera)",
   "que_cuenta": "solo los defectos que un arbitro confirme contra el libro; las trampas no cuentan"
+ },
+ "tercer_pase": {
+  "escrito": "2026-09-28, antes de repartir y antes de sortear, tras la muestra final 2 (NO CUMPLE: 0 duros, 11 blandos con la lectura estricta)",
+  "semilla_reparto_pase3": 20261011,
+  "semilla_muestra_final3": 20261012,
+  "que_se_revisa": "solo lo que fallo: matiz (dirigido, con la lista de frases con matiz del pasaje de cada nodo), calco, coherencia, voz, regionalismo, ortografia y longitud del resumen",
+  "lectura_del_umbral": "la misma que medir.py, escrita antes de la muestra 1: todo lo confirmado que no es invencion ni contrario cuenta dentro del tope de 10, tambien la longitud; los duros siguen en 0",
+  "muestra_final3": {
+   "nodos": 50,
+   "auditores": 2,
+   "trampas_sin_marca_por_auditor": 2,
+   "umbral_en_50_nodos": "invencion 0, contrario 0; el resto como maximo 10"
+  }
  }
 }

@@ -1,0 +1,1047 @@
+{
+ "lote": "18",
+ "nodos": [
+  {
+   "node_id": "aplicar_metodo_ghsmart_contratacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "lo que quieres que la persona logre en el papel",
+     "motivo": "\"role\" traducido como \"papel\": \"logre en el papel\" se lee como \"sobre el papel\" (en teoría); lo mismo en \"el desempeño A del papel\". En el nodo el término es \"puesto\".",
+     "propuesta": "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en el puesto. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del puesto te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 115,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 125,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 131,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 131,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_equipo_cartera_horizontes",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "un tercio en lo que se termina en semanas, otro en lo que lleva meses",
+     "motivo": "El libro dice proyectos que \"can be completed\" en semanas y que \"may take months\"; el resumen lo da como hecho (los pasos 2 y 3 sí lo conservan). La propuesta incluye también la corrección del defecto siguiente y recorta \"de inversiones\" para quedar en 593 caracteres.",
+     "fichero": "fuentes/zhuo_manager/cap_09.md",
+     "lineas": "231",
+     "frase": "My colleague makes sure that a third of her team works on projects that can be completed on the order of weeks, another third works on medium-term projects that may take months, and finally, the last third works on innovative, early-stage ideas whose impact won’t be known for years.",
+     "propuesta": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera deshace ese dilema. Igual que ningún asesor aconsejaría poner todo el dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que puede terminarse en semanas, otro en lo que puede llevar meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "Igual que nadie pone todo su dinero en un solo tipo de activo",
+     "motivo": "El libro dice que ningún asesor financiero recomendaría poner todo el dinero en un solo tipo de activo; el resumen lo vuelve un hecho general (nadie lo hace), que el libro no dice. La propuesta es la misma del defecto anterior (593 caracteres).",
+     "fichero": "fuentes/zhuo_manager/cap_09.md",
+     "lineas": "229",
+     "frase": "Just as no financial advisor would recommend putting all your money into one kind of asset, neither should you tackle projects with one kind of time horizon.",
+     "propuesta": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera deshace ese dilema. Igual que ningún asesor aconsejaría poner todo el dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que puede terminarse en semanas, otro en lo que puede llevar meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 221,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 221,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 225,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 231,
+     "usa": true,
+     "conserva": false
+    }
+   ]
+  },
+  {
+   "node_id": "usar_banco_nueve_preguntas_entrevista",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "matiz",
+     "cita": "para la hora o dos de entrevista de que dispones",
+     "motivo": "El libro dice que los medios \"typically\" consisten en una hora o dos de entrevista; la condición lo da como lo que siempre tienes (el resumen sí conserva \"suele\").",
+     "fichero": "fuentes/grove_high_output/cap_15.md",
+     "lineas": "27",
+     "frase": "The means at your disposal typically consist of an hour or two of interview time and a check of the candidate’s references.",
+     "propuesta": "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que sueles disponer."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 27,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 27,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 33,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 33,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 33,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 49,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 55,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "bajar_detalle_organizacion_fuente_hechos",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 297,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 297,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 297,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 297,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 299,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 301,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 301,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 301,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "pasear_organizacion_hallar_problemas_pequenios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "Enseñas con el ejemplo: arreglar tú algún detalle es lo mejor para acabar con la idea de «esto no es mi trabajo»",
+     "motivo": "El libro dice que lo mejor es ser consciente de los problemas pequeños \"and maybe even\" arreglarlos tú; el resumen deja solo el arreglarlos, que era lo opcional, como la mejor manera (el paso 7 sí conserva el \"quizá incluso\"). Se recorta \"de personas\" para quedar en 600 caracteres.",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "265",
+     "frase": "Second, being aware of small problems and maybe even rolling up your sleeves and fixing them yourself is the best way to kill the “it’s not my job” or, worse, the “that’s beneath me” mentality on your team.",
+     "propuesta": "Si diriges a otros jefes no puedes oír a cientos, y demasiadas veces eres el último en enterarte de que algo va mal, en general no porque te escondan los problemas, sino porque solo te traen lo que creen importante. Una hora semanal paseando te deja ver lo que no ves desde la mesa, hablar con quien hace tiempo que no oyes y hallar problemas pequeños que quizá importan más de lo que otros creen. Enseñas con el ejemplo: ver lo pequeño, y quizá arreglarlo tú, es lo mejor para acabar con la idea de «esto no es mi trabajo», y si cuidas lo pequeño, a todos les importa más y algo de lo grande mejora."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 255,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 255,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 257,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 261,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 263,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 263,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 263,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 265,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 267,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 269,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "comparar_motivacion_resultado_papel",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "así que su trabajo es lo que más le ayude a tener éxito",
+     "motivo": "Sujeto ambiguo: \"le\" se lee como quien dirige (el sujeto de la frase), y el libro habla de lo que ayuda al equipo a tener éxito (\"whatever most helps them succeed\"). Se cambia \"La pregunta que más pesa\" por \"Lo que más pesa\" para quedar en 594 caracteres.",
+     "propuesta": "Quien dirige es juzgado por los resultados del equipo que lleva, así que su trabajo es lo que más ayude al equipo a triunfar aunque sea poco lucido: formar o contratar, frenar a quien crea problemas, montar un plan si nadie sabe qué hacer. Ese trabajo cambia con las metas, la gente y los procesos. Si te mueve el resultado, probablemente esa variación no te moleste; si hay una actividad que no quieres soltar, tus metas pueden chocar con lo que el equipo más necesita. Lo que más pesa es si te mueve más el resultado que un papel concreto, y un sí rotundo puede compensar casi cualquier cosa."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "líderes de fuerzas y temperamentos muy distintos",
+     "motivo": "\"strengths\" traducido como \"fuerzas\"; en español son \"fortalezas\" (otro nodo del lote dice \"fortalezas\").",
+     "propuesta": "Ten presente que esta pregunta es más importante que cualquier otra que te hagas sobre si la gestión es tu camino, y que un sí rotundo aquí puede compensar casi cualquier cosa: por eso hay líderes de fortalezas y temperamentos muy distintos al frente de empresas. Lo que tienen en común es que su prioridad número uno es que el equipo que llevan tenga éxito, y que están dispuestos a adaptarse para ser el líder que su organización necesita."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 207,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 209,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 211,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 215,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "preferir_inspeccion_proceso_prueba_destructiva",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "matiz",
+     "cita": "Automatiza esa lectura para no tener que pagar a alguien por leerla: conecta un aparato",
+     "motivo": "El libro lo da como una posibilidad dentro del ejemplo (\"you could connect\"); el paso lo vuelve orden. El paso 3 sí lo cuenta como ejemplo (\"como meter un termómetro\").",
+     "fichero": "fuentes/grove_high_output/cap_02.md",
+     "lineas": "67",
+     "frase": "To avoid having to pay someone to read the thermometer, you could connect an electronic gadget to it that would set off bells anytime the temperature varied by a degree or two.",
+     "propuesta": "Si no quieres pagar a alguien por leerla, puedes automatizar esa lectura: conectar un aparato que haga sonar un aviso en cuanto el parámetro varíe un grado o dos."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 67,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 67,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 67,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 67,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 69,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 69,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 69,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 69,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_personas_capaces_mas",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 199,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 199,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 201,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 201,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 205,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 205,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 207,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "centrar_debate_ideas_fuera_egos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "y unas reglas dichas al principio lo sostienen",
+     "motivo": "El libro pone las reglas del juego como recurso \"If you have to\"; el resumen las da como lo que sostiene el debate siempre (el paso 6 sí conserva \"Si hace falta\"). 547 caracteres.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "227",
+     "frase": "If you have to, set ground rules at the beginning of the meeting",
+     "propuesta": "Nada roba más tiempo ni estorba más la búsqueda de la mejor respuesta que el ego. Cuando la discusión se vuelve ganar, mi idea contra la tuya o defender a un equipo, la gente deja de mirar los hechos. Intervenir, impedir que alguien se adueñe de una idea y recordar que la meta es la mejor respuesta como equipo devuelve el debate a su sitio, y, si hace falta, unas reglas dichas al principio lo sostienen. Cambiar los papeles funciona porque obliga a defender la posición contraria, y saberlo de antemano hace que todos escuchen con más atención."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 223,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 223,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 227,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "desarrollar_estrategia_busqueda_candidatos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "porque esa combinación producir un equilibrio sano entre visión y saber hacer pragmático",
+     "motivo": "El libro dice que esa combinación \"often produces\" el equilibrio; el paso pierde el \"often\" y además deja el verbo en infinitivo (\"producir\"), frase rota. El resumen sí conserva \"suele\".",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "83",
+     "frase": "For one role, my recruiting partner and I identified that our ideal candidate would have experience working at both a design agency as well as a tech company because that combination often produces a healthy balance of vision and pragmatic know-how.",
+     "propuesta": "Haz el otro ejercicio: averigua qué patrones o qué palabras clave hay que buscar en un historial. Por ejemplo, para un puesto se vio que el candidato ideal tendría experiencia tanto en una agencia de diseño como en una empresa de tecnología, porque esa combinación suele producir un equilibrio sano entre visión y saber hacer pragmático."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 81,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 83,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 85,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 85,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_tiempo_atencion_mejores_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "porque quien se atasca reclama tu atención",
+     "motivo": "El libro dice que \"you may feel like you should focus\" en quien se atasca; el resumen lo da como hecho y cambia quién hace qué (es quien se atasca el que reclama). Para quedar en 600 caracteres se quitan \"entero\" y \"Pero\".",
+     "fichero": "fuentes/zhuo_manager/cap_04.md",
+     "lineas": "235",
+     "frase": "If you have five people on your team, four of whom are doing well and one who isn’t, you may feel like you should focus most of your time and energy on the struggling report because you want to “fix” the problem.",
+     "propuesta": "Gestionar según las fortalezas también vale para el equipo: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quizá sientas que debes volcarte en quien se atasca y quien va bien no suele pedir ayuda. La cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 237,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 237,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 237,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 239,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_expectativas_claras_comienzo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 43,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 47,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 47,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 61,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "definir_vision_larga_trabajar_atras",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 205,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 205,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 209,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 213,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 213,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 215,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 215,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 217,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 219,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 219,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_cuatro_notas_calcular_nota_global",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 101,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 101,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 105,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 105,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 107,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 107,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 109,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 109,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 111,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 115,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "abrazar_incomodidad_silencio_contar_seis",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 189,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 191,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 191,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 191,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 197,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "vivir_valores_propios_evitar_listarlos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "pide poner en palabras lo que muchos no pueden o no quieren explicitar",
+     "motivo": "El libro dice que a algunos les sirve y que otros \"feel that it’s impossible\" hacerlo con sentido; el resumen lo vuelve un no poder de \"muchos\". El \"no quieren\" ya lo cuenta la frase siguiente (creencias privadas). 555 caracteres.",
+     "fichero": "fuentes/scott_radical_candor/cap_08.md",
+     "lineas": "99",
+     "frase": "Second, while some people find it helpful to articulate their values explicitly, others feel that it’s impossible to do this in a meaningful way.",
+     "propuesta": "Obligar a la gente a escribir y compartir sus valores parece una forma de centrarla, pero conviene desconfiar de ese ejercicio: algo que se forja durante toda una vida puede sentirse abaratado, pide poner en palabras lo que a otros les parece imposible explicitar con sentido, toca creencias que muchos viven como privadas y puede abrir brechas en vez de ayudar a encontrar lo común, e incluso obligar a alguien a mentir sobre sus valores. Lo que sí sirve es mantenerte en contacto con los tuyos y demostrarlos en cómo diriges, no escribirlos en un papel."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 95,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 101,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 101,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 101,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "agrupar_interrupciones_subordinados_reuniones_regulares",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 315,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 315,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 315,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 319,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 319,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "definir_quien_responde_cada_cosa",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz",
+     "cita": "quienes lo reciben van a quedar confundidos sobre quién esperas que haga qué",
+     "motivo": "El libro dice que los destinatarios \"may be confused\"; el paso lo da como seguro.",
+     "fichero": "fuentes/zhuo_manager/cap_09.md",
+     "lineas": "107",
+     "frase": "This doesn’t just happen in meetings; every time you send an email to more than one person about an issue that requires a follow-up, the recipients may be confused about whom you are expecting to do what.",
+     "propuesta": "Aplícalo también fuera de las reuniones: cada vez que escribes a más de una persona sobre un asunto que necesita seguimiento, quienes lo reciben pueden quedar confundidos sobre quién esperas que haga qué, y cada uno puede suponer que el responsable es otro."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "pensando que sus fuerzas se complementarían bien",
+     "motivo": "\"strengths\" traducido como \"fuerzas\"; en español son \"fortalezas\".",
+     "propuesta": "No confíes en las buenas intenciones. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fortalezas se complementarían bien."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 107,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 107,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 107,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 107,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 109,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 109,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 111,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 113,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "supervisar_decision_delegada_preguntas_concretas",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 257,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  }
+ ]
+}

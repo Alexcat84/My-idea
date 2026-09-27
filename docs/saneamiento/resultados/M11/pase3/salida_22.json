@@ -1,0 +1,1198 @@
+{
+ "lote": "22",
+ "nodos": [
+  {
+   "node_id": "conducir_etapas_modelo_ideal_decision",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 23,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 23,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 23,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 23,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 29,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 29,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 29,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "crear_manuales_jugadas_repetibles",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "matiz",
+     "cita": "Cuenta con que el reparto crea su propio problema:",
+     "motivo": "Lo que una persona vivió en su proceso (su nueva forma de recoger aportes resolvió problemas y creó otros) se da como regla que te va a pasar a ti; es un caso y, como mucho, una posibilidad.",
+     "fichero": "fuentes/zhuo_manager/cap_09.md",
+     "lineas": "277",
+     "frase": "My new process solved some major problems but created new ones—namely that it still took me a really long time to put together the weekly email.",
+     "propuesta": "Cuenta con que el reparto puede crear su propio problema: en ese caso, las aportaciones llegaban escritas por muchas personas distintas y variaban muchísimo en estilo y en nivel de detalle, así que ella tenía que hacer de editora, y a veces, cuando un aporte llegaba sin detalle suficiente, escribía a quien lo había enviado y se pasaban mensajes para mejorarlo. Seguía costándole muchísimo tiempo."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "coherencia",
+     "cita": "Cuando te oigas dando la misma indicación una y otra vez, escribe la tercera fase:",
+     "motivo": "El imperativo te habla a ti, pero el objeto (la tercera fase) es del caso de otra persona; tú no tienes fases que escribir.",
+     "propuesta": "Cuando te oigas dando la misma indicación una y otra vez, escríbela: en la tercera fase, ella creó un documento llamado «Cómo enviar un aporte para el resumen semanal», donde listó las metas del resumen, qué hacía bueno a un aporte y consejos a tener en cuenta al escribirlo, y lo compartió con su equipo y con la gente nueva al incorporarse."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "reparte la recogida: la segunda fase fue pedir al equipo",
+     "motivo": "El imperativo te habla a ti con un objeto del caso (la recogida de avances del correo semanal de otra persona); para el lector no hay ninguna recogida.",
+     "propuesta": "Cuando te conviertas en el cuello de botella, reparte el trabajo: en la segunda fase, ella pidió al equipo que le mandara lo que quisiera destacar, y con eso se le quitó de encima la carga de recordarlo todo."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "que haga la tarea más suave en el futuro",
+     "motivo": "Calco de \"make the task go smoother\": en español una tarea no se hace \"más suave\".",
+     "propuesta": "Reconoce dónde hay uno por escribir: si te encuentras haciendo una cosa parecida una y otra vez, hay buenas probabilidades de que se pueda codificar en un manual de instrucciones o en una lista de comprobación que haga la tarea más fluida en el futuro."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "que hace la tarea más suave la próxima vez",
+     "motivo": "Mismo calco de \"go smoother\".",
+     "propuesta": "Un manual de instrucciones o una lista de comprobación que hace la tarea más fluida la próxima vez, y que se puede pasar a otros para que aprendan y ejecuten."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "regionalismo",
+     "cita": "facturar a los pasajeros",
+     "motivo": "\"Facturar\" por registrar a los pasajeros es uso de España; en buena parte de América \"facturar\" es emitir una factura.",
+     "propuesta": "Cuenta con por qué no se improvisa: la mayor parte del trabajo que hace falta para que algo ocurra hoy es asombrosamente complejo. Piensa en la cantidad de pasos que lleva que un avión despegue: limpiar la cabina del vuelo anterior, repostar, registrar a los pasajeros, cargar el equipaje, hacer las comprobaciones de seguridad. Es casi imposible recordar todos los pasos de cabeza, y ya no digamos improvisarlos en el momento."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 253,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 253,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 253,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 257,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 257,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 259,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 261,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 263,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 265,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 269,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 269,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 271,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 271,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 275,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 277,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 277,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 277,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 279,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 281,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 283,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "persuadir_emocion_oyente_no_propia",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 311,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 313,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 315,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 317,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 319,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 327,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 327,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 331,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 331,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 343,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 345,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 347,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 347,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "entregar_problema_dificil_reporte",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "ortografia",
+     "cita": "sobrestimar de lo que tú, el directivo, eres capaz",
+     "motivo": "Error gramatical: \"sobrestimar\" pide complemento directo; \"sobrestimar de lo que\" no es correcto.",
+     "propuesta": "Cuenta con el primer error de ese razonamiento: sobrestimar aquello de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como una sola persona no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para meterse de lleno en un problema entero y dedicarse a encontrar la mejor solución."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 117,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 117,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 123,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "identificar_temas_formacion_tarjetas_decision",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 127,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 137,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 59,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "sostener_contacto_oferta_aceptacion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 171,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 171,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 173,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 173,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 173,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 175,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 179,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 181,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 181,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "transitar_pionero_equipo_nuevo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "calco",
+     "cita": "Y account con que",
+     "motivo": "Quedó una palabra en inglés (\"account\") en lugar de \"cuenta\".",
+     "propuesta": "Y cuenta con que también a ti te toca lo difícil que es equilibrar tus compromisos de trabajo individual con la gestión."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "regionalismo",
+     "cita": "el primer contable de una organización",
+     "motivo": "\"Contable\" como sustantivo es uso de España; en buena parte de América es \"contador\".",
+     "propuesta": "Cuando fuiste de los primeros en asumir un reto que ahora se está convirtiendo en el trabajo de un equipo mayor, y respondes de su crecimiento: el fundador que pasa de tres personas en un garaje a diez empleados, o la primera persona de contabilidad de una organización que ahora monta un departamento financiero entero."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 93,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 97,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 115,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 123,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 127,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 129,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 131,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 133,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 133,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "invitar_personas_necesarias_reunion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 171,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 171,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 171,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 173,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 173,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 183,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 183,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "usar_calendario_herramienta_planificacion_produccion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 271,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 271,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 273,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 273,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 273,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 275,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 277,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 277,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 277,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "conducir_reuniones_salto_nivel_diez_reglas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "ni que no estés dispuesto a oír ninguna crítica suya",
+     "motivo": "\"Crítica suya\" se lee como la crítica que hace el jefe, y se trata de la crítica sobre él (\"any criticism of your direct report\"): el sujeto queda ambiguo y puede invertir quién critica a quién.",
+     "propuesta": "Ve con cuidado, porque estas reuniones pueden convertirse en sesiones de queja, y tiene que quedar claro que no das por supuesto que el jefe, que es tu persona a cargo, sea culpable, ni que no estés dispuesto a oír ninguna crítica sobre él."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 381,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 385,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 389,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 391,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 391,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 399,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 405,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 405,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 409,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 411,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 411,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 413,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 413,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "evitar_presion_social_actos_equipo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 77,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 79,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 79,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 81,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "pelear_proliferacion_reuniones_bloquear_ejecucion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Pelear la proliferación de reuniones",
+     "motivo": "Calco de \"Fight meeting proliferation\": en español una proliferación se combate; \"pelear\" con complemento directo suena a traducción.",
+     "propuesta": "Combatir la proliferación de reuniones bloqueando en tu calendario el tiempo de estar a solas y ejecutar, después de descartar los tres remedios que no cuajan"
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 227,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 227,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 233,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "subir_productividad_gerencial_tres_vias",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 193,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "preparar_resena_mixta_hoja_trabajo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz",
+     "cita": "seguro que notarás que algunos son manifestaciones distintas de un mismo fenómeno",
+     "motivo": "El libro dice \"probably\" y el paso lo vuelve certeza (\"seguro que\"); el resumen del mismo nodo sí dice \"probablemente\".",
+     "fichero": "fuentes/grove_high_output/cap_14.md",
+     "lineas": "131",
+     "frase": "You will probably begin to notice that certain items are different manifestations of the same phenomenon, and that there may be some indications why a certain strength or weakness exists.",
+     "propuesta": "Busca relaciones entre los distintos ítems anotados en la hoja: probablemente notarás que algunos son manifestaciones distintas de un mismo fenómeno, y puede haber indicios de por qué existe cierta fortaleza o debilidad."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 129,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 129,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 129,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 129,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 131,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 131,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 131,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 131,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "dar_guia_acto_seis_consejos",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 117,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 117,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 121,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 121,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 123,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 123,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 123,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 123,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 125,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 125,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 125,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 129,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 131,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 133,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 135,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 135,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 137,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_cinco_pasos_proceso_contratacion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 245,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 247,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "dictar_ritmo_crecimiento_preguntas_escritas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "Para dictar el ritmo de crecimiento de tu negocio hace falta entender tres cosas",
+     "motivo": "El libro acota cuánto dictas el crecimiento (\"as best you can\"); el resumen lo da como control pleno. Propuesta medida con script: 592 caracteres.",
+     "fichero": "fuentes/gerber_emyth/cap_07.md",
+     "lineas": "279",
+     "frase": "“It’s up to you to dictate your business’s rate of growth as best you can by understanding the key processes that need to be performed, the key objectives that need to be achieved, the key position you are aiming your business to hold in the marketplace.",
+     "propuesta": "Para dictar lo mejor que puedas el ritmo de crecimiento de tu negocio hace falta entender tres cosas: los procesos clave que hay que ejecutar, los objetivos clave que hay que alcanzar y la posición que quieres ocupar en el mercado. Las preguntas sobre dónde, cuándo, cuánto capital, cuánta gente, qué tecnología y cuánto espacio convierten esa visión en un plan por hitos. Como te vas a equivocar, los planes de mejor y peor caso te dan margen. Y escribirlo con claridad para que otros lo entiendan te hace dueño del plan: lo que no escribes no es tuyo, y cualquier plan es mejor que ninguno."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "el primero de los tres conocimientos con los que se dicta el ritmo de crecimiento",
+     "motivo": "Mismo matiz perdido (\"as best you can\"); de paso el impersonal \"se dicta\" pasa a tú.",
+     "fichero": "fuentes/gerber_emyth/cap_07.md",
+     "lineas": "279",
+     "frase": "“It’s up to you to dictate your business’s rate of growth as best you can by understanding the key processes that need to be performed, the key objectives that need to be achieved, the key position you are aiming your business to hold in the marketplace.",
+     "propuesta": "Entiende los procesos clave que hay que ejecutar, que es el primero de los tres conocimientos con los que dictas, lo mejor que puedas, el ritmo de crecimiento."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 277,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 279,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 281,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 283,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 283,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 283,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 285,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 285,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "conversar_suenios_cruzar_habilidades",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "coherencia",
+     "cita": "los sueños que describió en la conversación anterior",
+     "motivo": "En el nodo, la conversación anterior es la de su historia de vida (condición), no la de los sueños; el referente queda equivocado.",
+     "propuesta": "Pide a cada persona a tu cargo que cree un documento con tres a cinco columnas y que titule cada una con el nombre de los sueños que describió en la conversación sobre sus sueños."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 63,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 63,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 65,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 65,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 67,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 69,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 71,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 71,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  }
+ ]
+}

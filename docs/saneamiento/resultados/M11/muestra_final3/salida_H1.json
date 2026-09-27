@@ -1,0 +1,219 @@
+{
+ "lote": "H1",
+ "nodos": [
+  {
+   "node_id": "elegir_medio_dar_guia_jerarquia_modos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "ajustar cómo estás entregando el mensaje",
+     "motivo": "\"entregar el mensaje\" calca \"deliver the message\"; en español el mensaje se transmite o se da.",
+     "propuesta": "Mira el lenguaje corporal y la expresión de la cara para ajustar cómo estás transmitiendo el mensaje, que es mucho más fácil cuando puedes mirarle a los ojos y notar si se remueve o cruza los brazos."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "La guía entregada por el medio más alto",
+     "motivo": "\"guía entregada\" calca \"deliver guidance\"; la guía se da.",
+     "propuesta": "La guía dada por el medio más alto de la jerarquía que las circunstancias permiten, y nunca una crítica con copia a todos."
+    }
+   ]
+  },
+  {
+   "node_id": "reservar_tiempo_reflexion_metas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "abastecer_flujo_candidatos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "que pasen nuestra criba telefónica / que deberíamos contratar",
+     "motivo": "Quedó la primera persona del plural de la firma de los autores (\"our phone screen\", \"whom we should hire\"); el nodo hermano pedir_referencias_empleados ya lo dice como \"tu criba\" y \"tu empresa debería contratar\".",
+     "propuesta": "Referencias de tus empleados: añade la búsqueda de candidatos como un resultado en la tarjeta de puntuación de todos los de tu equipo, por ejemplo encontrar cinco jugadores A al año que pasen tu criba telefónica. Anima a tus empleados a preguntar a la gente de sus redes quiénes son las personas más talentosas que conocen y que tu empresa debería contratar. Ofrece una prima por referencia."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "usa este mismo método para identificar y contratar reclutadores",
+     "motivo": "\"este mismo método\" no tiene antecedente en el nodo: era \"the method described in this book\" y, al quitar la voz de libro, quedó un referente vacío; el nombre admitido es \"método A\".",
+     "propuesta": "Contratar reclutadores: usa el método A para identificar y contratar reclutadores que sean jugadores A. Construye una tarjeta de puntuación para tus necesidades de reclutamiento y haz responsables a los reclutadores que contrates de lo que hay en esa tarjeta. Invierte tiempo en asegurarte de que los reclutadores entienden tu negocio y tu cultura."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Siempre, y no cuando se abre una vacante.",
+     "motivo": "La condición se contradice: \"siempre\" incluye el momento de la vacante; lo que se niega es buscar solo entonces (el reclutamiento no debe ser \"a one-time event\").",
+     "propuesta": "Siempre, y no solo cuando se abre una vacante. No dejes que el reclutamiento se convierta en un acto puntual: busca candidatos siempre, mantente siempre al acecho de talento nuevo e identifica a la persona antes de que el fichaje haga falta de verdad."
+    }
+   ]
+  },
+  {
+   "node_id": "inspeccionar_reparto_informacion_notas_jefe",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "pedir_referencias_empleados",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "conducir_reunion_equipo_agenda_tres_bloques",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "ortografia",
+     "cita": "con dueños que por lo general no seas tú",
+     "motivo": "Falta de concordancia: \"dueños\" (plural) con \"no seas tú\" (singular); cada reunión aparte lleva su dueño.",
+     "propuesta": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con un dueño que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico."
+    }
+   ]
+  },
+  {
+   "node_id": "implantar_politicas_respaldan_metodo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "trazar_plan_dieciocho_meses_aprendizaje",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "crear_obligacion_disentir_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "matiz",
+     "cita": "Un objeto tan simple va a ser sorprendentemente eficaz.",
+     "motivo": "Anécdota vuelta regla: el libro cuenta el resultado en el equipo de un directivo y el paso lo promete para ti. El resumen del mismo nodo ya lo cuenta como caso (\"en su caso ... resultó\").",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "233",
+     "frase": "This simple prop was surprisingly effective.",
+     "propuesta": "Deslízale el objeto a alguien de la mesa como señal de que le toca tomar el punto de vista contrario. En aquel equipo, un objeto tan simple resultó sorprendentemente eficaz."
+    }
+   ]
+  },
+  {
+   "node_id": "medir_critica_respuesta_oyente_brujula",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "demostrar_apertura_visiones_distintas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "cambiar_formato_reunion_favorecer_participacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "invencion",
+     "cita": "y con eso se acaban para siempre las quejas del equipo",
+     "motivo": "Efecto que el libro no dice: del arranque con notas adhesivas solo dice que baja la barrera para participar; nada de quejas del equipo, y menos \"para siempre\".",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "237-241",
+     "frase": "Then, have the room work in quiet concentration for about ten to fifteen minutes. [...] By encouraging people to get their own thoughts down on paper before sharing them, the barrier to participation is lowered.",
+     "propuesta": "Prueba también otra táctica, el arranque con notas adhesivas, en el que todos trabajan en silencio y concentrados durante unos diez o quince minutos."
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_repaso_posterior_proyecto",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "avisar_organizador_reunion_prescindible",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "determinar_estado_presente_capacidades_proyectos_merma",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "dar_valor_constante_cuatro_publicos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "investigar_antes_contratar_lideres",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "pasear_organizacion_hallar_problemas_pequenios",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "montar_proceso_contratacion_reducir_sesgo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "decidir_poner_nota_comunicar_proposito_limites",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "regionalismo",
+     "cita": "pesando sus pegas y sus beneficios",
+     "motivo": "\"pegas\" (inconvenientes) es coloquial de España; en otras regiones \"pega\" es el trabajo o el pegamento.",
+     "propuesta": "Decidir si pones nota de desempeño pesando sus inconvenientes y sus beneficios, y comunicar su propósito y sus límites si la pones"
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "regionalismo",
+     "cita": "Ten delante las pegas, que son reales y son las de la escuela",
+     "motivo": "\"pegas\" (inconvenientes) es coloquial de España; en otras regiones \"pega\" es el trabajo o el pegamento.",
+     "propuesta": "Ten delante los inconvenientes, que son reales y son los de la escuela que sostiene que la nota es defectuosa por naturaleza: que la nota revela a menudo más del que califica que del calificado; que puede desanimar a asumir riesgos, al castigar de más cuando el riesgo asumido no sale; y que la obsesión con la nota se interpone en las conversaciones de desarrollo."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "regionalismo",
+     "cita": "con las pegas y los beneficios delante",
+     "motivo": "\"pegas\" (inconvenientes) es coloquial de España; en otras regiones \"pega\" es el trabajo o el pegamento.",
+     "propuesta": "La decisión de poner nota o no tomada con los inconvenientes y los beneficios delante, y si la pones, el propósito y los límites de la nota comunicados a la plantilla."
+    }
+   ]
+  },
+  {
+   "node_id": "recoger_opinion_360_grados",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "bajar_detalle_organizacion_fuente_hechos",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}

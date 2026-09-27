@@ -1,0 +1,1072 @@
+{
+ "lote": "11",
+ "nodos": [
+  {
+   "node_id": "interrumpir_candidato_escucha_reflexiva",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 45,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 45,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 49,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 49,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "contrastar_motivos_querer_gestionar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "según las circunstancias la gestión va a no ser el mejor camino para esas metas",
+     "motivo": "El libro dice que la gestión puede no ser el mejor camino (\"may not\"); \"va a no ser\" lo afirma como hecho (y es una construcción forzada). El resumen y la condición sí dicen \"puede no ser\".",
+     "fichero": "fuentes/zhuo_manager/cap_02.md",
+     "lineas": "235",
+     "frase": "Depending on the circumstances, management may not be the best way to achieve these goals.",
+     "propuesta": "Pregúntate por qué quieres ser directivo y mira cuál de las tres respuestas comunes das, porque según las circunstancias la gestión puede no ser el mejor camino para esas metas."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz",
+     "cita": "ten presente la lección que cierra ese motivo, el de querer libertad para decidir: los mejores resultados salen de inspirar a la gente a actuar",
+     "motivo": "Es la lección que una directiva sacó de su propia experiencia con su equipo de diseño; el paso la da como lección general (\"la lección que cierra ese motivo\", que además remite a la estructura del texto). El resumen ya la cuenta como caso (\"una directiva aprendió\").",
+     "fichero": "fuentes/zhuo_manager/cap_02.md",
+     "lineas": "255-259",
+     "frase": "I learned then one of my first lessons of management—the best outcomes come from inspiring people to action, not telling them what to do.",
+     "propuesta": "Y ten presente la lección que una directiva sacó de ese motivo, el de querer libertad para decidir, al ver que su equipo no creía en su idea: los mejores resultados salen de inspirar a la gente a actuar, no de decirle lo que tiene que hacer."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 239,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 245,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 251,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 257,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 259,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 263,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 263,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 263,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 263,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "transitar_jefe_nuevo_equipo_establecido",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "una ventana de unos tres meses en la que nadie espera que sepas nada",
+     "motivo": "El libro dice que la ventana dura normalmente (\"usually\") unos tres meses; el resumen la da como duración fija. El paso 0 sí conserva \"normalmente\". Para seguir en 600 caracteres, \"se te perdonan\" pasa a \"te perdonan\", \"mientras se construye\" a \"mientras nace\" y \"se habla\" a \"hablas\" (595 caracteres).",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "143",
+     "frase": "The biggest advantage of being new is that you have a window of time, usually about three months, when everyone recognizes that you’re the new kid on the block.",
+     "propuesta": "Llegar a un equipo ya hecho da dos ventajas que caducan: una ventana que suele durar unos tres meses en la que nadie espera que sepas nada y te perdonan los errores, y una hoja en blanco para formar lazos y rehacer tu fama. Preguntar mucho y a muchos, verte a solas con quienes trabajarás y ser claro desde el principio sobre la relación que quieres aprovecha ambas. Los riesgos también son propios del recién llegado: imponer opiniones sin estar informado, sentirte aislado mientras nace la confianza, y descubrir que el puesto no era exactamente el que imaginabas, algo que hablas con tu jefe."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "La ventana de unos tres meses de novato aprovechada preguntando",
+     "motivo": "Igual que en el resumen: la ventana dura normalmente (\"usually\") unos tres meses, no siempre.",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "143",
+     "frase": "The biggest advantage of being new is that you have a window of time, usually about three months, when everyone recognizes that you’re the new kid on the block.",
+     "propuesta": "La ventana de novato, que suele durar unos tres meses, aprovechada preguntando, las relaciones nuevas ya en construcción, y con tu jefe hablado lo que te está funcionando y lo que no."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 139,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 139,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 139,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 143,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 143,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 143,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 143,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 145,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 147,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 147,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 157,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 159,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 165,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 171,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 173,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 175,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 177,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 179,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 187,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 187,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 189,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 193,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 197,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 197,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "seguir_frustrado_preguntar_implantacion_ideas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "y tampoco los de abajo se animan a proponer",
+     "motivo": "El libro dice que los de abajo no parecían (\"didn’t seem\") dispuestos a proponer; el resumen lo afirma como hecho. El paso 5 sí conserva \"parecen\" (556 caracteres).",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_03.md",
+     "lineas": "27",
+     "frase": "The chiefs working for him didn’t seem eager to step up with their own ideas either.",
+     "propuesta": "Cuando alguien parece frustrado o a la defensiva en una reunión, la causa puede no estar en él sino en el sistema en que trabaja. Seguirle después, nombrarle lo que viste y dejarle contar su visión abre la conversación; preguntar por cada idea cómo la implantó la convierte en diagnóstico. Si la respuesta es siempre la misma, que alguien más arriba no apoyó la iniciativa y no pasó nada, y tampoco los de abajo parecen animarse a proponer, lo que describe es un problema propio del modelo de líder a seguidores y no de la persona, que tiene ideas y ganas."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 21,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 25,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 27,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_rueda_hacer_cosas_equipo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 71,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 77,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 77,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_supervision_puesto_funcional_mision",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 43,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "investigar_antes_contratar_lideres",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 249,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 251,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 253,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 253,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 255,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 255,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "implantar_politicas_respaldan_metodo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 265,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 271,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_opinion_propia_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "La buena opinión llega cuando juntas dos cosas",
+     "motivo": "Calco de \"great feedback\"; además \"buena opinión\" en español es \"opinión favorable\", que no es lo que se quiere decir (557 caracteres).",
+     "propuesta": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La opinión que de verdad sirve llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que puede fallar le indica a la otra persona que está bien ser crítica. Así, la pregunta nombra tu meta con la reunión y tu duda sobre ella, y termina pidiendo su opinión."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 261,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 263,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "ligar_tareas_proposito_organizacion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 237,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 239,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 239,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 241,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 245,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 245,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 247,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "actuar_conducta_contraria_valores",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "voz",
+     "cita": "Por eso se actúa en dos tiempos: en el momento se baja la tensión, (...) después, en privado, se le dice con claridad",
+     "motivo": "Impersonales prescriptivos (\"se actúa\", \"se baja\", \"se le dice\") en lugar de hablarte de tú, como \"se debe\" o \"se recomienda\" (541 caracteres).",
+     "propuesta": "Cuando una conducta choca con los valores del equipo y la causa no está en los incentivos, no hay nada que rediseñar, pero sí hay que actuar. Por ejemplo, si te importa crear un ambiente de respeto y un día oyes a alguien gritarle con malos modos a un compañero, si no haces nada te arriesgas a mandar el mensaje de que toleras esa conducta. Por eso actúas en dos tiempos: en el momento bajas la tensión, pidiendo calma a quien grita o ayudándole a salir de la sala; después, en privado, le dices con claridad que lo que hizo es inaceptable."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "planificar_cinco_olas_venta",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": []
+  },
+  {
+   "node_id": "integrar_peticion_critica_rutina_existente",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 239,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "equilibrar_capacidad_personal_inventario_plazo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "Importa el razonamiento que obliga a hacer",
+     "motivo": "Sujeto ambiguo: no se sabe qué obliga a hacer el razonamiento; en el libro y en el paso 7 eres tú quien se obliga (\"the thinking you force yourself to go through\", \"que te obligas a hacer\"). Se aprovecha para pasar \"se busca\" a \"buscas\" y quedar en 600 (596 caracteres).",
+     "propuesta": "Cuando dos pasos chocan, el conflicto parece no tener salida, pero sí la tiene: capacidad de equipo, mano de obra e inventario se pueden intercambiar y equilibrar contra el plazo de entrega. Cada salida tiene su precio: especializar al personal infla la estructura, pedir ayuda suele volver el resultado menos predecible, más equipo es capital caro y el inventario acumulado es desperdicio. Como todas cuestan dinero, buscas la combinación más rentable. Importa el razonamiento al que te obligas: entender cómo se relacionan las partes del proceso, probablemente sin cronómetro ni fórmula exacta."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "escribir_apuntes_sala_estudio_equipo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 147,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 149,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 149,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 151,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 151,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 151,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 157,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 157,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 157,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 159,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 159,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_proceso_trabajo_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "Ten claro que el proceso es cómo trabaja junto tu equipo, que es lo que el proceso describe.",
+     "motivo": "Frase circular: define el proceso por lo que el proceso describe.",
+     "propuesta": "Ten claro qué es el proceso: lo que describe cómo trabaja junto tu equipo."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 137,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 137,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 139,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 143,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 143,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 149,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "definir_entorno_grupo_clientes_proveedores_competidores",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 25,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 27,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 27,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "retirar_etiquetas_permanentes_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "estrella de rock y estrella en ascenso",
+     "motivo": "Los dos perfiles del método de crecimiento se llaman en el pack \"estrella de rock\" y \"superestrella\" (el libro: \"rock star\" y \"superstar\"); \"estrella en ascenso\" es un nombre que no existe en el pack.",
+     "propuesta": "No uses los nombres de los dos perfiles, estrella de rock y superestrella, como etiquetas permanentes: ese es el mayor peligro de esos dos nombres."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 347,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 347,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 347,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 349,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 351,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 353,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 353,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 353,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 353,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "comprobar_confianza_persona_cargo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "reflexionar sobre la pregunta por tu account",
+     "motivo": "Inglés que quedó: \"account\" en lugar de \"cuenta\". La propuesta incluye también el arreglo del defecto de coherencia de este mismo paso.",
+     "propuesta": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente a cada persona del equipo si volvería a trabajar con su jefe, ya puede ser útil reflexionar sobre la pregunta por tu cuenta."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "coherencia",
+     "cita": "encuestas anónimas de salud de equipo que pregunten explícitamente si volverías a trabajar con tu jefe",
+     "motivo": "Sujeto cambiado: la encuesta pregunta a las personas a tu cargo si volverían a trabajar con su jefe (contigo), pero dicho en segunda persona parece preguntarte a ti por tu propio jefe. La propuesta incluye también el arreglo del calco de este mismo paso.",
+     "propuesta": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente a cada persona del equipo si volvería a trabajar con su jefe, ya puede ser útil reflexionar sobre la pregunta por tu cuenta."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 55,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 61,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 63,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 65,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 65,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 69,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 69,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 79,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 79,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 81,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 83,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 83,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 85,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 85,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "debatir_decidir_asuntos_cultura_evitar_delegar",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 299,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 299,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 299,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 299,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 303,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 303,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  }
+ ]
+}

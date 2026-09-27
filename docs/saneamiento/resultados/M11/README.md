@@ -60,4 +60,35 @@ regionalismo, voz y ortografia dentro del tope). Todas las trampas sin marca y e
   nodos iguales). Guarda de voz de cliente: 0 faltas en 471 nodos.
 - Orden de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido,
   m11-muestra-final, m11-pase2, m11-salida.
-- La muestra ciega final 2 (semilla 20261009, escrita antes de sortear) se mide despues de este commit.
+
+## Muestra ciega final 2, tercer pase y muestra ciega final 3 (28 sep 2026)
+
+- `muestra_final2/`: 50 nodos con semilla 20261009, 4 trampas sin marca, 3 cazadas (se escapo una de matiz). El arbitro
+  confirmo 0 invenciones, 0 contrarios y 11 del resto (matiz 6, calco 1, voz 1, coherencia 1, ortografia 1, longitud 1)
+  contra un tope de 10: NO CUMPLE. Las dos "invenciones" que marcaron los auditores no se sostuvieron (el orquestador las
+  cotejo tambien contra el libro). DECISION DE LECTURA DECLARADA: la lista escrita antes de la muestra 1 nombraba matiz,
+  calco, coherencia, regionalismo, voz y ortografia, no la longitud; sin ella serian 10. Se cuenta como falla porque
+  `medir.py`, escrito antes de la muestra 1, cuenta todo lo que no es invencion ni contrario, y sacar la longitud
+  despues de ver que decidia el resultado seria cambiar la vara a posteriori. Tanda `m11-muestra-final2` (11 en 8 nodos;
+  la longitud va con veredicto COHERENCIA y tipo "longitud").
+- `pase3/`: tercer pase solo sobre lo que fallo, con el matiz DIRIGIDO: cada nodo llevo la lista de frases con marca de
+  matiz de su pasaje (4186 en total; en el segundo pase 138 de 138 matices perdidos caian dentro de las lineas de la
+  evidencia) y el auditor declaro frase por frase si el nodo la usa y si conserva el matiz (4186 de 4186 declaradas), mas
+  avisos mecanicos (3 resumenes de mas de 600 y un "y idear"). 24 auditores con reparto de semilla 20261011 y 38 trampas
+  sin marca: 33 cazadas (las 5 que se escaparon, de matiz). 261 defectos marcados; 219 campos al arbitro: 186
+  corregidos (ANADIDO 70, VOZ 68, COHERENCIA 28, ORTOGRAFIA 19, CONTRARIO 1) y 33 que no se sostuvieron. Tanda `m11-pase3`
+  (186 en 141 nodos). Una decision del arbitro del lote 19 se revirtio por el orquestador y queda escrita en su salida:
+  cambiaba "la salida" por "el resultado" solo en el resumen de un nodo cuyo modelo es entrada, salida y trabajo.
+  FALLO DEL ORQUESTADOR DECLARADO: los auditores del tercer pase se lanzaron con un guion de orquestacion cuya fase de
+  arbitros fallo (una funcion inexistente); los auditores terminaron y los arbitros se lanzaron despues uno a uno, con las
+  mismas instrucciones.
+- `muestra_final3/`: 50 nodos con semilla 20261012, 4 trampas sin marca, 4 cazadas. El arbitro confirmo 0 invenciones,
+  0 contrarios, 0 matices y 11 del resto en 5 nodos (coherencia 4, regionalismo 3, calco 2, voz 1, ortografia 1) contra un
+  tope de 10: NO CUMPLE. El conteo es por campo, como fija `medir.py`: "pegas" en tres campos de un nodo, "la persona a
+  cargo" sin "tu" en dos de otro y "entregar" el mensaje en dos de un tercero cuentan cada campo. Tanda
+  `m11-muestra-final3` (11 en 5 nodos).
+- Reproducibilidad: las once tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta. Guarda de voz de
+  cliente: 0 faltas en 471 nodos.
+- Orden de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido,
+  m11-muestra-final, m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3.
+- Evolucion de la muestra ciega final (defectos blandos confirmados en 50 nodos, tope 10): 23, 11, 11. Duros: 0 en las tres.
