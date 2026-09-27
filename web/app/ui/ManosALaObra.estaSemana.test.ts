@@ -27,9 +27,11 @@ describe("Manos a la Obra: el bloque 'Esta semana' calculado", () => {
     expect(src.match(/<BloqueSemana\b/g)).toHaveLength(2);
   });
 
+  // 27 sep 2026: la chapa de la fila dice "primera acción" en los dos modos
+  // (ya no hay chapa "esta semana" en las tarjetas; ver manosSinEstaSemana.test).
   it("a mi ritmo el título es 'Tu siguiente paso' y la chapa de la fila, 'primera acción'", () => {
     expect(src).toContain('bloque.modo === "semana" ? t.semana.titulo : t.semana.tituloRitmo');
-    expect(src).toContain('modo === "fechas" ? t.fila.estaSemana : t.fila.primeraAccion');
+    expect(src).toContain("{t.fila.primeraAccion}");
     expect(MANOS_A_LA_OBRA.es.semana.titulo).toBe("Esta semana");
     expect(MANOS_A_LA_OBRA.es.semana.tituloRitmo).toBe("Tu siguiente paso");
     expect(MANOS_A_LA_OBRA.es.fila.primeraAccion).toBe("primera acción");

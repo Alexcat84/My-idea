@@ -14,10 +14,10 @@
  * el documento del panel.
  */
 import { partirMotivo } from "@/lib/i18n/comillas";
-import { useEffect, useId, useState, type MouseEvent } from "react";
-import { etiquetaEspacio, mesesDeBitacora, ordenCronologico, proyectoTieneMundos, type EntradaBitacora } from "@/lib/bitacoraCliente";
+import { useEffect, useState } from "react";
+import { etiquetaEspacio, ordenCronologico, proyectoTieneMundos, type EntradaBitacora } from "@/lib/bitacoraCliente";
 import { nombreDeMundo } from "@/lib/catalogoMundos";
-import { fechaHumanaConAno, fechaInputLocal, mesConAno } from "@/lib/fechas";
+import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
@@ -115,20 +115,16 @@ function coloreaMotivo(texto: string, color: string) {
   );
 }
 
-/** Desde cuántas entradas una bitácora de un solo mes ya es "larga" y lleva el
- * enlace "Ir al inicio" (con dos meses o más, siempre lo lleva). */
-const LARGA_DESDE = 11;
-
 /**
  * La LÍNEA DE TIEMPO en sí (sin encabezado ni descarga). Reutilizable: la usa la
  * página global "Mi bitácora" y la bitácora POR ESPACIO de la cara "Tu avance"
  * (Fase 3), que le pasa las entradas ya filtradas con `bitacoraDeEspacio`.
  *
- * Decisión del fundador (26 sep 2026): en PANTALLA, lo más reciente ARRIBA,
- * agrupado por mes (encabezado en el idioma de la interfaz), y un enlace "Ir al
- * inicio" al cierre de cada mes cuando la lista es larga. Los documentos (.md,
- * papel, Expediente) siguen en orden cronológico. La espina dibuja su tramo por
- * fila y, dentro de cada mes, termina justo en el centro de su último punto.
+ * En PANTALLA, lo más reciente ARRIBA (decisión del fundador, 26 sep 2026), en
+ * una LISTA CONTINUA: sin encabezados por mes ni enlaces "Ir al inicio" (se
+ * quitaron el 27 sep 2026). Los documentos (.md, papel, Expediente) siguen en
+ * orden cronológico. La espina dibuja su tramo por fila y termina justo en el
+ * centro del último punto.
  */
 export function LineaBitacora({
   entradas,
@@ -141,117 +137,89 @@ export function LineaBitacora({
 }) {
   const idioma = useIdioma();
   const t = elegir(BITACORA, idioma).pagina;
-  const inicio = `bitacora-inicio-${useId().replace(/[^A-Za-z0-9_-]/g, "")}`;
-  const meses = mesesDeBitacora(entradas);
-  const masAntigua = ordenCronologico(entradas)[0];
+  const cronologicas = ordenCronologico(entradas);
+  const masAntigua = cronologicas[0];
   const diaInicial = masAntigua ? fechaInputLocal(new Date(masAntigua.fecha)) : "";
-  const larga = meses.length > 1 || entradas.length >= LARGA_DESDE;
   const cerrada = entradas.some((e) => e.peso === "cierre");
-  const irAlInicio = (ev: MouseEvent<HTMLAnchorElement>) => {
-    const destino = document.getElementById(inicio);
-    if (!destino) return;
-    ev.preventDefault();
-    destino.scrollIntoView({ behavior: "smooth", block: "start" });
-    destino.focus({ preventScroll: true });
-  };
+  // De la más reciente a la más antigua, en una sola lista.
+  const filas = aFilas([...cronologicas].reverse(), t, diaInicial);
   return (
-    <div id={inicio} tabIndex={-1} className="relative mt-9 pb-1 outline-none" style={{ scrollMarginTop: 24 }}>
-      {meses.map((mes, m) => {
-        const filas = aFilas(mes.entradas, t, diaInicial);
-        const idMes = `${inicio}-${mes.clave}`;
-        return (
-          <section key={mes.clave} aria-labelledby={idMes} className={m === 0 ? "" : "mt-8"}>
-            <h3 id={idMes} className="mb-4 text-[13px] font-semibold tracking-[0.4px] text-dim">
-              {mesConAno(mes.fecha, idioma)}
-            </h3>
-            <div className="relative">
-              {filas.map((f, i) => {
-                const esPrimera = i === 0;
-                const esUltima = i === filas.length - 1;
-                // centro del punto de esta fila, desde el borde superior de la fila
-                const centro = f.tipo === "dia" ? 12 : f.entrada.peso === "cierre" ? 13 : 11;
-                const verde = cerrada && (f.tipo === "dia" ? f.cierre : f.entrada.peso === "cierre");
-                const tramo = (
-                  <span
-                    aria-hidden
-                    style={{
-                      position: "absolute",
-                      insetInlineStart: 13,
-                      width: 2,
-                      transform: "translateX(calc(-50% * var(--sentido)))",
-                      background: verde ? "rgba(63,185,80,0.9)" : "rgba(77,124,254,0.85)",
-                      top: esPrimera ? centro : 0,
-                      ...(esUltima ? { height: centro } : { bottom: 0 }),
-                    }}
-                  />
-                );
-                return f.tipo === "dia" ? (
-                  <div key={`d-${i}`} className="relative" style={{ paddingInlineStart: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
-                    {tramo}
-                    <span
-                      aria-hidden
-                      style={{
-                        position: "absolute",
-                        insetInlineStart: 13,
-                        top: 6,
-                        transform: "translateX(calc(-50% * var(--sentido)))",
-                        width: 13,
-                        height: 13,
-                        borderRadius: "50%",
-                        background: f.cierre ? VERDE : AZUL,
-                        boxShadow: `0 0 0 4px ${f.cierre ? "rgba(63,185,80,0.16)" : "rgba(77,124,254,0.16)"}`,
-                      }}
-                    />
-                    <div className="text-[15px] font-bold" style={{ color: f.cierre ? VERDE : "#F5F6F8" }}>
-                      {fechaHumanaConAno(f.fecha, idioma)}
-                    </div>
-                    {f.sub && <div className="mt-[3px] text-[12px] text-dim">{f.sub}</div>}
-                  </div>
-                ) : (
-                  <div
-                    key={`e-${i}`}
-                    className="relative"
-                    style={{ paddingInlineStart: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
-                  >
-                    {tramo}
-                    <PuntoEntrada peso={f.entrada.peso} />
-                    {(() => {
-                      const etq = etiquetar?.(f.entrada);
-                      return etq ? (
-                        <div className="mb-1">
-                          <span className="inline-flex items-center rounded-full border border-hairline bg-surface-3 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.6px] text-dim">
-                            {etq}
-                          </span>
-                        </div>
-                      ) : null;
-                    })()}
-                    {f.conHora ? (
-                      <div className="flex items-baseline gap-3">
-                        <span className="flex-none text-[12px] tabular-nums text-dim" style={{ minWidth: 38 }}>
-                          {hora(f.entrada.fecha)}
-                        </span>
-                        <span className="[text-wrap:pretty]">
-                          <TextoEntrada e={f.entrada} />
-                        </span>
-                      </div>
-                    ) : (
-                      <span className="[text-wrap:pretty]">
-                        <TextoEntrada e={f.entrada} />
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
+    <div className="relative mt-9 pb-1">
+      {filas.map((f, i) => {
+        const esPrimera = i === 0;
+        const esUltima = i === filas.length - 1;
+        // centro del punto de esta fila, desde el borde superior de la fila
+        const centro = f.tipo === "dia" ? 12 : f.entrada.peso === "cierre" ? 13 : 11;
+        const verde = cerrada && (f.tipo === "dia" ? f.cierre : f.entrada.peso === "cierre");
+        const tramo = (
+          <span
+            aria-hidden
+            style={{
+              position: "absolute",
+              insetInlineStart: 13,
+              width: 2,
+              transform: "translateX(calc(-50% * var(--sentido)))",
+              background: verde ? "rgba(63,185,80,0.9)" : "rgba(77,124,254,0.85)",
+              top: esPrimera ? centro : 0,
+              ...(esUltima ? { height: centro } : { bottom: 0 }),
+            }}
+          />
+        );
+        return f.tipo === "dia" ? (
+          <div key={`d-${i}`} className="relative" style={{ paddingInlineStart: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
+            {tramo}
+            <span
+              aria-hidden
+              style={{
+                position: "absolute",
+                insetInlineStart: 13,
+                top: 6,
+                transform: "translateX(calc(-50% * var(--sentido)))",
+                width: 13,
+                height: 13,
+                borderRadius: "50%",
+                background: f.cierre ? VERDE : AZUL,
+                boxShadow: `0 0 0 4px ${f.cierre ? "rgba(63,185,80,0.16)" : "rgba(77,124,254,0.16)"}`,
+              }}
+            />
+            <div className="text-[15px] font-bold" style={{ color: f.cierre ? VERDE : "#F5F6F8" }}>
+              {fechaHumanaConAno(f.fecha, idioma)}
             </div>
-            {larga && (
-              <p className="mt-5" style={{ paddingInlineStart: 44 }}>
-                <a href={`#${inicio}`} onClick={irAlInicio} className="text-[12.5px] font-semibold text-dim underline-offset-4 hover:text-ink hover:underline">
-                  <span aria-hidden>↑ </span>
-                  {t.irAlInicio}
-                </a>
-              </p>
+            {f.sub && <div className="mt-[3px] text-[12px] text-dim">{f.sub}</div>}
+          </div>
+        ) : (
+          <div
+            key={`e-${i}`}
+            className="relative"
+            style={{ paddingInlineStart: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
+          >
+            {tramo}
+            <PuntoEntrada peso={f.entrada.peso} />
+            {(() => {
+              const etq = etiquetar?.(f.entrada);
+              return etq ? (
+                <div className="mb-1">
+                  <span className="inline-flex items-center rounded-full border border-hairline bg-surface-3 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.6px] text-dim">
+                    {etq}
+                  </span>
+                </div>
+              ) : null;
+            })()}
+            {f.conHora ? (
+              <div className="flex items-baseline gap-3">
+                <span className="flex-none text-[12px] tabular-nums text-dim" style={{ minWidth: 38 }}>
+                  {hora(f.entrada.fecha)}
+                </span>
+                <span className="[text-wrap:pretty]">
+                  <TextoEntrada e={f.entrada} />
+                </span>
+              </div>
+            ) : (
+              <span className="[text-wrap:pretty]">
+                <TextoEntrada e={f.entrada} />
+              </span>
             )}
-          </section>
+          </div>
         );
       })}
     </div>
