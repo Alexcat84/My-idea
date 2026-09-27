@@ -670,5 +670,29 @@ FROM (
       SELECT 1 FROM information_schema.columns
       WHERE table_schema='public' AND table_name='checklist_items' AND column_name='heredado_de'
     )
+  UNION ALL
+  -- 048 . undecimo mundo: los 4 CHECK de dominio amplian a 10 packs (+primer_equipo).
+  -- ANTES de aplicar debe decir MISSING pero los 4 conname deben EXISTIR; DESPUES, OK.
+  SELECT '048', 'CHECKs de dominio con 10 packs (+primer_equipo)',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_unlocks_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%primer_equipo%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'sessions_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%primer_equipo%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%primer_equipo%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'pack_clicks_pack_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%primer_equipo%'
+    )
 ) checks
 ORDER BY num;
