@@ -1,6 +1,6 @@
 {
   "node_id": "ventana_oportunidad_accidente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Ventana de Oportunidad para la Trayectoria del Accidente",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Cierra la Ventana del Accidente",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-322",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-008: Es analisis forense posterior a un incidente en una operacion en marcha para reforzar defensas, control operativo y no prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

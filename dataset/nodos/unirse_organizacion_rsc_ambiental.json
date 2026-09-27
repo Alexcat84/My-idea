@@ -1,6 +1,6 @@
 {
   "node_id": "unirse_organizacion_rsc_ambiental",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Unirse a una Organización de Responsabilidad Social Ambiental",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -37,5 +37,20 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-315",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F01-023: Afiliarse a una red de sostenibilidad para integrarla en operaciones y reportes es gestion de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

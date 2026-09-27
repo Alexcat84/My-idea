@@ -14,7 +14,7 @@
   "entregable_esperado": "Tu lista de riesgos con un responsable explícito por cada uno, y los graves asignados a tu atención directa.",
   "nodos_previos": [
     "los_controles_que_ya_tienes",
-    "identificacion_de_riesgos"
+    "capacidad_de_respuesta_responsable"
   ],
   "nodos_siguientes": [
     "revisa_tus_riesgos_con_un_ritmo",
@@ -28,5 +28,33 @@
   "etiqueta_arbol": "Un Dueño Para Cada Riesgo",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-017",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "capacidad_de_respuesta_responsable -> un_dueno_para_cada_riesgo",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-035",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "identificacion_de_riesgos -> un_dueno_para_cada_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por capacidad_de_respuesta_responsable."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

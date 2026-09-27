@@ -1,6 +1,6 @@
 {
   "node_id": "tecnicas_para_sacar_riesgos_a_la_luz",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Técnicas de Identificación de Riesgos",
   "fuente": "Edwards et al., Managing Project Risks",
@@ -95,6 +95,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres proyectos' no está en el libro; se quita sin añadir nada más. No se añaden 'informes y lecciones', que era la propuesta de la ficha, para no introducir un dato nuevo. Cita del libro: L2678: \"What unsuccessful aspects of past projects are likely to arise in this one?\"; L5502: \"will have recourse to the knowledge captured from previous projects\". El resumen_teorico no lleva la cifra; no hay segmentos.",
       "indice": 2,
       "auditoria": "muestreo A10"
+    },
+    {
+      "id": "t2-fase-308",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-007: Identificar y redactar los riesgos del proyecto es parte del plan; no se prueba nada con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

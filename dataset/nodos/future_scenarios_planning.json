@@ -16,11 +16,7 @@
   "entregable_esperado": "Documento con 2 a 4 escenarios futuros titulados y narrados, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas",
   "nodos_previos": [
     "lienzo_modelo_negocio",
-    "iota_analysis",
-    "acuerdo_de_co_venta_y_votacion",
     "business_model_environment_mapping",
-    "vesting_acciones_fundadores",
-    "habilidad_prompting_como_experticia",
     "evaluacion_megatendencias",
     "vision_periferica"
   ],
@@ -146,6 +142,58 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la obligación de incluir el mejor y el peor caso, añadido de norma que se quita del paso 1 porque el libro no lo pide.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-046"
+    },
+    {
+      "id": "t2-arista-001",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "acuerdo_de_co_venta_y_votacion -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-18-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los acuerdos de co-venta y de votacion entre accionistas no preparan la planificacion de escenarios estrategicos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-069",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "habilidad_prompting_como_experticia -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-18-11): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La habilidad individual para trabajar con IA no prepara la construccion de escenarios cruzando impulsores de incertidumbre; la relacion no se sostiene."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-077",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "iota_analysis -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-18-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: IOTA integra los resultados de analisis previos, entre ellos los escenarios, asi que va despues de la planificacion de escenarios y no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-134",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "vesting_acciones_fundadores -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-12-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La planificacion de escenarios estrategicos no continua ni usa el vesting de acciones; temas sin relacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -17,7 +17,9 @@
     "alcance_profundo_cadena_suministro"
   ],
   "nodos_siguientes": [
-    "gestion_contratos_desempeno"
+    "gestion_contratos_desempeno",
+    "decide_criterio_eleccion_proveedor",
+    "punto_unico_contacto_proveedores"
   ],
   "condiciones_activacion": [
     "Cuando se requiere formalizar una relación comercial con un proveedor",
@@ -26,5 +28,33 @@
   "etiqueta_arbol": "Negocia Mejor con tus Proveedores",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-002",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "negociacion_contratos_proveedores -> decide_criterio_eleccion_proveedor",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-004",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "negociacion_contratos_proveedores -> punto_unico_contacto_proveedores",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

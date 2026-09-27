@@ -17,9 +17,7 @@
     "ia_generacion_ideas_negocio",
     "ingenieria_de_prompts_efectiva"
   ],
-  "nodos_siguientes": [
-    "pruebas_inadecuadas_prototipos"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si las ideas generadas por IA se sienten repetitivas o genéricas",
     "Si el equipo necesita diferenciación creativa fuerte frente a competidores"
@@ -27,5 +25,20 @@
   "etiqueta_arbol": "Rompe la Respuesta Promedio",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-050",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prompting_alta_variacion -> pruebas_inadecuadas_prototipos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-20, lector y verificador de acuerdo)",
+        "motivo": "Pedir a la IA respuestas de alta variacion no tiene que ver con la variacion estadistica en pruebas de prototipos; solo comparten la palabra variacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

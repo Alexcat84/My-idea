@@ -15,7 +15,6 @@
   "entregable_esperado": "Reporte de varianza mensual con clasificación clara de favorable/desfavorable por línea",
   "nodos_previos": [
     "tipos_de_utilidad",
-    "metodo_valor_presente_neto",
     "estructura_estado_resultados",
     "pro_forma_vs_actuals",
     "analisis_porcentual_estados_financieros"
@@ -56,6 +55,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda la varianza en dolares y porcentaje, pero no fija una frecuencia mensual obligatoria; habla de mes o ano (buscado every month, monthly).",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-040"
+    },
+    {
+      "id": "t2-arista-086",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "metodo_valor_presente_neto -> analisis_varianza_financiera",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-12-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El VPN evalua inversiones de capital; no prepara el analisis de varianza presupuesto contra real, que se apoya en el estado de resultados y en porcentajes de cambio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

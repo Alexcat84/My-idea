@@ -22,8 +22,7 @@
   ],
   "nodos_siguientes": [
     "retroalimentacion_cliente_mejora_servicio",
-    "rediseno_procesos_negocio_cx",
-    "punto_unico_contacto_proveedores"
+    "rediseno_procesos_negocio_cx"
   ],
   "condiciones_activacion": [
     "Cuando la organización tiene personal de atención directa al público",
@@ -57,6 +56,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-022 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-puente-022",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "contacto_con_el_cliente -> punto_unico_contacto_proveedores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
     }
   ],
   "fuentes_internas": [

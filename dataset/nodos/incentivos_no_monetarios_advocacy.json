@@ -19,7 +19,8 @@
     "equity_crowdfunding_terminos"
   ],
   "nodos_siguientes": [
-    "coeficiente_viral"
+    "coeficiente_viral",
+    "programa_referidos_exclusividad"
   ],
   "condiciones_activacion": [
     "Cuando los incentivos monetarios no son escalables o efectivos",
@@ -28,5 +29,20 @@
   "etiqueta_arbol": "Premia sin Usar Dinero",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-15",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "incentivos_no_monetarios_advocacy -> programa_referidos_exclusividad",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-15, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Después de ver cómo incentivar las recomendaciones sin dinero, la exclusividad y la escasez del golden ticket son otra forma de diseñar el programa de referidos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

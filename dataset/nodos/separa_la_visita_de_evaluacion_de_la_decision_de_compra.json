@@ -15,10 +15,9 @@
   "entregable_esperado": "Una decision de compra tomada fuera de la presion del punto de venta, con tiempo para comparar.",
   "nodos_previos": [
     "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
-    "aceptacion_bienes_comprados"
+    "obtencion_de_compromiso"
   ],
   "nodos_siguientes": [
-    "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
     "prepara_posicion_agenda_antes_negociar"
   ],
   "condiciones_activacion": [
@@ -29,5 +28,46 @@
   "etiqueta_arbol": "No compres en la primera visita",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-126",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "separa_la_visita_de_evaluacion_de_la_decision_de_compra -> investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-20-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: investigar en fuentes objetivas va antes de contactar o visitar al proveedor; la visita de evaluacion es un paso posterior (el nodo ya la tiene tambien como DESPUES)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-003",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "obtencion_de_compromiso -> separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-026",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "aceptacion_bienes_comprados -> separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por obtencion_de_compromiso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Un protocolo de pruebas de prototipos que incluya variación realista de parámetros y simulación de condiciones de producción",
   "nodos_previos": [
-    "falacia_cero_defectos",
-    "prompting_alta_variacion"
+    "falacia_cero_defectos"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -23,5 +22,20 @@
   "etiqueta_arbol": "Prueba tus Prototipos con Rigor",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-050",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prompting_alta_variacion -> pruebas_inadecuadas_prototipos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-20, lector y verificador de acuerdo)",
+        "motivo": "Pedir a la IA respuestas de alta variacion no tiene que ver con la variacion estadistica en pruebas de prototipos; solo comparten la palabra variacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

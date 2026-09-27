@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Una estrategia de incidencia regulatoria y posicionamiento de mercado ante nuevas normativas",
   "nodos_previos": [
-    "deteccion_temprana_regulatoria",
-    "diferenciacion_de_marca_contraintuitiva"
+    "deteccion_temprana_regulatoria"
   ],
   "nodos_siguientes": [
     "alianzas_cross_industry"
@@ -26,5 +25,20 @@
   "etiqueta_arbol": "Convierte las Normas en tu Ventaja",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-061",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diferenciacion_de_marca_contraintuitiva -> uso_regulaciones_como_espada",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-21, lector y verificador de acuerdo)",
+        "motivo": "Diferenciar la marca contra la convencion del sector y usar la regulacion ambiental como arma competitiva solo se parecen en que ambas son estrategias a contracorriente."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

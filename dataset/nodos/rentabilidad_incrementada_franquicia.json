@@ -1,6 +1,6 @@
 {
   "node_id": "rentabilidad_incrementada_franquicia",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Rentabilidad Incrementada del Modelo de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -72,6 +72,19 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro sostiene la tesis de mayor rentabilidad (L345) pero advierte que es difícil de cuantificar (L347), que los estudios del 40 y 45,6% del cuartil superior tienen validez estadística limitada y más de una década (L349), y que no hay cifras fiables para estimar el margen neto (L1468). El paso 2 y el entregable ya dicen eso y son fieles; el resumen daba la cifra como prueba sin la salvedad. Se retira la cifra (dato de mercado fechado, que por la política del marco sale) y se deja la advertencia del libro, con lo que resumen, paso y entregable quedan coherentes.",
       "auditoria": "SANEAMIENTO pasada K, ficha C04 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "t2-fase-274",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F09-027: Proyectar la rentabilidad y fijar metas de margen del franquiciante es construir el modelo financiero, no probarlo con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

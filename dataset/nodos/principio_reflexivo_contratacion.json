@@ -14,14 +14,27 @@
   "nodos_previos": [
     "cultura_de_buena_empresa"
   ],
-  "nodos_siguientes": [
-    "seminario_de_exito_para_gerencia"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se evalúa contratar a un empleado que trabaja en la empresa de un socio o amigo cercano"
   ],
   "etiqueta_arbol": "Aplica la Regla del Espejo",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-057",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "principio_reflexivo_contratacion -> seminario_de_exito_para_gerencia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-10, lector y verificador de acuerdo)",
+        "motivo": "La etica de contratar empleados de empresas amigas no tiene relacion con usar testimonios para vencer la resistencia a la calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

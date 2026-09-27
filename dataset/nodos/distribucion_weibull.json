@@ -17,9 +17,7 @@
   "nodos_previos": [
     "formula_exponencial_confiabilidad"
   ],
-  "nodos_siguientes": [
-    "identificacion_de_riesgos"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se necesita predecir vida útil o tasa de fallos de un componente",
     "Cuando los datos no se ajustan claramente a normal o exponencial"
@@ -27,5 +25,20 @@
   "etiqueta_arbol": "Predice tu Vida Útil",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-042",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "distribucion_weibull -> identificacion_de_riesgos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-12-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Weibull sirve para predecir la vida util a fatiga; no prepara la identificacion de riesgos de negocio. Si acaso encajaria despues, en la evaluacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

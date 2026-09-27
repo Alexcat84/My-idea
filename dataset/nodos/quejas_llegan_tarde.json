@@ -1,6 +1,6 @@
 {
   "node_id": "quejas_llegan_tarde",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Las Quejas Llegan Demasiado Tarde: Riesgo del Cliente Silencioso",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Escucha al Cliente a Tiempo",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-266",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F05-004: Trata del seguimiento de la satisfacción y de la pérdida de clientes en un negocio que ya vende, es decir, gestión operativa de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

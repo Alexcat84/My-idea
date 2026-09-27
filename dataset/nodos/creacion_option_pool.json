@@ -16,8 +16,7 @@
     "employee_pool_esop"
   ],
   "nodos_siguientes": [
-    "term_sheet_negociacion",
-    "decision_autofinanciamiento_vs_inversion"
+    "term_sheet_negociacion"
   ],
   "condiciones_activacion": [
     "Antes de cerrar una ronda de financiamiento formal.",
@@ -57,6 +56,19 @@
       },
       "decision": "Mandato del fundador, regla B, cifra cambiada: el resumen daba \"hasta 20%\" (un tope) donde el libro da un promedio en las startups mas jovenes (\"averaged 20% of fully diluted equity\", L2578). Se sustituye por lo que dice el libro. La encontro la sesion al revisar el nodo para fidelidad-t14-01; los resumenes no entraban en las lecturas de la campania.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C024-113 (nodo revisado por la sesion)"
+    },
+    {
+      "id": "t2-arista-023",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "creacion_option_pool -> decision_autofinanciamiento_vs_inversion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-03-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: decidir entre financiarte solo o buscar inversores va antes de crear un option pool en cada ronda, no despues. Esto no viene de la correccion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

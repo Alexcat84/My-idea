@@ -21,7 +21,6 @@
     "prototipado_rapido",
     "diseno_activismo_social",
     "conocimiento_local_colaboracion",
-    "encuadre_desafio_diseno",
     "restricciones_extremas_como_innovacion"
   ],
   "condiciones_activacion": [
@@ -31,5 +30,20 @@
   "etiqueta_arbol": "Explora la Pobreza Global como Fuente",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-131",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "usuarios_extremos_globales -> encuadre_desafio_diseno",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-02-21): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon A. El nodo se presenta hoy como 'herramienta inicial' para estructurar el proyecto. Buscar usuarios extremos en contextos de pobreza es un metodo de investigacion que viene despues del encuadre. La misma pareja ya existe en el orden correcto (R14-02-11, el vecino va DESPUES), asi que esta arista en sentido ANTES tiene el orden invertido. La correccion solo anadio el prefijo 'Sugerencia de My Idea' y no influye."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

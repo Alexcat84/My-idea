@@ -18,9 +18,9 @@
     "get_customers_funnel",
     "customer_discovery",
     "embudo_get_keep_grow",
-    "cohort_analysis_retencion",
     "customer_jobs",
-    "funnel_get_customers_optimizacion"
+    "funnel_get_customers_optimizacion",
+    "analisis_de_cohortes"
   ],
   "nodos_siguientes": [
     "estrategia_crecimiento_clientes",
@@ -46,5 +46,33 @@
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve",
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-138",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "analisis_de_cohortes -> optimizacion_keep_retencion",
+      "texto_nuevo": "analisis_de_cohortes -> keep_customers_strategy",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a optimizacion_keep_retencion, deprecado; su superviviente es keep_customers_strategy."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-170",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "cohort_analysis_retencion -> keep_customers_strategy",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a cohort_analysis_retencion, deprecado; su superviviente es analisis_de_cohortes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

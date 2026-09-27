@@ -20,7 +20,6 @@
     "esfuerzo_voluntario_vs_urge_espontaneo"
   ],
   "nodos_siguientes": [
-    "cuatro_etapas_del_pensamiento_creativo",
     "reglas_brainstorming",
     "second_wind_energia_mental",
     "sistema_captura_ideas"
@@ -56,6 +55,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-023 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-136",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "wallas_etapa_incubacion -> cuatro_etapas_del_pensamiento_creativo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-05-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la etapa de incubacion es una parte del modelo de las cuatro etapas y deberia ir despues del panorama general, no antes (el mismo nodo ya la tiene tambien como DESPUES, igual que preparacion y verificacion)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

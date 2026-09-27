@@ -1,6 +1,6 @@
 {
   "node_id": "comprender_alineacion_etica_ia",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Alineación y Ética de la IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
@@ -16,9 +16,7 @@
     "desafios_implementacion_ia",
     "alineacion_etica_ia_negocio"
   ],
-  "nodos_siguientes": [
-    "juran_quality_by_design"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando planeas meter IA generativa en tu producto o servicio",
     "Cuando tu producto toca decisiones sensibles, como contratación, crédito, salud o justicia"
@@ -26,5 +24,33 @@
   "etiqueta_arbol": "Cuida la Ética de tu IA",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-052",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comprender_alineacion_etica_ia -> juran_quality_by_design",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-23, lector y verificador de acuerdo)",
+        "motivo": "Los sesgos y la etica de los modelos de IA no se profundizan en el modelo de calidad por diseno de Juran; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-fase-054",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F13-009: Tiene razon B: la idea de meter IA ya esta tomada y el nodo evalua el modelo concreto, sus sesgos y el riesgo legal antes de implantarlo, lo que es diseno del producto y gestion de riesgos, no explorar el problema. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

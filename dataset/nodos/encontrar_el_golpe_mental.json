@@ -20,8 +20,7 @@
   ],
   "nodos_siguientes": [
     "emocion_como_motor_pensamiento",
-    "atacar_mercados_establecidos_con_problema",
-    "segmentos_de_clientes_problema_necesidad"
+    "atacar_mercados_establecidos_con_problema"
   ],
   "condiciones_activacion": [
     "Cuando el esfuerzo intenso no produce resultados proporcionales a la energía invertida",
@@ -44,6 +43,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-048",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "encontrar_el_golpe_mental -> segmentos_de_clientes_problema_necesidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El 'golpe' de esfuerzo mental de Wallas no prepara la segmentacion de clientes. Los nodos no tienen relacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

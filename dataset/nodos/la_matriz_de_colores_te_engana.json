@@ -1,6 +1,6 @@
 {
   "node_id": "la_matriz_de_colores_te_engana",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Por Qué la Matriz de Riesgo No Funciona",
   "fuente": "Hubbard, The Failure of Risk Management",
@@ -61,6 +61,19 @@
       },
       "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo entregable_esperado repetia lo que corrige la ficha C5. Se cambia solo el segmento; el resto no cambia.",
       "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C5"
+    },
+    {
+      "id": "t2-fase-199",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F12-010: Reexpresar y calificar los riesgos clave en probabilidades y cifras es trabajo de plan y estrategia, no prueba con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

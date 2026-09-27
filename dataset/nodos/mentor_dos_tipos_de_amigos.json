@@ -15,9 +15,7 @@
   "nodos_previos": [
     "gestion_junta_directiva_startup"
   ],
-  "nodos_siguientes": [
-    "equipo_de_gestion_de_crisis"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el fundador está construyendo su junta directiva o red de consejeros.",
     "Cuando el fundador enfrenta una decisión crítica y necesita consejo de alguien con experiencia relevante y confianza total."
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Busca tus Dos Mentores Clave",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-046",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mentor_dos_tipos_de_amigos -> equipo_de_gestion_de_crisis",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-13, lector y verificador de acuerdo)",
+        "motivo": "Tener mentores de confianza personal no lleva a un protocolo de equipo de gestion de crisis; la relacion es solo por la palabra crisis."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

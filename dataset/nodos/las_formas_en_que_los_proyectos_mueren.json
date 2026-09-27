@@ -1,6 +1,6 @@
 {
   "node_id": "las_formas_en_que_los_proyectos_mueren",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Los Riesgos Nucleares de Todo Proyecto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Cómo Mueren los Proyectos",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-200",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-011: Revisar el plan, el plazo y el alcance contra los riesgos tipicos y reservar margen es planificacion, no validacion con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

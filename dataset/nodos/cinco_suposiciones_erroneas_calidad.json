@@ -1,6 +1,6 @@
 {
   "node_id": "cinco_suposiciones_erroneas_calidad",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Las Cinco Suposiciones Erróneas sobre la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -15,7 +15,6 @@
   ],
   "entregable_esperado": "Un diagnostico honesto de que suposiciones erroneas estan afectando tu negocio, con un plan para corregirlas",
   "nodos_previos": [
-    "definicion_calidad_conformidad",
     "definiciones_operacionales"
   ],
   "nodos_siguientes": [
@@ -56,6 +55,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el LECTOR B. El libro pide examinar y corregir las cinco suposiciones erroneas (L167, L173), pero no da ninguna herramienta para detectarlas en los gerentes. El pasaje que cita el LECTOR A (L1525) trata de otra cosa: enviar el Quality Management Maturity Grid, comentarlo y pedir a cada gerente que califique a la empresa, no de entrevistas ni encuestas sobre las suposiciones. Busque en todo el libro survey, interview, questionnaire, poll, encuesta y entrevista: solo aparecen en contextos sin relacion (un ministerio ruso que 'surveyed' sistemas, la entrevista de salida con una gerente general, las entrevistas de Elmer sobre ausentismo, un cuestionario en un curso). La encuesta o entrevista como herramienta de diagnostico es un dato practico nuevo.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C097-041"
+    },
+    {
+      "id": "t2-arista-033",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "definicion_calidad_conformidad -> cinco_suposiciones_erroneas_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-17-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El nodo del vecino desarrolla la primera de las cinco suposiciones, asi que profundiza el panorama y deberia ir despues. Como ANTES, el orden esta invertido."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-051",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F23-012: Diagnosticar y corregir creencias erroneas sobre calidad para poner en marcha un programa de calidad en el negocio es mejora operativa, no descubrimiento de una oportunidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

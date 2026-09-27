@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Una estructura clara de responsabilidades de calidad, con roles definidos y un mecanismo fijo de revisión",
   "nodos_previos": [
-    "empoderamiento_personal_frontline",
-    "hr_calidad_gestion"
+    "empoderamiento_personal_frontline"
   ],
   "nodos_siguientes": [
     "six_sigma_dmaic"
@@ -27,5 +26,20 @@
   "etiqueta_arbol": "Organiza Equipos para la Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-041",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "hr_calidad_gestion -> organizacion_equipos_calidad_servicio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-08, lector y verificador de acuerdo)",
+        "motivo": "El nodo del nucleo usa la calidad como metafora para revisar la gestion de personas; los equipos de calidad en servicios son otro tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

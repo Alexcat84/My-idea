@@ -16,8 +16,7 @@
   "entregable_esperado": "Documento de visión de sostenibilidad con metas de largo y corto plazo, definido y comunicado por ti como fundador.",
   "nodos_previos": [
     "benchmarking_prioritizacion_sostenibilidad",
-    "plan_accion_corto_mediano_largo_plazo",
-    "incentivos_reconocimiento_sostenibilidad"
+    "plan_accion_corto_mediano_largo_plazo"
   ],
   "nodos_siguientes": [
     "estrategia_eco_advantage",
@@ -50,5 +49,20 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-073",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-19-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el nodo dice que los incentivos sirven cuando ya existe una estrategia de sostenibilidad, asi que la vision y alineacion estrategica lo prepara, no va despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

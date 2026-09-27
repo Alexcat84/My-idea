@@ -1,6 +1,6 @@
 {
   "node_id": "metabolismo_biologico_y_tecnico",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Los Dos Metabolismos: Biosfera y Tecnosfera",
   "fuente": "Cradle to Cradle - Michael Braungart",
@@ -48,5 +48,20 @@
   ],
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-221",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-009: Tiene razon B: los pasos y el entregable son la especificacion tecnica de materiales del producto con sus rutas de retorno, es decir, diseno del producto y no exploracion de la idea. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_licitaciones_no_ganadas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Análisis de Licitaciones No Ganadas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Aprende de Licitaciones Perdidas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-015",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-013: Analizar licitaciones perdidas para mejorar el proceso de estimacion es control y mejora de una operacion en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

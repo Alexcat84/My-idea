@@ -15,9 +15,7 @@
   "nodos_previos": [
     "entrenamiento_funcional_empleados"
   ],
-  "nodos_siguientes": [
-    "adopcion_liderazgo"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el rol de product manager no está claramente definido en la empresa",
     "Cuando hay inconsistencia en el desempeño de los gerentes de producto"
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Sé un Gran Gerente de Producto",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-042",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_good_bad_product_manager -> adopcion_liderazgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-09, lector y verificador de acuerdo)",
+        "motivo": "El marco de expectativas del product manager no se profundiza en el punto 7 de Deming sobre liderar sistemas en vez de vigilar numeros; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

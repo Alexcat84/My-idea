@@ -19,6 +19,11 @@ El veredicto ATRIBUCION (REGLA ESTRICTA del fundador, 26 sep 2026: el cliente nu
 como fuente) quita la cita a un autor o a un libro sin cambiar el sentido. No lo motiva una frase del libro sino la
 regla, asi que su "cita" es {"regla", "fragmentos"}: la regla que lo ordena y los fragmentos de atribucion que salen.
 
+Los veredictos FASE, DOMINIO y COHERENCIA (saneamiento del dataset, TANDA 2, 26 sep 2026) los declara una pasada de
+lectura contra el propio nodo, no una frase del libro: su "cita" es {"instrumento", "evidencia"}. FASE corrige
+`fase_proyecto` (ideacion, validacion, planificacion o ejecucion), DOMINIO corrige `dominio` (uno de los mundos) y
+COHERENCIA corrige un texto que contradice el resto del propio nodo (por ejemplo, una condicion de activacion).
+
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
 vigente, si el nuevo trae guiones largos o medios, si falta la cita, o si el id
 de la correccion ya esta aplicado en el nodo. Con --comprobar solo valida.
@@ -29,7 +34,13 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
-CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol"}
+CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol",
+          "fase_proyecto", "dominio"}
+FASES = {"ideacion", "validacion", "planificacion", "ejecucion"}
+DOMINIOS = {"core", "quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias",
+            "risk_management", "compras", "entrega"}
+# Declarados por una pasada de lectura contra el propio nodo: su cita es {"instrumento", "evidencia"}.
+POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None}
 # Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
 # activacion entraron el 24 sep 2026: la pasada contra la fuente sobre los campos
 # que no son pasos (docs/fidelidad/CAMPOS_QUE_LLEGAN.md) llegan a la IA. La etiqueta
@@ -46,7 +57,21 @@ def validar(c, nodo):
     if c.get("campo") not in CAMPOS:
         fallas.append("campo no admitido: %r" % c.get("campo"))
     cita = c.get("cita") or {}
-    if c.get("veredicto") == "ATRIBUCION":
+    if c.get("veredicto") in POR_INSTRUMENTO:
+        if not cita.get("instrumento") or not cita.get("evidencia"):
+            fallas.append("un veredicto %s declara su instrumento y su evidencia" % c.get("veredicto"))
+        campo = POR_INSTRUMENTO[c["veredicto"]]
+        if campo and c.get("campo") != campo:
+            fallas.append("el veredicto %s solo corrige %s" % (c["veredicto"], campo))
+        if c.get("campo") in ("fase_proyecto", "dominio") and c.get("veredicto") not in ("FASE", "DOMINIO"):
+            fallas.append("fase_proyecto y dominio solo se corrigen con los veredictos FASE y DOMINIO")
+        if c.get("campo") == "fase_proyecto" and c.get("texto_nuevo") not in FASES:
+            fallas.append("fase no valida: %r" % c.get("texto_nuevo"))
+        if c.get("campo") == "dominio" and c.get("texto_nuevo") not in DOMINIOS:
+            fallas.append("dominio no valido: %r" % c.get("texto_nuevo"))
+    elif c.get("campo") in ("fase_proyecto", "dominio"):
+        fallas.append("fase_proyecto y dominio solo se corrigen con los veredictos FASE y DOMINIO")
+    elif c.get("veredicto") == "ATRIBUCION":
         if not cita.get("regla") or not cita.get("fragmentos"):
             fallas.append("una ATRIBUCION declara su regla y los fragmentos que salen")
         for f in cita.get("fragmentos") or []:

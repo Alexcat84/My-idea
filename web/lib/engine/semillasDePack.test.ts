@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import brecha from "../assets/brecha_semillas.json";
 import seeds from "../assets/packs_entry_seeds.json";
+import { cargarGrafo } from "./graph";
 
 /**
  * NINGÚN MUNDO ENTRA MUDO.
@@ -61,6 +62,17 @@ describe("las semillas de cada pack", () => {
     for (const [fase, destino] of Object.entries(mapa)) {
       expect(typeof destino, `${dominio}/${fase}: destino no es texto`).toBe("string");
       expect(destino.length, `${dominio}/${fase}: destino vacío`).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("la fase horneada de cada semilla es la del grafo (saneamiento, tanda 2, 26 sep 2026)", () => {
+  // packs_entry_seeds.json COPIA la fase del nodo, y la brecha puntua por ella. La pasada de fase del saneamiento
+  // corrigio 13 semillas en el grafo; una copia vieja haria puntuar la brecha con la fase que se declaro mal.
+  const grafo = cargarGrafo();
+  it.each(dominios)("%s: cada semilla trae la fase_proyecto de su nodo", (dominio) => {
+    for (const s of (seeds as Record<string, { id: string; fase: string }[]>)[dominio]) {
+      expect(s.fase, `${dominio}/${s.id}`).toBe(grafo[s.id]?.fase_proyecto);
     }
   });
 });

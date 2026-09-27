@@ -1,6 +1,6 @@
 {
   "node_id": "concepto_quality_is_free",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Quality is Free (La Calidad es Gratis)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -15,13 +15,13 @@
   "entregable_esperado": "Un diagnostico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
   "nodos_previos": [
     "costo_de_calidad_3",
-    "conformance_to_requirements"
+    "definicion_calidad_conformidad"
   ],
   "nodos_siguientes": [
     "costo_de_mala_calidad_copq",
     "concepto_haciendo_la_calidad_cierta",
     "quality_awareness_crosby",
-    "programa_catorce_pasos_crosby"
+    "programa_mejora_calidad_14_pasos"
   ],
   "condiciones_activacion": [
     "Cuando crees que mejorar la calidad implica gastar mas dinero.",
@@ -55,6 +55,45 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-141",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "concepto_quality_is_free -> programa_catorce_pasos_crosby",
+      "texto_nuevo": "concepto_quality_is_free -> programa_mejora_calidad_14_pasos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a programa_catorce_pasos_crosby, deprecado; su superviviente es programa_mejora_calidad_14_pasos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-142",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "conformance_to_requirements -> concepto_quality_is_free",
+      "texto_nuevo": "definicion_calidad_conformidad -> concepto_quality_is_free",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a conformance_to_requirements, deprecado; su superviviente es definicion_calidad_conformidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-061",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-015: Calcula el costo de la no calidad (reprocesos, garantías, desperdicio) en un negocio que ya opera para medir su mejora; es control y mejora operativa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

@@ -23,11 +23,9 @@
   "nodos_previos": [
     "criterios_equity_split",
     "analisis_motivaciones_fundador",
-    "decision_pivotar_o_proceder",
     "puzzle_prima_capital_privado",
     "acumulacion_capital_previo_fundacion",
-    "compatibilidad_motivaciones_riqueza_control",
-    "framework_tres_rs_sucesion"
+    "compatibilidad_motivaciones_riqueza_control"
   ],
   "nodos_siguientes": [
     "preferencia_de_liquidacion",
@@ -66,6 +64,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. En el libro, el camino híbrido es una secuencia de decisiones (control primero, riqueza después) que además aumenta el riesgo de fracasar. Las acciones con derechos de voto diferenciados no aparecen en todo el libro: la búsqueda de dual-class y de voting rights solo encuentra derechos de voto extra de los inversores.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-018"
+    },
+    {
+      "id": "t2-arista-031",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decision_pivotar_o_proceder -> dilema_riqueza_vs_control",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-12-20): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Pivotar o proceder al validar clientes no prepara la eleccion entre riqueza y control; no comparten tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-060",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_tres_rs_sucesion -> dilema_riqueza_vs_control",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-12-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: los Tres Rs sirven para gestionar la sucesion de un fundador ya reemplazado, que viene despues de elegir entre riqueza y control, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

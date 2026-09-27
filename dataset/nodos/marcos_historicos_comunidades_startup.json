@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Diagnóstico del ecosistema local basado en los tres marcos (economías externas, redes horizontales, clase creativa)",
   "nodos_previos": [
-    "search_for_business_model"
+    "recursos_ecosistema_emprendedor"
   ],
   "nodos_siguientes": [
     "tesis_boulder_liderazgo_emprendedor",
@@ -40,6 +40,32 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-019 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-121",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> marcos_historicos_comunidades_startup",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los marcos teoricos sobre concentracion geografica de la innovacion no son un paso natural tras la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-12",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "recursos_ecosistema_emprendedor -> marcos_historicos_comunidades_startup",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-12, un lector sobre la lista ampliada de 20 candidatos): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Despues de mapear los recursos del ecosistema emprendedor, lo natural es preguntarse por que esos ecosistemas se concentran en ciertas geografias y como se forma una comunidad asi."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
     }
   ],
   "fuentes_internas": [

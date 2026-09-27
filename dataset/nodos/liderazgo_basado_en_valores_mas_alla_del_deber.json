@@ -15,9 +15,7 @@
   "nodos_previos": [
     "adquisicion_estrategica_resolver_crisis"
   ],
-  "nodos_siguientes": [
-    "cultura_organizacional_calidad"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando surge una crisis humana en el entorno cercano de la empresa sin obligación contractual",
     "Cuando se quiere definir/reforzar la cultura de la organización mediante acciones, no discursos"
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Haz lo Correcto sin Obligación",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-040",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "liderazgo_basado_en_valores_mas_alla_del_deber -> cultura_organizacional_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-07, lector y verificador de acuerdo)",
+        "motivo": "Asumir costos por valores ante una crisis personal no se continua en como la cultura condiciona la adopcion de herramientas de calidad; solo comparten la palabra cultura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

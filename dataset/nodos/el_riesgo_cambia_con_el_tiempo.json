@@ -1,6 +1,6 @@
 {
   "node_id": "el_riesgo_cambia_con_el_tiempo",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "risk_management",
   "titulo_concepto": "La Naturaleza Dinámica del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "El Riesgo Cambia con el Tiempo",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-121",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-005: Trata de revisar y actualizar periódicamente la lista de riesgos durante el proyecto, que es control y seguimiento continuo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

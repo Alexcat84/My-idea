@@ -20,7 +20,6 @@
     "build_measure_learn",
     "design_thinking_fundamentos",
     "diagrama_eames_interseccion_posibilidad",
-    "elementos_creadores_valor",
     "reconocer_el_sesgo_narrativo",
     "tecnologias_disruptivas_oportunidad"
   ],
@@ -32,5 +31,20 @@
   "etiqueta_arbol": "Cuidado con Ver Patrones Falsos",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-109",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reconocer_sesgo_de_apofenia -> elementos_creadores_valor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-17-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La apofenia y el sesgo de patrones al interpretar datos o diseñar futuros no preparan la selección de elementos de valor para la propuesta. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

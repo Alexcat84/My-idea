@@ -16,7 +16,7 @@
     "personas_productos_ganancias_orden"
   ],
   "nodos_siguientes": [
-    "coordinacion_sitios_multiempleador"
+    "hr_como_control_de_calidad_gerencial"
   ],
   "condiciones_activacion": [
     "Cuando tu negocio crece y se vuelve difícil mantener la cultura con la que empezaste.",
@@ -25,5 +25,33 @@
   "etiqueta_arbol": "Construye un Buen Lugar de Trabajo",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-09",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "buen_lugar_para_trabajar -> hr_como_control_de_calidad_gerencial",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-09, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Construir un buen lugar para trabajar lleva a preguntar qué papel tiene el área de personas: vigilar la calidad de la gestión de los gerentes. hr_calidad_gestion no sirve como predecesor porque parece un duplicado del propio nodo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-puente-048",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "buen_lugar_para_trabajar -> coordinacion_sitios_multiempleador",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-15, lector y verificador de acuerdo)",
+        "motivo": "Construir un buen lugar para trabajar en gestion no conduce a coordinar peligros entre contratistas en sitios multiempleador."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

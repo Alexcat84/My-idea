@@ -20,9 +20,7 @@
     "framework_excelencia_operacional",
     "reuniones_uno_a_uno"
   ],
-  "nodos_siguientes": [
-    "diseno_de_procesos_por_caracteristicas"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la estructura de tu empresa ya no sostiene el crecimiento y necesitas dividirla en subgrupos"
   ],
@@ -43,6 +41,19 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R059-003 (CONTRARIO, lector y verificador de acuerdo): Cambia la secuencia: el libro lo sitúa en el paso cuatro, no al final. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R059-003"
+    },
+    {
+      "id": "t2-arista-041",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diseno_organizacional -> diseno_de_procesos_por_caracteristicas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-04-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El diseno de procesos de calidad (vincular caracteristicas del proceso con las del producto) no continua el diseno del equipo segun el flujo de informacion y decisiones."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

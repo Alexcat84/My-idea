@@ -17,7 +17,6 @@
   ],
   "nodos_siguientes": [
     "engineering_as_marketing",
-    "seo_estrategia_fat_head",
     "seo_long_tail",
     "diagnostico_de_productos_crudos"
   ],
@@ -28,5 +27,20 @@
   "etiqueta_arbol": "Reconoce los Productos Dañinos",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-103",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "productos_crudos -> seo_estrategia_fat_head",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-18-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los productos crudos, un concepto de diseño sostenible y salud ecológica, no tienen relación con posicionarse en buscadores con términos de alto volumen."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

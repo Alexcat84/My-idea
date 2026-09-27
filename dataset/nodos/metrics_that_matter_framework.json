@@ -31,7 +31,7 @@
     "demand_curve_pricing",
     "customer_creation",
     "burn_rate_por_etapa",
-    "tipo_mercado_curva_ingresos"
+    "market_type_revenue_growth"
   ],
   "condiciones_activacion": [
     "Cuando has completado la validación de clientes y necesitas decidir si avanzar a la etapa de creación de clientes",
@@ -52,5 +52,33 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-175",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "metricas_que_importan -> market_type_revenue_growth",
+      "texto_nuevo": "metrics_that_matter_framework -> market_type_revenue_growth",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a metricas_que_importan, deprecado; su superviviente es metrics_that_matter_framework."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-178",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "metrics_that_matter_framework -> tipo_mercado_curva_ingresos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a tipo_mercado_curva_ingresos, deprecado; su superviviente es market_type_revenue_growth."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

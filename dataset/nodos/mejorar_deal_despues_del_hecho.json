@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Un plan concreto para renegociar las condiciones desfavorables en tu próxima ronda o en el momento en que vendas o salgas a bolsa",
   "nodos_previos": [
-    "seleccion_abogado_venture",
-    "breakup_fee_evaluation"
+    "seleccion_abogado_venture"
   ],
   "nodos_siguientes": [
     "plan_a_b_c_soft_landing"
@@ -26,5 +25,20 @@
   "etiqueta_arbol": "Corrige un Mal Trato Después",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-007",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "breakup_fee_evaluation -> mejorar_deal_despues_del_hecho",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-11-01): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon B. El nodo trata de la comision por cancelacion en la venta de la empresa, antes del cierre. El vecino trata de corregir las condiciones de una ronda de financiamiento ya cerrada, con nuevas rondas, inversionistas lideres y la motivacion del equipo. Despues de vender la empresa no hay rondas que levantar, asi que el vecino no usa ni continua esta decision. Lo unico en comun es la idea generica de 'un trato', que es demasiado vaga para un recorrido. La correccion no cambio nada que importe aqui (el resumen visible es igual ANTES y AHORA), asi que el desajuste ya venia de antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

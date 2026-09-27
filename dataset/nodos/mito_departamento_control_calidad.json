@@ -1,6 +1,6 @@
 {
   "node_id": "mito_departamento_control_calidad",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "El mito de que la calidad se resuelve delegandola por completo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "No Delegues Toda la Calidad",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-224",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-004: Redefine los roles y la responsabilidad de la calidad en un negocio que ya opera; es gestión operativa, no exploración de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

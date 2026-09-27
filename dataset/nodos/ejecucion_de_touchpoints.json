@@ -18,8 +18,7 @@
   ],
   "nodos_siguientes": [
     "pull_no_push",
-    "overlapping_stages_concurrent_execution",
-    "desarrollo_en_espiral"
+    "overlapping_stages_concurrent_execution"
   ],
   "condiciones_activacion": [
     "Cuando una experiencia debe repetirse de forma consistente a gran escala",
@@ -28,5 +27,20 @@
   "etiqueta_arbol": "Ejecuta cada Punto de Contacto",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-045",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ejecucion_de_touchpoints -> desarrollo_en_espiral",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-13-18): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La ejecucion precisa de touchpoints es implementacion de una experiencia ya disenada; no prepara el ciclo iterativo de construir, probar y revisar, en todo caso iria despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

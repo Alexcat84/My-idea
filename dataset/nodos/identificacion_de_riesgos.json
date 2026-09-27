@@ -1,6 +1,6 @@
 {
   "node_id": "identificacion_de_riesgos",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Identificación de Riesgos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -15,17 +15,12 @@
   ],
   "entregable_esperado": "Lista documentada de riesgos potenciales identificados por proceso, sistema o actividad, lista para su evaluación.",
   "nodos_previos": [
-    "prevencion_de_groupthink_en_evaluacion_de_riesgos",
-    "teoremas_probabilidad",
-    "distribucion_weibull"
+    "prevencion_de_groupthink_en_evaluacion_de_riesgos"
   ],
   "nodos_siguientes": [
     "evaluacion_de_factores_de_riesgo",
-    "caza_las_oportunidades_no_solo_amenazas",
-    "evalua_la_gravedad_sin_autoengano",
     "evaluacion_gestion_riesgos",
-    "evitacion_del_riesgo",
-    "un_dueno_para_cada_riesgo"
+    "evitacion_del_riesgo"
   ],
   "condiciones_activacion": [
     "Al iniciar cualquier proceso de gestión de riesgos en tu negocio.",
@@ -60,6 +55,84 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide formar un equipo multifuncional con conocimiento amplio; consultar por telefono (y revisar solo cada area) es un medio que el libro no menciona.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C049-112"
+    },
+    {
+      "id": "t2-arista-042",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "distribucion_weibull -> identificacion_de_riesgos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-12-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Weibull sirve para predecir la vida util a fatiga; no prepara la identificacion de riesgos de negocio. Si acaso encajaria despues, en la evaluacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-130",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "teoremas_probabilidad -> identificacion_de_riesgos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-12-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los teoremas de probabilidad aplicados a la confiabilidad de calidad no preparan la identificacion cualitativa de riesgos del negocio. Ademas el nodo dice que la probabilidad se evalua despues de identificar, asi que el orden tampoco encaja."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-033",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "identificacion_de_riesgos -> caza_las_oportunidades_no_solo_amenazas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por reglas_gestion_riesgo_gambling."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "t2-puente-034",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "identificacion_de_riesgos -> evalua_la_gravedad_sin_autoengano",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por matriz_probabilidad_impacto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "t2-puente-035",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "identificacion_de_riesgos -> un_dueno_para_cada_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por capacidad_de_respuesta_responsable."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "t2-fase-186",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-014: Razon para B: el nodo supone un negocio que ya opera (sus sistemas, personas y procesos, sus fallas de los ultimos 3 anos) y arranca su gestion de riesgos, que es gestion operativa; los dos coinciden en que no es validacion, pero A lo lleva a planificacion cuando no se disena ningun plan nuevo. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

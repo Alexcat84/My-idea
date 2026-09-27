@@ -1,6 +1,6 @@
 {
   "node_id": "decidir_vender_solo_online_o_tambien_tienda_fisica",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "entrega",
   "titulo_concepto": "Decidir si vendes solo online o también en tienda física",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Elige tus canales de venta",
   "fuentes_internas": [
     "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-086",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-014: Decidir los canales de venta y entrega y mapear su logistica es diseño del modelo operativo, planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -23,8 +23,8 @@
     "ppc_para_venta_de_franquicias"
   ],
   "nodos_siguientes": [
-    "preguntas_clave_decision_franquiciar",
-    "programa_de_referidos_de_franquiciados"
+    "programa_de_referidos_de_franquiciados",
+    "evaluacion_necesidad_franquiciar"
   ],
   "condiciones_activacion": [
     "Cuando dudas de si franquiciar es rentable con pocas unidades vendidas",
@@ -45,5 +45,33 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-161",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "leverage_una_sola_franquicia -> evaluacion_necesidad_franquiciar",
+      "texto_nuevo": "principio_apalancamiento_numero_magico -> evaluacion_necesidad_franquiciar",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a leverage_una_sola_franquicia, deprecado; su superviviente es principio_apalancamiento_numero_magico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-181",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "principio_apalancamiento_numero_magico -> preguntas_clave_decision_franquiciar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a preguntas_clave_decision_franquiciar, deprecado; su superviviente es evaluacion_necesidad_franquiciar."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

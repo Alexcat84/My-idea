@@ -56,7 +56,6 @@
     "embudo_get_keep_grow",
     "embudo_secuencial_de_inversores",
     "evitar_pseudociencia_producto",
-    "financiamiento_amigos_y_familia",
     "hablar_con_clientes_desmontar_supuestos",
     "herramientas_de_activacion_web",
     "identificar_consejo_asesores",
@@ -67,8 +66,7 @@
     "split_testing_experimentos_ab",
     "trabajo_en_lotes_pequenos",
     "regla_50_por_ciento",
-    "traccion_como_metrica_clave",
-    "lead_bullets_no_silver_bullets"
+    "traccion_como_metrica_clave"
   ],
   "condiciones_activacion": [
     "Cuando tienes una hipótesis de negocio sin validar y no sabes cuándo dejar de analizar y empezar a construir.",
@@ -95,6 +93,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon el lector B. La primera parte es fiel (L1066, L1068). La excepcion de anadir una funcion cuando sin ella no se pueda vender no esta en el libro. Busque en todo el libro 'sell', 'buy' y 'pay' junto a 'feature', ademas de 'extra feature' y 'additional feature', y no aparece. No la marco CONTRARIO porque el libro si admite lo que piden los primeros usuarios ('beyond what early adopters demand', L1056; 'beyond what is required by early adopters', L2578), y eso deja espacio a una funcion imprescindible. Lo que el libro no pone es el criterio de poder vender, porque su criterio es aprender. Es una condicion nueva que funciona como norma de decision, no como herramienta ni formato.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C103-059"
+    },
+    {
+      "id": "t2-arista-101",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "producto_minimo_viable -> financiamiento_amigos_y_familia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-03-18): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La financiacion de amigos y familia no usa, continua ni profundiza el MVP. A lo sumo iria antes, para arrancar, y no despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-102",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "producto_minimo_viable -> lead_bullets_no_silver_bullets",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-03-30): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Balas de plomo trata de responder a una amenaza competitiva existencial con trabajo duro. No tiene relacion con construir y probar un MVP."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_de_cohortes",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Análisis de Cohortes para Retención",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -28,12 +28,11 @@
     "estrategia_plataformas_existentes",
     "apertura_llamada_venta_grande",
     "metodologia_spin_selling",
-    "preguntas_situacion",
-    "optimizacion_keep_retencion",
     "hablar_con_clientes_desmontar_supuestos",
     "war_room_pivot_proceed",
     "tres_as_de_metricas",
-    "customer_retention_tactics"
+    "customer_retention_tactics",
+    "keep_customers_strategy"
   ],
   "condiciones_activacion": [
     "Cuando ya tienes al menos varios miles de clientes para poder segmentar con sentido",
@@ -61,5 +60,46 @@
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve",
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-003",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "analisis_de_cohortes -> preguntas_situacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-09-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El análisis de cohortes de retención no prepara las preguntas de situación de una conversación de venta. Son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-138",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "analisis_de_cohortes -> optimizacion_keep_retencion",
+      "texto_nuevo": "analisis_de_cohortes -> keep_customers_strategy",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a optimizacion_keep_retencion, deprecado; su superviviente es keep_customers_strategy."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-012",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F22-014: Exige miles de clientes y busca mejorar la retencion de una base existente; es mejora de lo que ya opera. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -18,8 +18,7 @@
     "modelo_simulacion_cadena_suministro_circular"
   ],
   "nodos_siguientes": [
-    "gestion_pedidos_order_management",
-    "planificacion_cadena_suministro"
+    "gestion_pedidos_order_management"
   ],
   "condiciones_activacion": [
     "Cuando el emprendimiento escala y necesita más de una instalación física",
@@ -43,6 +42,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q009, arbitro). Tiene razon el LECTOR B. La accion general (evitar sobre y sub capacidad) coincide con el libro, pero el parentesis del paso atribuye a la sobrecapacidad 'bajos costos de utilizacion', y el libro dice que trae bajas tasas de utilizacion y MAYORES costos de la cadena. L136 lo confirma: 'capacity costs money, and excess capacity is idle capacity not in use and not generating revenue'. Busque en todo el libro (utilization, excess capacity, too much capacity) y ningun pasaje dice que el exceso de capacidad abarate costos; el paso invierte la consecuencia. El LECTOR A paso por alto esa inversion. La sesion solo restituye las tildes que el texto propuesto traia sin ellas.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q009-001"
+    },
+    {
+      "id": "t2-puente-039",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_instalaciones -> planificacion_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-05, lector y verificador de acuerdo)",
+        "motivo": "La gestion del rol y la capacidad de instalaciones no se continua en el proceso de sourcing por commodities; la relacion es solo de cadena de suministro en general."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ],
   "fuentes_internas": [

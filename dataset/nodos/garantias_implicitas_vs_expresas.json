@@ -17,7 +17,9 @@
   ],
   "nodos_siguientes": [
     "clasificacion_garantia_full_limited",
-    "cumplimiento_magnuson_moss"
+    "cumplimiento_magnuson_moss",
+    "reconocer_mercancia_peligrosa_disfrazada",
+    "definir_que_cuenta_como_dano_antes_de_probar_empaque"
   ],
   "condiciones_activacion": [
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
@@ -27,5 +29,33 @@
   "etiqueta_arbol": "Distingue tus Garantías Legales",
   "fuentes_internas": [
     "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-006",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "garantias_implicitas_vs_expresas -> reconocer_mercancia_peligrosa_disfrazada",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-011",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "garantias_implicitas_vs_expresas -> definir_que_cuenta_como_dano_antes_de_probar_empaque",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

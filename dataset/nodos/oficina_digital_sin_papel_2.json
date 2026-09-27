@@ -17,8 +17,7 @@
     "impresion_inteligente"
   ],
   "nodos_siguientes": [
-    "seleccion_productos_servicios_verdes",
-    "human_in_the_loop_ia"
+    "seleccion_productos_servicios_verdes"
   ],
   "condiciones_activacion": [
     "Si manejas grandes volúmenes de documentación física",
@@ -38,5 +37,20 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-096",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "oficina_digital_sin_papel_2 -> human_in_the_loop_ia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-07-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Digitalizar procesos y reducir papel no prepara el principio de mantener tu juicio al trabajar con IA. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

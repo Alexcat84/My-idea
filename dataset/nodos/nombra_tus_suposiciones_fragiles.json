@@ -1,6 +1,6 @@
 {
   "node_id": "nombra_tus_suposiciones_fragiles",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "validacion",
   "dominio": "risk_management",
   "titulo_concepto": "Las Fuentes de Incertidumbre del Proyecto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
@@ -60,6 +60,19 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra 'cinco suposiciones', ANADIDO de cifra que el libro no fija (habla de enumerar todas); se quita la cifra.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-084"
+    },
+    {
+      "id": "t2-fase-238",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F08-022: Saca a la luz los supuestos que el plan no ha comprobado y diseña una prueba barata para el mas peligroso, que es validar. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

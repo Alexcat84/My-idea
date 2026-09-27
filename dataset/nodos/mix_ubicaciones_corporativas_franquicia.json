@@ -16,16 +16,14 @@
   "entregable_esperado": "Documento de estrategia de ubicacion que define la mezcla entre locales corporativos y franquiciados, el criterio de asignacion de mercados y el uso de ubicaciones corporativas como soporte.",
   "nodos_previos": [
     "estrategia_mercados_geograficos",
-    "preguntas_clave_decision_franquiciar",
     "alternativa_operaciones_propias",
     "franquicia_mas_crecimiento_corporativo_hibrido",
-    "prevenir_franquicias_inadvertidas"
+    "prevenir_franquicias_inadvertidas",
+    "evaluacion_necesidad_franquiciar"
   ],
   "nodos_siguientes": [
     "segmentacion_perfil_franquiciado",
-    "mix_medios_marketing_franquicia",
-    "decision_marca_comun_branding",
-    "evaluacion_necesidad_franquiciar"
+    "mix_medios_marketing_franquicia"
   ],
   "condiciones_activacion": [
     "Cuando ya decidiste franquiciar tu negocio y tambien planeas mantener o abrir locales propios",
@@ -67,6 +65,58 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon A. La primera mitad del paso (analizar capital y plan de salida para elegir la estrategia) sale de L3511. La coletilla, en cambio, pide garantizar recursos dedicados suficientes a los dos canales, y el libro dice otra cosa. Con capital limitado aconseja reservar menos mercados a lo corporativo (L3511). A los franquiciadores pequenos les aconseja poner lo corporativo en segundo plano uno o dos anos (L1278) y concentrar todos los recursos en la franquicia (L3503). Solo pide asegurar recursos suficientes al programa de franquicia, y eso para empresas grandes (L1278). Busque adequate resources, dedicated resources, both channels y cannibaliz: ningun pasaje apoya repartir recursos suficientes a ambos canales. B leyo como generalizacion lo que el libro limita al canal de franquicia.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-048"
+    },
+    {
+      "id": "t2-arista-087",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mix_ubicaciones_corporativas_franquicia -> decision_marca_comun_branding",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-11-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: decidir si construir una marca comun es un paso previo a elegir estructura de expansion, anterior a repartir ubicaciones entre locales propios y franquicias."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-088",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mix_ubicaciones_corporativas_franquicia -> evaluacion_necesidad_franquiciar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-11-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: evaluar si hace falta franquiciar es previo a definir la mezcla de locales corporativos y franquiciados, que ya da por hecho que se franquicia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-160",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_necesidad_franquiciar -> estrategia_ubicacion_franquicia_corporativa",
+      "texto_nuevo": "evaluacion_necesidad_franquiciar -> mix_ubicaciones_corporativas_franquicia",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a estrategia_ubicacion_franquicia_corporativa, deprecado; su superviviente es mix_ubicaciones_corporativas_franquicia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-179",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "preguntas_clave_decision_franquiciar -> mix_ubicaciones_corporativas_franquicia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a preguntas_clave_decision_franquiciar, deprecado; su superviviente es evaluacion_necesidad_franquiciar."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

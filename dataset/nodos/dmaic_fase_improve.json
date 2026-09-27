@@ -18,7 +18,6 @@
     "dmaic_fase_analyze"
   ],
   "nodos_siguientes": [
-    "six_sigma_dmaic",
     "diseno_experimentos_doe_mejora"
   ],
   "condiciones_activacion": [
@@ -27,5 +26,20 @@
   "etiqueta_arbol": "Mejora y Optimiza tu Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-044",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "dmaic_fase_improve -> six_sigma_dmaic",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-05-12): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la fase Improve es una parte de DMAIC; deberia ir despues del modelo general, no prepararlo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

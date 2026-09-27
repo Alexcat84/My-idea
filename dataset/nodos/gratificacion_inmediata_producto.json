@@ -15,9 +15,7 @@
   "nodos_previos": [
     "fase_activate_primera_impresion"
   ],
-  "nodos_siguientes": [
-    "cierre_segun_complejidad_venta"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el producto requiere configuración, carga o activación antes de poder usarse",
     "Cuando existe una demora evitable entre la compra y el disfrute real del producto"
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Elimina Fricciones al Usar",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-068",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gratificacion_inmediata_producto -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Quitar friccion para que el cliente use el producto recibido es posventa y de otro tema; no prepara el analisis del cierre y en todo caso iria despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

@@ -25,7 +25,6 @@
   "entregable_esperado": "Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.",
   "nodos_previos": [
     "limites_de_especificacion_vs_limites_de_control",
-    "estandarizacion_industrial_voluntaria",
     "falacia_meta_numerica_sin_metodo",
     "carta_de_control_shewhart",
     "aim_of_leadership",
@@ -61,7 +60,6 @@
     "importancia_de_la_capacitacion",
     "mal_uso_histograma_vs_carta_control",
     "mejora_continua_del_proceso",
-    "muestreo_con_seguimiento_no_respondientes",
     "sistema_responsabilidad_gerencial_2"
   ],
   "condiciones_activacion": [
@@ -179,6 +177,32 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-009 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "t2-arista-013",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "causas_comunes_vs_especiales -> muestreo_con_seguimiento_no_respondientes",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, arbitro de los pares en conflicto): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Distinguir la variacion comun de la especial con graficos de control no lleva a disenar una encuesta con seguimiento a quienes no responden; solo los une el libro."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-051",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estandarizacion_industrial_voluntaria -> causas_comunes_vs_especiales",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-02-21): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La estandarizacion industrial voluntaria (normas por consenso, intercambiabilidad de piezas) no prepara la distincion entre causas comunes y especiales. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

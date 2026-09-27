@@ -27,7 +27,6 @@
     "fase_adopt",
     "advocacy_customer_journey",
     "estrategia_multicanal_bienvenida",
-    "estrategia_de_ventas",
     "fase_acclimate_experiencia_cliente"
   ],
   "condiciones_activacion": [
@@ -62,6 +61,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro situa el estancamiento entre las fases 4 y 6 y dice que la ruptura ocurre most likely during the Acclimate phase (L4612). Sobre Activate afirma que many organizations do pay attention to this phase (L3082). El paso cambia las fases: pone Affirm y Activate como las mas descuidadas y como el punto de mayor desercion. Busque en todo el libro un pasaje que las senale como el punto de mayor desercion y no lo hay.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C108-030"
+    },
+    {
+      "id": "t2-arista-095",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ocho_fases_experiencia_cliente -> estrategia_de_ventas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-11-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La estrategia de ventas con mapas organizacionales y de acceso es un marco distinto, previo a la adquisicion. No continua el panorama de las ocho fases de la experiencia del cliente; si acaso iria antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

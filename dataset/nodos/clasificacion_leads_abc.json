@@ -19,7 +19,7 @@
   ],
   "entregable_esperado": "Tu cartera de clientes potenciales organizada en A/B/C, con el tiempo y quién se encarga de cada grupo bien definido",
   "nodos_previos": [
-    "elementos_creadores_valor"
+    "compromiso_linea_tiempo_cliente"
   ],
   "nodos_siguientes": [
     "diseno_embudo_ventas_cliente",
@@ -32,5 +32,33 @@
   "etiqueta_arbol": "Prioriza tus Leads en A/B/C",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-046",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "elementos_creadores_valor -> clasificacion_leads_abc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-17-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Clasificar los leads por plazo de cierre para repartir el tiempo de venta no usa ni profundiza los elementos que crean valor en la propuesta. Lo que los une es genérico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-02",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "compromiso_linea_tiempo_cliente -> clasificacion_leads_abc",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-02, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Pedir al prospecto un plazo de compra claro lleva directamente a clasificar los leads por plazo de cierre y a repartir el tiempo de venta según esa clasificación."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

@@ -14,8 +14,7 @@
   "entregable_esperado": "Inventario personal de capital humano, social y financiero relacionado a la oportunidad de negocio",
   "nodos_previos": [
     "decision_cuando_fundar",
-    "consistencia_decisiones_fundador",
-    "contratar_ambicion_correcta"
+    "consistencia_decisiones_fundador"
   ],
   "nodos_siguientes": [
     "sesgo_optimismo_fundador",
@@ -30,5 +29,20 @@
   "etiqueta_arbol": "Mide tus Capacidades como Fundador",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-020",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "contratar_ambicion_correcta -> evaluacion_capacidades_fundador",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-06-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Filtrar gerentes en una entrevista por su tipo de ambicion no lleva a evaluar si las capacidades del propio fundador encajan con la oportunidad. Son temas distintos, y la correccion (motivacion principal frente a unica) es irrelevante aqui."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

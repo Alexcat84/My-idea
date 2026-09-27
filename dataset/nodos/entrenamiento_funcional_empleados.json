@@ -20,8 +20,7 @@
   ],
   "nodos_siguientes": [
     "entrenamiento_gerencial",
-    "framework_good_bad_product_manager",
-    "cultura_flexible_organizacional"
+    "framework_good_bad_product_manager"
   ],
   "condiciones_activacion": [
     "Cuando la empresa crece rápido y contrata nuevos empleados sin procesos claros de onboarding",
@@ -40,5 +39,20 @@
   ],
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-038",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "entrenamiento_funcional_empleados -> cultura_flexible_organizacional",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-03, lector y verificador de acuerdo)",
+        "motivo": "El entrenamiento funcional por puesto no conduce a la cultura flexible de autoridad en picos de riesgo; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

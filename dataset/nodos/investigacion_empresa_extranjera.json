@@ -1,6 +1,6 @@
 {
   "node_id": "investigacion_empresa_extranjera",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "exportacion",
   "titulo_concepto": "Investigación de Clientes Potenciales en el Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Conoce a tu Cliente Extranjero",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-197",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F18-005: Tiene razon el lector A: el nodo se activa al recibir una consulta u orden de un comprador y entrega un informe de solvencia antes de cerrar la transaccion. Es diligencia operativa de un negocio exportador que ya vende, y el 'validar' del texto se refiere a la contraparte, no a probar la idea con el mercado. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

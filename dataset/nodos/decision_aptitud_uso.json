@@ -21,8 +21,7 @@
   "nodos_siguientes": [
     "decision_comunicacion",
     "disposicion_producto_no_conforme",
-    "accion_correctiva_diagnostico_remedio",
-    "revisar_necesidades_de_empaque"
+    "accion_correctiva"
   ],
   "condiciones_activacion": [
     "Cuando un producto no cumple especificaciones pero podría seguir siendo funcionalmente útil.",
@@ -57,6 +56,45 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro reparte la decisión al revés que el paso. Cuando hay poco dinero en juego, la decisión va a un especialista, al responsable de calidad o a un comité. Cuando hay mucho, la toma un equipo de la alta dirección. El paso invierte ese reparto: el directivo resuelve los casos menores y los de alto impacto van a un especialista. El capítulo 6 (L8223) solo respalda en parte reservar las decisiones clave a un órgano formal y delegar el resto; nunca manda los casos de alto impacto a un especialista. Lo de no buscar culpables sí lo respalda el libro (L8242). Redaccion en la voz de la casa por la baranda residuo_corporativo (scripts/censo_duplicacion.py): el comite y el equipo de la alta direccion del libro pasan a quien lleva la calidad y a ti con tus personas clave, con la misma logica de delegar segun el dinero en juego.",
       "indice": 5,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C043-100"
+    },
+    {
+      "id": "t2-arista-030",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decision_aptitud_uso -> revisar_necesidades_de_empaque",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-18-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Revisar necesidades de empaque antes de comprar materiales no tiene relacion con la decision de aptitud para el uso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-137",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "decision_aptitud_para_uso -> accion_correctiva",
+      "texto_nuevo": "decision_aptitud_uso -> accion_correctiva",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a decision_aptitud_para_uso, deprecado; su superviviente es decision_aptitud_uso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-148",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "decision_aptitud_uso -> accion_correctiva_diagnostico_remedio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a accion_correctiva_diagnostico_remedio, deprecado; su superviviente es accion_correctiva."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

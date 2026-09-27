@@ -16,8 +16,7 @@
     "adopcion_liderazgo"
   ],
   "nodos_siguientes": [
-    "eliminar_barreras_departamentales",
-    "deja_de_ignorar_el_riesgo"
+    "eliminar_barreras_departamentales"
   ],
   "condiciones_activacion": [
     "Cuando las personas ocultan errores por temor a represalias",
@@ -26,5 +25,20 @@
   "etiqueta_arbol": "Elimina el Miedo Interno",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-031",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "eliminar_miedo -> deja_de_ignorar_el_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por sesgo_optimismo_fundador."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

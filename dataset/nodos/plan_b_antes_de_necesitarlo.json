@@ -17,7 +17,8 @@
     "el_riesgo_eres_tu",
     "guarda_un_colchon_de_tiempo_y_dinero",
     "transfiere_lo_que_no_debes_cargar",
-    "evaluacion_gestion_riesgos"
+    "evaluacion_gestion_riesgos",
+    "plan_de_contingencia_b"
   ],
   "nodos_siguientes": [
     "cuando_el_riesgo_se_vuelve_realidad",
@@ -31,5 +32,20 @@
   "etiqueta_arbol": "Plan B Antes de Necesitarlo",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-018",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> plan_b_antes_de_necesitarlo",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

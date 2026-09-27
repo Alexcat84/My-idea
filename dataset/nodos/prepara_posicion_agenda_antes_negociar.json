@@ -16,12 +16,10 @@
   "entregable_esperado": "Una lista priorizada de objetivos de negociacion junto con una agenda escrita lista para enviar al proveedor.",
   "nodos_previos": [
     "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
-    "domina_lo_que_compras",
-    "fase_assess"
+    "domina_lo_que_compras"
   ],
   "nodos_siguientes": [
-    "ten_un_checklist_de_clausulas_de_contrato",
-    "clasifica_tu_inventario"
+    "ten_un_checklist_de_clausulas_de_contrato"
   ],
   "condiciones_activacion": [
     "Tienes una reunion agendada con un proveedor para negociar precio o condiciones y no sabes por donde empezar.",
@@ -47,6 +45,32 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, un dia antes es el minimo para publicar la agenda definitiva, despues de que el proveedor la haya revisado. Mandarla solo un dia antes altera el plazo y se salta esa revision.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-079"
+    },
+    {
+      "id": "t2-arista-057",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "fase_assess -> prepara_posicion_agenda_antes_negociar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-15-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La fase Assess describe al cliente potencial evaluandote a ti como vendedor. Este nodo te pone como comprador que negocia con un proveedor, asi que la perspectiva es otra y no lo prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-100",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prepara_posicion_agenda_antes_negociar -> clasifica_tu_inventario",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-09-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el nodo pide clasificar el inventario y fijar metas antes de decidir cuanto comprar; negociar con el proveedor viene despues, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

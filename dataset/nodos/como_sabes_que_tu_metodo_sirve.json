@@ -16,7 +16,8 @@
     "escepticismo_sano_ante_el_riesgo",
     "cuanto_sabes_y_cuanto_solo_crees",
     "la_matriz_de_colores_te_engana",
-    "enfoque_situacional_vs_personal"
+    "enfoque_situacional_vs_personal",
+    "aprendizaje_validado"
   ],
   "nodos_siguientes": [
     "tu_gestion_de_riesgo_funciona",
@@ -30,5 +31,20 @@
   "etiqueta_arbol": "¿Cómo Sabes Que tu Método Sirve?",
   "fuentes_internas": [
     "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-014",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "aprendizaje_validado -> como_sabes_que_tu_metodo_sirve",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

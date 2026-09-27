@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_valor",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Análisis de Valor (Value Analysis)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Evalúa el Valor de Cada Función",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-017",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F18-011: Comparar diseños alternativos de producto según su costo por necesidad y repartir recursos es diseño y planificación, no prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

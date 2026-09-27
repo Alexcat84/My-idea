@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Grilla competitiva y mapa de mercado con datos de tráfico y posicionamiento de competidores",
   "nodos_previos": [
-    "ganar_comprension_del_cliente",
-    "analisis_de_sensibilidad_riesgo"
+    "ganar_comprension_del_cliente"
   ],
   "nodos_siguientes": [
     "capturar_conocimiento_de_mercado",
@@ -59,6 +58,19 @@
       },
       "decision": "A15, decision del fundador, dato repetido en el nodo: el resumen repetia AdRoll y Adbeat. Se quitan los nombres; el resto no cambia.",
       "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha A15"
+    },
+    {
+      "id": "t2-arista-004",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "analisis_de_sensibilidad_riesgo -> analisis_trafico_competitivo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-22-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El analisis de sensibilidad financiera y el ratio riesgo-retorno de un proyecto no preparan el analisis del trafico web de los competidores; no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

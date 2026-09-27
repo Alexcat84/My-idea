@@ -23,13 +23,13 @@ integrar todavia.
 | 6 | Aristas por lectura | A MEDIAS (el mandato lo daba por VERIFICADO; ver la fila) |
 | 7 | Indice semantico | A MEDIAS (el mandato lo daba por VERIFICADO; ver la fila) |
 | 8 | Resumenes y entregables | A MEDIAS |
-| 9 | Los 61 puentes al nucleo sin declarar | A MEDIAS |
+| 9 | Los 61 puentes al nucleo sin declarar | VERIFICADO (tanda 2: aprobados igual a aristas en los 9 mundos, ley del ancla en 2, guarda) |
 | 10 | Vigencia de contenido legal, normativo, numerico y de enlaces | A MEDIAS (tanda 1: aviso en 305 nodos, enlaces comprobados, 21 plazos verificados; el resto, campania posterior) |
 | 11 | Jurisdiccion (nodos propios de un pais) | VERIFICADO (tanda 1: 237 nodos con clase, aviso en la tarjeta, guarda) |
 | 12 | Coherencia interna de cada nodo | A MEDIAS (tanda 1: los 25 corregidos contra su libro; residuo estimado sin localizar) |
-| 13 | Aristas rancias tras las correcciones | PENDIENTE (medido: 1 por correccion, 149 de antes) |
-| 14 | Titulos y condiciones de activacion contra su contenido | PENDIENTE (muestra: 0,0 y 0,3 por ciento) |
-| 15 | Fase y dominio de cada nodo | PENDIENTE (muestra: fase 12,3 por ciento, dominio 0,7) |
+| 13 | Aristas rancias tras las correcciones | VERIFICADO (tanda 2: las 136 rancias fuera, 54 referencias a deprecados recableadas, ningun nodo sin camino) |
+| 14 | Titulos y condiciones de activacion contra su contenido | A MEDIAS (muestra: 0,0 y 0,3 por ciento; el caso hallado, corregido; sin pasada completa) |
+| 15 | Fase y dominio de cada nodo | A MEDIAS (tanda 2: fase leida en los 853 de validacion e ideacion, 326 corregidas; planificacion y ejecucion sin pasada; 1 dominio corregido, 1 retenido para el fundador) |
 | 16 | Ortografia y voz de la casa | PENDIENTE |
 | 17 | Mundo 11 contra el catalogo (puerta semantica en la integracion) | PENDIENTE |
 
@@ -320,4 +320,54 @@ titulo respalda": ya no hay "detalle del nodo junto a su fuente" (esa vista nunc
    llevan ninguna clave interna, instruccion de la IA, texto de nodo ni titulo de libro.
 3. **Repositorios a privado:** ninguna sesion en la nube esta a mitad de un trabajo (la unica en la nube, "Proyecto idiomas
    My Idea", esta ociosa).
+
+---
+
+## TANDA 2 (decision del fundador del 26 sep 2026): ARISTAS, FASE Y PUENTES. CERRADA
+
+Todo por correccion declarada en el propio nodo, Gate 0 (alcanzabilidad 100 por ciento, 3.169 de 3.169),
+`engine/run_all_tests.py` (32 de 32), vitest (2.017) y tsc en verde. Tandas en `docs/saneamiento/tandas/`, instrumentos en
+`docs/saneamiento/instrumentos/`, resultados por nodo en `docs/saneamiento/resultados/` (E, F, P). Las aristas se corrigen
+con `scripts/saneamiento/aplicar_aristas.py` (nuevo: QUITAR, TEJER o RECABLEAR, en las dos vistas de la arista y declarado
+en los dos nodos); fase, dominio y coherencia con los veredictos nuevos FASE, DOMINIO y COHERENCIA de
+`aplicar_correcciones.py`, que declaran su instrumento y su evidencia.
+
+7. **Aristas** (`saneamiento-t2-aristas`, 190 operaciones en 241 nodos): salen la arista rancia por la correccion y las
+   rancias de antes de la pasada R (135 pares sin disputa; de los 4 pares juzgados vigentes desde un extremo y rancios
+   desde el otro, un arbitro dejo 3 y quito 1: 136 en total); las **54 referencias a deprecados** pasan a su
+   superviviente. **Ningun nodo se queda sin camino:** 18 de esas aristas eran la unica entrada de 27 nodos; la pasada E
+   (dos lectores ciegos entre 8 candidatos semanticos alcanzables, arbitro en 1) dio a cada uno un predecesor correcto
+   (`saneamiento-t2-entradas`; uno sobre una lista ampliada de 20, y uno rehecho porque formaba un par de ida y vuelta).
+8. **Fase** (`saneamiento-t2-fase`): pasada F sobre los **853 nodos** marcados validacion o ideacion, con la vara
+   calibrada de la pasada M; 29 lotes, trampas 56 de 58 (lector) y 32 de 34 (verificador ciego), 41 desacuerdos al
+   arbitro. **326 con la fase mal (38 por ciento)**, todas confirmadas por dos lectores o por el arbitro: validacion a
+   ejecucion 136, ideacion a planificacion 72, validacion a planificacion 63, ideacion a ejecucion 48, y 7 entre ideacion
+   y validacion. Hoy, vivos por fase: ejecucion 1.517, planificacion 1.118, ideacion 282, validacion 252. Las 20 puertas
+   siguen 5 por fase (la unica semilla corregida, `decision_fundador_solo_vs_equipo`, ya estaba curada entre las de
+   planificacion). Las 13 semillas de mundo con la fase corregida se alinearon en `packs_entry_seeds.json`, con prueba
+   (`semillasDePack.test.ts`). Los 2 fallos de trampa: una trampa de fase bien puesta que los dos lectores marcaron
+   (`evitar_uso_complacencia`, planificacion, fuera del universo) y una de fase mal que el lector no vio.
+9. **Puentes** (`saneamiento-t2-puentes`, 71 operaciones; ficheros `packs/*/metadata/bridges_aprobados.json`):
+   - **ley del ancla en 2** (`integrar_packs.py` toleraba 3): `reglas_gestion_riesgo_gambling` pierde su tercer puente;
+   - **21 puentes aprobados tejidos** y 16 aristas viejas de mundo a mundo que el reanclaje reemplazaba, retiradas;
+   - **7 aprobados que la pasada R juzgo rancios** (por ejemplo `sesgo_optimismo_fundador` hacia
+     `prospecto_emprendedor_flaming`) pasan a `rechazados` con el motivo de R, en vez de volver a tejerse;
+   - **las 61 aristas del nucleo a un mundo sin declarar**, leidas en la pasada P (lector con trampas, verificador ciego y
+     arbitro; trampas 5 de 6 y 5 de 6): **21 PUENTE** se declaran en su fichero (con su score y su lectura), **40
+     RETIRAR** salen (6 ya las habia quitado la pasada R);
+   - **guarda** `engine/test_puentes_tejidos.py`: en cada mundo, aprobados igual a aristas vivas del nucleo al mundo, y
+     ley del ancla; en rojo sobre main antes de la tanda (84 fallos), en verde despues (125 puentes en 9 mundos).
+   - **3 casos de la muestra M:** `manufactura_celular` pasa de environmental a quality; las 2 condiciones de
+     `regalos_estrategicos_personalizados` que contradecian el contenido se reescriben desde sus pasos.
+
+**Para el fundador:**
+- **Retenido:** `colaboracion_transporte_ctm` (la muestra M lo ve de entrega, no del nucleo). No se movio: es ancla de un
+  puente aprobado a quality, 4 nodos del nucleo entran por el, y sacarlo del nucleo lo cierra tras el mundo de entrega.
+  Es decision de producto: moverlo (y declarar sus puentes) o dejarlo en el nucleo.
+- **Aviso:** el puente aprobado `gestion_de_conflictos_cofundadores` hacia `enfoque_situacional_vs_personal`
+  (health_safety) fue la trampa que los dos lectores de la pasada P juzgaron RETIRAR; se queda como esta aprobado, pero la
+  lectura dice que es debil.
+
+**Textos derivados:** las 2 condiciones nuevas entran al vector: `regalos_estrategicos_personalizados` se suma a
+`nodos_a_reembeber.txt` (252). Fase, dominio y aristas no cambian vectores ni preguntas en cache.
 

@@ -23,7 +23,6 @@
     "conditions_precedent_financing"
   ],
   "nodos_siguientes": [
-    "proceso_decision_vc",
     "term_sheet_negociacion",
     "clausula_no_shop_adquisicion"
   ],
@@ -78,6 +77,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P024, arbitro). Tiene razon B. Es cierto que el no-shop es vinculante desde la firma. Pero el paso dice que eso es 'a diferencia del resto de sus condiciones', y el libro dice lo contrario: gastos legales y ley aplicable tambien son vinculantes al firmar (L1730, L1736). L2052 lo pone 'part of the few terms that are binding'. Busque con Grep 'binding' en todo el libro y ningun pasaje presenta al no-shop como la unica clausula vinculante. En L4947 y L5043 tambien aparece acompanado de otras. El paso invierte un hecho que el texto sostiene. Ademas, el lector podria creer que la clausula de gastos legales no lo obliga.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P024-064"
+    },
+    {
+      "id": "t2-arista-092",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "no_shop_agreement -> proceso_decision_vc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-06-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el proceso de decisión del VC (presentaciones, due diligence informal, identificar al socio que decide) ocurre antes del term sheet. La cláusula de exclusividad se firma con el term sheet, así que ese nodo la prepara y no la sigue."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -19,7 +19,6 @@
     "ser_buen_jig",
     "abrazar_la_incomodidad",
     "reglas_brainstorming",
-    "search_for_business_model",
     "diseno_como_plataforma_expansiva",
     "fracaso_como_aprendizaje_startup",
     "ficcion_especulativa_como_metodo",
@@ -33,5 +32,20 @@
   "etiqueta_arbol": "Busca la Armonía en tu Diseño",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-008",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "buscar_armonia_diseno -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-37): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La armonia como criterio de diseno no tiene relacion con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

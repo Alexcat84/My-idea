@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Esquema de incentivos y sanciones alineado con principios de refuerzo conductual",
   "nodos_previos": [
-    "cultura_justa",
-    "deteccion_efecto_hawthorne"
+    "cultura_justa"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -23,5 +22,20 @@
   "etiqueta_arbol": "Recompensa Rápido, Castiga con Cuidado",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-049",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "deteccion_efecto_hawthorne -> efectos_recompensa_castigo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-16, lector y verificador de acuerdo)",
+        "motivo": "Aislar el efecto Hawthorne al medir un entrenamiento es otro tema que recompensas y castigos para la conducta segura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

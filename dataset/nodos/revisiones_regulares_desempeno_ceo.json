@@ -17,8 +17,7 @@
     "manejo_de_quejas_entre_ejecutivos"
   ],
   "nodos_siguientes": [
-    "founder_ceo_succession_process",
-    "comunicacion_honesta_en_crisis_al_equipo"
+    "founder_ceo_succession_process"
   ],
   "condiciones_activacion": [
     "Una vez que los inversores han entrado al consejo de administración.",
@@ -42,6 +41,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide revisiones regulares, pero no fija su frecuencia. 'Trimestral o semestral' no aparece.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-068"
+    },
+    {
+      "id": "t2-arista-115",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "revisiones_regulares_desempeno_ceo -> comunicacion_honesta_en_crisis_al_equipo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-02-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las revisiones del CEO por el consejo no llevan de forma natural a la comunicacion del CEO con su equipo en una crisis. Lo unico en comun es el rol del CEO. La correccion solo convirtio el calendario en sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

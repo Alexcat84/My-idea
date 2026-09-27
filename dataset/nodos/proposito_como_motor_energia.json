@@ -1,6 +1,6 @@
 {
   "node_id": "proposito_como_motor_energia",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "El Propósito como Motor de Energía Mental",
   "fuente": "The Art of Thought - Wallas, Graham",
@@ -19,8 +19,7 @@
   "nodos_siguientes": [
     "lienzo_modelo_negocio",
     "vision_estrategia_producto_pivote",
-    "aprender_desde_el_amor_empatia",
-    "restricciones_extremas_como_innovacion"
+    "aprender_desde_el_amor_empatia"
   ],
   "condiciones_activacion": [
     "Cuando el fundador experimenta agotamiento o pérdida de motivación en fases largas de ejecución",
@@ -60,6 +59,32 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-017 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-106",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proposito_como_motor_energia -> restricciones_extremas_como_innovacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-16-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El propósito como motor de energía mental (Wallas, Bentham) no prepara la innovación bajo restricciones económicas extremas (Aravind, IDE). Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-262",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F11-013: Tiene razon el lector B: el nodo sirve para sostener la energia del fundador en fases largas de ejecucion, vinculando cada tarea operativa diaria y el roadmap con el proposito y revisandolo con feedback de usuarios y resultados, asi que describe operar un proyecto en marcha y no explorar la idea. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

@@ -18,7 +18,7 @@
     "medicion_calidad",
     "medicion_servicios",
     "buyer_rating_system",
-    "costo_de_la_calidad_coq"
+    "costo_de_mala_calidad_copq"
   ],
   "nodos_siguientes": [
     "conciencia_calidad",
@@ -64,6 +64,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-143",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "costo_de_la_calidad_coq -> costo_de_calidad_3",
+      "texto_nuevo": "costo_de_mala_calidad_copq -> costo_de_calidad_3",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a costo_de_la_calidad_coq, deprecado; su superviviente es costo_de_mala_calidad_copq."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

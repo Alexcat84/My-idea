@@ -18,18 +18,13 @@
   "entregable_esperado": "Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.",
   "nodos_previos": [
     "lienzo_modelo_negocio",
-    "arenas_estrategicas",
     "analisis_y_sintesis",
-    "diseno_consecuencias_no_intencionadas",
-    "ficcion_especulativa_como_metodo",
-    "tecnica_cambio_de_perspectiva_escala",
     "vision_estrategia_producto_pivote",
-    "division_trabajo_humano_ia",
-    "buscar_armonia_diseno",
     "modelo_tradicional_introduccion_producto",
     "contabilidad_innovacion_pivote",
     "estilos_pensamiento_intuitivo_vs_logico",
-    "value_proposition_canvas"
+    "value_proposition_canvas",
+    "seleccion_arenas_estrategicas"
   ],
   "nodos_siguientes": [
     "customer_development_process",
@@ -40,12 +35,7 @@
     "fracaso_como_aprendizaje_startup",
     "aprendizaje_validado",
     "emprendimiento_como_disciplina_de_gestion",
-    "marcos_historicos_comunidades_startup",
-    "antigoals_framework",
-    "diseno_sistemico_partes_interesadas",
     "encuadre_desafio_diseno",
-    "mapeo_capas_diseno",
-    "pensamiento_espacial_mapeo",
     "embudo_secuencial_de_inversores",
     "value_proposition_startup",
     "waterfall_vs_agile_development",
@@ -54,8 +44,6 @@
     "eliminar_desperdicio_organizacional",
     "evitar_pseudociencia_producto",
     "seleccion_estructura_corporativa",
-    "hr_como_control_de_calidad_gerencial",
-    "minimizar_politica_organizacional",
     "vision_estrategia_producto_pivote",
     "gestion_intraemprendedora_experimentacion",
     "desarrollo_de_clientes_customer_development",
@@ -126,6 +114,175 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro usa el Business Model Canvas como marcador de hipotesis. El Value Proposition Canvas no aparece en ninguna parte del libro (busque value proposition canvas y proposition canvas).",
       "indice": 7,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-083"
+    },
+    {
+      "id": "t2-arista-008",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "buscar_armonia_diseno -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-37): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La armonia como criterio de diseno no tiene relacion con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-040",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diseno_consecuencias_no_intencionadas -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-14-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Imaginar consecuencias no intencionadas antes de escalar una solucion no desemboca en la busqueda inicial de un modelo de negocio. Esa busqueda es una etapa anterior y de otro tema, asi que no es un paso natural a continuacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-043",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "division_trabajo_humano_ia -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-19-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La busqueda de un modelo de negocio en un startup no continua la division de tareas entre humanos e IA. Los nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-058",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ficcion_especulativa_como_metodo -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-33): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La ficcion especulativa sobre tecnologias futuras no prepara la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-117",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> antigoals_framework",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El marco de antimetas de Tragic Design no tiene que ver con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-118",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> diseno_sistemico_partes_interesadas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-11): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Disenar sistemas a gran escala (biomas, ecosistemas) no se relaciona con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-119",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> hr_como_control_de_calidad_gerencial",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-22-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Buscar un modelo de negocio en una startup temprana no prepara usar el area de personas como control de calidad de los gerentes; no comparten tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-120",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> mapeo_capas_diseno",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El mapeo de capas de diseno no es un paso natural tras la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-121",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> marcos_historicos_comunidades_startup",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los marcos teoricos sobre concentracion geografica de la innovacion no son un paso natural tras la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-122",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> minimizar_politica_organizacional",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Minimizar la politica corporativa (aumentos y promociones) no tiene relacion con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-123",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> pensamiento_espacial_mapeo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-13-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La busqueda de un modelo de negocio no prepara el mapeo como tecnica de pensamiento espacial. La relacion es muy generica y no tiene continuidad real."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-129",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "tecnica_cambio_de_perspectiva_escala -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-34): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La tecnica de zoom out/zoom in no tiene relacion con la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-186",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "arenas_estrategicas -> search_for_business_model",
+      "texto_nuevo": "seleccion_arenas_estrategicas -> search_for_business_model",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a arenas_estrategicas, deprecado; su superviviente es seleccion_arenas_estrategicas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

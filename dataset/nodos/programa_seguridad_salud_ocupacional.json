@@ -26,8 +26,8 @@
     "autoinspeccion_lugar_de_trabajo",
     "coordinacion_sitios_multiempleador",
     "registro_reporte_lesiones",
-    "evaluacion_periodica_programa_seguridad",
-    "recursos_externos_seguridad"
+    "recursos_externos_seguridad",
+    "evaluacion_mejora_programa"
   ],
   "condiciones_activacion": [
     "Cuando no cuentas con un programa formal de seguridad y salud",
@@ -48,5 +48,33 @@
   "fuentes_internas": [
     "OSHA3885",
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-158",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "programa_seguridad_salud_ocupacional_2 -> evaluacion_mejora_programa",
+      "texto_nuevo": "programa_seguridad_salud_ocupacional -> evaluacion_mejora_programa",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a programa_seguridad_salud_ocupacional_2, deprecado; su superviviente es programa_seguridad_salud_ocupacional."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-182",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "programa_seguridad_salud_ocupacional -> evaluacion_periodica_programa_seguridad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a evaluacion_periodica_programa_seguridad, deprecado; su superviviente es evaluacion_mejora_programa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

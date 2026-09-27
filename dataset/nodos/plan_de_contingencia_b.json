@@ -19,7 +19,9 @@
   "nodos_siguientes": [
     "negociacion_con_plazos_artificiales",
     "pivote_estrategico",
-    "necesidad_vs_deseo_en_ma"
+    "necesidad_vs_deseo_en_ma",
+    "plan_de_desastre_y_recuperacion",
+    "plan_b_antes_de_necesitarlo"
   ],
   "condiciones_activacion": [
     "Cuando el modelo de negocio actual muestra señales claras de inviabilidad futura",
@@ -43,6 +45,32 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-011 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-puente-015",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> plan_de_desastre_y_recuperacion",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-018",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> plan_b_antes_de_necesitarlo",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
     }
   ],
   "fuentes_internas": [

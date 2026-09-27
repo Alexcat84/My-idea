@@ -1,6 +1,6 @@
 {
   "node_id": "realizar_analisis_ciclo_vida",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Pasos de Aplicación",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Aplica los Pasos del Análisis",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-268",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F08-012: Mide los impactos ambientales de un producto existente a lo largo de su ciclo de vida; es un analisis tecnico de producto, no una prueba con clientes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

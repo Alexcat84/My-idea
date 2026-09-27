@@ -19,8 +19,7 @@
   ],
   "nodos_siguientes": [
     "red_flags_proyectos_en_problemas",
-    "aceleracion_de_gates",
-    "regla_simplificada_tolerancia_errores"
+    "aceleracion_de_gates"
   ],
   "condiciones_activacion": [
     "Si tus reuniones de decisión (gate) son ineficientes, se llenan de política o generan retrasos.",
@@ -44,6 +43,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. Es el unico pasaje del libro con este plazo (busque three/3 days prior, in advance, days before). El libro da unos tres dias habiles como plazo aproximado; el paso lo convierte en un minimo de al menos 3 dias sin decir habiles, que pueden ser menos de tres dias laborables (por ejemplo, enviar el viernes para una reunion el lunes). Por la vara, un plazo cambiado es CONTRARIO aunque la accion general sea correcta. Lo del formato es fiel en sustancia (formato estandar para comparar proyectos).",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-076"
+    },
+    {
+      "id": "t2-arista-108",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "protocolo_reuniones_gate -> regla_simplificada_tolerancia_errores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-04-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las reglas de las reuniones de decisión (gate) no tienen que ver con el sistema de dos reglas para el análisis de causa raíz de errores. La corrección solo tocó el plazo de envío de los entregables."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

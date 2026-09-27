@@ -14,7 +14,6 @@
   "entregable_esperado": "Plan de desarrollo cultural que incluya mecanismos de transición de autoridad y fomento de diversidad de equipos",
   "nodos_previos": [
     "organizaciones_alta_confiabilidad_hro",
-    "entrenamiento_funcional_empleados",
     "programacion_cultura_empresarial"
   ],
   "nodos_siguientes": [
@@ -27,5 +26,20 @@
   "etiqueta_arbol": "Cambia de Modo Según Demanda",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-038",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "entrenamiento_funcional_empleados -> cultura_flexible_organizacional",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-03, lector y verificador de acuerdo)",
+        "motivo": "El entrenamiento funcional por puesto no conduce a la cultura flexible de autoridad en picos de riesgo; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

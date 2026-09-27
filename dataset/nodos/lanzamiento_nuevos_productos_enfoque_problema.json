@@ -19,7 +19,6 @@
     "producto_unico_superior"
   ],
   "nodos_siguientes": [
-    "determinar_tipo_de_mercado",
     "prevencion_objeciones_vs_manejo",
     "modelo_spin_preguntas"
   ],
@@ -41,5 +40,20 @@
   ],
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-078",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "lanzamiento_nuevos_productos_enfoque_problema -> determinar_tipo_de_mercado",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Evitar el enfoque bells-and-whistles en la conversacion de venta (Huthwaite) no prepara la determinacion del tipo de mercado; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

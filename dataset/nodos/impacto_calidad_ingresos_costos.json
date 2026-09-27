@@ -1,6 +1,6 @@
 {
   "node_id": "impacto_calidad_ingresos_costos",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Impacto de la Calidad en Ingresos y Costos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -16,7 +16,7 @@
   "entregable_esperado": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retencion de clientes",
   "nodos_previos": [
     "costo_de_mala_calidad_copq",
-    "definicion_fitness_for_purpose"
+    "definicion_calidad_fitness_for_purpose"
   ],
   "nodos_siguientes": [
     "cadena_reaccion_calidad_productividad",
@@ -39,5 +39,46 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-154",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_fitness_for_purpose -> impacto_calidad_en_ingresos",
+      "texto_nuevo": "definicion_calidad_fitness_for_purpose -> impacto_calidad_ingresos_costos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a impacto_calidad_en_ingresos, deprecado; su superviviente es impacto_calidad_ingresos_costos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-165",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_fitness_for_purpose -> impacto_calidad_ingresos_costos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a definicion_fitness_for_purpose, deprecado; su superviviente es definicion_calidad_fitness_for_purpose."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-190",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-020: Razon para B, aunque planificacion era defendible: casi todos los pasos analizan datos de un negocio que ya vende (percepcion de clientes, ventas frente a competidores, recompra, precio) y monitorean indicadores de ingresos ligados a mejoras de calidad, o sea mejorar y controlar lo que ya funciona; los dos coinciden en que no es validacion. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

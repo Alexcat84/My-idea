@@ -1,6 +1,6 @@
 {
   "node_id": "accidentes_organizacionales_por_mantenimiento",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Casos Históricos de Accidentes Organizacionales Causados por Mantenimiento",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Aprende de Desastres por Mantenimiento",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-003",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F14-017: Usar casos historicos para capacitar en seguridad de mantenimiento es gestion operativa de riesgos de una organizacion en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

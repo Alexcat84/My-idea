@@ -1,6 +1,6 @@
 {
   "node_id": "burocracia_de_seguridad",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Riesgos de la Burocracia de Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -42,6 +42,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Métrica o herramienta añadida: el libro no menciona indicadores adelantados ni ninguna proporción entre adelantados y rezagados. Solo dice que las burocracias de seguridad se organizan en torno a indicadores rezagados de poco valor predictivo (Dekker L3111). Se reescribe como sugerencia de My Idea. El resumen_teorico solo habla de los indicadores retrasados, que sí están en el libro, así que no repite el dato. El entregable tampoco.",
       "indice": 3,
       "auditoria": "tramo1 DK1-073"
+    },
+    {
+      "id": "t2-fase-035",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F26-005: Es una auditoria de la burocracia de seguridad de una organizacion que ya opera, no una prueba con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

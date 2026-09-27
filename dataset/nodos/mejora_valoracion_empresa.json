@@ -1,6 +1,6 @@
 {
   "node_id": "mejora_valoracion_empresa",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "Mejora en la Valoración por Modelo de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -22,5 +22,20 @@
   "etiqueta_arbol": "Aumenta el Valor de tu Empresa",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-220",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-027: Analizar la valoracion bajo modelo de franquicia como estrategia de salida o de inversion es planificacion del modelo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

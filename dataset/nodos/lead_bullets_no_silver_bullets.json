@@ -15,7 +15,6 @@
   "entregable_esperado": "Plan de acción centrado en resolver la debilidad competitiva central del producto, sin desviarse hacia soluciones tangenciales.",
   "nodos_previos": [
     "analisis_competitivo",
-    "producto_minimo_viable",
     "deteccion_de_mentiras_organizacionales"
   ],
   "nodos_siguientes": [
@@ -39,5 +38,20 @@
   ],
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-102",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "producto_minimo_viable -> lead_bullets_no_silver_bullets",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-03-30): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Balas de plomo trata de responder a una amenaza competitiva existencial con trabajo duro. No tiene relacion con construir y probar un MVP."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

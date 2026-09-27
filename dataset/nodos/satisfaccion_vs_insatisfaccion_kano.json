@@ -1,6 +1,6 @@
 {
   "node_id": "satisfaccion_vs_insatisfaccion_kano",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Satisfacción vs. Insatisfacción no son opuestos (Modelo Kano aplicado)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -38,6 +38,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-015 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-fase-288",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-003: Rediseña las encuestas de satisfaccion que ya se aplican a clientes de un negocio en marcha, es mejora de la medicion operativa y no exploracion de la idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

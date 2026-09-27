@@ -15,14 +15,27 @@
   "nodos_previos": [
     "hr_como_control_de_calidad_gerencial"
   ],
-  "nodos_siguientes": [
-    "rol_alta_direccion_calidad"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se va a contratar al primer líder de RRHH de la empresa"
   ],
   "etiqueta_arbol": "Busca al Líder de RRHH Ideal",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-053",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "requisitos_lider_de_rrhh -> rol_alta_direccion_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-01, lector y verificador de acuerdo)",
+        "motivo": "El perfil del jefe de RRHH y el rol personal del lider en la calidad solo comparten la palabra liderazgo; no es la continuacion del tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

@@ -13,10 +13,7 @@
   ],
   "entregable_esperado": "Análisis cultural de la organización con identificación de riesgos de resistencia al cambio y plan de gestión del aspecto social de la transformación",
   "nodos_previos": [
-    "transformacion_calidad_compromiso_alta_direccion_japon",
-    "comunidad_como_activo_estrategico",
-    "liderazgo_basado_en_valores_mas_alla_del_deber",
-    "reconstruccion_significado_trabajo"
+    "transformacion_calidad_compromiso_alta_direccion_japon"
   ],
   "nodos_siguientes": [
     "modelo_transformacion_juran",
@@ -48,6 +45,45 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-002 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-puente-040",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "liderazgo_basado_en_valores_mas_alla_del_deber -> cultura_organizacional_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-07, lector y verificador de acuerdo)",
+        "motivo": "Asumir costos por valores ante una crisis personal no se continua en como la cultura condiciona la adopcion de herramientas de calidad; solo comparten la palabra cultura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-puente-055",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunidad_como_activo_estrategico -> cultura_organizacional_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-05, lector y verificador de acuerdo)",
+        "motivo": "La comunidad de usuarios como activo y la cultura organizacional frente a la calidad son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-puente-063",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reconstruccion_significado_trabajo -> cultura_organizacional_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-11, arbitro)",
+        "motivo": "Tiene razon B: el nucleo trata de rituales convertidos en ceremonia vacia por la IA y del sentido del trabajo humano, mientras el nodo de calidad trata de la legitimidad de herramientas como las cartas de control ante supervisores; solo comparten la idea general de cultura y cambio, y quien llega desde el nucleo se desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ],
   "fuentes_internas": [

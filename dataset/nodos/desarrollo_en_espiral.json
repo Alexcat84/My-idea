@@ -29,7 +29,6 @@
     "desarrollo_de_clientes_customer_development",
     "producto_unico_superior",
     "definicion_sprint_terminado_fisico",
-    "ejecucion_de_touchpoints",
     "procesamiento_paralelo_con_espirales"
   ],
   "nodos_siguientes": [
@@ -87,6 +86,19 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite las cifras cambiadas del paso 4 (de tres a cuatro en promedio, hasta quince). El libro da entre 3 y 4,5 versiones en promedio en fabricantes B2B y 15 como promedio de IDEO, no como máximo (Cooper, L1694-L1700).",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-105"
+    },
+    {
+      "id": "t2-arista-045",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ejecucion_de_touchpoints -> desarrollo_en_espiral",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-13-18): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La ejecucion precisa de touchpoints es implementacion de una experiencia ya disenada; no prepara el ciclo iterativo de construir, probar y revisar, en todo caso iria despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

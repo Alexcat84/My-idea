@@ -16,7 +16,6 @@
   ],
   "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
   "nodos_previos": [
-    "gestion_visual_del_pipeline_de_desarrollo",
     "riesgo_control_algoritmico",
     "comprension_capacidades_limitaciones_ia"
   ],
@@ -24,7 +23,6 @@
     "bucle_retroalimentacion_autoajustable",
     "centaur_cyborg_ia",
     "riesgo_sobredependencia_ia",
-    "search_for_business_model",
     "sistemas_organizacionales_ia"
   ],
   "condiciones_activacion": [
@@ -91,6 +89,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro recompensa el logro de metas de desempeno, no la identificacion y automatizacion de tareas aburridas con IA; esa practica no esta en el libro.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-078"
+    },
+    {
+      "id": "t2-arista-043",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "division_trabajo_humano_ia -> search_for_business_model",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-19-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La busqueda de un modelo de negocio en un startup no continua la division de tareas entre humanos e IA. Los nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-067",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_visual_del_pipeline_de_desarrollo -> division_trabajo_humano_ia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-19-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los tableros visuales del pipeline de Agile-Stage-Gate no preparan la division del trabajo entre humanos e IA. Los temas no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

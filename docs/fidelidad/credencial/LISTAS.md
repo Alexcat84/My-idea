@@ -140,6 +140,6 @@ corregido**, asi que no se retiro ninguna; las **14** preguntas cuyo nodo cambio
 ## Correccion urgente del fundador (26 sep 2026): 176 nodos mas a re-embeber
 
 La cita a un autor o a un libro como fuente salio de 182 nodos (`docs/saneamiento/tandas/saneamiento-atribuciones.json`);
-176 cambian su resumen_teorico, que entra al vector. Van al final de `nodos_a_reembeber.txt` (ahora 251). Ninguna
+176 cambian su resumen_teorico, que entra al vector. Van al final de `nodos_a_reembeber.txt` (ahora 252 con la tanda 2). Ninguna
 pregunta en cache nombra un autor o un libro: no se suma ninguna a regenerar.
 

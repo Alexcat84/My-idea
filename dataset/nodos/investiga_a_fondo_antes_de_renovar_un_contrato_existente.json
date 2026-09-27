@@ -1,6 +1,6 @@
 {
   "node_id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "compras",
   "titulo_concepto": "Investiga a fondo antes de renovar un contrato existente",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Revisa antes de renovar",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-195",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F12-013: Revisar y renegociar un contrato vigente con un proveedor es gestion operativa de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -17,7 +17,8 @@
     "cumplimiento_magnuson_moss"
   ],
   "nodos_siguientes": [
-    "publicidad_garantia_conforme"
+    "publicidad_garantia_conforme",
+    "detectar_empaque_poco_rigido"
   ],
   "condiciones_activacion": [
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
@@ -43,6 +44,19 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (Magnuson-Moss): el resumen cerraba con la formula de equivalente local.",
       "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "t2-puente-008",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "regla_disponibilidad_previa_venta -> detectar_empaque_poco_rigido",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
     }
   ],
   "fuentes_internas": [

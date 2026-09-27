@@ -15,13 +15,11 @@
   ],
   "entregable_esperado": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central",
   "nodos_previos": [
-    "definicion_alineacion_cadena_suministro",
-    "iota_analysis"
+    "definicion_alineacion_cadena_suministro"
   ],
   "nodos_siguientes": [
     "diseno_conceptual_sistema",
-    "funcion_identify_inventario_activos",
-    "gestion_visual_del_pipeline_de_desarrollo"
+    "funcion_identify_inventario_activos"
   ],
   "condiciones_activacion": [
     "Cuando se necesita construir rápidamente una plataforma de colaboración sin invertir en infraestructura pesada",
@@ -56,6 +54,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Conectar via APIs en vez de desarrollar internamente esta en el libro, pero la exigencia de que sean APIs abiertas no aparece en ninguna parte (buscado open API, open standard, openly).",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C088-016"
+    },
+    {
+      "id": "t2-arista-005",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "arquitectura_tecnica_modular -> gestion_visual_del_pipeline_de_desarrollo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-20-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La gestion visual del pipeline en Agile-Stage-Gate (portafolio de desarrollo de productos) no continua la arquitectura tecnica modular en la nube."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-076",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "iota_analysis -> arquitectura_tecnica_modular",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-20-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El IOTA integra analisis estrategicos de amenazas y oportunidades; no prepara la decision de construir sistemas con servicios cloud, SaaS y APIs."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

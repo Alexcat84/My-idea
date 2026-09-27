@@ -1,6 +1,6 @@
 {
   "node_id": "dmaic_fase_define",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Definir el proyecto (fase Define de DMAIC)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Define tu Problema y Alcance",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-114",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-023: La fase Define de DMAIC delimita un proyecto de mejora de un proceso existente, lo que es mejora de lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

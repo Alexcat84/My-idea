@@ -1,6 +1,6 @@
 {
   "node_id": "manufactura_verde",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Manufactura Verde (Green Manufacturing)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Produce Más con Menos Impacto",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-208",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-004: Tiene razon el lector B: el nodo trata de mejorar los procesos de produccion de un fabricante que ya opera (eficiencia energetica, quick wins, implicar a gerentes de planta y trabajadores de linea). Eso es mejorar lo que ya funciona. Que el entregable sea una estrategia documentada no lo convierte en planificacion, y en ningun caso es ideacion. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

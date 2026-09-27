@@ -15,8 +15,7 @@
   "entregable_esperado": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos del exit.",
   "nodos_previos": [
     "criterios_equity_split",
-    "decision_de_vender_startup",
-    "obtencion_compromiso"
+    "decision_de_vender_startup"
   ],
   "nodos_siguientes": [
     "estructura_de_la_venta"
@@ -43,6 +42,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro deja como pregunta abierta qué mecanismos sirven para resolver estas divergencias. Las cláusulas de arrastre solo aparecen como un término de los inversores que los fundadores que priorizan el control deberían resistir (L2988), nunca como un mecanismo entre cofundadores.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-032"
+    },
+    {
+      "id": "t2-arista-094",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "obtencion_compromiso -> divergencia_de_motivaciones_en_exit",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-13-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Conseguir un avance en una venta compleja (tecnica comercial) no prepara la divergencia de motivaciones de los cofundadores ante un exit. Son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

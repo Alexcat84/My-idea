@@ -17,7 +17,8 @@
     "aceleracion_de_gates"
   ],
   "nodos_siguientes": [
-    "cinco_porques_master"
+    "cinco_porques_master",
+    "regla_simplificada_tolerancia_errores"
   ],
   "condiciones_activacion": [
     "Cuando las sesiones de Cinco Porqués derivan en señalamientos personales o conflictos entre equipos",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Evita Culpar, Busca Causas",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-20",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "curse_cinco_culpas -> regla_simplificada_tolerancia_errores",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-16, segundo candidato): un lector sobre los candidatos 2 a 8, tras excluir el que formaba el par.",
+        "motivo": "Quien ha visto que los Cinco Porques pueden acabar buscando culpables y danando la confianza pasa de forma natural a este sistema de dos reglas, pensado para equipos donde todavia falta confianza."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

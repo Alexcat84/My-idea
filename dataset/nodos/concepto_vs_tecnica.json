@@ -1,6 +1,6 @@
 {
   "node_id": "concepto_vs_tecnica",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Distinción entre Concepto y Técnica en Programas de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Adopta la Filosofía No Técnica",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-062",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-008: Trata de comunicar y sostener un programa de calidad ya en marcha dentro del equipo, gestion operativa y no exploracion de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

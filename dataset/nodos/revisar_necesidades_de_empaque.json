@@ -15,7 +15,7 @@
   "entregable_esperado": "Una lista de requisitos de empaque especificos para tu producto, lista antes de comprar materiales.",
   "nodos_previos": [
     "disenar_empaque_logistica",
-    "decision_aptitud_uso"
+    "logistica_inversa_retornos"
   ],
   "nodos_siguientes": [
     "conocer_limites_peso_tamano_courier",
@@ -48,6 +48,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: se comparo la extraccion nueva con la version oficial descargada de mydhl.express.dhl (PDF de 14 paginas fechado el 23/07/2026; la copia local es del 25/02/2026). El texto coincide salvo un parrafo nuevo sobre no usar 'black foil' en el exterior; la frase citada es identica en las dos y la palabra insurance no aparece en ninguna. La guia relaciona el valor del contenido con proteccion extra, pero no con un seguro.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)"
+    },
+    {
+      "id": "t2-arista-030",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "decision_aptitud_uso -> revisar_necesidades_de_empaque",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-18-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Revisar necesidades de empaque antes de comprar materiales no tiene relacion con la decision de aptitud para el uso."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-007",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "logistica_inversa_retornos -> revisar_necesidades_de_empaque",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
     }
   ],
   "fuentes_internas": [

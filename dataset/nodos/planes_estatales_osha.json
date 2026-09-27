@@ -1,6 +1,6 @@
 {
   "node_id": "planes_estatales_osha",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Planes Estatales OSHA (State Plans)",
   "fuente": "SMALL_BUSINESS",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Conoce tus Planes Estatales",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-253",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F28-005: Trata de cumplir la normativa de seguridad laboral de un negocio que ya opera; no valida la idea con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

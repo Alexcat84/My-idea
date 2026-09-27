@@ -1,6 +1,6 @@
 {
   "node_id": "licencia_exportacion_regulaciones",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "exportacion",
   "titulo_concepto": "Determinar si se necesita Licencia de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -30,5 +30,20 @@
   "etiqueta_arbol": "Verifica si Necesitas Licencia",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-203",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F14-006: Clasificar el producto y verificar requisitos legales antes de exportar es preparacion regulatoria del plan, no validacion con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

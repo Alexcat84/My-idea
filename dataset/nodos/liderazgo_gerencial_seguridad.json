@@ -18,7 +18,7 @@
     "programa_seguridad_salud_ocupacional",
     "nueve_pasos_iniciar_programa",
     "alineacion_de_objetivos_en_sistemas",
-    "evaluacion_mejora_programa_2"
+    "evaluacion_mejora_programa"
   ],
   "nodos_siguientes": [
     "participacion_trabajadores",
@@ -45,5 +45,33 @@
   "fuentes_internas": [
     "OSHA3885",
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-157",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_mejora_programa -> compromiso_gerencial_seguridad",
+      "texto_nuevo": "evaluacion_mejora_programa -> liderazgo_gerencial_seguridad",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a compromiso_gerencial_seguridad, deprecado; su superviviente es liderazgo_gerencial_seguridad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-171",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_mejora_programa_2 -> liderazgo_gerencial_seguridad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a evaluacion_mejora_programa_2, deprecado; su superviviente es evaluacion_mejora_programa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

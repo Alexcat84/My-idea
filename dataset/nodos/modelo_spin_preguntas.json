@@ -1,6 +1,6 @@
 {
   "node_id": "modelo_spin_preguntas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Modelo SPIN: Secuencia de Preguntas de Venta",
   "fuente": "SPIN Selling - Neil Rackham",
@@ -24,7 +24,6 @@
     "lanzamiento_nuevos_productos_enfoque_problema",
     "cierre_satisfaccion_postventa",
     "cierre_segun_complejidad_venta",
-    "compromiso_linea_tiempo_cliente",
     "cuatro_etapas_llamada_de_ventas",
     "diseno_embudo_ventas_cliente",
     "estrategia_ventas_enterprise",
@@ -38,7 +37,6 @@
     "metodologia_evaluacion_entrenamiento_ventas",
     "prevencion_objeciones_vs_manejo",
     "cierre_segun_complejidad_venta",
-    "analisis_capacidad_proceso",
     "obtencion_compromiso_venta",
     "enfoque_etapa_investigacion",
     "reglas_aprendizaje_habilidades_venta",
@@ -97,6 +95,45 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso pone el foco de la practica en que la transicion sea imperceptible (calidad, fluidez) y en llamadas reales; el libro manda practicar por cantidad sin preocuparse de la fluidez (Regla 3) y probar primero en situaciones seguras antes de llamadas reales (L1822, L2689). Ningun pasaje apoya practicar la suavidad de las transiciones; el libro dice que el SPIN se usa con flexibilidad, no que se disimule.",
       "indice": 7,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C126-001"
+    },
+    {
+      "id": "t2-arista-014",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "compromiso_linea_tiempo_cliente -> modelo_spin_preguntas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-03-25): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el compromiso con linea de tiempo es una tecnica de cierre que va despues de la investigacion SPIN, no la prepara (el mismo vecino figura tambien como posterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-090",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "modelo_spin_preguntas -> analisis_capacidad_proceso",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-03-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La capacidad de proceso estadistica (calidad) no tiene relacion con las preguntas de venta SPIN."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-233",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F02-009: Es una tecnica de venta consultiva para llamadas reales con prospectos, o sea operar la funcion comercial, no validar la idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

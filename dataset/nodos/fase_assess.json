@@ -1,6 +1,6 @@
 {
   "node_id": "fase_assess",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Fase 1: Assess (Evaluar)",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
@@ -16,8 +16,7 @@
     "ocho_fases_experiencia_cliente"
   ],
   "nodos_siguientes": [
-    "fase_admit_celebracion",
-    "prepara_posicion_agenda_antes_negociar"
+    "fase_admit_celebracion"
   ],
   "condiciones_activacion": [
     "Cuando estás en el proceso de atraer y convencer prospectos antes de cerrar la venta."
@@ -25,5 +24,33 @@
   "etiqueta_arbol": "Genera una Buena Primera Impresión",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-057",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "fase_assess -> prepara_posicion_agenda_antes_negociar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-15-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La fase Assess describe al cliente potencial evaluandote a ti como vendedor. Este nodo te pone como comprador que negocia con un proveedor, asi que la perspectiva es otra y no lo prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-166",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-025: Es la etapa de ventas y marketing con prospectos y un guion de primer contacto, operacion comercial de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "sistema_estable_responsabilidad_gerencial",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Un sistema estable es evidencia de que la mejora depende de ti, no de tu equipo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Detecta Problemas del Sistema",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-304",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F21-005: Usa graficos de control sobre un proceso en marcha para decidir mejoras del sistema: es control y mejora operativa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

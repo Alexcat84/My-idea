@@ -24,8 +24,7 @@
     "producto_minimo_viable",
     "escenarios_diseno_modelo_negocio",
     "multi_sided_platforms",
-    "seleccion_estrategia_pricing",
-    "determinar_tipo_de_mercado"
+    "seleccion_estrategia_pricing"
   ],
   "condiciones_activacion": [
     "Si existe un competidor con más del 26% de cuota de mercado",
@@ -45,5 +44,20 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-111",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "resegmentacion_mercado_nicho_bajo_costo -> determinar_tipo_de_mercado",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-21): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Razon para B. El nodo de hoy presenta la re-segmentacion como uno de los cuatro tipos de mercado y como paso que sale del analisis (\"si el mercado esta dominado por incumbentes fuertes, evaluar re-segmentarlo\"); por tanto va despues, no lo prepara. El sentido correcto ya existe en R05-09-10. No tiene que ver con la correccion del costo de entrada."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

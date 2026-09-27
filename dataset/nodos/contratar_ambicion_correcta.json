@@ -23,7 +23,6 @@
     "cultura_organizacional_calidad"
   ],
   "nodos_siguientes": [
-    "evaluacion_capacidades_fundador",
     "proceso_de_promocion_disciplinado"
   ],
   "condiciones_activacion": [
@@ -58,6 +57,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razón B. El libro pone el umbral en que el equity sea la motivación principal. El paso solo desconfía si es la única, un umbral más laxo que deja pasar al candidato cuyo motivo principal es el equity aunque tenga otros. Busqué en todo el libro algún pasaje que hable de la motivación 'única' y no lo hay. La vara dice que un umbral cambiado es CONTRARIO. A lo dio por literal, y no lo es.",
       "indice": 8,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-056"
+    },
+    {
+      "id": "t2-arista-020",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "contratar_ambicion_correcta -> evaluacion_capacidades_fundador",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-06-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Filtrar gerentes en una entrevista por su tipo de ambicion no lleva a evaluar si las capacidades del propio fundador encajan con la oportunidad. Son temas distintos, y la correccion (motivacion principal frente a unica) es irrelevante aqui."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

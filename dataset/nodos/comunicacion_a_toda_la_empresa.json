@@ -16,9 +16,7 @@
     "entrenamiento_de_gerentes_para_despidos",
     "ejecucion_rapida_de_despidos"
   ],
-  "nodos_siguientes": [
-    "confianza_mutua_fundadores"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando vas a hacer un despido que afecta a varios equipos o a toda tu empresa"
   ],
@@ -40,6 +38,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razón B. El libro sí pide no disculparse de más, pero la razón que da es que la empresa tiene que seguir adelante. Busqué 'apolog' en todo el libro: solo sale en L891 y en L2106 (Arthur se disculpa, sin relación con esto). Ningún pasaje dice que disculparse de más debilite la confianza en el líder. El paso no se limita a concretar lo que dice el libro. Cambia la razón por una afirmación causal que el libro no respalda, así que no es OPERATIVO. Se corrige poniendo la razón del libro.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-001"
+    },
+    {
+      "id": "t2-arista-015",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_a_toda_la_empresa -> confianza_mutua_fundadores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-11-01): RANCIA_POR_CORRECCION, lector y verificador de acuerdo",
+        "motivo": "El enlace se apoyaba en la confianza en el lider que mencionaba el paso corregido; hoy el nodo habla de seguir adelante y la confianza entre cofundadores no continua el anuncio del despido a la empresa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

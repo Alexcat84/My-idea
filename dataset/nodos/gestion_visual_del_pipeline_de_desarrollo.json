@@ -18,12 +18,10 @@
     "backlog_evolutivo_y_cronograma_flexible",
     "fase_gestion_continua_modelo",
     "automatizacion_software_gestion_innovacion",
-    "sprint_board_burn_down",
-    "arquitectura_tecnica_modular"
+    "sprint_board_burn_down"
   ],
   "nodos_siguientes": [
-    "pruning_portafolio",
-    "division_trabajo_humano_ia"
+    "pruning_portafolio"
   ],
   "condiciones_activacion": [
     "Cuando se gestionan múltiples proyectos simultáneos bajo Agile-Stage-Gate",
@@ -32,5 +30,33 @@
   "etiqueta_arbol": "Visualiza tu Pipeline Completo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-005",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "arquitectura_tecnica_modular -> gestion_visual_del_pipeline_de_desarrollo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-20-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La gestion visual del pipeline en Agile-Stage-Gate (portafolio de desarrollo de productos) no continua la arquitectura tecnica modular en la nube."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-067",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_visual_del_pipeline_de_desarrollo -> division_trabajo_humano_ia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-19-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los tableros visuales del pipeline de Agile-Stage-Gate no preparan la division del trabajo entre humanos e IA. Los temas no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

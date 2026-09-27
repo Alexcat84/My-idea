@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Un marco de evaluación del ciclo de vida del empleado con métricas de calidad de gestión por fase.",
   "nodos_previos": [
-    "search_for_business_model"
+    "buen_lugar_para_trabajar"
   ],
   "nodos_siguientes": [
     "requisitos_lider_de_rrhh"
@@ -40,6 +40,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R059-044 (ANADIDO, lector y verificador de acuerdo): Umbral numérico que el libro no da (búsqueda de thirty, fifty, 30, 50 sin pasaje sobre el tema). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R059-044"
+    },
+    {
+      "id": "t2-arista-119",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> hr_como_control_de_calidad_gerencial",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-22-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Buscar un modelo de negocio en una startup temprana no prepara usar el area de personas como control de calidad de los gerentes; no comparten tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-09",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "buen_lugar_para_trabajar -> hr_como_control_de_calidad_gerencial",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-09, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Construir un buen lugar para trabajar lleva a preguntar qué papel tiene el área de personas: vigilar la calidad de la gestión de los gerentes. hr_calidad_gestion no sirve como predecesor porque parece un duplicado del propio nodo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
     }
   ],
   "fuentes_internas": [

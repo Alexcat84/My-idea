@@ -18,8 +18,6 @@
     "produccion_scheduling_balance_objetivos"
   ],
   "nodos_siguientes": [
-    "planificacion_cadena_suministro",
-    "customer_retention_tactics",
     "logistica_inversa_retornos",
     "programacion_entregas_delivery_scheduling"
   ],
@@ -31,5 +29,33 @@
   "etiqueta_arbol": "Ordena el Flujo de Pedidos",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-066",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_pedidos_order_management -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-12): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La gestion de pedidos en la cadena de suministro no prepara las tacticas de retencion de clientes. Son dominios distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-058",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_pedidos_order_management -> planificacion_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-11, lector y verificador de acuerdo)",
+        "motivo": "La gestion de pedidos hacia el cliente y la planificacion del abastecimiento con proveedores son procesos distintos; solo comparten la etiqueta de cadena de suministro."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

@@ -35,7 +35,8 @@
     "decision_de_salir_a_bolsa",
     "carta_de_intencion_loi",
     "decision_hire_investment_banker",
-    "divergencia_de_motivaciones_en_exit"
+    "divergencia_de_motivaciones_en_exit",
+    "tipos_adquisiciones_tecnologia"
   ],
   "condiciones_activacion": [
     "Si tu empresa enfrenta escasez de efectivo sin opciones claras de financiamiento",
@@ -46,5 +47,20 @@
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam",
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-18",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "decision_de_vender_startup -> tipos_adquisiciones_tecnologia",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-18, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Una vez decidido vender la empresa, lo siguiente es entender qué tipo de compra se ofrece y cómo se valora cada una."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

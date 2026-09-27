@@ -1,6 +1,6 @@
 {
   "node_id": "detectar_prioridad_cliente_entrega",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "entrega",
   "titulo_concepto": "Detectar lo que el cliente realmente prioriza en la entrega",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
@@ -13,9 +13,7 @@
     "Simplifica el proceso de devolucion antes de que un cliente lo necesite."
   ],
   "entregable_esperado": "Una lista de las tres prioridades reales de entrega de tu cliente, con un metodo simple para avisar y rastrear cada pedido.",
-  "nodos_previos": [
-    "venta_interna_cliente"
-  ],
+  "nodos_previos": [],
   "nodos_siguientes": [
     "decidir_cobro_velocidad_ventana_entrega",
     "ofrecer_puntos_recogida",
@@ -45,6 +43,32 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R052-040 (CONTRARIO, lector y verificador de acuerdo): Cambia la base de la cifra: de casi la mitad de los encuestados a casi la mitad de los carritos, lo que es una tasa de abandono distinta. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R052-040"
+    },
+    {
+      "id": "t2-arista-132",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "venta_interna_cliente -> detectar_prioridad_cliente_entrega",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-10-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Ensayar al comprador para la venta interna en ventas complejas B2B no prepara la deteccion de prioridades de entrega en venta en linea. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-104",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F10-007: Negocio que ya vende en linea y ajusta avisos, rastreo y devoluciones de sus pedidos: operacion y mejora de la entrega. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

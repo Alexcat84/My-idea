@@ -16,7 +16,7 @@
   "nodos_previos": [
     "investigacion_incidentes",
     "identificacion_peligros_salud",
-    "inspeccion_sitio_peligros"
+    "inspeccion_lugar_trabajo_peligros"
   ],
   "nodos_siguientes": [
     "plan_control_peligros",
@@ -91,6 +91,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). La condicion 'cuando no exista uno vigente' no esta en el libro y deja el paso sin sentido: no se puede actualizar un plan que no existe. Es la condicion que dispara una obligacion del plan de emergencia, asi que se reemplaza por lo que dice el libro (L739: 'Develop or modify plans to control hazards that may arise in emergency situations'). No aparece en ningun otro campo.",
       "indice": 4,
       "auditoria": "tramo1 O56-026"
+    },
+    {
+      "id": "t2-arista-168",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "inspeccion_lugar_trabajo_peligros -> peligros_emergencias_no_rutinarias_2",
+      "texto_nuevo": "inspeccion_lugar_trabajo_peligros -> peligros_emergencias_no_rutinarias",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a peligros_emergencias_no_rutinarias_2, deprecado; su superviviente es peligros_emergencias_no_rutinarias."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-180",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "inspeccion_sitio_peligros -> peligros_emergencias_no_rutinarias",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a inspeccion_sitio_peligros, deprecado; su superviviente es inspeccion_lugar_trabajo_peligros."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

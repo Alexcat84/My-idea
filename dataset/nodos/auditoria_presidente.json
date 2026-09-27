@@ -1,6 +1,6 @@
 {
   "node_id": "auditoria_presidente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Auditoría del Presidente (President's Audit)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -41,6 +41,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro describe la auditoría del presidente pero no fija frecuencia; busqué annual, yearly, once a year, each year junto a audit y solo aparece para auditorías de producto de productos simples (L10360).",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C039-049"
+    },
+    {
+      "id": "t2-fase-023",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F16-009: Auditoria anual de calidad liderada por el CEO es gestion operativa de una organizacion en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

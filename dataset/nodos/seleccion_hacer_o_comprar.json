@@ -1,6 +1,6 @@
 {
   "node_id": "seleccion_hacer_o_comprar",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Decisión de subcontratar o hacerlo tú mismo (Outsourcing)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -41,6 +41,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pide estudiar y mejorar la actividad internamente y comparar el resultado con los proveedores externos; el paso cambia el termino de comparacion a dejarla como esta.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C056-026"
+    },
+    {
+      "id": "t2-fase-292",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F13-025: Ambos aciertan en que ideacion es erronea, pero tiene razon A: el entregable es una decision de hacer o subcontratar y un mapa de lo que es nucleo del negocio, es decir, una decision de recursos y modelo operativo, no la operacion diaria. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

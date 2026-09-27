@@ -1,6 +1,6 @@
 {
   "node_id": "conexion_flujos_energia_natural",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Conexión con Flujos de Energía Natural",
   "fuente": "Cradle to Cradle - Michael Braungart",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Reconecta con la Naturaleza",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-065",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-012: Su entregable es un esquema de diseno bioclimatico del edificio al iniciar el proyecto arquitectonico; es diseno, no exploracion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

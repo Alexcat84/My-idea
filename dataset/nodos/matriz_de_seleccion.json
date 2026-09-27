@@ -1,6 +1,6 @@
 {
   "node_id": "matriz_de_seleccion",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Matriz de Selección",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -29,5 +29,20 @@
   "etiqueta_arbol": "Elige con Matriz de Selección",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-212",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F27-001: Tiene razon el lector B: la matriz pondera criterios internos del equipo para elegir entre soluciones o proyectos y termina en una decision sobre los proximos pasos, sin probar nada con clientes ni con el mercado, asi que es planificacion y no validacion. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

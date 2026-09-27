@@ -20,7 +20,6 @@
   ],
   "nodos_siguientes": [
     "adaptacion_14_puntos_servicio_medico",
-    "handoff_transicion_ventas_cuentas",
     "retroalimentacion_inmediata_de_errores"
   ],
   "condiciones_activacion": [
@@ -71,6 +70,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-026 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-047",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "eliminacion_firmas_redundantes -> handoff_transicion_ventas_cuentas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-16-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El traspaso de un cliente de ventas a gestion de cuentas no tiene relacion con eliminar firmas redundantes en procesos administrativos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -19,8 +19,7 @@
     "transicion_producto_a_experiencia"
   ],
   "nodos_siguientes": [
-    "negociacion_acuerdo_representante_extranjero",
-    "saber_hasta_donde_mejorar_servicio"
+    "negociacion_acuerdo_representante_extranjero"
   ],
   "condiciones_activacion": [
     "Si el producto exportado requiere mantenimiento, reparación o garantía",
@@ -29,5 +28,20 @@
   "etiqueta_arbol": "Cuida tu Servicio Postventa",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-027",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "servicio_postventa_internacional -> saber_hasta_donde_mejorar_servicio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por trade_off_responsividad_eficiencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "ausencia_valor_verdadero",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Ausencia de Valor Verdadero en Mediciones",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Duda de tus Mediciones Exactas",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-026",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F11-010: Acordar con clientes o proveedores el metodo de medicion de referencia es gestion de calidad de un negocio en operacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

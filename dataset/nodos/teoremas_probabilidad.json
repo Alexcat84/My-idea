@@ -16,9 +16,7 @@
   "nodos_previos": [
     "distribucion_binomial"
   ],
-  "nodos_siguientes": [
-    "identificacion_de_riesgos"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se evalúa la confiabilidad de un sistema con múltiples componentes",
     "Cuando se combinan probabilidades de eventos independientes o dependientes"
@@ -26,5 +24,20 @@
   "etiqueta_arbol": "Aplica Probabilidad a tu Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-130",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "teoremas_probabilidad -> identificacion_de_riesgos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-12-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los teoremas de probabilidad aplicados a la confiabilidad de calidad no preparan la identificacion cualitativa de riesgos del negocio. Ademas el nodo dice que la probabilidad se evalua despues de identificar, asi que el orden tampoco encaja."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

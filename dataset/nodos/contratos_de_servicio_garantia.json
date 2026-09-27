@@ -16,9 +16,7 @@
     "clasificacion_garantia_full_limited",
     "diferenciacion_garantia_contrato_servicio"
   ],
-  "nodos_siguientes": [
-    "negociacion_carta_compromiso_banquero"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
     "Cuando quieres cobrar por servicios de posventa adicionales, como garantia extendida o mantenimiento pagado."
@@ -41,6 +39,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro trata el contrato de servicio como un acuerdo aparte, con cargo adicional y términos claros, pero no habla de ingresos recurrentes. Busqué 'recurring', 'revenue' y 'profit' sin resultado.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C036-108"
+    },
+    {
+      "id": "t2-arista-021",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "contratos_de_servicio_garantia -> negociacion_carta_compromiso_banquero",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-17-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La carta de compromiso con un banquero de inversion para vender la empresa no tiene relacion con los contratos de servicio bajo la ley Magnuson Moss."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

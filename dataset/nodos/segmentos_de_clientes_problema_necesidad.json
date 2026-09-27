@@ -16,9 +16,7 @@
   "entregable_esperado": "Mapa de tus segmentos de cliente con la escala del problema, los tipos de cliente y la historia de usuario (user story) del problema",
   "nodos_previos": [
     "hipotesis_propuesta_de_valor_producto",
-    "encontrar_el_golpe_mental",
     "abrazar_la_incomodidad",
-    "comunicacion_proactiva_puntos_estres",
     "hipotesis_de_tamano_de_mercado",
     "lienzo_modelo_negocio"
   ],
@@ -31,7 +29,6 @@
     "customer_retention_tactics",
     "dia_en_la_vida_del_cliente",
     "embudo_get_keep_grow",
-    "evaluacion_vp_ventas",
     "lienzo_modelo_negocio",
     "plan_de_adquisicion_acquire",
     "relaciones_con_clientes",
@@ -76,6 +73,45 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La escala del libro tiene cuatro niveles: latente, pasivo, activo (o urgente) y vision, y la vision es del cliente, que ya tiene una idea e incluso una solucion casera. El paso anade un nivel en el que el problema aun no existe y eres tu quien muestra la vision, lo que invierte el sentido de esa categoria.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-015"
+    },
+    {
+      "id": "t2-arista-018",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_proactiva_puntos_estres -> segmentos_de_clientes_problema_necesidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-17): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El orden esta invertido: comunicar de forma proactiva en los puntos de estres del cliente supone ya conocer el segmento, asi que no lo prepara."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-048",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "encontrar_el_golpe_mental -> segmentos_de_clientes_problema_necesidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El 'golpe' de esfuerzo mental de Wallas no prepara la segmentacion de clientes. Los nodos no tienen relacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-124",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "segmentos_de_clientes_problema_necesidad -> evaluacion_vp_ventas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Evaluar a un candidato a VP de Ventas no es un paso natural despues de entender el problema, la necesidad o la pasion del segmento de clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

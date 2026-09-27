@@ -15,7 +15,6 @@
     "costos_agencia_asimetria_informacion"
   ],
   "nodos_siguientes": [
-    "intellectual_property_strategy",
     "manejo_crisis_auditoria_contable"
   ],
   "condiciones_activacion": [
@@ -24,5 +23,20 @@
   "etiqueta_arbol": "Cuida tu Reputación en el Ecosistema",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-112",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "restricciones_reputacionales -> intellectual_property_strategy",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-17-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las restricciones reputacionales en venture capital no preparan la estrategia de propiedad intelectual."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

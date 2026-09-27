@@ -23,7 +23,6 @@
     "plan_de_implementacion_de_venta",
     "business_model_environment_mapping",
     "balance_estructura_libertad_aprendizaje",
-    "benchmark_inversion_rd_industria",
     "business_model_canvas_scorecard",
     "cinco_artefactos_stage_gate",
     "cost_management_plan",
@@ -39,5 +38,20 @@
   "etiqueta_arbol": "Redacta tu Plan en Cinco Partes",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-009",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "business_plan_cinco_secciones -> benchmark_inversion_rd_industria",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-23-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Escribir el plan de negocio en cinco secciones a partir del Canvas no prepara comparar el gasto en I+D de una empresa con el promedio de su industria. La relacion es muy lejana."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

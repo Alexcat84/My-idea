@@ -1,6 +1,6 @@
 {
   "node_id": "diagnostico_sintoma_vs_causa_ventas",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Diagnóstico de Síntoma vs. Causa en Problemas de Venta",
   "fuente": "SPIN Selling - Neil Rackham",
@@ -29,5 +29,20 @@
   "etiqueta_arbol": "Busca la Causa, no el Síntoma",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-106",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F18-023: Diagnosticar el bajo desempeño de ventas que ya se hacen es mejorar la operación comercial. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "seguimiento_tendencias_sostenibilidad",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Seguimiento de Tendencias Futuras",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Anticipa lo que Viene",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-291",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-028: Construir escenarios futuros para ajustar la priorizacion de temas de sostenibilidad es estrategia, no validacion con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

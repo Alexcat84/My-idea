@@ -23,7 +23,8 @@
   ],
   "nodos_siguientes": [
     "portfolio_management",
-    "diamante_de_innovacion"
+    "diamante_de_innovacion",
+    "benchmark_inversion_rd_industria"
   ],
   "condiciones_activacion": [
     "Si la empresa no tiene métricas históricas de innovación",
@@ -43,5 +44,20 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-01",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "mantener_puntaje_innovacion -> benchmark_inversion_rd_industria",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-01, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Quien empieza a medir su innovación sigue naturalmente comparando su inversión en I+D con la de su industria, y eso ocurre antes de fijar la estrategia y las arenas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

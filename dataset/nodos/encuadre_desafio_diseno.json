@@ -28,7 +28,6 @@
     "integracion_deseabilidad_viabilidad_factibilidad_social",
     "search_for_business_model",
     "usuarios_extremos_edge_cases",
-    "usuarios_extremos_globales",
     "brief_de_diseno"
   ],
   "nodos_siguientes": [
@@ -95,6 +94,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Frame Your Design Challenge no pide validar el brief con ONGs ni con actores en terreno antes de prototipar. Busqué 'local knowledge', NGO y brief, y las ONGs solo salen en otros métodos, como interlocutores de investigación.",
       "indice": 5,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C130-071"
+    },
+    {
+      "id": "t2-arista-131",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "usuarios_extremos_globales -> encuadre_desafio_diseno",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-02-21): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon A. El nodo se presenta hoy como 'herramienta inicial' para estructurar el proyecto. Buscar usuarios extremos en contextos de pobreza es un metodo de investigacion que viene despues del encuadre. La misma pareja ya existe en el orden correcto (R14-02-11, el vecino va DESPUES), asi que esta arista en sentido ANTES tiene el orden invertido. La correccion solo anadio el prefijo 'Sugerencia de My Idea' y no influye."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

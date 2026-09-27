@@ -15,9 +15,7 @@
   "nodos_previos": [
     "iot_big_data_supply_chain"
   ],
-  "nodos_siguientes": [
-    "conformidad_comercio_internacional"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la empresa opera en múltiples países y necesita interoperabilidad de datos de producto",
     "Si se requiere trazabilidad detallada del historial de cada unidad de producto"
@@ -40,6 +38,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que UPC y EAN se unificaron en un solo esquema GTIN de 14 digitos (el EAN de 13 digitos mas digito de control); el paso presenta 13 o 14 digitos como opciones segun la region, cambiando el dato.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-009"
+    },
+    {
+      "id": "t2-puente-056",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estandar_gtin_epc -> conformidad_comercio_internacional",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-06, lector y verificador de acuerdo)",
+        "motivo": "Los codigos GTIN/EPC para identificar productos y el marcado CE de conformidad solo coinciden en que son estandares de comercio; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ],
   "fuentes_internas": [

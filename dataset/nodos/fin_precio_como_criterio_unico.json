@@ -16,9 +16,7 @@
     "abolir_inspeccion_masiva",
     "los_14_puntos_deming"
   ],
-  "nodos_siguientes": [
-    "decide_criterio_eleccion_proveedor"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando elijes proveedores solo por el precio más bajo",
     "Cuando tienes problemas de calidad repetidos con materiales que cumplen lo prometido pero fallan cuando los usas juntos"
@@ -26,5 +24,20 @@
   "etiqueta_arbol": "Exige Calidad Junto al Precio",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-023",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "fin_precio_como_criterio_unico -> decide_criterio_eleccion_proveedor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

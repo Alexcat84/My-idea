@@ -1,6 +1,6 @@
 {
   "node_id": "reconocer_mercancia_peligrosa_disfrazada",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "entrega",
   "titulo_concepto": "Reconocer productos que en realidad son mercancía peligrosa",
   "fuente": "Guia de empaque para envios (FedEx)",
@@ -15,8 +15,8 @@
   "entregable_esperado": "Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.",
   "nodos_previos": [
     "identificar_si_tu_producto_necesita_proteccion_especial",
-    "diagnostico_de_productos_crudos",
-    "revisar_necesidades_de_empaque"
+    "revisar_necesidades_de_empaque",
+    "garantias_implicitas_vs_expresas"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -27,5 +27,46 @@
   "etiqueta_arbol": "Detecta mercancía peligrosa oculta",
   "fuentes_internas": [
     "Guia de empaque para envios (FedEx)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-006",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "garantias_implicitas_vs_expresas -> reconocer_mercancia_peligrosa_disfrazada",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-030",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diagnostico_de_productos_crudos -> reconocer_mercancia_peligrosa_disfrazada",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por garantias_implicitas_vs_expresas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "t2-fase-270",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F26-016: Clasificar productos como mercancia peligrosa para despacharlos con el courier es logistica operativa de un negocio que ya vende. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

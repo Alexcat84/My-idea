@@ -15,9 +15,7 @@
   "nodos_previos": [
     "seleccion_ceo_fundador"
   ],
-  "nodos_siguientes": [
-    "autenticidad_del_liderazgo_de_campo"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando un CEO/fundador atraviesa una crisis o decisión sin precedentes claros",
     "Cuando el fundador siente aislamiento o síndrome del impostor"
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Abraza tu Propia Lucha",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-051",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "embrace_the_struggle_liderazgo_autentico -> autenticidad_del_liderazgo_de_campo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-21, lector y verificador de acuerdo)",
+        "motivo": "La autenticidad personal del CEO ante sus luchas no se continua en la presencia de supervisores en campo para seguridad; solo comparten la palabra autentico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }
