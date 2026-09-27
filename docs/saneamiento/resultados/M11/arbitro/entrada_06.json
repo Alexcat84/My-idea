@@ -1,0 +1,55 @@
+{
+ "lote": "06",
+ "casos": [
+  {
+   "item": "alentar_asuntos_corazon_vigilar_final_reunion|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Alienta que en la reunion individual se hablen los asuntos de corazon a corazon.",
+    "Cuenta con la razon que lo sostiene: es el foro perfecto para llegar a los problemas sutiles y profundos del trabajo que afectan al subordinado.",
+    "Preguntale si esta satisfecho con su propio rendimiento.",
+    "Preguntale si alguna frustracion o algun obstaculo le esta carcomiendo.",
+    "Preguntale si tiene dudas sobre adonde va.",
+    "Ponte en guardia contra el asunto de corazon a corazon sacado en un momento inoportuno.",
+    "Cuenta con que la mayoria de las veces esos llegan cerca del final de la reunion.",
+    "Cuenta con lo que pasa si lo dejas correr: el subordinado puede decirte algo como que no esta contento y que lleva tiempo buscando trabajo fuera, y dejarte solo cinco minutos para lidiar con ello."
+   ],
+   "nuevo": "La reunión individual es el foro ideal para llegar a los problemas sutiles y profundos que afectan a tu subordinado en su trabajo. Tres preguntas abren esa puerta: si está satisfecho con su propio rendimiento, si alguna frustración u obstáculo le carcome, y si tiene dudas sobre adónde va. Hay que vigilar además el riesgo contrario: que el asunto grave salga a destiempo, casi siempre cerca del final, por ejemplo que no está contento y busca trabajo fuera, y te deje solo cinco minutos para tratarlo. Abrir la puerta a tiempo te da margen para atenderlo como merece.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_05.md",
+    "lineas": "53"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Endurece el sentido: 'casi siempre cerca del final' donde las líneas dicen 'more often than not' y el paso dice 'la mayoría de las veces'. Largo y resto correctos.",
+   "propuesta_verificador": "La reunión individual es el foro ideal para llegar a los problemas sutiles y profundos que afectan a tu subordinado en su trabajo. Tres preguntas abren esa puerta: si está satisfecho con su propio rendimiento, si alguna frustración u obstáculo le carcome, y si tiene dudas sobre adónde va. Hay que vigilar además el riesgo contrario: que el asunto grave salga a destiempo, la mayoría de las veces cerca del final, por ejemplo que no está contento y busca trabajo fuera, y te deje solo cinco minutos para tratarlo. Abrir la puerta a tiempo te da margen para atenderlo como merece."
+  },
+  {
+   "item": "facilitar_expresion_subordinado_pregunta_mas|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Facilita que el subordinado exprese lo que esta pasando y lo que le molesta.",
+    "Ponte en la reunion para aprender y para orientar.",
+    "Cuenta con como resume Drucker el trabajo del supervisor aqui: los que usan bien el tiempo entre los mandos no hablan con sus subordinados de los problemas de ellos mismos, sino que saben como hacer que los subordinados hablen de los suyos.",
+    "Aplica para conseguirlo el principio de direccion didactica de Grove, que es preguntar una vez mas.",
+    "Cuando creas que el subordinado ha dicho ya todo lo que queria sobre un asunto, hazle otra pregunta.",
+    "Manten el flujo de ideas pinchando al subordinado con preguntas hasta que los dos os deis por satisfechos de haber llegado al fondo de un problema."
+   ],
+   "nuevo": "En la reunión individual el supervisor está para aprender y orientar. Su trabajo es facilitar que el subordinado cuente lo que está pasando y lo que le molesta, porque quien usa bien su tiempo como mando no le habla a su gente de los problemas de ella, sino que consigue que ella hable de los suyos. La herramienta es sencilla: cuando parece que la persona ya ha dicho todo lo que quería sobre un asunto, haces una pregunta más. Seguir preguntando mantiene el flujo de ideas y saca lo que aún no había salido, hasta que los dos quedan satisfechos de haber llegado al fondo del problema.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_05.md",
+    "lineas": "45-47"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Cambia el sentido respecto al paso del nodo: 'no le habla a su gente de los problemas de ella' atribuye los problemas a los subordinados, cuando el paso dice 'de los problemas de ellos mismos' (los del mando), en contraste con 'los suyos'. Largo (586) y resto correctos.",
+   "propuesta_verificador": "En la reunión individual el supervisor está para aprender y orientar. Su trabajo es facilitar que el subordinado cuente lo que está pasando y lo que le molesta, porque quien usa bien su tiempo como mando no le habla a su gente de sus propios problemas, sino que consigue que ella hable de los suyos. La herramienta es sencilla: cuando parece que la persona ya ha dicho todo lo que quería sobre un asunto, haces una pregunta más. Seguir preguntando mantiene el flujo de ideas y saca lo que aún no había salido, hasta que los dos quedan satisfechos de haber llegado al fondo del problema."
+  },
+  {
+   "item": "facilitar_expresion_subordinado_pregunta_mas|pasos_accionables[2]",
+   "campo": "pasos_accionables",
+   "viejo": "Cuenta con como resume Drucker el trabajo del supervisor aqui: los que usan bien el tiempo entre los mandos no hablan con sus subordinados de los problemas de ellos mismos, sino que saben como hacer que los subordinados hablen de los suyos.",
+   "nuevo": "Cuenta con que quien usa bien su tiempo como mando no les habla a sus subordinados de los problemas de ellos, sino que sabe hacer que sean ellos quienes hablen de los suyos.",
+   "objecion": "Cambia el sentido: el viejo dice que el buen mando no habla con sus subordinados 'de los problemas de ellos mismos' (los del propio mando); el nuevo 'de los problemas de ellos' se lee como los problemas de los subordinados, lo que choca con la segunda mitad de la frase ('los suyos').",
+   "propuesta_verificador": "Cuenta con que quien usa bien su tiempo como mando no les habla a sus subordinados de sus propios problemas, sino que sabe hacer que sean ellos quienes hablen de los suyos."
+  }
+ ]
+}

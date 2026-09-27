@@ -1,0 +1,47 @@
+{
+ "_nota": "Borrador para la integracion del mundo 11 (paso 3, 28 sep 2026). Se vuelca a dataset/metadata/jurisdiccion.json y vigencia.json al integrar, con los fragmentos re-comprobados contra el texto final (despues del pase de glosario). docs/POLITICA_MARCO_PAIS.md.",
+ "jurisdiccion": {
+  "evitar_preguntas_ilegales_entrevista": {
+   "pais": "US",
+   "clase": "B",
+   "motivo": "La lista de materias prohibidas en la entrevista es la de Estados Unidos y el nodo la da como ejemplo; manda confirmar la ley laboral de tu pais (clase B decidida por el fundador, 28 sep 2026; regla del empleo).",
+   "origen": "integracion mundo 11"
+  },
+  "conducir_llamadas_referencia": {
+   "pais": "CA",
+   "clase": "B",
+   "motivo": "Canada es el ejemplo de los paises cuya ley laboral pide permiso del candidato antes de llamar a referencias de tu red; la clase existe en muchos paises y el metodo vale en todos (regla del empleo). El redactor propuso clase A, pero la A es solo para marcos acordados entre paises.",
+   "origen": "integracion mundo 11"
+  }
+ },
+ "_adjudicados_sin_pais": {
+  "delimitar_franqueza_radical_cinco_noes": "'no es estadounidense' dice que el metodo no es propio de una cultura; no es contenido de un pais (ni ley, ni organismo, ni figura).",
+  "vender_cambio_trabajo_familia": "'fuera de Estados Unidos no se puede dar por supuesto que la familia vaya detras' es una observacion social del caso, no una norma ni un organismo."
+ },
+ "sin_contenido_de_pais_tras_la_limpieza": {
+  "respetar_cautelas_legales_contratacion": "la forja anotaba en marco_pais la lista de EE. UU.; en el nodo limpio queda el metodo (cumplir la ley laboral en sus tres niveles, en cualquier pais) y ninguna marca de pais: regla del empleo, sin entrada.",
+  "aplicar_tacticas_maestras_entrevista": "sin marca de pais en ningun campo de cara.",
+  "preparar_preguntas_entrevista_antemano": "sin marca de pais en ningun campo de cara."
+ },
+ "vigencia_nodos": {
+  "evitar_preguntas_ilegales_entrevista": {
+   "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+   "tipos": [
+    "norma"
+   ],
+   "fragmentos": [
+    "la lista de los pasos siguientes es la de Estados Unidos y sirve de ejemplo de las materias que suelen prohibirse"
+   ]
+  },
+  "conducir_llamadas_referencia": {
+   "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+   "tipos": [
+    "norma"
+   ],
+   "fragmentos": [
+    "las leyes laborales de algunos países, Canadá entre ellos, no permiten este tipo de comprobación sin pedir antes permiso al candidato"
+   ]
+  }
+ },
+ "barrido_vigencia": "Barrido del orquestador sobre el pack limpio (anos, porcentajes, estudio, investigacion, ley, norma, plazo, institucion): 36 nodos con alguna marca. Solo los dos de arriba dependen de algo que caduca (una lista legal de un pais). El resto: 'la norma' en el sentido de regla del equipo o desviacion de la norma estadistica; 'la ley' generica (cumplir la ley laboral, 'dentro de la ley', ley de Parkinson, 'ley de la selva'); hallazgos de investigacion sin fecha ni cifra datada; el 40 y el 70 por ciento de casos o de ejercicios; 2005 como fecha de una anecdota historica que no caduca. Ninguno es norma, plazo legal, cifra con fecha ni institucion (criterio de la pasada J, docs/saneamiento/resultados/J)."
+}
