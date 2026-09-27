@@ -239,7 +239,7 @@ describe("verificarProcedenciaEtapas (Fase 3.1): cada id declarado por etapa deb
 
 describe("ensamblarOffline / extraerTitulo", () => {
   const material: MaterialNodo[] = [
-    { id: "fundamentos_test", concepto: "Fundamentos", pasos: ["paso uno", "paso dos"], entregable: "un documento", es_viabilidad_economica: false },
+    { id: "fundamentos_test", concepto: "Customer Development según Blank", etiqueta: "Fundamentos", pasos: ["paso uno", "paso dos"], entregable: "un documento", es_viabilidad_economica: false },
   ];
 
   it("arma un markdown con etapas y pasos numerados", () => {
@@ -247,6 +247,9 @@ describe("ensamblarOffline / extraerTitulo", () => {
     expect(md).toContain("# Tu plan de acción");
     expect(md).toContain("Punto de partida: mi idea original");
     expect(md).toContain("## Etapa 1: Fundamentos");
+    // REGLA ESTRICTA (fundador, 26 sep 2026): el plan sin IA nombra la etapa por su etiqueta, nunca por el titulo.
+    expect(md).not.toContain("Customer Development");
+    expect(md).not.toContain("Blank");
     expect(md).toContain("1.1 paso uno");
     expect(md).toContain("Punto de control: un documento");
   });
@@ -429,7 +432,7 @@ describe("finalizarPlan y ensamblarOffline: marcadores neutros (i18n F5)", () =>
 
   it("el plan sin IA en coreano: etapas con el marcador neutro, el resto en coreano", () => {
     const material: MaterialNodo[] = [
-      { id: "x", concepto: "기초", pasos: ["하나"], entregable: "문서", es_viabilidad_economica: false },
+      { id: "x", concepto: "Fundamentos", etiqueta: "기초", pasos: ["하나"], entregable: "문서", es_viabilidad_economica: false },
     ];
     const md = ensamblarOffline(material, null, "", "ko");
     expect(md).toContain("## Etapa 1: 기초");

@@ -216,7 +216,7 @@ describe("POST /api/session/start", () => {
       tipo: "error_temporal",
       estado: { fase: "esperando_respuesta", ruta: ["design_thinking_fundamentos"] },
       acumulado: acumuladoFalso,
-      opciones: [{ id: "mapeo_capas_diseno", titulo: "Mapeo de capas" }],
+      opciones: [{ id: "mapeo_capas_diseno", etiqueta: "Mapeo de capas" }],
     });
 
     const res = await POST(requestFalso({ texto: "algo" }));

@@ -30,7 +30,7 @@ import { neutralizarRotulos, rotulosPlan } from "../i18n/rotulosPlan";
 import { interpolar } from "../i18n/interpolar";
 import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
-import { esOfrecible, resolverId, type Grafo } from "./graph";
+import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
 import {
@@ -64,7 +64,10 @@ export { SECCION_ECONOMICA_TITULO };
 
 export interface MaterialNodo {
   id: string;
+  /** El titulo del concepto: material INTERNO para el redactor (que tiene prohibido citarlo). */
   concepto: string;
+  /** Lo que ve el cliente cuando el plan se arma sin IA: la etiqueta, nunca el titulo (REGLA ESTRICTA, 26 sep 2026). */
+  etiqueta: string;
   pasos: string[];
   entregable: string;
   es_viabilidad_economica: boolean;
@@ -88,6 +91,7 @@ export function aMaterial(nid: string, graph: Grafo, families: Record<string, Fa
   return {
     id: nid,
     concepto: n.titulo_concepto,
+    etiqueta: etiquetaArbol(real, graph),
     pasos: n.pasos_accionables ?? [],
     entregable: n.entregable_esperado ?? "",
     es_viabilidad_economica: (families[real] ?? "general") === "viabilidad_economica",
@@ -568,7 +572,7 @@ export function ensamblarOffline(
   // planParser.ts); la pantalla lo pinta en el idioma de quien lee.
   const etapaNeutra = elegir(MOTOR_PLAN, LOCALE_BASE).offline.etapa;
   material.forEach((m, i) => {
-    out.push(interpolar(etapaNeutra, { n: i + 1, concepto: m.concepto }));
+    out.push(interpolar(etapaNeutra, { n: i + 1, concepto: m.etiqueta }));
     m.pasos.forEach((p, j) => out.push(`  ${i + 1}.${j + 1} ${p}`));
     if (m.entregable) out.push(`  ${interpolar(t.puntoDeControl, { entregable: m.entregable })}`);
     // Decisión del fundador (26 sep 2026): cada etapa lleva su Primera acción,

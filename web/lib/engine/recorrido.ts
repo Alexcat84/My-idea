@@ -201,7 +201,7 @@ export type ResultadoTurno =
       tipo: "error_temporal";
       estado: EstadoRecorrido;
       acumulado: UsoAcumulado;
-      opciones: Array<{ id: string; titulo: string }>;
+      opciones: Array<{ id: string; etiqueta: string }>;
     };
 
 /** Port de _detectar_decision_plan: clasifica una respuesta libre como
@@ -670,7 +670,9 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
         tipo: "error_temporal",
         estado,
         acumulado,
-        opciones: nivel1Ids.map((nid) => ({ id: nid, titulo: graph[nid].titulo_concepto })),
+        // REGLA ESTRICTA (fundador, 26 sep 2026): lo que llega al cliente nombra el tema por su ETIQUETA, nunca
+        // por el titulo del concepto (que puede traer un libro o un autor).
+        opciones: nivel1Ids.map((nid) => ({ id: nid, etiqueta: etiquetaArbol(nid, graph, idiomaInterfaz) })),
       };
     }
 
