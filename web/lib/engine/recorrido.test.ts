@@ -17,7 +17,10 @@ const buscarAfinesFalso = vi.fn<(...args: unknown[]) => Promise<{ id: string; sc
   async () => []
 );
 vi.mock("../compass", () => ({
+  MIN_SCORE_SALTO: 0.3,
   buscarAfines: (...args: unknown[]) => buscarAfinesFalso(...args),
+  // Construccion 4: sin brujula, la prioridad no se mide (la regla queda en el prompt).
+  puntuadorContra: async () => null,
 }));
 
 import { usoVacio } from "../costmeter";

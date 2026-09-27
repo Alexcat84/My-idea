@@ -16,6 +16,11 @@ import { parsearJson } from "../parseJson";
 import { SYSTEM_PUERTA_AVANZADA } from "../prompts";
 import { esOfrecible, type Grafo } from "./graph";
 import { tokensCosecha } from "./tokens";
+import type { EventoInterprete } from "./interprete";
+import { queAtienden, violaPrioridad, type Puntuador } from "./prioridad";
+
+/** Cuantos nodos que atienden la prioridad entran a los candidatos aunque el puntaje de siempre no los traiga. */
+const MAX_ATIENDEN_EXTRA = 8;
 
 const ORDEN_FASES: Record<string, number> = { ideacion: 0, validacion: 1, planificacion: 2, ejecucion: 3 };
 
@@ -64,6 +69,8 @@ export interface ResultadoPuertaAvanzada {
   puertaId: string;
   perfilSesion: string;
   acumulado: UsoAcumulado;
+  /** Construccion 4: lo que la prioridad decidio en la puerta (rechazo corregido o paso previo). */
+  eventos: EventoInterprete[];
 }
 
 /** Port de seleccionar_puerta_avanzada: candidatos → Haiku elige la puerta
@@ -80,9 +87,12 @@ export async function seleccionarPuertaAvanzada(
   acumulado: UsoAcumulado,
   dominiosDesbloqueados: string[] | null = null,
   /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
-  contexto: string | null = null
+  contexto: string | null = null,
+  /** Construccion 4 (28 sep 2026): la prioridad declarada manda (null = sin prioridad o sin brujula). */
+  puntuarPrioridad: Puntuador | null = null
 ): Promise<ResultadoPuertaAvanzada> {
-  const candidatosIds = candidatosSeguimiento(
+  const PUERTA = "(puerta de seguimiento)";
+  const deSiempre = candidatosSeguimiento(
     mensajeNuevo,
     estadoVivo,
     faseActual,
@@ -92,6 +102,15 @@ export async function seleccionarPuertaAvanzada(
     undefined,
     dominiosDesbloqueados
   );
+  // Los que atienden la prioridad entran aunque el puntaje de siempre no los traiga, y van primero.
+  const atiendenTodos = puntuarPrioridad
+    ? queAtienden(
+        Object.keys(graph).filter((nid) => !cubiertos.has(nid) && esOfrecible(nid, graph, dominiosDesbloqueados)),
+        puntuarPrioridad
+      ).slice(0, MAX_ATIENDEN_EXTRA)
+    : [];
+  const candidatosIds = [...new Set([...atiendenTodos, ...deSiempre])];
+  const atienden = queAtienden(candidatosIds, puntuarPrioridad);
   if (candidatosIds.length > 0) {
     const opciones = candidatosIds.map((nid) => {
       const n = graph[nid];
@@ -103,22 +122,43 @@ export async function seleccionarPuertaAvanzada(
         condiciones_activacion: (n.condiciones_activacion ?? []).slice(0, 2),
       };
     });
-    const ctx = { estado_vivo: estadoVivo, mensaje_nuevo: mensajeNuevo, candidatos: opciones };
+    const ctx = {
+      estado_vivo: estadoVivo,
+      mensaje_nuevo: mensajeNuevo,
+      candidatos: opciones,
+      ...(atienden.length > 0 ? { candidatos_que_atienden_prioridad: atienden } : {}),
+    };
+    const respaldo = atienden[0] ?? candidatosIds[0];
     try {
       const r = await llamarClaude(client, SYSTEM_PUERTA_AVANZADA, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
         maxTokens: 400,
         contexto,
         componente: "clasificacion",
       });
-      const data = parsearJson<{ puerta_id?: string; perfil_sesion?: string }>(r.texto);
+      const data = parsearJson<{ puerta_id?: string; perfil_sesion?: string; paso_previo?: string | null }>(r.texto);
       if (data.puerta_id && candidatosIds.includes(data.puerta_id)) {
-        return { puertaId: data.puerta_id, perfilSesion: (data.perfil_sesion ?? "").trim(), acumulado: r.acumulado };
+        const perfilSesion = (data.perfil_sesion ?? "").trim();
+        const pasoPrevio = data.paso_previo ? String(data.paso_previo).trim() || null : null;
+        if (violaPrioridad(data.puerta_id, atienden, pasoPrevio)) {
+          // Una sola llamada aqui: la puerta se corrige en codigo al candidato que mejor atiende la prioridad.
+          return {
+            puertaId: atienden[0],
+            perfilSesion,
+            acumulado: r.acumulado,
+            eventos: [{ tipo: "prioridad_rechazo", nodo_actual: PUERTA, destino: data.puerta_id, atienden }],
+          };
+        }
+        const eventos: EventoInterprete[] =
+          pasoPrevio && atienden.length > 0 && !atienden.includes(data.puerta_id)
+            ? [{ tipo: "prioridad_paso_previo", nodo_actual: PUERTA, destino: data.puerta_id, motivo: pasoPrevio, atienden }]
+            : [];
+        return { puertaId: data.puerta_id, perfilSesion, acumulado: r.acumulado, eventos };
       }
-      // puerta_id fuera de los candidatos: mismo respaldo que el except de Python.
-      return { puertaId: candidatosIds[0], perfilSesion: estadoVivo ?? "", acumulado: r.acumulado };
+      // puerta_id fuera de los candidatos: el respaldo (el que mejor atiende la prioridad, o el primero).
+      return { puertaId: respaldo, perfilSesion: estadoVivo ?? "", acumulado: r.acumulado, eventos: [] };
     } catch {
-      return { puertaId: candidatosIds[0], perfilSesion: estadoVivo ?? "", acumulado };
+      return { puertaId: respaldo, perfilSesion: estadoVivo ?? "", acumulado, eventos: [] };
     }
   }
-  return { puertaId: entrySeeds[0], perfilSesion: estadoVivo ?? "", acumulado };
+  return { puertaId: entrySeeds[0], perfilSesion: estadoVivo ?? "", acumulado, eventos: [] };
 }

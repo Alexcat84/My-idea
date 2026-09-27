@@ -33,6 +33,7 @@ import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { avisosNodo } from "./avisos";
 import { adaptarResultadoTurno } from "./adaptadorPregunta";
+import { puntuadorDePrioridad, type Puntuador } from "./prioridad";
 import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import { contextoDeSesion, fichaVacia, fusionarFicha, type FichaContexto } from "./memoria";
@@ -144,6 +145,8 @@ export function estadoInicial(params: {
   /** Principio 1: la foto del contexto del proyecto y la ficha al abrir la sesion. */
   contextoProyecto?: string | null;
   ficha?: FichaContexto;
+  /** Construccion 4: lo que la puerta ya dejo escrito (la prioridad en la puerta del seguimiento). */
+  fallbackEvents?: EventoInterprete[];
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -159,8 +162,9 @@ export function estadoInicial(params: {
     puertasDescartadas: [],
     snapshotNucleo: params.snapshotNucleo ?? null,
     idioma: params.idioma ?? "es",
-    fallbackEvents: [],
-    prioridadDeclarada: null,
+    fallbackEvents: params.fallbackEvents ?? [],
+    // Construccion 4 + Principio 1: la prioridad que la persona ya declaro viaja a la sesion nueva.
+    prioridadDeclarada: params.ficha?.prioridad_declarada ?? null,
     preguntaPendiente: null,
     ultimasPreguntas: [],
     repreguntasUsadas: 0,
@@ -437,6 +441,13 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
   let respuestaUsuario = params.respuestaUsuario;
   const rutaLongitudInicial = estado.ruta.length;
 
+  // Construccion 4 (28 sep 2026): la prioridad manda tambien al re-elegir puerta.
+  async function puntuarPrioridadDeSesion(): Promise<Puntuador | null> {
+    const r = await puntuadorDePrioridad(client, estado.prioridadDeclarada?.texto, idiomaSalida, acumulado, graph);
+    acumulado = r.acumulado;
+    return r.puntuar;
+  }
+
   function nodosNuevosDesdeInicio(): NodoTranscrito[] {
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
@@ -606,6 +617,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
         perfilSesion: estado.perfilSesion,
         cubiertos: visitados,
         descartados: new Set(estado.puertasDescartadas),
+        puntuarPrioridad: await puntuarPrioridadDeSesion(),
       });
       if (reeleccion) {
         const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
@@ -740,6 +752,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
           perfilSesion: estado.perfilSesion,
           cubiertos: new Set([...estado.nodosCubiertosPrevios, ...estado.ruta]),
           descartados,
+          puntuarPrioridad: await puntuarPrioridadDeSesion(),
         });
         const motivo = resultado.razonamiento ?? null;
         if (reeleccion) {

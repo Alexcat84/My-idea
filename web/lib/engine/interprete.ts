@@ -39,6 +39,7 @@ import {
 import { tokensCosecha } from "./tokens";
 import { LOCALE_BASE, type Locale } from "../i18n/config";
 import { textoFichaActual, type FichaContexto } from "./memoria";
+import { puntuadorDePrioridad, queAtienden, violaPrioridad } from "./prioridad";
 
 export interface PrioridadDeclarada {
   texto: string;
@@ -70,6 +71,8 @@ export interface ResultadoInterprete {
   tipoOfertaDetectado: string | null;
   unidadVentaDetectada: string | null;
   razonamiento: string | null;
+  /** Construccion 4: por que se eligio un destino que no atiende la prioridad (un paso previo necesario). */
+  pasoPrevio?: string | null;
 }
 
 export interface EventoFallback {
@@ -173,6 +176,30 @@ export interface EventoAdaptacionPregunta {
   motivo?: string;
 }
 
+/** CONSTRUCCION 4 (28 sep 2026): la prioridad declarada es regla en codigo. `prioridad_rechazo`: el modelo eligio un
+ * destino que no la atiende habiendo quien la atiende (se le pide otra vez con el motivo). `prioridad_paso_previo`:
+ * lo eligio con un paso previo escrito, que se permite. `prioridad_sin_medir`: la brujula no estaba y la regla quedo
+ * solo en el prompt. */
+export interface EventoPrioridadRechazo {
+  tipo: "prioridad_rechazo";
+  nodo_actual: string;
+  destino: string;
+  atienden: string[];
+}
+
+export interface EventoPrioridadPasoPrevio {
+  tipo: "prioridad_paso_previo";
+  nodo_actual: string;
+  destino: string;
+  motivo: string;
+  atienden: string[];
+}
+
+export interface EventoPrioridadSinMedir {
+  tipo: "prioridad_sin_medir";
+  nodo_actual: string;
+}
+
 export type EventoInterprete =
   | EventoConsultaSinTraducir
   | EventoFallback
@@ -181,6 +208,9 @@ export type EventoInterprete =
   | EventoMundoIncompatible
   | EventoAnclajeProteccion
   | EventoAdaptacionPregunta
+  | EventoPrioridadRechazo
+  | EventoPrioridadPasoPrevio
+  | EventoPrioridadSinMedir
   | EventoRegeneracionPlanBasico;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */
@@ -260,17 +290,25 @@ function validarCamino(
   return caminoReparado;
 }
 
+/** Lo que la brujula busca: la respuesta del turno Y la prioridad declarada. Pertinencia (vuelo del 27 sep 2026,
+ * mundo 11): con solo la respuesta, los saltos ofrecidos no traian los nodos que atienden lo que la persona viene
+ * repitiendo como su urgencia. */
+export function consultaParaBrujula(respuesta: string, prioridad: PrioridadDeclarada | null): string {
+  return [respuesta.trim(), prioridad?.texto?.trim() ?? ""].filter(Boolean).join(" ");
+}
+
 /** Ultimo recurso silencioso: elige el candidato de mayor afinidad de
  * palabras clave con la ultima respuesta del usuario (y el perfil de
- * sesion), en vez de un menu numerado. */
-function elegirPorAfinidad(
+ * sesion, y su prioridad declarada), en vez de un menu numerado. */
+export function elegirPorAfinidad(
   candidatosIds: string[],
   graph: Grafo,
   respuestaUsuario: string | null,
-  perfilSesion: string | null
+  perfilSesion: string | null,
+  prioridad: PrioridadDeclarada | null = null
 ): string | null {
   if (candidatosIds.length === 0) return null;
-  const contexto = tokensCosecha(`${respuestaUsuario ?? ""} ${perfilSesion ?? ""}`);
+  const contexto = tokensCosecha(`${respuestaUsuario ?? ""} ${perfilSesion ?? ""} ${prioridad?.texto ?? ""}`);
   if (contexto.size === 0) return candidatosIds[0];
   const puntaje = (nid: string): number => {
     const n = graph[nid];
@@ -372,7 +410,7 @@ export async function interpretarMultiSalto(
   // otro idioma, la brújula busca con la respuesta traducida al español.
   const traducida = await consultaAlEspanol(
     client,
-    respuestaUsuario || textoOriginal,
+    consultaParaBrujula(respuestaUsuario || textoOriginal, prioridadDeclaradaActual),
     idiomaSalida,
     acumulado,
     [contextoProyecto, fichaActual ? textoFichaActual(fichaActual) : null].filter(Boolean).join("\n\n") || null
@@ -398,6 +436,23 @@ export async function interpretarMultiSalto(
     afinidad: Math.round(score * 1000) / 1000,
   }));
 
+  // CONSTRUCCION 4 (28 sep 2026): quien de los candidatos (siguientes de nivel 1 y 2, y saltos) atiende la prioridad.
+  let atiendenPrioridad: string[] = [];
+  if (prioridadDeclaradaActual?.texto?.trim()) {
+    const p = await puntuadorDePrioridad(client, prioridadDeclaradaActual.texto, idiomaSalida, acumulado, graph);
+    acumulado = p.acumulado;
+    if (!p.puntuar) {
+      registrarEvento?.({ tipo: "prioridad_sin_medir", nodo_actual: actualId });
+    } else {
+      const idsCandidatos = [
+        ...nivel1Ids,
+        ...nivel1.flatMap((n) => (n.sucesores ?? []).map((h) => h.id)),
+        ...saltoCandidatos.map((c) => c.id),
+      ];
+      atiendenPrioridad = queAtienden(idsCandidatos, p.puntuar);
+    }
+  }
+
   const ctxCompleto: Record<string, unknown> = {
     entrada_original: textoOriginal,
     perfil_sesion: perfilSesion,
@@ -410,6 +465,7 @@ export async function interpretarMultiSalto(
     ultimas_preguntas_hechas: ultimasPreguntas.slice(-3),
     prioridad_declarada_actual: prioridadDeclaradaActual,
     ficha_contexto: fichaActual,
+    ...(atiendenPrioridad.length > 0 ? { candidatos_que_atienden_prioridad: atiendenPrioridad } : {}),
   };
   // Principio 1 (28 sep 2026): desde el turno 2 la entrada original ya vive al
   // principio del historial; el perfil y la ficha ACTUALES viajan en cada turno
@@ -433,6 +489,8 @@ export async function interpretarMultiSalto(
     let camino: string[] = [];
     let preguntaNecesaria = false;
     let preguntaAdaptada: string | null = null;
+    let pasoPrevio: string | null = null;
+    let eventoPasoPrevio: EventoPrioridadPasoPrevio | null = null;
     if (accion === "avanzar") {
       const salto = data.salto_semantico as string | undefined;
       if (salto) {
@@ -447,6 +505,19 @@ export async function interpretarMultiSalto(
       } else {
         const caminoBruto = (data.camino as string[] | undefined) ?? [];
         camino = validarCamino(actualId, caminoBruto, graph, visitados, nivel1);
+      }
+      const destino = camino[camino.length - 1];
+      pasoPrevio = data.paso_previo ? String(data.paso_previo).trim() || null : null;
+      if (violaPrioridad(destino, atiendenPrioridad, pasoPrevio)) {
+        registrarEvento?.({ tipo: "prioridad_rechazo", nodo_actual: actualId, destino, atienden: atiendenPrioridad });
+        throw new Error(
+          `prioridad: '${destino}' no atiende la prioridad declarada ('${prioridadDeclaradaActual?.texto}'); elige uno de ` +
+            `candidatos_que_atienden_prioridad (${atiendenPrioridad.join(", ")}) o, si de verdad hace falta un paso previo, ` +
+            `di por que en paso_previo`
+        );
+      }
+      if (pasoPrevio && atiendenPrioridad.length > 0 && !atiendenPrioridad.includes(destino)) {
+        eventoPasoPrevio = { tipo: "prioridad_paso_previo", nodo_actual: actualId, destino, motivo: pasoPrevio, atienden: atiendenPrioridad };
       }
       preguntaNecesaria = data.pregunta_necesaria === undefined ? true : Boolean(data.pregunta_necesaria);
       if (preguntaNecesaria) {
@@ -492,6 +563,7 @@ export async function interpretarMultiSalto(
 
     const razonamientoRaw = data.razonamiento;
     const razonamiento = razonamientoRaw ? String(razonamientoRaw).trim() : null;
+    if (eventoPasoPrevio) registrarEvento?.(eventoPasoPrevio);
 
     return {
       accion: accion as AccionInterprete,
@@ -507,6 +579,7 @@ export async function interpretarMultiSalto(
       tipoOfertaDetectado,
       unidadVentaDetectada,
       razonamiento,
+      pasoPrevio,
     };
   }
 
@@ -583,7 +656,9 @@ export async function interpretarMultiSalto(
     emitirDecisionTurno(resultado);
     return { resultado, acumulado, historialMensajes: nuevoHistorial };
   } catch (segundoError) {
-    const candidato = elegirPorAfinidad(nivel1Ids, graph, respuestaUsuario, perfilSesion);
+    const candidato =
+      atiendenPrioridad.find((id) => nivel1Ids.includes(id)) ??
+      elegirPorAfinidad(nivel1Ids, graph, respuestaUsuario, perfilSesion, prioridadDeclaradaActual);
     if (!candidato) {
       return { resultado: null, acumulado, historialMensajes: nuevoHistorial };
     }
