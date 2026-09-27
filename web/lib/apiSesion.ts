@@ -12,6 +12,7 @@ import { mundo } from "./catalogoMundos";
 import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
 import { resolverReserva } from "./creditos";
 import {
+  anotarEnMemoria,
   cerrarSesion,
   guardarEstadoSesion,
   mergeNumerosProyecto,
@@ -19,6 +20,7 @@ import {
   registrarBitacora,
   type TurnoRegistrado,
 } from "./db";
+import type { EntradaHilo } from "./engine/memoria";
 import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { interpolar } from "./i18n/interpolar";
@@ -86,7 +88,10 @@ export async function responderResultadoTurno(
    * el usuario lo vuelva a ver al reentrar y para el análisis de la beta. */
   turnos: TurnoRegistrado[] = [],
   /** i18n F2: el idioma de la petición, para el cierre honesto. */
-  idioma: Locale = LOCALE_BASE
+  idioma: Locale = LOCALE_BASE,
+  /** Principio 1 (28 sep 2026): la pareja pregunta/respuesta de ESTE turno para el
+   * hilo de la memoria del proyecto; null si el turno no tuvo respuesta (apertura). */
+  entradaHilo: EntradaHilo | null = null
 ): Promise<NextResponse> {
   await guardarEstadoSesion(supabase, sessionId, {
     recorrido: resultado.estado,
@@ -96,6 +101,9 @@ export async function responderResultadoTurno(
     // se arma la pareja.
     ultimaPregunta: resultado.tipo === "pregunta" ? resultado.pregunta : null,
   });
+  // Principio 1: la memoria del proyecto se actualiza en CADA turno (la ficha de la
+  // sesion y la pareja al final del hilo). Falla ruidoso: sin la 049 no hay memoria.
+  await anotarEnMemoria(supabase, projectId, resultado.estado.ficha ?? null, entradaHilo);
   const costoUsd = costoAcumuladoUsd(acumuladoFinal);
 
   if (resultado.tipo === "salio") {

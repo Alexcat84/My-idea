@@ -351,9 +351,16 @@ export async function llamarClaudeConversacion(
     }
   }
 
+  // Principio 1 (28 sep 2026): en el PRIMER turno de la conversacion, el
+  // contexto del proyecto entra en su propio bloque con cache de 1 hora; desde
+  // ahi vive al principio del historial, que solo crece por el final.
+  const bloqueTurno: BloqueTexto = { type: "text", text: nuevoTurnoTexto, cache_control: { type: "ephemeral" } };
   const nuevoTurno: MensajeConversacion = {
     role: "user",
-    content: [{ type: "text", text: nuevoTurnoTexto, cache_control: { type: "ephemeral" } }],
+    content:
+      historialMensajes.length === 0 && opts.contexto
+        ? [{ type: "text", text: opts.contexto, cache_control: CACHE_1H }, bloqueTurno]
+        : [bloqueTurno],
   };
 
   let maxTokens = opts.maxTokens ?? 600;

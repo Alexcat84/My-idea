@@ -35,6 +35,7 @@ import { avisosNodo } from "./avisos";
 import { preguntaEnIdioma } from "./preguntaEnIdioma";
 import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
+import { fichaVacia, fusionarFicha, textoFichaActual, type FichaContexto } from "./memoria";
 import {
   interpretarMultiSalto,
   type EventoInterprete,
@@ -107,6 +108,19 @@ export interface EstadoRecorrido {
    * posterior (profundizar o replantear). Viaja con la sesión hasta la entrega
    * del plan, donde se registra en la bitácora. Ausente en todo lo demás. */
   ciclo?: CicloSesion;
+  /** Principio 1 (28 sep 2026): la foto ESTABLE del contexto del proyecto al abrir
+   * la sesion (lib/engine/memoria.ts, textoContextoProyecto). Viaja a toda llamada
+   * de la sesion con cache de 1 hora. Ausente en sesiones anteriores. */
+  contextoProyecto?: string | null;
+  /** Principio 1: la ficha de contexto de la persona, actualizada cada turno. */
+  ficha?: FichaContexto;
+}
+
+/** Principio 1: el contexto completo para una llamada suelta de la sesion: la foto
+ * del proyecto y la ficha actual. null si la sesion es anterior a la memoria. */
+export function contextoDeSesion(estado: Pick<EstadoRecorrido, "contextoProyecto" | "ficha">): string | null {
+  const partes = [estado.contextoProyecto ?? null, estado.ficha ? textoFichaActual(estado.ficha) : null].filter(Boolean);
+  return partes.length > 0 ? partes.join("\n\n") : null;
 }
 
 /** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de
@@ -134,6 +148,9 @@ export function estadoInicial(params: {
   idioma?: string;
   /** Ciclo de replanteamiento, Fase 2. */
   ciclo?: CicloSesion;
+  /** Principio 1: la foto del contexto del proyecto y la ficha al abrir la sesion. */
+  contextoProyecto?: string | null;
+  ficha?: FichaContexto;
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -161,6 +178,8 @@ export function estadoInicial(params: {
     fase: "esperando_respuesta",
     sigamosDirigido: null,
     ...(params.ciclo ? { ciclo: params.ciclo } : {}),
+    contextoProyecto: params.contextoProyecto ?? null,
+    ficha: params.ficha ?? fichaVacia(),
   };
 }
 
@@ -267,13 +286,15 @@ async function temasPendientesDeLaMesa(
 export async function detectarDecisionPlan(
   client: Anthropic,
   respuesta: string,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  contexto: string | null = null
 ): Promise<{ decision: "generar_ya" | "continuar"; acumulado: UsoAcumulado }> {
   let acumuladoActualizado = acumulado;
   try {
     const r = await llamarClaude(client, SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, acumulado, {
       maxTokens: 100,
       componente: "turnos",
+      contexto,
     });
     acumuladoActualizado = r.acumulado;
     const data = parsearJson<{ decision?: string }>(r.texto);
@@ -356,7 +377,8 @@ export async function preguntaDirigida(
   ultimasPreguntas: string[],
   acumulado: UsoAcumulado,
   idioma: Locale = LOCALE_BASE,
-  idiomaSalida: string | null = null
+  idiomaSalida: string | null = null,
+  contexto: string | null = null
 ): Promise<{ pregunta: string; acumulado: UsoAcumulado }> {
   const plano = preguntaDeNodo(nid, graph, preguntasCache, idioma);
   try {
@@ -369,6 +391,7 @@ export async function preguntaDirigida(
       maxTokens: 150,
       componente: "turnos",
       idiomaSalida,
+      contexto,
     });
     const texto = r.texto.trim();
     return { pregunta: texto || plano, acumulado: r.acumulado };
@@ -455,7 +478,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     if (respuestaUsuario === SENTINELA_SEGUIR_EXPLORANDO) {
       decision = "continuar";
     } else {
-      const r = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado);
+      const r = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado, contextoDeSesion(estado));
       decision = r.decision;
       acumulado = r.acumulado;
     }
@@ -481,7 +504,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     // de familia (antes: elegidos vacios -> listo otra vez, boton muerto).
     if (candidatosFamilia.length === 0 && familiasFaltantesKeys.length === 0) {
       // i18n F5, remedio de F1: el índice está en español.
-      const traducida = await consultaAlEspanol(client, estado.perfilSesion || estado.textoOriginal, idiomaSalida, acumulado);
+      const traducida = await consultaAlEspanol(client, estado.perfilSesion || estado.textoOriginal, idiomaSalida, acumulado, contextoDeSesion(estado));
       acumulado = traducida.acumulado;
       const afinesPerfil = await buscarAfines(traducida.consulta, visitados, {
         k: 6,
@@ -516,7 +539,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
       estado.ultimasPreguntas,
       acumulado,
       idioma,
-      idiomaSalida
+      idiomaSalida,
+      contextoDeSesion(estado)
     );
     acumulado = a2;
     estado = {
@@ -533,7 +557,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
 
   // --- Sub-fase: dentro de la extension dirigida (Fase 2.8/2.9) ---
   if (estado.fase === "extendiendo_dirigido" && estado.sigamosDirigido) {
-    const { decision, acumulado: a1 } = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado);
+    const { decision, acumulado: a1 } = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado, contextoDeSesion(estado));
     acumulado = a1;
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null, sigamosDirigido: null };
@@ -568,7 +592,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
       estado.ultimasPreguntas,
       acumulado,
       idioma,
-      idiomaSalida
+      idiomaSalida,
+      contextoDeSesion(estado)
     );
     acumulado = a2;
     estado = {
@@ -657,6 +682,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
       ultimasPreguntas: estado.ultimasPreguntas,
       prioridadDeclaradaActual: estado.prioridadDeclarada,
       historialMensajes: estado.historialMensajes,
+      contextoProyecto: estado.contextoProyecto ?? null,
+      fichaActual: estado.ficha ?? fichaVacia(),
       acumulado,
       registrarEvento: (e) => eventosNuevos.push(e),
       dominiosDesbloqueados: dominiosDelRecorrido(estado),
@@ -692,6 +719,17 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     }
     if (resultado.prioridadDeclarada) {
       estado = { ...estado, prioridadDeclarada: resultado.prioridadDeclarada };
+    }
+    // Principio 1: lo que el turno revela entra en la ficha (un dato desconocido
+    // nunca pisa uno conocido), y la prioridad declarada con ella.
+    if (resultado.fichaUpdate || resultado.prioridadDeclarada) {
+      estado = {
+        ...estado,
+        ficha: fusionarFicha(estado.ficha ?? fichaVacia(), {
+          ...(resultado.fichaUpdate ?? {}),
+          prioridad_declarada: resultado.prioridadDeclarada ?? null,
+        }),
+      };
     }
     if (resultado.numerosDetectados) {
       const nuevos = { ...estado.numerosDetectadosSesion };

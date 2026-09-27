@@ -56,6 +56,7 @@ import { avisosNodo } from "@/lib/engine/avisos";
 import { estadoInicial } from "@/lib/engine/recorrido";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -266,6 +267,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     dominioSesion: pack,
     snapshotNucleo,
     idioma: idiomaDelProyecto(proyecto),
+    // Principio 1 (28 sep 2026): el mundo recibe todo lo del nucleo y de los mundos anteriores.
+    ...aperturaDeSesion(proyecto),
   });
 
   // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del

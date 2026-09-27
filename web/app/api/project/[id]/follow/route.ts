@@ -56,6 +56,7 @@ import {
 import { cargarFamilies } from "@/lib/readiness";
 import { abrirCiclo, consultarSaldoCiclo, realidadDelCiclo } from "@/lib/cicloApertura";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -245,6 +246,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // Fase 4.3: un follow de mundo es una sesion de mundo. Misma regla.
     dominioSesion: dominio,
     idioma: idiomaDelProyecto(proyecto),
+    // Principio 1 (28 sep 2026): la memoria del proyecto al abrir el seguimiento.
+    ...aperturaDeSesion(proyecto),
     // Ciclo de replanteamiento, Fase 2: lo que la persona escribió o dictó
     // viaja con la sesión y se registra en la bitácora al entregar el plan.
     ciclo: { tipo: "profundizar", detalles: detalles?.trim() || null, enfoque: enfoque?.trim() || null },

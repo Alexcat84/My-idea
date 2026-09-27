@@ -694,5 +694,14 @@ FROM (
       WHERE conname = 'pack_clicks_pack_check' AND connamespace = 'public'::regnamespace
         AND pg_get_constraintdef(oid) LIKE '%primer_equipo%'
     )
+  UNION ALL
+  -- 049 . memoria de contexto del proyecto (decision del fundador, 28 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '049', 'projects.memoria jsonb NOT NULL (memoria de contexto)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='projects' AND column_name='memoria'
+        AND data_type='jsonb' AND is_nullable='NO'
+    )
 ) checks
 ORDER BY num;

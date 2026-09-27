@@ -38,6 +38,7 @@ import {
 } from "./graph";
 import { tokensCosecha } from "./tokens";
 import { LOCALE_BASE, type Locale } from "../i18n/config";
+import { textoFichaActual, type FichaContexto } from "./memoria";
 
 export interface PrioridadDeclarada {
   texto: string;
@@ -63,6 +64,8 @@ export interface ResultadoInterprete {
   repregunta: string | null;
   perfilUpdate: string | null;
   prioridadDeclarada: PrioridadDeclarada | null;
+  /** Principio 1 (28 sep 2026): lo que este turno revela o corrige de la ficha de contexto. */
+  fichaUpdate: Partial<FichaContexto> | null;
   numerosDetectados: NumerosDetectados | null;
   tipoOfertaDetectado: string | null;
   unidadVentaDetectada: string | null;
@@ -302,6 +305,11 @@ export interface InterpretarMultiSaltoParams {
   /** i18n F5: el idioma de la IDEA, en que la IA escribe la pregunta adaptada
    * y la repregunta (lib/i18n/idiomaSalida). Sin él, español. */
   idiomaSalida?: string | null;
+  /** Principio 1 (28 sep 2026): la foto estable del contexto del proyecto al abrir
+   * la sesion; viaja en su bloque con cache de 1 hora. */
+  contextoProyecto?: string | null;
+  /** Principio 1: la ficha de contexto actual; viaja en CADA turno. */
+  fichaActual?: FichaContexto | null;
 }
 
 export interface ResultadoInterpretarMultiSalto {
@@ -332,6 +340,8 @@ export async function interpretarMultiSalto(
     dominiosDesbloqueados,
     idioma = LOCALE_BASE,
     idiomaSalida = null,
+    contextoProyecto = null,
+    fichaActual = null,
   } = params;
   let acumulado = params.acumulado;
 
@@ -346,7 +356,13 @@ export async function interpretarMultiSalto(
 
   // i18n F5, remedio de F1: el índice está en español; en una idea escrita en
   // otro idioma, la brújula busca con la respuesta traducida al español.
-  const traducida = await consultaAlEspanol(client, respuestaUsuario || textoOriginal, idiomaSalida, acumulado);
+  const traducida = await consultaAlEspanol(
+    client,
+    respuestaUsuario || textoOriginal,
+    idiomaSalida,
+    acumulado,
+    [contextoProyecto, fichaActual ? textoFichaActual(fichaActual) : null].filter(Boolean).join("\n\n") || null
+  );
   acumulado = traducida.acumulado;
   if (traducida.fallo && registrarEvento) {
     registrarEvento({ tipo: "consulta_sin_traducir", nodo_actual: actualId, idioma: idiomaSalida });
@@ -379,10 +395,14 @@ export async function interpretarMultiSalto(
     repreguntas_disponibles: repreguntasDisponibles,
     ultimas_preguntas_hechas: ultimasPreguntas.slice(-3),
     prioridad_declarada_actual: prioridadDeclaradaActual,
+    ficha_contexto: fichaActual,
   };
+  // Principio 1 (28 sep 2026): desde el turno 2 la entrada original ya vive al
+  // principio del historial; el perfil y la ficha ACTUALES viajan en cada turno
+  // (antes el perfil actualizado no se le reenviaba nunca).
   const usaHistorial = historialMensajes !== null && historialMensajes.length > 0;
   const ctxTurno = usaHistorial
-    ? Object.fromEntries(Object.entries(ctxCompleto).filter(([k]) => k !== "entrada_original" && k !== "perfil_sesion"))
+    ? Object.fromEntries(Object.entries(ctxCompleto).filter(([k]) => k !== "entrada_original"))
     : ctxCompleto;
 
   function validarRespuesta(raw: string): ResultadoInterprete {
@@ -453,6 +473,9 @@ export async function interpretarMultiSalto(
       typeof tipoOfertaRaw === "string" && TIPOS_OFERTA_VALIDOS.has(tipoOfertaRaw) ? tipoOfertaRaw : null;
     const unidadVentaRaw = data.unidad_venta_detectada;
     const unidadVentaDetectada = unidadVentaRaw ? String(unidadVentaRaw).trim() : null;
+    const fu = data.ficha_update;
+    const fichaUpdate = fu && typeof fu === "object" && !Array.isArray(fu) ? (fu as Partial<FichaContexto>) : null;
+
     const razonamientoRaw = data.razonamiento;
     const razonamiento = razonamientoRaw ? String(razonamientoRaw).trim() : null;
 
@@ -465,6 +488,7 @@ export async function interpretarMultiSalto(
       repregunta: (data.repregunta as string | null | undefined) ?? null,
       perfilUpdate: (data.perfil_update as string | null | undefined) ?? null,
       prioridadDeclarada,
+      fichaUpdate,
       numerosDetectados,
       tipoOfertaDetectado,
       unidadVentaDetectada,
@@ -497,7 +521,7 @@ export async function interpretarMultiSalto(
         JSON.stringify(ctxTurno),
         MODEL_HAIKU,
         acumulado,
-        { maxTokens: 700, componente: "turnos", idiomaSalida }
+        { maxTokens: 700, componente: "turnos", idiomaSalida, contexto: contextoProyecto }
       );
       raw = r.texto;
       acumulado = r.acumulado;
@@ -507,6 +531,7 @@ export async function interpretarMultiSalto(
         maxTokens: 700,
         componente: "turnos",
         idiomaSalida,
+        contexto: contextoProyecto,
       });
       raw = r.texto;
       acumulado = r.acumulado;
@@ -537,6 +562,7 @@ export async function interpretarMultiSalto(
       maxTokens: 700,
       componente: "turnos",
       idiomaSalida,
+      contexto: contextoProyecto,
     });
     acumulado = r2.acumulado;
     const resultado = validarRespuesta(r2.texto);
@@ -565,6 +591,7 @@ export async function interpretarMultiSalto(
       repregunta: null,
       perfilUpdate: null,
       prioridadDeclarada: prioridadDeclaradaActual,
+      fichaUpdate: null,
       numerosDetectados: null,
       tipoOfertaDetectado: null,
       unidadVentaDetectada: null,
