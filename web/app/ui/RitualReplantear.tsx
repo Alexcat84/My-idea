@@ -29,6 +29,7 @@ import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
+import { textoParaMostrar } from "@/lib/textoTarea";
 
 export interface CaminoPosible {
   id: string;
@@ -134,7 +135,9 @@ export function PasoConstruido({
               const suelta = sueltas.has(i.id);
               return (
                 <li key={i.id} className="rounded-cinta border border-hairline bg-surface-2/40 px-4 py-3">
-                  <p className={"text-[14px] " + (suelta ? "text-dim line-through" : "text-ink")}>{i.texto}</p>
+                  <p className={"text-[14px] " + (suelta ? "text-dim line-through" : "text-ink")} title={i.texto}>
+                    {textoParaMostrar(i.texto)}
+                  </p>
                   <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={i.texto}>
                     <button type="button" aria-pressed={!suelta} onClick={() => onAlternar(i.id, false)} className={opcion(!suelta)}>
                       {t.replantear.meSirve}

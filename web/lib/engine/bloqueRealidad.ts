@@ -13,10 +13,11 @@
  */
 import type { Analytics, AnalyticsMundo } from "../analytics";
 
-/** Recorta un texto de ítem para que el bloque no se infle. */
-function corto(texto: string, max = 70): string {
-  const t = (texto ?? "").replace(/\s+/g, " ").trim();
-  return t.length > max ? `${t.slice(0, max)}…` : t;
+/** Un texto de ítem, en una sola línea y ENTERO. Contexto de la entrevista (28 sep
+ * 2026): antes se cortaba a 70 caracteres + "…" y el motor recibía frases rotas;
+ * las tareas viajan completas. */
+function corto(texto: string): string {
+  return (texto ?? "").replace(/\s+/g, " ").trim();
 }
 
 const PLURAL = (n: number, sing: string, plur: string) => `${n} ${n === 1 ? sing : plur}`;

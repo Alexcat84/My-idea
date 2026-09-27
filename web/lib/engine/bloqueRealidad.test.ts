@@ -285,3 +285,16 @@ describe("construirBloqueRealidadMundo — bordes", () => {
     expect(construirBloqueRealidadMundo(vacio, base(), "Calidad y Confianza", "fechas")).toBeNull();
   });
 });
+
+// Contexto de la entrevista (28 sep 2026): las tareas viajan ENTERAS al motor. El
+// bloque las cortaba a 70 caracteres + "…" y el seguimiento recibia frases rotas.
+describe("el bloque lleva las tareas enteras", () => {
+  const LARGA = "Escribe en otra columna los costos que sí cambian con cada maceta que produces, pieza por pieza, con su precio real";
+  it("una tarea retirada y su motivo largos viajan completos", () => {
+    const b = construirBloqueRealidad(
+      base({ universal: { ...UNIVERSAL, retiradas: [{ texto: LARGA, motivo: "no vendo por pieza sino por lote cerrado de veinte", etapa: 1 }] } })
+    );
+    expect(b).toContain(`"${LARGA}"`);
+    expect(b).toContain("no vendo por pieza sino por lote cerrado de veinte");
+  });
+});

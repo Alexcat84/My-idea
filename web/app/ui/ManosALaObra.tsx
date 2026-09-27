@@ -73,6 +73,7 @@ import { rico } from "@/lib/i18n/rico";
 import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
 import { ESTADOS_TAREA } from "@/lib/i18n/mensajes/estadosTarea";
 import { REGISTRO_PROTECCION } from "@/lib/i18n/mensajes/registroProteccion";
+import { textoParaMostrar } from "@/lib/textoTarea";
 
 export interface ItemChecklistUI {
   id: string;
@@ -450,7 +451,7 @@ function FilaItem({
             }
             title={t.fila.verDetalle}
           >
-            {item.texto}
+            {textoParaMostrar(item.texto)}
           </button>
           {retirada && (
             <span className="mt-0.5 block text-[12.5px] text-[#8A8B92]">
@@ -645,7 +646,7 @@ function BloqueSemana({
             {bloque.tambienCaben.map((i) => (
               <li key={i.id} className="flex items-start gap-2">
                 <span aria-hidden className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-done/70" />
-                {botonTarea(i, i.texto)}
+                {botonTarea(i, textoParaMostrar(i.texto))}
               </li>
             ))}
           </ul>
@@ -861,7 +862,7 @@ function HistoriaPlanes({ historial, idiomaDocumento }: { historial: PlanHistori
                             </svg>
                           </span>
                           <span className="min-w-0">
-                            <span className="text-ink">{x.texto}</span>
+                            <span className="text-ink" title={x.texto}>{textoParaMostrar(x.texto)}</span>
                             {x.completed_at && (
                               <span className="ms-2 text-[12.5px] text-done">
                                 {interpolarEn(idioma, t.fila.hechoEl, { fecha: fechaHumanaCorta(x.completed_at, idioma) })}
@@ -1302,8 +1303,8 @@ function RitualFechas({
                       className="h-4 w-4 shrink-0 rounded-full border-[1.6px]"
                       style={{ borderColor: "var(--accent)" }}
                     />
-                    <span className="min-w-0 flex-1 text-[14.5px]">
-                      {it.texto}
+                    <span className="min-w-0 flex-1 text-[14.5px]" title={it.texto}>
+                      {textoParaMostrar(it.texto)}
                       {/* P5 — el aviso de no-llego, en persona y en ÁMBAR espejo
                           (aviso, jamás regaño): la fecha es la honesta por
                           capacidad y por eso mismo no alcanza el ancla. */}

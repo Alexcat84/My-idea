@@ -82,8 +82,20 @@ describe("derivarChecklist", () => {
     expect(items.some((i) => i.texto.includes("fuera de una Etapa"))).toBe(false);
   });
 
-  it("todos los textos <= 180 chars", () => {
-    expect(items.every((i) => i.texto.length <= 180)).toBe(true);
+  // Contexto de la entrevista (28 sep 2026): la tarea se guarda COMPLETA y viaja
+  // entera (al seguimiento, al plan anterior, a la estimacion). Antes se cortaba
+  // a 177 caracteres + "…" y el motor recibia frases rotas. El recorte vive solo
+  // al MOSTRARLA (lib/textoTarea.ts, textoParaMostrar).
+  it("la tarea se guarda con su primera oracion ENTERA, aunque pase de 180 caracteres", () => {
+    const LARGA =
+      "Haz una caminata de 20 minutos por tu área de trabajo y anota en papel o celular todo lo que podría " +
+      "lastimarte: polvo de cemento en el aire, aditivos o resinas sin ficha de seguridad, cables sueltos y cargas pesadas.";
+    expect(LARGA.length).toBeGreaterThan(180);
+    const [primera] = derivarChecklist(`## Etapa 1: Peligros
+
+1. ${LARGA} Segunda oracion del paso.
+`);
+    expect(primera.texto).toBe(LARGA);
   });
 });
 
