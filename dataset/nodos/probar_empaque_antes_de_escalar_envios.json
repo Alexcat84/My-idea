@@ -1,6 +1,6 @@
 {
   "node_id": "probar_empaque_antes_de_escalar_envios",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "entrega",
   "titulo_concepto": "Prueba tu empaque antes de escalar envios",
   "fuente": "Guia de empaque para envios (FedEx)",
@@ -44,6 +44,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Repetir la prueba al cambiar de proveedor es una frecuencia o disparador práctico que la guía no dice (L879 solo anima a enviar una muestra). Se reescribe como sugerencia de My Idea. El dato no se repite en el resumen ni en el entregable.",
       "indice": 4,
       "auditoria": "tramo1 FX1-015"
+    },
+    {
+      "id": "t2-fase-260",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F24-022: Probar el empaque con el courier para que resista el transporte es un ajuste logistico de la operacion de envios, no una prueba con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

@@ -19,7 +19,8 @@
   ],
   "nodos_siguientes": [
     "matriz_asignacion_responsabilidades",
-    "getting_started_risk_assessment"
+    "getting_started_risk_assessment",
+    "evalua_la_gravedad_sin_autoengano"
   ],
   "condiciones_activacion": [
     "Cuando necesitas decidir a qué riesgos ponerle atención primero y con qué recursos",
@@ -28,5 +29,20 @@
   "etiqueta_arbol": "Evalúa Probabilidad e Impacto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-013",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "matriz_probabilidad_impacto -> evalua_la_gravedad_sin_autoengano",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

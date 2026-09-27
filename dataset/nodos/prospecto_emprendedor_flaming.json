@@ -16,8 +16,7 @@
   "nodos_previos": [
     "encaje_organizacional",
     "pasivos_vs_operadores",
-    "evaluacion_capacidades_fundador",
-    "sesgo_optimismo_fundador"
+    "evaluacion_capacidades_fundador"
   ],
   "nodos_siguientes": [
     "clasificacion_abc_prospectos"
@@ -43,6 +42,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P018, lector y verificador de acuerdo). El libro pone como senal haber iniciado muchos negocios, con exito o sin el. El paso la reduce a negocios fallidos y cambia el criterio que el libro fija de forma expresa. En el libro nada apoya que la senal sea el fracaso. La sesion solo restituye las tildes y la enie que el texto del verificador traia sin ellas.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P018-010"
+    },
+    {
+      "id": "t2-arista-127",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "sesgo_optimismo_fundador -> prospecto_emprendedor_flaming",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-15-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El sobreoptimismo del propio fundador no prepara la deteccion de franquiciados rebeldes a los estandares de marca; son sujetos y temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -16,9 +16,7 @@
   "nodos_previos": [
     "fase_affirm_buyers_remorse"
   ],
-  "nodos_siguientes": [
-    "organizacion_independiente_de_calidad"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la empresa opera principalmente de forma digital/automatizada sin contacto humano directo",
     "Si se busca diferenciación de marca en un sector con comunicaciones estandarizadas y frías"
@@ -26,5 +24,20 @@
   "etiqueta_arbol": "Vuelve Especial lo Obligatorio",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-067",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "hacer_remarcable_lo_requerido -> organizacion_independiente_de_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-17, lector y verificador de acuerdo)",
+        "motivo": "Convertir los mensajes obligatorios en experiencias de marca no guarda relacion con la independencia de la funcion de calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

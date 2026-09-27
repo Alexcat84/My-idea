@@ -1,6 +1,6 @@
 {
   "node_id": "sbrefa_cumplimiento",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Small Business Regulatory Enforcement Fairness Act (SBREFA)",
   "fuente": "SMALL_BUSINESS",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Conoce Tus Derechos Regulatorios",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-289",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-008: Cumplir la normativa de OSHA y pedir reducción de multas tras una citación es gestión operativa de un negocio que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

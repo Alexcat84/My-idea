@@ -1,6 +1,6 @@
 {
   "node_id": "modelo_eco_criterios_ponderados",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Sistema de puntos para pesar tus proyectos ambientales (Eco-Model)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Pondera tus Iniciativas Ambientales",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-227",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-009: Montar un sistema de puntos para decidir entre proyectos que compiten por inversion es asignar recursos, no probar nada con clientes o con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

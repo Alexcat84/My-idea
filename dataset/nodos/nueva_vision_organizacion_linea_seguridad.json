@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Modelo organizacional de seguridad que defina roles complementarios entre línea y staff según principios New View",
   "nodos_previos": [
-    "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas",
-    "construccion_experticia_era_ia"
+    "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -25,5 +24,20 @@
   "etiqueta_arbol": "Dale Poder al Experto",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-069",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "construccion_experticia_era_ia -> nueva_vision_organizacion_linea_seguridad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-20, lector y verificador de acuerdo)",
+        "motivo": "Conservar la experticia humana frente a la IA y el New View de seguridad solo comparten la palabra experto; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

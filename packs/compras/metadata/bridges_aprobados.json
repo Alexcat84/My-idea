@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria de la extraccion 2026-08-07: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Rechazos uno a uno con motivo abajo. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
+  "nota": "Curaduria de la extraccion 2026-08-07: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Rechazos uno a uno con motivo abajo. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md).",
   "aprobados": [
     {
       "core": "gestion_contratos_desempeno",
@@ -11,11 +11,6 @@
       "core": "ecuacion_de_valor",
       "dominio": "ofrece_valor_no_economico",
       "score": 0.7984
-    },
-    {
-      "core": "enfoque_etapa_investigacion",
-      "dominio": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
-      "score": 0.7917
     },
     {
       "core": "apertura_llamada_venta_grande",
@@ -54,11 +49,6 @@
       "dominio": "punto_unico_contacto_proveedores",
       "score": 0.7616,
       "reanclado_de": "contacto_con_el_cliente"
-    },
-    {
-      "core": "fase_assess",
-      "dominio": "prepara_posicion_agenda_antes_negociar",
-      "score": 0.7245
     },
     {
       "core": "contract_close_out",
@@ -114,6 +104,18 @@
       "dominio": "gestiona_contrato_tras_firma",
       "score": 0.7107,
       "motivo": "gestion del tiempo de un lanzamiento no es administrar un contrato"
+    },
+    {
+      "core": "enfoque_etapa_investigacion",
+      "dominio": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+      "score": 0.7917,
+      "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-049): El vecino trata la etapa de investigacion del vendedor en la venta grande (preguntar al comprador); este nodo trata al comprador que investiga fuentes independientes. Solo coinciden en la palabra investigacion y en perspectivas opuestas."
+    },
+    {
+      "core": "fase_assess",
+      "dominio": "prepara_posicion_agenda_antes_negociar",
+      "score": 0.7245,
+      "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-057): La fase Assess describe al cliente potencial evaluandote a ti como vendedor. Este nodo te pone como comprador que negocia con un proveedor, asi que la perspectiva es otra y no lo prepara."
     }
   ]
 }

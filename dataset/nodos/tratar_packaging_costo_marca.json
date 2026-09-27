@@ -14,7 +14,7 @@
   "entregable_esperado": "Una versión de empaque optimizada en peso con retroalimentacion real de tus clientes.",
   "nodos_previos": [
     "disenar_empaque_logistica",
-    "embalaje_exportacion"
+    "programacion_entregas_delivery_scheduling"
   ],
   "nodos_siguientes": [
     "elegir_caja_correcta"
@@ -27,5 +27,33 @@
   "etiqueta_arbol": "Ajusta el peso de tu empaque",
   "fuentes_internas": [
     "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-009",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "programacion_entregas_delivery_scheduling -> tratar_packaging_costo_marca",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-028",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "embalaje_exportacion -> tratar_packaging_costo_marca",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por programacion_entregas_delivery_scheduling."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

@@ -19,7 +19,6 @@
   "nodos_siguientes": [
     "ai_como_coach_personalizado",
     "practica_deliberada_asistida_ia",
-    "nueva_vision_organizacion_linea_seguridad",
     "ia_como_nivelador_habilidades"
   ],
   "condiciones_activacion": [
@@ -32,5 +31,20 @@
   "etiqueta_arbol": "Forma Expertos, no Solo Usuarios",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-069",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "construccion_experticia_era_ia -> nueva_vision_organizacion_linea_seguridad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-20, lector y verificador de acuerdo)",
+        "motivo": "Conservar la experticia humana frente a la IA y el New View de seguridad solo comparten la palabra experto; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

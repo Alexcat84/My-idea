@@ -18,14 +18,27 @@
     "gestion_desempeno_feedback",
     "deuda_de_gestion"
   ],
-  "nodos_siguientes": [
-    "organizacion_equipos_calidad_servicio"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando necesitas ir más allá de la administración básica de personas y empezar a cuidar en serio cómo se gestiona a tu equipo"
   ],
   "etiqueta_arbol": "Vigila la Calidad de tu Gestión",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-041",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "hr_calidad_gestion -> organizacion_equipos_calidad_servicio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-08, lector y verificador de acuerdo)",
+        "motivo": "El nodo del nucleo usa la calidad como metafora para revisar la gestion de personas; los equipos de calidad en servicios son otro tema."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

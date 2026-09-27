@@ -15,7 +15,7 @@
   "entregable_esperado": "Documento propio que justifica por qué tu estructura de franquicia y tu propuesta de valor difieren de la competencia",
   "nodos_previos": [
     "decision_royalties_vs_venta_producto",
-    "preguntas_clave_decision_franquiciar"
+    "evaluacion_necesidad_franquiciar"
   ],
   "nodos_siguientes": [
     "otros_terminos_contractuales",
@@ -39,5 +39,33 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-159",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "evaluacion_necesidad_franquiciar -> diferenciacion_estructura_legal_franquicia",
+      "texto_nuevo": "evaluacion_necesidad_franquiciar -> evitar_copia_estructura_competencia",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a diferenciacion_estructura_legal_franquicia, deprecado; su superviviente es evitar_copia_estructura_competencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-162",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "preguntas_clave_decision_franquiciar -> evitar_copia_estructura_competencia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a preguntas_clave_decision_franquiciar, deprecado; su superviviente es evaluacion_necesidad_franquiciar."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

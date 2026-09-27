@@ -15,7 +15,7 @@
   "nodos_previos": [
     "amenaza_y_oportunidad",
     "el_riesgo_del_entorno_que_no_controlas",
-    "identificacion_de_riesgos"
+    "reglas_gestion_riesgo_gambling"
   ],
   "nodos_siguientes": [
     "riesgo_contra_valor_vale_la_pena",
@@ -29,5 +29,33 @@
   "etiqueta_arbol": "Caza Oportunidades, No Solo Amenazas",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-012",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "reglas_gestion_riesgo_gambling -> caza_las_oportunidades_no_solo_amenazas",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-033",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "identificacion_de_riesgos -> caza_las_oportunidades_no_solo_amenazas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por reglas_gestion_riesgo_gambling."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

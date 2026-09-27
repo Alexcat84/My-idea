@@ -12,8 +12,7 @@
   ],
   "entregable_esperado": "Informe de impacto organizacional que anticipe cómo la nueva tecnología modificará las exigencias de desempeño sobre los operadores",
   "nodos_previos": [
-    "diseno_no_neutral_interfaces",
-    "explotacion_tecnologias_disruptivas"
+    "diseno_no_neutral_interfaces"
   ],
   "nodos_siguientes": [
     "adaptaciones_procedimentales",
@@ -41,6 +40,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Medida práctica añadida: el libro describe la ley de Hirschhorn, según la cual todo sistema opera a su capacidad y las mejoras tecnológicas se estiran hasta devolver al operador al borde (Dekker L2384-L2388). No prescribe límites organizacionales. Se reescribe como sugerencia de My Idea, sin atribuirla al autor. El resumen_teorico solo describe la ley y el entregable habla de un informe de impacto, así que ninguno repite el dato.",
       "indice": 2,
       "auditoria": "tramo1 DK3-012"
+    },
+    {
+      "id": "t2-arista-055",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "explotacion_tecnologias_disruptivas -> ley_de_capacidad_de_sistemas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-03-04): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Tiene razon A. Explotacion de Tecnologias Disruptivas es una estrategia de mercado: detectar nichos y expandirse al mercado masivo. La Ley de Capacidad trata de factores humanos: la carga del operador vuelve al limite de su capacidad. Ninguno de los dos nodos prepara al otro, solo comparten el tema 'tecnologia'. La correccion (el prefijo) no cambio nada: la arista ya era debil antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -17,17 +17,14 @@
   "nodos_previos": [
     "segmentos_de_clientes_problema_necesidad",
     "channels_hypothesis_physical",
-    "vesting_acciones_fundadores",
-    "customer_acquisition_activation_web",
     "embudo_get_keep_grow",
     "community_building_estrategia",
     "customer_appreciation_pr",
     "eventos_offline_como_canal_traccion",
     "cierre_satisfaccion_postventa",
-    "gestion_pedidos_order_management",
-    "programacion_entregas_delivery_scheduling",
     "diseno_de_ia_antropomorfica_para_producto",
-    "analisis_de_cohortes"
+    "analisis_de_cohortes",
+    "get_customers_funnel_webmobile"
   ],
   "nodos_siguientes": [
     "retention_metrics",
@@ -115,6 +112,58 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R062-002 (ANADIDO, lector y verificador de acuerdo): Plazo numerico que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R062-002"
+    },
+    {
+      "id": "t2-arista-066",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_pedidos_order_management -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-12): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La gestion de pedidos en la cadena de suministro no prepara las tacticas de retencion de clientes. Son dominios distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-104",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "programacion_entregas_delivery_scheduling -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Programar entregas directas o milk run es logistica y no tiene relacion con retener clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-133",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "vesting_acciones_fundadores -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-12-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El vesting (propiedad de acciones de fundadores y empleados) no tiene relacion con las tacticas de retencion de clientes; solo coinciden en la palabra retencion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-147",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "customer_acquisition_activation_web -> customer_retention_tactics",
+      "texto_nuevo": "get_customers_funnel_webmobile -> customer_retention_tactics",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a customer_acquisition_activation_web, deprecado; su superviviente es get_customers_funnel_webmobile."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

@@ -1,6 +1,6 @@
 {
   "node_id": "fase_entendimiento_investigacion_mercado",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ideacion",
   "dominio": "core",
   "titulo_concepto": "Fase de Entendimiento: Investigación del Entorno",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
@@ -46,5 +46,20 @@
   ],
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-168",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ideacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-029: Es investigacion exploratoria del entorno y de los clientes antes de comprometerse con una idea concreta; es ideacion, no la prueba de una hipotesis. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

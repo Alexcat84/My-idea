@@ -24,7 +24,8 @@
     "pivote_estrategico",
     "valor_vs_desperdicio",
     "ciclo_construir_medir_aprender",
-    "gestion_intraemprendedora_experimentacion"
+    "gestion_intraemprendedora_experimentacion",
+    "como_sabes_que_tu_metodo_sirve"
   ],
   "condiciones_activacion": [
     "Cuando el emprendedor está operando bajo condiciones de incertidumbre extrema",
@@ -34,5 +35,20 @@
   "etiqueta_arbol": "Demuestra tu Aprendizaje Real",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-014",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "aprendizaje_validado -> como_sabes_que_tu_metodo_sirve",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

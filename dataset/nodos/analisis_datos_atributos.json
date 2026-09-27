@@ -1,6 +1,6 @@
 {
   "node_id": "analisis_datos_atributos",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Análisis de Capacidad para Datos de Atributos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -16,9 +16,7 @@
   "nodos_previos": [
     "diseno_de_metodos_de_recoleccion_de_datos"
   ],
-  "nodos_siguientes": [
-    "eliminacion_causas_error_4"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando no se dispone de mediciones numéricas continuas sino solo datos de conformidad/no conformidad",
     "Cuando el problema de calidad se debe a equivocaciones más que a variabilidad de parámetros"
@@ -26,5 +24,33 @@
   "etiqueta_arbol": "Mide Capacidad con Defectos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-002",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "analisis_datos_atributos -> eliminacion_causas_error_4",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-23-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El calculo estadistico de capacidad con datos de atributos no prepara un canal para que el personal avise de las causas de error. No hay relacion directa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-011",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F01-002: Calcular la capacidad de un proceso en marcha con datos de defectos es control y mejora de la operacion, no prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

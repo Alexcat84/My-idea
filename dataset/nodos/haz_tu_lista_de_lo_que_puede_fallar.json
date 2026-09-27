@@ -1,6 +1,6 @@
 {
   "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "El Censo de Riesgos",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
@@ -48,6 +48,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el LECTOR B. El libro hace el triaje (L146) y solo manda mantener en la lista, marcados como supuesto del proyecto, los riesgos que pertenecen a niveles superiores (L602). A los de consecuencias minimas los manda ignorar (L427-L429), y del tipo asteroide dice que ni siquiera vale la pena ponerlos en la lista (L412). En ningun sitio crea un estado 'observado' frente a 'activo' para todo lo que se descarta. Ese formato de marcado es invencion practica. No es CONTRARIO porque L602 apoya en parte mantener en la lista y marcar lo que no gestionas. El analogo que cita el LECTOR A cubre solo una clase de riesgos y otro rotulo.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-066"
+    },
+    {
+      "id": "t2-fase-182",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F13-014: Construye el registro inicial de riesgos del proyecto y decide cuales atender; es planificacion de riesgos, no prueba con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

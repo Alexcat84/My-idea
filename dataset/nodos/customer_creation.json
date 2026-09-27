@@ -30,8 +30,7 @@
     "validar_canal_distribucion"
   ],
   "nodos_siguientes": [
-    "company_building",
-    "determinar_tipo_de_mercado"
+    "company_building"
   ],
   "condiciones_activacion": [
     "Si ya se validó que el modelo es repetible y escalable",
@@ -40,5 +39,20 @@
   "etiqueta_arbol": "Crea Demanda de tus Clientes",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-028",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "customer_creation -> determinar_tipo_de_mercado",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-09-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: Customer Creation es el tercer paso de Customer Development y sus actividades dependen del tipo de mercado ya definido; deberia ir despues, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

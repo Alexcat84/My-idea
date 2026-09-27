@@ -14,7 +14,7 @@
   ],
   "entregable_esperado": "Un diseño de encuesta con muestra representativa y protocolo de seguimiento a no respondientes, junto con resultados con nivel de confianza estadística documentado.",
   "nodos_previos": [
-    "causas_comunes_vs_especiales"
+    "estudio_lealtad_cliente"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -55,6 +55,32 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-013",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "causas_comunes_vs_especiales -> muestreo_con_seguimiento_no_respondientes",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, arbitro de los pares en conflicto): RANCIA_DE_ANTES, arbitro",
+        "motivo": "Distinguir la variacion comun de la especial con graficos de control no lleva a disenar una encuesta con seguimiento a quienes no responden; solo los une el libro."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-14",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "estudio_lealtad_cliente -> muestreo_con_seguimiento_no_respondientes",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-14, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Quien diseña estudios con clientes en lugar de encuestas de satisfacción sigue naturalmente con cómo tomar la muestra y cómo seguir a quienes no responden, para que el estudio no quede sesgado."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
     }
   ],
   "fuentes_internas": [

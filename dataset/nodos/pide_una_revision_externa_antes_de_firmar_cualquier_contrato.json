@@ -1,6 +1,6 @@
 {
   "node_id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "compras",
   "titulo_concepto": "Pide una revisión externa antes de firmar cualquier contrato",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Pide una segunda lectura",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-250",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F21-003: Revisar un contrato con un proveedor antes de firmarlo es gestion operativa de compras, no prueba con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

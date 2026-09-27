@@ -15,7 +15,7 @@
   "entregable_esperado": "Una lista de las fallas de rigidez encontradas en tu empaque actual, lista para corregir antes de escalar.",
   "nodos_previos": [
     "definir_que_cuenta_como_dano_antes_de_probar_empaque",
-    "pruebas_destructivas"
+    "regla_disponibilidad_previa_venta"
   ],
   "nodos_siguientes": [
     "simular_riesgos_transito_antes_de_enviar",
@@ -29,5 +29,33 @@
   "etiqueta_arbol": "Detecta fallas en tu empaque",
   "fuentes_internas": [
     "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-008",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "regla_disponibilidad_previa_venta -> detectar_empaque_poco_rigido",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-029",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "pruebas_destructivas -> detectar_empaque_poco_rigido",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por regla_disponibilidad_previa_venta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

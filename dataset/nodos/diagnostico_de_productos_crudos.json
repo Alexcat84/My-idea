@@ -18,8 +18,7 @@
   ],
   "nodos_siguientes": [
     "concepto_producto_plus",
-    "critica_eco_eficiencia",
-    "reconocer_mercancia_peligrosa_disfrazada"
+    "critica_eco_eficiencia"
   ],
   "condiciones_activacion": [
     "Si el usuario está evaluando un producto existente antes de rediseñarlo",
@@ -28,5 +27,20 @@
   "etiqueta_arbol": "Detecta Productos Diseñados sin Conciencia",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-030",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diagnostico_de_productos_crudos -> reconocer_mercancia_peligrosa_disfrazada",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por garantias_implicitas_vs_expresas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

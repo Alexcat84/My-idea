@@ -25,7 +25,8 @@
     "estilo_gerencial_ballet_vs_hockey",
     "consejo_de_calidad_3",
     "zero_defects_concepto",
-    "mejora_calidad_crosby"
+    "mejora_calidad_crosby",
+    "concepto_quality_is_free"
   ],
   "nodos_siguientes": [
     "cero_defectos",
@@ -90,6 +91,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U2-015 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-141",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "concepto_quality_is_free -> programa_catorce_pasos_crosby",
+      "texto_nuevo": "concepto_quality_is_free -> programa_mejora_calidad_14_pasos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a programa_catorce_pasos_crosby, deprecado; su superviviente es programa_mejora_calidad_14_pasos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

@@ -24,7 +24,8 @@
   ],
   "nodos_siguientes": [
     "tres_preguntas_carrera",
-    "prospecto_emprendedor_flaming"
+    "deja_de_ignorar_el_riesgo",
+    "cuanto_sabes_y_cuanto_solo_crees"
   ],
   "etiqueta_arbol": "Cuida tu Optimismo Excesivo",
   "correcciones": [
@@ -44,6 +45,45 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro advierte de los planes con proyecciones optimistas y del sesgo de confirmación, pero no propone el premortem. Esta herramienta no aparece en el libro.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-048"
+    },
+    {
+      "id": "t2-arista-127",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "sesgo_optimismo_fundador -> prospecto_emprendedor_flaming",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-15-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El sobreoptimismo del propio fundador no prepara la deteccion de franquiciados rebeldes a los estandares de marca; son sujetos y temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-016",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "sesgo_optimismo_fundador -> deja_de_ignorar_el_riesgo",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-019",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "sesgo_optimismo_fundador -> cuanto_sabes_y_cuanto_solo_crees",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
     }
   ],
   "fuentes_internas": [

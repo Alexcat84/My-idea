@@ -15,9 +15,7 @@
   "nodos_previos": [
     "depreciacion_y_amortizacion"
   ],
-  "nodos_siguientes": [
-    "calculo_roi"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si el usuario está due diligence de una adquisición",
     "Si el usuario planea salir a bolsa o busca inversión externa"
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Vigila los Cargos Extraordinarios",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-011",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cargos_extraordinarios_bandera_amarilla -> calculo_roi",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-06-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los cargos únicos como alerta de sesgo contable en los estados financieros no preparan el cálculo del ROI de una compra. La corrección solo marcó la fórmula como sugerencia y no cambia esto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

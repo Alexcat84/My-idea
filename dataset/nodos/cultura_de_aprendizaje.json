@@ -21,7 +21,6 @@
     "cultura_como_mecanismo_descentralizacion"
   ],
   "nodos_siguientes": [
-    "cultura_de_seguridad_componentes",
     "evaluacion_cultura_seguridad_completa"
   ],
   "condiciones_activacion": [
@@ -43,5 +42,20 @@
   ],
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-027",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cultura_de_aprendizaje -> cultura_de_seguridad_componentes",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-21-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la cultura de aprendizaje es el subcomponente final y deberia ir despues del nodo general (tambien figura como posterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

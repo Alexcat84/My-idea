@@ -17,7 +17,8 @@
     "la_lucha_resiliencia_ceo"
   ],
   "nodos_siguientes": [
-    "proceso_despidos_responsables"
+    "proceso_despidos_responsables",
+    "comunicacion_honesta_en_crisis_al_equipo"
   ],
   "condiciones_activacion": [
     "Cuando el equipo percibe que el CEO oculta información",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Di las Cosas Como Son",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-03",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cultura_transparencia_organizacional -> comunicacion_honesta_en_crisis_al_equipo",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-03, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "La crisis es el caso extremo de la transparencia radical del CEO: decir con franqueza lo grave de la situación y pedir el sacrificio es su aplicación directa."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

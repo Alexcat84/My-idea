@@ -42,8 +42,6 @@
   "nodos_siguientes": [
     "employee_pool_esop",
     "exercise_period_opciones",
-    "customer_retention_tactics",
-    "future_scenarios_planning",
     "eleccion_83b",
     "term_sheet_negociacion",
     "acuerdo_de_co_venta_y_votacion",
@@ -143,6 +141,32 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: el entregable imponia la 83(b) a todos.",
       "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "t2-arista-133",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "vesting_acciones_fundadores -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-12-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El vesting (propiedad de acciones de fundadores y empleados) no tiene relacion con las tacticas de retencion de clientes; solo coinciden en la palabra retencion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-134",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "vesting_acciones_fundadores -> future_scenarios_planning",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-12-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La planificacion de escenarios estrategicos no continua ni usa el vesting de acciones; temas sin relacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

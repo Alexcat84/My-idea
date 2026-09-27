@@ -1,6 +1,6 @@
 {
   "node_id": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "compras",
   "titulo_concepto": "Investiga con fuentes objetivas antes de contactar al proveedor",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
@@ -13,9 +13,7 @@
   ],
   "entregable_esperado": "Una lista escrita con precios de referencia, preguntas pendientes y opciones alternativas antes de la primera llamada al proveedor.",
   "nodos_previos": [
-    "decide_si_lo_compras_o_lo_haces_tu",
-    "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
-    "enfoque_etapa_investigacion"
+    "decide_si_lo_compras_o_lo_haces_tu"
   ],
   "nodos_siguientes": [
     "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
@@ -44,6 +42,45 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro recomienda investigar en fuentes de confianza, pero no fija un numero minimo. Lo de al menos dos fuentes no aparece en el libro.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-052"
+    },
+    {
+      "id": "t2-arista-049",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "enfoque_etapa_investigacion -> investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-20-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El vecino trata la etapa de investigacion del vendedor en la venta grande (preguntar al comprador); este nodo trata al comprador que investiga fuentes independientes. Solo coinciden en la palabra investigacion y en perspectivas opuestas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-126",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "separa_la_visita_de_evaluacion_de_la_decision_de_compra -> investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-20-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: investigar en fuentes objetivas va antes de contactar o visitar al proveedor; la visita de evaluacion es un paso posterior (el nodo ya la tiene tambien como DESPUES)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-196",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-020: Tiene razon el lector B: ambos coinciden en que no es validacion, pero el nodo se activa ante el primer proveedor posible para una compra importante y prepara precios de referencia y alternativas antes de decidir, lo que es disenar la obtencion de recursos (planificacion) mas que operar compras rutinarias. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

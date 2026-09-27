@@ -14,7 +14,6 @@
   ],
   "entregable_esperado": "Un atlas de varios mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
   "nodos_previos": [
-    "search_for_business_model",
     "metaforas_para_pensar",
     "mapeo_de_patrones"
   ],
@@ -61,6 +60,19 @@
       },
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo entregable_esperado del nodo; se cambia solo el segmento.",
       "auditoria": "muestreo A7"
+    },
+    {
+      "id": "t2-arista-123",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> pensamiento_espacial_mapeo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-13-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La busqueda de un modelo de negocio no prepara el mapeo como tecnica de pensamiento espacial. La relacion es muy generica y no tiene continuidad real."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

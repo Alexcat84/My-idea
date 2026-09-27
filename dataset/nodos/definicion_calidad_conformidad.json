@@ -1,6 +1,6 @@
 {
   "node_id": "definicion_calidad_conformidad",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Calidad como Conformidad con los Requisitos (La Primera Suposición Errónea)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -24,15 +24,14 @@
     "estilo_gerencial_ballet_vs_hockey",
     "programa_make_certain_2",
     "zero_defects_concepto",
-    "costo_de_calidad_crosby",
-    "quality_management_maturity_grid",
     "programa_cero_defectos",
-    "cinco_suposiciones_erroneas_calidad",
     "critica_acceptable_quality_level",
-    "programa_zero_defects",
     "costo_de_calidad_diagnostico",
     "programa_mejora_calidad_14_pasos",
-    "equipo_mejora_calidad_2"
+    "equipo_mejora_calidad_2",
+    "cero_defectos",
+    "concepto_quality_is_free",
+    "rejilla_madurez_gestion_calidad"
   ],
   "condiciones_activacion": [
     "Cuando no tienes claro qué significa calidad para lo que ofreces.",
@@ -90,6 +89,97 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-011 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-033",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "definicion_calidad_conformidad -> cinco_suposiciones_erroneas_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-17-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El nodo del vecino desarrolla la primera de las cinco suposiciones, asi que profundiza el panorama y deberia ir despues. Como ANTES, el orden esta invertido."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-139",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_conformidad_requisitos -> cero_defectos",
+      "texto_nuevo": "definicion_calidad_conformidad -> cero_defectos",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a definicion_calidad_conformidad_requisitos, deprecado; su superviviente es definicion_calidad_conformidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-142",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "conformance_to_requirements -> concepto_quality_is_free",
+      "texto_nuevo": "definicion_calidad_conformidad -> concepto_quality_is_free",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a conformance_to_requirements, deprecado; su superviviente es definicion_calidad_conformidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-151",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_conformidad -> costo_de_calidad_crosby",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a costo_de_calidad_crosby, deprecado; su superviviente es concepto_quality_is_free."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-152",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_conformidad -> quality_management_maturity_grid",
+      "texto_nuevo": "definicion_calidad_conformidad -> rejilla_madurez_gestion_calidad",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a quality_management_maturity_grid, deprecado; su superviviente es rejilla_madurez_gestion_calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-153",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_conformidad -> programa_zero_defects",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a programa_zero_defects, deprecado; su superviviente es cero_defectos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-092",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F16-015: Tiene razon B: los dos coinciden en que no es ideacion, y el nodo se dirige a quien ya produce y entrega (evaluar su trabajo, documentar no conformidades, iniciar mejoras de un producto o proceso existente), asi que es control de calidad de un negocio en marcha, aunque planificacion seria defendible. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

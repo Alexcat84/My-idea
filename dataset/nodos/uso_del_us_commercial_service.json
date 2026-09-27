@@ -24,8 +24,8 @@
   "nodos_siguientes": [
     "seleccion_de_distribuidor_internacional",
     "capacitacion_de_distribuidores",
-    "financiamiento_exim_bank_3",
-    "elementos_plan_exportacion_ejemplo"
+    "elementos_plan_exportacion_ejemplo",
+    "programas_ex_im_bank"
   ],
   "condiciones_activacion": [
     "Estás empezando a exportar y necesitas orientación experta gratuita o de bajo costo",
@@ -52,5 +52,33 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-183",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "asistencia_us_commercial_service -> programas_ex_im_bank",
+      "texto_nuevo": "uso_del_us_commercial_service -> programas_ex_im_bank",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a asistencia_us_commercial_service, deprecado; su superviviente es uso_del_us_commercial_service."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-190",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "uso_del_us_commercial_service -> financiamiento_exim_bank_3",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a financiamiento_exim_bank_3, deprecado; su superviviente es programas_ex_im_bank."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

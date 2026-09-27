@@ -16,9 +16,7 @@
   "nodos_previos": [
     "preparacion_conversacion_despido_ejecutivo"
   ],
-  "nodos_siguientes": [
-    "auditorias_gerenciales_periodicas"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Inmediatamente después de despedir a un ejecutivo"
   ],
@@ -55,6 +53,19 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R058-033 (CONTRARIO, arbitro): El lector B tenia razon y el A lo paso por alto. El resumen rebaja el plazo del libro: convierte el mismo dia, que el libro exige, en una preferencia y omite el ideal de un par de horas. El resto del resumen (el orden de las comunicaciones y el mensaje positivo, L980 y L982) es fiel al libro. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R058-033"
+    },
+    {
+      "id": "t2-arista-017",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_interna_post_despido_ejecutivo -> auditorias_gerenciales_periodicas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R01-20-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los recorridos periodicos para verificar controles y recoger sugerencias no continuan ni profundizan la comunicacion del despido de un ejecutivo; no tienen que ver. La correccion solo cambio los plazos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

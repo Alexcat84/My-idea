@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Un organigrama actualizado donde la calidad aparece como un area independiente, al mismo nivel que las areas operativas.",
   "nodos_previos": [
-    "politica_formal_de_calidad",
-    "hacer_remarcable_lo_requerido"
+    "politica_formal_de_calidad"
   ],
   "nodos_siguientes": [
     "funciones_del_departamento_de_calidad",
@@ -28,5 +27,20 @@
   "etiqueta_arbol": "Mantén la Calidad Independiente",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-067",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "hacer_remarcable_lo_requerido -> organizacion_independiente_de_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-17, lector y verificador de acuerdo)",
+        "motivo": "Convertir los mensajes obligatorios en experiencias de marca no guarda relacion con la independencia de la funcion de calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

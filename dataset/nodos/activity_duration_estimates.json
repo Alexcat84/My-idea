@@ -20,7 +20,6 @@
     "activity_list",
     "cost_management_plan",
     "duration_estimating_worksheet",
-    "cronograma_proyecto",
     "work_breakdown_structure"
   ],
   "nodos_siguientes": [
@@ -34,5 +33,20 @@
   "etiqueta_arbol": "Estima la Duración de tus Actividades",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-024",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> activity_duration_estimates",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: las estimaciones de duracion son un insumo del cronograma (el mismo vecino figura tambien como anterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

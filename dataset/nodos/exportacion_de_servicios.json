@@ -1,6 +1,6 @@
 {
   "node_id": "exportacion_de_servicios",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "exportacion",
   "titulo_concepto": "Fundamentos de la Exportación de Servicios",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Exporta tus Servicios al Mundo",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-160",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F11-030: El entregable es un plan de entrada a un mercado internacional para una empresa existente, que es planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

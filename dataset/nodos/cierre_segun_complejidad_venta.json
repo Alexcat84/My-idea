@@ -24,11 +24,7 @@
     "escala_actitud_cierre",
     "modelo_spin_preguntas",
     "preguntas_need_payoff",
-    "comunicacion_honesta_en_crisis_al_equipo",
-    "gratificacion_inmediata_producto",
-    "metodologia_spin_selling",
-    "nobody_cares_just_run_company",
-    "reuniones_diarias_eliminar_bloqueos"
+    "metodologia_spin_selling"
   ],
   "nodos_siguientes": [
     "compromiso_linea_tiempo_cliente",
@@ -135,6 +131,58 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-008 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-016",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "comunicacion_honesta_en_crisis_al_equipo -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-14): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La comunicacion honesta del CEO en una crisis interna no prepara la efectividad del cierre de ventas; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-068",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gratificacion_inmediata_producto -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Quitar friccion para que el cliente use el producto recibido es posventa y de otro tema; no prepara el analisis del cierre y en todo caso iria despues."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-093",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "nobody_cares_just_run_company -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-17): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Dejar las excusas y dirigir la empresa no tiene relacion con las tecnicas de cierre segun la complejidad de la venta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-114",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reuniones_diarias_eliminar_bloqueos -> cierre_segun_complejidad_venta",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-03-18): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las reuniones diarias para eliminar bloqueos en situacion de supervivencia no tienen que ver con el cierre de ventas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -16,7 +16,6 @@
     "construccion_de_leverage"
   ],
   "nodos_siguientes": [
-    "negociacion_carta_compromiso_banquero",
     "cierre_term_sheet"
   ],
   "condiciones_activacion": [
@@ -41,6 +40,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro solo dice que busques al unico inversor que diga que si e ignores los no. En ningun sitio aconseja preparar varias versiones de la historia segun el perfil de cada inversor. Busque con Grep tailor, each investor, different investors, customize, pitch y story: tailored solo sale para un traje (L1169) y para cursos de formacion (L1399). En la visita a Herb Allen (L2444-L2450) cuentan la misma historia de Loudcloud, y L2981 habla de una sola historia que da contexto a todos, inversores incluidos. Adaptar la historia a cada perfil es una tactica de formato nueva, no una concrecion de lo que dice el libro. Por eso es ANADIDO de tipo PRACTICO.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C095-052"
+    },
+    {
+      "id": "t2-arista-085",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mercado_de_uno_fundraising -> negociacion_carta_compromiso_banquero",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R04-18-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Buscar al unico inversionista que diga si es levantar capital; la carta de compromiso con el banquero trata de pagos si hay venta de la empresa, otro proceso que no continua este."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

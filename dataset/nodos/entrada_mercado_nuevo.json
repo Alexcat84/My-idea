@@ -1,6 +1,6 @@
 {
   "node_id": "entrada_mercado_nuevo",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Entrada a un Mercado Nuevo",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Evalúa Entrar a Mercado Nuevo",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-127",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F02-007: No prueba nada con clientes: estima presupuesto y tiempo de educacion del mercado, pronostica ventas y define la defensa estrategica, lo que es planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

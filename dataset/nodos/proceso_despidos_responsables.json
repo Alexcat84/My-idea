@@ -17,7 +17,7 @@
     "cultura_transparencia_organizacional"
   ],
   "nodos_siguientes": [
-    "breakthrough_cultural"
+    "ejecucion_rapida_de_despidos"
   ],
   "condiciones_activacion": [
     "Cuando la empresa no cumple su plan financiero y debe reducir personal",
@@ -41,6 +41,32 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pone el mensaje a toda la empresa antes de ejecutar el despido; el paso lo pone despues, invirtiendo la secuencia.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-098"
+    },
+    {
+      "id": "t2-entrada-07",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "proceso_despidos_responsables -> ejecucion_rapida_de_despidos",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-07, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "El proceso general de despidos ya pide actuar con rapidez para evitar filtraciones; este nodo desarrolla ese punto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-puente-045",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proceso_despidos_responsables -> breakthrough_cultural",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-12, lector y verificador de acuerdo)",
+        "motivo": "Ejecutar despidos cuidando la cultura no se continua en la transformacion cultural hacia metas de calidad; coinciden solo en la palabra cultura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ],
   "fuentes_internas": [

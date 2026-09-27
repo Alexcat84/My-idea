@@ -16,15 +16,13 @@
   "entregable_esperado": "Mapa de estrategia de IP con activos identificados, tipo de protección y cronograma de registro",
   "nodos_previos": [
     "key_resources_hypothesis",
-    "preparacion_due_diligence",
-    "restricciones_reputacionales"
+    "preparacion_due_diligence"
   ],
   "nodos_siguientes": [
     "key_partners_hypothesis",
     "proteccion_propiedad_intelectual_internacional",
     "licenciamiento_tecnologico",
     "proteccion_propiedad_intelectual_franq",
-    "determinar_monto_a_levantar",
     "marcas_registradas",
     "patentes_startup"
   ],
@@ -77,6 +75,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide acuerdos de cesión con empleados y contratistas, pero no menciona la figura legal work for hire (búsqueda de work for hire y variantes sin resultado).",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C071-108"
+    },
+    {
+      "id": "t2-arista-074",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "intellectual_property_strategy -> determinar_monto_a_levantar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-17-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Calcular el monto de una ronda no continua la estrategia de propiedad intelectual."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-112",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "restricciones_reputacionales -> intellectual_property_strategy",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-17-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las restricciones reputacionales en venture capital no preparan la estrategia de propiedad intelectual."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

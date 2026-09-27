@@ -1,6 +1,6 @@
 {
   "node_id": "comprension_capacidades_limitaciones_ia",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Comprensión de las Capacidades y Limitaciones Impredecibles de la IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
@@ -61,5 +61,20 @@
   ],
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-056",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F20-016: Consiste en probar la IA en cada tarea del flujo de trabajo diario para decidir que se automatiza; es operar y mejorar el negocio, no explorar una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

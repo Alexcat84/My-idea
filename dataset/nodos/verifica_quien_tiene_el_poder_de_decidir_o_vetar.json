@@ -1,6 +1,6 @@
 {
   "node_id": "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "compras",
   "titulo_concepto": "Verifica quién tiene realmente el poder de decidir o de vetar",
   "fuente": "Chris Voss, Rompe la barrera del no",
@@ -74,6 +74,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide asegurar la ejecución e influir en quienes no están en la mesa, pero no propone un registro escrito de quién aprobó cada parte. Busqué por escrito, aprobó y registro sin encontrar respaldo.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-075"
+    },
+    {
+      "id": "t2-fase-323",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-009: Identificar quien aprueba o veta en una negociacion es practica operativa de negociacion, no prueba de la idea con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

@@ -13,7 +13,6 @@
   "entregable_esperado": "Un checklist de riesgos identificados en el proyecto actual comparado con el caso Webvan.",
   "nodos_previos": [
     "modelo_tradicional_introduccion_producto",
-    "desarrollo_posicionamiento_producto",
     "audacia_del_cero"
   ],
   "nodos_siguientes": [
@@ -27,5 +26,20 @@
   "etiqueta_arbol": "Evita los Pecados del Lanzamiento",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-036",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "desarrollo_posicionamiento_producto -> nueve_pecados_capitales_lanzamiento",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-24-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los 9 pecados del modelo de introduccion de producto son el punto de partida del metodo de desarrollo de clientes. No son un paso que siga al posicionamiento final, asi que el orden esta invertido."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

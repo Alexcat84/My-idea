@@ -15,8 +15,7 @@
   "nodos_previos": [
     "auditoria_de_producto",
     "auditoria_de_proceso",
-    "auditoria_de_producto_2",
-    "marco_analisis_mercado_cadena_suministro"
+    "auditoria_de_producto_2"
   ],
   "nodos_siguientes": [
     "mejora_continua_operaciones",
@@ -29,5 +28,20 @@
   "etiqueta_arbol": "Mide Calidad en tu Manufactura",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-064",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "marco_analisis_mercado_cadena_suministro -> medicion_de_calidad_en_manufactura",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-12, lector y verificador de acuerdo)",
+        "motivo": "Clasificar el tipo de mercado para decidir en que destacar no continua en medir la productividad con el output aceptable en manufactura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

@@ -16,9 +16,7 @@
   "nodos_previos": [
     "fase_affirm_buyers_remorse"
   ],
-  "nodos_siguientes": [
-    "enfasis_en_utilidades_corto_plazo"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el producto/servicio tiene un costo alto o percepción de riesgo elevado para el cliente",
     "Si las tasas de cancelación temprana o devoluciones son un problema recurrente"
@@ -26,5 +24,20 @@
   "etiqueta_arbol": "Ofrece Garantía sin Riesgo",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-070",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "garantia_devolucion_dinero -> enfasis_en_utilidades_corto_plazo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-21, lector y verificador de acuerdo)",
+        "motivo": "Una garantia de devolucion para dar confianza al comprador no conduce a la critica de Deming a las utilidades de corto plazo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

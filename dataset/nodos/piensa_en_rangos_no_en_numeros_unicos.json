@@ -1,6 +1,6 @@
 {
   "node_id": "piensa_en_rangos_no_en_numeros_unicos",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Expresar la Incertidumbre como Rango",
   "fuente": "Hubbard, The Failure of Risk Management",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Piensa en Rangos, No en Cifras",
   "fuentes_internas": [
     "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-251",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-001: Trata de cómo estimar plazos, costos y ventas con rangos para planear con margen, no de probar la idea con clientes ni con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

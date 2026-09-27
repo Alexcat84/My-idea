@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Un plan simple para explicarle a quien te apoya (inversor, socio, tú mismo) por qué es normal empezar con números pequeños y cómo vas a mostrar el progreso real: la velocidad de mejora, no el tamaño absoluto",
   "nodos_previos": [
-    "metricas_como_validacion_cuantitativa",
-    "desarrollo_presentacion_problema"
+    "metricas_como_validacion_cuantitativa"
   ],
   "nodos_siguientes": [
     "nueve_pecados_capitales_lanzamiento",
@@ -29,5 +28,20 @@
   "etiqueta_arbol": "La Trampa de Empezar en Cero",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-037",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "desarrollo_presentacion_problema -> audacia_del_cero",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-09-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La trampa de los numeros pequeños al buscar apoyo o inversion no es un paso natural despues de preparar la reunion de presentacion del problema. La correccion del entregable (50 clientes) no la sostenia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

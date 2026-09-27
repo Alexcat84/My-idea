@@ -14,8 +14,7 @@
   ],
   "entregable_esperado": "Un análisis de ROI documentado para cada decisión de inversión de capital significativa",
   "nodos_previos": [
-    "analisis_de_ratios_financieros",
-    "cargos_extraordinarios_bandera_amarilla"
+    "analisis_de_ratios_financieros"
   ],
   "nodos_siguientes": [
     "comparacion_metodos_inversion"
@@ -42,6 +41,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no da la formula beneficio neto entre costo (buscado divided by y ROI); calcula el retorno con payback, NPV e IRR. El paso introduce una herramienta de calculo que el libro no respalda.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-108"
+    },
+    {
+      "id": "t2-arista-011",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cargos_extraordinarios_bandera_amarilla -> calculo_roi",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-06-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los cargos únicos como alerta de sesgo contable en los estados financieros no preparan el cálculo del ROI de una compra. La corrección solo marcó la fórmula como sugerencia y no cambia esto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

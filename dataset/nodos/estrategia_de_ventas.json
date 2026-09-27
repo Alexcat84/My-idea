@@ -16,7 +16,6 @@
     "mapa_de_acceso_al_cliente",
     "lienzo_modelo_negocio",
     "refinar_sales_roadmap",
-    "ocho_fases_experiencia_cliente",
     "evaluacion_vp_ventas"
   ],
   "nodos_siguientes": [
@@ -29,5 +28,20 @@
   "etiqueta_arbol": "Diseña tu Estrategia de Ventas",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-095",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ocho_fases_experiencia_cliente -> estrategia_de_ventas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-11-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La estrategia de ventas con mapas organizacionales y de acceso es un marco distinto, previo a la adquisicion. No continua el panorama de las ocho fases de la experiencia del cliente; si acaso iria antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

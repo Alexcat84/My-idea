@@ -21,8 +21,7 @@
   ],
   "nodos_siguientes": [
     "fomento_educacion_autoeducacion",
-    "enfermedades_mortales_gestion",
-    "analisis_causa_raiz_despido_ejecutivo"
+    "enfermedades_mortales_gestion"
   ],
   "condiciones_activacion": [
     "Cuando existe alto ausentismo o rotación entre las personas que trabajan contigo",
@@ -74,6 +73,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-097",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "orgullo_por_el_trabajo -> analisis_causa_raiz_despido_ejecutivo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-05-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Pasar de las barreras al orgullo por el trabajo (Deming) a la causa raiz de despedir a un ejecutivo no es una continuacion natural. Solo los une una idea sistemica vaga, y ninguno de los dos textos la desarrolla hacia el otro. La correccion solo marco un paso como sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

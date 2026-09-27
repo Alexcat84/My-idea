@@ -1,6 +1,6 @@
 {
   "node_id": "gestion_alucinaciones_ia",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Gestión de Alucinaciones de la IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
@@ -15,12 +15,10 @@
   "entregable_esperado": "Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.",
   "nodos_previos": [
     "prompting_por_persona_ia",
-    "automatizacion_software_gestion_innovacion",
     "ia_generacion_ideas_negocio",
     "human_in_the_loop_ia"
   ],
   "nodos_siguientes": [
-    "customer_validation",
     "ia_generacion_ideas_negocio",
     "ia_como_nivelador_habilidades",
     "simulacion_clientes_ia"
@@ -58,6 +56,45 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro reconoce que las respuestas varian porque se anade algo de aleatoriedad (L94) y que la IA es poco fiable, porque a veces se niega a hacer lo mismo cuando se le vuelve a pedir (L514). Pero nunca presenta esa variacion como herramienta para detectar alucinaciones. Contra las alucinaciones, su metodo es leer con mucho cuidado y comprobar cada dato (L720, L722), y avisa de que no sirve preguntarle a la IA por que alucino (L712). Busque rephras, same question, ask again, different answers, regenerat, inconsisten, multiple times y several times: no aparece la tecnica de hacer la misma pregunta de varias formas para comparar. No es una concrecion del cotejo de datos que propone el libro, sino otra tecnica que el libro no da. El libro tampoco la desaconseja, asi que no es CONTRARIO. Es una practica, asi que el tipo es PRACTICO.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-083"
+    },
+    {
+      "id": "t2-arista-006",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "automatizacion_software_gestion_innovacion -> gestion_alucinaciones_ia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-23-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Un software de gestion Stage-Gate no es IA generativa ni prepara el manejo de sus alucinaciones."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-062",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_alucinaciones_ia -> customer_validation",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-23-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La validacion con clientes (Customer Development) no continua ni profundiza la gestion de alucinaciones de la IA; los nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-178",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F26-008: Es una politica y protocolo interno de verificacion para la operacion diaria del equipo, no una validacion con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

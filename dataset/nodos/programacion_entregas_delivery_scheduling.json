@@ -20,10 +20,10 @@
     "gestion_inventario"
   ],
   "nodos_siguientes": [
-    "customer_retention_tactics",
     "colaboracion_transporte_ctm",
     "crossdocking",
-    "driver_transporte"
+    "driver_transporte",
+    "tratar_packaging_costo_marca"
   ],
   "condiciones_activacion": [
     "Cuando el negocio tiene múltiples puntos de entrega y busca reducir costos logísticos",
@@ -42,5 +42,33 @@
   ],
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-104",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "programacion_entregas_delivery_scheduling -> customer_retention_tactics",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R03-21-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Programar entregas directas o milk run es logistica y no tiene relacion con retener clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-009",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "programacion_entregas_delivery_scheduling -> tratar_packaging_costo_marca",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

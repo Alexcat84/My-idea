@@ -19,7 +19,6 @@
   ],
   "nodos_siguientes": [
     "founder_ceo_succession_process",
-    "encontrar_lead_vc",
     "fuentes_contratacion_ejecutivos"
   ],
   "condiciones_activacion": [
@@ -30,5 +29,20 @@
   "etiqueta_arbol": "Elige tu Estilo de Contratación",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-070",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "hiring_blueprints -> encontrar_lead_vc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R12-18-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Los blueprints de contratacion de empleados no preparan la identificacion de un VC lider en una ronda. Los temas no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

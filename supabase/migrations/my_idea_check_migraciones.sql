@@ -657,5 +657,18 @@ FROM (
       WHERE routine_schema='public' AND routine_name='contar_idioma_de_idea'
         AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
     )
+  UNION ALL
+  -- 047 . ciclo de replanteamiento (decision del fundador, 27 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '047', 'plans_etiqueta_check admite ''replanteamiento'' + checklist_items.heredado_de',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_etiqueta_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%replanteamiento%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='heredado_de'
+    )
 ) checks
 ORDER BY num;

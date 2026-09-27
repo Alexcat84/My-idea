@@ -18,15 +18,15 @@
     "estrategia_crecimiento_clientes",
     "producto_minimo_viable",
     "embudo_get_keep_grow",
-    "comunicacion_aprendizaje_startup"
+    "comunicacion_aprendizaje_continuo"
   ],
   "nodos_siguientes": [
     "retention_metrics",
     "acquisicion_viral_engineering",
     "customer_activation_tactics",
-    "customer_retention_strategy",
     "estrategia_crecimiento_clientes",
-    "herramientas_de_activacion_web"
+    "herramientas_de_activacion_web",
+    "customer_retention_tactics"
   ],
   "condiciones_activacion": [
     "Cuando tu startup opera en canal web/mobile y necesitas atraer tus primeros clientes",
@@ -46,5 +46,59 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-140",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "comunicacion_aprendizaje_continuo -> customer_acquisition_activation_web",
+      "texto_nuevo": "comunicacion_aprendizaje_continuo -> get_customers_funnel_webmobile",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a customer_acquisition_activation_web, deprecado; su superviviente es get_customers_funnel_webmobile."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-147",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "customer_acquisition_activation_web -> customer_retention_tactics",
+      "texto_nuevo": "get_customers_funnel_webmobile -> customer_retention_tactics",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a customer_acquisition_activation_web, deprecado; su superviviente es get_customers_funnel_webmobile."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-163",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "get_customers_funnel_webmobile -> customer_retention_strategy",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a customer_retention_strategy, deprecado; su superviviente es customer_retention_tactics."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-164",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "comunicacion_aprendizaje_startup -> get_customers_funnel_webmobile",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a comunicacion_aprendizaje_startup, deprecado; su superviviente es comunicacion_aprendizaje_continuo."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

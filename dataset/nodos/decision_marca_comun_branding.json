@@ -1,6 +1,6 @@
 {
   "node_id": "decision_marca_comun_branding",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "franquicias",
   "titulo_concepto": "¿Quieres construir una marca común para expandirte?",
   "fuente": "Franchise Your Business - Mark Siebert",
@@ -13,7 +13,6 @@
   ],
   "entregable_esperado": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y cuánto control quieres tener sobre ella",
   "nodos_previos": [
-    "mix_ubicaciones_corporativas_franquicia",
     "marco_name_system_fee"
   ],
   "nodos_siguientes": [],
@@ -25,5 +24,33 @@
   "etiqueta_arbol": "Decide Construir una Marca Común",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-087",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mix_ubicaciones_corporativas_franquicia -> decision_marca_comun_branding",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-11-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: decidir si construir una marca comun es un paso previo a elegir estructura de expansion, anterior a repartir ubicaciones entre locales propios y franquicias."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-090",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-021: Decidir si la expansión llevará marca común y cuánto control tener es diseño del modelo de expansión. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

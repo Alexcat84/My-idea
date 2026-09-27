@@ -1,6 +1,6 @@
 {
   "node_id": "evaluacion_riesgos_legales_ia",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Riesgos legales y éticos de usar inteligencia artificial generativa en tu negocio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
@@ -57,6 +57,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. Los acuerdos de L401 son las promesas de privacidad de los modos privados, no terminos de servicio que asignen la propiedad del resultado. L1024 solo dice que hoy no esta claro si lo que produce la IA esta protegido por derechos de autor. Busque terms of, agreement, liab, ownership, who owns y legal risk en todo el libro: no hay ningun pasaje que diga que los terminos del proveedor fijan quien es dueno de lo generado ni quien responde legalmente. El paso mete materia legal (propiedad y responsabilidad legal) que el libro no respalda, asi que no es solo una concrecion. El libro no dice lo contrario, asi que tampoco es CONTRARIO. Es materia legal, por eso el tipo es LEGAL_CIFRA.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-050"
+    },
+    {
+      "id": "t2-fase-154",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F07-009: Evaluar riesgos legales y eticos y fijar reglas internas antes de construir es diseno del plan y del marco, no una prueba con clientes o mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

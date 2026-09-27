@@ -1,6 +1,6 @@
 {
   "node_id": "erosion_de_defensas_por_ausencia_de_accidentes",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Erosión de Defensas por Períodos sin Accidentes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "No Bajes la Guardia sin Accidentes",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-128",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-018: Mantener las defensas de seguridad tras largos periodos sin accidentes es gestión operativa de una organización en marcha, no validación con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

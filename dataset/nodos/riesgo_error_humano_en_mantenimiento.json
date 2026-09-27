@@ -1,6 +1,6 @@
 {
   "node_id": "riesgo_error_humano_en_mantenimiento",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "El Contacto Humano como Riesgo Creciente en Mantenimiento",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Vigila el Error en Mantenimiento",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-283",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F27-025: Analiza el riesgo de error humano en el mantenimiento de sistemas en operacion y propone redisenos; es gestion operativa de seguridad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

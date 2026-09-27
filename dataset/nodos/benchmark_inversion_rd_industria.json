@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Un reporte comparativo de inversión en I+D vs. benchmarks de la industria, con justificación estratégica de la brecha encontrada.",
   "nodos_previos": [
-    "business_plan_cinco_secciones"
+    "mantener_puntaje_innovacion"
   ],
   "nodos_siguientes": [
     "definicion_tipos_nuevo_producto",
@@ -59,6 +59,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro remite a su Tabla 1.1 para comparar con la industria; no menciona la NSF ni asociaciones sectoriales como fuente (busque NSF, National Science Foundation, trade association sin resultado en este contexto).",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C075-081"
+    },
+    {
+      "id": "t2-arista-009",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "business_plan_cinco_secciones -> benchmark_inversion_rd_industria",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-23-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Escribir el plan de negocio en cinco secciones a partir del Canvas no prepara comparar el gasto en I+D de una empresa con el promedio de su industria. La relacion es muy lejana."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-01",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "mantener_puntaje_innovacion -> benchmark_inversion_rd_industria",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-01, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Quien empieza a medir su innovación sigue naturalmente comparando su inversión en I+D con la de su industria, y eso ocurre antes de fijar la estrategia y las arenas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
     }
   ],
   "fuentes_internas": [

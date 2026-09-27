@@ -1,6 +1,6 @@
 {
   "node_id": "valor_de_vida_del_cliente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Valor de Vida del Cliente (Customer Lifetime Value - LTV)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Calcula el Valor del Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-318",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F23-023: Calcular y monitorear el LTV en el tiempo e implementar programas de retencion y crecimiento es gestion operativa de clientes existentes. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

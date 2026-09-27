@@ -18,7 +18,8 @@
   "nodos_siguientes": [
     "producto_minimo_viable",
     "build_measure_learn",
-    "customer_development_process"
+    "customer_development_process",
+    "manifiesto_agile"
   ],
   "condiciones_activacion": [
     "Cuando el equipo debe decidir cómo estructurar el desarrollo de su producto"
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Elige entre Cascada o Ágil",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-11",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "waterfall_vs_agile_development -> manifiesto_agile",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-11, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Tras ver la diferencia entre cascada y ágil, lo natural es ir a los valores y principios que fundan lo ágil."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

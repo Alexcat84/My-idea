@@ -1,6 +1,6 @@
 {
   "node_id": "escepticismo_sano_ante_el_riesgo",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Escepticismo Sano ante los Métodos de Riesgo",
   "fuente": "Hubbard, The Failure of Risk Management",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Escepticismo Sano Ante el Riesgo",
   "fuentes_internas": [
     "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-133",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-001: Tiene razon B: el nodo no explora ninguna idea de negocio, revisa y pone a prueba el metodo de riesgo que se usa o se va a adoptar (entregable: revision escrita del metodo), lo que es disenar la estrategia de riesgo. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

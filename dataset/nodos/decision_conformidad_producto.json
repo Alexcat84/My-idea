@@ -14,7 +14,6 @@
   "entregable_esperado": "Procedimiento documentado de inspección con criterios de conformidad y delegación de autoridad.",
   "nodos_previos": [
     "planificacion_inspeccion",
-    "driver_produccion",
     "desarrollo_de_controles_de_proceso"
   ],
   "nodos_siguientes": [
@@ -27,5 +26,20 @@
   "etiqueta_arbol": "Verifica si el Producto Cumple",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-043",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "driver_produccion -> decision_conformidad_producto",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-10, arbitro)",
+        "motivo": "Tiene razon B: el nucleo trata del diseno de la operacion (enfoque de producto o funcional de la fabrica, metodo de almacen); la decision de conformidad de un producto inspeccionado es un acto puntual de inspeccion que no lo continua, y la unica mencion de calidad en el programa maestro es una palabra suelta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

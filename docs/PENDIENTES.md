@@ -32,7 +32,7 @@ Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
   `dataset/metadata/fuentes_canonicas.json` con sus titulos; se corre `python scripts/fuentes_internas.py`; sus nodos
   pasan la guarda de titulos (`engine/test_fuentes_de_cara.py`) y cualquier cita a un autor o libro como fuente sale por
   correccion declarada (veredicto ATRIBUCION) antes de integrar.
-- **Sesion con credencial:** 251 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
+- **Sesion con credencial:** 252 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
 
 ## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
 
@@ -17570,6 +17570,10 @@ campaña, afirmando una continuidad de contenido y no para tapar un hueco del mo
 por lectura con su fuente), en una campaña propia.
 
 ## Ficha para la integración: `puentes-reanclados-sin-tejer` (AUD-09 M51 y M53, decisión del fundador 25 sep 2026)
+
+**CERRADA el 26 sep 2026 (saneamiento, tanda 2, punto 9):** aprobados igual a aristas en los 9 mundos, ley del ancla en 2
+en `integrar_packs.py`, y la guarda `engine/test_puentes_tejidos.py` sobre el grafo servido. Detalle en
+`docs/SANEAMIENTO_DATASET.md`, tanda 2.
 
 **Por qué va a la integración y no a otra sesión.** Son DATO DEL GRAFO. Por su doctrina, la
 única sesión que puede tocar `dataset/` es la de integración; la rama de arreglos de la AUD-09

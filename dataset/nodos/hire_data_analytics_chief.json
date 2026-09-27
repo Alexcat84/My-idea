@@ -1,6 +1,6 @@
 {
   "node_id": "hire_data_analytics_chief",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Contratar un Chief de Analítica de Datos",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Contrata tu Analista de Datos",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-185",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F13-020: Incorporar un responsable de la mejora continua basada en datos cuando ya hay metricas y dashboard es gestion del negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

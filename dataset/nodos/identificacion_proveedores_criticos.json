@@ -1,6 +1,6 @@
 {
   "node_id": "identificacion_proveedores_criticos",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Identifica a tus proveedores críticos",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Mapea tus Proveedores Clave",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-187",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F27-030: Mapear y priorizar proveedores criticos para arrancar un programa de compras sostenibles es planificar el programa sobre un negocio existente, no explorar una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

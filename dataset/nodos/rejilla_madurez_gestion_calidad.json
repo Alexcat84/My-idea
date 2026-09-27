@@ -1,6 +1,6 @@
 {
   "node_id": "rejilla_madurez_gestion_calidad",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Rejilla de Madurez de Gestión de Calidad (Quality Management Maturity Grid)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -17,10 +17,10 @@
   "nodos_previos": [
     "medicion_calidad",
     "cinco_suposiciones_erroneas_calidad",
-    "costo_de_la_calidad",
-    "definicion_calidad_como_conformidad",
     "responsabilidad_personal_en_gestion",
-    "evaluacion_encuesta_calidad_proveedor"
+    "evaluacion_encuesta_calidad_proveedor",
+    "costo_de_mala_calidad_copq",
+    "definicion_calidad_conformidad"
   ],
   "nodos_siguientes": [
     "costo_de_calidad",
@@ -76,6 +76,71 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-005 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-144",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "costo_de_mala_calidad_copq -> quality_management_maturity_grid",
+      "texto_nuevo": "costo_de_mala_calidad_copq -> rejilla_madurez_gestion_calidad",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a quality_management_maturity_grid, deprecado; su superviviente es rejilla_madurez_gestion_calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-152",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_conformidad -> quality_management_maturity_grid",
+      "texto_nuevo": "definicion_calidad_conformidad -> rejilla_madurez_gestion_calidad",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a quality_management_maturity_grid, deprecado; su superviviente es rejilla_madurez_gestion_calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-184",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "costo_de_la_calidad -> rejilla_madurez_gestion_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a costo_de_la_calidad, deprecado; su superviviente es costo_de_mala_calidad_copq."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-185",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "definicion_calidad_como_conformidad -> rejilla_madurez_gestion_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a definicion_calidad_como_conformidad, deprecado; su superviviente es definicion_calidad_conformidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-fase-273",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F19-007: Diagnostica la madurez de la gestión de calidad de un negocio en marcha y planea su mejora, que es mejorar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

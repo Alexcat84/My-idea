@@ -17,8 +17,7 @@
   "entregable_esperado": "Conclusión estadística documentada sobre si se rechaza o no la hipótesis nula, con implicaciones prácticas para el proceso",
   "nodos_previos": [
     "determinacion_tamano_muestra",
-    "estimacion_intervalos_confianza",
-    "disenar_prompts_efectivos_para_ia"
+    "estimacion_intervalos_confianza"
   ],
   "nodos_siguientes": [
     "pruebas_no_parametricas_transformacion",
@@ -31,5 +30,20 @@
   "etiqueta_arbol": "Pon a Prueba tu Hipótesis",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-054",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "disenar_prompts_efectivos_para_ia -> prueba_hipotesis",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-02, lector y verificador de acuerdo)",
+        "motivo": "Disenar prompts para simulaciones con IA no lleva de forma natural a la prueba de hipotesis estadistica; son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

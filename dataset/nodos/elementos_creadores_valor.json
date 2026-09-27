@@ -14,14 +14,12 @@
   "entregable_esperado": "Lista priorizada de elementos de valor aplicados a la propuesta específica del negocio",
   "nodos_previos": [
     "value_proposition_startup",
-    "empathy_map",
-    "reconocer_sesgo_de_apofenia"
+    "empathy_map"
   ],
   "nodos_siguientes": [
     "canales_distribucion",
     "relaciones_con_clientes",
     "flujos_de_ingresos",
-    "clasificacion_leads_abc",
     "diseno_embudo_ventas_cliente",
     "necesidades_implicitas_vs_explicitas"
   ],
@@ -47,6 +45,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro habla de una mezcla de elementos segun las necesidades del segmento, pero no da un numero de elementos que priorizar. No encontre ninguna cifra equivalente.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-092"
+    },
+    {
+      "id": "t2-arista-046",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "elementos_creadores_valor -> clasificacion_leads_abc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-17-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Clasificar los leads por plazo de cierre para repartir el tiempo de venta no usa ni profundiza los elementos que crean valor en la propuesta. Lo que los une es genérico."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-109",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reconocer_sesgo_de_apofenia -> elementos_creadores_valor",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R13-17-10): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La apofenia y el sesgo de patrones al interpretar datos o diseñar futuros no preparan la selección de elementos de valor para la propuesta. Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

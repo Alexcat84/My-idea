@@ -18,7 +18,7 @@
     "modelo_contingencia_riesgo",
     "afinar_frente_difuso_innovacion",
     "value_proposition_canvas",
-    "project_schedule"
+    "cronograma_proyecto"
   ],
   "nodos_siguientes": [
     "technology_platform_evaluation",
@@ -43,5 +43,33 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-146",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "cronograma_proyecto -> innovation_project_canvas",
+      "texto_nuevo": "cronograma_proyecto -> lienzo_proyecto_innovacion",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a innovation_project_canvas, deprecado; su superviviente es lienzo_proyecto_innovacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-172",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "project_schedule -> lienzo_proyecto_innovacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a project_schedule, deprecado; su superviviente es cronograma_proyecto."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

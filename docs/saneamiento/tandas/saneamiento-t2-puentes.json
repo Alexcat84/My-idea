@@ -1,0 +1,712 @@
+[
+ {
+  "id": "t2-puente-001",
+  "operacion": "TEJER",
+  "desde": "gestion_contratos_desempeno",
+  "hacia": "lleva_scorecard_desempeno_proveedor",
+  "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-002",
+  "operacion": "TEJER",
+  "desde": "negociacion_contratos_proveedores",
+  "hacia": "decide_criterio_eleccion_proveedor",
+  "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-003",
+  "operacion": "TEJER",
+  "desde": "obtencion_de_compromiso",
+  "hacia": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+  "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-004",
+  "operacion": "TEJER",
+  "desde": "negociacion_contratos_proveedores",
+  "hacia": "punto_unico_contacto_proveedores",
+  "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-005",
+  "operacion": "TEJER",
+  "desde": "contract_close_out",
+  "hacia": "ata_el_pago_al_cumplimiento_real_del_servicio",
+  "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-006",
+  "operacion": "TEJER",
+  "desde": "garantias_implicitas_vs_expresas",
+  "hacia": "reconocer_mercancia_peligrosa_disfrazada",
+  "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-007",
+  "operacion": "TEJER",
+  "desde": "logistica_inversa_retornos",
+  "hacia": "revisar_necesidades_de_empaque",
+  "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-008",
+  "operacion": "TEJER",
+  "desde": "regla_disponibilidad_previa_venta",
+  "hacia": "detectar_empaque_poco_rigido",
+  "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-009",
+  "operacion": "TEJER",
+  "desde": "programacion_entregas_delivery_scheduling",
+  "hacia": "tratar_packaging_costo_marca",
+  "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-010",
+  "operacion": "TEJER",
+  "desde": "trade_off_responsividad_eficiencia",
+  "hacia": "saber_hasta_donde_mejorar_servicio",
+  "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-011",
+  "operacion": "TEJER",
+  "desde": "garantias_implicitas_vs_expresas",
+  "hacia": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+  "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-012",
+  "operacion": "TEJER",
+  "desde": "reglas_gestion_riesgo_gambling",
+  "hacia": "caza_las_oportunidades_no_solo_amenazas",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-013",
+  "operacion": "TEJER",
+  "desde": "matriz_probabilidad_impacto",
+  "hacia": "evalua_la_gravedad_sin_autoengano",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-014",
+  "operacion": "TEJER",
+  "desde": "aprendizaje_validado",
+  "hacia": "como_sabes_que_tu_metodo_sirve",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-015",
+  "operacion": "TEJER",
+  "desde": "plan_de_contingencia_b",
+  "hacia": "plan_de_desastre_y_recuperacion",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-016",
+  "operacion": "TEJER",
+  "desde": "sesgo_optimismo_fundador",
+  "hacia": "deja_de_ignorar_el_riesgo",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-017",
+  "operacion": "TEJER",
+  "desde": "capacidad_de_respuesta_responsable",
+  "hacia": "un_dueno_para_cada_riesgo",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-018",
+  "operacion": "TEJER",
+  "desde": "plan_de_contingencia_b",
+  "hacia": "plan_b_antes_de_necesitarlo",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-019",
+  "operacion": "TEJER",
+  "desde": "sesgo_optimismo_fundador",
+  "hacia": "cuanto_sabes_y_cuanto_solo_crees",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-020",
+  "operacion": "TEJER",
+  "desde": "reglas_gestion_riesgo_gambling",
+  "hacia": "empieza_con_lo_que_ya_funciona",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-021",
+  "operacion": "TEJER",
+  "desde": "decision_consciente_de_crecimiento",
+  "hacia": "gestionar_el_riesgo_es_de_adultos",
+  "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia.",
+  "evidencia": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-022",
+  "operacion": "QUITAR",
+  "desde": "contacto_con_el_cliente",
+  "hacia": "punto_unico_contacto_proveedores",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-023",
+  "operacion": "QUITAR",
+  "desde": "fin_precio_como_criterio_unico",
+  "hacia": "decide_criterio_eleccion_proveedor",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-024",
+  "operacion": "QUITAR",
+  "desde": "calificacion_de_calidad_de_proveedores",
+  "hacia": "lleva_scorecard_desempeno_proveedor",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por gestion_contratos_desempeno.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-025",
+  "operacion": "QUITAR",
+  "desde": "transfiere_lo_que_no_debes_cargar",
+  "hacia": "ata_el_pago_al_cumplimiento_real_del_servicio",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por contract_close_out.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-026",
+  "operacion": "QUITAR",
+  "desde": "aceptacion_bienes_comprados",
+  "hacia": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por obtencion_de_compromiso.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-027",
+  "operacion": "QUITAR",
+  "desde": "servicio_postventa_internacional",
+  "hacia": "saber_hasta_donde_mejorar_servicio",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por trade_off_responsividad_eficiencia.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-028",
+  "operacion": "QUITAR",
+  "desde": "embalaje_exportacion",
+  "hacia": "tratar_packaging_costo_marca",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por programacion_entregas_delivery_scheduling.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-029",
+  "operacion": "QUITAR",
+  "desde": "pruebas_destructivas",
+  "hacia": "detectar_empaque_poco_rigido",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por regla_disponibilidad_previa_venta.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-030",
+  "operacion": "QUITAR",
+  "desde": "diagnostico_de_productos_crudos",
+  "hacia": "reconocer_mercancia_peligrosa_disfrazada",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por garantias_implicitas_vs_expresas.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-031",
+  "operacion": "QUITAR",
+  "desde": "eliminar_miedo",
+  "hacia": "deja_de_ignorar_el_riesgo",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por sesgo_optimismo_fundador.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-032",
+  "operacion": "QUITAR",
+  "desde": "estrategia_gestion_riesgo_tolerancia",
+  "hacia": "empieza_con_lo_que_ya_funciona",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por reglas_gestion_riesgo_gambling.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-033",
+  "operacion": "QUITAR",
+  "desde": "identificacion_de_riesgos",
+  "hacia": "caza_las_oportunidades_no_solo_amenazas",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por reglas_gestion_riesgo_gambling.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-034",
+  "operacion": "QUITAR",
+  "desde": "identificacion_de_riesgos",
+  "hacia": "evalua_la_gravedad_sin_autoengano",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por matriz_probabilidad_impacto.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-035",
+  "operacion": "QUITAR",
+  "desde": "identificacion_de_riesgos",
+  "hacia": "un_dueno_para_cada_riesgo",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por capacidad_de_respuesta_responsable.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-036",
+  "operacion": "QUITAR",
+  "desde": "estrategia_gestion_riesgo_tolerancia",
+  "hacia": "evitar_o_asumir_decide_a_conciencia",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por gestion_riesgo_incremental.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-037",
+  "operacion": "QUITAR",
+  "desde": "planificacion_recuperacion_post_accidente",
+  "hacia": "plan_de_desastre_y_recuperacion",
+  "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por plan_de_contingencia_b.",
+  "evidencia": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-038",
+  "operacion": "QUITAR",
+  "desde": "entrenamiento_funcional_empleados",
+  "hacia": "cultura_flexible_organizacional",
+  "motivo": "El entrenamiento funcional por puesto no conduce a la cultura flexible de autoridad en picos de riesgo; son temas distintos.",
+  "evidencia": "Pasada P del saneamiento (P1-03, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-039",
+  "operacion": "QUITAR",
+  "desde": "gestion_instalaciones",
+  "hacia": "planificacion_cadena_suministro",
+  "motivo": "La gestion del rol y la capacidad de instalaciones no se continua en el proceso de sourcing por commodities; la relacion es solo de cadena de suministro en general.",
+  "evidencia": "Pasada P del saneamiento (P1-05, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-040",
+  "operacion": "QUITAR",
+  "desde": "liderazgo_basado_en_valores_mas_alla_del_deber",
+  "hacia": "cultura_organizacional_calidad",
+  "motivo": "Asumir costos por valores ante una crisis personal no se continua en como la cultura condiciona la adopcion de herramientas de calidad; solo comparten la palabra cultura.",
+  "evidencia": "Pasada P del saneamiento (P1-07, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-041",
+  "operacion": "QUITAR",
+  "desde": "hr_calidad_gestion",
+  "hacia": "organizacion_equipos_calidad_servicio",
+  "motivo": "El nodo del nucleo usa la calidad como metafora para revisar la gestion de personas; los equipos de calidad en servicios son otro tema.",
+  "evidencia": "Pasada P del saneamiento (P1-08, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-042",
+  "operacion": "QUITAR",
+  "desde": "framework_good_bad_product_manager",
+  "hacia": "adopcion_liderazgo",
+  "motivo": "El marco de expectativas del product manager no se profundiza en el punto 7 de Deming sobre liderar sistemas en vez de vigilar numeros; el salto desorienta.",
+  "evidencia": "Pasada P del saneamiento (P1-09, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-043",
+  "operacion": "QUITAR",
+  "desde": "driver_produccion",
+  "hacia": "decision_conformidad_producto",
+  "motivo": "Tiene razon B: el nucleo trata del diseno de la operacion (enfoque de producto o funcional de la fabrica, metodo de almacen); la decision de conformidad de un producto inspeccionado es un acto puntual de inspeccion que no lo continua, y la unica mencion de calidad en el programa maestro es una palabra suelta.",
+  "evidencia": "Pasada P del saneamiento (P1-10, arbitro)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-044",
+  "operacion": "QUITAR",
+  "desde": "gestion_testimonios",
+  "hacia": "riesgos_consenso_inspeccion",
+  "motivo": "Redactar testimonios de clientes no tiene relacion con el consenso entre inspectores de calidad.",
+  "evidencia": "Pasada P del saneamiento (P1-11, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-045",
+  "operacion": "QUITAR",
+  "desde": "proceso_despidos_responsables",
+  "hacia": "breakthrough_cultural",
+  "motivo": "Ejecutar despidos cuidando la cultura no se continua en la transformacion cultural hacia metas de calidad; coinciden solo en la palabra cultura.",
+  "evidencia": "Pasada P del saneamiento (P1-12, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-046",
+  "operacion": "QUITAR",
+  "desde": "mentor_dos_tipos_de_amigos",
+  "hacia": "equipo_de_gestion_de_crisis",
+  "motivo": "Tener mentores de confianza personal no lleva a un protocolo de equipo de gestion de crisis; la relacion es solo por la palabra crisis.",
+  "evidencia": "Pasada P del saneamiento (P1-13, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-047",
+  "operacion": "QUITAR",
+  "desde": "diseno_dashboards",
+  "hacia": "analisis_reporte_benchmarking",
+  "motivo": "Tiene razon B: disenar dashboards internos por nivel no lleva naturalmente a analizar los datos de un estudio de benchmarking (normalizacion, significancia, cuartiles, antitrust); el lazo por indicadores y graficos es de palabras, y el salto exige explicacion.",
+  "evidencia": "Pasada P del saneamiento (P1-14, arbitro)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-048",
+  "operacion": "QUITAR",
+  "desde": "buen_lugar_para_trabajar",
+  "hacia": "coordinacion_sitios_multiempleador",
+  "motivo": "Construir un buen lugar para trabajar en gestion no conduce a coordinar peligros entre contratistas en sitios multiempleador.",
+  "evidencia": "Pasada P del saneamiento (P1-15, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-049",
+  "operacion": "QUITAR",
+  "desde": "deteccion_efecto_hawthorne",
+  "hacia": "efectos_recompensa_castigo",
+  "motivo": "Aislar el efecto Hawthorne al medir un entrenamiento es otro tema que recompensas y castigos para la conducta segura.",
+  "evidencia": "Pasada P del saneamiento (P1-16, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-050",
+  "operacion": "QUITAR",
+  "desde": "prompting_alta_variacion",
+  "hacia": "pruebas_inadecuadas_prototipos",
+  "motivo": "Pedir a la IA respuestas de alta variacion no tiene que ver con la variacion estadistica en pruebas de prototipos; solo comparten la palabra variacion.",
+  "evidencia": "Pasada P del saneamiento (P1-20, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-051",
+  "operacion": "QUITAR",
+  "desde": "embrace_the_struggle_liderazgo_autentico",
+  "hacia": "autenticidad_del_liderazgo_de_campo",
+  "motivo": "La autenticidad personal del CEO ante sus luchas no se continua en la presencia de supervisores en campo para seguridad; solo comparten la palabra autentico.",
+  "evidencia": "Pasada P del saneamiento (P1-21, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-052",
+  "operacion": "QUITAR",
+  "desde": "comprender_alineacion_etica_ia",
+  "hacia": "juran_quality_by_design",
+  "motivo": "Los sesgos y la etica de los modelos de IA no se profundizan en el modelo de calidad por diseno de Juran; son temas distintos.",
+  "evidencia": "Pasada P del saneamiento (P1-23, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-053",
+  "operacion": "QUITAR",
+  "desde": "requisitos_lider_de_rrhh",
+  "hacia": "rol_alta_direccion_calidad",
+  "motivo": "El perfil del jefe de RRHH y el rol personal del lider en la calidad solo comparten la palabra liderazgo; no es la continuacion del tema.",
+  "evidencia": "Pasada P del saneamiento (P2-01, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-054",
+  "operacion": "QUITAR",
+  "desde": "disenar_prompts_efectivos_para_ia",
+  "hacia": "prueba_hipotesis",
+  "motivo": "Disenar prompts para simulaciones con IA no lleva de forma natural a la prueba de hipotesis estadistica; son temas distintos.",
+  "evidencia": "Pasada P del saneamiento (P2-02, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-055",
+  "operacion": "QUITAR",
+  "desde": "comunidad_como_activo_estrategico",
+  "hacia": "cultura_organizacional_calidad",
+  "motivo": "La comunidad de usuarios como activo y la cultura organizacional frente a la calidad son temas distintos.",
+  "evidencia": "Pasada P del saneamiento (P2-05, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-056",
+  "operacion": "QUITAR",
+  "desde": "estandar_gtin_epc",
+  "hacia": "conformidad_comercio_internacional",
+  "motivo": "Los codigos GTIN/EPC para identificar productos y el marcado CE de conformidad solo coinciden en que son estandares de comercio; el salto desorienta.",
+  "evidencia": "Pasada P del saneamiento (P2-06, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-057",
+  "operacion": "QUITAR",
+  "desde": "principio_reflexivo_contratacion",
+  "hacia": "seminario_de_exito_para_gerencia",
+  "motivo": "La etica de contratar empleados de empresas amigas no tiene relacion con usar testimonios para vencer la resistencia a la calidad.",
+  "evidencia": "Pasada P del saneamiento (P2-10, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-058",
+  "operacion": "QUITAR",
+  "desde": "gestion_pedidos_order_management",
+  "hacia": "planificacion_cadena_suministro",
+  "motivo": "La gestion de pedidos hacia el cliente y la planificacion del abastecimiento con proveedores son procesos distintos; solo comparten la etiqueta de cadena de suministro.",
+  "evidencia": "Pasada P del saneamiento (P2-11, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-059",
+  "operacion": "QUITAR",
+  "desde": "diseno_de_eucatastrofe_organizacional",
+  "hacia": "gestion_del_cambio",
+  "motivo": "El uso humano y responsable de la IA en el equipo no se continua en un sistema para gestionar cambios de producto, proveedor o regulacion; solo coinciden en la palabra cambio.",
+  "evidencia": "Pasada P del saneamiento (P2-12, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-060",
+  "operacion": "QUITAR",
+  "desde": "plataforma_colaboracion_tiempo_real",
+  "hacia": "alcance_profundo_cadena_suministro",
+  "motivo": "Una plataforma de colaboracion en tiempo real con los socios no es la puerta natural al control ambiental de los proveedores de segundo y tercer nivel.",
+  "evidencia": "Pasada P del saneamiento (P2-18, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-061",
+  "operacion": "QUITAR",
+  "desde": "diferenciacion_de_marca_contraintuitiva",
+  "hacia": "uso_regulaciones_como_espada",
+  "motivo": "Diferenciar la marca contra la convencion del sector y usar la regulacion ambiental como arma competitiva solo se parecen en que ambas son estrategias a contracorriente.",
+  "evidencia": "Pasada P del saneamiento (P2-21, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-062",
+  "operacion": "QUITAR",
+  "desde": "social_ads_indirect_response",
+  "hacia": "sistema_manejo_quejas",
+  "motivo": "La publicidad indirecta en redes y el sistema de quejas son temas distintos; solo comparten la palabra lealtad.",
+  "evidencia": "Pasada P del saneamiento (P3-05, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-063",
+  "operacion": "QUITAR",
+  "desde": "reconstruccion_significado_trabajo",
+  "hacia": "cultura_organizacional_calidad",
+  "motivo": "Tiene razon B: el nucleo trata de rituales convertidos en ceremonia vacia por la IA y del sentido del trabajo humano, mientras el nodo de calidad trata de la legitimidad de herramientas como las cartas de control ante supervisores; solo comparten la idea general de cultura y cambio, y quien llega desde el nucleo se desorienta.",
+  "evidencia": "Pasada P del saneamiento (P3-11, arbitro)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-064",
+  "operacion": "QUITAR",
+  "desde": "marco_analisis_mercado_cadena_suministro",
+  "hacia": "medicion_de_calidad_en_manufactura",
+  "motivo": "Clasificar el tipo de mercado para decidir en que destacar no continua en medir la productividad con el output aceptable en manufactura.",
+  "evidencia": "Pasada P del saneamiento (P3-12, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-065",
+  "operacion": "QUITAR",
+  "desde": "gestion_de_problemas_sin_receta",
+  "hacia": "adopcion_liderazgo",
+  "motivo": "Resolver crisis de personas sin recetas y el punto 7 de Deming solo comparten la palabra liderazgo; tienen enfoques distintos.",
+  "evidencia": "Pasada P del saneamiento (P3-14, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-066",
+  "operacion": "QUITAR",
+  "desde": "gestion_confrontacion_ejecutiva",
+  "hacia": "rol_alta_direccion_calidad",
+  "motivo": "Manejar confrontaciones con ejecutivos y top performers no lleva al rol del dueño en el liderazgo de calidad.",
+  "evidencia": "Pasada P del saneamiento (P3-16, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-067",
+  "operacion": "QUITAR",
+  "desde": "hacer_remarcable_lo_requerido",
+  "hacia": "organizacion_independiente_de_calidad",
+  "motivo": "Convertir los mensajes obligatorios en experiencias de marca no guarda relacion con la independencia de la funcion de calidad.",
+  "evidencia": "Pasada P del saneamiento (P3-17, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-068",
+  "operacion": "QUITAR",
+  "desde": "marco_analisis_mercado_cadena_suministro",
+  "hacia": "key_process_product_characteristics",
+  "motivo": "El analisis del tipo de mercado y de la competencia no continua en identificar caracteristicas clave de producto y proceso.",
+  "evidencia": "Pasada P del saneamiento (P3-19, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-069",
+  "operacion": "QUITAR",
+  "desde": "construccion_experticia_era_ia",
+  "hacia": "nueva_vision_organizacion_linea_seguridad",
+  "motivo": "Conservar la experticia humana frente a la IA y el New View de seguridad solo comparten la palabra experto; el salto desorienta.",
+  "evidencia": "Pasada P del saneamiento (P3-20, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-070",
+  "operacion": "QUITAR",
+  "desde": "garantia_devolucion_dinero",
+  "hacia": "enfasis_en_utilidades_corto_plazo",
+  "motivo": "Una garantia de devolucion para dar confianza al comprador no conduce a la critica de Deming a las utilidades de corto plazo.",
+  "evidencia": "Pasada P del saneamiento (P3-21, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ },
+ {
+  "id": "t2-puente-071",
+  "operacion": "QUITAR",
+  "desde": "framework_excelencia_operacional",
+  "hacia": "metodologia_clara_reporte",
+  "motivo": "La autoevaluacion de la gestion y el diseño de metricas no continua en la metodologia para reportar datos de sostenibilidad; solo comparten la idea de medir.",
+  "evidencia": "Pasada P del saneamiento (P3-22, lector y verificador de acuerdo)",
+  "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente.",
+  "fecha": "2026-09-26"
+ }
+]

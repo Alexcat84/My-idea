@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Una declaración escrita de cuánto riesgo estás dispuesto a asumir en tu decisión clave, revisada contra tu estado de ánimo reciente.",
   "nodos_previos": [
-    "cuatro_caminos_ante_un_riesgo",
-    "estrategia_gestion_riesgo_tolerancia"
+    "cuatro_caminos_ante_un_riesgo"
   ],
   "nodos_siguientes": [
     "reduce_el_riesgo_a_lo_razonable",
@@ -28,5 +27,20 @@
   "etiqueta_arbol": "Evitar o Asumir a Conciencia",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-036",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "estrategia_gestion_riesgo_tolerancia -> evitar_o_asumir_decide_a_conciencia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por gestion_riesgo_incremental."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

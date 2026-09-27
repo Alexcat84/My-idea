@@ -20,8 +20,7 @@
     "etapa_discovery_ideacion"
   ],
   "nodos_siguientes": [
-    "mrg_event",
-    "contabilidad_innovacion"
+    "mrg_event"
   ],
   "condiciones_activacion": [
     "Cuando la empresa quiere aprovechar el conocimiento interno de sus empleados",
@@ -30,5 +29,20 @@
   "etiqueta_arbol": "Recoge Ideas de tu Equipo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-075",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "internal_idea_capture -> contabilidad_innovacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R15-23-15): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Un sistema interno de captura de ideas de los empleados no prepara la medicion del aprendizaje validado de la contabilidad de la innovacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

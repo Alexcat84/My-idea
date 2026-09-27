@@ -16,7 +16,6 @@
   ],
   "entregable_esperado": "Un mapa de capas de diseño documentado (producto, tecnología, datos, experiencia, sistema, implicaciones) para la solución que se está desarrollando, incluyendo una lista explícita de para quién fue diseñada y para quién no.",
   "nodos_previos": [
-    "search_for_business_model",
     "diseno_de_flujos_pace_layers",
     "design_thinking_fundamentos"
   ],
@@ -32,5 +31,20 @@
   "etiqueta_arbol": "Mapea tus Capas de Diseño",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-120",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "search_for_business_model -> mapeo_capas_diseno",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-14-13): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El mapeo de capas de diseno no es un paso natural tras la busqueda del modelo de negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

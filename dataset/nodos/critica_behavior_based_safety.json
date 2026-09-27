@@ -17,8 +17,7 @@
   "nodos_previos": [
     "participacion_trabajadores",
     "vieja_vision_vs_nueva_vision_seguridad",
-    "cultura_de_seguridad_interpretivista_funcionalista",
-    "proteccion_organizacion_matriz_experimentos"
+    "cultura_de_seguridad_interpretivista_funcionalista"
   ],
   "nodos_siguientes": [
     "cuestionar_vision_zero",
@@ -58,6 +57,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Método añadido: el libro no propone entrevistas anónimas. Cuenta que un representante sindical pidió a los trabajadores escribir 'sí' en un papel, sin identificarse, si tenían miedo de reportar lesiones (Dekker L3525). Como herramienta o formato práctico, se reescribe como sugerencia de My Idea. Ni el resumen_teorico ni el entregable repiten el dato.",
       "indice": 5,
       "auditoria": "tramo1 DK1-059"
+    },
+    {
+      "id": "t2-arista-107",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proteccion_organizacion_matriz_experimentos -> critica_behavior_based_safety",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-04-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Proteger el negocio de siempre de tus experimentos comerciales no tiene relacion con los programas de seguridad basados en el comportamiento."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -1,6 +1,6 @@
 {
   "node_id": "escala_actitud_cierre",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Escala de Actitud hacia el Cierre de Ventas",
   "fuente": "SPIN Selling - Neil Rackham",
@@ -31,5 +31,20 @@
   "etiqueta_arbol": "Evalúa tu Actitud al Cerrar",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-131",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F23-021: Autoevaluacion de vendedores para ajustar su coaching y entrenamiento es gestion de un equipo comercial en operacion, no validacion con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "validacion_certificaciones_terceros",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Validación mediante Certificaciones y Sellos de Terceros",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Respáldate con Sellos de Terceros",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-316",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-001: Conseguir una certificación ambiental y comunicarla en marketing es operar un producto que ya existe; no se prueba la idea con clientes ni con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

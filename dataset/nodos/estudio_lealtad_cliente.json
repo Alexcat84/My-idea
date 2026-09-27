@@ -1,6 +1,6 @@
 {
   "node_id": "estudio_lealtad_cliente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Estudio de Lealtad del Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -18,7 +18,8 @@
   ],
   "nodos_siguientes": [
     "decide_phase_roadmap",
-    "roadmap_despliegue_lean_six_sigma"
+    "roadmap_despliegue_lean_six_sigma",
+    "muestreo_con_seguimiento_no_respondientes"
   ],
   "condiciones_activacion": [
     "Cuando necesitas entender a fondo por qué se pierden o se quedan tus clientes",
@@ -27,5 +28,33 @@
   "etiqueta_arbol": "Mide la Lealtad del Cliente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-14",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "estudio_lealtad_cliente -> muestreo_con_seguimiento_no_respondientes",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-14, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Quien diseña estudios con clientes en lugar de encuestas de satisfacción sigue naturalmente con cómo tomar la muestra y cómo seguir a quienes no responden, para que el estudio no quede sesgado."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "t2-fase-144",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-004: Estudio periodico de lealtad sobre clientes actuales y perdidos de un negocio en marcha para mejorar, es gestion operativa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "fijar_causa_ultimo_accidente_riesgo_siguiente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "El Riesgo de las 'Soluciones' que Causan el Próximo Accidente",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -57,6 +57,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es una frecuencia (revisiones periódicas), que es práctica, y queda como sugerencia de My Idea. El fin original, 'verificar su aplicabilidad universal', se cambia porque el libro dice que ningún conjunto de procedimientos será nunca universalmente aplicable (L1575). El dato no se repite en el resumen ni en el entregable.",
       "indice": 2,
       "auditoria": "muestreo A25"
+    },
+    {
+      "id": "t2-fase-170",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F24-020: Revisar las medidas correctivas tras un accidente en sistemas que ya operan es control operativo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

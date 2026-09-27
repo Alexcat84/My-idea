@@ -1,6 +1,6 @@
 {
   "node_id": "restricciones_extremas_como_innovacion",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Restricciones Extremas como Motor de Innovación",
   "fuente": "Change by Design, Revised and U - Tim Brown",
@@ -14,8 +14,7 @@
   "entregable_esperado": "Modelo de costos y de retorno de inversión rápido validado con el usuario final, junto con un proceso operativo eficiente",
   "nodos_previos": [
     "usuarios_extremos_globales",
-    "prototipado_rapido",
-    "proposito_como_motor_energia"
+    "prototipado_rapido"
   ],
   "nodos_siguientes": [
     "lienzo_modelo_negocio"
@@ -41,6 +40,32 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R030-019 (CONTRARIO, lector y verificador de acuerdo): Cambia la cifra de duración que da el libro (una o dos temporadas) por una sola temporada. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta. El texto vigente traia rayas; la sesion las cambia por comas (regla de la casa), sin tocar el sentido.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R030-019"
+    },
+    {
+      "id": "t2-arista-106",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proposito_como_motor_energia -> restricciones_extremas_como_innovacion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R09-16-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El propósito como motor de energía mental (Wallas, Bentham) no prepara la innovación bajo restricciones económicas extremas (Aravind, IDE). Los dos nodos no tienen que ver."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-fase-279",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F04-013: Tiene razon el lector B: los pasos y el entregable disenan el modelo (costo maximo hacia atras, modelo de costos y de retorno de la inversion, proceso operativo). No hay descubrimiento del problema ni de la oportunidad, asi que ideacion no se sostiene. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

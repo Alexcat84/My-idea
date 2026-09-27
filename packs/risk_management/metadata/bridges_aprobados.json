@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | Doctrina del puente-correctivo escrita en el puente matriz_probabilidad_impacto -> evalua_la_gravedad_sin_autoengano.",
+  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | Doctrina del puente-correctivo escrita en el puente matriz_probabilidad_impacto -> evalua_la_gravedad_sin_autoengano. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md).",
   "aprobados": [
     {
       "core": "reglas_gestion_riesgo_gambling",
@@ -49,13 +49,6 @@
       "dominio": "plan_b_antes_de_necesitarlo",
       "score": 0.7572,
       "reanclado_de": "plan_de_gestion_de_riesgos"
-    },
-    {
-      "core": "reglas_gestion_riesgo_gambling",
-      "dominio": "evitar_o_asumir_decide_a_conciencia",
-      "score": 0.6669,
-      "reanclado_de": "estrategia_gestion_riesgo_tolerancia",
-      "ancla_original": "gestion_riesgo_incremental"
     },
     {
       "core": "sesgo_optimismo_fundador",
@@ -123,6 +116,14 @@
       "dominio": "cuan_probable_y_cuanto_doleria",
       "score": 0.7291,
       "motivo": "Score mas bajo del lote (0.729) + redundante con la semilla cuan_probable_y_cuanto_doleria (el nodo ya es puerta de entrada)."
+    },
+    {
+      "core": "reglas_gestion_riesgo_gambling",
+      "dominio": "evitar_o_asumir_decide_a_conciencia",
+      "score": 0.6669,
+      "reanclado_de": "estrategia_gestion_riesgo_tolerancia",
+      "ancla_original": "gestion_riesgo_incremental",
+      "motivo": "Ley del ancla en 2 (saneamiento, tanda 2, 26 sep 2026): el ancla reglas_gestion_riesgo_gambling llevaba 3 puentes; sale el de menor score."
     }
   ]
 }

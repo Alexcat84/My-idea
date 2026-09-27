@@ -20,12 +20,12 @@
     "certificacion_origen_producto",
     "seleccion_agente_carga_internacional",
     "certificado_de_origen_coo",
-    "glosario_terminos_incoterms",
     "autocertificacion_del_exportador",
     "certificados_genericos_de_origen",
     "elaboracion_pro_forma_invoice",
     "seguro_exportacion",
-    "seleccion_metodo_envio_internacional"
+    "incoterms_reglas_comerciales_internacionales",
+    "seleccion_metodo_transporte_internacional"
   ],
   "nodos_siguientes": [
     "seguro_exportacion",
@@ -54,5 +54,33 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-155",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "glosario_terminos_incoterms -> documentacion_exportacion",
+      "texto_nuevo": "incoterms_reglas_comerciales_internacionales -> documentacion_exportacion",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a glosario_terminos_incoterms, deprecado; su superviviente es incoterms_reglas_comerciales_internacionales."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-156",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "seleccion_metodo_envio_internacional -> documentacion_exportacion",
+      "texto_nuevo": "seleccion_metodo_transporte_internacional -> documentacion_exportacion",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a seleccion_metodo_envio_internacional, deprecado; su superviviente es seleccion_metodo_transporte_internacional."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

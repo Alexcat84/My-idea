@@ -15,7 +15,7 @@
   "entregable_esperado": "Una cláusula de pago escrita que vincula cada monto a una tarea cumplida y verificable.",
   "nodos_previos": [
     "verifica_que_el_si_es_real",
-    "transfiere_lo_que_no_debes_cargar"
+    "contract_close_out"
   ],
   "nodos_siguientes": [
     "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos"
@@ -28,5 +28,33 @@
   "etiqueta_arbol": "Paga solo lo cumplido",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-005",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "contract_close_out -> ata_el_pago_al_cumplimiento_real_del_servicio",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "t2-puente-025",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "transfiere_lo_que_no_debes_cargar -> ata_el_pago_al_cumplimiento_real_del_servicio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "docs/_reanclaje_puentes.json (cambios); AUD-09 M51",
+        "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por contract_close_out."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    }
   ]
 }

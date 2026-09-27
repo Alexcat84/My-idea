@@ -1,6 +1,6 @@
 {
   "node_id": "servicizacion_producto",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Servicización del producto (Servicize)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Convierte tu Producto en Servicio",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-297",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F11-023: El entregable es un modelo de negocio de servicizacion disenado con su propuesta de valor, lo que corresponde a planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

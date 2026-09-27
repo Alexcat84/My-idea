@@ -1,6 +1,6 @@
 {
   "node_id": "deteccion_efecto_hawthorne",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Detección y Aislamiento del Efecto Hawthorne",
   "fuente": "SPIN Selling - Neil Rackham",
@@ -17,9 +17,7 @@
     "esfuerzo_voluntario_vs_urge_espontaneo",
     "metodologia_evaluacion_entrenamiento_ventas"
   ],
-  "nodos_siguientes": [
-    "efectos_recompensa_castigo"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se necesita evidencia robusta de que una mejora de resultados se debe al contenido de una intervención y no solo a la atención recibida",
     "Si stakeholders cuestionan la validez de resultados positivos post-entrenamiento"
@@ -27,5 +25,33 @@
   "etiqueta_arbol": "Cuidado con el Efecto Novedad",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-049",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "deteccion_efecto_hawthorne -> efectos_recompensa_castigo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-16, lector y verificador de acuerdo)",
+        "motivo": "Aislar el efecto Hawthorne al medir un entrenamiento es otro tema que recompensas y castigos para la conducta segura."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-fase-102",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-002: Mide si un entrenamiento interno mejoró de verdad la productividad: es control de la gestión de un negocio en marcha, no validación de la idea con el mercado. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

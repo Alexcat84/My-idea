@@ -19,8 +19,7 @@
   "nodos_siguientes": [
     "definicion_estable_producto",
     "stage_gate_system",
-    "mapa_flujo_trabajo_cliente",
-    "medicion_servicios"
+    "mapa_flujo_trabajo_cliente"
   ],
   "condiciones_activacion": [
     "Si el equipo quiere saltarse la investigación de mercado para ganar tiempo",
@@ -29,5 +28,20 @@
   "etiqueta_arbol": "Haz tu Tarea Antes de Lanzar",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-135",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "voice_of_customer_homework -> medicion_servicios",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-19-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El trabajo previo de estudio de mercado y analisis tecnico para desarrollar productos no prepara la medicion de la calidad en areas administrativas y de servicio. Son temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

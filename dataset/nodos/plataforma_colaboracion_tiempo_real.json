@@ -19,9 +19,7 @@
     "modelado_simulacion_cadena_suministro",
     "coordinacion_colaboracion_cadena_suministro"
   ],
-  "nodos_siguientes": [
-    "alcance_profundo_cadena_suministro"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si múltiples empresas socias necesitan coordinar operaciones logísticas de forma ágil",
     "Si el negocio enfrenta alta variabilidad de demanda y necesita respuesta rápida coordinada"
@@ -29,5 +27,20 @@
   "etiqueta_arbol": "Da Visibilidad a tu Cadena",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-060",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "plataforma_colaboracion_tiempo_real -> alcance_profundo_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-18, lector y verificador de acuerdo)",
+        "motivo": "Una plataforma de colaboracion en tiempo real con los socios no es la puerta natural al control ambiental de los proveedores de segundo y tercer nivel."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

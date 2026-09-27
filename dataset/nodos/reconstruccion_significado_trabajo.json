@@ -15,9 +15,7 @@
   "nodos_previos": [
     "riesgo_sobredependencia_ia"
   ],
-  "nodos_siguientes": [
-    "cultura_organizacional_calidad"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el equipo percibe que su trabajo ha perdido sentido o relevancia tras adoptar IA.",
     "Cuando procesos formales (informes, evaluaciones) se han vuelto redundantes por el uso masivo de IA."
@@ -25,5 +23,20 @@
   "etiqueta_arbol": "Dale Sentido al Trabajo Creativo",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-063",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reconstruccion_significado_trabajo -> cultura_organizacional_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-11, arbitro)",
+        "motivo": "Tiene razon B: el nucleo trata de rituales convertidos en ceremonia vacia por la IA y del sentido del trabajo humano, mientras el nodo de calidad trata de la legitimidad de herramientas como las cartas de control ante supervisores; solo comparten la idea general de cultura y cambio, y quien llega desde el nucleo se desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

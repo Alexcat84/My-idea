@@ -19,9 +19,7 @@
     "fase_accomplish_experiencia_cliente",
     "reunion_conclusion_proyecto"
   ],
-  "nodos_siguientes": [
-    "riesgos_consenso_inspeccion"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando buscas generar prueba social para atraer nuevos prospectos",
     "Cuando necesitas mejorar tu posición en marketplaces (por ejemplo, Amazon)"
@@ -29,5 +27,20 @@
   "etiqueta_arbol": "Facilita Buenos Testimonios",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-044",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_testimonios -> riesgos_consenso_inspeccion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-11, lector y verificador de acuerdo)",
+        "motivo": "Redactar testimonios de clientes no tiene relacion con el consenso entre inspectores de calidad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "escenarios_diseno_modelo_negocio",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Escenarios para Guiar el Diseño del Modelo de Negocio",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
@@ -46,5 +46,20 @@
   ],
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-132",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F23-029: Usa escenarios para tomar decisiones sobre canales, relaciones y propuesta de valor en cada bloque del Business Model Canvas, lo que es disenar el modelo de negocio. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

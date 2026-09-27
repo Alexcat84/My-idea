@@ -14,7 +14,6 @@
   "entregable_esperado": "Diagnostico documentado del estado de la cultura de seguridad de tu negocio con plan de accion para fortalecer cada subcomponente",
   "nodos_previos": [
     "ciclo_de_culpa_2",
-    "cultura_de_aprendizaje",
     "new_view_investigation",
     "riesgos_del_enfoque_en_error_humano"
   ],
@@ -48,6 +47,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica por que los cuatro subcomponentes valen la pena, pero no pide dejar esa justificacion por escrito antes de decidir; el formato escrito es un anadido practico.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C001-020"
+    },
+    {
+      "id": "t2-arista-027",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cultura_de_aprendizaje -> cultura_de_seguridad_componentes",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-21-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la cultura de aprendizaje es el subcomponente final y deberia ir despues del nodo general (tambien figura como posterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

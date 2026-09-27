@@ -29,11 +29,8 @@
   "nodos_siguientes": [
     "estimacion_costos_actividad",
     "asignacion_agil_de_recursos",
-    "project_charter",
     "linea_base_costos",
-    "activity_duration_estimates",
-    "requirements_management_plan",
-    "innovation_project_canvas"
+    "lienzo_proyecto_innovacion"
   ],
   "condiciones_activacion": [
     "Cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final",
@@ -67,6 +64,58 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R025-044 (CONTRARIO, lector y verificador de acuerdo): Atribuye al grafico de hitos los nombres de recursos, cuando el libro dice que solo muestra fechas de eventos clave. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R025-044"
+    },
+    {
+      "id": "t2-arista-024",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> activity_duration_estimates",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: las estimaciones de duracion son un insumo del cronograma (el mismo vecino figura tambien como anterior)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-025",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> project_charter",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el acta de constitucion autoriza el proyecto y precede al cronograma."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-026",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> requirements_management_plan",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el plan de gestion de requisitos es de planificacion temprana y no sigue al cronograma."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-146",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "cronograma_proyecto -> innovation_project_canvas",
+      "texto_nuevo": "cronograma_proyecto -> lienzo_proyecto_innovacion",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a innovation_project_canvas, deprecado; su superviviente es lienzo_proyecto_innovacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

@@ -16,10 +16,7 @@
     "negocia_por_intereses_no_posiciones",
     "aplica_modelo_ackerman"
   ],
-  "nodos_siguientes": [
-    "muestra_puntos_en_comun_antes_de_negociar",
-    "define_punto_maximo_de_stock"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Te van a preguntar tu precio antes de conocer el de la otra parte.",
     "No conoces con certeza el valor de mercado de lo que estás vendiendo o comprando.",
@@ -43,6 +40,32 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razón A. El libro pone en el extremo bajo del rango la cifra que de verdad quieres conseguir (L2680), y avisa de que el otro 'se aferrará a la cifra más baja' (L2682). En sus ejemplos el extremo bajo es un objetivo ambicioso: Jerry, 130.000 frente a los 110.000 que pedía (L2676-L2678), y Ángel, que cobra el extremo bajo de su rango (L2838-L2842). El paso lo cambia por 'el que realmente aceptarías', que es tu mínimo. El libro desaconseja justo eso: si te centras en el mínimo, eso es lo que conseguirás (L5241). El umbral cambiado hace el paso CONTRARIO. La lectura benévola de B no la sostiene la palabra 'aceptarías'.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-083"
+    },
+    {
+      "id": "t2-arista-098",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "plantea_oferta_como_rango_o_cifra_precisa -> define_punto_maximo_de_stock",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-20-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Fijar el punto de reorden del inventario no tiene relacion con plantear un precio en una negociacion."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-099",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "plantea_oferta_como_rango_o_cifra_precisa -> muestra_puntos_en_comun_antes_de_negociar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-20-01): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el propio vecino dice que se busca el terreno comun antes de hablar de precio, asi que prepara el nodo y no va despues de dar la oferta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

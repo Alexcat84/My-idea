@@ -20,8 +20,7 @@
     "business_model_environment_mapping"
   ],
   "nodos_siguientes": [
-    "ceo_puente_interino",
-    "desarrollo_attack_plans"
+    "ceo_puente_interino"
   ],
   "condiciones_activacion": [
     "Cuando tu empresa ha pivotado a un modelo de negocio fundamentalmente distinto",
@@ -41,5 +40,20 @@
   ],
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-110",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "reconstruccion_de_equipo_ejecutivo -> desarrollo_attack_plans",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R05-14-04): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Reconstruir el equipo ejecutivo tras un pivote no prepara la eleccion de la estrategia de ataque por arena; los temas no se conectan."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

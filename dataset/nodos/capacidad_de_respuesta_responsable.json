@@ -18,7 +18,8 @@
   ],
   "nodos_siguientes": [
     "storytelling_como_herramienta_de_diseno",
-    "responsabilidad_prospectiva"
+    "responsabilidad_prospectiva",
+    "un_dueno_para_cada_riesgo"
   ],
   "condiciones_activacion": [
     "Cuando lo que haces tiene potencial de crecer rápido o volverse viral.",
@@ -27,5 +28,20 @@
   "etiqueta_arbol": "Prepárate para Responder Bien",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-017",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "capacidad_de_respuesta_responsable -> un_dueno_para_cada_riesgo",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

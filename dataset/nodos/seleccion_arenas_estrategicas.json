@@ -27,10 +27,10 @@
   "nodos_siguientes": [
     "strat_map_arenas_estrategicas",
     "definicion_tipos_nuevo_producto",
-    "busqueda_vs_ejecucion",
     "portfolio_management",
     "investigacion_etnografica_ideacion",
-    "apalancamiento_de_competencias_centrales"
+    "apalancamiento_de_competencias_centrales",
+    "search_for_business_model"
   ],
   "condiciones_activacion": [
     "Cuando tu búsqueda de ideas de nuevos productos es difusa o no está dirigida",
@@ -99,6 +99,32 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. Diverger con una lista amplia (L7975-L7977), usar dimensiones como grupos de clientes, sectores, categorias de producto y tecnologias (L8179-L8190) y evitar definiciones demasiado amplias (caso OSB, L7895) si son del libro. Pero el doce solo sale como resultado de dos ejemplos (OSB en L7977, Chempro en L8307 y L8320). Busque twelve, 12, dozen, long list y broad list: el libro nunca lo propone como minimo ni como referencia. Convertirlo en \"12 o más\" es una cifra normativa que el libro no respalda. No es CONTRARIO porque el libro no da otro minimo distinto.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-094"
+    },
+    {
+      "id": "t2-arista-186",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "arenas_estrategicas -> search_for_business_model",
+      "texto_nuevo": "seleccion_arenas_estrategicas -> search_for_business_model",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a arenas_estrategicas, deprecado; su superviviente es seleccion_arenas_estrategicas."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-187",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "seleccion_arenas_estrategicas -> busqueda_vs_ejecucion",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a busqueda_vs_ejecucion, deprecado; su superviviente es search_for_business_model."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

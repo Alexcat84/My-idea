@@ -1,6 +1,6 @@
 {
   "node_id": "indicadores_desempeno_recursos",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "environmental",
   "titulo_concepto": "Indicadores de Desempeño de Recursos (ROR y P2NP)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Mide tu Eficiencia de Recursos",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-191",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F17-010: Mide la productividad de recursos y el desperdicio de procesos que ya operan para sustentar mejoras de eficiencia, es control y mejora operativa. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

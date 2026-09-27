@@ -1,6 +1,6 @@
 {
   "node_id": "modelo_servqual",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Modelo SERVQUAL para Medición de Calidad de Servicio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -39,6 +39,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. SERVQUAL solo aparece una vez en el libro (L21983), que se limita a enumerar las cinco dimensiones. Busque con Grep en todo el libro expectations junto a perception, perceived, compare o gap, y ningun pasaje describe comparar expectativas con percepciones. Las menciones de percepcion del cliente (L3631, L21868, L22009) no tratan ese metodo. La comparacion expectativas frente a percepciones es un metodo de medicion concreto que el libro no respalda; no es una simple concrecion de medir por dimension. Es de tipo PRACTICO porque el dato es un metodo o formato de medicion, no una cifra ni una norma.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C052-088"
+    },
+    {
+      "id": "t2-fase-230",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F23-022: Medir la calidad percibida de un servicio existente con sus clientes y priorizar mejoras por brecha es control y mejora de lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
     }
   ],
   "fuentes_internas": [

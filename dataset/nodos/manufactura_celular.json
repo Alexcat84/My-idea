@@ -1,7 +1,7 @@
 {
   "node_id": "manufactura_celular",
   "fase_proyecto": "ejecucion",
-  "dominio": "environmental",
+  "dominio": "quality",
   "titulo_concepto": "Manufactura Celular y Equipo de Tamaño Adecuado",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "La manufactura celular divide grandes procesos unitarios en 'células' flexibles y de tamaño adecuado, procesando una pieza a la vez en lugar de lotes grandes ('batch and queue'). Utiliza innovaciones como SMED (cambio rápido de matriz), autonomación (equipos que se detienen/inician automáticamente) y equipos de tamaño adecuado para responder rápidamente a la demanda del cliente, reduciendo sobreproducción y desperdicio.",
@@ -35,5 +35,20 @@
   "etiqueta_arbol": "Organiza tu Producción en Células",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-dominio-328",
+      "fecha": "2026-09-26",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "environmental",
+      "texto_nuevo": "quality",
+      "cita": {
+        "instrumento": "Pasada M del saneamiento (docs/saneamiento/resultados/M)",
+        "evidencia": "Razon para B, y A coincide en el fondo (el mismo A admite que su titulo_ok false fue un error). El titulo nombra bien la manufactura celular y el equipo de tamano adecuado. Todo el contenido es manufactura esbelta: celulas, SMED, autonomacion, sobreproduccion y tiempos de cambio. No hay ningun angulo ambiental. Encaja en quality (calidad y operaciones). Fase ejecucion, correcta. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 9: corregir los casos de dominio hallados."
+    }
   ]
 }

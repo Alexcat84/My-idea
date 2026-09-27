@@ -1,6 +1,6 @@
 {
   "node_id": "evaluacion_amazon_case",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Evaluación Estratégica de Fortalezas y Debilidades para Expansión (Caso Amazon)",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
@@ -30,5 +30,20 @@
   "etiqueta_arbol": "Analiza Fortalezas para Expandirte",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-146",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F03-029: Analizar fortalezas y debilidades de un negocio maduro para diseñar una nueva iniciativa de crecimiento es estrategia; el entregable es un plan. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

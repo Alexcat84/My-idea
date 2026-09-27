@@ -18,7 +18,8 @@
   ],
   "nodos_siguientes": [
     "welcome_call_cliente_veterano",
-    "fase_admit_celebracion"
+    "fase_admit_celebracion",
+    "handoff_transicion_ventas_cuentas"
   ],
   "condiciones_activacion": [
     "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio",
@@ -54,6 +55,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda un traspaso fluido en el que el vendedor presenta al cliente a su gestor, pero lo hace con un video. No propone una reunión conjunta de los tres ni empezar por los clientes más importantes; busqué joint, three-way y variantes sin resultado.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C107-079"
+    },
+    {
+      "id": "t2-entrada-08",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "desconexion_ventas_experiencia -> handoff_transicion_ventas_cuentas",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-08, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Primero se ve que se corta la conexión entre quien vende y quien entrega; el traspaso cuidado entre ventas y gestión de cuentas es la solución que sigue."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
     }
   ],
   "fuentes_internas": [

@@ -23,7 +23,8 @@
     "project_close_out",
     "lessons_learned",
     "contractor_status_report",
-    "compromiso_linea_tiempo_cliente"
+    "compromiso_linea_tiempo_cliente",
+    "ata_el_pago_al_cumplimiento_real_del_servicio"
   ],
   "condiciones_activacion": [
     "Cuando un contrato con un proveedor ha finalizado o se está terminando"
@@ -31,5 +32,20 @@
   "etiqueta_arbol": "Cierra Formalmente tus Contratos",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-005",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "contract_close_out -> ata_el_pago_al_cumplimiento_real_del_servicio",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

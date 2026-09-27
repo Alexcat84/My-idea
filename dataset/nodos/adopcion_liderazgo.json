@@ -16,8 +16,6 @@
     "institucionalizar_capacitacion",
     "causas_comunes_vs_especiales",
     "entrenamiento_gerencial",
-    "framework_good_bad_product_manager",
-    "gestion_de_problemas_sin_receta",
     "diseno_de_eucatastrofe_organizacional"
   ],
   "nodos_siguientes": [
@@ -33,5 +31,33 @@
   "etiqueta_arbol": "Ejerce Liderazgo, No Supervises",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-042",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "framework_good_bad_product_manager -> adopcion_liderazgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-09, lector y verificador de acuerdo)",
+        "motivo": "El marco de expectativas del product manager no se profundiza en el punto 7 de Deming sobre liderar sistemas en vez de vigilar numeros; el salto desorienta."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "t2-puente-065",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_de_problemas_sin_receta -> adopcion_liderazgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-14, lector y verificador de acuerdo)",
+        "motivo": "Resolver crisis de personas sin recetas y el punto 7 de Deming solo comparten la palabra liderazgo; tienen enfoques distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

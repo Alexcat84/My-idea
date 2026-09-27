@@ -15,7 +15,8 @@
   "nodos_previos": [
     "deja_de_ignorar_el_riesgo",
     "cultura_que_habla_del_riesgo_sin_miedo",
-    "enfoque_situacional_vs_personal"
+    "enfoque_situacional_vs_personal",
+    "decision_consciente_de_crecimiento"
   ],
   "nodos_siguientes": [
     "cultura_que_habla_del_riesgo_sin_miedo",
@@ -29,5 +30,20 @@
   "etiqueta_arbol": "Gestionar el Riesgo Es de Adultos",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-puente-021",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "decision_consciente_de_crecimiento -> gestionar_el_riesgo_es_de_adultos",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

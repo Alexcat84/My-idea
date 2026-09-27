@@ -19,8 +19,7 @@
   "entregable_esperado": "Checklist de entrevista estructurado con preguntas específicas para validar competencias reales de un candidato a VP de Ventas",
   "nodos_previos": [
     "framework_ones_and_twos",
-    "contratar_cerrador_de_ventas",
-    "segmentos_de_clientes_problema_necesidad"
+    "contratar_cerrador_de_ventas"
   ],
   "nodos_siguientes": [
     "diseno_embudo_ventas_cliente",
@@ -59,6 +58,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-arista-124",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "segmentos_de_clientes_problema_necesidad -> evaluacion_vp_ventas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-07-09): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Evaluar a un candidato a VP de Ventas no es un paso natural despues de entender el problema, la necesidad o la pasion del segmento de clientes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

@@ -14,7 +14,7 @@
   ],
   "entregable_esperado": "Un monto específico de financiamiento, con la justificación de tu gasto mensual y del hito al que apunta",
   "nodos_previos": [
-    "intellectual_property_strategy"
+    "decision_autofinanciamiento_vs_inversion"
   ],
   "nodos_siguientes": [
     "preparacion_materiales_fundraising"
@@ -26,5 +26,33 @@
   "etiqueta_arbol": "Calcula Cuánto Capital Levantar",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-074",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "intellectual_property_strategy -> determinar_monto_a_levantar",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-17-05): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Calcular el monto de una ronda no continua la estrategia de propiedad intelectual."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-entrada-06",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "decision_autofinanciamiento_vs_inversion -> determinar_monto_a_levantar",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-06, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Cuando se decide buscar inversores, la pregunta siguiente es cuánto pedir en la ronda."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

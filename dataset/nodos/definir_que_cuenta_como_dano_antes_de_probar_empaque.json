@@ -15,7 +15,7 @@
   "entregable_esperado": "Una lista escrita de que es daño aceptable y que no, lista antes de tu primera prueba de empaque.",
   "nodos_previos": [
     "identificar_si_tu_producto_necesita_proteccion_especial",
-    "evalua_la_gravedad_sin_autoengano"
+    "garantias_implicitas_vs_expresas"
   ],
   "nodos_siguientes": [
     "detectar_empaque_poco_rigido"
@@ -28,5 +28,33 @@
   "etiqueta_arbol": "Define qué es daño aceptable",
   "fuentes_internas": [
     "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-053",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "evalua_la_gravedad_sin_autoengano -> definir_que_cuenta_como_dano_antes_de_probar_empaque",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R07-08-03): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "El vecino trata de fijar criterios de falla para probar un empaque; no tiene relacion con evaluar la severidad de los riesgos del negocio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-011",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "garantias_implicitas_vs_expresas -> definir_que_cuenta_como_dano_antes_de_probar_empaque",
+      "cita": {
+        "instrumento": "AUD-09 M51 y M53; ficha puentes-reanclados-sin-tejer (docs/PENDIENTES.md)",
+        "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    }
   ]
 }

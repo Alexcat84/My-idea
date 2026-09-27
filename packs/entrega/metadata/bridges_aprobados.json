@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
+  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: colaboracion_transporte_ctm entra a entrega; sus aristas del nucleo, leidas (pasada C).",
   "aprobados": [
     {
       "core": "garantias_implicitas_vs_expresas",
@@ -69,11 +69,6 @@
       "score": 0.7093
     },
     {
-      "core": "venta_interna_cliente",
-      "dominio": "detectar_prioridad_cliente_entrega",
-      "score": 0.7052
-    },
-    {
       "core": "herramientas_online_canal_fisico",
       "dominio": "decidir_vender_solo_online_o_tambien_tienda_fisica",
       "score": 0.6982
@@ -83,6 +78,20 @@
       "dominio": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
       "score": 0.5962,
       "reanclado_de": "evalua_la_gravedad_sin_autoengano"
+    },
+    {
+      "core": "collaboration_roadblocks",
+      "dominio": "colaboracion_transporte_ctm",
+      "score": 0.6064,
+      "declarado_de_arista_existente": true,
+      "lectura": "Pasada C del saneamiento (C-C1, lectores de acuerdo): Quien estudia los obstaculos a la colaboracion encuentra en la gestion colaborativa de transporte un caso logistico concreto donde esos obstaculos (informacion propietaria, falta de estandares) se superan con resultados medibles."
+    },
+    {
+      "core": "programacion_entregas_delivery_scheduling",
+      "dominio": "colaboracion_transporte_ctm",
+      "score": 0.5952,
+      "declarado_de_arista_existente": true,
+      "lectura": "Pasada C del saneamiento (C-C4, lectores de acuerdo): Quien decide entre entregas directas y milk run para aprovechar cargas completas sigue naturalmente con consolidar embarques junto a otras empresas para llenar el transporte y bajar costos."
     }
   ],
   "rechazados": [
@@ -115,6 +124,12 @@
       "dominio": "evaluar_proceso_completo_no_cada_metrica",
       "score": 0.6809,
       "motivo": "conciliar utilidad y caja no es evaluar el proceso de entrega"
+    },
+    {
+      "core": "venta_interna_cliente",
+      "dominio": "detectar_prioridad_cliente_entrega",
+      "score": 0.7052,
+      "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-132): Ensayar al comprador para la venta interna en ventas complejas B2B no prepara la deteccion de prioridades de entrega en venta en linea. Los dos nodos no tienen que ver."
     }
   ]
 }

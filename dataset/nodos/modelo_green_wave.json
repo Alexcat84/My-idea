@@ -1,6 +1,6 @@
 {
   "node_id": "modelo_green_wave",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "planificacion",
   "dominio": "environmental",
   "titulo_concepto": "Modelo de las Cuatro Etapas del Green Wave",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Ubica tu Etapa en Sostenibilidad",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-228",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F06-019: Diagnosticar la etapa de sostenibilidad y trazar una hoja de ruta estrategica es planificacion, no exploracion de una idea. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

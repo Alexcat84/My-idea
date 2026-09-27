@@ -1,6 +1,6 @@
 {
   "node_id": "medir_satisfaccion_real_del_cliente",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "entrega",
   "titulo_concepto": "Medir la satisfacción real del cliente, no la que crees dar",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Mide lo que el cliente percibe",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-219",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F29-019: Mide la brecha de servicio en los ultimos pedidos de una operacion de entrega ya en marcha para mejorarla, control y mejora de ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

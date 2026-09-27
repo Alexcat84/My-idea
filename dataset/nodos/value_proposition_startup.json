@@ -19,7 +19,6 @@
     "economia_circular_de_la_imaginacion",
     "economia_de_la_experiencia",
     "multi_sided_platforms",
-    "narrativa_como_herramienta_de_sentido",
     "ecuacion_de_valor_venta",
     "preguntas_need_payoff",
     "pivot_post_ventas",
@@ -65,5 +64,20 @@
   "etiqueta_arbol": "Resuelve el Trabajo del Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-091",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "narrativa_como_herramienta_de_sentido -> value_proposition_startup",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R11-04-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Del efecto Heider-Simmel y la narrativa como forma de dar sentido no se pasa de manera natural a la propuesta de valor como job del cliente. La correccion solo marco dos pasos como Sugerencia de My Idea."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

@@ -13,7 +13,6 @@
   ],
   "entregable_esperado": "Una lista de tu inventario dividido por tipo, con una meta numerica escrita para cada categoria relevante.",
   "nodos_previos": [
-    "prepara_posicion_agenda_antes_negociar",
     "gestion_inventario"
   ],
   "nodos_siguientes": [
@@ -42,6 +41,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide una meta pero no fija una frecuencia de revision.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-114"
+    },
+    {
+      "id": "t2-arista-100",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prepara_posicion_agenda_antes_negociar -> clasifica_tu_inventario",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-09-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el nodo pide clasificar el inventario y fijar metas antes de decidir cuanto comprar; negociar con el proveedor viene despues, no antes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

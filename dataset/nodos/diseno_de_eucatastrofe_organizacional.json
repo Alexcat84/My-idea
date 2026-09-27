@@ -17,7 +17,6 @@
     "cultura_organizacional_calidad"
   ],
   "nodos_siguientes": [
-    "gestion_del_cambio",
     "adopcion_liderazgo"
   ],
   "condiciones_activacion": [
@@ -42,6 +41,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-012 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "t2-puente-059",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "diseno_de_eucatastrofe_organizacional -> gestion_del_cambio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P2-12, lector y verificador de acuerdo)",
+        "motivo": "El uso humano y responsable de la IA en el equipo no se continua en un sistema para gestionar cambios de producto, proveedor o regulacion; solo coinciden en la palabra cambio."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ],
   "fuentes_internas": [

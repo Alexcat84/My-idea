@@ -25,8 +25,7 @@
     "concepcion_hormica_del_pensamiento",
     "pensamiento_autoiniciado",
     "superacion_accidia_creativa",
-    "ruptura_de_habitos_para_estimulo",
-    "wallas_etapa_incubacion"
+    "ruptura_de_habitos_para_estimulo"
   ],
   "nodos_siguientes": [
     "prototipado_rapido",
@@ -83,6 +82,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. Wallas describe el solapamiento de etapas entre problemas (L313). Como metodo de registro, en L537-L539 propone carpetas etiquetadas por tema, una carpeta 'Redistribute' y la libreta de Hobbes para los pensamientos al vuelo, pero en ningun pasaje propone anotar en que etapa esta cada idea. Busque note-book, folder, label y record. Llevar un registro por etapas es un formato que pone el paso.",
       "indice": 5,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-133"
+    },
+    {
+      "id": "t2-arista-136",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "wallas_etapa_incubacion -> cuatro_etapas_del_pensamiento_creativo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R14-05-24): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: la etapa de incubacion es una parte del modelo de las cuatro etapas y deberia ir despues del panorama general, no antes (el mismo nodo ya la tiene tambien como DESPUES, igual que preparacion y verificacion)."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
     }
   ],
   "fuentes_internas": [

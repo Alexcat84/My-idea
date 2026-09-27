@@ -18,10 +18,10 @@
     "descuento_aceptaciones_bancarias",
     "decisiones_de_financiamiento_exportacion",
     "trabajo_con_bancos_comerciales",
-    "asistencia_us_commercial_service",
     "enfoques_generales_exportacion",
     "elementos_plan_exportacion_ejemplo",
-    "recursos_apoyo_gubernamental_exportacion"
+    "recursos_apoyo_gubernamental_exportacion",
+    "uso_del_us_commercial_service"
   ],
   "nodos_siguientes": [
     "financiamiento_sba_exportacion",
@@ -54,5 +54,20 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-183",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "asistencia_us_commercial_service -> programas_ex_im_bank",
+      "texto_nuevo": "uso_del_us_commercial_service -> programas_ex_im_bank",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a asistencia_us_commercial_service, deprecado; su superviviente es uso_del_us_commercial_service."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    }
   ]
 }

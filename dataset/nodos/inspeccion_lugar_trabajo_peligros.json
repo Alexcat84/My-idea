@@ -21,8 +21,8 @@
     "identificacion_peligros_salud",
     "prevencion_control_peligros",
     "caracterizacion_priorizacion_peligros",
-    "investigacion_incidentes_2",
-    "peligros_emergencias_no_rutinarias_2"
+    "investigacion_incidentes",
+    "peligros_emergencias_no_rutinarias"
   ],
   "condiciones_activacion": [
     "Cuando necesitas verificar las condiciones físicas de tu entorno laboral",
@@ -107,6 +107,32 @@
       },
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
       "auditoria": "tramo1 O56-042"
+    },
+    {
+      "id": "t2-arista-167",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "inspeccion_lugar_trabajo_peligros -> investigacion_incidentes_2",
+      "texto_nuevo": "inspeccion_lugar_trabajo_peligros -> investigacion_incidentes",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a investigacion_incidentes_2, deprecado; su superviviente es investigacion_incidentes."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "t2-arista-168",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_RECABLEADA",
+      "texto_anterior": "inspeccion_lugar_trabajo_peligros -> peligros_emergencias_no_rutinarias_2",
+      "texto_nuevo": "inspeccion_lugar_trabajo_peligros -> peligros_emergencias_no_rutinarias",
+      "cita": {
+        "instrumento": "Determinista: resolutor por ids_alias (AUD-09 B15; pasada R, 54 referencias a deprecados).",
+        "motivo": "Referencia de un nodo vivo a peligros_emergencias_no_rutinarias_2, deprecado; su superviviente es peligros_emergencias_no_rutinarias."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
     }
   ],
   "fuentes_internas": [

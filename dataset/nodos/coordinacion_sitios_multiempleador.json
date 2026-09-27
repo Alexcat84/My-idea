@@ -17,12 +17,10 @@
   "nodos_previos": [
     "liderazgo_gerencial_seguridad",
     "evaluacion_mejora_programa",
-    "buen_lugar_para_trabajar",
     "programa_seguridad_salud_ocupacional"
   ],
   "nodos_siguientes": [
-    "identificacion_evaluacion_peligros",
-    "tecnica_freaky_friday"
+    "identificacion_evaluacion_peligros"
   ],
   "condiciones_activacion": [
     "Cuando en tu sitio de trabajo participan múltiples contratistas o subcontratistas",
@@ -86,5 +84,33 @@
   "fuentes_internas": [
     "OSHA3886",
     "OSHA3885"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-022",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "coordinacion_sitios_multiempleador -> tecnica_freaky_friday",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R08-04-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Coordinar la comunicacion de peligros de seguridad con contratistas en sitios multiempleador no prepara una tecnica de intercambio de roles entre lideres de equipos en conflicto. Solo comparten la idea generica de varios grupos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-048",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "buen_lugar_para_trabajar -> coordinacion_sitios_multiempleador",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P1-15, lector y verificador de acuerdo)",
+        "motivo": "Construir un buen lugar para trabajar en gestion no conduce a coordinar peligros entre contratistas en sitios multiempleador."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    }
   ]
 }

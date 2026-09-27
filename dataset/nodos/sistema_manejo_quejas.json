@@ -16,15 +16,11 @@
   "entregable_esperado": "Un sistema propio de manejo de quejas, con canal de contacto, registro de casos y seguimiento de resolución y satisfacción.",
   "nodos_previos": [
     "necesidad_mantener_informado",
-    "social_ads_indirect_response",
-    "scorecard_desempeno_cadena_suministro",
     "descubrir_necesidades_del_cliente",
-    "senales_de_compra_en_venta_grande",
     "descubrir_valor_inesperado_cliente"
   ],
   "nodos_siguientes": [
     "vacios_conocimiento_cliente",
-    "law_of_shitty_click_throughs",
     "fase_affirm_buyers_remorse"
   ],
   "condiciones_activacion": [
@@ -60,6 +56,58 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El canal 24 horas y la linea gratuita estan en el libro, pero WhatsApp es una herramienta que el libro no menciona (buscado whatsapp).",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C057-024"
+    },
+    {
+      "id": "t2-arista-116",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "scorecard_desempeno_cadena_suministro -> sistema_manejo_quejas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R02-02-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Un scorecard de desempeño entre empresas de la cadena de suministro no prepara un sistema de manejo de quejas de clientes; comparten solo la palabra retroalimentación."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-125",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "senales_de_compra_en_venta_grande -> sistema_manejo_quejas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R02-02-08): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Las señales de compra en ventas grandes (necesidades implícitas y explícitas) no preparan la gestión de quejas posventa; temas distintos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-arista-128",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "sistema_manejo_quejas -> law_of_shitty_click_throughs",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R02-02-02): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "La saturación de canales de marketing (click-through) no tiene relación con gestionar quejas de clientes; la corrección solo añadió la etiqueta de sugerencia."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "t2-puente-062",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "social_ads_indirect_response -> sistema_manejo_quejas",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada P del saneamiento (P3-05, lector y verificador de acuerdo)",
+        "motivo": "La publicidad indirecta en redes y el sistema de quejas son temas distintos; solo comparten la palabra lealtad."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
     }
   ],
   "fuentes_internas": [

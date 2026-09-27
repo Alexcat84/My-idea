@@ -1,6 +1,6 @@
 {
   "node_id": "old_view_vs_new_view_human_error",
-  "fase_proyecto": "ideacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Contraste entre la Vieja y la Nueva Visión del 'Error Humano'",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Elige tu Visión del Error",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-240",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ideacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F15-028: Diagnostica la visión del error humano en las políticas e investigaciones de incidentes de una organización en marcha; es gestión operativa de la seguridad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

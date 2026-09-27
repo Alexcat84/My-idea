@@ -17,7 +17,8 @@
     "decide_si_lo_compras_o_lo_haces_tu"
   ],
   "nodos_siguientes": [
-    "ten_un_checklist_de_clausulas_de_contrato"
+    "ten_un_checklist_de_clausulas_de_contrato",
+    "define_punto_maximo_de_stock"
   ],
   "condiciones_activacion": [
     "Sientes que tienes demasiado inventario guardado sin moverse.",
@@ -27,5 +28,20 @@
   "etiqueta_arbol": "Calcula tu punto optimo de pedido",
   "fuentes_internas": [
     "Max Muller, Essentials of Inventory Management"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-entrada-05",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "calcula_costo_de_mantener_contra_costo_de_reponer -> define_punto_maximo_de_stock",
+      "cita": {
+        "instrumento": "Pasada E del saneamiento (E-05, lectores de acuerdo): su unica entrada era una arista rancia que sale en saneamiento-t2-aristas.",
+        "motivo": "Del mismo mundo de compras: una vez equilibrados el costo de mantener y el de reponer, el paso siguiente es fijar el punto de reorden, el máximo y cada cuánto revisarlos."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    }
   ]
 }

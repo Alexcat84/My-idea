@@ -1,6 +1,6 @@
 {
   "node_id": "efecto_bullwhip",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Detectar y calcular el costo del efecto látigo en tu cadena de suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Detecta el Efecto Látigo",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-118",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F25-007: Medir y costear el efecto latigo en una cadena de suministro que ya opera es controlar y mejorar lo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

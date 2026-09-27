@@ -1,6 +1,6 @@
 {
   "node_id": "international_partner_search",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "exportacion",
   "titulo_concepto": "Búsqueda Internacional de Socios (International Partner Search)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
@@ -46,5 +46,20 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-fase-194",
+      "fecha": "2026-09-26",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "validacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada F del saneamiento (docs/saneamiento/resultados/F)",
+        "evidencia": "F13-024: Con el mercado ya elegido, se buscan, verifican y contactan socios para cerrar tratos; es implementar la exportacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    }
   ]
 }

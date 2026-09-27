@@ -1,16 +1,10 @@
 {
-  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; POME y CEPI limitados; rechazados: CEPI-mantenimiento y 2 usos extra de diseno_imperfeccion por afinidad tenue, 2 extras de POME, 1 duplicado tematico de arreglos rapidos, 1 par tecnologia-mantenimiento debil). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion HSEQ: puentes redirigidos a su superviviente.",
+  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; POME y CEPI limitados; rechazados: CEPI-mantenimiento y 2 usos extra de diseno_imperfeccion por afinidad tenue, 2 extras de POME, 1 duplicado tematico de arreglos rapidos, 1 par tecnologia-mantenimiento debil). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion HSEQ: puentes redirigidos a su superviviente. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: rechazado gestion_de_conflictos_cofundadores -> enfoque_situacional_vs_personal (decision del fundador).",
   "aprobados": [
     {
       "core": "second_wind_energia_mental",
       "dominio": "fatigue_performance_effects",
       "score": 0.8
-    },
-    {
-      "core": "gestion_de_conflictos_cofundadores",
-      "dominio": "enfoque_situacional_vs_personal",
-      "score": 0.8,
-      "redir_hseq_dominio": "enfoque_situacional_vs_personal_2"
     },
     {
       "core": "calidad_de_ejecucion_proceso_innovacion",
@@ -22,12 +16,6 @@
       "core": "proteccion_organizacion_matriz_experimentos",
       "dominio": "organizaciones_alta_confiabilidad",
       "score": 0.79
-    },
-    {
-      "core": "proteccion_organizacion_matriz_experimentos",
-      "dominio": "critica_behavior_based_safety",
-      "score": 0.79,
-      "redir_hseq_dominio": "riesgos_programas_seguridad_conductual"
     },
     {
       "core": "five_whys_inversion_proporcional",
@@ -62,9 +50,42 @@
       "score": 0.77
     },
     {
+      "core": "paradoja_responsabilidad_creatividad",
+      "dominio": "equipos_alto_desempeno",
+      "score": 0.6039,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P2-14): El dilema entre exigir responsabilidad y dar libertad conecta de forma debil con la rendicion de cuentas entre pares y el conflicto constructivo en equipos de seguridad."
+    },
+    {
+      "core": "programacion_cultura_empresarial",
+      "dominio": "cultura_flexible_organizacional",
+      "score": 0.5977,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 1,
+      "lectura": "Pasada P del saneamiento (P3-01): Ambos tratan la cultura como mecanismo de valores compartidos; la cultura flexible de alta fiabilidad es una profundizacion posible en seguridad, aunque el salto desde los rituales distintivos no es obvio."
+    }
+  ],
+  "rechazados": [
+    {
+      "core": "proteccion_organizacion_matriz_experimentos",
+      "dominio": "critica_behavior_based_safety",
+      "score": 0.79,
+      "redir_hseq_dominio": "riesgos_programas_seguridad_conductual",
+      "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-107): Proteger el negocio de siempre de tus experimentos comerciales no tiene relacion con los programas de seguridad basados en el comportamiento."
+    },
+    {
       "core": "explotacion_tecnologias_disruptivas",
       "dominio": "ley_de_capacidad_de_sistemas",
-      "score": 0.79
+      "score": 0.79,
+      "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-055): Tiene razon A. Explotacion de Tecnologias Disruptivas es una estrategia de mercado: detectar nichos y expandirse al mercado masivo. La Ley de Capacidad trata de factores humanos: la carga del operador vuelve al limite de su capacidad. Ninguno de los dos nodos prepara al otro, solo comparten el tema 'tecnologia'. La correccion (el prefijo) no cambio nada: la arista ya era debil antes."
+    },
+    {
+      "core": "gestion_de_conflictos_cofundadores",
+      "dominio": "enfoque_situacional_vs_personal",
+      "score": 0.8,
+      "redir_hseq_dominio": "enfoque_situacional_vs_personal_2",
+      "motivo": "Rechazado por el fundador el 27 sep 2026: los dos lectores de la pasada P lo juzgaron debil (trampa P2-08)."
     }
   ]
 }

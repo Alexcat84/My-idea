@@ -17,7 +17,6 @@
     "project_charter",
     "stakeholder_register",
     "project_management_plan",
-    "cronograma_proyecto",
     "scope_management_plan"
   ],
   "nodos_siguientes": [
@@ -31,5 +30,20 @@
   "etiqueta_arbol": "Planifica la Gestión de Requisitos",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-026",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "cronograma_proyecto -> requirements_management_plan",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R06-19-06): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Orden invertido: el plan de gestion de requisitos es de planificacion temprana y no sigue al cronograma."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }

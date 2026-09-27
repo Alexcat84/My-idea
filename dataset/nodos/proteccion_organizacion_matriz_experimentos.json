@@ -22,7 +22,6 @@
   "nodos_siguientes": [
     "cultura_de_experimentacion_continua",
     "organizaciones_alta_confiabilidad",
-    "critica_behavior_based_safety",
     "mitigacion_riesgos_ambientales"
   ],
   "condiciones_activacion": [
@@ -33,5 +32,20 @@
   "etiqueta_arbol": "Protege a la Empresa Matriz",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "t2-arista-107",
+      "fecha": "2026-09-26",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "proteccion_organizacion_matriz_experimentos -> critica_behavior_based_safety",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada R (docs/saneamiento/resultados/R/final.json, R10-04-07): RANCIA_DE_ANTES, lector y verificador de acuerdo",
+        "motivo": "Proteger el negocio de siempre de tus experimentos comerciales no tiene relacion con los programas de seguridad basados en el comportamiento."
+      },
+      "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    }
   ]
 }
