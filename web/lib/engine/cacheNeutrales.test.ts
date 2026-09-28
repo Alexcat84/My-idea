@@ -10,8 +10,10 @@ import { describe, expect, it } from "vitest";
 import { cargarGrafo, cargarPreguntasCache } from "./graph";
 
 /** Bases vivas sin neutral al 28 sep 2026 (engine/build_question_cache.py objetivos_neutrales): 2.940 sin el mundo 11,
- * y 3.287 con las 347 bases de Primer Equipo al traer main a puente-forja. */
-const TOPE_SIN_NEUTRAL = 3287;
+ * y 3.287 con las 347 bases de Primer Equipo al traer main a puente-forja. 3.288 con la base escrita a mano de la
+ * puerta nueva de la auditoria final (repartir_supervision_puesto_funcional_mision, 28 sep 2026): su neutral la
+ * genera la corrida final, que es la primera con API. */
+const TOPE_SIN_NEUTRAL = 3288;
 /** Nodos con siguientes y sin pregunta al 28 sep 2026 (engine/build_question_cache.py faltantes): 40, y 43 desde la
  * auditoria final, cuyas aristas verificadas dieron siguientes a cuestionar_historia_irracional_cabeza,
  * lleva_scorecard_desempeno_proveedor y traduce_stock_muerto_numeros (docs/ACTA_SANEAMIENTO_FINAL.md, 6.1). Se

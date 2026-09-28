@@ -1,0 +1,124 @@
+{
+ "_nota": "Verificacion ciega de las puertas nuevas de la auditoria final (decision del fundador, 28 sep 2026). Dos rondas, un lector ciego cada una, con trampas sin marca bajo ids reales sorteadas antes de armar el paquete; la clave estuvo fuera de lo que leyo el lector. Scripts: auditoria-final-claves/hacer_puertas.py y hacer_puertas_2.py.",
+ "rondas": [
+  {
+   "ronda": 1,
+   "casos": [
+    {
+     "caso": 1,
+     "node_id": "fijar_proceso_trabajo_equipo",
+     "papel": "trampa: pregunta",
+     "condicion_mostrada": [
+      "Cuando tienes un equipo con mucho talento y con una idea muy clara de cuál es la meta final, y aun así las tareas simples se complican enormemente porque no está claro cómo se supone que todos trabajan juntos ni cuáles son los valores del equipo."
+     ],
+     "pregunta_mostrada": "¿Cuánto cobras hoy por tu producto y cómo decidiste ese precio?",
+     "veredicto_condicion": "precisa",
+     "razon_condicion": "Describe una situación reconocible y propia del concepto: equipo con talento y meta clara donde lo simple se complica porque no está claro cómo trabajan juntos ni sus valores.",
+     "veredicto_pregunta": "no_corresponde",
+     "razon_pregunta": "Pregunta por el precio del producto y cómo se fijó, que no tiene nada que ver con el proceso de trabajo del equipo."
+    },
+    {
+     "caso": 2,
+     "node_id": "repartir_supervision_puesto_funcional_mision",
+     "papel": "real",
+     "condicion_mostrada": [
+      "Cuando un puesto pertenece a un grupo funcional y trabaja para una unidad de misión, y hay que decidir de quién depende sin dejar fuera ni las prioridades del negocio ni el oficio de su especialidad."
+     ],
+     "pregunta_mostrada": "¿Hay alguien en tu equipo que trabaje a la vez para dos áreas o para dos personas, y cómo decides hoy quién le marca las prioridades y quién cuida cómo hace su oficio?",
+     "veredicto_condicion": "precisa",
+     "razon_condicion": "Describe una situación concreta y propia del concepto (un puesto que sirve a un grupo funcional y a una unidad de misión y hay que decidir de quién depende), aunque con vocabulario algo técnico.",
+     "veredicto_pregunta": "floja",
+     "razon_pregunta": "Traduce bien la situación de la doble dependencia, pero da por hecho que la persona tiene un equipo sin ponerlo en condicional y encadena varias preguntas en una."
+    },
+    {
+     "caso": 3,
+     "node_id": "csf_funcion_recover",
+     "papel": "trampa: condicion",
+     "condicion_mostrada": [
+      "Cuando quieres mejorar tu negocio y hacerlo crecer."
+     ],
+     "pregunta_mostrada": "Una vez que tu idea pueda recuperarse de un incidente de ciberseguridad, ¿qué tan importante sería para ti poder demostrar y comunicar a otros, como inversionistas, socios o reguladores, exactamente en qué nivel de preparación estás ahora y hacia dónde quieres llegar?",
+     "veredicto_condicion": "vaga",
+     "razon_condicion": "Querer mejorar el negocio y hacerlo crecer sirve para casi cualquier concepto y no tiene nada que ver con recuperarse de un ataque.",
+     "veredicto_pregunta": "no_corresponde",
+     "razon_pregunta": "Da por hecha la recuperación y pregunta por demostrar el nivel de preparación ante inversionistas, que es el concepto siguiente (perfil), no la recuperación tras un incidente."
+    },
+    {
+     "caso": 4,
+     "node_id": "gestion_riesgo_seguridad_ia",
+     "papel": "real",
+     "condicion_mostrada": [
+      "Cuando el producto integra IA con capacidad de leer contenido externo o ejecutar acciones automáticas",
+      "Antes del lanzamiento público de una funcionalidad basada en IA generativa"
+     ],
+     "pregunta_mostrada": "Más allá de protegerse contra estos ataques, ¿qué tan preparada está tu idea para que las personas, tanto dentro de tu equipo como los que usen lo que construyas, confíen realmente en las decisiones o recomendaciones que la IA va a tomar?",
+     "veredicto_condicion": "precisa",
+     "razon_condicion": "Describe situaciones concretas y propias del concepto: un producto con IA que lee contenido externo o ejecuta acciones, o una funcionalidad de IA generativa a punto de lanzarse.",
+     "veredicto_pregunta": "no_corresponde",
+     "razon_pregunta": "Salta más allá de protegerse de los ataques y pregunta por la confianza en las decisiones de la IA, tema del siguiente concepto, además de suponer un equipo que no se mencionó."
+    }
+   ]
+  },
+  {
+   "ronda": 2,
+   "casos": [
+    {
+     "caso": 1,
+     "node_id": "accion_correctiva",
+     "papel": "control: puerta vigente con su pregunta de la cache",
+     "condicion_mostrada": [
+      "Cuando aparece un pico o desviación aislada no conforme en tu proceso.",
+      "Cuando detectas un problema que se repite una y otra vez pese a corregirlo.",
+      "Cuando necesitas decidir si basta con restaurar el estado anterior o si hace falta rediseñar el proceso."
+     ],
+     "pregunta_mostrada": "Cuando identificas que algo no está funcionando como debería en tu proyecto, ¿cómo te enteras normalmente y qué haces primero para entender qué pasó?",
+     "veredicto_condicion": "precisa",
+     "razon_condicion": "Un pico aislado fuera de lo normal y un problema que vuelve pese a corregirlo son situaciones concretas que la persona reconoce y que calzan justo con la distinción esporádica/crónica del concepto.",
+     "veredicto_pregunta": "floja",
+     "razon_pregunta": "Es genérica (vale para cualquier problema), junta dos preguntas en una y no indaga si la falla es aislada o se repite, que es lo que permite entrar al concepto y elegir camino."
+    },
+    {
+     "caso": 2,
+     "node_id": "repartir_supervision_puesto_funcional_mision",
+     "papel": "real",
+     "condicion_mostrada": [
+      "Cuando un puesto pertenece a un grupo funcional y trabaja para una unidad de misión, y hay que decidir de quién depende sin dejar fuera ni las prioridades del negocio ni el oficio de su especialidad."
+     ],
+     "pregunta_mostrada": "Si alguien de tu negocio responde a la vez a dos personas o a dos áreas, ¿cómo está repartido hoy entre ellas quién le marca las prioridades y quién cuida que haga bien su oficio?",
+     "veredicto_condicion": "precisa",
+     "razon_condicion": "Describe la situación propia del concepto (un puesto entre un área de especialidad y una unidad de negocio, con la duda de quién lo supervisa en qué), aunque con términos algo técnicos como grupo funcional y unidad de misión.",
+     "veredicto_pregunta": "adecuada",
+     "razon_pregunta": "Una sola pregunta en segunda persona, en condicional para no suponer la doble dependencia, en lenguaje llano y apuntando directo al reparto entre prioridades y oficio."
+    },
+    {
+     "caso": 3,
+     "node_id": "wizard_of_oz_testing",
+     "papel": "trampa: pregunta",
+     "condicion_mostrada": [
+      "Cuando el producto requiere una tecnología compleja o costosa (ej. IA, algoritmos) para funcionar.",
+      "Cuando se quiere probar la propuesta de valor sin construir la solución técnica completa.",
+      "Cuando el equipo necesita iterar rápidamente sobre el concepto de producto."
+     ],
+     "pregunta_mostrada": "¿Cómo te sientes hoy con tu proyecto en general?",
+     "veredicto_condicion": "precisa",
+     "razon_condicion": "Un producto que necesita tecnología compleja o costosa y el deseo de probar el valor sin construirla es una situación reconocible y propia del Mago de Oz, aunque la tercera condición (iterar rápido, con un equipo supuesto) es vaga.",
+     "veredicto_pregunta": "no_corresponde",
+     "razon_pregunta": "Preguntar cómo te sientes con tu proyecto en general no toca la tecnología costosa, la simulación manual ni la validación de demanda, así que no sirve para entrar al concepto ni para elegir entre sus siguientes."
+    },
+    {
+     "caso": 4,
+     "node_id": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+     "papel": "trampa: condicion",
+     "condicion_mostrada": [
+      "Cuando ya terminaste las pruebas de empaque del paso anterior y tienes sus resultados."
+     ],
+     "pregunta_mostrada": "Cuando imaginas que tu producto llega a manos del cliente, ¿qué tipo de daño sería inaceptable para ti y cuál podrías tolerar sin problema?",
+     "veredicto_condicion": "no_corresponde",
+     "razon_condicion": "Describe un punto intermedio que solo se alcanza desde otro paso (haber terminado pruebas previas) y además contradice el concepto, que consiste en definir el criterio de daño antes de probar.",
+     "veredicto_pregunta": "adecuada",
+     "razon_pregunta": "Una sola pregunta en segunda persona, sin jerga, que lleva directo a separar el daño inaceptable del tolerable, que es el entregable del concepto y la base para detectar fallas en el empaque."
+    }
+   ]
+  }
+ ]
+}

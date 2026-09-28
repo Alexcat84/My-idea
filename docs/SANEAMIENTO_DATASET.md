@@ -2,6 +2,16 @@
 
 > **EL DATASET ESTA SANEADO PARA EL CLIENTE.**
 >
+> **MATIZ DECLARADO EL 28 SEP 2026, SIN BORRAR LO DE ARRIBA** (decisión del fundador): la auditoría final
+> (`docs/ACTA_SANEAMIENTO_FINAL.md`), con umbrales escritos antes de medir y una muestra ciega de 200 nodos, dio
+> **NO CERTIFICADO** en su medida 1 (sección 6). Esta declaración vale para lo que el nivel 1 midió con sus
+> instrumentos; la muestra halló defectos fuera de lo que esos instrumentos leían: 4 contrarios y 25 invenciones
+> (sobre todo en resúmenes que la campaña de fidelidad decidió con una sola lectura), fase 5 %, condiciones 3 %,
+> etiquetas 6 %, ortografía 19,5 % de nodos (sobre todo en resumen, condiciones y título, que la pasada O no cubrió),
+> matiz 0,50 y calco 0,72 por nodo. El mundo 11 sale limpio. Diagnóstico y propuesta de remedio en la sección 7 del
+> acta; el remedio espera el visto del fundador. **Mientras no se certifique, "saneado para el cliente" significa
+> "nivel 1 cerrado", no "certificado".**
+>
 > Nivel 1 cerrado por la decision del fundador del 27 sep 2026 ("dos niveles de saneamiento"): todos sus criterios
 > verificados por su instrumento, con Gate 0 (alcanzabilidad 100 por ciento), el motor, vitest y tsc en verde. El
 > criterio 7 se cerro en la sesion con credencial ("clave cargada"): el indice semantico reconstruido (los 349 nodos
@@ -424,6 +434,9 @@ peso para el cliente.
 ---
 
 ## NIVEL 1 "SANEADO PARA EL CLIENTE" (decision del fundador del 27 sep 2026). CERRADO
+
+> **Matiz del 28 sep 2026:** la auditoría final dio NO CERTIFICADO (ver el aviso del principio y
+> `docs/ACTA_SANEAMIENTO_FINAL.md`, secciones 6 y 7). Lo que sigue se queda tal cual: es lo que el nivel 1 verificó.
 
 Todo por correccion declarada en el propio nodo, instrumento y resultados por nodo en `docs/saneamiento/`; Gate 0
 (alcanzabilidad 100 por ciento, 3.169 de 3.169), motor (32 de 32), vitest (2.017) y tsc en verde.

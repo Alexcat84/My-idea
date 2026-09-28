@@ -109,9 +109,12 @@ describe("Primer Equipo, el undécimo mundo, entra oculto", () => {
     expect(linea).not.toContain("primer_equipo");
   });
 
-  it("trae sus 19 puertas horneadas y su mapa de brecha", () => {
+  it("trae sus 20 puertas horneadas y su mapa de brecha", () => {
     const semillas = JSON.parse(leer("lib/assets/packs_entry_seeds.json")) as Record<string, { id: string }[]>;
-    expect(semillas.primer_equipo).toHaveLength(19);
+    // 19 del paso 8 más la puerta de la auditoría final (decisión del fundador, 28 sep 2026): el nodo de la doble
+    // dependencia no se alcanzaba desde ninguna puerta; su condición y su pregunta pasaron la lectura ciega.
+    expect(semillas.primer_equipo).toHaveLength(20);
+    expect(semillas.primer_equipo.map((s) => s.id)).toContain("repartir_supervision_puesto_funcional_mision");
     const brecha = JSON.parse(leer("lib/assets/brecha_semillas.json")) as Record<string, Record<string, string>>;
     expect(brecha.primer_equipo._defecto).toBe("responder_tres_preguntas_vocacion_directiva");
   });

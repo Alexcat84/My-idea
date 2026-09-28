@@ -353,3 +353,53 @@ Todas las etapas siguen la doctrina de siempre:
 - **Por qué un pase entero y no solo los nodos de la muestra:** los defectos se reparten por todos los espacios fuera
   del mundo 11 (sección 6.2). Corregir la muestra y volver a medir con semilla nueva volvería a caer.
 - **Lo que no se toca:** el mundo 11. Su método de certificación es el que esta propuesta aplica al resto.
+
+## 8. Decisiones del fundador del 28 sep 2026: las puertas y el BANCO
+
+### 8.1 Los 2 nodos sin alcanzar pasan a ser puertas (G2)
+
+Decisión: cada uno entra como puerta de su mundo con una condición precisa, verificada a ciegas con trampas sin marca.
+Evidencia completa (lo que vio el lector, sus veredictos y el papel de cada caso) en
+`docs/auditoria_final/puertas_verificacion.json`.
+
+**Método:** un lector ciego por ronda, con las instrucciones de siempre para puertas (condición `precisa`/`vaga`/
+`no_corresponde`; pregunta `adecuada`/`floja`/`no_corresponde`). Cada ronda lleva dos trampas bajo ids reales que no
+son puerta, sorteadas antes de armar el paquete (una con condición mala y otra con pregunta mala). La clave queda fuera
+de lo que lee el lector.
+
+| Ronda | Caso | Condición | Pregunta | Resultado |
+|---|---|---|---|---|
+| 1 | `repartir_supervision_puesto_funcional_mision`, pregunta escrita a mano | precisa | **floja** | Suponía un equipo sin condicional y encadenaba dos preguntas. Se reescribe |
+| 1 | `gestion_riesgo_seguridad_ia`, pregunta base de la caché | precisa | **no_corresponde** | Ver abajo: queda para el fundador |
+| 1 | Trampa de condición (`csf_funcion_recover`) | vaga | no_corresponde | **Cazada** |
+| 1 | Trampa de pregunta (`fijar_proceso_trabajo_equipo`) | precisa | no_corresponde | **Cazada** |
+| 2 | `repartir_supervision_puesto_funcional_mision`, pregunta reescrita | precisa | **adecuada** | **Pasa** |
+| 2 | Trampa de condición (`definir_que_cuenta_como_dano_antes_de_probar_empaque`) | no_corresponde | adecuada | **Cazada** |
+| 2 | Trampa de pregunta (`wizard_of_oz_testing`) | precisa | no_corresponde | **Cazada** |
+| 2 | Control: puerta vigente `accion_correctiva` con su pregunta base | precisa | floja | Ver abajo |
+
+- **`repartir_supervision_puesto_funcional_mision` es puerta de Primer Equipo** (la vigésima). Su pregunta es nueva y
+  se AÑADE a la caché, porque el nodo no tenía ninguna (Principio 2): "Si alguien de tu negocio responde a la vez a dos
+  personas o a dos áreas, ¿cómo está repartido hoy entre ellas quién le marca las prioridades y quién cuida que haga
+  bien su oficio?". Su versión neutral la genera la corrida final (tope de `cacheNeutrales.test.ts` de 3.287 a 3.288,
+  declarado). No tiene sucesores: la salida la da el motor (AUD-09 H13). Primer Equipo queda alcanzable al 100 %.
+- **`gestion_riesgo_seguridad_ia` NO entra todavía.** Su condición pasa, pero su pregunta base de la caché ("Más allá de
+  protegerse contra estos ataques, ¿qué tan preparada está tu idea para que las personas […] confíen realmente en las
+  decisiones […] de la IA?") sale `no_corresponde`: da por trabajado el concepto, salta al siguiente y supone un
+  equipo. El Principio 2 prohíbe tocar una base, así que no la cambio. **Decide el fundador.**
+- **Una duda de vara que se ve en las dos rondas:** las preguntas base se escribieron para elegir entre los siguientes
+  y por eso miran al concepto que viene. El lector de puertas pide que la primera pregunta parta del concepto de la
+  puerta. Con esa vara fallan también dos bases vigentes: la de `csf_funcion_recover` (la pregunta real de la trampa de
+  condición de la ronda 1, `no_corresponde`) y la del control `accion_correctiva` (`floja`). No es un defecto de estas
+  dos puertas: es una pregunta de diseño para el fundador (¿la primera pregunta de una puerta es la base del nodo o
+  necesita la suya propia?).
+- **G2 tras esta decisión:** `scripts/auditoria_final/navegacion.py` queda en rojo por 1 nodo
+  (`gestion_riesgo_seguridad_ia`, seguridad digital, 52 de 53). Gate 0 OK.
+
+### 8.2 El choque del BANCO con la regla sin fuentes
+
+Seis pasajes de `docs/BANCO_DE_TEXTOS.md` decían que el plan cita libro y capítulo en el detalle de cada concepto (§3,
+§5, §6 y dos notas de §7). Quedan tachados con su corrección declarada, por la regla de `AGENTS.md` del 26 sep 2026, y
+el claim "cada plan cita su fuente" pasa a PROHIBIDO en §6. **Ningún prompt pide citar libro, capítulo ni autor:**
+`SYSTEM_PLAN` dice "sin autores" y prohíbe "fuentes nuevas que no esten en el material". `docs/REGLAS_DE_LA_CASA.md`
+marca el choque como resuelto (commit 2f7285ec).
