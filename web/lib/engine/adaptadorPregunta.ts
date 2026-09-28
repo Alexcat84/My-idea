@@ -14,14 +14,18 @@
  *
  * SALIDA SEGURA: si la llamada falla, tarda o devuelve algo que no pasa las comprobaciones, sale la version NEUTRAL de
  * la cache (`pregunta_neutral`, un campo aparte: la base sigue intacta), nunca la base cruda. Mientras un nodo no tenga
- * neutral (se generan en la corrida final), sale su base y el evento lo dice (`base_sin_neutral`): fallar ruidoso.
+ * neutral (se generan en la corrida final), sale una PLANTILLA NEUTRAL generica sin roles supuestos (visto del
+ * fundador, 28 sep 2026, punto 1): la generica que nombra el tema por su etiqueta, o, si la etiqueta supone un papel
+ * (equipo, jefe, socios), la que no nombra tema. El evento dice cual salio.
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_ADAPTAR_PREGUNTA } from "../prompts";
 import type { Locale } from "../i18n/config";
 import { contextoDeSesion, type FichaContexto } from "./memoria";
-import { etiquetaArbol, obtenerPregunta, resolverId, type Grafo, type PreguntasCache } from "./graph";
+import { etiquetaArbol, obtenerPregunta, resolverId, type Grafo, type NodoGrafo, type PreguntasCache } from "./graph";
+import { elegir } from "../i18n/config";
+import { MOTOR } from "../i18n/mensajes/motor";
 import type { EventoAdaptacionPregunta, EventoInterprete } from "./interprete";
 
 /** Lo que tarda de mas una adaptacion antes de dar paso a la neutral: la persona esta esperando su pregunta. */
@@ -29,7 +33,22 @@ export const TIEMPO_MAX_ADAPTADOR_MS = 8000;
 /** Cuantos siguientes del nodo viajan como ancla del fondo. */
 const MAX_SIGUIENTES = 6;
 
-export type SalidaAdaptador = "adaptada" | "neutral" | "base_sin_neutral";
+export type SalidaAdaptador = "adaptada" | "neutral" | "plantilla_neutral";
+
+/** Una etiqueta de nodo que supone un papel o una estructura (la mira en español, que es la del grafo). 100 de las
+ * 3.169 etiquetas vivas lo hacen ("Alinea a tu Equipo con el Mapa") al 28 sep 2026. */
+const SUPONE_PAPEL = /\b(jef[ea]s?|recursos humanos|directiv\w*|departamento\w*|emplead\w*|equipo\w*|subordinad\w*|gerente\w*|socio\w*|colaborador\w*|junta)\b/i;
+
+export function supuestoDePapel(etiqueta: string): boolean {
+  return SUPONE_PAPEL.test(etiqueta);
+}
+
+/** La plantilla neutral de un nodo: la generica con su tema si su etiqueta no supone papeles; si los supone, la que
+ * no nombra tema. Nunca la base. */
+export function plantillaNeutral(nodo: string, n: NodoGrafo, idioma: Locale): string {
+  if (supuestoDePapel(n.etiqueta_arbol ?? n.titulo_concepto ?? "")) return elegir(MOTOR, idioma).preguntaNeutralSinTema;
+  return obtenerPregunta(nodo, n, {}, idioma);
+}
 
 export interface EntradaAdaptador {
   nodo: string;
@@ -37,6 +56,8 @@ export interface EntradaAdaptador {
   base: string;
   /** la version neutral de la cache, sin roles supuestos; null si el nodo aun no la tiene */
   neutral: string | null;
+  /** la plantilla neutral generica (plantillaNeutral): la salida segura cuando no hay neutral */
+  plantilla: string;
   /** las etiquetas de los siguientes entre los que la respuesta ayuda a elegir */
   siguientes: string[];
 }
@@ -94,7 +115,7 @@ export async function adaptarPregunta(
   const segura = (fallo: string, acc: UsoAcumulado): ResultadoAdaptador =>
     entrada.neutral
       ? { pregunta: entrada.neutral, busca: null, acumulado: acc, salida: "neutral", fallo }
-      : { pregunta: entrada.base, busca: null, acumulado: acc, salida: "base_sin_neutral", fallo };
+      : { pregunta: entrada.plantilla, busca: null, acumulado: acc, salida: "plantilla_neutral", fallo };
   const turno = JSON.stringify({ pregunta_base: entrada.base, sirve_para_elegir_entre: entrada.siguientes });
   let r: { texto: string; acumulado: UsoAcumulado };
   try {
@@ -165,7 +186,8 @@ export async function adaptarResultadoTurno<
     .slice(0, MAX_SIGUIENTES)
     .map((c) => etiquetaArbol(c, datos.graph));
 
-  const a = await adaptarPregunta(client, { nodo, base, neutral, siguientes }, resultado.acumulado, {
+  const plantilla = plantillaNeutral(nodo, n, datos.idiomaPlantilla);
+  const a = await adaptarPregunta(client, { nodo, base, neutral, plantilla, siguientes }, resultado.acumulado, {
     idiomaSalida: resultado.estado.idioma ?? null,
     contexto: contextoDeSesion(resultado.estado),
     tiempoMaxMs: datos.tiempoMaxMs,

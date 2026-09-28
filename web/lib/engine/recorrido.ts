@@ -419,7 +419,7 @@ export interface AvanzarTurnoParams {
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
   // CONSTRUCCION 2 (28 sep 2026): si el turno sale con la pregunta de la cache del ultimo nodo, sea por el camino
   // que sea (re-eleccion, respaldo, dirigida fallida, copia literal), pasa por el adaptador: la dice a esta persona
-  // y en el idioma de su idea. Nunca sale la base cruda si el nodo tiene su neutral (lib/engine/adaptadorPregunta).
+  // y en el idioma de su idea. Nunca sale la base cruda: si falla, su neutral o la plantilla neutral (adaptadorPregunta).
   return adaptarResultadoTurno(params.client, await avanzarTurnoBase(params), {
     graph: params.graph,
     preguntasCache: params.preguntasCache,

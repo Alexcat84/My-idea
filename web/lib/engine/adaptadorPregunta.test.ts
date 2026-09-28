@@ -2,13 +2,14 @@
  * CONSTRUCCION 2 (decision del fundador, 28 sep 2026): el ADAPTADOR de preguntas. Toda pregunta que va a salir de la
  * cache (o la generica de un nodo sin pregunta) pasa por Haiku, que la dice a ESTA persona y en su idioma: cambia la
  * forma, nunca el fondo. Si falla, tarda o devuelve algo que no pasa las comprobaciones, sale la version NEUTRAL de la
- * cache, nunca la base cruda (mientras un nodo no tenga neutral, sale la base y el evento lo dice).
+ * cache, nunca la base cruda. Mientras un nodo no tenga neutral (las 2.940 se generan en la corrida final), sale una
+ * PLANTILLA NEUTRAL generica sin roles supuestos (visto del fundador del 28 sep 2026, punto 1).
  *
  * Todo con clientes falsos: ninguna llamada a la API real hasta la corrida final (regla del fundador, 28 sep 2026).
  */
 import { describe, expect, it, vi } from "vitest";
 import type Anthropic from "@anthropic-ai/sdk";
-import { adaptarPregunta, adaptarResultadoTurno, comprobarAdaptada } from "./adaptadorPregunta";
+import { adaptarPregunta, adaptarResultadoTurno, comprobarAdaptada, supuestoDePapel } from "./adaptadorPregunta";
 import { MODEL_HAIKU, usoVacio } from "../costmeter";
 import { SYSTEM_ADAPTAR_PREGUNTA } from "../prompts";
 import type { Grafo, PreguntasCache } from "./graph";
@@ -73,7 +74,8 @@ describe("comprobarAdaptada: lo que el codigo exige antes de mostrar una adaptad
 });
 
 describe("adaptarPregunta: la llamada", () => {
-  const entrada = { nodo: "n1", base: BASE, neutral: NEUTRAL, siguientes: ["Cuenta cómo vas", "Pide ayuda a tiempo"] };
+  const PLANTILLA = "¿En qué punto está hoy tu idea con este paso, y qué es lo que más te preocupa o te entusiasma de él?";
+  const entrada = { nodo: "n1", base: BASE, neutral: NEUTRAL, plantilla: PLANTILLA, siguientes: ["Cuenta cómo vas", "Pide ayuda a tiempo"] };
 
   it("va a Haiku con el prompt del adaptador, el contexto en su bloque de 1 hora y la base con sus siguientes", async () => {
     const { client, create } = clienteFalso(json("¿A quién le cuentas cómo va tu taller?"));
@@ -105,10 +107,11 @@ describe("adaptarPregunta: la llamada", () => {
     expect(r).toMatchObject({ pregunta: NEUTRAL, salida: "neutral", fallo: "no_json" });
   });
 
-  it("un nodo que aun no tiene neutral: sale la base y el resultado lo dice", async () => {
+  it("un nodo que aun no tiene neutral: sale la PLANTILLA neutral, nunca la base cruda", async () => {
     const { client } = clienteFalso(new Error("timeout"));
     const r = await adaptarPregunta(client, { ...entrada, neutral: null }, usoVacio(), { idiomaSalida: "es", contexto: null });
-    expect(r).toMatchObject({ pregunta: BASE, salida: "base_sin_neutral", fallo: "timeout" });
+    expect(r).toMatchObject({ pregunta: PLANTILLA, salida: "plantilla_neutral", fallo: "timeout" });
+    expect(r.pregunta).not.toBe(BASE);
   });
 });
 
@@ -200,5 +203,54 @@ describe("el prompt del adaptador lleva el contrato", () => {
     expect(p).toContain('{"pregunta"');
     expect(p).toContain('"busca"');
     expect(p).toContain("PROHIBIDO usar guiones largos");
+  });
+});
+
+// VISTO DEL FUNDADOR (28 sep 2026), punto 1: HOY no existen las 2.940 neutrales. Si el adaptador falla y el nodo no
+// tiene todavia su neutral, sale una plantilla neutral generica SIN roles supuestos, nunca la base cruda.
+describe("salida segura sin neutral: plantilla neutral generica, sin roles, nunca la base", () => {
+  const graph = {
+    n0: { titulo_concepto: "Inicio", etiqueta_arbol: "Empieza por aquí", dominio: "core" },
+    sinPapel: { titulo_concepto: "Informe al jefe", etiqueta_arbol: "Cuenta cómo vas", dominio: "core" },
+    conPapel: { titulo_concepto: "Alinear al equipo", etiqueta_arbol: "Alinea a tu Equipo con el Mapa", dominio: "core" },
+  } as unknown as Grafo;
+  const cache: PreguntasCache = {
+    sinPapel: { pregunta: BASE, candidatos: [] },
+    conPapel: { pregunta: "¿Qué le dirías a tu jefe sobre cómo se alinea tu equipo?", candidatos: [] },
+  };
+  const turno = (pregunta: string, nodo: string) => ({
+    tipo: "pregunta" as const,
+    pregunta,
+    acumulado: usoVacio(),
+    estado: { ruta: ["n0", nodo], idioma: "es", preguntaPendiente: pregunta, ultimasPreguntas: [pregunta], fallbackEvents: [] as EventoInterprete[] },
+  });
+
+  it("etiqueta sin papeles: la plantilla generica nombra el tema por su etiqueta", async () => {
+    const { client } = clienteFalso(new Error("sin red"));
+    const r = await adaptarResultadoTurno(client, turno(BASE, "sinPapel"), { graph, preguntasCache: cache, idiomaPlantilla: "es" });
+    // A mano: MOTOR.es.preguntaGenerica con titulo = 'Cuenta cómo vas'.
+    expect(r.pregunta).toBe('Pensando en "Cuenta cómo vas", cuéntame en tus palabras dónde estás parado ahora mismo con tu idea y qué es lo que más te preocupa o te entusiasma.');
+    expect(r.pregunta).not.toBe(BASE);
+    expect(r.estado.fallbackEvents.at(-1)).toMatchObject({ tipo: "adaptacion_pregunta", salida: "plantilla_neutral", motivo: "sin red" });
+  });
+
+  it("etiqueta que supone un equipo: la plantilla neutral SIN tema, que no nombra ningun papel", async () => {
+    const { client } = clienteFalso(new Error("sin red"));
+    const base = cache.conPapel.pregunta as string;
+    const r = await adaptarResultadoTurno(client, turno(base, "conPapel"), { graph, preguntasCache: cache, idiomaPlantilla: "es" });
+    expect(r.pregunta).toBe("¿En qué punto está hoy tu idea con este paso, y qué es lo que más te preocupa o te entusiasma de él?");
+    expect(r.pregunta).not.toMatch(/jefe|equipo|recursos humanos|emplead|socio|colaborador/i);
+  });
+
+  it("en otro idioma, la plantilla sale en el idioma de las plantillas", async () => {
+    const { client } = clienteFalso(new Error("sin red"));
+    const base = cache.conPapel.pregunta as string;
+    const r = await adaptarResultadoTurno(client, { ...turno(base, "conPapel"), estado: { ...turno(base, "conPapel").estado, idioma: "en" } }, { graph, preguntasCache: cache, idiomaPlantilla: "en" });
+    expect(r.pregunta).toBe("Where does your idea stand with this step today, and what worries or excites you most about it?");
+  });
+
+  it("supuestoDePapel reconoce las etiquetas que suponen equipo, jefe, socios o colaboradores", () => {
+    expect(["Alinea a tu Equipo con el Mapa", "Elige tus Socios Clave", "Clasifica Bien a tus Colaboradores", "Habla con tu jefe"].every(supuestoDePapel)).toBe(true);
+    expect(["Cuenta cómo vas", "Ordena tus números", "Prueba tu precio"].some(supuestoDePapel)).toBe(false);
   });
 });

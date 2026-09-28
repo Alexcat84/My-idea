@@ -31,6 +31,9 @@ const es = {
   /** graph.ts obtenerPregunta: la pregunta de un nodo sin pregunta en el caché. */
   preguntaGenerica:
     'Pensando en "{{titulo}}", cuéntame en tus palabras dónde estás parado ahora mismo con tu idea y qué es lo que más te preocupa o te entusiasma.',
+  /** Construccion 2, salida segura (visto del fundador, 28 sep 2026): la plantilla neutral SIN tema, cuando la
+   * etiqueta del nodo supone un papel (equipo, jefe, socios) y el nodo aun no tiene su version neutral. */
+  preguntaNeutralSinTema: "¿En qué punto está hoy tu idea con este paso, y qué es lo que más te preocupa o te entusiasma de él?",
   /** recorrido.ts: el nombre humano de una familia cuando la brújula no responde. */
   temaFamilia: {
     accionClientes: "Salir a validar con clientes",
@@ -68,6 +71,7 @@ const en: typeof es = {
   preguntaTipoOferta: "What exactly do you sell, and how do you charge for it?",
   preguntaGenerica:
     'Thinking about "{{titulo}}", tell me in your own words where you stand with your idea right now and what worries or excites you most.',
+  preguntaNeutralSinTema: "Where does your idea stand with this step today, and what worries or excites you most about it?",
   temaFamilia: {
     accionClientes: "Go validate with customers",
     viabilidadEconomica: "Your real numbers",
@@ -98,6 +102,7 @@ const fr: typeof es = {
   reporteDisclaimer: "\n\n---\n_Estimations basées sur les chiffres que tu as donnés; elles ne remplacent pas une comptabilité en bonne et due forme ni des conseils fiscaux, qui varient selon ton pays._",
   preguntaTipoOferta: "Qu'est-ce que tu vends exactement, et comment te fais-tu payer?",
   preguntaGenerica: "En pensant à « {{titulo}} », raconte-moi dans tes mots où tu en es avec ton idée en ce moment, et ce qui t'inquiète ou t'enthousiasme le plus.",
+  preguntaNeutralSinTema: "Où en est ton idée avec cette étape aujourd'hui, et qu'est-ce qui t'inquiète ou t'enthousiasme le plus ?",
   temaFamilia: {
     accionClientes: "Aller valider auprès de clients",
     viabilidadEconomica: "Tes vrais chiffres",
@@ -128,6 +133,7 @@ const pt: typeof es = {
   reporteDisclaimer: "\n\n---\n_Estimativas baseadas nos valores que você informou; não substituem contabilidade formal nem assessoria tributária, que variam conforme o seu país._",
   preguntaTipoOferta: "O que exatamente você vende e como cobra por isso?",
   preguntaGenerica: "Pensando em \"{{titulo}}\", me conte com suas palavras em que ponto você está agora com sua ideia e o que mais preocupa ou empolga você.",
+  preguntaNeutralSinTema: "Em que ponto está sua ideia nesta etapa hoje, e o que mais preocupa ou empolga você nela?",
   temaFamilia: {
     accionClientes: "Sair para validar com clientes",
     viabilidadEconomica: "Seus números de verdade",
@@ -158,6 +164,7 @@ const de: typeof es = {
   reporteDisclaimer: "\n\n---\n_Schätzungen auf Grundlage der Zahlen, die du angegeben hast; sie ersetzen keine ordentliche Buchhaltung und keine Steuerberatung, die je nach Land verschieden sind._",
   preguntaTipoOferta: "Was genau verkaufst du, und wie rechnest du ab?",
   preguntaGenerica: "Mit Blick auf „{{titulo}}“: Erzähl mir in deinen eigenen Worten, wo du gerade mit deiner Idee stehst und was dich am meisten beschäftigt oder begeistert.",
+  preguntaNeutralSinTema: "Wo steht deine Idee heute bei diesem Schritt, und was beschäftigt oder begeistert dich daran am meisten?",
   temaFamilia: {
     accionClientes: "Raus zu echten Kunden",
     viabilidadEconomica: "Deine echten Zahlen",
@@ -188,6 +195,7 @@ const it: typeof es = {
   reporteDisclaimer: "\n\n---\n_Stime basate sulle cifre che hai fornito tu; non sostituiscono una contabilità formale né una consulenza fiscale, che variano a seconda del tuo paese._",
   preguntaTipoOferta: "Cosa vendi esattamente e come ti fai pagare?",
   preguntaGenerica: "Pensando a \"{{titulo}}\", raccontami con parole tue a che punto sei adesso con la tua idea e cosa ti preoccupa o ti entusiasma di più.",
+  preguntaNeutralSinTema: "A che punto è oggi la tua idea con questo passo, e cosa ti preoccupa o ti entusiasma di più?",
   temaFamilia: {
     accionClientes: "Andare a verificare con i clienti",
     viabilidadEconomica: "I tuoi numeri, quelli veri",
@@ -218,6 +226,7 @@ const ja: typeof es = {
   reporteDisclaimer: "\n\n---\n_これは入力した数字にもとづく見積もりです。正式な会計や税務の助言に代わるものではありません。会計や税務は国によって異なります。_",
   preguntaTipoOferta: "具体的に何を売っていて、どうやって代金を受け取りますか？",
   preguntaGenerica: "「{{titulo}}」について、今アイデアはどんな段階にありますか？いちばん不安なこと、またはいちばんワクワクしていることは何ですか？自分の言葉で聞かせてください。",
+  preguntaNeutralSinTema: "このステップについて、今アイデアはどんな段階にありますか？いちばん不安なこと、またはワクワクしていることは何ですか？",
   temaFamilia: {
     accionClientes: "お客様と検証しに行く",
     viabilidadEconomica: "本当の数字",
@@ -248,6 +257,7 @@ const zh: typeof es = {
   reporteDisclaimer: "\n\n---\n_以上估算基于你提供的数字；不能替代正式的会计或税务咨询，这些因国家而异。_",
   preguntaTipoOferta: "你具体卖的是什么？怎么收费？",
   preguntaGenerica: "想想“{{titulo}}”，用你自己的话告诉我：你的想法现在进展到哪一步了，最让你担心或兴奋的是什么？",
+  preguntaNeutralSinTema: "在这一步上，你的想法现在进展到哪里了？最让你担心或兴奋的是什么？",
   temaFamilia: {
     accionClientes: "去找客户验证",
     viabilidadEconomica: "你真实的数字",
@@ -278,6 +288,7 @@ const ko: typeof es = {
   reporteDisclaimer: "\n\n---\n_입력한 수치를 바탕으로 한 추정이에요. 정식 회계나 세무 상담을 대신하지 않으며, 이런 부분은 나라마다 달라요._",
   preguntaTipoOferta: "정확히 무엇을 팔고, 돈은 어떻게 받나요?",
   preguntaGenerica: "“{{titulo}}”에 대해 생각해 보면서, 지금 아이디어가 어디쯤 와 있는지, 그리고 무엇이 가장 걱정되거나 설레는지 편하게 이야기해 주세요.",
+  preguntaNeutralSinTema: "이 단계에서 지금 아이디어는 어디쯤 와 있나요? 가장 걱정되거나 설레는 것은 무엇인가요?",
   temaFamilia: {
     accionClientes: "고객과 검증하러 나가기",
     viabilidadEconomica: "나의 진짜 숫자",
@@ -308,6 +319,7 @@ const ar: typeof es = {
   reporteDisclaimer: "\n\n---\n_تقديرات مبنية على الأرقام التي قدّمتموها؛ ولا تغني عن المحاسبة الرسمية ولا عن الاستشارة الضريبية، إذ تختلفان من بلد إلى آخر._",
   preguntaTipoOferta: "ماذا تبيعون بالضبط، وكيف تتقاضون مقابله؟",
   preguntaGenerica: "بالتفكير في «{{titulo}}»، احكوا لي بكلماتكم أين تقفون الآن مع فكرتكم، وما أكثر ما يقلقكم أو يحمّسكم.",
+  preguntaNeutralSinTema: "أين تقفون اليوم بفكرتكم في هذه الخطوة، وما أكثر ما يقلقكم أو يحمّسكم فيها؟",
   temaFamilia: {
     accionClientes: "الخروج للتحقّق مع العملاء",
     viabilidadEconomica: "أرقامكم الحقيقية",
@@ -338,6 +350,7 @@ const hi: typeof es = {
   reporteDisclaimer: "\n\n---\n_ये अनुमान आपकी दी गई संख्याओं पर आधारित हैं; ये औपचारिक अकाउंटिंग या टैक्स सलाह की जगह नहीं लेते, जो हर देश में अलग होती है।_",
   preguntaTipoOferta: "आप ठीक-ठीक क्या बेचते हैं, और उसका पैसा कैसे लेते हैं?",
   preguntaGenerica: "“{{titulo}}” के बारे में सोचते हुए, अपने शब्दों में बताइए कि अभी आप अपने विचार के साथ कहाँ हैं, और किस बात की आपको सबसे ज़्यादा चिंता है या किस बात का सबसे ज़्यादा उत्साह।",
+  preguntaNeutralSinTema: "इस कदम पर आज आपका विचार कहाँ है, और इसमें किस बात की आपको सबसे ज़्यादा चिंता है या किस बात का सबसे ज़्यादा उत्साह?",
   temaFamilia: {
     accionClientes: "ग्राहकों के बीच जाकर परखें",
     viabilidadEconomica: "आपके असली आंकड़े",

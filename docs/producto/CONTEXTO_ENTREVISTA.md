@@ -261,8 +261,11 @@ IA queda preparado para la corrida final.
   neutral también. Las bases no se tocan.
 - **B, la salida segura antes de la corrida final.** Las versiones neutrales y las preguntas de los 40 nodos se generan
   en la corrida final (`engine/build_question_cache.py --faltantes` y `--neutrales`). Hasta entonces, si el adaptador
-  falla, sale la base y el evento lo dice (`base_sin_neutral`). La prueba `cacheNeutrales.test.ts` guarda la cifra
-  (2.940 bases vivas sin neutral, 40 nodos sin pregunta): solo puede bajar.
+  falla y el nodo no tiene su neutral, sale una **plantilla neutral genérica sin roles supuestos**, nunca la base
+  cruda (visto del fundador del 28 sep 2026, punto 1). Es la genérica que nombra el tema por su etiqueta; si la
+  etiqueta supone un papel (100 de las 3.169 vivas, como "Alinea a tu Equipo con el Mapa"), es la que no nombra tema.
+  El evento dice cuál salió (`plantilla_neutral`). La prueba `cacheNeutrales.test.ts` guarda la cifra (2.940 bases
+  vivas sin neutral, 40 nodos sin pregunta): solo puede bajar.
 - **B, el adaptador también cubre la genérica** de un nodo sin pregunta, y corre en español, no solo fuera: la base ya
   no sale cruda en ningún idioma. Tarda como mucho 8 segundos antes de dar paso a la salida segura.
 - **D, la medida de "atiende la prioridad"** es el coseno contra la prioridad en el mismo índice semántico, con el umbral

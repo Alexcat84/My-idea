@@ -2,7 +2,7 @@
  * CONSTRUCCION 2 (decision del fundador, 28 sep 2026): el adaptador dentro del turno. Antes (D3, i18n F5) la cacheada
  * solo se traducia fuera del español y en español salia cruda. Ahora toda pregunta que sale de la cache pasa por el
  * adaptador, en cualquier idioma: la dice a esta persona y en el idioma de su idea (sustituye a la traduccion). Si la
- * IA falla, sale la neutral del nodo; si aun no la tiene, su base, y el evento lo dice.
+ * IA falla, sale la neutral del nodo; si aun no la tiene, una plantilla neutral sin roles, nunca la base cruda.
  * Y la pregunta genérica (nodo sin cacheada) nombra el tema por su ETIQUETA, nunca por el titulo_concepto (AGENTS.md:
  * la etiqueta enamora).
  */
@@ -85,10 +85,11 @@ describe("avanzarTurno pasa la pregunta cacheada por el adaptador", () => {
     if (r.tipo !== "pregunta") throw new Error("esperaba pregunta");
     const entrada = preguntasCache[nid]!;
     const neutral = typeof entrada.pregunta_neutral === "string" ? entrada.pregunta_neutral : null;
-    expect(r.pregunta).toBe(neutral ?? entrada.pregunta);
+    if (neutral) expect(r.pregunta).toBe(neutral);
+    expect(r.pregunta).not.toBe(entrada.pregunta);
     expect(r.estado.fallbackEvents.at(-1)).toMatchObject({
       tipo: "adaptacion_pregunta",
-      salida: neutral ? "neutral" : "base_sin_neutral",
+      salida: neutral ? "neutral" : "plantilla_neutral",
       motivo: "sin red",
     });
   });
