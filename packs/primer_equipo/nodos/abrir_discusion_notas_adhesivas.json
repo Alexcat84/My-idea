@@ -1,0 +1,274 @@
+{
+  "node_id": "abrir_discusion_notas_adhesivas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Abrir una discusión compleja escribiendo cada uno sus notas adhesivas en silencio",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "En una discusión abierta cada uno decide si habla y cuándo: con gente introvertida puede costar que diga lo que piensa, la más extrovertida puede acaparar la conversación, y la antigüedad o la confianza pesan en quién se atreve. Una manera de contrarrestarlo es abrir con notas adhesivas: cada persona escribe lo que piensa durante diez a quince minutos en silencio, luego pega sus notas en la pizarra y explica su razonamiento, y las ideas parecidas se agrupan para que la sala discuta junta esos grupos. Poner las ideas propias en papel antes de compartirlas baja la barrera para participar.",
+  "notas_extraccion": "Es la tactica mas desarrollada del capitulo y la unica del bloque de participacion que trae una caja de tiempo con numero. Su mecanismo es el mismo que el libro explica en la reunion generativa, separar el pensar a solas del hablar en grupo, pero aqui aparece como procedimiento con sus objetos, notas adhesivas y pizarra, y con su secuencia escrita, escribir, pegar, explicar, agrupar y discutir. Va a nodo propio y no dentro de la tactica de cambiar el formato porque tiene pasos propios que la cabeza no tiene, que es la prueba del manual para separar. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas notas escribe cada uno, quien agrupa, ni que se hace con los grupos despues de discutirlos.",
+  "pasos_accionables": [
+    "Antes de lanzarte a la discusión sobre el tema complejo, da a cada uno un bloc de notas adhesivas y pídeles que escriban lo que piensan sobre el tema.",
+    "Haz que todos trabajen en silencio y concentrados durante unos diez a quince minutos.",
+    "Después, haz que cada participante pegue sus notas en la pizarra y explique en voz alta su razonamiento.",
+    "Agrupa las ideas parecidas según van saliendo.",
+    "Cuando se haya añadido la última nota, discute con toda la sala los distintos grupos que han quedado.",
+    "Cuenta con este efecto: al animar a la gente a poner sus propios pensamientos en papel antes de compartirlos, la barrera para participar baja."
+  ],
+  "entregable_esperado": "Una pizarra con las notas de todos los participantes agrupadas por parecido, y una discusión sobre esos grupos en la que la barrera para participar ya está bajada.",
+  "nodos_previos": [
+    "cambiar_formato_reunion_favorecer_participacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Justo antes de lanzarte a una discusión sobre un tema complejo, por ejemplo cuáles deberían ser tus metas de mercadotecnia o cómo sería el éxito dentro de tres años."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "En una discusión abierta cada uno decide si habla y cuándo: con gente introvertida puede costar que diga lo que piensa, la más extrovertida puede acaparar la conversación, y la antigüedad o la confianza pesan en quién se atreve. Una manera de contrarrestarlo es abrir con notas adhesivas: cada persona escribe lo que piensa durante diez a quince minutos en silencio, luego pega sus notas en la pizarra y explica su razonamiento, y las ideas parecidas se agrupan para que la sala discuta junta esos grupos. Poner las ideas propias en papel antes de compartirlas baja la barrera para participar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "231-241"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Objecion sostenida: los 'might' de la 233 y el 'You can combat' de la 235 quedaron como hechos, y 'da a todas el mismo sitio' no está en las líneas. La propuesta devuelve los matices, presenta la técnica como 'una manera' y cierra con el efecto que da la 241.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)"
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Abrir una discusion compleja escribiendo cada uno sus notas adhesivas en silencio",
+      "texto_nuevo": "Abrir una discusión compleja escribiendo cada uno sus notas adhesivas en silencio",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de lanzarte a la discusion sobre el tema complejo, da a cada uno un taco de notas adhesivas y pideles que escriban lo que piensan sobre el tema.",
+      "texto_nuevo": "Antes de lanzarte a la discusión sobre el tema complejo, da a cada uno un taco de notas adhesivas y pídeles que escriban lo que piensan sobre el tema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que la sala trabaje en concentracion silenciosa durante unos diez a quince minutos.",
+      "texto_nuevo": "Haz que la sala trabaje en concentración silenciosa durante unos diez a quince minutos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues, haz que cada participante pegue sus notas en la pizarra y explique en voz alta su razonamiento.",
+      "texto_nuevo": "Después, haz que cada participante pegue sus notas en la pizarra y explique en voz alta su razonamiento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Agrupa las ideas parecidas segun van saliendo.",
+      "texto_nuevo": "Agrupa las ideas parecidas según van saliendo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando se haya anadido la ultima nota, discutid con toda la sala los distintos grupos que han quedado.",
+      "texto_nuevo": "Cuando se haya añadido la última nota, discute con toda la sala los distintos grupos que han quedado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "discutid"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el efecto que el libro le atribuye: al animar a la gente a poner sus propios pensamientos en papel antes de compartirlos, la barrera para participar baja.",
+      "texto_nuevo": "Cuenta con este efecto: al animar a la gente a poner sus propios pensamientos en papel antes de compartirlos, la barrera para participar baja.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro le atribuye"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una pizarra con las notas de todos los participantes agrupadas por parecido, y una discusion sobre esos grupos en la que la barrera para participar ya esta bajada.",
+      "texto_nuevo": "Una pizarra con las notas de todos los participantes agrupadas por parecido, y una discusión sobre esos grupos en la que la barrera para participar ya está bajada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_discusion_notas_adhesivas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Justo antes de lanzarse a una discusion sobre un tema complejo, por ejemplo cuales deberian ser nuestras metas de marketing o a que se parece el exito dentro de tres anios.",
+      "texto_nuevo": "Justo antes de lanzarte a una discusión sobre un tema complejo, por ejemplo cuáles deberían ser tus metas de mercadotecnia o a qué se parece el éxito dentro de tres años.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "marketing"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-abrir_discusion_notas_adhesivas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Justo antes de lanzarte a una discusión sobre un tema complejo, por ejemplo cuáles deberían ser tus metas de mercadotecnia o a qué se parece el éxito dentro de tres años.",
+      "texto_nuevo": "Justo antes de lanzarte a una discusión sobre un tema complejo, por ejemplo cuáles deberían ser tus metas de mercadotecnia o cómo sería el éxito dentro de tres años.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "a qué se parece"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'what success looks like'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-abrir_discusion_notas_adhesivas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Antes de lanzarte a la discusión sobre el tema complejo, da a cada uno un taco de notas adhesivas y pídeles que escriban lo que piensan sobre el tema.",
+      "texto_nuevo": "Antes de lanzarte a la discusión sobre el tema complejo, da a cada uno un bloc de notas adhesivas y pídeles que escriban lo que piensan sobre el tema.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "taco"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'taco' por bloc es de España.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-abrir_discusion_notas_adhesivas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz que la sala trabaje en concentración silenciosa durante unos diez a quince minutos.",
+      "texto_nuevo": "Haz que todos trabajen en silencio y concentrados durante unos diez a quince minutos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Haz que la sala trabaje en concentración silenciosa"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'have the room work in quiet concentration'.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Escribe Antes de Hablar"
+}

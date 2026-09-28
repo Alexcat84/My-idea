@@ -1,0 +1,219 @@
+{
+  "node_id": "desarrollar_estrategia_busqueda_candidatos",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Desarrollar con el reclutador la estrategia de dónde buscar",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Tener claro a quién buscas y sentarte con el reclutador a decidir dónde mirar y qué señales buscar convierte el perfil en canales concretos: una red profesional, personas a las que pedir recomendaciones, congresos o anuncios. Los patrones del historial, como una combinación de experiencias que suele equilibrar visión y saber hacer práctico, afinan la búsqueda, y a veces los patrones raros llevan a candidatos asombrosos. También conviene acordar quién manda el primer correo: en un caso lo mandó quien contrataba y no el reclutador, para que el trato fuera personal desde el inicio.",
+  "notas_extraccion": "Es la segunda tactica de trabajo conjunto con el reclutamiento y la unica que produce una lista de sitios en vez de una descripcion. Lo que la hace procedimentable es el inventario de canales que el libro nombra uno a uno, y el ejercicio de los patrones, que es un acto con entregable. El paso 4, quien manda el primer correo, va dentro porque el libro lo cuenta como parte del mismo acuerdo y no como un detalle suelto. El paso 5 trae el caso de Netflix como ejemplo nombrado (manual seccion 3.5), con su razonamiento incluido, porque sin el razonamiento el patron parece una anecdota. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantos canales hay que abrir, ni como se prioriza entre ellos.",
+  "pasos_accionables": [
+    "Siéntate con el reclutador y reúne ideas con él sobre dónde buscar a tu candidato ideal.",
+    "Saca de ahí cosas concretas: títulos de puesto u organizaciones que buscar en una red profesional, personas a las que escribir para pedirles recomendaciones, congresos a los que ir o anuncios que te gustaría poner.",
+    "Haz el otro ejercicio: averigua qué patrones o qué palabras clave hay que buscar en un historial. Por ejemplo, para un puesto se vio que el candidato ideal tendría experiencia tanto en una agencia de diseño como en una empresa de tecnología, porque esa combinación suele producir un equilibrio sano entre visión y saber hacer pragmático.",
+    "Acuerda también quién manda el primer correo. En ese caso se acordó que lo mandara quien contrataba y no el reclutador, para que la experiencia fuera personal desde el primer momento.",
+    "Deja sitio a los patrones inusuales, porque a veces llevan a candidatos asombrosos. En una empresa, el equipo de reclutamiento notó que un número sorprendente de sus mejores líderes de ciencia de datos compartía el interés por la música, así que, además de buscar historiales con las palabras clave típicas de datos, empezó a buscar gente que tocara el piano o la guitarra."
+  ],
+  "entregable_esperado": "Una lista de sitios donde buscar y de patrones o palabras clave que cazar en un historial, acordada con el reclutador.",
+  "nodos_previos": [
+    "repartir_papeles_directivo_reclutador",
+    "describir_candidato_ideal_precision"
+  ],
+  "nodos_siguientes": [
+    "entregar_experiencia_entrevista_excelente"
+  ],
+  "condiciones_activacion": [
+    "Una vez que tienes buena idea de la clase de persona que quieres, y antes de mandar el primer correo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Tener claro a quién buscas y sentarte con el reclutador a decidir dónde mirar y qué señales buscar convierte el perfil en canales concretos: una red profesional, personas a las que pedir recomendaciones, congresos o anuncios. Los patrones del historial, como una combinación de experiencias que suele equilibrar visión y saber hacer práctico, afinan la búsqueda, y a veces los patrones raros llevan a candidatos asombrosos. También conviene acordar quién manda el primer correo: en un caso lo mandó quien contrataba y no el reclutador, para que el trato se sintiera personal desde el inicio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "79-85"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desarrollar con el reclutador la estrategia de donde buscar",
+      "texto_nuevo": "Desarrollar con el reclutador la estrategia de dónde buscar",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sientate con el reclutador y generad ideas juntos sobre donde buscar a tu candidato ideal.",
+      "texto_nuevo": "Siéntate con el reclutador y reúne ideas con él sobre dónde buscar a tu candidato ideal.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "generad ideas juntos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sacad de ahi cosas concretas, y el libro nombra cuales: titulos de puesto u organizaciones que buscar en una red profesional, personas a las que escribir para pedirles recomendaciones, congresos a los que ir, o anuncios que os gustaria poner.",
+      "texto_nuevo": "Saca de ahí cosas concretas: títulos de puesto u organizaciones que buscar en una red profesional, personas a las que escribir para pedirles recomendaciones, congresos a los que ir o anuncios que te gustaría poner.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Sacad",
+          "y el libro nombra cuales",
+          "os gustaria"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haced el otro ejercicio: averiguar que patrones o que palabras clave hay que buscar en un historial. La autora y su companiero de reclutamiento identificaron para un puesto que su candidato ideal tendria experiencia tanto en una agencia de diseno como en una empresa de tecnologia, porque esa combinacion suele producir un equilibrio sano entre vision y saber hacer pragmatico.",
+      "texto_nuevo": "Haz el otro ejercicio: averigua qué patrones o qué palabras clave hay que buscar en un historial. Por ejemplo, para un puesto se vio que el candidato ideal tendría experiencia tanto en una agencia de diseño como en una empresa de tecnología, porque esa combinación suele producir un equilibrio sano entre visión y saber hacer pragmático.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Haced",
+          "La autora y su companiero de reclutamiento identificaron"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acordad tambien quien manda el primer correo. Ellos acordaron que lo mandara ella y no el reclutador, para que la experiencia se sintiera personal desde el primer momento.",
+      "texto_nuevo": "Acuerda también quién manda el primer correo. En ese caso se acordó que lo mandara quien contrataba y no el reclutador, para que la experiencia se sintiera personal desde el primer momento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Acordad",
+          "Ellos acordaron que lo mandara ella"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_estrategia_busqueda_candidatos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deja sitio a los patrones inusuales, porque a veces llevan a candidatos asombrosos. El equipo de reclutamiento de Netflix noto que un numero sorprendente de sus mejores lideres de ciencia de datos compartia interes por la musica, asi que ademas de buscar historiales con las palabras clave tipicas de datos, empezaron a buscar gente que tocara el piano o la guitarra.",
+      "texto_nuevo": "Deja sitio a los patrones inusuales, porque a veces llevan a candidatos asombrosos. En una empresa, el equipo de reclutamiento notó que un número sorprendente de sus mejores líderes de ciencia de datos compartía el interés por la música, así que, además de buscar historiales con las palabras clave típicas de datos, empezó a buscar gente que tocara el piano o la guitarra.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "El equipo de reclutamiento de Netflix"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-desarrollar_estrategia_busqueda_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tener claro a quién buscas y sentarte con el reclutador a decidir dónde mirar y qué señales buscar convierte el perfil en canales concretos: una red profesional, personas a las que pedir recomendaciones, congresos o anuncios. Los patrones del historial, como una combinación de experiencias que suele equilibrar visión y saber hacer práctico, afinan la búsqueda, y a veces los patrones raros llevan a candidatos asombrosos. También conviene acordar quién manda el primer correo: en un caso lo mandó quien contrataba y no el reclutador, para que el trato se sintiera personal desde el inicio.",
+      "texto_nuevo": "Tener claro a quién buscas y sentarte con el reclutador a decidir dónde mirar y qué señales buscar convierte el perfil en canales concretos: una red profesional, personas a las que pedir recomendaciones, congresos o anuncios. Los patrones del historial, como una combinación de experiencias que suele equilibrar visión y saber hacer práctico, afinan la búsqueda, y a veces los patrones raros llevan a candidatos asombrosos. También conviene acordar quién manda el primer correo: en un caso lo mandó quien contrataba y no el reclutador, para que el trato fuera personal desde el inicio.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se sintiera"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"so the experience felt personal\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-desarrollar_estrategia_busqueda_candidatos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acuerda también quién manda el primer correo. En ese caso se acordó que lo mandara quien contrataba y no el reclutador, para que la experiencia se sintiera personal desde el primer momento.",
+      "texto_nuevo": "Acuerda también quién manda el primer correo. En ese caso se acordó que lo mandara quien contrataba y no el reclutador, para que la experiencia fuera personal desde el primer momento.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se sintiera"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"so the experience felt personal\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define Dónde Buscar Candidatos",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

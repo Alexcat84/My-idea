@@ -1,0 +1,197 @@
+{
+  "node_id": "rechazar_candidato_razones_relevantes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "No rechazar a un candidato por razones ajenas al puesto",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Para mantenerte holgadamente dentro de la ley, la primera de cuatro cautelas al contratar es la relevancia: no descartar a ningún candidato por razones ajenas al puesto. La tarjeta de puntuación tiene aquí un beneficio enorme: te obliga a definir los resultados y las competencias que el puesto exige antes de empezar a entrevistar a nadie. Esa definición explícita te mantiene objetivo al evaluar. Atente a los hechos y deja fuera los asuntos y los sentimientos que no influyen en lograr lo que la tarjeta de puntuación pide.",
+  "notas_extraccion": "Es la primera de las cuatro areas de cautela legal que el libro pide respetar para mantenerse holgadamente dentro de la ley. Lo que la hace procedimentable y no una declaracion de buenas intenciones es que el criterio de relevancia no se deja en manos del que evalua: el libro lo ancla en un documento escrito antes de la primera entrevista, la tarjeta de puntuacion, y explica el mecanismo entero en una linea, que la tarjeta te obliga a definir los resultados y las competencias antes de entrevistar y que esa definicion explicita es lo que te mantiene honesto durante la evaluacion. Sin ese anclaje, relevante para el puesto seria exactamente un adjetivo de adecuacion en el sitio del criterio y cualquier paso que se escribiera lo escribiria el lector. Con el, el paso es comprobable: cada razon de rechazo tiene que poder senalar una linea de la tarjeta. Las dos instrucciones finales del libro cierran la cautela por el lado contrario, diciendo que se excluye, los asuntos y los sentimientos irrelevantes para lograr lo que la tarjeta pide.",
+  "pasos_accionables": [
+    "No rechaces a ningún candidato por razones que no sean relevantes para el puesto.",
+    "Define los resultados y las competencias que el puesto exige en la tarjeta de puntuación antes de empezar a entrevistar a nadie. Ese es un beneficio enorme de la tarjeta: te obliga a definirlos antes.",
+    "Apóyate en esa definición explícita durante la evaluación, porque es lo que te mantiene objetivo.",
+    "Atente a los hechos.",
+    "Excluye los asuntos y los sentimientos que sean irrelevantes para lograr lo que la tarjeta de puntuación pide."
+  ],
+  "entregable_esperado": "El rechazo del candidato sostenido sobre hechos, y cada uno de esos hechos referido a un resultado o a una competencia escritos en la tarjeta de puntuación antes de empezar a entrevistar.",
+  "nodos_previos": [
+    "respetar_cautelas_legales_contratacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando vas a descartar a un candidato y tienes que poder decir por qué, y que ese porqué sea del puesto. Es la primera de las cuatro áreas de cautela legal."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Para mantenerte holgadamente dentro de la ley, la primera de cuatro cautelas al contratar es la relevancia: no descartar a ningún candidato por razones ajenas al puesto. La tarjeta de puntuación tiene aquí un beneficio enorme: te obliga a definir los resultados y las competencias que el puesto exige antes de empezar a entrevistar a nadie. Esa definición explícita te mantiene honesto al evaluar. Atente a los hechos y deja fuera los asuntos y los sentimientos que no influyen en lograr lo que la tarjeta de puntuación pide.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "305-307"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): La objeción se sostiene: 'la salvaguarda no queda al criterio de quien evalúa' y 'cada razón tiene que poder señalar algo escrito' no están en 307. La propuesta del lector es fiel pero usa 'que se sugiere' (impersonal de baranda); se reescribe como la primera de las cuatro cautelas de 305 y el 'tremendous benefit' de 307.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No rechaces a ningun candidato por razones que no sean relevantes para el puesto.",
+      "texto_nuevo": "No rechaces a ningún candidato por razones que no sean relevantes para el puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define los resultados y las competencias que el puesto exige en la tarjeta de puntuacion antes de empezar a entrevistar a nadie. El libro dice que ese es un beneficio tremendo de la tarjeta: te obliga a definirlos antes.",
+      "texto_nuevo": "Define los resultados y las competencias que el puesto exige en la tarjeta de puntuación antes de empezar a entrevistar a nadie. Ese es un beneficio enorme de la tarjeta: te obliga a definirlos antes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Apoyate en esa definicion explicita durante la evaluacion, porque es lo que te mantiene honesto.",
+      "texto_nuevo": "Apóyate en esa definición explícita durante la evaluación, porque es lo que te mantiene honesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Excluye los asuntos y los sentimientos que sean irrelevantes para lograr lo que la tarjeta de puntuacion pide.",
+      "texto_nuevo": "Excluye los asuntos y los sentimientos que sean irrelevantes para lograr lo que la tarjeta de puntuación pide.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El rechazo del candidato sostenido sobre hechos, y cada uno de esos hechos referido a un resultado o a una competencia escritos en la tarjeta de puntuacion antes de empezar a entrevistar.",
+      "texto_nuevo": "El rechazo del candidato sostenido sobre hechos, y cada uno de esos hechos referido a un resultado o a una competencia escritos en la tarjeta de puntuación antes de empezar a entrevistar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-rechazar_candidato_razones_relevantes-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a descartar a un candidato y tienes que poder decir por que, y que ese por que sea del puesto. Es la primera de las cuatro areas de cautela legal.",
+      "texto_nuevo": "Cuando vas a descartar a un candidato y tienes que poder decir por qué, y que ese porqué sea del puesto. Es la primera de las cuatro áreas de cautela legal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-rechazar_candidato_razones_relevantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para mantenerte holgadamente dentro de la ley, la primera de cuatro cautelas al contratar es la relevancia: no descartar a ningún candidato por razones ajenas al puesto. La tarjeta de puntuación tiene aquí un beneficio enorme: te obliga a definir los resultados y las competencias que el puesto exige antes de empezar a entrevistar a nadie. Esa definición explícita te mantiene honesto al evaluar. Atente a los hechos y deja fuera los asuntos y los sentimientos que no influyen en lograr lo que la tarjeta de puntuación pide.",
+      "texto_nuevo": "Para mantenerte holgadamente dentro de la ley, la primera de cuatro cautelas al contratar es la relevancia: no descartar a ningún candidato por razones ajenas al puesto. La tarjeta de puntuación tiene aquí un beneficio enorme: te obliga a definir los resultados y las competencias que el puesto exige antes de empezar a entrevistar a nadie. Esa definición explícita te mantiene objetivo al evaluar. Atente a los hechos y deja fuera los asuntos y los sentimientos que no influyen en lograr lo que la tarjeta de puntuación pide.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "te mantiene honesto al evaluar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Will keep you honest\" traducido palabra a palabra; el giro quiere decir que te obliga a ser objetivo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-rechazar_candidato_razones_relevantes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Apóyate en esa definición explícita durante la evaluación, porque es lo que te mantiene honesto.",
+      "texto_nuevo": "Apóyate en esa definición explícita durante la evaluación, porque es lo que te mantiene objetivo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "es lo que te mantiene honesto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Will keep you honest\" traducido palabra a palabra, igual que en el resumen.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Evalúa Solo lo Relevante al Puesto",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

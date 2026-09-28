@@ -1,0 +1,305 @@
+{
+  "node_id": "fijar_proceso_trabajo_equipo",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Fijar el proceso con el que tu equipo trabaja junto",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "En un equipo nadie puede leer la mente de los demás: coordinar lo que hay que hacer siempre cuesta tiempo, y cuanto más grande es el equipo, más tiempo hace falta. Si no está claro cómo se supone que todos trabajan juntos ni cuáles son sus valores, hasta las tareas simples pueden complicarse enormemente, aunque haya talento y la meta esté clara. Fijar quién hace qué y para cuándo, qué principios gobiernan las decisiones y un plan predecible para los traspasos que se repiten evita perder tiempo coordinando sobre la marcha y lidiando con los errores inevitables que salen sin ese plan.",
+  "notas_extraccion": "Es el desarrollo del tercero de los tres cubos del capitulo, el proceso, que el libro llama el como. El libro se adelanta a la objecion y la nombra: mucha gente tiene una reaccion alergica a la palabra proceso, y la propia autora dice que le evocaba el avance glacial, montones de papeleo y un calendario lleno de reuniones tediosas. Su respuesta no es negar eso sino situarlo: trabajando solo decides todo tu y solo te limita lo rapido que puedas pensar y actuar, pero en un equipo la coordinacion cuesta tiempo si o si. El ejemplo del puesto de limonada aporta las tres preguntas de traspaso que el libro escribe una a una, y queda como ejemplo dentro de la doctrina. El ultimo paso es el unico que el libro nombra sin desarrollar aqui: los cuatro procesos que un directivo debe dominar son los titulos de capitulos posteriores de este mismo libro, y el libro dice que los desarrollara. Lo que el libro NO dice, y por eso no esta escrito aqui, es quien redacta el plan de traspasos, cada cuanto se revisan los valores comunes, ni como se resuelve un desacuerdo sobre ellos.",
+  "pasos_accionables": [
+    "Ten claro qué es el proceso: lo que describe cómo trabaja junto tu equipo.",
+    "Contesta quién debe hacer qué y para cuándo.",
+    "Fija qué principios deben gobernar la toma de decisiones.",
+    "Establece valores comunes dentro de tu equipo para cómo se toman las decisiones y cómo se responde a los problemas.",
+    "Haz un plan predecible para los traspasos que se repiten. Por ejemplo, en un puesto de limonada donde uno compra los ingredientes y otro prepara la limonada: cómo sabrá el que compra que le toca ir a buscarlos, cómo encontrará los ingredientes quien la prepara, y qué debe pasar si se acaban los limones en un día especialmente caluroso. Sin ese plan, los dos pierden tiempo coordinando traspasos y lidiando con los errores inevitables que salen.",
+    "No cuentes con ahorrarte el tiempo de coordinación: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto más grande es el equipo más tiempo hace falta. Por mucho talento que haya, nadie sabe leer la mente de los demás.",
+    "Aprende a dominar los procesos que importan a quien dirige un equipo: dirigir reuniones eficaces, blindarte contra los errores del pasado, planificar el mañana y cultivar una cultura sana."
+  ],
+  "entregable_esperado": "Contestado quién hace qué y para cuándo, los principios que gobiernan las decisiones, los valores comunes para decidir y para responder a los problemas, y un plan predecible para los traspasos que se repiten.",
+  "nodos_previos": [
+    "revisar_proposito_personas_proceso",
+    "transitar_pionero_equipo_nuevo"
+  ],
+  "nodos_siguientes": [
+    "definir_quien_responde_cada_cosa",
+    "contrastar_cultura_actual_aspirada",
+    "fijar_resultado_excelente_reunion",
+    "decidir_quien_comunica_cada_cuanto"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes un equipo con mucho talento y con una idea muy clara de cuál es la meta final, y aun así las tareas simples se complican enormemente porque no está claro cómo se supone que todos trabajan juntos ni cuáles son los valores del equipo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "En un equipo nadie puede leer la mente de los demás: coordinar lo que hay que hacer siempre cuesta tiempo, y cuanto más grande es el equipo, más tiempo hace falta. Si no está claro cómo se supone que todos trabajan juntos ni cuáles son sus valores, hasta las tareas simples se complican enormemente, aunque haya talento y la meta esté clara. Fijar quién hace qué y para cuándo, qué principios gobiernan las decisiones y un plan predecible para los traspasos que se repiten evita perder tiempo coordinando sobre la marcha y lidiando con los errores inevitables que salen sin ese plan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_02.md",
+          "lineas": "139-147"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)"
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro que el proceso es como trabaja junto tu equipo, que es lo que el proceso describe.",
+      "texto_nuevo": "Ten claro que el proceso es cómo trabaja junto tu equipo, que es lo que el proceso describe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contesta quien debe hacer que y para cuando.",
+      "texto_nuevo": "Contesta quién debe hacer qué y para cuándo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija que principios deben gobernar la toma de decisiones.",
+      "texto_nuevo": "Fija qué principios deben gobernar la toma de decisiones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establece valores comunes dentro de tu equipo para como tomais las decisiones y como respondeis a los problemas.",
+      "texto_nuevo": "Establece valores comunes dentro de tu equipo para cómo se toman las decisiones y cómo se responde a los problemas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tomais",
+          "respondeis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz un plan predecible para los traspasos que se repiten: como sabra el que trae los ingredientes que le toca ir a por ellos, como encontrara el material quien lo va a usar, y que debe pasar si se acaban en un dia especialmente caluroso. Sin ese plan, los dos pierden tiempo coordinando traspasos y lidiando con los errores inevitables que salen.",
+      "texto_nuevo": "Haz un plan predecible para los traspasos que se repiten: cómo sabrá el que trae los ingredientes que le toca ir a por ellos, cómo encontrará el material quien lo va a usar, y qué debe pasar si se acaban en un día especialmente caluroso. Sin ese plan, los dos pierden tiempo coordinando traspasos y lidiando con los errores inevitables que salen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No cuentes con ahorrarte el tiempo de coordinacion: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto mas grande es el equipo mas tiempo hace falta. Por listos que seamos, leer la mente no es una competencia humana basica.",
+      "texto_nuevo": "No cuentes con ahorrarte el tiempo de coordinación: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto más grande es el equipo más tiempo hace falta. Por listos que seamos, leer la mente no es una competencia humana básica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprende a dominar los procesos que el libro nombra como importantes para un directivo: dirigir reuniones eficaces, blindarte contra los errores del pasado, planificar el maniana y cultivar una cultura sana.",
+      "texto_nuevo": "Aprende a dominar los procesos que importan a quien dirige un equipo: dirigir reuniones eficaces, blindarte contra los errores del pasado, planificar el mañana y cultivar una cultura sana.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra como importantes para un directivo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contestado quien hace que y para cuando, los principios que gobiernan las decisiones, los valores comunes para decidir y para responder a los problemas, y un plan predecible para los traspasos que se repiten.",
+      "texto_nuevo": "Contestado quién hace qué y para cuándo, los principios que gobiernan las decisiones, los valores comunes para decidir y para responder a los problemas, y un plan predecible para los traspasos que se repiten.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_proceso_trabajo_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes un equipo con mucho talento y con una idea muy clara de cual es la meta final, y aun asi las tareas simples se complican enormemente porque no esta claro como se supone que todos trabajan juntos ni cuales son los valores del equipo.",
+      "texto_nuevo": "Cuando tienes un equipo con mucho talento y con una idea muy clara de cuál es la meta final, y aun así las tareas simples se complican enormemente porque no está claro cómo se supone que todos trabajan juntos ni cuáles son los valores del equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_proceso_trabajo_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En un equipo nadie puede leer la mente de los demás: coordinar lo que hay que hacer siempre cuesta tiempo, y cuanto más grande es el equipo, más tiempo hace falta. Si no está claro cómo se supone que todos trabajan juntos ni cuáles son sus valores, hasta las tareas simples se complican enormemente, aunque haya talento y la meta esté clara. Fijar quién hace qué y para cuándo, qué principios gobiernan las decisiones y un plan predecible para los traspasos que se repiten evita perder tiempo coordinando sobre la marcha y lidiando con los errores inevitables que salen sin ese plan.",
+      "texto_nuevo": "En un equipo nadie puede leer la mente de los demás: coordinar lo que hay que hacer siempre cuesta tiempo, y cuanto más grande es el equipo, más tiempo hace falta. Si no está claro cómo se supone que todos trabajan juntos ni cuáles son sus valores, hasta las tareas simples pueden complicarse enormemente, aunque haya talento y la meta esté clara. Fijar quién hace qué y para cuándo, qué principios gobiernan las decisiones y un plan predecible para los traspasos que se repiten evita perder tiempo coordinando sobre la marcha y lidiando con los errores inevitables que salen sin ese plan.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 139",
+        "frase": "if it’s not apparent how everyone’s supposed to work together or what the team’s values are, then even simple tasks can get enormously complicated."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que pueden complicarse (can get); el resumen lo afirmaba como hecho.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_proceso_trabajo_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz un plan predecible para los traspasos que se repiten: cómo sabrá el que trae los ingredientes que le toca ir a por ellos, cómo encontrará el material quien lo va a usar, y qué debe pasar si se acaban en un día especialmente caluroso. Sin ese plan, los dos pierden tiempo coordinando traspasos y lidiando con los errores inevitables que salen.",
+      "texto_nuevo": "Haz un plan predecible para los traspasos que se repiten. Por ejemplo, en un puesto de limonada donde uno compra los ingredientes y otro prepara la limonada: cómo sabrá el que compra que le toca ir a buscarlos, cómo encontrará los ingredientes quien la prepara, y qué debe pasar si se acaban los limones en un día especialmente caluroso. Sin ese plan, los dos pierden tiempo coordinando traspasos y lidiando con los errores inevitables que salen.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ir a por ellos",
+          "el que trae los ingredientes",
+          "el material quien lo va a usar",
+          "si se acaban en un día"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo, coherencia): \"Ir a por\" es forma peninsular: pasa a \"ir a buscar\". El ejemplo del puesto de limonada (zhuo_manager/cap_02.md 141) aparecía sin antecedente (\"los ingredientes\", \"el material\", \"los dos\"); se presenta el caso.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-fijar_proceso_trabajo_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No cuentes con ahorrarte el tiempo de coordinación: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto más grande es el equipo más tiempo hace falta. Por listos que seamos, leer la mente no es una competencia humana básica.",
+      "texto_nuevo": "No cuentes con ahorrarte el tiempo de coordinación: en un equipo es imposible coordinar lo que hay que hacer sin dedicarle tiempo, y cuanto más grande es el equipo más tiempo hace falta. Por mucho talento que haya, nadie sabe leer la mente de los demás.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Por listos que seamos, leer la mente no es una competencia humana básica."
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, voz): La última frase calca «As talented as we are, mind reading is not a core human competency» y mete un nosotros («seamos») en un nodo en tú.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase3-fijar_proceso_trabajo_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ten claro que el proceso es cómo trabaja junto tu equipo, que es lo que el proceso describe.",
+      "texto_nuevo": "Ten claro qué es el proceso: lo que describe cómo trabaja junto tu equipo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "Frase circular: definía el proceso por lo que el proceso describe. El libro: process, which describes how your team works together."
+      },
+      "decision": "auditoria completa M11 (coherencia): Frase circular: definía el proceso por lo que el proceso describe. El libro: process, which describes how your team works together.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Fija el Proceso del Equipo",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

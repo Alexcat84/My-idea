@@ -1,0 +1,279 @@
+{
+  "node_id": "evitar_doble_impuesto_malestar",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Evitar el doble impuesto de sufrir y encima sentirte culpable por sufrir",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. A una directiva le ayudan dos tácticas a evitar ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa puede hacerte pasar de preocuparte por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+  "notas_extraccion": "Es el primero de los consejos para el Pozo y ataca no el problema sino el recargo que le ponemos encima. Su inventario propio son las dos tacticas, numeradas por el propio libro como primera y segunda, y las dos son ejecutables sin nadie mas delante. La razon de que la segunda funcione tambien la pone el libro: escribirlo cambia la cabeza de preocuparse por las preocupaciones a declararlas. Lo que el libro NO dice, y por eso no esta escrito: ni cuanto dura el efecto, ni que se hace con el papel adhesivo despues.",
+  "pasos_accionables": [
+    "Ten delante cuál es una de las peores partes de estar en el Pozo (el bache de desánimo): el doble golpe de estar batallando con algo y además preocuparte por el hecho de que estás batallando con ello. Tu crítico interior puede gemir: «¿Por qué esto me resulta difícil siquiera? Si fuera más listo o más valiente o más talentoso, estaría bien».",
+    "Ten claro lo que eso te cuesta: al sentirte culpable por cómo te sientes, te estás creando todavía más estrés a ti mismo.",
+    "Reconoce que todo el mundo pasa por momentos duros, y date permiso para preocuparte.",
+    "No pagues el doble impuesto sobre tu carga mental.",
+    "Primera de las dos tácticas: piensa en una figura pública que admires, alguien que parezca tener la vida perfecta, y busca su nombre junto a la palabra lucha. Siempre hay una historia, y es un buen recordatorio de que estar en el Pozo es universal.",
+    "Segunda táctica: admite que te sientes mal. Saca una nota adhesiva y escribe «estoy superestresado por tal cosa». Ese pequeño acto puede hacerte pasar de preocuparte por tus preocupaciones a simplemente declararlas, y una vez hecho puedes empezar a avanzar en atacar la causa de raíz."
+  ],
+  "entregable_esperado": "El doble impuesto retirado: la dificultad sigue, pero ya no pagas además la culpa por tenerla, y el malestar está declarado en vez de rumiado.",
+  "nodos_previos": [
+    "manejo_psicologia_ceo"
+  ],
+  "nodos_siguientes": [
+    "visualizar_recuperar_confianza",
+    "pedir_ayuda_grupo_apoyo"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás en el Pozo y además te está costando algo y te preocupa el hecho mismo de que te esté costando."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. El procedimiento retira ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa cambia la cabeza de preocuparse por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_06.md",
+          "lineas": "271-277"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten delante cual es una de las peores partes de estar en el Pozo: el doble golpe de estar batallando con algo y ademas preocuparte por el hecho de que estas batallando con ello. Tu critico interior puede gemir por que esto me resulta dificil siquiera, si fuera mas listo o mas valiente o mas talentoso estaria bien.",
+      "texto_nuevo": "Ten delante cuál es una de las peores partes de estar en el Pozo: el doble golpe de estar batallando con algo y además preocuparte por el hecho de que estás batallando con ello. Tu crítico interior puede gemir: «¿Por qué esto me resulta difícil siquiera? Si fuera más listo o más valiente o más talentoso, estaría bien».",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro lo que eso te cuesta: al sentirte culpable por como te sientes, te estas creando todavia mas estres a ti mismo.",
+      "texto_nuevo": "Ten claro lo que eso te cuesta: al sentirte culpable por cómo te sientes, te estás creando todavía más estrés a ti mismo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Primera tactica de las dos que la autora dice haber encontrado: conjura a una figura publica que admires, alguien que parezca tener la vida perfecta, y busca su nombre junto a la palabra lucha. Siempre hay una historia, y es un buen recordatorio de que estar en el Pozo es universal.",
+      "texto_nuevo": "Primera de las dos tácticas: piensa en una figura pública que admires, alguien que parezca tener la vida perfecta, y busca su nombre junto a la palabra lucha. Siempre hay una historia, y es un buen recordatorio de que estar en el Pozo es universal.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la autora dice haber encontrado"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segunda tactica: admite que te sientes mal. La autora saca un papel adhesivo y escribe estoy superestresada por tal cosa. Ese pequenio acto le cambia la cabeza de preocuparse por sus preocupaciones a simplemente declararlas, y una vez hecho puede empezar a avanzar en atacar la causa de raiz.",
+      "texto_nuevo": "Segunda táctica: admite que te sientes mal. Saca una nota adhesiva y escribe «estoy superestresado por tal cosa». Ese pequeño acto te cambia la cabeza de preocuparte por tus preocupaciones a simplemente declararlas, y una vez hecho puedes empezar a avanzar en atacar la causa de raíz.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora saca un papel adhesivo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El doble impuesto retirado: la dificultad sigue, pero ya no pagas ademas la culpa por tenerla, y el malestar esta declarado en vez de rumiado.",
+      "texto_nuevo": "El doble impuesto retirado: la dificultad sigue, pero ya no pagas además la culpa por tenerla, y el malestar está declarado en vez de rumiado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_doble_impuesto_malestar-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas en el Pozo y ademas te esta costando algo y te preocupa el hecho mismo de que te este costando.",
+      "texto_nuevo": "Cuando estás en el Pozo y además te está costando algo y te preocupa el hecho mismo de que te esté costando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-evitar_doble_impuesto_malestar-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante cuál es una de las peores partes de estar en el Pozo: el doble golpe de estar batallando con algo y además preocuparte por el hecho de que estás batallando con ello. Tu crítico interior puede gemir: «¿Por qué esto me resulta difícil siquiera? Si fuera más listo o más valiente o más talentoso, estaría bien».",
+      "texto_nuevo": "Ten delante cuál es una de las peores partes de estar en el Pozo (el bache de desánimo): el doble golpe de estar batallando con algo y además preocuparte por el hecho de que estás batallando con ello. Tu crítico interior puede gemir: «¿Por qué esto me resulta difícil siquiera? Si fuera más listo o más valiente o más talentoso, estaría bien».",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Pozo: el doble"
+        ]
+      },
+      "decision": "pase de glosario (pozo): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-evitar_doble_impuesto_malestar-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Segunda táctica: admite que te sientes mal. Saca una nota adhesiva y escribe «estoy superestresado por tal cosa». Ese pequeño acto te cambia la cabeza de preocuparte por tus preocupaciones a simplemente declararlas, y una vez hecho puedes empezar a avanzar en atacar la causa de raíz.",
+      "texto_nuevo": "Segunda táctica: admite que te sientes mal. Saca una nota adhesiva y escribe «estoy superestresado por tal cosa». Ese pequeño acto puede cambiarte la cabeza de preocuparte por tus preocupaciones a simplemente declararlas, y una vez hecho puedes empezar a avanzar en atacar la causa de raíz.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 275-277",
+        "frase": "That little act shifts my mindset from worrying about my worries to simply declaring them."
+      },
+      "decision": "auditoria completa M11 (matiz): Es lo que le funciona a la autora (I've found two tactics that help; shifts my mindset); el paso lo prometía como efecto seguro.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-evitar_doble_impuesto_malestar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. El procedimiento retira ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa cambia la cabeza de preocuparse por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "texto_nuevo": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. El procedimiento retira ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa puede cambiar la cabeza de preocuparse por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 275-277",
+        "frase": "That little act shifts my mindset from worrying about my worries to simply declaring them."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la experiencia de la autora, afirmada como efecto seguro.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-evitar_doble_impuesto_malestar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. El procedimiento retira ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa puede cambiar la cabeza de preocuparse por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "texto_nuevo": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. El procedimiento retira ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa puede hacerte pasar de preocuparte por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "puede cambiar la cabeza de preocuparse por las preocupaciones"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"shifts my mindset from... to...\"; \"cambiar la cabeza de X a Y\" no es español.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-evitar_doble_impuesto_malestar-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segunda táctica: admite que te sientes mal. Saca una nota adhesiva y escribe «estoy superestresado por tal cosa». Ese pequeño acto puede cambiarte la cabeza de preocuparte por tus preocupaciones a simplemente declararlas, y una vez hecho puedes empezar a avanzar en atacar la causa de raíz.",
+      "texto_nuevo": "Segunda táctica: admite que te sientes mal. Saca una nota adhesiva y escribe «estoy superestresado por tal cosa». Ese pequeño acto puede hacerte pasar de preocuparte por tus preocupaciones a simplemente declararlas, y una vez hecho puedes empezar a avanzar en atacar la causa de raíz.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "puede cambiarte la cabeza de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"shifts my mindset from... to...\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-evitar_doble_impuesto_malestar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. El procedimiento retira ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa puede hacerte pasar de preocuparte por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "texto_nuevo": "Cuando algo cuesta, es fácil pagar dos veces: la dificultad misma y la culpa por sentir que no deberías tenerla, que añade más estrés al que ya hay. A una directiva le ayudan dos tácticas a evitar ese segundo pago. Buscar la historia de lucha de alguien que parece tenerlo todo recuerda que pasar por momentos duros es universal y da permiso para preocuparse. Escribir en una nota lo que te estresa puede hacerte pasar de preocuparte por las preocupaciones a declararlas, y con el malestar nombrado en vez de rumiado ya se puede empezar a atacar la causa de raíz.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 275",
+        "frase": "I’ve found two tactics that help: The first is conjuring up a public figure you admire, someone who seems to have the perfect life, and Googling “[person’s name] struggle.”"
+      },
+      "decision": "auditoria completa M11 (matiz): Las dos tácticas son lo que a una persona le ha servido y ayudan (I've found two tactics that help); el resumen lo volvía regla general y afirmaba que el procedimiento retira el segundo pago.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "No Pagues Doble el Malestar",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

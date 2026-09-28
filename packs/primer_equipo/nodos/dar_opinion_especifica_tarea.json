@@ -1,0 +1,366 @@
+{
+  "node_id": "dar_opinion_especifica_tarea",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dar opinión sobre tareas concretas tan a menudo como puedas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La opinión sobre una tarea concreta es la más fácil de dar porque habla de lo que se hizo y no de quién es la persona, así que se siente menos personal y cuesta menos decirla. Funciona mejor cuanto más fresca está la acción en la memoria de quien la hizo, y por eso conviene darla pronto; si la tarea no es de mucho peso, una nota escrita el mismo día puede bastar. Ser preciso y detallado sobre lo que salió bien y lo que puede mejorar la vuelve útil, y convertirla en un hábito ligero reparte pequeñas dosis de entrenamiento en todo lo que ves hacer a tu equipo.",
+  "notas_extraccion": "Es la segunda de las cuatro formas de dar opinion y la que el libro recomienda como puerta de entrada, con una razon escrita: al ir sobre el que y no sobre el quien, se siente menos personal y por eso cuesta menos darla. El libro le pone dos reglas de tiempo que son lo que la hace procedimentable, una de urgencia, cuanto mas fresca mejor, y una de canal, con el umbral escrito de cuando basta un mensaje y cuando pide cara a cara. Y le pone dos ejemplos redactados enteros, uno de elogio y otro de sugerencia, que son el inventario de forma. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas veces por semana es tan a menudo como puedas.",
+  "pasos_accionables": [
+    "Da esta opinión sobre algo que alguien ya hizo: por ejemplo, cuando la persona a tu cargo termine de presentar un análisis, dile qué te pareció que hizo bien y qué podría ir mejor en el futuro.",
+    "Sé tan preciso y tan detallado como puedas.",
+    "Empieza por esta categoría si te cuesta adquirir el hábito de dar opinión, porque es la más fácil de dar: se centra en el qué y no en el quién, así que se siente menos personal.",
+    "Dala cuanto antes, porque es más eficaz mientras la acción sigue fresca en la memoria de la persona a tu cargo.",
+    "Si la tarea no es de las importantes, como sí lo sería una presentación en la que hay mucho en juego, dejar una nota por correo o por chat dentro del mismo día puede funcionar igual de bien que decirlo cara a cara.",
+    "Apunta a que se vuelva una parte ligera y habitual de tu día, de modo que las personas a tu cargo reciban dosis pequeñas de entrenamiento en todo lo que les ves hacer.",
+    "Usa como modelo estos dos ejemplos. Para el elogio: ese informe de investigación que compartiste ayer era excelente, la forma en que resumiste de manera sucinta los hallazgos más importantes arriba del todo lo hizo fácil de procesar, y la idea concreta sobre tal cosa fue realmente útil.",
+    "Y para la sugerencia: nota rápida sobre la presentación que diste esta mañana, noté que fuiste directo a la propuesta sin explicar cómo habías llegado a ella, y eso hizo difícil valorar por qué era el mejor camino; la próxima vez prueba a dedicar unos minutos a recorrer tu proceso y las alternativas que consideraste."
+  ],
+  "entregable_esperado": "Dicho, sobre algo concreto que la persona acaba de hacer, qué te pareció bien y qué podría ir mejor la próxima vez, con la mayor precisión y el mayor detalle que puedas.",
+  "nodos_previos": [
+    "fijar_expectativas_claras_comienzo"
+  ],
+  "nodos_siguientes": [
+    "compartir_opinion_conductual_regularidad",
+    "comprobar_opinion_produce_mejora"
+  ],
+  "condiciones_activacion": [
+    "Cada vez que veas a alguien de tu equipo hacer algo concreto: presentar un análisis, dirigir una reunión, entregar un informe. Y con más motivo si te cuesta adquirir el hábito de dar opinión, porque esta es la más fácil por donde empezar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La opinión sobre una tarea concreta es la más fácil de dar porque habla de lo que se hizo y no de quién es la persona, así que se siente menos personal y cuesta menos decirla. Funciona mejor cuanto más fresca está la acción en la memoria de quien la hizo, y por eso conviene darla pronto; si la tarea no es de mucho peso, una nota escrita el mismo día basta. Ser preciso y detallado sobre lo que salió bien y lo que puede mejorar la vuelve útil, y convertirla en un hábito ligero reparte pequeñas dosis de entrenamiento en todo lo que ves hacer a tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_05.md",
+          "lineas": "61-71"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dar opinion especifica de la tarea tan a menudo como puedas",
+      "texto_nuevo": "Dar opinión específica de la tarea tan a menudo como puedas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Da esta opinion sobre algo que alguien hizo, despues del hecho: por ejemplo, cuando tu persona a cargo termine de presentar un analisis, dile que te parecio que hizo bien y que podria ir mejor en el futuro.",
+      "texto_nuevo": "Da esta opinión sobre algo que alguien hizo, después del hecho: por ejemplo, cuando la persona a tu cargo termine de presentar un análisis, dile qué te pareció que hizo bien y qué podría ir mejor en el futuro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Se tan preciso y tan detallado como puedas.",
+      "texto_nuevo": "Sé tan preciso y tan detallado como puedas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza por esta categoria si te cuesta coger el habito de dar opinion, porque es la mas facil de dar: se centra en el que y no en el quien, asi que se siente menos personal.",
+      "texto_nuevo": "Empieza por esta categoría si te cuesta coger el hábito de dar opinión, porque es la más fácil de dar: se centra en el qué y no en el quién, así que se siente menos personal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dala cuanto antes, porque es mas eficaz mientras la accion sigue fresca en la memoria de tu persona a cargo.",
+      "texto_nuevo": "Dala cuanto antes, porque es más eficaz mientras la acción sigue fresca en la memoria de la persona a tu cargo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si la tarea no es de las importantes, como si lo seria una presentacion en la que hay mucho en juego, dejar una nota por correo o por chat dentro del mismo dia funciona igual de bien que decirlo cara a cara.",
+      "texto_nuevo": "Si la tarea no es de las importantes, como sí lo sería una presentación en la que hay mucho en juego, dejar una nota por correo o por chat dentro del mismo día funciona igual de bien que decirlo cara a cara.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Apunta a que se vuelva una parte ligera y habitual de tu dia, de modo que tus personas a cargo reciban dosis pequenias de entrenamiento en todo lo que les ves hacer.",
+      "texto_nuevo": "Apunta a que se vuelva una parte ligera y habitual de tu día, de modo que las personas a tu cargo reciban dosis pequeñas de entrenamiento en todo lo que les ves hacer.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa como modelo los dos ejemplos que el libro escribe. Para el elogio: ese informe de investigacion que compartiste ayer era excelente, la forma en que resumiste de manera sucinta los hallazgos mas importantes arriba del todo lo hizo facil de procesar, y la idea concreta sobre tal cosa fue realmente util.",
+      "texto_nuevo": "Usa como modelo estos dos ejemplos. Para el elogio: ese informe de investigación que compartiste ayer era excelente, la forma en que resumiste de manera sucinta los hallazgos más importantes arriba del todo lo hizo fácil de procesar, y la idea concreta sobre tal cosa fue realmente útil.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los dos ejemplos que el libro escribe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y para la sugerencia: nota rapida sobre la presentacion que diste esta maniana, note que fuiste directo a la propuesta sin explicar como habias llegado a ella, y eso hizo dificil valorar por que era el mejor camino; la proxima vez prueba a dedicar unos minutos a recorrer tu proceso y las alternativas que consideraste.",
+      "texto_nuevo": "Y para la sugerencia: nota rápida sobre la presentación que diste esta mañana, noté que fuiste directo a la propuesta sin explicar cómo habías llegado a ella, y eso hizo difícil valorar por qué era el mejor camino; la próxima vez prueba a dedicar unos minutos a recorrer tu proceso y las alternativas que consideraste.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dicho, sobre algo concreto que la persona acaba de hacer, que te parecio bien y que podria ir mejor la proxima vez, con la mayor precision y el mayor detalle que puedas.",
+      "texto_nuevo": "Dicho, sobre algo concreto que la persona acaba de hacer, qué te pareció bien y qué podría ir mejor la próxima vez, con la mayor precisión y el mayor detalle que puedas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_opinion_especifica_tarea-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada vez que veas a alguien de tu equipo hacer algo concreto: presentar un analisis, dirigir una reunion, entregar un informe. Y con mas motivo si te cuesta coger el habito de dar opinion, porque esta es la mas facil por donde empezar.",
+      "texto_nuevo": "Cada vez que veas a alguien de tu equipo hacer algo concreto: presentar un análisis, dirigir una reunión, entregar un informe. Y con más motivo si te cuesta coger el hábito de dar opinión, porque esta es la más fácil por donde empezar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-dar_opinion_especifica_tarea-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza por esta categoría si te cuesta coger el hábito de dar opinión, porque es la más fácil de dar: se centra en el qué y no en el quién, así que se siente menos personal.",
+      "texto_nuevo": "Empieza por esta categoría si te cuesta adquirir el hábito de dar opinión, porque es la más fácil de dar: se centra en el qué y no en el quién, así que se siente menos personal.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "coger"
+        ]
+      },
+      "decision": "pase de glosario (coger): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-glosario-dar_opinion_especifica_tarea-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cada vez que veas a alguien de tu equipo hacer algo concreto: presentar un análisis, dirigir una reunión, entregar un informe. Y con más motivo si te cuesta coger el hábito de dar opinión, porque esta es la más fácil por donde empezar.",
+      "texto_nuevo": "Cada vez que veas a alguien de tu equipo hacer algo concreto: presentar un análisis, dirigir una reunión, entregar un informe. Y con más motivo si te cuesta adquirir el hábito de dar opinión, porque esta es la más fácil por donde empezar.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "coger"
+        ]
+      },
+      "decision": "pase de glosario (coger): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dar_opinion_especifica_tarea-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La opinión sobre una tarea concreta es la más fácil de dar porque habla de lo que se hizo y no de quién es la persona, así que se siente menos personal y cuesta menos decirla. Funciona mejor cuanto más fresca está la acción en la memoria de quien la hizo, y por eso conviene darla pronto; si la tarea no es de mucho peso, una nota escrita el mismo día basta. Ser preciso y detallado sobre lo que salió bien y lo que puede mejorar la vuelve útil, y convertirla en un hábito ligero reparte pequeñas dosis de entrenamiento en todo lo que ves hacer a tu equipo.",
+      "texto_nuevo": "La opinión sobre una tarea concreta es la más fácil de dar porque habla de lo que se hizo y no de quién es la persona, así que se siente menos personal y cuesta menos decirla. Funciona mejor cuanto más fresca está la acción en la memoria de quien la hizo, y por eso conviene darla pronto; si la tarea no es de mucho peso, una nota escrita el mismo día puede bastar. Ser preciso y detallado sobre lo que salió bien y lo que puede mejorar la vuelve útil, y convertirla en un hábito ligero reparte pequeñas dosis de entrenamiento en todo lo que ves hacer a tu equipo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_05.md 67",
+        "frase": "dropping a note via email or chat within the day can work just as well as giving the feedback face-to-face."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la nota puede funcionar igual de bien (can work just as well).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dar_opinion_especifica_tarea-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la tarea no es de las importantes, como sí lo sería una presentación en la que hay mucho en juego, dejar una nota por correo o por chat dentro del mismo día funciona igual de bien que decirlo cara a cara.",
+      "texto_nuevo": "Si la tarea no es de las importantes, como sí lo sería una presentación en la que hay mucho en juego, dejar una nota por correo o por chat dentro del mismo día puede funcionar igual de bien que decirlo cara a cara.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_05.md 67",
+        "frase": "dropping a note via email or chat within the day can work just as well as giving the feedback face-to-face."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'can work just as well' (puede funcionar igual de bien).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-dar_opinion_especifica_tarea-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dar opinión específica de la tarea tan a menudo como puedas",
+      "texto_nuevo": "Dar opinión sobre tareas concretas tan a menudo como puedas",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "opinión específica de la tarea"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"task-specific feedback\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-dar_opinion_especifica_tarea-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Da esta opinión sobre algo que alguien hizo, después del hecho: por ejemplo, cuando la persona a tu cargo termine de presentar un análisis, dile qué te pareció que hizo bien y qué podría ir mejor en el futuro.",
+      "texto_nuevo": "Da esta opinión sobre algo que alguien ya hizo: por ejemplo, cuando la persona a tu cargo termine de presentar un análisis, dile qué te pareció que hizo bien y qué podría ir mejor en el futuro.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "después del hecho"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"after the fact\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Opina sobre Tareas Concretas"
+}

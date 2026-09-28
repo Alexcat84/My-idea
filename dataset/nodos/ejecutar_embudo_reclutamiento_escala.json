@@ -1,0 +1,339 @@
+{
+  "node_id": "ejecutar_embudo_reclutamiento_escala",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ejecutar el embudo de reclutamiento a gran escala repartiéndolo en piezas pequeñas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuánto tardas en cubrir un puesto depende de la suerte, pero a gran escala contratar es más predecible: las medias del embudo empiezan a suavizar los casos sueltos, y de ellas sale cuánto trabajo hace falta. Partiendo de cuántos correos, reuniones, entrevistas y ofertas cuesta cada aceptación, el total anual se reparte por directivo y por semana hasta quedar en tareas pequeñas y asumibles. Por eso el éxito pasa a depender de operar bien: una máquina engrasada donde cada paso fluye, entrevistadores formados para evaluar con consistencia, un embudo que se afina y toda la plantilla con su parte.",
+  "notas_extraccion": "Es la primera de las lecciones de contratar a escala y la que convierte el embudo en trabajo repartido. Su inventario propio es aritmetico y completo: el libro da las cuatro etapas con sus numeros, el total anual, el reparto por directivo, el reparto por semana y el objetivo de entrevistas semanales, todo en el mismo parrafo. Por eso los pasos 2, 4 y 5 son transcripcion y no calculo mio: los numeros son los del libro. Se separa del calculo del embudo propio porque aquel produce una ecuacion y este produce un reparto y un programa de formacion, que son entregables distintos y de ejecutores distintos. Lo que el libro NO dice, y por eso no esta escrito aqui, es que contiene el programa de formacion de entrevistadores, ni quien lo imparte, ni como se mide que un entrevistador es consistente.",
+  "pasos_accionables": [
+    "Cuenta con que a gran escala las medias empiezan a suavizar los casos individuales de imprevisibilidad, aunque para un puesto concreto te pueda costar dos semanas o dos meses según la suerte.",
+    "Calcula el total desde tu propio embudo. La cuenta es esta: si para tu equipo una aceptación sale de dos ofertas, ocho entrevistas, veinte reuniones iniciales y cuarenta correos, entonces para conseguir veinte contrataciones vas a necesitar mandar unos ochocientos correos a lo largo del año. Es un número grande, pero la certeza reconforta.",
+    "Ponte como tarea crear una máquina bien engrasada en la que todos los pasos del embudo de reclutamiento ocurran con suavidad y eficiencia.",
+    "Reparte ese total entre las personas y las semanas. Sigue la cuenta: si hay ocho directivos en tu equipo, cada uno tendrá que mandar unos doscientos correos al año, que son unos cuatro a la semana, lo cual no es una locura.",
+    "Reparte también las entrevistas: si quieres llegar a ciento sesenta entrevistas, apunta a que entren tres candidatos cada semana.",
+    "Monta un programa para formar entrevistadores, porque vas a necesitar gente suficiente que sepa evaluar candidatos de manera consistente y objetiva.",
+    "Busca además oportunidades de hacer tu embudo más eficiente con estas preguntas: ¿puedes retocar tu correo inicial para que resulte más atractivo y te responda más gente? ¿Puedes organizar eventos para que sea más probable que los candidatos potenciales quieran venir a entrevistarse? ¿Puedes idear mejores preguntas que te den más información sobre un candidato?",
+    "Divide el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que ponga de su parte para ayudar al equipo a crecer y prosperar."
+  ],
+  "entregable_esperado": "Una máquina bien engrasada donde cada paso del embudo ocurre con suavidad, con la cuota de correos y de entrevistas repartida por directivo y por semana, y con entrevistadores formados.",
+  "nodos_previos": [
+    "calcular_embudo_reclutamiento_propio"
+  ],
+  "nodos_siguientes": [
+    "repartir_responsabilidad_contratar_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando necesitas crecer en veinte o doscientas personas en vez de en dos, y las medias empiezan a suavizar los casos individuales impredecibles."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cubrir un puesto depende de la suerte, pero contratar a escala se vuelve predecible: las medias del embudo suavizan los casos sueltos, y de ellas sale cuánto trabajo hace falta. Partiendo de cuántos correos, reuniones, entrevistas y ofertas cuesta cada aceptación, el total anual se reparte por directivo y por semana hasta quedar en tareas pequeñas y asumibles. Por eso el éxito pasa a depender de operar bien: una máquina engrasada donde cada paso fluye, entrevistadores formados para evaluar con consistencia, un embudo que se afina y toda la plantilla con su parte.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "239-245"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ejecutar el embudo de reclutamiento a escala repartiendolo en piezas pequenias",
+      "texto_nuevo": "Ejecutar el embudo de reclutamiento a escala repartiéndolo en piezas pequeñas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que a escala las medias empiezan a suavizar los casos individuales de imprevisibilidad, aunque para un puesto concreto te pueda costar dos semanas o dos meses segun la suerte.",
+      "texto_nuevo": "Cuenta con que a escala las medias empiezan a suavizar los casos individuales de imprevisibilidad, aunque para un puesto concreto te pueda costar dos semanas o dos meses según la suerte.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula el total desde tu propio embudo. El libro hace la cuenta: si para tu equipo una aceptacion sale de dos ofertas, ocho entrevistas, veinte reuniones iniciales y cuarenta correos, entonces para conseguir veinte contrataciones vas a necesitar mandar unos ochocientos correos a lo largo del anio. Es un numero grande, pero la certeza reconforta.",
+      "texto_nuevo": "Calcula el total desde tu propio embudo. La cuenta es esta: si para tu equipo una aceptación sale de dos ofertas, ocho entrevistas, veinte reuniones iniciales y cuarenta correos, entonces para conseguir veinte contrataciones vas a necesitar mandar unos ochocientos correos a lo largo del año. Es un número grande, pero la certeza reconforta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro hace la cuenta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ponte como tarea crear una maquina bien engrasada en la que todos los pasos del embudo de reclutamiento ocurran con suavidad y eficiencia.",
+      "texto_nuevo": "Ponte como tarea crear una máquina bien engrasada en la que todos los pasos del embudo de reclutamiento ocurran con suavidad y eficiencia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reparte ese total entre las personas y las semanas. El libro sigue la cuenta: si hay ocho directivos en tu equipo, cada uno tendra que mandar unos doscientos correos al anio, que son unos cuatro a la semana, lo cual no es una locura.",
+      "texto_nuevo": "Reparte ese total entre las personas y las semanas. Sigue la cuenta: si hay ocho directivos en tu equipo, cada uno tendrá que mandar unos doscientos correos al año, que son unos cuatro a la semana, lo cual no es una locura.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro sigue la cuenta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reparte tambien las entrevistas: si quieres llegar a ciento sesenta entrevistas, apunta a que entren tres candidatos cada semana.",
+      "texto_nuevo": "Reparte también las entrevistas: si quieres llegar a ciento sesenta entrevistas, apunta a que entren tres candidatos cada semana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca ademas oportunidades de hacer tu embudo mas eficiente, y el libro da las preguntas con las que se buscan: puedes retocar tu correo inicial para que resulte mas atractivo y te responda mas gente? Puedes organizar eventos para que los candidatos potenciales quieran mas venir a entrevistarse? Puedes idear mejores preguntas que te den mas informacion sobre un candidato?",
+      "texto_nuevo": "Busca además oportunidades de hacer tu embudo más eficiente con estas preguntas: ¿puedes retocar tu correo inicial para que resulte más atractivo y te responda más gente? ¿Puedes organizar eventos para que los candidatos potenciales quieran más venir a entrevistarse? ¿Puedes idear mejores preguntas que te den más información sobre un candidato?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro da las preguntas con las que se buscan"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rompe el problema en piezas cada vez mas pequenias, y pide a toda tu plantilla que juegue un papel en ayudar al equipo a crecer y prosperar.",
+      "texto_nuevo": "Rompe el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que juegue un papel en ayudar al equipo a crecer y prosperar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_embudo_reclutamiento_escala-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una maquina bien engrasada donde cada paso del embudo ocurre con suavidad, con la cuota de correos y de entrevistas repartida por directivo y por semana, y con entrevistadores formados.",
+      "texto_nuevo": "Una máquina bien engrasada donde cada paso del embudo ocurre con suavidad, con la cuota de correos y de entrevistas repartida por directivo y por semana, y con entrevistadores formados.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ejecutar_embudo_reclutamiento_escala-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ejecutar el embudo de reclutamiento a escala repartiéndolo en piezas pequeñas",
+      "texto_nuevo": "Ejecutar el embudo de reclutamiento a gran escala repartiéndolo en piezas pequeñas",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "reclutamiento a escala"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"A escala\" por at scale; en español, a gran escala.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ejecutar_embudo_reclutamiento_escala-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cubrir un puesto depende de la suerte, pero contratar a escala se vuelve predecible: las medias del embudo suavizan los casos sueltos, y de ellas sale cuánto trabajo hace falta. Partiendo de cuántos correos, reuniones, entrevistas y ofertas cuesta cada aceptación, el total anual se reparte por directivo y por semana hasta quedar en tareas pequeñas y asumibles. Por eso el éxito pasa a depender de operar bien: una máquina engrasada donde cada paso fluye, entrevistadores formados para evaluar con consistencia, un embudo que se afina y toda la plantilla con su parte.",
+      "texto_nuevo": "Cuánto tardas en cubrir un puesto depende de la suerte, pero a gran escala contratar es más predecible: las medias del embudo empiezan a suavizar los casos sueltos, y de ellas sale cuánto trabajo hace falta. Partiendo de cuántos correos, reuniones, entrevistas y ofertas cuesta cada aceptación, el total anual se reparte por directivo y por semana hasta quedar en tareas pequeñas y asumibles. Por eso el éxito pasa a depender de operar bien: una máquina engrasada donde cada paso fluye, entrevistadores formados para evaluar con consistencia, un embudo que se afina y toda la plantilla con su parte.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 239",
+        "frase": "Depending on your luck, it might take you two weeks or two months to land someone for a particular role."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): De la suerte depende cuánto tardas, no el cubrirlo; las medias empiezan a suavizar la imprevisibilidad; \"a escala\" es calco.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ejecutar_embudo_reclutamiento_escala-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que a escala las medias empiezan a suavizar los casos individuales de imprevisibilidad, aunque para un puesto concreto te pueda costar dos semanas o dos meses según la suerte.",
+      "texto_nuevo": "Cuenta con que a gran escala las medias empiezan a suavizar los casos individuales de imprevisibilidad, aunque para un puesto concreto te pueda costar dos semanas o dos meses según la suerte.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "a escala las medias"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"A escala\" por at scale; en español, a gran escala.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-ejecutar_embudo_reclutamiento_escala-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca además oportunidades de hacer tu embudo más eficiente con estas preguntas: ¿puedes retocar tu correo inicial para que resulte más atractivo y te responda más gente? ¿Puedes organizar eventos para que los candidatos potenciales quieran más venir a entrevistarse? ¿Puedes idear mejores preguntas que te den más información sobre un candidato?",
+      "texto_nuevo": "Busca además oportunidades de hacer tu embudo más eficiente con estas preguntas: ¿puedes retocar tu correo inicial para que resulte más atractivo y te responda más gente? ¿Puedes organizar eventos para que sea más probable que los candidatos potenciales quieran venir a entrevistarse? ¿Puedes idear mejores preguntas que te den más información sobre un candidato?",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 243",
+        "frase": "Can you host events so that prospective candidates are more likely to want to interview?"
+      },
+      "decision": "auditoria completa M11 (matiz): \"More likely to want\" es mayor probabilidad, no querer más.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-ejecutar_embudo_reclutamiento_escala-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rompe el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que juegue un papel en ayudar al equipo a crecer y prosperar.",
+      "texto_nuevo": "Rompe el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que ponga de su parte para ayudar al equipo a crecer y prosperar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "juegue un papel en ayudar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"play a role in helping\".",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-ejecutar_embudo_reclutamiento_escala-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rompe el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que ponga de su parte para ayudar al equipo a crecer y prosperar.",
+      "texto_nuevo": "Divide el problema en piezas cada vez más pequeñas, y pide a toda tu plantilla que ponga de su parte para ayudar al equipo a crecer y prosperar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Rompe el problema"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de break the problem down (zhuo_manager/cap_08 l.245); en español un problema se divide.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ejecuta tu Embudo de Reclutamiento",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

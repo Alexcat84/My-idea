@@ -1,0 +1,372 @@
+{
+  "node_id": "abrir_debate_humor_explicar_proposito",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Abrir un debate con humor y explicando para qué sirve, porque el tono con que se lanza suele marcar el de todo lo que viene detrás",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "El ánimo con el que abres un debate a menudo marca el tono de lo que sigue, más que tus palabras exactas. Hay quien nota que la gente a su cargo se guía por su ánimo hasta un punto casi alarmante y que, cuando disfruta el debate, los demás suelen seguirle; puede servir un humor sencillo o una historia a costa propia. Pero no a todo el mundo le gusta debatir, y a algunas personas el acto mismo les parece agresivo o amenazante. Por eso importa explicar de antemano para qué sirve el debate, crear un espacio positivo y conocer a cada cual para notar cuándo lo estás volviendo loco sin querer.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 239 a 243, bajo el rotulo Use humor and have fun, y es la cuarta de las tecnicas que el libro ofrece dentro del paso DEBATE de la rueda de hacer cosas. La pieza tiene dos mitades y la segunda es la que la salva de ser un consejo de animo: el caso del colega que durante todo el desarrollo de una clase en Apple creyo que la autora le estaba discutiendo para volverle loco, cuando ella creia estar mejorando la clase con el. De ahi salen los dos ultimos pasos, que son los unicos con inventario duro: explicar por delante para que sirve el debate, y conocer a la gente lo bastante para notar cuando la estas volviendo loca. El caso va NOMBRADO en el resumen y no en los pasos porque el paso que sale de el es general y el libro lo escribe como general (the importance of providing a clear explanation up front). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. P1, P2, P3 y P4 de la linea 241; P5, P6 y P7 de la linea 243. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: que se dice exactamente en esa explicacion previa, a quien se le da y a quien no, y que se hace con quien sigue viviendo el debate como una agresion despues de oirla.",
+  "pasos_accionables": [
+    "Cuida el espíritu con el que lanzas el debate, porque suele determinar el tono de todo lo que viene detrás.",
+    "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante: hay quien lo ha visto en el suyo, y ha visto también que, cuando encuentra la manera de disfrutar un debate, los demás suelen seguirle.",
+    "En algunos casos, puede servir un humor simple, o abrir la reunión con una buena historia a tu costa.",
+    "Preocúpate más del tono que transmites y del ánimo que creas para lo que sigue que de lo que dices exactamente: lo que dices importa menos.",
+    "Cuenta con que no todo el mundo disfruta debatiendo, y que a algunos el acto mismo de debatir les parece agresivo o amenazante, o las dos cosas.",
+    "Da de antemano una explicación clara de para qué sirve el debate, y crea un espacio positivo donde pueda ocurrir.",
+    "Conoce lo bastante bien a las personas con las que debates para darte cuenta de cuándo las estás volviendo locas sin querer."
+  ],
+  "entregable_esperado": "Un debate lanzado con un tono que la gente pueda seguir, con el propósito del debate explicado de antemano a quien no lo da por supuesto.",
+  "nodos_previos": [
+    "montar_reunion_gran_debate"
+  ],
+  "nodos_siguientes": [
+    "centrar_debate_ideas_fuera_egos",
+    "fijar_fecha_cierre_debate_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a lanzar un debate en tu equipo, y sobre todo cuando hay en la sala gente a la que el acto mismo de debatir le parece agresivo o amenazante."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "El ánimo con el que abres un debate a menudo marca el tono de lo que sigue, más que tus palabras exactas. Hay quien nota que la gente a su cargo se guía por su ánimo hasta un punto casi alarmante y que, cuando disfruta el debate, los demás suelen seguirle; puede servir un humor sencillo o una historia a costa propia. Pero no a todo el mundo le gusta debatir, y a algunas personas el acto mismo les parece agresivo o amenazante. Por eso importa explicar por delante para qué sirve el debate, crear un espacio positivo y conocer a cada cual para notar cuándo lo estás volviendo loco sin querer.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "239-243"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Se sostiene: L241 'I have found that people on a team I lead key off my mood' es experiencia propia, 'often determines', 'In some cases, it might be'. La propuesta del lector cuenta el caso pero dice 'a veces basta' (sobreafirma el 'might be') y usa 'su equipo', baranda de la casa; el propio la cambia por 'la gente a su cargo' y deja 'puede servir'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)"
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Abrir un debate con humor y explicando para que sirve, porque el tono con que se lanza marca el de todo lo que viene detras",
+      "texto_nuevo": "Abrir un debate con humor y explicando para qué sirve, porque el tono con que se lanza marca el de todo lo que viene detrás",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuida el espiritu con el que lanzas el debate, porque el texto dice que suele determinar el tono de todo lo que viene detras.",
+      "texto_nuevo": "Cuida el espíritu con el que lanzas el debate, porque suele determinar el tono de todo lo que viene detrás.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la gente de tu equipo se guia por tu estado de animo hasta un punto casi alarmante, y que cuando tu encuentras la manera de pasartelo bien en un debate, los demas suelen seguirte.",
+      "texto_nuevo": "Cuenta con que la gente de tu equipo se guía por tu estado de ánimo hasta un punto casi alarmante, y que cuando tú encuentras la manera de pasártelo bien en un debate, los demás suelen seguirte.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa humor simple, o abre la reunion con una buena historia a tu costa.",
+      "texto_nuevo": "Usa humor simple, o abre la reunión con una buena historia a tu costa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preocupate mas del tono que transmites y del animo que dejas puesto que de lo que dices exactamente: el texto dice que lo que dices importa menos.",
+      "texto_nuevo": "Preocúpate más del tono que transmites y del ánimo que dejas puesto que de lo que dices exactamente: lo que dices importa menos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Da por delante una explicacion clara de para que sirve el debate, y crea un espacio positivo donde pueda ocurrir.",
+      "texto_nuevo": "Da por delante una explicación clara de para qué sirve el debate, y crea un espacio positivo donde pueda ocurrir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conoce lo bastante bien a las personas con las que debates para darte cuenta de cuando las estas volviendo locas sin querer.",
+      "texto_nuevo": "Conoce lo bastante bien a las personas con las que debates para darte cuenta de cuándo las estás volviendo locas sin querer.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-abrir_debate_humor_explicar_proposito-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un debate lanzado con un tono que la gente pueda seguir, con el proposito del debate explicado por delante a quien no lo da por supuesto.",
+      "texto_nuevo": "Un debate lanzado con un tono que la gente pueda seguir, con el propósito del debate explicado por delante a quien no lo da por supuesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-abrir_debate_humor_explicar_proposito-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Abrir un debate con humor y explicando para qué sirve, porque el tono con que se lanza marca el de todo lo que viene detrás",
+      "texto_nuevo": "Abrir un debate con humor y explicando para qué sirve, porque el tono con que se lanza suele marcar el de todo lo que viene detrás",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 241",
+        "frase": "The spirit with which a debate is launched often determines the tenor of what follows."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'often determines'; el título lo volvía regla.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-abrir_debate_humor_explicar_proposito-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que la gente de tu equipo se guía por tu estado de ánimo hasta un punto casi alarmante, y que cuando tú encuentras la manera de pasártelo bien en un debate, los demás suelen seguirte.",
+      "texto_nuevo": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante, como hay quien lo ha visto en el suyo, y que cuando tú encuentras la manera de pasártelo bien en un debate, los demás suelen seguirte.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 241",
+        "frase": "I have found that people on a team I lead key off my mood to an almost alarming extent; when I find a way to have fun with a debate, others often follow suit."
+      },
+      "decision": "auditoria completa M11 (matiz): Es lo que la autora ha visto en su equipo ('I have found that people on a team I lead'); se cuenta como caso.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-abrir_debate_humor_explicar_proposito-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa humor simple, o abre la reunión con una buena historia a tu costa.",
+      "texto_nuevo": "En algunos casos, puede servir un humor simple, o abrir la reunión con una buena historia a tu costa.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 241",
+        "frase": "In some cases, it might be simple humor or opening the meeting with a good self-effacing story."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'In some cases, it might be'; el paso lo volvía orden general.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-barrido-abrir_debate_humor_explicar_proposito-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "El ánimo con el que abres un debate a menudo marca el tono de lo que sigue, más que tus palabras exactas. Hay quien nota que la gente a su cargo se guía por su ánimo hasta un punto casi alarmante y que, cuando disfruta el debate, los demás suelen seguirle; puede servir un humor sencillo o una historia a costa propia. Pero no a todo el mundo le gusta debatir, y a algunas personas el acto mismo les parece agresivo o amenazante. Por eso importa explicar por delante para qué sirve el debate, crear un espacio positivo y conocer a cada cual para notar cuándo lo estás volviendo loco sin querer.",
+      "texto_nuevo": "El ánimo con el que abres un debate a menudo marca el tono de lo que sigue, más que tus palabras exactas. Hay quien nota que la gente a su cargo se guía por su ánimo hasta un punto casi alarmante y que, cuando disfruta el debate, los demás suelen seguirle; puede servir un humor sencillo o una historia a costa propia. Pero no a todo el mundo le gusta debatir, y a algunas personas el acto mismo les parece agresivo o amenazante. Por eso importa explicar de antemano para qué sirve el debate, crear un espacio positivo y conocer a cada cual para notar cuándo lo estás volviendo loco sin querer.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "explicar por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-abrir_debate_humor_explicar_proposito-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un debate lanzado con un tono que la gente pueda seguir, con el propósito del debate explicado por delante a quien no lo da por supuesto.",
+      "texto_nuevo": "Un debate lanzado con un tono que la gente pueda seguir, con el propósito del debate explicado de antemano a quien no lo da por supuesto.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "explicado por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-abrir_debate_humor_explicar_proposito-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Da por delante una explicación clara de para qué sirve el debate, y crea un espacio positivo donde pueda ocurrir.",
+      "texto_nuevo": "Da de antemano una explicación clara de para qué sirve el debate, y crea un espacio positivo donde pueda ocurrir.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "Da por delante una"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-abrir_debate_humor_explicar_proposito-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante, como hay quien lo ha visto en el suyo, y que cuando tú encuentras la manera de pasártelo bien en un debate, los demás suelen seguirte.",
+      "texto_nuevo": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante: hay quien lo ha visto en el suyo, y ha visto también que, cuando encuentra la manera de pasárselo bien en un debate, los demás suelen seguirle.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_07.md 241",
+        "frase": "I have found that people on a team I lead key off my mood to an almost alarming extent; when I find a way to have fun with a debate, others often follow suit."
+      },
+      "decision": "auditoria completa M11 (matiz): La segunda mitad seguía siendo la experiencia de una persona vuelta predicción sobre ti; queda como caso.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-abrir_debate_humor_explicar_proposito-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Preocúpate más del tono que transmites y del ánimo que dejas puesto que de lo que dices exactamente: lo que dices importa menos.",
+      "texto_nuevo": "Preocúpate más del tono que transmites y del ánimo que creas para lo que sigue que de lo que dices exactamente: lo que dices importa menos.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "\"dejas puesto que de lo que dices\" se lee como la conjunción \"puesto que\" y rompe la comparación \"más ... que\"; el libro dice \"the mood it sets for what follows\" (cap_07, línea 241)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"dejas puesto que de lo que dices\" se lee como la conjunción \"puesto que\" y rompe la comparación \"más ... que\"; el libro dice \"the mood it sets for what follows\" (cap_07, línea 241).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-abrir_debate_humor_explicar_proposito-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante: hay quien lo ha visto en el suyo, y ha visto también que, cuando encuentra la manera de pasárselo bien en un debate, los demás suelen seguirle.",
+      "texto_nuevo": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante: hay quien lo ha visto en el suyo, y ha visto también que, cuando encuentra la manera de disfrutar un debate, los demás suelen seguirle.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "pasárselo bien"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Pasárselo bien' es coloquial de España; 'disfrutar un debate' recoge 'have fun with a debate' (cap_07 l. 241).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Marca el Tono al Abrir",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

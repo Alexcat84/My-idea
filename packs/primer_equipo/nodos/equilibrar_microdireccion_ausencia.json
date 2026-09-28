@@ -1,0 +1,267 @@
+{
+  "node_id": "equilibrar_microdireccion_ausencia",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Equilibrar la microdirección y la ausencia al delegar",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Delegar bien es saber cuándo meterte tú y cuándo dar un paso atrás y confiar en otros, y cada extremo tiene un coste. El que se mete en todo asfixia: la gente con talento se va y nadie aprende a resolver por su cuenta. El que se ausenta deja al equipo sin apoyo cuando las cosas se tuercen y pierde credibilidad. Reconocer las señales de cada lado, en conductas concretas, te deja ver hacia dónde te inclinas. Y como el equilibrio cambia con cada persona y cada parte del trabajo, y en el momento no siempre sabes cómo vas, se ajusta caso por caso.",
+  "notas_extraccion": "Abre el bloque de delegacion y es el unico nodo del capitulo cuyo entregable es no caer, en vez de hacer. Lo que lo hace procedimentable son las senales observables de cada extremo, que el libro escribe una a una y en conducta, no en adjetivos: consultar cada decision, rondar detras de las mesas, manos impolutas, no tomar decisiones dificiles. Con esas senales alguien puede mirarse y decidir de que lado esta. Los dos ultimos pasos son los limites que el propio libro pone a su consejo, que el equilibrio depende de la persona y que en el momento no lo sabes, y sin ellos el nodo prometeria una precision que el libro niega. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se corrige el rumbo una vez detectado el sesgo propio, ni cada cuanto se comprueba.",
+  "pasos_accionables": [
+    "Ten clara esta definición de delegar: el arte de saber cuándo meterte tú y cuándo dar un paso atrás y confiar en otros. El equilibrio es difícil de sostener, como cruzar la cuerda floja con los ojos vendados.",
+    "Reconoce el primer extremo, el microdirectivo: pides a tu gente que te consulte cada decisión, estás constantemente preguntando cómo van las cosas y metiéndote en la minucia de las tareas, y tienes fama de rondar por detrás de las mesas dando tu opinión sobre lo que hay en las pantallas.",
+    "Cuenta con el coste de ese extremo aunque consigas resultados: tu estilo asfixia. La gente con talento se va porque no soporta trabajar contigo, no siente que le des confianza ni espacio para operar, y no está aprendiendo porque no tiene ocasión de resolver problemas por su cuenta.",
+    "Reconoce el otro extremo, el directivo ausente: algunas personas de tu equipo agradecen la independencia, pero la mayoría desearía más apoyo, y cuando las cosas se ponen feas el equipo se siente como en tierra de nadie, un sitio sin reglas porque no hay nadie que ponga orden.",
+    "Cuenta con el coste de ese: tus manos están impolutas porque rara vez te remangas y bajas al detalle, no tomas decisiones difíciles ni empujas las cosas por iniciativa propia, y con el tiempo pierdes credibilidad como líder porque no haces gran cosa. Y tu gente tampoco aprende, porque no la estás entrenando ni retando.",
+    "Asume que en el mundo real rara vez estás en los extremos, pero que sí tiendes a inclinarte hacia un lado o hacia otro según tus valores. Por ejemplo, una directiva nueva estaba del lado ausente porque a ella personalmente le disgustaba que la microgestionaran, y cuando recibió la opinión de que las personas a su cargo querían que se implicara más, sobrecorrigió y entonces le dijeron que se había pasado.",
+    "Cuenta con que lo normal es inclinarte de forma distinta en aspectos distintos del trabajo según dónde esté tu equipo. En una misma semana, a ella una persona a su cargo le dijo que opinaba demasiado sobre un detalle concreto de diseño, mientras otra le pidió que se implicara más en la estrategia de otro proyecto: una estaba segura de lo que hacía y su implicación le parecía agobiante, la otra no lo estaba y quería más ayuda.",
+    "Cuenta con que en el momento no siempre sabes cómo lo estás haciendo. Ella ha dado un paso atrás en un área pensando que iba bien, y unas semanas después se ha dado cuenta de que no había dejado el trabajo bien montado y de que debería haberse quedado más cerca del detalle."
+  ],
+  "entregable_esperado": "Un reparto que no cae en ninguno de los dos extremos, ajustado a cada persona y al punto en que está cada parte del trabajo.",
+  "nodos_previos": [
+    "delegar_tarea_base_comun_seguimiento"
+  ],
+  "nodos_siguientes": [
+    "entregar_problema_dificil_reporte"
+  ],
+  "condiciones_activacion": [
+    "Siempre que tengas que decidir si te metes tú o das un paso atrás y confías en otro."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Delegar bien es saber cuándo meterte tú y cuándo dar un paso atrás y confiar en otros, y cada extremo tiene un coste. El que se mete en todo asfixia: la gente con talento se va y nadie aprende a resolver por su cuenta. El que se ausenta deja al equipo sin apoyo cuando las cosas se tuercen y pierde credibilidad. Reconocer las señales de cada lado, en conductas concretas, te deja ver hacia dónde te inclinas. Y como el equilibrio cambia con cada persona y cada parte del trabajo, y en el momento no siempre sabes cómo vas, se ajusta caso por caso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_10.md",
+          "lineas": "91-105"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Equilibrar la microdireccion y la ausencia al delegar",
+      "texto_nuevo": "Equilibrar la microdirección y la ausencia al delegar",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten clara la definicion de delegar que el libro usa: el arte de saber cuando meterte tu y cuando dar un paso atras y confiar en otros. El equilibrio es dificil de sostener, como cruzar la cuerda floja con los ojos vendados.",
+      "texto_nuevo": "Ten clara esta definición de delegar: el arte de saber cuándo meterte tú y cuándo dar un paso atrás y confiar en otros. El equilibrio es difícil de sostener, como cruzar la cuerda floja con los ojos vendados.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro usa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce el primer extremo, el microdirectivo: pides a tus reportes que te consulten cada decision, estas constantemente preguntando como van las cosas y metiendote en la minucia de las tareas, y tienes fama de rondar por detras de las mesas dando tu opinion sobre lo que hay en las pantallas.",
+      "texto_nuevo": "Reconoce el primer extremo, el microdirectivo: pides a tu gente que te consulte cada decisión, estás constantemente preguntando cómo van las cosas y metiéndote en la minucia de las tareas, y tienes fama de rondar por detrás de las mesas dando tu opinión sobre lo que hay en las pantallas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tus reportes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con el coste de ese extremo aunque consigas resultados: tu estilo asfixia. La gente con talento se va porque no soporta trabajar contigo, no siente que le des confianza ni espacio para operar, y no esta aprendiendo porque no tiene ocasion de resolver problemas por su cuenta.",
+      "texto_nuevo": "Cuenta con el coste de ese extremo aunque consigas resultados: tu estilo asfixia. La gente con talento se va porque no soporta trabajar contigo, no siente que le des confianza ni espacio para operar, y no está aprendiendo porque no tiene ocasión de resolver problemas por su cuenta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce el otro extremo, el directivo ausente: algunos de tus reportes agradecen la independencia, pero la mayoria desearia mas apoyo, y cuando las cosas se ponen feas el equipo se siente como en tierra de nadie, un sitio sin reglas porque no hay sheriff en el pueblo.",
+      "texto_nuevo": "Reconoce el otro extremo, el directivo ausente: algunas personas de tu equipo agradecen la independencia, pero la mayoría desearía más apoyo, y cuando las cosas se ponen feas el equipo se siente como en tierra de nadie, un sitio sin reglas porque no hay nadie que ponga orden.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tus reportes",
+          "sheriff"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el coste de ese: tus manos estan impolutas porque rara vez te remangas y bajas al detalle, no tomas decisiones dificiles ni empujas las cosas por iniciativa propia, y con el tiempo pierdes credibilidad como lider porque no haces gran cosa. Y tus reportes tampoco aprenden, porque no les estas entrenando ni retando.",
+      "texto_nuevo": "Cuenta con el coste de ese: tus manos están impolutas porque rara vez te remangas y bajas al detalle, no tomas decisiones difíciles ni empujas las cosas por iniciativa propia, y con el tiempo pierdes credibilidad como líder porque no haces gran cosa. Y tu gente tampoco aprende, porque no la estás entrenando ni retando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tus reportes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asume que en el mundo real rara vez estamos en los extremos, pero que si tendemos a inclinarnos hacia un lado o hacia otro segun nuestros valores. La autora, de directiva nueva, estaba del lado ausente porque a ella personalmente le disgustaba que la microgestionaran, y cuando recibio la opinion de que sus reportes querian que se implicara mas, sobrecorrigio y entonces le dijeron que se habia pasado.",
+      "texto_nuevo": "Asume que en el mundo real rara vez estás en los extremos, pero que sí tiendes a inclinarte hacia un lado o hacia otro según tus valores. Por ejemplo, una directiva nueva estaba del lado ausente porque a ella personalmente le disgustaba que la microgestionaran, y cuando recibió la opinión de que las personas a su cargo querían que se implicara más, sobrecorrigió y entonces le dijeron que se había pasado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora",
+          "sus reportes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK; ajuste del orquestador: baranda residuo_corporativo de la casa (scripts/censo_duplicacion.py): 'su equipo'/'el equipo de' en tercera persona pasa a 'a su cargo' o a 'tu equipo'; el sentido no cambia",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que lo normal es inclinarte de forma distinta en aspectos distintos del trabajo segun donde este tu equipo. En una misma semana, a ella un reporte le dijo que opinaba demasiado sobre un detalle concreto de diseno, mientras otro le pidio que se implicara mas en la estrategia de otro proyecto: uno estaba seguro de lo que hacia y su implicacion le parecia agobiante, el otro no lo estaba y queria mas ayuda.",
+      "texto_nuevo": "Cuenta con que lo normal es inclinarte de forma distinta en aspectos distintos del trabajo según dónde esté tu equipo. En una misma semana, a ella una persona a su cargo le dijo que opinaba demasiado sobre un detalle concreto de diseño, mientras otra le pidió que se implicara más en la estrategia de otro proyecto: una estaba segura de lo que hacía y su implicación le parecía agobiante, la otra no lo estaba y quería más ayuda.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "un reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK; ajuste del orquestador: baranda residuo_corporativo de la casa (scripts/censo_duplicacion.py): 'su equipo'/'el equipo de' en tercera persona pasa a 'a su cargo' o a 'tu equipo'; el sentido no cambia",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que en el momento no siempre sabes como lo estas haciendo. Ella ha dado un paso atras en un area pensando que iba bien, y unas semanas despues se ha dado cuenta de que no habia dejado el trabajo bien montado y de que deberia haberse quedado mas cerca del detalle.",
+      "texto_nuevo": "Cuenta con que en el momento no siempre sabes cómo lo estás haciendo. Ella ha dado un paso atrás en un área pensando que iba bien, y unas semanas después se ha dado cuenta de que no había dejado el trabajo bien montado y de que debería haberse quedado más cerca del detalle.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un reparto que no cae en ninguno de los dos extremos, ajustado a cada persona y a donde esta cada parte del trabajo.",
+      "texto_nuevo": "Un reparto que no cae en ninguno de los dos extremos, ajustado a cada persona y al punto en que está cada parte del trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_microdireccion_ausencia-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Siempre que tengas que decidir si te metes tu o das un paso atras y confias en otro.",
+      "texto_nuevo": "Siempre que tengas que decidir si te metes tú o das un paso atrás y confías en otro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Equilibra Microgestión y Ausencia"
+}

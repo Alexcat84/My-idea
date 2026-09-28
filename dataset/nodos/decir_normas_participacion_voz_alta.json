@@ -1,0 +1,322 @@
+{
+  "node_id": "decir_normas_participacion_voz_alta",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Decir en voz alta la norma de participación que quieres que rija",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Que en una reunión nadie haga preguntas duras no siempre significa que no las haya: en el caso de una directiva, las dudas circulaban por los pasillos mientras en la sala todos se miraban esperando a que otro preguntara primero. A veces lo más fácil es decir la norma en voz alta, en tres pasos: explicas por qué te importa hablar de verdad, reconoces en primera persona que sospechas que no estás oyendo todas las preocupaciones, y declaras que las preguntas difíciles son bienvenidas mientras te comprometes a ser transparente. En su caso, así mucha más gente preguntó.",
+  "notas_extraccion": "Es la primera de las tacticas del capitulo para hacer seguro contribuir, y la mas barata de todas: no cambia el formato ni la lista de invitados, solo dice en voz alta la norma. Lo que la hace procedimentable no es el consejo, que por si solo seria postura, sino que el libro pone su propio parlamento entre comillas y con las tres partes distinguibles: el por que, la sospecha en primera persona, y la norma con el compromiso de quien la pide. Los pasos 5, 6 y 7 son la transcripcion de ese parlamento, troceado por sus propias frases. El paso 3 esta porque el libro lo escribe: descartar que el equipo no tenga preguntas es lo que la lleva a buscar la causa en la norma y no en la gente. Lo que el libro NO dice, y por eso no esta escrito aqui, es que hacer si despues de decir la norma la sala sigue callada.",
+  "pasos_accionables": [
+    "Si quieres que todo el mundo participe en tu reunión, prueba la táctica que a veces es la más fácil: decirlo directamente.",
+    "Fíjate primero en la señal de que la norma no está puesta. Por ejemplo, alguien que organizaba sesiones periódicas de preguntas y respuestas con su equipo se dio cuenta, después de una docena, de que rara vez recibía preguntas duras: la gente del público se miraba entre sí, como retándose a que preguntara otro primero.",
+    "Descarta la explicación cómoda. No podía ser que su equipo no tuviera preguntas duras, porque a menudo oía por los pasillos que la gente era escéptica sobre alguna estrategia o se preguntaba por qué una de sus iniciativas no iba bien. Simplemente no salían en la sesión.",
+    "Nombra el problema del que nadie habla al abrir la reunión siguiente, y dilo en las tres partes que siguen.",
+    "Di por qué estás ahí: estoy aquí para hacer esta sesión de preguntas y respuestas porque es muy importante para mí que podamos hablar de verdad sobre todo lo que está pasando en nuestro equipo.",
+    "Di lo que sospechas, y dilo en primera persona: pero, con toda franqueza, no tengo la sensación de estar oyendo todas las preocupaciones principales del equipo.",
+    "Di la norma y comprométete con tu parte: así que quiero decir esto desde el principio, las preguntas difíciles son buenas, que nadie se las guarde, y yo prometo ser todo lo transparente que pueda.",
+    "Cuenta con lo que pasó en ese caso: al decir explícitamente que se valoraba la transparencia y que las preguntas duras eran bienvenidas, mucha más gente las hizo."
+  ],
+  "entregable_esperado": "La norma dicha en voz alta al abrir la reunión, y gente que empieza a hacer las preguntas difíciles que antes se guardaba.",
+  "nodos_previos": [
+    "facilitar_gente_diga_verdad"
+  ],
+  "nodos_siguientes": [
+    "cambiar_formato_reunion_favorecer_participacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres que todo el mundo participe en tu reunión y no lo están haciendo, y notas que la sala se mira entre sí en vez de hablar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Que en una reunión nadie haga preguntas duras no siempre significa que no las haya: en el caso de una directiva, las dudas circulaban por los pasillos mientras en la sala todos se miraban esperando a que otro preguntara primero. A veces lo más fácil es decir la norma en voz alta, en tres pasos: explicas por qué te importa hablar de verdad, reconoces en primera persona que sospechas que no estás oyendo todas las preocupaciones, y declaras que las preguntas difíciles son bienvenidas mientras te comprometes a ser transparente. En su caso, así mucha más gente preguntó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "219-229"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decir en voz alta la norma de participacion que quieres que rija",
+      "texto_nuevo": "Decir en voz alta la norma de participación que quieres que rija",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si quieres que todo el mundo participe en tu reunion, prueba la tactica mas facil: decirlo directamente.",
+      "texto_nuevo": "Si quieres que todo el mundo participe en tu reunión, prueba la táctica más fácil: decirlo directamente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fijate primero en la senal de que la norma no esta puesta. La autora organizaba sesiones periodicas de preguntas y respuestas con su equipo y, despues de una docena, se dio cuenta de que rara vez recibia preguntas duras: la gente del publico se miraba entre si, como retandose a que preguntara otro primero.",
+      "texto_nuevo": "Fíjate primero en la señal de que la norma no está puesta. Por ejemplo, alguien que organizaba sesiones periódicas de preguntas y respuestas con su equipo se dio cuenta, después de una docena, de que rara vez recibía preguntas duras: la gente del público se miraba entre sí, como retándose a que preguntara otro primero.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora organizaba"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Descarta la explicacion comoda. No podia ser que su equipo no tuviera preguntas duras, porque a menudo oia por los pasillos que la gente era esceptica sobre alguna estrategia o se preguntaba por que una de sus iniciativas no iba bien. Simplemente no salian en la sesion.",
+      "texto_nuevo": "Descarta la explicación cómoda. No podía ser que su equipo no tuviera preguntas duras, porque a menudo oía por los pasillos que la gente era escéptica sobre alguna estrategia o se preguntaba por qué una de sus iniciativas no iba bien. Simplemente no salían en la sesión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Nombra el elefante en la sala al abrir la reunion siguiente, y di lo que ella dijo, que el libro pone entre comillas y que va troceado en los pasos que siguen.",
+      "texto_nuevo": "Nombra el problema del que nadie habla al abrir la reunión siguiente, y dilo en las tres partes que siguen.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y di lo que ella dijo, que el libro pone entre comillas y que va troceado en los pasos que siguen",
+          "el elefante en la sala"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Di por que estas ahi: estoy aqui para hacer preguntas y respuestas porque es muy importante para mi que podamos hablar de verdad sobre todo lo que esta pasando en nuestro equipo.",
+      "texto_nuevo": "Di por qué estás ahí: estoy aquí para hacer esta sesión de preguntas y respuestas porque es muy importante para mí que podamos hablar de verdad sobre todo lo que está pasando en nuestro equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Di lo que sospechas, y dilo en primera persona: pero, para ser honesta, no tengo la sensacion de estar oyendo todas vuestras preocupaciones principales.",
+      "texto_nuevo": "Di lo que sospechas, y dilo en primera persona: pero, con toda franqueza, no tengo la sensación de estar oyendo todas las preocupaciones principales del equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "vuestras preocupaciones principales"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Di la norma y comprometete a tu parte: asi que quiero decir esto por delante, las preguntas dificiles son buenas, sacadlas del pecho, y yo prometo ser todo lo transparente que pueda.",
+      "texto_nuevo": "Di la norma y comprométete con tu parte: así que quiero decir esto por delante, las preguntas difíciles son buenas, que nadie se las guarde, y yo prometo ser todo lo transparente que pueda.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "sacadlas del pecho"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que funcione por lo que es, no por magia: al decir explicitamente que valoraba la transparencia y que daba la bienvenida a las preguntas duras, mucha mas gente las hizo.",
+      "texto_nuevo": "Cuenta con que funciona por lo que es, no por magia: en ese caso, al decir explícitamente que se valoraba la transparencia y que las preguntas duras eran bienvenidas, mucha más gente las hizo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La norma dicha en voz alta al abrir la reunion, y gente que empieza a hacer las preguntas dificiles que antes se guardaba.",
+      "texto_nuevo": "La norma dicha en voz alta al abrir la reunión, y gente que empieza a hacer las preguntas difíciles que antes se guardaba.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decir_normas_participacion_voz_alta-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres que todo el mundo participe en tu reunion y no lo estan haciendo, y notas que la sala se mira entre si en vez de hablar.",
+      "texto_nuevo": "Cuando quieres que todo el mundo participe en tu reunión y no lo están haciendo, y notas que la sala se mira entre sí en vez de hablar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decir_normas_participacion_voz_alta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si quieres que todo el mundo participe en tu reunión, prueba la táctica más fácil: decirlo directamente.",
+      "texto_nuevo": "Si quieres que todo el mundo participe en tu reunión, prueba la táctica que a veces es la más fácil: decirlo directamente.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 221",
+        "frase": "If you want everyone to participate in your meeting, sometimes the easiest tactic is just to say that directly."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'sometimes'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decir_normas_participacion_voz_alta-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que funciona por lo que es, no por magia: en ese caso, al decir explícitamente que se valoraba la transparencia y que las preguntas duras eran bienvenidas, mucha más gente las hizo.",
+      "texto_nuevo": "Cuenta con lo que pasó en ese caso: al decir explícitamente que se valoraba la transparencia y que las preguntas duras eran bienvenidas, mucha más gente las hizo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 229",
+        "frase": "That worked—by explicitly saying that I valued transparency and welcomed hard questions, many more people asked them."
+      },
+      "decision": "auditoria completa M11 (matiz, invencion): El libro cuenta que funcionó en su caso; el texto lo volvía garantía y añadía 'no por magia', que no está.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-barrido-decir_normas_participacion_voz_alta-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Di la norma y comprométete con tu parte: así que quiero decir esto por delante, las preguntas difíciles son buenas, que nadie se las guarde, y yo prometo ser todo lo transparente que pueda.",
+      "texto_nuevo": "Di la norma y comprométete con tu parte: así que quiero decir esto desde el principio, las preguntas difíciles son buenas, que nadie se las guarde, y yo prometo ser todo lo transparente que pueda.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "decir esto por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Di tus Normas en Voz Alta",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "node_id": "desarrollar_primer_curso_entrenamiento",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Desarrollar el primer curso de entrenamiento en siete pasos, desde el alcance sin ambición hasta decidir si hacen falta más instructores",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Lo que llevas años haciendo casi sin pensar cuesta mucho más explicarlo que practicarlo, y al intentarlo es fácil perderse en antecedentes hasta tapar el objetivo del curso. Empiezas con poco, un curso corto sobre lo más urgente, y te atas a un calendario con plazos para no atascarte en la preparación. La primera versión nunca sale bien por mucho que te esfuerces, así que conviene aceptarla como camino hacia una segunda mejor y dársela a los subordinados que más saben: no se confunden y te ayudan a pulirla. Luego decides si necesitas más instructores.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_17.md, unidad Cap. 16, titulo textual Why Training Is the Boss's Job. Sale de la PIEZA P22 de la frontera publicada hoy en .v60ext/frontera.txt (tabla de cap_17), L53 a L59, 303 palabras. FRONTERA DENTRO DEL NODO, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): L53 abre con el alcance sin ambicion (un curso corto de tres a cuatro clases); L55 da el calendario, el compromiso y el esquema, mas desarrollar y dictar la primera clase; L57 da desarrollar la segunda clase y tratar la primera vez como desechable frente a los subordinados mas informados; L59 cierra la pieza con la pregunta sobre cubrir la organizacion entera o preparar instructores. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el texto trae su propia secuencia de siete acciones nombradas una a una (alcance, calendario, esquema, primera clase, segunda clase, tratamiento de la primera vez, decision de cobertura), que son ETAPAS de un mismo procedimiento de desarrollo de curso, no metas ni un adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, uno a uno, verificado hoy con grep -n literal contra el fichero (guiones largos U+2014 del original sustituidos por guion corto ASCII, EXTRACTOR.md 6, y la sustitucion se declara aqui en vez de callarse): paso 1 de L53, grep -n 'start very unambitiously' fuentes/grove_high_output/cap_17.md da linea 53: 'Especially if you haven't done this sort of thing before, start very unambitiously-like developing one short course (three to four lectures) on the most urgent subject.'; pasos 2, 3 y 4 de L55, grep -n 'To avoid letting yourself bog down' fuentes/grove_high_output/cap_17.md da linea 55: 'To avoid letting yourself bog down in the difficult task of course preparation, set a schedule for your course, with deadlines, and commit yourself to it. Create an outline for the whole course, develop just the first lecture, and go.'; pasos 5 y 6 de L57, grep -n 'Develop the second lecture' fuentes/grove_high_output/cap_17.md da linea 57: 'Develop the second lecture after you have given the first. Regard the first time you teach the course as a throwaway-it won't be great, because no matter how hard you try, you'll have to go through one version that won't be. Rather than agonize over it, accept the inevitability of the first time being unsatisfactory and consider it the path to a more satisfactory second round. To make sure that your first attempt causes no damage, teach this course to the more knowledgeable of your subordinates, who won't be confused by it but who will help you perfect the course through interaction and critique.'; paso 7 de L59, grep -n 'With your second attempt' fuentes/grove_high_output/cap_17.md da linea 59: 'With your second attempt in the offing, ask yourself one final question: Will you be able to teach all members of your organization yourself? Will you be able to cover everybody in one or two courses, or will it require ten or twenty? If your organization is large enough to require many repetitions of your course before different audiences, then set yourself up to train a few instructors with your first set of lectures.'. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. No escribo destinatario, responsable ni periodo porque el parrafo no los pone: el numero de clases, el instructor a preparar y el calendario exacto quedan a criterio del propio mando, y fijarlos yo seria la especie de puente que 15.4 nombra por su nombre. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: comparto capitulo y tema con priorizar_lista_entrenamiento_subordinados (L49 a L51) y con el candidato de la pieza P23 (L61): los tres son momentos sucesivos del mismo proceso de entrenar (priorizar que enseñar, desarrollar el primer curso, pedir critica tras dictarlo), cada uno con su propio entregable (una lista priorizada, un curso dictado con su segunda clase lista, una critica recogida) y su propia condicion de activacion. Un lector que lea el capitulo entero como una sola secuencia continua podria fundir los tres en un solo nodo de dieciseis pasos. Si cae, cae DENTRO de mi marcado.",
+  "pasos_accionables": [
+    "Empieza sin ambición: desarrolla un curso corto, de tres a cuatro clases, sobre el tema más urgente de tu lista.",
+    "Fija un calendario para el curso, con plazos, y comprométete con él para no atascarte en la preparación.",
+    "Crea un esquema para el curso entero.",
+    "Desarrolla solo la primera clase, e impártela.",
+    "Desarrolla la segunda clase después de haber dado la primera.",
+    "Trata como desechable la primera vez que enseñas el curso: enséñaselo a los subordinados más informados, que te ayudarán a perfeccionarlo con su interacción y su crítica.",
+    "Pregúntate si podrás cubrir tú solo a toda la organización o si, por su tamaño, hace falta que prepares a unos cuantos instructores con tu primera tanda de clases."
+  ],
+  "entregable_esperado": "Un primer curso corto impartido, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si tú solo puedes cubrir a toda la organización o hace falta preparar instructores adicionales.",
+  "nodos_previos": [
+    "priorizar_lista_entrenamiento_subordinados"
+  ],
+  "nodos_siguientes": [
+    "pedir_critica_anonima_curso_entrenamiento_dictado"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya priorizaste en qué entrenar a tus subordinados y eliges el tema más urgente para desarrollar tu primer curso propio."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Lo que llevas años haciendo casi sin pensar cuesta mucho más explicarlo que practicarlo, y al intentarlo es fácil perderse en antecedentes hasta tapar el objetivo del curso. Empezar con poco, un curso corto sobre lo más urgente, y atarte a un calendario con plazos evita atascarte en la preparación. La primera versión nunca sale bien por mucho que te esfuerces, así que conviene aceptarla como camino hacia una segunda mejor y dársela a los subordinados que más saben: no se confunden y te ayudan a pulirla. Luego decides si necesitas más instructores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_17.md",
+          "lineas": "53-59"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)"
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desarrollar el primer curso de entrenamiento en siete pasos, desde el alcance sin ambicion hasta decidir si hacen falta mas instructores",
+      "texto_nuevo": "Desarrollar el primer curso de entrenamiento en siete pasos, desde el alcance sin ambición hasta decidir si hacen falta más instructores",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza sin ambicion: desarrolla un curso corto, de tres a cuatro clases, sobre el tema mas urgente de tu lista.",
+      "texto_nuevo": "Empieza sin ambición: desarrolla un curso corto, de tres a cuatro clases, sobre el tema más urgente de tu lista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija un calendario para el curso, con plazos, y comprometete con el para no atascarte en la preparacion.",
+      "texto_nuevo": "Fija un calendario para el curso, con plazos, y comprométete con él para no atascarte en la preparación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desarrolla solo la primera clase, y dictala.",
+      "texto_nuevo": "Desarrolla solo la primera clase, y díctala.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desarrolla la segunda clase despues de haber dado la primera.",
+      "texto_nuevo": "Desarrolla la segunda clase después de haber dado la primera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata la primera vez que enseñas el curso como un desechable: enseñaselo a los subordinados mas informados, que te ayudaran a perfeccionarlo con su interaccion y su critica.",
+      "texto_nuevo": "Trata como desechable la primera vez que enseñas el curso: enséñaselo a los subordinados más informados, que te ayudarán a perfeccionarlo con su interacción y su crítica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntate si podras cubrir tu solo a toda la organizacion o si, por su tamaño, hace falta que prepares a unos cuantos instructores con tu primer set de clases.",
+      "texto_nuevo": "Pregúntate si podrás cubrir tú solo a toda la organización o si, por su tamaño, hace falta que prepares a unos cuantos instructores con tu primera tanda de clases.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "primer set de clases"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un primer curso corto dictado, con su segunda clase desarrollada tras la primera y una decision explicita sobre si el propio mando puede cubrir a toda la organizacion o hace falta preparar instructores adicionales.",
+      "texto_nuevo": "Un primer curso corto dictado, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si el propio mando puede cubrir a toda la organización o hace falta preparar instructores adicionales.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desarrollar_primer_curso_entrenamiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el mando ya priorizó en que entrenar a sus subordinados y elige el tema mas urgente para desarrollar su primer curso propio.",
+      "texto_nuevo": "Cuando el mando ya priorizó en qué entrenar a sus subordinados y elige el tema más urgente para desarrollar su primer curso propio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desarrollar_primer_curso_entrenamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un primer curso corto dictado, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si el propio mando puede cubrir a toda la organización o hace falta preparar instructores adicionales.",
+      "texto_nuevo": "Un primer curso corto dictado, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si tú solo puedes cubrir a toda la organización o hace falta preparar instructores adicionales.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el propio mando puede"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Tercera persona (\"el propio mando\") en un nodo dirigido a ti; el último paso ya lo dice en tú (\"si podrás cubrir tú solo\").",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desarrollar_primer_curso_entrenamiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando el mando ya priorizó en qué entrenar a sus subordinados y elige el tema más urgente para desarrollar su primer curso propio.",
+      "texto_nuevo": "Cuando ya priorizaste en qué entrenar a tus subordinados y eliges el tema más urgente para desarrollar tu primer curso propio.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el mando ya priorizó",
+          "sus subordinados",
+          "y elige el",
+          "su primer curso"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Tercera persona (\"el mando\", \"sus subordinados\", \"su primer curso\") en vez de tú.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-desarrollar_primer_curso_entrenamiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desarrolla solo la primera clase, y díctala.",
+      "texto_nuevo": "Desarrolla solo la primera clase, e impártela.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "díctala"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Dictar\" una clase es uso americano; en otras regiones se lee como dictar un texto. Pasa a \"impartir\" (el libro: \"develop just the first lecture, and go\", grove cap_17 l.55).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase4-desarrollar_primer_curso_entrenamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un primer curso corto dictado, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si tú solo puedes cubrir a toda la organización o hace falta preparar instructores adicionales.",
+      "texto_nuevo": "Un primer curso corto impartido, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si tú solo puedes cubrir a toda la organización o hace falta preparar instructores adicionales.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "dictado"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Curso dictado\" es uso americano; se decide igual que el paso 3 del nodo: \"impartido\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase5-desarrollar_primer_curso_entrenamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lo que llevas años haciendo casi sin pensar cuesta mucho más explicarlo que practicarlo, y al intentarlo es fácil perderse en antecedentes hasta tapar el objetivo del curso. Empezar con poco, un curso corto sobre lo más urgente, y atarte a un calendario con plazos evita atascarte en la preparación. La primera versión nunca sale bien por mucho que te esfuerces, así que conviene aceptarla como camino hacia una segunda mejor y dársela a los subordinados que más saben: no se confunden y te ayudan a pulirla. Luego decides si necesitas más instructores.",
+      "texto_nuevo": "Lo que llevas años haciendo casi sin pensar cuesta mucho más explicarlo que practicarlo, y al intentarlo es fácil perderse en antecedentes hasta tapar el objetivo del curso. Empiezas con poco, un curso corto sobre lo más urgente, y te atas a un calendario con plazos para no atascarte en la preparación. La primera versión nunca sale bien por mucho que te esfuerces, así que conviene aceptarla como camino hacia una segunda mejor y dársela a los subordinados que más saben: no se confunden y te ayudan a pulirla. Luego decides si necesitas más instructores.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_17.md 53-55",
+        "frase": "To avoid letting yourself bog down in the difficult task of course preparation, set a schedule for your course, with deadlines, and commit yourself to it."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro atribuye no atascarse en la preparación solo al calendario con plazos (55); empezar sin ambición (53) no lleva ese efecto en ningún punto del capítulo; la finalidad queda atada solo al calendario.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Crea tu Primer Curso",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

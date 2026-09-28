@@ -1,0 +1,327 @@
+{
+  "node_id": "planificar_cinco_olas_venta",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Planificar la venta en las cinco olas del proceso de contratación",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Vender el puesto a un candidato no es un paso del final sino algo que exige atención constante durante todo el proceso, igual que buscar candidatos. Hay cinco momentos en los que el esfuerzo de venta tiene que subir: cuando lo captas, cuando lo entrevistas, entre la oferta y la aceptación, entre la aceptación y su primer día, y en sus primeros cien días. Funcionan como olas: si no subes tu energía en cada una, el candidato no pasa la cresta hacia la fase siguiente. Saber qué motivos le pesan te dice qué vender; las olas te dicen cuándo.",
+  "notas_extraccion": "Es la cabeza de la segunda serie de cinco del capitulo, y nace de una pregunta que el libro se hace en voz alta despues de listar las cinco efes: pero cuando se vende. La respuesta corrige la impresion que da el propio indice del libro. Vender esta presentado como el cuarto y ultimo paso del metodo A, pero en la practica es como abastecer, algo que pide atencion constante durante todo el proceso. Sobre eso los autores dicen haber identificado con los años cinco fases distintas del proceso de contratacion que merecen un esfuerzo de venta mayor, y las llaman olas porque hay que remontarlas: si en cada una no se sube la energia de venta, el candidato no pasa la cresta y no llega a la fase siguiente. La serie no reparte las efes por olas: las efes dicen QUE se vende y las olas dicen CUANDO, y el recuadro del capitulo las junta en un solo punto, el de crear y ejecutar un plan que atienda las efes relevantes durante las cinco olas.",
+  "pasos_accionables": [
+    "Entiende cuáles de las cinco áreas de la venta le importan de verdad a este candidato y enfoca la atención en esas palancas para vencer sus reparos. Eso es vender a un futuro contratado.",
+    "Vende durante el proceso entero y no solo al final. Aunque vender parezca el último paso del método, en realidad deberías hacerlo a lo largo de todo el proceso: igual que buscar candidatos, vender exige atención constante.",
+    "Trata las cinco fases como olas que hay que superar. Si no subes tu energía de venta, no pasarás a tu candidato por la cresta de la ola hasta la fase siguiente.",
+    "Sube la energía de venta en la primera ola: cuando busques candidatos.",
+    "Sube la energía de venta en la segunda ola: cuando entrevistes.",
+    "Sube la energía de venta en la tercera ola: el tiempo entre tu oferta y la aceptación del candidato.",
+    "Sube la energía de venta en la cuarta ola: el tiempo entre la aceptación del candidato y su primer día.",
+    "Sube la energía de venta en la quinta ola: los primeros cien días del recién contratado en el puesto."
+  ],
+  "entregable_esperado": "Un plan de venta escrito para este candidato que dice qué motivos de decisión se atienden y en cuál de las cinco olas se atiende cada uno.",
+  "nodos_previos": [
+    "vender_puesto_jugador"
+  ],
+  "nodos_siguientes": [
+    "vender_abastecimiento_candidatos",
+    "vender_final_entrevista",
+    "sostener_contacto_oferta_aceptacion",
+    "celebrar_aceptacion_primer_dia",
+    "disenar_incorporacion_cien_dias"
+  ],
+  "condiciones_activacion": [
+    "Cuando empieza el proceso de contratación y toca decidir cuándo venderle el puesto al candidato, a medida que vas sabiendo qué motivos de decisión le importan: la venta empieza al principio del proceso y no al final."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Vender el puesto a un candidato no es un paso del final sino algo que exige atención constante durante todo el proceso, igual que buscar candidatos. Hay cinco momentos en los que el esfuerzo de venta tiene que subir: cuando lo captas, cuando lo entrevistas, entre la oferta y la aceptación, entre la aceptación y su primer día, y en sus primeros cien días. Funcionan como olas: si no subes tu energía en cada una, el candidato no pasa la cresta hacia la fase siguiente. Saber qué motivos le pesan te dice qué vender; las olas te dicen cuándo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "143-159"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Planificar la venta en las cinco olas del proceso de contratacion",
+      "texto_nuevo": "Planificar la venta en las cinco olas del proceso de contratación",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende cuales de las cinco efes le importan de verdad a este candidato y enfoca la atencion en esas palancas para vencer sus reparos. Eso, y no otra cosa, es vender a un futuro contratado.",
+      "texto_nuevo": "Entiende cuáles de los cinco motivos de decisión le importan de verdad a este candidato y enfoca la atención en esas palancas para vencer sus reparos. Eso, y no otra cosa, es vender a un futuro contratado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "cinco efes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vende durante el proceso entero y no solo al final. El capitulo de vender esta presentado como el ultimo paso del metodo A, pero en realidad vender es algo que deberias estar haciendo a lo largo de todo el proceso: igual que abastecer, vender exige atencion constante.",
+      "texto_nuevo": "Vende durante el proceso entero y no solo al final. Aunque vender parezca el último paso del método, en realidad deberías hacerlo a lo largo de todo el proceso: igual que buscar candidatos, vender exige atención constante.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El capitulo de vender esta presentado como el ultimo paso del metodo A",
+          "igual que abastecer"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata las cinco fases como olas que hay que superar. Si no subes tu energia de venta, no pasaras a tu candidato por la cresta de la ola hasta la fase siguiente.",
+      "texto_nuevo": "Trata las cinco fases como olas que hay que superar. Si no subes tu energía de venta, no pasarás a tu candidato por la cresta de la ola hasta la fase siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sube la energia de venta en la primera ola: cuando abastezcas.",
+      "texto_nuevo": "Sube la energía de venta en la primera ola: cuando busques candidatos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "cuando abastezcas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sube la energia de venta en la segunda ola: cuando entrevistes.",
+      "texto_nuevo": "Sube la energía de venta en la segunda ola: cuando entrevistes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sube la energia de venta en la tercera ola: el tiempo entre tu oferta y la aceptacion del candidato.",
+      "texto_nuevo": "Sube la energía de venta en la tercera ola: el tiempo entre tu oferta y la aceptación del candidato.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sube la energia de venta en la cuarta ola: el tiempo entre la aceptacion del candidato y su primer dia.",
+      "texto_nuevo": "Sube la energía de venta en la cuarta ola: el tiempo entre la aceptación del candidato y su primer día.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sube la energia de venta en la quinta ola: los primeros cien dias del recien contratado en el puesto.",
+      "texto_nuevo": "Sube la energía de venta en la quinta ola: los primeros cien días del recién contratado en el puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un plan de venta escrito para este candidato que dice que efes se atienden y en cual de las cinco olas se atiende cada una.",
+      "texto_nuevo": "Un plan de venta escrito para este candidato que dice qué motivos de decisión se atienden y en cuál de las cinco olas se atiende cada uno.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que efes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_cinco_olas_venta-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya sabes que efes le importan al candidato y toca decidir CUANDO vender. Es el segundo de los tres puntos del recuadro de como vender a los jugadores A, y abre la serie de las cinco olas. Se activa al principio del proceso de contratacion y no al final, que es justamente lo que el libro corrige aqui.",
+      "texto_nuevo": "Cuando ya sabes qué motivos de decisión le importan al candidato y toca decidir cuándo venderle. Se activa al principio del proceso de contratación y no al final.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Es el segundo de los tres puntos del recuadro de como vender a los jugadores A, y abre la serie de las cinco olas.",
+          "que es justamente lo que el libro corrige aqui",
+          "que efes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-planificar_cinco_olas_venta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende cuáles de los cinco motivos de decisión le importan de verdad a este candidato y enfoca la atención en esas palancas para vencer sus reparos. Eso, y no otra cosa, es vender a un futuro contratado.",
+      "texto_nuevo": "Entiende cuáles de las cinco áreas de la venta le importan de verdad a este candidato y enfoca la atención en esas palancas para vencer sus reparos. Eso, y no otra cosa, es vender a un futuro contratado.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los cinco motivos de decisión"
+        ]
+      },
+      "decision": "pase de glosario (cinco_efes): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-pase2-planificar_cinco_olas_venta-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando ya sabes qué motivos de decisión le importan al candidato y toca decidir cuándo venderle. Se activa al principio del proceso de contratación y no al final.",
+      "texto_nuevo": "Cuando empieza el proceso de contratación y toca decidir cuándo venderle el puesto al candidato, a medida que vas sabiendo qué motivos de decisión le importan: la venta empieza al principio del proceso y no al final.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "La condición pedía saber ya los motivos y a la vez activarse al principio; el libro sitúa en la búsqueda de candidatos, la primera ola, la primera ocasión de medir qué motivos le importan."
+      },
+      "decision": "auditoria completa M11 (coherencia): La condición pedía saber ya los motivos y a la vez activarse al principio; el libro sitúa en la búsqueda de candidatos, la primera ola, la primera ocasión de medir qué motivos le importan.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase5-planificar_cinco_olas_venta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Entiende cuáles de las cinco áreas de la venta le importan de verdad a este candidato y enfoca la atención en esas palancas para vencer sus reparos. Eso, y no otra cosa, es vender a un futuro contratado.",
+      "texto_nuevo": "Entiende cuáles de las cinco áreas de la venta le importan de verdad a este candidato y enfoca la atención en esas palancas para vencer sus reparos. Eso es vender a un futuro contratado.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 145",
+        "frase": "Selling a would-be hire is a matter of understanding which of the five F’s really matter to a candidate and focusing attention on those levers to overcome a candidate’s concerns."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que vender es cuestión de entender qué áreas importan y enfocarse en ellas, y el mismo capítulo añade el cuándo (las cinco olas, 147) y la persistencia como aspecto más importante (197); \"y no otra cosa\" es una exclusividad que el libro no pone.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vende en Cinco Momentos Clave"
+}

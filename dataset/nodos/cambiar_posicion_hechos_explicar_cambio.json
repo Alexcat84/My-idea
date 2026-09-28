@@ -1,0 +1,354 @@
+{
+  "node_id": "cambiar_posicion_hechos_explicar_cambio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cambiar de posición cuando cambian los hechos, y explicar el cambio en voz alta en vez de dejar que se note",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Cambiar de opinión cuando cambian los hechos es sensato, aunque a menudo se tacha de veleta o de falta de principios a quien lo hace, y alguien puede quejarse con razón de que hace dos meses le convenciste de lo contrario. La clave es la comunicación: no cambiar de rumbo a la ligera y, si lo haces, poder explicar con claridad y convicción por qué han cambiado las cosas. Hay quien vuelve a menudo a escuchar, aclarar, debatir y decidir con un círculo cercano, y luego cuenta al equipo amplio, con paciencia y las veces que haga falta, cómo se llegó ahí, nombrando el cambio de forma explícita.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 403 a 407, bajo el rotulo Pressure to be consistent, y es la PRIMERA de las dos presiones que la linea 401 cuenta y nombra dentro del paso LEARN de la rueda de hacer cosas. Su madre es aprender_resultados_vencer_dos_presiones, que la nombra en su paso 6, y la arista va bajo D.37 porque el texto dice cuantas son y las nombra. La pieza es corta pero tiene inventario duro en su segunda mitad: la linea 407 pone cinco actos seguidos (no cambiar a la ligera, explicar claro y convincente, repasar el ciclo con un circulo cercano, contar el camino con paciencia y repetidamente, y nombrar el cambio explicitamente), y esos cinco son los pasos P5 a P9. La atribucion de Keynes va en su sede. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. P1 y P2 de la linea 405; P3, P4, P5, P6, P7, P8 y P9 de la linea 407. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: quienes forman ese circulo cercano, cuantas veces es repetidamente, y que se hace con quien se queda convencido de la posicion vieja.",
+  "pasos_accionables": [
+    "Cuenta con lo que te dicen a menudo: que cambiar de posición te convierte en una veleta, en un errático o en alguien sin principios.",
+    "Quédate en su lugar con una idea mejor: si los hechos cambian, es razonable cambiar de opinión.",
+    "Trata la comunicación como la clave.",
+    "Cuenta con la queja razonable que puedes recibir: hace solo dos meses me convenciste de X y ahora me dices que quizá no X.",
+    "No cambies de rumbo a la ligera.",
+    "Y si lo haces, prepara una explicación clara y convincente de por qué las cosas han cambiado.",
+    "Puedes volver a pasar por escuchar, clarificar, debatir y decidir con un círculo cercano antes de llevarlo fuera, como hay quien hace a menudo.",
+    "Cuando toque persuadir otra vez al equipo amplio de la nueva conclusión, respira hondo y cuenta con paciencia y las veces que haga falta cómo se llegó a ella.",
+    "Nombra el cambio de dirección explícitamente en vez de dejar que se note."
+  ],
+  "entregable_esperado": "El cambio de rumbo hecho, con su explicación clara y convincente de por qué las cosas han cambiado, dicha en voz alta y nombrada como cambio.",
+  "nodos_previos": [
+    "aprender_resultados_vencer_dos_presiones"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando los hechos han cambiado y tu posición tendría que cambiar con ellos, y te frena que te llamen veleta, errático o sin principios."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cambiar de opinión cuando cambian los hechos es sensato, aunque a menudo se tacha de veleta o de falta de principios a quien lo hace, y alguien puede quejarse con razón de que hace dos meses le convenciste de lo contrario. La clave es la comunicación: no cambiar de rumbo a la ligera y, si lo haces, poder explicar con claridad y convicción por qué han cambiado las cosas. Hay quien vuelve a menudo a escuchar, aclarar, debatir y decidir con un círculo cercano, y luego cuenta al equipo amplio, con paciencia y las veces que haga falta, cómo se llegó ahí, nombrando el cambio de forma explícita.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "403-407"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Objecion sostenida: 'evita que la gente lo descubra por su cuenta y lo viva como incoherencia' es un efecto que la 407 no da (solo 'call out the change in direction explicitly'), y el repaso con el círculo cercano es la práctica de una persona ('I'd often revisit'). La propuesta devuelve el 'often' de la 405 y la queja razonable, y cuenta la práctica como caso.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)"
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cambiar de posicion cuando cambian los hechos, y explicar el cambio en voz alta en vez de dejar que se note",
+      "texto_nuevo": "Cambiar de posición cuando cambian los hechos, y explicar el cambio en voz alta en vez de dejar que se note",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que nos dicen a menudo: que cambiar de posicion te convierte en una veleta, en un erratico o en alguien sin principios.",
+      "texto_nuevo": "Cuenta con lo que nos dicen a menudo: que cambiar de posición te convierte en una veleta, en un errático o en alguien sin principios.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quedate en su lugar con la idea de Keynes que el texto prefiere: cuando los hechos cambian, yo cambio de opinion.",
+      "texto_nuevo": "Quédate en su lugar con una idea mejor: si los hechos cambian, es razonable cambiar de opinión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la idea de Keynes que el texto prefiere",
+          "cuando los hechos cambian, yo cambio de opinion"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trata la comunicacion como la clave, que es como el texto la llama.",
+      "texto_nuevo": "Trata la comunicación como la clave.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es como el texto la llama"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con la queja razonable que vas a recibir: hace solo dos meses me convenciste de X y ahora me dices que quiza no X.",
+      "texto_nuevo": "Cuenta con la queja razonable que vas a recibir: hace solo dos meses me convenciste de X y ahora me dices que quizá no X.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y si lo haces, prepara una explicacion clara y convincente de por que las cosas han cambiado.",
+      "texto_nuevo": "Y si lo haces, prepara una explicación clara y convincente de por qué las cosas han cambiado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vuelve a pasar por escuchar, clarificar, debatir y decidir con un circulo cercano antes de llevarlo fuera.",
+      "texto_nuevo": "Vuelve a pasar por escuchar, clarificar, debatir y decidir con un círculo cercano antes de llevarlo fuera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando toque persuadir otra vez al equipo amplio, respira hondo y cuenta con paciencia y las veces que haga falta como habeis llegado hasta ahi.",
+      "texto_nuevo": "Cuando toque persuadir otra vez al equipo amplio, respira hondo y cuenta con paciencia y las veces que haga falta cómo se llegó hasta ahí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como habeis llegado"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Nombra el cambio de direccion explicitamente en vez de dejar que se note.",
+      "texto_nuevo": "Nombra el cambio de dirección explícitamente en vez de dejar que se note.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El cambio de rumbo hecho, con su explicacion clara y convincente de por que las cosas han cambiado, dicha en voz alta y nombrada como cambio.",
+      "texto_nuevo": "El cambio de rumbo hecho, con su explicación clara y convincente de por qué las cosas han cambiado, dicha en voz alta y nombrada como cambio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_posicion_hechos_explicar_cambio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando los hechos han cambiado y tu posicion tendria que cambiar con ellos, y te frena que te llamen veleta, erratico o sin principios.",
+      "texto_nuevo": "Cuando los hechos han cambiado y tu posición tendría que cambiar con ellos, y te frena que te llamen veleta, errático o sin principios.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vuelve a pasar por escuchar, clarificar, debatir y decidir con un círculo cercano antes de llevarlo fuera.",
+      "texto_nuevo": "Vuelve a menudo a pasar por escuchar, clarificar, debatir y decidir con un círculo cercano antes de llevarlo fuera.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 407",
+        "frase": "I’d often revisit the listen, clarify, debate, and decide steps with an inner circle."
+      },
+      "decision": "auditoria completa M11 (matiz): Se pierde 'often': la práctica del libro es frecuente, no fija; el resumen sí dice 'a menudo'.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con la queja razonable que vas a recibir: hace solo dos meses me convenciste de X y ahora me dices que quizá no X.",
+      "texto_nuevo": "Cuenta con la queja razonable que puedes recibir: hace solo dos meses me convenciste de X y ahora me dices que quizá no X.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 407",
+        "frase": "Someone might reasonably complain, “Just two months ago you convinced me of X and now you’re telling me maybe not-X after all?”"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que alguien podría quejarse (\"might\"); el paso lo daba por seguro.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando toque persuadir otra vez al equipo amplio, respira hondo y cuenta con paciencia y las veces que haga falta cómo se llegó hasta ahí.",
+      "texto_nuevo": "Cuando toque persuadir otra vez al equipo amplio de la nueva conclusión, respira hondo y cuenta con paciencia y las veces que haga falta cómo se llegó a ella.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"ahí\" sin antecedente en el paso: falta la nueva conclusión a la que se llegó (\"after we'd reached a new conclusion\", scott cap_07 l.407)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"ahí\" sin antecedente en el paso: falta la nueva conclusión a la que se llegó (\"after we'd reached a new conclusion\", scott cap_07 l.407).",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que nos dicen a menudo: que cambiar de posición te convierte en una veleta, en un errático o en alguien sin principios.",
+      "texto_nuevo": "Cuenta con lo que te dicen a menudo: que cambiar de posición te convierte en una veleta, en un errático o en alguien sin principios.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "lo que nos dicen"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Primera persona del plural del libro (We are often told); la voz de la casa habla de tú.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase3-cambiar_posicion_hechos_explicar_cambio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vuelve a menudo a pasar por escuchar, clarificar, debatir y decidir con un círculo cercano antes de llevarlo fuera.",
+      "texto_nuevo": "Puedes volver a pasar por escuchar, clarificar, debatir y decidir con un círculo cercano antes de llevarlo fuera, como hay quien hace a menudo.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 407",
+        "frase": "I’d often revisit the listen, clarify, debate, and decide steps with an inner circle."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la costumbre de una persona (often revisit, en primera persona), que el resumen ya cuenta como caso; el paso la volvía instrucción con su frecuencia.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cambia de Postura en Voz Alta",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

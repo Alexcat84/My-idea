@@ -1,0 +1,240 @@
+{
+  "node_id": "vender_fortuna_candidato",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Vender la fortuna sin que el dinero vaya solo",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "El dinero rara vez es lo que más motiva a un buen candidato: puede desanimar si es bajo o si no está ligado al desempeño, pero una subida de hoy suele estar olvidada mañana, y si solo tienes retribución que ofrecer, vas mal. Aun así, la paga acabará en la mesa, y ahí conviene mostrar cómo se recompensaría a la persona, sabiendo que ella se compara con lo que cobra y con lo que cree valer fuera. En el mercado de trabajo es fácil pagar de menos o de más; pagar por desempeño y atar los bonos a la tarjeta de puntuación asegura que solo pagas lo mejor cuando obtienes lo mejor.",
+  "notas_extraccion": "Es la cuarta de las cinco efes y el libro la define como la estabilidad de tu empresa y el recorrido economico global. La seccion empieza tumbando la salida facil: si nada mas parece funcionar siempre puedes tirar dinero al candidato que intentas fichar, verdad; pues no. El respaldo es una nota al pie del propio libro, la nota dos, que remite a Frederick Herzberg, One More Time: How Do You Motivate Employees, Harvard Business Review, enero y febrero de 1968. El equilibrio que el libro propone es que el dinero es una pieza del paquete pero nunca va solo, y que la forma de usarlo es demostrar como seria recompensada la persona si se incorporase. Los casos, con sus dueños delante y fuera de los pasos: Carl Lindner, presidente y fundador de American Financial Group, anima a los candidatos a mirar los beneficios record, el crecimiento y el valor de mercado de la casa, y comparte con ellos el exito personal en retribucion y patrimonio que han obtenido los que trabajan alli; Robert Gillette, de Honeywell Aerospace, avisa de que si todo lo que tienes que vender es la retribucion la cosa va mal; y Gabriel Echavarria, de Corona, tiene los bonos atados a metas matematicas junto con otras ocho metas facilmente identificables, de modo que su gente sabe cada trimestre donde estan sus bonos, y ha tenido gente que se incorporo por un salario menor porque creia en el crecimiento, y que no se incorpora para seis meses sino para seis, diez o treinta años.",
+  "pasos_accionables": [
+    "No intentes cerrar la contratación a base de ofrecerle más dinero al candidato. La investigación dice que el dinero puede ser un desincentivo si es demasiado bajo o si no está ligado al desempeño, pero rara vez es el motivador clave, y una subida que se da hoy suele estar olvidada mañana. Si todo lo que tienes que vender es la retribución, eso no es bueno.",
+    "Tampoco lo ignores. La retribución va a entrar en la ecuación tarde o temprano, y puedes aprovecharlo demostrándole cómo sería recompensado si se incorporase a tu empresa.",
+    "Cuenta con los dos mercados que fijan el nivel de la paga. El candidato se va a comparar con lo que cobra hoy y con lo que cree que podría conseguir en el mercado externo; tú vas a intentar aplicar las pautas internas de retribución, que pueden estar comparadas con fuentes externas o no estarlo.",
+    "Paga a la gente según su desempeño, con este aviso: en el mercado de trabajo no existen las gangas, es fácil pagar de menos y pagar de más, no puedes intentar llevártelos baratos porque querrán irse a otro sitio, y no puedes ofrecerles demasiado dinero porque otros se enterarán y se enfadarán.",
+    "Ata la retribución variable al desempeño de la persona contra la tarjeta de puntuación. La tarjeta define el desempeño A y da métricas objetivas para vigilarlo, así que ligar los bonos al logro de la tarjeta asegura que solo pagas retribución de primera cuando obtienes desempeño de primera."
+  ],
+  "entregable_esperado": "Una propuesta económica que el candidato entiende y que ya está atada al logro de la tarjeta de puntuación, y no un número suelto lanzado para tapar un hueco.",
+  "nodos_previos": [
+    "abordar_cinco_efes_venta"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando estás vendiendo el puesto al candidato elegido y toca atender la cuarta área, la fortuna, dentro de abordar las cinco áreas de la venta. Tarde o temprano se activa siempre, porque la retribución acaba entrando en la ecuación."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "El dinero rara vez es lo que más motiva a un buen candidato: puede desanimar si es bajo o si no está ligado al desempeño, pero una subida de hoy suele estar olvidada mañana, y si solo tienes retribución que ofrecer, vas mal. Aun así, la paga acabará en la mesa, y ahí conviene mostrar cómo se recompensaría a la persona, sabiendo que ella se compara con lo que cobra y con lo que cree valer fuera. En el mercado de trabajo es fácil pagar de menos o de más; pagar por desempeño y atar los bonos a la tarjeta de puntuación asegura que solo pagas lo mejor cuando obtienes lo mejor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "107-119"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: 'can be a disincentive' y 'is usually forgotten' (l.109) quedaron en 'desanima' y 'se olvida'; 'evita pagar de menos o de más' atribuye al pago por desempeño un efecto que no tiene. La propuesta devuelve 'puede' y 'suele', pone la facilidad de pagar mal como hecho del mercado (l.115) y el 'asegura' es literal (l.119).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)"
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No tires dinero al candidato para cerrar. La investigacion dice que el dinero puede ser un desincentivo si es demasiado bajo o si no esta ligado al desempeño, pero rara vez es el motivador clave, y una subida que se da hoy suele estar olvidada mañana. Si todo lo que tienes que vender es la retribucion, eso no es bueno.",
+      "texto_nuevo": "No tires dinero al candidato para cerrar. La investigación dice que el dinero puede ser un desincentivo si es demasiado bajo o si no está ligado al desempeño, pero rara vez es el motivador clave, y una subida que se da hoy suele estar olvidada mañana. Si todo lo que tienes que vender es la retribución, eso no es bueno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tampoco lo ignores. La retribucion va a entrar en la ecuacion tarde o temprano, y puedes aprovecharlo demostrandole como seria recompensado si se incorporase a tu empresa.",
+      "texto_nuevo": "Tampoco lo ignores. La retribución va a entrar en la ecuación tarde o temprano, y puedes aprovecharlo demostrándole cómo sería recompensado si se incorporase a tu empresa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con los dos mercados que fijan el nivel de la paga. El candidato se va a comparar con lo que cobra hoy y con lo que cree que podria conseguir en el mercado externo; tu vas a intentar aplicar las pautas internas de retribucion, que pueden estar comparadas con fuentes externas o no estarlo.",
+      "texto_nuevo": "Cuenta con los dos mercados que fijan el nivel de la paga. El candidato se va a comparar con lo que cobra hoy y con lo que cree que podría conseguir en el mercado externo; tú vas a intentar aplicar las pautas internas de retribución, que pueden estar comparadas con fuentes externas o no estarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Paga a la gente sobre una base de desempeño. Es el consejo de Ed Liddy, presidente de Allstate, y viene con su aviso: en el mercado de trabajo no existen las gangas, es facil pagar de menos y pagar de mas, no puedes intentar robarlos porque querran irse a otro sitio, y no puedes tirarles demasiado dinero porque otros se enteraran y se enfadaran.",
+      "texto_nuevo": "Paga a la gente según su desempeño, con este aviso: en el mercado de trabajo no existen las gangas, es fácil pagar de menos y pagar de más, no puedes intentar llevártelos baratos porque querrán irse a otro sitio, y no puedes tirarles demasiado dinero porque otros se enterarán y se enfadarán.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "Es el consejo de Ed Liddy, presidente de Allstate, y viene con su aviso"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ata la retribucion variable al desempeño de la persona contra la tarjeta de puntuacion. La tarjeta define el desempeño A y da metricas objetivas para vigilarlo, asi que ligar los bonos al logro de la tarjeta asegura que solo pagas retribucion de primera cuando obtienes desempeño de primera.",
+      "texto_nuevo": "Ata la retribución variable al desempeño de la persona contra la tarjeta de puntuación. La tarjeta define el desempeño A y da métricas objetivas para vigilarlo, así que ligar los bonos al logro de la tarjeta asegura que solo pagas retribución de primera cuando obtienes desempeño de primera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una propuesta economica que el candidato entiende y que ya esta atada al logro de la tarjeta de puntuacion, y no un numero suelto lanzado para tapar un hueco.",
+      "texto_nuevo": "Una propuesta económica que el candidato entiende y que ya está atada al logro de la tarjeta de puntuación, y no un número suelto lanzado para tapar un hueco.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_fortuna_candidato-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando estas vendiendo el puesto al candidato elegido y toca atender la cuarta de las cinco efes, la fortuna, dentro de abordar las cinco efes de la venta. Tarde o temprano se activa siempre, porque el libro dice que la retribucion acaba entrando en la ecuacion.",
+      "texto_nuevo": "Cuando estás vendiendo el puesto al candidato elegido y toca atender la cuarta de las cinco efes, la fortuna, dentro de abordar las cinco efes de la venta. Tarde o temprano se activa siempre, porque la retribución acaba entrando en la ecuación.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-vender_fortuna_candidato-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando estás vendiendo el puesto al candidato elegido y toca atender la cuarta de las cinco efes, la fortuna, dentro de abordar las cinco efes de la venta. Tarde o temprano se activa siempre, porque la retribución acaba entrando en la ecuación.",
+      "texto_nuevo": "Cuando estás vendiendo el puesto al candidato elegido y toca atender la cuarta área, la fortuna, dentro de abordar las cinco áreas de la venta. Tarde o temprano se activa siempre, porque la retribución acaba entrando en la ecuación.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de las cinco efes",
+          "las cinco efes de la venta"
+        ]
+      },
+      "decision": "pase de glosario (cinco_efes): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_fortuna_candidato-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No tires dinero al candidato para cerrar. La investigación dice que el dinero puede ser un desincentivo si es demasiado bajo o si no está ligado al desempeño, pero rara vez es el motivador clave, y una subida que se da hoy suele estar olvidada mañana. Si todo lo que tienes que vender es la retribución, eso no es bueno.",
+      "texto_nuevo": "No intentes cerrar la contratación a base de ofrecerle más dinero al candidato. La investigación dice que el dinero puede ser un desincentivo si es demasiado bajo o si no está ligado al desempeño, pero rara vez es el motivador clave, y una subida que se da hoy suele estar olvidada mañana. Si todo lo que tienes que vender es la retribución, eso no es bueno.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "No tires dinero al candidato para cerrar."
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'throw money at a hire'; en español 'tirar dinero' es malgastarlo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_fortuna_candidato-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paga a la gente según su desempeño, con este aviso: en el mercado de trabajo no existen las gangas, es fácil pagar de menos y pagar de más, no puedes intentar llevártelos baratos porque querrán irse a otro sitio, y no puedes tirarles demasiado dinero porque otros se enterarán y se enfadarán.",
+      "texto_nuevo": "Paga a la gente según su desempeño, con este aviso: en el mercado de trabajo no existen las gangas, es fácil pagar de menos y pagar de más, no puedes intentar llevártelos baratos porque querrán irse a otro sitio, y no puedes ofrecerles demasiado dinero porque otros se enterarán y se enfadarán.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no puedes tirarles demasiado dinero"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'throw too much money at them'.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vende la Fortuna, no el Dinero",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

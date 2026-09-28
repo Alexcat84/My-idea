@@ -1,0 +1,274 @@
+{
+  "node_id": "situar_transicion_cuatro_caminos",
+  "fase_proyecto": "ideacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Situar tu transición a directivo en uno de los cuatro caminos",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Nombrar por qué camino llegaste a dirigir sirve porque, según cada llegada, pueden resultarte fáciles o difíciles cosas distintas en los primeros tres meses. Como aprendiz, diriges una parte del equipo creciente de tu jefe; como pionero, fundaste un grupo y ahora respondes de su crecimiento; como jefe nuevo, entras a un equipo ya hecho; como sucesor, ocupas el lugar de tu jefe que se va. Saber cuál es el tuyo te ayuda a prever qué puede resultarte fácil y qué difícil. Lo que más oye una directiva de los directivos nuevos que se le incorporan es que hay tanto por aprender que abruma.",
+  "notas_extraccion": "Es la cabeza de la serie con la que se ordena el capitulo entero de los primeros tres meses: cuatro caminos nombrados uno a uno por el libro, cada uno con su definicion en una linea, y cada uno desarrollado despues en su propia seccion con dos apartados fijos, lo que hay que aprovechar y lo que hay que vigilar. El libro dice de que sirve la clasificacion antes de darla, que segun el camino seran faciles o dificiles cosas distintas, y cierra invitando a elegir la propia aventura. Las dos preguntas del ultimo paso son las que abren el capitulo, y el libro da la respuesta mas comun a la primera: hay tantisimo que aprender que te sientes desbordado, o como se lo cito un directivo leyendo un cartel de la pared, cada dia parece una semana. Lo que el libro NO dice, y por eso no esta escrito aqui, es que hacer cuando tu llegada mezcla dos de los cuatro caminos, ni cuanto dura de verdad la transicion, mas alla de que al cabo de tres meses el dia a dia empieza a resultar familiar.",
+  "pasos_accionables": [
+    "Sea cual sea el camino por el que has llegado a tu puesto nuevo, toca felicitarte, porque esto sí es cierto: alguien, y lo más probable es que mucha gente, creyó en ti y en tu potencial para dirigir un equipo.",
+    "Mira cuál de los cuatro caminos fue el tuyo, porque lo más probable es que fuera uno de estos cuatro.",
+    "Aprendiz: el equipo de tu jefe está creciendo, así que te han pedido que dirijas una parte de él a partir de ahora.",
+    "Pionero: eres miembro fundador de un grupo nuevo y ahora respondes de su crecimiento.",
+    "Jefe nuevo: entras a dirigir un equipo ya establecido, sea dentro de tu organización actual o en otra.",
+    "Sucesor: tu jefe ha decidido marcharse y ocupas su lugar.",
+    "Según sea tu camino, puede que te resulten fáciles o difíciles cosas distintas en tus primeros tres meses: fíjate en el tuyo para saber qué esperar.",
+    "Y si eres tú quien recibe a un directivo nuevo en tu equipo, dos buenas preguntas al cabo de unos meses son qué ha resultado ser más difícil de lo que esperaba y qué ha sido más fácil de lo que esperaba."
+  ],
+  "entregable_esperado": "Tu camino identificado entre los cuatro, y con él la lista de lo que te toca aprovechar y lo que te toca vigilar en tus primeros tres meses.",
+  "nodos_previos": [
+    "responder_tres_preguntas_vocacion_directiva"
+  ],
+  "nodos_siguientes": [
+    "transitar_aprendiz_primeros_meses",
+    "transitar_pionero_equipo_nuevo",
+    "transitar_jefe_nuevo_equipo_establecido",
+    "transitar_sucesor_equipo_entero"
+  ],
+  "condiciones_activacion": [
+    "Cuando acabas de llegar a un puesto de dirección de equipo, por el camino que sea, y tienes por delante los primeros tres meses sin saber qué te va a resultar fácil y qué difícil."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Nombrar por qué camino llegaste a dirigir sirve porque cada llegada trae ventajas y riesgos distintos en los primeros tres meses. Como aprendiz, diriges una parte del equipo de tu jefe que crece; como pionero, fundaste un grupo y ahora respondes de su crecimiento; como jefe nuevo, entras a un equipo ya hecho; como sucesor, ocupas el lugar de tu jefe que se va. Saber cuál es el tuyo te dice qué te resultará fácil y qué difícil, y te prepara contra la sensación más común del comienzo: tanto por aprender que cada día parece una semana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "17-35"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)"
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Situar tu transicion a directivo en uno de los cuatro caminos",
+      "texto_nuevo": "Situar tu transición a directivo en uno de los cuatro caminos",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sea cual sea el camino por el que has llegado a tu puesto nuevo, toca felicitarte, porque esto si es cierto: alguien, y lo mas probable es que mucha gente, creyo en ti y en tu potencial para dirigir un equipo.",
+      "texto_nuevo": "Sea cual sea el camino por el que has llegado a tu puesto nuevo, toca felicitarte, porque esto sí es cierto: alguien, y lo más probable es que mucha gente, creyó en ti y en tu potencial para dirigir un equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira cual de los cuatro caminos fue el tuyo, porque lo mas probable es que fuera uno de estos cuatro.",
+      "texto_nuevo": "Mira cuál de los cuatro caminos fue el tuyo, porque lo más probable es que fuera uno de estos cuatro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprendiz: el equipo de tu jefe esta creciendo, asi que te han pedido que dirijas una parte de el a partir de ahora.",
+      "texto_nuevo": "Aprendiz: el equipo de tu jefe está creciendo, así que te han pedido que dirijas una parte de él a partir de ahora.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Jefe nuevo: entras a dirigir un equipo ya establecido, sea dentro de tu organizacion actual o en otra.",
+      "texto_nuevo": "Jefe nuevo: entras a dirigir un equipo ya establecido, sea dentro de tu organización actual o en otra.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Segun sea tu camino, te van a resultar faciles o dificiles cosas distintas en tus primeros tres meses: elige tu propia aventura y aprende que esperar.",
+      "texto_nuevo": "Según sea tu camino, te van a resultar fáciles o difíciles cosas distintas en tus primeros tres meses: elige tu propia aventura y aprende qué esperar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si eres tu quien recibe a un directivo nuevo en tu equipo, las dos preguntas favoritas de la autora al cabo de unos meses son que ha resultado ser mas dificil de lo que esperaba y que ha sido mas facil de lo que esperaba.",
+      "texto_nuevo": "Y si eres tú quien recibe a un directivo nuevo en tu equipo, dos buenas preguntas al cabo de unos meses son qué ha resultado ser más difícil de lo que esperaba y qué ha sido más fácil de lo que esperaba.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las dos preguntas favoritas de la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu camino identificado entre los cuatro, y con el la lista de lo que te toca aprovechar y lo que te toca vigilar en tus primeros tres meses.",
+      "texto_nuevo": "Tu camino identificado entre los cuatro, y con él la lista de lo que te toca aprovechar y lo que te toca vigilar en tus primeros tres meses.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-situar_transicion_cuatro_caminos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando acabas de llegar a un puesto de direccion de equipo, por el camino que sea, y tienes por delante los primeros tres meses sin saber que te va a resultar facil y que dificil.",
+      "texto_nuevo": "Cuando acabas de llegar a un puesto de dirección de equipo, por el camino que sea, y tienes por delante los primeros tres meses sin saber qué te va a resultar fácil y qué difícil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-situar_transicion_cuatro_caminos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nombrar por qué camino llegaste a dirigir sirve porque cada llegada trae ventajas y riesgos distintos en los primeros tres meses. Como aprendiz, diriges una parte del equipo de tu jefe que crece; como pionero, fundaste un grupo y ahora respondes de su crecimiento; como jefe nuevo, entras a un equipo ya hecho; como sucesor, ocupas el lugar de tu jefe que se va. Saber cuál es el tuyo te dice qué te resultará fácil y qué difícil, y te prepara contra la sensación más común del comienzo: tanto por aprender que cada día parece una semana.",
+      "texto_nuevo": "Nombrar por qué camino llegaste a dirigir sirve porque, según cada llegada, pueden resultarte fáciles o difíciles cosas distintas en los primeros tres meses. Como aprendiz, diriges una parte del equipo creciente de tu jefe; como pionero, fundaste un grupo y ahora respondes de su crecimiento; como jefe nuevo, entras a un equipo ya hecho; como sucesor, ocupas el lugar de tu jefe que se va. Saber cuál es el tuyo te ayuda a prever qué puede resultarte fácil y qué difícil. Lo que más se oye de quien empieza es que hay tanto por aprender que abruma.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 19, 35",
+        "frase": "Depending on your path, different things may be easy or hard for you in your first three months."
+      },
+      "decision": "auditoria completa M11 (matiz, invencion, voz): El libro dice que según el camino cosas distintas PUEDEN resultar fáciles o difíciles (no que cada llegada 'trae ventajas y riesgos'); no dice que conocer tu camino te prepare contra el agobio, y 'cada día parece una semana' es el cartel que citó un solo directivo, no la sensación general (lo más oído es que hay tanto por aprender que abruma). De paso se evita la forma vetada 'el equipo de'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "invencion",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-situar_transicion_cuatro_caminos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Según sea tu camino, te van a resultar fáciles o difíciles cosas distintas en tus primeros tres meses: elige tu propia aventura y aprende qué esperar.",
+      "texto_nuevo": "Según sea tu camino, puede que te resulten fáciles o difíciles cosas distintas en tus primeros tres meses: fíjate en el tuyo para saber qué esperar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 35",
+        "frase": "Depending on your path, different things may be easy or hard for you in your first three months."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): 'may be easy or hard' es posibilidad, no certeza; 'elige tu propia aventura' calca 'Choose your own adventure' y remite a secciones del libro que no están en el nodo.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-situar_transicion_cuatro_caminos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nombrar por qué camino llegaste a dirigir sirve porque, según cada llegada, pueden resultarte fáciles o difíciles cosas distintas en los primeros tres meses. Como aprendiz, diriges una parte del equipo creciente de tu jefe; como pionero, fundaste un grupo y ahora respondes de su crecimiento; como jefe nuevo, entras a un equipo ya hecho; como sucesor, ocupas el lugar de tu jefe que se va. Saber cuál es el tuyo te ayuda a prever qué puede resultarte fácil y qué difícil. Lo que más se oye de quien empieza es que hay tanto por aprender que abruma.",
+      "texto_nuevo": "Nombrar por qué camino llegaste a dirigir sirve porque, según cada llegada, pueden resultarte fáciles o difíciles cosas distintas en los primeros tres meses. Como aprendiz, diriges una parte del equipo creciente de tu jefe; como pionero, fundaste un grupo y ahora respondes de su crecimiento; como jefe nuevo, entras a un equipo ya hecho; como sucesor, ocupas el lugar de tu jefe que se va. Saber cuál es el tuyo te ayuda a prever qué puede resultarte fácil y qué difícil. Lo que más oye una directiva de los directivos nuevos que se le incorporan es que hay tanto por aprender que abruma.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_03.md 17-19",
+        "frase": "His answer was a variation on the most common thing I hear—there’s so much to learn and you feel overwhelmed."
+      },
+      "decision": "auditoria completa M11 (matiz): es lo que una directiva oye de los directivos nuevos de su equipo, contado como algo general; se cuenta como caso",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ubica tu Camino a Directivo"
+}

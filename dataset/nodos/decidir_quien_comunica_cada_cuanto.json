@@ -1,0 +1,314 @@
+{
+  "node_id": "decidir_quien_comunica_cada_cuanto",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Decidir quién necesita comunicarse con quién y cada cuánto, minimizando el coste de cada reunión",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona a tu cargo. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros visuales de tareas o pasear por la organización.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_11.md, unidad Cap. 8, Results. Sale de las lineas 15 a 35. ES LA PIEZA P1 DE LA FRONTERA DE cap_11 Y ES LA CABEZA DEL CAPITULO. POR QUE ES PROCEDIMIENTO Y NO ENTRADA, con D.27 delante: la linea 15 pone un mandato (decide who needs to communicate with whom and how frequently) Y SU PROPIO INVENTARIO DE OBJETOS A MINIMIZAR nombrados uno a uno (the duration, frequency and number of people required to attend), y las lineas 17 a 35 ponen el inventario de MEDIOS del capitulo entero, diez herramientas nombradas una a una. Escribir los pasos es transcribir esos dos inventarios. POR QUE NO ES UNA SERIE D.37 SINO D.29: el libro NO escribe la cuenta en ningun sitio. Enumera las diez sin decir cuantas son, y EXTRACTOR.md 15.6 dice que si el texto solo enumera sin decir cuantas esto NO es D.37 sino D.29, y la arista se declara igual pero con razon escrita que la sostenga. Las aristas van declaradas en docs/loop/REPORTE.md de la vuelta 22. UNA DISCREPANCIA DEL PROPIO LIBRO QUE DECLARO EN VEZ DE ARREGLARLA: el indice de la linea 29 dice Meeting-Free Zones y el rotulo de la seccion que le corresponde, en la linea 223, dice EXECUTION TIME. Transcribo el indice tal como esta en la linea 29 y dejo dicho aqui que el rotulo de la seccion es otro. No elijo por el libro. RELECTURA DE FIDELIDAD D.30 EN EL ACTO, paso a paso contra su linea: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. P1 a P5 de la linea 15; P6 de las lineas 17 a 35. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto es demasiada duracion, cada cuanto es demasiada frecuencia, cuantas personas son demasiadas, y en que orden se montan las diez herramientas. El libro pone el mandato de minimizar y NO pone el umbral, asi que cualquier cifra que yo escribiera ahi la escribiria yo.",
+  "pasos_accionables": [
+    "Asume como una de tus responsabilidades más importantes para que todo siga moviéndose sin roces: decidir quién necesita comunicarse con quién y con qué frecuencia.",
+    "Cuenta con lo que eso significa en la práctica: reuniones.",
+    "Cuenta también con que toda reunión tiene un coste significativo: el tiempo.",
+    "Minimiza por eso estas tres cosas: la duración, la frecuencia y el número de personas a las que hace falta que asistan.",
+    "Empieza por la más importante de todas estas reuniones: la reunión a solas con cada persona a tu cargo.",
+    "Y ten delante las herramientas para sacar cosas adelante juntos, que son las reuniones a solas, las reuniones de equipo, el tiempo para pensar, las reuniones de gran debate, las reuniones de gran decisión, las reuniones generales, las zonas libres de reuniones, los tableros visuales de tareas, pasear por la organización y ser consciente de la cultura."
+  ],
+  "entregable_esperado": "El mapa de quién se comunica con quién y cada cuánto, con cada reunión puesta con su duración, su frecuencia y el mínimo de personas a las que hace falta que asistan.",
+  "nodos_previos": [
+    "fijar_proceso_trabajo_equipo"
+  ],
+  "nodos_siguientes": [
+    "montar_reuniones_solas_mentalidad_frecuencia",
+    "conducir_reunion_equipo_agenda_tres_bloques",
+    "montar_reunion_gran_debate",
+    "montar_reunion_gran_decision",
+    "montar_reunion_general_presentaciones_preguntas",
+    "bloquear_tiempo_pensar_calendario",
+    "recorrer_rueda_conscientemente_cultura_equipo",
+    "montar_tablero_kanban_medir_actividades",
+    "pasear_organizacion_hallar_problemas_pequenios"
+  ],
+  "condiciones_activacion": [
+    "Cuando te toca decidir qué reuniones hay en tu equipo, quién va a cada una y cada cuánto, y quieres que la comunicación fluya sin que las reuniones se coman el tiempo de todos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona que te reporta directamente. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros kanban o pasear por la organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_11.md",
+          "lineas": "15-35"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: baranda voz_de_libro de la casa (scripts/censo_duplicacion.py): el impersonal reflexivo o el sujeto en tercera con deber pasa a tu o a forma directa; el sentido no cambia; y 'cada persona que te reporta' (calco del ingles) pasa a 'cada persona a tu cargo', como en el glosario del pack; pase de matices (causa): La objeción se sostiene en su parte principal: que tener el repertorio a la vista 'permite elegir la que toca en cada caso' es un efecto que la línea 15 no da. La propuesta conserva la única razón que da la línea (el coste de tiempo obliga a recortar duración, frecuencia y asistentes), nombra la reunión a solas como la más importante y mide 577.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)"
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decidir quien necesita comunicarse con quien y cada cuanto, minimizando el coste de cada reunion",
+      "texto_nuevo": "Decidir quién necesita comunicarse con quién y cada cuánto, minimizando el coste de cada reunión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asume como una de tus responsabilidades mas importantes para que todo siga moviendose sin roces: decidir quien necesita comunicarse con quien y con que frecuencia.",
+      "texto_nuevo": "Asume como una de tus responsabilidades más importantes para que todo siga moviéndose sin roces: decidir quién necesita comunicarse con quién y con qué frecuencia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que eso significa en la practica, y el texto lo dice en dos palabras: reuniones.",
+      "texto_nuevo": "Cuenta con lo que eso significa en la práctica: reuniones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el texto lo dice en dos palabras"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta tambien con que toda reunion viene con un coste significativo, que el texto nombra: el tiempo.",
+      "texto_nuevo": "Cuenta también con que toda reunión viene con un coste significativo: el tiempo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Minimiza por eso las tres cosas que el texto nombra una a una: la duracion, la frecuencia y el numero de personas a las que hace falta que asistan.",
+      "texto_nuevo": "Minimiza por eso estas tres cosas: la duración, la frecuencia y el número de personas a las que hace falta que asistan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las tres cosas que el texto nombra una a una"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza por la que el texto llama la mas importante de todas estas reuniones: la reunion a solas con cada persona que te reporta directamente.",
+      "texto_nuevo": "Empieza por la más importante de todas estas reuniones: la reunión a solas con cada persona que te reporta directamente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la que el texto llama"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y ten delante las herramientas que el texto enumera para sacar cosas adelante juntos, que son las reuniones a solas, las reuniones de equipo, el tiempo para pensar, las reuniones de gran debate, las reuniones de gran decision, las reuniones generales, las zonas libres de reuniones, los tableros kanban, pasear por la organizacion y ser consciente de la cultura.",
+      "texto_nuevo": "Y ten delante las herramientas para sacar cosas adelante juntos, que son las reuniones a solas, las reuniones de equipo, el tiempo para pensar, las reuniones de gran debate, las reuniones de gran decisión, las reuniones generales, las zonas libres de reuniones, los tableros visuales de tareas, pasear por la organización y ser consciente de la cultura.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto enumera",
+          "tableros kanban"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El mapa de quien se comunica con quien y cada cuanto, con cada reunion puesta con su duracion, su frecuencia y el minimo de personas a las que hace falta que asistan.",
+      "texto_nuevo": "El mapa de quién se comunica con quién y cada cuánto, con cada reunión puesta con su duración, su frecuencia y el mínimo de personas a las que hace falta que asistan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_quien_comunica_cada_cuanto-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te toca decidir que reuniones hay en tu equipo, quien va a cada una y cada cuanto, y quieres que la comunicacion fluya sin que las reuniones se coman el tiempo de todos.",
+      "texto_nuevo": "Cuando te toca decidir qué reuniones hay en tu equipo, quién va a cada una y cada cuánto, y quieres que la comunicación fluya sin que las reuniones se coman el tiempo de todos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-decidir_quien_comunica_cada_cuanto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona que te reporta directamente. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros kanban o pasear por la organización.",
+      "texto_nuevo": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona a tu cargo. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros kanban o pasear por la organización.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que te reporta directamente"
+        ]
+      },
+      "decision": "pase de glosario (reporta): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-decidir_quien_comunica_cada_cuanto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza por la más importante de todas estas reuniones: la reunión a solas con cada persona que te reporta directamente.",
+      "texto_nuevo": "Empieza por la más importante de todas estas reuniones: la reunión a solas con cada persona a tu cargo.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que te reporta directamente"
+        ]
+      },
+      "decision": "pase de glosario (reporta): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_quien_comunica_cada_cuanto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona a tu cargo. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros kanban o pasear por la organización.",
+      "texto_nuevo": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona a tu cargo. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros visuales de tareas o pasear por la organización.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "kanban"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Término extranjero crudo; el paso del propio nodo ya dice \"tableros visuales de tareas\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_quien_comunica_cada_cuanto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta también con que toda reunión viene con un coste significativo: el tiempo.",
+      "texto_nuevo": "Cuenta también con que toda reunión tiene un coste significativo: el tiempo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "viene con"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"viene con un coste\" calca \"comes with a cost\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Decide Quién Habla con Quién",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

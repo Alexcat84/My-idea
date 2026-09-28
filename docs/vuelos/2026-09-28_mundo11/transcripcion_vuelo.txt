@@ -1,0 +1,432 @@
+
+==============================================================================
+  VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
+==============================================================================
+BASE_URL: http://localhost:3000
+Fecha: 2026-09-27T21:12:53.770Z
+
+==============================================================================
+  FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material
+==============================================================================
+OK: numero inyectado (4500) detectado como huerfano -- contexto: "alas, podrias llegar a vender 4500 unidades el proximo trimestre"
+Autenticado como dev user.
+
+==============================================================================
+  FASE 1: organizer (capa gratuita) -- idea del sonar para ciegos
+==============================================================================
+project_id: f6262e7e-cf93-4cd3-bc38-7db927ce02ad
+costo_usd: 0.004181
+tiempo: 7215ms
+--- markdown (primeras 500 chars) ---
+# Organizador de tu idea
+
+**En una frase:** Aplicación con tecnología sonar para que personas ciegas se orienten mediante alertas sonoras en tiempo real
+
+**Etapa detectada:** ideacion
+
+## Lo que ya tienes claro
+- Existe un problema de movilidad y orientación para personas ciegas
+- La tecnología sonar y las alertas sonoras son un medio viable para solucionarlo
+- El formato es una aplicación digital
+
+## Lo que estás asumiendo sin saberlo
+- Que las personas ciegas quieren recibir información princi
+  voz OK (sin guiones largos): organizer (sonar)
+
+==============================================================================
+  FASE 1b: organizer con idea larga multi-dominio (regresion tope de tokens)
+==============================================================================
+largo del texto: 1237 chars
+project_id: 1b782c9c-758e-4b9e-90b0-a2b41b3b3126
+costo_usd: 0.006169
+tiempo: 9142ms
+  voz OK (sin guiones largos): organizer (idea larga, markdown)
+  voz OK (sin guiones largos): organizer (idea larga, data)
+OK -- frase: "Una plataforma SaaS que automatiza auditorías HSEQ (calidad, ambiente, seguridad) permitie..."
+
+==============================================================================
+  FASE 2: sesion completa de macetas de cemento (HTTP + SSE)
+==============================================================================
+Entrada inicial: "Hago y vendo macetas de cemento decorativas, ya tengo ventas reales por Instagram, pero no se si el precio que cobro de verdad me deja ganancia."
+project_id: 5e412273-9eee-4071-a4fe-ffd555d0daea, session_id: f4f51e46-e24f-4b1e-8501-687180ec07d1
+
+[turno 1] PREGUNTA: Para saber si de verdad ganas dinero, primero necesito entender: ¿cuanto te cuesta en materiales y tiempo hacer cada maceta, y a que precio la vendes en Instagram?
+[turno 1] RESPUESTA: Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.
+
+[turno 2] PREGUNTA: Entiendo que vendes a tiendas y por Instagram. Para calcular tu ganancia real, necesito los números: ¿cuánto te cuesta en materiales y tiempo cada maceta, y a qué precio la vendes?
+[turno 2] RESPUESTA: Cobro por pieza pero no he calculado bien cuanto me cuesta en minutos y materiales hacer cada maceta.
+  nodos nuevos: undefined [salto]
+
+[turno 3] PREGUNTA: Lo que necesitas ahora es hacer esa cuenta de una vez. ¿Cuánto gastas en cemento, colorantes, moldes y otros materiales por maceta, y cuánto tiempo te toma desde que empiezas a mezclar hasta que termina lista para vender?
+[turno 3] RESPUESTA: Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.
+
+[turno 4] PREGUNTA: Bien, tienes 15 ventas reales en dos meses. Ahora: de esas 15 macetas que vendiste, ¿a qué precio las vendiste y cuánto dinero gastaste en materiales para hacerlas?
+[turno 4] RESPUESTA: Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.
+  nodos nuevos: undefined [salto]
+
+[turno 5] PREGUNTA: Tu preocupación es clara y real. Para resolverla necesito que hagas una cuenta concreta: toma una maceta que vendiste recientemente, dime exactamente cuánto dinero recibiste por ella y cuánto gastaste en cemento, colorantes y otros materiales para hacerla.
+[turno 5] RESPUESTA: Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.
+
+[turno 6] PREGUNTA: Bien, entonces cada maceta te cuesta 68 en materiales y te toma dos horas en total. Ahora: ¿a qué precio la vendes, y es el mismo precio tanto para la tienda de plantas como para los clientes que compran directo por Instagram?
+[turno 6] RESPUESTA: Valoro mi hora de trabajo en unos 17, aunque nunca lo habia puesto en numeros asi.
+  nodos nuevos: undefined [conversado]
+
+[turno 7] PREGUNTA: Acabas de poner en números lo que nunca habías visto claro: $68 en materiales, dos horas a $17 cada una, eso suma $102 de costo solo para hacer una maceta. Ahora el dato que falta: ¿a cuánto la vendes?
+[turno 7] RESPUESTA: Las vendo en 85 cada una, mas o menos, dependiendo del tamano.
+  nodos nuevos: undefined [conversado]
+
+[turno 8] PREGUNTA: Aqui esta lo que acabas de descubrir: vendes a 85 pero te cuesta 102 producir cada maceta. Pierdes 17 por unidad. Eso explica por qué no sabes si ganas dinero: de verdad no estás ganando. Ahora viene lo importante: ¿que quieres hacer? ¿Subir el precio, bajar costos, o validar si la gente pagaria mas?
+[turno 8] RESPUESTA: Puedo hacer unas 10 a la semana trabajando en mis ratos libres, sin descuidar mi otro trabajo.
+
+[turno 9] PREGUNTA: Bien, 10 macetas a la semana en ratos libres. Eso significa 40 al mes, y a la velocidad actual de 15 en dos meses, estás vendiendo mucho menos de lo que podrías producir. Antes de decidir si subes precio o bajas costos: ¿ya le mostraste tu maceta a alguien que no sea amigo tuyo o cliente de Instagram, para saber si de verdad les interesa y qué piensan que vale?
+[turno 9] RESPUESTA: Tengo costos fijos como de 200 al mes: renta de un rincon del taller de un amigo y las herramientas que voy comprando.
+  nodos nuevos: undefined [salto]
+
+[turno 10] PREGUNTA: Ahora el cuadro es completo y es más grave de lo que parecía. Tienes $200 de costos fijos al mes, pierdes $17 por cada maceta que vendes, y solo vendes 7 o 8 al mes. Eso significa que estás perdiendo dinero cada mes: entre los costos fijos y la pérdida por unidad, ¿cuánto crees que estás perdiendo mensualmente en este momento?
+[turno 10] RESPUESTA: No he hablado con clientes de forma organizada, solo veo que la gente compra por Instagram, nunca les he preguntado directamente por que.
+  nodos nuevos: undefined [salto]
+
+[turno 11] PREGUNTA: Aqui esta el punto: estás perdiendo dinero cada mes sin saber por qué la gente compra ni si pagaria más. Antes de subir precio o cambiar algo, necesitas hablar con tus clientes de Instagram de verdad. Toma los tres ultimos que compraron: ¿quien son, que hacen, y por que eligieron tu maceta en lugar de otra que encontraron en Instagram?
+[turno 11] RESPUESTA: Mi plan es ir a mercados locales de fin de semana para validar si la gente las compra en persona, no solo en redes.
+  nodos nuevos: undefined [salto]
+
+[turno 12] PREGUNTA: Bien, los mercados de fin de semana es un test real. Pero antes de ir, necesitas saber qué validar exactamente: ¿irás solo a ver si se venden a ese precio de 85, o también probarás si la gente pagaría más si la maceta tiene algo diferente o especial?
+[turno 12] RESPUESTA: Si, tiene sentido, sigamos con lo que sigue.
+
+Interprete se detuvo tras 12 turno(s). tipo final: listo_para_plan
+costo acumulado hasta aqui: $0.1382
+
+==============================================================================
+  FASE 2b: ensamblando el plan (SSE streaming)
+==============================================================================
+....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+SSE: 1636 deltas de texto recibidos, 0 aviso(s), tiempo total: 117909ms
+evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
+costo_usd (sesion completa, incluye el plan): $0.3024
+--- plan generado (completo) ---
+_Plan completo_
+
+# Tus macetas de cemento: saber si el precio que cobras de verdad te deja ganar
+
+Ya tienes algo que muchos emprendedores no tienen: ventas reales, dos canales funcionando y claridad sobre tu costo real. Y también tienes un dato incómodo: producir cada maceta te cuesta $102 y la vendes a $85. Este plan parte de ese número concreto y te lleva, paso a paso, a convertir esa pérdida en una operación que sí cierre bien.
+
+---
+
+## Etapa 1: Pon todos tus costos sobre la mesa con claridad
+
+Ya calculaste los materiales y tu tiempo. Ahora necesitas ver el cuadro completo, porque hay costos que no entran en cada maceta individual pero sí afectan si ganas o pierdes al mes.
+
+**Pasos:**
+
+1. Anota todos los costos que pagas sin importar cuántas macetas vendas ese mes. En tu caso ya sabes que son $200 al mes (renta del espacio en el taller y herramientas). Escríbelos en una columna separada con la etiqueta "costos fijos mensuales".
+2. En otra columna, escribe los costos que sí cambian con cada maceta que produces: materiales ($68) y tu tiempo (2 horas a $17 la hora, es decir $34). Eso da $102 por unidad. Esta columna es tu "costo variable por maceta".
+3. Revisa si hay algo que olvidaste en alguna de las dos columnas: empaques, envíos, comisión que te queda a ti de la tienda de plantas, cualquier insumo adicional. Si la tienda de plantas te paga menos del precio que tú pones, la diferencia es un costo real: anótala.
+4. Separa los dos tipos de costos con claridad en una hoja simple con dos columnas: una para lo fijo y otra para lo variable por unidad. Esa separación es la base de todo lo que sigue.
+
+**Entregable:** Una hoja con dos columnas claras: costos fijos mensuales totales y costo variable real por maceta (materiales más tiempo más cualquier otro costo directo).
+
+**Primera acción:** Abre una hoja (papel o digital) y escribe dos títulos: "Costos fijos al mes" y "Costo por maceta". Pon los números que ya conoces en cada columna y deja un renglón en blanco para lo que aún debas verificar (como el margen que te queda del canal de la tienda de plantas).
+
+---
+
+## Etapa 2: Calcula cuánto necesitas vender para no perder, y cuánto para ganar
+
+Con los costos claros, puedes calcular el punto en que tus ventas cubren exactamente todo lo que gastas. Ese número te dice si tu operación actual tiene futuro con los precios actuales, o si algo tiene que cambiar.
+
+**Pasos:**
+
+1. Decide un precio de venta al que quieres llegar (o usa el actual de $85 como escenario base para ver qué pasa). Réstale el costo variable por maceta ($102 si el precio sigue igual, o el nuevo costo si ajustas algo). El resultado es tu margen de contribución por unidad: cuánto aporta cada maceta vendida a cubrir tus costos fijos. Con $85 de precio y $102 de costo, ese margen es negativo ($-17), lo que significa que vender más empeora la situación mientras el precio no cambie.
+2. Para que el margen de contribución sea positivo, el precio tiene que superar los $102. Prueba con $130 como escenario: $130 menos $102 da un margen de $28 por maceta.
+3. Con ese margen de contribución positivo, divide tus costos fijos mensuales ($200) entre ese margen por unidad. Si el margen fuera $28, necesitarías vender 8 macetas al mes solo para cubrir los costos fijos, sin ganar nada todavía. Cualquier maceta vendida por encima de esas 8 empieza a ser ganancia real.
+4. Compara ese número con tu capacidad real: produces hasta 40 macetas al mes pero vendes 7 o 8. ¿Puedes vender más si subes el precio? Esa es la pregunta que guía la siguiente etapa.
+5. Haz el mismo cálculo con al menos dos escenarios de precio (por ejemplo, $120 y $145) para ver cómo cambia el número de macetas que necesitas vender en cada caso.
+
+**Entregable:** Una tabla con al menos dos escenarios de precio, mostrando el margen de contribución por maceta y el número de unidades mensuales que necesitas vender para cubrir todos tus costos.
+
+**Primera acción:** Escribe en papel: "Si vendo a $[precio], mi margen por maceta es $[precio menos $102] y necesito vender $200 dividido entre ese margen para no perder." Haz ese cálculo con $120 y con $145 y anota los dos resultados.
+
+---
+
+## Etapa 3: Define un precio que sí funcione y pruébalo con clientes reales
+
+Saber el precio correcto en papel no es suficiente: necesitas saber si tus clientes reales lo aceptan. Tienes dos canales activos (Instagram y la tienda de plantas) y ya hay personas que compraron. Eso es una ventaja enorme para probar.
+
+**Pasos:**
+
+1. Elige el precio que tus números piden (el que te da un margen de contribución positivo y te acerca al punto de equilibrio con tu volumen de venta realista). Compáralo con lo que ves en productos similares de otros vendedores en Instagram o en mercados locales: ¿tu precio nuevo está dentro del rango, por encima o por debajo?
+2. Identifica qué hace a tus macetas distintas de las que se venden más baratas: el acabado, el diseño, el tamaño, el material. Eso es lo que justifica el precio ante el cliente, y tienes que poder decirlo en una sola frase cuando alguien pregunte.
+3. Con las 15 personas que ya te compraron, elige tres y escríbeles directamente (por Instagram o como tengas contacto) para preguntarles qué fue lo que las llevó a comprar tu maceta en lugar de otra. No les pidas opinión sobre el precio: pregunta por qué compraron. Lo que te digan te dice dónde está el valor real que perciben.
+4. Sube una publicación en Instagram con el precio nuevo (el que tus números necesitan) y observa durante dos semanas si el nivel de consultas cae mucho, se mantiene o incluso mejora. Define de antemano un criterio claro: si recibes menos de 2 consultas en esas dos semanas, el precio puede estar fuera del rango que tu audiencia acepta y necesitas ajustar. Si recibes 4 o más, el precio aguanta.
+5. Si planeas ir a mercados locales de fin de semana (como ya lo tienes en mente), úsalos también para probar el precio nuevo en persona. La reacción cara a cara de alguien que ve la maceta, pregunta el precio y decide en el momento te da información que Instagram no puede darte.
+
+**Entregable:** Un precio nuevo documentado con su justificación (qué lo hace viable en tus números y qué lo sostiene ante el cliente), y al menos dos semanas de datos sobre cómo responde tu audiencia actual a ese precio.
+
+**Primera acción:** Elige el precio que necesitas según tus cálculos de la etapa anterior, escribe en una sola línea por qué tus macetas valen ese precio (qué las diferencia), y publica en Instagram con ese precio y esa frase visible.
+
+---
+
+## Etapa 4: Conoce a quien te compra para vender más sin producir más
+
+Tienes capacidad para 40 macetas al mes y vendes menos de 8. El cuello de botella no es la producción: es cuántos clientes llegas a convencer. Para mejorar eso sin adivinar, necesitas entender quién compra y por qué.
+
+**Pasos:**
+
+1. Escribe lo que ya sabes sobre las 15 personas que te compraron: ¿las conociste por Instagram, llegaron por la tienda de plantas, o te buscaron directamente? ¿Compraron una sola vez o volvieron? Ese patrón ya existe en tu memoria y en tus mensajes: empieza por rescatarlo.
+2. Contacta directamente a tres de esas personas (las más accesibles) y hazles una sola pregunta concreta: "¿Para qué usas la maceta que te compraste?" No preguntes si les gustó (todos dirán que sí). Pregunta el uso real: dónde está puesta, si es para ellas o fue un regalo, si la combinaron con algo. Eso te dice el contexto real de compra.
+3. Con lo que aprendas, escribe una descripción breve de quién es tu comprador más probable: qué tiene en casa o en el espacio donde pondría la maceta, qué le importa del diseño, si compra para sí misma o para regalar. No necesitas que sea perfecta: es una hipótesis que vas a ir ajustando.
+4. Usa esa descripción para decidir a quién le hablas en tus publicaciones de Instagram y a quién te dirigirías en un mercado local de fin de semana. Un mensaje que le habla a alguien específico convierte mejor que uno que le habla a todo el mundo.
+
+**Entregable:** Una descripción de una sola página de tu comprador más probable: contexto de uso, motivación de compra (para ella o para regalar), y qué valora del producto, basada en lo que te digan personas reales que ya compraron.
+
+**Primera acción:** Abre tu historial de mensajes de Instagram y anota, para cada una de las 15 ventas, si el cliente llegó por Instagram, por la tienda de plantas o de otra forma. Con eso ya tienes el primer patrón real.
+
+---
+
+## Etapa 5: Ajusta lo que no funciona y decide si sigues o cambias algo
+
+Con el precio nuevo probado, los números calculados y más claridad sobre tu cliente, es el momento de revisar el conjunto y tomar decisiones sobre lo que sí conservas y lo que cambias.
+
+**Pasos:**
+
+1. Revisa tus dos canales actuales (Instagram y la tienda de plantas) con el precio nuevo encima de la mesa. Si la tienda de plantas revende tus macetas a un precio que les deja margen a ellos, verifica cuánto te pagan a ti: ese precio tiene que seguir siendo mayor a tu costo de $102 para que ese canal tenga sentido. Si no lo es, ese canal te cuesta dinero aunque parezca que vende.
+2. Evalúa el canal de mercados locales que ya planeabas probar: ¿el costo de ir (transporte, tiempo, cuota del puesto) queda cubierto con las ventas que esperas hacer ese día? Haz ese cálculo antes de ir, no después.
+3. Revisa si el volumen de ventas que necesitas (el que calculaste en la Etapa 2 para cubrir costos) es realista con tus canales actuales y el precio nuevo. Si no lo es, tienes dos palancas: subir el precio o bajar los costos (por ejemplo, negociando materiales en mayor cantidad).
+4. Toma una decisión concreta sobre cada canal: ¿sigue tal como está, cambia de condiciones, o lo pausas? Escríbela. Una decisión documentada es mejor que una duda que se repite cada mes.
+5. Haz este mismo ejercicio de revisión cada dos meses: costos, precio, volumen de ventas, canales. No lo hagas una sola vez y lo dejes fijo.
+
+**Entregable:** Una decisión documentada sobre cada canal activo (Instagram, tienda de plantas, mercados locales), con los números que la justifican, y un precio final que sabes que funciona tanto para tus costos como para tus clientes.
+
+**Primera acción:** Calcula cuánto te paga realmente la tienda de plantas por cada maceta que revende, réstale tus $102 de costo, y anota si ese canal te deja ganancia o pérdida por unidad.
+
+---
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Ya tienes datos reales encima de la mesa, no suposiciones. El problema que encontraste es concreto: vendes a $85 y produces a $102, lo que significa que cada maceta vendida te genera una pérdida de $17, y encima tienes $200 de costos fijos al mes que no dependen de cuánto vendas. Para que tu idea sea sostenible, hay cuatro números que necesitas tener claros al mismo tiempo:
+
+- **Costo variable por maceta:** lo que gastas en materiales y tu tiempo para producir una sola unidad. Ya lo sabes: $102 ($68 en materiales más $34 de tus 2 horas de trabajo). Si encuentras cómo bajar este número (por ejemplo, comprando materiales en mayor volumen), el margen mejora sin tocar el precio.
+- **Precio de venta real:** el precio al que el cliente paga, descontando cualquier margen que se quede la tienda de plantas o cualquier descuento que hayas dado. Ese es el ingreso real que entra a tu bolsillo por cada unidad. Necesitas que ese número sea mayor a $102 para que cada venta sume en lugar de restar.
+- **Margen de contribución por maceta:** la diferencia entre tu precio real y tu costo variable. Si vendes a $130 y produces a $102, ese margen es $28. Ese es el número que va acumulándose con cada venta para cubrir tus costos fijos.
+- **Macetas que necesitas vender al mes para no perder:** divides tus costos fijos ($200) entre el margen de contribución por maceta. Con un margen de $28, necesitas vender 8 macetas al mes solo para cubrir el espacio del taller y las herramientas. Lo que vendas por encima de esas 8 es ganancia real. Tienes capacidad de producir 40, así que el espacio para crecer existe: el reto es el precio y el volumen de ventas, no la producción.
+
+**Primera acción:** Abre una hoja con cuatro columnas: "costo por maceta", "precio de venta real", "margen por maceta" y "macetas para cubrir costos fijos". Pon el número que ya conoces en cada columna con el precio actual ($85) y repite el ejercicio con el precio que tus cálculos necesitan.
+
+==============================================================================
+  FASE 2c (Hotfix v2.2.2): verificando persistencia real de saltos semanticos
+==============================================================================
+saltos detectados en la ruta: undefined (hoja_estimacion_costos), undefined (validacion_hipotesis_ingresos), undefined (punto_equilibrio_unidades), undefined (arquetipos_de_cliente), undefined (eventos_offline_como_canal_traccion)
+  OK: project_nodes.tipo='salto' persistido correctamente para 'hoja_estimacion_costos'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'validacion_hipotesis_ingresos'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'punto_equilibrio_unidades'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'arquetipos_de_cliente'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'eventos_offline_como_canal_traccion'
+
+==============================================================================
+  FASE 2d (Fase 3.1): verificando la bitacora de decisiones (caja de vidrio)
+==============================================================================
+decision_turno persistidos: 13, con salto+score verificable: 5
+OK: los 5 saltos quedaron en la bitacora con su score de afinidad.
+OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).
+
+==============================================================================
+  FASE 2e (Fase 3.2): eventos del arbol == ruta persistida, 1:1 y en orden
+==============================================================================
+eventos del arbol (10): arte_de_las_finanzas[conversado] -> distincion_cogs_gastos_operativos[silencioso] -> margen_bruto[conversado] -> hoja_estimacion_costos[salto] -> validacion_hipotesis_ingresos[salto] -> sintesis_hipotesis_modelo_negocio[conversado] -> diseno_experimentos_pass_fail[conversado] -> punto_equilibrio_unidades[salto] -> arquetipos_de_cliente[salto] -> eventos_offline_como_canal_traccion[salto]
+ruta persistida  (10): arte_de_las_finanzas[conversado] -> distincion_cogs_gastos_operativos[silencioso] -> margen_bruto[conversado] -> hoja_estimacion_costos[salto] -> validacion_hipotesis_ingresos[salto] -> sintesis_hipotesis_modelo_negocio[conversado] -> diseno_experimentos_pass_fail[conversado] -> punto_equilibrio_unidades[salto] -> arquetipos_de_cliente[salto] -> eventos_offline_como_canal_traccion[salto]
+OK: el arbol que piensa muestra EXACTAMENTE la ruta persistida (misma secuencia, mismos modos).
+
+==============================================================================
+  FASE 2f (Fase 3.3): checklist -> PATCH -> follow -> plan seguimiento encadenado
+==============================================================================
+checklist derivado: 28 items en 5 etapa(s), dominio 'core'
+OK: estructura del checklist (1 destacado por etapa, al final; todos pendientes; resumen consistente).
+OK: 'Anota todos los costos que pagas sin importar cuán…' -> hecho (con nota); destacado etapa 1 -> en_proceso.
+OK: retirada 'En otra columna, escribe los costos que …' con motivo; activas=27, retiradas=1.
+OK: el expediente muestra la retirada aparte, con su motivo, y no como pendiente.
+OK: reactivación conserva historia en project_bitacora (retiro + reactivación).
+OK: estado fuera de CHECKLIST_ESTADO rechazado con 400.
+nodos cubiertos antes del follow: 35
+follow session_id: 2e33c315-7924-4c1d-ac3e-d7368e480e91, tipo primer turno: pregunta
+OK: puerta avanzada 'undefined' (clasificacion_leads_abc) fuera de lo ya cubierto.
+OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada aparte sin reproponerse).
+
+[seguimiento turno 1] PREGUNTA: Cuando alguien llega a hablar contigo después de haber visto tu sitio web o materiales, ¿qué tipo de conversación necesitas tener? ¿Hay personas que se quedan dando vueltas sin decidirse, o más bien lo que te falta es saber exactamente qué preguntas hacer en esas llamadas para entender realmente qué necesita el otro?
+[seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
+
+[seguimiento turno 2] PREGUNTA: Cuando miras tu cadena de suministro hoy, ¿dónde ves que se crean los mayores cuellos de botella o desajustes entre lo que realmente necesita el cliente y lo que estás produciendo o moviendo?
+[seguimiento turno 2] RESPUESTA: Vendo unas 12 macetas al mes por Instagram, y el proveedor nuevo me baja el cemento un 20%.
+
+listo_para_plan tras 2 turno(s) de seguimiento.
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+OK: plan persistido con etiqueta 'seguimiento' (7ca4d922-9a1c-43b3-b0a7-cb987d46e28f).
+OK: checklist encadenado (29 items nuevos del plan de seguimiento; hechos previos preservados).
+OK: el replan nace estimado -- 29/29 items del plan de seguimiento traen banda.
+
+==============================================================================
+  FASE 2g (Fase 3.5): mundos HSEQ -- el muro, el unlock y el ciclo
+==============================================================================
+OK: contrato 4.5 -- sin plan core el mundo no abre (409); el muro de pago 403 murió.
+OK: pack fuera del catalogo rechazado (404).
+OK: unlock de quality con 5 creditos (stub).
+OK: unlock idempotente (23505 absorbido).
+OK: fila persistida (creditos_pagados=0).
+world session: 481f709c-c25a-451f-be18-1528dbd32ad4, tipo: pregunta
+[mundo turno 1] Después de seguir estos 14 pasos, ¿qué es lo que más te preocupa ahora: que los errores sigan apareciendo porque la gente aún no cree que se puedan evitar, o que el momentum de mejora se pierda con el tiempo porque no hay una estructura que lo mantenga vivo?
+[mundo turno 2] Cuando dices que hay burbujas y acabados irregulares entre lotes, ¿eso te pasa en TODOS los lotes o solo en algunos?, ¿y ya identificaste en qué momento del proceso (mezcla, vertido, curado, desmolde) es donde aparecen?
+[mundo turno 3] Para atacar las burbujas y acabados irregulares, lo primero es saber exactamente cuándo y dónde ocurren: ¿podrías empezar a anotar en cada lote qué fecha hiciste, qué variables cambiaste (temperatura, tiempo de curado, técnica de vertido) y cuáles piezas salieron con defectos?
+[mundo turno 4] Antes de hornear, ¿hay algo en tu proceso de mezcla o vertido donde podrías ver de inmediato si algo no está bien (por ejemplo, si la mezcla tiene aire atrapado, si la temperatura es muy baja, o si quedó demasiado espesa)?
+[mundo turno 5] Cuando identificas que algo no está funcionando como debería en tu proyecto, ¿cómo te enteras normalmente y qué haces primero para entender qué pasó?
+OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 27 items).
+
+==============================================================================
+  FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital
+==============================================================================
+OK: 'exportacion' abre su preview gratis (200); el muro murió.
+OK: 'franquicias' abre su preview gratis (200); el muro murió.
+OK: unlock de seguridad_digital con 5 creditos (migracion 017 viva).
+world session: 8d8f5a43-18ef-4e16-985e-b924264c0aa9, tipo: pregunta
+[seguridad_digital turno 1] Cuando la revisión bimestral de la actividad #27 te lleve a incorporar un proveedor nuevo, una plataforma diferente o algún colaborador externo para manejar tus datos de ventas, costos o conversaciones con clientes, ¿cómo vas a asegurarte de que ese nuevo elemento cumpla con los mismos criterios de seguridad y privacidad que ya tienes definidos para tu operación actual?
+[seguridad_digital turno 2] Empecemos por lo que te urge en este momento: en tu actividad #6, cuando abras el historial de mensajes de Instagram para rastrear el origen de tus 15 ventas, ¿cuántos datos de clientes tienes ya guardados ahi y desde hace cuánto los estás almacenando de esa forma?
+[seguridad_digital turno 3] Entiendo que quieres ordenar tus números y tomar decisiones sobre cada parte del negocio. Cuando dices que quieres empezar ya, por donde prefieres arrancar: con los costos y el margen actualizado en la Etapa 1, o primero con el análisis de tus canales de venta en la Etapa 4?
+[seguridad_digital turno 4] Sin copias de seguridad, perder el celular significa perder todo: pedidos, contactos, datos de tus 15 clientes. Ese riesgo es real y urgente. Lo que propongo es resolver esto en paralelo a ordenar las contraseñas: primero, ¿dónde guardas ahora mismo esos datos del celular, solo en el teléfono, o hay algo en la nube, aunque sea accidental?
+[seguridad_digital turno 5] Si mañana perdieras acceso a tu cuenta de Instagram y con ella todo el historial que necesitas revisar en la actividad #6 para clasificar las 15 ventas por canal de origen, ¿tienes esos datos de esos clientes guardados en otro lugar (correo, papel, nube), o en este momento solo existen dentro de los mensajes de Instagram?
+OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con 22 items).
+
+==============================================================================
+  FASE 2g-ter (v1.4): Riesgos Bajo Control -- contrato 4.5 (sin muro, unlock gratis) + ciclo
+==============================================================================
+OK: risk_management sin muro de pago (contrato 4.5); el ciclo abajo prueba su preview.
+OK: unlock de risk_management (precio de catálogo 5, migracion 019 viva).
+world session: 5968ab69-11a2-41b6-bcd8-cb01e492539b, tipo: pregunta
+[risk_management brecha] primera pregunta (semilla del mapeo, cero LLM): De esos cuatro caminos para manejar un riesgo (evitar, transferir, reducir o retener), cuando piensas en decisiones como la que describes en la actividad #21 sobre cada canal de venta, ¿cuál de los cuatro aplicas casi por costumbre sin analizarlo, y cuál te gustaría aprender a usar mejor?
+[risk_management turno 1] De esos cuatro caminos para manejar un riesgo (evitar, transferir, reducir o retener), cuando piensas en decisiones como la que describes en la actividad #21 sobre cada canal de venta, ¿cuál de los cuatro aplicas casi por costumbre sin analizarlo, y cuál te gustaría aprender a usar mejor?
+[risk_management turno 2] Ahora mismo, tus tres mayores desafíos operativos son la resina que viene de un solo proveedor, los datos de clientes sin respaldo, e Instagram como único canal de ventas. De esos tres, ¿cuál crees que podría colapsar el negocio más rápido si falla?
+[risk_management turno 3] Si revisas todo lo que registraste en tus actividades de la Etapa 5, como costos, canales, márgenes y señales de alerta, ¿cuáles son los dos o tres eventos que, si ocurren, podrían romper el negocio aunque nunca los hayas puesto en palabras hasta ahora?
+[risk_management turno 4] Si el proveedor de resina sube precio o desaparece mañana, ¿cuánto tiempo y dinero necesitarías para encontrar otro proveedor, cambiar el proceso si es necesario, y seguir entregando a tus clientes sin perder la feria de agosto?
+[risk_management turno 5] En la actividad #27, donde revisas cada dos meses si cambió algo en costos, precio, volumen y canales: antes de que llegue esa revisión bimestral, ¿cuáles son las tres señales concretas que te dirían "el proveedor de cemento está a punto de cambiar precio" o "mis ventas por Instagram están bajando" antes de que ocurra? ¿Qué observarías o preguntarías semana a semana para verlas venir con tiempo?
+OK: ciclo completo del 7.o mundo (plan dominio=risk_management, checklist con 35 items).
+
+==============================================================================
+  FASE 2g-quater (mundo 11): Primer Equipo -- oculto, unlock gratis (048), su puerta y su plan
+==============================================================================
+OK: unlock de primer_equipo (precio de catalogo 5, migracion 048 viva, fila gratis).
+world session: efa3658e-be7a-4c37-ab51-94f6a305ecbd, tipo: pregunta
+[primer_equipo brecha] primera pregunta: Cuando pienses en la persona que necesitas para este puesto, ¿ya tienes claro en tu cabeza cuál es el propósito principal de ese rol, qué resultados concretos debería lograr, y cómo debería actuar para conseguirlos, o todavía hay partes de eso que no tienes bien definidas?
+  voz OK (sin guiones largos): primera pregunta de primer_equipo
+[primer_equipo turno 1] Cuando pienses en la persona que necesitas para este puesto, ¿ya tienes claro en tu cabeza cuál es el propósito principal de ese rol, qué resultados concretos debería lograr, y cómo debería actuar para conseguirlos, o todavía hay partes de eso que no tienes bien definidas?
+  voz OK (sin guiones largos): pregunta 1 de primer_equipo
+[primer_equipo turno 2] Ya que acabas de contratar a esos dos primeros y veas que terminas rehaciendo el trabajo, ¿qué es lo que pasa cuando les señalas que algo no salió bien: evitas hacerlo, o lo haces pero después terminas arreglándolo tu mismo de todas formas?
+  voz OK (sin guiones largos): pregunta 2 de primer_equipo
+[primer_equipo turno 3] Cuando algo sale mal en el taller, ¿qué te pasa en la cabeza: que si no lo arreglas tu mismo se va a desmoronar todo, o que si ellos no lo resuelven solos nunca van a aprender?
+  voz OK (sin guiones largos): pregunta 3 de primer_equipo
+[primer_equipo turno 4] Cuando piensas en la próxima persona que necesitas traer a tu equipo, ¿qué es lo que más te preocupa en este momento: tener claro exactamente qué resultados esperas que logre, encontrar a los candidatos adecuados, elegir bien entre quienes ya tienes identificados, o hacer que la persona que escojas realmente quiera venir a trabajar contigo?
+  voz OK (sin guiones largos): pregunta 4 de primer_equipo
+[primer_equipo turno 5] Cuando les dices a tus dos empleados que algo salió mal, ¿qué información les das: solo el error que viste, o también qué esperabas que hicieran distinto y por qué te importa?
+  voz OK (sin guiones largos): pregunta 5 de primer_equipo
+[primer_equipo turno 6] Cuando alguien valioso en tu proyecto te dice que se quiere ir, y tu escuchas de verdad hasta encontrar la razón real detrás de esa decisión, ¿qué tan lejos estás dispuesto a llegar para retenerlo: hablarías con tu propio jefe, buscarías cambiarle el rol, conseguirías presupuesto para mejorar su situación, o ya sabes que hay cosas en tu alcance que podrías mover?
+  voz OK (sin guiones largos): pregunta 6 de primer_equipo
+  voz OK (sin guiones largos): plan de primer_equipo
+  sin titulos ni autores de libros en el plan: OK
+OK: ciclo completo del mundo 11 (6 turnos, plan dominio=primer_equipo, checklist con 29 items).
+
+==============================================================================
+  FASE 2h (Fase 3.6): contrato de la UI -- /api/idea con unlocks, mundos e historial
+==============================================================================
+OK: unlocks = ["exportacion","franquicias","primer_equipo","quality","risk_management","seguridad_digital"] (fila real de project_unlocks).
+OK: historial con 1 plan(es) core anteriores, releibles.
+OK: el plan de la vista es el ultimo CORE (los planes de mundos no lo tapan).
+OK: seccion de mundo quality con su plan.
+OK: grupo vigente = ultimo cronologico (la pantalla Manos a la Obra pinta el checklist correcto).
+
+==============================================================================
+  FASE 2i (Fase 3.8): el sentido del tiempo -- modo, timeline real, baseline, analisis, celebracion
+==============================================================================
+OK: modo del camino = 'ritmo' (persistido).
+OK: timeline real -- completed_at pasado persistido (para todos, sin fechas base).
+OK: analisis a-mi-ritmo -- capa universal sola (acciones=2, cumplimiento=null).
+OK: modo del camino = 'fechas'.
+OK: linea base sellada (3 fechas, baseline_confirmada_at=2026-09-27T21:29:37.088Z).
+OK: analisis con cumplimiento -- 1 a tiempo, 1 adelantadas, 1 tardias (calculado de lo persistido).
+OK: realizada -> celebracion (timeline de 12 hitos con acciones y REALIZADA).
+OK: reabrir puso realizada_at a null (la idea vuelve a estar viva).
+OK: empaquetado -- la S cae en la semana 1 y la XL en la 4 (misma etapa, capacidad 5-10).
+OK: tuberia del calendario -- el .ics exporta las fechas EMPAQUETADAS tal cual, con UID estable.
+
+==============================================================================
+  FASE 2j (Fase 4.0): el bucle de tracking -- bloque de realidad, dos ciclos, y el acta
+==============================================================================
+OK: el BLOQUE DE REALIDAD llego al motor con cumplimiento (modo fechas), auditable en la bitacora.
+OK: el plan de seguimiento asume la desviacion SIN regañar (cero frases prohibidas).
+OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).
+OK: el plan del ciclo a-mi-ritmo no juzga contra fechas que el usuario no tiene.
+Sembrado para el acta: 17 de 23 acciones hechas (~75%).
+OK: acta de cierre -- cerrado al 74% (17 de 23); motivo en analisis + celebracion + informe; los 6 pendientes quedaron intactos.
+OK: reabrir NO borro el motivo; la bitacora conserva la secuencia (4 eventos 'realizada').
+
+==============================================================================
+  FASE 2k (Fase 4.1): paridad de mundos -- fechas, cumplimiento por dominio y follow limpio
+==============================================================================
+OK: punto de partida -- baseline core confirmada y modo 'fechas'.
+OK: 'health_safety' activado y explorado DESPUES de la baseline core.
+OK: los 29 items de 'health_safety' nacen SIN fecha base (post-baseline).
+OK: los items del MUNDO reciben fecha base por el ritual del proyecto (V3a).
+OK: 3 items del mundo completados con fechas conocidas (1 a tiempo, 1 tardia, 1 adelantada).
+OK: Analisis con desglose por dominio -- health_safety: 1 a tiempo, 1 adelantadas, 1 tardias (conteos a mano); core aparte con 1.
+OK: el follow core compone con items CORE aunque los del mundo sean los mas recientes (V4).
+
+==============================================================================
+  FASE 2L (Fase 4.2): el mundo como subproyecto -- su seguimiento, su cumplimiento y su cierre
+==============================================================================
+OK: desviacion sembrada en los items de 'health_safety' -- a mano queda 1 a tiempo, 1 adelantada, 3 tardias (de 5).
+OK: el Analisis cuenta el cumplimiento del mundo con los conteos a mano (1/1/3 de 5, +4.8 dias).
+
+==============================================================================
+  VUELO FALLIDO
+==============================================================================
+Error: el bloque no lleva el cumplimiento DEL MUNDO calculado a mano: Desde el último plan, este es mi avance real:
+HECHO (5):
+- Haz una caminata de 20 minutos por tu área de trabajo y anota en papel o celular todo lo que podría lastimarte: polvo de cemento en el aire, aditivos o resinas sin ficha de segu…
+- Para cada peligro que anotes, escribe dos números del 1 al 3: qué tan grave sería el daño si ocurre (1 = molestia, 2 = lesión seria, 3 = daño permanente o muerte) y qué tan prob…
+- Haz la misma caminata con tus dos empleados, aunque dure solo 10 minutos extra: ellos ven peligros que tú ya no notas porque te acostumbraste.
+- Ordena tu lista de mayor a menor producto.
+- Documenta con fotos o video cada peligro crítico: eso te da evidencia para corregirlo y para mostrársela a tus empleados cuando les expliques por qué cambiarán algo.
+SIN EMPEZAR (24):
+- Abre una hoja en blanco (papel o celular), camina tu área de trabajo y anota los tres primeros peligros que veas, con su nivel de gravedad y probabilidad, antes de hacer cualqui…
+- La medida provisional que entra hoy: compra o consigue este mismo día una mascarilla con filtro N95 o equivalente en tu país, y guantes de nitrilo o látex resistentes.
+- Revisa las fichas de seguridad (SDS) del cemento y de la resina que usas.
+- Elige el respirador definitivo: debe ser aprobado por el organismo de certificación de tu país (NIOSH si trabajas bajo estándar estadounidense, o su equivalente local) y compati…
+- Para reducir el polvo en el origen, antes de que llegue a los pulmones, evalúa si puedes mezclar en húmedo en vez de en seco, o si puedes cubrir el área de mezcla con una lona m…
+- Anota en una hoja qué nivel de protección tienes hoy (mascarilla provisional) versus lo que el nivel de riesgo del cemento exige (respirador certificado con ajuste verificado).
+- Compra una mascarilla N95 o su equivalente local para ti y para cada uno de tus dos empleados, y ponla en uso mañana al inicio del trabajo.
+- Haz una lista de las tareas principales que realizas tú y cada empleado: mezclar cemento, vaciar moldes, lijar, limpiar, cargar materiales.
+- Muéstrale a cada empleado, en persona y con el equipo en la mano, cómo ponérselo correctamente, cómo revisarlo antes de usarlo (grietas, sello roto, filtro saturado) y cómo guar…
+- Deja el equipo de protección en el lugar donde se usa, no guardado lejos.
+- Establece un canal simple para que tus empleados te avisen cuando algo falla: un respirador que ya no sella, guantes rotos, polvo que llegó a un área donde no había llegado antes.
+- Revisa tus incentivos: si presionas por velocidad sin mencionar protección, tus empleados van a interpretar que la protección estorba.
+- Escribe en papel la lista de tus tres tareas más frecuentes y anota junto a cada una qué equipo de protección le corresponde según las fichas de seguridad que conseguiste en la…
+- Datos: Activa la copia automática de tu hoja de Excel a Google Drive o cualquier servicio en la nube que ya uses.
+- Instagram: Agrega un segundo correo electrónico como cuenta de recuperación y activa la verificación en dos pasos.
+- Resina: Llama o escribe a dos proveedores alternativos de resina esta semana.
+- Tú como punto único: Elige una tarea que haces solo tú y enséñala completamente a uno de tus dos empleados, paso a paso, esta semana.
+- Activa la copia automática de tu archivo de Excel a Google Drive o equivalente, hoy, antes de cerrar cualquier otra tarea del plan.
+- Define dos indicadores que vas a revisar cada semana, no después de un accidente.
+- Si algún control que instalaste no funcionó (el respirador no sella, los guantes se dañaron antes de lo previsto, el empleado no reporta porque siente que no importa), corrige e…
+- Una vez al mes, repite la caminata de inspección de la Etapa 1 con tus dos empleados.
+- Si implementas un equipo nuevo o cambias un paso del proceso, evalúa el riesgo antes de hacerlo, no después.
+- Revisa que la velocidad de producción no haya aumentado justo después de instalar protecciones: a veces, sentirse más seguro lleva a trabajar más rápido o con menos cuidado.
+- Agrega dos filas a tu hoja de indicadores actual: una que diga "¿equipo de protección usado en todas las tareas esta semana?" y otra que diga "¿algún casi accidente o señal de a…
+Además: Compre las mascarillas pero el polvo sigue igual de bravo.
+
+Mi realidad medida en «Seguridad y Personas» (registrada por el sistema, no por mi memoria):
+- Ciclo 1 de este mundo; su plan vigente lleva 0 días.
+- Ritmo en este mundo: 5 de 29 acciones de este mundo hechas en su ciclo; 5 acciones por semana desde que lo activé; 12 días desde mi último avance aquí.
+- Duración real por etapa de este mundo: etapa 1: 0 días.
+- Contexto de mi proyecto (NO de este mundo): mi viaje principal va 17 de 23 acciones en su ciclo 4; 0 días desde mi último avance allí.
+
+No estoy seguro de hacia dónde profundizar; guíame según mi avance.
+    at faseMundoSubproyecto (C:\Users\AlexDesk\Documents\my-idea-integracion\web\scripts\vuelo.ts:2206:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\AlexDesk\Documents\my-idea-integracion\web\scripts\vuelo.ts:3011:32)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\my-idea-integracion\examples\fase3_0_vuelo_web.txt
+rc=1

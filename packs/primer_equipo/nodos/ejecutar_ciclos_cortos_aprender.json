@@ -1,0 +1,308 @@
+{
+  "node_id": "ejecutar_ciclos_cortos_aprender",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ejecutar en ciclos cortos para aprender haciendo en vez de debatir",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Un plan brillante no sirve si no se ejecuta con precisión y a tiempo, y cuando hay varias ideas y ninguna certeza, puedes pasarte semanas debatiendo cuál es la mejor en vez de aprender haciendo. El ciclo corto cambia el debate por pruebas simples y concluyentes: se eligen unas pocas ideas, se construyen y el resultado dice a cuál se le dobla la apuesta y cuál se corta. Funciona porque el ciclo es lo bastante corto para que perder una idea cueste poco y es repetible, así que el aprendizaje se acumula; como un corredor rápido, puedes equivocarte de desvío y aun así llegar antes.",
+  "notas_extraccion": "Abre el bloque de ejecucion y es la unica pieza del capitulo que responde a una objecion dentro del propio procedimiento: el paso 5 es literalmente la respuesta que la colega da a la duda de la autora, y es lo que convierte el ciclo corto en una decision razonada y no en una moda. Las dos propiedades del paso 8 son el inventario propio del libro y la razon por la que la cadencia no es arbitraria. El caso de la colega va dentro (manual seccion 3.5) y sin su nombre, que el propio libro sustituye. Lo que el libro NO dice, y por eso no esta escrito aqui, es de cuantas semanas es el ciclo, ni cuantas ideas son un punado, ni quien decide cortar.",
+  "pasos_accionables": [
+    "Entiende la diferencia entre estrategia y ejecución: si tu estrategia es mala, haces un movimiento en el tablero que te deja abierto al ataque; si tu ejecución es mala, tu intención de mover la torre acaba moviendo el alfil a otro sitio, porque estás jugando al ajedrez con los pies en vez de con las manos.",
+    "Cuenta con que los mejores planes no importan si no puedes conseguirlos con precisión o con la rapidez suficiente para que marquen una diferencia: aunque una bola de cristal te dijera exactamente qué idea disruptiva construir, si tu producto final sale lento y con errores frente a la competencia, o si no llegas al mercado a tiempo, pierdes igual.",
+    "Define tus hojas de ruta en ciclos cortos de varias semanas, como hacía una colega con su equipo.",
+    "Arranca el ciclo con una sesión de generación de ideas. En la semana uno, ella dirigía una sesión de tres horas: se proponían metas, se garabateaban ideas de proyecto en la pizarra, todos votaban sus conceptos favoritos y el grupo los reducía a un puñado para construir.",
+    "No pares el ciclo porque dudes de que todas las ideas vayan a funcionar. La respuesta a esa objeción es el eje del procedimiento: o el equipo se pasa las siguientes semanas debatiendo qué ideas son las mejores, o intenta aprender lo más rápido posible haciendo.",
+    "Fija como meta del ciclo construir pruebas simples y concluyentes que ayuden al equipo a entender a qué cosas hay que doblarles la apuesta y qué cosas hay que cortar de la lista.",
+    "Si una idea funciona, amplíala en el ciclo siguiente.",
+    "Cuenta con las propiedades por las que esa cadencia importa: es lo bastante corta como para que no pierdas mucho si una idea cualquiera falla, y es un proceso repetible que maximiza el aprendizaje a la larga.",
+    "Ejecuta bien, que significa elegir una dirección razonable, moverte rápido para aprender qué funciona y qué no, y hacer ajustes hasta llegar al resultado que buscas.",
+    "Cuenta con que la velocidad importa: un corredor rápido puede tomar unos cuantos desvíos equivocados y aun así ganar a un corredor lento que conoce el camino más corto."
+  ],
+  "entregable_esperado": "Pruebas simples y concluyentes hechas dentro de un ciclo corto, que dicen a qué se le dobla la apuesta y qué se corta de la lista.",
+  "nodos_previos": [
+    "dirigir_reunion_generar_ideas"
+  ],
+  "nodos_siguientes": [
+    "comprobar_equipo_ejecuta_bien"
+  ],
+  "condiciones_activacion": [
+    "Cuando hay varias ideas sobre la mesa y no sabes cuál funciona, y la tentación es pasar semanas debatiendo cuál es la mejor."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un plan brillante no sirve si no se ejecuta con precisión y a tiempo, y cuando hay varias ideas y ninguna certeza, debatir cuál es la mejor consume semanas sin enseñar nada. El ciclo corto cambia el debate por pruebas simples y concluyentes: se eligen unas pocas ideas, se construyen y el resultado dice a cuál se le dobla la apuesta y cuál se corta. Funciona porque el ciclo es lo bastante corto para que perder una idea cueste poco y es repetible, así que el aprendizaje se acumula; como un corredor rápido, puedes equivocarte de desvío y aun así llegar antes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "141-157"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende la diferencia entre estrategia y ejecucion como la cuenta el libro: si tu estrategia es mala, haces un movimiento en el tablero que te deja abierto al ataque; si tu ejecucion es mala, tu intencion de mover la torre acaba moviendo el alfil a otro sitio, porque estas jugando al ajedrez con los pies en vez de con las manos.",
+      "texto_nuevo": "Entiende la diferencia entre estrategia y ejecución: si tu estrategia es mala, haces un movimiento en el tablero que te deja abierto al ataque; si tu ejecución es mala, tu intención de mover la torre acaba moviendo el alfil a otro sitio, porque estás jugando al ajedrez con los pies en vez de con las manos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como la cuenta el libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que los mejores planes no importan si no puedes conseguirlos con precision o con la rapidez suficiente para que marquen una diferencia: aunque una bola de cristal te dijera exactamente que idea disruptiva construir, si tu producto final sale lento y con errores frente a la competencia, o si no llegas al mercado a tiempo, pierdes igual.",
+      "texto_nuevo": "Cuenta con que los mejores planes no importan si no puedes conseguirlos con precisión o con la rapidez suficiente para que marquen una diferencia: aunque una bola de cristal te dijera exactamente qué idea disruptiva construir, si tu producto final sale lento y con errores frente a la competencia, o si no llegas al mercado a tiempo, pierdes igual.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define tus hojas de ruta en ciclos cortos de varias semanas, que es lo que hacia la colega del libro con su equipo.",
+      "texto_nuevo": "Define tus hojas de ruta en ciclos cortos de varias semanas, como hacía una colega con su equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Arranca el ciclo con una sesion de generacion de ideas. En la semana uno ella dirigia una sesion de tres horas: se proponian metas, se garabateaban ideas de proyecto en la pizarra, todos votaban sus conceptos favoritos y el grupo los reducia a un punado para construir.",
+      "texto_nuevo": "Arranca el ciclo con una sesión de generación de ideas. En la semana uno, ella dirigía una sesión de tres horas: se proponían metas, se garabateaban ideas de proyecto en la pizarra, todos votaban sus conceptos favoritos y el grupo los reducía a un puñado para construir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No pares el ciclo porque dudes de que todas las ideas vayan a funcionar. La respuesta del libro a esa objecion es el eje del procedimiento: o gastais las siguientes semanas debatiendo que ideas son las mejores, o intentais aprender lo mas rapido posible haciendo.",
+      "texto_nuevo": "No pares el ciclo porque dudes de que todas las ideas vayan a funcionar. La respuesta a esa objeción es el eje del procedimiento: o el equipo se pasa las siguientes semanas debatiendo qué ideas son las mejores, o intenta aprender lo más rápido posible haciendo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del libro",
+          "gastais",
+          "intentais"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fija como meta del ciclo construir pruebas simples y concluyentes que os ayuden a entender que cosas hay que doblar y que cosas hay que cortar de la lista.",
+      "texto_nuevo": "Fija como meta del ciclo construir pruebas simples y concluyentes que ayuden al equipo a entender a qué cosas hay que doblarles la apuesta y qué cosas hay que cortar de la lista.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "os ayuden"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si una idea funciona, ampliala en el ciclo siguiente.",
+      "texto_nuevo": "Si una idea funciona, amplíala en el ciclo siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con las propiedades por las que esa cadencia importa, que el libro nombra: es lo bastante corta como para que no pierdas mucho si una idea cualquiera falla, y es un proceso repetible que maximiza el aprendizaje a la larga.",
+      "texto_nuevo": "Cuenta con las propiedades por las que esa cadencia importa: es lo bastante corta como para que no pierdas mucho si una idea cualquiera falla, y es un proceso repetible que maximiza el aprendizaje a la larga.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ejecuta bien, que segun el libro significa elegir una direccion razonable, moverse rapido para aprender que funciona y que no, y hacer ajustes hasta llegar al resultado que buscas.",
+      "texto_nuevo": "Ejecuta bien, que significa elegir una dirección razonable, moverte rápido para aprender qué funciona y qué no, y hacer ajustes hasta llegar al resultado que buscas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "segun el libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la velocidad importa: un corredor rapido puede tomar unos cuantos desvios equivocados y aun asi ganar a un corredor lento que conoce el camino mas corto.",
+      "texto_nuevo": "Cuenta con que la velocidad importa: un corredor rápido puede tomar unos cuantos desvíos equivocados y aun así ganar a un corredor lento que conoce el camino más corto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pruebas simples y concluyentes hechas dentro de un ciclo corto, que dicen que se dobla la apuesta y que se corta de la lista.",
+      "texto_nuevo": "Pruebas simples y concluyentes hechas dentro de un ciclo corto, que dicen a qué se le dobla la apuesta y qué se corta de la lista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ejecutar_ciclos_cortos_aprender-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando hay varias ideas sobre la mesa y no sabeis cual funciona, y la tentacion es pasar semanas debatiendo cual es la mejor.",
+      "texto_nuevo": "Cuando hay varias ideas sobre la mesa y no sabes cuál funciona, y la tentación es pasar semanas debatiendo cuál es la mejor.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "sabeis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase5-ejecutar_ciclos_cortos_aprender-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan brillante no sirve si no se ejecuta con precisión y a tiempo, y cuando hay varias ideas y ninguna certeza, debatir cuál es la mejor consume semanas sin enseñar nada. El ciclo corto cambia el debate por pruebas simples y concluyentes: se eligen unas pocas ideas, se construyen y el resultado dice a cuál se le dobla la apuesta y cuál se corta. Funciona porque el ciclo es lo bastante corto para que perder una idea cueste poco y es repetible, así que el aprendizaje se acumula; como un corredor rápido, puedes equivocarte de desvío y aun así llegar antes.",
+      "texto_nuevo": "Un plan brillante no sirve si no se ejecuta con precisión y a tiempo, y cuando hay varias ideas y ninguna certeza, puedes pasarte semanas debatiendo cuál es la mejor en vez de aprender haciendo. El ciclo corto cambia el debate por pruebas simples y concluyentes: se eligen unas pocas ideas, se construyen y el resultado dice a cuál se le dobla la apuesta y cuál se corta. Funciona porque el ciclo es lo bastante corto para que perder una idea cueste poco y es repetible, así que el aprendizaje se acumula; como un corredor rápido, puedes equivocarte de desvío y aun así llegar antes.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 149",
+        "frase": "We can either spend the next few weeks debating which ideas are the best or we can try to learn as quickly as possible by doing."
+      },
+      "decision": "auditoria completa M11 (invencion): Efecto añadido: el libro opone debatir unas semanas a aprender haciendo, pero no dice que el debate no enseñe nada. Propuesta del auditor.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ejecuta en Ciclos Cortos"
+}

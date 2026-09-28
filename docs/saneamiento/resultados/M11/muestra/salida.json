@@ -1,0 +1,568 @@
+{
+ "nodos": [
+  {
+   "node_id": "conducir_reuniones_salto_nivel_diez_reglas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "cifra_fuera_de_lineas",
+     "cita": "siguiendo diez reglas prácticas",
+     "motivo": "Las líneas dicen 'a few rules of thumb' (391); el número diez no está: sale de contar los encabezados, y según cómo se agrupen salen diez u once.",
+     "propuesta": "Conducir reuniones de salto de nivel con el equipo de cada persona a tu cargo, siguiendo unas reglas prácticas"
+    },
+    {
+     "campo": "pasos_accionables[17]",
+     "tipo": "matiz_perdido",
+     "cita": "Empieza por el elogio, que es lo más fácil para que la gente hable, preguntando qué está haciendo bien tu jefe",
+     "motivo": "Línea 405: 'Generally, it's easiest to start with praise'. El 'en general' desaparece. Además 'tu jefe' se lee como el jefe del lector, cuando la pregunta va al equipo sobre SU jefe.",
+     "propuesta": "Empieza por el elogio, que en general es lo más fácil para que la gente hable, preguntando qué está haciendo bien su jefe; luego qué podría estar haciendo mejor; y luego qué es lo que de verdad es un asco."
+    },
+    {
+     "campo": "pasos_accionables[20]",
+     "tipo": "matiz_perdido",
+     "cita": "casi siempre se plantean muchos más problemas de los que se van a arreglar",
+     "motivo": "Línea 407: 'often far more issues will get raised than will get fixed'. 'often' es 'a menudo', no 'casi siempre'.",
+     "propuesta": "Prioriza los asuntos: cuando la cosa fluya, recuérdale a la gente que a menudo se plantean muchos más problemas de los que se van a arreglar, y que la meta es mejorar las cosas, porque dejarlas perfectas no es realista."
+    },
+    {
+     "campo": "pasos_accionables[28]",
+     "tipo": "matiz_perdido",
+     "cita": "y en casos extremos quita al jefe en cuestión del equipo",
+     "motivo": "Línea 411: 'In extreme cases, you may want to remove the manager'. El libro lo deja como posibilidad ('puede que quieras'); el paso lo vuelve orden.",
+     "propuesta": "Si la gente cree que no se hizo ningún cambio, o que la reunión no sirvió de nada, tómatelo muy en serio, y en casos extremos puede que tengas que quitar al jefe en cuestión del equipo, devolviéndolo a un puesto sin gente a cargo, poniéndolo al frente de otro equipo o despidiéndolo."
+    },
+    {
+     "campo": "pasos_accionables[29]",
+     "tipo": "calco",
+     "cita": "que es lo que hace que el proceso escale",
+     "motivo": "'escalar' en el sentido de 'to scale' es calco del inglés.",
+     "propuesta": "Ten estas reuniones una vez al año para cada persona a tu cargo, y si diriges jefes, insiste en que hagan lo mismo, que es lo que permite que el proceso siga siendo manejable aunque crezca."
+    },
+    {
+     "campo": "pasos_accionables[30]",
+     "tipo": "matiz_perdido",
+     "cita": "y se llega a la proliferación de saltos de nivel",
+     "motivo": "Línea 413: 'you can get skip level proliferation'. Es un riesgo ('puedes llegar'), no algo que ocurre siempre.",
+     "propuesta": "Cuenta con este problema, que tiene nombre propio: cuando empiezan a ir bien todo el mundo las quiere todo el tiempo, y puedes llegar a la proliferación de saltos de nivel, que consumen mucha energía y atención y pueden acabar quemándote si tienes que hacer demasiadas."
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_metodo_ghsmart_contratacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "qué quieres que la persona logre en el papel ... al definir el desempeño A del papel",
+     "motivo": "'role' traducido como 'papel': 'lo que la persona logre en el papel' se lee como 'sobre el papel' (en teoría). Calco que cambia el sentido.",
+     "propuesta": "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en ese puesto. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del puesto te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "coherencia",
+     "cita": "El jugador A identificado y contratado para el puesto, con un alto grado de éxito",
+     "motivo": "Línea 117: el 'alto grado de éxito' es del método ('identifying and hiring A Players with a high degree of success'), no de una contratación concreta; pegado al entregable no significa nada.",
+     "propuesta": "El jugador A identificado y contratado para el puesto: la persona acertada, elegida con los cuatro pasos del método."
+    }
+   ]
+  },
+  {
+   "node_id": "redactar_mision_tarjeta_puntuacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "causa_desconectada",
+     "cita": "No saques una misión de la estantería para desempolvarla cada vez que el puesto se vuelve a cubrir: por eso la tarjeta de puntuación tiene que ser un documento vivo",
+     "motivo": "Línea 61: el 'That's why' se apoya en que los asuntos cambian, hace falta otra experiencia y los apoyos se mueven. Sin esa razón, el 'por eso' queda colgando e invierte la lógica.",
+     "propuesta": "No saques una misión de la estantería para desempolvarla cada vez que el puesto se vuelve a cubrir: los asuntos cambian y el puesto puede pedir otra experiencia, y por eso la tarjeta de puntuación tiene que ser un documento vivo y no estático."
+    }
+   ]
+  },
+  {
+   "node_id": "definir_quien_responde_cada_cosa",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "las cosas se cuelan por las grietas",
+     "motivo": "Calco de 'slip through the cracks' (línea 107).",
+     "propuesta": "Entiende la regla general: cuando la responsabilidad no está clara, las cosas se quedan sin hacer."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "cambio_de_sentido",
+     "cita": "No confíes en las buenas intenciones.",
+     "motivo": "Línea 109: 'Even when people have the best of intentions, fuzziness around role definition can create problems.' No dice que desconfíes de las intenciones, sino que aun con las mejores intenciones la falta de claridad puede crear problemas.",
+     "propuesta": "Ten presente que, aunque todos tengan las mejores intenciones, la falta de claridad sobre quién hace qué puede crear problemas. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fuerzas se complementarían bien."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "discutieron en círculos",
+     "motivo": "Calco de 'argued in circles' (línea 111).",
+     "propuesta": "Cuenta con cómo falló eso, que es la parte útil del caso: tenían opiniones muy distintas sobre qué hacer, y como no se definió ni cómo debían trabajar juntas ni quién tenía en última instancia la autoridad de decidir, discutieron dando vueltas sin salir del mismo punto, intentando convencerse una a la otra, y el avance se paró en seco."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "menos espacio hay para la ambigüedad y para los cables cruzados",
+     "motivo": "Calco de 'crossed wires' (línea 111).",
+     "propuesta": "Quédate con la lección: cuanto más claro seas sobre a quién haces responsable de qué, menos espacio hay para la ambigüedad y para los malentendidos."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "contenido_ajeno",
+     "cita": "con un responsable nombrado en voz alta",
+     "motivo": "Las líneas piden que alguien se apunte explícitamente (107); 'en voz alta' no está y no encaja con el caso del correo a varios destinatarios que el propio nodo incluye.",
+     "propuesta": "Cada cosa con un responsable nombrado de forma explícita y, cuando dos personas trabajan juntas, dicho quién tiene la autoridad de decidir."
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_categorias_nota_palabras_propias_empresa",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "causa_inventada",
+     "cita": "porque así la gente se compromete el doble con el resultado",
+     "motivo": "Línea 77 solo dice 'It's worth taking the time to get on the same page'. Ni la causa ni la cifra 'el doble' están en las líneas.",
+     "propuesta": "Junta para elegirlas al equipo de responsables operativos y de gente de recursos humanos, que es donde se nota la importancia de tener los dos perfiles, y dedica el tiempo necesario a que todos lleguen a un acuerdo."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "autor_o_titulo",
+     "cita": "y muestra franqueza radical desafiando directamente y a la vez importándole las personas",
+     "motivo": "'Franqueza radical' es el título del libro fuente (Radical Candor) usado como nombre del marco. La definición que sigue ya dice lo que hace falta.",
+     "propuesta": "La segunda, trabajo en equipo: ¿cómo de bien trabaja la persona con otros para conseguir los resultados, ayuda a que otros tengan éxito o va dejando el reguero de cadáveres a su paso, y es franca con los demás, desafiándolos directamente y a la vez importándole las personas?"
+    },
+    {
+     "campo": "pasos_accionables[14]",
+     "tipo": "calco",
+     "cita": "Honra el proceso, y no seas un esclavo sin cabeza del sistema.",
+     "motivo": "Calcos de 'Honor the process' y 'mindless slave' (línea 93); además el 'but' del libro es contraste, no suma.",
+     "propuesta": "Respeta el proceso, pero no seas un esclavo del sistema que obedece sin pensar."
+    }
+   ]
+  },
+  {
+   "node_id": "dar_opinion_frecuencia_suficiente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "anecdota_y_causa",
+     "cita": "Lo que más piden las personas a sus jefes ... Si la frecuencia es baja, reservar una reunión individual al mes para la conducta y las metas profesionales cubre lo que el día a día deja fuera.",
+     "motivo": "Línea 173: lo más pedido sale de las miles de evaluaciones que una persona leyó, no es una verdad general. Línea 181: la reunión mensual es 'one tactic I've found helpful', una experiencia; 'cubre lo que el día a día deja fuera' es un efecto que no está en las líneas.",
+     "propuesta": "En miles de evaluaciones que las personas hacen de sus jefes, la respuesta más común a cómo podrían apoyarlas mejor es, sencillamente, más opinión; y la segunda, opinión sobre sus habilidades y su trayectoria, no solo sobre las tareas. Por eso el primer paso no es afinar el cómo, sino dar opinión más a menudo: cada vez que ves a alguien en acción, buscar algo útil que decirle, con al menos la mitad positiva para que sepa qué hace bien. Si la frecuencia es baja, hay quien ha encontrado útil reservar una reunión individual al mes solo para la conducta y las metas profesionales."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "anecdota_vuelta_regla",
+     "cita": "Parte de la petición más común que las personas a cargo hacen a sus jefes",
+     "motivo": "Línea 173: 'I've read thousands of reviews ... the most common response'. Es lo observado en esas evaluaciones, no una regla sobre todas las personas.",
+     "propuesta": "Parte de la petición que más se repite en miles de evaluaciones de personas a cargo sobre sus jefes: a la pregunta de cómo podría tu jefe apoyarte mejor, la respuesta más común es simplemente dame más opinión."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "anecdota_vuelta_regla",
+     "cita": "usa esta táctica: dedica una reunión individual al mes",
+     "motivo": "Línea 181: 'one tactic I've found helpful'. Es una táctica que a alguien le ha servido, no la receta.",
+     "propuesta": "Y si encuentras que tu frecuencia de opinión es baja, prueba una táctica que a otros jefes les ha servido: dedica una reunión individual al mes solo a hablar de opinión sobre la conducta y de metas profesionales."
+    }
+   ]
+  },
+  {
+   "node_id": "fomentar_guia_reciproca_companieros",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "largo_y_contenido_ajeno",
+     "cita": "y siempre da resultado",
+     "motivo": "El resumen tiene 602 caracteres, fuera del rango de 400 a 600. 'Y siempre da resultado' no está en las líneas: la 381 dice 'Having a shared vocabulary will help your culture move toward Radical Candor'. Además 'hizo allí seguro equivocarse' está mal construido.",
+     "propuesta": "La buena guía entre compañeros debería darse en persona, no en una herramienta que reparte trocitos de texto, y como responsable te toca animar a tu equipo a hablar entre sí. Un caso: en dos empresas, un premio semanal que cada ganador otorgaba al siguiente buscaba que se contara el buen trabajo ajeno, y otro al error contado por uno mismo, con perdón automático, hizo que allí fuera seguro equivocarse, y por tanto innovar, y resolvió antes problemas que se habrían enquistado. No encaja en todas partes. Un vocabulario compartido para medir la guía ayuda a avanzar hacia la franqueza."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "anecdota_vuelta_regla",
+     "cita": "Cuenta con lo que pasa la primera vez: silencio.",
+     "motivo": "Línea 373: 'When we first started doing this at both Juice and Google, there was silence.' Es lo que pasó en dos empresas, no lo que va a pasar siempre.",
+     "propuesta": "Cuenta con que la primera vez puede haber silencio, como pasó en las dos empresas donde se probó. Para romperlo, pon un pequeño premio en dinero sobre la cabeza del peluche, para que la gente pueda fingir que no se suma al peluche sino que va por el dinero."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "anecdota_vuelta_regla",
+     "cita": "Cuenta con las dos cosas que consigue esa práctica",
+     "motivo": "Línea 373: 'This practice not only made it safe...' en pasado y en esos equipos. El paso lo vuelve efecto garantizado.",
+     "propuesta": "Ten presente las dos cosas que consiguió esa práctica en los equipos donde se usó: hizo seguro equivocarse, y por tanto innovar; y aceleró la resolución de problemas que, si no, se habrían enquistado."
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "autor_o_titulo",
+     "cita": "Explica el marco de la franqueza radical a tu equipo",
+     "motivo": "'Franqueza radical' es el título del libro fuente (Radical Candor) usado como nombre de marco.",
+     "propuesta": "Explica a tu equipo el marco de franqueza con el que das guía, como segunda vía para que hablen entre ellos, contándoles cómo les pides a ellos que midan la guía que tú das para poder mejorarla."
+    },
+    {
+     "campo": "pasos_accionables[12]",
+     "tipo": "autor_o_titulo",
+     "cita": "ayuda a que tu cultura se mueva hacia la franqueza radical",
+     "motivo": "Mismo título del libro fuente.",
+     "propuesta": "Anímalos a medir la guía que se dan entre pares, porque tener un vocabulario compartido ayuda a que tu cultura se mueva hacia la franqueza."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_grafico_escalonado_pronosticos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz_perdido",
+     "cita": "que es lo que te deja anticipar la tendencia mejor que un gráfico de tendencia simple",
+     "motivo": "Línea 91: 'which can help you anticipate future trends better'. Es 'puede ayudarte', no 'te deja'.",
+     "propuesta": "Lee la variación de un pronóstico al siguiente, que puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "anecdota_vuelta_regla",
+     "cita": "Hazlo con la tasa de pedidos entrantes",
+     "motivo": "Línea 93: es el ejemplo de una división de una empresa ('In my experience ... forecasted rates of incoming orders'), no una obligación.",
+     "propuesta": "Por ejemplo, con la tasa de pedidos entrantes: pon el pronóstico de esa tasa, y con él el mismo pronóstico preparado el mes siguiente, y el del mes de después, y así sucesivamente."
+    }
+   ]
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz_perdido",
+     "cita": "la dificultad central del oficio, que casi nadie se plantea",
+     "motivo": "Línea 69: 'Very few people focus first on the central difficulty'. Es que pocos se centran en ella primero, no que casi nadie se la plantee.",
+     "propuesta": "Parte de la dificultad central del oficio, en la que muy pocos se centran primero: establecer una relación de confianza con cada persona a tu cargo. Si diriges una organización grande no puedes tener relación con todos, pero sí puedes conocer de verdad a quienes tienes directamente a tu cargo."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "contenido_ajeno",
+     "cita": "Repasa tus tres responsabilidades, en este orden: crear una cultura de guía, alabanza y crítica",
+     "motivo": "Línea 71: las enumera, pero no pide un orden. Y la guía ES elogio y crítica ('guidance (praise and criticism)'), no son tres cosas.",
+     "propuesta": "Repasa tus tres responsabilidades: crear una cultura de guía, es decir, de elogio y de crítica, que mantenga a todos moviéndose en la dirección correcta; entender qué motiva a cada persona de tu equipo lo bastante bien para evitar el agotamiento o el aburrimiento y mantener el equipo cohesionado; y conseguir resultados en colaboración."
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_recompensar_uso_metodo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "contenido_ajeno",
+     "cita": "Una es barata y pública ... no premia el esfuerzo sino un resultado medible",
+     "motivo": "Línea 273 no dice que el reconocimiento sea barato ni contrapone esfuerzo y resultado: dice 'publicly recognize' y 'linking a substantial portion of their bonus to that particular outcome'.",
+     "propuesta": "Instalar un método de contratación no se consigue solo pidiéndolo: hay que premiar a quien lo usa. El reconocimiento tiene dos mitades. Una es pública: buscar activamente pruebas de que alguien usa el método y reconocerlo delante de todos. La otra es económica y precisa: liga una parte sustancial de la prima a un resultado concreto, la tasa de éxito en contratación del noventa por ciento o más, que es la misma que la política de la empresa pone en la tarjeta de cada directivo. Así la recompensa mide lo que la política exige, y esas primas se pagan solas con la productividad que traen."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "contenido_ajeno",
+     "cita": "y no a una valoración general",
+     "motivo": "No está en la línea 273.",
+     "propuesta": "Ata esa recompensa ligando una parte sustancial de su retribución variable a ese resultado concreto."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "contenido_ajeno",
+     "cita": "ligada por escrito",
+     "motivo": "'por escrito' no está en las líneas.",
+     "propuesta": "Los que usan el método reconocidos en público, y una parte sustancial de la retribución variable de los directivos ligada a la tasa de éxito en contratación del noventa por ciento o más."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia_y_contenido_ajeno",
+     "cita": "toca la octava de las diez cosas ... en vez de esperar a que lo use todo el mundo",
+     "motivo": "'La octava de las diez cosas' remite a la numeración de una lista que el cliente no ve en el nodo. 'En vez de esperar a que lo use todo el mundo' no está en las líneas.",
+     "propuesta": "Cuando estás instalando el método de contratación en tu empresa, ya hay quien lo usa y consigue resultados, y toca premiarlo en público y con dinero."
+    }
+   ]
+  },
+  {
+   "node_id": "presionar_curva_notas_evitar_forzarla",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz_perdido",
+     "cita": "Cuenta con lo que la curva forzada sí evita",
+     "motivo": "Línea 155: 'This can be useful to push managers to avoid'. Puede ayudar a empujar, no lo evita (el propio resumen lo dice bien: 'puede empujar').",
+     "propuesta": "Cuenta con lo que la curva forzada puede ayudar a evitar, que son las dos maneras comunes de hacer trampa con el sistema: darle un trofeo a cada empleado, o meter a todo el mundo en el medio para ahorrarse las conversaciones duras."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco_y_sentido",
+     "cita": "cuenta la salida no lamentada ... la gente se queda con sus malos desempeños dentro para cuadrar una curva en vez de despedirlos",
+     "motivo": "'Salida no lamentada' calca 'nonregretted attrition' (el resumen ya usa 'salidas buscadas'). 'Se queda con sus malos desempeños ... en vez de despedirlos' despide a desempeños, no a personas: línea 165 'keep their low performers around'.",
+     "propuesta": "Dos, cuenta las salidas buscadas, es decir, la gente que fue despedida o a la que se acompañó a la salida, dentro de las cifras de la nota más baja, y sigue esas salidas a lo largo del tiempo. Si no, los jefes retienen a quienes rinden mal para cuadrar la curva en vez de despedirlos."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "matiz_perdido",
+     "cita": "casi todos los jefes se quedan en el medio",
+     "motivo": "Línea 169: 'Most managers will stick to the middle'. Es 'la mayoría', no 'casi todos' (el resumen dice bien 'la mayoría').",
+     "propuesta": "Cuenta con hacia dónde se tuerce la mayoría, que es lo que hace importantes las sesiones de calibración: la mayoría de los jefes se quedan en el medio tirando hacia lo positivo, y dan demasiadas notas buenas y medias y demasiado pocas altas y bajas."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco_y_contenido_ajeno",
+     "cita": "La curva esperada dicha en voz alta ... con la salida no lamentada contada",
+     "motivo": "Línea 163: 'State explicitly', no 'en voz alta'. 'Salida no lamentada' es calco.",
+     "propuesta": "La curva esperada dicha de forma explícita, visible entre pares del mismo nivel, con las salidas buscadas contadas dentro de la nota más baja y una explicación escrita exigida a quien se salga."
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_referencias_red_personal",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz_perdido",
+     "cita": "que pasa de las diez personas iniciales a otros cincuenta o cien nombres",
+     "motivo": "Línea 315: 'can easily generate another fifty to one hundred names'. Es lo que puede dar, no un resultado fijo del entregable.",
+     "propuesta": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que parte de las diez personas iniciales y puede llegar a otros cincuenta o cien nombres."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "Captura esos nombres en la lista",
+     "motivo": "Calco de 'captures those names' (línea 313).",
+     "propuesta": "Apunta esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana."
+    }
+   ]
+  },
+  {
+   "node_id": "casar_flujo_fabricacion_flujo_ventas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "matiz_perdido",
+     "cita": "fabricación falla plazos, comete errores o se encuentra con problemas imprevistos",
+     "motivo": "Línea 119: 'manufacturing could miss deadlines, or make mistakes'. Es una posibilidad.",
+     "propuesta": "Cuenta con que el ideal casi nunca se da en el mundo real: lo más frecuente es que los pedidos no lleguen a tiempo o que el cliente cambie de idea, y por el otro lado fabricación puede fallar plazos, cometer errores o encontrarse con problemas imprevistos."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "como los huevos crudos de la fábrica de desayunos",
+     "motivo": "Remite a un ejemplo anterior de la fuente ('as we've learned before', línea 119) que el cliente no tiene: 'la fábrica de desayunos' con artículo definido presupone que la conoce. Además se pierde el 'Ideally'.",
+     "propuesta": "Guarda ese inventario, idealmente, en la etapa de menor valor, como quien en una cocina de desayunos guarda los huevos crudos y no los platos ya hechos, porque cuanto menor es el valor más flexibilidad de producción obtienes por el mismo coste de inventario."
+    }
+   ]
+  },
+  {
+   "node_id": "evitar_obsesion_ascenso_estatus",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "comparar_motivacion_resultado_papel",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "ortografia_y_sentido",
+     "cita": "Quien dirige se juzga por los resultados del equipo que lleva, así que su trabajo es lo que más le ayude a tener éxito",
+     "motivo": "'Se juzga' dice que se juzga a sí mismo; línea 211: 'you are judged'. 'Lo que más le ayude' se lee como que ayude al jefe, cuando es 'whatever most helps them (el equipo) succeed'.",
+     "propuesta": "A quien dirige se le juzga por los resultados de su equipo, así que su trabajo es lo que más ayude al equipo a tener éxito, aunque sea poco lucido: formar o contratar, frenar a quien crea problemas, montar un plan si nadie sabe qué hacer. Ese trabajo cambia con las metas, la gente y los procesos. Si te mueve el resultado, probablemente esa variación no te moleste; si hay una actividad que no quieres soltar, tus metas pueden chocar con lo que el equipo más necesita. La pregunta que más pesa es si te mueve más el resultado que un papel, y un sí rotundo puede compensar casi cualquier cosa."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz_perdido",
+     "cita": "un sí rotundo aquí compensa casi cualquier cosa ... más importante que ninguna otra de la lista",
+     "motivo": "Línea 215: 'a strong yes can make up for almost anything'. Se pierde el 'puede'. Y 'la lista' remite a una lista que el nodo no muestra.",
+     "propuesta": "Ten presente que esta pregunta pesa más que las otras sobre si la gestión es tu camino, y que un sí rotundo aquí puede compensar casi cualquier cosa: por eso hay líderes de fuerzas y temperamentos muy distintos al frente de empresas. Lo que tienen en común es que su prioridad número uno es que su equipo tenga éxito, y que están dispuestos a adaptarse para ser el líder que su organización necesita."
+    }
+   ]
+  },
+  {
+   "node_id": "manejar_contacto_fisico_regla_platino",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "sentido",
+     "cita": "cuando a un compañero le han matado a su pareja en un accidente de auto",
+     "motivo": "'Le han matado' sugiere un homicidio; línea 125: 'a colleague's spouse has been killed in a car accident', es decir, ha muerto en el accidente.",
+     "propuesta": "Cuenta con que el apretón de manos muy profesional no da para todo: cuando la pareja de un compañero ha muerto en un accidente de auto, o cuando alguien acaba de anunciar que se casa, un abrazo de verdad puede ser la manera más eficaz del mundo de demostrar que te importa esa persona."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "anecdota_vuelta_regla",
+     "cita": "Si vas a criticar a alguien, piensa en lo que hizo un entrenador de directivos con una ejecutiva",
+     "motivo": "Líneas 131 y 135: es el caso de una persona a la que ese gesto le salió natural ('it seemed just so natural coming from him'). Planteado como pauta para cualquier crítica, choca además con el último paso del nodo (probar solo con gente que quiera que la abracen).",
+     "propuesta": "Ten presente este caso: un entrenador de directivos, antes de criticar a una ejecutiva a la que no conocía, le dio un abrazo de oso enorme y un beso en la mejilla; viniendo de él le resultó tan natural que ella supo que la crítica venía de un sitio cálido y no se enfadó."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "regionalismo",
+     "cita": "también vale",
+     "motivo": "'Vale' por 'está bien' es regionalismo.",
+     "propuesta": "No te sientas mal cuando la otra persona no quiera que la abracen, y si el que no está cómodo con un abrazo eres tú, también está bien: hay quien, nada más leer sobre esto, pidió directamente que no le abrazaran."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "Usa las palabras.",
+     "motivo": "Calco de 'Use your words!' (línea 145).",
+     "propuesta": "Si la mayoría de tu equipo está cómoda con los abrazos y un par de personas no, busca la manera de que esas dos no se sientan excluidas de unos abrazos que no quieren. Díselo con palabras."
+    }
+   ]
+  },
+  {
+   "node_id": "dirigir_reunion_generar_ideas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "contrastar_motivos_querer_gestionar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "Pregunta por qué quieres ser directivo y escucha cuál de las tres respuestas comunes te dan",
+     "motivo": "El título habla de 'tus motivos', pero el paso pide preguntar a otro ('te dan'), y la pregunta está en segunda persona dirigida a ti. No cuadra quién pregunta a quién.",
+     "propuesta": "Pregúntate por qué quieres ser directivo y mira si tu respuesta es una de estas tres comunes, porque según las circunstancias la gestión puede no ser el mejor camino para esas metas."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "sentido",
+     "cita": "todos los directivos de primer nivel llevan equipos",
+     "motivo": "'All C-level executives' (línea 241) es la alta dirección; 'de primer nivel' en gestión suele leerse como mandos de primera línea, el nivel más bajo.",
+     "propuesta": "Si la respuesta es «quiero progresar en mi carrera», comprueba primero si en tu organización el crecimiento choca con un techo mientras no gestiones personas, que es lo que pasa en muchas: toda la alta dirección lleva equipos, y hay trabajos donde, pasado cierto nivel de habilidad, el único camino de crecimiento es aprender a gestionar y coordinar el trabajo de más y más gente."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "sentido_y_matiz",
+     "cita": "en muchas empresas de tecnología los dos caminos dan las mismas oportunidades ... hasta el primer nivel",
+     "motivo": "Línea 245: los caminos paralelos se dan en papeles como ingeniería o diseño y a partir de cierto nivel de experiencia, y llegan 'up to the C-level' (la alta dirección), no al 'primer nivel'.",
+     "propuesta": "Y comprueba después lo contrario, porque muchas organizaciones de hoy, sobre todo las que buscan atraer talento muy cualificado o creativo, tienen caminos de ascenso que no exigen gestionar a otros: en muchas empresas de tecnología, en papeles como ingeniería o diseño y a partir de cierto nivel de experiencia, los dos caminos dan las mismas oportunidades de impacto, de crecimiento y de retribución hasta la alta dirección, lo que significa que hacerse directivo no es un ascenso sino un cambio de camino."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "anecdota_vuelta_regla_y_voz",
+     "cita": "ten presente la lección que cierra ese motivo",
+     "motivo": "Líneas 255 a 259: es lo que aprendió una directiva en su primer equipo ('I learned then one of my first lessons'); 'la lección que cierra ese motivo' remite a la estructura de la fuente. El resumen sí lo cuenta como caso.",
+     "propuesta": "Y ten presente lo que aprendió una directiva en su primer equipo, cuando pidió a su gente desarrollar una idea suya de la que no estaban convencidos: los mejores resultados salen de inspirar a la gente a actuar, no de decirle lo que tiene que hacer."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Cuando alguien contesta a «¿por qué quieres ser directivo?»",
+     "motivo": "El nodo trata de contrastar TUS motivos; la condición lo pone en boca de otra persona.",
+     "propuesta": "Cuando te preguntas por qué quieres ser directivo y tu respuesta es una de las tres comunes, y tienes que ver si la gestión es de verdad el mejor camino para esa meta, porque según las circunstancias puede no serlo."
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_reclutadores_externos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "buscar_recomendaciones_confianza",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "cuestionar_historia_irracional_cabeza",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "contenido_ajeno_e_ingles",
+     "cita": "y pide feedback al terminar",
+     "motivo": "Añadido que no está en la línea 283 ni se sigue de nada del nodo, y con una palabra en inglés.",
+     "propuesta": "Cuenta con que esto mismo pasa con cómo percibimos los acontecimientos: cuando reunimos unos pocos datos, intentamos construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estamos en el Pozo (el bache de desánimo), nuestra historia tiende a ser la del peor caso posible."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "regionalismo",
+     "cita": "la otra persona no va a por ti",
+     "motivo": "'Ir a por' es peninsular.",
+     "propuesta": "Ten claro lo que eso dice: las historias que nos contamos a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estamos en el Pozo. Nueve de cada diez veces la otra persona no está en tu contra, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_apoyo_equipo_directivo_metodo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "resumen_lista_de_pasos",
+     "cita": "Ese apoyo se construye con medios concretos: usar tus relaciones personales para sumar a la gente, repartir libros sobre el método para promover la idea, e incluso celebrar jornadas fuera de la oficina y talleres",
+     "motivo": "El resumen es casi una lista de los pasos; lo único que dice de por qué funciona es que da impulso. Las líneas 253 a 257 permiten decir más (se predica con el ejemplo, no con órdenes).",
+     "propuesta": "Instalar un método de contratación pide varios pasos, entre ellos darle prioridad, seguirlo tú antes que nadie y construir apoyo en tu equipo directivo o entre tus pares. Este último da el impulso: quienes lideran lo ganan cuando comprometen a todo su equipo directivo a seguir el método, no a base de órdenes sino con el ejemplo y con medios cercanos. Tus relaciones personales suman a cada persona, los libros sobre el método hacen circular la idea, y las jornadas fuera de la oficina y los talleres le dan un empujón al tema."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "palabra_impropia",
+     "cita": "la otra sede donde construir este apoyo",
+     "motivo": "'Sede' no significa lugar o ámbito aquí.",
+     "propuesta": "Haz lo mismo con tus pares, el otro lugar donde construir este apoyo junto al equipo directivo."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "toca la tercera de las diez cosas",
+     "motivo": "Remite a la numeración de una lista de la fuente que el cliente no ve en el nodo.",
+     "propuesta": "Cuando estás instalando el método de contratación en tu empresa, ya lo sigues tú, y necesitas que el equipo directivo o tus pares no solo lo consientan, sino que lo empujen contigo."
+    }
+   ]
+  },
+  {
+   "node_id": "dar_guia_util_cuatro_recordatorios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz_perdido_y_regionalismo",
+     "cita": "que baja las defensas ... no vas a por él ... ayuda mucho a que reciba",
+     "motivo": "Línea 103: 'can lower defenses' y 'it can go a long way'. Los dos 'can' se pierden. 'Ir a por' es peninsular.",
+     "propuesta": "Declara tu intención de ayudar, que puede bajar las defensas: decirle a alguien que no vas en su contra y que de verdad quieres ayudarle puede ayudar mucho a que reciba lo que le vas a decir."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "eso es un ejemplo de primera de empatía ruinosa",
+     "motivo": "'De primera' calca 'prime example' y en español significa 'excelente'.",
+     "propuesta": "No te refugies en la abstracción para ahorrarle el dolor a la otra persona o ahorrarte a ti la incomodidad de decir las palabras en voz alta: eso es un ejemplo clarísimo de empatía ruinosa, y además puede señalar sin querer que lo que hizo fue tan malo o vergonzoso que ni se puede hablar de ello, lo que le pone difícil pasar página."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "regionalismo",
+     "cita": "tira de un colega o un conocido",
+     "motivo": "'Tirar de' en el sentido de recurrir a es coloquial peninsular.",
+     "propuesta": "Cuando no tengas presupuesto para eso, recurre a un colega o un conocido que pueda ayudar, que es lo que tendrás la mayoría de las veces: lo único que tienes que hacer es presentarlos y ayudar a tu persona a cargo a estructurar esa conversación."
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_estilo_direccion_madurez_relevante_tarea",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "dar_estabilidad_situacion_emocional",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}

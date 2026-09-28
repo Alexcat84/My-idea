@@ -66,7 +66,8 @@ def _sha256_file(path: Path) -> str:
 # lo que se copia a web/ es la VISTA WEB de cada asset, sin la fuente de los nodos, sus fuentes internas, sus
 # correcciones (con sus citas) ni la procedencia de sus fusiones. Todo eso vive solo en dataset/.
 # La guarda es web/lib/assets/sinInternos.test.ts.
-CLAVES_INTERNAS_NODO = ("fuente", "fuentes_internas", "correcciones", "merged_originals")
+# Integracion del mundo 11 (28 sep 2026): + notas_extraccion, las notas de extraccion de la forja.
+CLAVES_INTERNAS_NODO = ("fuente", "fuentes_internas", "correcciones", "merged_originals", "notas_extraccion")
 
 
 def _vista_web(nombre: str, datos):

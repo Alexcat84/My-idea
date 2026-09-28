@@ -1,0 +1,43 @@
+{
+ "lote": "01",
+ "casos": [
+  {
+   "item": "construir_empresa_plantilla_vision_diaria|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Hazte un retrato muy claro de como sera la empresa cuando este finalmente terminada, un modelo en tu cabeza de como se vera cuando el sueno este puesto, que es la primera de las tres razones que el texto atribuye a Tom Watson, el fundador de IBM.",
+    "Preguntate entonces como tendria que actuar una empresa con ese aspecto, y hazte un retrato de como actuara cuando este finalmente terminada, que es la segunda razon.",
+    "Date cuenta de que si no empezais a actuar de esa manera desde el mismisimo principio no llegareis nunca, que es la tercera razon.",
+    "Actua como la gran empresa mucho antes de serlo, que es como el propio texto resume las tres razones en una linea.",
+    "Modela la empresa contra esa plantilla cada uno de los dias, desde el primero.",
+    "Al final de cada dia preguntaos como lo habeis hecho y descubrid la distancia que hay entre donde estais y donde os habiais comprometido a estar.",
+    "Al empezar el dia siguiente, poneos a recuperar esa diferencia.",
+    "Dedica cada dia a desarrollar el negocio y no a hacer negocio, que es la linea con la que el texto cierra la historia: alli no haciamos negocio, construiamos uno."
+   ],
+   "nuevo": "Una empresa no se vuelve grande y luego empieza a actuar como tal: actúa así desde el primer día. Por eso el procedimiento arranca con dos retratos muy claros, cómo será la empresa cuando esté terminada y cómo tendrá que actuar entonces, que convierten la visión en una plantilla concreta. Esa plantilla sirve de vara diaria: cada jornada se modela la empresa contra ella, al final del día se mide la distancia entre donde estás y donde te comprometiste a estar, y a la mañana siguiente te pones a recuperarla. Así cada día se dedica a construir el negocio y no solo a hacer negocio.",
+   "evidencia": {
+    "fichero": "fuentes/gerber_emyth/cap_08.md",
+    "lineas": "37-51"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Suaviza el sentido en la última frase: 'no solo a hacer negocio' deja entender que también se dedica a hacer negocio; los pasos y las líneas (49-51) dicen 'no a hacer negocio', 'no hacíamos negocio, construíamos uno'. El resto está bien y el largo cumple.",
+   "propuesta_verificador": "Una empresa no se vuelve grande y luego empieza a actuar como tal: actúa así desde el primer día. Por eso el procedimiento arranca con dos retratos muy claros, cómo será la empresa cuando esté terminada y cómo tendrá que actuar entonces, que convierten la visión en una plantilla concreta. Esa plantilla sirve de vara diaria: cada jornada se modela la empresa contra ella, al final del día se mide la distancia entre donde estás y donde te comprometiste a estar, y a la mañana siguiente te pones a recuperarla. Así cada día se dedica a construir el negocio y no a hacer negocio."
+  },
+  {
+   "item": "operar_modelo_gente_destreza_minima|pasos_accionables[2]",
+   "campo": "pasos_accionables",
+   "viejo": "Ten los titulados que tu oficio exija, que es la salvedad que el texto pone: si lo tuyo es un despacho de abogados tienes que tener abogados, y si es una consulta medica tienes que tener medicos.",
+   "nuevo": "Ten los titulados que tu oficio exija, que es la única salvedad: si lo tuyo es un despacho de abogados tienes que tener abogados, y si es una consulta médica tienes que tener médicos.",
+   "objecion": "Añade contenido: 'la única salvedad' endurece el viejo, que solo decía 'la salvedad'; ni el paso viejo ni las líneas dicen que sea la única.",
+   "propuesta_verificador": "Ten los titulados que tu oficio exija, que es la salvedad: si lo tuyo es un despacho de abogados tienes que tener abogados, y si es una consulta médica tienes que tener médicos."
+  },
+  {
+   "item": "unificar_color_forma_vestuario_modelo|entregable_esperado",
+   "campo": "entregable_esperado",
+   "viejo": "Los colores determinados cientificamente y aplicados en los ocho sitios que el libro nombra, y las formas elegidas para los soportes que nombra, con el modelo tratado como el envase de tu unico producto.",
+   "nuevo": "Los colores determinados científicamente y aplicados en los ocho sitios de la lista, y las formas elegidas para cada uno de sus soportes, con el modelo tratado como el envase de tu único producto.",
+   "objecion": "Cambio de sentido por ambigüedad: 'las formas elegidas para cada uno de sus soportes' ya no dice cuáles son (el viejo remitía a los cuatro soportes de las formas: tarjeta, rótulos, logotipo y expositores) y puede leerse como los soportes de los ocho sitios de los colores. Mejor nombrarlos, como permite la regla de voz.",
+   "propuesta_verificador": "Los colores determinados científicamente y aplicados en los ocho sitios de la lista, y las formas elegidas para la tarjeta de visita, los rótulos, el logotipo y los expositores, con el modelo tratado como el envase de tu único producto."
+  }
+ ]
+}

@@ -1,0 +1,457 @@
+{
+ "lote": "08",
+ "nodos": [
+  {
+   "node_id": "auditar_calendario_reuniones_semana",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "montar_equipo_gestion_desempenio_revisar_sistema",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "coherencia",
+     "cita": "en seis pasos de partida",
+     "motivo": "El título anuncia seis pasos, pero el nodo trae doce pasos accionables y ninguno marca cuáles son los seis: el lector cuenta doce y la cifra no le cuadra.",
+     "propuesta": "Montar el equipo de gestión del desempeño y arrancar la revisión del sistema, con sus pasos de partida"
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dimensionar_numero_subordinados_medio_dia_semanal",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "desplegar_tres_conversaciones_carrera",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "rechazar_candidato_razones_relevantes",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "aplicar_ocho_reglas_juego_personas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "ortografia",
+     "cita": "cambia el juego del vez en cuando",
+     "motivo": "Errata: \"del vez en cuando\" por \"de vez en cuando\".",
+     "propuesta": "Regla 4: cambia el juego de vez en cuando, las tácticas y no la estrategia; para saber cuándo toca el cambio observa los resultados de tu gente, anticipa el final del juego y cámbialo por decisión tuya antes que nadie más lo note."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pedir_critica_primero_crear_seguridad_psicologica",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "calibrar_vision_propia_opinion_ajena",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "la percepción que tenemos de nosotros mismos es como una montaña rusa, unos días cuesta tenerse compasión y otros nos creemos lo máximo",
+     "motivo": "Nosotros del libro (la autora hablando en primera persona del plural); en la casa se habla de tú. (\"Our self-perception... we struggle... we think we are the best\").",
+     "propuesta": "Cuenta con que es más difícil de lo que suena: la percepción que tienes de ti mismo es como una montaña rusa, unos días te cuesta tenerte compasión y otros te crees lo máximo. Existe incluso un sesgo cognitivo por el que la gente que no es muy hábil tiende a creerse mejor de lo que es."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "tenemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "nosotros",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "creemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "escala",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "nuestro",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "agendar_cuidados_propios_cumplirlos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "priorizar_lista_entrenamiento_subordinados",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "tiene sentido",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "adaptar_escucha_cultura_ajena",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "redactar_mision_tarjeta_puntuacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "revisar_proposito_personas_proceso",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "en tres cubos",
+     "motivo": "Calco de \"buckets\" (three buckets): en español las tareas no se ordenan en cubos; se agrupan en tres cajones o grupos.",
+     "propuesta": "Ordena la multitud de tareas que llenan tu día en tres cajones: propósito, personas y proceso, que son el porqué, el quién y el cómo."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "En el cubo del propósito",
+     "motivo": "Calco de \"buckets\" (three buckets): en español las tareas no se ordenan en cubos; se agrupan en tres cajones o grupos.",
+     "propuesta": "En el cajón del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de «¿por qué importa nuestro trabajo?». Si el propósito falta o está poco claro, pueden aparecer conflictos y expectativas desalineadas."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "En el cubo de las personas",
+     "motivo": "Calco de \"buckets\" (three buckets): en español las tareas no se ordenan en cubos; se agrupan en tres cajones o grupos.",
+     "propuesta": "En el cajón de las personas pregunta si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo. Si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "En el cubo del proceso",
+     "motivo": "Calco de \"buckets\" (three buckets): en español las tareas no se ordenan en cubos; se agrupan en tres cajones o grupos.",
+     "propuesta": "En el cajón del proceso pon cómo trabaja en conjunto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples pueden complicarse enormemente."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "ordenadas en los tres cubos, las preguntas de cada cubo contestadas",
+     "motivo": "Calco de \"buckets\" (three buckets): en español las tareas no se ordenan en cubos; se agrupan en tres cajones o grupos.",
+     "propuesta": "Las tareas de tu día ordenadas en los tres cajones, las preguntas de cada cajón contestadas, y la palanca que está fallando identificada por lo que puede producir: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "nuestro",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "nosotros",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "cambiar_saludo_cliente_dos_ramas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "diagnosticar_nivel_motivacion_reaccion_aumento_salario",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cortar_efecto_divisor_persona_brillante",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "recorrer_siete_pasos_programa_desarrollo_negocio",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "equilibrar_elogio_critica_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "mediar_tiempo_palabra_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "regionalismo",
+     "cita": "buscando meter baza",
+     "motivo": "\"Meter baza\" es coloquial de España y poco claro en América; \"buscando hueco para hablar\" sirve a los dos lados.",
+     "propuesta": "Si ves a alguien buscando hueco para hablar, ayúdale a abrir el hueco: «Parece que Juan quiere decir algo». Por ejemplo, alguien a quien un colega le hizo ese gesto en una revisión con veinte personas todavía recuerda la oleada de gratitud que sintió."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "deberíamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "hemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "deberíamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "usar_calendario_herramienta_planificacion_produccion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "Referente sin antecedente: en el nodo no hay ningún \"cliente de la fábrica\" visto antes (remite a otro pasaje; el libro solo pregunta cuál es el medio del pronóstico y responde: el calendario).",
+     "propuesta": "Usa como medio de ese pronóstico algo muy simple: tu calendario."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "listar_fuerzas_propias_cuatro_preguntas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "repartir_material_antes_reunion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "preparar_preguntas_entrevista_antemano",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "voz",
+     "cita": "Todos tenemos sesgos",
+     "motivo": "Nosotros del libro (la autora hablando en primera persona del plural); en la casa se habla de tú. (\"we are all biased\").",
+     "propuesta": "Todo el mundo tiene sesgos, y sin preparar la entrevista corres el riesgo de decidir por la impresión que da la persona y por cómo fluyó la conversación, no por la sustancia de sus respuestas. Llegar sabiendo qué quieres aprender, con su trayectoria revisada y una lista de preguntas preparada, y hacer las mismas preguntas a todos los candidatos del mismo puesto vuelve comparables las entrevistas. Así un candidato nervioso pero sólido puede mostrar cómo resuelve problemas. Solo tú sabes qué buscas, por eso eliges tú las preguntas; las de propósito general sirven de punto de partida."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "voz",
+     "cita": "todos tenemos sesgos",
+     "motivo": "Nosotros del libro (la autora hablando en primera persona del plural); en la casa se habla de tú. (\"we are all biased\").",
+     "propuesta": "Hazlo por esta razón: todo el mundo tiene sesgos, y si no lo haces te arriesgas a basar tu decisión de contratación en tu impresión de la persona y en cómo fluyó la conversación, en vez de en la sustancia de sus respuestas."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "¿Puedes describirme un proyecto favorito?",
+     "motivo": "Calco de \"a favorite project\": en español es \"tu proyecto favorito\" o \"uno de tus proyectos favoritos\".",
+     "propuesta": "Si quieres un punto de partida, usa estas preguntas de propósito general, cada una con lo que te revela. ¿Qué clase de retos te resultan interesantes y por qué? ¿Puedes describirme uno de tus proyectos favoritos? Esto te dice qué apasiona al candidato."
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "calco",
+     "cita": "¿Qué es algo que te haya inspirado en tu trabajo últimamente?",
+     "motivo": "Calco de \"What is something that...\": la construcción \"¿Qué es algo que...?\" no es española.",
+     "propuesta": "¿Qué te ha inspirado últimamente en tu trabajo? Esto arroja luz sobre lo que el candidato considera interesante o valioso."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "tenemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "tenemos",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_referencias_empleados",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Pedir referencias a tus propios empleados",
+     "motivo": "Calco de \"referrals\": en español \"pedir referencias\" es pedir informes sobre alguien (la comprobación de referencias de un candidato, otro método del mismo pack), no pedir que te recomienden candidatos.",
+     "propuesta": "Pedir a tus propios empleados que te recomienden candidatos"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "las referencias internas suelen apuntar mejor",
+     "motivo": "Calco de \"referrals\": en español \"pedir referencias\" es pedir informes sobre alguien (la comprobación de referencias de un candidato, otro método del mismo pack), no pedir que te recomienden candidatos.",
+     "propuesta": "Nadie conoce mejor lo que necesita tu empresa y cómo es su cultura que la gente que ya trabaja en ella, por eso los candidatos recomendados desde dentro suelen apuntar mejor que las de fuera. Aun así, pocos directivos se toman el tiempo de pedirlas, y el procedimiento lo resuelve volviéndolas un resultado exigible: la captación de candidatos entra en la tarjeta de puntuación de cada persona y lleva un incentivo detrás. Quizá el mayor beneficio sea el cambio de mirada: cuando todos buscan talento, la empresa entera empieza a fijarse en quién hace el trabajo y no solo en qué se hace."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "una prima por referencia",
+     "motivo": "Calco de \"referrals\": en español \"pedir referencias\" es pedir informes sobre alguien (la comprobación de referencias de un candidato, otro método del mismo pack), no pedir que te recomienden candidatos.",
+     "propuesta": "Ofrece una prima por candidato recomendado, o premia el esfuerzo con un incentivo económico o de otro tipo, como días extra de vacaciones para quienes alcancen y superen el objetivo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "prima",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_cinco_indicadores_diarios_fabrica",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "prima",
+     "defecto": false
+    },
+    {
+     "campo": "entregable_esperado",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "prima",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "ese mismo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "despedir_persona_franqueza_radical",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "regionalismo",
+     "cita": "vas a hacer una chapuza",
+     "motivo": "\"Chapuza\" es coloquial de España (en México se lee como trampa); \"lo vas a hacer mal\", como ya dice el resumen.",
+     "propuesta": "No te distancies de la persona a la que vas a despedir: si intentas evitar sentir el dolor que hay en la situación, sobre todo el de la persona que se va, lo vas a hacer mal."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "chapuza",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "mantener_manos_trabajo_real_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "regionalismo",
+     "cita": "si diriges un equipo de fontaneros, arregla algún grifo",
+     "motivo": "\"Fontaneros\" y \"grifo\" son de España (plomeros, llave o canilla en América); hace falta una forma común a los dos lados.",
+     "propuesta": "Aplícalo a tu oficio concreto: si te haces director de orquesta, sigue tocando tu instrumento; si te haces jefe de ventas, sigue yendo tú a visitar clientes; si diriges un equipo que hace reparaciones, arregla tú alguna avería."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "tus relaciones con tus personas a cargo",
+     "motivo": "\"A cargo\" sin el posesivo fijado (\"tus personas a cargo\"); la forma fijada es \"las personas a tu cargo\".",
+     "propuesta": "Mira un nivel más allá: tus relaciones con las personas a tu cargo afectan a las relaciones que ellas tienen con las suyas, y a la cultura de tu equipo."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "la relación con la persona a cargo",
+     "motivo": "\"La persona a cargo\" se lee como quien manda; es \"la persona a tu cargo\".",
+     "propuesta": "Cuando quieres saber por qué una de tus tres responsabilidades de jefe no avanza, y quieres mirar la relación con la persona a tu cargo antes de mirar la tarea."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  }
+ ]
+}

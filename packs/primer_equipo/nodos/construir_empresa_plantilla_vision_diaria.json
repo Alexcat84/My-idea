@@ -1,0 +1,366 @@
+{
+  "node_id": "construir_empresa_plantilla_vision_diaria",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Construir la empresa según la plantilla de tu visión, y medir cada noche la distancia que falta",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Se dice que un fundador atribuía el éxito de su empresa a haber actuado como una gran empresa mucho antes de serlo. El procedimiento toma esa idea y arranca con dos retratos muy claros, cómo será la empresa cuando esté terminada y cómo tendrá que actuar entonces, que convierten la visión en una plantilla concreta. Esa plantilla sirve de vara diaria: cada jornada modelas la empresa según ella, al final del día mides la distancia entre donde estás y donde te comprometiste a estar, y a la mañana siguiente te pones a recuperarla, dedicando cada día a construir el negocio y no a hacer negocio.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_08.md, unidad Cap. 6, titulo textual Maturity and the Entrepreneurial Perspective. Sale de la PIEZA P1 de la frontera publicada en esta misma vuelta, L36 a L51, 310 palabras. EL CASO NO ES LA CASA, y por eso el nodo esta escrito asi (EXTRACTOR.md 9): la doctrina es construir la empresa contra la plantilla de la vision con su bucle diario, e IBM y Tom Watson entran DENTRO como el ejemplo nombrado que el libro usa. La senal barata de que se hizo mal seria que el entregable llevara un dato del caso, y no lo lleva: el entregable habla de tu empresa y de tus dos retratos. POR QUE ES PROCEDIMIENTO, con D.27 delante: el libro pone su propio inventario de etapas numeradas por el propio texto (primera, segunda y tercera razon) y ademas el bucle diario completo con sus tres momentos (modelar contra la plantilla cada dia, preguntarse al final del dia y descubrir la distancia, ponerse a recuperarla al empezar el siguiente). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v1/cita_cap08_P1.txt. LA SALVEDAD QUE EL PROPIO LIBRO PONE Y QUE NO ME CALLO: en L53 Gerber escribe que su narrador puede no haber tenido las palabras de Watson exactamente textuales, y que lo importante es lo que la historia cuenta. Por eso los pasos dicen lo que el texto atribuye a Watson y no lo que Watson dijo, y por eso no hay atribuciones: no hay cifra que atribuir, y una cita que el propio libro declara no textual no se registra como cifra del autor. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: en que soporte se guardan los dos retratos, quien hace el repaso de cada noche, ni como se mide la distancia. El texto dice que se preguntaban y que descubrian la disparidad, y poner un instrumento o un responsable seria puente de la especie responsable.",
+  "pasos_accionables": [
+    "Hazte un retrato muy claro de cómo será la empresa cuando esté finalmente terminada, un modelo en tu cabeza del aspecto que tendrá cuando el sueño se haya hecho realidad, que es la primera de las tres razones con las que el fundador de una gran empresa explicaba su éxito.",
+    "Pregúntate entonces cómo tendría que actuar una empresa con ese aspecto, y hazte un retrato de cómo actuará cuando esté finalmente terminada, que es la segunda razón.",
+    "Date cuenta de que si la empresa no empieza a actuar de esa manera desde el mismísimo principio, no llegará nunca, que es la tercera razón.",
+    "Haz que tu empresa actúe como una gran empresa mucho antes de serlo, que es como se resumen las tres razones en una sola línea.",
+    "Modela la empresa según esa plantilla cada uno de los días, desde el primero.",
+    "Al final de cada día, pregúntate cómo lo has hecho y descubre la distancia que hay entre donde estás y donde te habías comprometido a estar.",
+    "Al empezar el día siguiente, ponte a recuperar esa diferencia.",
+    "Dedica cada día a desarrollar el negocio y no a hacer negocio: el trabajo es construirlo."
+  ],
+  "entregable_esperado": "Los dos retratos hechos, el de cómo será la empresa cuando esté terminada y el de cómo actuará, y un día de trabajo que acaba con la distancia medida y la mañana siguiente puesta a recuperarla.",
+  "nodos_previos": [
+    "hacer_trabajo_futuro_imaginar_negocio"
+  ],
+  "nodos_siguientes": [
+    "fingir_prototipo_cinco_mil_replicas",
+    "dictar_ritmo_crecimiento_preguntas_escritas"
+  ],
+  "condiciones_activacion": [
+    "Cuando arrancas una empresa o la rehaces y quieres que llegue a ser grande, y necesitas saber por dónde se empieza y qué se hace cada día."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un fundador atribuía el éxito de su empresa a haber actuado como una gran empresa mucho antes de serlo. El procedimiento toma esa idea y arranca con dos retratos muy claros, cómo será la empresa cuando esté terminada y cómo tendrá que actuar entonces, que convierten la visión en una plantilla concreta. Esa plantilla sirve de vara diaria: cada jornada modelas la empresa contra ella, al final del día mides la distancia entre donde estás y donde te comprometiste a estar, y a la mañana siguiente te pones a recuperarla, dedicando cada día a construir el negocio y no a hacer negocio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_08.md",
+          "lineas": "37-51"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador; ajuste del orquestador: pase de matices (anecdota): Se sostiene: l.37-45 es un relato atribuido a un fundador ('he is said to have answered'), no una ley general. La propuesta del lector lo cuenta como caso y conserva el resto fiel.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)"
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construir la empresa contra la plantilla de tu vision, y medir cada noche la distancia que falta",
+      "texto_nuevo": "Construir la empresa contra la plantilla de tu visión, y medir cada noche la distancia que falta",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazte un retrato muy claro de como sera la empresa cuando este finalmente terminada, un modelo en tu cabeza de como se vera cuando el sueno este puesto, que es la primera de las tres razones que el texto atribuye a Tom Watson, el fundador de IBM.",
+      "texto_nuevo": "Hazte un retrato muy claro de cómo será la empresa cuando esté finalmente terminada, un modelo en tu cabeza de cómo se verá cuando el sueño esté puesto, que es la primera de las tres razones con las que el fundador de una gran empresa explicaba su éxito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto atribuye a Tom Watson, el fundador de IBM"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate entonces como tendria que actuar una empresa con ese aspecto, y hazte un retrato de como actuara cuando este finalmente terminada, que es la segunda razon.",
+      "texto_nuevo": "Pregúntate entonces cómo tendría que actuar una empresa con ese aspecto, y hazte un retrato de cómo actuará cuando esté finalmente terminada, que es la segunda razón.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Date cuenta de que si no empezais a actuar de esa manera desde el mismisimo principio no llegareis nunca, que es la tercera razon.",
+      "texto_nuevo": "Date cuenta de que si la empresa no empieza a actuar de esa manera desde el mismísimo principio, no llegará nunca, que es la tercera razón.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "si no empezais a actuar",
+          "no llegareis nunca"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actua como la gran empresa mucho antes de serlo, que es como el propio texto resume las tres razones en una linea.",
+      "texto_nuevo": "Actúa como la gran empresa mucho antes de serlo, que es como se resumen las tres razones en una sola línea.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como el propio texto resume"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Modela la empresa contra esa plantilla cada uno de los dias, desde el primero.",
+      "texto_nuevo": "Modela la empresa contra esa plantilla cada uno de los días, desde el primero.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al final de cada dia preguntaos como lo habeis hecho y descubrid la distancia que hay entre donde estais y donde os habiais comprometido a estar.",
+      "texto_nuevo": "Al final de cada día, pregúntate cómo lo has hecho y descubre la distancia que hay entre donde estás y donde te habías comprometido a estar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "preguntaos como lo habeis hecho",
+          "donde estais",
+          "os habiais comprometido"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al empezar el dia siguiente, poneos a recuperar esa diferencia.",
+      "texto_nuevo": "Al empezar el día siguiente, ponte a recuperar esa diferencia.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "poneos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dedica cada dia a desarrollar el negocio y no a hacer negocio, que es la linea con la que el texto cierra la historia: alli no haciamos negocio, construiamos uno.",
+      "texto_nuevo": "Dedica cada día a desarrollar el negocio y no a hacer negocio: el trabajo es construirlo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es la linea con la que el texto cierra la historia",
+          "alli no haciamos negocio, construiamos uno"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los dos retratos hechos, el de como sera la empresa cuando este terminada y el de como actuara, y un dia de trabajo que acaba con la distancia medida y la manana siguiente puesta a recuperarla.",
+      "texto_nuevo": "Los dos retratos hechos, el de cómo será la empresa cuando esté terminada y el de cómo actuará, y un día de trabajo que acaba con la distancia medida y la mañana siguiente puesta a recuperarla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_empresa_plantilla_vision_diaria-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando arrancas una empresa o la rehaces y quieres que llegue a ser grande, y necesitas saber por donde se empieza y que se hace cada dia.",
+      "texto_nuevo": "Cuando arrancas una empresa o la rehaces y quieres que llegue a ser grande, y necesitas saber por dónde se empieza y qué se hace cada día.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-construir_empresa_plantilla_vision_diaria-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Actúa como la gran empresa mucho antes de serlo, que es como se resumen las tres razones en una sola línea.",
+      "texto_nuevo": "Haz que tu empresa actúe como una gran empresa mucho antes de serlo, que es como se resumen las tres razones en una sola línea.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Sujeto cruzado: quien tiene que actuar como gran empresa y llegar a serlo es la empresa, no tú; y 'la gran empresa' no tenía antecedente."
+      },
+      "decision": "auditoria completa M11 (coherencia): Sujeto cruzado: quien tiene que actuar como gran empresa y llegar a serlo es la empresa, no tú; y 'la gran empresa' no tenía antecedente.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_empresa_plantilla_vision_diaria-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construir la empresa contra la plantilla de tu visión, y medir cada noche la distancia que falta",
+      "texto_nuevo": "Construir la empresa según la plantilla de tu visión, y medir cada noche la distancia que falta",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "contra la plantilla"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"contra\" calca el \"against\" de medir contra algo; la empresa se construye según la plantilla (\"fashioned after the template\").",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_empresa_plantilla_vision_diaria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un fundador atribuía el éxito de su empresa a haber actuado como una gran empresa mucho antes de serlo. El procedimiento toma esa idea y arranca con dos retratos muy claros, cómo será la empresa cuando esté terminada y cómo tendrá que actuar entonces, que convierten la visión en una plantilla concreta. Esa plantilla sirve de vara diaria: cada jornada modelas la empresa contra ella, al final del día mides la distancia entre donde estás y donde te comprometiste a estar, y a la mañana siguiente te pones a recuperarla, dedicando cada día a construir el negocio y no a hacer negocio.",
+      "texto_nuevo": "Se dice que un fundador atribuía el éxito de su empresa a haber actuado como una gran empresa mucho antes de serlo. El procedimiento toma esa idea y arranca con dos retratos muy claros, cómo será la empresa cuando esté terminada y cómo tendrá que actuar entonces, que convierten la visión en una plantilla concreta. Esa plantilla sirve de vara diaria: cada jornada modelas la empresa según ella, al final del día mides la distancia entre donde estás y donde te comprometiste a estar, y a la mañana siguiente te pones a recuperarla, dedicando cada día a construir el negocio y no a hacer negocio.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "lineas": "fuentes/gerber_emyth/cap_08.md 37",
+        "frase": "Asked to what he attributed the phenomenal success of IBM, he is said to have answered:"
+      },
+      "decision": "auditoria completa M11 (matiz, calco): El libro cuenta la respuesta como algo que se dice (\"he is said to have answered\") y admite que quien la contó quizá no tenía las palabras exactas (línea 55); además \"modelas la empresa contra ella\" calca \"model the company after that template\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_empresa_plantilla_vision_diaria-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazte un retrato muy claro de cómo será la empresa cuando esté finalmente terminada, un modelo en tu cabeza de cómo se verá cuando el sueño esté puesto, que es la primera de las tres razones con las que el fundador de una gran empresa explicaba su éxito.",
+      "texto_nuevo": "Hazte un retrato muy claro de cómo será la empresa cuando esté finalmente terminada, un modelo en tu cabeza del aspecto que tendrá cuando el sueño se haya hecho realidad, que es la primera de las tres razones con las que el fundador de una gran empresa explicaba su éxito.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "de cómo se verá cuando el sueño esté puesto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"what it would look like when the dream was in place\" traducido palabra a palabra.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_empresa_plantilla_vision_diaria-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modela la empresa contra esa plantilla cada uno de los días, desde el primero.",
+      "texto_nuevo": "Modela la empresa según esa plantilla cada uno de los días, desde el primero.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "contra esa plantilla"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"model the company after that template\" calcado con \"contra\".",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Mide cada Noche tu Distancia"
+}

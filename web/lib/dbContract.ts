@@ -46,6 +46,7 @@ export type ModoRuta = (typeof MODO_RUTA)[number];
  * `dominio` de sus nodos, y las que emite POST /api/packs/interes.
  * Fase v1.3.2 (migration 017): + seguridad_digital, exportacion, franquicias.
  * Fase v1.4 (migration 019): + risk_management (séptimo pack).
+ * Integración del mundo 11 (migration 048): + primer_equipo (Primer Equipo).
  * Extracción (migration 036): + compras, entrega (octavo y noveno). Que estén
  * aquí NO los publica: la aduana de la base y la visibilidad del catálogo son
  * cosas distintas, y el interruptor de publicación es `oculto` en
@@ -60,6 +61,7 @@ export const PACK_CLICKS_PACK = [
   "risk_management",
   "compras",
   "entrega",
+  "primer_equipo",
 ] as const;
 export type PackClave = (typeof PACK_CLICKS_PACK)[number];
 

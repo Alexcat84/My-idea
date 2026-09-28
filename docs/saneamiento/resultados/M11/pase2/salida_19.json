@@ -1,0 +1,315 @@
+{
+ "lote": "19",
+ "nodos": [
+  {
+   "node_id": "visualizar_recuperar_confianza",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "bloquear_tiempo_pensar_calendario",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "montar_tablero_kanban_medir_actividades",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "seleccionar_jugador_cuatro_entrevistas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "Filtra fuera de tu flujo de contratación a los jugadores B y C evidentes",
+     "motivo": "Calco palabra a palabra de \"filter out ... from your hiring pipeline\"; en español se descarta de un proceso.",
+     "fichero": "fuentes/smart_who/cap_05.md",
+     "lineas": "345",
+     "frase": "Filter out obvious B and C Players from your hiring pipeline.",
+     "propuesta": "Entrevista de criba: conduce una entrevista de criba de veinte a treinta minutos usando las cuatro preguntas clave. Sondea para obtener más información con el marco de qué, cómo y cuéntame más. Descarta de tu proceso de contratación a los jugadores B y C evidentes."
+    }
+   ]
+  },
+  {
+   "node_id": "escribir_escaleras_puesto_evitar_dos_extremos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "empleado de entrada",
+     "motivo": "Calco de \"entry-level employee\"; en español es el empleado de primer nivel o recién llegado.",
+     "fichero": "fuentes/scott_radical_candor/cap_14.md",
+     "lineas": "97",
+     "frase": "So you need to describe what teamwork means for an entry-level employee versus a manager, a director, a VP, and so on.",
+     "propuesta": "Describe qué significa en cada nivel la categoría de la escalera, tomando como ejemplo una sola, el trabajo en equipo: empleado de primer nivel, jefe, director, vicepresidente, y así hacia arriba."
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_repaso_posterior_proyecto",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "ajustar_franqueza_oido_oyente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "No lo trates como un tipo de personalidad",
+     "motivo": "El pronombre \"lo\" no tiene antecedente: el paso anterior habla de \"las dos dimensiones\" (plural femenino) y el sujeto en el libro es la franqueza radical.",
+     "fichero": "fuentes/scott_radical_candor/cap_04.md",
+     "lineas": "157",
+     "frase": "Radical Candor is not a personality type or a talent or a cultural judgment.",
+     "propuesta": "No trates la franqueza radical como un tipo de personalidad, ni como un talento, ni como un juicio sobre una cultura."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "la forma preferida de mostrar que les importaba era ser educados",
+     "motivo": "Calco de \"showing they cared personally\": \"mostrar que les importaba\" queda sin sujeto (¿qué les importaba?); el libro habla de mostrar que cuidaban personalmente de los demás.",
+     "fichero": "fuentes/scott_radical_candor/cap_04.md",
+     "lineas": "171",
+     "frase": "Being polite was their preferred way of showing they cared personally.",
+     "propuesta": "Busca la forma local de cuidar personalmente, que es la primera dimensión. En un equipo en Tokio la forma preferida de mostrar aprecio por los demás era ser educados."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "ortografia",
+     "cita": "no se le pidió franqueza radical, que habría sonado demasiado agresivo",
+     "motivo": "Falta de concordancia: \"franqueza radical\" es femenino y el adjetivo va en masculino; lo que habría sonado agresivo es el nombre (así lo dice bien el resumen).",
+     "propuesta": "Cambia el nombre si el nombre estorba: a ese equipo no se le pidió franqueza radical, un nombre que habría sonado demasiado agresivo, sino ser educadamente persistentes."
+    }
+   ]
+  },
+  {
+   "node_id": "abrazar_incomodidad_silencio_contar_seis",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "Y si aun así se quedan callados, diles que les vas a dar más tiempo pero que vas a volver a ellos",
+     "motivo": "Cambia de número sin antecedente: todo el nodo habla de un solo interlocutor (\"el otro\", \"tu compañero\") y aquí pasa a un plural que no existe; el resumen lo dice en singular (\"Si aun así calla, dile\").",
+     "propuesta": "Y si aun así se queda callado, dile que le vas a dar más tiempo pero que vas a volver a él porque de verdad quieres su crítica."
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "coherencia",
+     "cita": "no les dejes salir del apuro",
+     "motivo": "Mismo cambio a plural sin antecedente; el paso [1] dice \"no le dejes salir del apuro\".",
+     "propuesta": "Y no te olvides de volver a preguntar: no le dejes salir del apuro, ni te dejes salir a ti."
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_material_antes_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "que muestra un nivel de cuidado e intención al ayudar al grupo a mantenerse enfocado",
+     "motivo": "Traducción palabra a palabra de \"shows a level of care and intentionality in helping the group stay focused\".",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "199",
+     "frase": "Sending out an agenda ahead of time shows a level of care and intentionality in helping the group stay focused.",
+     "propuesta": "Envía también la agenda por adelantado: muestra cuidado e intención, y ayuda al grupo a no perder el foco."
+    }
+   ]
+  },
+  {
+   "node_id": "preguntar_conducir_reunion_individual",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "cómo puedes serle de mayor servicio",
+     "motivo": "Calco de \"how you can be of greatest service to your report\"; en español se dice ayudarle mejor o serle más útil.",
+     "fichero": "fuentes/zhuo_manager/cap_04.md",
+     "lineas": "167",
+     "frase": "Support: These questions zero in on how you can be of greatest service to your report.",
+     "propuesta": "Y cierra con el grupo de apoyar, que apunta a cómo puedes ayudarle mejor: ¿cómo puedo ayudarte?, ¿qué puedo hacer para que tengas más éxito?, y ¿qué ha sido lo más útil de nuestra conversación de hoy?"
+    }
+   ]
+  },
+  {
+   "node_id": "equilibrar_capacidad_personal_inventario_plazo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "sin cronómetro ni fórmula exacta",
+     "motivo": "El libro dice que probablemente no usarás cronómetro ni el cálculo exacto; el resumen lo afirma sin matiz (el paso [7] sí conserva \"probablemente\"). La propuesta acorta \"Lo que importa es\" a \"Importa\" para quedar en rango.",
+     "fichero": "fuentes/grove_high_output/cap_02.md",
+     "lineas": "61",
+     "frase": "You probably won’t use a stopwatch to conduct a time-and-motion study of the person behind a toaster; nor will you calculate the precise trade-off between the cost of toast inventory and the added toaster capacity in mathematical terms.",
+     "propuesta": "Cuando dos pasos chocan, el conflicto parece no tener salida, pero sí la tiene: capacidad de equipo, mano de obra e inventario se pueden intercambiar y equilibrar contra el plazo de entrega. Cada salida tiene su precio: especializar al personal infla la estructura, pedir ayuda suele volver el resultado menos predecible, más equipo es capital caro y el inventario acumulado es desperdicio. Como todas cuestan dinero, se busca la combinación más rentable. Importa el razonamiento que obliga a hacer: entender cómo se relacionan las partes del proceso, probablemente sin cronómetro ni fórmula exacta."
+    }
+   ]
+  },
+  {
+   "node_id": "infundir_regularidad_reunion_proceso",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "Apunta a infundir regularidad a esta clase de reunión",
+     "motivo": "Giro inglés palabra a palabra de \"we should aim to infuse it with regularity\".",
+     "fichero": "fuentes/grove_high_output/cap_05.md",
+     "lineas": "21",
+     "frase": "To make the most of this kind of meeting, we should aim to infuse it with regularity.",
+     "propuesta": "Procura darle regularidad a esta clase de reunión, que es la manera de sacarle el máximo."
+    }
+   ]
+  },
+  {
+   "node_id": "supervisar_tarea_delegada_etapa_menor_valor",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "Chequea, por ejemplo, los borradores",
+     "motivo": "Anglicismo \"chequear\" (check) donde el libro dice \"review\" y el español tiene \"revisa\".",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "253",
+     "frase": "For example, review rough drafts of reports that you have delegated",
+     "propuesta": "Revisa, por ejemplo, los borradores en sucio de los informes que has delegado, y no esperes a que tus subordinados hayan gastado su tiempo en pulirlos hasta su forma final para descubrir entonces que tienes un problema básico con el contenido."
+    }
+   ]
+  },
+  {
+   "node_id": "comparar_motivacion_resultado_papel",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "Quien dirige se juzga por los resultados del equipo que lleva",
+     "motivo": "\"Se juzga\" con sujeto de persona se lee como reflexivo (quien dirige se juzga a sí mismo); el libro dice que a quien dirige lo juzgan por los resultados de su equipo. Cambia quién hace qué.",
+     "fichero": "fuentes/zhuo_manager/cap_02.md",
+     "lineas": "211",
+     "frase": "As a manager, you are judged on your team’s outcomes, so your job is to do whatever most helps them succeed.",
+     "propuesta": "Quien dirige es juzgado por los resultados del equipo que lleva, así que su trabajo es lo que más le ayude a tener éxito, aunque sea poco lucido: formar o contratar, frenar a quien crea problemas, montar un plan si nadie sabe qué hacer. Ese trabajo cambia con las metas, la gente y los procesos. Si te mueve el resultado, probablemente esa variación no te moleste; si hay una actividad que no quieres soltar, tus metas pueden chocar con lo que el equipo más necesita. La pregunta que más pesa es si te mueve más el resultado que un papel concreto, y un sí rotundo puede compensar casi cualquier cosa."
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_periodo_direccion_objetivos_retroalimentacion",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "asignar_entrevistas_enfocadas_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "con las preguntas primarias y después ponte curioso tras cada respuesta",
+     "motivo": "Dos calcos en la misma frase: \"primary questions\" (en español, preguntas principales) y \"get curious\" (ponerse curioso no es giro español; es indagar).",
+     "fichero": "fuentes/smart_who/cap_05.md",
+     "lineas": "105",
+     "frase": "We recommend leading with these primary questions to get the conversation started. As with all of the interviews we present in this book, get curious after every answer by using the “What? How? Tell me more” framework",
+     "propuesta": "Arranca cada entrevista con las preguntas principales y después indaga tras cada respuesta con el marco de qué, cómo y cuéntame más, sin dejar de preguntar hasta entender qué hizo la persona y cómo lo hizo."
+    }
+   ]
+  },
+  {
+   "node_id": "abrazar_incomodidad_arrancar_critica_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "matiz",
+     "cita": "si tienes más de sesenta personas trabajando para ti",
+     "motivo": "El libro da una cifra aproximada (\"sixty or so\"); el texto la vuelve un umbral exacto.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "33",
+     "frase": "If you have more than sixty or so people working for you and you make them wait till they can get a private moment with you to share some criticism, you’ll probably never hear it.",
+     "propuesta": "Cuenta con las dos ventajas de airearlo en público: si tienes más de unas sesenta personas trabajando para ti y las haces esperar a un momento privado para darte una crítica, probablemente no la oigas nunca; y te ahorra tener que oír lo mismo una y otra vez."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "regionalismo",
+     "cita": "siempre puedes quedar otro día",
+     "motivo": "\"Quedar\" por citarse o verse es uso peninsular.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "41",
+     "frase": "If they can’t come up with anything on the spot, you can always arrange a time to meet again.",
+     "propuesta": "Cuenta hasta seis antes de decir nada más, obligando a la otra persona a aguantar el silencio. La meta no es abusar sino insistir en una discusión franca, poniendo más difícil callarse que decirte lo que piensa, y si no se le ocurre nada en el momento siempre puedes acordar otro momento para volver a hablar."
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "calco",
+     "cita": "así que lo que te oigo decir es…",
+     "motivo": "Calco palabra a palabra de \"So what I hear you saying is…\"; en español la fórmula natural es \"entonces, lo que me dices es…\".",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "45",
+     "frase": "Try saying, “So what I hear you saying is…”",
+     "propuesta": "Escucha con intención de entender y no de responder. No empieces a criticar la crítica ni a decirle a la otra persona que no ha sido radicalmente franca: repite lo que dijo para asegurarte de haberlo entendido en vez de defenderte, y aclara la crítica sin debatirla. Puedes decir algo como entonces, lo que me dices es…, y si te suena demasiado programático, busca otra forma de decirlo."
+    }
+   ]
+  },
+  {
+   "node_id": "aprender_resultados_vencer_dos_presiones",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "admitir que tu criatura es fea duele de forma insoportable",
+     "motivo": "Calco de la metáfora inglesa \"an ugly baby\" (el mismo caso que \"tienes un bebé feo\").",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "399",
+     "frase": "It’s unbearably painful to admit it when you have an ugly baby!",
+     "propuesta": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume en que admitir que lo que has creado salió mal duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "matiz",
+     "cita": "la negación es la reacción más común a una ejecución imperfecta",
+     "motivo": "El libro compara dos reacciones (\"the more common reaction ... than learning\"); \"la reacción más común\" la vuelve la más frecuente de todas. La propuesta corrige también el calco de la misma frase (defecto siguiente).",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "401",
+     "frase": "And yet, denial is actually the more common reaction to imperfect execution than learning.",
+     "propuesta": "Cuenta con que la negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y con el motivo que dio un colega: duele muchísimo reconocer que lo que has sacado adelante salió mal."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "la criatura que has sacado adelante es fea",
+     "motivo": "Calco de la metáfora inglesa \"an ugly baby\". La propuesta corrige también el matiz de la misma frase (defecto anterior).",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "399",
+     "frase": "It’s unbearably painful to admit it when you have an ugly baby!",
+     "propuesta": "Cuenta con que la negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y con el motivo que dio un colega: duele muchísimo reconocer que lo que has sacado adelante salió mal."
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_fabricar_pedido_pronostico",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "matiz",
+     "cita": "contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad",
+     "motivo": "El libro lo describe como práctica de la mayoría (\"most companies recruit\") y dice que el software se desarrolla \"typically\" contra una necesidad prevista; el paso lo vuelve orden sin matiz.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "109",
+     "frase": "Similarly, most companies recruit new college graduates to fill anticipated needs ... Computer software products, such as compilers, are also typically developed in response to an anticipated market need rather than to specific customer order.",
+     "propuesta": "Usa el pronóstico también fuera de la fábrica, como suele hacerse: la mayoría de las empresas contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y los programas informáticos suelen desarrollarse contra una necesidad de mercado prevista y no contra un pedido concreto."
+    }
+   ]
+  }
+ ]
+}

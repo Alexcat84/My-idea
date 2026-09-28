@@ -1,0 +1,200 @@
+{
+  "node_id": "valorar_logro_tres_comparaciones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Valorar un logro con las tres comparaciones",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Un logro contado en una entrevista no se puede juzgar suelto: una cifra sin contexto no dice si el resultado es magnífico, bueno, aceptable o pobre. Tres preguntas aclaran cuánto valió en cualquier contexto, comparándolo con tres referentes: lo que se logró el año anterior, lo que estaba en el plan y lo que consiguieron sus pares. Por ejemplo, dos millones en ventas cobran su valor al saber que el año anterior fueron ciento cincuenta mil, que el plan pedía un millón doscientos mil y que el siguiente mejor entre treinta pares vendió setecientos cincuenta mil.",
+  "notas_extraccion": "La segunda tactica maestra resuelve un problema concreto de la entrevista cronologica: un candidato cuenta un logro y el entrevistador no tiene con que juzgarlo, porque una cifra suelta no dice nada sin su contexto. Las tres comparaciones son las tres preguntas que ponen ese contexto, y estan elegidas para cubrir los tres referentes posibles: el pasado del propio puesto, lo que se habia comprometido y lo que hicieron los demas en las mismas condiciones. Un mismo resultado puede ser magnifico contra el año anterior y mediocre contra los pares, y solo con las tres se sabe cual de las dos cosas es. Los ejemplos con los que el libro las ilustra estan construidos sobre la misma cifra de ventas a proposito, para que se vea que lo que cambia el juicio no es el numero sino contra que se compara.",
+  "pasos_accionables": [
+    "Pregunta cómo se comparó su desempeño con el desempeño del año anterior. Por ejemplo: esta persona logró ventas de dos millones y las del año anterior habían sido de solo ciento cincuenta mil.",
+    "Pregunta cómo se comparó su desempeño con el plan. Por ejemplo: esta persona vendió dos millones y el plan era de un millón doscientos mil.",
+    "Pregunta cómo se comparó su desempeño con el de sus pares. Por ejemplo: esta persona vendió dos millones y quedó la primera entre treinta pares, y el siguiente mejor vendió solo setecientos cincuenta mil."
+  ],
+  "entregable_esperado": "El valor real de cada logro contado, situado en su contexto por tres comparaciones: con el año anterior, con el plan y con sus pares.",
+  "nodos_previos": [
+    "aplicar_tacticas_maestras_entrevista"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando un candidato te cuenta un logro en la entrevista cronológica de trayectoria y no sabes si es magnífico, bueno, aceptable o pobre. Se aplica logro a logro."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-valorar_logro_tres_comparaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un logro contado en una entrevista no se puede juzgar suelto: una cifra sin contexto no dice si el resultado es magnífico, bueno, aceptable o pobre. Tres preguntas aclaran cuánto valió en cualquier contexto, comparándolo con tres referentes: lo que se logró el año anterior, lo que estaba en el plan y lo que consiguieron sus pares. Por ejemplo, dos millones en ventas cobran su valor al saber que el año anterior fueron ciento cincuenta mil, que el plan pedía un millón doscientos mil y que el siguiente mejor entre treinta pares vendió setecientos cincuenta mil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_05.md",
+          "lineas": "61-69"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): La objeción se sostiene: 'un mismo resultado puede brillar contra el año anterior y quedarse corto contra los pares', 'solo con las tres a la vista' y 'los tres referentes posibles' no salen de las líneas 63-69, que solo dan las tres preguntas 'to clarify how valuable an accomplishment was in any context' y un ejemplo que brilla en las tres. La propuesta se ciñe a eso y usa el ejemplo del libro.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)"
+    },
+    {
+      "id": "m11-limpieza-valorar_logro_tres_comparaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta como se comparo su desempeño con el desempeño del año anterior. El ejemplo del libro: esta persona logro ventas de dos millones de dolares y las del año anterior habian sido de solo ciento cincuenta mil.",
+      "texto_nuevo": "Pregunta cómo se comparó su desempeño con el desempeño del año anterior. Por ejemplo: esta persona logró ventas de dos millones de dólares y las del año anterior habían sido de solo ciento cincuenta mil.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-valorar_logro_tres_comparaciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta como se comparo su desempeño con el plan. El ejemplo del libro: esta persona vendio dos millones y el plan era de un millon doscientos mil.",
+      "texto_nuevo": "Pregunta cómo se comparó su desempeño con el plan. Por ejemplo: esta persona vendió dos millones y el plan era de un millón doscientos mil.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-valorar_logro_tres_comparaciones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta como se comparo su desempeño con el de sus pares. El ejemplo del libro: esta persona vendio dos millones y quedo la primera entre treinta pares, y el siguiente mejor vendio solo setecientos cincuenta mil.",
+      "texto_nuevo": "Pregunta cómo se comparó su desempeño con el de sus pares. Por ejemplo: esta persona vendió dos millones y quedó la primera entre treinta pares, y el siguiente mejor vendió solo setecientos cincuenta mil.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-valorar_logro_tres_comparaciones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El valor real de cada logro contado, situado en su contexto por tres comparaciones y no por el adjetivo con el que el candidato lo presento.",
+      "texto_nuevo": "El valor real de cada logro contado, situado en su contexto por tres comparaciones y no por el adjetivo con el que el candidato lo presentó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-valorar_logro_tres_comparaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un candidato te cuenta un logro en la entrevista cronologica de trayectoria y no sabes si es magnifico, bueno, aceptable o pobre. Es la segunda de las cinco tacticas maestras y se aplica logro a logro.",
+      "texto_nuevo": "Cuando un candidato te cuenta un logro en la entrevista cronológica de trayectoria y no sabes si es magnífico, bueno, aceptable o pobre. Es la segunda de las cinco tácticas maestras y se aplica logro a logro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-valorar_logro_tres_comparaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta cómo se comparó su desempeño con el desempeño del año anterior. Por ejemplo: esta persona logró ventas de dos millones de dólares y las del año anterior habían sido de solo ciento cincuenta mil.",
+      "texto_nuevo": "Pregunta cómo se comparó su desempeño con el desempeño del año anterior. Por ejemplo: esta persona logró ventas de dos millones y las del año anterior habían sido de solo ciento cincuenta mil.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de dólares"
+        ]
+      },
+      "decision": "pase de glosario (moneda): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-pase2-valorar_logro_tres_comparaciones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El valor real de cada logro contado, situado en su contexto por tres comparaciones y no por el adjetivo con el que el candidato lo presentó.",
+      "texto_nuevo": "El valor real de cada logro contado, situado en su contexto por tres comparaciones: con el año anterior, con el plan y con sus pares.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_05.md 63",
+        "frase": "How do you know if an accomplishment a person tells you about is great, good, okay, or lousy? Use the three P’s."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no habla de un adjetivo del candidato; la duda es del entrevistador sobre cuánto vale el logro.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase3-valorar_logro_tres_comparaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando un candidato te cuenta un logro en la entrevista cronológica de trayectoria y no sabes si es magnífico, bueno, aceptable o pobre. Es la segunda de las cinco tácticas maestras y se aplica logro a logro.",
+      "texto_nuevo": "Cuando un candidato te cuenta un logro en la entrevista cronológica de trayectoria y no sabes si es magnífico, bueno, aceptable o pobre. Se aplica logro a logro.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "\"La segunda de las cinco tácticas maestras\" remite a una lista que no aparece en este nodo (el resumen y los pasos solo cuentan las tres comparaciones); es el caso de \"la octava de las diez cosas\". Sale la remisión y queda la condición."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La segunda de las cinco tácticas maestras\" remite a una lista que no aparece en este nodo (el resumen y los pasos solo cuentan las tres comparaciones); es el caso de \"la octava de las diez cosas\". Sale la remisión y queda la condición.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Valora un Logro con Tres Comparaciones",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

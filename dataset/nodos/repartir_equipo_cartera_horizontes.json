@@ -1,0 +1,183 @@
+{
+  "node_id": "repartir_equipo_cartera_horizontes",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Repartir el equipo como una cartera, por horizonte de tiempo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que ningún asesor aconsejaría poner todo el dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+  "notas_extraccion": "Es la segunda tactica de equilibrio y la unica pieza del capitulo que da una proporcion con numero. Lo que la hace procedimentable es precisamente eso: sin los tercios, la idea de la cartera seria una analogia. El paso 1 esta porque el libro empieza desmontando el supuesto de la pregunta, y sin ese paso el reparto parece una respuesta a una pregunta distinta de la que se hizo. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se eligen las personas de cada tercio, ni cada cuanto rotan, ni que se hace si el tercio de largo plazo no produce nada.",
+  "pasos_accionables": [
+    "Reconoce el supuesto escondido en la pregunta de cómo sacar tiempo para el largo plazo: se da por hecho que levantar la cabeza para planificar los meses o años que vienen sale a costa de ejecutar bien lo de ahora.",
+    "Trata tus proyectos como trata sus activos un asesor financiero: igual que ninguno recomendaría poner todo tu dinero en un solo tipo de activo, tampoco deberías abordar proyectos con un solo horizonte de tiempo.",
+    "Un reparto posible, el que usa una directiva: pon a un tercio de tu equipo en proyectos que se pueden completar en cuestión de semanas.",
+    "Pon a otro tercio en proyectos de plazo medio, que pueden llevar meses.",
+    "Pon al último tercio en ideas innovadoras y tempranas cuyo impacto no se sabrá hasta dentro de años.",
+    "Cuenta con lo que ese reparto equilibra: hacer mejoras constantes a las funciones esenciales mientras se mira al horizonte."
+  ],
+  "entregable_esperado": "El equipo repartido por horizonte de tiempo, mejorando lo esencial y mirando al horizonte a la vez.",
+  "nodos_previos": [
+    "equilibrar_corto_largo_plazo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando te preguntas cómo sacar tiempo para el trabajo de largo plazo si hay tantísimo que hacer ahora mismo para que todo siga funcionando."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-repartir_equipo_cartera_horizontes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que nadie pone todo su dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "223-233"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)"
+    },
+    {
+      "id": "m11-limpieza-repartir_equipo_cartera_horizontes-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce el supuesto escondido en esa pregunta, que es lo primero que el libro desmonta: se da por hecho que levantar la cabeza para planificar los meses o anios que vienen sale a costa de ejecutar bien lo de ahora.",
+      "texto_nuevo": "Reconoce el supuesto escondido en la pregunta de cómo sacar tiempo para el largo plazo: se da por hecho que levantar la cabeza para planificar los meses o años que vienen sale a costa de ejecutar bien lo de ahora.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo primero que el libro desmonta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_equipo_cartera_horizontes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata tus proyectos como trata sus activos un asesor financiero: igual que ninguno recomendaria poner todo tu dinero en un solo tipo de activo, tampoco deberias abordar proyectos con un solo horizonte de tiempo.",
+      "texto_nuevo": "Trata tus proyectos como trata sus activos un asesor financiero: igual que ninguno recomendaría poner todo tu dinero en un solo tipo de activo, tampoco deberías abordar proyectos con un solo horizonte de tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_equipo_cartera_horizontes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pon al ultimo tercio en ideas innovadoras y tempranas cuyo impacto no se sabra hasta dentro de anios.",
+      "texto_nuevo": "Pon al último tercio en ideas innovadoras y tempranas cuyo impacto no se sabrá hasta dentro de años.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_equipo_cartera_horizontes-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando te preguntas como sacar tiempo para el trabajo de largo plazo si hay tantisimo que hacer ahora mismo para que los trenes sigan saliendo.",
+      "texto_nuevo": "Cuando te preguntas cómo sacar tiempo para el trabajo de largo plazo si hay tantísimo que hacer ahora mismo para que todo siga funcionando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "para que los trenes sigan saliendo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_equipo_cartera_horizontes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que nadie pone todo su dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+      "texto_nuevo": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que nadie pone todo su dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 229-231",
+        "frase": "My colleague makes sure that a third of her team works on projects that can be completed on the order of weeks, another third works on medium-term projects that may take months, and finally, the last third works on innovative, early-stage ideas whose impact won't be known for years."
+      },
+      "decision": "auditoria completa M11 (matiz): El reparto en tercios es la práctica de una colega de la autora, no una norma general; se cuenta como caso.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_equipo_cartera_horizontes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pon a un tercio de tu equipo en proyectos que se pueden completar en el orden de semanas.",
+      "texto_nuevo": "Un reparto posible, el que usa una directiva: pon a un tercio de tu equipo en proyectos que se pueden completar en cuestión de semanas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 231",
+        "frase": "My colleague makes sure that a third of her team works on projects that can be completed on the order of weeks"
+      },
+      "decision": "auditoria completa M11 (matiz, calco): El reparto por tercios es la práctica de una colega de la autora; pasa a contarse como caso. 'En el orden de semanas' calca 'on the order of weeks'.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-repartir_equipo_cartera_horizontes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que nadie pone todo su dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+      "texto_nuevo": "Detrás de la pregunta de cómo sacar tiempo para el largo plazo hay un supuesto: que planificar los meses o años que vienen se hace a costa de ejecutar bien lo de ahora. Tratar los proyectos como una cartera de inversiones deshace ese dilema. Igual que ningún asesor aconsejaría poner todo el dinero en un solo tipo de activo, no conviene apostar todo el equipo a un solo horizonte. Una directiva lo reparte así: un tercio en lo que se termina en semanas, otro en lo que lleva meses y otro en ideas tempranas cuyo impacto tardará años en verse. Así se mejora lo esencial sin dejar de mirar lejos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 229",
+        "frase": "Just as no financial advisor would recommend putting all your money into one kind of asset, neither should you tackle projects with one kind of time horizon."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro dice que ningún asesor recomendaría poner todo el dinero en un solo activo, no que nadie lo haga. El matiz de \"can be completed\"/\"may take months\" no se sostiene: describe la categoría de plazo de cada tercio, sin matiz perdido.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Reparte tu Equipo por Horizontes",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

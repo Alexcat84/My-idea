@@ -1,0 +1,419 @@
+{
+  "node_id": "repartir_semana_cuarenta_horas_jefe",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Repartir la semana de cuarenta horas del jefe entre gestionar, pensar por tu cuenta y lo imprevisible",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Todo lo que conviene hacer como jefe puede abrumarte de vez en cuando. Respira hondo: la meta es ahorrarte tiempo, no llenarte el calendario de reuniones. Si aplicas todas las ideas y herramientas, gestionar a tu equipo cuesta unas diez horas a la semana, y esas horas deberían ahorrarte después mucho tiempo perdido y muchos quebraderos de cabeza. Puedes reservar además unas quince para pensar y ejecutar en tu especialidad, y las quince restantes de una semana de cuarenta ojalá puedas reclamarlas como tuyas, aunque hay quien gasta la mayor parte en lidiar con lo imprevisible.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_03.md, unidad How to Use This Book, How to Use This Book. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'ten hours a week', corrida con grep contra las quince unidades del libro. Es la respuesta del libro a la objecion que el mismo se pone: que aplicar sus tecnicas llene el calendario. El inventario es propio del texto y numerado por el, tres partidas que suman la semana entera, asi que escribir los pasos es transcribirlo y no completarlo. Su valor no es la aritmetica sino que fija un techo: diez horas de gestion, y no todas las que hagan falta, es lo que convierte el resto del libro en algo cuyo coste se puede decidir antes de empezar. Lo que el texto NO dice, y por eso no esta escrito aqui, es como se reparten esas diez horas entre las personas a cargo, en que dias se bloquean las quince, que se recorta primero cuando la semana se desborda, ni de donde sale la cifra de diez. FUSION DECLARADA DE LA VUELTA 24, 13 sep 2026, por la adjudicacion 1 de la ACTA 23 y la TAREA 2 de su encargo, CORRECCION DECLARADA Y SIN BORRAR LO QUE HABIA: el entregable decia 'Tu semana de cuarenta horas repartida en sus tres partidas, con las quince horas de trabajo propio bloqueadas en el calendario.' y los pasos eran siete. La vuelta 23 leyo la linea 51 de fuentes/scott_radical_candor/cap_12.md, la clasifico REPITE contra este nodo por P.19 y NO abrio pieza nueva, que es la clase buena; pero la otra mitad de P.19 dice que fundir es que el DONANTE se lleve lo que el tramo repetido anade, y esa mitad no se hizo. Hoy se hace. LA FRONTERA DE UNIDAD, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): los pasos P1, P2, P3, P4, P8, P9 y P10 salen de fuentes/scott_radical_candor/cap_03.md linea 17, unidad How to Use This Book, que es la unidad de origen de este nodo y no se mueve; los pasos P5, P6 y P7 salen de fuentes/scott_radical_candor/cap_12.md linea 51, unidad Getting Started. LAS TRES COSAS QUE L51 ANADE Y ESTE NODO NO TENIA, contadas una a una: que cinco de esas diez horas son reuniones a solas que probablemente ya tenias; que las conversaciones de gestion del crecimiento, los saltos de nivel y las calibraciones vienen a rachas y no se reparten por semana; y que por eso hay semanas de ocho horas, otras de doce y otras de cinco. La vuelta 23 escribio que lo unico que L51 anadia era la primera, y eran TRES: esa frase queda tachada en su sede, R.2.b del reporte. NO SE ANADE UNA SEGUNDA CLAVE DE FUENTE Y SE DICE POR QUE: cap_03 y cap_12 son dos unidades del MISMO libro, la tabla canonica manda una sola grafia por libro y el gate tumba una clave repetida en la lista de fuentes del nodo, src/gate.py linea 179. Lo que cambia no es la fuente sino la UNIDAD, y por eso la unidad anadida se declara aqui con su frontera y no en el campo fuentes. LOS TRES PASOS NUEVOS SON TRANSCRIPCION Y NO PUENTE, marcados uno a uno contra L51 en la relectura D.30: cada cifra, cada proceso nombrado y la horquilla entera estan escritos en esa linea. Lo que L51 NO dice y por eso no esta escrito aqui es cuales de las cinco horas de reunion a solas son las que ya tenias, cada cuanto vienen las rachas, ni que se recorta la semana de doce. CORRECCION DECLARADA DE LA VUELTA 27, 16 sep 2026, por el punto 3 de la TAREA 1 de su encargo y la adjudicacion 3.1 de la ACTA 25, SIN BORRAR LO QUE HAY ENCIMA: la frase de la vuelta 19 que llama ancla textual unica a 'ten hours a week' es FALSA, y se mide con un comando. grep -ril 'ten hours a week' contra las quince unidades del libro da DOS ficheros, cap_03.md y cap_12.md, corrido el 16 sep 2026. La UNIDAD DE ORIGEN cap_03 se sostiene y no cambia: el ancla que SI es unica de cap_03, comprobada con el mismo comando, es 'litter your calendar with meetings'. La segunda aparicion esta en la misma linea 51 de cap_12 que este nodo ya declara en su frontera de fusion de la vuelta 24, asi que el ancla no era unica tampoco el dia en que se escribio. Lo que estaba mal es la etiqueta de procedencia y la palabra unica, NO el procedimiento: ni un paso ni una cita cambian.",
+  "pasos_accionables": [
+    "Cuenta con que puede que te sientas abrumado de vez en cuando por la cantidad de cosas que conviene hacer como directivo. Respira hondo.",
+    "Parte de esta meta: ahorrarte tiempo, no llenarte el calendario de reuniones.",
+    "Da por hecho que sí necesitas pasar tiempo con las personas a tu cargo para ser un gran jefe, pero no necesitas pasar todo tu tiempo con ellas.",
+    "Cuenta unas diez horas a la semana de gestión de tu equipo, que es lo que cuesta aplicar cada idea, herramienta y técnica.",
+    "Descuenta de esas diez horas las cinco que ya son reuniones a solas que probablemente ya estabas teniendo de todos modos.",
+    "Saca del reparto semanal los procesos que vienen a rachas: las conversaciones de gestión del crecimiento, las reuniones de salto de nivel y las calibraciones no se reparten cada semana.",
+    "Cuenta con esta horquilla por esas rachas: puede que unas semanas tengas ocho horas de trabajo asociado a tus responsabilidades nucleares como jefe, otras doce, otras cinco.",
+    "Cuenta con lo que esas diez horas compran: deberían ahorrarte después una cantidad enorme de tiempo perdido y de quebraderos de cabeza.",
+    "Bloquea además unas quince horas a la semana para pensar y ejecutar por tu cuenta en tu área de especialidad.",
+    "Cuenta las otras quince horas que quedan en una semana laboral de cuarenta: ojalá puedas reclamarlas como tuyas, aunque hay quien acaba gastando la mayor parte en lidiar con lo imprevisible."
+  ],
+  "entregable_esperado": "Tu semana de cuarenta horas repartida en sus tres partidas, con las quince horas de trabajo propio bloqueadas en el calendario y la horquilla de ocho, doce o cinco horas de gestión anotada según le toquen rachas a la semana.",
+  "nodos_previos": [
+    "auditar_calendario_reuniones_semana"
+  ],
+  "nodos_siguientes": [
+    "reservar_calendario_tiempo_ejecutar",
+    "bloquear_tiempo_pensar_calendario"
+  ],
+  "condiciones_activacion": [
+    "Cuando te abruma la cantidad de cosas que conviene hacer como directivo y quieres saber cuánto tiempo de tu semana te van a costar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Todo lo que se le sugiere a un buen jefe puede abrumar de vez en cuando. Respira hondo: la meta es ahorrarte tiempo, no llenarte el calendario de reuniones. Si aplicas todas las ideas y herramientas, gestionar a tu equipo cuesta unas diez horas a la semana, y esas horas deberían ahorrarte después mucho tiempo perdido y muchos quebraderos de cabeza. Puedes reservar además unas quince para pensar y ejecutar en tu especialidad, y las quince restantes de una semana de cuarenta ojalá puedas reclamarlas como tuyas, aunque hay quien gasta la mayor parte en lidiar con lo imprevisible.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_03.md",
+          "lineas": "17-17"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Objecion sostenida: 'if you're like me' es la experiencia de una persona vuelta regla, 'should save' quedó como 'te ahorran', y 'poner cifras lo desactiva' y 'así sabes de antemano' no están en la 17. La propuesta del lector lo arregla pero usa 'Se sugiere reservar', de la familia de las barandas impersonales; se cambia por 'Puedes reservar además' y 'Aplicando' por 'Si aplicas'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)"
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto anticipa: segun avanzas puede que te sientas abrumado de vez en cuando por la cantidad de cosas que te sugiere hacer como directivo. Respira hondo.",
+      "texto_nuevo": "Cuenta con que puede que te sientas abrumado de vez en cuando por la cantidad de cosas que conviene hacer como directivo. Respira hondo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto anticipa",
+          "segun avanzas",
+          "que te sugiere hacer"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de la meta que el libro declara sobre si mismo: ahorrarte tiempo, no llenarte el calendario de reuniones.",
+      "texto_nuevo": "Parte de esta meta: ahorrarte tiempo, no llenarte el calendario de reuniones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro declara sobre si mismo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Da por hecho lo que el texto separa en dos mitades: si necesitas pasar tiempo con tus personas a cargo para ser un gran jefe, pero no necesitas pasar TODO tu tiempo con ellas.",
+      "texto_nuevo": "Da por hecho que sí necesitas pasar tiempo con tus personas a cargo para ser un gran jefe, pero no necesitas pasar todo tu tiempo con ellas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto separa en dos mitades"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta diez horas a la semana de gestion de tu equipo, que es lo que el texto cifra si aplicas cada idea, herramienta y tecnica del libro.",
+      "texto_nuevo": "Cuenta diez horas a la semana de gestión de tu equipo, que es lo que cuesta aplicar cada idea, herramienta y técnica.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto cifra",
+          "del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Descuenta de esas diez horas las cinco que el texto dice que ya son reuniones a solas que probablemente ya estabas teniendo de todos modos.",
+      "texto_nuevo": "Descuenta de esas diez horas las cinco que ya son reuniones a solas que probablemente ya estabas teniendo de todos modos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Saca del reparto semanal los procesos que el texto nombra como de rachas: las conversaciones de gestion del crecimiento, las reuniones de salto de nivel y las calibraciones, que segun el texto no se reparten cada semana sino que vienen a rachas.",
+      "texto_nuevo": "Saca del reparto semanal los procesos que vienen a rachas: las conversaciones de gestión del crecimiento, las reuniones de salto de nivel y las calibraciones no se reparten cada semana.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto nombra como de rachas",
+          "que segun el texto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la horquilla que el texto da por esas rachas: unas semanas ocho horas de trabajo asociado a tus responsabilidades nucleares como jefe, otras doce, otras cinco.",
+      "texto_nuevo": "Cuenta con esta horquilla por esas rachas: unas semanas tendrás ocho horas de trabajo asociado a tus responsabilidades nucleares como jefe, otras doce, otras cinco.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que esas diez horas compran: te ahorran despues una cantidad enorme de tiempo perdido y de quebraderos de cabeza.",
+      "texto_nuevo": "Cuenta con lo que esas diez horas compran: te ahorran después una cantidad enorme de tiempo perdido y de quebraderos de cabeza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Bloquea unas quince horas a la semana para pensar y ejecutar por tu cuenta en tu area de especialidad, que es lo que el texto sugiere ademas.",
+      "texto_nuevo": "Bloquea además unas quince horas a la semana para pensar y ejecutar por tu cuenta en tu área de especialidad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto sugiere ademas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta las otras quince horas que quedan en una semana laboral de cuarenta: el texto dice que ojala puedas reclamarlas como tuyas, y avisa de que si eres como la autora vas a gastar la mayor parte en lidiar con lo imprevisible.",
+      "texto_nuevo": "Cuenta las otras quince horas que quedan en una semana laboral de cuarenta: ojalá puedas reclamarlas como tuyas, aunque es probable que gastes la mayor parte en lidiar con lo imprevisible.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que",
+          "si eres como la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu semana de cuarenta horas repartida en sus tres partidas, con las quince horas de trabajo propio bloqueadas en el calendario y la horquilla de ocho, doce o cinco horas de gestion anotada segun le toque rachas a la semana.",
+      "texto_nuevo": "Tu semana de cuarenta horas repartida en sus tres partidas, con las quince horas de trabajo propio bloqueadas en el calendario y la horquilla de ocho, doce o cinco horas de gestión anotada según le toquen rachas a la semana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_semana_cuarenta_horas_jefe-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando te abruma la cantidad de cosas que el libro te sugiere hacer como directivo y quieres saber cuanto tiempo de tu semana te van a costar.",
+      "texto_nuevo": "Cuando te abruma la cantidad de cosas que conviene hacer como directivo y quieres saber cuánto tiempo de tu semana te van a costar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro te sugiere hacer"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_semana_cuarenta_horas_jefe-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta diez horas a la semana de gestión de tu equipo, que es lo que cuesta aplicar cada idea, herramienta y técnica.",
+      "texto_nuevo": "Cuenta unas diez horas a la semana de gestión de tu equipo, que es lo que cuesta aplicar cada idea, herramienta y técnica.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_03.md 17",
+        "frase": "the time you dedicate to managing your team will come to approximately ten hours a week"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro da una cifra aproximada ('approximately').",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_semana_cuarenta_horas_jefe-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que esas diez horas compran: te ahorran después una cantidad enorme de tiempo perdido y de quebraderos de cabeza.",
+      "texto_nuevo": "Cuenta con lo que esas diez horas compran: deberían ahorrarte después una cantidad enorme de tiempo perdido y de quebraderos de cabeza.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_03.md 17",
+        "frase": "those ten hours should save you enormous lost time and headaches later"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'should save' (deberían), no que lo ahorren con seguridad.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_semana_cuarenta_horas_jefe-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con esta horquilla por esas rachas: unas semanas tendrás ocho horas de trabajo asociado a tus responsabilidades nucleares como jefe, otras doce, otras cinco.",
+      "texto_nuevo": "Cuenta con esta horquilla por esas rachas: puede que unas semanas tengas ocho horas de trabajo asociado a tus responsabilidades nucleares como jefe, otras doce, otras cinco.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_12.md 51",
+        "frase": "Of course, some processes like growth-management conversations, skip-level meetings, and calibrations don’t get spread out each week but will come in bursts, so some weeks you may have eight hours of work associated with your core responsibilities as a boss, others twelve others five."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"you may have\": posibilidad, no previsión segura.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_semana_cuarenta_horas_jefe-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta las otras quince horas que quedan en una semana laboral de cuarenta: ojalá puedas reclamarlas como tuyas, aunque es probable que gastes la mayor parte en lidiar con lo imprevisible.",
+      "texto_nuevo": "Cuenta las otras quince horas que quedan en una semana laboral de cuarenta: ojalá puedas reclamarlas como tuyas, aunque hay quien acaba gastando la mayor parte en lidiar con lo imprevisible.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_03.md 17",
+        "frase": "Hopefully you can claim them as your own, though if you’re like me you’ll have to use most of them to deal with the unpredictable."
+      },
+      "decision": "auditoria completa M11 (matiz): La experiencia propia de la autora (\"if you are like me\") vuelta probabilidad general; se cuenta como caso.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-repartir_semana_cuarenta_horas_jefe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Todo lo que se le sugiere a un buen jefe puede abrumar de vez en cuando. Respira hondo: la meta es ahorrarte tiempo, no llenarte el calendario de reuniones. Si aplicas todas las ideas y herramientas, gestionar a tu equipo cuesta unas diez horas a la semana, y esas horas deberían ahorrarte después mucho tiempo perdido y muchos quebraderos de cabeza. Puedes reservar además unas quince para pensar y ejecutar en tu especialidad, y las quince restantes de una semana de cuarenta ojalá puedas reclamarlas como tuyas, aunque hay quien gasta la mayor parte en lidiar con lo imprevisible.",
+      "texto_nuevo": "Todo lo que conviene hacer como jefe puede abrumarte de vez en cuando. Respira hondo: la meta es ahorrarte tiempo, no llenarte el calendario de reuniones. Si aplicas todas las ideas y herramientas, gestionar a tu equipo cuesta unas diez horas a la semana, y esas horas deberían ahorrarte después mucho tiempo perdido y muchos quebraderos de cabeza. Puedes reservar además unas quince para pensar y ejecutar en tu especialidad, y las quince restantes de una semana de cuarenta ojalá puedas reclamarlas como tuyas, aunque hay quien gasta la mayor parte en lidiar con lo imprevisible.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se le sugiere a un buen jefe"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): \"Se le sugiere\" es voz impersonal de libro (en el libro sugiere la autora: \"the things I'm suggesting you do as a manager\"); pasa a tú como el resto del resumen.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-repartir_semana_cuarenta_horas_jefe-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Da por hecho que sí necesitas pasar tiempo con tus personas a cargo para ser un gran jefe, pero no necesitas pasar todo tu tiempo con ellas.",
+      "texto_nuevo": "Da por hecho que sí necesitas pasar tiempo con las personas a tu cargo para ser un gran jefe, pero no necesitas pasar todo tu tiempo con ellas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "«Tus personas a cargo» pasa a la forma fijada del pack, «las personas a tu cargo» (decisión del orquestador del cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): «Tus personas a cargo» pasa a la forma fijada del pack, «las personas a tu cargo» (decisión del orquestador del cuarto pase).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Reparte tu Semana de Jefe",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

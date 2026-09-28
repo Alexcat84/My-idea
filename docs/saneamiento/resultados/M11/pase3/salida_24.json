@@ -1,0 +1,976 @@
+{
+ "lote": "24",
+ "nodos": [
+  {
+   "node_id": "reservar_calendario_tiempo_ejecutar",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 383,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 387,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 387,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_seis_pasos_sistema_venta",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 139,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "decidir_nivel_competente_inferior",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "preguntar_seguimiento_hallar_huecos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "Haz estas preguntas de seguimiento con un doble propósito",
+     "motivo": "El libro ofrece algunas preguntas que puedes hacer (un menú: 'some ... you can ask'); el paso las vuelve una lista que hay que hacer entera.",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "67-69",
+     "frase": "Here are some follow-up questions you can ask to show not only that you are listening but that you care and want to help, and to identify the gaps between what people are doing, what they think they ought to be doing, and what they want to be doing:",
+     "propuesta": "Puedes hacer algunas de estas preguntas de seguimiento con un doble propósito: enseñar no solo que estás escuchando sino que te importa y quieres ayudar, e identificar los huecos entre lo que la gente hace, lo que cree que debería hacer y lo que quiere hacer."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "Haz un check de:",
+     "motivo": "Inglés que quedó ('check'); en el libro es una pregunta más de la lista (línea 81).",
+     "propuesta": "Pregunta: ¿no quieres trabajar en ello porque no te interesa o porque crees que no es importante?"
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 67,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 69,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 83,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 89,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 93,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "auditar_formacion_premios_ultima_fila",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 55,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 55,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 57,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "listar_bueno_mejorable_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "Para armarla, pregunta si todos se llevan bien",
+     "motivo": "Las preguntas del libro son para ti mismo mientras haces la lista a solas ('sit down and make a list', líneas 63-65); 'pregunta si' sin destinatario se lee como preguntar a otros.",
+     "propuesta": "Para armarla, pregúntate si todos se llevan bien, si los procesos del equipo son eficientes, y si tu equipo tiene fama de hacer un trabajo riguroso y de alta calidad."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "Para armar esa segunda, pregunta si el equipo es esquivo con los plazos",
+     "motivo": "Igual que el paso 1: son preguntas que te haces a ti mismo, no a otros.",
+     "propuesta": "Para armar esa segunda, pregúntate si el equipo es esquivo con los plazos, si parece que las prioridades cambian todo el rato, y si hay una reunión semanal larguísima a la que nadie quiere ir."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 59,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 65,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 65,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 69,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "distinguir_empuje_tiron_salidas_laborales",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 73,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 77,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "bloquear_tiempo_pensar_calendario",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 163,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 163,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 169,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 169,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 171,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 173,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 173,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 173,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "preparar_guion_reunion_individual_subordinado",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 39,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 39,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 43,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 43,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 43,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "evaluar_cultura_empresa_adjetivos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "En un caso, el ejercicio fue rápido y tosco pero honesto",
+     "motivo": "El libro concede que pudo ser rápido y tosco ('may have been'); el resumen lo afirma como hecho. Propuesta medida: 595 caracteres.",
+     "fichero": "fuentes/smart_who/cap_03.md",
+     "lineas": "167",
+     "frase": "It may have been quick and dirty, but it was honest, and that honesty meant they could focus their hiring in the short term on people who could handle all of that.",
+     "propuesta": "Quien no encaja en la cultura fracasa en el puesto aunque sea capaz en todo lo demás, así que evaluar ese encaje empieza por conocer tu propia cultura. Una forma es preguntar a tu equipo de dirección qué adjetivos la describen y anotarlos: no tarda en surgir una imagen. En un caso, el ejercicio pudo ser rápido y tosco, pero fue honesto, y eso permitió centrar la contratación inmediata en quien pudiera con esa cultura. Convertir esos rasgos en competencias escritas para todos los puestos te ayuda a no dejar de evaluar el encaje, porque con la prisa lo más evidente a veces se pasa por alto."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 161,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 163,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 165,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 167,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 167,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 169,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 169,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 169,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 171,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 173,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 175,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 183,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 183,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 191,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 191,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 191,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 193,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 197,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 197,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 201,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 201,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "avisar_organizador_reunion_prescindible",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "matiz",
+     "cita": "cuando una reunión periódica no vale para nadie",
+     "motivo": "El libro habla de reuniones que no parecen valiosas para nadie ('don't seem valuable'), de valor cuestionable; el título lo afirma como hecho (resumen, paso 0 y condición sí conservan el matiz).",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "283",
+     "frase": "Be on the lookout as well for meetings that don’t seem valuable for anyone.",
+     "propuesta": "Avisar a quien organiza cuando una reunión periódica no parece valer para nadie"
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 283,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 283,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 287,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 289,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "identificar_disparadores_propios_reaccion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "¿cuáles son las cosas que a mí me sacan de quicio, pero no a otra persona?",
+     "motivo": "El libro dice 'but maybe not someone else's'; el paso quita el 'quizá'.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "233",
+     "frase": "The more interesting question is: What are the things that push your buttons, but maybe not someone else’s?",
+     "propuesta": "Ten claro qué separa un disparador de una reacción negativa normal: que tiene un efecto desmedido sobre ti en concreto. Cualquier directivo se sentiría decepcionado si un candidato prometedor rechazara una oferta o si una empleada estrella entregara su carta de renuncia. La pregunta más interesante es: ¿cuáles son las cosas que a mí me sacan de quicio, pero quizá no a otra persona? Ahí es donde corres más riesgo de que te vean como irracional."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 233,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 233,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 237,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 239,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 241,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 245,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 257,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "agendar_cuidados_propios_cumplirlos",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "llevar_inventario_proyectos_discrecionales",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 287,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 287,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 287,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 287,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 287,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 287,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 289,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 289,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 289,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 289,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 291,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 291,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "montar_equipo_gestion_desempenio_revisar_sistema",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "las consecuencias no buscadas que salen de un sistema mal diseñado",
+     "motivo": "El libro dice 'that can come from'; el paso afirma que salen.",
+     "fichero": "fuentes/scott_radical_candor/cap_14.md",
+     "lineas": "25",
+     "frase": "HR professionals offer a broader understanding of the kinds of unintended consequences that can come from poorly designed systems.",
+     "propuesta": "Mete en el equipo dos perfiles: responsables operativos y directivos de recursos humanos. Los operativos traen el conocimiento experto de las competencias concretas del trabajo, y sin meterlos el sistema no tiene impacto; los de recursos humanos traen la comprensión más amplia de las consecuencias no buscadas que pueden salir de un sistema mal diseñado."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 21,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 25,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 25,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 27,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "listar_debilidades_disparadores_propios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "agrupada en unos pocos temas",
+     "motivo": "El libro dice que puede que veas emerger algunos temas ('you may see'); el entregable exige la lista agrupada en temas (el paso 6 y el resumen sí conservan el 'puede que').",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "113",
+     "frase": "Again, you may see some themes emerging.",
+     "propuesta": "Una lista escrita de tus debilidades y tus disparadores, justo debajo de la de fuerzas, con los temas que quizá veas emerger en ella."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 93,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 93,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 109,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 113,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 115,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "programar_visita_area_observar_despachar",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 155,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 159,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 159,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_recolocar_despedir_persona",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 301,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 303,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 303,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 309,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 311,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_referencias_red_personal",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 299,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 301,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 307,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 307,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 309,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 313,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 313,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 313,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 315,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 315,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 315,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 319,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  }
+ ]
+}

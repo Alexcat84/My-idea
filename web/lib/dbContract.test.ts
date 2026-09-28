@@ -88,6 +88,8 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
   });
 
   it("pack_clicks.pack", () => {
+    // Integracion del mundo 11 (migration 048): primer_equipo es un pack.
+    expect(PACK_CLICKS_PACK).toContain("primer_equipo");
     assertSubconjuntoDelContrato("pack_clicks.pack", PACK_CLICKS_PACK);
   });
 

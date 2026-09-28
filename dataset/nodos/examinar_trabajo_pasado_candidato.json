@@ -1,0 +1,239 @@
+{
+  "node_id": "examinar_trabajo_pasado_candidato",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Examinar ejemplos del trabajo pasado del candidato en proyectos parecidos",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Los resultados de una entrevista no cuentan toda la verdad sobre cómo trabajará alguien. Lo que mejor lo anticipa, aunque siga siendo imperfecto, es cómo le ha ido en proyectos y entornos parecidos: por eso unos meses de prácticas enseñan tanto. Cuando no las hay, lo siguiente mejor es meterte a fondo en lo que ya produjo, porque oírle explicar su proceso sobre ejemplos concretos muestra sus habilidades y su manera de abordar problemas. Pedirle que te enseñe lo que ha hecho te deja valorar la calidad de lo que produce; si fue un trabajo de equipo, pide que aclare qué piezas fueron suyas.",
+  "notas_extraccion": "Es la primera de las tacticas de apostar con cabeza, y la respuesta directa del libro al hallazgo de que la entrevista no predice: si la conversacion no informa, informa el producto. El inventario propio del libro son las clases de prueba, portafolio, clase de muestra, aplicaciones, articulos y presentaciones, nombradas una a una, y el acto final de separar la parte propia de la del equipo. El paso 5 va dentro porque el libro pone el caso de la amiga de educacion justo para decir que la forma se traslada fuera del diseno. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantos proyectos se piden, cuanto dura la revision, ni con que se puntua.",
+  "pasos_accionables": [
+    "Parte de cuál es el mejor predictor, aunque siga siendo imperfecto: entender cómo le ha ido a esa persona en el pasado en proyectos parecidos y en entornos parecidos.",
+    "Cuenta con que por eso las prácticas son tan valiosas: cuando alguien se une a tu equipo unos meses, entiendes mucho mejor cómo trabaja.",
+    "Si no hay prácticas, haz lo siguiente mejor, que es meterte a fondo en su trabajo pasado.",
+    "Monta una revisión de trabajo. Por ejemplo, un equipo que entrevista a diseñadores pone un fuerte énfasis en la revisión de portafolio, donde los candidatos vienen y presentan unos cuantos proyectos que ellos mismos eligen, y al oírlos explicar su proceso y enseñar ejemplos concretos de su trabajo aprende mucho de sus habilidades y de cómo abordan los problemas.",
+    "Traslada esa forma a tu oficio: en educación, por ejemplo, se puede pedir a los posibles profesores que vengan y den una clase sobre la materia que quieran.",
+    "Pregunta a los candidatos si pueden enseñarte las aplicaciones que han desarrollado, los artículos que han escrito, las presentaciones que han dado o lo que corresponda, para que puedas valorar la calidad de lo que producen.",
+    "Si lo que te presentan fue un esfuerzo de equipo, pide que te aclaren de qué piezas fue responsable esa persona."
+  ],
+  "entregable_esperado": "Una valoración de la calidad de lo que el candidato ha producido, con la parte que fue suya separada de la del equipo.",
+  "nodos_previos": [
+    "preparar_preguntas_entrevista_antemano",
+    "conducir_entrevista_cronologica_trayectoria"
+  ],
+  "nodos_siguientes": [
+    "buscar_recomendaciones_confianza"
+  ],
+  "condiciones_activacion": [
+    "Al evaluar a cualquier candidato, y sobre todo cuando la entrevista sola no te da confianza en el pronóstico."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los resultados de una entrevista no cuentan toda la verdad sobre cómo trabajará alguien. Lo que mejor lo anticipa, aunque siga siendo imperfecto, es cómo le ha ido en proyectos y entornos parecidos: por eso unos meses de prácticas enseñan tanto. Cuando no las hay, lo siguiente mejor es meterte a fondo en lo que ya produjo, porque oírle explicar su proceso sobre ejemplos concretos muestra sus habilidades y su manera de abordar problemas. Separar lo que fue suyo de lo que hizo el equipo evita atribuirle méritos ajenos y deja una valoración de su trabajo real.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "117-127"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)"
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de cual es el mejor predictor, aunque siga siendo imperfecto: entender como le ha ido a esa persona en el pasado en proyectos parecidos y en entornos parecidos.",
+      "texto_nuevo": "Parte de cuál es el mejor predictor, aunque siga siendo imperfecto: entender cómo le ha ido a esa persona en el pasado en proyectos parecidos y en entornos parecidos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que por eso las practicas son tan valiosas: cuando alguien se une a tu equipo unos meses, entiendes mucho mejor como trabaja.",
+      "texto_nuevo": "Cuenta con que por eso las prácticas son tan valiosas: cuando alguien se une a tu equipo unos meses, entiendes mucho mejor cómo trabaja.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si no hay practicas, haz lo siguiente mejor, que es meterte a fondo en su trabajo pasado.",
+      "texto_nuevo": "Si no hay prácticas, haz lo siguiente mejor, que es meterte a fondo en su trabajo pasado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta la revision de trabajo que el libro describe: al entrevistar disenadores ellos ponen fuerte enfasis en la revision de portafolio, donde los candidatos vienen y presentan unos cuantos proyectos que ellos mismos eligen, y al oirles explicar su proceso y ensenar ejemplos concretos de su trabajo se aprende mucho de sus habilidades y de como abordan los problemas.",
+      "texto_nuevo": "Monta una revisión de trabajo. Por ejemplo, un equipo que entrevista a diseñadores pone un fuerte énfasis en la revisión de portafolio, donde los candidatos vienen y presentan unos cuantos proyectos que ellos mismos eligen, y al oírlos explicar su proceso y enseñar ejemplos concretos de su trabajo aprende mucho de sus habilidades y de cómo abordan los problemas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la revision de trabajo que el libro describe",
+          "ellos ponen fuerte enfasis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: propio",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Traslada esa forma a tu oficio, como hace la amiga del libro que trabaja en educacion y pide a los posibles profesores que vengan y den una clase sobre la materia que quieran.",
+      "texto_nuevo": "Traslada esa forma a tu oficio: en educación, por ejemplo, se puede pedir a los posibles profesores que vengan y den una clase sobre la materia que quieran.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como hace la amiga del libro que trabaja en educacion"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a los candidatos si pueden ensenarte las aplicaciones que han desarrollado, los articulos que han escrito, las presentaciones que han dado o lo que corresponda, para que puedas valorar la calidad de lo que producen.",
+      "texto_nuevo": "Pregunta a los candidatos si pueden enseñarte las aplicaciones que han desarrollado, los artículos que han escrito, las presentaciones que han dado o lo que corresponda, para que puedas valorar la calidad de lo que producen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lo que te presentan fue un esfuerzo de equipo, pide que te aclaren de que piezas fue responsable esa persona.",
+      "texto_nuevo": "Si lo que te presentan fue un esfuerzo de equipo, pide que te aclaren de qué piezas fue responsable esa persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una valoracion de la calidad de lo que el candidato ha producido, con la parte que fue suya separada de la del equipo.",
+      "texto_nuevo": "Una valoración de la calidad de lo que el candidato ha producido, con la parte que fue suya separada de la del equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_trabajo_pasado_candidato-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al evaluar a cualquier candidato, y sobre todo cuando la entrevista sola no te da confianza en el pronostico.",
+      "texto_nuevo": "Al evaluar a cualquier candidato, y sobre todo cuando la entrevista sola no te da confianza en el pronóstico.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-examinar_trabajo_pasado_candidato-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los resultados de una entrevista no cuentan toda la verdad sobre cómo trabajará alguien. Lo que mejor lo anticipa, aunque siga siendo imperfecto, es cómo le ha ido en proyectos y entornos parecidos: por eso unos meses de prácticas enseñan tanto. Cuando no las hay, lo siguiente mejor es meterte a fondo en lo que ya produjo, porque oírle explicar su proceso sobre ejemplos concretos muestra sus habilidades y su manera de abordar problemas. Separar lo que fue suyo de lo que hizo el equipo evita atribuirle méritos ajenos y deja una valoración de su trabajo real.",
+      "texto_nuevo": "Los resultados de una entrevista no cuentan toda la verdad sobre cómo trabajará alguien. Lo que mejor lo anticipa, aunque siga siendo imperfecto, es cómo le ha ido en proyectos y entornos parecidos: por eso unos meses de prácticas enseñan tanto. Cuando no las hay, lo siguiente mejor es meterte a fondo en lo que ya produjo, porque oírle explicar su proceso sobre ejemplos concretos muestra sus habilidades y su manera de abordar problemas. Pedirle que te enseñe lo que ha hecho te deja valorar la calidad de lo que produce; si fue un trabajo de equipo, pide que aclare qué piezas fueron suyas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 127",
+        "frase": "Ask candidates if they can show you the applications they’ve developed, the articles they’ve written, the pitches they’ve given, etc., so you can assess the quality of their output. If what’s presented is a team effort, ask for clarification on which pieces the individual was responsible for."
+      },
+      "decision": "auditoria completa M11 (invencion): 'Evita atribuirle méritos ajenos' es un efecto que el libro no da: dice ver el trabajo para valorar su calidad y pedir que aclare qué piezas fueron suyas. La propuesta del auditor unía la aclaración a la valoración de calidad como causa; aquí van como en el libro.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Revisa el Trabajo Pasado",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

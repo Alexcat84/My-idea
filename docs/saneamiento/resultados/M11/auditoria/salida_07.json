@@ -1,0 +1,586 @@
+{
+ "lote": "07",
+ "nodos": [
+  {
+   "node_id": "gestionar_personas_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "los ingredientes de la fórmula",
+     "motivo": "La fórmula no existe en el nodo: venía del ejemplo del puesto de limonada y su fórmula secreta, que no se cuenta.",
+     "propuesta": "Y cuenta con que si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas: basta con que uno no mida bien las cantidades de lo que prepara, con que otro no se moleste en saludar con educación a los clientes, o con que tú planifiques mal."
+    }
+   ]
+  },
+  {
+   "node_id": "cerrar_reunion_pasos_siguientes",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "actúa sobre ella",
+     "motivo": "Calco de \"act upon\"; en español la opinión se aplica, como dice el propio resumen.",
+     "propuesta": "Si lo que hubo fue opinión sobre un trabajo, aplícala."
+    }
+   ]
+  },
+  {
+   "node_id": "calibrar_decision_despido_documentarla",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "matiz",
+     "cita": "que se repite muchísimas veces",
+     "motivo": "La experiencia de la autora (decenas de casos que ha visto) se vuelve frecuencia general.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "185",
+     "frase": "I've seen dozens of cases where a manager has been advised how to write a Performance Improvement Plan (PIP).",
+     "propuesta": "Cuenta con este mecanismo concreto de fallo, que hay quien ha visto en decenas de casos: a un jefe se le aconseja cómo escribir un plan de mejora del desempeño, se le dice que lo haga justo pero no demasiado fácil y que atienda de verdad el problema de desempeño, el jefe oye la parte de justo e ignora la parte de no demasiado fácil, la persona pasa el plan sin atender el problema de fondo, y el problema de desempeño se arrastra otros tres o seis meses."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "voz",
+     "cita": "como jefa",
+     "motivo": "Femenino dirigido al lector (no es una anécdota en tercera persona): supone el género de quien lee.",
+     "propuesta": "Escribe tú, como responsable, los correos y los demás documentos como los planes de mejora del desempeño."
+    },
+    {
+     "campo": "pasos_accionables[12]",
+     "tipo": "voz",
+     "cita": "ser demandada",
+     "motivo": "Femenino dirigido al lector: supone el género de quien lee.",
+     "propuesta": "Y cuenta con el coste y con por qué vale la pena: va a llevar tiempo, mucho más tiempo del que quieres dedicarle, y aun así vale la pena dedicárselo porque una demanda es mucho peor."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "invencion",
+     "cita": "que es el momento en que la decisión se toma unilateralmente si nadie lo para",
+     "motivo": "El libro solo pide no decidir en solitario; no dice que en ese momento la decisión se tome unilateralmente si nadie lo impide.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "181-183",
+     "frase": "Don't make the decision unilaterally. Once you've identified performance issues, take the time to get advice from your boss",
+     "propuesta": "Cuando ya has identificado los problemas de desempeño de alguien y vas a decidir sobre su despido."
+    }
+   ]
+  },
+  {
+   "node_id": "examinar_demanda_entorno_dos_marcos_temporales",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "la otra parte",
+     "motivo": "\"La otra parte\" no tiene antecedente en el nodo (venía del ejemplo de la fábrica, marketing y producción, que no se cuenta).",
+     "propuesta": "No rebajes la demanda que declaras por lo que creas que se puede entregar: una demanda rebajada así deja que nunca se prepare la capacidad para la demanda real."
+    }
+   ]
+  },
+  {
+   "node_id": "vender_puesto_jugador",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "las efes que sí importan",
+     "motivo": "Las \"efes\" son las iniciales en inglés (fit, family, freedom, fortune, fun); en el nodo las áreas están en español (encaje, familia, libertad, fortuna, diversión) y la referencia se pierde.",
+     "propuesta": "Crea y ejecuta un plan para atender las áreas que sí importan durante las cinco olas de la venta: al abastecer, durante las entrevistas, entre la oferta y la aceptación, entre la aceptación y el primer día, y durante los primeros cien días en el puesto."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "al abastecer",
+     "motivo": "Calco de \"sourcing\": \"al abastecer\" no dice nada en español; es la búsqueda de candidatos.",
+     "propuesta": "Crea y ejecuta un plan para atender las efes que sí importan durante las cinco olas de la venta: al buscar candidatos, durante las entrevistas, entre la oferta y la aceptación, entre la aceptación y el primer día, y durante los primeros cien días en el puesto."
+    }
+   ]
+  },
+  {
+   "node_id": "desplegar_marco_franqueza_radical",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "invencion",
+     "cita": "porque así el equipo rinde el doble",
+     "motivo": "Efecto y cifra inventados: el libro solo pide no usar el marco como test de personalidad; no promete ningún rendimiento.",
+     "fichero": "fuentes/scott_radical_candor/cap_01.md",
+     "lineas": "37",
+     "frase": "Please do NOT use it as a personality test to judge yourself or others.",
+     "propuesta": "No lo uses como prueba de personalidad para juzgarte a ti ni para juzgar a otros."
+    }
+   ]
+  },
+  {
+   "node_id": "retirar_barreras_politicas_metodo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "la sexta de las diez cosas",
+     "motivo": "Referente que no existe en el nodo: las diez cosas para instalar el método no se enumeran.",
+     "propuesta": "Cuando estás instalando el método de contratación en tu empresa y toca quitar de en medio lo que tu empresa ya tiene y estorba, escrito o no, antes de que nadie pueda usarlo como excusa."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "para hacer esto",
+     "motivo": "\"Esto\" no tiene antecedente dentro de los pasos: es el primero.",
+     "propuesta": "Trabaja con la gente de personal para retirar las barreras que impiden implantar el método."
+    }
+   ]
+  },
+  {
+   "node_id": "crear_espacio_seguro_madurar_ideas_nuevas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "Hazle agujeros a las ideas nuevas",
+     "motivo": "Calco de \"poke holes\"; en español a una idea se le buscan fallos.",
+     "propuesta": "Búscales fallos a las ideas nuevas sabiendo que eso no las mata necesariamente, y que puede empujar a la gente a aclarar su pensamiento."
+    }
+   ]
+  },
+  {
+   "node_id": "rechazar_contratacion_tibia",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "Reconoce también cuándo se da:",
+     "motivo": "Es lo que la autora notó en las puestas en común de su empresa, no una regla general de cuándo ocurre.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "153",
+     "frase": "I noticed that weak hires were given when a candidate didn’t have any obvious issues",
+     "propuesta": "Reconoce también cuándo suele darse, según lo que ha notado una directiva en estas reuniones: cuando el candidato no tiene ningún problema evidente, parece bastante agradable, se ajusta a lo esperable en sus respuestas y tiene experiencia relevante, y al mismo tiempo no deslumbra en ninguna dimensión concreta, y ninguno de los entrevistadores está lo bastante convencido como para pelear por la contratación si la decisión se fuera hacia el no."
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_ocho_reglas_juego_personas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "que hay que honrar",
+     "motivo": "Calco de \"honored\" (reglas que se respetan).",
+     "propuesta": "Tu gente hace lo que quieres en la medida en que compra el juego que le propones, y el juego tiene que ser real: no puede ser un invento para enrolarla. Como todo juego, tiene reglas que hay que respetar para llegar a jugarlo bien. El juego va antes que las tareas, tú lo juegas igual que ellos, da victorias de vez en cuando sin terminar nunca, cambia sus tácticas sin tocar su ética, se recuerda cada semana y cada día, tiene una lógica que sostiene el compromiso y trae diversión planeada de vez en cuando. Si robas uno ajeno, apréndelo de memoria: no hay nada peor que fingir que juegas."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "que hay que honrar",
+     "motivo": "Calco de \"honored\".",
+     "propuesta": "Reconoce que el juego de tu gente tiene reglas que hay que respetar si quieres llegar a ser bueno en él."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "honradas",
+     "motivo": "Calco de \"honored\"; además \"tu juego de personas honradas\" se lee como que las personas son honradas.",
+     "propuesta": "Las ocho reglas de tu juego de personas respetadas, desde que el juego va primero y lo que tu gente hace después, hasta que robas un juego ajeno si no se te ocurre uno bueno."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "por acción ejecutiva",
+     "motivo": "Calco de \"by executive action\"; en español es por decisión tuya.",
+     "propuesta": "Regla 4: cambia el juego de vez en cuando, las tácticas y no la estrategia; para saber cuándo toca el cambio observa los resultados de tu gente, anticipa el final del juego y cámbialo por decisión tuya antes que nadie más lo note."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "regionalismo",
+     "cita": "saca a relucir la lógica seguido",
+     "motivo": "\"Seguido\" por \"a menudo\" es forma de una sola región.",
+     "propuesta": "Regla 6: haz que el juego tenga sentido, construido sobre verdades verificables universalmente, y saca a relucir la lógica a menudo para sostener el compromiso emocional de tu gente cuando decaiga."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "construido sobre verdades verificables universalmente",
+     "motivo": "El libro dice que los MEJORES juegos se construyen así; el paso lo vuelve requisito de todo juego.",
+     "fichero": "fuentes/gerber_emyth/cap_18.md",
+     "lineas": "157",
+     "frase": "The best games are built on universally verifiable truths.",
+     "propuesta": "Regla 6: haz que el juego tenga sentido; los mejores se construyen sobre verdades verificables universalmente, y saca a relucir la lógica seguido para sostener el compromiso emocional de tu gente cuando decaiga."
+    }
+   ]
+  },
+  {
+   "node_id": "resolver_dudas_frecuentes_reuniones_salto_nivel",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "abraza la incomodidad",
+     "motivo": "Calco de \"embrace the discomfort\".",
+     "propuesta": "En una reunión de salto de nivel, las dudas frecuentes tienen respuestas concretas. Si la gente no habla, rompe el hielo con preguntas directas, pon sobre la mesa asuntos que hayas oído y acepta la incomodidad. Si alguien acapara, lee las caras de los demás y pregúntales. Si hay más problemas de los que puedes atender, prioriza. Y no juzgues ni defiendas al jefe del que se habla: si parece que buscas razones para castigarlo, la gente se cierra o la reunión acaba en una sesión de quejas. Promete mirar a fondo lo grave y compadécete sin condenar."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "abraza la incomodidad",
+     "motivo": "Calco de \"embrace the discomfort\".",
+     "propuesta": "Y acepta la incomodidad."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "no parece resonarte",
+     "motivo": "Calco de \"doesn’t seem to resonate for you\".",
+     "propuesta": "Si alguien parece aburrido, pregúntale: este asunto no parece tocarte mucho, ¿tienes otros en la cabeza?"
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "calco",
+     "cita": "estás pescando razones",
+     "motivo": "Calco de \"fishing for reasons\"; el resumen ya dice \"buscas razones\".",
+     "propuesta": "Cuenta con lo que pasa si parece que andas buscando razones para castigar a ese jefe: o la gente se cierra en banda, o se desata una sesión de quejas."
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_forma_inspirar_cambio_conducta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "De ahí salen cuatro formas distintas",
+     "motivo": "El libro las da como las cuatro formas MÁS COMUNES, no como las únicas.",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "39",
+     "frase": "Below, you’ll find the four most common ways to inspire a change in behavior.",
+     "propuesta": "Dar opinión no es solo señalar problemas y proponer arreglos: es cualquier cosa que inspire a alguien a cambiar su conducta para mejor. Al ensanchar la definición entran el elogio, que a menudo motiva más que la crítica, y lo que se dice antes de que el trabajo empiece. De ahí salen las cuatro formas más comunes: fijar expectativas claras al principio, dar opinión concreta de la tarea con frecuencia, hablar de la conducta con cuidado y con regularidad, y reunir la mirada de varias personas cuando hace falta objetividad. Elegir la que encaja evita reducirlo todo a la crítica."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "Elegir la que encaja evita reducirlo todo a la crítica.",
+     "motivo": "Efecto que el pasaje no afirma: no dice que elegir la forma adecuada evite nada; dice que la opinión no tiene que ser crítica ni empezar siempre por un problema.",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "37",
+     "frase": "For one, feedback doesn’t have to be critical. Praise is often more motivating than criticism. And for another, you don’t always have to start with a problem.",
+     "propuesta": "Dar opinión no es solo señalar problemas y proponer arreglos: es cualquier cosa que inspire a alguien a cambiar su conducta para mejor. Al ensanchar la definición entran el elogio, que a menudo motiva más que la crítica, y lo que se dice antes de que el trabajo empiece. De ahí salen cuatro formas distintas: fijar expectativas claras al principio, dar opinión concreta de la tarea con frecuencia, hablar de la conducta con cuidado y con regularidad, y reunir la mirada de varias personas cuando hace falta objetividad. Y no siempre hace falta empezar por un problema."
+    }
+   ]
+  },
+  {
+   "node_id": "listar_debilidades_disparadores_propios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "cuenta con que verás emerger algunos temas",
+     "motivo": "El libro dice que PUEDE que veas temas; el paso lo da por seguro (el resumen sí conserva el matiz).",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "113",
+     "frase": "Again, you may see some themes emerging.",
+     "propuesta": "Otra vez, puede que veas emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo."
+    }
+   ]
+  },
+  {
+   "node_id": "usar_tres_clases_reunion_proceso",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "las reuniones de proceso que se usan son de tres clases",
+     "motivo": "Es la práctica de una empresa (el resumen lo cuenta como caso: una gran empresa de chips); el paso lo vuelve clasificación general.",
+     "fichero": "fuentes/grove_high_output/cap_05.md",
+     "lineas": "23",
+     "frase": "At Intel we use three kinds of process-oriented meetings: the one-on-one, the staff meeting, and the operation review.",
+     "propuesta": "Toma como modelo las tres clases de reunión de proceso que usa una gran empresa de chips, cada una con su nombre."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "matiz",
+     "cita": "necesitas saber cuántas clases hay y cuáles son",
+     "motivo": "Da por hecho que hay un número fijo de clases; en el libro son las tres que usa una empresa.",
+     "fichero": "fuentes/grove_high_output/cap_05.md",
+     "lineas": "23",
+     "frase": "At Intel we use three kinds of process-oriented meetings",
+     "propuesta": "Cuando vas a montar las reuniones de proceso de tu organización y quieres un modelo de qué clases montar, antes de entrar en cómo se lleva cada una."
+    }
+   ]
+  },
+  {
+   "node_id": "compartir_logica_mostrar_razonamiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "porque es la que te lleva a no compartirla",
+     "motivo": "El libro dice que A VECES la lógica te parece evidente y por eso no la compartes; el paso lo vuelve regla.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "363",
+     "frase": "Sometimes, the logic may seem self-evident to you, so you fail to share it with others.",
+     "propuesta": "Desconfía en particular de la lógica que a ti te parece evidente, porque a veces es la que te lleva a no compartirla."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz",
+     "cita": "la gente aceptará tu idea con más facilidad",
+     "motivo": "El libro dice que es MÁS PROBABLE que la acepten, no que la acepten con más facilidad.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "365",
+     "frase": "And if there wasn’t, people would be more likely to accept his idea.",
+     "propuesta": "Cuenta con lo que eso señala y con lo que consigue: que si hay un fallo en tu razonamiento quieres que te lo digan, y que si no lo hay es más probable que la gente acepte tu idea."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "regionalismo",
+     "cita": "clase de matemáticas del instituto",
+     "motivo": "\"Instituto\" por la secundaria es forma de una sola región.",
+     "propuesta": "Enseña tus operaciones, que es el secreto que ya aprendiste en clase de matemáticas en la escuela."
+    }
+   ]
+  },
+  {
+   "node_id": "explicar_idea_facil_comprender_oyente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "ponerle a él la de comunicar",
+     "motivo": "\"Él\" no tiene antecedente (el paso habla de quien te habla, de tu equipo).",
+     "propuesta": "Cuando el que escucha eres tú, carga tú con la responsabilidad de entender en vez de ponerle a quien habla la de comunicar."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "coherencia",
+     "cita": "el experto que se quedó con su genio encerrado en la cabeza",
+     "motivo": "\"El experto\", con artículo definido, remite a la anécdota del economista y el presidente, que no está en el nodo.",
+     "propuesta": "Cuando les estás ayudando a preparar la explicación para otros, empújales a ellos y a ti mismo a hacerlo mejor que quien deja su genio encerrado en la cabeza."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_indicador_tendencia_patron",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "otra ventana recortada en tu caja",
+     "motivo": "\"Otra ventana\" y \"tu caja\" no tienen antecedente: la caja negra y la primera ventana (el indicador de linealidad) no están en el nodo.",
+     "propuesta": "Monta el indicador de tendencia, que es una ventana recortada en la caja negra de tu operación."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "otra ventana en tu caja negra",
+     "motivo": "\"Otra\" sin una primera ventana en el nodo.",
+     "propuesta": "El indicador de tendencia pone la salida de tu operación, sean desayunos entregados, módulos de programa terminados o comprobantes tramitados, contra el tiempo, lo de este mes frente a una serie de meses anteriores, y además contra un patrón o nivel esperado. Cada comparación hace un trabajo distinto: ver la tendencia te obliga a mirar hacia delante, porque te lleva casi sin querer a extrapolar del pasado, y medir contra el patrón te obliga a pensar por qué el resultado fue el que fue y no el que el patrón anunciaba. Esa extrapolación te abre una ventana en la caja negra de tu operación."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "la salida de tu caja",
+     "motivo": "\"Tu caja\" sin antecedente en la condición.",
+     "propuesta": "Cuando ya tienes nombrada la salida de tu operación y quieres una ventana que te empuje a mirar hacia delante, en vez de una foto suelta del mes que acaba de cerrar."
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_rueda_hacer_cosas_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "calificar_tarjeta_puntuacion_habilidad_voluntad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Es el cuarto paso de las cuatro entrevistas del método A",
+     "motivo": "La calificación no es una entrevista: es el cuarto paso de la selección (filtro, entrevista cronológica, entrevistas enfocadas, puesta en común), antes de las llamadas de referencias.",
+     "propuesta": "Al terminar cada jornada de entrevistas, cuando ya tienes los datos de la entrevista cronológica de trayectoria y de las entrevistas enfocadas y hay que decidir si el candidato sigue en el proceso. Es el cuarto paso de la selección del método A, antes de las llamadas de referencias, dentro de seleccionar al jugador A con las cuatro entrevistas."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "Comprueba la diana",
+     "motivo": "\"La diana\" no se ha presentado en el nodo.",
+     "propuesta": "Comprueba que el candidato da en el blanco con estas dos condiciones: que estés seguro al noventa por ciento o más de que el candidato puede hacer el trabajo porque su habilidad encaja con los resultados de tu tarjeta, y que estés seguro al noventa por ciento o más de que encajará bien porque su voluntad encaja con la misión y las competencias del papel."
+    }
+   ]
+  },
+  {
+   "node_id": "alinear_comunicar_tarjeta_puntuacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "la sometes a prueba de presión",
+     "motivo": "Calco de \"pressure-test\".",
+     "propuesta": "Una tarjeta de puntuación se arma en cuatro pasos: la misión del puesto en pocas frases, de tres a ocho resultados concretos y objetivos, y las competencias que el puesto pide junto con las de tu cultura. El cuarto paso es alinearla y comunicarla. Primero la pones a prueba comparándola con el plan de negocio y con las tarjetas de las personas que van a relacionarse con ese puesto, y compruebas que hay coherencia y alineación. Después la compartes con las partes que corresponda, incluidos los pares y los reclutadores."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "Somete la tarjeta de puntuación a prueba de presión",
+     "motivo": "Calco de \"pressure-test\".",
+     "propuesta": "Pon a prueba la tarjeta de puntuación comparándola con el plan de negocio."
+    }
+   ]
+  },
+  {
+   "node_id": "reciclar_empleado_ascendido_mas_alla_capacidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Reciclar abiertamente a un empleado",
+     "motivo": "Calco de \"recycle\": en español reciclar a un empleado es volver a formarlo; aquí es devolverlo al puesto anterior.",
+     "propuesta": "Devolver abiertamente a su puesto anterior a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, devolverlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "si el reciclaje se hace a la vista de todos",
+     "motivo": "Calco de \"recycling\".",
+     "propuesta": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si esa vuelta atrás se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "Haz el reciclaje abiertamente",
+     "motivo": "Calco de \"recycling\".",
+     "propuesta": "Haz esa vuelta atrás abiertamente y no a escondidas, porque hecho así la vergüenza dura mucho menos de lo que todos esperan."
+    }
+   ]
+  },
+  {
+   "node_id": "aprender_resultados_vencer_dos_presiones",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz",
+     "cita": "Vence las dos enormes presiones que empujan a dejar de aprender cuando diriges un equipo grande",
+     "motivo": "Es lo que la autora encontró al dirigir un equipo grande (el resumen lo cuenta como caso); el paso lo vuelve regla de lo que te va a pasar.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "401",
+     "frase": "When managing a large team, I found there were two enormous pressures that tempted me to quit learning.",
+     "propuesta": "Vence las dos enormes presiones que pueden empujarte a dejar de aprender cuando diriges un equipo grande, las que encontró una directiva: la presión de ser coherente, y el agotamiento."
+    },
+    {
+     "campo": "titulo_concepto",
+     "tipo": "matiz",
+     "cita": "las dos presiones que empujan a dejar de aprender",
+     "motivo": "Presenta como ley las dos presiones que una directiva encontró en su caso.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "401",
+     "frase": "I found there were two enormous pressures that tempted me to quit learning.",
+     "propuesta": "Aprender de los resultados venciendo las dos presiones que pueden empujarte a dejar de aprender"
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "Reúne la disciplina casi sobrehumana que hace falta",
+     "motivo": "El libro dice que PUEDE hacer falta una disciplina casi sobrehumana; el resumen lo conserva y el paso no.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "395",
+     "frase": "It can take almost superhuman discipline to step back",
+     "propuesta": "Reúne la disciplina, a veces casi sobrehumana, que puede hacer falta para dar un paso atrás."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "coherencia",
+     "cita": "la rueda empezada otra vez desde escuchar",
+     "motivo": "La rueda y su paso de escuchar no existen en este nodo: ningún paso habla de volver a empezar.",
+     "propuesta": "El resultado mirado sin negación, el aprendizaje sacado de él, listo para empezar otra vez."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "la vuelta entera a la rueda",
+     "motivo": "\"La rueda\" no tiene antecedente en el nodo.",
+     "propuesta": "Cuando has hecho con tu equipo todo el trabajo hasta ejecutar, has conseguido algo, y ahora hay que mirar el resultado de verdad."
+    }
+   ]
+  },
+  {
+   "node_id": "probar_banquillo_vacaciones_largas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz",
+     "cita": "necesita refuerzo",
+     "motivo": "El libro dice que a esa capa le vendría bien un refuerzo, no que lo necesite.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "277",
+     "frase": "then that’s a sign your next layer of leadership could use some shoring up.",
+     "propuesta": "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que tu siguiente capa de liderazgo no le vendría mal un refuerzo."
+    }
+   ]
+  },
+  {
+   "node_id": "dirigir_reunion_reforzar_relaciones",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "un equipo que funcione alto",
+     "motivo": "Calco de \"high-functioning team\".",
+     "propuesta": "Parte de que para tener un equipo que funcione muy bien la gente necesita trabajar bien entre sí, así que tienes que buscar formas de nutrir la empatía, crear confianza y animar a la colaboración."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "un equipo que funciona alto",
+     "motivo": "Calco de \"high-functioning team\".",
+     "propuesta": "Cuando decides juntar a un grupo con el simple propósito de cuidar las relaciones, porque un equipo que funciona muy bien necesita que la gente trabaje bien entre sí."
+    }
+   ]
+  },
+  {
+   "node_id": "adaptar_escucha_cultura_ajena",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "matiz",
+     "cita": "Asegúrate de tener comida abundante cuando el que convoca la reunión eres tú.",
+     "motivo": "Lo que hizo la negociadora en una cultura donde la comida importaba mucho se vuelve regla para cualquier cultura.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "161",
+     "frase": "such as hosting meetings with people without offering them real food, which was so important in the culture. [...] And she made sure she had a lot of food available when she hosted meetings.",
+     "propuesta": "Si en esa cultura la comida importa, asegúrate de tener comida abundante cuando el que convoca la reunión eres tú, como hizo ella."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "no podían ni querían ir",
+     "motivo": "El libro dice que otros de fuera no podían O no querían ir; \"ni\" afirma las dos cosas a la vez.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "163",
+     "frase": "take her places where other outsiders couldn’t or wouldn’t go",
+     "propuesta": "La confianza ganada en esa cultura: gente dispuesta a hablar contigo y a llevarte a sitios donde otros de fuera no podían o no querían ir."
+    }
+   ]
+  }
+ ]
+}

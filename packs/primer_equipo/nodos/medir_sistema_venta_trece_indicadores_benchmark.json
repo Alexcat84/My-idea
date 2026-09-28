@@ -1,0 +1,467 @@
+{
+  "node_id": "medir_sistema_venta_trece_indicadores_benchmark",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Medir tu sistema de venta con trece indicadores, hito a hito",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Este registro sigue la actividad de tu sistema de venta de un hito al siguiente. Cuentas cada llamada, cada cliente potencial contactado, cada cita y cada presentación programada, confirmada y completada, hasta las soluciones vendidas y su valor promedio, y anotas esas cifras en un formulario, a mano o como base de datos. Con ellas el registro puede decirte muchas cosas: la tasa de conversión entre dos hitos cualesquiera de tu proceso de venta, en qué hito necesita ayuda cada vendedor, y quién sigue el sistema al pie de la letra y quién se aparta de él.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_19.md, unidad Cap. 18, titulo textual Your Systems Strategy. Sale de la PIEZA D3 de la frontera publicada en esta misma vuelta (.gerber_v7/frontera_cap19.txt), L307 a L338, 126 palabras, bajo el rotulo del propio libro INFORMATION BENCHMARK. POR QUE ES PROCEDIMIENTO, con D.27 delante: el libro pone su propio inventario de OBJETOS DE TRABAJO, trece preguntas numeradas 1 a 13 en el propio texto (L311 a L335: how many calls were made, how many prospects were reached... what was the average dollar value), introducidas por it should provide you with the following information, sin ningun adjetivo de adecuacion en el sitio del criterio. SIGO EL PATRON DE UN SOLO NODO ya establecido en esta vuelta: la lista entera transcrita como pasos de registro (registra X), mas el paso final que el propio texto agrega (L337: the information should be recorded on a form). LAS TRECE PREGUNTAS SE APOYAN EN LOS BENCHMARKS DE aplicar_seis_pasos_sistema_venta (esta misma vuelta) Y DE LA PIEZA CASO R5 (Appointment, Needs Analysis, Solutions Presentation): no se funden porque son objetos distintos (alli el procedimiento para vender, aqui las trece cifras para medir lo vendido), y P.19 no aplica porque ninguna de las trece preguntas repite un paso ya escrito en otro nodo, solo nombra los mismos Benchmarks para contarlos. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 14 pasos, 14 TRANSCRIPCION, 0 PUENTE, cita pegada en .gerber_v7/cita_cap19_L307_L337.txt (D.35). No invento destinatario ni responsable: el libro no los pone y este candidato no los completa.",
+  "pasos_accionables": [
+    "Registra cuántas llamadas se hicieron.",
+    "Registra con cuántos clientes potenciales se logró contactar.",
+    "Registra cuántas citas se programaron.",
+    "Registra cuántas citas se confirmaron.",
+    "Registra cuántas citas se realizaron.",
+    "Registra cuántas presentaciones de análisis de necesidades se programaron.",
+    "Registra cuántos análisis de necesidades se confirmaron.",
+    "Registra cuántos análisis de necesidades se completaron.",
+    "Registra cuántas presentaciones de soluciones se programaron.",
+    "Registra cuántas presentaciones de soluciones se confirmaron.",
+    "Registra cuántas presentaciones de soluciones se completaron.",
+    "Registra cuántas soluciones se vendieron.",
+    "Registra cuál fue el valor promedio de lo vendido, en tu moneda.",
+    "Anota esta información en un formulario, ya sea a mano o como base de datos."
+  ],
+  "entregable_esperado": "Un formulario, en papel o en base de datos, con las trece cifras de tu registro por hito anotadas para tu proceso de venta.",
+  "nodos_previos": [
+    "aplicar_seis_pasos_sistema_venta"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando ya tienes tu sistema de venta operando y necesitas un sistema de información que te diga hasta qué punto es predecible, hito a hito."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Este registro sigue la actividad de tu sistema de venta de un hito al siguiente. Cuentas cada llamada, cada prospecto alcanzado, cada cita y cada presentación programada, confirmada y completada, hasta las soluciones vendidas y su valor promedio, y anotas esas cifras en un formulario, a mano o como base de datos. Con ellas el registro puede decirte muchas cosas: la tasa de conversión entre dos hitos cualesquiera de tu proceso de venta, en qué hito necesita ayuda cada vendedor, y quién sigue el sistema al pie de la letra y quién se aparta de él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_19.md",
+          "lineas": "307-345"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): 'ves cuán predecible es tu proceso' no sale de L307-345, y 'puedes calcular' había perdido el 'could tell you' de L343-345. La propuesta se ciñe a L339 ('track the activity... from Benchmark to Benchmark') y devuelve el 'puede decirte' para conversiones, hito donde falta ayuda y quién sigue el sistema.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir tu sistema de venta con los trece indicadores del Information Benchmark que el libro enumera",
+      "texto_nuevo": "Medir tu sistema de venta con trece indicadores, hito a hito",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del Information Benchmark que el libro enumera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: verificador",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cuantas llamadas se hicieron.",
+      "texto_nuevo": "Registra cuántas llamadas se hicieron.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cuantos prospectos se alcanzaron.",
+      "texto_nuevo": "Registra cuántos prospectos se alcanzaron.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cuantas citas se programaron.",
+      "texto_nuevo": "Registra cuántas citas se programaron.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cuantas citas se confirmaron.",
+      "texto_nuevo": "Registra cuántas citas se confirmaron.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cuantas citas se realizaron.",
+      "texto_nuevo": "Registra cuántas citas se realizaron.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuantas Needs Analysis Presentations se programaron.",
+      "texto_nuevo": "Registra cuántas presentaciones de análisis de necesidades se programaron.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Needs Analysis Presentations"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuantos Needs Analysis se confirmaron.",
+      "texto_nuevo": "Registra cuántos análisis de necesidades se confirmaron.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Needs Analysis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuantos Needs Analysis se completaron.",
+      "texto_nuevo": "Registra cuántos análisis de necesidades se completaron.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Needs Analysis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuantas Solutions Presentations se programaron.",
+      "texto_nuevo": "Registra cuántas presentaciones de soluciones se programaron.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Solutions Presentations"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuantas Solutions Presentations se confirmaron.",
+      "texto_nuevo": "Registra cuántas presentaciones de soluciones se confirmaron.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Solutions Presentations"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuantas Solutions Presentations se completaron.",
+      "texto_nuevo": "Registra cuántas presentaciones de soluciones se completaron.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Solutions Presentations"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registra cuantas soluciones se vendieron.",
+      "texto_nuevo": "Registra cuántas soluciones se vendieron.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-12",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CIFRA",
+      "texto_anterior": "Registra cual fue el valor promedio en dolares.",
+      "texto_nuevo": "Registra cuál fue el valor promedio de lo vendido, en tu moneda.",
+      "cita": {
+        "regla": "regla de la cifra (docs/POLITICA_MARCO_PAIS.md): la cifra de mercado sale",
+        "fragmentos": [
+          "en dolares"
+        ]
+      },
+      "decision": "limpieza M11 (CIFRA): verificador OK",
+      "indice": 12,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "cifra_de_mercado",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-13",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota esta informacion en un formulario, ya sea a mano o como base de datos en tu computador.",
+      "texto_nuevo": "Anota esta información en un formulario, ya sea a mano o como base de datos en tu computador.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 13,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un formulario, en papel o en base de datos, con las trece cifras del Information Benchmark registradas para tu proceso de venta.",
+      "texto_nuevo": "Un formulario, en papel o en base de datos, con las trece cifras de tu registro por hito anotadas para tu proceso de venta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del Information Benchmark registradas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-medir_sistema_venta_trece_indicadores_benchmark-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes tu sistema de venta operando y necesitas un Information System que te diga que tan predecible es, Benchmark a Benchmark.",
+      "texto_nuevo": "Cuando ya tienes tu sistema de venta operando y necesitas un sistema de información que te diga qué tan predecible es, hito a hito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Information System",
+          "Benchmark a Benchmark"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-medir_sistema_venta_trece_indicadores_benchmark-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Este registro sigue la actividad de tu sistema de venta de un hito al siguiente. Cuentas cada llamada, cada prospecto alcanzado, cada cita y cada presentación programada, confirmada y completada, hasta las soluciones vendidas y su valor promedio, y anotas esas cifras en un formulario, a mano o como base de datos. Con ellas el registro puede decirte muchas cosas: la tasa de conversión entre dos hitos cualesquiera de tu proceso de venta, en qué hito necesita ayuda cada vendedor, y quién sigue el sistema al pie de la letra y quién se aparta de él.",
+      "texto_nuevo": "Este registro sigue la actividad de tu sistema de venta de un hito al siguiente. Cuentas cada llamada, cada cliente potencial contactado, cada cita y cada presentación programada, confirmada y completada, hasta las soluciones vendidas y su valor promedio, y anotas esas cifras en un formulario, a mano o como base de datos. Con ellas el registro puede decirte muchas cosas: la tasa de conversión entre dos hitos cualesquiera de tu proceso de venta, en qué hito necesita ayuda cada vendedor, y quién sigue el sistema al pie de la letra y quién se aparta de él.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cada prospecto alcanzado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Prospecto\" por cliente potencial y \"alcanzado\" por \"reached\" son calcos.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registra cuántos prospectos se alcanzaron.",
+      "texto_nuevo": "Registra con cuántos clientes potenciales se logró contactar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuántos prospectos se alcanzaron"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Prospectos\" (prospects) y \"se alcanzaron\" (were reached) son calcos.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-medir_sistema_venta_trece_indicadores_benchmark-pasos_accionables-13",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Anota esta información en un formulario, ya sea a mano o como base de datos en tu computador.",
+      "texto_nuevo": "Anota esta información en un formulario, ya sea a mano o como base de datos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "en tu computador"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Computador\" es forma regional; el aparato sobra.",
+      "indice": 13,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase4-medir_sistema_venta_trece_indicadores_benchmark-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes tu sistema de venta operando y necesitas un sistema de información que te diga qué tan predecible es, hito a hito.",
+      "texto_nuevo": "Cuando ya tienes tu sistema de venta operando y necesitas un sistema de información que te diga hasta qué punto es predecible, hito a hito.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "qué tan predecible es"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Qué tan' es de uso americano; forma neutra 'hasta qué punto'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Mide tu Sistema de Venta"
+}

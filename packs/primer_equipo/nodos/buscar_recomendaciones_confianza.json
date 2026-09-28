@@ -1,0 +1,255 @@
+{
+  "node_id": "buscar_recomendaciones_confianza",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Buscar recomendaciones de fuentes en las que ya confías",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una entrevista de dos horas pesa poco al lado del testimonio de quien ha trabajado de verdad con una persona, así que tómate en serio lo que te diga una fuente creíble. La confianza sirve en dos momentos: al abrir el puesto, pidiendo a tu equipo sus candidatos soñados, y al comprobar referencias, buscando por tu red a alguien que sea franco contigo, algo que probablemente no consigas con la gente que el candidato te da. Y ten en cuenta que la gente suele mejorar con el tiempo, así que una crítica antigua pesa menos, y buscando solo en tu red puede que no llegues a un grupo diverso.",
+  "notas_extraccion": "Es la segunda tactica de apostar con cabeza y la que trae mas material propio del libro: la pregunta de la varita magica con sus dos usos, la doctrina de Ryan sobre el peso relativo del historial, la entrevista y la referencia, y los dos correctivos al evaluar referencias. Los dos ultimos pasos son el contrapeso que el propio libro pone a la tactica, y van dentro porque sin ellos el nodo empujaria a contratar siempre dentro del mismo circulo. El paso 9 se apoya en la doctrina del libro de que las personas cambian, que el mismo capitulo sostiene con la cita de Bock. Lo que el libro NO dice, y por eso no esta escrito aqui, es a cuantas referencias se llama, que se pregunta en esa llamada, ni cuanto de reciente es reciente.",
+  "pasos_accionables": [
+    "Toma en serio lo que te diga una fuente creíble: si te dice que una persona es asombrosa y que con otra no querría volver a trabajar, eso pesa. La fiabilidad de tu entrevista de dos horas palidece al lado del testimonio de quien ha trabajado de verdad con esa persona.",
+    "Cuando abras un puesto nuevo, lo primero que haces es asegurarte de que todo tu equipo sabe que estás contratando.",
+    "Pregúntales con la varita mágica: si pudieras agitar una varita mágica, ¿quién sería tu candidato soñado para este puesto?",
+    "Usa la lista que te devuelvan por sus dos caras: como buen punto de partida de a quién escribir, y también para ver dónde más podrías estar buscando, es decir, si entre las personas recomendadas hay patrones de habilidades, de empresas o de experiencias en los que convenga profundizar.",
+    "Usa el otro sitio donde las recomendaciones de confianza sirven, que es la comprobación de referencias.",
+    "Busca referencias honestas, que es la clave. Puede costar esfuerzo de verdad encontrar a alguien que sea franco contigo, pero merece la pena.",
+    "No cuentes con conseguirlo llamando a la gente que el propio candidato te da, ni hablando con alguien a quien no conoces bien.",
+    "Pide en cambio a tu red de colegas de confianza que te pongan en contacto con una conexión común en la que ellos también confíen.",
+    "Al evaluar referencias, ten en cuenta que la gente normalmente mejora sus habilidades con el tiempo, así que descuenta la opinión negativa que no sea reciente: si un amigo te cuenta que hace cinco años alguien no era bueno cerrando tratos, es posible que desde entonces haya mejorado mucho.",
+    "Ten en cuenta también que puedes no conseguir un grupo diverso de candidatos si solo buscas dentro de tu red existente, así que vuelve a tu definición de la persona ideal para el puesto y asegúrate de estar echando la red lo bastante ancha."
+  ],
+  "entregable_esperado": "Una lista de candidatos soñados nombrada por tu propio equipo, y referencias honestas obtenidas por tu red y no por la lista que da el candidato.",
+  "nodos_previos": [
+    "examinar_trabajo_pasado_candidato",
+    "preguntar_contratar_unica_prioridad"
+  ],
+  "nodos_siguientes": [
+    "conducir_llamadas_referencia"
+  ],
+  "condiciones_activacion": [
+    "En cuanto se abre un puesto nuevo, y otra vez antes de cerrar una contratación."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una entrevista de dos horas pesa poco al lado del testimonio de quien ha trabajado de verdad con una persona, así que tómate en serio lo que te diga una fuente creíble. La confianza sirve en dos momentos: al abrir el puesto, pidiendo a tu equipo sus candidatos soñados, y al comprobar referencias, buscando por tu red a alguien que sea franco contigo, algo que probablemente no consigas con la gente que el candidato te da. Y ten en cuenta que la gente suele mejorar con el tiempo, así que una crítica antigua pesa menos, y buscando solo en tu red puede que no llegues a un grupo diverso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "131-141"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La 139 dice 'typically improve', la 141 'you might not get a diverse pool' y la 137 'You probably won't get that'; 'Dos correctivos evitan que el método se tuerza' es efecto añadido. La propuesta devuelve los tres matices y conserva la razón de la 131.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Buscar recomendaciones de fuentes en las que ya confias",
+      "texto_nuevo": "Buscar recomendaciones de fuentes en las que ya confías",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Toma en serio lo que te diga una fuente creible: si te dice que una persona es asombrosa y que con otra no querria volver a trabajar, eso pesa. La fiabilidad de tu entrevista de dos horas palidece al lado del testimonio de quien ha trabajado de verdad con esa persona.",
+      "texto_nuevo": "Toma en serio lo que te diga una fuente creíble: si te dice que una persona es asombrosa y que con otra no querría volver a trabajar, eso pesa. La fiabilidad de tu entrevista de dos horas palidece al lado del testimonio de quien ha trabajado de verdad con esa persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando abras un puesto nuevo, lo primero que haces es asegurarte de que todo tu equipo sabe que estais contratando.",
+      "texto_nuevo": "Cuando abras un puesto nuevo, lo primero que haces es asegurarte de que todo tu equipo sabe que estás contratando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "estais contratando"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntales con la varita magica: si pudieras agitar una varita magica, quien seria tu candidato sonado para este puesto?",
+      "texto_nuevo": "Pregúntales con la varita mágica: si pudieras agitar una varita mágica, ¿quién sería tu candidato soñado para este puesto?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa la lista que te devuelvan por sus dos caras: como buen punto de partida de a quien escribir, y tambien para ver donde mas podriais estar buscando, es decir, si entre las personas recomendadas hay patrones de habilidades, de empresas o de experiencias en los que convenga profundizar.",
+      "texto_nuevo": "Usa la lista que te devuelvan por sus dos caras: como buen punto de partida de a quién escribir, y también para ver dónde más podrías estar buscando, es decir, si entre las personas recomendadas hay patrones de habilidades, de empresas o de experiencias en los que convenga profundizar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "podriais estar buscando"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa el otro sitio donde las recomendaciones de confianza sirven, que es la comprobacion de referencias.",
+      "texto_nuevo": "Usa el otro sitio donde las recomendaciones de confianza sirven, que es la comprobación de referencias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide en cambio a tu red de colegas de confianza que te pongan en contacto con una conexion comun en la que ellos tambien confien.",
+      "texto_nuevo": "Pide en cambio a tu red de colegas de confianza que te pongan en contacto con una conexión común en la que ellos también confíen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al evaluar referencias, ten en cuenta que la gente normalmente mejora sus habilidades con el tiempo, asi que descuenta la opinion negativa que no sea reciente: si un amigo te cuenta que hace cinco anios alguien no era bueno cerrando tratos, es posible que desde entonces haya mejorado mucho.",
+      "texto_nuevo": "Al evaluar referencias, ten en cuenta que la gente normalmente mejora sus habilidades con el tiempo, así que descuenta la opinión negativa que no sea reciente: si un amigo te cuenta que hace cinco años alguien no era bueno cerrando tratos, es posible que desde entonces haya mejorado mucho.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten en cuenta tambien que puedes no conseguir un grupo diverso de candidatos si solo buscas dentro de tu red existente, asi que vuelve a tu definicion de la persona ideal para el puesto y asegurate de estar echando la red lo bastante ancha.",
+      "texto_nuevo": "Ten en cuenta también que puedes no conseguir un grupo diverso de candidatos si solo buscas dentro de tu red existente, así que vuelve a tu definición de la persona ideal para el puesto y asegúrate de estar echando la red lo bastante ancha.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de candidatos sonados nombrada por tu propio equipo, y referencias honestas obtenidas por tu red y no por la lista que da el candidato.",
+      "texto_nuevo": "Una lista de candidatos soñados nombrada por tu propio equipo, y referencias honestas obtenidas por tu red y no por la lista que da el candidato.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-buscar_recomendaciones_confianza-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En cuanto se abre un puesto nuevo, y otra vez antes de cerrar una contratacion.",
+      "texto_nuevo": "En cuanto se abre un puesto nuevo, y otra vez antes de cerrar una contratación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pide Referencias de Confianza"
+}

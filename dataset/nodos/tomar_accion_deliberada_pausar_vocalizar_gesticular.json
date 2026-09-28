@@ -1,0 +1,303 @@
+{
+  "node_id": "tomar_accion_deliberada_pausar_vocalizar_gesticular",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Actuar de forma deliberada: hacer una pausa, decir en voz alta lo que vas a hacer y señalarlo con un gesto antes de ejecutar cualquier acción para evitar errores automáticos",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Hay errores que ocurren en automático: la persona ejecuta un procedimiento sin poner la cabeza en lo que hace. La acción deliberada consiste en hacer una pausa, decir en voz alta lo que vas a hacer y señalarlo con un gesto, y solo después ejecutar. Su intención es eliminar esos fallos automáticos metiendo deliberación en la mente de quien actúa, y por eso da igual que haya un observador o no: no se hace para un supervisor ni para lucirse. Y no se limita a las máquinas: en un trabajo de servicios o intelectual, se aplica al firmar un documento, autorizar una acción o pulsar una tecla.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_11.md, unidad Cap. 16, titulo textual \"Mistakes Just Happen!\". FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los pasos 1 y 2 salen de la linea 75 (124 palabras) y el paso 3 sale de la linea 95 (43 palabras), ambas dentro de la pieza P1 de la frontera de cap_11 publicada en esta vuelta, que reune LINEAS NO CONTIGUAS (L75 y L95) porque las dos desarrollan el mismo mecanismo nombrado por su propio rotulo en la linea 57, Mechanism: Take Deliberate Action, saltando dos subrotulos y su desarrollo (linea 83, Deliberate Action Is Not for Show, y linea 91, How Can You Implement Deliberate Action?, con sus parrafos de las lineas 77 a 93) que diagnostican por que cuesta adoptar el mecanismo, sin traer un inventario propio nuevo. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: la linea 75 pone su propio inventario de ETAPAS de la accion misma (pausar, vocalizar y gesticular lo que se va a hacer, y solo despues ejecutar) y su propia condicion de aplicacion (no importa si alguien esta mirando); la linea 95 pone su propio inventario de OBJETOS DE TRABAJO para el caso de los negocios de servicios o intelectuales (firmar un documento, autorizar una accion, introducir una pulsacion de teclado), sin adjetivo de adecuacion en el sitio del criterio. LA ASIMETRIA ES DELIBERADA: la linea 93, que describe el caso de negocios con interfaz fisica con la naturaleza, NO trae un inventario propio (solo dice que ahi es mas claro y que el reto es cuando las cosas pasan rapido), asi que esa linea se sostiene como POSTURA y no se mina, mientras que la 95 si trae su lista y se mina. EL CASO ENTRA COMO EJEMPLO Y NO COMO NODO PROPIO (manual 3.5): la critica completa de ocho horas sobre el tag rojo violado (lineas 15 a 73), la anecdota del operador del reactor en el cambio de bomba (linea 99) y la anecdota de los monitores de simulacro (linea 101) son casos especificos que ilustran el mecanismo y no se minan como pasos propios. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: la pieza junta dos lineas separadas por diecinueve lineas de distancia (L75 y L95), el salto mas largo de los tres candidatos de esta vuelta; si el auditor lee que la aplicacion a negocios de servicios (linea 95) es un mecanismo distinto y no una etapa del mismo mecanismo de accion deliberada, esto se parte en dos candidatos. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: los dos beneficios adicionales de la accion deliberada (que un companero de equipo pueda corregir el error antes de que ocurra, linea 99, y que los monitores de simulacro puedan intervenir, linea 101) no se escriben como pasos propios, porque son efectos del mecanismo y no una etapa nueva de como ejecutarlo; y la extension a los documentos administrativos firmados con descuido (linea 107) tampoco entra, por repetir sin inventario nuevo lo que la linea 95 ya cubre. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 3 pasos, 3 TRANSCRIPCION, 0 PUENTE.",
+  "pasos_accionables": [
+    "Antes de cualquier acción, haz una pausa, di en voz alta lo que estás a punto de hacer y señálalo con un gesto; solo después de esa pausa deliberada ejecuta la acción.",
+    "Recuerda que la acción deliberada no se hace para quedar bien ante un observador o un inspector: se hace igual si nadie te está mirando, porque su objetivo es que tú mismo evites el error, no aparentar.",
+    "Si tu negocio no tiene un contacto evidente con el mundo físico, por ser más bien de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o pulsar una tecla."
+  ],
+  "entregable_esperado": "La acción ejecutada solo después de la pausa, el anuncio verbal y el gesto que la preceden, sin importar si alguien más está observando.",
+  "nodos_previos": [
+    "ceder_control_reforzar_competencia_claridad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando una persona está a punto de ejecutar cualquier acción en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una acción o pulsar una tecla en un negocio de servicios."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Hay errores que ocurren en automático: la persona ejecuta un procedimiento sin poner la cabeza en lo que hace. La acción deliberada consiste en hacer una pausa, decir en voz alta lo que vas a hacer y señalarlo con un gesto, y solo después ejecutar. Su intención es eliminar esos fallos automáticos metiendo deliberación en la mente de quien actúa, y por eso da igual que haya un observador o no: no se hace para un supervisor ni para lucirse. Y no se limita a las máquinas: en un trabajo de servicios o intelectual, se aplica al firmar un documento, autorizar una acción o pulsar una tecla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_11.md",
+          "lineas": "73-95"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): L75 'Our intent was to eliminate those automatic mistakes' es intención, no resultado, y la línea da la causa al revés de como la ponía el texto: como la meta es meter deliberación en la mente de quien actúa, da igual que haya alguien mirando. 'Muchos errores' generalizaba el caso del marinero en automático. La propuesta corrige las tres cosas con lo que dicen L75 y L95.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tomar accion deliberada: pausar, vocalizar y gesticular antes de ejecutar cualquier accion para evitar errores automaticos",
+      "texto_nuevo": "Tomar acción deliberada: pausar, vocalizar y gesticular antes de ejecutar cualquier acción para evitar errores automáticos",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Antes de cualquier accion, haz una pausa, di en voz alta lo que estas a punto de hacer y senalalo con un gesto; solo despues de esa pausa deliberada ejecuta la accion. El texto lo dice asi: prior to any action, the operator paused and vocalized and gestured toward what he was about to do, and only after taking a deliberate pause would he execute the action.",
+      "texto_nuevo": "Antes de cualquier acción, haz una pausa, di en voz alta lo que estás a punto de hacer y señálalo con un gesto; solo después de esa pausa deliberada ejecuta la acción.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: prior to any action, the operator paused and vocalized and gestured toward what he was about to do, and only after taking a deliberate pause would he execute the action."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recuerda que la accion deliberada no se hace para quedar bien ante un observador o un inspector: se hace igual si nadie te esta mirando, porque su objetivo es que tu mismo evites el error, no dar una actuacion. El texto lo dice asi: it didn't matter whether anyone was around or not. Deliberate actions were not performed for the benefit of an observer or an inspector. They weren't for show.",
+      "texto_nuevo": "Recuerda que la acción deliberada no se hace para quedar bien ante un observador o un inspector: se hace igual si nadie te está mirando, porque su objetivo es que tú mismo evites el error, no dar una actuación.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: it didn't matter whether anyone was around or not. Deliberate actions were not performed for the benefit of an observer or an inspector. They weren't for show."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si tu negocio no tiene una interfaz fisica con la naturaleza, por ser de servicios o intelectual, aplica la accion deliberada en el momento de firmar un documento, autorizar una accion o introducir una pulsacion de teclado. El texto lo dice asi: If your business doesn't have an obvious interface with nature and is more service or intellectual, take deliberate action still applies, but in a slightly different way. It applies at the moment someone signs a form, authorizes an action, or enters a keystroke.",
+      "texto_nuevo": "Si tu negocio no tiene una interfaz física con la naturaleza, por ser de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: If your business doesn't have an obvious interface with nature and is more service or intellectual, take deliberate action still applies, but in a slightly different way. It applies at the moment someone signs a form, authorizes an action, or enters a keystroke."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La accion ejecutada solo despues de la pausa, el anuncio verbal y el gesto que la preceden, sin importar si alguien mas esta observando.",
+      "texto_nuevo": "La acción ejecutada solo después de la pausa, el anuncio verbal y el gesto que la preceden, sin importar si alguien más está observando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_accion_deliberada_pausar_vocalizar_gesticular-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando una persona esta por ejecutar cualquier accion en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una accion o introducir una pulsacion de teclado en un negocio de servicios.",
+      "texto_nuevo": "Cuando una persona está por ejecutar cualquier acción en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado en un negocio de servicios.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-tomar_accion_deliberada_pausar_vocalizar_gesticular-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando una persona está por ejecutar cualquier acción en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado en un negocio de servicios.",
+      "texto_nuevo": "Cuando una persona está a punto de ejecutar cualquier acción en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado en un negocio de servicios.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "está por ejecutar"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'estar por' en el sentido de 'estar a punto de' es forma regional.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio no tiene una interfaz física con la naturaleza, por ser de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado.",
+      "texto_nuevo": "Si tu negocio no tiene una interfaz evidente con la naturaleza, por ser más bien de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_11.md 95",
+        "frase": "If your business doesn’t have an obvious interface with nature and is more service or intellectual, take deliberate action still applies, but in a slightly different way."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'obvious interface' y 'more service or intellectual'; el texto lo volvía absoluto.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recuerda que la acción deliberada no se hace para quedar bien ante un observador o un inspector: se hace igual si nadie te está mirando, porque su objetivo es que tú mismo evites el error, no dar una actuación.",
+      "texto_nuevo": "Recuerda que la acción deliberada no se hace para quedar bien ante un observador o un inspector: se hace igual si nadie te está mirando, porque su objetivo es que tú mismo evites el error, no aparentar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no dar una actuación"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"dar una actuación\" calca \"for show\"; en español, aparentar.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si tu negocio no tiene una interfaz evidente con la naturaleza, por ser más bien de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado.",
+      "texto_nuevo": "Si tu negocio no tiene una interfaz evidente con la naturaleza, por ser más bien de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o pulsar una tecla.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "introducir una pulsación de teclado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"introducir una pulsación de teclado\" calca \"enters a keystroke\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-tomar_accion_deliberada_pausar_vocalizar_gesticular-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando una persona está a punto de ejecutar cualquier acción en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una acción o introducir una pulsación de teclado en un negocio de servicios.",
+      "texto_nuevo": "Cuando una persona está a punto de ejecutar cualquier acción en la interfaz entre el operador y el equipo o el proceso, incluyendo el momento de firmar un documento, autorizar una acción o pulsar una tecla en un negocio de servicios.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "introducir una pulsación de teclado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"introducir una pulsación de teclado\" calca \"enters a keystroke\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-tomar_accion_deliberada_pausar_vocalizar_gesticular-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tomar acción deliberada: pausar, vocalizar y gesticular antes de ejecutar cualquier acción para evitar errores automáticos",
+      "texto_nuevo": "Actuar de forma deliberada: hacer una pausa, decir en voz alta lo que vas a hacer y señalarlo con un gesto antes de ejecutar cualquier acción para evitar errores automáticos",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Tomar acción deliberada",
+          "pausar, vocalizar y gesticular"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Tomar acción\" calca \"take action\" y \"vocalizar\" calca \"vocalize\" (en español es articular); el libro dice \"paused and vocalized and gestured toward what he was about to do\" (marquet_turn_the_ship/cap_11.md 75), que el resumen ya cuenta como decir en voz alta y señalar con un gesto.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-tomar_accion_deliberada_pausar_vocalizar_gesticular-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si tu negocio no tiene una interfaz evidente con la naturaleza, por ser más bien de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o pulsar una tecla.",
+      "texto_nuevo": "Si tu negocio no tiene un contacto evidente con el mundo físico, por ser más bien de servicios o intelectual, aplica la acción deliberada en el momento de firmar un documento, autorizar una acción o pulsar una tecla.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "interfaz evidente con la naturaleza"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de \"an obvious interface with nature\" (marquet cap_11 l.95): en español no se entiende; el sentido es el contacto con lo físico. Se toma la propuesta.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pausa, Dilo y Señala Antes",
+  "fuentes_internas": [
+    "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet"
+  ]
+}

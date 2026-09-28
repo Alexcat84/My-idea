@@ -1,0 +1,407 @@
+{
+  "node_id": "elegir_fabricar_pedido_pronostico",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Elegir entre fabricar contra pedido y fabricar contra pronóstico, y asumir el riesgo de inventario del segundo",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Una fábrica solo controla su producción de dos maneras: espera el pedido y lo encaja en su programa, o produce antes contra un pronóstico. Fabricar contra pedido es lo preferible, pero si tu competencia entrega mucho antes que tú, los clientes se van, y entonces toca montar la actividad sobre una especulación razonada de qué pedidos llegarán y cuándo. Eso funciona porque te deja responder a tiempo, pero cuesta: comprometes capital, y si los pedidos no llegan o llegan para otro producto, te queda inventario que nadie quiere. Por eso se elige sabiendo ese riesgo.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P13 de la frontera publicada en la vuelta 2 del frente, L101 a L109, 425 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro dice cuantas vias hay (There are two ways to control the output of any factory), las nombra las dos (build to order, build to forecast), pone la mecanica de cada una (looks for a hole in its manufacturing schedule; sets up his activities around a reasoned speculation), pone el precio de la segunda (takes an inventory risk, con sus dos maneras de salir mal) y la despliega sobre cuatro poblaciones distintas. Inventario de MEDIOS. DE DONDE SALE CADA PASO, uno a uno: pasos 1 y 2 de L103 (There are two ways to control the output of any factory. Some industries build to order; When it learns what you want, the factory looks for a hole in its manufacturing schedule and makes the item for you); pasos 3, 4 y 5 de L105 (if your competition in the sofa business makes the same product but has it ready in four weeks while you need four months, you are not going to have many customers; even though you would much rather build to order, you will have to use another way; you will have to build to forecast, which is a contemplation of future orders; the manufacturer sets up his activities around a reasoned speculation that orders will materialize for specific products within a certain time); pasos 6 y 7 de L107 (An obvious disadvantage here is that the manufacturer takes an inventory risk; the factory could be in an immense amount of trouble if the orders do not materialize or if they materialize for a product other than the one anticipated. In either case, unwanted inventory is the result; To build to forecast, you risk capital to respond to anticipated future demand in good order); pasos 8 y 9 de L109 (Our breakfast factory makes its product to customer order, but buys from its suppliers, like the egg man, on the basis of forecasted demand; most companies recruit new college graduates to fill anticipated needs, rather than recruiting only when a need develops, which would be foolish because college graduates are turned out in a highly seasonal fashion; Computer software products, such as compilers, are also typically developed in response to an anticipated market need rather than to specific customer order). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LAS CUATRO SEMANAS Y LOS CUATRO MESES DEL PASO 3 SON DEL LIBRO Y NO MIOS, y van como lo que son, el ejemplo del sofa con el que el libro ensena la comparacion; no los convierto en umbral de decision, porque el libro no dice a partir de que diferencia de plazo hay que cambiar de via. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cuanto inventario es demasiado ni como se dimensiona el riesgo, porque el libro lo nombra y no lo mide en este tramo. NO escribo quien decide el cambio de via ni cada cuanto se revisa la decision: ni responsable ni periodo estan en el texto. NO escribo que el pronostico se escriba en ningun sitio; eso pertenece al tramo siguiente, que es su propio nodo. NI UNA CIFRA A atribuciones: las cuatro semanas y los cuatro meses son de un ejemplo inventado por el autor, no una medicion suya, y por tanto no son cifra del autor con fecha de corte en el sentido del manual principio 5. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: los pasos 1, 6 y 7 se parecen mas a reconocer que a hacer, y un lector estricto puede decir que son POSTURA. Lo sostengo porque los tres son condiciones que se ejecutan al decidir, y porque el paso 3 les pone delante una comparacion concreta y medible, tu plazo contra el de tu competencia, que es lo que convierte el tramo en una decision y no en una descripcion. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA de la vuelta 64 de la linea serial, la de saneamiento, en la relectura de fidelidad entera que el encargo de la 64 y D.30 mandan sobre los seis de d005, ANTES de su insercion y sin insertar nada. EL PASO 8 TRAIA UN CRITERIO PUENTE Y EL ENTREGABLE UN PUENTE DE SOPORTE; SE REESCRIBEN SIN BORRAR EL RASTRO. El paso 8 decia Mezcla las dos vias donde te convenga, como hace la fabrica de desayunos: fabrica tu producto contra el pedido del cliente y compra a tus proveedores contra la demanda pronosticada, y hoy dice Cuenta con que las dos vias pueden convivir en la misma operacion, como en la fabrica de desayunos. L109 dice Our breakfast factory makes its product to customer order, but buys from its suppliers, like the egg man, on the basis of forecasted demand, y lo dice para ensenar que fabricar contra pronostico es comun (So building to forecast is a very common business practice); no manda mezclar, y el donde te convenga es un criterio de adecuacion que el libro no pone. El entregable decia Escrito cual de las dos vias usas y hoy dice Decidido: ningun renglon de L103 a L109 manda escribirlo, y esta misma ficha declara arriba que no escribe que el pronostico se escriba en ningun sitio. CIFRA DE FIDELIDAD DE ESTA RELECTURA: 9 pasos, 8 TRANSCRIPCION y 1 PUENTE reescrito, el paso 8, que CUENTA como puente (ACTA 62 62.5). La cifra vieja de arriba no se borra.",
+  "pasos_accionables": [
+    "Cuenta con que solo hay dos maneras de controlar la producción de cualquier fábrica: fabricar contra pedido y fabricar contra pronóstico.",
+    "Si fabricas contra pedido, espera a saber qué quiere el cliente, busca después un hueco en tu programa de fabricación y hazle ahí su pieza.",
+    "Compara tu plazo con el de tu competencia: si ellos tienen listo el mismo producto en cuatro semanas y tú necesitas cuatro meses, no vas a tener muchos clientes.",
+    "Cuando esa comparación te cierre la vía del pedido, pasa a fabricar contra pronóstico, que es actuar sobre una previsión de los pedidos futuros, aunque preferirías fabricar contra pedido.",
+    "Monta tus actividades alrededor de una especulación razonada de que se materializarán pedidos de productos concretos dentro de un plazo determinado.",
+    "Asume el riesgo de inventario que eso trae: comprometes recursos contra una evaluación de necesidades futuras, y si los pedidos no se materializan, o se materializan para un producto distinto del previsto, lo que te queda es inventario no deseado.",
+    "Reconoce que al fabricar contra pronóstico estás arriesgando capital para poder responder ordenadamente a una demanda futura prevista.",
+    "Cuenta con que las dos vías pueden convivir en la misma operación, como en un negocio que sirve desayunos: prepara su producto contra el pedido del cliente, pero compra a sus proveedores, como al que le vende los huevos, contra la demanda pronosticada.",
+    "Usa el pronóstico también fuera de la fábrica, como hace la mayoría de las empresas al contratar titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional; y los programas informáticos también suelen desarrollarse contra una necesidad de mercado prevista y no contra un pedido concreto."
+  ],
+  "entregable_esperado": "Decidido cuál de las dos vías usas para cada cosa que produces o compras, y, si es contra pronóstico, el riesgo de inventario reconocido y el plazo dentro del cual esperas que se materialicen los pedidos.",
+  "nodos_previos": [
+    "equilibrar_capacidad_personal_inventario_plazo"
+  ],
+  "nodos_siguientes": [
+    "casar_flujo_fabricacion_flujo_ventas"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes que decidir cómo controlas la producción de tu operación, y el plazo que tardas en fabricar es más largo que el que tu cliente está dispuesto a esperar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una fábrica solo controla su salida de dos maneras: espera el pedido y lo encaja en su programa, o produce antes contra un pronóstico. Fabricar contra pedido es lo preferible, pero si tu competencia entrega mucho antes que tú, los clientes se van, y entonces toca montar la actividad sobre una especulación razonada de qué pedidos llegarán y cuándo. Eso funciona porque te deja responder a tiempo, pero cuesta: comprometes capital, y si los pedidos no llegan o llegan para otro producto, te queda inventario que nadie quiere. Por eso se elige sabiendo ese riesgo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_03.md",
+          "lineas": "103-109"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)"
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir entre fabricar contra pedido y fabricar contra pronostico, y asumir el riesgo de inventario del segundo",
+      "texto_nuevo": "Elegir entre fabricar contra pedido y fabricar contra pronóstico, y asumir el riesgo de inventario del segundo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que solo hay dos maneras de controlar la salida de cualquier fabrica: fabricar contra pedido y fabricar contra pronostico.",
+      "texto_nuevo": "Cuenta con que solo hay dos maneras de controlar la salida de cualquier fábrica: fabricar contra pedido y fabricar contra pronóstico.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si fabricas contra pedido, espera a saber que quiere el cliente, busca despues un hueco en tu programa de fabricacion y hazle ahi su pieza.",
+      "texto_nuevo": "Si fabricas contra pedido, espera a saber qué quiere el cliente, busca después un hueco en tu programa de fabricación y hazle ahí su pieza.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara tu plazo con el de tu competencia: si ellos tienen listo el mismo producto en cuatro semanas y tu necesitas cuatro meses, no vas a tener muchos clientes.",
+      "texto_nuevo": "Compara tu plazo con el de tu competencia: si ellos tienen listo el mismo producto en cuatro semanas y tú necesitas cuatro meses, no vas a tener muchos clientes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando esa comparacion te cierre la via del pedido, pasa a fabricar contra pronostico, que es actuar sobre una contemplacion de los pedidos futuros, aunque preferirias fabricar contra pedido.",
+      "texto_nuevo": "Cuando esa comparación te cierre la vía del pedido, pasa a fabricar contra pronóstico, que es actuar sobre una contemplación de los pedidos futuros, aunque preferirías fabricar contra pedido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monta tus actividades alrededor de una especulacion razonada de que se materializaran pedidos de productos concretos dentro de un plazo determinado.",
+      "texto_nuevo": "Monta tus actividades alrededor de una especulación razonada de que se materializarán pedidos de productos concretos dentro de un plazo determinado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asume el riesgo de inventario que eso trae: comprometes recursos contra una evaluacion de necesidades futuras, y si los pedidos no se materializan, o se materializan para un producto distinto del previsto, lo que te queda es inventario no deseado.",
+      "texto_nuevo": "Asume el riesgo de inventario que eso trae: comprometes recursos contra una evaluación de necesidades futuras, y si los pedidos no se materializan, o se materializan para un producto distinto del previsto, lo que te queda es inventario no deseado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que al fabricar contra pronostico estas arriesgando capital para poder responder ordenadamente a una demanda futura prevista.",
+      "texto_nuevo": "Reconoce que al fabricar contra pronóstico estás arriesgando capital para poder responder ordenadamente a una demanda futura prevista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que las dos vias pueden convivir en la misma operacion, como en la fabrica de desayunos: fabrica su producto contra el pedido del cliente, pero compra a sus proveedores, como al huevero, contra la demanda pronosticada.",
+      "texto_nuevo": "Cuenta con que las dos vías pueden convivir en la misma operación, como en una fábrica de desayunos: fabrica su producto contra el pedido del cliente, pero compra a sus proveedores, como al huevero, contra la demanda pronosticada.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como en la fabrica de desayunos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa el pronostico tambien fuera de la fabrica: contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y desarrolla productos de programa contra una necesidad de mercado prevista y no contra un pedido concreto.",
+      "texto_nuevo": "Usa el pronóstico también fuera de la fábrica: contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y desarrolla productos de programa contra una necesidad de mercado prevista y no contra un pedido concreto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decidido cual de las dos vias usas para cada cosa que produces o compras, y, si es contra pronostico, el riesgo de inventario reconocido y el plazo dentro del cual esperas que se materialicen los pedidos.",
+      "texto_nuevo": "Decidido cuál de las dos vías usas para cada cosa que produces o compras, y, si es contra pronóstico, el riesgo de inventario reconocido y el plazo dentro del cual esperas que se materialicen los pedidos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_fabricar_pedido_pronostico-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes que decidir como controlas la salida de tu operacion, y el plazo que tardas en fabricar es mas largo que el que tu cliente esta dispuesto a esperar.",
+      "texto_nuevo": "Cuando tienes que decidir cómo controlas la salida de tu operación, y el plazo que tardas en fabricar es más largo que el que tu cliente está dispuesto a esperar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_fabricar_pedido_pronostico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una fábrica solo controla su salida de dos maneras: espera el pedido y lo encaja en su programa, o produce antes contra un pronóstico. Fabricar contra pedido es lo preferible, pero si tu competencia entrega mucho antes que tú, los clientes se van, y entonces toca montar la actividad sobre una especulación razonada de qué pedidos llegarán y cuándo. Eso funciona porque te deja responder a tiempo, pero cuesta: comprometes capital, y si los pedidos no llegan o llegan para otro producto, te queda inventario que nadie quiere. Por eso se elige sabiendo ese riesgo.",
+      "texto_nuevo": "Una fábrica solo controla su producción de dos maneras: espera el pedido y lo encaja en su programa, o produce antes contra un pronóstico. Fabricar contra pedido es lo preferible, pero si tu competencia entrega mucho antes que tú, los clientes se van, y entonces toca montar la actividad sobre una especulación razonada de qué pedidos llegarán y cuándo. Eso funciona porque te deja responder a tiempo, pero cuesta: comprometes capital, y si los pedidos no llegan o llegan para otro producto, te queda inventario que nadie quiere. Por eso se elige sabiendo ese riesgo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "su salida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"output\" es la producción.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_fabricar_pedido_pronostico-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que solo hay dos maneras de controlar la salida de cualquier fábrica: fabricar contra pedido y fabricar contra pronóstico.",
+      "texto_nuevo": "Cuenta con que solo hay dos maneras de controlar la producción de cualquier fábrica: fabricar contra pedido y fabricar contra pronóstico.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "la salida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"output\" es la producción.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_fabricar_pedido_pronostico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando esa comparación te cierre la vía del pedido, pasa a fabricar contra pronóstico, que es actuar sobre una contemplación de los pedidos futuros, aunque preferirías fabricar contra pedido.",
+      "texto_nuevo": "Cuando esa comparación te cierre la vía del pedido, pasa a fabricar contra pronóstico, que es actuar sobre una previsión de los pedidos futuros, aunque preferirías fabricar contra pedido.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "contemplación"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"contemplation\" calcado; es una previsión.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_fabricar_pedido_pronostico-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta con que las dos vías pueden convivir en la misma operación, como en una fábrica de desayunos: fabrica su producto contra el pedido del cliente, pero compra a sus proveedores, como al huevero, contra la demanda pronosticada.",
+      "texto_nuevo": "Cuenta con que las dos vías pueden convivir en la misma operación, como en un negocio que sirve desayunos: prepara su producto contra el pedido del cliente, pero compra a sus proveedores, como al que le vende los huevos, contra la demanda pronosticada.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"la fábrica de desayunos\" es el ejemplo continuo del libro, que el nodo no presenta; suelto no tiene referente, y \"el huevero\" es el proveedor de ese ejemplo."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"la fábrica de desayunos\" es el ejemplo continuo del libro, que el nodo no presenta; suelto no tiene referente, y \"el huevero\" es el proveedor de ese ejemplo.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_fabricar_pedido_pronostico-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el pronóstico también fuera de la fábrica: contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y desarrolla productos de programa contra una necesidad de mercado prevista y no contra un pedido concreto.",
+      "texto_nuevo": "Usa el pronóstico también fuera de la fábrica: contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y desarrolla programas informáticos contra una necesidad de mercado prevista y no contra un pedido concreto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "productos de programa"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"software products\" mal calcado; son programas informáticos.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_fabricar_pedido_pronostico-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando tienes que decidir cómo controlas la salida de tu operación, y el plazo que tardas en fabricar es más largo que el que tu cliente está dispuesto a esperar.",
+      "texto_nuevo": "Cuando tienes que decidir cómo controlas la producción de tu operación, y el plazo que tardas en fabricar es más largo que el que tu cliente está dispuesto a esperar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "la salida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"output\" es la producción.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-elegir_fabricar_pedido_pronostico-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa el pronóstico también fuera de la fábrica: contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y desarrolla programas informáticos contra una necesidad de mercado prevista y no contra un pedido concreto.",
+      "texto_nuevo": "Usa el pronóstico también fuera de la fábrica, como hace la mayoría de las empresas al contratar titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional; y los programas informáticos también suelen desarrollarse contra una necesidad de mercado prevista y no contra un pedido concreto.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 109",
+        "frase": "Similarly, most companies recruit new college graduates to fill anticipated needs—rather than recruiting only when a need develops, which would be foolish because college graduates are turned out in a highly seasonal fashion. Computer software products, such as compilers, are also typically developed in response to an anticipated market need rather than to specific customer order."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro lo describe como práctica de la mayoría (\"most companies\") y del software como lo típico (\"typically\"); el paso lo volvía orden sin matiz. Se recuperan \"la mayoría\" y \"suelen\" con un cambio menor que la propuesta.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Elige Pedido o Pronóstico",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

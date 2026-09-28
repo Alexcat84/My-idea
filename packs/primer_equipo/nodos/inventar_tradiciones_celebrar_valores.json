@@ -1,0 +1,223 @@
+{
+  "node_id": "inventar_tradiciones_celebrar_valores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Inventar tradiciones que celebren los valores de tu equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Más allá de lemas o discursos, los ritos crean acciones alrededor de las cuales el equipo puede unirse, y pueden ser tan únicos, peculiares y divertidos como el propio equipo. En una empresa, unas horas dedicadas a construir el prototipo de una idea propia hicieron concretos, más allá de los productos que salieron, sus valores más antiguos: ser audaz y moverse rápido. En esa misma empresa, quien la dirige lleva más de diez años respondiendo cada semana cualquier pregunta, porque la apertura es uno de sus grandes valores y, si él no da ejemplo, ¿por qué iba a creer nadie más que importa?",
+  "notas_extraccion": "Es el cuarto frente del capitulo y el unico cuyo entregable es un objeto nuevo y no una revision de algo que ya existe. Su inventario propio es el mas rico del capitulo: seis tradiciones nombradas una a una, mas el hackathon y el turno de preguntas de los viernes como casos con su valor asociado. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se inventa una tradicion nueva, ni como se retira la que deja de funcionar, ni quien la propone.",
+  "pasos_accionables": [
+    "Cuenta con que hay poder en los ritos: más allá de los lemas o los discursos, crean acciones alrededor de las cuales los miembros del equipo pueden unirse, y pueden ser tan únicos, peculiares y divertidos como tu equipo.",
+    "Mira el caso de una tradición con solera, la maratón de prototipos: venir y pasar unas cuantas horas dedicadas a crear un prototipo de una idea que te entusiasme, solo o con un puñado de otros, animado a construir lo que creyeras bueno para la empresa, con una energía que a menudo se alargaba hasta las tantas de la noche, hasta que podías llamar a tus compañeros para enseñarles funcionando lo que tenías en la cabeza.",
+    "Fíjate en que lo que el rito hizo concreto no fueron solo los productos que salieron de él, sino los dos valores más antiguos de la casa: sé audaz y muévete rápido.",
+    "Toma ideas de estos seis ejemplos de tradiciones. Preguntas personales al empezar una reunión, del estilo de «película favorita de la infancia» o «el mejor regalo que has recibido en Navidad», para que la gente conozca mejor a sus compañeros. Noches mensuales de aprender a pintar, esculpir o hacer manualidades, para fomentar la creatividad y la mentalidad del principiante. Un oso de peluche gigantesco de amor al cliente que se entrega a quien más se esforzó por ayudar a un cliente el último mes. Una ceremonia anual de premios al estilo de los Óscar, para que la gente reconozca todas las maneras en que sus compañeros son estupendos. Sesiones de yoga los lunes por la mañana, para promover la atención plena. Y el fallo de la semana, donde la gente comparte sus errores en un foro seguro, para fomentar la autenticidad y el aprendizaje.",
+    "Mira el caso de un fundador que sostiene el rito él mismo: lleva más de diez años celebrando un turno de preguntas interno los viernes por la tarde, donde cualquiera de la empresa puede hacerle cualquier pregunta y recibe una respuesta honesta, sobre el rumbo futuro, sobre decisiones recientes, sobre las políticas de la empresa o incluso sobre sus opiniones personales de la última noticia, y algunas de esas preguntas pueden ser extremadamente directas.",
+    "Cuenta con la razón para que el que manda lo sostenga: uno de los mayores valores de esa empresa es la apertura, y si él no da ejemplo, ¿por qué iba a creer nadie más que importa?"
+  ],
+  "entregable_esperado": "Una tradición propia del equipo, tan única, peculiar y divertida como él, que haga concreto el valor que quieres celebrar.",
+  "nodos_previos": [
+    "reconocer_decision_dificil_valores"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando quieres hacer concreto un valor de tu equipo y los lemas y los discursos no bastan."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Más allá de los lemas o los discursos, los ritos crean acciones alrededor de las cuales el equipo se une, y pueden ser tan únicos, peculiares y divertidos como el propio equipo. En una empresa, unas horas dedicadas a construir el prototipo de una idea propia hicieron concretos, más allá de los productos que salieron, sus valores más antiguos: ser audaz y moverse rápido. En esa misma empresa, quien la dirige lleva más de diez años respondiendo cada semana cualquier pregunta, porque la apertura es uno de sus grandes valores y, si él no da ejemplo, ¿por qué iba a creer nadie más que importa?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_11.md",
+          "lineas": "165-187"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)"
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que hay poder en los ritos: mas alla de los lemas o los discursos, crean acciones alrededor de las cuales los miembros del equipo pueden unirse, y pueden ser tan unicos, peculiares y divertidos como tu equipo.",
+      "texto_nuevo": "Cuenta con que hay poder en los ritos: más allá de los lemas o los discursos, crean acciones alrededor de las cuales los miembros del equipo pueden unirse, y pueden ser tan únicos, peculiares y divertidos como tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el caso que el libro cuenta de una tradicion con solera, el hackathon: venir y pasar unas cuantas horas dedicadas a crear un prototipo de una idea que te entusiasme, solo o con un punado de otros, animado a construir lo que creyeras bueno para la empresa, con una energia que a menudo se alargaba hasta las tantas de la noche, hasta que podias llamar a tus companieros para ensenarles funcionando lo que tenias en la cabeza.",
+      "texto_nuevo": "Mira el caso de una tradición con solera, la maratón de prototipos: venir y pasar unas cuantas horas dedicadas a crear un prototipo de una idea que te entusiasme, solo o con un puñado de otros, animado a construir lo que creyeras bueno para la empresa, con una energía que a menudo se alargaba hasta las tantas de la noche, hasta que podías llamar a tus compañeros para enseñarles funcionando lo que tenías en la cabeza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro cuenta",
+          "hackathon"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fijate en que lo que el rito hizo concreto no fueron solo los productos que salieron de el, sino los dos valores mas antiguos de la casa: se audaz y muevete rapido.",
+      "texto_nuevo": "Fíjate en que lo que el rito hizo concreto no fueron solo los productos que salieron de él, sino los dos valores más antiguos de la casa: sé audaz y muévete rápido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Toma ideas de los seis ejemplos de tradiciones que el libro imprime. Preguntas personales al empezar una reunion, del estilo de pelicula favorita de la infancia o el mejor regalo que has recibido en Navidad, para que la gente conozca mejor a sus companieros. Noches mensuales de aprender a pintar, esculpir o hacer manualidades, para fomentar la creatividad y la mentalidad del principiante. Un oso de peluche gigantesco de amor al cliente que se entrega a quien se salio mas de su camino para ayudar a un cliente el ultimo mes. Una ceremonia anual de premios al estilo de los Oscar, para que la gente reconozca todas las maneras en que sus companieros son estupendos. Sesiones de yoga los lunes por la maniana, para promover la atencion plena. Y el fallo de la semana, donde la gente comparte sus errores en un foro seguro, para fomentar la autenticidad y el aprendizaje.",
+      "texto_nuevo": "Toma ideas de estos seis ejemplos de tradiciones. Preguntas personales al empezar una reunión, del estilo de «película favorita de la infancia» o «el mejor regalo que has recibido en Navidad», para que la gente conozca mejor a sus compañeros. Noches mensuales de aprender a pintar, esculpir o hacer manualidades, para fomentar la creatividad y la mentalidad del principiante. Un oso de peluche gigantesco de amor al cliente que se entrega a quien se salió más de su camino para ayudar a un cliente el último mes. Una ceremonia anual de premios al estilo de los Óscar, para que la gente reconozca todas las maneras en que sus compañeros son estupendos. Sesiones de yoga los lunes por la mañana, para promover la atención plena. Y el fallo de la semana, donde la gente comparte sus errores en un foro seguro, para fomentar la autenticidad y el aprendizaje.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro imprime"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el caso que el libro pone del fundador de la casa sosteniendo el rito el mismo: lleva mas de diez anios celebrando un turno de preguntas interno los viernes por la tarde, donde cualquiera de la empresa puede hacerle cualquier pregunta y recibe una respuesta honesta, sobre el rumbo futuro, sobre decisiones recientes, sobre las politicas de la empresa o incluso sobre sus opiniones personales de la ultima noticia, y algunas de esas preguntas pueden ser extremadamente directas.",
+      "texto_nuevo": "Mira el caso de un fundador que sostiene el rito él mismo: lleva más de diez años celebrando un turno de preguntas interno los viernes por la tarde, donde cualquiera de la empresa puede hacerle cualquier pregunta y recibe una respuesta honesta, sobre el rumbo futuro, sobre decisiones recientes, sobre las políticas de la empresa o incluso sobre sus opiniones personales de la última noticia, y algunas de esas preguntas pueden ser extremadamente directas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Mira el caso que el libro pone del fundador de la casa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la razon que el libro da para que el que manda lo sostenga: uno de los mayores valores de la casa es la apertura, y si el no da ejemplo, por que iba a creer nadie mas que importa.",
+      "texto_nuevo": "Cuenta con la razón para que el que manda lo sostenga: uno de los mayores valores de esa empresa es la apertura, y si él no da ejemplo, ¿por qué iba a creer nadie más que importa?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la razon que el libro da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-inventar_tradiciones_celebrar_valores-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una tradicion propia del equipo, tan unica, peculiar y divertida como el, que haga concreto el valor que quieres celebrar.",
+      "texto_nuevo": "Una tradición propia del equipo, tan única, peculiar y divertida como él, que haga concreto el valor que quieres celebrar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-inventar_tradiciones_celebrar_valores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más allá de los lemas o los discursos, los ritos crean acciones alrededor de las cuales el equipo se une, y pueden ser tan únicos, peculiares y divertidos como el propio equipo. En una empresa, unas horas dedicadas a construir el prototipo de una idea propia hicieron concretos, más allá de los productos que salieron, sus valores más antiguos: ser audaz y moverse rápido. En esa misma empresa, quien la dirige lleva más de diez años respondiendo cada semana cualquier pregunta, porque la apertura es uno de sus grandes valores y, si él no da ejemplo, ¿por qué iba a creer nadie más que importa?",
+      "texto_nuevo": "Más allá de lemas o discursos, los ritos crean acciones alrededor de las cuales el equipo puede unirse, y pueden ser tan únicos, peculiares y divertidos como el propio equipo. En una empresa, unas horas dedicadas a construir el prototipo de una idea propia hicieron concretos, más allá de los productos que salieron, sus valores más antiguos: ser audaz y moverse rápido. En esa misma empresa, quien la dirige lleva más de diez años respondiendo cada semana cualquier pregunta, porque la apertura es uno de sus grandes valores y, si él no da ejemplo, ¿por qué iba a creer nadie más que importa?",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 169",
+        "frase": "Beyond slogans or speeches, they create actions around which team members can bond."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"can bond\" (el paso 0 lo conserva); el resumen lo afirmaba. Se acorta \"los lemas o los discursos\" para no pasar de 600.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-inventar_tradiciones_celebrar_valores-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Toma ideas de estos seis ejemplos de tradiciones. Preguntas personales al empezar una reunión, del estilo de «película favorita de la infancia» o «el mejor regalo que has recibido en Navidad», para que la gente conozca mejor a sus compañeros. Noches mensuales de aprender a pintar, esculpir o hacer manualidades, para fomentar la creatividad y la mentalidad del principiante. Un oso de peluche gigantesco de amor al cliente que se entrega a quien se salió más de su camino para ayudar a un cliente el último mes. Una ceremonia anual de premios al estilo de los Óscar, para que la gente reconozca todas las maneras en que sus compañeros son estupendos. Sesiones de yoga los lunes por la mañana, para promover la atención plena. Y el fallo de la semana, donde la gente comparte sus errores en un foro seguro, para fomentar la autenticidad y el aprendizaje.",
+      "texto_nuevo": "Toma ideas de estos seis ejemplos de tradiciones. Preguntas personales al empezar una reunión, del estilo de «película favorita de la infancia» o «el mejor regalo que has recibido en Navidad», para que la gente conozca mejor a sus compañeros. Noches mensuales de aprender a pintar, esculpir o hacer manualidades, para fomentar la creatividad y la mentalidad del principiante. Un oso de peluche gigantesco de amor al cliente que se entrega a quien más se esforzó por ayudar a un cliente el último mes. Una ceremonia anual de premios al estilo de los Óscar, para que la gente reconozca todas las maneras en que sus compañeros son estupendos. Sesiones de yoga los lunes por la mañana, para promover la atención plena. Y el fallo de la semana, donde la gente comparte sus errores en un foro seguro, para fomentar la autenticidad y el aprendizaje.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "quien se salió más de su camino para ayudar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"se salió más de su camino\" calca \"went out of their way\" (el libro dice \"went above and beyond\").",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Inventa Tradiciones para tu Equipo"
+}

@@ -1,0 +1,1188 @@
+{
+  "node_id": "desplegar_plan_orden_operaciones_franqueza_radical",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Desplegar en tu equipo el plan de franqueza radical por su orden de operaciones, etapa a etapa y con su parada de evaluación en medio",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Explicar una idea es muy distinto de ponerla a funcionar, y el orden importa: la confianza se construye antes que los procesos. Por eso el plan empieza por contar tus historias y pedir crítica, para demostrar que aguantas antes de repartir, sigue con las conversaciones de carrera y las reuniones a solas, y solo después mejora cómo das elogio y crítica. Una parada de evaluación impide avanzar sin cimientos: reuniones de equipo, normas contra las puñaladas y procesos de la empresa llegan cuando la guía, el trato con cada persona y las reuniones a solas ya funcionan.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_12.md, unidad Getting Started, titulo textual Getting Started. Sale de las lineas 13, 15 y 19 a 49. ES LA PIEZA 1 DE LA FRONTERA DE cap_12, que cierra en 2 piezas con su instrumento en .t1_v23/frontera_cap12.py. POR QUE ES PROCEDIMIENTO Y NO UN INDICE, con D.27 delante y sabiendo que este es el caso en que mas facil seria equivocarse, porque casi todas sus etapas remiten a otro capitulo: el libro NO pone aqui un mandato general con un adjetivo de adecuacion, pone SU PROPIO INVENTARIO DE ETAPAS EN SU ORDEN, nombradas una a una de la linea 15 a la 49, con lo que va antes, lo que va en paralelo, donde hay que pararse y que condiciones hay que cumplir para seguir. LO QUE ESTE NODO APORTA Y NO APORTA NINGUNO DE LOS NODOS A LOS QUE REMITE ES EL ORDEN Y LA PARADA, y eso deja fichero: el plan recorrido dice que etapa toca. LOS REMITES NO SE CONVIERTEN EN PASOS DE PROCEDIMIENTO AJENO: cada paso de aqui nombra la etapa y su condicion, y NO copia los pasos del nodo que la despliega, que es justo la linea que EXTRACTOR.md 9 traza entre nombrar y procedimentar. LA ETAPA PRIMERA NO SE DESPLIEGA AQUI: el paso 4 la nombra por su rotulo de la linea 15 (comparte tus historias) y su despliegue vive en la pieza 2, contar_historias_propias_explicar_franqueza_radical, que sale de la linea 17. Es cabeza y parte, y la arista va declarada en el reporte de la vuelta 23. Y NO ES UNA SERIE D.37: el texto NO escribe cuantas etapas tiene el plan, asi que ni el titulo ni el id llevan numero, y la arista a su parte es D.29 con razon escrita. EL REPARTO DE LA SEMANA DE LA LINEA 51 NO VIAJA A NINGUN PASO Y DIGO POR QUE: ese material ya esta extraido de cap_03 en repartir_semana_cuarenta_horas_jefe, con las diez horas de gestion, las quince de trabajo propio y las quince de lo imprevisible. Leido contra el uno a uno, lo unico que la linea 51 anade es que cinco de esas diez son reuniones a solas que ya estabas teniendo y que algunas semanas son de ocho, doce o cinco horas. ES EL MISMO OBJETO, y P.19 manda no fabricar el gemelo de su propio donante: el par va declarado en el reporte con su veredicto. RELECTURA DE FIDELIDAD D.30 EN EL ACTO, paso a paso contra su linea: 42 pasos, 42 TRANSCRIPCION, 0 PUENTE. P1 a P3 de la linea 13; P4 de la linea 15; P5 a P9 de la linea 21; P10 y P11 de la linea 23; P12 y P13 de las lineas 25 y 27; P14 de la linea 27; P15 y P16 de la linea 29; P17 a P19 de la linea 31; P20 y P21 de la linea 33; P22 a P24 de la linea 35; P25 a P28 de la linea 37; P29 a P31 de la linea 39; P32 y P33 de la linea 41; P34 a P36 de la linea 43; P37 a P40 de la linea 45; P41 de la linea 47; P42 de la linea 49. LOS NOMBRES PROPIOS QUE VIAJAN Y POR QUE: Michael Dearing y Dan Woods viajan porque el libro pone sus tecnicas por su nombre y sin ellos el paso no se puede buscar, que es manual 3.5 (el caso entra como ejemplo nombrado dentro de la doctrina). LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto dura cada etapa, que se hace si una etapa no sale, quien decide que el plan ha terminado, y cada cuanto se vuelve a recorrer entero. El libro pone el orden y la parada, y no pone ninguna de esas cuatro: escribirlas seria escribirlas yo. CORRECCION DECLARADA 17 sep 2026, vuelta 37, TAREA 1 BLOQUEANTE (D.30, ACTA 35 seccion 6): el paso 33 decia recompensando a tus superestrellas y cap_12 L41 dice rock stars, que en este libro NO es sinonimo de superstar sino la mitad opuesta de su propio marco (cap_10 L19 las escribe en la misma frase para oponerlas). Conteo propio de esta vuelta: cap_12 dice rock star 1 vez y superstar 0; cap_10 dice rock star 7 y superstar 8. El paso se REESCRIBE contra su linea con la mitad que el libro nombra, estrellas de rock, y la cuenta de fidelidad de este nodo pasa de 42 TRANSCRIPCION y 0 PUENTE a 41 TRANSCRIPCION y 1 PUENTE RETIRADO ANTES DE ENTRAR. No se borra el texto viejo: queda aqui.",
+  "pasos_accionables": [
+    "Parte de esta pregunta: ya toca poner en práctica la franqueza radical, y hay que saber qué hacer primero, es decir, cuál es el orden de operaciones.",
+    "Cuenta con esta distinción antes de empezar: explicar ideas y técnicas es algo muy distinto de ponerlas a funcionar, y lo que sigue es un plan para construir una cultura de franqueza radical en tu equipo.",
+    "Y si te atascas en alguna parte del plan, busca consejo más detallado sobre compartir tus historias, pedir crítica, dar elogio y medir tu crítica.",
+    "Empieza por la primera etapa: comparte tus historias.",
+    "Sigue por la segunda, demuestra que aguantas la crítica antes de empezar a repartirla: empieza a pedir a tu equipo que te critique.",
+    "Y no dejes que la gente se libre cuando no diga gran cosa, porque al principio no la va a decir. Acepta la incomodidad para superarla.",
+    "Presta mucha atención si no te está llegando ninguna crítica: que no te critiquen no significa que te crean perfecto.",
+    "Si quieres, dibuja el marco de la franqueza radical y lleva ahí la cuenta de quién te dice qué.",
+    "Y si te das cuenta de que no te llega ninguna crítica, prueba la técnica de la caja naranja.",
+    "Cuenta con lo que es pedir guía, y sobre todo crítica: no es algo que se hace una vez y se tacha de la lista, es algo que vas a hacer a diario, en conversaciones pequeñas de uno a dos minutos, y no en reuniones que tengas que añadir al calendario. Es algo de lo que ser consciente, no algo que programar.",
+    "Cuenta también con que al principio se te va a hacer raro, y con que cuando te acostumbres lo raro será no hacerlo: nunca dejarás de recibir guía, igual que nunca dejarás de tener que beber agua o lavarte los dientes.",
+    "Cuando eso esté en marcha ya estás listo para las conversaciones de carrera: empiézalas con tu equipo, y empieza por las personas con las que llevas más tiempo trabajando.",
+    "Cuenta con que tampoco son algo que se hace una vez y se tacha de la lista: la gente cambia, y tú tienes que cambiar con ella.",
+    "Por eso es buena idea hacer una ronda de conversaciones de carrera al año con cada persona a tu cargo, dentro del tiempo de reunión a solas que tienes con ella.",
+    "En paralelo, perfecciona tus reuniones a solas, y en paralelo por esto: vas a tardar al menos de tres a seis semanas en pasar las tres conversaciones de carrera con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres.",
+    "Asegúrate en ese tiempo de que estás teniendo reuniones a solas con sentido con las personas a tu cargo.",
+    "Después de haber explicado la franqueza radical, pedido guía, tenido las conversaciones de carrera y mejorado tus reuniones a solas, notarás que te estás ganando la confianza de tu equipo y construyendo una cultura mejor. Entonces estás listo para empezar a mejorar cómo das elogio y crítica improvisados.",
+    "Acuérdate de que la guía improvisada ocurre mejor en conversaciones de uno a dos minutos.",
+    "Y asegúrate de medir tu guía, porque puede pasar esto: puedes creerte radicalmente franco y que una persona no haya oído ninguna crítica, otra la haya oído como empatía ruinosa y otra como agresión odiosa. Tienes que ajustar para cada persona, y no basta con ser consciente de ti mismo: hay que serlo también de la relación y de la cultura.",
+    "Respira hondo y evalúa con estas preguntas: ¿cómo va la cosa?, ¿qué está funcionando?, ¿qué no está funcionando?, ¿con quién puedes hablar?, ¿puede ayudarte tu jefe, tu equipo, un mentor de fuera del trabajo, alguien que te acompañe profesionalmente, otra gente de la comunidad de la franqueza radical?",
+    "Y no intentes hacer más cosas nuevas hasta que sientas estas tres: que has avanzado bien en el ladrillo fundamental de la gestión, que es recibir y dar guía; que conoces mejor a las personas a tu cargo; y que estás contento con tus reuniones a solas.",
+    "Si la respuesta a esas tres es sí, estás listo para perfeccionar las reuniones de equipo, las decisiones y los debates: ya has construido los cimientos de confianza que son el centro de tu capacidad de sacar cosas adelante.",
+    "Asegúrate de que tus reuniones de equipo son lo más productivas posible: durante la reunión revisas las métricas clave, compartes actualizaciones e identificas tus grandes decisiones y tus grandes debates. No dejes que se alarguen demasiado, y no te las saltes.",
+    "Y aprovecha que es buen momento para estrenar las reuniones de gran decisión y las de gran debate.",
+    "Vuelve a la guía: asegúrate de que estás fomentando la guía entre las personas de tu equipo.",
+    "Establece en tu equipo una norma de nada de puñaladas por la espalda, o de que un desacuerdo solo te llegue con las dos personas delante, y explícala: no vas a permitir que una persona venga a hablarte de otra.",
+    "Puedes darles algo que leer sobre cómo impedir las puñaladas por la espalda, pero lo importante no es que lo lean sino que tú lo hagas cumplir, y vas a tener que hacer seguimiento.",
+    "Cuenta con lo que esa norma cuesta y con lo que ahorra: a veces te caerán en el calendario reuniones extra para resolver disputas, y aun así ahorrará más tiempo del que cuesta, porque habrá menos situaciones políticas estallándote en la cara.",
+    "Combate la multiplicación de reuniones: asegúrate de que no te están sobreprogramando, y piensa muy a conciencia qué estás haciendo que puedas dejar de hacer.",
+    "Reserva en tu calendario algo de tiempo para pensar.",
+    "Y cuenta con que el desorden de calendario es una pelea permanente para la mayoría de las organizaciones: pelea la buena pelea, no solo por ti sino en nombre de tu equipo.",
+    "Planea el futuro de tu equipo: empieza a hacer un plan de gestión del crecimiento para cada persona de tu equipo.",
+    "Asegúrate de que no estás creando una cultura obsesionada con el ascenso, y piensa un poco más en cómo estás recompensando a tus estrellas de rock.",
+    "Vuelve otra vez a la guía, ahora entre ellos: pide a tu equipo que empiece a medirse la guía unos a otros. La razón: son más que tú, así que cualquier cosa que consigas para que se den entre ellos más elogio y más crítica radicalmente francos reforzará la cultura y te dará más palanca que toda la guía que puedas dar o recibir tú en persona.",
+    "Si se resisten, prueba a empezar con la técnica del «uy, qué despiste» en tu próxima reunión de equipo.",
+    "Y aprovecha ese momento para evaluar si sigues haciendo un buen trabajo recibiendo y dando guía, acordándote de que es difícil, de que no es natural, y de que es el ladrillo atómico de la gestión.",
+    "Pasea por la organización: llevas ya un tiempo en esto, así que pregúntate si notas las cosas distintas en el equipo, y qué cosas quieres saber y no estás oyendo.",
+    "Aparta un rato cada semana para pasear y tener charlas informales y espontáneas con la gente.",
+    "Si tienes la sensación de que las cosas siguen sin ir bien y de que hay mucho escepticismo en el equipo, vuelve a la primera etapa: compartir tus historias.",
+    "Y valora además estrenar una semana de arreglo de averías de gestión. Pregúntate también cómo notas la cultura de tu equipo y qué puedes hacer para mejorarla.",
+    "Si eres jefe de jefes, prueba las reuniones de salto de nivel con todo tu equipo: solo hace falta hacerlas una vez al año, y es buena idea agruparlas en un periodo de dos semanas para que nadie se sienta señalado.",
+    "Y empieza a llevar un enfoque más radicalmente franco a los procesos que tu empresa ya tenga: sé radicalmente franco al contratar, al despedir y al ascender, y también al dar las evaluaciones formales de desempeño."
+  ],
+  "entregable_esperado": "El plan recorrido en su orden, con cada etapa en marcha antes de pasar a la siguiente y las reuniones a solas en paralelo con las conversaciones de carrera, la parada de evaluación pasada con sus tres condiciones, y las etapas que aún no tocan identificadas como tales.",
+  "nodos_previos": [
+    "empezar_cultura_franqueza_radical"
+  ],
+  "nodos_siguientes": [
+    "armar_plan_anual_crecimiento_equipo",
+    "bloquear_tiempo_pensar_calendario",
+    "desplegar_tres_conversaciones_carrera",
+    "evitar_obsesion_ascenso_estatus",
+    "reconocer_excelencia_trayectoria_gradual",
+    "contar_historias_propias_explicar_franqueza_radical",
+    "desplegar_marco_franqueza_radical",
+    "contar_cuatro_historias_propias_ver_hueco_intencion",
+    "pedir_critica_primero_crear_seguridad_psicologica"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a empezar a poner en práctica la franqueza radical en tu equipo, y no sabes por dónde empezar ni en qué orden."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Explicar una idea es muy distinto de ponerla a funcionar, y el orden importa: la confianza se construye antes que los procesos. Por eso el plan empieza por contar tus historias y pedir crítica, para demostrar que aguantas antes de repartir, sigue con las conversaciones de carrera y las reuniones a solas, y solo después mejora cómo das elogio y crítica. Una parada de evaluación impide avanzar sin cimientos: reuniones de equipo, normas contra las puñaladas y procesos de la empresa llegan cuando la guía, el trato con cada persona y las reuniones a solas ya funcionan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_12.md",
+          "lineas": "13-49"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)"
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desplegar en tu equipo el plan de franqueza radical por el orden de operaciones que el texto pone, etapa a etapa y con su parada de evaluacion en medio",
+      "texto_nuevo": "Desplegar en tu equipo el plan de franqueza radical por su orden de operaciones, etapa a etapa y con su parada de evaluación en medio",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de lo que el texto pone: ya toca empezar a poner en practica las sugerencias del libro, y la pregunta es que hacer primero, que es lo que el texto llama el orden de operaciones.",
+      "texto_nuevo": "Parte de esta pregunta: ya toca poner en práctica estas sugerencias, y hay que saber qué hacer primero, es decir, cuál es el orden de operaciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Parte de lo que el texto pone",
+          "las sugerencias del libro",
+          "que es lo que el texto llama el orden de operaciones"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto distingue antes de darte el plan: explicar ideas y tecnicas es un negocio muy distinto de ponerlas a funcionar, y lo que viene es un plan para construir una cultura de franqueza radical en tu equipo.",
+      "texto_nuevo": "Cuenta con esta distinción antes de empezar: explicar ideas y técnicas es un negocio muy distinto de ponerlas a funcionar, y lo que sigue es un plan para construir una cultura de franqueza radical en tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto distingue antes de darte el plan"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si te atascas en alguna parte del plan, ve al epilogo: el texto dice que ahi hay consejo mas detallado sobre compartir tus historias, pedir critica, dar elogio y medir tu critica.",
+      "texto_nuevo": "Y si te atascas en alguna parte del plan, busca consejo más detallado sobre compartir tus historias, pedir crítica, dar elogio y medir tu crítica.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "ve al epilogo: el texto dice que ahi hay consejo mas detallado"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza por la etapa que el texto pone primera, y su rotulo es comparte tus historias.",
+      "texto_nuevo": "Empieza por la primera etapa: comparte tus historias.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la etapa que el texto pone primera, y su rotulo es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sigue por la segunda, cuyo rotulo es prueba que aguantas antes de empezar a repartir: empieza a pedir a tu equipo que te critique.",
+      "texto_nuevo": "Sigue por la segunda, demuestra que aguantas la crítica antes de empezar a repartirla: empieza a pedir a tu equipo que te critique.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "cuyo rotulo es prueba que aguantas antes de empezar a repartir"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Presta mucha atencion si no te esta llegando ninguna critica: que no te critiquen no significa que te crean perfecto.",
+      "texto_nuevo": "Presta mucha atención si no te está llegando ninguna crítica: que no te critiquen no significa que te crean perfecto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si quieres, copia el marco de la franqueza radical del capitulo dos y lleva ahi la cuenta de quien te dice que.",
+      "texto_nuevo": "Si quieres, dibuja el marco de la franqueza radical y lleva ahí la cuenta de quién te dice qué.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "copia el marco de la franqueza radical del capitulo dos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Y si te das cuenta de que no te llega ninguna critica, prueba la tecnica de la caja naranja de Michael Dearing.",
+      "texto_nuevo": "Y si te das cuenta de que no te llega ninguna crítica, prueba la técnica de la caja naranja.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          " de Michael Dearing"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que es pedir guia, y sobre todo critica: no es algo que se hace una vez y se tacha de la lista, es algo que vas a hacer a diario, en conversaciones pequenias de uno a dos minutos, y no en reuniones que tengas que anadir al calendario. Es algo de lo que ser consciente, no algo que programar.",
+      "texto_nuevo": "Cuenta con lo que es pedir guía, y sobre todo crítica: no es algo que se hace una vez y se tacha de la lista, es algo que vas a hacer a diario, en conversaciones pequeñas de uno a dos minutos, y no en reuniones que tengas que añadir al calendario. Es algo de lo que ser consciente, no algo que programar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que es pedir guia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta tambien con que al principio se te va a hacer raro, y con que cuando cojas la costumbre lo raro sera no hacerlo: el texto dice que nunca pasaras de recibir guia, igual que nunca pasaras de tener que beber agua o lavarte los dientes.",
+      "texto_nuevo": "Cuenta también con que al principio se te va a hacer raro, y con que cuando cojas la costumbre lo raro será no hacerlo: nunca dejarás de recibir guía, igual que nunca dejarás de tener que beber agua o lavarte los dientes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que nunca pasaras de recibir guia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando eso este en marcha ya estas listo para las conversaciones de carrera: empiezalas con tu equipo, y empieza por las personas con las que llevas mas tiempo trabajando.",
+      "texto_nuevo": "Cuando eso esté en marcha ya estás listo para las conversaciones de carrera: empiézalas con tu equipo, y empieza por las personas con las que llevas más tiempo trabajando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-12",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que tampoco son algo que se hace una vez y se tacha de la lista: la gente cambia, y tu tienes que cambiar con ella.",
+      "texto_nuevo": "Cuenta con que tampoco son algo que se hace una vez y se tacha de la lista: la gente cambia, y tú tienes que cambiar con ella.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 12,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-13",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Por eso el texto dice que es buena idea hacer una ronda de conversaciones de carrera al anio con cada persona a tu cargo, dentro de vuestro tiempo de reunion a solas.",
+      "texto_nuevo": "Por eso es buena idea hacer una ronda de conversaciones de carrera al año con cada persona a tu cargo, dentro del tiempo de reunión a solas que tienes con ella.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que ",
+          "vuestro tiempo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 13,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-14",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En paralelo, perfecciona tus reuniones a solas, y el texto dice por que en paralelo: vas a tardar al menos de tres a seis semanas en pasar esas tres conversaciones con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres.",
+      "texto_nuevo": "En paralelo, perfecciona tus reuniones a solas, y en paralelo por esto: vas a tardar al menos de tres a seis semanas en pasar esas tres conversaciones con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el texto dice por que en paralelo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 14,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-15",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate en ese tiempo de que estas teniendo reuniones a solas con sentido con las personas a tu cargo.",
+      "texto_nuevo": "Asegúrate en ese tiempo de que estás teniendo reuniones a solas con sentido con las personas a tu cargo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 15,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-16",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues de haber explicado la franqueza radical, pedido guia, tenido las conversaciones de carrera y mejorado tus reuniones a solas, notaras que te estas ganando la confianza de tu equipo y construyendo una cultura mejor. Entonces estas listo para empezar a mejorar como das elogio y critica improvisados.",
+      "texto_nuevo": "Después de haber explicado la franqueza radical, pedido guía, tenido las conversaciones de carrera y mejorado tus reuniones a solas, notarás que te estás ganando la confianza de tu equipo y construyendo una cultura mejor. Entonces estás listo para empezar a mejorar cómo das elogio y crítica improvisados.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 16,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-17",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Acuerdate de que la guia improvisada ocurre mejor en conversaciones de uno a dos minutos.",
+      "texto_nuevo": "Acuérdate de que la guía improvisada ocurre mejor en conversaciones de uno a dos minutos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 17,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-18",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y asegurate de medir tu guia, porque el texto avisa: puedes creerte radicalmente franco y que una persona no haya oido ninguna critica, otra la haya oido como empatia ruinosa y otra como agresion odiosa. Tienes que ajustar para cada persona, y no basta con ser consciente de ti mismo: hay que serlo tambien de la relacion y de la cultura.",
+      "texto_nuevo": "Y asegúrate de medir tu guía, porque puede pasar esto: puedes creerte radicalmente franco y que una persona no haya oído ninguna crítica, otra la haya oído como empatía ruinosa y otra como agresión odiosa. Tienes que ajustar para cada persona, y no basta con ser consciente de ti mismo: hay que serlo también de la relación y de la cultura.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "porque el texto avisa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 18,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-19",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Respira hondo y evalua, con las preguntas que el texto pone: como va la cosa, que esta funcionando, que no esta funcionando, con quien puedes hablar, puede ayudarte tu jefe, tu equipo, un mentor de fuera del trabajo, un coach, otra gente de la comunidad de la franqueza radical.",
+      "texto_nuevo": "Respira hondo y evalúa con estas preguntas: ¿cómo va la cosa?, ¿qué está funcionando?, ¿qué no está funcionando?, ¿con quién puedes hablar?, ¿puede ayudarte tu jefe, tu equipo, un mentor de fuera del trabajo, alguien que te acompañe profesionalmente, otra gente de la comunidad de la franqueza radical?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          ", con las preguntas que el texto pone",
+          "un coach"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 19,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-20",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y no intentes hacer mas cosas nuevas hasta que sientas estas tres: que has avanzado bien en el ladrillo fundamental de la gestion, que es recibir y dar guia; que conoces mejor a las personas a tu cargo; y que estas contento con tus reuniones a solas.",
+      "texto_nuevo": "Y no intentes hacer más cosas nuevas hasta que sientas estas tres: que has avanzado bien en el ladrillo fundamental de la gestión, que es recibir y dar guía; que conoces mejor a las personas a tu cargo; y que estás contento con tus reuniones a solas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 20,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-21",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la respuesta a esas tres es si, estas listo para perfeccionar las reuniones de equipo, las decisiones y los debates: el texto dice que ya has construido los cimientos de confianza que son el centro de tu capacidad de sacar cosas adelante.",
+      "texto_nuevo": "Si la respuesta a esas tres es sí, estás listo para perfeccionar las reuniones de equipo, las decisiones y los debates: ya has construido los cimientos de confianza que son el centro de tu capacidad de sacar cosas adelante.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que "
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 21,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-22",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de que tus reuniones de equipo son lo mas productivas posible: durante la reunion revisas las metricas clave, compartes actualizaciones e identificas tus grandes decisiones y tus grandes debates. No dejes que se alarguen demasiado, y no te las saltes.",
+      "texto_nuevo": "Asegúrate de que tus reuniones de equipo son lo más productivas posible: durante la reunión revisas las métricas clave, compartes actualizaciones e identificas tus grandes decisiones y tus grandes debates. No dejes que se alarguen demasiado, y no te las saltes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 22,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-23",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y aprovecha que es buen momento para estrenar las reuniones de gran decision y las de gran debate.",
+      "texto_nuevo": "Y aprovecha que es buen momento para estrenar las reuniones de gran decisión y las de gran debate.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 23,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-24",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vuelve a la guia: asegurate de que estas fomentando la guia entre las personas de tu equipo.",
+      "texto_nuevo": "Vuelve a la guía: asegúrate de que estás fomentando la guía entre las personas de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 24,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-25",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establece en tu equipo una norma de nada de punialadas por la espalda, o de escalada limpia, y explicala: no vas a permitir que una persona venga a hablarte de otra.",
+      "texto_nuevo": "Establece en tu equipo una norma de nada de puñaladas por la espalda, o de escalada limpia, y explícala: no vas a permitir que una persona venga a hablarte de otra.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 25,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-26",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Puedes darles a leer el apartado de impedir las punialadas por la espalda del capitulo seis, pero el texto dice que lo importante no es que lo lean sino que tu lo hagas cumplir, y que vas a tener que hacer seguimiento.",
+      "texto_nuevo": "Puedes darles algo que leer sobre cómo impedir las puñaladas por la espalda, pero lo importante no es que lo lean sino que tú lo hagas cumplir, y vas a tener que hacer seguimiento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el apartado de impedir las punialadas por la espalda del capitulo seis",
+          "el texto dice que "
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 26,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-27",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que esa norma cuesta y con lo que ahorra: a veces te caeran en el calendario reuniones extra para resolver disputas, y aun asi ahorrara mas tiempo del que cuesta, porque habra menos situaciones politicas estallandote en la cara.",
+      "texto_nuevo": "Cuenta con lo que esa norma cuesta y con lo que ahorra: a veces te caerán en el calendario reuniones extra para resolver disputas, y aun así ahorrará más tiempo del que cuesta, porque habrá menos situaciones políticas estallándote en la cara.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 27,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-28",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pelea la multiplicacion de reuniones: asegurate de que no te estan sobreprogramando, y piensa muy a conciencia que estas haciendo que puedas dejar de hacer.",
+      "texto_nuevo": "Pelea la multiplicación de reuniones: asegúrate de que no te están sobreprogramando, y piensa muy a conciencia qué estás haciendo que puedas dejar de hacer.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 28,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-30",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y cuenta con que el desorden de calendario es una pelea permanente para la mayoria de las organizaciones: pelea la buena pelea, no solo por ti sino en nombre de tu equipo.",
+      "texto_nuevo": "Y cuenta con que el desorden de calendario es una pelea permanente para la mayoría de las organizaciones: pelea la buena pelea, no solo por ti sino en nombre de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 30,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-31",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Planea el futuro de tu equipo: empieza a hacer un plan de gestion del crecimiento para cada persona de tu equipo.",
+      "texto_nuevo": "Planea el futuro de tu equipo: empieza a hacer un plan de gestión del crecimiento para cada persona de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 31,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-32",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de que no estas creando una cultura obsesionada con el ascenso, y dedica un pensamiento extra a como estas recompensando a tus estrellas de rock.",
+      "texto_nuevo": "Asegúrate de que no estás creando una cultura obsesionada con el ascenso, y dedica un pensamiento extra a cómo estás recompensando a tus estrellas de rock.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 32,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-33",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vuelve otra vez a la guia, ahora entre ellos: pide a tu equipo que empiece a medirse la guia unos a otros. El texto da la razon: son mas que tu, asi que cualquier cosa que consigas para que se den entre ellos mas elogio y mas critica radicalmente francos reforzara la cultura y te dara mas palanca que toda la guia que puedas dar o recibir tu en persona.",
+      "texto_nuevo": "Vuelve otra vez a la guía, ahora entre ellos: pide a tu equipo que empiece a medirse la guía unos a otros. La razón: son más que tú, así que cualquier cosa que consigas para que se den entre ellos más elogio y más crítica radicalmente francos reforzará la cultura y te dará más palanca que toda la guía que puedas dar o recibir tú en persona.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto da la razon"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 33,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-34",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Si se resisten, prueba a empezar con la tecnica del uy, que despiste de Dan Woods en tu proxima reunion de equipo.",
+      "texto_nuevo": "Si se resisten, prueba a empezar con la técnica del «uy, qué despiste» en tu próxima reunión de equipo.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          " de Dan Woods"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 34,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-35",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y aprovecha ese momento para evaluar si sigues haciendo un buen trabajo recibiendo y dando guia, acordandote de que es dificil, de que no es natural, y de que es el ladrillo atomico de la gestion.",
+      "texto_nuevo": "Y aprovecha ese momento para evaluar si sigues haciendo un buen trabajo recibiendo y dando guía, acordándote de que es difícil, de que no es natural, y de que es el ladrillo atómico de la gestión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 35,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-36",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pasea por la organizacion: llevas ya un tiempo en esto, asi que preguntate si las cosas se sienten distintas en el equipo, y que cosas quieres saber y no estas oyendo.",
+      "texto_nuevo": "Pasea por la organización: llevas ya un tiempo en esto, así que pregúntate si las cosas se sienten distintas en el equipo, y qué cosas quieres saber y no estás oyendo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 36,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-37",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aparta un rato cada semana para pasear y tener charlas informales y espontaneas con la gente.",
+      "texto_nuevo": "Aparta un rato cada semana para pasear y tener charlas informales y espontáneas con la gente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 37,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-38",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes la sensacion de que las cosas siguen sin ir bien y de que hay mucho escepticismo en el equipo, vuelve al paso uno.",
+      "texto_nuevo": "Si tienes la sensación de que las cosas siguen sin ir bien y de que hay mucho escepticismo en el equipo, vuelve al paso uno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 38,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-39",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y valora ademas estrenar una semana de arreglo de averias de gestion. Preguntate tambien como se siente tu cultura y que puedes hacer para mejorarla.",
+      "texto_nuevo": "Y valora además estrenar una semana de arreglo de averías de gestión. Pregúntate también cómo se siente tu cultura y qué puedes hacer para mejorarla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 39,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-40",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si eres jefe de jefes, prueba las reuniones de salto de nivel con todo tu equipo: el texto dice que solo hace falta hacerlas una vez al anio, y que es buena idea agruparlas en un periodo de dos semanas para que nadie se sienta senialado.",
+      "texto_nuevo": "Si eres jefe de jefes, prueba las reuniones de salto de nivel con todo tu equipo: solo hace falta hacerlas una vez al año, y es buena idea agruparlas en un periodo de dos semanas para que nadie se sienta señalado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que "
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 40,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-41",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y empieza a llevar un enfoque mas radicalmente franco a los procesos que tu empresa ya tenga: se radicalmente franco al contratar, al despedir y al ascender, y tambien al dar las evaluaciones formales de desempenio.",
+      "texto_nuevo": "Y empieza a llevar un enfoque más radicalmente franco a los procesos que tu empresa ya tenga: sé radicalmente franco al contratar, al despedir y al ascender, y también al dar las evaluaciones formales de desempeño.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 41,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El plan recorrido en el orden del texto, con cada etapa hecha antes de la siguiente, la parada de evaluacion pasada con sus tres condiciones, y las etapas que aun no tocan identificadas como tales.",
+      "texto_nuevo": "El plan recorrido en su orden, con cada etapa hecha antes de la siguiente, la parada de evaluación pasada con sus tres condiciones, y las etapas que aún no tocan identificadas como tales.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en el orden del texto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_plan_orden_operaciones_franqueza_radical-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando has leido el libro y vas a empezar a poner sus sugerencias en practica en tu equipo, y no sabes por donde empezar ni en que orden.",
+      "texto_nuevo": "Cuando vas a empezar a poner en práctica la franqueza radical en tu equipo, y no sabes por dónde empezar ni en qué orden.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "has leido el libro y ",
+          "poner sus sugerencias en practica"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta también con que al principio se te va a hacer raro, y con que cuando cojas la costumbre lo raro será no hacerlo: nunca dejarás de recibir guía, igual que nunca dejarás de tener que beber agua o lavarte los dientes.",
+      "texto_nuevo": "Cuenta también con que al principio se te va a hacer raro, y con que cuando te acostumbres lo raro será no hacerlo: nunca dejarás de recibir guía, igual que nunca dejarás de tener que beber agua o lavarte los dientes.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuando cojas la costumbre"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Coger' es forma de una sola region; se usa 'cuando te acostumbres' ('tomes la costumbre' de la propuesta suena forzado).",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-25",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establece en tu equipo una norma de nada de puñaladas por la espalda, o de escalada limpia, y explícala: no vas a permitir que una persona venga a hablarte de otra.",
+      "texto_nuevo": "Establece en tu equipo una norma de nada de puñaladas por la espalda, o de que un desacuerdo solo te llegue con las dos personas delante, y explícala: no vas a permitir que una persona venga a hablarte de otra.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "o de escalada limpia"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Escalada limpia' calca 'clean escalation' y no se entiende; en el libro es que los dos implicados acudan juntos al jefe cuando no lo resuelven solos (cap_09, l. 367). Se escribe con el jefe como 'tu' y no 'al jefe', que en este paso eres tu.",
+      "indice": 25,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-28",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pelea la multiplicación de reuniones: asegúrate de que no te están sobreprogramando, y piensa muy a conciencia qué estás haciendo que puedas dejar de hacer.",
+      "texto_nuevo": "Combate la multiplicación de reuniones: asegúrate de que no te están sobreprogramando, y piensa muy a conciencia qué estás haciendo que puedas dejar de hacer.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Pelea"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Pelea la multiplicacion' traslada 'Fight meeting proliferation'; 'combatir' es lo natural con objeto directo.",
+      "indice": 28,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-38",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si tienes la sensación de que las cosas siguen sin ir bien y de que hay mucho escepticismo en el equipo, vuelve al paso uno.",
+      "texto_nuevo": "Si tienes la sensación de que las cosas siguen sin ir bien y de que hay mucho escepticismo en el equipo, vuelve a la primera etapa: compartir tus historias.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "El paso uno del nodo es 'Parte de esta pregunta...'; el 'step one' del libro es la primera etapa, compartir tus historias, que el paso 3 del nodo ya nombra."
+      },
+      "decision": "auditoria completa M11 (coherencia): El paso uno del nodo es 'Parte de esta pregunta...'; el 'step one' del libro es la primera etapa, compartir tus historias, que el paso 3 del nodo ya nombra.",
+      "indice": 38,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Parte de esta pregunta: ya toca poner en práctica estas sugerencias, y hay que saber qué hacer primero, es decir, cuál es el orden de operaciones.",
+      "texto_nuevo": "Parte de esta pregunta: ya toca poner en práctica la franqueza radical, y hay que saber qué hacer primero, es decir, cuál es el orden de operaciones.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"Estas sugerencias\" no tiene antecedente en el nodo: eran las del libro (cap_12 L13)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Estas sugerencias\" no tiene antecedente en el nodo: eran las del libro (cap_12 L13).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con esta distinción antes de empezar: explicar ideas y técnicas es un negocio muy distinto de ponerlas a funcionar, y lo que sigue es un plan para construir una cultura de franqueza radical en tu equipo.",
+      "texto_nuevo": "Cuenta con esta distinción antes de empezar: explicar ideas y técnicas es algo muy distinto de ponerlas a funcionar, y lo que sigue es un plan para construir una cultura de franqueza radical en tu equipo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un negocio muy distinto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"a very different business\" en el sentido de asunto (cap_12 L13).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y no dejes que la gente se libre cuando no diga gran cosa, porque al principio no la va a decir. Abraza la incomodidad para pasar de ella.",
+      "texto_nuevo": "Y no dejes que la gente se libre cuando no diga gran cosa, porque al principio no la va a decir. Acepta la incomodidad para superarla.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Abraza la incomodidad para pasar de ella."
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, regionalismo): \"Abraza\" calca \"embrace\" y \"pasar de ella\" en buena parte del mundo hispano es desentenderse (cap_12 L21). Sin el \"poder\" de la propuesta.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco",
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-29",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Pon algo de tiempo para pensar en tu calendario.",
+      "texto_nuevo": "Reserva en tu calendario algo de tiempo para pensar.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Ambiguo: se lee \"pensar en tu calendario\"; el libro pide reservar tiempo para pensar en el calendario (cap_12 L39)."
+      },
+      "decision": "auditoria completa M11 (coherencia): Ambiguo: se lee \"pensar en tu calendario\"; el libro pide reservar tiempo para pensar en el calendario (cap_12 L39).",
+      "indice": 29,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-36",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pasea por la organización: llevas ya un tiempo en esto, así que pregúntate si las cosas se sienten distintas en el equipo, y qué cosas quieres saber y no estás oyendo.",
+      "texto_nuevo": "Pasea por la organización: llevas ya un tiempo en esto, así que pregúntate si notas las cosas distintas en el equipo, y qué cosas quieres saber y no estás oyendo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "las cosas se sienten distintas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"do things feel different\" (cap_12 L45). Se evita el \"ambiente\" de la propuesta, más lejos del libro.",
+      "indice": 36,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-39",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y valora además estrenar una semana de arreglo de averías de gestión. Pregúntate también cómo se siente tu cultura y qué puedes hacer para mejorarla.",
+      "texto_nuevo": "Y valora además estrenar una semana de arreglo de averías de gestión. Pregúntate también cómo notas la cultura de tu equipo y qué puedes hacer para mejorarla.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cómo se siente tu cultura"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"how does your culture feel\" (cap_12 L45).",
+      "indice": 39,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-14",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "En paralelo, perfecciona tus reuniones a solas, y en paralelo por esto: vas a tardar al menos de tres a seis semanas en pasar esas tres conversaciones con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres.",
+      "texto_nuevo": "En paralelo, perfecciona tus reuniones a solas, y en paralelo por esto: vas a tardar al menos de tres a seis semanas en pasar las tres conversaciones de carrera con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "\"Esas tres conversaciones\" no tiene antecedente en el nodo: ningún paso dice que las conversaciones de carrera sean tres. El libro las da como tres conversaciones en tres a seis semanas (scott_radical_candor/cap_10.md 43; cap_12.md 29)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Esas tres conversaciones\" no tiene antecedente en el nodo: ningún paso dice que las conversaciones de carrera sean tres. El libro las da como tres conversaciones en tres a seis semanas (scott_radical_candor/cap_10.md 43; cap_12.md 29).",
+      "indice": 14,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-desplegar_plan_orden_operaciones_franqueza_radical-pasos_accionables-32",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegúrate de que no estás creando una cultura obsesionada con el ascenso, y dedica un pensamiento extra a cómo estás recompensando a tus estrellas de rock.",
+      "texto_nuevo": "Asegúrate de que no estás creando una cultura obsesionada con el ascenso, y piensa un poco más en cómo estás recompensando a tus estrellas de rock.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "dedica un pensamiento extra a"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"give some extra thought to\" (scott_radical_candor/cap_12.md 41): pasa a \"piensa un poco más en\".",
+      "indice": 32,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase6-desplegar_plan_orden_operaciones_franqueza_radical-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El plan recorrido en su orden, con cada etapa hecha antes de la siguiente, la parada de evaluación pasada con sus tres condiciones, y las etapas que aún no tocan identificadas como tales.",
+      "texto_nuevo": "El plan recorrido en su orden, con cada etapa en marcha antes de pasar a la siguiente y las reuniones a solas en paralelo con las conversaciones de carrera, la parada de evaluación pasada con sus tres condiciones, y las etapas que aún no tocan identificadas como tales.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_12.md 23-29",
+        "frase": "Soliciting guidance, especially criticism, is not something you do once and check off your list / In parallel: perfect your 1:1 conversations."
+      },
+      "decision": "doble lectura M11 (sexto pase) (matiz): El plan no pide terminar cada etapa antes de la siguiente: pedir guía y las conversaciones de carrera no se hacen una vez y se tachan, y las reuniones a solas van en paralelo. 'hecha antes' pasa a 'en marcha antes', como dice el paso 11, y el paralelo se nombra sin paréntesis (texto propio sobre las dos propuestas).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Despliega tu Plan Paso a Paso"
+}

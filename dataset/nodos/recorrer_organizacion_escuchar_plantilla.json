@@ -1,0 +1,416 @@
+{
+  "node_id": "recorrer_organizacion_escuchar_plantilla",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Recorrer la organización y escuchar a su gente en vez de revisar sus expedientes, con recorridos guiados y una linterna para inspeccionar",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Caminar por la organización y escuchar a su gente sirve para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien, antes de tomar el mando, dejó de lado la revisión de papeles que mandaba el procedimiento y pasó ese tiempo caminando y hablando con la gente, con recorridos en los que cada responsable le enseñaba sus espacios con una linterna para inspeccionar bien. No era un examen, pero las linternas estaban rotas, sin pilas o con luz mortecina. Consiguió una que funcionaba y la llevó siempre encima, y pronto otros empezaron a llevar linternas que también funcionaban.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_03.md, unidad Cap. 5, titulo textual Call to Action. FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: el paso 1 sale de la linea 11, que es la PIEZA P1 de la frontera publicada en esta vuelta, 37 palabras; los pasos 2 a 7 salen de la linea 15, que es la PIEZA P2, 169 palabras. Las dos lineas son de la misma unidad y del mismo libro. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el capitulo entero es narrativo y en pasado, y leido por encima se lee como autobiografia. Esta pieza pasa la prueba del inventario porque el libro pone SU PROPIO inventario de MEDIOS, nombrados uno a uno: caminar y escuchar, los recorridos guiados donde cada jefe ensena sus espacios, y la linterna que se pide para inspeccionar. Y pone ademas, uno a uno, el inventario de los OBJETOS que decide NO revisar, que es lo que da sentido al paso 2. No hay adjetivo de adecuacion en el sitio del criterio. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: cuantos recorridos se montan, cada cuanto se repiten, a quien se le cuenta lo que se oyo, ni que se hace con las linternas rotas. El texto no lo dice y ponerlo seria un puente de la especie periodo o destinatario. El texto si da una cifra de plazo, las dos semanas, pero es el plazo de la revision que se ignora y no el del recorrido, y por eso va en el paso 2 y no en la activacion. DISCUTIBLE MARCADO ANTES DE SABER SI ACIERTO, y va en el reporte de esta vuelta: el paso 7 lleva pegada una consecuencia observada (que otros empezaron a llevar linternas que funcionaban) y no una instruccion. La dejo porque el texto la escribe en la misma frase que la accion y porque es lo que hace de la linterna un medio y no una anecdota; pero quien lea que una consecuencia no es un paso tiene donde agarrarse.",
+  "pasos_accionables": [
+    "Pregúntate primero cuándo fue la última vez que recorriste tu organización para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien hizo de caminar y escuchar su primer paso para prepararse a tomar el mando.",
+    "Deja de lado la revisión de expedientes que el procedimiento manda, por ejemplo, en un submarino, una lista para repasar en dos semanas con registros de formación, de escuela, administrativos, de premios, de ascensos, los de operación y mantenimiento de la planta del reactor, el sistema de armas, los torpedos y misiles, calendarios, ejercicios y material clasificado.",
+    "Gasta ese tiempo recorriendo la instalación y hablando con la gente.",
+    "Monta además una serie de recorridos en los que cada jefe o cada oficial te enseñe sus propios espacios.",
+    "Pídeles que traigan una linterna para poder hacer esas inspecciones como es debido.",
+    "Lee el estado de esas linternas como dato y no como examen, porque no se trata de una prueba. Pueden aparecer lamentables: rotas, con las pilas gastadas y las bombillas mortecinas, de forma que no se ve nada.",
+    "Consíguete una que funcione y llévala encima a todas partes. El ejemplo puede cundir: en un submarino, pronto otros empezaron a llevar linternas que también funcionaban."
+  ],
+  "entregable_esperado": "Tu propia lectura de la organización, oída de su gente y vista en sus espacios en vez de leída en sus registros, con el estado real del material común medido en el propio recorrido.",
+  "nodos_previos": [
+    "transitar_jefe_nuevo_equipo_establecido"
+  ],
+  "nodos_siguientes": [
+    "observar_reunion_rutinaria_senales_plantilla",
+    "pasear_organizacion_hallar_problemas_pequenios"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a tomar el mando de una organización que no conoces y el procedimiento de la casa te manda dedicar las primeras semanas a revisar sus expedientes."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Caminar por la organización y escuchar a su gente sirve para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien, al preparar un mando, dejó de lado la revisión de papeles que mandaba el procedimiento y pasó ese tiempo caminando y hablando con la gente, con recorridos en los que cada responsable le enseñaba sus espacios con una linterna para inspeccionar bien. No era un examen, pero las linternas estaban rotas, sin pilas o con luz mortecina. Consiguió una que funcionaba y la llevó siempre encima, y pronto otros empezaron a llevar linternas que también funcionaban.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_03.md",
+          "lineas": "11-15"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: 'da un ejemplo que otros acaban siguiendo' vuelve regla un solo caso ('Soon, others started carrying flashlights', línea 15), y 'revisar expedientes te enseña registros' y 'convierte el recorrido en una medida real' no salen de las líneas. La propuesta lo cuenta como caso ('hay quien') y mide 590.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recorrer la organizacion y escuchar a su gente en vez de revisar sus expedientes, con el recorrido guiado y la linterna como excusa de inspeccion",
+      "texto_nuevo": "Recorrer la organización y escuchar a su gente en vez de revisar sus expedientes, con el recorrido guiado y la linterna como excusa de inspección",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta primero por ti mismo cuando fue la ultima vez que caminaste tu organizacion para oir lo bueno, lo malo y lo feo de la gestion de arriba abajo. El texto abre con esa pregunta dirigida al lector y llama a caminar y escuchar su primer paso al preparar el mando.",
+      "texto_nuevo": "Pregúntate primero cuándo fue la última vez que recorriste tu organización para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Caminar y escuchar es el primer paso para preparar el mando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto abre con esa pregunta dirigida al lector y llama a caminar y escuchar su primer paso al preparar el mando."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja de lado la revision de expedientes que el procedimiento manda. El texto enumera la lista que le tocaba repasar en dos semanas: registros de formacion, de escuela, administrativos, de premios, de ascensos, los de operacion y mantenimiento de la planta del reactor, el sistema de armas, los torpedos y misiles, calendarios, ejercicios y material clasificado; y dice que la ignoro.",
+      "texto_nuevo": "Deja de lado la revisión de expedientes que el procedimiento manda, por ejemplo una lista para repasar en dos semanas con registros de formación, de escuela, administrativos, de premios, de ascensos, los de operación y mantenimiento de la planta del reactor, el sistema de armas, los torpedos y misiles, calendarios, ejercicios y material clasificado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto enumera la lista que le tocaba repasar en dos semanas",
+          "y dice que la ignoro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Gasta ese tiempo caminando la instalacion y hablando con la gente.",
+      "texto_nuevo": "Gasta ese tiempo caminando la instalación y hablando con la gente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monta ademas una serie de recorridos en los que cada jefe o cada oficial te ensene sus propios espacios.",
+      "texto_nuevo": "Monta además una serie de recorridos en los que cada jefe o cada oficial te enseñe sus propios espacios.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pideles que traigan una linterna para poder hacer esas inspecciones como se deben hacer.",
+      "texto_nuevo": "Pídeles que traigan una linterna para poder hacer esas inspecciones como se deben hacer.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lee el estado de esas linternas como dato y no como examen. El texto dice que no pretendia ser una prueba, y que estaban lamentables: rotas, con las pilas gastadas y las bombillas mortecinas, de forma que no se veia nada.",
+      "texto_nuevo": "Lee el estado de esas linternas como dato y no como examen, porque no se trata de una prueba. Pueden aparecer lamentables: rotas, con las pilas gastadas y las bombillas mortecinas, de forma que no se ve nada.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que no pretendia ser una prueba"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consiguete una que funcione y llevala encima a todas partes. El texto registra lo que vino despues sin pedirlo: pronto otros empezaron a llevar linternas que tambien funcionaban.",
+      "texto_nuevo": "Consíguete una que funcione y llévala encima a todas partes. El ejemplo cunde sin pedirlo: pronto otros empiezan a llevar linternas que también funcionan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto registra lo que vino despues sin pedirlo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu propia lectura de la organizacion, oida de su gente y vista en sus espacios en vez de leida en sus registros, con el estado real del material comun medido en el propio recorrido.",
+      "texto_nuevo": "Tu propia lectura de la organización, oída de su gente y vista en sus espacios en vez de leída en sus registros, con el estado real del material común medido en el propio recorrido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_organizacion_escuchar_plantilla-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a tomar el mando de una organizacion que no conoces y el procedimiento de la casa te manda dedicar las primeras semanas a revisar sus expedientes.",
+      "texto_nuevo": "Cuando vas a tomar el mando de una organización que no conoces y el procedimiento de la casa te manda dedicar las primeras semanas a revisar sus expedientes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_organizacion_escuchar_plantilla-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregúntate primero cuándo fue la última vez que recorriste tu organización para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Caminar y escuchar es el primer paso para preparar el mando.",
+      "texto_nuevo": "Pregúntate primero cuándo fue la última vez que recorriste tu organización para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien hizo de caminar y escuchar su primer paso para preparar el mando.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_03.md 11",
+        "frase": "Walking around and listening was my first step in preparing to command Santa Fe."
+      },
+      "decision": "auditoria completa M11 (matiz): En el libro es el primer paso de un comandante concreto, no una regla general.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_organizacion_escuchar_plantilla-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Deja de lado la revisión de expedientes que el procedimiento manda, por ejemplo una lista para repasar en dos semanas con registros de formación, de escuela, administrativos, de premios, de ascensos, los de operación y mantenimiento de la planta del reactor, el sistema de armas, los torpedos y misiles, calendarios, ejercicios y material clasificado.",
+      "texto_nuevo": "Deja de lado la revisión de expedientes que el procedimiento manda, por ejemplo, en un submarino, una lista para repasar en dos semanas con registros de formación, de escuela, administrativos, de premios, de ascensos, los de operación y mantenimiento de la planta del reactor, el sistema de armas, los torpedos y misiles, calendarios, ejercicios y material clasificado.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Reactor, torpedos y misiles aparecían sin decir que el ejemplo es un submarino."
+      },
+      "decision": "auditoria completa M11 (coherencia): Reactor, torpedos y misiles aparecían sin decir que el ejemplo es un submarino.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_organizacion_escuchar_plantilla-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Gasta ese tiempo caminando la instalación y hablando con la gente.",
+      "texto_nuevo": "Gasta ese tiempo recorriendo la instalación y hablando con la gente.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "caminando"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Caminar la instalación' calca 'walking around the ship'.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_organizacion_escuchar_plantilla-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pídeles que traigan una linterna para poder hacer esas inspecciones como se deben hacer.",
+      "texto_nuevo": "Pídeles que traigan una linterna para poder hacer esas inspecciones como es debido.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "como se deben hacer"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): 'Se deben' está fuera de la voz de la casa.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_organizacion_escuchar_plantilla-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consíguete una que funcione y llévala encima a todas partes. El ejemplo cunde sin pedirlo: pronto otros empiezan a llevar linternas que también funcionan.",
+      "texto_nuevo": "Consíguete una que funcione y llévala encima a todas partes. El ejemplo puede cundir sin pedirlo: en un submarino, pronto otros empezaron a llevar linternas que también funcionaban.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_03.md 15",
+        "frase": "I carried that flashlight around with me everywhere. Soon, others started carrying flashlights that actually worked as well."
+      },
+      "decision": "auditoria completa M11 (matiz): Lo que pasó en un submarino se prometía como lo que siempre pasa.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_organizacion_escuchar_plantilla-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recorrer la organización y escuchar a su gente en vez de revisar sus expedientes, con el recorrido guiado y la linterna como excusa de inspección",
+      "texto_nuevo": "Recorrer la organización y escuchar a su gente en vez de revisar sus expedientes, con recorridos guiados y una linterna para inspeccionar",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_03.md 15",
+        "frase": "In order to do these inspections properly, I’d ask them to bring me a flashlight. It wasn’t supposed to be a test"
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no presenta la inspección como excusa: la linterna se pedía para inspeccionar bien, y no era una prueba.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-recorrer_organizacion_escuchar_plantilla-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate primero cuándo fue la última vez que recorriste tu organización para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien hizo de caminar y escuchar su primer paso para preparar el mando.",
+      "texto_nuevo": "Pregúntate primero cuándo fue la última vez que recorriste tu organización para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien hizo de caminar y escuchar su primer paso para prepararse a tomar el mando.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "preparar el mando"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'preparing to command'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-recorrer_organizacion_escuchar_plantilla-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Caminar por la organización y escuchar a su gente sirve para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien, al preparar un mando, dejó de lado la revisión de papeles que mandaba el procedimiento y pasó ese tiempo caminando y hablando con la gente, con recorridos en los que cada responsable le enseñaba sus espacios con una linterna para inspeccionar bien. No era un examen, pero las linternas estaban rotas, sin pilas o con luz mortecina. Consiguió una que funcionaba y la llevó siempre encima, y pronto otros empezaron a llevar linternas que también funcionaban.",
+      "texto_nuevo": "Caminar por la organización y escuchar a su gente sirve para oír lo bueno, lo malo y lo feo de la gestión de arriba abajo. Hay quien, antes de tomar el mando, dejó de lado la revisión de papeles que mandaba el procedimiento y pasó ese tiempo caminando y hablando con la gente, con recorridos en los que cada responsable le enseñaba sus espacios con una linterna para inspeccionar bien. No era un examen, pero las linternas estaban rotas, sin pilas o con luz mortecina. Consiguió una que funcionaba y la llevó siempre encima, y pronto otros empezaron a llevar linternas que también funcionaban.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "al preparar un mando"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'preparing to command'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase6-recorrer_organizacion_escuchar_plantilla-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consíguete una que funcione y llévala encima a todas partes. El ejemplo puede cundir sin pedirlo: en un submarino, pronto otros empezaron a llevar linternas que también funcionaban.",
+      "texto_nuevo": "Consíguete una que funcione y llévala encima a todas partes. El ejemplo puede cundir: en un submarino, pronto otros empezaron a llevar linternas que también funcionaban.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_03.md 15",
+        "frase": "In order to do these inspections properly, I’d ask them to bring me a flashlight. / I carried that flashlight around with me everywhere. Soon, others started carrying flashlights that actually worked as well."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El libro no dice que no se pidiera; al contrario, se les pidió traer linterna a los recorridos (lo recoge el paso 4). Sale 'sin pedirlo' (los dos lectores proponen el mismo texto).",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Recorre y Escucha a tu Gente",
+  "fuentes_internas": [
+    "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet"
+  ]
+}

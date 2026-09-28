@@ -1,0 +1,278 @@
+{
+  "node_id": "representar_actividad_caja_negra_ventanas",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Representar cualquier actividad como una caja negra y abrirle ventanas para ver dentro",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Recortarle ventanas mejora tu manera de llevar el proceso: deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P7 de la frontera publicada en la vuelta 2 del frente, L71 a L79, 348 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO Y NO DEFINICION, que es el juicio caro de este tramo y lo digo antes que nada: el libro no se queda en decir que es una caja negra, sino que pone SU PROPIO INVENTARIO de las tres piezas que hay que nombrar (input, output, labor), LO REPITE ENTERO sobre tres actividades que no son la fabrica, nombrando en cada una cual es cada pieza, y anade la operacion de recortar ventanas con su para que. EXTRACTOR.md 9.1: el inventario es de OBJETOS DE TRABAJO y de MEDIOS, no de metas, y escribir los pasos es transcribirlo. DE DONDE SALE CADA PASO, uno a uno: pasos 1 a 4 de L73 (we can think of our breakfast factory as if it were a black box: input, the raw materials, and the labor of waiters, helpers, and you, the manager, flowing into the box, and the output, the breakfast, flowing out of it; y In general, we can represent any activity that resembles a production process in a simple fashion as a black box); paso 5 de L73 (we can draw a black box to represent college recruiting, where the input is the applicants on campus and the output is college graduates who have accepted our employment offers. The labor is the work of our on-campus interviewers and the managers and technical people who interview back at the plant); paso 6 de L73 (the process of field sales training can be seen as a black box with the input being the raw product specifications and the output being trained sales personnel. The labor here is the work of the marketing and merchandising people who turn raw information into usable sales tools and train the field sales personnel to exploit them); paso 7 de L73 (A group whose job is to bill customers has as its input the information about the customer, what he has purchased, the pricing data, and the shipment records; and output is the final bill sent to the customer through which payment is collected. The labor is the work of all personnel involved); pasos 8 y 9 de L77 y L79 (We can improve our ability to run that process by cutting some windows in our box so that we can see some of what goes on within it. By looking through the openings we can better understand the internal workings of any production process and assess what the future output is likely to be). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo QUE ventana hay que recortar ni donde, porque este tramo dice cutting some windows y no dice cuales; las ventanas concretas son los indicadores adelantados, y el libro las despliega en el tramo siguiente, que es su propio nodo. Cerrar aqui ese bucle seria un puente. NO escribo que la caja se dibuje en ningun soporte ni que se revise cada tanto: el libro no pone ni soporte ni periodo. NO escribo responsable de dibujarla. TRADUCCION DECLARADA: merchandising no esta en la lista blanca de EXTRACTOR.md 15.1, asi que va como comercializacion y el termino ingles viaja en denominaciones; marketing si esta en la blanca y se escribe tal cual; pricing esta en la negra y va como datos de precio. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO, y es el mas gordo de mi tanda: un lector estricto puede decir que esto es un CONCEPTO con ejemplos y que la tabla de EXTRACTOR.md 9 tumba las definiciones sin nada que hacer. Lo sostengo porque aqui SI hay algo que hacer y el libro dice que se haga (represent any activity, draw a black box, cutting some windows), porque el entregable es material (la caja dibujada con sus tres piezas nombradas) y porque las tres repeticiones del libro sobre actividades distintas son la prueba de que el inventario es suyo y no mio. Si cae, cae DENTRO de mi marcado, y lo pongo el primero de la cola de relectura.",
+  "pasos_accionables": [
+    "Dibuja tu actividad como una caja negra, y hazlo aunque no sea una fábrica: sirve para cualquier actividad que se parezca a un proceso de producción.",
+    "Nombra la entrada, que es la materia prima o la información que entra en la caja.",
+    "Nombra la salida, que es lo que sale de la caja ya terminado.",
+    "Nombra el trabajo que entra en la caja junto con la materia prima, y cuenta dentro de él tanto el de quienes ejecutan como el tuyo de mando.",
+    "Hazlo igual con la contratación universitaria: la entrada son los candidatos del campus, la salida son los titulados que han aceptado la oferta de empleo, y el trabajo es el de los entrevistadores del campus más el de los mandos y técnicos que los entrevistan después en la planta.",
+    "Hazlo igual con la formación de la fuerza de ventas: la entrada son las especificaciones en bruto del producto, la salida es el personal de ventas ya formado, y el trabajo es el de la gente de mercadotecnia y de comercialización que convierte la información en bruto en herramientas de venta utilizables y enseña a usarlas.",
+    "Hazlo igual con un grupo que factura: la entrada es la información del cliente, o sea lo que ha comprado, los datos de precio y los registros de envío; la salida es la factura final que se le manda y por la que se cobra; y el trabajo es el de todo el personal implicado.",
+    "Recorta ventanas en la caja, para poder ver una parte de lo que ocurre dentro.",
+    "Mira por esas aberturas para entender el funcionamiento interno del proceso y calcular cuál va a ser probablemente la salida futura."
+  ],
+  "entregable_esperado": "La actividad dibujada como una caja con sus tres piezas nombradas, entrada, salida y trabajo, y las ventanas ya recortadas por donde se mira lo que pasa dentro.",
+  "nodos_previos": [
+    "clasificar_trabajo_proceso_montaje_prueba"
+  ],
+  "nodos_siguientes": [
+    "construir_indicador_linealidad_alerta_temprana",
+    "construir_indicador_tendencia_patron",
+    "buscar_regularidad_bloques_iguales_trabajo_mando"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes delante una actividad que se parece a un proceso de producción, sea de fábrica o administrativa, y necesitas ordenar cuál es su entrada, su salida y su trabajo, y ver parte de lo que pasa dentro."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Pero la caja cerrada solo enseña lo que ya salió. Recortarle ventanas deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_03.md",
+          "lineas": "73-79"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)"
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dibuja tu actividad como una caja negra, y hazlo aunque no sea una fabrica: sirve para cualquier actividad que se parezca a un proceso de produccion.",
+      "texto_nuevo": "Dibuja tu actividad como una caja negra, y hazlo aunque no sea una fábrica: sirve para cualquier actividad que se parezca a un proceso de producción.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Nombra la entrada, que es la materia prima o la informacion que entra en la caja.",
+      "texto_nuevo": "Nombra la entrada, que es la materia prima o la información que entra en la caja.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Nombra el trabajo que entra en la caja junto con la materia prima, y cuenta dentro de el tanto el de quienes ejecutan como el tuyo de mando.",
+      "texto_nuevo": "Nombra el trabajo que entra en la caja junto con la materia prima, y cuenta dentro de él tanto el de quienes ejecutan como el tuyo de mando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazlo igual con la contratacion universitaria: la entrada son los candidatos del campus, la salida son los titulados que han aceptado la oferta de empleo, y el trabajo es el de los entrevistadores del campus mas el de los mandos y tecnicos que entrevistan de vuelta en la planta.",
+      "texto_nuevo": "Hazlo igual con la contratación universitaria: la entrada son los candidatos del campus, la salida son los titulados que han aceptado la oferta de empleo, y el trabajo es el de los entrevistadores del campus más el de los mandos y técnicos que entrevistan de vuelta en la planta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazlo igual con la formacion de la fuerza de ventas: la entrada son las especificaciones crudas del producto, la salida es el personal de ventas ya formado, y el trabajo es el de la gente de marketing y de comercializacion que convierte la informacion cruda en herramientas de venta utilizables y ensena a usarlas.",
+      "texto_nuevo": "Hazlo igual con la formación de la fuerza de ventas: la entrada son las especificaciones crudas del producto, la salida es el personal de ventas ya formado, y el trabajo es el de la gente de mercadotecnia y de comercialización que convierte la información cruda en herramientas de venta utilizables y enseña a usarlas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "marketing"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazlo igual con un grupo que factura: la entrada es la informacion del cliente, o sea lo que ha comprado, los datos de precio y los registros de envio; la salida es la factura final que se le manda y por la que se cobra; y el trabajo es el de todo el personal implicado.",
+      "texto_nuevo": "Hazlo igual con un grupo que factura: la entrada es la información del cliente, o sea lo que ha comprado, los datos de precio y los registros de envío; la salida es la factura final que se le manda y por la que se cobra; y el trabajo es el de todo el personal implicado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira por esas aberturas para entender el funcionamiento interno del proceso y calcular cual va a ser probablemente la salida futura.",
+      "texto_nuevo": "Mira por esas aberturas para entender el funcionamiento interno del proceso y calcular cuál va a ser probablemente la salida futura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-representar_actividad_caja_negra_ventanas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes delante una actividad que se parece a un proceso de produccion, sea de fabrica o administrativa, y necesitas ordenarla antes de medirla, porque sin saber cuales son su entrada, su salida y su trabajo no hay indicador que colocar.",
+      "texto_nuevo": "Cuando tienes delante una actividad que se parece a un proceso de producción, sea de fábrica o administrativa, y necesitas ordenarla antes de medirla, porque sin saber cuáles son su entrada, su salida y su trabajo no hay indicador que colocar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-representar_actividad_caja_negra_ventanas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Pero la caja cerrada solo enseña lo que ya salió. Recortarle ventanas deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura.",
+      "texto_nuevo": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Recortarle ventanas mejora tu manera de llevar el proceso: deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 77",
+        "frase": "We can improve our ability to run that process by cutting some windows in our box so that we can see some of what goes on within it."
+      },
+      "decision": "auditoria completa M11 (invencion): 'la caja cerrada solo enseña lo que ya salió' no lo dice el libro; se pone lo que sí dice: las ventanas mejoran tu capacidad de llevar el proceso.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-representar_actividad_caja_negra_ventanas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tienes delante una actividad que se parece a un proceso de producción, sea de fábrica o administrativa, y necesitas ordenarla antes de medirla, porque sin saber cuáles son su entrada, su salida y su trabajo no hay indicador que colocar.",
+      "texto_nuevo": "Cuando tienes delante una actividad que se parece a un proceso de producción, sea de fábrica o administrativa, y necesitas ordenar cuál es su entrada, su salida y su trabajo, y ver parte de lo que pasa dentro.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 77",
+        "frase": "The black box sorts out what the inputs, the output, and the labor are in the production process."
+      },
+      "decision": "auditoria completa M11 (invencion): Causa inventada: el pasaje no dice que sin las tres piezas no haya indicador que colocar; la caja negra ordena entrada, salida y trabajo, y las ventanas dejan ver dentro.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-representar_actividad_caja_negra_ventanas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazlo igual con la contratación universitaria: la entrada son los candidatos del campus, la salida son los titulados que han aceptado la oferta de empleo, y el trabajo es el de los entrevistadores del campus más el de los mandos y técnicos que entrevistan de vuelta en la planta.",
+      "texto_nuevo": "Hazlo igual con la contratación universitaria: la entrada son los candidatos del campus, la salida son los titulados que han aceptado la oferta de empleo, y el trabajo es el de los entrevistadores del campus más el de los mandos y técnicos que los entrevistan después en la planta.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "que entrevistan de vuelta en la planta"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"De vuelta en la planta\" calca \"back at the plant\" (grove cap_03 l.73): en español sugiere un regreso; son los mandos y técnicos que entrevistan en la planta, después del campus.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-representar_actividad_caja_negra_ventanas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazlo igual con la formación de la fuerza de ventas: la entrada son las especificaciones crudas del producto, la salida es el personal de ventas ya formado, y el trabajo es el de la gente de mercadotecnia y de comercialización que convierte la información cruda en herramientas de venta utilizables y enseña a usarlas.",
+      "texto_nuevo": "Hazlo igual con la formación de la fuerza de ventas: la entrada son las especificaciones en bruto del producto, la salida es el personal de ventas ya formado, y el trabajo es el de la gente de mercadotecnia y de comercialización que convierte la información en bruto en herramientas de venta utilizables y enseña a usarlas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "las especificaciones crudas del producto",
+          "la información cruda"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Crudas\"/\"cruda\" calca \"raw\" (grove cap_03 l.73); la información sin elaborar va en bruto. Se coloca \"en bruto\" junto a especificaciones para no leer \"producto en bruto\" como en la propuesta.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Abre Ventanas a tu Proceso"
+}

@@ -1,0 +1,354 @@
+{
+  "node_id": "documentar_trabajo_manual_operaciones",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Documentar todo el trabajo del modelo en el Manual de Operaciones, con sus tres contenidos",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Sin documentación, todo el trabajo rutinario se convierte en excepciones. Escribir «así es como lo hacemos aquí» da a la gente la estructura que necesita y un relato escrito de la forma más eficiente y eficaz de trabajar, y le comunica, a nuevos y veteranos, que hay una lógica detrás de los resultados. La clave es la claridad: documentar reduce la estructura a medios concretos, a la tarea literal que cada uno necesita entender para hacer su trabajo. Por eso el Manual de Operaciones designa el propósito del trabajo, especifica los pasos y resume los estándares del proceso y del resultado.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_11.md, unidad Cap. 9, titulo textual Working On Your Business, Not In It. Sale de la PIEZA P4 de la frontera publicada en esta misma vuelta, L152 a L173, 265 palabras. ES LA PARTE 4 DE LA SERIE NUMERADA cuya cabeza es fingir_prototipo_cinco_mil_replicas. POR QUE ES PROCEDIMIENTO, con D.27 delante: el libro no se queda en el mandato de documentar, sino que pone el inventario de lo que el manual TIENE QUE CONTENER y lo nombra pieza por pieza en una sola linea: designa el proposito del trabajo, especifica los pasos que hay que dar mientras se hace, y resume los estandares asociados al proceso y al resultado. Tres objetos de trabajo nombrados por el libro, no por mi, y por eso los pasos 8, 9 y 10 van separados: son tres contenidos distintos y fundirlos en uno perderia la cuenta que el libro da. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v1/cita_cap11_P4.txt. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: quien escribe el manual, cada cuanto se revisa, en que formato vive, ni que se hace cuando un paso documentado deja de valer. El texto pone el contenido y no pone ni responsable ni periodo, que son dos de las tres especies de puente que D.30 tiene tabuladas. LAS DOS CITAS DE TOFFLER que hay dentro de esta pieza (L159 y L161) no entran como pasos ni como atribuciones: son apoyo del argumento y no traen cifra, y una cita de otro autor dentro del libro no es un medio que alguien ejecute. LA ARISTA DE CABEZA A PARTE queda escrita en el reporte de esta vuelta con su paso citado, el paso 8 de la cabeza, y se cablea el dia de la insercion.",
+  "pasos_accionables": [
+    "Escribe la documentación para que diga esto: así es como lo hacemos aquí.",
+    "Cuenta con lo que pasa cuando no la escribes: sin documentación, todo el trabajo rutinario se convierte en excepciones.",
+    "Dale a tu gente, con ella, la estructura que necesita y el relato escrito de cómo se hace el trabajo de la manera más eficiente y eficaz.",
+    "Comunica con ella, a los nuevos igual que a los veteranos, que hay una lógica en el mundo en el que han elegido trabajar y que hay una tecnología con la que se producen los resultados.",
+    "Escríbela clara, porque la claridad es lo que la estructura necesita para significar algo para tu gente.",
+    "Reduce con ella la estructura a medios concretos en vez de a fines generales, hasta la tarea literal y simplificada que el técnico que hay en cada uno necesita entender para hacer el trabajo que tiene delante.",
+    "Guarda la documentación en el Manual de Operaciones y trátalo como lo que es: la guía de cómo se hacen las cosas en tu empresa.",
+    "Haz que ese manual designe el propósito del trabajo.",
+    "Haz que especifique los pasos que hay que dar mientras se hace ese trabajo.",
+    "Haz que resuma los estándares asociados tanto al proceso como al resultado."
+  ],
+  "entregable_esperado": "El Manual de Operaciones escrito como la guía de cómo se hace aquí, con el propósito del trabajo designado, los pasos especificados y los estándares del proceso y del resultado resumidos.",
+  "nodos_previos": [
+    "fingir_prototipo_cinco_mil_replicas",
+    "construir_estrategia_gente_cuatro_componentes"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando estás montando el prototipo de tu negocio y tienes que poner por escrito cómo se hace el trabajo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Sin documentación, todo el trabajo rutinario se convierte en excepciones. Escribir así es como lo hacemos aquí da a la gente la estructura que necesita y un relato escrito de la forma más eficiente y eficaz de hacer el trabajo, y le comunica, a los nuevos y a los veteranos, que hay una lógica detrás de los resultados. La clave es la claridad: reduce la estructura a medios concretos, a la tarea literal que cada uno necesita entender para hacer su trabajo. Por eso el Manual de Operaciones designa el propósito del trabajo, especifica los pasos y resume los estándares del proceso y del resultado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_11.md",
+          "lineas": "155-173"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)"
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar todo el trabajo del modelo en el Manual de Operaciones, con los tres contenidos que el libro le exige",
+      "texto_nuevo": "Documentar todo el trabajo del modelo en el Manual de Operaciones, con sus tres contenidos",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los tres contenidos que el libro le exige"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe la documentacion para que diga lo que el texto dice que dice: asi es como lo hacemos aqui.",
+      "texto_nuevo": "Escribe la documentación para que diga esto: así es como lo hacemos aquí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que dice"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que pasa cuando no la escribes, que el texto pone en una linea: sin documentacion, todo el trabajo rutinario se convierte en excepciones.",
+      "texto_nuevo": "Cuenta con lo que pasa cuando no la escribes: sin documentación, todo el trabajo rutinario se convierte en excepciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone en una linea"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dale a tu gente, con ella, la estructura que necesita y el relato escrito de como se hace el trabajo de la manera mas eficiente y eficaz.",
+      "texto_nuevo": "Dale a tu gente, con ella, la estructura que necesita y el relato escrito de cómo se hace el trabajo de la manera más eficiente y eficaz.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comunica con ella, a los nuevos igual que a los viejos, que hay una logica en el mundo en el que han elegido trabajar y que hay una tecnologia con la que se producen los resultados.",
+      "texto_nuevo": "Comunica con ella, a los nuevos igual que a los viejos, que hay una lógica en el mundo en el que han elegido trabajar y que hay una tecnología con la que se producen los resultados.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribela clara, que es la palabra que el propio texto subraya, porque la claridad es lo que la estructura necesita para significar algo para tu gente.",
+      "texto_nuevo": "Escríbela clara, porque la claridad es lo que la estructura necesita para significar algo para tu gente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es la palabra que el propio texto subraya"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reduce con ella la estructura a medios concretos en vez de a fines generales, hasta la tarea literal y simplificada que el tecnico que hay en cada uno necesita entender para hacer el trabajo que tiene delante.",
+      "texto_nuevo": "Reduce con ella la estructura a medios concretos en vez de a fines generales, hasta la tarea literal y simplificada que el técnico que hay en cada uno necesita entender para hacer el trabajo que tiene delante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Guarda la documentacion en el Manual de Operaciones y tratalo como lo que el texto dice que es: la guia de como se hace de tu empresa.",
+      "texto_nuevo": "Guarda la documentación en el Manual de Operaciones y trátalo como lo que es: la guía de cómo se hacen las cosas en tu empresa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que ese manual designe el proposito del trabajo.",
+      "texto_nuevo": "Haz que ese manual designe el propósito del trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que resuma los estandares asociados tanto al proceso como al resultado.",
+      "texto_nuevo": "Haz que resuma los estándares asociados tanto al proceso como al resultado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El Manual de Operaciones escrito como la guia de como se hace aqui, con el proposito del trabajo designado, los pasos especificados y los estandares del proceso y del resultado resumidos.",
+      "texto_nuevo": "El Manual de Operaciones escrito como la guía de cómo se hace aquí, con el propósito del trabajo designado, los pasos especificados y los estándares del proceso y del resultado resumidos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-documentar_trabajo_manual_operaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando trabajas la regla 4 del prototipo de tu negocio y tienes que poner por escrito como se hace el trabajo.",
+      "texto_nuevo": "Cuando trabajas la regla 4 del prototipo de tu negocio y tienes que poner por escrito cómo se hace el trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-documentar_trabajo_manual_operaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sin documentación, todo el trabajo rutinario se convierte en excepciones. Escribir así es como lo hacemos aquí da a la gente la estructura que necesita y un relato escrito de la forma más eficiente y eficaz de hacer el trabajo, y le comunica, a los nuevos y a los veteranos, que hay una lógica detrás de los resultados. La clave es la claridad: reduce la estructura a medios concretos, a la tarea literal que cada uno necesita entender para hacer su trabajo. Por eso el Manual de Operaciones designa el propósito del trabajo, especifica los pasos y resume los estándares del proceso y del resultado.",
+      "texto_nuevo": "Sin documentación, todo el trabajo rutinario se convierte en excepciones. Escribir «así es como lo hacemos aquí» da a la gente la estructura que necesita y un relato escrito de la forma más eficiente y eficaz de trabajar, y le comunica, a los nuevos y a los veteranos, que hay una lógica detrás de los resultados. La clave es la claridad: reduce la estructura a medios concretos, a la tarea literal que cada uno necesita entender para hacer su trabajo. Por eso el Manual de Operaciones designa el propósito del trabajo, especifica los pasos y resume los estándares del proceso y del resultado.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Faltaban las comillas de la cita 'así es como lo hacemos aquí'; 'de hacer el trabajo' pasa a 'de trabajar' para no pasar de 600 caracteres."
+      },
+      "decision": "auditoria completa M11 (ortografia): Faltaban las comillas de la cita 'así es como lo hacemos aquí'; 'de hacer el trabajo' pasa a 'de trabajar' para no pasar de 600 caracteres.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-documentar_trabajo_manual_operaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando trabajas la regla 4 del prototipo de tu negocio y tienes que poner por escrito cómo se hace el trabajo.",
+      "texto_nuevo": "Cuando estás montando el prototipo de tu negocio y tienes que poner por escrito cómo se hace el trabajo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'La regla 4' es la numeración del capítulo y no existe en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'La regla 4' es la numeración del capítulo y no existe en el nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-documentar_trabajo_manual_operaciones-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunica con ella, a los nuevos igual que a los viejos, que hay una lógica en el mundo en el que han elegido trabajar y que hay una tecnología con la que se producen los resultados.",
+      "texto_nuevo": "Comunica con ella, a los nuevos igual que a los veteranos, que hay una lógica en el mundo en el que han elegido trabajar y que hay una tecnología con la que se producen los resultados.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "a los viejos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"The old\" (employees) vertido como \"los viejos\", que en español remite a la edad; el resumen ya dice veteranos.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-documentar_trabajo_manual_operaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Sin documentación, todo el trabajo rutinario se convierte en excepciones. Escribir «así es como lo hacemos aquí» da a la gente la estructura que necesita y un relato escrito de la forma más eficiente y eficaz de trabajar, y le comunica, a los nuevos y a los veteranos, que hay una lógica detrás de los resultados. La clave es la claridad: reduce la estructura a medios concretos, a la tarea literal que cada uno necesita entender para hacer su trabajo. Por eso el Manual de Operaciones designa el propósito del trabajo, especifica los pasos y resume los estándares del proceso y del resultado.",
+      "texto_nuevo": "Sin documentación, todo el trabajo rutinario se convierte en excepciones. Escribir «así es como lo hacemos aquí» da a la gente la estructura que necesita y un relato escrito de la forma más eficiente y eficaz de trabajar, y le comunica, a nuevos y veteranos, que hay una lógica detrás de los resultados. La clave es la claridad: documentar reduce la estructura a medios concretos, a la tarea literal que cada uno necesita entender para hacer su trabajo. Por eso el Manual de Operaciones designa el propósito del trabajo, especifica los pasos y resume los estándares del proceso y del resultado.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "Sujeto ambiguo: \"reduce\" se leía como imperativo o con la claridad de sujeto; en el libro es la documentación la que reduce la estructura (\"Through documentation, structure is reduced to specific means\", gerber_emyth/cap_11.md 167). Para seguir dentro de 600 caracteres, \"a los nuevos y a los veteranos\" pasa a \"a nuevos y veteranos\"."
+      },
+      "decision": "auditoria completa M11 (coherencia): Sujeto ambiguo: \"reduce\" se leía como imperativo o con la claridad de sujeto; en el libro es la documentación la que reduce la estructura (\"Through documentation, structure is reduced to specific means\", gerber_emyth/cap_11.md 167). Para seguir dentro de 600 caracteres, \"a los nuevos y a los veteranos\" pasa a \"a nuevos y veteranos\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Documenta tu Manual de Operaciones",
+  "fuentes_internas": [
+    "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber"
+  ]
+}

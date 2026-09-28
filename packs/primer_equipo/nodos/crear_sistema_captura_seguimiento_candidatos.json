@@ -1,0 +1,267 @@
+{
+  "node_id": "crear_sistema_captura_seguimiento_candidatos",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Crear el sistema que guarda los nombres captados y los sigue",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Captar talento por varias vías es fácil; lo difícil es montar un sistema para gestionarlo y tener la disciplina de seguirlo. En las épocas de más trabajo es probable que conozcas gente a diario, y los reclutadores pueden traerte más nombres, así que necesitas una forma de guardarlos y, sobre todo, de volver a ellos para construir la relación. Da igual si son fichas, una hoja de cálculo o un programa: lo que importa es que registre cada nombre con su contacto y que reserve tiempo cada semana para el seguimiento. El sistema más avanzado no sirve de nada si no lo usas de forma sistemática.",
+  "notas_extraccion": "Es el punto 6 del recuadro How to Source, y el que convierte todo lo anterior en algo que sobrevive a la semana ocupada. El problema que resuelve, planteado por el libro como pregunta: cuando el apreton esta encima, tu y tu equipo de contratacion vais a estar conociendo gente todo el dia, todos los dias, muchos de ellos podrian ser jugadores A para algun puesto, y si ademas has metido reclutadores e investigadores ellos van a traer todavia mas gente a tu atencion, asi que como capturas todos esos nombres y, mas importante, como haces seguimiento para construir una relacion. Las soluciones que el libro pone, de la mas barata a la mas cara, son las fichas de cartulina del directivo metodico en extremo al que sus conocidos admiran por lo bien que recuerda detalles de sus vidas, la hoja de calculo que ordena por nombre y fecha y de la que otro directivo saca su lista semanal de llamadas, y los sistemas de seguimiento comprados que usan muchas empresas grandes. Sobre estos ultimos el libro se niega expresamente a recomendar proveedores concretos, y se limita a decir que un buen sistema permitira que todos los empleados aporten nombres a la base de datos de la empresa. El aviso final: no te dejes adormecer por la tecnologia, porque el sistema mas avanzado del mundo no sirve de nada si no se usa de forma sistematica.",
+  "pasos_accionables": [
+    "Crea un sistema que guarde los nombres y los datos de contacto de todas las personas que captas.",
+    "Haz que ese mismo sistema reserve tiempo semanal en tu calendario para hacer el seguimiento.",
+    "Elige la solución según tus medios: puede ser tan simple como una hoja de cálculo o tan compleja como un sistema de seguimiento de candidatos integrado con tu calendario.",
+    "Si vas con fichas de cartulina, anota junto al nombre unos cuantos retazos de lo que aprendiste, como el nombre de la pareja, una afición o un tema de conversación, y revisita las fichas de forma rutinaria para hacer seguimiento.",
+    "Si vas con hoja de cálculo, aprovecha que te deja ordenar por nombre y por fecha, y genera tu lista semanal de llamadas anotando una fecha de seguimiento junto a cada nombre.",
+    "Si usas un sistema de seguimiento comprado, elige uno que permita a todos los empleados del negocio aportar nombres e información útil a la base de datos de candidatos jugadores A potenciales de la empresa.",
+    "No te dejes adormecer por la tecnología: el sistema de seguimiento más avanzado del mundo no te sirve de nada si no lo usas de forma sistemática."
+  ],
+  "entregable_esperado": "Un sistema que guarda el nombre y los datos de contacto de todas las personas que captas y que reserva tiempo semanal en tu calendario para hacerles seguimiento.",
+  "nodos_previos": [
+    "abastecer_flujo_candidatos",
+    "pedir_referencias_red_personal",
+    "pedir_referencias_empleados",
+    "nombrar_delegados_amigos_casa",
+    "contratar_investigadores_reclutamiento"
+  ],
+  "nodos_siguientes": [
+    "reservar_media_hora_semanal_talento",
+    "calcular_embudo_reclutamiento_propio"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya estás captando talento por varias vías y el problema deja de ser saber qué hacer: captar talento con prácticas probadas es fácil, y el reto es menos cuestión de saber qué hacer que de poner un sistema que gestione el proceso y de tener la disciplina de seguirlo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Captar talento por varias vías es fácil; lo difícil es montar un sistema para gestionarlo y tener la disciplina de seguirlo. En las épocas de más trabajo es probable que conozcas gente a diario, y los reclutadores pueden traerte más nombres, así que necesitas una forma de guardarlos y, sobre todo, de volver a ellos para construir la relación. Da igual si son fichas, una hoja de cálculo o un programa: lo que importa es que capture cada nombre con su contacto y que reserve tiempo cada semana para el seguimiento. El sistema más avanzado no sirve de nada si no lo usas de forma sistemática.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "397-409"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 'likely to be meeting people' (l.401) perdió el matiz y la pregunta de las líneas se volvió afirmación. La propuesta del lector es fiel (y recupera 'putting a system in place... and having the discipline', l.399), pero abre con 'por estas vías', que en un resumen suelto no tiene referente. El texto propio cambia solo eso por 'varias vías'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)"
+    },
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige la solucion segun tus medios: puede ser tan simple como una hoja de calculo o tan compleja como un sistema de seguimiento de candidatos integrado con tu calendario.",
+      "texto_nuevo": "Elige la solución según tus medios: puede ser tan simple como una hoja de cálculo o tan compleja como un sistema de seguimiento de candidatos integrado con tu calendario.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si vas con fichas de cartulina, anota junto al nombre unos cuantos retazos de lo que aprendiste, como el nombre de la pareja, una aficion o un tema de conversacion, y revisita las fichas de forma rutinaria para hacer seguimiento.",
+      "texto_nuevo": "Si vas con fichas de cartulina, anota junto al nombre unos cuantos retazos de lo que aprendiste, como el nombre de la pareja, una afición o un tema de conversación, y revisita las fichas de forma rutinaria para hacer seguimiento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si vas con hoja de calculo, aprovecha que te deja ordenar por nombre y por fecha, y genera tu lista semanal de llamadas cargando una fecha de seguimiento contra cada nombre.",
+      "texto_nuevo": "Si vas con hoja de cálculo, aprovecha que te deja ordenar por nombre y por fecha, y genera tu lista semanal de llamadas anotando una fecha de seguimiento junto a cada nombre.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si usas un sistema de seguimiento comprado, elige uno que permita a todos los empleados del negocio aportar nombres e informacion util a la base de datos de candidatos jugadores A potenciales de la empresa.",
+      "texto_nuevo": "Si usas un sistema de seguimiento comprado, elige uno que permita a todos los empleados del negocio aportar nombres e información útil a la base de datos de candidatos jugadores A potenciales de la empresa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No te dejes adormecer por la tecnologia: el sistema de seguimiento mas avanzado del mundo no te sirve de nada si no lo usas de forma sistematica.",
+      "texto_nuevo": "No te dejes adormecer por la tecnología: el sistema de seguimiento más avanzado del mundo no te sirve de nada si no lo usas de forma sistemática.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_sistema_captura_seguimiento_candidatos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya estas abasteciendote por las otras vias y el problema deja de ser saber que hacer. El libro lo dice asi: abastecerse de talento con estas practicas probadas es facil, y el reto es menos cuestion de saber que hacer que de poner un sistema que gestione el proceso y de tener la disciplina de seguirlo.",
+      "texto_nuevo": "Cuando ya te estás abasteciendo por las otras vías y el problema deja de ser saber qué hacer: abastecerse de talento con estas prácticas probadas es fácil, y el reto es menos cuestión de saber qué hacer que de poner un sistema que gestione el proceso y de tener la disciplina de seguirlo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo dice asi"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_sistema_captura_seguimiento_candidatos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear el sistema que captura los nombres abastecidos y los sigue",
+      "texto_nuevo": "Crear el sistema que guarda los nombres captados y los sigue",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "captura",
+          "abastecidos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Abastecidos\" es calco de source; \"captura\" es calco de capture (en la lista de calcos de la vara). La propuesta del auditor dejaba \"captura los nombres que captas\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_sistema_captura_seguimiento_candidatos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea un sistema que capture los nombres y los datos de contacto de todas las personas que abasteces.",
+      "texto_nuevo": "Crea un sistema que guarde los nombres y los datos de contacto de todas las personas que captas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "capture",
+          "abasteces"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Abasteces\" es calco de everybody you source; \"capture\" es calco de capture (lista de la vara).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_sistema_captura_seguimiento_candidatos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema que captura el nombre y los datos de contacto de todas las personas que abasteces y que reserva tiempo semanal en tu calendario para hacerles seguimiento.",
+      "texto_nuevo": "Un sistema que guarda el nombre y los datos de contacto de todas las personas que captas y que reserva tiempo semanal en tu calendario para hacerles seguimiento.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "captura",
+          "abasteces"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Abasteces\" es calco de source; \"captura\" es calco de capture (lista de la vara).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_sistema_captura_seguimiento_candidatos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya te estás abasteciendo por las otras vías y el problema deja de ser saber qué hacer: abastecerse de talento con estas prácticas probadas es fácil, y el reto es menos cuestión de saber qué hacer que de poner un sistema que gestione el proceso y de tener la disciplina de seguirlo.",
+      "texto_nuevo": "Cuando ya estás captando talento por varias vías y el problema deja de ser saber qué hacer: captar talento con prácticas probadas es fácil, y el reto es menos cuestión de saber qué hacer que de poner un sistema que gestione el proceso y de tener la disciplina de seguirlo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "te estás abasteciendo por las otras vías",
+          "abastecerse de talento con estas prácticas probadas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): \"Abastecerse\" de talento es calco de sourcing; \"las otras vías\" y \"estas prácticas probadas\" remiten a vías que no están en el nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-crear_sistema_captura_seguimiento_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Captar talento por varias vías es fácil; lo difícil es montar un sistema para gestionarlo y tener la disciplina de seguirlo. En las épocas de más trabajo es probable que conozcas gente a diario, y los reclutadores pueden traerte más nombres, así que necesitas una forma de guardarlos y, sobre todo, de volver a ellos para construir la relación. Da igual si son fichas, una hoja de cálculo o un programa: lo que importa es que capture cada nombre con su contacto y que reserve tiempo cada semana para el seguimiento. El sistema más avanzado no sirve de nada si no lo usas de forma sistemática.",
+      "texto_nuevo": "Captar talento por varias vías es fácil; lo difícil es montar un sistema para gestionarlo y tener la disciplina de seguirlo. En las épocas de más trabajo es probable que conozcas gente a diario, y los reclutadores pueden traerte más nombres, así que necesitas una forma de guardarlos y, sobre todo, de volver a ellos para construir la relación. Da igual si son fichas, una hoja de cálculo o un programa: lo que importa es que registre cada nombre con su contacto y que reserve tiempo cada semana para el seguimiento. El sistema más avanzado no sirve de nada si no lo usas de forma sistemática.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "que capture cada nombre"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Capturar\" un dato calca \"capture\"; se usa \"registrar\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Crea tu Sistema de Candidatos"
+}

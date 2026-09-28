@@ -1,0 +1,206 @@
+{
+  "node_id": "celebrar_logros_planificar_cambio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Celebrar los logros del equipo y planificar el cambio siguiente",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Instalar un método de contratación no acaba en una meta fija: funciona como un ciclo. Los mejores líderes celebran lo conseguido con una recompensa tangible, como una cena de lujo, un evento de equipo o un regalo bonito, y esa buena voluntad no se queda en una fiesta: la usan para inspirar más acción el año siguiente. Como nunca se dan por satisfechos, buscan formas nuevas y mejores de lograr los resultados que quieren y vuelven al primer paso del método para implantar esos cambios, que es hacer de las personas una prioridad máxima.",
+  "notas_extraccion": "Es la decima y ultima de las diez cosas que hay que hacer para instalar el metodo de contratacion en una empresa, y la unica que devuelve la serie a su principio: el libro cierra su paso diciendo que se vuelve al paso uno para implantar los cambios nuevos, de modo que la lista no es una escalera sino un ciclo anual. Sus dos mitades son distintas y el libro las distingue: la celebracion, que tiene sus tres medios nombrados uno a uno y es tangible, y el uso de esa celebracion, que es lo que la separa de una fiesta, porque la buena voluntad que genera se gasta a proposito en inspirar la accion del ano siguiente. La actitud que el libro pone en medio, nunca satisfechos, no se escribe aqui como paso independiente porque es el motivo de los dos ultimos y no una accion aparte.",
+  "pasos_accionables": [
+    "Celebra el éxito de tu equipo ofreciendo una recompensa tangible: una cena de lujo, un evento de equipo o incluso un regalo bonito.",
+    "Gasta la buena voluntad que genera ese reconocimiento en inspirar más acción para el año siguiente.",
+    "No te des por satisfecho. Busca vías nuevas y mejores de conseguir los resultados que quieres.",
+    "Vuelve al primer paso del método, hacer de las personas una prioridad máxima, para implantar esos cambios, que es lo que cierra el ciclo y lo vuelve a abrir."
+  ],
+  "entregable_esperado": "El logro celebrado con una recompensa tangible, la buena voluntad de esa celebración gastada en inspirar más acción para el año siguiente, y el ciclo reabierto sobre el primer paso del método: hacer de las personas una prioridad máxima.",
+  "nodos_previos": [
+    "instalar_metodo_contratacion_empresa"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando estás instalando el método de contratación en tu empresa, el equipo ha conseguido algo con el método y el ciclo tiene que volver a empezar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-celebrar_logros_planificar_cambio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Instalar un método de contratación no acaba en una meta fija: funciona como un ciclo. Los mejores líderes celebran lo conseguido con una recompensa tangible, como una cena de lujo, un evento de equipo o un regalo bonito, y esa buena voluntad no se queda en una fiesta: la usan para inspirar más acción el año siguiente. Como nunca se dan por satisfechos, buscan formas nuevas y mejores de lograr los resultados que quieren y vuelven a la primera de las diez cosas para implantar esos cambios, que es hacer de las personas una prioridad máxima.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "251-277"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: 'la mejora se renueva año tras año en lugar de apagarse' es un resultado que las líneas no dan. La propuesta se queda en lo que dice el punto 10 y lo atribuye a 'los mejores líderes', como el libro.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)"
+    },
+    {
+      "id": "m11-limpieza-celebrar_logros_planificar_cambio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Celebra el exito de tu equipo ofreciendo una recompensa tangible: una cena de lujo, un evento de equipo o incluso un regalo bonito.",
+      "texto_nuevo": "Celebra el éxito de tu equipo ofreciendo una recompensa tangible: una cena de lujo, un evento de equipo o incluso un regalo bonito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_logros_planificar_cambio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Gasta la buena voluntad que genera ese reconocimiento en inspirar mas accion para el ano siguiente.",
+      "texto_nuevo": "Gasta la buena voluntad que genera ese reconocimiento en inspirar más acción para el año siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_logros_planificar_cambio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No te des por satisfecho. Busca vias nuevas y mejores de conseguir los resultados que quieres.",
+      "texto_nuevo": "No te des por satisfecho. Busca vías nuevas y mejores de conseguir los resultados que quieres.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_logros_planificar_cambio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El logro celebrado con una recompensa tangible, la buena voluntad de esa celebracion gastada en inspirar mas accion para el ano siguiente, y el ciclo reabierto sobre la primera de las diez cosas.",
+      "texto_nuevo": "El logro celebrado con una recompensa tangible, la buena voluntad de esa celebración gastada en inspirar más acción para el año siguiente, y el ciclo reabierto sobre la primera de las diez cosas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_logros_planificar_cambio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas instalando el metodo de contratacion en tu empresa y toca la decima y ultima de las diez cosas: el equipo ha conseguido algo con el metodo y el ciclo tiene que volver a empezar.",
+      "texto_nuevo": "Cuando estás instalando el método de contratación en tu empresa y toca la décima y última de las diez cosas: el equipo ha conseguido algo con el método y el ciclo tiene que volver a empezar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-celebrar_logros_planificar_cambio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando estás instalando el método de contratación en tu empresa y toca la décima y última de las diez cosas: el equipo ha conseguido algo con el método y el ciclo tiene que volver a empezar.",
+      "texto_nuevo": "Cuando estás instalando el método de contratación en tu empresa, el equipo ha conseguido algo con el método y el ciclo tiene que volver a empezar.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Las diez cosas' son la lista del libro (smart_who/cap_06.md l.250-277) y no existen en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Las diez cosas' son la lista del libro (smart_who/cap_06.md l.250-277) y no existen en el nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-celebrar_logros_planificar_cambio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Vuelve a la primera de las diez cosas para implantar esos cambios, que es lo que cierra el ciclo y lo vuelve a abrir.",
+      "texto_nuevo": "Vuelve al primer paso del método, hacer de las personas una prioridad máxima, para implantar esos cambios, que es lo que cierra el ciclo y lo vuelve a abrir.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Las diez cosas' no tienen antecedente en el nodo; el libro dice 'go back to step one'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Las diez cosas' no tienen antecedente en el nodo; el libro dice 'go back to step one'.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-celebrar_logros_planificar_cambio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "El logro celebrado con una recompensa tangible, la buena voluntad de esa celebración gastada en inspirar más acción para el año siguiente, y el ciclo reabierto sobre la primera de las diez cosas.",
+      "texto_nuevo": "El logro celebrado con una recompensa tangible, la buena voluntad de esa celebración gastada en inspirar más acción para el año siguiente, y el ciclo reabierto sobre el primer paso del método: hacer de las personas una prioridad máxima.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Las diez cosas' no tienen antecedente en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Las diez cosas' no tienen antecedente en el nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-celebrar_logros_planificar_cambio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Instalar un método de contratación no acaba en una meta fija: funciona como un ciclo. Los mejores líderes celebran lo conseguido con una recompensa tangible, como una cena de lujo, un evento de equipo o un regalo bonito, y esa buena voluntad no se queda en una fiesta: la usan para inspirar más acción el año siguiente. Como nunca se dan por satisfechos, buscan formas nuevas y mejores de lograr los resultados que quieren y vuelven a la primera de las diez cosas para implantar esos cambios, que es hacer de las personas una prioridad máxima.",
+      "texto_nuevo": "Instalar un método de contratación no acaba en una meta fija: funciona como un ciclo. Los mejores líderes celebran lo conseguido con una recompensa tangible, como una cena de lujo, un evento de equipo o un regalo bonito, y esa buena voluntad no se queda en una fiesta: la usan para inspirar más acción el año siguiente. Como nunca se dan por satisfechos, buscan formas nuevas y mejores de lograr los resultados que quieren y vuelven al primer paso del método para implantar esos cambios, que es hacer de las personas una prioridad máxima.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Las diez cosas' no tienen antecedente en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Las diez cosas' no tienen antecedente en el nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Celebra los Logros del Equipo",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

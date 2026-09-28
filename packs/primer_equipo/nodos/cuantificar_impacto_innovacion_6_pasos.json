@@ -1,0 +1,231 @@
+{
+  "node_id": "cuantificar_impacto_innovacion_6_pasos",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cuantificar el impacto real de una innovación en tu negocio con seis conteos",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Una innovación sin cuantificar no lleva a ninguna parte: sin números no sabes si funcionó. Por eso se cuenta antes y después del cambio: cuántas personas entraron y cuántas compraron, y por cuánto, antes de la innovación; cuántas entraron y cuántas compraron después; el valor promedio de una venta; y con todo eso, cuál fue la mejora. Esos números sustituyen la impresión por el valor preciso de la innovación, ya sea cambiar las palabras con que saludas a quien entra o cualquier otro cambio que pruebes en tu negocio.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_12.md, unidad Cap. 10, titulo textual The Business Development Process. Sale de la PIEZA R5 de la frontera publicada en esta misma vuelta (.gerber_v3/frontera_cap12.txt), L95 a L95, una sola linea de 4206 palabras del capitulo. POR QUE ES PROCEDIMIENTO, con D.27 y 9.1 delante: el libro pone su propio inventario de MEDIOS, y lo pone numerado (1) a (6) dentro de la misma frase, sin ningun adjetivo de adecuacion en el sitio del criterio (no dice mide lo razonable ni de forma apropiada: dice determinando cuantos, contando cuantos, determinando el valor). Es la prueba del manual al pie de la letra: una linea que tarda seis pasos en ejecutarse es un procedimiento nombrado en una linea. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. Cita pegada en .gerber_v3/cita_cap12_L95.txt (D.35). LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: el libro no dice cada cuanto se repite esta cuantificacion, ni quien de tu equipo la hace: cerrar ese hueco seria un PUENTE (15.4), asi que el nodo se queda con el verbo en segunda persona que usa el propio libro en todo el capitulo, sin inventar destinatario ni periodo. DISCUTIBLE DECLARADO (ver reporte de esta vuelta, marcado antes de saber si acierto): los pasos 2 a 4 estan anclados en el texto al ejemplo concreto de cambiar las palabras del saludo (change the words), mientras que los pasos 1 y 6 ya hablan de the Innovation en generico; elegi transcribir fiel a esa mezcla en vez de generalizar el ejemplo entero, porque generalizar los pasos 2 a 4 habria sido escribir yo una generalizacion que el parrafo no hace del todo explicita. LA CABEZA DE TRES QUE NO SE CABLEA, D.37 vs D.29: L21 de este mismo capitulo nombra tres actividades (Innovation, Quantification, Orchestration) una a una, que es el supuesto de D.37, pero hoy NINGUNA de las tres existe como nodo propio (este candidato es un metodo concreto dentro de Quantification, no Quantification como nodo entero), asi que D.37 no aplica todavia: si alguna vuelta futura hace nacer un nodo cabeza para Quantification o para las tres actividades, la arista se declara entonces citando L21, y no antes. CORRECCION DECLARADA DE LA VUELTA 76 de la linea serial, en la relectura de fidelidad entera que D.30 y D.58 mandan antes de la insercion (TAREA 2.3 del encargo de la 76), sin insertar nada. EL PASO 6 TRAIA UNA CLAUSULA PUENTE, Y LA CONDICION Y EL ENTREGABLE OTRA CADA UNO; SE RETIRAN SIN BORRAR EL RASTRO. El paso 6 decia: Determina cual fue la mejora que produjo tu innovacion, comparando los numeros de antes con los de despues. Hoy dice lo mismo sin la clausula comparando. LA CLAUSULA QUE SE RETIRA compara, y el libro no la pone: L95 dice (6) determining what the improvement was as a result of your Innovation, y These numbers enable you to determine the precise value of your Innovation, sin decir como. El entregable decia la mejora que produjo, comparando los conteos de antes del cambio con los conteos de despues, y hoy dice la mejora que produjo; la condicion decia si de verdad funciono en vez de suponerlo, y hoy dice si de verdad funciono: L87 dice Without Quantification, how would you know whether the Innovation worked?, sin el contraste. DONDE ARRIBA DICE RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE, la cifra de la relectura de la vuelta 76 es 6 pasos, 5 TRANSCRIPCION y 1 PUENTE sobre el texto viejo, y 6 TRANSCRIPCION y 0 PUENTE despues de esta correccion (.v76ext/fidelidad.tsv). La cifra vieja no se borra, manual principio 6.",
+  "pasos_accionables": [
+    "Determina cuántas personas entraron por la puerta antes de poner en marcha la innovación.",
+    "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra.",
+    "Cuenta cuántas personas entraron por la puerta después de la innovación.",
+    "Cuenta cuántas personas compraron algo, después del cambio.",
+    "Determina el valor promedio de una venta.",
+    "Determina cuál fue la mejora que produjo tu innovación."
+  ],
+  "entregable_esperado": "El valor preciso, en números, de tu innovación: la mejora que produjo.",
+  "nodos_previos": [
+    "cambiar_saludo_cliente_dos_ramas",
+    "probar_traje_azul_seis_semanas"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando pruebas una innovación en tu negocio, por ejemplo cambiar las palabras con que saludas a un cliente que entra, y quieres saber si de verdad funcionó."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una innovación sin cuantificar no lleva a ninguna parte: sin números no sabes si funcionó. Por eso se cuenta antes y después del cambio: cuántas personas entraron y cuántas compraron, y por cuánto, antes de la innovación; cuántas entraron y cuántas compraron después; el valor promedio de una venta; y con todo eso, cuál fue la mejora. Esos números sustituyen la impresión por el valor preciso de la innovación, ya sea cambiar las palabras con que saludas a quien entra o cualquier otro cambio que pruebes en tu negocio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_12.md",
+          "lineas": "87-95"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)"
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuantificar el impacto real de una innovacion en tu negocio con los seis conteos que el libro enumera",
+      "texto_nuevo": "Cuantificar el impacto real de una innovación en tu negocio con seis conteos",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los seis conteos que el libro enumera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina cuantas personas entraron por la puerta antes de poner en marcha la innovacion.",
+      "texto_nuevo": "Determina cuántas personas entraron por la puerta antes de poner en marcha la innovación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CIFRA",
+      "texto_anterior": "Determina cuantas personas compraron productos y cual fue el valor en dolares de esos productos, antes de cambiar las palabras y lo que decias para producir esas ventas.",
+      "texto_nuevo": "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de cambiar las palabras y lo que decías para producir esas ventas.",
+      "cita": {
+        "regla": "regla de la cifra (docs/POLITICA_MARCO_PAIS.md): la cifra de mercado sale",
+        "fragmentos": [
+          "en dolares"
+        ]
+      },
+      "decision": "limpieza M11 (CIFRA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "cifra_de_mercado",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta cuantas personas entraron por la puerta despues de cambiar las palabras.",
+      "texto_nuevo": "Cuenta cuántas personas entraron por la puerta después de cambiar las palabras.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta cuantas personas compraron algo, despues del cambio.",
+      "texto_nuevo": "Cuenta cuántas personas compraron algo, después del cambio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina cual fue la mejora que produjo tu innovacion.",
+      "texto_nuevo": "Determina cuál fue la mejora que produjo tu innovación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El valor preciso, en numeros, de tu innovacion: la mejora que produjo.",
+      "texto_nuevo": "El valor preciso, en números, de tu innovación: la mejora que produjo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuantificar_impacto_innovacion_6_pasos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando pruebas una innovacion en tu negocio, por ejemplo cambiar las palabras con que saludas a un cliente que entra, y quieres saber si de verdad funciono.",
+      "texto_nuevo": "Cuando pruebas una innovación en tu negocio, por ejemplo cambiar las palabras con que saludas a un cliente que entra, y quieres saber si de verdad funcionó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de cambiar las palabras y lo que decías para producir esas ventas.",
+      "texto_nuevo": "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "El nodo trata cualquier innovación (título, paso 0, pasos 3 y 5, resumen: 'o cualquier otro cambio que pruebes'), y este paso ataba el conteo previo al ejemplo del saludo como si fuera el único caso. Se ancla a la innovación y el saludo queda como ejemplo (gerber_emyth/cap_12.md l. 95)."
+      },
+      "decision": "auditoria completa M11 (coherencia): El nodo trata cualquier innovación (título, paso 0, pasos 3 y 5, resumen: 'o cualquier otro cambio que pruebes'), y este paso ataba el conteo previo al ejemplo del saludo como si fuera el único caso. Se ancla a la innovación y el saludo queda como ejemplo (gerber_emyth/cap_12.md l. 95).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta cuántas personas entraron por la puerta después de cambiar las palabras.",
+      "texto_nuevo": "Cuenta cuántas personas entraron por la puerta después de la innovación.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Igual que el paso 1: el conteo posterior quedaba atado al ejemplo de las palabras en un nodo sobre cualquier innovación; el paso 3 ya dice 'después del cambio'."
+      },
+      "decision": "auditoria completa M11 (coherencia): Igual que el paso 1: el conteo posterior quedaba atado al ejemplo de las palabras en un nodo sobre cualquier innovación; el paso 3 ya dice 'después del cambio'.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cuantifica el Impacto Real"
+}

@@ -1,0 +1,312 @@
+{
+  "node_id": "decidir_contratacion_final",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Decidir a quién contratar sobre las tarjetas de puntuación calificadas",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "La decisión final se apoya en lo que ya dicen las tarjetas de puntuación, calificadas con todo lo reunido en las entrevistas y en las referencias, y por eso puede ser sencilla. Se repite el análisis de habilidad y voluntad por si las referencias movieron algo, se da a cada candidato una nota global de A, B o C y se aplica una regla de tres salidas: sin ninguna A vuelves a buscar candidatos, con una la contratas y con varias eliges la mejor. Así nunca te quedas con alguien que no es A, y queda claro que decidir no basta: falta que la persona se una.",
+  "notas_extraccion": "Es el momento de la verdad del paso Select y el libro lo resuelve con una lista de cinco pasos y una regla de ramificacion, no con una deliberacion. La razon esta escrita en el propio parrafo: con todos esos datos delante la decision deberia ser facil, y lo es porque las tarjetas ya estan calificadas resultado a resultado y competencia a competencia con el marco de habilidad y voluntad, de modo que la decision final no vuelve a juzgar a la persona sino que lee lo que la calificacion dice. El recuadro del capitulo añade encima el sexto punto, repetir el analisis del perfil de habilidad y voluntad para comprobar que la diana sigue ahi despues de las llamadas de referencia, que es el unico sitio donde la informacion nueva puede haber movido la calificacion. La ramificacion de tres salidas es lo que impide la contratacion por cansancio: si no hay ninguna A no se elige a la menos mala, se vuelve al paso de abastecer el flujo. El capitulo cierra con el acertijo de las cinco ranas en un tronco, una decide saltar y quedan cinco, porque decidir hacer algo y hacerlo son dos cosas distintas; con eso el libro empalma con su cuarto paso, vender el puesto a la persona elegida, que es el capitulo siguiente.",
+  "pasos_accionables": [
+    "Saca las tarjetas de puntuación que has completado sobre cada candidato.",
+    "Repite tu análisis del perfil de habilidad y voluntad, para asegurarte de que sigues dando en la diana.",
+    "Asegúrate de haber calificado a todos los candidatos en la tarjeta. Si no le has dado a cada uno una calificación global de A, B o C, dásela ahora. Haz las actualizaciones que hagan falta a partir de las entrevistas de referencia: mira los datos, considera las opiniones y observaciones del equipo entrevistador, y pon una calificación final.",
+    "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del método, el de captar candidatos.",
+    "Si tienes una sola A, decide contratar a esa persona.",
+    "Si tienes varias A, ordénalas y decide contratar a la mejor de entre ellas.",
+    "No des el trabajo por terminado con la decisión tomada. Decidir hacer algo y hacerlo son dos cosas distintas, y queda el último paso, que es vender el puesto a la persona para que se una de verdad a tu equipo."
+  ],
+  "entregable_esperado": "La decisión escrita de a quién contratar, con una calificación global de A, B o C dada a cada candidato y actualizada con lo que dijeron las referencias, o bien la decisión de volver al paso de captar candidatos.",
+  "nodos_previos": [
+    "seleccionar_jugador_cuatro_entrevistas",
+    "conducir_llamadas_referencia",
+    "revisar_banderas_rojas_candidato",
+    "calificar_tarjeta_puntuacion_habilidad_voluntad"
+  ],
+  "nodos_siguientes": [
+    "vender_puesto_jugador"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya has construido la tarjeta de puntuación, captado candidatos, conducido los cuatro tipos de entrevista sobre cada candidato y recogido montañas de datos, y toca elegir. Es el sexto y último paso de la selección, dentro de seleccionar al jugador A con las cuatro entrevistas."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La decisión final no vuelve a juzgar a la persona: lee lo que ya dicen las tarjetas de puntuación, calificadas con todo lo reunido en las entrevistas y en las referencias, y por eso puede ser sencilla. Se repite el análisis de habilidad y voluntad por si las referencias movieron algo, se da a cada candidato una nota global de A, B o C y se aplica una regla de tres salidas: sin ninguna A vuelves a buscar candidatos, con una la contratas y con varias eliges la mejor. Así nunca te quedas con alguien que no es A, y queda claro que decidir no basta: falta que la persona se una.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_05.md",
+          "lineas": "319-355"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)"
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decidir a quien contratar sobre las tarjetas de puntuacion calificadas",
+      "texto_nuevo": "Decidir a quién contratar sobre las tarjetas de puntuación calificadas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Saca las tarjetas de puntuacion que has completado sobre cada candidato.",
+      "texto_nuevo": "Saca las tarjetas de puntuación que has completado sobre cada candidato.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repite tu analisis del perfil de habilidad y voluntad, para asegurarte de que sigues teniendo una diana.",
+      "texto_nuevo": "Repite tu análisis del perfil de habilidad y voluntad, para asegurarte de que sigues teniendo una diana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de haber calificado a todos los candidatos en la tarjeta. Si no le has dado a cada uno una calificacion global de A, B o C, dasela ahora. Haz las actualizaciones que hagan falta a partir de las entrevistas de referencia: mira los datos, considera las opiniones y observaciones del equipo entrevistador, y pon una calificacion final.",
+      "texto_nuevo": "Asegúrate de haber calificado a todos los candidatos en la tarjeta. Si no le has dado a cada uno una calificación global de A, B o C, dásela ahora. Haz las actualizaciones que hagan falta a partir de las entrevistas de referencia: mira los datos, considera las opiniones y observaciones del equipo entrevistador, y pon una calificación final.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del metodo, el de abastecer el flujo de candidatos.",
+      "texto_nuevo": "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del método, el de abastecer el flujo de candidatos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes varias A, ordenalas y decide contratar a la mejor de entre ellas.",
+      "texto_nuevo": "Si tienes varias A, ordénalas y decide contratar a la mejor de entre ellas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No des el trabajo por terminado con la decision tomada. Decidir hacer algo y hacerlo son dos cosas distintas, y queda el ultimo paso, que es vender el puesto a la persona para que se una de verdad a tu equipo.",
+      "texto_nuevo": "No des el trabajo por terminado con la decisión tomada. Decidir hacer algo y hacerlo son dos cosas distintas, y queda el último paso, que es vender el puesto a la persona para que se una de verdad a tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La decision escrita de a quien contratar, con una calificacion global de A, B o C dada a cada candidato y actualizada con lo que dijeron las referencias, o bien la decision de volver al paso de abastecer el flujo de candidatos.",
+      "texto_nuevo": "La decisión escrita de a quién contratar, con una calificación global de A, B o C dada a cada candidato y actualizada con lo que dijeron las referencias, o bien la decisión de volver al paso de abastecer el flujo de candidatos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_contratacion_final-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya has construido la tarjeta de puntuacion, abastecido el flujo de candidatos, conducido los cuatro tipos de entrevista sobre cada candidato y recogido montañas de datos, y toca elegir. Es el sexto y ultimo paso del recuadro de seleccion, dentro de seleccionar al jugador A con las cuatro entrevistas.",
+      "texto_nuevo": "Cuando ya has construido la tarjeta de puntuación, abastecido el flujo de candidatos, conducido los cuatro tipos de entrevista sobre cada candidato y recogido montañas de datos, y toca elegir. Es el sexto y último paso de la selección, dentro de seleccionar al jugador A con las cuatro entrevistas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del recuadro de seleccion"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_contratacion_final-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Repite tu análisis del perfil de habilidad y voluntad, para asegurarte de que sigues teniendo una diana.",
+      "texto_nuevo": "Repite tu análisis del perfil de habilidad y voluntad, para asegurarte de que sigues dando en la diana.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "sigues teniendo una diana"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Tener una diana\" calca still have a bull's-eye; es seguir dando en la diana.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-barrido-decidir_contratacion_final-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "La decisión escrita de a quién contratar, con una calificación global de A, B o C dada a cada candidato y actualizada con lo que dijeron las referencias, o bien la decisión de volver al paso de abastecer el flujo de candidatos.",
+      "texto_nuevo": "La decisión escrita de a quién contratar, con una calificación global de A, B o C dada a cada candidato y actualizada con lo que dijeron las referencias, o bien la decisión de volver al paso de captar candidatos.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "abastecer el flujo de candidatos"
+        ]
+      },
+      "decision": "barrido final de calcos (abastecer)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-decidir_contratacion_final-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del método, el de abastecer el flujo de candidatos.",
+      "texto_nuevo": "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del método, el de captar candidatos.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "abastecer el flujo de candidatos"
+        ]
+      },
+      "decision": "barrido final de calcos (abastecer)",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-decidir_contratacion_final-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya has construido la tarjeta de puntuación, abastecido el flujo de candidatos, conducido los cuatro tipos de entrevista sobre cada candidato y recogido montañas de datos, y toca elegir. Es el sexto y último paso de la selección, dentro de seleccionar al jugador A con las cuatro entrevistas.",
+      "texto_nuevo": "Cuando ya has construido la tarjeta de puntuación, captado candidatos, conducido los cuatro tipos de entrevista sobre cada candidato y recogido montañas de datos, y toca elegir. Es el sexto y último paso de la selección, dentro de seleccionar al jugador A con las cuatro entrevistas.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "abastecido el flujo de candidatos"
+        ]
+      },
+      "decision": "barrido final de calcos (abastecer)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-decidir_contratacion_final-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La decisión final no vuelve a juzgar a la persona: lee lo que ya dicen las tarjetas de puntuación, calificadas con todo lo reunido en las entrevistas y en las referencias, y por eso puede ser sencilla. Se repite el análisis de habilidad y voluntad por si las referencias movieron algo, se da a cada candidato una nota global de A, B o C y se aplica una regla de tres salidas: sin ninguna A vuelves a buscar candidatos, con una la contratas y con varias eliges la mejor. Así nunca te quedas con alguien que no es A, y queda claro que decidir no basta: falta que la persona se una.",
+      "texto_nuevo": "La decisión final se apoya en lo que ya dicen las tarjetas de puntuación, calificadas con todo lo reunido en las entrevistas y en las referencias, y por eso puede ser sencilla. Se repite el análisis de habilidad y voluntad por si las referencias movieron algo, se da a cada candidato una nota global de A, B o C y se aplica una regla de tres salidas: sin ninguna A vuelves a buscar candidatos, con una la contratas y con varias eliges la mejor. Así nunca te quedas con alguien que no es A, y queda claro que decidir no basta: falta que la persona se una.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_05.md 321-325",
+        "frase": "Look at the data, consider the opinions and observations of the interview team, and give a final grade."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no dice que la decisión no vuelva a juzgar: pide mirar los datos, las opiniones del equipo entrevistador y poner la nota final. No se sostiene el segundo defecto: 'por si las referencias movieron algo' está en el libro (l.325: Make any updates you need to based on the reference interviews; l.355: to ensure you still have a bull's-eye).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Decide a Quién Contratar"
+}

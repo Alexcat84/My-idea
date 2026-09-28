@@ -9,8 +9,9 @@
 import { describe, expect, it } from "vitest";
 import { cargarGrafo, cargarPreguntasCache } from "./graph";
 
-/** Bases vivas sin neutral al 28 sep 2026 (engine/build_question_cache.py objetivos_neutrales). */
-const TOPE_SIN_NEUTRAL = 2940;
+/** Bases vivas sin neutral al 28 sep 2026 (engine/build_question_cache.py objetivos_neutrales): 2.940 sin el mundo 11,
+ * y 3.287 con las 347 bases de Primer Equipo al traer main a puente-forja. */
+const TOPE_SIN_NEUTRAL = 3287;
 /** Nodos con siguientes y sin pregunta al 28 sep 2026 (engine/build_question_cache.py faltantes). */
 const TOPE_SIN_PREGUNTA = 40;
 

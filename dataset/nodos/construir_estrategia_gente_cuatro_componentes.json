@@ -1,0 +1,287 @@
+{
+  "node_id": "construir_estrategia_gente_cuatro_componentes",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Construir tu Estrategia de Personas con sus cuatro componentes",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Esta estrategia importa porque el grado en que tu gente hace lo que quieres depende de cuánto se suma al juego que propone tu negocio, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_18.md, unidad Cap. 16, titulo textual Your People Strategy. Sale de la PIEZA C1 de la frontera publicada en esta misma vuelta (.gerber_v7/frontera_cap18.txt), L117 a L120, 51 palabras. POR QUE ES PROCEDIMIENTO, con D.27 delante: el libro no se queda en el mandato de comunicar la idea a la gente, sino que pone su propio inventario de MEDIOS: L119 nombra, uno a uno, los cuatro componentes con los que arranca y con los que continua Your People Strategy (Primary Aim, Strategic Objective, Organizational Strategy con sus dos partes, y Operations Manuals). Ningun adjetivo de adecuacion se sienta en el sitio del criterio (no dice medios apropiados ni politicas adecuadas: nombra los cuatro objetos por su nombre propio), asi que la restriccion 2 de 9.1 no tumba el inventario. ESTE ES EL CANDIDATO QUE PAGA d110 (vuelta 5, cerrado en esta vuelta 7, ver REPORTE.md seccion G7.2): la vuelta 5 cerro el discutible 5 diciendo que cap_17 dejaba la descripcion del Operations Manual metida en el dialogo del Manager de Venetia sin que el autor la retomara fuera de el antes del corte en L221; leida la continuacion en cap_18, el autor SI la retoma fuera del dialogo, en su propia voz de segunda persona (your Organizational Strategy, the Operations Manuals that define the work your people do), ya no como el cuaderno rojo concreto del hotel sino como uno de los cuatro componentes genericos de la estrategia del lector. NO ES DUPLICADO DE documentar_trabajo_manual_operaciones (cap_11, vuelta 1): ese nodo procedimenta el CONTENIDO que el Manual de Operaciones tiene que traer (los tres contenidos que el libro le exige); este nodo procedimenta la ESTRUCTURA de Your People Strategy, de la que el Manual de Operaciones es solo uno de cuatro componentes nombrados en una linea, sin repetir ninguno de los tres contenidos del otro nodo. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: L121 a L135 (pieza R4 de la frontera) sigue hablando del juego en terminos generales (que no se puede capturar solo en la pagina, que tiene que vivirse) sin nombrar mas medios ni etapas, asi que se queda en POSTURA y no se funde aqui (P.19: no hay objeto que fundir porque no repite ninguno de los cuatro nombrados en C1). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE, cita pegada en .gerber_v7/cita_cap18_L117_L119.txt (D.35). No invento destinatario, responsable ni periodo: el libro no los pone y este candidato no los completa.",
+  "pasos_accionables": [
+    "Entiende que tu Estrategia de Personas es la forma en que le comunicas a tu gente la idea de tu negocio.",
+    "Arranca con tu Objetivo Principal.",
+    "Sigue con tu Objetivo Estratégico.",
+    "Construye tu Estrategia Organizativa: tu organigrama y los contratos de puesto de todas las posiciones que contiene.",
+    "Escribe tus Manuales de Operaciones, que son los que definen el trabajo que hace tu gente."
+  ],
+  "entregable_esperado": "Tu Estrategia de Personas armada con sus cuatro componentes en este orden: Objetivo Principal, Objetivo Estratégico, Estrategia Organizativa con su organigrama y sus contratos de puesto, y tus Manuales de Operaciones.",
+  "nodos_previos": [
+    "recorrer_siete_pasos_programa_desarrollo_negocio"
+  ],
+  "nodos_siguientes": [
+    "documentar_trabajo_manual_operaciones",
+    "aplicar_cinco_pasos_proceso_contratacion",
+    "aplicar_ocho_reglas_juego_personas"
+  ],
+  "condiciones_activacion": [
+    "Cuando necesitas comunicarle a tu gente la idea de tu negocio desde el inicio de la relación, para que se sume al juego que le propones."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Esta estrategia funciona porque el grado en que tu gente hace lo que quieres depende de cuánto compra tu juego, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_18.md",
+          "lineas": "113-119"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construir tu Your People Strategy con los cuatro componentes que el libro nombra uno a uno",
+      "texto_nuevo": "Construir tu Estrategia de Personas con sus cuatro componentes",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your People Strategy",
+          "que el libro nombra uno a uno"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende que tu Your People Strategy es la forma en que le comunicas a tu gente la idea de tu negocio.",
+      "texto_nuevo": "Entiende que tu Estrategia de Personas es la forma en que le comunicas a tu gente la idea de tu negocio.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your People Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Arranca con tu Primary Aim.",
+      "texto_nuevo": "Arranca con tu Objetivo Principal.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Primary Aim"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sigue con tu Strategic Objective.",
+      "texto_nuevo": "Sigue con tu Objetivo Estratégico.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Strategic Objective"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construye tu Organizational Strategy: tu Organization Chart y los Position Contracts de todas las posiciones que contiene.",
+      "texto_nuevo": "Construye tu Estrategia Organizativa: tu organigrama y los contratos de puesto de todas las posiciones que contiene.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Organizational Strategy",
+          "Organization Chart",
+          "Position Contracts"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe tus Operations Manuals, que son los que definen el trabajo que hace tu gente.",
+      "texto_nuevo": "Escribe tus Manuales de Operaciones, que son los que definen el trabajo que hace tu gente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Operations Manuals"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tu Your People Strategy armada con sus cuatro componentes en el orden que el libro los nombra: Primary Aim, Strategic Objective, Organizational Strategy con su Organization Chart y sus Position Contracts, y tus Operations Manuals.",
+      "texto_nuevo": "Tu Estrategia de Personas armada con sus cuatro componentes en este orden: Objetivo Principal, Objetivo Estratégico, Estrategia Organizativa con su organigrama y sus contratos de puesto, y tus Manuales de Operaciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en el orden que el libro los nombra",
+          "Your People Strategy",
+          "Primary Aim",
+          "Strategic Objective",
+          "Organizational Strategy",
+          "Organization Chart",
+          "Position Contracts",
+          "Operations Manuals"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_estrategia_gente_cuatro_componentes-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes tu Primary Aim y tu Strategic Objective escritos y tu Organizational Strategy construida, y necesitas comunicarle esa idea a tu gente para que compre el juego que le propones.",
+      "texto_nuevo": "Cuando ya tienes tu Objetivo Principal y tu Objetivo Estratégico escritos y tu Estrategia Organizativa construida, y necesitas comunicarle esa idea a tu gente para que compre el juego que le propones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Primary Aim",
+          "Strategic Objective",
+          "Organizational Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-construir_estrategia_gente_cuatro_componentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Esta estrategia funciona porque el grado en que tu gente hace lo que quieres depende de cuánto compra tu juego, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente.",
+      "texto_nuevo": "Esta estrategia funciona porque el grado en que tu gente hace lo que quieres depende de cuánto se suma al juego que propone tu negocio, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuánto compra tu juego"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): 'Compra tu juego' calca 'buy into your game', y 'tu juego' no tiene antecedente; en el libro el juego es la idea que el negocio propone (cap_18, l. 111-117).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-construir_estrategia_gente_cuatro_componentes-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes tu Objetivo Principal y tu Objetivo Estratégico escritos y tu Estrategia Organizativa construida, y necesitas comunicarle esa idea a tu gente para que compre el juego que le propones.",
+      "texto_nuevo": "Cuando necesitas comunicarle a tu gente la idea de tu negocio desde el inicio de la relación, para que se sume al juego que le propones.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ya tienes tu Objetivo Principal y tu Objetivo Estratégico escritos y tu Estrategia Organizativa construida, y necesitas comunicarle esa idea a tu gente",
+          "compre el juego"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): La condicion daba por hechos componentes que los pasos mandan arrancar y construir, 'esa idea' no tiene antecedente, y 'compre el juego' calca 'buy into your game'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase6-construir_estrategia_gente_cuatro_componentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta estrategia funciona porque el grado en que tu gente hace lo que quieres depende de cuánto se suma al juego que propone tu negocio, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente.",
+      "texto_nuevo": "Esta estrategia importa porque el grado en que tu gente hace lo que quieres depende de cuánto se suma al juego que propone tu negocio, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "lineas": "fuentes/gerber_emyth/cap_18.md 113-123",
+        "frase": "Your People Strategy is the way you communicate this idea. / But the game your business will play can’t simply be captured on the written page. It must be seen if it is to work."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El libro dice por qué importa (la adhesión depende de cómo comuniques el juego y la estrategia es la forma de comunicarlo), no que funcione; y cuatro líneas después advierte que el juego escrito no basta, tiene que verse para funcionar. 'funciona' pasa a 'importa' (texto del lector B).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Arma tu Estrategia de Personas",
+  "fuentes_internas": [
+    "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber"
+  ]
+}

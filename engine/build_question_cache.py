@@ -262,9 +262,14 @@ def nodos_elegibles(graph):
 
 def generar_pregunta(client, actual, candidatos_ids, graph, system=SYSTEM_PREGUNTA):
     ctx = {
+        # La condicion y el entregable del nodo actual (integracion del mundo 11,
+        # 28 sep 2026): sin ellos la pregunta no podia partir de la situacion
+        # del nodo y la verificacion a ciegas la daba por floja.
         "concepto_actual": {
             "titulo": actual["titulo_concepto"],
             "resumen": actual["resumen_teorico"][:400],
+            "condicion": (actual.get("condiciones_activacion") or [""])[0],
+            "entregable": actual.get("entregable_esperado") or "",
         },
         "conceptos_siguientes": [
             {

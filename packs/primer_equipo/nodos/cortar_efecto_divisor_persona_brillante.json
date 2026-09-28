@@ -1,0 +1,256 @@
+{
+  "node_id": "cortar_efecto_divisor_persona_brillante",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cortar el efecto divisor de la persona brillante que rebaja a los demás",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Quien es muy capaz pero rebaja a los demás no multiplica al equipo, lo divide: su presencia hace menos eficaz al resto. Una definición concreta ayuda a reconocerlo: hace que otros se sientan peor consigo mismos o ataca a los que tienen menos poder. Hay quien lo vivió y vio cuánto tiempo se iba en reparar las relaciones que esa persona dañaba. Cuando se va, pierdes su aporte individual, pero el equipo baja la guardia y colabora mejor. Hay gente igual de talentosa y además humilde y amable: no negocies tus valores. Y puede cambiar si tu cultura deja claro que no se le tolerará.",
+  "notas_extraccion": "Es la unica cosa que el capitulo nombra como intolerable, y el libro la razona con una cuenta y no con moral: la persona muy capaz que rebaja a los demas produce un efecto divisor, de modo que lo que se gana en contribucion individual se pierde multiplicado en el resto. El inventario propio del libro es doble: la definicion operativa que toma de Robert I. Sutton, que sirve para identificar el caso sin discutir de caracteres, y las tres lecciones que la autora numera una a una. La forma en que el libro las presenta, lo que aprendi despues, la segunda cosa que aprendi, la tercera leccion, es lo que las convierte en inventario y no en desahogo. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se le dice a esa persona lo que esta pasando ni cuanto se espera antes de concluir que no va a cambiar.",
+  "pasos_accionables": [
+    "Reconoce el arquetipo del lobo solitario brillante que, aunque rebaje a los demás con regularidad, acaba saliendo como héroe porque es sencillamente más capaz que nadie. Es una noción romántica en la ficción popular, pero en la vida real esta gente no es la que quieres en tu equipo, por talentosa que sea.",
+    "Cuenta con que lo que obtienes no es un efecto multiplicador sino un efecto divisor: la presencia de esa persona hace menos eficaz al resto de tu equipo.",
+    "Usa esta definición para identificarlo: es quien hace que los demás se sientan peor consigo mismos, o quien ataca específicamente a los que tienen menos poder que él.",
+    "Cuenta con que desde la inexperiencia puede costar verlo claro, como le pasó a una directiva, porque lo que se ve es que hace un montón de trabajo impresionante. Y mientras tanto, en su caso, se iba un montón de tiempo en lidiar con las relaciones que esa persona dejaba dañadas a su paso.",
+    "Ten presente la primera lección: el equipo mejora de verdad cuando el brillante que rebaja se va. Pierdes su contribución individual, sí, pero a los demás se les levanta la niebla, pueden bajar la guardia, la colaboración se vuelve más honesta y productiva, y con ella mejora el trabajo del equipo entero.",
+    "La segunda: es posible encontrar gente igual de talentosa que además sea humilde y amable. No es lo uno o lo otro, por mucho que las películas lo cuenten así.",
+    "Mantén por eso alta la vara de la colaboración y no negocies tus valores por alguien que cree que está bien acosar a otros, porque te mereces algo mejor, y tu equipo también.",
+    "Y la tercera: sí pueden cambiar, cuando la cultura que tú fijas deja claro que no se les va a tolerar."
+  ],
+  "entregable_esperado": "Dicho y sostenido que la vara de colaboración no se negocia por talento, con los asuntos de esa persona abordados y con una cultura de equipo que deja claro que eso no se tolera.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "resolver_desencaje_valores_persona_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes en el equipo a alguien muy capaz que rebaja a los demás con regularidad, y estás dudando porque hace un montón de trabajo impresionante."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Quien es muy capaz pero rebaja a los demás no multiplica al equipo, lo divide: su presencia hace menos eficaz al resto. Una definición concreta ayuda a reconocerlo: hace que otros se sientan peor consigo mismos o ataca a los que tienen menos poder. Hay quien lo vivió y vio cuánto tiempo se iba en reparar las relaciones que esa persona dañaba. Cuando se va, pierdes su aporte individual, pero el equipo baja la guardia y colabora mejor. Hay gente igual de talentosa y además humilde y amable: no negocies tus valores. Y puede cambiar si tu cultura deja claro que no se le tolerará.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "241-255"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: el tiempo en reparar relaciones es el caso de L247 ('I once worked with a particular individual'), y 'se pierde con creces' y 'evita discutir de caracteres' no están en L243-255. La propuesta del lector es fiel pero trae 'Hay talento igual que además es humilde', frase rota; se reescribe con L253 ('people who are just as talented and who are humble and kind') y se ajusta el largo.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)"
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cortar el efecto divisor de la persona brillante que rebaja a los demas",
+      "texto_nuevo": "Cortar el efecto divisor de la persona brillante que rebaja a los demás",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce el arquetipo del lobo solitario brillante que, aunque rebaje a los demas con regularidad, acaba saliendo como heroe porque es sencillamente mas capaz que nadie. Es una nocion romantica en la ficcion popular, pero en la vida real esta gente no es la que quieres en tu equipo, por talentosa que sea.",
+      "texto_nuevo": "Reconoce el arquetipo del lobo solitario brillante que, aunque rebaje a los demás con regularidad, acaba saliendo como héroe porque es sencillamente más capaz que nadie. Es una noción romántica en la ficción popular, pero en la vida real esta gente no es la que quieres en tu equipo, por talentosa que sea.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa para identificarlo la definicion que el libro toma de Robert I. Sutton, profesor de Stanford, en su libro The No Asshole Rule: es quien hace que los demas se sientan peor consigo mismos, o quien ataca especificamente a los que tienen menos poder que el.",
+      "texto_nuevo": "Usa esta definición para identificarlo: es quien hace que los demás se sientan peor consigo mismos, o quien ataca específicamente a los que tienen menos poder que él.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la definicion que el libro toma de Robert I. Sutton, profesor de Stanford, en su libro The No Asshole Rule"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que desde la inexperiencia cuesta verlo claro, porque lo que se ve es que hace un monton de trabajo impresionante. El libro lo cuenta de un caso propio, donde ademas se fue un monton de tiempo en lidiar con las relaciones que aquella persona iba dejando deshilachadas a su paso.",
+      "texto_nuevo": "Cuenta con que desde la inexperiencia cuesta verlo claro, porque lo que se ve es que hace un montón de trabajo impresionante. Y mientras tanto se va un montón de tiempo en lidiar con las relaciones que esa persona deja dañadas a su paso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo cuenta de un caso propio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten presente la primera leccion: el equipo mejora de verdad cuando el brillante que rebaja se va. Pierdes su contribucion individual, si, pero a los demas se les levanta la niebla, pueden bajar la guardia, la colaboracion se vuelve mas honesta y productiva, y con ella mejora el trabajo del equipo entero.",
+      "texto_nuevo": "Ten presente la primera lección: el equipo mejora de verdad cuando el brillante que rebaja se va. Pierdes su contribución individual, sí, pero a los demás se les levanta la niebla, pueden bajar la guardia, la colaboración se vuelve más honesta y productiva, y con ella mejora el trabajo del equipo entero.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La segunda: es posible encontrar gente igual de talentosa que ademas sea humilde y amable. No es lo uno o lo otro, por mucho que las peliculas lo cuenten asi.",
+      "texto_nuevo": "La segunda: es posible encontrar gente igual de talentosa que además sea humilde y amable. No es lo uno o lo otro, por mucho que las películas lo cuenten así.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Manten por eso alta la vara de la colaboracion y no negocies tus valores por alguien que cree que esta bien acosar a otros, porque tu y tu equipo mereceis algo mejor.",
+      "texto_nuevo": "Mantén por eso alta la vara de la colaboración y no negocies tus valores por alguien que cree que está bien acosar a otros, porque te mereces algo mejor, y tu equipo también.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu y tu equipo mereceis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y la tercera: si pueden cambiar, cuando la cultura que tu fijas deja claro que no se les va a tolerar.",
+      "texto_nuevo": "Y la tercera: sí pueden cambiar, cuando la cultura que tú fijas deja claro que no se les va a tolerar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dicho y sostenido que la vara de colaboracion no se negocia por talento, con los asuntos de esa persona abordados y con una cultura de equipo que deja claro que eso no se tolera.",
+      "texto_nuevo": "Dicho y sostenido que la vara de colaboración no se negocia por talento, con los asuntos de esa persona abordados y con una cultura de equipo que deja claro que eso no se tolera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cortar_efecto_divisor_persona_brillante-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes en el equipo a alguien muy capaz que rebaja a los demas con regularidad, y estas dudando porque hace un monton de trabajo impresionante.",
+      "texto_nuevo": "Cuando tienes en el equipo a alguien muy capaz que rebaja a los demás con regularidad, y estás dudando porque hace un montón de trabajo impresionante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cortar_efecto_divisor_persona_brillante-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que desde la inexperiencia cuesta verlo claro, porque lo que se ve es que hace un montón de trabajo impresionante. Y mientras tanto se va un montón de tiempo en lidiar con las relaciones que esa persona deja dañadas a su paso.",
+      "texto_nuevo": "Cuenta con que desde la inexperiencia puede costar verlo claro, como le pasó a una directiva, porque lo que se ve es que hace un montón de trabajo impresionante. Y mientras tanto, en su caso, se iba un montón de tiempo en lidiar con las relaciones que esa persona dejaba dañadas a su paso.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 247-249",
+        "frase": "A huge amount of time was spent dealing with the frayed relationships in his wake. ... But as an inexperienced manager, I didn’t always see it clearly."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la experiencia de la autora con un colaborador concreto (no siempre lo vio claro; en su caso se iba mucho tiempo), vuelta regla; se cuenta como caso.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Frena a Quien Divide al Equipo"
+}

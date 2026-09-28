@@ -1,0 +1,465 @@
+{
+  "node_id": "preguntar_conducir_reunion_individual",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Preguntar para conducir la reunión individual, con tres grupos de preguntas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a tu cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Demasiadas veces la ayuda no ayuda: el sermón de quien no entiende el problema no cala, y la ayuda no pedida parece microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+  "notas_extraccion": "El libro da once preguntas repartidas en tres grupos con su titulo, y cada grupo lleva delante una linea que dice para que sirve. Los tres van en un solo nodo y no en cabeza mas tres, y la razon esta escrita en el propio libro: los tres grupos son tres momentos de la misma conversacion y no tres procedimientos distintos, porque el segundo se abre con que se usa una vez identificado el tema a discutir. Ademas la riqueza de los tres es pareja y delgada, tres, cinco y tres preguntas con un solo acto cada uno, y partirlos dejaria a la cabeza con la doctrina sola. La doctrina que sostiene las once preguntas es que el trabajo del directivo no es dar la respuesta sino que la encuentre quien tiene el contexto. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas preguntas de cada grupo se usan por reunion ni que hacer si la persona a cargo no quiere llevar la conversacion.",
+  "pasos_accionables": [
+    "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, tú y la persona a tu cargo. Hay quien tiene este hábito: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que se va a ver.",
+    "Pregunta en vez de suponer, porque la mejor herramienta de un entrenador para entender qué está pasando es preguntar: no des por sabido cuál es el problema ni cuál es la solución.",
+    "Cuenta con que demasiadas veces los intentos de ayudar no ayudan de verdad, aunque se sirvan con la mejor de las intenciones: seguro que recuerdas sermones que te entraron por un oído y te salieron por el otro porque era obvio que el otro no entendía tu problema de verdad, y ayudas no pedidas que se hacen indistinguibles de microgestionar o de entrometerse.",
+    "Ten claro que tu trabajo no es repartir consejo ni acudir al rescate, sino habilitar a la persona a tu cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas.",
+    "Empieza por el grupo de identificar, que sirve para centrarse en lo que de verdad importa a la persona a tu cargo y en qué temas merecen más tiempo: ¿qué tienes en la cabeza ahora mismo?, ¿qué prioridades estás pensando para esta semana?, y ¿cuál es el mejor uso de nuestro tiempo hoy?",
+    "Sigue con el grupo de entender, una vez identificado el tema, que va a la raíz del problema y a qué se puede hacer con él: ¿cómo sería tu resultado ideal?, ¿qué se te hace difícil para llegar a ese resultado?, ¿qué es lo que de verdad te importa?, ¿cuál crees que es el mejor curso de acción?, y ¿cuál es el peor escenario que te preocupa?",
+    "Y cierra con el grupo de apoyar, que apunta a cómo puedes serle más útil: ¿cómo puedo ayudarte?, ¿qué puedo hacer para que tengas más éxito?, y ¿qué ha sido lo más útil de nuestra conversación de hoy?"
+  ],
+  "entregable_esperado": "La conversación movida por preguntas y no por consejo, con el tema identificado, la raíz entendida y la ayuda ofrecida.",
+  "nodos_previos": [
+    "dirigir_reunion_individual_semanal"
+  ],
+  "nodos_siguientes": [
+    "preguntar_seguimiento_hallar_huecos"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes delante una reunión a solas con una persona a tu cargo y quieres que la lleve ella mientras tú escuchas y hurgas, en vez de repartir consejo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no salvar el día. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "139-171"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntar para conducir la reunion individual, con los tres grupos de preguntas del libro",
+      "texto_nuevo": "Preguntar para conducir la reunión individual, con tres grupos de preguntas",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los tres grupos de preguntas del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Piensa de antemano los temas que quieres traer, porque al libro le es util que lo hagan los dos, el directivo y la persona a cargo. El ejemplo que pone es un habito de la autora: cada maniana repasa su calendario y prepara una lista de preguntas para cada persona con la que se va a ver.",
+      "texto_nuevo": "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, el directivo y la persona a cargo. Un hábito que ayuda: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que te vas a ver.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "porque al libro le es util",
+          "El ejemplo que pone es un habito de la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta en vez de suponer, porque la mejor herramienta de un entrenador para entender que esta pasando es preguntar: no des por sabido cual es el problema ni cual es la solucion.",
+      "texto_nuevo": "Pregunta en vez de suponer, porque la mejor herramienta de un entrenador para entender qué está pasando es preguntar: no des por sabido cuál es el problema ni cuál es la solución.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que demasiadas veces los intentos de ayudar no ayudan de verdad, aunque se sirvan con la mejor de las intenciones: todos recordamos sermones que nos entraron por un oido y nos salieron por el otro porque era obvio que el otro no entendia nuestro problema de verdad, y ayudas no pedidas que se hacen indistinguibles de microgestionar o de entrometerse.",
+      "texto_nuevo": "Cuenta con que demasiadas veces los intentos de ayudar no ayudan de verdad, aunque se sirvan con la mejor de las intenciones: todos recordamos sermones que nos entraron por un oído y nos salieron por el otro porque era obvio que el otro no entendía nuestro problema de verdad, y ayudas no pedidas que se hacen indistinguibles de microgestionar o de entrometerse.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro que tu trabajo no es repartir consejo ni salvar el dia, sino habilitar a tu persona a cargo para que encuentre ella la respuesta: tiene mas contexto que tu sobre los problemas con los que esta lidiando, asi que esta en mejor posicion para destapar la solucion. Dejala llevar la reunion mientras tu escuchas y hurgas.",
+      "texto_nuevo": "Ten claro que tu trabajo no es repartir consejo ni salvar el día, sino habilitar a tu persona a cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza por el grupo de identificar, que sirve para centrarse en lo que de verdad importa a tu persona a cargo y en que temas merecen mas tiempo: que tienes en la cabeza ahora mismo, que prioridades estas pensando para esta semana, y cual es el mejor uso de nuestro tiempo hoy.",
+      "texto_nuevo": "Empieza por el grupo de identificar, que sirve para centrarse en lo que de verdad importa a tu persona a cargo y en qué temas merecen más tiempo: ¿qué tienes en la cabeza ahora mismo?, ¿qué prioridades estás pensando para esta semana?, y ¿cuál es el mejor uso de nuestro tiempo hoy?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sigue con el grupo de entender, una vez identificado el tema, que va a la raiz del problema y a que se puede hacer con el: a que se parece tu resultado ideal, que se te hace dificil para llegar a ese resultado, que es lo que de verdad te importa, cual crees que es el mejor curso de accion, y cual es el peor escenario que te preocupa.",
+      "texto_nuevo": "Sigue con el grupo de entender, una vez identificado el tema, que va a la raíz del problema y a qué se puede hacer con él: ¿a qué se parece tu resultado ideal?, ¿qué se te hace difícil para llegar a ese resultado?, ¿qué es lo que de verdad te importa?, ¿cuál crees que es el mejor curso de acción?, y ¿cuál es el peor escenario que te preocupa?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y cierra con el grupo de apoyar, que apunta a como puedes serle de mayor servicio: como puedo ayudarte, que puedo hacer para que tengas mas exito, y que ha sido lo mas util de nuestra conversacion de hoy.",
+      "texto_nuevo": "Y cierra con el grupo de apoyar, que apunta a cómo puedes serle de mayor servicio: ¿cómo puedo ayudarte?, ¿qué puedo hacer para que tengas más éxito?, y ¿qué ha sido lo más útil de nuestra conversación de hoy?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La conversacion movida por preguntas y no por consejo, con el tema identificado, la raiz entendida y la ayuda ofrecida.",
+      "texto_nuevo": "La conversación movida por preguntas y no por consejo, con el tema identificado, la raíz entendida y la ayuda ofrecida.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_conducir_reunion_individual-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes delante una reunion a solas con una persona a cargo y quieres que la lleve ella mientras tu escuchas y hurgas, en vez de repartir consejo.",
+      "texto_nuevo": "Cuando tienes delante una reunión a solas con una persona a cargo y quieres que la lleve ella mientras tú escuchas y hurgas, en vez de repartir consejo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-preguntar_conducir_reunion_individual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, el directivo y la persona a cargo. Un hábito que ayuda: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que te vas a ver.",
+      "texto_nuevo": "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, el directivo y la persona a cargo. Hay quien tiene este hábito: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que se va a ver.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 139",
+        "frase": "Every morning, I’ve gotten into the habit of scanning my calendar and compiling a list of questions for each person I’m meeting with."
+      },
+      "decision": "auditoria completa M11 (matiz): Es el hábito de una persona; se cuenta como caso.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-barrido-preguntar_conducir_reunion_individual-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sigue con el grupo de entender, una vez identificado el tema, que va a la raíz del problema y a qué se puede hacer con él: ¿a qué se parece tu resultado ideal?, ¿qué se te hace difícil para llegar a ese resultado?, ¿qué es lo que de verdad te importa?, ¿cuál crees que es el mejor curso de acción?, y ¿cuál es el peor escenario que te preocupa?",
+      "texto_nuevo": "Sigue con el grupo de entender, una vez identificado el tema, que va a la raíz del problema y a qué se puede hacer con él: ¿cómo sería tu resultado ideal?, ¿qué se te hace difícil para llegar a ese resultado?, ¿qué es lo que de verdad te importa?, ¿cuál crees que es el mejor curso de acción?, y ¿cuál es el peor escenario que te preocupa?",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "¿a qué se parece tu resultado ideal?"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-preguntar_conducir_reunion_individual-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y cierra con el grupo de apoyar, que apunta a cómo puedes serle de mayor servicio: ¿cómo puedo ayudarte?, ¿qué puedo hacer para que tengas más éxito?, y ¿qué ha sido lo más útil de nuestra conversación de hoy?",
+      "texto_nuevo": "Y cierra con el grupo de apoyar, que apunta a cómo puedes serle más útil: ¿cómo puedo ayudarte?, ¿qué puedo hacer para que tengas más éxito?, y ¿qué ha sido lo más útil de nuestra conversación de hoy?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "serle de mayor servicio"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"be of greatest service to your report\". Se prefiere \"serle más útil\" a \"ayudarle mejor\" de la propuesta, que sería leísmo con la persona a cargo en femenino en el nodo.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-preguntar_conducir_reunion_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no salvar el día. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "texto_nuevo": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "salvar el día"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"salvar el día\" calca el modismo inglés \"save the day\" (cap_04, línea 143). Medido con script.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-preguntar_conducir_reunion_individual-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten claro que tu trabajo no es repartir consejo ni salvar el día, sino habilitar a tu persona a cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas.",
+      "texto_nuevo": "Ten claro que tu trabajo no es repartir consejo ni acudir al rescate, sino habilitar a tu persona a cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "salvar el día"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"salvar el día\" calca \"save the day\". \"habilitar a alguien para que\" no se sostiene como calco: el diccionario lo recoge (\"hacer a alguien apto o capaz para algo\") y la propuesta \"hacer que\" perdía el sentido de \"empower\"; se queda.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_conducir_reunion_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "texto_nuevo": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a tu cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Decisión del orquestador para todo el pack (cuarto pase): \"la persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decisión del orquestador para todo el pack (cuarto pase): \"la persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_conducir_reunion_individual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, el directivo y la persona a cargo. Hay quien tiene este hábito: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que se va a ver.",
+      "texto_nuevo": "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, tú y la persona a tu cargo. Hay quien tiene este hábito: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que se va a ver.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Decisión del orquestador para todo el pack (cuarto pase): \"la persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda. Y 'el directivo' en tercera persona en un paso que te habla a ti pasa a 'tú' ('both manager and report', zhuo_manager/cap_04.md l. 139)."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decisión del orquestador para todo el pack (cuarto pase): \"la persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda. Y 'el directivo' en tercera persona en un paso que te habla a ti pasa a 'tú' ('both manager and report', zhuo_manager/cap_04.md l. 139).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_conducir_reunion_individual-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que demasiadas veces los intentos de ayudar no ayudan de verdad, aunque se sirvan con la mejor de las intenciones: todos recordamos sermones que nos entraron por un oído y nos salieron por el otro porque era obvio que el otro no entendía nuestro problema de verdad, y ayudas no pedidas que se hacen indistinguibles de microgestionar o de entrometerse.",
+      "texto_nuevo": "Cuenta con que demasiadas veces los intentos de ayudar no ayudan de verdad, aunque se sirvan con la mejor de las intenciones: seguro que recuerdas sermones que te entraron por un oído y te salieron por el otro porque era obvio que el otro no entendía tu problema de verdad, y ayudas no pedidas que se hacen indistinguibles de microgestionar o de entrometerse.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "todos recordamos",
+          "nos entraron",
+          "nos salieron",
+          "nuestro problema"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe ('We all remember lectures... our real problem', zhuo_manager/cap_04.md l. 141): por decisión del orquestador pasa a tú.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_conducir_reunion_individual-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ten claro que tu trabajo no es repartir consejo ni acudir al rescate, sino habilitar a tu persona a cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas.",
+      "texto_nuevo": "Ten claro que tu trabajo no es repartir consejo ni acudir al rescate, sino habilitar a la persona a tu cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Decisión del orquestador para todo el pack (cuarto pase): \"tu persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decisión del orquestador para todo el pack (cuarto pase): \"tu persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_conducir_reunion_individual-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Empieza por el grupo de identificar, que sirve para centrarse en lo que de verdad importa a tu persona a cargo y en qué temas merecen más tiempo: ¿qué tienes en la cabeza ahora mismo?, ¿qué prioridades estás pensando para esta semana?, y ¿cuál es el mejor uso de nuestro tiempo hoy?",
+      "texto_nuevo": "Empieza por el grupo de identificar, que sirve para centrarse en lo que de verdad importa a la persona a tu cargo y en qué temas merecen más tiempo: ¿qué tienes en la cabeza ahora mismo?, ¿qué prioridades estás pensando para esta semana?, y ¿cuál es el mejor uso de nuestro tiempo hoy?",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Decisión del orquestador para todo el pack (cuarto pase): \"tu persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decisión del orquestador para todo el pack (cuarto pase): \"tu persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_conducir_reunion_individual-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando tienes delante una reunión a solas con una persona a cargo y quieres que la lleve ella mientras tú escuchas y hurgas, en vez de repartir consejo.",
+      "texto_nuevo": "Cuando tienes delante una reunión a solas con una persona a tu cargo y quieres que la lleve ella mientras tú escuchas y hurgas, en vez de repartir consejo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Decisión del orquestador para todo el pack (cuarto pase): \"una persona a cargo\" pasa a la forma fijada \"una persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decisión del orquestador para todo el pack (cuarto pase): \"una persona a cargo\" pasa a la forma fijada \"una persona a tu cargo\"; \"a cargo\" sin posesivo se lee como quien manda.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase6-preguntar_conducir_reunion_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a tu cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "texto_nuevo": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a tu cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Demasiadas veces la ayuda no ayuda: el sermón de quien no entiende el problema no cala, y la ayuda no pedida parece microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 141",
+        "frase": "Too often, attempts to “help” aren’t actually helpful, even when served with the best of intentions. We all remember lectures that went in one ear and out the other because it was obvious the other party didn’t understand our real problem, or when unasked-for “help” feels indistinguishable from micromanaging or meddling."
+      },
+      "decision": "doble lectura M11 (sexto pase) (matiz): El libro reparte dos casos: el sermón que no cala porque quien lo da no entiende el problema real y la ayuda no pedida que parece microgestión; el resumen atribuía los dos efectos a todo consejo no pedido y perdía la condición. Texto propio, con el cambio mínimo sobre esa frase.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Guía con Buenas Preguntas",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

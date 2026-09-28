@@ -1,0 +1,321 @@
+{
+  "node_id": "construir_flujo_produccion_paso_limitante",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Construir el flujo de producción desde el paso limitante y escalonar los demás hacia atrás",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Producir no es entregar lo que el cliente quiera al instante, porque eso exigiría capacidad infinita o inventarios enormes; es entregar a una hora comprometida, con calidad aceptable y a un coste que te deje vender a precio competitivo con un beneficio aceptable. Para lograrlo miras tu flujo y fijas el paso limitante, el que determina la forma del conjunto: el que más tarda, o el más difícil, sensible o caro. Planeas todo alrededor de él y calculas hacia atrás desde la hora de entrega para que todo esté listo a la vez. Los demás pasos se escalonan tomando como base el anterior.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P2 de la frontera publicada en la vuelta 1 del frente, L15 a L27, 602 palabras. FRONTERA DENTRO DEL NODO, declarada porque EXTRACTOR.md 10 la pide aunque la fuente sea una sola: pasos 1 y 2 de L19, pasos 3 y 4 de L21 (su ultima frase es We start by looking at our production flow), pasos 5 y 6 de L23, pasos 7 y 8 de L25, y pasos 9 y 10 de L27. POR QUE ES PROCEDIMIENTO: el inventario es del libro y es de ETAPAS, nombradas una a una en imperativo suyo (The first thing we must do is to pin down the step...; To work back from the time of delivery, you will need to calculate...; First you must allow time to assemble...; Next you must get the toast...; Using the egg time as your base, you must allow yourself time...). Escribir los pasos es transcribir ese inventario. LOS TRES CASOS DEL LIBRO VIVEN AQUI Y NO EN CASA PROPIA (manual 3.5, el caso no es la casa): el desayuno de tres minutos (L17 a L27), el reclutamiento universitario de Intel (L31 a L35, donde el paso limitante es el viaje del candidato a la planta y la salida es cribar por telefono antes de invitar) y la justicia penal (L77 a L79, que es el MISMO principio al reves: la casa dice que el paso limitante deberia ser conseguir la condena y en cambio lo limita la disponibilidad de celdas, y eso es permitir que el paso equivocado limite el proceso entero). Ninguno de los tres es nodo aparte, y la frontera de la vuelta 1 lo declara tramo a tramo. LAS CIFRAS DEL CASO PENAL NO SE EXTRAEN: el texto dice even today only some $80,000 sin decir que anio es hoy, y una cifra del autor sin fecha de corte es media cifra (manual principio 5). Por eso atribuciones va vacia y no aparece ningun dolar en ningun paso. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo quien dibuja el flujo ni en que soporte, porque el libro lo ensena en una figura (What must happen is illustrated opposite) y no encarga dibujarla; NO escribo cada cuanto se revisa el flujo, que seria puente de la especie periodo; NO escribo quien responde de cada paso, que seria puente de la especie responsable. Las tres especies son las que el lote 1 pago. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: este nodo y el de la cola del tostador (rehacer_flujo_paso_limitante_capacidad) son el par mas proximo de la unidad, porque los dos hablan del paso limitante. Los separo porque este CONSTRUYE el flujo la primera vez y el otro lo REHACE cuando una capacidad limitada mueve el paso que manda, y porque sus condiciones de activacion son distintas: una es la del que todavia no tiene flujo y otra es la del que ya lo tiene y se le ha metido una cola dentro. DOMINIO NUEVO, declarado en el reporte: produccion no existia en el catalogo, y este libro lo abre. config/umbrales.json tiene solo_dominio_y_nucleo en false, asi que no estrecha ningun barrido. CORRECCION DE FIDELIDAD EN EL MISMO ACTO, ANTES DE QUE ESTE CANDIDATO CUENTE COMO ESCRITO (D.30, EXTRACTOR.md 15.4): el paso 6 decia Planea el trabajo entero alrededor del tiempo que ese paso necesita, y mira si ademas es el componente que mas le importa al cliente, como pasa con el huevo del desayuno. y hoy dice Planea el trabajo entero alrededor del tiempo que ese paso necesita, y cuenta con lo que el libro anade de ese paso en el caso del desayuno: no solo es el que mas tarda en prepararse, es tambien el componente mas importante del desayuno para la mayoria de los clientes.. LA ESPECIE ERA LA DEL ACTO, que es la cuarta y no esta en la tabla de las tres de D.30: el libro NO encarga mirar si ese paso es ademas el mas importante, lo AFIRMA del huevo, y convertir una afirmacion del libro en una comprobacion del lector es escribir un paso que el libro no dice. La linea, reabierta con su sed y no de memoria, sed -n 23p fuentes/grove_high_output/cap_02.md, dice: Not only does that component take the longest to prepare, the egg is also for most customers the most important feature of the breakfast. La correccion se hace con el candidato todavia en la bandeja y se vuelve a pasar la aduana despues de ella, asi que el informe que este reporte publica de este candidato es el de DESPUES de la correccion. CORRECCION DECLARADA de la vuelta 44 de la linea serial (deuda d004, cita grove PARA_ALEXIS 5.3.4, resuelta por D.53 del 17 sep 2026), y se escribe aqui para que la vuelta que inserte este candidato no dependa de que alguien se acuerde, que es la perdida que D.29 vino a cerrar. LA ACTA 32 seccion 3.3 del frente grove adjudico CONTINUA este par por la lectura vieja de que un par con arista declarada no puede ser SANO. D.53 decide lo contrario con su prueba por reduccion: UN SANO PUEDE LLEVAR ARISTA DECLARADA, Y DECLARARLA NO LO CONVIERTE EN CONTINUA, porque si lo hiciera D.37 seria imposible y toda cabeza de serie devoraria sus partes. RE ADJUDICADO: el veredicto de construir_flujo_produccion_paso_limitante con rehacer_flujo_paso_limitante_capacidad vuelve a SANO, que es lo que esta ficha publico, y la caida que dependia de la lectura vieja se retira citando D.53. LA ARISTA SIGUE EN PIE Y SE CABLEA AL INSERTAR: madre construir_flujo_produccion_paso_limitante paso 9, hijo rehacer_flujo_paso_limitante_capacidad. No se borra nada: la clase CONTINUA de la ACTA 32 queda escrita donde esta.",
+  "pasos_accionables": [
+    "Pon delante los requisitos básicos de la producción, uno a uno: construir y entregar en respuesta a la demanda del cliente, a una hora de entrega programada, a un nivel de calidad aceptable y al coste más bajo posible.",
+    "Descarta la carta blanca antes de planear: entregar lo que el cliente quiera cuando lo quiera pediría capacidad de producción infinita, o su equivalente, inventarios enormes listos para entregar.",
+    "Comprométete en su lugar a una hora de entrega, y al coste que te permita vender a un precio competitivo y seguir sacando un beneficio aceptable.",
+    "Empieza por mirar tu flujo de producción.",
+    "Fija el paso limitante, que es el paso del flujo que determina la forma del conjunto, y para encontrarlo pregunta cuál de los componentes tarda más en prepararse.",
+    "Planea el trabajo entero alrededor del tiempo que ese paso necesita. Por ejemplo, al servir un desayuno de huevo cocido de tres minutos, pan tostado con mantequilla y café, el huevo no solo es lo que más tarda en prepararse: también es lo más importante del desayuno para la mayoría de los clientes.",
+    "Calcula hacia atrás desde la hora de entrega el tiempo de preparar cada componente para que estén todos listos a la vez: primero deja tiempo para montarlos juntos, y luego para sacar cada uno de donde se estaba haciendo.",
+    "Suma ese tiempo al que hace falta para conseguir y cocinar el componente del paso limitante: eso define la duración del proceso entero, que en la jerga de la producción es el tiempo total de paso.",
+    "Escalona los demás pasos tomando como base el tiempo del anterior, como el huevo sirve de base para el pan y el pan de base para el café, y eso es el desfase.",
+    "Y cuando el paso que manda no sea el más largo, usa el criterio entero: empieza por el más largo, o el más difícil, o el más sensible, o el más caro, y trabaja hacia atrás desde él."
+  ],
+  "entregable_esperado": "El flujo de producción con su paso limitante nombrado, el tiempo total de paso calculado desde la hora de entrega, y cada uno de los demás pasos desfasado del anterior para que todo quede listo a la vez.",
+  "nodos_previos": [
+    "clasificar_trabajo_proceso_montaje_prueba"
+  ],
+  "nodos_siguientes": [
+    "rehacer_flujo_paso_limitante_capacidad",
+    "identificar_paso_limitante_jornada_desfases"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes que entregar varias piezas de un mismo trabajo a la vez y a una hora comprometida, y todavía no sabes por cuál de ellas hay que empezar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Producir no es entregar lo que el cliente quiera al instante, porque eso exigiría capacidad infinita o inventarios enormes; es entregar a una hora comprometida, con calidad aceptable y a un coste que te deje vender a precio competitivo con un beneficio aceptable. Para lograrlo miras tu flujo y fijas el paso limitante, el que determina la forma del conjunto: el que más tarda, o el más difícil, sensible o caro. Planeas todo alrededor de él y calculas hacia atrás desde la hora de entrega para que todo esté listo a la vez. Los demás pasos se escalonan tomando como base el anterior.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_02.md",
+          "lineas": "19-27"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'deja de ser una sorpresa y los demás se acomodan a él, en vez de competir' no está en las líneas. La propuesta se queda con lo que dicen (paso que determina la forma, el más largo, difícil, sensible o caro, hacia atrás para que todo esté listo a la vez) y mide 584.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)"
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construir el flujo de produccion desde el paso limitante y escalonar los demas hacia atras",
+      "texto_nuevo": "Construir el flujo de producción desde el paso limitante y escalonar los demás hacia atrás",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pon delante los requisitos basicos de la produccion que el libro nombra uno a uno: construir y entregar en respuesta a la demanda del cliente, a una hora de entrega programada, a un nivel de calidad aceptable y al coste mas bajo posible.",
+      "texto_nuevo": "Pon delante los requisitos básicos de la producción, uno a uno: construir y entregar en respuesta a la demanda del cliente, a una hora de entrega programada, a un nivel de calidad aceptable y al coste más bajo posible.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra uno a uno"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Descarta la carta blanca antes de planear: entregar lo que el cliente quiera cuando lo quiera pediria capacidad de produccion infinita, o su equivalente, inventarios enormes listos para entregar.",
+      "texto_nuevo": "Descarta la carta blanca antes de planear: entregar lo que el cliente quiera cuando lo quiera pediría capacidad de producción infinita, o su equivalente, inventarios enormes listos para entregar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprometete en su lugar a una hora de entrega, y al coste que te permita vender a un precio competitivo y seguir sacando un beneficio aceptable.",
+      "texto_nuevo": "Comprométete en su lugar a una hora de entrega, y al coste que te permita vender a un precio competitivo y seguir sacando un beneficio aceptable.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira tu flujo de produccion, que es por donde el libro dice que se empieza.",
+      "texto_nuevo": "Empieza por mirar tu flujo de producción.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es por donde el libro dice que se empieza"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija el paso limitante, que es el paso del flujo que determina la forma del conjunto, y para encontrarlo pregunta cual de los componentes tarda mas en prepararse.",
+      "texto_nuevo": "Fija el paso limitante, que es el paso del flujo que determina la forma del conjunto, y para encontrarlo pregunta cuál de los componentes tarda más en prepararse.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Planea el trabajo entero alrededor del tiempo que ese paso necesita, y cuenta con lo que el libro anade de ese paso en el caso del desayuno: no solo es el que mas tarda en prepararse, es tambien el componente mas importante del desayuno para la mayoria de los clientes.",
+      "texto_nuevo": "Planea el trabajo entero alrededor del tiempo que ese paso necesita, y cuenta con lo que se ve en el caso del desayuno: ese paso no solo es el que más tarda en prepararse, también es el componente más importante del desayuno para la mayoría de los clientes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el libro anade"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula hacia atras desde la hora de entrega el tiempo de preparar cada componente para que esten todos listos a la vez: primero deja tiempo para montarlos juntos, y luego para sacar cada uno de donde se estaba haciendo.",
+      "texto_nuevo": "Calcula hacia atrás desde la hora de entrega el tiempo de preparar cada componente para que estén todos listos a la vez: primero deja tiempo para montarlos juntos, y luego para sacar cada uno de donde se estaba haciendo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Suma ese tiempo al que hace falta para conseguir y cocinar el componente del paso limitante: eso define la duracion del proceso entero, que en la jerga de la produccion es el tiempo total de paso.",
+      "texto_nuevo": "Suma ese tiempo al que hace falta para conseguir y cocinar el componente del paso limitante: eso define la duración del proceso entero, que en la jerga de la producción es el tiempo total de paso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escalona los demas pasos tomando como base el tiempo del anterior, que es lo que el libro hace con el huevo como base del pan y el pan como base del cafe, y eso es el desfase.",
+      "texto_nuevo": "Escalona los demás pasos tomando como base el tiempo del anterior, como el huevo sirve de base para el pan y el pan de base para el café, y eso es el desfase.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el libro hace"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y cuando el paso que manda no sea el mas largo, usa el criterio entero que el libro escribe: empieza por el mas largo, o el mas dificil, o el mas sensible, o el mas caro, y trabaja hacia atras desde el.",
+      "texto_nuevo": "Y cuando el paso que manda no sea el más largo, usa el criterio entero: empieza por el más largo, o el más difícil, o el más sensible, o el más caro, y trabaja hacia atrás desde él.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro escribe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El flujo de produccion con su paso limitante nombrado, el tiempo total de paso calculado desde la hora de entrega, y cada uno de los demas pasos desfasado del anterior para que todo quede listo a la vez.",
+      "texto_nuevo": "El flujo de producción con su paso limitante nombrado, el tiempo total de paso calculado desde la hora de entrega, y cada uno de los demás pasos desfasado del anterior para que todo quede listo a la vez.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_flujo_produccion_paso_limitante-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes que entregar varias piezas de un mismo trabajo a la vez y a una hora comprometida, y todavia no sabes por cual de ellas hay que empezar.",
+      "texto_nuevo": "Cuando tienes que entregar varias piezas de un mismo trabajo a la vez y a una hora comprometida, y todavía no sabes por cuál de ellas hay que empezar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-construir_flujo_produccion_paso_limitante-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Planea el trabajo entero alrededor del tiempo que ese paso necesita, y cuenta con lo que se ve en el caso del desayuno: ese paso no solo es el que más tarda en prepararse, también es el componente más importante del desayuno para la mayoría de los clientes.",
+      "texto_nuevo": "Planea el trabajo entero alrededor del tiempo que ese paso necesita. Por ejemplo, al servir un desayuno de huevo cocido de tres minutos, pan tostado con mantequilla y café, el huevo no solo es lo que más tarda en prepararse: también es lo más importante del desayuno para la mayoría de los clientes.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'El caso del desayuno' no tenía antecedente en el nodo; se cuenta el ejemplo del libro (huevo, tostada y café). La propuesta del auditor metía un 'puede no ser' que el libro no dice."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'El caso del desayuno' no tenía antecedente en el nodo; se cuenta el ejemplo del libro (huevo, tostada y café). La propuesta del auditor metía un 'puede no ser' que el libro no dice.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ordena tu Flujo desde el Límite",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

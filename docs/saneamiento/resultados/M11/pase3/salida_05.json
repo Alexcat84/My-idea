@@ -1,0 +1,1063 @@
+{
+ "lote": "05",
+ "nodos": [
+  {
+   "node_id": "recorrer_siete_pasos_programa_desarrollo_negocio",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "asegurar_opinion_llega_persona",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "matiz",
+     "cita": "porque escribirlo aclara los puntos",
+     "motivo": "El libro dice que escribir puede aclarar los puntos (\"can clarify\"); el paso lo afirma como efecto seguro. La propuesta corrige también el calco del defecto siguiente.",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "203",
+     "frase": "Writing can clarify the points being made as well as be reread and referenced in the future.",
+     "propuesta": "La segunda táctica es resumir por correo lo que se habló, porque escribirlo puede aclarar los puntos y además se puede releer y consultar más adelante."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "se puede releer y referenciar en el futuro",
+     "motivo": "\"referenciar en el futuro\" calca \"be referenced in the future\"; en español llano es \"consultar más adelante\". Misma propuesta que el defecto de matiz de este paso.",
+     "propuesta": "La segunda táctica es resumir por correo lo que se habló, porque escribirlo puede aclarar los puntos y además se puede releer y consultar más adelante."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 193,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 193,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 195,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 199,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 201,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 201,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 205,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 205,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "pasar_direccion_directa_indirecta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "respondes por resultados cuyos detalles no ves",
+     "motivo": "El libro dice que no puedes estar en TODOS los detalles; \"cuyos detalles no ves\" dice que no ves ninguno y quita el \"no puedes\". Propuesta medida con script: 598 caracteres.",
+     "fichero": "fuentes/zhuo_manager/cap_10.md",
+     "lineas": "45",
+     "frase": "You're still responsible for your team's outcomes, but you can't be in all the details.",
+     "propuesta": "Dirigir de cerca tiene un techo que se mide en horas: con cinco personas puedes conocer el trabajo de cada una, lo que le importa y en qué es buena, pero con treinta, solo las reuniones individuales semanales de media hora suman quince horas, media semana, antes de seguir lo que salga de ellas. Por eso quien dirige un equipo que crece pone directivos debajo. Eso tiene un precio que conviene conocer: quedas más lejos del terreno, respondes por resultados sin poder estar en todo, y otros deciden y hacen las cosas a su manera. Al principio puede desorientar, pero dar ese poder es una necesidad."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 43,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 47,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 47,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "adaptar_escucha_cultura_ajena",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "Cuenta con que la forma de trabajar que traes va a ser la equivocada nada más llegar",
+     "motivo": "Lo que le pasó a una negociadora al llegar se vuelve una regla segura para ti (\"va a ser\"); el resumen del mismo nodo lo dice como posibilidad (\"puede leerse como frialdad\").",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "157",
+     "frase": "When she first arrived, she acted like a New Yorker—very business-like, making back-to-back appointments.",
+     "propuesta": "Cuenta con que la forma de trabajar que traes puede ser la equivocada nada más llegar: una negociadora invitada a trabajar en el proceso de paz con el Frente Moro de Liberación Islámica, en el sur de Filipinas, al llegar se comportó como una neoyorquina, muy profesional, encadenando citas una detrás de otra."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 161,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 161,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "abrazar_incomodidad_arrancar_critica_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "de maneras desconcertantes",
+     "motivo": "El libro dice que el cambio de impresión puede resultar desconcertante (\"in ways that can be bewildering\"); el paso lo da como hecho.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "21",
+     "frase": "The role often changes people's impression of you in ways that can be bewildering.",
+     "propuesta": "Cuenta con este punto de partida: cuando eres el jefe la gente de verdad no quiere criticarte ni decirte lo que piensa, porque con el puesto heredas un montón de suposiciones que no tienen nada que ver con quién eres, y el papel a menudo cambia la impresión que la gente tiene de ti de maneras que pueden desconcertarte."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 21,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 23,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 23,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 25,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 25,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 25,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 27,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 35,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 35,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 37,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 39,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 43,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 45,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 47,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 49,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 49,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 53,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 53,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "construir_empresa_plantilla_vision_diaria",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "con las que el fundador de una gran empresa explicaba su éxito",
+     "motivo": "Las tres razones son lo que se cuenta que respondió el fundador (\"he is said to have answered\"; el pasaje admite en la línea 55 que quien lo contó quizá no tenía sus palabras exactas). El resumen conserva el \"se dice\"; el paso lo da como hecho.",
+     "fichero": "fuentes/gerber_emyth/cap_08.md",
+     "lineas": "37",
+     "frase": "Asked to what he attributed the phenomenal success of IBM, he is said to have answered:",
+     "propuesta": "Hazte un retrato muy claro de cómo será la empresa cuando esté finalmente terminada, un modelo en tu cabeza del aspecto que tendrá cuando el sueño se haya hecho realidad, que es la primera de las tres razones con las que, se dice, el fundador de una gran empresa explicaba su éxito."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "responder_8_preguntas_construir_primary_aim",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 135,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 137,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "criticar_trabajo_evitar_desanimo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 257,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 259,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 263,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 269,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 269,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 269,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 271,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 273,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "calcular_embudo_reclutamiento_propio",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 211,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 215,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 215,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 217,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 219,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_periodo_direccion_objetivos_retroalimentacion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 77,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 79,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 79,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 81,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 81,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 81,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "empezar_cultura_franqueza_radical",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 215,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 219,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 221,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 223,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "abrir_debate_humor_explicar_proposito",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "y del ánimo que dejas puesto que de lo que dices exactamente",
+     "motivo": "\"dejas puesto que de lo que dices\" se lee como la conjunción causal \"puesto que\": la frase queda ambigua y se pierde la comparación \"más ... que\". El libro: \"the mood it sets for what follows\" (línea 241).",
+     "propuesta": "Preocúpate más del tono que transmites y del ánimo que creas para lo que sigue que de lo que dices exactamente: lo que dices importa menos."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 237,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 237,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "tomar_mando_reunion_pares_presidente_ausente",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 39,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 43,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 49,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "rechazar_contratacion_tibia",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 147,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 151,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 151,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 153,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "declarar_intencion_reemplazar_peticion_permiso",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 59,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 69,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 83,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "mantener_proceso_evaluacion_ligero_vigilar_crecimiento",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 235,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 237,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "operar_modelo_gente_destreza_minima",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 85,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 87,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 89,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 89,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 91,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 91,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 93,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 97,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 99,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 111,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "dirigir_reunion_informativa",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "Quédate con la meeting",
+     "motivo": "Inglés que quedó: \"meeting\" por \"reunión\".",
+     "propuesta": "Quédate con la reunión si buscas su primera ventaja: que permite más interactividad. Si quieres que todo el mundo conozca un cambio de política potencialmente polémico, dar esa noticia en persona deja al grupo preguntar o expresar sus reacciones."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 101,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 103,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "medir_sistema_venta_trece_indicadores_benchmark",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 313,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 315,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 319,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 321,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 323,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 325,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 327,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 329,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 331,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 333,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 343,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 345,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 347,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "preguntar_conducir_reunion_individual",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "no salvar el día",
+     "motivo": "\"salvar el día\" calca el modismo inglés \"save the day\". Propuesta medida con script: 567 caracteres.",
+     "propuesta": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no llegar al rescate. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "ni salvar el día, sino habilitar a tu persona a cargo para que encuentre ella la respuesta",
+     "motivo": "\"salvar el día\" calca \"save the day\" y \"habilitar a ... para que\" calca \"empower ... to\"; en español llano: \"llegar al rescate\" y \"hacer que tu persona a cargo encuentre ella la respuesta\".",
+     "propuesta": "Ten claro que tu trabajo no es repartir consejo ni llegar al rescate, sino hacer que tu persona a cargo encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 141,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 145,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 167,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 169,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 171,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 173,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  }
+ ]
+}

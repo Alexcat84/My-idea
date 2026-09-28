@@ -1,0 +1,348 @@
+{
+ "lote": "12",
+ "nodos": [
+  {
+   "node_id": "responder_4_preguntas_estandares_objetivo_estrategico",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "organizar_sistema_recoger_quejas_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "fijar_horizonte_ventana_replanificacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "evitar_presion_social_actos_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pedir_opinion_propia_reunion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "vender_libertad_candidato",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "revisar_incentivos_trampas_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "voz",
+     "cita": "una discusión franca sobre qué deberíamos valorar y por qué. ¿Por qué debería importarnos explorar más diseños al principio? ¿Por qué deberíamos buscar que ingeniería avance más rápido?",
+     "motivo": "El nosotros del libro (\"what we should value\", \"why should we care\") quedó en el paso sin comillas ni hablante; en la casa se habla de tú.",
+     "propuesta": "Usa en su lugar la opción que suele ser mejor: una discusión franca con tu equipo sobre qué valorar y por qué. Por ejemplo, por qué importa explorar más diseños al principio, o por qué conviene buscar que ingeniería avance más rápido. Cuando la gente entiende esos valores y los hace suyos, puede tomar las mejores decisiones sobre cómo aplicarlos."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "una persona a cargo de un directivo",
+     "motivo": "\"A cargo de un directivo\" se lee como quien manda sobre el directivo; en el caso es alguien de su equipo, que depende de él.",
+     "propuesta": "Repasa cuatro trampas de incentivo comunes para evitarlas. Premiar el rendimiento individual por encima de cualquier otra cosa: a un equipo de ventas que oye que nada es más importante que alcanzar tu cuota personal le conviene más quitarle un trato a un compañero, que es fácil, que buscar un trato nuevo, que es más difícil. Premiar las ganancias a corto plazo sobre las inversiones a largo: a un equipo de ingeniería cuyos extras se deciden cada seis meses por cuántas funcionalidades nuevas ha sacado, los incentivos le dicen a su directiva que elija varias funcionalidades de poco impacto en vez de la más pedida por los clientes, que tarda un año en construirse. Premiar la ausencia aparente de problemas o de conflicto: el directivo que habla sin parar de lo contento que está de que todos en su equipo se lleven bien, y que ante un desacuerdo o le quita importancia o expresa su disgusto de que exista, enseña a su equipo a esconderle los conflictos mientras crecen el resentimiento y la conducta pasivo agresiva. Y premiar al que más ruido hace: una persona que depende de un directivo se entrevista en otra empresa, consigue una oferta mayor y dice que se irá salvo que le suban el sueldo para igualarla, y el directivo dice que sí; la historia se sabe, y de golpe todos los demás del equipo se sienten incentivados a entrevistarse en otros sitios."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "regionalismo",
+     "cita": "le sale más a cuenta",
+     "motivo": "\"Salir a cuenta\" es giro coloquial de España; forma común: \"le conviene más\".",
+     "propuesta": "Repasa cuatro trampas de incentivo comunes para evitarlas. Premiar el rendimiento individual por encima de cualquier otra cosa: a un equipo de ventas que oye que nada es más importante que alcanzar tu cuota personal le conviene más quitarle un trato a un compañero, que es fácil, que buscar un trato nuevo, que es más difícil. Premiar las ganancias a corto plazo sobre las inversiones a largo: a un equipo de ingeniería cuyos extras se deciden cada seis meses por cuántas funcionalidades nuevas ha sacado, los incentivos le dicen a su directiva que elija varias funcionalidades de poco impacto en vez de la más pedida por los clientes, que tarda un año en construirse. Premiar la ausencia aparente de problemas o de conflicto: el directivo que habla sin parar de lo contento que está de que todos en su equipo se lleven bien, y que ante un desacuerdo o le quita importancia o expresa su disgusto de que exista, enseña a su equipo a esconderle los conflictos mientras crecen el resentimiento y la conducta pasivo agresiva. Y premiar al que más ruido hace: una persona que depende de un directivo se entrevista en otra empresa, consigue una oferta mayor y dice que se irá salvo que le suban el sueldo para igualarla, y el directivo dice que sí; la historia se sabe, y de golpe todos los demás del equipo se sienten incentivados a entrevistarse en otros sitios."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "pega",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "deberíamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "deberíamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "impacto en",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "partir_meta_grande_hitos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "le pareció que sobraba tiempo en el reloj",
+     "motivo": "Calco de \"plenty of time on the clock\"; en español llano: le pareció que le sobraba el tiempo.",
+     "propuesta": "Reconoce cómo te hace fallar, con un caso: alguien acordó con su editorial que un año era un plazo sensato para un primer borrador, colgó el teléfono sintiéndose audaz y pensando que lo tendría en seis meses, y entregó un primer borrador ni siquiera terminado justo al cumplirse el año, porque durante nueve meses le pareció que le sobraba el tiempo y cada vez que aparecía otra tarea urgente o simplemente no le apetecía escribir se decía que saltarse un día no cambiaría mucho."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "regionalismo",
+     "cita": "a meses o años vista",
+     "motivo": "\"A meses vista\" (como \"a un año vista\") es construcción de España; forma común: \"a meses o años de distancia\".",
+     "propuesta": "Preocúpate por lo que tienes delante y no todavía por lo que está a meses o años de distancia."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "voz",
+     "cita": "nuestro sesgo natural",
+     "motivo": "El nosotros del libro (\"our natural bias\"); en la casa no se habla en primera persona del plural.",
+     "propuesta": "Ten en cuenta la falacia de la planificación, que es el sesgo natural a predecir que las cosas van a llevar menos tiempo y menos dinero de los que llevan de verdad."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "nuestro",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "ajustar_plan_fuerzas_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "vídeo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "entregar_evaluacion_formal_desempenio_nueve_consejos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Entregar bien una evaluación formal de desempeño",
+     "motivo": "Calco de \"delivering a performance review well\": una evaluación se da o se lleva, no se entrega (como \"la guía entregada\" de la muestra).",
+     "propuesta": "Llevar bien una evaluación formal de desempeño con nueve consejos, de no dar sorpresas a dejar la nota para el final"
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "Sácale a eso unos cinco minutos del tiempo del uno a uno",
+     "motivo": "\"Sácale a eso cinco minutos\" dice que se le quitan minutos a la comprobación; el sentido es dedicarle cinco minutos sacados del uno a uno (\"takes about five minutes out of everyone's 1:1 time\").",
+     "propuesta": "Dedícale a eso unos cinco minutos, sacados del tiempo del uno a uno de cada persona, dos veces al año, justo antes de las evaluaciones."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "subir_vara_calidad_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "construir_flujo_produccion_paso_limitante",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "usar_tres_clases_reunion_proceso",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "Referente sin antecedente: en el nodo no hay ningún cliente ni fábrica \"que viste antes\".",
+     "propuesta": "Segunda clase: la reunión de personal."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reconocer_decision_dificil_valores",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "a tu persona a cargo",
+     "motivo": "\"Tu persona a cargo\" se lee como quien está a cargo; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Reconoce a la persona a tu cargo cuando haga algo difícil que va en el espíritu de los valores de tu equipo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "abrazar_incomodidad_silencio_contar_seis",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "soportarlo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "responder_critica_abrasiva_cuatro_reglas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "regionalismo",
+     "cita": "van en vaqueros",
+     "motivo": "\"Vaqueros\" por pantalón de mezclilla es de España (en buena parte de América son los jinetes); forma común: ropa informal.",
+     "propuesta": "No tienes que hornear galletas, ni traer el café, ni hacer las fotocopias, ni gastar mucho tiempo y dinero en tu ropa mientras tus compañeros varones van con ropa informal y la camiseta de la empresa, si no quieres."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "transmitir_objetivos_prioridades_preferencias",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "auditar_formacion_premios_ultima_fila",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "escalonar_fuentes_informacion_gerencial",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "interrogar_negocio_cinco_preguntas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "examinar_demanda_entorno_dos_marcos_temporales",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "digamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "digamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "listar_bueno_mejorable_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "imaginar_caso_simple_bragueta_abierta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "te hace la diferencia mucho caer bien",
+     "motivo": "Construcción calcada y agramatical (\"makes a difference\"); la línea dice \"You care deeply about being liked\": te importa mucho caer bien.",
+     "propuesta": "La insinceridad manipuladora es callarte pensando en tus propios sentimientos y en tu reputación, no por él sino por ahorrártelo tú, porque te importa mucho caer bien y te preocupa que te juzguen si te oyen decírselo. Y si eres del todo desvergonzado, susurrárselo al siguiente que pase."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "disenar_incorporacion_cien_dias",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "recorrer_trece_elementos_proceso_evaluacion_formal",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "evitar_obsesion_ascenso_estatus",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "construir_confianza_equipo_tiempo_solas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reunir_informacion_gerencial_vias_variadas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "vale.",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "vale.",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "montar_evaluacion_360_grados_ligera_pares",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "escala",
+     "defecto": false
+    }
+   ]
+  }
+ ]
+}

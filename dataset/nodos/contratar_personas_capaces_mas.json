@@ -1,0 +1,328 @@
+{
+  "node_id": "contratar_personas_capaces_mas",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Contratar personas capaces de más de lo que el puesto pide hoy",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Una directiva nunca sintió en años formando equipos que faltaran problemas grandes para el talento, y vio a alguien que parecía excesivo para su puesto brillar, impulsar iniciativas propias y liderar más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+  "notas_extraccion": "Es la octava tactica de apostar con cabeza y la que trae su propio limite escrito, lo cual es raro en este capitulo: el libro pone el caso en que NO se aplica, el primer ejecutivo para un puesto de comercial, y ademas lo ata al presupuesto. Ese limite es lo que impide que el nodo se lea como contrata siempre por encima. La condicion del trabajo de conocimiento tambien la pone el libro y va transcrita, porque fuera de ella el consejo no se sostiene. El caso del director va dentro y no a nodo propio (manual seccion 3.5). Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto por encima es demasiado, ni que se le promete a esa persona al contratarla, ni que pasa si los problemas grandes no llegan.",
+  "pasos_accionables": [
+    "Desconfía cuando te oigas decir, o le oigas decir a otro directivo, que solo necesitas a alguien que se ocupe de esto ahora mismo y que no necesitas a alguien que además pueda hacer aquello otro.",
+    "Respeta el límite: no deberías mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un vendedor de primera línea.",
+    "Al mismo tiempo, si estás en trabajo de conocimiento, contrata a alguien que parezca ofrecer más de lo que el puesto necesita ahora mismo, porque eso significa que puede ayudarte a atacar problemas más grandes en el futuro.",
+    "Cuenta con una experiencia que respalda esta apuesta: alguien que lleva años construyendo equipos nunca ha pensado que no hubiera problemas grandes suficientes para toda la gente con talento que tenía.",
+    "Mira un caso: en una iniciativa nueva se contrató a un candidato de nivel director; el tamaño inicial del equipo era modesto y esa persona tenía experiencia dirigiendo organizaciones mucho mayores, así que sobre el papel el puesto parecía demasiado pequeño para lo que era capaz de hacer. Unos meses después lo estaba haciendo muy bien en el área que le habían pedido liderar, además identificaba y ejecutaba por su cuenta otras iniciativas que ayudaban a crecer, y cuando apareció la oportunidad de liderar otro equipo fue la primera persona en la que pensaron. En un año llevaba varios proyectos clave.",
+    "Contrata a las mejores personas y dales poder para hacer más y más hasta que estires los límites de sus capacidades, que es una de las formas más inteligentes de multiplicar el impacto de tu equipo."
+  ],
+  "entregable_esperado": "Una contratación que hoy cubre el puesto y mañana ataca problemas más grandes, con esa persona empujada a hacer más y más hasta el límite de sus capacidades.",
+  "nodos_previos": [
+    "disenar_equipo_plan_anual"
+  ],
+  "nodos_siguientes": [
+    "entregar_problema_dificil_reporte"
+  ],
+  "condiciones_activacion": [
+    "Cuando te oigas decir que solo necesitas a alguien que se ocupe de esto de ahora y no a alguien que además pueda hacer aquello."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Una directiva nunca sintió en años formando equipos que faltaran problemas grandes para el talento, y vio a un fichaje que parecía excesivo para su puesto brillar, impulsar iniciativas propias y liderar más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "197-207"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: 'detecta y lleva adelante otras iniciativas y queda lista para liderar más' es el caso de un fichaje (líneas 203-205) vuelto regla, y 'no faltan problemas grandes' es la experiencia de la autora (línea 201); la línea general solo dice 'means they can help you tackle bigger problems'. La propuesta del lector acierta, pero rebaja 'one of the smartest ways to multiply your team's impact' a 'una gran forma de multiplicar tu impacto' y deja 'para un comercial'; el texto propio devuelve la línea 207 y lo que pide el puesto.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)"
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contratar personas capaces de mas de lo que el puesto pide hoy",
+      "texto_nuevo": "Contratar personas capaces de más de lo que el puesto pide hoy",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desconfia cuando te oigas decir, o le oigas decir a otro directivo, que solo necesitas a alguien que se ocupe de esto ahora mismo y que no necesitas a alguien que ademas pueda hacer aquello otro.",
+      "texto_nuevo": "Desconfía cuando te oigas decir, o le oigas decir a otro directivo, que solo necesitas a alguien que se ocupe de esto ahora mismo y que no necesitas a alguien que además pueda hacer aquello otro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Respeta el limite que el libro si pone: ciertamente no deberias mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un comercial de primera linea.",
+      "texto_nuevo": "Respeta el límite: no deberías mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un comercial de primera línea.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro si pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al mismo tiempo, si estas en trabajo de conocimiento, contrata a alguien que parezca ofrecer mas de lo que el puesto necesita ahora mismo, porque eso significa que puede ayudarte a atacar problemas mas grandes en el futuro.",
+      "texto_nuevo": "Al mismo tiempo, si estás en trabajo de conocimiento, contrata a alguien que parezca ofrecer más de lo que el puesto necesita ahora mismo, porque eso significa que puede ayudarte a atacar problemas más grandes en el futuro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la experiencia que la autora ofrece en contra del miedo: en todos sus anios construyendo equipos, nunca ha pensado que no hubiera problemas grandes suficientes para toda la gente con talento que tenian.",
+      "texto_nuevo": "Cuenta con la experiencia contra ese miedo: tras años construyendo equipos, nunca han faltado problemas grandes para toda la gente con talento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la autora ofrece en contra del miedo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el caso contrario, que es el que ella si ha visto: contrato a un candidato de nivel director cuando estaban arrancando una iniciativa nueva, el tamanio inicial del equipo era modesto y esa persona tenia experiencia dirigiendo organizaciones mucho mayores, asi que sobre el papel el puesto parecia demasiado pequenio para lo que era capaz de hacer. Unos meses despues estaba haciendolo muy bien en el area que le habian pedido liderar, ademas identificaba y ejecutaba por su cuenta otras iniciativas que les ayudaban a crecer, y cuando aparecio la oportunidad de liderar otro equipo fue la primera persona en la que ella penso. En un anio llevaba varios proyectos clave.",
+      "texto_nuevo": "Mira el caso contrario: en una iniciativa nueva se contrató a un candidato de nivel director; el tamaño inicial del equipo era modesto y esa persona tenía experiencia dirigiendo organizaciones mucho mayores, así que sobre el papel el puesto parecía demasiado pequeño para lo que era capaz de hacer. Unos meses después lo estaba haciendo muy bien en el área que le habían pedido liderar, además identificaba y ejecutaba por su cuenta otras iniciativas que ayudaban a crecer, y cuando apareció la oportunidad de liderar otro equipo fue la primera persona en la que pensaron. En un año llevaba varios proyectos clave.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el que ella si ha visto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contrata a las mejores personas y dales poder para hacer mas y mas hasta que estires los limites de sus capacidades, que es una de las formas mas inteligentes de multiplicar el impacto de tu equipo.",
+      "texto_nuevo": "Contrata a las mejores personas y dales poder para hacer más y más hasta que estires los límites de sus capacidades, que es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una contratacion que hoy cubre el puesto y manana ataca problemas mas grandes, con su gente empujada hasta el limite de sus capacidades.",
+      "texto_nuevo": "Una contratación que hoy cubre el puesto y mañana ataca problemas más grandes, con su gente empujada hasta el límite de sus capacidades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_personas_capaces_mas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te oigas decir que solo necesitas a alguien que se ocupe de esto de ahora y no a alguien que ademas pueda hacer aquello.",
+      "texto_nuevo": "Cuando te oigas decir que solo necesitas a alguien que se ocupe de esto de ahora y no a alguien que además pueda hacer aquello.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-contratar_personas_capaces_mas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con la experiencia contra ese miedo: tras años construyendo equipos, nunca han faltado problemas grandes para toda la gente con talento.",
+      "texto_nuevo": "Cuenta con una experiencia contra ese miedo: alguien que lleva años construyendo equipos nunca ha pensado que no hubiera problemas grandes suficientes para toda la gente con talento que tenía.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 201",
+        "frase": "In all my years of building teams, I have never, ever thought to myself, huh, there aren't enough big problems for all the talented people we have."
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_08.md línea 201: \"In all my years of building teams, I have never, ever thought to myself, huh, there aren't enough big problems for all the talented people we have.\" Es lo que una persona ha pensado en sus años de oficio; \"nunca han faltado problemas grandes\" lo vuelve un hecho general. Se cuenta como experiencia de alguien.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-contratar_personas_capaces_mas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta con una experiencia contra ese miedo: alguien que lleva años construyendo equipos nunca ha pensado que no hubiera problemas grandes suficientes para toda la gente con talento que tenía.",
+      "texto_nuevo": "Cuenta con una experiencia que respalda esta apuesta: alguien que lleva años construyendo equipos nunca ha pensado que no hubiera problemas grandes suficientes para toda la gente con talento que tenía.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Ningún texto del nodo habla de un miedo; \"ese miedo\" no tiene antecedente."
+      },
+      "decision": "auditoria completa M11 (coherencia): Ningún texto del nodo habla de un miedo; \"ese miedo\" no tiene antecedente.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-contratar_personas_capaces_mas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Mira el caso contrario: en una iniciativa nueva se contrató a un candidato de nivel director; el tamaño inicial del equipo era modesto y esa persona tenía experiencia dirigiendo organizaciones mucho mayores, así que sobre el papel el puesto parecía demasiado pequeño para lo que era capaz de hacer. Unos meses después lo estaba haciendo muy bien en el área que le habían pedido liderar, además identificaba y ejecutaba por su cuenta otras iniciativas que ayudaban a crecer, y cuando apareció la oportunidad de liderar otro equipo fue la primera persona en la que pensaron. En un año llevaba varios proyectos clave.",
+      "texto_nuevo": "Mira un caso: en una iniciativa nueva se contrató a un candidato de nivel director; el tamaño inicial del equipo era modesto y esa persona tenía experiencia dirigiendo organizaciones mucho mayores, así que sobre el papel el puesto parecía demasiado pequeño para lo que era capaz de hacer. Unos meses después lo estaba haciendo muy bien en el área que le habían pedido liderar, además identificaba y ejecutaba por su cuenta otras iniciativas que ayudaban a crecer, y cuando apareció la oportunidad de liderar otro equipo fue la primera persona en la que pensaron. En un año llevaba varios proyectos clave.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "El caso no es contrario a nada de lo que dice el nodo: ilustra la apuesta (en el libro lo \"opuesto\" es la idea de que faltan problemas grandes, que el nodo no nombra)."
+      },
+      "decision": "auditoria completa M11 (coherencia): El caso no es contrario a nada de lo que dice el nodo: ilustra la apuesta (en el libro lo \"opuesto\" es la idea de que faltan problemas grandes, que el nodo no nombra).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-contratar_personas_capaces_mas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Una contratación que hoy cubre el puesto y mañana ataca problemas más grandes, con su gente empujada hasta el límite de sus capacidades.",
+      "texto_nuevo": "Una contratación que hoy cubre el puesto y mañana ataca problemas más grandes, con esa persona empujada a hacer más y más hasta el límite de sus capacidades.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"su gente\" hace pensar en la gente de la persona contratada; lo que se estira hasta el límite son las capacidades de esa persona (empower them to do more and more)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"su gente\" hace pensar en la gente de la persona contratada; lo que se estira hasta el límite son las capacidades de esa persona (empower them to do more and more).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_personas_capaces_mas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Una directiva nunca sintió en años formando equipos que faltaran problemas grandes para el talento, y vio a un fichaje que parecía excesivo para su puesto brillar, impulsar iniciativas propias y liderar más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+      "texto_nuevo": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Una directiva nunca sintió en años formando equipos que faltaran problemas grandes para el talento, y vio a alguien que parecía excesivo para su puesto brillar, impulsar iniciativas propias y liderar más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un fichaje"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"fichaje\" por persona contratada en una empresa es uso de España (lenguaje del fútbol); pasa a \"alguien\". Mide 595 caracteres",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_personas_capaces_mas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Respeta el límite: no deberías mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un comercial de primera línea.",
+      "texto_nuevo": "Respeta el límite: no deberías mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un vendedor de primera línea.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un comercial"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"un comercial\" por vendedor es de España; en buena parte de América es un anuncio (\"frontline salesperson\", zhuo_manager/cap_08.md l.201)",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Contrata a Quien Da Más",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

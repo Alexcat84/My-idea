@@ -1,0 +1,628 @@
+{
+  "node_id": "conducir_reunion_equipo_agenda_tres_bloques",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Conducir la reunión semanal de equipo con una agenda de tres bloques: aprender, escuchar y aclarar, sin debatir ni decidir dentro",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con un dueño que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_11.md, unidad Cap. 8, Results. Sale de las lineas 129 a 145 y de las lineas 159 a 163, bajo el rotulo STAFF MEETINGS. ES LA PIEZA P6 DE LA FRONTERA DE cap_11, Y SU TRAMO ES NO CONTIGUO: entre sus dos mitades viven las lineas 147 a 157, que son el mecanismo de los apuntes de sala de estudio y salen en su propio nodo, escribir_apuntes_sala_estudio_equipo. Lo digo aqui para que la frontera se pueda comprobar. POR QUE LOS TRES BLOQUES VAN EN UN SOLO NODO Y NO EN TRES: comparten UNA activacion (conduces la reunion semanal) y UN entregable (la reunion corrida con sus tres bloques), y el libro los encadena el mismo en la linea 137 con una sola frase (Here's the agenda that I've found to be most effective). Es la vara de la ACTA 20 seccion 4.1 confirmada por la ACTA 21 seccion 4.2. LA CUENTA QUE EL LIBRO SI ESCRIBE, y por eso el id la lleva: la linea 135 dice An effective staff meeting has three goals. PERO ES UNA CUENTA DE GOLES, NO DE PARTES, y por eso esto NO es una serie D.37: EXTRACTOR.md 15.6 pide que la cuenta sea de las PARTES que existen como nodos, y aqui los tres goles son fines, que la restriccion 1 de D.27 excluye expresamente. Los tres bloques de la agenda son pasos de este nodo y no nodos hermanos. EL PAR QUE DECLARO YO ANTES DE QUE LO LEVANTE NADIE: el paso 6 de este nodo nombra en una linea poner las actualizaciones en un documento compartido, y escribir_apuntes_sala_estudio_equipo lo despliega en su mecanismo entero. CONTINUA CON ARISTA, declarada en docs/loop/REPORTE.md de la vuelta 22 con su paso citado. Y lo mismo con los pasos 18 y 20, que nombran las reuniones de gran debate y de gran decision, desplegadas en montar_reunion_gran_debate y montar_reunion_gran_decision. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 22 pasos, 22 TRANSCRIPCION, 0 PUENTE. P1 de la linea 133; P2 a P4 de la 135; P5 a P7 de las 139, 141 y 143; P8 a P15 de la 145; P16 y P17 de la 159; P18 a P20 de la 161; P21 y P22 de la 163. LAS CIFRAS SON TODAS DEL LIBRO: veinte minutos, quince minutos, treinta minutos, veinte personas y una o dos decisiones y un debate estan escritas en las lineas 139, 141, 143, 159 y 161. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto dura la reunion entera, quien la convoca, que se hace si un bloque se pasa de su tiempo, y cada cuanto se revisa el cuadro de mando en si.",
+  "pasos_accionables": [
+    "Parte de lo que se gana: bien llevada, una reunión de equipo puede ahorrarte tiempo porque te avisa de los problemas, comparte las actualizaciones con eficiencia y pone de acuerdo a todo tu equipo sobre cuáles son las prioridades compartidas de la semana.",
+    "Ponle tres fines: repasar cómo han ido las cosas la semana anterior, dejar que la gente comparta actualizaciones importantes, y forzar al equipo a aclarar cuáles son las decisiones y los debates más importantes de la semana que viene.",
+    "Y para ahí: eso es todo, y esta no es la reunión donde se debate ni donde se decide.",
+    "Haz tu trabajo, que son tres actos: establecer una agenda constante, insistir en que la gente se ciña a ella, y cortar a quien se alarga demasiado o se va por las ramas.",
+    "Monta la agenda con los tres bloques y sus tiempos: aprender, repasar los indicadores clave, veinte minutos.",
+    "Escuchar, poner las actualizaciones en un documento compartido, quince minutos.",
+    "Aclarar, identificar las decisiones y los debates clave, treinta minutos.",
+    "En el bloque de aprender, pregunta qué fue bien esa semana y por qué, y qué fue mal y por qué.",
+    "Monta para eso un cuadro de mando de indicadores clave, que no significa un sistema sofisticadísimo montado por un departamento de informática: significa una hoja de cálculo con unos pocos números.",
+    "Elige esos números con esta pregunta: ¿cuáles son las actividades y los resultados más importantes que ves cada semana y que te dicen si vas camino de lograr tus objetivos?",
+    "Diseña tú el cuadro de mando: no necesitas que te lo haga una infraestructura corporativa.",
+    "Idealmente que se actualice solo; y si eso no es posible, asegúrate de que cada persona que trabaja para ti actualice su parte la noche anterior a la reunión.",
+    "Si hace falta, compruébalo tú y dales la lata hasta que metan sus actualizaciones.",
+    "Si puedes, pon el cuadro de mando en un sitio donde lo vea el equipo entero.",
+    "Y haz públicas casi siempre las notas de esa conversación.",
+    "En el bloque de aclarar, pregunta cuáles son la una o dos decisiones más importantes y el debate principal que tu equipo tiene que abordar esa semana.",
+    "Si tu equipo es de menos de unas veinte personas, probablemente puedas limitarte a listarlos y decidir o debatir sobre la marcha.",
+    "Si tu equipo es más grande que unas veinte personas, ponte más formal: pon esos temas en las agendas de reuniones separadas de gran decisión y de gran debate, e identifica dueños para cada uno.",
+    "Cuenta con que eso parece multiplicar reuniones, pero en realidad es la manera de sacarte a ti de reuniones y de que estén presentes los que quieren estar en esos debates y decisiones.",
+    "Y deja que los dueños del debate y de la decisión, por lo general, no sean ni tú ni la gente a tu cargo, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+    "Comunica al equipo más amplio la agenda de esas dos reuniones, y deja que asista libremente quien quiera.",
+    "Cuenta con lo que pasa entonces: al principio serán probablemente demasiado grandes, pero muy pronto la gente irá solo si de verdad quiere o necesita estar, porque la mayoría odia más asistir a reuniones que no le incumben que quedarse fuera de decisiones que sí."
+  ],
+  "entregable_esperado": "La reunión semanal celebrada con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados, con su dueño cuando el equipo pasa de unas veinte personas, sin haberlos decidido ni debatido dentro.",
+  "nodos_previos": [
+    "decidir_quien_comunica_cada_cuanto"
+  ],
+  "nodos_siguientes": [
+    "escribir_apuntes_sala_estudio_equipo",
+    "pedir_opinion_propia_reunion"
+  ],
+  "condiciones_activacion": [
+    "Cuando conduces la reunión semanal con las personas a tu cargo y quieres que sirva para algo, en vez de que la temas tú, la vean como pérdida de tiempo los que van, y se sientan excluidos los que no."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con dueños que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_11.md",
+          "lineas": "129-163"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'se vuelve temida y eterna cuando mezcla ponerse al día con debatir y decidir' inventa la causa, 'da a todos el mismo dato' no está, y L161 'will generally not be you' y el umbral de unas veinte personas se habían perdido. La propuesta del lector corrige eso pero afirma 'bien llevada te ahorra tiempo' donde L133 dice 'a well-run meeting can save you time by alerting you to problems, sharing updates efficiently'; el texto propio devuelve el 'puede' y la razón que da la línea.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)"
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conducir la reunion semanal de equipo con la agenda de tres bloques del texto: aprender, escuchar y aclarar, sin debatir ni decidir dentro",
+      "texto_nuevo": "Conducir la reunión semanal de equipo con una agenda de tres bloques: aprender, escuchar y aclarar, sin debatir ni decidir dentro",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la agenda de tres bloques del texto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto mide antes de darte la agenda: bien llevada, una reunion de equipo te ahorra tiempo porque te avisa de los problemas, comparte las actualizaciones con eficiencia y os deja a todos de acuerdo sobre cuales son las prioridades compartidas de la semana.",
+      "texto_nuevo": "Parte de lo que se gana: bien llevada, una reunión de equipo te ahorra tiempo porque te avisa de los problemas, comparte las actualizaciones con eficiencia y pone de acuerdo a todo tu equipo sobre cuáles son las prioridades compartidas de la semana.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Cuenta con lo que el texto mide antes de darte la agenda",
+          "y os deja a todos de acuerdo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK; ajuste del orquestador: baranda residuo_corporativo de la casa (scripts/censo_duplicacion.py): 'su equipo'/'el equipo de' en tercera persona pasa a 'a su cargo' o a 'tu equipo'; el sentido no cambia",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ponle los tres goles que el texto escribe: repasar como han ido las cosas la semana anterior, dejar que la gente comparta actualizaciones importantes, y forzar al equipo a aclarar cuales son las decisiones y los debates mas importantes de la semana que viene.",
+      "texto_nuevo": "Ponle tres fines: repasar cómo han ido las cosas la semana anterior, dejar que la gente comparta actualizaciones importantes, y forzar al equipo a aclarar cuáles son las decisiones y los debates más importantes de la semana que viene.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los tres goles que el texto escribe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y para ahi: el texto dice que eso es todo, y que esta no es la reunion donde se debate ni donde se decide.",
+      "texto_nuevo": "Y para ahí: eso es todo, y esta no es la reunión donde se debate ni donde se decide.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que eso es todo, y que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz tu trabajo, que el texto define en tres actos: establecer una agenda constante, insistir en que la gente se cinia a ella, y cortar a quien se alarga demasiado o se va por las ramas.",
+      "texto_nuevo": "Haz tu trabajo, que son tres actos: establecer una agenda constante, insistir en que la gente se ciña a ella, y cortar a quien se alarga demasiado o se va por las ramas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto define en tres actos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En el bloque de aprender, pregunta que fue bien esa semana y por que, y que fue mal y por que.",
+      "texto_nuevo": "En el bloque de aprender, pregunta qué fue bien esa semana y por qué, y qué fue mal y por qué.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta para eso un cuadro de mando de indicadores clave, y el texto aclara que no significa un sistema sofisticadisimo montado por un departamento de informatica: significa una hoja de calculo con unos pocos numeros.",
+      "texto_nuevo": "Monta para eso un cuadro de mando de indicadores clave, que no significa un sistema sofisticadísimo montado por un departamento de informática: significa una hoja de cálculo con unos pocos números.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el texto aclara que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elige esos numeros con la pregunta que el texto da: cuales son las actividades y los resultados mas importantes que ves cada semana y que te dicen si vas camino de lograr tus objetivos.",
+      "texto_nuevo": "Elige esos números con esta pregunta: ¿cuáles son las actividades y los resultados más importantes que ves cada semana y que te dicen si vas camino de lograr tus objetivos?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con la pregunta que el texto da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Disenia tu misma el cuadro de mando: el texto dice que no necesitas que te lo haga una infraestructura corporativa.",
+      "texto_nuevo": "Diseña tú el cuadro de mando: no necesitas que te lo haga una infraestructura corporativa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que no necesitas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Idealmente que se actualice solo; y si eso no es posible, asegurate de que cada persona que trabaja para ti actualice su parte la noche anterior a la reunion.",
+      "texto_nuevo": "Idealmente que se actualice solo; y si eso no es posible, asegúrate de que cada persona que trabaja para ti actualice su parte la noche anterior a la reunión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-12",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si hace falta, compruebalo tu y dales la lata hasta que metan sus actualizaciones.",
+      "texto_nuevo": "Si hace falta, compruébalo tú y dales la lata hasta que metan sus actualizaciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 12,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-14",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y haz publicas casi siempre las notas de esa conversacion.",
+      "texto_nuevo": "Y haz públicas casi siempre las notas de esa conversación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 14,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-15",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En el bloque de aclarar, pregunta cuales son la una o dos decisiones mas importantes y el unico debate mas importante que tu equipo tiene que abordar esa semana.",
+      "texto_nuevo": "En el bloque de aclarar, pregunta cuáles son la una o dos decisiones más importantes y el único debate más importante que tu equipo tiene que abordar esa semana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 15,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-17",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu equipo es mas grande que unas veinte personas, ponte mas formal: pon esos temas en las agendas de reuniones separadas de gran decision y de gran debate, e identifica duenios para cada uno.",
+      "texto_nuevo": "Si tu equipo es más grande que unas veinte personas, ponte más formal: pon esos temas en las agendas de reuniones separadas de gran decisión y de gran debate, e identifica dueños para cada uno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 17,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-18",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que eso parece multiplicar reuniones y con lo que el texto responde: en realidad es la manera de sacarte a ti de reuniones y de que esten presentes los que quieren estar en esos debates y decisiones.",
+      "texto_nuevo": "Cuenta con que eso parece multiplicar reuniones, pero en realidad es la manera de sacarte a ti de reuniones y de que estén presentes los que quieren estar en esos debates y decisiones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y con lo que el texto responde"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 18,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-19",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y deja que los duenios del debate y de la decision no sean ni tu ni la gente que te reporta, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerarquico.",
+      "texto_nuevo": "Y deja que los dueños del debate y de la decisión no sean ni tú ni la gente que te reporta, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 19,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-20",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comunica al equipo mas amplio la agenda de esas dos reuniones, y deja que asista libremente quien quiera.",
+      "texto_nuevo": "Comunica al equipo más amplio la agenda de esas dos reuniones, y deja que asista libremente quien quiera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 20,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-21",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que pasa entonces: al principio seran probablemente demasiado grandes, pero muy pronto la gente ira solo si de verdad quiere o necesita estar, porque odia mas asistir a reuniones que no le incumben que quedarse fuera de decisiones que si.",
+      "texto_nuevo": "Cuenta con lo que pasa entonces: al principio serán probablemente demasiado grandes, pero muy pronto la gente irá solo si de verdad quiere o necesita estar, porque odia más asistir a reuniones que no le incumben que quedarse fuera de decisiones que sí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que pasa entonces"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 21,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La reunion semanal corrida con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate mas importante de la semana identificados con su duenio, sin haberlos decidido ni debatido dentro.",
+      "texto_nuevo": "La reunión semanal corrida con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados con su dueño, sin haberlos decidido ni debatido dentro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-conducir_reunion_equipo_agenda_tres_bloques-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando conduces la reunion semanal con las personas que te reportan y quieres que sirva para algo, en vez de que la temas tu, la vean como perdida de tiempo los que van, y se sientan excluidos los que no.",
+      "texto_nuevo": "Cuando conduces la reunión semanal con las personas que te reportan y quieres que sirva para algo, en vez de que la temas tú, la vean como pérdida de tiempo los que van, y se sientan excluidos los que no.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 20, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 20)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-19",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y deja que los dueños del debate y de la decisión no sean ni tú ni la gente que te reporta, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "texto_nuevo": "Y deja que los dueños del debate y de la decisión no sean ni tú ni la gente a tu cargo, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que te reporta"
+        ]
+      },
+      "decision": "pase de glosario (reporta): verificador OK",
+      "indice": 19,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-conducir_reunion_equipo_agenda_tres_bloques-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando conduces la reunión semanal con las personas que te reportan y quieres que sirva para algo, en vez de que la temas tú, la vean como pérdida de tiempo los que van, y se sientan excluidos los que no.",
+      "texto_nuevo": "Cuando conduces la reunión semanal con las personas a tu cargo y quieres que sirva para algo, en vez de que la temas tú, la vean como pérdida de tiempo los que van, y se sientan excluidos los que no.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que te reportan"
+        ]
+      },
+      "decision": "pase de glosario (reporta): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Parte de lo que se gana: bien llevada, una reunión de equipo te ahorra tiempo porque te avisa de los problemas, comparte las actualizaciones con eficiencia y pone de acuerdo a todo tu equipo sobre cuáles son las prioridades compartidas de la semana.",
+      "texto_nuevo": "Parte de lo que se gana: bien llevada, una reunión de equipo puede ahorrarte tiempo porque te avisa de los problemas, comparte las actualizaciones con eficiencia y pone de acuerdo a todo tu equipo sobre cuáles son las prioridades compartidas de la semana.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_11.md 133",
+        "frase": "a well-run meeting can save you time by alerting you to problems, sharing updates efficiently"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que puede ahorrarte tiempo (can save you time), no que lo haga siempre.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-19",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Y deja que los dueños del debate y de la decisión no sean ni tú ni la gente a tu cargo, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "texto_nuevo": "Y deja que los dueños del debate y de la decisión, por lo general, no sean ni tú ni la gente a tu cargo, porque esas reuniones separadas son la manera de delegar debates y decisiones, y delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_11.md 161",
+        "frase": "The debate and decision owners will generally not be you or the people reporting to you."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'will generally not be'; el paso lo volvía regla sin excepción.",
+      "indice": 19,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-21",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que pasa entonces: al principio serán probablemente demasiado grandes, pero muy pronto la gente irá solo si de verdad quiere o necesita estar, porque odia más asistir a reuniones que no le incumben que quedarse fuera de decisiones que sí.",
+      "texto_nuevo": "Cuenta con lo que pasa entonces: al principio serán probablemente demasiado grandes, pero muy pronto la gente irá solo si de verdad quiere o necesita estar, porque la mayoría odia más asistir a reuniones que no le incumben que quedarse fuera de decisiones que sí.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_11.md 163",
+        "frase": "Most people hate to be excluded from decisions relevant to them, but they hate attending meetings that are irrelevant to them even more."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro habla de la mayoría (Most people), no de toda la gente. Se conserva 'odia' (hate) en vez del 'molesta' de la propuesta.",
+      "indice": 21,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-conducir_reunion_equipo_agenda_tres_bloques-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La reunión semanal corrida con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados con su dueño, sin haberlos decidido ni debatido dentro.",
+      "texto_nuevo": "La reunión semanal corrida con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados, con su dueño cuando el equipo pasa de unas veinte personas, sin haberlos decidido ni debatido dentro.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Los dueños solo se nombran en equipos de más de unas veinte personas (pasos 16 y 17); el entregable los exigía siempre. Se mantiene 'sin haberlos decidido ni debatido dentro', que sostienen el título y el paso 2; la propuesta del auditor lo quitaba para los equipos pequeños."
+      },
+      "decision": "auditoria completa M11 (coherencia): Los dueños solo se nombran en equipos de más de unas veinte personas (pasos 16 y 17); el entregable los exigía siempre. Se mantiene 'sin haberlos decidido ni debatido dentro', que sostienen el título y el paso 2; la propuesta del auditor lo quitaba para los equipos pequeños.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final3-conducir_reunion_equipo_agenda_tres_bloques-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con dueños que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "texto_nuevo": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con un dueño que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Falta de concordancia: 'dueños' en plural con 'no seas tú' en singular; 'con un dueño que por lo general no seas tú' la arregla con el cambio mínimo (598 caracteres)."
+      },
+      "decision": "auditoria completa M11 (ortografia): Falta de concordancia: 'dueños' en plural con 'no seas tú' en singular; 'con un dueño que por lo general no seas tú' la arregla con el cambio mínimo (598 caracteres).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase4-conducir_reunion_equipo_agenda_tres_bloques-pasos_accionables-15",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En el bloque de aclarar, pregunta cuáles son la una o dos decisiones más importantes y el único debate más importante que tu equipo tiene que abordar esa semana.",
+      "texto_nuevo": "En el bloque de aclarar, pregunta cuáles son la una o dos decisiones más importantes y el debate principal que tu equipo tiene que abordar esa semana.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el único debate más importante"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"El único debate más importante\" calca \"the single most important debate\" (scott cap_11 l.159).",
+      "indice": 15,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-conducir_reunion_equipo_agenda_tres_bloques-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "La reunión semanal corrida con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados, con su dueño cuando el equipo pasa de unas veinte personas, sin haberlos decidido ni debatido dentro.",
+      "texto_nuevo": "La reunión semanal celebrada con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados, con su dueño cuando el equipo pasa de unas veinte personas, sin haberlos decidido ni debatido dentro.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "corrida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Reunión corrida\" calca \"run a meeting\"; pasa a \"celebrada\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ordena tu Reunión en Tres Bloques",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

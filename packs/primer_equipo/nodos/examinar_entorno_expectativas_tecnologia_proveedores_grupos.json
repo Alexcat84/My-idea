@@ -1,0 +1,195 @@
+{
+  "node_id": "examinar_entorno_expectativas_tecnologia_proveedores_grupos",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Examinar tu entorno por cuatro objetos: las expectativas del cliente, la tecnología, tus proveedores y los otros grupos de tu organización",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Para establecer lo que tu entorno te va a pedir, mira tu grupo como si fuera una empresa independiente: tu entorno lo forman los otros grupos que influyen directamente en lo que haces. En él se miran cuatro cosas. Qué esperan tus clientes y cómo perciben tu desempeño. Qué desarrollos tecnológicos y maneras alternativas de hacer tu trabajo aparecen. Cómo rinden tus proveedores. Y cómo rinden los otros grupos de tu organización, preguntando si afectan a lo bien que puedes trabajar y si pueden cubrir lo que necesitas.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_07.md, PIEZA P9 de la frontera publicada en la vuelta 53 (docs/loop/REPORTE.md L50889), tramo L27 a L27, 88 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro contesta su propia pregunta (What should you look for when you examine your environment?) con CUATRO OBJETOS DE REVISION nombrados uno a uno en cuatro oraciones consecutivas que empiezan todas por You should, y cierra con las dos preguntas literales que hay que contestar sobre el cuarto. Inventario de OBJETOS DE TRABAJO, no de metas, y sin adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, uno a uno, todos de L27: paso 1 (You should attempt to determine your customers' expectations and their perception of your performance); paso 2 (You should keep abreast of technological developments like electronic mail and other alternative ways of doing your job); paso 3 (You should evaluate the performance of your vendors); paso 4 (You should also evaluate the performance of other groups in the organization to which you belong); paso 5 (Does some other group (like the traffic department) affect how well you can do your work? Can that group meet your needs?). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LOS SITIOS DE TENTACION QUE DECLARO Y EN LOS QUE NO ESCRIBI: NO escribo COMO se determinan las expectativas del cliente ni con que instrumento, porque el libro no lo dice y ponerlo seria inventar el paso. NO escribo cada cuanto se examina el entorno: el periodo es la segunda especie de PUENTE del lote 1, y ademas los marcos temporales son la pieza P10 y su propio nodo. NO escribo umbral ninguno para cuando un proveedor o un grupo se considera mal evaluado: el libro no pone vara. NO escribo quien hace el examen. EL CORREO ELECTRONICO Y EL DEPARTAMENTO DE TRAFICO SON EJEMPLOS DEL LIBRO, manual 3.5, y por eso el paso habla de desarrollos tecnologicos y de otros grupos, no de correo electronico ni de trafico. NI UNA CIFRA A atribuciones: el tramo no trae ninguna. ARISTA QUE ANUNCIO Y NO CABLEO HOY: parte de la misma cabeza planificar_tres_pasos_demanda_estado_brecha (P5), caso de D.37, que se cablea el dia de la insercion porque esta vuelta NO INSERTA. Y LA FRONTERA CONTRA P8, que es la que mas me jugaba aqui: P8 contesta QUE ES tu entorno y da sus tres clases de grupo; P9 contesta QUE MIRAR cuando ya lo tienes definido, y lo dice el propio libro al abrir el tramo (Once you have established what constitutes your environment aparece en P10, y P9 abre con What should you look for). Son dos procedimientos distintos sobre el mismo objeto, no una compresion doble. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 5 recoge dos preguntas que el libro pone entre parentesis del cuarto objeto, y podria leerse como parte del paso 4 y no como paso propio. Lo separo porque son preguntas literales del libro con respuesta exigible, y fundirlas las dejaria sin superficie.",
+  "pasos_accionables": [
+    "Determina las expectativas de tus clientes y la percepción que tienen de tu desempeño.",
+    "Mantente al corriente de los desarrollos tecnológicos y de las maneras alternativas de hacer tu trabajo.",
+    "Evalúa el desempeño de tus proveedores.",
+    "Evalúa el desempeño de los otros grupos de la organización a la que perteneces.",
+    "Contesta para cada uno de esos grupos dos preguntas: si ese grupo afecta a lo bien que puedes hacer tu trabajo, y si ese grupo puede cubrir lo que necesitas de él."
+  ],
+  "entregable_esperado": "Los cuatro objetos revisados por escrito: qué esperan tus clientes y cómo perciben tu desempeño, qué desarrollos técnicos cambian tu manera de trabajar, cómo se están portando tus proveedores, y qué otros grupos de tu organización afectan a tu trabajo y si pueden cubrir lo que necesitas de ellos.",
+  "nodos_previos": [
+    "definir_entorno_grupo_clientes_proveedores_competidores"
+  ],
+  "nodos_siguientes": [
+    "examinar_demanda_entorno_dos_marcos_temporales"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes definido qué es tu entorno y tienes que examinarlo, y no sabes en qué fijarte ni por dónde empezar a mirar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Para establecer lo que tu entorno te va a pedir, mira tu grupo como si fuera una empresa independiente: tu entorno lo forman los otros grupos que influyen directamente en lo que haces. En él se miran cuatro cosas. Qué esperan tus clientes y cómo perciben tu desempeño. Qué desarrollos tecnológicos y maneras alternativas de hacer tu trabajo aparecen. Cómo rinden tus proveedores. Y cómo rinden los otros grupos de tu organización, preguntando si afectan a lo bien que puedes trabajar y si pueden cubrir lo que necesitas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_07.md",
+          "lineas": "23-27"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): Objecion sostenida: ni el 'por escrito' ni 'una imagen completa en vez de una impresión suelta' están en 23-27. La propuesta quita ese efecto y trae lo que la 25 sí da para saber qué es el entorno (mirar tu grupo como una empresa independiente, rodeada de los grupos que influyen en lo que haces) y los cuatro frentes de la 27.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Examinar tu entorno por los cuatro objetos que el libro nombra: las expectativas del cliente, la tecnologia, tus proveedores y los otros grupos de tu organizacion",
+      "texto_nuevo": "Examinar tu entorno por cuatro objetos: las expectativas del cliente, la tecnología, tus proveedores y los otros grupos de tu organización",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina las expectativas de tus clientes y la percepcion que tienen de tu desempeno.",
+      "texto_nuevo": "Determina las expectativas de tus clientes y la percepción que tienen de tu desempeño.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mantente al corriente de los desarrollos tecnologicos y de las maneras alternativas de hacer tu trabajo.",
+      "texto_nuevo": "Mantente al corriente de los desarrollos tecnológicos y de las maneras alternativas de hacer tu trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua el desempeno de tus proveedores.",
+      "texto_nuevo": "Evalúa el desempeño de tus proveedores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua el desempeno de los otros grupos de la organizacion a la que perteneces.",
+      "texto_nuevo": "Evalúa el desempeño de los otros grupos de la organización a la que perteneces.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contesta para cada uno de esos grupos las dos preguntas que el libro pone: si ese grupo afecta a lo bien que puedes hacer tu trabajo, y si ese grupo puede cubrir lo que necesitas de el.",
+      "texto_nuevo": "Contesta para cada uno de esos grupos dos preguntas: si ese grupo afecta a lo bien que puedes hacer tu trabajo, y si ese grupo puede cubrir lo que necesitas de él.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las dos preguntas que el libro pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los cuatro objetos revisados por escrito: que esperan tus clientes y como perciben tu desempeno, que desarrollos tecnicos cambian tu manera de trabajar, como se estan portando tus proveedores, y que otros grupos de tu organizacion afectan a tu trabajo y si pueden cubrir lo que necesitas de ellos.",
+      "texto_nuevo": "Los cuatro objetos revisados por escrito: qué esperan tus clientes y cómo perciben tu desempeño, qué desarrollos técnicos cambian tu manera de trabajar, cómo se están portando tus proveedores, y qué otros grupos de tu organización afectan a tu trabajo y si pueden cubrir lo que necesitas de ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-examinar_entorno_expectativas_tecnologia_proveedores_grupos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes definido que es tu entorno y tienes que examinarlo, y no sabes en que fijarte ni por donde empezar a mirar.",
+      "texto_nuevo": "Cuando ya tienes definido qué es tu entorno y tienes que examinarlo, y no sabes en qué fijarte ni por dónde empezar a mirar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Examina tu Entorno en Cuatro"
+}

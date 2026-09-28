@@ -1,0 +1,213 @@
+{
+  "node_id": "anunciar_decision_inesperada_reconvocar_reunion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Anunciar una decisión radicalmente distinta de lo que el grupo esperaba, y reconvocar la reunión en vez de marcharse",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Cuando la decisión final choca de frente con lo que esperaban quienes participaron en tomarla, anunciarla y dar el asunto por cerrado deja a la gente sin margen para asimilarla. Las personas necesitan tiempo para ajustarse, encontrarle sentido y recomponerse. Por eso haces el anuncio, levantas la sesión y vuelves a convocar la reunión cuando ya han tenido ocasión de recuperarse, para pedirles entonces su opinión sobre la decisión. Esa segunda sesión es la que ayuda a todos a aceptar lo inesperado y a aprender a vivir con ello.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_06.md, unidad Cap. 5, titulo textual Decisions, Decisions. Sale de la PIEZA P31 de la frontera publicada hoy en OO.2.a, L93, 95 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone su propio inventario de ETAPAS y las nombra una a una y en orden, con tres verbos seguidos en imperativo (make your announcement but don't just walk away from the issue; Adjourn, reconvene the meeting after people have had a chance to recover, and solicit their views of the decision at that time). No hay adjetivo de adecuacion en el sitio del criterio: la condicion de activacion esta escrita (dramatically different from the expectations) y el disparador de la reconvocatoria tambien (after people have had a chance to recover). DE DONDE SALE CADA PASO, uno a uno, todos de L93: paso 1 (If the final word has to be dramatically different from the expectations of the people who participated in the decision-making process); paso 2 (make your announcement); paso 3 (but don't just walk away from the issue); paso 4 (People need time to adjust, rationalize, and in general put their heads back together); paso 5 (Adjourn); paso 6 (reconvene the meeting after people have had a chance to recover); paso 7 (and solicit their views of the decision at that time); paso 8 (This will help everybody accept and learn to live with the unexpected). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. LOS SITIOS DE TENTACION QUE DECLARO, y en los que NO escribi: NO escribo CUANTO se espera antes de reconvocar, porque el libro pone el disparador en el estado de la gente (after people have had a chance to recover) y no en el reloj, y poner ahi un dia o una semana es exactamente la segunda especie de PUENTE del lote 1. NO escribo que se levante acta de la segunda sesion ni que las opiniones recogidas se hagan algo, porque el libro cierra el tramo ahi y cerrarle el bucle seria escribir yo el paso. NO escribo quien hace el anuncio cuando el que decidio no esta. EL PARENTESIS DEL AUTOR NO ES PASO (manual 3.5): had I chosen, for example, to cancel the Philippine plant project altogether es el ejemplo con el que el libro ilustra la condicion, del caso de Filipinas que ocupa L79 a L89, y por eso ni el entregable ni ningun paso llevan el nombre de aquella planta. NI UNA CIFRA A atribuciones: el tramo no trae ninguna. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: con 95 palabras y ocho pasos, este nodo tiene casi tantos pasos como frases el parrafo, y el aviso de 15.4 dice que un parrafo pobre produce un nodo inventado. Lo sostengo porque el parrafo NO es pobre en medios pese a ser corto: trae cinco verbos de accion encadenados y su condicion de entrada, y ninguno de mis ocho pasos anade un medio que el no nombre. Si cae, cae DENTRO de mi marcado.",
+  "pasos_accionables": [
+    "Comprueba la condición: la palabra final va a ser radicalmente distinta de lo que esperaban las personas que participaron en el proceso de decisión.",
+    "Haz tu anuncio.",
+    "No te limites a anunciarlo y desentenderte del asunto.",
+    "Cuenta con que la gente necesita tiempo para ajustarse, racionalizar y, en general, recomponerse.",
+    "Levanta la sesión.",
+    "Reconvoca la reunión después de que la gente haya tenido ocasión de recuperarse.",
+    "Pídeles entonces su opinión sobre la decisión.",
+    "Cuenta con lo que eso consigue: ayuda a todo el mundo a aceptar lo inesperado y a aprender a vivir con ello."
+  ],
+  "entregable_esperado": "El anuncio hecho, la sesión levantada, la reunión reconvocada después de que la gente se haya recuperado, y las opiniones del grupo sobre la decisión recogidas en esa segunda sesión.",
+  "nodos_previos": [
+    "ejercer_poder_posicion_etapa_decision_clara"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la palabra final sobre una decisión va a ser radicalmente distinta de lo que esperaban las personas que participaron en el proceso de decisión."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando la decisión final choca de frente con lo que esperaban quienes participaron en tomarla, anunciarla y dar el asunto por cerrado deja a la gente sin margen para asimilarla. Las personas necesitan tiempo para ajustarse, encontrarle sentido y recomponerse. Por eso se hace el anuncio, se levanta la sesión y se vuelve a convocar la reunión cuando ya han tenido ocasión de recuperarse, para pedirles entonces su opinión sobre la decisión. Esa segunda sesión es la que ayuda a todos a aceptar lo inesperado y a aprender a vivir con ello.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_06.md",
+          "lineas": "93-93"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)"
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anunciar una decision radicalmente distinta de lo que el grupo esperaba, y reconvocar la reunion en vez de marcharse",
+      "texto_nuevo": "Anunciar una decisión radicalmente distinta de lo que el grupo esperaba, y reconvocar la reunión en vez de marcharse",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba la condicion: la palabra final va a ser radicalmente distinta de lo que esperaban las personas que participaron en el proceso de decision.",
+      "texto_nuevo": "Comprueba la condición: la palabra final va a ser radicalmente distinta de lo que esperaban las personas que participaron en el proceso de decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Levanta la sesion.",
+      "texto_nuevo": "Levanta la sesión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconvoca la reunion despues de que la gente haya tenido ocasion de recuperarse.",
+      "texto_nuevo": "Reconvoca la reunión después de que la gente haya tenido ocasión de recuperarse.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pideles entonces su opinion sobre la decision.",
+      "texto_nuevo": "Pídeles entonces su opinión sobre la decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El anuncio hecho, la sesion levantada, la reunion reconvocada despues de que la gente se haya recuperado, y las opiniones del grupo sobre la decision recogidas en esa segunda sesion.",
+      "texto_nuevo": "El anuncio hecho, la sesión levantada, la reunión reconvocada después de que la gente se haya recuperado, y las opiniones del grupo sobre la decisión recogidas en esa segunda sesión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-anunciar_decision_inesperada_reconvocar_reunion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la palabra final sobre una decision va a ser radicalmente distinta de lo que esperaban las personas que participaron en el proceso de decision.",
+      "texto_nuevo": "Cuando la palabra final sobre una decisión va a ser radicalmente distinta de lo que esperaban las personas que participaron en el proceso de decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-anunciar_decision_inesperada_reconvocar_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te limites a anunciarlo y marcharte del asunto.",
+      "texto_nuevo": "No te limites a anunciarlo y desentenderte del asunto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "marcharte del asunto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Marcharte del asunto\" calca walk away from the issue.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-anunciar_decision_inesperada_reconvocar_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando la decisión final choca de frente con lo que esperaban quienes participaron en tomarla, anunciarla y dar el asunto por cerrado deja a la gente sin margen para asimilarla. Las personas necesitan tiempo para ajustarse, encontrarle sentido y recomponerse. Por eso se hace el anuncio, se levanta la sesión y se vuelve a convocar la reunión cuando ya han tenido ocasión de recuperarse, para pedirles entonces su opinión sobre la decisión. Esa segunda sesión es la que ayuda a todos a aceptar lo inesperado y a aprender a vivir con ello.",
+      "texto_nuevo": "Cuando la decisión final choca de frente con lo que esperaban quienes participaron en tomarla, anunciarla y dar el asunto por cerrado deja a la gente sin margen para asimilarla. Las personas necesitan tiempo para ajustarse, encontrarle sentido y recomponerse. Por eso haces el anuncio, levantas la sesión y vuelves a convocar la reunión cuando ya han tenido ocasión de recuperarse, para pedirles entonces su opinión sobre la decisión. Esa segunda sesión es la que ayuda a todos a aceptar lo inesperado y a aprender a vivir con ello.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se hace",
+          "se levanta",
+          "se vuelve"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Impersonal prescriptivo (\"se hace\", \"se levanta\", \"se vuelve a convocar\"), de la familia de \"se debe\"; el libro se dirige al lector (\"make your announcement\", \"Adjourn, reconvene\") y la casa habla en tú.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Da Tiempo a la Sorpresa"
+}

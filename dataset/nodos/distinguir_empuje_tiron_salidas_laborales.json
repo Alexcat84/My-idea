@@ -1,0 +1,257 @@
+{
+  "node_id": "distinguir_empuje_tiron_salidas_laborales",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Distinguir empuje de tirón en cada salida de empleo",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Quien rinde bien suele dejar un empleo porque lo atrae una oportunidad mayor; quien rinde mal suele dejarlo porque lo empujan fuera. Por eso la respuesta a por qué dejó cada trabajo dice mucho de su desempeño real. Cada salida cae en una de dos categorías, con respuestas típicas a cada lado. Al repetirlo en toda la carrera obtienes una proporción, y la regla es no contratar a quien fue empujado fuera del veinte por ciento o más de sus empleos: según la experiencia de quienes la proponen, esas personas tienen tres veces más probabilidades de rendir por debajo de forma crónica.",
+  "notas_extraccion": "La tercera tactica maestra convierte la ultima pregunta de la entrevista cronologica en una medida. El principio es simple y esta escrito en el propio parrafo: a quien rinde bien lo atraen hacia oportunidades mayores, y a quien rinde mal lo empujan fuera de sus puestos. Lo que la vuelve procedimiento es que el libro pone su propio inventario de respuestas a cada lado, con las formulas literales con las que la gente cuenta una y otra cosa, y encima un corte numerico que no depende del juicio del entrevistador: el veinte por ciento de los empleos. Eso la hace ejecutable por cualquiera y comparable entre candidatos, y evita que una sola salida mala hunda a alguien o que una racha de salidas malas se explique una a una. En la lista de empujes el libro cuela ademas su propio guiño al caso del vicepresidente de ventas que abofeteo a su consejero delegado y perdio con ello tres millones de dolares, que es el ejemplar extremo de la categoria.",
+  "pasos_accionables": [
+    "Después de preguntar «¿por qué dejaste ese trabajo?», escucha en qué categoría cae la respuesta, porque solo hay dos.",
+    "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; mi papel se redujo; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja.",
+    "Marca como tirón las respuestas de este otro tipo: mi mayor cliente me contrató; mi antiguo jefe me reclutó para un puesto mayor; el director general me pidió que aceptara una doble promoción; un antiguo par se fue a un competidor y me recomendó a su jefe.",
+    "No contrates a nadie que haya sido empujado fuera del veinte por ciento o más de sus empleos."
+  ],
+  "entregable_esperado": "Cada salida de empleo de la carrera del candidato clasificada como empuje o como tirón, y la proporción de empujes sobre el total de sus empleos.",
+  "nodos_previos": [
+    "aplicar_tacticas_maestras_entrevista"
+  ],
+  "nodos_siguientes": [
+    "revisar_banderas_rojas_candidato"
+  ],
+  "condiciones_activacion": [
+    "Justo después de preguntar «¿por qué dejaste ese trabajo?», en cada empleo que repasas en la entrevista cronológica de trayectoria. Se aplica a cada salida de empleo de la carrera del candidato."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Quien rinde bien suele dejar un empleo porque lo atrae una oportunidad mayor; quien rinde mal suele dejarlo porque lo empujan fuera. Por eso la respuesta a por qué dejó cada trabajo dice mucho de su desempeño real. Cada salida cae en una de dos categorías, con respuestas típicas a cada lado. Al repetirlo en toda la carrera obtienes una proporción, y la regla es no contratar a quien fue empujado fuera del veinte por ciento o más de sus empleos: según la experiencia de quienes la proponen, esas personas tienen tres veces más probabilidades de rendir por debajo de forma crónica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_05.md",
+          "lineas": "71-79"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: 'funciona porque no deja esa lectura a tu impresión' y 'juzga el patrón' no están en las líneas; el porqué del corte es l.73 ('From our experience... three times higher chance'). La propuesta del lector lo corrige.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)"
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues de preguntar por que dejaste ese trabajo, escucha en que categoria cae la respuesta, porque solo hay dos.",
+      "texto_nuevo": "Después de preguntar «¿por qué dejaste ese trabajo?», escucha en qué categoría cae la respuesta, porque solo hay dos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Marca como empuje las respuestas de este tipo: fue mutuo; era hora de que me fuera; mi jefe y yo no nos llevabamos bien; ascendieron a Judy y a mi no; mi papel se encogio; no llegue a mi numero y me dijeron que estaba en la cuerda floja.",
+      "texto_nuevo": "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; mi papel se encogió; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Judy",
+          "mi numero"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ingles",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marca como tiron las respuestas de este otro tipo: mi mayor cliente me contrato; mi antiguo jefe me recluto para un puesto mayor; el consejero delegado me pidio que aceptara una doble promocion; un antiguo par se fue a un competidor y me recomendo a su jefe.",
+      "texto_nuevo": "Marca como tirón las respuestas de este otro tipo: mi mayor cliente me contrató; mi antiguo jefe me reclutó para un puesto mayor; el consejero delegado me pidió que aceptara una doble promoción; un antiguo par se fue a un competidor y me recomendó a su jefe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No contrates a nadie que haya sido empujado fuera del veinte por ciento o mas de sus empleos.",
+      "texto_nuevo": "No contrates a nadie que haya sido empujado fuera del veinte por ciento o más de sus empleos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Distinguir empuje de tiron en cada salida de empleo",
+      "texto_nuevo": "Distinguir empuje de tirón en cada salida de empleo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada salida de empleo de la carrera del candidato clasificada como empuje o como tiron, y la proporcion de empujes sobre el total de sus empleos.",
+      "texto_nuevo": "Cada salida de empleo de la carrera del candidato clasificada como empuje o como tirón, y la proporción de empujes sobre el total de sus empleos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-distinguir_empuje_tiron_salidas_laborales-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Justo despues de preguntar por que dejaste ese trabajo en cada capitulo de la entrevista cronologica de trayectoria. Es la tercera de las cinco tacticas maestras y se aplica a cada salida de empleo de la carrera del candidato.",
+      "texto_nuevo": "Justo después de preguntar por qué dejaste ese trabajo, en cada empleo que repasas en la entrevista cronológica de trayectoria. Es la tercera de las cinco tácticas maestras y se aplica a cada salida de empleo de la carrera del candidato.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "cada capitulo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Marca como tirón las respuestas de este otro tipo: mi mayor cliente me contrató; mi antiguo jefe me reclutó para un puesto mayor; el consejero delegado me pidió que aceptara una doble promoción; un antiguo par se fue a un competidor y me recomendó a su jefe.",
+      "texto_nuevo": "Marca como tirón las respuestas de este otro tipo: mi mayor cliente me contrató; mi antiguo jefe me reclutó para un puesto mayor; el director general me pidió que aceptara una doble promoción; un antiguo par se fue a un competidor y me recomendó a su jefe.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "consejero delegado"
+        ]
+      },
+      "decision": "pase de glosario (consejero_delegado): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-distinguir_empuje_tiron_salidas_laborales-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Justo después de preguntar por qué dejaste ese trabajo, en cada empleo que repasas en la entrevista cronológica de trayectoria. Es la tercera de las cinco tácticas maestras y se aplica a cada salida de empleo de la carrera del candidato.",
+      "texto_nuevo": "Justo después de preguntar por qué dejaste ese trabajo, en cada empleo que repasas en la entrevista cronológica de trayectoria. Se aplica a cada salida de empleo de la carrera del candidato.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Remite a la numeración del libro ('Master Tactic #3'); las cinco tácticas no existen en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): Remite a la numeración del libro ('Master Tactic #3'); las cinco tácticas no existen en el nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; mi papel se encogió; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja.",
+      "texto_nuevo": "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; mi papel se redujo; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se encogió"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de «My role shrank»: un papel no «se encoge», se reduce.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-distinguir_empuje_tiron_salidas_laborales-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Justo después de preguntar por qué dejaste ese trabajo, en cada empleo que repasas en la entrevista cronológica de trayectoria. Se aplica a cada salida de empleo de la carrera del candidato.",
+      "texto_nuevo": "Justo después de preguntar «¿por qué dejaste ese trabajo?», en cada empleo que repasas en la entrevista cronológica de trayectoria. Se aplica a cada salida de empleo de la carrera del candidato.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Sin comillas, la pregunta al candidato se lee como si quien dejó el trabajo fuera el lector."
+      },
+      "decision": "auditoria completa M11 (coherencia): Sin comillas, la pregunta al candidato se lee como si quien dejó el trabajo fuera el lector.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Distingue Empuje de Tirón",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

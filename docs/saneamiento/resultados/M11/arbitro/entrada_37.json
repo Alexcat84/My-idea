@@ -1,0 +1,127 @@
+{
+ "lote": "37",
+ "casos": [
+  {
+   "item": "pedir_ayuda_grupo_apoyo|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Mira primero el error que la autora cuenta haber cometido durante anios: cuando se encontraba en el Pozo se mordia el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaria de sentirse un fraude y nadie se enteraria.",
+    "Ten claro por que dice que era un error: se negaba a si misma el alivio que da poder compartir tus miedos con gente en la que confias, y se perdia su empatia y sus consejos.",
+    "Cuenta con lo que admitir que estas batallando y pedir ayuda es de verdad: lo contrario de debilidad. De hecho muestra coraje y conciencia de uno mismo, porque estas diciendo que te importa mas llevarte a un buen sitio que tu ego.",
+    "Ten delante que cuando otros entienden nuestra situacion nos beneficiamos enormemente: el libro dice que la investigacion sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y da como ejemplo que el ochenta y dos por ciento de las personas con trastorno maniaco depresivo declararon sobrellevar mejor su enfermedad despues de unirse a un grupo de autoayuda.",
+    "El libro lo cuenta ademas de primera mano: la autora formo un circulo de Lean In con una docena de mujeres de la empresa, y dos horas cada mes daban la vuelta a la sala compartiendo aquello con lo que estaba lidiando cada una, relaciones dificiles, incertidumbre sobre sus carreras, la lucha por equilibrar la maternidad con el trabajo. Las lagrimas no eran raras porque algunos de los retos eran de verdad duros, y donde podian se daban ayuda y consejo, y donde no, ofrecian abrazos y oidos comprensivos.",
+    "Encuentra tu grupo de apoyo, ya sea con tu familia, tu mejor amigo, un entrenador o un grupo de colegas de confianza.",
+    "Y usalos para las dos cosas que el libro nombra: como tus animadores y como tu caja de resonancia. Ninguna persona es una isla, y nuestra comunidad puede alumbrarnos el camino y echarnos una mano en la subida para salir del Pozo."
+   ],
+   "nuevo": "Fingir que lo tienes todo bajo control cuando estás en el Pozo no quita la sensación de fraude: te niega el alivio de compartir tus miedos con gente en la que confías y te deja sin su empatía ni sus consejos. Admitir que batallas y pedir ayuda muestra coraje y conciencia de ti mismo, porque pones llegar a un buen sitio por delante de tu ego. Funciona porque ser entendido por otros alivia de verdad: los grupos de apoyo resultan notablemente eficaces incluso en problemas serios. Por eso se busca un grupo concreto y se usa para dos cosas: que te anime y que te sirva de caja de resonancia.",
+   "evidencia": {
+    "fichero": "fuentes/zhuo_manager/cap_06.md",
+    "lineas": "325-335"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Cambio de sentido: la línea 331 dice que la investigación SUGIERE que los grupos de apoyo son notablemente eficaces; el resumen lo afirma como hecho ('resultan notablemente eficaces') y quita la cautela. Además 'no quita la sensación de fraude' no está en las líneas: lo que dicen es que pensar así fue un error porque niega el alivio.",
+   "propuesta_verificador": "Fingir control en el Pozo para dejar de sentirte un fraude es un error: te niega el alivio de compartir tus miedos con gente de confianza y te deja sin su empatía ni sus consejos. Admitir que batallas y pedir ayuda muestra coraje y conciencia de ti mismo: pones llegar a un buen sitio por delante de tu ego. Funciona porque que otros entiendan tu situación ayuda mucho: la investigación sugiere que los grupos de apoyo son notablemente eficaces incluso en problemas serios. Por eso se busca un grupo y se usa para dos cosas: que te anime y que te sirva de caja de resonancia."
+  },
+  {
+   "item": "pedir_ayuda_grupo_apoyo|pasos_accionables[0]",
+   "campo": "pasos_accionables",
+   "viejo": "Mira primero el error que la autora cuenta haber cometido durante anios: cuando se encontraba en el Pozo se mordia el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaria de sentirse un fraude y nadie se enteraria.",
+   "nuevo": "Mira primero un error fácil de cometer durante años: cuando estás en el Pozo te muerdes el labio y te lo guardas, porque como dice el dicho hay que fingirlo hasta lograrlo, y piensas que aparentando tenerlo todo bajo control dejarás de sentirte un fraude y nadie se enterará.",
+   "objecion": "Experiencia personal vuelta afirmación general: el viejo (y la línea 327) cuenta el error que una persona cometió durante años; el nuevo afirma de ti que 'cuando estás en el Pozo te muerdes el labio y te lo guardas' y lo presenta como 'un error fácil de cometer', que no está en la fuente.",
+   "propuesta_verificador": "Mira primero un error que una directiva cuenta haber cometido durante años: cuando se encontraba en el Pozo se mordía el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaría de sentirse un fraude y nadie se enteraría."
+  },
+  {
+   "item": "pedir_ayuda_grupo_apoyo|pasos_accionables[1]",
+   "campo": "pasos_accionables",
+   "viejo": "Ten claro por que dice que era un error: se negaba a si misma el alivio que da poder compartir tus miedos con gente en la que confias, y se perdia su empatia y sus consejos.",
+   "nuevo": "Ten claro por qué es un error: te niegas a ti mismo el alivio que da poder compartir tus miedos con gente en la que confías, y te pierdes su empatía y sus consejos.",
+   "objecion": "Experiencia personal vuelta afirmación general: el viejo explica por qué aquello FUE un error para ella ('se negaba a sí misma'); el nuevo lo convierte en algo que tú haces ('te niegas a ti mismo'). Debe seguir al paso anterior, que cuenta el caso.",
+   "propuesta_verificador": "Ten claro por qué fue un error: se negaba a sí misma el alivio que da poder compartir los miedos con gente en la que confiaba, y se perdía su empatía y sus consejos."
+  },
+  {
+   "item": "pedir_opinion_otros_mejorar|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Despues de un capitulo entero sobre la importancia de dar opinion a tus personas a cargo, esto no deberia sorprenderte: si hay una salsa secreta para mejorar uno mismo, es pedir opinion a otras personas todo el tiempo.",
+    "Ten claro cual es el unico obstaculo que tienes que superar, que eres tu, y las dos preguntas con las que el libro lo formula: puedes acordarte de pedirla con suficiente frecuencia, y puedes ser lo bastante humilde y consciente de ti mismo como para escucharla con apertura y responder despues con un cambio de verdad?",
+    "Acuerdate de pedir las dos clases: opinion especifica de la tarea y opinion sobre tu conducta.",
+    "Cuanto mas concreto seas sobre lo que quieres saber, mejor.",
+    "No abras con que te parecio como fue mi presentacion, porque probablemente vas a escuchar respuestas del tipo creo que fue bien, que no son particularmente utiles.",
+    "En vez de eso, hurga en lo especifico y ponselo facil a la otra persona para que te diga algo accionable: estoy trabajando en asegurarme de que mi idea quede clara en los tres primeros minutos, se entendio? Como puedo hacerla mas clara la proxima vez?",
+    "Da siempre las gracias por la opinion. Aunque no estes de acuerdo con lo que te digan, recibela con gracia y reconoce que costo esfuerzo darla.",
+    "Cuenta con lo que pasa si no lo haces: si los demas te encuentran defensivo, vas a recibir menos opinion en el futuro, y eso solo va a perjudicar tu crecimiento."
+   ],
+   "nuevo": "Mejorar uno mismo depende sobre todo de recibir opinión todo el tiempo, y el único obstáculo eres tú: acordarte de pedirla y tener la humildad de escucharla y cambiar de verdad. Funciona cuando la pregunta es concreta, sobre la tarea o sobre tu conducta, porque una pregunta vaga solo devuelve respuestas amables que no sirven, y una específica le pone fácil a la otra persona decirte algo que puedas aplicar. Agradecer siempre, aunque no estés de acuerdo, cuida la fuente: quien te ve a la defensiva deja de darte opinión y tu crecimiento se frena.",
+   "evidencia": {
+    "fichero": "fuentes/zhuo_manager/cap_06.md",
+    "lineas": "375-381"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Endurece: la línea 381 dice que si te ven a la defensiva recibirás MENOS opinión ('less feedback'); el resumen dice que quien te ve así 'deja de darte opinión' y que 'tu crecimiento se frena'.",
+   "propuesta_verificador": "Mejorar uno mismo depende sobre todo de recibir opinión todo el tiempo, y el único obstáculo eres tú: acordarte de pedirla y tener la humildad de escucharla y cambiar de verdad. Funciona cuando la pregunta es concreta, sobre la tarea o sobre tu conducta, porque una pregunta vaga solo devuelve respuestas amables que no sirven, y una específica le pone fácil a la otra persona decirte algo que puedas aplicar. Agradecer siempre, aunque no estés de acuerdo, cuida la fuente: si te ven a la defensiva, recibirás menos opinión en el futuro y eso perjudica tu crecimiento."
+  },
+  {
+   "item": "planificar_reduccion_trabajo_individual|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Cuenta con que en los primeros tiempos vas a llevar a la vez trabajo de contribuidor individual y trabajo de gestion: como aprendiz rara vez empiezas con un equipo grande, lo normal es empezar con un punado de personas a cargo e ir recibiendo mas con el tiempo, asi que ademas de apoyar a otros sigues vendiendo limonada.",
+    "Vigila el error que la autora cuenta de si misma y que dice ver cometer a practicamente todo directivo aprendiz: seguir haciendo trabajo de contribuidor individual pasado el punto en que es sostenible.",
+    "No lo aprendas por las malas: en el momento en que tu equipo llegue a cuatro o cinco personas, ten ya un plan de como reducir tus responsabilidades de contribuidor individual para poder ser el mejor directivo posible para tu gente."
+   ],
+   "nuevo": "Al empezar a dirigir casi siempre llevas a la vez tu trabajo individual y la gestión, y el error común es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. Cuando el equipo crece, cualquier imprevisto de gestión, como una persona que necesita más atención o varias revisiones en la misma semana, te deja sin tiempo para tu proyecto: la calidad baja, los compañeros se frustran y todo se cae. Intentar ser las dos cosas hace que no hagas bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+   "evidencia": {
+    "fichero": "fuentes/zhuo_manager/cap_03.md",
+    "lineas": "87-93"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Anécdota personal vuelta afirmación general: las líneas 91 y 93 cuentan lo que le pasó a una persona con un equipo de unas seis personas y su propia conclusión (intentando hacer las dos cosas no hacía bien ninguna); el resumen lo afirma como ley para cualquiera ('Cuando el equipo crece, cualquier imprevisto de gestión te deja sin tiempo... todo se cae'; 'Intentar ser las dos cosas hace que no hagas bien ninguna').",
+   "propuesta_verificador": "Al empezar a dirigir casi siempre llevas a la vez tu trabajo individual y la gestión, y el error que comete prácticamente todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas."
+  },
+  {
+   "item": "preguntar_jefe_sonado_persona_cargo|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "En tus primeras reuniones a solas, preguntale que discutia con su jefe anterior que le resultara mas util.",
+    "Preguntale de que maneras le gustaria que le apoyaras.",
+    "Preguntale como le gusta que se le reconozca un gran trabajo.",
+    "Preguntale que clase de opinion sobre su trabajo le resulta mas util.",
+    "Y pidele que imagine que tu y el teneis una relacion estupenda, y que te cuente a que se pareceria eso.",
+    "Manten la mente abierta y la curiosidad mientras conoces a cada uno, y se claro por delante sobre la clase de relacion que te gustaria construir y la clase de directivo que quieres ser."
+   ],
+   "nuevo": "Al llegar de jefe nuevo empiezas con una pizarra en blanco, y cada persona a tu cargo también: tiene la ocasión de construir la relación con su jefe que siempre quiso. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas sirven para preguntar qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo.",
+   "evidencia": {
+    "fichero": "fuentes/zhuo_manager/cap_03.md",
+    "lineas": "151-167"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Convierte un 'algunos' en regla: la línea 153 dice que ALGUNAS personas a cargo agradecerán la ocasión de construir la relación que siempre quisieron ('Some of your reports'); el resumen lo afirma de cada persona a tu cargo.",
+   "propuesta_verificador": "Al llegar de jefe nuevo empiezas con una pizarra en blanco, y eso vale también para tu gente: algunas personas a tu cargo agradecerán la ocasión de construir con su jefe la relación que siempre quisieron. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas sirven para preguntar qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo."
+  },
+  {
+   "item": "preparar_preguntas_entrevista_antemano|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Presentate con una idea clara de que quieres aprender sobre la persona, que es cuando ocurren las mejores entrevistas.",
+    "Familiarizate con su trayectoria antes de entrar.",
+    "Ten una lista de preguntas preparada.",
+    "Si varios candidatos se entrevistan para el mismo puesto, preguntale a cada candidato las mismas cosas.",
+    "Hazlo por la razon que el libro da: todos tenemos sesgos, y si no lo haces te arriesgas a basar tu decision de contratacion en tu impresion de la persona y en como fluyo la conversacion, en vez de en la sustancia de sus respuestas.",
+    "Cuenta con el caso que el libro pone para eso: un candidato llego nervioso y timido, apenas mantenia el contacto visual, tomaba aire entrecortado entre frases y repetia el mismo punto tres veces en una respuesta; pero las preguntas preparadas sobre sus habilidades y su experiencia le dieron ocasion de contar como fijo metas en un proyecto, cual fue el reto mas dificil de su empleo anterior y como lo abordo, y cuales eran honestamente sus fuerzas y sus debilidades. Las clavo, la sustancia de sus respuestas era mas detallada y meditada que la de otros candidatos, le contrataron, trabajo duro para mejorar su comunicacion y se convirtio rapido en uno de los que mas aportaban.",
+    "Decide tu que preguntas hacer, porque solo tu sabes que estas buscando, y reserva preguntas especificas para los puestos muy especializados, que las merecen.",
+    "Si quieres un punto de partida, usa las preguntas de proposito general que la autora prefiere, cada una con lo que le dice a ella. Que clase de retos te resultan interesantes y por que? Puedes describirme un proyecto favorito? Esto le dice que apasiona al candidato.",
+    "Que consideras que son tus mayores fuerzas? En que areas de crecimiento estarian de acuerdo tus companieros? Esta pregunta va a la vez a la conciencia que tiene de si mismo y a cuales podrian ser sus fuerzas y sus debilidades reales.",
+    "Imaginate dentro de tres anios. Que esperas que sea distinto en ti entonces comparado con ahora? Esto le deja entender las ambiciones del candidato y tambien cuanto se orienta a metas y cuanto reflexiona sobre si mismo.",
+    "Cual fue el conflicto mas duro que has tenido en el ultimo anio? Como termino, y que aprendiste de la experiencia? Esto le da una idea de como trabaja el candidato con otras personas y de como aborda el conflicto.",
+    "Que es algo que te haya inspirado en tu trabajo ultimamente? Esto arroja luz sobre lo que el candidato considera interesante o valioso."
+   ],
+   "nuevo": "Todos tenemos sesgos, y una entrevista sin guion acaba juzgando la impresión que da la persona y lo bien que fluyó la conversación, no la sustancia de sus respuestas. Llegar sabiendo qué quieres aprender, con su trayectoria revisada y una lista de preguntas preparada, y hacer las mismas preguntas a todos los candidatos del mismo puesto vuelve comparables las entrevistas. Así un candidato nervioso pero sólido puede mostrar cómo resuelve problemas. Solo tú sabes qué buscas, por eso eliges tú las preguntas; las de propósito general sirven de punto de partida.",
+   "evidencia": {
+    "fichero": "fuentes/zhuo_manager/cap_08.md",
+    "lineas": "159-175"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Endurece: la línea 159 dice que sin preparar TE ARRIESGAS a basar la decisión en la impresión y en cómo fluyó la conversación ('you risk'); el resumen afirma que una entrevista sin guion 'acaba juzgando' eso, como certeza.",
+   "propuesta_verificador": "Todos tenemos sesgos, y sin preparar la entrevista corres el riesgo de decidir por la impresión que da la persona y por cómo fluyó la conversación, no por la sustancia de sus respuestas. Llegar sabiendo qué quieres aprender, con su trayectoria revisada y una lista de preguntas preparada, y hacer las mismas preguntas a todos los candidatos del mismo puesto vuelve comparables las entrevistas. Así un candidato nervioso pero sólido puede mostrar cómo resuelve problemas. Solo tú sabes qué buscas, por eso eliges tú las preguntas; las de propósito general sirven de punto de partida."
+  }
+ ]
+}

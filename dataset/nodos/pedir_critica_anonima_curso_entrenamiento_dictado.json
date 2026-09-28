@@ -1,0 +1,253 @@
+{
+  "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Pedir crítica anónima tras dar un curso de entrenamiento, con formulario numérico y preguntas abiertas",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Después de dar el curso, pide críticas anónimas a quienes lo recibieron, con un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas. Estudia y considera las respuestas, pero cuenta con que nunca podrás complacer a todos los de la clase: lo típico es que las opiniones se repartan casi por igual entre demasiado detallado, demasiado superficial y en su punto. Tu objetivo último no es la unanimidad sino convencerte tú de que el curso está logrando lo que te propusiste.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_17.md, unidad Cap. 16, titulo textual Why Training Is the Boss's Job. Sale de la PIEZA P23 de la frontera publicada hoy en .v60ext/frontera.txt (tabla de cap_17), L61, 89 palabras, pieza de una sola linea que cierra en si misma. FRONTERA DENTRO DEL NODO, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): la pieza completa vive en un unico parrafo, L61, sin tramos previos ni posteriores que la compongan. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el parrafo trae su propia secuencia de cuatro acciones nombradas una a una (pedir critica anonima, usar un formulario con dos tipos de pregunta, estudiar las respuestas, fijar el objetivo ultimo en la propia satisfaccion), que son ETAPAS de un mismo procedimiento de cierre del curso, no metas ni un adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, verificado hoy con grep -n literal contra el fichero: grep -n 'After you' fuentes/grove_high_output/cap_17.md da linea 61: 'After you've given the course, ask for anonymous critiques from the employees in your class. Prompt them with a form that asks for numerical ratings but that also poses some open-ended questions. Study and consider the responses, but understand that you will never be able to please all members of your class: typical feedback will be that the course was too detailed, too superficial, and just right, in about equal balance. Your ultimate aim should be to satisfy yourself that you are accomplishing what you set out to do.'. Paso 1 y 2 salen de la primera y segunda oracion (pedir critica anonima con un formulario de dos tipos de pregunta); paso 3 sale de la tercera oracion (estudiar las respuestas sabiendo que no complaceran a todos, con el ejemplo descriptivo de feedback tipico excluido del paso por ser ilustracion y no instruccion); paso 4 sale de la ultima oracion (el objetivo ultimo es la propia satisfaccion). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. No escribo destinatario, responsable ni periodo porque el parrafo no los pone: el libro deja el formulario y el momento exacto de aplicarlo a criterio del propio mando, y fijarlos yo seria la especie de puente que 15.4 nombra por su nombre. No incluyo como paso propio la frase descriptiva sobre el reparto tipico de opiniones (demasiado detallado, demasiado superficial, en su punto) porque describe un resultado esperado y no una accion que el mando ejecute. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: comparto capitulo y tema con priorizar_lista_entrenamiento_subordinados (L49 a L51) y con desarrollar_primer_curso_entrenamiento (L53 a L59): los tres son momentos sucesivos del mismo proceso de entrenar (priorizar que enseñar, desarrollar el primer curso, pedir critica tras dictarlo), cada uno con su propio entregable (una lista priorizada, un curso dictado con su segunda clase lista, una critica recogida) y su propia condicion de activacion. Un lector que lea el capitulo entero como una sola secuencia continua podria fundir los tres en un solo nodo de dieciseis pasos. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA DE LA VUELTA 73 de la linea serial, en la relectura de fidelidad entera que D.30 y D.58 mandan antes de la insercion (TAREA 2.2 del encargo de la 73), sin insertar nada. EL PASO 3 TRAIA UNA CLAUSULA PUENTE, Y EL ENTREGABLE LA MISMA; SE RETIRAN SIN BORRAR EL RASTRO. El paso 3 decia: Estudia y considera las respuestas, entendiendo que nunca podras complacer a todos los miembros de tu clase por igual. Hoy dice lo mismo sin por igual. El entregable decia sin esperar complacer a todos los alumnos por igual, y hoy lo dice sin por igual. LA CLAUSULA QUE SE RETIRA, por igual, no la pone el libro: L61 dice Study and consider the responses, but understand that you will never be able to please all members of your class. DONDE ARRIBA DICE RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE, la cifra de la relectura de la vuelta 73 es 4 pasos, 3 TRANSCRIPCION y 1 PUENTE sobre el texto viejo, y 4 TRANSCRIPCION y 0 PUENTE despues de esta correccion (.v73ext/fidelidad.tsv). La cifra vieja no se borra, manual principio 6.",
+  "pasos_accionables": [
+    "Después de dar el curso, pide críticas anónimas a los empleados de tu clase.",
+    "Usa un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas.",
+    "Estudia y considera las respuestas, entendiendo que nunca podrás complacer a todos los miembros de tu clase.",
+    "Ten como objetivo último convencerte de que estás logrando lo que te propusiste."
+  ],
+  "entregable_esperado": "Un conjunto de críticas anónimas recogidas y estudiadas, y tú convencido de estar logrando lo que te propusiste, sin esperar complacer a todos los alumnos.",
+  "nodos_previos": [
+    "desarrollar_primer_curso_entrenamiento"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando ya diste tu curso de entrenamiento y quieres saber si está cumpliendo el propósito que te propusiste."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Después de dar el curso, pide críticas anónimas a quienes lo recibieron, con un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas. Estudia y considera las respuestas, pero cuenta con que nunca podrás complacer a todos los de la clase: lo típico es que las opiniones se repartan casi por igual entre demasiado detallado, demasiado superficial y en su punto. Tu objetivo último no es la unanimidad sino convencerte tú de que el curso está logrando lo que te propusiste.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_17.md",
+          "lineas": "61-61"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: la franqueza del anonimato, la medida comparable con sus motivos y 'el curso se mejora' no están en l.61. Pero la propuesta del lector mete contenido ajeno ('ni rehagas el curso a cada comentario', 'de verdad', 'al diseñarlo y al darlo') y un 'Por eso' que la línea no pone. El texto propio se ciñe a l.61.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)"
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pedir critica anonima tras dictar un curso de entrenamiento, con formulario numerico y preguntas abiertas",
+      "texto_nuevo": "Pedir crítica anónima tras dictar un curso de entrenamiento, con formulario numérico y preguntas abiertas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues de dar el curso, pide criticas anonimas a los empleados de tu clase.",
+      "texto_nuevo": "Después de dar el curso, pide críticas anónimas a los empleados de tu clase.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa un formulario que pida calificaciones numericas y que ademas plantee algunas preguntas abiertas.",
+      "texto_nuevo": "Usa un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estudia y considera las respuestas, entendiendo que nunca podras complacer a todos los miembros de tu clase.",
+      "texto_nuevo": "Estudia y considera las respuestas, entendiendo que nunca podrás complacer a todos los miembros de tu clase.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten como objetivo ultimo satisfacerte a ti mismo de que estas logrando lo que te propusiste.",
+      "texto_nuevo": "Ten como objetivo último satisfacerte a ti mismo de que estás logrando lo que te propusiste.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un conjunto de criticas anonimas recogidas y estudiadas, con el propio mando satisfecho de estar logrando lo que se propuso, sin esperar complacer a todos los alumnos.",
+      "texto_nuevo": "Un conjunto de críticas anónimas recogidas y estudiadas, con el propio mando satisfecho de estar logrando lo que se propuso, sin esperar complacer a todos los alumnos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_critica_anonima_curso_entrenamiento_dictado-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el mando ya dicto su curso de entrenamiento y quiere saber si esta cumpliendo el proposito que se propuso.",
+      "texto_nuevo": "Cuando el mando ya dictó su curso de entrenamiento y quiere saber si está cumpliendo el propósito que se propuso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_critica_anonima_curso_entrenamiento_dictado-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pedir crítica anónima tras dictar un curso de entrenamiento, con formulario numérico y preguntas abiertas",
+      "texto_nuevo": "Pedir crítica anónima tras dar un curso de entrenamiento, con formulario numérico y preguntas abiertas",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "dictar"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Dictar un curso' es uso de una región; 'dar' vale en todas.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_critica_anonima_curso_entrenamiento_dictado-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un conjunto de críticas anónimas recogidas y estudiadas, con el propio mando satisfecho de estar logrando lo que se propuso, sin esperar complacer a todos los alumnos.",
+      "texto_nuevo": "Un conjunto de críticas anónimas recogidas y estudiadas, y tú convencido de estar logrando lo que te propusiste, sin esperar complacer a todos los alumnos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "con el propio mando satisfecho",
+          "se propuso"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Hablaba del lector en tercera persona ('el propio mando', 'se propuso'); la voz de la casa es tú.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_critica_anonima_curso_entrenamiento_dictado-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando el mando ya dictó su curso de entrenamiento y quiere saber si está cumpliendo el propósito que se propuso.",
+      "texto_nuevo": "Cuando ya diste tu curso de entrenamiento y quieres saber si está cumpliendo el propósito que te propusiste.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el mando ya dictó su curso",
+          "quiere saber",
+          "se propuso"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz, regionalismo): Tercera persona para el lector ('el mando', 'quiere', 'se propuso') y 'dictar un curso' regional.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz",
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-pedir_critica_anonima_curso_entrenamiento_dictado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten como objetivo último satisfacerte a ti mismo de que estás logrando lo que te propusiste.",
+      "texto_nuevo": "Ten como objetivo último convencerte de que estás logrando lo que te propusiste.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "satisfacerte a ti mismo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): «Satisfacerte a ti mismo de que» calca «satisfy yourself that»; en español es convencerte de que, como ya dicen el resumen y el entregable.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pide Crítica Anónima al Enseñar",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

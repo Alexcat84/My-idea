@@ -1,0 +1,264 @@
+{
+  "node_id": "escalonar_fuentes_informacion_gerencial",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Escalonar las fuentes de información del mando, de la verbal a la reposada, y solaparlas para verificar",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Ninguna fuente de información sirve sola, porque cada una da algo distinto. Lo que te cuentan de palabra llega primero y vale mucho, pero es esquemático, incompleto y a veces inexacto, como un titular; el detalle de quién, qué, dónde, por qué y cómo llega después, y la perspectiva reposada llega la última, cuando ya es tarde para enterarte. Por eso conviene tener fuentes de cada escalón que se complementen entre sí y que además se solapen: el solape es lo que te permite contrastar una con otra y verificar lo que has sabido.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P9 de la frontera publicada en esta vuelta 46, L153 a L153, 208 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO Y NO DEFINICION: el libro no se queda en decir que hay una jerarquia, sino que pone SU PROPIO INVENTARIO de los escalones y los nombra uno a uno con lo que cada uno da y lo que no (verbal sources, the newspaper article itself to find out who, what, where, why, and how, y a news magazine or even a book para reiteration and perspective), que es inventario de MEDIOS y de ETAPAS, asi que escribir los pasos es transcribirlo (EXTRACTOR.md 9.1). DE DONDE SALE CADA PASO, uno a uno, y los siete salen del mismo renglon L153: paso 1 (To improve and maintain your capacity to get information, you have to understand the way it comes to you. There is a hierarchy involved); paso 2 (Verbal sources are the most valuable, but what they provide is also sketchy, incomplete, and sometimes inaccurate, like a newspaper headline that can give you only the general idea of a story. A headline can not give any of the details and might even give you a distorted idea of what the real story is); paso 3 (So you then read the newspaper article itself to find out who, what, where, why, and how); paso 4 (After this, you should have some reiteration and perspective, which can be compared to reading a news magazine or even a book); paso 5 (Each level in your information hierarchy is important, and you can rely on none alone); paso 6 (Though the most thorough information might come from the news magazine, you do not, of course, want to wait a full week after an event to find out about it); paso 7 (Your information sources should complement one another, and also be redundant because that gives you a way to verify what you have learned). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo CUANTOS escalones hay, y es deliberado, porque el libro dice hierarchy y nombra tres pero NO dice tres: por eso este nodo NO es D.37 sino D.29, y su id no lleva ninguna cuenta dentro; NO escribo cada cuanto se revisa la jerarquia ni cuantas fuentes hay por escalon, porque el libro no pone ni periodo ni cantidad; NO escribo a quien se le pasa lo verificado. LA FRONTERA CON EL TRAMO VECINO, declarada antes de cortar: las vias sueltas por las que llega la informacion (informes, memorandos, ad hoc, conversacion, quejas) son de L145 y L147 y tienen nodo propio en esta misma tanda, reunir_informacion_gerencial_vias_variadas; aqui va SOLO el escalonamiento y el solape, que es lo que L153 anade y los otros dos renglones no dicen. ARISTA DECLARADA POR LECTURA (D.29), para cablearla el dia de la insercion y no hoy: madre reunir_informacion_gerencial_vias_variadas, hijo escalonar_fuentes_informacion_gerencial, porque el paso 7 de la madre pone la preferencia de la verbal en una linea y este hijo la despliega en siete pasos que la madre no tiene, que son los escalones y su solape. NO la levanta ninguna senial obligada: la declaro por lectura, que es lo que EXTRACTOR.md 11 manda cuando el candidato despliega algo que el libro ya nombro en una linea. TRADUCCION DECLARADA: information hierarchy y redundant viajan en denominaciones; news magazine va como revista de actualidad. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: un lector estricto puede decir que esto REPITE a reunir_informacion_gerencial_vias_variadas, porque las dos fichas hablan de por donde llega la informacion. Lo sostengo porque lo que queda fuera es procedimiento en los dos lados (manual seccion 4, no tiene bascula): la madre dice QUE VIAS abrir y no dice en que orden leerlas ni por que solaparlas; el hijo no abre ninguna via nueva y dice como se ordenan y como se verifican entre ellas. Si cae, cae DENTRO de mi marcado y es el primero de mi cola de relectura. CORRECCION DECLARADA DE LA VUELTA 50, SIN BORRAR EL NUMERO VIEJO (manual principio 6, deuda d036, adjudicada en ACTA 48 seccion 48.5.a): donde esta ficha dice mas arriba que la PIEZA P9, L153 a L153, tiene 208 palabras, TIENE QUE LEERSE 183 palabras. La cifra buena es la que la frontera de HH.2.c publica para esta pieza, y no una tercera cifra mia: la recompute en la vuelta 50 con el mismo recuento de .v46/frontera.py linea 136 y me da 183, identica a la de la frontera. EL RENGLON DEL INSTRUMENTO QUE LO SOSTIENE, pegado (.v50/palabras_d036.txt): escalonar_fuentes_informacion_gerencial P9 L153 a L153 dice 208 HH.2.c 183 cuento 183 la frontera manda. LO QUE ESTA CORRECCION NO TOCA: ni un paso, ni una atribucion, ni la frontera, que es precisamente la que sale bien. El numero viejo era un numero escrito a mano en la vuelta 46 que ni la frontera citada ni ningun recuento reproducen.",
+  "pasos_accionables": [
+    "Entiende por dónde te llega la información antes de intentar mejorar tu capacidad de conseguirla, porque hay una jerarquía dentro.",
+    "Coloca arriba las fuentes verbales, que son las más valiosas, y cuenta con que lo que dan es esquemático, incompleto y a veces inexacto, igual que el titular de un periódico, que solo da la idea general de una historia y hasta puede darte una idea distorsionada de cuál es la historia de verdad.",
+    "Baja después al artículo entero, que es donde averiguas quién, qué, dónde, por qué y cómo.",
+    "Termina en la reiteración y la perspectiva, que es lo que dan una revista de actualidad o incluso un libro.",
+    "No te apoyes en un solo escalón: cada nivel de tu jerarquía importa y ninguno basta solo.",
+    "No esperes a la fuente más cabal para enterarte, porque la más cabal puede ser, como una revista semanal, la que llega una semana entera después del hecho.",
+    "Monta tus fuentes para que se complementen unas a otras y además para que sean redundantes, porque el solape es lo que te da una vía de verificar lo que has sabido."
+  ],
+  "entregable_esperado": "Tus fuentes de información colocadas por escalones, de la verbal a la reposada, cada una con lo que da y lo que no, complementándose entre sí y con solape deliberado para poder verificar.",
+  "nodos_previos": [
+    "reunir_informacion_gerencial_vias_variadas"
+  ],
+  "nodos_siguientes": [
+    "programar_visita_area_observar_despachar"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes abiertas varias vías por las que te llega información y te falla igual: te enteras rápido pero a medias, o completo pero tarde, porque te apoyas en un solo escalón de fuentes."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Ninguna fuente de información sirve sola, porque cada una da algo distinto. Lo que te cuentan de palabra llega primero y vale mucho, pero es esquemático, incompleto y a veces inexacto, como un titular; el detalle de quién, qué, dónde, por qué y cómo llega después, y la perspectiva reposada llega la última, cuando ya es tarde para enterarte. Por eso conviene tener fuentes de cada escalón que se complementen entre sí y que además se solapen: el solape es lo que te permite contrastar una con otra y verificar lo que has sabido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "153-153"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)"
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escalonar las fuentes de informacion del mando, de la verbal a la reposada, y solaparlas para verificar",
+      "texto_nuevo": "Escalonar las fuentes de información del mando, de la verbal a la reposada, y solaparlas para verificar",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entiende por donde te llega la informacion antes de intentar mejorar tu capacidad de conseguirla, porque hay una jerarquia dentro.",
+      "texto_nuevo": "Entiende por dónde te llega la información antes de intentar mejorar tu capacidad de conseguirla, porque hay una jerarquía dentro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Coloca arriba las fuentes verbales, que son las mas valiosas, y cuenta con que lo que dan es esquematico, incompleto y a veces inexacto, igual que el titular de un periodico, que solo da la idea general de una historia y hasta puede darte una idea distorsionada de cual es la historia de verdad.",
+      "texto_nuevo": "Coloca arriba las fuentes verbales, que son las más valiosas, y cuenta con que lo que dan es esquemático, incompleto y a veces inexacto, igual que el titular de un periódico, que solo da la idea general de una historia y hasta puede darte una idea distorsionada de cuál es la historia de verdad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Baja despues al articulo entero, que es donde averiguas quien, que, donde, por que y como.",
+      "texto_nuevo": "Baja después al artículo entero, que es donde averiguas quién, qué, dónde, por qué y cómo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Termina en la reiteracion y la perspectiva, que es lo que dan una revista de actualidad o incluso un libro.",
+      "texto_nuevo": "Termina en la reiteración y la perspectiva, que es lo que dan una revista de actualidad o incluso un libro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No te apoyes en un solo escalon: cada nivel de tu jerarquia importa y ninguno basta solo.",
+      "texto_nuevo": "No te apoyes en un solo escalón: cada nivel de tu jerarquía importa y ninguno basta solo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No esperes a la fuente mas cabal para enterarte, porque la mas cabal es la que llega una semana entera despues del hecho.",
+      "texto_nuevo": "No esperes a la fuente más cabal para enterarte, porque la más cabal es la que llega una semana entera después del hecho.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monta tus fuentes para que se complementen unas a otras y ademas para que sean redundantes, porque el solape es lo que te da una via de verificar lo que has sabido.",
+      "texto_nuevo": "Monta tus fuentes para que se complementen unas a otras y además para que sean redundantes, porque el solape es lo que te da una vía de verificar lo que has sabido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tus fuentes de informacion colocadas por escalones, de la verbal a la reposada, cada una con lo que da y lo que no, complementandose entre si y con solape deliberado para poder verificar.",
+      "texto_nuevo": "Tus fuentes de información colocadas por escalones, de la verbal a la reposada, cada una con lo que da y lo que no, complementándose entre sí y con solape deliberado para poder verificar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_fuentes_informacion_gerencial-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes abiertas varias vias por las que te llega informacion y te falla igual: te enteras esquematico y tarde, o te enteras completo y tarde, porque estas tratando todas las fuentes como si fueran el mismo escalon.",
+      "texto_nuevo": "Cuando ya tienes abiertas varias vías por las que te llega información y te falla igual: te enteras esquemático y tarde, o te enteras completo y tarde, porque estás tratando todas las fuentes como si fueran el mismo escalón.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-escalonar_fuentes_informacion_gerencial-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No esperes a la fuente más cabal para enterarte, porque la más cabal es la que llega una semana entera después del hecho.",
+      "texto_nuevo": "No esperes a la fuente más cabal para enterarte, porque la más cabal puede ser, como una revista semanal, la que llega una semana entera después del hecho.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 153",
+        "frase": "Though the most thorough information might come from the news magazine, you do not, of course, want to wait a full week after an event to find out about it."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro: la información más completa podría (might) venir de la revista semanal; la semana es la del ejemplo de la revista.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-escalonar_fuentes_informacion_gerencial-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando ya tienes abiertas varias vías por las que te llega información y te falla igual: te enteras esquemático y tarde, o te enteras completo y tarde, porque estás tratando todas las fuentes como si fueran el mismo escalón.",
+      "texto_nuevo": "Cuando ya tienes abiertas varias vías por las que te llega información y te falla igual: te enteras rápido pero a medias, o completo pero tarde, porque te apoyas en un solo escalón de fuentes.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Esquemático y tarde' contradice el nodo (la fuente verbal llega primero); la causa pasa a la del nodo: apoyarse en un solo escalón."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Esquemático y tarde' contradice el nodo (la fuente verbal llega primero); la causa pasa a la del nodo: apoyarse en un solo escalón.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Escalona tus Fuentes de Información"
+}

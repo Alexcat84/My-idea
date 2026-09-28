@@ -1,0 +1,160 @@
+{
+  "nota": "Puentes del mundo 11 Primer Equipo, horneados el 23 sep 2026 como en todo pack, con el pack entrega (packs/entrega/metadata/bridges_aprobados.json, extraccion del 2026-08-07) como modelo: 15 aprobados, ninguna ancla del nucleo pasa de 2 (max real 2), todas las anclas vivas y de dominio core (ley del ancla). DIFERENCIA DECLARADA con el modelo: alli el score salia de la similitud Voyage de bridges_propuestos.json; aqui los nodos del mundo 11 no tienen vector (el indice se construye en la integracion, con credencial), asi que cada par se eligio POR LECTURA del titulo, la condicion y el entregable de los dos nodos, y el score va null con su motivo escrito. integrar_packs.py consume core y dominio, no el score. RELECTURA DEL PASO 4 (28 sep 2026): con el texto limpio del pack (dieciocho tandas) un lector releyo los 15 puentes (13 se sostienen, 2 no) y propuso 4 sustituciones; un verificador independiente aprobo 3 y rechazo 1 (el puente de reuniones_uno_a_uno se queda). Los 3 que salen quedan en 'rechazados' con su motivo. Grove entra con un puente. Evidencia en docs/puente_forja/paso4/. | Integracion (28 sep 2026): +6 puentes leidos y verificados a ciegas con trampa sin marca en la campana de alcanzabilidad del paso 5; 21 aprobados, ninguna ancla pasa de 2.",
+  "aprobados": [
+    {
+      "core": "decision_fundador_solo_vs_equipo",
+      "dominio": "responder_tres_preguntas_vocacion_directiva",
+      "score": null,
+      "motivo": "la decision de formar equipo abre la pregunta de si dirigirlo es tu camino"
+    },
+    {
+      "core": "hiring_blueprints",
+      "dominio": "aplicar_metodo_ghsmart_contratacion",
+      "score": null,
+      "motivo": "elegido el modelo con que vas a reclutar, pagar y controlar a tus primeros empleados no fundadores, el paso siguiente es contratarlos con el metodo de cuatro pasos",
+      "entra_el": "2026-09-28, paso 4 (relectura con verificador independiente)"
+    },
+    {
+      "core": "contratar_por_fortaleza",
+      "dominio": "crear_tarjeta_puntuacion_puesto",
+      "score": null,
+      "motivo": "contratar por fortaleza pide escribir antes que resultados y competencias quieres del puesto"
+    },
+    {
+      "core": "proceso_contratacion_ejecutivos_sin_experiencia",
+      "dominio": "investigar_antes_contratar_lideres",
+      "score": null,
+      "motivo": "el nucleo dice contratar un puesto que no hiciste; el mundo dice como investigar que buscar"
+    },
+    {
+      "core": "evaluacion_fit_cultural",
+      "dominio": "evaluar_cultura_empresa_adjetivos",
+      "score": null,
+      "motivo": "evaluar el encaje cultural empieza por escribir la cultura propia en adjetivos"
+    },
+    {
+      "core": "reuniones_uno_a_uno",
+      "dominio": "montar_reuniones_solas_mentalidad_frecuencia",
+      "score": null,
+      "motivo": "el nucleo nombra la reunion uno a uno; el mundo la monta con frecuencia y agenda"
+    },
+    {
+      "core": "reuniones_uno_a_uno",
+      "dominio": "dirigir_reunion_individual_semanal",
+      "score": null,
+      "motivo": "y la conduce cada semana con cada persona a cargo"
+    },
+    {
+      "core": "cultura_feedback_alta_frecuencia",
+      "dominio": "dar_opinion_especifica_tarea",
+      "score": null,
+      "motivo": "la cultura de opinion frecuente se practica dando opinion concreta de cada tarea"
+    },
+    {
+      "core": "feedback_efectivo_liderazgo",
+      "dominio": "empezar_cultura_franqueza_radical",
+      "score": null,
+      "motivo": "dar opinion como habilidad del fundador; el mundo arranca la cultura pidiendo antes que dando"
+    },
+    {
+      "core": "gestion_desempeno_feedback",
+      "dominio": "recorrer_trece_elementos_proceso_evaluacion_formal",
+      "score": null,
+      "motivo": "el proceso de revisiones del nucleo se disena elemento por elemento"
+    },
+    {
+      "core": "analisis_causa_raiz_despido_ejecutivo",
+      "dominio": "decidir_momento_despedir_persona",
+      "score": null,
+      "motivo": "antes de la decision final de despedir a un lider que no cumple, contestar las tres preguntas que dicen si ha llegado el momento y nombrar la mentira que lo retrasa",
+      "entra_el": "2026-09-28, paso 4 (relectura con verificador independiente)"
+    },
+    {
+      "core": "entrenamiento_gerencial",
+      "dominio": "priorizar_lista_entrenamiento_subordinados",
+      "score": null,
+      "motivo": "entrenar es el trabajo del jefe, y se empieza por la lista priorizada de en que entrenar, preguntada a tu gente y contrastada con quien puede ensenar",
+      "entra_el": "2026-09-28, paso 4 (relectura con verificador independiente)"
+    },
+    {
+      "core": "programacion_cultura_empresarial",
+      "dominio": "contrastar_cultura_actual_aspirada",
+      "score": null,
+      "motivo": "disenar la cultura empieza por contrastar la que hay con la que quieres"
+    },
+    {
+      "core": "gestion_empleados_brillantes_problematicos",
+      "dominio": "cortar_efecto_divisor_persona_brillante",
+      "score": null,
+      "motivo": "el empleado brillante y problematico, con el procedimiento para cortar su efecto divisor"
+    },
+    {
+      "core": "decision_egalitaria_vs_jerarquica",
+      "dominio": "repartir_decision_cercanos_hechos",
+      "score": null,
+      "motivo": "elegida la forma de decidir, repartir las decisiones entre los mas cercanos a los hechos"
+    },
+    {
+      "core": "tres_preguntas_carrera",
+      "dominio": "hacer_trabajo_futuro_imaginar_negocio",
+      "score": null,
+      "motivo": "Resuelto el salto a emprender con tu experiencia y tus habilidades como factor de carrera, el paso siguiente es no montar el negocio desde ese oficio sino hacer el trabajo del emprendedor: verlo aparte de ti y preguntarte qué negocio sería."
+    },
+    {
+      "core": "entrenamiento_gerencial",
+      "dominio": "vivir_valores_propios_evitar_listarlos",
+      "score": null,
+      "motivo": "Al montar el programa de entrenamiento de quienes lideran equipos surge la tentación de abrirlo con un ejercicio de valores escritos y compartidos; este nodo dice qué se hace en su lugar: vivir y demostrar tus valores en cómo diriges."
+    },
+    {
+      "core": "la_lucha_resiliencia_ceo",
+      "dominio": "celebrar_pequenias_victorias",
+      "score": null,
+      "motivo": "La Lucha deja reconocido el bache de dudas sobre si tienes lo que hace falta como una etapa normal que se aborda con estrategias concretas; celebrar las pequeñas victorias es la estrategia concreta para romper el ciclo de repasar fracasos."
+    },
+    {
+      "core": "toma_decisiones_bajo_incertidumbre",
+      "dominio": "reunir_informacion_gerencial_vias_variadas",
+      "score": null,
+      "motivo": "El núcleo deja claro que decides con información incompleta y que el remedio es recoger conocimiento de forma continua en cada interacción diaria; el mundo monta esas vías una a una, con el intercambio verbal rápido por delante de lo escrito."
+    },
+    {
+      "core": "manejo_psicologia_ceo",
+      "dominio": "evitar_doble_impuesto_malestar",
+      "score": null,
+      "motivo": "el nucleo deja nombrada la carga emocional del fundador y el ideal de actuar con urgencia sin culpabilidad; el mundo da el paso concreto siguiente: dejar de pagar la culpa por sufrir ademas de la dificultad misma, con las dos tacticas de la historia de lucha ajena y la nota que declara el malestar"
+    },
+    {
+      "core": "equipo_multifuncional_real",
+      "dominio": "repartir_supervision_puesto_funcional_mision",
+      "score": null,
+      "motivo": "el nucleo deja montado un equipo con gente de distintas areas y un lider con autoridad real; cada miembro sigue perteneciendo a su area y trabaja para el proyecto, y lo siguiente es repartir su supervision: al jefe del proyecto las prioridades, al de su area el oficio y la carrera"
+    }
+  ],
+  "rechazados": [
+    {
+      "core": "decision_fundador_solo_vs_equipo",
+      "dominio": "aplicar_metodo_ghsmart_contratacion",
+      "score": null,
+      "motivo": "decidido formar equipo, el paso siguiente es contratar al primero con metodo",
+      "rechazado_el": "2026-09-28",
+      "motivo_rechazo": "paso 4, relectura de puentes con el texto limpio: El puente actual no se sostiene (un socio no es un puesto). Se conserva el nodo del mundo y se le da el ancla correcta: hiring_blueprints se activa \"al iniciar la contratacion de los primeros empleados no fundadores\", que es exactamente cuando hace falta el metodo A."
+    },
+    {
+      "core": "proceso_despidos_responsables",
+      "dominio": "decidir_momento_despedir_persona",
+      "score": null,
+      "motivo": "antes de ejecutar un despido hay que decidir si ha llegado el momento",
+      "rechazado_el": "2026-09-28",
+      "motivo_rechazo": "paso 4, relectura de puentes con el texto limpio: El puente actual no se sostiene (recorte colectivo contra despido por desempeno). El nucleo nuevo se activa \"antes de tomar la decision final de despedir a un lider\" que no cumple, que es el caso individual que el nodo del mundo resuelve."
+    },
+    {
+      "core": "entrenamiento_gerencial",
+      "dominio": "pasar_direccion_directa_indirecta",
+      "score": null,
+      "motivo": "entrenar a quienes lideran es el paso de dirigir directamente a dirigir por otros",
+      "rechazado_el": "2026-09-28",
+      "motivo_rechazo": "paso 4, relectura de puentes con el texto limpio: Claramente mejor: el nucleo cita a Andy Grove (\"entrenar es el trabajo del jefe\") y el nodo de High Output Management se activa \"cuando decides abrazar el entrenamiento como tarea propia y necesitas decidir por donde empezar\". El puente actual tenia el orden invertido. El ancla no cambia de cuenta."
+    }
+  ]
+}

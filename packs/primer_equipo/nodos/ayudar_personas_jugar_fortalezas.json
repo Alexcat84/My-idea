@@ -1,0 +1,371 @@
+{
+  "node_id": "ayudar_personas_jugar_fortalezas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ayudar a cada persona de tu equipo a apoyarse en sus fortalezas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Por instinto vemos lo malo con más claridad que lo bueno, y hay quien, ya dirigiendo, nota que su atención se va sola a los problemas. Reconocer el trabajo duro, una habilidad valiosa, un consejo útil o unos buenos valores puede motivar enormemente, siempre que se sienta genuino y específico de esa persona, no una frase de ánimo que valdría para cualquiera. Y como la gente tiene más probabilidad de éxito cuando usa sus fortalezas, busca ocasiones para que cada uno haga más de aquello que le gusta y se le da bien, y crezca por ahí.",
+  "notas_extraccion": "El libro sostiene que hay una cualidad que separa a los grandes directivos del resto, que es descubrir que tiene de unico cada persona y capitalizarlo, y monta la seccion sobre una tension medida: vemos lo malo con mas claridad que lo bueno, por evolucion, y por eso el reconocimiento hay que ponerlo a proposito. El inventario propio del libro son los cuatro objetos que se reconocen, el trabajo duro, las habilidades valiosas, el consejo util y los buenos valores, y los dos ejemplos de oportunidad que escribe uno a uno. Los dos criterios del reconocimiento, genuino y especifico, tambien son suyos y estan razonados con el caso de la frase de su jefe. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se reconoce ni que hacer si la fortaleza de alguien no le sirve de nada al equipo.",
+  "pasos_accionables": [
+    "Parte de que estamos hechos para ver lo malo con más claridad que lo bueno, y de que es una ventaja evolutiva: al cavernícola que otea el paisaje le sirve más detectar al león hambriento entre las sombras que distinguir lo que es normal y está bien, los ciervos pastando o las ramas meciéndose.",
+    "Cuenta con que eso puede afectarte por los dos lados: hay quien, al leer la opinión de su jefe, pasa por encima de la parte de fortalezas y se fija sobre todo en las áreas de mejora, y ya como directivo nota que su atención se va igual a los puntos con problema, a los diseños que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+    "Reconoce aun así el trabajo duro, las habilidades valiosas, el consejo útil o los buenos valores, porque reconocerlos puede motivar enormemente si se siente genuino y específico.",
+    "Haz que sea específico de la persona: a una persona abatida, su jefe pudo haberle dicho decenas de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad.",
+    "Da por hecho que la gente tiene más probabilidad de tener éxito usando sus fortalezas.",
+    "Busca oportunidades para que cada uno haga más de aquello que le gusta y se le da bien: si a alguien de tu equipo le encanta poner al día a los recién llegados y además se le da bien, dale más de eso, por ejemplo mentorizar a alguien en prácticas o hacer de entrenador informal de otros.",
+    "Y si tienes a alguien que construye comunidad y ya organiza de forma natural las comidas del equipo, pregúntale si le interesaría dirigir determinadas reuniones.",
+    "Ten presente en cada caso que lo que estás dando es una oportunidad de crecer en una dirección que conecta con los intereses y las fortalezas de esa persona."
+  ],
+  "entregable_esperado": "Cada persona del equipo con su fortaleza reconocida de forma genuina y específica, y con una oportunidad concreta de hacer más de aquello que se le da bien.",
+  "nodos_previos": [
+    "gestionar_personas_equipo"
+  ],
+  "nodos_siguientes": [
+    "repartir_tiempo_atencion_mejores_equipo"
+  ],
+  "condiciones_activacion": [
+    "Siempre que tengas personas a cargo, y con más motivo cuando notes que toda tu atención se está yendo a los puntos con problema."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Por instinto vemos lo malo con más claridad que lo bueno, y hay quien, ya dirigiendo, nota que su atención se va sola a los problemas. Reconocer el trabajo duro, una habilidad valiosa, un consejo útil o unos buenos valores puede motivar enormemente, siempre que se sienta genuino y específico de esa persona, no una frase de ánimo que valdría para cualquiera. Y como la gente tiene más probabilidad de éxito cuando usa sus fortalezas, busca ocasiones para que cada uno haga más de aquello que le gusta y se le da bien, y crezca por ahí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "209-231"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: 'can be hugely motivating if' (l.227) quedó en 'motiva mucho', y la atención que se va a los problemas es experiencia de la autora (l.223). La propuesta devuelve el 'puede', cuenta la experiencia como 'hay quien' y suelta el 'hay que ponerlo a propósito', que no estaba en las líneas.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de que estamos cableados para ver lo malo con mas claridad que lo bueno, y de que es una ventaja evolutiva: el cavernicola que otea el paisaje no gana nada distinguiendo lo que es normal y esta bien, los ciervos pastando o las ramas meciendose, sino detectando al leon hambriento entre las sombras.",
+      "texto_nuevo": "Parte de que estamos cableados para ver lo malo con más claridad que lo bueno, y de que es una ventaja evolutiva: el cavernícola que otea el paisaje no gana nada distinguiendo lo que es normal y está bien, los ciervos pastando o las ramas meciéndose, sino detectando al león hambriento entre las sombras.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que eso tira de ti en las dos direcciones: al leer la opinion de tu jefe pasas por encima de la parte de fortalezas y te clavas en las areas de mejora, y ya como directivo tu atencion se va igual a los puntos con problema, a los disenios que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+      "texto_nuevo": "Cuenta con que eso tira de ti en las dos direcciones: al leer la opinión de tu jefe pasas por encima de la parte de fortalezas y te clavas en las áreas de mejora, y ya como directivo tu atención se va igual a los puntos con problema, a los diseños que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce aun asi el trabajo duro, las habilidades valiosas, el consejo util o los buenos valores, porque reconocerlos puede motivar enormemente si se siente genuino y especifico.",
+      "texto_nuevo": "Reconoce aun así el trabajo duro, las habilidades valiosas, el consejo útil o los buenos valores, porque reconocerlos puede motivar enormemente si se siente genuino y específico.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz que sea especifico de la persona, que es como el libro lo razona con el caso del jefe de la autora: pudo haberle dicho una docena de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenia buenos valores, algo especifico de ella y que ella sintio que el creia de verdad.",
+      "texto_nuevo": "Haz que sea específico de la persona: a alguien abatido, su jefe pudo haberle dicho una docena de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es como el libro lo razona con el caso del jefe de la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Da por hecho que la gente tiene mas probabilidad de tener exito usando sus fortalezas, que es el mensaje que exploran Marcus Buckingham y Donald Clifton en Now, Discover Your Strengths y Tom Rath en StrengthsFinder 2.0.",
+      "texto_nuevo": "Da por hecho que la gente tiene más probabilidad de tener éxito usando sus fortalezas.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "que es el mensaje que exploran Marcus Buckingham y Donald Clifton en Now, Discover Your Strengths y Tom Rath en StrengthsFinder 2.0"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "autor_o_titulo",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca oportunidades para que cada uno haga mas de aquello que le gusta y se le da bien: si a alguien de tu equipo le encanta poner al dia a los recien llegados y ademas se le da bien, dale mas de eso, por ejemplo mentorizar a alguien en practicas o hacer de entrenador informal de otros.",
+      "texto_nuevo": "Busca oportunidades para que cada uno haga más de aquello que le gusta y se le da bien: si a alguien de tu equipo le encanta poner al día a los recién llegados y además se le da bien, dale más de eso, por ejemplo mentorizar a alguien en prácticas o hacer de entrenador informal de otros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y si tienes a alguien que construye comunidad y ya organiza de forma natural las comidas del equipo, preguntale si le interesaria dirigir determinadas reuniones.",
+      "texto_nuevo": "Y si tienes a alguien que construye comunidad y ya organiza de forma natural las comidas del equipo, pregúntale si le interesaría dirigir determinadas reuniones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten presente en cada caso que lo que estas dando es una oportunidad de crecer en una direccion que habla a los intereses y a las fortalezas de esa persona.",
+      "texto_nuevo": "Ten presente en cada caso que lo que estás dando es una oportunidad de crecer en una dirección que habla a los intereses y a las fortalezas de esa persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada persona del equipo con su fortaleza reconocida de forma genuina y especifica, y con una oportunidad concreta de hacer mas de aquello que se le da bien.",
+      "texto_nuevo": "Cada persona del equipo con su fortaleza reconocida de forma genuina y específica, y con una oportunidad concreta de hacer más de aquello que se le da bien.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ayudar_personas_jugar_fortalezas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Siempre que tengas personas a cargo, y con mas motivo cuando notes que toda tu atencion se esta yendo a los puntos con problema.",
+      "texto_nuevo": "Siempre que tengas personas a cargo, y con más motivo cuando notes que toda tu atención se está yendo a los puntos con problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ayudar_personas_jugar_fortalezas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Parte de que estamos cableados para ver lo malo con más claridad que lo bueno, y de que es una ventaja evolutiva: el cavernícola que otea el paisaje no gana nada distinguiendo lo que es normal y está bien, los ciervos pastando o las ramas meciéndose, sino detectando al león hambriento entre las sombras.",
+      "texto_nuevo": "Parte de que estamos hechos para ver lo malo con más claridad que lo bueno, y de que es una ventaja evolutiva: al cavernícola que otea el paisaje le sirve más detectar al león hambriento entre las sombras que distinguir lo que es normal y está bien, los ciervos pastando o las ramas meciéndose.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 219",
+        "frase": "Imagine you are an ancient cave dweller surveying the landscape: Would you rather be better at noticing what’s fine and normal—deer grazing, tree branches swaying, the sun shining—or at spotting the hungry lion in the shadows?"
+      },
+      "decision": "auditoria completa M11 (matiz, calco): 'Cableados' calca 'wired'; y 'no gana nada distinguiendo' endurece la pregunta del libro, que solo compara qué es mejor.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ayudar_personas_jugar_fortalezas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que eso tira de ti en las dos direcciones: al leer la opinión de tu jefe pasas por encima de la parte de fortalezas y te clavas en las áreas de mejora, y ya como directivo tu atención se va igual a los puntos con problema, a los diseños que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+      "texto_nuevo": "Cuenta con que eso te afecta por los dos lados: hay quien, al leer la opinión de su jefe, pasa por encima de la parte de fortalezas y se fija sobre todo en las áreas de mejora, y ya como directivo nota que su atención se va igual a los puntos con problema, a los diseños que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 221-223",
+        "frase": "Whenever I used to read my manager’s feedback, I’d give the strengths and “going well” section a passing glance and focus primarily on the “areas for improvement.”"
+      },
+      "decision": "auditoria completa M11 (matiz, regionalismo): Es la experiencia de la autora, vuelta en lo que te pasa a ti (el resumen ya la cuenta como 'hay quien'); 'tira de ti' es forma peninsular y 'te clavas en' también es regional.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-ayudar_personas_jugar_fortalezas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ayudar a cada persona de tu equipo a jugar con sus fortalezas",
+      "texto_nuevo": "Ayudar a cada persona de tu equipo a apoyarse en sus fortalezas",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "jugar con"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'play to their strengths'; 'jugar con' es tomar a la ligera.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-ayudar_personas_jugar_fortalezas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que eso te afecta por los dos lados: hay quien, al leer la opinión de su jefe, pasa por encima de la parte de fortalezas y se fija sobre todo en las áreas de mejora, y ya como directivo nota que su atención se va igual a los puntos con problema, a los diseños que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+      "texto_nuevo": "Cuenta con que eso puede afectarte por los dos lados: hay quien, al leer la opinión de su jefe, pasa por encima de la parte de fortalezas y se fija sobre todo en las áreas de mejora, y ya como directivo nota que su atención se va igual a los puntos con problema, a los diseños que no acaban de estar, a los proyectos que se retrasan y a los equipos que necesitan contratar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 221-223",
+        "frase": "As a manager, my attention is similarly drawn toward the problem spots."
+      },
+      "decision": "auditoria completa M11 (matiz): Lo que sigue es la experiencia de la autora; el paso afirmaba que al lector le pasa.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-ayudar_personas_jugar_fortalezas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz que sea específico de la persona: a alguien abatido, su jefe pudo haberle dicho una docena de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad.",
+      "texto_nuevo": "Haz que sea específico de la persona: a alguien abatido, su jefe pudo haberle dicho decenas de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 215",
+        "frase": "He could have said dozens of other things to make me feel better"
+      },
+      "decision": "auditoria completa M11 (invencion): El libro dice 'dozens' (decenas), no una docena.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase3-ayudar_personas_jugar_fortalezas-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten presente en cada caso que lo que estás dando es una oportunidad de crecer en una dirección que habla a los intereses y a las fortalezas de esa persona.",
+      "texto_nuevo": "Ten presente en cada caso que lo que estás dando es una oportunidad de crecer en una dirección que conecta con los intereses y las fortalezas de esa persona.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "habla a los intereses y a las fortalezas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"speaks to their interests and strengths\" (zhuo_manager/cap_04.md:231): en español una dirección no \"habla a\" unos intereses; pasa a \"conecta con\".",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-ayudar_personas_jugar_fortalezas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que sea específico de la persona: a alguien abatido, su jefe pudo haberle dicho decenas de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad.",
+      "texto_nuevo": "Haz que sea específico de la persona: a una persona abatida, su jefe pudo haberle dicho decenas de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Falta de concordancia: \"alguien abatido\" en masculino y luego \"de ella\" y \"ella sintió\" (en el pasaje, zhuo_manager/cap_04.md 211-215, quien estaba abatida es una directiva). Cambio mínimo: \"una persona abatida\", sin añadir nada."
+      },
+      "decision": "auditoria completa M11 (ortografia): Falta de concordancia: \"alguien abatido\" en masculino y luego \"de ella\" y \"ella sintió\" (en el pasaje, zhuo_manager/cap_04.md 211-215, quien estaba abatida es una directiva). Cambio mínimo: \"una persona abatida\", sin añadir nada.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Apóyate en sus Fortalezas"
+}

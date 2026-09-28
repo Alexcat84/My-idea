@@ -1,0 +1,397 @@
+{
+  "node_id": "retirar_etiquetas_permanentes_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Retirar las etiquetas permanentes de la gente de tu equipo y volver a mirarla con ojos nuevos cada día",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "La gente cambia de verdad: quien crecía despacio puede pedir de golpe un reto nuevo y quien llevaba años subiendo puede necesitar calma, y el desempeño también sube y baja con el tiempo. Una etiqueta fija congela a la persona en una foto vieja y te impide ver ese cambio. Por eso el ajuste depende de prestar atención y de conocer a cada cual lo bastante para notar que algo importante se movió. Importa hablar con la persona de qué impulsa su trayectoria, y puntuar el periodo y no a quien lo trabajó combate las etiquetas. Así la relación evoluciona con la persona en vez de encerrarla en una caja.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_06.md, unidad Cap. 3, Understand What Motivates Each Person on Your Team. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'permanent marker', corrida con grep contra las quince unidades del libro. Es el cierre del capitulo y podria leerse como exhortacion, pero no lo es: el texto pone medios concretos, una prohibicion de uso sobre los dos nombres que el mismo capitulo introdujo, una sustitucion de vocabulario de puntuacion con sus tres valores transcritos y su autor nombrado, y la condicion que hace posible el ajuste, conocer a la persona lo bastante como para notar el cambio. Ese es el inventario que lo vuelve procedimentable. Se extrae como nodo propio y no como ultimo paso del procedimiento del marco porque su objeto es el uso del marco a lo largo del tiempo y no su aplicacion en un momento dado, y porque el texto le da rotulo propio. Lo que el texto NO dice, y por eso no esta escrito aqui, es cada cuanto se revisa la trayectoria de alguien, ni quien inicia la conversacion sobre que la esta impulsando.",
+  "pasos_accionables": [
+    "Cuenta con lo difícil que es esto: cuesta no fijar tus percepciones sobre la gente, y salen solas frases del tipo «esta persona es de tal manera y siempre lo será».",
+    "No uses los nombres de los dos perfiles, estrella de rock y superestrella, como etiquetas permanentes: ese es el mayor peligro de esos dos nombres.",
+    "Cuenta con que la gente cambia de verdad: quien llevaba tiempo en trayectoria gradual puede ponerse inquieto de golpe y ansiar un reto nuevo, y quien lleva años en trayectoria empinada puede estar deseando un periodo de estabilidad.",
+    "Toma eso como una razón más para dirigir de verdad: ser un gran jefe supone ajustarse constantemente a la realidad nueva del día, la semana o el año según se despliega.",
+    "Y cuenta con la condición de ese ajuste: no puedes ajustarte si no has estado prestando atención, o si no conoces a la persona lo bastante como para notar que algo importante ha cambiado.",
+    "No etiquetes tampoco por desempeño: el desempeño de la gente también cambia con el tiempo y todo el mundo tiene un trimestre malo de vez en cuando.",
+    "Para combatir las etiquetas permanentes, refiere la puntuación al periodo y no a la persona, con tres valores: trimestre flojo, trimestre sólido y trimestre excepcional.",
+    "Cuenta con que el ajuste es especialmente difícil cuando toca mover a quien te hacía la vida fácil a un papel nuevo que te la va a hacer más difícil, al menos a corto plazo, y con que eso es estresante para ti.",
+    "Habla con la persona de qué está impulsando su grado de trayectoria en cada momento: es importante que lo tengan claro los dos, el miembro del equipo y el jefe, para que se beneficien la persona y la empresa.",
+    "Usa el marco pero no abuses de él: asegúrate de ver a cada persona de tu equipo con ojos nuevos cada día, porque la gente evoluciona y tus relaciones tienen que evolucionar con ella. Que cada persona te importe personalmente, y no metas a la gente en cajas para dejarla ahí."
+  ],
+  "entregable_esperado": "Ninguna etiqueta permanente puesta sobre nadie del equipo, el motivo de la trayectoria de cada cual hablado con la persona, y las puntuaciones de desempeño referidas a un periodo y no a una persona.",
+  "nodos_previos": [
+    "cambiar_potencial_trayectoria_crecimiento"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando te oyes decir que alguien de tu equipo es de una manera, en presente permanente, y cuando alguien que llevaba años estable de pronto pide un cambio o al revés."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La gente cambia de verdad: quien crecía despacio puede pedir de golpe un reto nuevo y quien llevaba años subiendo puede necesitar calma, y el desempeño también sube y baja con el tiempo. Una etiqueta fija congela a la persona en una foto vieja y te impide ver ese cambio. Por eso el ajuste depende de prestar atención y de conocer a cada cual lo bastante para notar que algo importante se movió, de hablar con la persona de qué impulsa su trayectoria y de puntuar el periodo y no a quien lo trabajó. Así la relación evoluciona con la persona en vez de encerrarla en una caja.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_06.md",
+          "lineas": "343-355"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)"
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Retirar las etiquetas permanentes de la gente de tu equipo y volver a mirarla con ojos nuevos cada dia",
+      "texto_nuevo": "Retirar las etiquetas permanentes de la gente de tu equipo y volver a mirarla con ojos nuevos cada día",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que es dificil aqui, que el texto nombra: cuesta no fijar tus percepciones sobre la gente, y salen solas frases del tipo esta persona es de tal manera y siempre lo sera.",
+      "texto_nuevo": "Cuenta con lo difícil que es esto: cuesta no fijar tus percepciones sobre la gente, y salen solas frases del tipo «esta persona es de tal manera y siempre lo será».",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No uses los nombres de las dos fases como etiquetas permanentes. El texto dice que esa es su mayor preocupacion con esos dos nombres, y lo pide expresamente.",
+      "texto_nuevo": "No uses los nombres de las dos fases como etiquetas permanentes: ese es el mayor peligro de esos dos nombres.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que esa es su mayor preocupacion con esos dos nombres, y lo pide expresamente"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la gente cambia de verdad: quien llevaba tiempo en trayectoria gradual puede ponerse inquieto de golpe y ansiar un reto nuevo, y quien lleva anios en trayectoria empinada puede estar deseando un periodo de estabilidad.",
+      "texto_nuevo": "Cuenta con que la gente cambia de verdad: quien llevaba tiempo en trayectoria gradual puede ponerse inquieto de golpe y ansiar un reto nuevo, y quien lleva años en trayectoria empinada puede estar deseando un periodo de estabilidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Toma eso como una razon mas para dirigir de verdad: ser un gran jefe supone ajustarse constantemente a la realidad nueva del dia, la semana o el anio segun se despliega.",
+      "texto_nuevo": "Toma eso como una razón más para dirigir de verdad: ser un gran jefe supone ajustarse constantemente a la realidad nueva del día, la semana o el año según se despliega.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y cuenta con la condicion de ese ajuste, que es la que el texto pone como filo: no puedes ajustarte si no has estado prestando atencion, o si no conoces a la persona lo bastante como para notar que algo importante ha cambiado.",
+      "texto_nuevo": "Y cuenta con la condición de ese ajuste: no puedes ajustarte si no has estado prestando atención, o si no conoces a la persona lo bastante como para notar que algo importante ha cambiado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es la que el texto pone como filo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No etiquetes tampoco por desempenio. El texto dice que el desempenio de la gente tambien cambia con el tiempo y que todo el mundo tiene un trimestre malo de vez en cuando.",
+      "texto_nuevo": "No etiquetes tampoco por desempeño: el desempeño de la gente también cambia con el tiempo y todo el mundo tiene un trimestre malo de vez en cuando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para combatir las etiquetas permanentes, refiere la puntuacion al periodo y no a la persona. El texto recoge las tres que ideo Jared Smith: trimestre flojo, trimestre solido y trimestre excepcional.",
+      "texto_nuevo": "Para combatir las etiquetas permanentes, refiere la puntuación al periodo y no a la persona, con tres valores: trimestre flojo, trimestre sólido y trimestre excepcional.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto recoge las tres que ideo Jared Smith"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que el ajuste mas dificil es cuando toca mover a quien te hacia la vida facil a un papel nuevo que te la va a hacer mas dificil, al menos a corto plazo, y con que eso es estresante para ti.",
+      "texto_nuevo": "Cuenta con que el ajuste más difícil es cuando toca mover a quien te hacía la vida fácil a un papel nuevo que te la va a hacer más difícil, al menos a corto plazo, y con que eso es estresante para ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Habla con la persona de que esta impulsando su grado de trayectoria en cada momento. El texto dice que es importante que lo tengan claro los dos, el miembro del equipo y el jefe, para que se beneficien la persona y la empresa.",
+      "texto_nuevo": "Habla con la persona de qué está impulsando su grado de trayectoria en cada momento: es importante que lo tengan claro los dos, el miembro del equipo y el jefe, para que se beneficien la persona y la empresa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el marco pero no abuses de el: asegurate de ver a cada persona de tu equipo con ojos nuevos cada dia, porque la gente evoluciona y tus relaciones tienen que evolucionar con ella. El texto lo cierra asi: cuida personalmente, y no metas a la gente en cajas para dejarla ahi.",
+      "texto_nuevo": "Usa el marco pero no abuses de él: asegúrate de ver a cada persona de tu equipo con ojos nuevos cada día, porque la gente evoluciona y tus relaciones tienen que evolucionar con ella. Cuida personalmente, y no metas a la gente en cajas para dejarla ahí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo cierra asi:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ninguna etiqueta permanente puesta sobre nadie del equipo, el motivo de la trayectoria de cada cual hablado con la persona, y las puntuaciones de desempenio referidas a un periodo y no a una persona.",
+      "texto_nuevo": "Ninguna etiqueta permanente puesta sobre nadie del equipo, el motivo de la trayectoria de cada cual hablado con la persona, y las puntuaciones de desempeño referidas a un periodo y no a una persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_etiquetas_permanentes_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te oyes decir que alguien de tu equipo es de una manera, en presente permanente, y cuando alguien que llevaba anios estable de pronto pide un cambio o al reves.",
+      "texto_nuevo": "Cuando te oyes decir que alguien de tu equipo es de una manera, en presente permanente, y cuando alguien que llevaba años estable de pronto pide un cambio o al revés.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-retirar_etiquetas_permanentes_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No uses los nombres de las dos fases como etiquetas permanentes: ese es el mayor peligro de esos dos nombres.",
+      "texto_nuevo": "No uses los nombres de los dos perfiles, estrella de rock y estrella en ascenso, como etiquetas permanentes: ese es el mayor peligro de esos dos nombres.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"Las dos fases\" no existen en el nodo. La propuesta del auditor (gradual y empinada) mete otro error: en el libro la preocupación es por los nombres \"rock star\" y \"superstar\" como etiquetas (cap_06 l. 347), que el pack llama estrella de rock y estrella en ascenso."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Las dos fases\" no existen en el nodo. La propuesta del auditor (gradual y empinada) mete otro error: en el libro la preocupación es por los nombres \"rock star\" y \"superstar\" como etiquetas (cap_06 l. 347), que el pack llama estrella de rock y estrella en ascenso.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-retirar_etiquetas_permanentes_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que el ajuste más difícil es cuando toca mover a quien te hacía la vida fácil a un papel nuevo que te la va a hacer más difícil, al menos a corto plazo, y con que eso es estresante para ti.",
+      "texto_nuevo": "Cuenta con que el ajuste es especialmente difícil cuando toca mover a quien te hacía la vida fácil a un papel nuevo que te la va a hacer más difícil, al menos a corto plazo, y con que eso es estresante para ti.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 351",
+        "frase": "Such adjustments are particularly hard when it comes time to move people who have been making your life easier into new roles that will make your life harder—at least in the short term."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que esos ajustes son especialmente difíciles, no el más difícil de todos.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-retirar_etiquetas_permanentes_equipo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el marco pero no abuses de él: asegúrate de ver a cada persona de tu equipo con ojos nuevos cada día, porque la gente evoluciona y tus relaciones tienen que evolucionar con ella. Cuida personalmente, y no metas a la gente en cajas para dejarla ahí.",
+      "texto_nuevo": "Usa el marco pero no abuses de él: asegúrate de ver a cada persona de tu equipo con ojos nuevos cada día, porque la gente evoluciona y tus relaciones tienen que evolucionar con ella. Que cada persona te importe personalmente, y no metas a la gente en cajas para dejarla ahí.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Cuida personalmente"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Cuida personalmente' calca 'Care personally' y sin objeto se lee como 'ocúpate tú mismo'; se alinea con la dimensión 'importarte personalmente' que usa el pack.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-retirar_etiquetas_permanentes_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No uses los nombres de los dos perfiles, estrella de rock y estrella en ascenso, como etiquetas permanentes: ese es el mayor peligro de esos dos nombres.",
+      "texto_nuevo": "No uses los nombres de los dos perfiles, estrella de rock y superestrella, como etiquetas permanentes: ese es el mayor peligro de esos dos nombres.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "Los dos perfiles del método de crecimiento son «estrella de rock» y «superestrella» (decisión del orquestador); «estrella en ascenso» pasa a «superestrella»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Los dos perfiles del método de crecimiento son «estrella de rock» y «superestrella» (decisión del orquestador); «estrella en ascenso» pasa a «superestrella».",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase6-retirar_etiquetas_permanentes_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gente cambia de verdad: quien crecía despacio puede pedir de golpe un reto nuevo y quien llevaba años subiendo puede necesitar calma, y el desempeño también sube y baja con el tiempo. Una etiqueta fija congela a la persona en una foto vieja y te impide ver ese cambio. Por eso el ajuste depende de prestar atención y de conocer a cada cual lo bastante para notar que algo importante se movió, de hablar con la persona de qué impulsa su trayectoria y de puntuar el periodo y no a quien lo trabajó. Así la relación evoluciona con la persona en vez de encerrarla en una caja.",
+      "texto_nuevo": "La gente cambia de verdad: quien crecía despacio puede pedir de golpe un reto nuevo y quien llevaba años subiendo puede necesitar calma, y el desempeño también sube y baja con el tiempo. Una etiqueta fija congela a la persona en una foto vieja y te impide ver ese cambio. Por eso el ajuste depende de prestar atención y de conocer a cada cual lo bastante para notar que algo importante se movió. Importa hablar con la persona de qué impulsa su trayectoria, y puntuar el periodo y no a quien lo trabajó combate las etiquetas. Así la relación evoluciona con la persona en vez de encerrarla en una caja.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 347-353",
+        "frase": "But you can't adjust if you haven't been paying attention or if you don't know the person well enough to notice that something significant has shifted. / To combat permanent labels, Qualtrics cofounder (and my colleague from Juice and Google) Jared Smith came up with the performance ratings “off quarter,” “solid quarter,” and “exceptional quarter.”"
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El libro hace depender el ajuste solo de prestar atención y conocer a la persona; puntuar el periodo lo da como remedio contra las etiquetas y hablar de la trayectoria como algo importante para los dos, no como condiciones del ajuste. El 'Por eso' se queda: el libro encadena etiquetas, cambio real y ajuste en el mismo párrafo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Quita las Etiquetas Permanentes"
+}

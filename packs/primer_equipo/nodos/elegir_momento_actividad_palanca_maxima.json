@@ -1,0 +1,307 @@
+{
+  "node_id": "elegir_momento_actividad_palanca_maxima",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Elegir el momento de una actividad para que su palanca sea máxima: antes del acontecimiento, o inmediata cuando el momento manda",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "La palanca de una actividad depende también de cuándo se hace. El trabajo que prepara un proceso, dejando claro de antemano qué información se reúne en cada etapa y quién responde de qué, quita confusión y ambigüedad a mucha gente durante mucho tiempo; el mismo esfuerzo hecho tarde, corriendo a ayudar a fijar pautas, tiene mucha menos palanca. Y hay asuntos que dependen del momento: si una persona valiosa decide irse, tienes que atenderlo enseguida si quieres que cambie de idea, porque si lo aplazas pierdes tus posibilidades. La oportunidad es muchas veces crítica, así que tenla presente.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P20 de la frontera publicada en esta vuelta 46, L215 a L217, 297 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO: el libro pone la regla (leverage that depends, however, on when it is performed) y pone SU PROPIO INVENTARIO de lo que es hacer el trabajo por delante, nombrado pieza a pieza (defines in advance exactly what information needs to be gathered and presented at each stage of the planning process and lays out who is responsible for what), mas el contraste de hacerlo tarde y el segundo caso, el del subordinado que se va. Es inventario de OBJETOS DE TRABAJO y de ETAPAS, no de metas. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L215 (leverage that depends, however, on when it is performed); paso 2 de L215 (When Robin defines in advance exactly what information needs to be gathered and presented at each stage of the planning process and lays out who is responsible for what); paso 3 de L215 (she directly affects the subsequent work of perhaps two hundred people, y By spending a certain amount of time in advance of the planning activities, Robin will help to eliminate confusion and ambiguity for a large population of managers over an extended period of time); paso 4 de L215 (If Robin has to scramble later to help a manager define guidelines and milestones, her work will clearly have much less leverage); paso 5 de L217 (Another example of leverage that depends on timely action is what you do when you learn that a valued subordinate has decided to quit. In such a case, you must direct yourself to the situation immediately if you want to change the person mind); paso 6 de L217 (If you put it off, all your chances are lost); paso 7 de L217 (Thus to maximize the leverage of his activities, a manager must keep timeliness, which is often critical, firmly in mind). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. Y EL RESPONSABLE DEL PASO 2 NO ES PUENTE, que es la tercera especie de EXTRACTOR.md 15.4 y la que mas se cuela: lo escribo porque el libro lo escribe en ese mismo renglon, lays out who is responsible for what. Si el renglon no lo dijera, no estaria. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo CUANTO tiempo antes hay que hacer el trabajo preparatorio, porque el libro dice a certain amount of time in advance y no pone cifra, y ponerla yo seria puente de la segunda especie, el periodo; NO escribo la cifra de las doscientas personas como si fuera una vara (el libro dice perhaps two hundred people, o sea una estimacion del caso), y por eso el paso 3 dice mucha gente y una poblacion grande, que es lo que el libro sostiene fuera del caso; NO escribo a quien se le informa. LOS DOS CASOS ENTRAN NOMBRADOS DENTRO Y NO EN CASA PROPIA (manual 3.5): el de la responsable del proceso anual de planificacion y el del subordinado que decide irse. Y LA SENIAL BARATA DE QUE ESO SE HIZO MAL LA COMPRUEBO CONTRA MI ENTREGABLE: el entregable no lleva ningun dato de ninguno de los dos casos, ni las doscientas personas ni el proceso de planificacion. ARISTA DECLARADA, para cablearla el dia de la insercion: es hija de buscar_actividad_alta_palanca_tres_vias, cuya primera via (mucha gente afectada por un solo mando) este nodo despliega con su condicion de tiempo. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: los pasos 2, 3 y 4 salen del caso de la planificacion anual, y un lector estricto puede decir que un caso no puede poner pasos, que es el mismo discutible que la ficha de clasificar_trabajo_proceso_montaje_prueba lleva desde cap_02. Lo sostengo porque el libro saca de ese caso la regla general en el mismo renglon (leverage that depends on when it is performed) y porque el segundo caso, el del subordinado, repite la misma estructura con otro material, que es la prueba de que la doctrina es del libro y no del caso. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA DE LA VUELTA 50, SIN BORRAR EL NUMERO VIEJO (manual principio 6, deuda d036, adjudicada en ACTA 48 seccion 48.5.a): donde esta ficha dice mas arriba que la PIEZA P20, L215 a L217, tiene 297 palabras, TIENE QUE LEERSE 237 palabras. La cifra buena es la que la frontera de HH.2.c publica para esta pieza, y no una tercera cifra mia: la recompute en la vuelta 50 con el mismo recuento de .v46/frontera.py linea 136 y me da 237, identica a la de la frontera. EL RENGLON DEL INSTRUMENTO QUE LO SOSTIENE, pegado (.v50/palabras_d036.txt): elegir_momento_actividad_palanca_maxima P20 L215 a L217 dice 297 HH.2.c 237 cuento 237 la frontera manda. LO QUE ESTA CORRECCION NO TOCA: ni un paso, ni una atribucion, ni la frontera, que es precisamente la que sale bien. El numero viejo era un numero escrito a mano en la vuelta 46 que ni la frontera citada ni ningun recuento reproducen.",
+  "pasos_accionables": [
+    "Cuenta con que la palanca de una actividad depende de cuándo se ejerce.",
+    "Haz antes del acontecimiento el trabajo que lo prepara: define con antelación exactamente qué información hay que reunir y presentar en cada etapa del proceso, y deja puesto quién responde de qué.",
+    "Cuenta con lo que ese trabajo hecho de antemano consigue: afecta directamente al trabajo posterior de mucha gente y le quita confusión y ambigüedad a una población grande durante un periodo largo.",
+    "Cuenta también con lo contrario: el mismo trabajo hecho tarde, corriendo después a ayudar a un mando a definir sus pautas y sus hitos, tiene mucha menos palanca.",
+    "Cuando la actividad sea de las que dependen del momento, atiéndela inmediatamente: si te enteras de que un subordinado valioso ha decidido irse, ocúpate de esa situación en el acto si quieres que cambie de idea.",
+    "Cuenta con que si la aplazas pierdes todas tus posibilidades.",
+    "Ten presente la oportunidad del momento, que muchas veces es crítica, para sacar a tus actividades la máxima palanca."
+  ],
+  "entregable_esperado": "La actividad colocada en su momento: la preparatoria hecha antes del acontecimiento con su información y sus responsables ya definidos, y la que depende del momento atendida en el acto.",
+  "nodos_previos": [
+    "buscar_actividad_alta_palanca_tres_vias"
+  ],
+  "nodos_siguientes": [
+    "zanjar_seis_preguntas_decision_adelantado"
+  ],
+  "condiciones_activacion": [
+    "Cuando la actividad que tienes delante es de las de alta palanca y está a tiempo de hacerse antes o después, porque hacerla tarde no la hace menos actividad pero sí la hace valer mucho menos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La palanca de una actividad depende también de cuándo se hace. El trabajo que prepara un proceso, dejando claro de antemano qué información se reúne en cada etapa y quién responde de qué, quita confusión y ambigüedad a mucha gente durante mucho tiempo; el mismo esfuerzo hecho tarde, corriendo a ayudar a fijar pautas, tiene mucha menos palanca. Y hay asuntos que dependen del momento: si una persona valiosa decide irse, tienes que atenderlo enseguida si quieres que cambie de idea, porque si lo aplazas pierdes tus posibilidades. La oportunidad es muchas veces crítica, así que tenla presente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "215-217"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): 'la oportunidad pesa tanto como el esfuerzo' y 'el momento lo es todo' no salen de L215-217, que dicen 'timeliness, which is often critical'. La propuesta devuelve el 'muchas veces', se ciñe a los dos ejemplos de las líneas (preparar por delante frente a correr tarde; atender enseguida a quien quiere irse, L217 'If you put it off, all your chances are lost') y no inventa nada.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)"
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir el momento de una actividad para que su palanca sea maxima: por delante del acontecimiento, o inmediata cuando el momento manda",
+      "texto_nuevo": "Elegir el momento de una actividad para que su palanca sea máxima: por delante del acontecimiento, o inmediata cuando el momento manda",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la palanca de una actividad depende de cuando se ejerce.",
+      "texto_nuevo": "Cuenta con que la palanca de una actividad depende de cuándo se ejerce.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz por delante del acontecimiento el trabajo que lo prepara: define con antelacion exactamente que informacion hay que reunir y presentar en cada etapa del proceso, y deja puesto quien responde de que.",
+      "texto_nuevo": "Haz por delante del acontecimiento el trabajo que lo prepara: define con antelación exactamente qué información hay que reunir y presentar en cada etapa del proceso, y deja puesto quién responde de qué.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que ese trabajo hecho por delante consigue: afecta directamente al trabajo posterior de mucha gente y le quita confusion y ambiguedad a una poblacion grande durante un periodo largo.",
+      "texto_nuevo": "Cuenta con lo que ese trabajo hecho por delante consigue: afecta directamente al trabajo posterior de mucha gente y le quita confusión y ambigüedad a una población grande durante un periodo largo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta tambien con lo contrario: el mismo trabajo hecho tarde, corriendo despues a ayudar a un mando a definir sus pautas y sus hitos, tiene mucha menos palanca.",
+      "texto_nuevo": "Cuenta también con lo contrario: el mismo trabajo hecho tarde, corriendo después a ayudar a un mando a definir sus pautas y sus hitos, tiene mucha menos palanca.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la actividad sea de las que dependen del momento, atiendela inmediatamente: si te enteras de que un subordinado valioso ha decidido irse, dirigete a esa situacion en el acto si quieres que cambie de idea.",
+      "texto_nuevo": "Cuando la actividad sea de las que dependen del momento, atiéndela inmediatamente: si te enteras de que un subordinado valioso ha decidido irse, dirígete a esa situación en el acto si quieres que cambie de idea.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten presente la oportunidad del momento, que muchas veces es critica, para sacar a tus actividades la maxima palanca.",
+      "texto_nuevo": "Ten presente la oportunidad del momento, que muchas veces es crítica, para sacar a tus actividades la máxima palanca.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La actividad colocada en su momento: la preparatoria hecha por delante del acontecimiento con su informacion y sus responsables ya definidos, y la que depende del momento atendida en el acto.",
+      "texto_nuevo": "La actividad colocada en su momento: la preparatoria hecha por delante del acontecimiento con su información y sus responsables ya definidos, y la que depende del momento atendida en el acto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_momento_actividad_palanca_maxima-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la actividad que tienes delante es de las de alta palanca y esta a tiempo de hacerse antes o despues, porque hacerla tarde no la hace menos actividad pero si la hace valer mucho menos.",
+      "texto_nuevo": "Cuando la actividad que tienes delante es de las de alta palanca y está a tiempo de hacerse antes o después, porque hacerla tarde no la hace menos actividad pero sí la hace valer mucho menos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-barrido-elegir_momento_actividad_palanca_maxima-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elegir el momento de una actividad para que su palanca sea máxima: por delante del acontecimiento, o inmediata cuando el momento manda",
+      "texto_nuevo": "Elegir el momento de una actividad para que su palanca sea máxima: antes del acontecimiento, o inmediata cuando el momento manda",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "por delante del acontecimiento"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-elegir_momento_actividad_palanca_maxima-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "La actividad colocada en su momento: la preparatoria hecha por delante del acontecimiento con su información y sus responsables ya definidos, y la que depende del momento atendida en el acto.",
+      "texto_nuevo": "La actividad colocada en su momento: la preparatoria hecha antes del acontecimiento con su información y sus responsables ya definidos, y la que depende del momento atendida en el acto.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "hecha por delante del acontecimiento"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-elegir_momento_actividad_palanca_maxima-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz por delante del acontecimiento el trabajo que lo prepara: define con antelación exactamente qué información hay que reunir y presentar en cada etapa del proceso, y deja puesto quién responde de qué.",
+      "texto_nuevo": "Haz antes del acontecimiento el trabajo que lo prepara: define con antelación exactamente qué información hay que reunir y presentar en cada etapa del proceso, y deja puesto quién responde de qué.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "Haz por delante del acontecimiento"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-elegir_momento_actividad_palanca_maxima-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que ese trabajo hecho por delante consigue: afecta directamente al trabajo posterior de mucha gente y le quita confusión y ambigüedad a una población grande durante un periodo largo.",
+      "texto_nuevo": "Cuenta con lo que ese trabajo hecho de antemano consigue: afecta directamente al trabajo posterior de mucha gente y le quita confusión y ambigüedad a una población grande durante un periodo largo.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "hecho por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase3-elegir_momento_actividad_palanca_maxima-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando la actividad sea de las que dependen del momento, atiéndela inmediatamente: si te enteras de que un subordinado valioso ha decidido irse, dirígete a esa situación en el acto si quieres que cambie de idea.",
+      "texto_nuevo": "Cuando la actividad sea de las que dependen del momento, atiéndela inmediatamente: si te enteras de que un subordinado valioso ha decidido irse, ocúpate de esa situación en el acto si quieres que cambie de idea.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "dirígete a esa situación"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"direct yourself to the situation\": en español dirigirse a una situación es ir hacia ella; lo natural es ocuparse de ella.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Elige el Momento de Máxima Palanca"
+}

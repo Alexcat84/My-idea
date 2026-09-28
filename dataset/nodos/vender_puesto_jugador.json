@@ -1,0 +1,225 @@
+{
+  "node_id": "vender_puesto_jugador",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Vender el puesto al jugador A hasta sellar el trato",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Elegir a la persona correcta no basta: todavía hay que conseguir que diga que sí y que se quede. La venta funciona cuando entiendes cuáles de las cinco áreas de la venta le importan de verdad a este candidato y concentras ahí tu esfuerzo para resolver sus dudas. No es un paso final sino una tarea de todo el proceso: hay cinco momentos en que la venta tiene que subir de intensidad, desde el primer contacto hasta los primeros cien días en el puesto. Y pide persistencia: no aceptar el primer no y no aflojar la presión hasta tener a esa persona dentro.",
+  "notas_extraccion": "Es la cabeza del cuarto paso del metodo A y el libro la escribe como un recuadro de tres puntos que comprime el capitulo entero. El capitulo se abre diciendo su sitio en el metodo: vender es el cuarto y ultimo paso del metodo A de ghSMART para contratar, y el que impide que todo el trabajo anterior se pierda en la ultima hora. La clave que el libro pone debajo de los tres puntos es ponerse en los zapatos del candidato e importarte lo que a el le importa, porque los candidatos se preocupan de cinco cosas y hay que atender cada una de las cinco hasta que la persona firme. El primer punto abre la serie de las cinco efes de la venta; el segundo abre la serie de las cinco olas, que es la respuesta del libro a la pregunta de cuando se vende: aunque el capitulo este presentado como el ultimo paso, en realidad vender es algo que hay que hacer durante todo el proceso, igual que abastecer. El tercer punto es persistencia, y el libro lo sostiene con dos relatos, el del ejecutivo numero dos que Robert Hurst llamaba cada dos semanas hasta conseguirlo y el del hacedor de tratos que conto John Howard, que fue subiendo su oferta, apartamento, coche y abrigo incluidos, hasta que el candidato acepto y enderezo la compañia en un año. La moral que Howard le pone es que hay que hacer lo que haga falta cuando estas seguro de haber identificado a la persona correcta. CORRECCION DECLARADA (26 sep 2026, politica marco contra pais, regla de la cifra): el campo resumen_teorico se sustituyo por decision del fundador; el texto anterior queda literal en bitacora/VEREDICTOS.jsonl.",
+  "pasos_accionables": [
+    "Identifica cuáles de las cinco áreas de la venta le importan de verdad a este candidato: el encaje, la familia, la libertad, la fortuna o la diversión.",
+    "Crea y ejecuta un plan para atender las áreas que sí importan durante las cinco olas de la venta: al buscar candidatos, durante las entrevistas, entre la oferta y la aceptación, entre la aceptación y el primer día, y durante los primeros cien días en el puesto.",
+    "Sé persistente. No te rindas hasta que tengas a tu jugador A a bordo."
+  ],
+  "entregable_esperado": "El candidato elegido con la firma puesta y ya incorporado a tu equipo: el trato sellado y el jugador A a bordo.",
+  "nodos_previos": [
+    "aplicar_metodo_ghsmart_contratacion",
+    "decidir_contratacion_final"
+  ],
+  "nodos_siguientes": [
+    "abordar_cinco_efes_venta",
+    "planificar_cinco_olas_venta"
+  ],
+  "condiciones_activacion": [
+    "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, de la captación de candidatos y de la selección, aunque en realidad la venta se hace durante todo el proceso, desde la captación."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-vender_puesto_jugador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Elegir a la persona correcta no basta: todavía hay que conseguir que diga que sí y que se quede. La venta funciona cuando entiendes cuáles de las cinco efes le importan de verdad a este candidato y concentras ahí tu esfuerzo para resolver sus dudas. No es un paso final sino una tarea de todo el proceso: hay cinco momentos en que la venta tiene que subir de intensidad, desde el primer contacto hasta los primeros cien días en el puesto. Y pide persistencia: no aceptar el primer no y no aflojar la presión hasta tener a esa persona dentro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "145-223"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)"
+    },
+    {
+      "id": "m11-limpieza-vender_puesto_jugador-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica cuales de las cinco efes le importan de verdad a este candidato: el encaje, la familia, la libertad, la fortuna o la diversion.",
+      "texto_nuevo": "Identifica cuáles de las cinco efes le importan de verdad a este candidato: el encaje, la familia, la libertad, la fortuna o la diversión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_puesto_jugador-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea y ejecuta un plan para atender las efes que si importan durante las cinco olas de la venta: al abastecer, durante las entrevistas, entre la oferta y la aceptacion, entre la aceptacion y el primer dia, y durante los primeros cien dias en el puesto.",
+      "texto_nuevo": "Crea y ejecuta un plan para atender las efes que sí importan durante las cinco olas de la venta: al abastecer, durante las entrevistas, entre la oferta y la aceptación, entre la aceptación y el primer día, y durante los primeros cien días en el puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_puesto_jugador-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Se persistente. No te rindas hasta que tengas a tu jugador A a bordo.",
+      "texto_nuevo": "Sé persistente. No te rindas hasta que tengas a tu jugador A a bordo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_puesto_jugador-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuando la seleccion ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y ultimo paso del metodo A de ghSMART para contratar, detras de la tarjeta de puntuacion, del abastecimiento del flujo de candidatos y de la seleccion, y arranca justo donde termina decidir a quien contratar.",
+      "texto_nuevo": "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, del abastecimiento del flujo de candidatos y de la selección, y arranca justo donde termina decidir a quién contratar.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "de ghSMART"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-vender_puesto_jugador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elegir a la persona correcta no basta: todavía hay que conseguir que diga que sí y que se quede. La venta funciona cuando entiendes cuáles de las cinco efes le importan de verdad a este candidato y concentras ahí tu esfuerzo para resolver sus dudas. No es un paso final sino una tarea de todo el proceso: hay cinco momentos en que la venta tiene que subir de intensidad, desde el primer contacto hasta los primeros cien días en el puesto. Y pide persistencia: no aceptar el primer no y no aflojar la presión hasta tener a esa persona dentro.",
+      "texto_nuevo": "Elegir a la persona correcta no basta: todavía hay que conseguir que diga que sí y que se quede. La venta funciona cuando entiendes cuáles de las cinco áreas de la venta le importan de verdad a este candidato y concentras ahí tu esfuerzo para resolver sus dudas. No es un paso final sino una tarea de todo el proceso: hay cinco momentos en que la venta tiene que subir de intensidad, desde el primer contacto hasta los primeros cien días en el puesto. Y pide persistencia: no aceptar el primer no y no aflojar la presión hasta tener a esa persona dentro.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "efes"
+        ]
+      },
+      "decision": "pase de glosario (cinco_efes): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-glosario-vender_puesto_jugador-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica cuáles de las cinco efes le importan de verdad a este candidato: el encaje, la familia, la libertad, la fortuna o la diversión.",
+      "texto_nuevo": "Identifica cuáles de las cinco áreas de la venta le importan de verdad a este candidato: el encaje, la familia, la libertad, la fortuna o la diversión.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "efes"
+        ]
+      },
+      "decision": "pase de glosario (cinco_efes): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_puesto_jugador-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea y ejecuta un plan para atender las efes que sí importan durante las cinco olas de la venta: al abastecer, durante las entrevistas, entre la oferta y la aceptación, entre la aceptación y el primer día, y durante los primeros cien días en el puesto.",
+      "texto_nuevo": "Crea y ejecuta un plan para atender las áreas que sí importan durante las cinco olas de la venta: al buscar candidatos, durante las entrevistas, entre la oferta y la aceptación, entre la aceptación y el primer día, y durante los primeros cien días en el puesto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "efes",
+          "al abastecer"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): \"Al abastecer\" sin objeto es calco de \"sourcing\"; \"las efes\" son las iniciales inglesas de las cinco áreas, que en el nodo están en español.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-barrido-vender_puesto_jugador-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, del abastecimiento del flujo de candidatos y de la selección, y arranca justo donde termina decidir a quién contratar.",
+      "texto_nuevo": "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, de la captación de candidatos y de la selección, y arranca justo donde termina decidir a quién contratar.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "del abastecimiento del flujo de candidatos"
+        ]
+      },
+      "decision": "barrido final de calcos (abastecer)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-vender_puesto_jugador-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, de la captación de candidatos y de la selección, y arranca justo donde termina decidir a quién contratar.",
+      "texto_nuevo": "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, de la captación de candidatos y de la selección, aunque en realidad la venta se hace durante todo el proceso, desde la captación.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "smart_who/cap_06.md 147",
+        "frase": "We have presented this “Sell” chapter as the last step in the A Method. In reality, selling is something you should be doing throughout the entire process."
+      },
+      "decision": "auditoria completa M11 (contrario): El libro dice que la venta se hace durante todo el proceso (la primera ola es la captación, líneas 150-160); decir que arranca donde termina la selección es lo contrario.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "contrario"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vende el Puesto Hasta Sellarlo",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

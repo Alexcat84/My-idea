@@ -1,0 +1,287 @@
+{
+  "node_id": "comprobar_opinion_produce_mejora",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Comprobar que tu opinión produce la mejora que buscas, con tres preguntas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Dar tu opinión no basta: solo cuenta si la otra persona mejora. Puedes sentir que cumpliste al señalar el problema, pero hay quien oye el mensaje, lo acepta e intenta cambiar sin lograrlo, porque no ve qué es lo que falla, y si no lo ve no puede arreglarlo. Por eso la vara pasa del acto de decir al resultado: la pregunta de fondo es si tu opinión lleva al cambio que esperas. Para mirar cómo lo estás haciendo, desglósala en tres preguntas: si das opinión con la frecuencia suficiente, si le llega a quien la recibe y si lleva a una acción positiva.",
+  "notas_extraccion": "La seccion desmonta una satisfaccion falsa del directivo, la de haber cumplido por haber senialado el problema, y pone en su lugar una vara de resultado: la opinion solo cuenta si mejora las cosas. El libro la razona con un caso propio en el que la autora descubre que el mensaje habia sido oido y aun asi no era accionable, porque quien lo recibio no veia el problema que se le describia. Despues declara que la pregunta se desglosa un nivel mas y escribe tres preguntas, cada una con su propio titulo y su propia seccion, asi que este nodo es la cabeza y las tres tienen nodo propio. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se hace esta comprobacion sobre uno mismo.",
+  "pasos_accionables": [
+    "Cambia la vara con la que juzgas tu propia opinión: la marca de un gran entrenador es que los demás mejoran bajo su guía, no que él haya señalado el problema.",
+    "Mira este caso. Una directiva le dijo a alguien de su equipo que se extendía demasiado al hablar; él se lo tomó bien, y ella se felicitó por haber cumplido con su deber. Semanas después volvió a pasar exactamente lo mismo.",
+    "Y fíjate en lo que descubrió al preguntarle por qué no había trabajado en simplificar: sí que había trabajado, había añadido un índice y cambiado el orden de las cosas. Quien no había entendido era ella. Él sí había oído la opinión, pero no veía qué tenía de complicado su forma de explicar las cosas, y si no lo veía no podía arreglarlo.",
+    "Ten por eso siempre presente la pregunta que manda: ¿lleva mi opinión al cambio que espero?",
+    "Y desglósala un nivel más en tres preguntas para mirar cómo lo estás haciendo. La primera: ¿estoy dando opinión con la frecuencia suficiente?",
+    "La segunda: ¿está llegando mi opinión a quien la recibe?",
+    "Y la tercera: ¿lleva mi opinión a una acción positiva?"
+  ],
+  "entregable_esperado": "Contestadas las tres preguntas sobre tu propia práctica de dar opinión, y sabido cuál de las tres es la que falla.",
+  "nodos_previos": [
+    "entregar_evaluacion_desempeno_tres_claves",
+    "dar_opinion_especifica_tarea",
+    "compartir_opinion_conductual_regularidad"
+  ],
+  "nodos_siguientes": [
+    "dar_opinion_frecuencia_suficiente",
+    "asegurar_opinion_llega_persona",
+    "hacer_opinion_accionable"
+  ],
+  "condiciones_activacion": [
+    "Cuando has dado opinión y no ves el cambio que esperabas, o cuando quieres saber si tu manera de dar opinión está sirviendo de algo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Dar tu opinión no basta: solo cuenta si la otra persona mejora. Puedes sentir que cumpliste al señalar el problema, pero hay quien oye el mensaje, lo acepta e intenta cambiar sin lograrlo, porque no ve qué es lo que falla, y si no lo ve no puede arreglarlo. Por eso la vara pasa del acto de decir al resultado: la pregunta de fondo es si tu opinión lleva al cambio que esperas. Para mirar cómo lo estás haciendo, desglósala en tres preguntas: si das opinión con la frecuencia suficiente, si le llega a quien la recibe y si lleva a una acción positiva.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_05.md",
+          "lineas": "157-169"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'te deja ver en qué punto se rompe la cadena, en vez de repetir lo mismo' es un efecto que la línea 169 no da (solo 'consider how you're doing with each'), y 'da una falsa sensación' vuelve regla el 'I might feel accomplished' de la línea 167. La propuesta lo deja en 'puedes sentir', cuenta el caso como 'hay quien' y cierra con las tres preguntas de los pasos.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)"
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comprobar que tu opinion produce la mejora que buscas, con las tres preguntas del libro",
+      "texto_nuevo": "Comprobar que tu opinión produce la mejora que buscas, con tres preguntas",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con las tres preguntas del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cambia la vara con la que juzgas tu propia opinion: la marca de un gran entrenador es que los demas mejoran bajo su guia, no que el haya senialado el problema.",
+      "texto_nuevo": "Cambia la vara con la que juzgas tu propia opinión: la marca de un gran entrenador es que los demás mejoran bajo su guía, no que él haya señalado el problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Toma el caso que el libro cuenta para explicarlo. La autora dijo a alguien de su equipo que se enrollaba al hablar, el se lo tomo bien, y ella se dio una palmada en la espalda por haber cumplido con su deber de directiva. Semanas despues volvio a pasar exactamente lo mismo.",
+      "texto_nuevo": "Mira este caso. Una directiva le dijo a alguien de su equipo que se enrollaba al hablar; él se lo tomó bien, y ella se felicitó por haber cumplido con su deber. Semanas después volvió a pasar exactamente lo mismo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Toma el caso que el libro cuenta para explicarlo.",
+          "La autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y toma lo que descubrio al preguntarle por que no habia trabajado en simplificar: si que habia trabajado, habia anadido un indice y cambiado el orden de las cosas. Quien no habia entendido era ella. El si habia oido la opinion, pero no veia que tenia de complicado su forma de explicar las cosas, y si no lo veia no podia arreglarlo.",
+      "texto_nuevo": "Y fíjate en lo que descubrió al preguntarle por qué no había trabajado en simplificar: sí que había trabajado, había añadido un índice y cambiado el orden de las cosas. Quien no había entendido era ella. Él sí había oído la opinión, pero no veía qué tenía de complicado su forma de explicar las cosas, y si no lo veía no podía arreglarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten por eso siempre al fondo de la cabeza la pregunta que manda: lleva mi opinion al cambio que espero?",
+      "texto_nuevo": "Ten por eso siempre al fondo de la cabeza la pregunta que manda: ¿lleva mi opinión al cambio que espero?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y desglosala un nivel mas, en las tres preguntas con las que el libro te manda mirar como lo estas haciendo. La primera, estoy dando opinion con la frecuencia suficiente?",
+      "texto_nuevo": "Y desglósala un nivel más en tres preguntas para mirar cómo lo estás haciendo. La primera: ¿estoy dando opinión con la frecuencia suficiente?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con las que el libro te manda"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La segunda, esta llegando mi opinion a quien la recibe?",
+      "texto_nuevo": "La segunda: ¿está llegando mi opinión a quien la recibe?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y la tercera, lleva mi opinion a una accion positiva?",
+      "texto_nuevo": "Y la tercera: ¿lleva mi opinión a una acción positiva?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contestadas las tres preguntas del libro sobre tu propia practica de dar opinion, y sabido cual de las tres es la que falla.",
+      "texto_nuevo": "Contestadas las tres preguntas sobre tu propia práctica de dar opinión, y sabido cuál de las tres es la que falla.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_opinion_produce_mejora-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando has dado opinion y no ves el cambio que esperabas, o cuando quieres saber si tu manera de dar opinion esta sirviendo de algo.",
+      "texto_nuevo": "Cuando has dado opinión y no ves el cambio que esperabas, o cuando quieres saber si tu manera de dar opinión está sirviendo de algo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_opinion_produce_mejora-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira este caso. Una directiva le dijo a alguien de su equipo que se enrollaba al hablar; él se lo tomó bien, y ella se felicitó por haber cumplido con su deber. Semanas después volvió a pasar exactamente lo mismo.",
+      "texto_nuevo": "Mira este caso. Una directiva le dijo a alguien de su equipo que se extendía demasiado al hablar; él se lo tomó bien, y ella se felicitó por haber cumplido con su deber. Semanas después volvió a pasar exactamente lo mismo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se enrollaba"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Enrollarse' por extenderse al hablar es coloquial de España.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_opinion_produce_mejora-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten por eso siempre al fondo de la cabeza la pregunta que manda: ¿lleva mi opinión al cambio que espero?",
+      "texto_nuevo": "Ten por eso siempre presente la pregunta que manda: ¿lleva mi opinión al cambio que espero?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "al fondo de la cabeza"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'in the back of your mind'.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Verifica que tu Opinión Mejora",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -28,6 +28,16 @@ VIGENCIA uno que dejo de ser cierto con el tiempo (un enlace roto o movido, comp
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
 vigente, si el nuevo trae guiones largos o medios, si falta la cita, o si el id
 de la correccion ya esta aplicado en el nodo. Con --comprobar solo valida.
+
+Integracion del mundo 11 (decisiones del fundador, 28 sep 2026): el pack se limpia ANTES de integrarse.
+  --nodos DIR   aplica sobre otra carpeta de nodos (la de un pack, packs/<dominio>/nodos) en vez de dataset/nodos.
+  VOZ           quita la voz de libro ("el libro", "el texto", "el autor", las citas en ingles) de un campo de cara,
+                titulo_concepto incluido, sin cambiar el sentido. Su "cita" es {"regla", "fragmentos"} como ATRIBUCION.
+  CIFRA         quita una cifra de mercado (regla de la cifra de docs/POLITICA_MARCO_PAIS.md). {"regla", "fragmentos"}.
+  RESUMEN       pone el resumen nuevo (400 a 600 caracteres) cuando el viejo era la nota de extraccion de la forja.
+                El texto viejo YA vive en el campo interno `notas_extraccion` (el importador lo copia alli): el
+                aplicador lo exige identico y en `correcciones` lo remite con `texto_anterior_en` en vez de duplicarlo.
+                Su "cita" es {"instrumento", "evidencia": {"fichero", "lineas"}}.
 """
 import json
 import sys
@@ -36,10 +46,19 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
 CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol",
-          "fase_proyecto", "dominio"}
+          "fase_proyecto", "dominio", "titulo_concepto"}
+# El titulo llega a la IA y a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), pero su contenido vive con el libro:
+# solo lo tocan la voz de cliente y la ortografia (la forja escribe sin tildes) y, contra el libro con su cita, la
+# fidelidad: un titulo que dice lo contrario del libro (CONTRARIO), le anade algo (ANADIDO) o no calza con su propio
+# nodo (COHERENCIA). Lo encontro la auditoria completa del mundo 11 (28 sep 2026). FASE, DOMINIO, RESUMEN, CIFRA y
+# VIGENCIA no tocan el titulo.
+SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION", "ORTOGRAFIA", "CONTRARIO", "ANADIDO", "COHERENCIA"}}
+# Veredictos que declara una regla y los fragmentos que salen, no una frase del libro.
+POR_REGLA = {"ATRIBUCION", "VOZ", "CIFRA"}
+RESUMEN_MIN, RESUMEN_MAX = 400, 600
 FASES = {"ideacion", "validacion", "planificacion", "ejecucion"}
 DOMINIOS = {"core", "quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias",
-            "risk_management", "compras", "entrega"}
+            "risk_management", "compras", "entrega", "primer_equipo"}
 # Declarados por una pasada de lectura contra el propio nodo: su cita es {"instrumento", "evidencia"}.
 POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None, "VIGENCIA": None, "ORTOGRAFIA": None}
 # Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
@@ -57,6 +76,8 @@ def validar(c, nodo):
             fallas.append("falta %s" % k)
     if c.get("campo") not in CAMPOS:
         fallas.append("campo no admitido: %r" % c.get("campo"))
+    if c.get("campo") in SOLO_VOZ and c.get("veredicto") not in SOLO_VOZ[c["campo"]]:
+        fallas.append("%s solo se corrige con %s" % (c["campo"], sorted(SOLO_VOZ[c["campo"]])))
     cita = c.get("cita") or {}
     if c.get("veredicto") in POR_INSTRUMENTO:
         if not cita.get("instrumento") or not cita.get("evidencia"):
@@ -72,9 +93,20 @@ def validar(c, nodo):
             fallas.append("dominio no valido: %r" % c.get("texto_nuevo"))
     elif c.get("campo") in ("fase_proyecto", "dominio"):
         fallas.append("fase_proyecto y dominio solo se corrigen con los veredictos FASE y DOMINIO")
-    elif c.get("veredicto") == "ATRIBUCION":
+    elif c.get("veredicto") == "RESUMEN":
+        ev = cita.get("evidencia") or {}
+        if not cita.get("instrumento") or not isinstance(ev, dict) or not ev.get("fichero") or not ev.get("lineas"):
+            fallas.append("un RESUMEN declara su instrumento y su evidencia con fichero y lineas")
+        if c.get("campo") != "resumen_teorico":
+            fallas.append("el veredicto RESUMEN solo corrige resumen_teorico")
+        largo = len(c.get("texto_nuevo") or "")
+        if not RESUMEN_MIN <= largo <= RESUMEN_MAX:
+            fallas.append("el resumen nuevo tiene %d caracteres (van de %d a %d)" % (largo, RESUMEN_MIN, RESUMEN_MAX))
+        if nodo is not None and nodo.get("notas_extraccion") != c.get("texto_anterior"):
+            fallas.append("el texto viejo del resumen no esta guardado en notas_extraccion")
+    elif c.get("veredicto") in POR_REGLA:
         if not cita.get("regla") or not cita.get("fragmentos"):
-            fallas.append("una ATRIBUCION declara su regla y los fragmentos que salen")
+            fallas.append("una %s declara su regla y los fragmentos que salen" % c.get("veredicto"))
         for f in cita.get("fragmentos") or []:
             if f and f in c.get("texto_nuevo", ""):
                 fallas.append("el fragmento de atribucion sigue en el texto nuevo: %r" % f)
@@ -103,8 +135,11 @@ def validar(c, nodo):
 
 
 def main(argv):
+    global NODOS
     tanda = json.loads(Path(argv[0]).read_text(encoding="utf-8"))
     comprobar = "--comprobar" in argv
+    if "--nodos" in argv:
+        NODOS = Path(argv[argv.index("--nodos") + 1]).resolve()
     nodos, fallas = {}, []
     for c in tanda:
         ruta = NODOS / ("%s.json" % c.get("node_id"))
@@ -119,10 +154,17 @@ def main(argv):
             else:
                 nodo[c["campo"]] = c["texto_nuevo"]
             registro = {k: c[k] for k in ("id", "fecha", "campo", "veredicto", "texto_anterior", "texto_nuevo", "cita", "decision")}
+            if c["veredicto"] == "RESUMEN":
+                # El texto viejo ya esta, identico, en notas_extraccion: se remite en vez de duplicarlo.
+                del registro["texto_anterior"]
+                registro["texto_anterior_en"] = "notas_extraccion"
             if c["campo"] in LISTAS:
                 registro["indice"] = c["indice"]
             if c.get("auditoria"):
                 registro["auditoria"] = c["auditoria"]
+            if c.get("motivos"):
+                # Un mismo texto puede corregirse por varias razones a la vez (voz, ingles, tildes): se declaran todas.
+                registro["motivos"] = c["motivos"]
             nodo.setdefault("correcciones", []).append(registro)
     # LAS BARANDAS DE LA CASA (scripts/censo_duplicacion.py): una correccion no
     # puede dejar en el nodo una baranda que antes no tenia (por ejemplo, una sigla
@@ -138,10 +180,19 @@ def main(argv):
             for nid, nodo in nodos.items():
                 ruta = NODOS / ("%s.json" % nid)
                 antes = censo_duplicacion.revisar_barandas(json.loads(ruta.read_text(encoding="utf-8")))
-                ya = {(b["baranda"], b.get("cita")) for b in antes}
-                for b in censo_duplicacion.revisar_barandas(nodo):
-                    if (b["baranda"], b.get("cita")) not in ya:
-                        fallas.append("%s: la correccion deja la baranda %s: %s" % (nid, b["baranda"], b.get("cita")))
+                # Se compara CUANTOS hallazgos tiene cada baranda antes y despues, no la cita exacta: una
+                # correccion de solo tildes ("tu organizacion" a "tu organización") cambia la cita y no deja
+                # ninguna baranda nueva (integracion del mundo 11, 28 sep 2026: la forja escribe sin tildes).
+                cuenta = {}
+                for b in antes:
+                    cuenta[b["baranda"]] = cuenta.get(b["baranda"], 0) + 1
+                despues = censo_duplicacion.revisar_barandas(nodo)
+                por_baranda = {}
+                for b in despues:
+                    por_baranda.setdefault(b["baranda"], []).append(b)
+                for baranda, hallazgos in por_baranda.items():
+                    if len(hallazgos) > cuenta.get(baranda, 0):
+                        fallas.append("%s: la correccion deja la baranda %s: %s" % (nid, baranda, hallazgos[-1].get("cita")))
     if fallas:
         print("TANDA RECHAZADA, no se escribio nada:")
         for f in fallas:

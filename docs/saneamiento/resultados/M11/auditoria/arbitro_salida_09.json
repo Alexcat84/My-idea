@@ -1,0 +1,777 @@
+{
+ "lote": "09",
+ "campos": [
+  {
+   "node_id": "asignar_responsable_unico_evolucion_planificada",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Al planificar cada evento u operación, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "o evolución"
+   ],
+   "motivo": "'evolución' calca el 'evolution' naval (cualquier operación); en español no se entiende así."
+  },
+  {
+   "node_id": "asignar_responsable_unico_evolucion_planificada",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando estás planificando cualquier evento u operación y quieres que quede claro quién responde de que salga bien, en lugar de enumerar todo lo que podría salir mal.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "o evolución"
+   ],
+   "motivo": "'evolución' calca el 'evolution' naval; se cambia por 'operación'."
+  },
+  {
+   "node_id": "asignar_responsable_unico_evolucion_planificada",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que en un submarino resultó pesar más.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/marquet_turn_the_ship/cap_06.md",
+   "lineas": "127",
+   "frase": "I learned that focusing on who was put in charge was more important than trying to evaluate all the ways the event could go wrong.",
+   "fragmentos": [],
+   "motivo": "Es lo que aprendió quien mandaba el submarino ('I learned'); el paso lo daba como regla general, se cuenta como caso."
+  },
+  {
+   "node_id": "seguir_frustrado_preguntar_implantacion_ideas",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Al acabar la reunión, sigue a quien viste frustrado hasta su sitio de trabajo.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "El 'lo' del primer paso no tenía antecedente: nadie había nombrado aún a la persona frustrada."
+  },
+  {
+   "node_id": "establecer_dinamica_nueva_antiguos_pares",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Pasar de compañero a jefe puede alterar la relación, y lo que se hace difícil al empezar se puede prever en tres frentes. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode, y cuanto antes asumes que los resultados son tuyos, más fáciles se hacen esas conversaciones. Y puede que te cuenten menos, algo normal que te toca compensar trabajando más para ganar su confianza.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion",
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "73-85",
+   "frase": "The sooner you internalize that you own the outcomes of your team, the easier it becomes to have these conversations.",
+   "fragmentos": [],
+   "motivo": "'Funciona porque convierte la rareza en tareas concretas', 'aunque nadie lo diga' y 'una confianza que ya no viene dada' no están en el libro; la relación 'might feel altered', no 'cambia'. Se pone la causa que sí da el libro."
+  },
+  {
+   "node_id": "establecer_dinamica_nueva_antiguos_pares",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que a una directiva se le hicieron difíciles al empezar, y sobre todo con personas a cargo a las que consideraba amigas.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "73",
+   "frase": "It can feel awkward to establish a new dynamic with former peers.",
+   "fragmentos": [],
+   "motivo": "'It can feel awkward' pierde el 'can', y las tres dificultades son la experiencia de la autora al empezar; se cuentan como caso."
+  },
+  {
+   "node_id": "establecer_dinamica_nueva_antiguos_pares",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a las expectativas.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "lo que se espera de ellos"
+   ],
+   "motivo": "'se espera' está en la lista de voz prohibida; 'relative to expectations' queda como 'respecto a las expectativas' sin añadir nada."
+  },
+  {
+   "node_id": "establecer_dinamica_nueva_antiguos_pares",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Y con esa tercera, con el tiempo puede verse que es normal: tus personas a cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion",
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "85",
+   "frase": "Over time, however, I recognized that, yes, this was normal. My reports were wary of bothering me or coming across poorly. It was up to me to work harder to establish a trusting relationship",
+   "fragmentos": [],
+   "motivo": "'no pide ninguna acción concreta' no lo dice el libro (y el mismo paso termina en una acción); lo que la autora vio en su equipo ('My reports were wary') se afirmaba como regla."
+  },
+  {
+   "node_id": "establecer_dinamica_nueva_antiguos_pares",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con ellos puede sentirse alterada. Te pasa tanto si diriges una parte del equipo que lleva tu jefe porque crece como si ocupas su puesto cuando se va.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz",
+    "voz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "73",
+   "frase": "Now, you are the boss, which means your relationship with teammates might feel altered.",
+   "fragmentos": [],
+   "motivo": "El libro dice 'might feel altered'; la condición lo afirmaba como hecho. De paso sale 'el equipo de' (lista de voz): 'del equipo de tu jefe' pasa a 'del equipo que lleva tu jefe'."
+  },
+  {
+   "node_id": "casar_flujo_fabricacion_flujo_ventas",
+   "campo": "pasos_accionables[10]",
+   "decision": "corregido",
+   "texto_final": "Guarda ese inventario, idealmente, en la etapa de menor valor, como los huevos crudos en una cocina que sirve desayunos, porque cuanto menor es el valor más flexibilidad de producción obtienes por el mismo coste de inventario.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz",
+    "coherencia"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "119",
+   "frase": "Ideally, inventory should be kept at the lowest-value stage, as we've learned before, like raw eggs kept at the breakfast factory.",
+   "fragmentos": [],
+   "motivo": "El libro lo pone como ideal ('Ideally'); y 'la fábrica de desayunos' es el ejemplo de otro capítulo, sin antecedente en el nodo."
+  },
+  {
+   "node_id": "trazar_modelo_negocio_cliente_primero",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Una vez la has identificado, vuelve a la mesa de diseño.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "al tablero de dibujo"
+   ],
+   "motivo": "Calco literal de 'goes back to the drawing board'; el 'allí' del paso siguiente sigue teniendo antecedente."
+  },
+  {
+   "node_id": "fijar_resultado_excelente_reunion",
+   "campo": "pasos_accionables[8]",
+   "decision": "corregido",
+   "texto_final": "No cuentes con que la estructura de una reunión de decisión sirva de foro para generar ideas: en la experiencia de una directiva, es improbable.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_07.md",
+   "lineas": "165",
+   "frase": "In my experience, it's unlikely that the structure of a decision meeting makes it a good forum for generating ideas.",
+   "fragmentos": [],
+   "motivo": "El libro lo da como experiencia de la autora ('In my experience'); se cuenta como caso."
+  },
+  {
+   "node_id": "fijar_resultado_excelente_reunion",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes a qué se parece un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_07.md",
+   "lineas": "165",
+   "frase": "Don't try to make a single meeting do too much, and remind the group of its primary purpose when the conversation starts to deviate.",
+   "fragmentos": [],
+   "motivo": "El libro no dice que sea fácil devolver la conversación; dice que recuerdes al grupo su propósito primario cuando se desvía."
+  },
+  {
+   "node_id": "ajustar_franqueza_oido_oyente",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Busca la forma local de cuidar personalmente, que es la primera dimensión. En un equipo en Tokio la forma preferida de mostrar que les importaba era ser educados.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'el equipo de Tokio' con artículo definido para un equipo que el nodo no ha presentado (y cae además en 'el equipo de')."
+  },
+  {
+   "node_id": "ajustar_franqueza_oido_oyente",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Busca la forma local de desafiar directamente, que es la segunda. En ese mismo equipo de Tokio la forma con la que estaban más cómodos desafiando la dirección de producto de la sede central era ser persistentes.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz",
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "En el equipo de Tokio",
+    "de Google"
+   ],
+   "motivo": "Nombra la empresa de la anécdota de la autora; el libro habla de la dirección de producto de la sede ('Google's U.S. headquarters'), que queda como 'la sede central'. El equipo remite ya al paso anterior."
+  },
+  {
+   "node_id": "construir_grafico_escalonado_pronosticos",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Lee la variación de un pronóstico al siguiente, que es lo que puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "91",
+   "frase": "You can readily see the variation of one forecast from the next, which can help you anticipate future trends better than if you used a simple trend chart.",
+   "fragmentos": [],
+   "motivo": "El libro dice 'can help you anticipate'; el paso lo volvía certeza."
+  },
+  {
+   "node_id": "planificar_reduccion_trabajo_individual",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con que en los primeros tiempos lo más probable es que lleves a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "87",
+   "frase": "This means that, in the early days, most new apprentice managers are also handling individual contributor responsibilities.",
+   "fragmentos": [],
+   "motivo": "El libro dice que la mayoría ('most') de los directivos nuevos lleva también trabajo individual; el cierre del paso sí sigue al libro ('you're also still selling lemonade') y se deja."
+  },
+  {
+   "node_id": "agrupar_tareas_semejantes_aprovechar_preparacion",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Aplica a tu trabajo de mando un principio de producción: agrupar las tareas semejantes.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'el segundo' remitía a un primer principio que no está en el nodo (el libro dice 'A second production principle')."
+  },
+  {
+   "node_id": "equilibrar_microdireccion_ausencia",
+   "campo": "pasos_accionables[6]",
+   "decision": "actual",
+   "texto_final": "Cuenta con que lo normal es inclinarte de forma distinta en aspectos distintos del trabajo según dónde esté tu equipo. En una misma semana, a ella una persona a su cargo le dijo que opinaba demasiado sobre un detalle concreto de diseño, mientras otra le pidió que se implicara más en la estrategia de otro proyecto: una estaba segura de lo que hacía y su implicación le parecía agobiante, la otra no lo estaba y quería más ayuda.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: 'ella' tiene antecedente dentro del nodo, la directiva nueva del paso anterior, única persona en femenino; no hay ambigüedad."
+  },
+  {
+   "node_id": "equilibrar_microdireccion_ausencia",
+   "campo": "pasos_accionables[7]",
+   "decision": "actual",
+   "texto_final": "Cuenta con que en el momento no siempre sabes cómo lo estás haciendo. Ella ha dado un paso atrás en un área pensando que iba bien, y unas semanas después se ha dado cuenta de que no había dejado el trabajo bien montado y de que debería haberse quedado más cerca del detalle.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: 'Ella' remite a la misma directiva presentada dos pasos antes y retomada en el anterior; el referente existe en el nodo."
+  },
+  {
+   "node_id": "construir_indicador_linealidad_alerta_temprana",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operación, desde el registro de paradas de máquina hasta un índice de satisfacción del cliente, porque los dos pueden avisarte de si hay problemas más adelante.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "83",
+   "frase": "Leading indicators might include the daily monitors we use to run our breakfast factory, from machine downtime records to an index of customer satisfaction—both of which can tell us if problems lie down the road.",
+   "fragmentos": [],
+   "motivo": "El libro dice 'can tell us'; el paso lo volvía certeza."
+  },
+  {
+   "node_id": "construir_indicador_linealidad_alerta_temprana",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Recorta en tu proceso una ventana para ver lo que pasa dentro: el indicador de linealidad, que vale para cualquier proceso.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'tu caja' y 'esta ventana' remitían a la caja negra, que este nodo no presenta; se dice qué es la ventana y se mantiene 'Recorta' para que el paso 'Recorta la misma ventana' siga casando."
+  },
+  {
+   "node_id": "mover_rapido_persona_papel_equivocado",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Parte de esta idea: tu papel es ante todo estar del lado de tu equipo, apoyarlos, defenderlos y escucharlos, y si una persona a cargo está batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tú no das un paso al frente con empatía no lo hará nadie. Nadie lo hará: ese es tu trabajo, y todo el mundo merece una segunda oportunidad.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "ser el campeón de tu equipo"
+   ],
+   "motivo": "'ser el campeón de tu equipo' calca 'a champion for my team' y en español se lee como el mejor del equipo; la propuesta 'defensor' repetía 'defenderlos'."
+  },
+  {
+   "node_id": "pedir_referencias_red_personal",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Apunta esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "Captura"
+   ],
+   "motivo": "'Capturar' por anotar está en la lista de calcos."
+  },
+  {
+   "node_id": "pedir_referencias_red_personal",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que puede pasar de las diez personas iniciales a otros cincuenta o cien nombres.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/smart_who/cap_03.md",
+   "lineas": "315",
+   "frase": "can easily generate another fifty to one hundred names.",
+   "fragmentos": [],
+   "motivo": "El libro dice que la pregunta 'can easily generate' otros cincuenta a cien nombres; el entregable lo daba como resultado seguro."
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Cuenta el tiempo de espera dentro del flujo y no solo el tiempo de la operación, porque en una cocina que sirve desayunos, si no ajustas el flujo por la cola del tostador, un huevo de tres minutos se convierte fácilmente en uno de seis.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'tu huevo' remitía al ejemplo del desayuno, que ningún paso presentaba; se presenta aquí con la cola del tostador, que es la del libro (cap_02 l. 51), y los pasos 4 y 5 remiten a esa cocina."
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Deja iguales los ciclos que la cola no toca, como en esa cocina de desayunos siguen iguales el del huevo y el del café, y altera los desfases.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Huevo y café sin antecedente; ahora remiten a la cocina presentada en el paso 2."
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Y no cambies de componente el que manda la calidad: en esa cocina, el huevo sigue determinando la calidad general del desayuno aunque el paso limitante ya sea el tostador.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Huevo, desayuno y tostador sin antecedente; ahora remiten a la cocina del paso 2."
+  },
+  {
+   "node_id": "informar_cierre_jornada_conservar_propiedad_trabajo",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Cierra el informe dejando la propiedad de la tarea donde corresponde: quien responde por tu trabajo eres tú, no tu superior. Así el liderazgo queda repartido en todos los niveles.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'jefe de departamento' y 'segundo al mando' son los cargos del submarino, no presentados; en el nodo son tú y tu superior."
+  },
+  {
+   "node_id": "representar_actividad_caja_negra_ventanas",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Recortarle ventanas mejora tu manera de llevar el proceso: deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "77",
+   "frase": "We can improve our ability to run that process by cutting some windows in our box so that we can see some of what goes on within it.",
+   "fragmentos": [],
+   "motivo": "'la caja cerrada solo enseña lo que ya salió' no lo dice el libro; se pone lo que sí dice: las ventanas mejoran tu capacidad de llevar el proceso."
+  },
+  {
+   "node_id": "representar_actividad_caja_negra_ventanas",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando tienes delante una actividad que se parece a un proceso de producción, sea de fábrica o administrativa, y necesitas ordenar cuál es su entrada, su salida y su trabajo, y ver parte de lo que pasa dentro.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "77",
+   "frase": "The black box sorts out what the inputs, the output, and the labor are in the production process.",
+   "fragmentos": [],
+   "motivo": "Causa inventada: el pasaje no dice que sin las tres piezas no haya indicador que colocar; la caja negra ordena entrada, salida y trabajo, y las ventanas dejan ver dentro."
+  },
+  {
+   "node_id": "alinear_equipo_proposito_comun",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Comprueba que todos en el equipo tienen una imagen parecida de por qué importa el trabajo que hacen juntos.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'nuestro' es la pregunta del libro copiada sin comillas; en un texto en tú no tiene sujeto."
+  },
+  {
+   "node_id": "alinear_equipo_proposito_comun",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "El equipo sabiendo a qué se parece el éxito y con ganas de lograrlo, y todos con una imagen parecida de por qué importa el trabajo que hacen juntos.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Primera persona del plural sin sujeto en un texto en tú."
+  },
+  {
+   "node_id": "alinear_equipo_proposito_comun",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Cuando veas a alguien de tu equipo trabajando sobre una impresión distinta de para qué existe esto, haz que se sume a lo que de verdad te importa, que es lo que evita esos desalineamientos.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "súbelo a bordo de"
+   ],
+   "motivo": "'súbelo a bordo' calca 'get him on board'."
+  },
+  {
+   "node_id": "alinear_equipo_proposito_comun",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando alguien de tu equipo está haciendo cosas que a ti te parecen poco importantes o un derroche, o cuando notas conflictos y expectativas desalineadas: pueden venir de un propósito que falta o que está poco claro.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_02.md",
+   "lineas": "127",
+   "frase": "If this purpose is missing or unclear, then you may experience conflicts or mismatched expectations.",
+   "fragmentos": [],
+   "motivo": "El libro dice que un propósito que falta 'may' traer conflictos; la condición lo daba como causa segura."
+  },
+  {
+   "node_id": "conocer_fuerzas_valores_sesgos_propios",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "En la primera sesión ella empezó a enumerar problemas enredados, y la entrenadora la escuchó con calma hasta que terminó y luego le pidió dar un paso atrás y hablarle de ella: de su pasado, del camino que la había traído hasta ahí, y de cómo se veía a sí misma a los ochenta años mirando atrás y preguntándose qué quería recordar.",
+   "veredicto": "CONTRARIO",
+   "tipos": [
+    "contrario"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_06.md",
+   "lineas": "23",
+   "frase": "Instead, Stacy listened calmly until I was done.",
+   "fragmentos": [],
+   "motivo": "Al revés: la entrenadora no la paró, la escuchó con calma hasta que terminó y solo entonces le pidió dar un paso atrás."
+  },
+  {
+   "node_id": "conocer_fuerzas_valores_sesgos_propios",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Y fíjate en lo que aquel informe le dio: le sirvió para calibrar su propia brújula interna, para entender dónde sus miedos estaban desmedidos y dónde no estaba prestando suficiente atención, y una vez supo dónde estaba pudo empezar a avanzar.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'que es la razón de estar aquí' no tiene referente en el nodo."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Parte de aquí: ya has tenido tus tres conversaciones de carrera y has empezado a alinear las oportunidades del equipo con las aspiraciones de cada persona, lo que te ha subido mucho en la dimensión de que te importe personalmente. Ahora toca moverte en la otra dimensión, la de desafiar directamente.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'tus tres conversaciones' remitía a un procedimiento sin nombrar; se dice cuáles son, como ya hace la condición del nodo."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Primer paso: identifica a tus estrellas de rock y a tus superestrellas, y escribe sus nombres en su casilla, con una casilla por cada tipo de persona que vas a identificar.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "'las casillas correctas' remitía a una cuadrícula que el nodo no presenta; se dice qué casillas son."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[9]",
+   "decision": "corregido",
+   "texto_final": "Busca después una mirada de fuera para asegurarte de que no vas sesgado: encuentra a alguien que conozca el trabajo de la gente de tu equipo pero que no esté tan implicado emocionalmente como tú, por ejemplo tu jefe, un igual o alguien de recursos humanos.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Femenino de la autora aplicado al lector en segunda persona ('sesgada') y a 'alguien' ('implicada'); el resto del nodo usa el genérico."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[21]",
+   "decision": "corregido",
+   "texto_final": "Usa esta señal para cazarte: si tienes a medio equipo en la casilla de estrella de rock y nadie más tiene a nadie ahí, es más probable que estés desacompasado con tus colegas que que tengas el mejor equipo.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Femenino de la autora aplicado al lector en segunda persona."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[22]",
+   "decision": "corregido",
+   "texto_final": "Si eres jefe de jefes, busca una vía simple para que todos vean lo mismo, por ejemplo esta: crea un documento compartido, pide a todas tus personas a cargo que pongan ahí los nombres de sus equipos en las casillas que correspondan, y reúnete después con ellas en una sala a discutirlo.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Femenino de la autora aplicado al lector en segunda persona."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[20]",
+   "decision": "corregido",
+   "texto_final": "Contrasta tus valoraciones con las de tus iguales si muchos de ellos también hacen planes de gestión del crecimiento, porque cuando formas parte de un equipo más amplio hace falta un entendimiento compartido de qué es trabajo excepcional, qué es trabajo bueno y qué es trabajo malo.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "Compara notas con tus iguales"
+   ],
+   "motivo": "'Compara notas' calca 'compare notes'."
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "campo": "pasos_accionables[25]",
+   "decision": "corregido",
+   "texto_final": "Comprueba por último la equidad entre niveles, y cuenta con este sesgo: como te importan mucho tus personas a cargo, tiendes a ver lo mejor de ellas, y en un equipo muy grande eso puede convertirse en sesgo inconsciente, porque tus personas a cargo hacen lo mismo con las suyas y, si no tienes cuidado, acaba habiendo un porcentaje desproporcionado de gente considerada estrella de rock o superestrella entre los más veteranos de la jerarquía.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_10.md",
+   "lineas": "123",
+   "frase": "This is a good thing, but it can turn into a form of unconscious bias on a really big team.",
+   "fragmentos": [],
+   "motivo": "El libro dice 'can turn into' y 'if you're not careful'; el paso lo daba como certeza."
+  },
+  {
+   "node_id": "sopesar_consejo_legal_despedir_humildad",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Sopesar el consejo legal contra el riesgo de seguirlo y despedir con humildad",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Remitía a una lista de tres cosas que no existe en el nodo."
+  },
+  {
+   "node_id": "sopesar_consejo_legal_despedir_humildad",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Compara entonces las respuestas: si la forma que te propone el consejo puede provocar lo mismo que dice prevenir, seguirlo es probablemente provocar justo lo que intentas evitar.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_10.md",
+   "lineas": "193",
+   "frase": "I realized I was likely to cause the very thing I was trying to prevent by following legal advice, so I did the opposite.",
+   "fragmentos": [],
+   "motivo": "El criterio del paso era vacío (el riesgo de no seguir un consejo es siempre lo que el consejo previene); en el libro lo que decide es que la forma propuesta hacía más probable el estallido."
+  },
+  {
+   "node_id": "abrir_debate_humor_explicar_proposito",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Abrir un debate con humor y explicando para qué sirve, porque el tono con que se lanza suele marcar el de todo lo que viene detrás",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_07.md",
+   "lineas": "241",
+   "frase": "The spirit with which a debate is launched often determines the tenor of what follows.",
+   "fragmentos": [],
+   "motivo": "El libro dice 'often determines'; el título lo volvía regla."
+  },
+  {
+   "node_id": "abrir_debate_humor_explicar_proposito",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante, como hay quien lo ha visto en el suyo, y que cuando tú encuentras la manera de pasártelo bien en un debate, los demás suelen seguirte.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_07.md",
+   "lineas": "241",
+   "frase": "I have found that people on a team I lead key off my mood to an almost alarming extent; when I find a way to have fun with a debate, others often follow suit.",
+   "fragmentos": [],
+   "motivo": "Es lo que la autora ha visto en su equipo ('I have found that people on a team I lead'); se cuenta como caso."
+  },
+  {
+   "node_id": "abrir_debate_humor_explicar_proposito",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "En algunos casos, puede servir un humor simple, o abrir la reunión con una buena historia a tu costa.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_07.md",
+   "lineas": "241",
+   "frase": "In some cases, it might be simple humor or opening the meeting with a good self-effacing story.",
+   "fragmentos": [],
+   "motivo": "El libro dice 'In some cases, it might be'; el paso lo volvía orden general."
+  },
+  {
+   "node_id": "impedir_punialadas_espalda_equipo",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Ten presente lo que estás haciendo en realidad cuando escuchas eso: parece que estás siendo empático, pero lo que haces es avivar la política interna.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "remover la olla política"
+   ],
+   "motivo": "'remover la olla política' calca 'stirring the political pot'."
+  }
+ ]
+}

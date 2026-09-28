@@ -1,0 +1,36 @@
+[
+  {
+    "id": "m11-voz-catalogo-01",
+    "fecha": "2026-09-28",
+    "node_id": "planificacion_recoleccion_datos",
+    "campo": "resumen_teorico",
+    "veredicto": "VOZ",
+    "texto_anterior": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. El libro lo detalla en 17 pasos, aquí agrupados, que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+    "texto_nuevo": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. El proceso tiene 17 pasos, aquí agrupados, que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+    "cita": {
+      "regla": "voz de libro: el cliente no ve 'el libro', 'el texto' ni 'el autor' (decision del fundador, 28 sep 2026); cazado por la guarda nueva web/lib/vozDeCliente.test.ts sobre el grafo vivo",
+      "fragmentos": [
+        "El libro lo detalla"
+      ]
+    },
+    "decision": "se quita la voz de libro sin cambiar el sentido: el numero de pasos se conserva",
+    "auditoria": "guarda vozDeLibro en rojo sobre el grafo vivo"
+  },
+  {
+    "id": "m11-voz-catalogo-02",
+    "fecha": "2026-09-28",
+    "node_id": "tratar_las_historias_como_herramientas",
+    "campo": "resumen_teorico",
+    "veredicto": "VOZ",
+    "texto_anterior": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. El texto propone que las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
+    "texto_nuevo": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. Las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
+    "cita": {
+      "regla": "voz de libro: el cliente no ve 'el libro', 'el texto' ni 'el autor' (decision del fundador, 28 sep 2026); cazado por la guarda nueva web/lib/vozDeCliente.test.ts sobre el grafo vivo",
+      "fragmentos": [
+        "El texto propone"
+      ]
+    },
+    "decision": "se quita la voz de libro sin cambiar el sentido: la frase afirma lo mismo sin atribuirlo a un texto",
+    "auditoria": "guarda vozDeLibro en rojo sobre el grafo vivo"
+  }
+]

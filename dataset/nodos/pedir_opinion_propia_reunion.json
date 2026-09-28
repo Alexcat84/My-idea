@@ -1,0 +1,301 @@
+{
+  "node_id": "pedir_opinion_propia_reunion",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Pedir opinión sobre tu propia reunión en vez de esperar a que alguien se atreva",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La opinión que de verdad sirve llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que puede fallar le indica a la otra persona que está bien ser crítica. Así, la pregunta nombra tu meta con la reunión y tu duda sobre ella, y termina pidiendo su opinión.",
+  "notas_extraccion": "Cierra el bloque de hacer seguro contribuir aplicando sobre la propia reunion lo que el capitulo pide para el trabajo de los demas. El inventario propio del libro son las dos claves de la buena opinion, ser especifico y hacerlo seguro, mas la tactica concreta de abrir con lo que uno sospecha; y el ejemplo literal de la pregunta es lo que convierte esas dos claves en algo que se ejecuta en vez de algo con lo que se esta de acuerdo. El nodo se queda con la reunion como objeto y no se ensancha a la opinion en general, que es materia de otro capitulo del mismo libro y ya vive en el grafo. Lo que el libro NO dice, y por eso no esta escrito aqui, es a cuanta gente se le pregunta, cada cuanto, ni que se hace con la respuesta cuando dice que la reunion sobra.",
+  "pasos_accionables": [
+    "No cuentes con la suerte de tener en el equipo a alguien franco que te diga cuando siente que tu reunión no es un buen uso de su tiempo.",
+    "Usa la vía más fiable: toma la costumbre de pedir opinión, sobre todo en las reuniones periódicas con un público grande.",
+    "Sé específico sobre lo que quieres saber: ahí está la clave para conseguir una opinión valiosa.",
+    "Haz que sea seguro para la persona decirte su opinión honesta. Va unido a lo anterior, como parte de la misma clave.",
+    "Abre diciendo lo que sospechas que puede ser el problema, porque eso da la señal de que está bien que la persona sea crítica.",
+    "Escribe la pregunta con esa forma. Por ejemplo, sobre una reunión semanal de seguimiento que no funciona: «¿Hasta qué punto crees que es útil mi reunión semanal de seguimiento? Mi meta es dar a todo el mundo contexto sobre quién está haciendo qué, para que haya mejor colaboración y apoyo en el equipo. Pero me pregunto si ahora mismo está demasiado metida en los detalles. ¿Tú qué opinas?»"
+  ],
+  "entregable_esperado": "Una opinión honesta y concreta sobre si tu reunión es un buen uso del tiempo de quienes van a ella, pedida por ti y no esperada.",
+  "nodos_previos": [
+    "pedir_opinion_otros_mejorar",
+    "conducir_reunion_equipo_agenda_tres_bloques"
+  ],
+  "nodos_siguientes": [
+    "premiar_franqueza_hacer_escucha_tangible"
+  ],
+  "condiciones_activacion": [
+    "Con cualquier reunión tuya, y especialmente con las periódicas que tienen un público grande."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La buena opinión llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que falla le indica a la otra persona que está bien ser crítica. Con una pregunta así, la respuesta te dice de verdad si tu reunión es un buen uso del tiempo de quienes van a ella.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "257-263"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pedir opinion sobre tu propia reunion en vez de esperar a que alguien se atreva",
+      "texto_nuevo": "Pedir opinión sobre tu propia reunión en vez de esperar a que alguien se atreva",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No cuentes con la suerte de tener en el equipo a alguien franco que te diga cuando siente que tu reunion no es un buen uso de su tiempo.",
+      "texto_nuevo": "No cuentes con la suerte de tener en el equipo a alguien franco que te diga cuando siente que tu reunión no es un buen uso de su tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa la via mas fiable: coge la costumbre de pedir opinion, sobre todo en las reuniones periodicas con un publico grande.",
+      "texto_nuevo": "Usa la vía más fiable: toma la costumbre de pedir opinión, sobre todo en las reuniones periódicas con un público grande.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Se especifico sobre lo que quieres saber. El libro dice que ahi esta la clave para conseguir una gran opinion.",
+      "texto_nuevo": "Sé específico sobre lo que quieres saber: ahí está la clave para conseguir una gran opinión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que ahi esta la clave"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz que sea seguro para la persona decirte su opinion honesta. El libro lo pone unido a lo anterior, en la misma frase y como parte de la misma clave.",
+      "texto_nuevo": "Haz que sea seguro para la persona decirte su opinión honesta. Va unido a lo anterior, como parte de la misma clave.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo pone unido a lo anterior, en la misma frase"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Abre diciendo lo que sospechas que puede ser el problema, porque eso da la senal de que esta bien que la persona sea critica.",
+      "texto_nuevo": "Abre diciendo lo que sospechas que puede ser el problema, porque eso da la señal de que está bien que la persona sea crítica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe la pregunta con esa forma. El libro pone su propio ejemplo sobre la reunion de estado que fracaso: como de util crees que es mi reunion de estado semanal? Mi meta es dar a todo el mundo contexto sobre quien esta haciendo que, para que haya mejor colaboracion y apoyo en el equipo. Pero me pregunto si ahora mismo esta demasiado metida en los detalles. Tu que opinas?",
+      "texto_nuevo": "Escribe la pregunta con esa forma. Por ejemplo, sobre una reunión semanal de seguimiento que no funciona: «¿Qué tan útil crees que es mi reunión semanal de seguimiento? Mi meta es dar a todo el mundo contexto sobre quién está haciendo qué, para que haya mejor colaboración y apoyo en el equipo. Pero me pregunto si ahora mismo está demasiado metida en los detalles. ¿Tú qué opinas?»",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro pone su propio ejemplo sobre la reunion de estado que fracaso",
+          "reunion de estado semanal"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una opinion honesta y concreta sobre si tu reunion es un buen uso del tiempo de quienes van a ella, pedida por ti y no esperada.",
+      "texto_nuevo": "Una opinión honesta y concreta sobre si tu reunión es un buen uso del tiempo de quienes van a ella, pedida por ti y no esperada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_opinion_propia_reunion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con cualquier reunion tuya, y especialmente con las periodicas que tienen un publico grande.",
+      "texto_nuevo": "Con cualquier reunión tuya, y especialmente con las periódicas que tienen un público grande.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_opinion_propia_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La buena opinión llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que falla le indica a la otra persona que está bien ser crítica. Con una pregunta así, la respuesta te dice de verdad si tu reunión es un buen uso del tiempo de quienes van a ella.",
+      "texto_nuevo": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La buena opinión llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que puede fallar le indica a la otra persona que está bien ser crítica. Así, la pregunta nombra tu meta con la reunión y tu duda sobre ella, y termina pidiendo su opinión.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 261-263",
+        "frase": "Leading with what you suspect may be an issue signals that it’s okay for the person to be critical."
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): El libro no promete que la respuesta diga 'de verdad' si la reunión vale la pena: solo da la forma de la pregunta (meta, duda, petición de opinión). Y lo que se sospecha es lo que 'may be an issue', no lo que falla.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-pedir_opinion_propia_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe la pregunta con esa forma. Por ejemplo, sobre una reunión semanal de seguimiento que no funciona: «¿Qué tan útil crees que es mi reunión semanal de seguimiento? Mi meta es dar a todo el mundo contexto sobre quién está haciendo qué, para que haya mejor colaboración y apoyo en el equipo. Pero me pregunto si ahora mismo está demasiado metida en los detalles. ¿Tú qué opinas?»",
+      "texto_nuevo": "Escribe la pregunta con esa forma. Por ejemplo, sobre una reunión semanal de seguimiento que no funciona: «¿Hasta qué punto crees que es útil mi reunión semanal de seguimiento? Mi meta es dar a todo el mundo contexto sobre quién está haciendo qué, para que haya mejor colaboración y apoyo en el equipo. Pero me pregunto si ahora mismo está demasiado metida en los detalles. ¿Tú qué opinas?»",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "¿Qué tan útil crees que es"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"qué tan\" es forma americana; neutro: \"hasta qué punto\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-muestra-final2-pedir_opinion_propia_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sé específico sobre lo que quieres saber: ahí está la clave para conseguir una gran opinión.",
+      "texto_nuevo": "Sé específico sobre lo que quieres saber: ahí está la clave para conseguir una opinión valiosa.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una gran opinión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'conseguir una gran opinión' calca 'great feedback'; en español 'gran opinión' es estima por alguien y la frase se lee mal.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-pedir_opinion_propia_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La buena opinión llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que puede fallar le indica a la otra persona que está bien ser crítica. Así, la pregunta nombra tu meta con la reunión y tu duda sobre ella, y termina pidiendo su opinión.",
+      "texto_nuevo": "Esperar a que alguien del equipo se atreva a decirte que tu reunión no le sirve es fiarse de la suerte; pedir opinión por costumbre, sobre todo en las reuniones periódicas con mucho público, es la vía fiable. La opinión que de verdad sirve llega cuando juntas dos cosas: preguntar por algo específico y hacer que sea seguro contestar con honestidad. Abrir con lo que tú mismo sospechas que puede fallar le indica a la otra persona que está bien ser crítica. Así, la pregunta nombra tu meta con la reunión y tu duda sobre ella, y termina pidiendo su opinión.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "La buena opinión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): «La buena opinión» calca «great feedback» y en español se lee como opinión favorable; pasa a «La opinión que de verdad sirve» (557 caracteres, medido).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pregunta por tu Propia Reunión",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

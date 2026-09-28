@@ -1,0 +1,345 @@
+{
+  "node_id": "construir_indicador_linealidad_alerta_temprana",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Construir el indicador de linealidad para enterarte de que probablemente vas a fallar la meta cuando todavía se puede hacer algo",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Sin un aviso temprano, puedes descubrir que fallaste una meta con fecha al final, cuando ya no se puede hacer nada. El indicador de linealidad adelanta esa lectura: traza la recta ideal hasta la meta y pone encima lo conseguido, de modo que a media carrera se ve cuánto falta y a qué ritmo habría que ir para llegar. Ese aviso da tiempo a corregir. También destapa lo que un cumplimiento puntual esconde: una unidad que cumple cada mes pero concentra la producción en la última semana probablemente usa mal gente y equipo, y una avería pequeña a final de mes podría hacerle fallar la meta.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P9 de la frontera publicada en la vuelta 2 del frente, L83 a L87, 352 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone el instrumento con nombre propio (the linearity indicator), pone sus dos ejes (number of college graduates who have accepted our offers versus the month of the year), pone la recta ideal, pone la lectura a media carrera con su mes (by April) y su conclusion aritmetica (a much higher rate in the remaining two months than we had gotten in the preceding four), y REPITE el instrumento entero sobre una segunda poblacion, la unidad de fabricacion dentro del mes. Inventario de MEDIOS y de OBJETOS DE TRABAJO. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L83 (Leading indicators might include the daily monitors we use to run our breakfast factory, from machine downtime records to an index of customer satisfaction, both of which can tell us if problems lie down the road); pasos 2 a 6 de L83 y L85 (A generally applicable example of a window cut into the black box is the linearity indicator; Plotted here is the number of college graduates who have accepted our offers versus the month of the year; If all went ideally, we would move along the straight line that would yield our hiring target for the semester by the month of June; If by April the actual progress is as shown here, we will find ourselves far below the ideal straight line; the only way we can hit our target is by getting acceptance at a much higher rate in the remaining two months than we had gotten in the preceding four; the linearity indicator flashes an early warning, allowing us time to take corrective action. Without it, we would discover that we had missed our target in June, when nothing can be done about it); pasos 7, 8 y 9 de L87 (we may assume that because it makes monthly goals regularly, all is well. But we can cut a window into the black box here, measure production output against time as the month proceeds, and compare that with the ideal linear output; We may learn that output performance is spread evenly throughout the course of the month or that it is concentrated in the last week of the month; If the latter is the case, the manager of the unit is probably not using manpower and equipment efficiently. And if the situation is not remedied, one minor breakdown toward month end could cause the unit to miss its monthly output goal entirely). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LA FRASE QUE ESTUVE A PUNTO DE ESCRIBIR Y RETIRE EN EL ACTO, y la declaro porque es la especie mas cara: iba a poner revisa el indicador de linealidad cada semana. El libro NO pone periodo de lectura en ningun sitio de este tramo: pone un momento de lectura dentro de un ejemplo (by April) y nada mas. Ese habria sido un PUENTE de la especie periodo, que es la segunda de las tres del lote 1, y por eso el paso 5 dice lee a media carrera y cita el abril del libro como lo que es, el ejemplo. LO QUE TAMPOCO ESCRIBO: NO escribo cual es la accion correctora, porque el libro dice take corrective action y no dice cual; NO escribo a quien se avisa; NO escribo umbral de separacion respecto de la recta a partir del cual hay que actuar, porque el libro dice far below y no pone cifra. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 1 habla de indicadores adelantados en general y los ocho siguientes hablan de UNO solo, el de linealidad, asi que un lector estricto puede decir que el paso 1 sobra o que es de otro nodo. Lo sostengo porque L83 abre con esa frase y porque los controles diarios que nombra son ejemplos de la misma especie, el indicador que avisa antes, y sacarlos dejaria el tramo con una linea sin casa. Si cae, cae DENTRO de mi marcado. Y DIGO DONDE NO ESTA LA FRONTERA: L81, que es el parrafo que precede a este, NO entra en el nodo, y su motivo esta en la frontera publicada: pide que los indicadores adelantados sean credible, que es adjetivo de adecuacion en el sitio del criterio, o sea la restriccion 2 de 9.1.",
+  "pasos_accionables": [
+    "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operación, desde el registro de paradas de máquina hasta un índice de satisfacción del cliente, porque los dos pueden avisarte de si hay problemas más adelante.",
+    "Recorta en tu proceso una ventana para ver lo que pasa dentro: el indicador de linealidad, que vale para cualquier proceso.",
+    "Traza la recta ideal, que es la que te llevaría desde el principio hasta tu meta justo al acabar el plazo.",
+    "Dibuja encima lo realmente conseguido contra el mes del año, punto por punto.",
+    "Lee a media carrera cuánto te separa de esa recta: en la contratación universitaria, si en abril vas muy por debajo de la recta ideal, la única manera de alcanzar la meta de junio es conseguir aceptaciones a un ritmo mucho mayor en los dos meses que quedan del que llevaste en los cuatro anteriores.",
+    "Toma la acción correctora con ese aviso temprano, en vez de descubrir en el último mes que fallaste la meta, que es cuando ya no se puede hacer nada.",
+    "Recorta la misma ventana dentro del mes en una unidad de fabricación que cumple sus metas mensuales con regularidad, y no des por hecho que ahí va todo bien: mide la producción contra el tiempo según avanza el mes y compárala con la producción lineal ideal.",
+    "Mira si la producción está repartida a lo largo del mes o si está concentrada en la última semana.",
+    "Si está concentrada en la última semana, trata al mando de esa unidad como a alguien que probablemente no está usando bien ni la gente ni el equipo, y arregla la situación antes de que una avería pequeña a final de mes le haga fallar la meta entera del mes."
+  ],
+  "entregable_esperado": "El gráfico con la recta ideal hasta la meta y lo acumulado real encima, leído antes del cierre, y la acción correctora tomada mientras queda plazo.",
+  "nodos_previos": [
+    "representar_actividad_caja_negra_ventanas"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando tienes una meta con fecha y un avance que solo se comprueba al final, de modo que si esperas al cierre te enteras del fallo cuando ya no se puede corregir."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Sin un aviso temprano, puedes descubrir que fallaste una meta con fecha al final, cuando ya no se puede hacer nada. El indicador de linealidad adelanta esa lectura: traza la recta ideal hasta la meta y pone encima lo conseguido, de modo que a media carrera se ve cuánto falta y a qué ritmo habría que ir para llegar. Ese aviso da tiempo a corregir. También destapa lo que un cumplimiento puntual esconde: una unidad que cumple cada mes pero concentra la salida en la última semana probablemente usa mal gente y equipo, y una avería pequeña a final de mes podría hacerle fallar la meta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_03.md",
+          "lineas": "83-87"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 87 'is probably not using manpower' y 'could cause'; además 'suele comprobarse al final' no está en 83, que dice 'Without it, we would discover'. La propuesta del lector corrige las tres cosas y mide 585.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)"
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construir el indicador de linealidad para enterarte de que vas a fallar la meta cuando todavia se puede hacer algo",
+      "texto_nuevo": "Construir el indicador de linealidad para enterarte de que vas a fallar la meta cuando todavía se puede hacer algo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operacion, desde el registro de paradas de maquina hasta un indice de satisfaccion del cliente, porque los dos te avisan de si hay problemas mas adelante.",
+      "texto_nuevo": "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operación, desde el registro de paradas de máquina hasta un índice de satisfacción del cliente, porque los dos te avisan de si hay problemas más adelante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Traza la recta ideal, que es la que te llevaria desde el principio hasta tu meta justo al acabar el plazo.",
+      "texto_nuevo": "Traza la recta ideal, que es la que te llevaría desde el principio hasta tu meta justo al acabar el plazo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dibuja encima lo realmente conseguido contra el mes del ano, punto por punto.",
+      "texto_nuevo": "Dibuja encima lo realmente conseguido contra el mes del año, punto por punto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee a media carrera cuanto te separa de esa recta: en la contratacion universitaria, si en abril vas muy por debajo de la recta ideal, la unica manera de alcanzar la meta de junio es conseguir aceptaciones a un ritmo mucho mayor en los dos meses que quedan del que llevaste en los cuatro anteriores.",
+      "texto_nuevo": "Lee a media carrera cuánto te separa de esa recta: en la contratación universitaria, si en abril vas muy por debajo de la recta ideal, la única manera de alcanzar la meta de junio es conseguir aceptaciones a un ritmo mucho mayor en los dos meses que quedan del que llevaste en los cuatro anteriores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Toma la accion correctora con ese aviso temprano, en vez de descubrir en el ultimo mes que fallaste la meta, que es cuando ya no se puede hacer nada.",
+      "texto_nuevo": "Toma la acción correctora con ese aviso temprano, en vez de descubrir en el último mes que fallaste la meta, que es cuando ya no se puede hacer nada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recorta la misma ventana dentro del mes en una unidad de fabricacion que cumple sus metas mensuales con regularidad, y no des por hecho que ahi va todo bien: mide la salida contra el tiempo segun avanza el mes y comparala con la salida lineal ideal.",
+      "texto_nuevo": "Recorta la misma ventana dentro del mes en una unidad de fabricación que cumple sus metas mensuales con regularidad, y no des por hecho que ahí va todo bien: mide la salida contra el tiempo según avanza el mes y compárala con la salida lineal ideal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira si la salida esta repartida a lo largo del mes o si esta concentrada en la ultima semana.",
+      "texto_nuevo": "Mira si la salida está repartida a lo largo del mes o si está concentrada en la última semana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si esta concentrada en la ultima semana, trata al mando de esa unidad como a alguien que probablemente no esta usando bien ni la gente ni el equipo, y arregla la situacion antes de que una averia pequena a final de mes le haga fallar la meta entera del mes.",
+      "texto_nuevo": "Si está concentrada en la última semana, trata al mando de esa unidad como a alguien que probablemente no está usando bien ni la gente ni el equipo, y arregla la situación antes de que una avería pequeña a final de mes le haga fallar la meta entera del mes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_indicador_linealidad_alerta_temprana-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El grafico con la recta ideal hasta la meta y lo acumulado real encima, leido antes del cierre, y la accion correctora tomada mientras queda plazo.",
+      "texto_nuevo": "El gráfico con la recta ideal hasta la meta y lo acumulado real encima, leído antes del cierre, y la acción correctora tomada mientras queda plazo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-construir_indicador_linealidad_alerta_temprana-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operación, desde el registro de paradas de máquina hasta un índice de satisfacción del cliente, porque los dos te avisan de si hay problemas más adelante.",
+      "texto_nuevo": "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operación, desde el registro de paradas de máquina hasta un índice de satisfacción del cliente, porque los dos pueden avisarte de si hay problemas más adelante.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 83",
+        "frase": "Leading indicators might include the daily monitors we use to run our breakfast factory, from machine downtime records to an index of customer satisfaction—both of which can tell us if problems lie down the road."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'can tell us'; el paso lo volvía certeza.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-construir_indicador_linealidad_alerta_temprana-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Recorta en tu caja esta ventana concreta, el indicador de linealidad, que vale para cualquier proceso.",
+      "texto_nuevo": "Recorta en tu proceso una ventana para ver lo que pasa dentro: el indicador de linealidad, que vale para cualquier proceso.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'tu caja' y 'esta ventana' remitían a la caja negra, que este nodo no presenta; se dice qué es la ventana y se mantiene 'Recorta' para que el paso 'Recorta la misma ventana' siga casando."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'tu caja' y 'esta ventana' remitían a la caja negra, que este nodo no presenta; se dice qué es la ventana y se mantiene 'Recorta' para que el paso 'Recorta la misma ventana' siga casando.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_indicador_linealidad_alerta_temprana-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir el indicador de linealidad para enterarte de que vas a fallar la meta cuando todavía se puede hacer algo",
+      "texto_nuevo": "Construir el indicador de linealidad para enterarte de que probablemente vas a fallar la meta cuando todavía se puede hacer algo",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "grove_high_output/cap_03.md 85",
+        "frase": "The linearity indicator can give us an early warning that we are likely to miss our target."
+      },
+      "decision": "auditoria completa M11 (matiz): Se perdía el \"likely\": el indicador avisa de que probablemente fallarás.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_indicador_linealidad_alerta_temprana-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sin un aviso temprano, puedes descubrir que fallaste una meta con fecha al final, cuando ya no se puede hacer nada. El indicador de linealidad adelanta esa lectura: traza la recta ideal hasta la meta y pone encima lo conseguido, de modo que a media carrera se ve cuánto falta y a qué ritmo habría que ir para llegar. Ese aviso da tiempo a corregir. También destapa lo que un cumplimiento puntual esconde: una unidad que cumple cada mes pero concentra la salida en la última semana probablemente usa mal gente y equipo, y una avería pequeña a final de mes podría hacerle fallar la meta.",
+      "texto_nuevo": "Sin un aviso temprano, puedes descubrir que fallaste una meta con fecha al final, cuando ya no se puede hacer nada. El indicador de linealidad adelanta esa lectura: traza la recta ideal hasta la meta y pone encima lo conseguido, de modo que a media carrera se ve cuánto falta y a qué ritmo habría que ir para llegar. Ese aviso da tiempo a corregir. También destapa lo que un cumplimiento puntual esconde: una unidad que cumple cada mes pero concentra la producción en la última semana probablemente usa mal gente y equipo, y una avería pequeña a final de mes podría hacerle fallar la meta.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "concentra la salida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"output\" en una unidad de fabricación: pasa a \"la producción\" (decisión del orquestador).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_indicador_linealidad_alerta_temprana-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recorta la misma ventana dentro del mes en una unidad de fabricación que cumple sus metas mensuales con regularidad, y no des por hecho que ahí va todo bien: mide la salida contra el tiempo según avanza el mes y compárala con la salida lineal ideal.",
+      "texto_nuevo": "Recorta la misma ventana dentro del mes en una unidad de fabricación que cumple sus metas mensuales con regularidad, y no des por hecho que ahí va todo bien: mide la producción contra el tiempo según avanza el mes y compárala con la producción lineal ideal.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "mide la salida",
+          "con la salida lineal"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"output\" en una unidad de fabricación, dos veces.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_indicador_linealidad_alerta_temprana-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira si la salida está repartida a lo largo del mes o si está concentrada en la última semana.",
+      "texto_nuevo": "Mira si la producción está repartida a lo largo del mes o si está concentrada en la última semana.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "si la salida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"output\" en una unidad de fabricación.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Anticipa si Vas a Fallar",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

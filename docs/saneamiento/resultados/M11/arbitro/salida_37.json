@@ -1,0 +1,47 @@
+{
+ "lote": "37",
+ "casos": [
+  {
+   "item": "pedir_ayuda_grupo_apoyo|resumen_teorico",
+   "decision": "propio",
+   "texto_final": "Una directiva pasó años fingiendo control cuando estaba en el Pozo para dejar de sentirse un fraude, y fue un error: se negó el alivio de compartir sus miedos con gente de confianza y se perdió su empatía y sus consejos. Admitir que batallas y pedir ayuda no es debilidad: muestra coraje y conciencia de ti mismo. Funciona porque que otros entiendan tu situación ayuda mucho: la investigación sugiere que los grupos de apoyo son notablemente eficaces, incluso en problemas serios de salud mental. Por eso buscas tu grupo y lo usas para dos cosas: que te anime y que te sirva de caja de resonancia.",
+   "motivo": "La objeción se sostiene: la línea 331 dice que la investigación SUGIERE, y 'no quita la sensación de fraude' no está en las líneas. La propuesta del verificador lo arregla pero afirma en general que fingir control es un error, cuando las líneas 327-329 cuentan el error de una persona, y quita 'de salud mental' a los problemas serios. Se cuenta el error como caso de una directiva y se restituye 'salud mental'; 597 caracteres."
+  },
+  {
+   "item": "pedir_ayuda_grupo_apoyo|pasos_accionables[0]",
+   "decision": "verificador",
+   "texto_final": "Mira primero un error que una directiva cuenta haber cometido durante años: cuando se encontraba en el Pozo se mordía el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaría de sentirse un fraude y nadie se enteraría.",
+   "motivo": "Objeción correcta: el viejo cuenta el error de una persona y el nuevo te lo atribuye y lo llama 'fácil de cometer'. La propuesta lo cuenta como caso de una directiva, fiel al viejo."
+  },
+  {
+   "item": "pedir_ayuda_grupo_apoyo|pasos_accionables[1]",
+   "decision": "verificador",
+   "texto_final": "Ten claro por qué fue un error: se negaba a sí misma el alivio que da poder compartir los miedos con gente en la que confiaba, y se perdía su empatía y sus consejos.",
+   "motivo": "Objeción correcta: el paso sigue al caso del paso anterior y explica por qué fue un error para ella. La propuesta lo mantiene en tercera persona y en pasado, fiel al viejo."
+  },
+  {
+   "item": "pedir_opinion_otros_mejorar|resumen_teorico",
+   "decision": "propio",
+   "texto_final": "Mejorar depende sobre todo de pedir opinión a otros todo el tiempo, y el único obstáculo eres tú: acordarte de pedirla con frecuencia y tener la humildad de escucharla con apertura y cambiar de verdad. Cuanto más concreta sea la pregunta, sobre la tarea o sobre tu conducta, mejor: una pregunta vaga probablemente te devuelva respuestas como «creo que fue bien», poco útiles, y una específica le pone fácil al otro decirte algo que puedas aplicar. Agradecer siempre, aunque no estés de acuerdo, cuida la fuente: si te ven a la defensiva, recibirás menos opinión y eso perjudica tu crecimiento.",
+   "motivo": "La objeción se sostiene: 'deja de darte opinión' y 'se frena' endurecen la línea 381 (menos opinión, perjudica tu crecimiento). La propuesta del verificador lo arregla pero deja 'Funciona cuando la pregunta es concreta' (la línea 379 dice cuanto más concreto, mejor) y 'solo devuelve respuestas que no sirven' (la línea dice probablemente y no particularmente útiles), además de 'recibir' donde la línea 377 dice pedir. Se restituyen esos matices; 593 caracteres."
+  },
+  {
+   "item": "planificar_reduccion_trabajo_individual|resumen_teorico",
+   "decision": "verificador",
+   "texto_final": "Al empezar a dirigir casi siempre llevas a la vez tu trabajo individual y la gestión, y el error que comete prácticamente todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+   "motivo": "Objeción correcta: el equipo de unas seis personas y la conclusión de no hacer bien ninguna de las dos cosas son el caso de una persona. La propuesta lo cuenta como caso de una directiva y conserva lo general de las líneas 87 y 89; 585 caracteres."
+  },
+  {
+   "item": "preguntar_jefe_sonado_persona_cargo|resumen_teorico",
+   "decision": "verificador",
+   "texto_final": "Al llegar de jefe nuevo empiezas con una pizarra en blanco, y eso vale también para tu gente: algunas personas a tu cargo agradecerán la ocasión de construir con su jefe la relación que siempre quisieron. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas sirven para preguntar qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo.",
+   "motivo": "Objeción correcta: la línea 153 dice algunas personas a cargo. La propuesta lo restituye, se queda en las líneas 151-167 y mide 595."
+  },
+  {
+   "item": "preparar_preguntas_entrevista_antemano|resumen_teorico",
+   "decision": "verificador",
+   "texto_final": "Todos tenemos sesgos, y sin preparar la entrevista corres el riesgo de decidir por la impresión que da la persona y por cómo fluyó la conversación, no por la sustancia de sus respuestas. Llegar sabiendo qué quieres aprender, con su trayectoria revisada y una lista de preguntas preparada, y hacer las mismas preguntas a todos los candidatos del mismo puesto vuelve comparables las entrevistas. Así un candidato nervioso pero sólido puede mostrar cómo resuelve problemas. Solo tú sabes qué buscas, por eso eliges tú las preguntas; las de propósito general sirven de punto de partida.",
+   "motivo": "Objeción correcta: la línea 159 dice te arriesgas. La propuesta lo restituye y el caso del candidato nervioso queda como posibilidad; 582 caracteres."
+  }
+ ]
+}

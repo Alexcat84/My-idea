@@ -1,0 +1,28 @@
+{
+ "lote": "04",
+ "casos": [
+  {
+   "item": "elegir_fabricar_pedido_pronostico|resumen_teorico",
+   "campo": "resumen_teorico",
+   "pasos_del_nodo": [
+    "Cuenta con que solo hay dos maneras de controlar la salida de cualquier fabrica: fabricar contra pedido y fabricar contra pronostico.",
+    "Si fabricas contra pedido, espera a saber que quiere el cliente, busca despues un hueco en tu programa de fabricacion y hazle ahi su pieza.",
+    "Compara tu plazo con el de tu competencia: si ellos tienen listo el mismo producto en cuatro semanas y tu necesitas cuatro meses, no vas a tener muchos clientes.",
+    "Cuando esa comparacion te cierre la via del pedido, pasa a fabricar contra pronostico, que es actuar sobre una contemplacion de los pedidos futuros, aunque preferirias fabricar contra pedido.",
+    "Monta tus actividades alrededor de una especulacion razonada de que se materializaran pedidos de productos concretos dentro de un plazo determinado.",
+    "Asume el riesgo de inventario que eso trae: comprometes recursos contra una evaluacion de necesidades futuras, y si los pedidos no se materializan, o se materializan para un producto distinto del previsto, lo que te queda es inventario no deseado.",
+    "Reconoce que al fabricar contra pronostico estas arriesgando capital para poder responder ordenadamente a una demanda futura prevista.",
+    "Cuenta con que las dos vias pueden convivir en la misma operacion, como en la fabrica de desayunos: fabrica su producto contra el pedido del cliente, pero compra a sus proveedores, como al huevero, contra la demanda pronosticada.",
+    "Usa el pronostico tambien fuera de la fabrica: contrata titulados para necesidades previstas en vez de contratar solo cuando surge la necesidad, porque los titulados salen de forma muy estacional, y desarrolla productos de programa contra una necesidad de mercado prevista y no contra un pedido concreto."
+   ],
+   "nuevo": "Una fábrica solo controla su salida de dos maneras: espera el pedido y lo encaja en su programa, o produce antes contra un pronóstico. Fabricar contra pedido no arriesga nada, pero si tu competencia entrega mucho antes que tú, los clientes se van, y entonces toca montar la actividad sobre una especulación razonada de qué pedidos llegarán y cuándo. Eso funciona porque te deja responder a tiempo, pero cuesta: comprometes capital, y si los pedidos no llegan o llegan para otro producto, te queda inventario que nadie quiere. Por eso se elige sabiendo ese riesgo.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_03.md",
+    "lineas": "103-109"
+   },
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)",
+   "objecion": "Anade contenido: 'Fabricar contra pedido no arriesga nada' es una afirmacion absoluta que no esta en las lineas (103-107 solo dicen que el pedido es lo preferible y que el riesgo de inventario es la desventaja del pronostico) ni en los pasos; ademas choca con la frase siguiente, que describe el riesgo de perder clientes. Se sustituye por lo que si dicen las lineas (line 105: 'you would much rather build to order'). Largo de la propuesta: 563.",
+   "propuesta_verificador": "Una fábrica solo controla su salida de dos maneras: espera el pedido y lo encaja en su programa, o produce antes contra un pronóstico. Fabricar contra pedido es lo preferible, pero si tu competencia entrega mucho antes que tú, los clientes se van, y entonces toca montar la actividad sobre una especulación razonada de qué pedidos llegarán y cuándo. Eso funciona porque te deja responder a tiempo, pero cuesta: comprometes capital, y si los pedidos no llegan o llegan para otro producto, te queda inventario que nadie quiere. Por eso se elige sabiendo ese riesgo."
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+{
+  "node_id": "convertir_cualquiera_mentor",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Convertir a cualquiera en mentor pidiéndole un consejo concreto",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Un mentor es cualquiera que comparte su experiencia para ayudarte a mejorar, y no hace falta nada más formal. Pedirle a alguien que sea tu mentor suena a necesidad y a mucho tiempo; en cambio, si pides un consejo concreto, encontrarás montones de gente dispuesta a ayudar. Tus pares pueden ser una fuente excelente de apoyo y consejo, y la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Si alguien dice que no, está en su derecho. Pero más a menudo de lo que crees la respuesta será sí: todos nos hemos beneficiado de otros y mucha gente está encantada de devolverlo.",
+  "notas_extraccion": "Es la tercera via de aprendizaje y la que quita un obstaculo de forma en vez de anadir una tecnica: el libro sostiene que lo que bloquea la mentoria es la solemnidad de la peticion, no la falta de gente dispuesta. Su inventario propio es el guion exacto de la peticion, escrito literalmente, mas el mapa de a quien pedirle, primero los pares y despues cualquiera con una habilidad que admires. El caso de la amiga que construye cultura esta aqui porque es donde el libro demuestra que el metodo produce cambios concretos, y nombra uno, los bloques semanales de horas de puertas abiertas. Lo que el libro NO dice, y por eso no esta escrito: ni cuantas veces se puede volver a la misma persona, ni que se devuelve a cambio.",
+  "pasos_accionables": [
+    "Parte de que no hay ninguna regla que diga que solo puedes tener un entrenador: el mundo está lleno de gente que puede enseñarte algo.",
+    "Quédate con una definición de mentor deliberadamente sencilla: alguien que comparte su experiencia para ayudarte a mejorar. No necesita ser nada más formal que eso.",
+    "No trates la idea de mentor como algo demasiado solemne: a nadie le gusta que le pidan ser su mentor, porque suena a necesidad y a que va a consumir mucho tiempo.",
+    "Pide consejo específico en su lugar, y vas a encontrar montones de gente dispuesta a ayudar.",
+    "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque pueden ser una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, desahogarse sobre los retos que comparten e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres.",
+    "Ten delante lo concreto que puede llegar a ser eso: una de esas amigas construye cultura de forma fantástica y consigue cultivar en su equipo una sensación de calidez, camaradería y cuidado digna de admirar. A lo largo de los años, otra del grupo le ha hecho docenas de preguntas sobre cómo lo hace: cómo conduce sus reuniones, qué herramientas usa para comunicarse con su equipo amplio, cómo se las arregla para extender esa sensación de conexión a las oficinas remotas. Y las respuestas de la primera le han dado forma directamente a cómo lleva la segunda su propio equipo: por una recomendación de su amiga, mantiene bloques semanales de horas de puertas abiertas.",
+    "Y no lo limites a quien tenga tu mismo trabajo: aunque no lo tengan, la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Quizá un colega es un reclutador excepcional, quizá otra es muy buena vendiendo sus ideas, quizá alguien de tu equipo es la persona más creativa que conoces, quizá tu jefe tiene un don especial para ver lo mejor de cada uno.",
+    "Sea cual sea la habilidad, no tengas miedo de preguntar con algo como esto: «Me impresiona mucho cómo haces tal cosa y me encantaría aprender de ti. ¿Te tomarías un café conmigo para contarme cómo lo enfocas?»",
+    "Ten presente que, como estás pidiendo un favor, la gente está en su derecho de decir que no porque está ocupada o porque no sabe cómo ayudarte. Dales las gracias igualmente.",
+    "Pero cuenta con que más a menudo de lo que crees la respuesta va a ser que sí, porque todos nos hemos beneficiado de la mentoría de otros y mucha gente está encantada de devolverlo."
+  ],
+  "entregable_esperado": "Consejo concreto obtenido de gente distinta, incluidos tus pares, sin haber pedido a nadie que sea tu mentor.",
+  "nodos_previos": [
+    "tratar_jefe_entrenador"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando quieres aprender de más gente que de tu jefe, o cuando te frena la idea de tener que pedirle a alguien que sea tu mentor."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un mentor es cualquiera que comparte su experiencia para ayudarte a mejorar, y no hace falta nada más formal. Pedirle a alguien que sea tu mentor suena a necesidad y a mucho tiempo; en cambio, si pides un consejo concreto, encontrarás montones de gente dispuesta a ayudar. Tus pares pueden ser una fuente excelente de apoyo y consejo, y la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Si alguien dice que no, está en su derecho. Pero más a menudo de lo que crees la respuesta será sí: todos nos hemos beneficiado de otros y mucha gente está encantada de devolverlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_06.md",
+          "lineas": "399-411"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: L403 'can be an excellent source' y L407 'probably all have' salen como certeza, L411 dice 'more often than you might think' y no 'suele', y 'lo que bloquea es la solemnidad' no está en las líneas. La propuesta del lector devuelve los tres matices y el derecho a decir que no de L411.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)"
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Convertir a cualquiera en mentor pidiendole un consejo concreto",
+      "texto_nuevo": "Convertir a cualquiera en mentor pidiéndole un consejo concreto",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de que no hay ninguna regla que diga que solo puedes tener un entrenador: el mundo esta lleno de gente que puede ensenriarte algo.",
+      "texto_nuevo": "Parte de que no hay ninguna regla que diga que solo puedes tener un entrenador: el mundo está lleno de gente que puede enseñarte algo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quedate con la definicion que el libro da de mentor, que es deliberadamente barata: alguien que comparte su experiencia para ayudarte a mejorar. No necesita ser nada mas formal que eso.",
+      "texto_nuevo": "Quédate con una definición de mentor deliberadamente sencilla: alguien que comparte su experiencia para ayudarte a mejorar. No necesita ser nada más formal que eso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la definicion que el libro da de mentor"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "No trates la idea de mentor como algo demasiado precioso, que es lo que Sheryl Sandberg advierte en su libro Lean In: nadie quiere que le pregunten quieres ser mi mentor, porque suena necesitado y suena a que va a consumir mucho tiempo.",
+      "texto_nuevo": "No trates la idea de mentor como algo demasiado solemne: a nadie le gusta que le pidan ser su mentor, porque suena a necesidad y a que va a consumir mucho tiempo.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "que es lo que Sheryl Sandberg advierte en su libro Lean In",
+          "quieres ser mi mentor"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide consejo especifico en su lugar, y vas a encontrar montones de gente dispuesta a ayudar.",
+      "texto_nuevo": "Pide consejo específico en su lugar, y vas a encontrar montones de gente dispuesta a ayudar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque el libro dice que son una fuente excelente de apoyo y de consejo. La autora tiene un grupo de amigos que tambien dirigen disenio y al que ve cada pocos meses: como tienen responsabilidades parecidas, pueden hablar de las tendencias del mercado, compadecerse de los retos compartidos e intercambiar consejo sobre como llevan las criticas de trabajo o como montan sus talleres.",
+      "texto_nuevo": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque son una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, compadecerse de los retos compartidos e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que",
+          "La autora tiene un grupo de amigos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante lo concreto que puede llegar a ser eso: una de esas amigas construye cultura de forma fantastica y consigue cultivar en su equipo una sensacion de calidez, camaraderia y cuidado que la autora admira. A lo largo de los anios le ha hecho docenas de preguntas sobre como lo hace, como conduce sus reuniones, que herramientas usa para comunicarse con su equipo amplio, como se las arregla para extender esa sensacion de conexion a las oficinas remotas. Y sus respuestas le han dado forma directamente a como lleva su propio equipo: por una recomendacion suya, la autora mantiene bloques semanales de horas de puertas abiertas.",
+      "texto_nuevo": "Ten delante lo concreto que puede llegar a ser eso: una de esas amigas construye cultura de forma fantástica y consigue cultivar en su equipo una sensación de calidez, camaradería y cuidado digna de admirar. A lo largo de los años, otra del grupo le ha hecho docenas de preguntas sobre cómo lo hace: cómo conduce sus reuniones, qué herramientas usa para comunicarse con su equipo amplio, cómo se las arregla para extender esa sensación de conexión a las oficinas remotas. Y sus respuestas le han dado forma directamente a cómo lleva su propio equipo: por una recomendación suya, mantiene bloques semanales de horas de puertas abiertas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la autora admira",
+          "la autora mantiene"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y no lo limites a quien tenga tu mismo trabajo: aunque no lo tengan, la gente con la que trabajas probablemente tiene toda algo valioso que ensenriarte. Quiza un colega es un reclutador excepcional, quiza otra es muy buena vendiendo sus ideas, quiza tu persona a cargo es la persona mas creativa que conoces, quiza tu jefe tiene una habilidad aguda para ver lo mejor de cada uno.",
+      "texto_nuevo": "Y no lo limites a quien tenga tu mismo trabajo: aunque no lo tengan, la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Quizá un colega es un reclutador excepcional, quizá otra es muy buena vendiendo sus ideas, quizá alguien de tu equipo es la persona más creativa que conoces, quizá tu jefe tiene una habilidad aguda para ver lo mejor de cada uno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sea cual sea la habilidad, no tengas miedo de preguntar con este guion: oye, me impresiona mucho como haces tal cosa, me encantaria aprender de ti, te importaria tomarte un cafe conmigo y contarme como lo enfocas?",
+      "texto_nuevo": "Sea cual sea la habilidad, no tengas miedo de preguntar con algo como esto: «Me impresiona mucho cómo haces tal cosa y me encantaría aprender de ti. ¿Te tomarías un café conmigo para contarme cómo lo enfocas?»",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten presente que como estas pidiendo un favor, esta dentro de los derechos de la gente decir que no porque estan ocupados o porque no saben como ayudarte. Dales las gracias igualmente.",
+      "texto_nuevo": "Ten presente que, como estás pidiendo un favor, está dentro de los derechos de la gente decir que no porque están ocupados o porque no saben cómo ayudarte. Dales las gracias igualmente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pero cuenta con que mas a menudo de lo que crees la respuesta va a ser que si, porque todos nos hemos beneficiado de la mentoria de otros y mucha gente esta encantada de devolverlo.",
+      "texto_nuevo": "Pero cuenta con que más a menudo de lo que crees la respuesta va a ser que sí, porque todos nos hemos beneficiado de la mentoría de otros y mucha gente está encantada de devolverlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-convertir_cualquiera_mentor-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres aprender de mas gente que de tu jefe, o cuando te frena la idea de tener que pedirle a alguien que sea tu mentor.",
+      "texto_nuevo": "Cuando quieres aprender de más gente que de tu jefe, o cuando te frena la idea de tener que pedirle a alguien que sea tu mentor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-convertir_cualquiera_mentor-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque son una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, compadecerse de los retos compartidos e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres.",
+      "texto_nuevo": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque son una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, desahogarse sobre los retos que comparten e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "compadecerse de los retos compartidos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"commiserate over shared challenges\"; uno se compadece de personas, no de retos.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-convertir_cualquiera_mentor-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ten delante lo concreto que puede llegar a ser eso: una de esas amigas construye cultura de forma fantástica y consigue cultivar en su equipo una sensación de calidez, camaradería y cuidado digna de admirar. A lo largo de los años, otra del grupo le ha hecho docenas de preguntas sobre cómo lo hace: cómo conduce sus reuniones, qué herramientas usa para comunicarse con su equipo amplio, cómo se las arregla para extender esa sensación de conexión a las oficinas remotas. Y sus respuestas le han dado forma directamente a cómo lleva su propio equipo: por una recomendación suya, mantiene bloques semanales de horas de puertas abiertas.",
+      "texto_nuevo": "Ten delante lo concreto que puede llegar a ser eso: una de esas amigas construye cultura de forma fantástica y consigue cultivar en su equipo una sensación de calidez, camaradería y cuidado digna de admirar. A lo largo de los años, otra del grupo le ha hecho docenas de preguntas sobre cómo lo hace: cómo conduce sus reuniones, qué herramientas usa para comunicarse con su equipo amplio, cómo se las arregla para extender esa sensación de conexión a las oficinas remotas. Y las respuestas de la primera le han dado forma directamente a cómo lleva la segunda su propio equipo: por una recomendación de su amiga, mantiene bloques semanales de horas de puertas abiertas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Posesivos y sujeto ambiguos entre las dos amigas; se marca quién responde y quién lleva el equipo. \"Dar forma a\" es español corriente y se queda."
+      },
+      "decision": "auditoria completa M11 (coherencia): Posesivos y sujeto ambiguos entre las dos amigas; se marca quién responde y quién lleva el equipo. \"Dar forma a\" es español corriente y se queda.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-convertir_cualquiera_mentor-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y no lo limites a quien tenga tu mismo trabajo: aunque no lo tengan, la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Quizá un colega es un reclutador excepcional, quizá otra es muy buena vendiendo sus ideas, quizá alguien de tu equipo es la persona más creativa que conoces, quizá tu jefe tiene una habilidad aguda para ver lo mejor de cada uno.",
+      "texto_nuevo": "Y no lo limites a quien tenga tu mismo trabajo: aunque no lo tengan, la gente con la que trabajas probablemente tiene toda algo valioso que enseñarte. Quizá un colega es un reclutador excepcional, quizá otra es muy buena vendiendo sus ideas, quizá alguien de tu equipo es la persona más creativa que conoces, quizá tu jefe tiene un don especial para ver lo mejor de cada uno.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una habilidad aguda"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"a keen ability\".",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-convertir_cualquiera_mentor-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten presente que, como estás pidiendo un favor, está dentro de los derechos de la gente decir que no porque están ocupados o porque no saben cómo ayudarte. Dales las gracias igualmente.",
+      "texto_nuevo": "Ten presente que, como estás pidiendo un favor, la gente está en su derecho de decir que no porque está ocupada o porque no sabe cómo ayudarte. Dales las gracias igualmente.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "está dentro de los derechos de la gente decir que no porque están ocupados o porque no saben"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"it is well within people's rights\" y concordancia rota con \"la gente\".",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-convertir_cualquiera_mentor-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque son una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, desahogarse sobre los retos que comparten e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres.",
+      "texto_nuevo": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque pueden ser una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, desahogarse sobre los retos que comparten e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 403",
+        "frase": "In particular, people in your peer group—those with a similar job to yours—can be an excellent source of support and advice."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que los pares pueden ser una fuente excelente (can be); el paso lo afirmaba. Se devuelve el «pueden ser», como en el resumen.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pide un Consejo Concreto"
+}

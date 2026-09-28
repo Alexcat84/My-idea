@@ -1,0 +1,267 @@
+{
+  "node_id": "empujar_persona_reunion_direccion_preferida",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Empujar a una persona o a una reunión hacia la dirección que prefieres, sabiendo que un empujón no es una orden",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Entre dar información y dar una orden hay un terreno intermedio que un mando usa sin parar: sugerir con una llamada cómo debería tomarse una decisión, dejar por escrito cómo ves una situación o comentar algo durante una presentación. Con eso defiendes el camino que prefieres sin dar una orden, y aun así haces algo más fuerte que informar: empujas a una persona o a una reunión hacia donde te gustaría. Conviene distinguir bien ese empujón de las decisiones que acaban en directrices firmes y claras. En la práctica, por cada decisión tajante, probablemente empujas las cosas una docena de veces.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P13 de la frontera publicada en esta vuelta 46, L167 a L167, 174 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO Y NO DEFINICION, que es el juicio caro de este tramo porque el libro literalmente dice Let us call it nudging: el renglon no se queda en bautizar la actividad, pone SU PROPIO INVENTARIO de los medios con que se ejecuta, nombrados uno a uno (making a phone call to an associate suggesting that a decision be made in a certain way, sending a note or a memo that shows how you see a particular situation, making a comment during an oral presentation), y pone ademas el CRITERIO que separa el empujon de sus dos vecinos por arriba y por abajo (you may be advocating a preferred course of action, but you are not issuing an instruction or a command; Yet you are doing something stronger than merely conveying information). Inventario de MEDIOS mas criterio escrito es exactamente la cara positiva de EXTRACTOR.md 9.1, y NO hay adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, uno a uno, y los siete salen de L167: pasos 1, 2 y 3 (maybe making a phone call to an associate suggesting that a decision be made in a certain way, or sending a note or a memo that shows how you see a particular situation, or making a comment during an oral presentation); paso 4 (In such instances you may be advocating a preferred course of action, but you are not issuing an instruction or a command); paso 5 (Yet you are doing something stronger than merely conveying information. Let us call it nudging because through it you nudge an individual or a meeting in the direction you would like); paso 6 (it should be carefully distinguished from decision-making that results in firm, clear directives); paso 7 (In reality, for every unambiguous decision we make, we probably nudge things a dozen times). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo COMO se elige cual de los tres medios usar, porque el libro los pone con o y no pone criterio de eleccion entre ellos; NO escribo cuando NO hay que empujar, porque el renglon no lo dice; NO escribo que se lleve la cuenta por escrito de los empujones, porque la docena de L167 es una proporcion observada por el autor y no un registro que el libro encargue. LA CIFRA DEL AUTOR, DECLARADA: a dozen times no va a atribuciones porque no es una tasa medida con su fecha de corte, es una estimacion que el propio renglon presenta como probably; la escribo dentro del paso 7 con ese probablemente delante, que es como el libro la escribe. TRADUCCION DECLARADA: nudging y nudge viajan en denominaciones y el paso escribe empujon, que es su equivalente corriente en castellano y por tanto lo que manda EXTRACTOR.md 15.1. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO, Y LO MARQUE YA EN LA FRONTERA ANTES DE ESCRIBIR LA FICHA: un lector estricto puede decir que esto es una DEFINICION de una categoria de actividad, de las que la tabla de EXTRACTOR.md 9 tumba, porque el libro esta clasificando lo que hace un mando y no encargando nada. Lo sostengo porque hay algo que hacer y el libro dice como hacerlo con tres medios suyos, porque el entregable es comprobable (el asunto empujado por un medio que no emite instruccion) y porque el paso 4 trae una restriccion ejecutable que una definicion no necesitaria. Si cae, cae DENTRO de mi marcado y es el segundo de mi cola de relectura. CORRECCION DECLARADA DE LA VUELTA 50, SIN BORRAR EL NUMERO VIEJO (manual principio 6, deuda d036, adjudicada en ACTA 48 seccion 48.5.a): donde esta ficha dice mas arriba que la PIEZA P13, L167 a L167, tiene 174 palabras, TIENE QUE LEERSE 147 palabras. La cifra buena es la que la frontera de HH.2.c publica para esta pieza, y no una tercera cifra mia: la recompute en la vuelta 50 con el mismo recuento de .v46/frontera.py linea 136 y me da 147, identica a la de la frontera. EL RENGLON DEL INSTRUMENTO QUE LO SOSTIENE, pegado (.v50/palabras_d036.txt): empujar_persona_reunion_direccion_preferida P13 L167 a L167 dice 174 HH.2.c 147 cuento 147 la frontera manda. LO QUE ESTA CORRECCION NO TOCA: ni un paso, ni una atribucion, ni la frontera, que es precisamente la que sale bien. El numero viejo era un numero escrito a mano en la vuelta 46 que ni la frontera citada ni ningun recuento reproducen.",
+  "pasos_accionables": [
+    "Haz una llamada a un colega sugiriendo que la decisión se tome de cierta manera.",
+    "O manda una nota o un memorando que enseñe cómo ves tú esa situación concreta.",
+    "O haz un comentario durante una presentación oral.",
+    "En cualquiera de esos casos defiende un curso de acción preferido, pero no emitas una instrucción ni una orden.",
+    "Cuenta con que eso es algo más fuerte que limitarte a transmitir información: por ese medio empujas a una persona o a una reunión en la dirección que a ti te gustaría.",
+    "Distingue ese empujón con cuidado de la toma de decisiones, que es la que acaba en directrices firmes y claras.",
+    "Cuenta con la proporción en que ocurren las dos: por cada decisión inequívoca que tomas, probablemente empujas las cosas una docena de veces."
+  ],
+  "entregable_esperado": "El asunto empujado en la dirección que prefieres, por un medio que defiende un curso de acción y no emite ninguna instrucción, y separado en tu cuenta de las decisiones que sí tomaste.",
+  "nodos_previos": [
+    "transmitir_objetivos_prioridades_preferencias"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando quieres que un asunto vaya en una dirección sin dar una instrucción ni una orden, y limitarte a transmitir información se queda corto."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Entre dar información y dar una orden hay un terreno intermedio que un mando usa sin parar: sugerir con una llamada cómo debería tomarse una decisión, dejar por escrito cómo ves una situación o comentar algo durante una presentación. Con eso defiendes el camino que prefieres sin dar una orden, y aun así haces algo más fuerte que informar: empujas a una persona o a una reunión hacia donde te gustaría. Conviene distinguir bien ese empujón de las decisiones que acaban en directrices firmes y claras. En la práctica, por cada decisión tajante, probablemente empujas las cosas una docena de veces.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "167-167"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'funciona porque buena parte de la influencia pasa por aquí' es causa inventada y 'muchos más empujones' pierde el 'probably... a dozen times' de la línea 167. La propuesta del lector lo arregla, pero 'Conviene distinguirlos' queda sin antecedente (no había nombrado los empujones) y pierde el 'claras' de 'firm, clear directives'; el texto propio lo corrige.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)"
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empujar a una persona o a una reunion hacia la direccion que prefieres, sabiendo que un empujon no es una orden",
+      "texto_nuevo": "Empujar a una persona o a una reunión hacia la dirección que prefieres, sabiendo que un empujón no es una orden",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz una llamada a un colega sugiriendo que la decision se tome de una cierta manera.",
+      "texto_nuevo": "Haz una llamada a un colega sugiriendo que la decisión se tome de una cierta manera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "O manda una nota o un memorando que ensene como ves tu esa situacion concreta.",
+      "texto_nuevo": "O manda una nota o un memorando que enseñe cómo ves tú esa situación concreta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "O haz un comentario durante una presentacion oral.",
+      "texto_nuevo": "O haz un comentario durante una presentación oral.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En cualquiera de esos casos defiende un curso de accion preferido, pero no emitas una instruccion ni una orden.",
+      "texto_nuevo": "En cualquiera de esos casos defiende un curso de acción preferido, pero no emitas una instrucción ni una orden.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que eso es algo mas fuerte que limitarte a transmitir informacion: por ese medio empujas a una persona o a una reunion en la direccion que a ti te gustaria.",
+      "texto_nuevo": "Cuenta con que eso es algo más fuerte que limitarte a transmitir información: por ese medio empujas a una persona o a una reunión en la dirección que a ti te gustaría.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Distingue ese empujon con cuidado de la toma de decisiones, que es la que acaba en directrices firmes y claras.",
+      "texto_nuevo": "Distingue ese empujón con cuidado de la toma de decisiones, que es la que acaba en directrices firmes y claras.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con la proporcion en que ocurren las dos: por cada decision inequivoca que tomas, probablemente empujas las cosas una docena de veces.",
+      "texto_nuevo": "Cuenta con la proporción en que ocurren las dos: por cada decisión inequívoca que tomas, probablemente empujas las cosas una docena de veces.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El asunto empujado en la direccion que prefieres, por un medio que defiende un curso de accion y no emite ninguna instruccion, y separado en tu cuenta de las decisiones que si tomaste.",
+      "texto_nuevo": "El asunto empujado en la dirección que prefieres, por un medio que defiende un curso de acción y no emite ninguna instrucción, y separado en tu cuenta de las decisiones que sí tomaste.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empujar_persona_reunion_direccion_preferida-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres que un asunto vaya en una direccion y no es tuyo decidirlo, o no quieres decidirlo tu, y lo unico que tienes a mano es informar o mandar, que son los dos extremos que no sirven aqui.",
+      "texto_nuevo": "Cuando quieres que un asunto vaya en una dirección y no es tuyo decidirlo, o no quieres decidirlo tú, y lo único que tienes a mano es informar o mandar, que son los dos extremos que no sirven aquí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-empujar_persona_reunion_direccion_preferida-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando quieres que un asunto vaya en una dirección y no es tuyo decidirlo, o no quieres decidirlo tú, y lo único que tienes a mano es informar o mandar, que son los dos extremos que no sirven aquí.",
+      "texto_nuevo": "Cuando quieres que un asunto vaya en una dirección sin dar una instrucción ni una orden, y limitarte a transmitir información se queda corto.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 167",
+        "frase": "In such instances you may be advocating a preferred course of action, but you are not issuing an instruction or a command. Yet you’re doing something stronger than merely conveying information."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no liga el empujón a que la decisión no sea tuya ni dice que informar y mandar 'no sirvan'; lo sitúa entre no dar una orden y hacer algo más que informar.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-empujar_persona_reunion_direccion_preferida-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz una llamada a un colega sugiriendo que la decisión se tome de una cierta manera.",
+      "texto_nuevo": "Haz una llamada a un colega sugiriendo que la decisión se tome de cierta manera.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "de una cierta manera"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"De una cierta manera\" calca \"in a certain way\" (grove cap_04 l.167); en español cierto va sin artículo indefinido.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Empuja sin Dar una Orden",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

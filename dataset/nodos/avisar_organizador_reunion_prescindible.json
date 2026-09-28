@@ -1,0 +1,290 @@
+{
+  "node_id": "avisar_organizador_reunion_prescindible",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Avisar a quien organiza cuando una reunión periódica no parece valer para nadie",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Las reuniones bien planificadas se asocian con mejor rendimiento del equipo y bienestar, y las malas pueden dejar frustración, agotamiento y riesgo de desgaste. Por eso las que no parecen valer para nadie deberían cancelarse o rehacerse. Hay quien temía una reunión semanal tensa, con brazos cruzados, ideas rebatidas al instante y silencios largos, que no terminó hasta una reorganización; años después supo que un colega también la veía como una pérdida de tiempo. Si estás en una reunión periódica de valor dudoso, avisar con amabilidad a quien la organiza es un servicio para todos.",
+  "notas_extraccion": "Cierra el capitulo con la unica pieza cuyo ejecutor no es quien organiza la reunion sino quien la sufre. La doctrina es que una reunion mala no es un coste neutro, y eso no se sostiene sobre opinion sino sobre la investigacion que el libro cita, que conecta las reuniones bien planificadas con el rendimiento del equipo y el bienestar del empleado, y las malas con la frustracion, el agotamiento y el posible desgaste. El caso de la reunion de los miercoles va DENTRO y no a nodo propio (manual seccion 3.5): lo que se lleva de el es el patron de senales y la leccion de no esperar, no la fecha ni el asunto. Lo que el libro NO dice, y por eso no esta escrito aqui, es con que palabras se avisa al organizador, ni que hacer si el organizador se niega.",
+  "pasos_accionables": [
+    "Mantén la vigilancia también sobre las reuniones que no parecen valiosas para nadie, y no solo sobre las que no te necesitan a ti.",
+    "Ten claro lo que les toca a esas reuniones: deberían cancelarse o rehacerse.",
+    "Fíjate en las señales que tenía una reunión de los miércoles que una directiva temía: los asistentes sentados con brazos y piernas cruzados, como si debatieran política de armamento nuclear en vez de mejoras de proceso, y cualquier cosa que se decía, inmediatamente refutada o recibida con un silencio largo.",
+    "No esperes a que la reunión muera sola. Esa reunión de los miércoles terminó solo cuando llegó una reorganización mayor del equipo, y años después dos de sus asistentes descubrieron que los dos habían pensado que era una pérdida de tiempo, y se preguntaron por qué no lo habían reconocido entonces y la habían cerrado antes.",
+    "Si te encuentras en una reunión periódica de valor cuestionable, hazle a todo el mundo un servicio importante avisando amablemente a quien la organiza.",
+    "Apunta a que cada una de las reuniones de las que formas parte sea útil, estupenda y llena de energía, para que tu equipo consiga más junto."
+  ],
+  "entregable_esperado": "El organizador avisado amablemente, y la reunión cancelada o rehecha.",
+  "nodos_previos": [
+    "auditar_calendario_reuniones_semana"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando te encuentras en una reunión periódica de valor cuestionable, que no parece valiosa para nadie y no solo para ti."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Las reuniones bien planificadas se asocian con mejor rendimiento del equipo y bienestar, y las malas pueden dejar frustración, agotamiento y riesgo de desgaste. Por eso las que no parecen valer para nadie deberían cancelarse o rehacerse. Hay quien temía una reunión semanal tensa, con brazos cruzados, ideas rebatidas al instante y silencios largos, que no terminó hasta una reorganización; años después supo que un colega también la veía como una pérdida de tiempo. Si estás en una reunión periódica de valor dudoso, avisar con amabilidad a quien la organiza es un servicio para todos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "283-289"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Objecion sostenida: las señales y el 'varios piensan lo mismo y nadie lo dice' son el caso de una persona y un colega (285-287), 'solo alarga el daño' no está en las líneas y 'Bad meetings can leave' perdió el puede. La propuesta del lector escribía 'tan tensa... que solo terminó con una reorganización', que convierte la tensión en causa del final (la 285 solo dice que 'eventually ended with a larger team reorganization'); se corrige eso.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)"
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Avisar a quien organiza cuando una reunion periodica no vale para nadie",
+      "texto_nuevo": "Avisar a quien organiza cuando una reunión periódica no vale para nadie",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Manten la vigilancia tambien sobre las reuniones que no parecen valiosas para nadie, y no solo sobre las que no te necesitan a ti.",
+      "texto_nuevo": "Mantén la vigilancia también sobre las reuniones que no parecen valiosas para nadie, y no solo sobre las que no te necesitan a ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata esas dos salidas como las unicas: deberian cancelarse o rehacerse.",
+      "texto_nuevo": "Trata esas dos salidas como las únicas: deberían cancelarse o rehacerse.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fijate en las senales que la autora describe en la suya de los miercoles, que ella temia: todos los asistentes sentados con brazos y piernas cruzados, como si debatieran politica de armamento nuclear en vez de mejoras de proceso, y cualquier cosa que se decia inmediatamente refutada o recibida con un silencio largo.",
+      "texto_nuevo": "Fíjate en las señales de una reunión que todos temen: los asistentes sentados con brazos y piernas cruzados, como si debatieran política de armamento nuclear en vez de mejoras de proceso, y cualquier cosa que se dice inmediatamente refutada o recibida con un silencio largo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la autora describe en la suya de los miercoles, que ella temia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No esperes a que la reunion muera sola. La de los miercoles termino solo cuando llego una reorganizacion mayor del equipo, y anios despues ella y un colega descubrieron que los dos habian pensado siempre que era una perdida de tiempo, y se preguntaron por que no lo habian reconocido entonces y la habian cerrado antes.",
+      "texto_nuevo": "No esperes a que la reunión muera sola. En un caso real, una reunión así de los miércoles terminó solo cuando llegó una reorganización mayor del equipo, y años después dos de sus asistentes descubrieron que los dos habían pensado siempre que era una pérdida de tiempo, y se preguntaron por qué no lo habían reconocido entonces y la habían cerrado antes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La de los miercoles",
+          "ella y un colega"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si te encuentras en una reunion periodica de valor cuestionable, hazle a todo el mundo un servicio importante avisando amablemente a quien la organiza.",
+      "texto_nuevo": "Si te encuentras en una reunión periódica de valor cuestionable, hazle a todo el mundo un servicio importante avisando amablemente a quien la organiza.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Apunta a que cada una de las reuniones de las que formas parte sea util, estupenda y llena de energia, para que tu equipo consiga mas junto.",
+      "texto_nuevo": "Apunta a que cada una de las reuniones de las que formas parte sea útil, estupenda y llena de energía, para que tu equipo consiga más junto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El organizador avisado amablemente, y la reunion cancelada o rehecha.",
+      "texto_nuevo": "El organizador avisado amablemente, y la reunión cancelada o rehecha.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-avisar_organizador_reunion_prescindible-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te encuentras en una reunion periodica de valor cuestionable, que no parece valiosa para nadie y no solo para ti.",
+      "texto_nuevo": "Cuando te encuentras en una reunión periódica de valor cuestionable, que no parece valiosa para nadie y no solo para ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-avisar_organizador_reunion_prescindible-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fíjate en las señales de una reunión que todos temen: los asistentes sentados con brazos y piernas cruzados, como si debatieran política de armamento nuclear en vez de mejoras de proceso, y cualquier cosa que se dice inmediatamente refutada o recibida con un silencio largo.",
+      "texto_nuevo": "Fíjate en las señales que tenía una reunión de los miércoles que una directiva temía: los asistentes sentados con brazos y piernas cruzados, como si debatieran política de armamento nuclear en vez de mejoras de proceso, y cualquier cosa que se decía, inmediatamente refutada o recibida con un silencio largo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 285",
+        "frase": "I used to have a meeting on Wednesdays that I dreaded going to"
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_07.md línea 285: \"I used to have a meeting on Wednesdays that I dreaded going to\". La temía una persona, no \"todos\"; que a otro asistente también le pareciera una pérdida de tiempo se supo años después (línea 287). Se cuenta como caso y en pasado, y así el paso siguiente (\"una reunión así de los miércoles\") tiene su referente.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-avisar_organizador_reunion_prescindible-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Trata esas dos salidas como las únicas: deberían cancelarse o rehacerse.",
+      "texto_nuevo": "Ten claro lo que les toca a esas reuniones: deberían cancelarse o rehacerse.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 285",
+        "frase": "Be on the lookout as well for meetings that don’t seem valuable for anyone. They should be canceled or revamped."
+      },
+      "decision": "auditoria completa M11 (invencion, coherencia): El libro dice que deberían cancelarse o rehacerse, no que sean las únicas salidas; además 'esas dos salidas' no tenía antecedente.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-avisar_organizador_reunion_prescindible-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No esperes a que la reunión muera sola. En un caso real, una reunión así de los miércoles terminó solo cuando llegó una reorganización mayor del equipo, y años después dos de sus asistentes descubrieron que los dos habían pensado siempre que era una pérdida de tiempo, y se preguntaron por qué no lo habían reconocido entonces y la habían cerrado antes.",
+      "texto_nuevo": "No esperes a que la reunión muera sola. Esa reunión de los miércoles terminó solo cuando llegó una reorganización mayor del equipo, y años después dos de sus asistentes descubrieron que los dos habían pensado que era una pérdida de tiempo, y se preguntaron por qué no lo habían reconocido entonces y la habían cerrado antes.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 287",
+        "frase": "Some years later, I was talking with a colleague who happened to be in that same meeting with me, and we both realized that we thought the meeting was a waste of time."
+      },
+      "decision": "auditoria completa M11 (invencion, coherencia): «Siempre» no está en el libro; y «una reunión así» presentaba como otra la misma reunión de los miércoles del paso anterior.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-avisar_organizador_reunion_prescindible-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Avisar a quien organiza cuando una reunión periódica no vale para nadie",
+      "texto_nuevo": "Avisar a quien organiza cuando una reunión periódica no parece valer para nadie",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 283",
+        "frase": "Be on the lookout as well for meetings that don’t seem valuable for anyone."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro habla de reuniones que no parecen valiosas para nadie y de valor cuestionable (línea 289); el título lo afirmaba como hecho.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Avisa de la Reunión Inútil",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

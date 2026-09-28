@@ -1,0 +1,163 @@
+# Limpieza M11: evidencia (integracion del mundo 11, paso 3, 28 sep 2026)
+
+Decisiones del fundador del 28 sep 2026 (voz de libro fuera, 471 resumenes nuevos, notas_extraccion interno).
+Instrumento: `docs/saneamiento/instrumentos/M11_LIMPIEZA.md`. Tandas aplicables (en orden) sobre el pack importado:
+`docs/saneamiento/tandas/m11-limpieza.json` (5452), `m11-glosario.json` (130), `m11-limites.json` (21).
+
+- `redactor/lote_NN.json`: lo que escribio cada redactor (40 lotes, 12 nodos + 1 trampa).
+- `verificador/salida_NN.json`: el juicio del verificador ciego por elemento. Sus entradas se regeneran con
+  `herramientas/preparar_verificador.py NN` (semilla 20260929+NN); las entradas de los lotes con
+  `herramientas/preparar_lotes.py` (semilla 20260928) sobre el pack importado con `scripts/importar_forja.py`.
+- `arbitro/`: los casos FALLA reales y la decision del arbitro.
+- `ajustes_orquestador.json`: los textos finales que el orquestador fijo sobre lo arbitrado, cada uno con su motivo
+  (barandas de la casa, pase de matices).
+- `matices/`: el pase de matices (resumenes de los lotes 01 a 31 y textos con experiencia de autor), lector + arbitro.
+- `glosario/`: DECISIONES.md, propuestas, verificador y la resolucion del orquestador.
+- `limites/`: el arbitro de los casos que los verificadores dejaron en OK senalados como dudosos.
+- `muestra/`: la muestra ciega final (25 nodos, semilla escrita antes de sortear, 3 trampas sin marca).
+- `claves/`: las claves de todas las trampas.
+- Las lineas de los libros que llevaban las entradas se retiraron del repo (texto con derechos); quedan fichero y
+  lineas como referencia.
+
+FALLO DE METODO DECLARADO: las trampas del redactor, del verificador, del pase de matices y del glosario llevaban
+nombre visible (trampa_NN, vtrampa_, mtrampa_, gtrampa_). Sus puntuaciones no prueban ceguera. Las trampas del
+arbitro de limites y de la muestra final se plantaron sin marca, en ids reales: 1 de 1 y 3 de 3 cazadas.
+
+## Auditoria completa y barrido (28 sep 2026, tras la muestra ciega que dio 57 defectos en 19 de 25 nodos)
+
+Umbral del fundador fijado ANTES de medir (claves/umbral_y_semilla_auditoria.json): en la muestra ciega final, cero
+invenciones y cero contrarios; matices, calcos y coherencia como maximo 1 por cada 5 nodos (lectura estricta: tambien
+regionalismo, voz y ortografia dentro del tope). Todas las trampas sin marca y en ids reales.
+
+- `auditoria/`: 19 auditores ciegos (471 nodos, reparto con semilla 20261005, `auditoria/repartir.py`), 24 trampas sin
+  marca, 24 cazadas. 952 defectos marcados; 892 campos al arbitro: 842 corregidos (ANADIDO 382, VOZ 292, COHERENCIA 143,
+  CONTRARIO 16, ORTOGRAFIA 9) y 50 que no se sostuvieron. Tanda `m11-auditoria` (842 en 372 nodos).
+  Dos fallos del orquestador, corregidos y declarados: la primera version de las instrucciones daba "agresividad
+  molesta" como nombre fijado (el pack usa "agresion odiosa"; los arbitros lo rechazaron); y el consolidador descartaba
+  todo defecto del campo de una trampa, tambien los reales (3, arbitrados aparte en el lote X).
+- `barrido/`: los calcos que la auditoria dejo repetidos ("a que se parece", "abastecer", "por delante" como up front,
+  "que suban la voz", "ensenar mejora"); redactor, verificador ciego con 1 trampa sin marca (cazada). Tanda `m11-barrido` (37).
+- La herramienta admite ahora CONTRARIO, ANADIDO y COHERENCIA sobre `titulo_concepto` (con su cita), con su caso en rojo
+  primero en `engine/test_correcciones_mundo11.py`.
+- Orden de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido.
+
+## Muestra ciega final 1, segundo pase y barrido de "salida" (28 sep 2026)
+
+- `muestra_final/`: 50 nodos con semilla 20261006, dos auditores ciegos (F1, F2), 4 trampas sin marca en ids reales,
+  4 cazadas. El arbitro confirmo 23 defectos: 0 invenciones y 0 contrarios, 23 del resto (VOZ 11, ANADIDO de matiz 7,
+  COHERENCIA 5) contra un tope de 10. Veredicto: NO CUMPLE (`claves/resultado_muestra_final_1.json`). Las 23
+  correcciones van en la tanda `m11-muestra-final` (15 nodos).
+- `pase2/`: segundo pase solo sobre las categorias que fallaron (matiz, calco, coherencia, regionalismo, voz,
+  ortografia) en los 471 nodos, 24 auditores con reparto de semilla 20261008 y 28 trampas sin marca: 26 cazadas.
+  FALLA DECLARADA: dos trampas de matiz no se cazaron (lotes 02 y 10, en pasos). Las trampas solo viven en la entrada del
+  auditor, no en el pack; lo que prueban es que el auditor deja pasar parte de los matices, y eso es lo que mide la
+  muestra final 2. 761 defectos marcados; 696 campos al arbitro: 673 corregidos (VOZ 429, ANADIDO 153, COHERENCIA 82,
+  ORTOGRAFIA 6, CONTRARIO 3) y 23 que no se sostuvieron. Tanda `m11-pase2` (673 en 335 nodos).
+- `salida/`: "salida" como calco de output pasa a "produccion" (operacion) o "resultado" (mando, unidad, proceso); se
+  queda cuando va en par con "entrada". Verificador ciego con 1 trampa sin marca (cazada) y 1 falla real de concordancia
+  resuelta con su propuesta. Tanda `m11-salida` (15 en 3 nodos).
+- Reproducibilidad: las ocho tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta (471 de 471
+  nodos iguales). Guarda de voz de cliente: 0 faltas en 471 nodos.
+- Orden de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido,
+  m11-muestra-final, m11-pase2, m11-salida.
+
+## Muestra ciega final 2, tercer pase y muestra ciega final 3 (28 sep 2026)
+
+- `muestra_final2/`: 50 nodos con semilla 20261009, 4 trampas sin marca, 3 cazadas (se escapo una de matiz). El arbitro
+  confirmo 0 invenciones, 0 contrarios y 11 del resto (matiz 6, calco 1, voz 1, coherencia 1, ortografia 1, longitud 1)
+  contra un tope de 10: NO CUMPLE. Las dos "invenciones" que marcaron los auditores no se sostuvieron (el orquestador las
+  cotejo tambien contra el libro). DECISION DE LECTURA DECLARADA: la lista escrita antes de la muestra 1 nombraba matiz,
+  calco, coherencia, regionalismo, voz y ortografia, no la longitud; sin ella serian 10. Se cuenta como falla porque
+  `medir.py`, escrito antes de la muestra 1, cuenta todo lo que no es invencion ni contrario, y sacar la longitud
+  despues de ver que decidia el resultado seria cambiar la vara a posteriori. Tanda `m11-muestra-final2` (11 en 8 nodos;
+  la longitud va con veredicto COHERENCIA y tipo "longitud").
+- `pase3/`: tercer pase solo sobre lo que fallo, con el matiz DIRIGIDO: cada nodo llevo la lista de frases con marca de
+  matiz de su pasaje (4186 en total; en el segundo pase 138 de 138 matices perdidos caian dentro de las lineas de la
+  evidencia) y el auditor declaro frase por frase si el nodo la usa y si conserva el matiz (4186 de 4186 declaradas), mas
+  avisos mecanicos (3 resumenes de mas de 600 y un "y idear"). 24 auditores con reparto de semilla 20261011 y 38 trampas
+  sin marca: 33 cazadas (las 5 que se escaparon, de matiz). 261 defectos marcados; 219 campos al arbitro: 186
+  corregidos (ANADIDO 70, VOZ 68, COHERENCIA 28, ORTOGRAFIA 19, CONTRARIO 1) y 33 que no se sostuvieron. Tanda `m11-pase3`
+  (186 en 141 nodos). Una decision del arbitro del lote 19 se revirtio por el orquestador y queda escrita en su salida:
+  cambiaba "la salida" por "el resultado" solo en el resumen de un nodo cuyo modelo es entrada, salida y trabajo.
+  FALLO DEL ORQUESTADOR DECLARADO: los auditores del tercer pase se lanzaron con un guion de orquestacion cuya fase de
+  arbitros fallo (una funcion inexistente); los auditores terminaron y los arbitros se lanzaron despues uno a uno, con las
+  mismas instrucciones.
+- `muestra_final3/`: 50 nodos con semilla 20261012, 4 trampas sin marca, 4 cazadas. El arbitro confirmo 0 invenciones,
+  0 contrarios, 0 matices y 11 del resto en 5 nodos (coherencia 4, regionalismo 3, calco 2, voz 1, ortografia 1) contra un
+  tope de 10: NO CUMPLE. El conteo es por campo, como fija `medir.py`: "pegas" en tres campos de un nodo, "la persona a
+  cargo" sin "tu" en dos de otro y "entregar" el mensaje en dos de un tercero cuentan cada campo. Tanda
+  `m11-muestra-final3` (11 en 5 nodos).
+- Reproducibilidad: las once tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta. Guarda de voz de
+  cliente: 0 faltas en 471 nodos.
+- Orden de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido,
+  m11-muestra-final, m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3.
+- Evolucion de la muestra ciega final (defectos blandos confirmados en 50 nodos, tope 10): 23, 11, 11. Duros: 0 en las tres.
+
+## Cuarto pase, barrido de restos y muestra ciega final 4 (28 sep 2026)
+
+- `pase4/`: cuarto pase solo sobre lo que fallo en la muestra 3 (coherencia, regionalismo, calco, voz, ortografia; el
+  matiz dio 0), 16 auditores con reparto de semilla 20261013. Cada nodo llevo sus avisos mecanicos (460: lexico de
+  regionalismos de ambos lados, primera persona del plural, "a cargo" sin posesivo, calcos conocidos, demostrativos sin
+  antecedente), que el auditor juzgo uno a uno, y lectura de coherencia interna. 23 trampas sin marca, 22 cazadas (se
+  escapo una de ortografia). FALLO DE METODO DECLARADO: una trampa de calco reemplazo "importa" dentro de "importantes"
+  y dejo una palabra rota; solo vivia en la entrada del auditor y se cazo. 365 campos al arbitro: 355 corregidos (VOZ 196,
+  COHERENCIA 147, ORTOGRAFIA 12) y 10 que no se sostuvieron. Tanda `m11-pase4` (355 en 172 nodos). Decisiones del
+  orquestador para todo el pack, escritas en `pase4/INSTRUCCIONES_ARBITRO.md` mientras los arbitros trabajaban y
+  enviadas a los que ya habian empezado: forma fijada "a tu cargo" / "a su cargo"; formas de una sola region a la neutra
+  ("adhesivo", "cien por ciento", "video"); el "nosotros" generico de quien escribe pasa a tu o a tercera persona.
+- `pase4_barrido/`: los restos de esas decisiones en campos que ningun arbitro tenia (10), propuestos por el
+  orquestador y cotejados por un verificador ciego con una trampa sin marca (cazada). Tanda `m11-pase4-barrido`.
+- `muestra_final4/`: 50 nodos con semilla 20261014, 4 trampas sin marca, 4 cazadas. El arbitro confirmo 1 INVENCION
+  ("que es como lo comprobaron", zhuo cap_09 217: el libro usa la pelicula como ilustracion, no como la prueba que
+  hicieron; el orquestador lo coteja contra el libro y coincide), 0 contrarios y 5 del resto contra un tope de 10:
+  NO CUMPLE por la invencion. Nota declarada: el encargo de este arbitro llevaba una aclaracion de tipos del orquestador
+  (invencion es causa, efecto, cifra o contenido que el libro no dice; un enfasis o un matiz perdido llevan su tipo
+  real), sacada de la definicion del umbral del fundador; con ella "Eso, y no otra cosa" quedo como actual. Tanda
+  `m11-muestra-final4` (4 en 4 nodos).
+- Reproducibilidad: las catorce tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta. Guarda de
+  voz de cliente: 0 faltas en 471 nodos.
+- Orden de las tandas: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido, m11-muestra-final,
+  m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3, m11-pase4, m11-pase4-barrido,
+  m11-muestra-final4.
+- Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5 (tope 10); duros 0, 0, 0, 1 (tope 0).
+
+## Quinto pase y muestra ciega final 5 (28 sep 2026)
+
+- `pase5/`: quinto pase solo sobre lo que fallo en la muestra 4 (invenciones y contrarios), 16 auditores con reparto de
+  semilla 20261016. Cada nodo llevo sus clausulas marcadas por script (2356: causa, efecto, finalidad, procedencia,
+  absolutos, cifras) y el auditor declaro de cada una si el libro la sostiene, con la linea. 26 trampas sin marca, 25
+  cazadas. FALLO DE METODO DECLARADO: las clausulas se calcularon antes de plantar las trampas, asi que el contexto de
+  algunas conservaba el texto original y delataba la trampa (dos auditores lo notaron); en este pase la puntuacion de
+  trampas no prueba ceguera. 33 campos al arbitro (en 4 arbitros por lotes): 32 corregidos (ANADIDO) y 1 que no se
+  sostuvo. Tanda `m11-pase5` (32 en 27 nodos). Un resto que un arbitro senalo fuera de su entrada (el "Por eso" del resumen
+  de aplicar_metodo_promocion_sucesion) lo coteja el orquestador contra smart_who cap_06 397-403 y se sostiene.
+- `muestra_final5/`: 50 nodos con semilla 20261017, 4 trampas sin marca, 3 cazadas. El arbitro confirmo 0 invenciones,
+  1 CONTRARIO ("y las cosas de abajo dichas que no": el libro manda atender lo de arriba antes de bajar y el no va a las
+  otras cien buenas ideas, zhuo cap_09 89 y 97; el orquestador lo coteja y coincide) y 7 del resto: NO CUMPLE por el
+  contrario. Tanda `m11-muestra-final5` (8 en 7 nodos).
+- Reproducibilidad: las dieciseis tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta.
+- Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5, 7 (tope 10); duros 0, 0, 0, 1, 1 (tope 0).
+
+## Sexto pase (doble lectura) y muestra ciega final 6: MUNDO 11 CERTIFICADO (28 sep 2026)
+
+Decision del fundador tras la muestra 5: doble lectura, con tres condiciones escritas antes de repartir y de sortear
+(`claves/umbral_y_semilla_auditoria.json`, sexto_pase): (1) las trampas sin marca se plantan antes de generar cualquier
+contexto, para que ningun texto original las delate; (2) REGLA DE PARADA: si la muestra 6 da cero contrarios y cero
+invenciones, el mundo 11 queda certificado; si da uno o mas, se corrigen, se releen con el libro los nodos del mismo libro
+y del mismo tipo de campo, y se integra declarando su riesgo residual, sin otro pase completo; (3) los blandos siguen con
+su tope de 1 por cada 5 nodos.
+
+- `pase6/`: cada uno de los 471 nodos lo leyeron de punta a punta dos lectores independientes (A y B, 16 lotes, reparto
+  con semilla 20261018) contra el libro, solo buscando invenciones y contrarios. Las entradas solo llevan el texto del nodo
+  y su evidencia; las trampas se plantan antes de escribirlas y el plantador salta los pasos cuyo texto original sigue
+  visible en otro campo del nodo (un primer reparto tenia uno asi y se rehizo con la misma semilla antes de lanzar a nadie).
+  47 trampas sin marca, 0 fugas, 47 cazadas. Un arbitro por grupo de lotes decidio todo lo que marco cualquiera de los dos
+  lectores: 35 corregidos (ANADIDO 34, CONTRARIO 1) y el resto no se sostuvo. Tanda `m11-pase6` (35 en 30 nodos).
+- `muestra_final6/`: 50 nodos con semilla 20261019, 4 trampas sin marca, 0 fugas, 4 cazadas. El arbitro confirmo 0
+  invenciones, 0 contrarios y 2 del resto (coherencia 1, calco 1) contra un tope de 10: CUMPLE. Por la regla de parada del
+  fundador, el mundo 11 queda CERTIFICADO. Tanda `m11-muestra-final6` (2 en 2 nodos).
+- Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5, 7, 2 (tope 10); duros 0, 0, 0, 1, 1, 0 (tope 0).
+- Orden completo de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria,
+  m11-barrido, m11-muestra-final, m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3, m11-pase4,
+  m11-pase4-barrido, m11-muestra-final4, m11-pase5, m11-muestra-final5, m11-pase6, m11-muestra-final6. Las dieciocho
+  reproducen la copia limpia exacta; guarda de voz de cliente 0 faltas en 471 nodos.

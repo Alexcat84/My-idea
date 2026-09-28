@@ -1,0 +1,512 @@
+{
+  "node_id": "cuidar_persona_completa_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cuidar a la persona completa de cada miembro del equipo, con cuatro medios que sirven y tres que se descartan",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Una relación con quien trabaja para ti no se construye cuidando solo su trabajo o su carrera: hace falta cuidar a la persona entera, con tu persona entera. Parte de lo que lo impide es el mandato de mantenerlo todo en lo profesional, que niega que en el trabajo sigues siendo una persona, y en algunos jefes la sensación de superioridad, que olvida que ser jefe es un puesto y no un juicio de valor. Cuidar no pide gestos forzados: pide conversaciones de verdad y saber qué le importa a cada uno, y a menudo pasa por mostrarte vulnerable primero y dejar que los demás hagan lo mismo sin riesgo.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_04.md, unidad Cap. 1, Build Radically Candid Relationships. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'sordid details', corrida con grep contra las quince unidades del libro. Es la primera de las dos dimensiones de la franqueza radical y el libro la desarrolla con su propio inventario: cuatro medios nombrados uno a uno en una sola linea del texto, tres cosas que descarta por su nombre, dos causas de que la gente falle en esto, y un precio. Por eso es procedimiento y no postura: escribir los pasos es transcribir ese inventario en imperativo. Lo que el texto NO dice, y por eso no esta escrito aqui, es cada cuanto se busca ese tiempo de conversacion, cuanto dura, con quien se empieza cuando el equipo es grande, ni como se sabe que ya se ha cuidado bastante. El texto tampoco encarga registrar nada por escrito, asi que aqui no hay ningun paso de registro. El caso de los talladores de diamantes de Moscu vive en este nodo como ejemplo nombrado y no como casa: lo que la autora aprende ahi es que lo mas importante que ella podia hacer y el Estado no era dar la cara personalmente, y eso es doctrina de este nodo, no un procedimiento para contratar talladores.",
+  "pasos_accionables": [
+    "Cuenta con parte de lo que hace que la gente no se preocupe personalmente por los demás: el mandato de mantenerlo todo en lo profesional, que niega algo esencial, y la sensación que algunos empiezan a tener al volverse jefes de ser mejores o más listos que quienes trabajan para ellos, que es un sentido de superioridad.",
+    "Reconoce que ser jefe es un puesto de trabajo, no un juicio de valor.",
+    "No te quedes en cuidar el trabajo de la persona ni su carrera: eso no basta, y solo cuidando a la persona completa con tu persona completa se construye la relación.",
+    "Busca tiempo para conversaciones de verdad, que es el primero de los medios.",
+    "Conoce a la otra persona y deja que te conozca a nivel humano, que es el segundo.",
+    "Aprende qué es importante para cada persona, que es el tercero.",
+    "Comparte con cada persona qué te hace querer levantarte por la mañana e ir a trabajar, y qué tiene el efecto contrario, y pídele que te cuente lo mismo, que es el cuarto.",
+    "Da ejemplo tú primero mostrando alguna vulnerabilidad a las personas a tu cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: mostrarte en el trabajo tal como eres a menudo pasa por eso.",
+    "No confundas esto con memorizar cumpleaños y nombres de familiares, ni con contar los detalles sórdidos de tu vida personal, ni con la charla forzada en actos sociales a los que preferirías no ir.",
+    "Cuenta con el precio: tienes que cuidar profundamente de la gente estando preparado para que te odien a cambio, y si puedes aguantar los golpes es más probable que los tuyos sean buenos jefes cuando les toque. Puede que nunca te lo devuelvan, pero es probable que lo hagan con otros."
+  ],
+  "entregable_esperado": "Una relación en la que las dos partes se muestran en el trabajo tal como son, con tiempo real de conversación reservado y un espacio seguro en el que otros pueden hacer lo mismo.",
+  "nodos_previos": [
+    "revisar_ciclo_responsabilidades_relaciones",
+    "respetar_cuidar_persona_cargo"
+  ],
+  "nodos_siguientes": [
+    "construir_confianza_equipo_tiempo_solas",
+    "descubrir_motivacion_sentido_persona",
+    "dominar_arte_socializar_trabajo"
+  ],
+  "condiciones_activacion": [
+    "Cuando la relación con una persona a tu cargo se ha quedado en lo estrictamente profesional y quieres saber qué hacer con ella, sin caer en memorizar cumpleaños ni en la charla forzada."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una relación con quien trabaja para ti no se construye cuidando solo su trabajo o su carrera: hace falta cuidar a la persona entera, con tu persona entera. Parte de lo que lo impide es el mandato de mantenerlo todo en lo profesional, que niega que en el trabajo seguimos siendo personas, y en algunos jefes la sensación de superioridad, que olvida que ser jefe es un puesto y no un juicio de valor. Cuidar no pide gestos forzados: pide conversaciones de verdad y saber qué le importa a cada uno, y a menudo pasa por mostrarte vulnerable primero y dejar que los demás hagan lo mismo sin riesgo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_04.md",
+          "lineas": "111-121"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 111 'Part of the reason', 115 'some people', 113 'This often means'. La propuesta del lector acierta en los matices pero conserva 'de confianza', que 117 no dice ('can you build a relationship'), y 'rendimiento' por 'work'; se quitan y se completa 113 con el espacio seguro para los demás.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)"
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidar a la persona completa de cada miembro del equipo, con los cuatro medios que el libro nombra y los tres que descarta",
+      "texto_nuevo": "Cuidar a la persona completa de cada miembro del equipo, con cuatro medios que sirven y tres que se descartan",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto pone como causa de que la gente no cuide personalmente: el mandato de mantenerlo profesional, que segun el texto niega algo esencial, y la sensacion de ser mejor o mas listo que quien trabaja para ti, que el texto llama sentido de superioridad.",
+      "texto_nuevo": "Cuenta con lo que hace que la gente no cuide personalmente: el mandato de mantenerlo profesional, que niega algo esencial, y la sensación de ser mejor o más listo que quien trabaja para ti, que es un sentido de superioridad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto pone como causa",
+          "que segun el texto niega",
+          "que el texto llama sentido de superioridad"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce que ser jefe es un puesto de trabajo, no un juicio de valor, que es lo que el texto pone contra ese sentido de superioridad.",
+      "texto_nuevo": "Reconoce que ser jefe es un puesto de trabajo, no un juicio de valor; eso es lo que contrarresta ese sentido de superioridad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto pone contra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te quedes en cuidar el trabajo de la persona ni su carrera: el texto dice expresamente que eso no basta y que solo cuidando a la persona completa con tu persona completa se construye la relacion.",
+      "texto_nuevo": "No te quedes en cuidar el trabajo de la persona ni su carrera: eso no basta, y solo cuidando a la persona completa con tu persona completa se construye la relación.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice expresamente que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca tiempo para conversaciones de verdad, que es el primero de los medios que el texto nombra.",
+      "texto_nuevo": "Busca tiempo para conversaciones de verdad, que es el primero de los medios.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conoceos mutuamente a nivel humano, que es el segundo.",
+      "texto_nuevo": "Conoce a la otra persona y deja que te conozca a nivel humano, que es el segundo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Conoceos mutuamente"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprende que es importante para cada persona, que es el tercero.",
+      "texto_nuevo": "Aprende qué es importante para cada persona, que es el tercero.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compartid mutuamente que os hace querer levantaros por la maniana e ir a trabajar, y que tiene el efecto contrario, que es el cuarto.",
+      "texto_nuevo": "Comparte con cada persona qué te hace querer levantarte por la mañana e ir a trabajar, y qué tiene el efecto contrario, y pídele que te cuente lo mismo, que es el cuarto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Compartid mutuamente que os hace querer levantaros"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Da ejemplo tu primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal dia, y crea un espacio seguro para que los demas hagan lo mismo, que es como el texto describe traer tu persona entera al trabajo.",
+      "texto_nuevo": "Da ejemplo tú primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: así traes tu persona entera al trabajo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es como el texto describe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No confundas esto con memorizar cumpleanios y nombres de familiares, ni con contar los detalles sordidos de tu vida personal, ni con la charla forzada en actos sociales a los que preferirias no ir: el texto descarta los tres por su nombre.",
+      "texto_nuevo": "No confundas esto con memorizar cumpleaños y nombres de familiares, ni con contar los detalles sórdidos de tu vida personal, ni con la charla forzada en actos sociales a los que preferirías no ir.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto descarta los tres por su nombre"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el precio que el texto pone al lado: tienes que cuidar profundamente de la gente estando preparado para que te odien a cambio, y si puedes absorber los golpes es mas probable que los tuyos sean buenos jefes cuando les toque. El texto avisa de que puede que nunca te lo devuelvan, y de que es probable que lo pasen adelante.",
+      "texto_nuevo": "Cuenta con el precio: tienes que cuidar profundamente de la gente estando preparado para que te odien a cambio, y si puedes absorber los golpes es más probable que los tuyos sean buenos jefes cuando les toque. Puede que nunca te lo devuelvan, pero es probable que lo pasen adelante.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone al lado",
+          "El texto avisa de que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una relacion en la que las dos partes traen su persona entera al trabajo, con tiempo real de conversacion reservado y un espacio seguro en el que otros pueden hacer lo mismo.",
+      "texto_nuevo": "Una relación en la que las dos partes traen su persona entera al trabajo, con tiempo real de conversación reservado y un espacio seguro en el que otros pueden hacer lo mismo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuidar_persona_completa_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la relacion con una persona a cargo se ha quedado en lo estrictamente profesional y quieres saber que hacer con ella, sin caer en memorizar cumpleanios ni en la charla forzada.",
+      "texto_nuevo": "Cuando la relación con una persona a cargo se ha quedado en lo estrictamente profesional y quieres saber qué hacer con ella, sin caer en memorizar cumpleaños ni en la charla forzada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cuidar_persona_completa_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que hace que la gente no cuide personalmente: el mandato de mantenerlo profesional, que niega algo esencial, y la sensación de ser mejor o más listo que quien trabaja para ti, que es un sentido de superioridad.",
+      "texto_nuevo": "Cuenta con parte de lo que hace que la gente no cuide personalmente: el mandato de mantenerlo profesional, que niega algo esencial, y la sensación que algunos empiezan a tener al volverse jefes de ser mejores o más listos que quienes trabajan para ellos, que es un sentido de superioridad.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_04.md 111, 115",
+        "frase": "When they become a boss, some people consciously or unconsciously begin to feel they're better or smarter than the people who work for them."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro: es parte de la razón (part of the reason), y la superioridad la sienten algunos al volverse jefes.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cuidar_persona_completa_equipo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el precio: tienes que cuidar profundamente de la gente estando preparado para que te odien a cambio, y si puedes absorber los golpes es más probable que los tuyos sean buenos jefes cuando les toque. Puede que nunca te lo devuelvan, pero es probable que lo pasen adelante.",
+      "texto_nuevo": "Cuenta con el precio: tienes que cuidar profundamente de la gente estando preparado para que te odien a cambio, y si puedes aguantar los golpes es más probable que los tuyos sean buenos jefes cuando les toque. Puede que nunca te lo devuelvan, pero es probable que lo hagan con otros.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "absorber los golpes",
+          "lo pasen adelante"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de 'absorb the blows' y 'pay it forward'.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-cuidar_persona_completa_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con parte de lo que hace que la gente no cuide personalmente: el mandato de mantenerlo profesional, que niega algo esencial, y la sensación que algunos empiezan a tener al volverse jefes de ser mejores o más listos que quienes trabajan para ellos, que es un sentido de superioridad.",
+      "texto_nuevo": "Cuenta con parte de lo que hace que la gente no se preocupe personalmente por los demás: el mandato de mantenerlo todo en lo profesional, que niega algo esencial, y la sensación que algunos empiezan a tener al volverse jefes de ser mejores o más listos que quienes trabajan para ellos, que es un sentido de superioridad.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no cuide personalmente",
+          "mantenerlo profesional"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"No cuide personalmente\" calca \"fail to care personally\" (sin objeto no significa nada) y \"mantenerlo profesional\" calca \"keep it professional\"; el resumen ya dice \"mantenerlo todo en lo profesional\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-cuidar_persona_completa_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Da ejemplo tú primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: así traes tu persona entera al trabajo.",
+      "texto_nuevo": "Da ejemplo tú primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: traer tu persona entera al trabajo a menudo pasa por eso.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_04.md 113",
+        "frase": "This often means modeling the behavior yourself by showing some vulnerability to the people who report to you"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que traer la persona entera a menudo pasa por dar ejemplo (often means); el paso lo volvía equivalencia.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-cuidar_persona_completa_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Da ejemplo tú primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: traer tu persona entera al trabajo a menudo pasa por eso.",
+      "texto_nuevo": "Da ejemplo tú primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: mostrarte en el trabajo tal como eres a menudo pasa por eso.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "traer tu persona entera al trabajo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal del lema \"Bring your whole self to work\" (cap_04 l. 113); en español, mostrarte en el trabajo tal como eres.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-cuidar_persona_completa_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una relación en la que las dos partes traen su persona entera al trabajo, con tiempo real de conversación reservado y un espacio seguro en el que otros pueden hacer lo mismo.",
+      "texto_nuevo": "Una relación en la que las dos partes se muestran en el trabajo tal como son, con tiempo real de conversación reservado y un espacio seguro en el que otros pueden hacer lo mismo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "traen su persona entera al trabajo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de \"bring your whole self to work\"; se dice como en el paso 7 corregido: mostrarse en el trabajo tal como son.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuidar_persona_completa_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una relación con quien trabaja para ti no se construye cuidando solo su trabajo o su carrera: hace falta cuidar a la persona entera, con tu persona entera. Parte de lo que lo impide es el mandato de mantenerlo todo en lo profesional, que niega que en el trabajo seguimos siendo personas, y en algunos jefes la sensación de superioridad, que olvida que ser jefe es un puesto y no un juicio de valor. Cuidar no pide gestos forzados: pide conversaciones de verdad y saber qué le importa a cada uno, y a menudo pasa por mostrarte vulnerable primero y dejar que los demás hagan lo mismo sin riesgo.",
+      "texto_nuevo": "Una relación con quien trabaja para ti no se construye cuidando solo su trabajo o su carrera: hace falta cuidar a la persona entera, con tu persona entera. Parte de lo que lo impide es el mandato de mantenerlo todo en lo profesional, que niega que en el trabajo sigues siendo una persona, y en algunos jefes la sensación de superioridad, que olvida que ser jefe es un puesto y no un juicio de valor. Cuidar no pide gestos forzados: pide conversaciones de verdad y saber qué le importa a cada uno, y a menudo pasa por mostrarte vulnerable primero y dejar que los demás hagan lo mismo sin riesgo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "seguimos siendo personas"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe, voz de libro: pasa a tú.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuidar_persona_completa_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Da ejemplo tú primero mostrando alguna vulnerabilidad a tus personas a cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: mostrarte en el trabajo tal como eres a menudo pasa por eso.",
+      "texto_nuevo": "Da ejemplo tú primero mostrando alguna vulnerabilidad a las personas a tu cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: mostrarte en el trabajo tal como eres a menudo pasa por eso.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"tus personas a cargo\" pasa a la forma fijada \"las personas a tu cargo\" (decisión del orquestador, cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"tus personas a cargo\" pasa a la forma fijada \"las personas a tu cargo\" (decisión del orquestador, cuarto pase).",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuidar_persona_completa_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la relación con una persona a cargo se ha quedado en lo estrictamente profesional y quieres saber qué hacer con ella, sin caer en memorizar cumpleaños ni en la charla forzada.",
+      "texto_nuevo": "Cuando la relación con una persona a tu cargo se ha quedado en lo estrictamente profesional y quieres saber qué hacer con ella, sin caer en memorizar cumpleaños ni en la charla forzada.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"una persona a cargo\" sin posesivo se lee como quien manda; pasa a la forma fijada \"una persona a tu cargo\"."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"una persona a cargo\" sin posesivo se lee como quien manda; pasa a la forma fijada \"una persona a tu cargo\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase5-cuidar_persona_completa_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconoce que ser jefe es un puesto de trabajo, no un juicio de valor; eso es lo que contrarresta ese sentido de superioridad.",
+      "texto_nuevo": "Reconoce que ser jefe es un puesto de trabajo, no un juicio de valor.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_04.md 115-117",
+        "frase": "Caring personally is the antidote to both robotic professionalism and managerial arrogance."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro pide recordar que ser jefe es un puesto y no un juicio de valor (línea 115), pero lo que nombra como antídoto de la arrogancia del jefe es preocuparte personalmente (línea 117), no ese recordatorio; sale la cláusula.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cuida a la Persona Completa",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

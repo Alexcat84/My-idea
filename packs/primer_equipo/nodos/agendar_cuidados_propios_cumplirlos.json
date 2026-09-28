@@ -1,0 +1,177 @@
+{
+  "node_id": "agendar_cuidados_propios_cumplirlos",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Poner en el calendario lo que necesitas hacer por ti, y después presentarte a esas citas como te presentarías a una con tu jefe",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Pon en tu calendario las cosas que necesitas hacer por ti, igual que pondrías una reunión importante. Si te cuesta salir de la oficina a tiempo para llegar a cenar a casa, apunta también el tiempo de volver y haz como si tuvieras que tomar un tren. La segunda mitad es presentarte a esas citas contigo: no te las saltes ni dejes que otros te pongan cosas encima, igual que no lo permitirías con una reunión con tu jefe. Se trata de darle a lo tuyo, en el calendario y en los hechos, el mismo trato que le das a una reunión importante.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_08.md, lineas 37 a 43, bajo DOS rotulos del libro, Calendar y Show up for yourself, dentro de la seccion STAY CENTERED, que no tiene cabeza propia. LOS DOS ROTULOS VAN EN UN SOLO NODO POR P.19, Y ES LA UNICA FUSION DEL CAPITULO: la linea 43 no tiene objeto propio, es la continuacion de la cita de calendario que monta la linea 39, y lo dice con sus palabras, Don not blow off those meetings with yourself. Con 49 y 27 palabras de cuerpo son las dos piezas mas delgadas del capitulo, y separadas darian un nodo de tres pasos y otro de dos. VA MARCADO DISCUTIBLE en el reporte de esta vuelta, porque es la misma tension que la vuelta 17 ya declaro: uso el rotulo del libro como criterio de corte en todo el capitulo y lo rompo aqui. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. P1, P2 y P3 de la linea 39; P4 y P5 de la 43. EL TREN DEL P3 ES DEL LIBRO, no una imagen mia: Pretend you have a train to catch. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto tiempo se reserva, con que frecuencia, y que se hace cuando quien te pisa la cita es tu propio jefe.",
+  "pasos_accionables": [
+    "Pon en tu calendario las cosas que necesitas hacer para ti, igual que pondrías una reunión importante.",
+    "Si te cuesta salir de la oficina a tiempo para llegar a cenar a casa, pon en el calendario tu tiempo de desplazamiento.",
+    "Haz como si tuvieras que tomar un tren.",
+    "No te saltes esas reuniones contigo mismo.",
+    "Y no dejes que otros te pongan cosas encima de ellas, igual que no se lo dejarías hacer con una reunión con tu jefe."
+  ],
+  "entregable_esperado": "Las cosas que necesitas para ti puestas en el calendario como reuniones importantes, y cumplidas: ni saltadas por ti ni pisadas por otros.",
+  "nodos_previos": [
+    "definir_receta_propia_mantenerse_centrado",
+    "establecer_limites_cuidado_personal",
+    "disenar_entorno_rendir_mejor"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando ya sabes lo que necesitas hacer para mantenerte centrado y el trabajo se lo va comiendo porque no está en ningún sitio."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-agendar_cuidados_propios_cumplirlos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Pon en tu calendario las cosas que necesitas hacer por ti, igual que pondrías una reunión importante. Si te cuesta salir de la oficina a tiempo para llegar a cenar a casa, apunta también el tiempo de volver y haz como si tuvieras que coger un tren. La segunda mitad es presentarte a esas citas contigo: no te las saltes ni dejes que otros te pongan cosas encima, igual que no lo permitirías con una reunión con tu jefe. Se trata de darle a lo tuyo, en el calendario y en los hechos, el mismo trato que le das a una reunión importante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_08.md",
+          "lineas": "37-43"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: L39-43 solo piden apuntarlo como una reunión importante y respetarlo como una reunión con tu jefe; 'se pierde porque no está en ningún sitio' y 'un lugar que el trabajo no puede invadir sin que se note' son causa y efecto inventados. La propuesta del lector se queda en lo que dicen las líneas.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)"
+    },
+    {
+      "id": "m11-limpieza-agendar_cuidados_propios_cumplirlos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Poner en el calendario lo que necesitas hacer por ti, y despues presentarte a esas citas como te presentarias a una con tu jefe",
+      "texto_nuevo": "Poner en el calendario lo que necesitas hacer por ti, y después presentarte a esas citas como te presentarías a una con tu jefe",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-agendar_cuidados_propios_cumplirlos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pon en tu calendario las cosas que necesitas hacer para ti, igual que pondrias una reunion importante.",
+      "texto_nuevo": "Pon en tu calendario las cosas que necesitas hacer para ti, igual que pondrías una reunión importante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-agendar_cuidados_propios_cumplirlos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y no dejes que otros te pongan cosas encima de ellas, ni mas ni menos de lo que se lo dejarias hacer con una reunion con tu jefe.",
+      "texto_nuevo": "Y no dejes que otros te pongan cosas encima de ellas, ni más ni menos de lo que se lo dejarías hacer con una reunión con tu jefe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-agendar_cuidados_propios_cumplirlos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya sabes lo que necesitas hacer para mantenerte centrado y el trabajo se lo va comiendo porque no esta en ningun sitio.",
+      "texto_nuevo": "Cuando ya sabes lo que necesitas hacer para mantenerte centrado y el trabajo se lo va comiendo porque no está en ningún sitio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-agendar_cuidados_propios_cumplirlos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pon en tu calendario las cosas que necesitas hacer por ti, igual que pondrías una reunión importante. Si te cuesta salir de la oficina a tiempo para llegar a cenar a casa, apunta también el tiempo de volver y haz como si tuvieras que coger un tren. La segunda mitad es presentarte a esas citas contigo: no te las saltes ni dejes que otros te pongan cosas encima, igual que no lo permitirías con una reunión con tu jefe. Se trata de darle a lo tuyo, en el calendario y en los hechos, el mismo trato que le das a una reunión importante.",
+      "texto_nuevo": "Pon en tu calendario las cosas que necesitas hacer por ti, igual que pondrías una reunión importante. Si te cuesta salir de la oficina a tiempo para llegar a cenar a casa, apunta también el tiempo de volver y haz como si tuvieras que tomar un tren. La segunda mitad es presentarte a esas citas contigo: no te las saltes ni dejes que otros te pongan cosas encima, igual que no lo permitirías con una reunión con tu jefe. Se trata de darle a lo tuyo, en el calendario y en los hechos, el mismo trato que le das a una reunión importante.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "coger"
+        ]
+      },
+      "decision": "pase de glosario (coger): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-glosario-agendar_cuidados_propios_cumplirlos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz como si tuvieras que coger un tren.",
+      "texto_nuevo": "Haz como si tuvieras que tomar un tren.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "coger"
+        ]
+      },
+      "decision": "pase de glosario (coger): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-agendar_cuidados_propios_cumplirlos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y no dejes que otros te pongan cosas encima de ellas, ni más ni menos de lo que se lo dejarías hacer con una reunión con tu jefe.",
+      "texto_nuevo": "Y no dejes que otros te pongan cosas encima de ellas, igual que no se lo dejarías hacer con una reunión con tu jefe.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ni más ni menos de lo que se lo dejarías"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'any more than you would': 'ni más ni menos' dice 'exactamente tanto como' y confunde el sentido, que es 'igual que no se lo dejarías'.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Agenda Tu Propio Cuidado"
+}

@@ -1,0 +1,202 @@
+{
+  "node_id": "asignar_responsable_unico_evolucion_planificada",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Nombrar un jefe a cargo por cada evento en el documento de planificación",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Junto a cada evento, una línea en el documento de planificación nombra a la persona a cargo, para que quede claro, pase lo que pase, que alguien concreto responde de que salga bien. En un submarino, quien lo mandaba fue ampliando así la autoridad de sus mandos intermedios, y aprendió que poner la atención en quién queda a cargo pesaba más que intentar evaluar todas las maneras en que el evento podría torcerse. Es un mecanismo sencillo: una línea más en cada evento del plan, con un nombre al lado, en vez de dedicar el esfuerzo principal a prever cada fallo posible.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_06.md, unidad Cap. 8, titulo textual Change, in a Word. FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los dos pasos salen de la misma linea 127, que es la PIEZA P2 de la frontera publicada en esta vuelta para cap_06, 144 palabras. POR QUE ES PROCEDIMIENTO Y NO CASO: el texto nombra su propio mecanismo por su nombre, the mechanism was to add a line, y da la accion concreta (anadir una linea con el jefe a cargo) mas el criterio de por que importa (senalar quien responde pesa mas que enumerar como podria fallar el evento), sin adjetivo de adecuacion en el sitio del criterio. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: el candidato tiene solo DOS pasos y ninguna lista de medios nombrados uno a uno, a diferencia del ejercicio del codigo genetico que sale del mismo capitulo; la restriccion 1 de D.27 exige inventario para el caso normativo de adjetivos de adecuacion, y aqui no hay ese problema porque no hay ningun adjetivo de adecuacion, pero tampoco hay inventario que transcribir, solo una accion y su razon. Lo sostengo como nodo porque la vara madre no exige inventario para narrativa de negocio, solo pide que el paso sea ejecutable y que el libro lo diga, y las dos condiciones se cumplen, pero el margen es estrecho y lo marco para que se relea primero. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 2 pasos, 2 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la misma linea 127 cierra diciendo que estas iniciativas de jefe a cargo fueron decisivas para que Santa Fe ganara el premio a la mejor camara de suboficiales durante los siguientes siete anios; esa cifra es la vigencia del caso propio de Santa Fe y no una etapa del mecanismo, y no tiene fecha de corte verificable como cifra de autor, asi que no entra ni como paso ni como atribucion.",
+  "pasos_accionables": [
+    "Al planificar cada evento u operación, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+    "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que en un submarino resultó pesar más."
+  ],
+  "entregable_esperado": "El documento de planificación con una línea que nombra al jefe a cargo junto a cada evento.",
+  "nodos_previos": [
+    "ceder_control_reforzar_competencia_claridad"
+  ],
+  "nodos_siguientes": [
+    "eliminar_seguimiento_descendente_responsabilizar_dueno"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás planificando cualquier evento u operación y quieres que quede claro quién responde de que salga bien, en lugar de enumerar todo lo que podría salir mal."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-asignar_responsable_unico_evolucion_planificada-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Junto a cada evento, una línea en el documento de planificación nombra a la persona a cargo, para que quede claro, pase lo que pase, que alguien concreto responde de que salga bien. En un submarino, quien lo mandaba fue ampliando así la autoridad de sus mandos intermedios, y aprendió que poner la atención en quién queda a cargo pesaba más que intentar evaluar todas las maneras en que el evento podría torcerse. Es un mecanismo sencillo: una línea más en cada evento del plan, con un nombre al lado, en vez de dedicar el esfuerzo principal a prever cada fallo posible.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_06.md",
+          "lineas": "127-127"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): 'porque la responsabilidad deja de ser difusa y tiene nombre' y 'duradero, que todos pueden ver y consultar antes de empezar' no están en L127, y L127 'I learned that focusing on who was put in charge was more important' es el aprendizaje de una persona. La propuesta lo cuenta como el caso del submarino, conserva el fin que da la línea ('clear whenever something happened... that some chief was responsible for making sure it came out right') y no añade razones.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-asignar_responsable_unico_evolucion_planificada-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Nombrar un jefe a cargo por cada evento en el documento de planificacion",
+      "texto_nuevo": "Nombrar un jefe a cargo por cada evento en el documento de planificación",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-asignar_responsable_unico_evolucion_planificada-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al planificar cada evento o evolucion, anade una linea al documento de planificacion que nombre quien es el jefe a cargo de ese evento. El texto lo dice asi: the mechanism was to add a line to our planning documents that listed the Chief in Charge next to each event.",
+      "texto_nuevo": "Al planificar cada evento o evolución, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: the mechanism was to add a line to our planning documents that listed the Chief in Charge next to each event."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-asignar_responsable_unico_evolucion_planificada-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podria salir mal: concentra la atencion en dejar senalado quien esta a cargo. El texto lo dice asi: I learned that focusing on who was put in charge was more important than trying to evaluate all the ways the event could go wrong.",
+      "texto_nuevo": "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que pesa más.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: I learned that focusing on who was put in charge was more important than trying to evaluate all the ways the event could go wrong."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-asignar_responsable_unico_evolucion_planificada-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El documento de planificacion con una linea que nombra al jefe a cargo junto a cada evento.",
+      "texto_nuevo": "El documento de planificación con una línea que nombra al jefe a cargo junto a cada evento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-asignar_responsable_unico_evolucion_planificada-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas planificando cualquier evento o evolucion y quieres que quede claro quien responde de que salga bien, en lugar de enumerar todo lo que podria salir mal.",
+      "texto_nuevo": "Cuando estás planificando cualquier evento o evolución y quieres que quede claro quién responde de que salga bien, en lugar de enumerar todo lo que podría salir mal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-asignar_responsable_unico_evolucion_planificada-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al planificar cada evento o evolución, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+      "texto_nuevo": "Al planificar cada evento u operación, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "o evolución"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'evolución' calca el 'evolution' naval (cualquier operación); en español no se entiende así.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-asignar_responsable_unico_evolucion_planificada-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando estás planificando cualquier evento o evolución y quieres que quede claro quién responde de que salga bien, en lugar de enumerar todo lo que podría salir mal.",
+      "texto_nuevo": "Cuando estás planificando cualquier evento u operación y quieres que quede claro quién responde de que salga bien, en lugar de enumerar todo lo que podría salir mal.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "o evolución"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'evolución' calca el 'evolution' naval; se cambia por 'operación'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-asignar_responsable_unico_evolucion_planificada-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que pesa más.",
+      "texto_nuevo": "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que en un submarino resultó pesar más.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_06.md 127",
+        "frase": "I learned that focusing on who was put in charge was more important than trying to evaluate all the ways the event could go wrong."
+      },
+      "decision": "auditoria completa M11 (matiz): Es lo que aprendió quien mandaba el submarino ('I learned'); el paso lo daba como regla general, se cuenta como caso.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Nombra un Responsable por Evento",
+  "fuentes_internas": [
+    "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet"
+  ]
+}

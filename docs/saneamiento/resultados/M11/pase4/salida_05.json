@@ -1,0 +1,655 @@
+{
+ "lote": "05",
+ "nodos": [
+  {
+   "node_id": "invitar_desafio_reciproco_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "'a cargo' sin posesivo en la persona: 'personas a cargo' se lee como quien está al mando; la forma fijada es 'a tu cargo'.",
+     "propuesta": "Invitar a las personas a tu cargo a desafiarte a ti tan directamente como tú las desafías a ellas"
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "Acepta entonces su cambio.",
+     "motivo": "'su cambio' no tiene antecedente en el nodo: el paso anterior habla de un desacuerdo, no de ningún cambio propuesto (en el libro, el jefe acepta los cambios de redacción que ella proponía: 'Russ agreed to Elisse's changes').",
+     "propuesta": "Acepta entonces los cambios que propone.",
+     "fichero": "fuentes/scott_radical_candor/cap_04.md",
+     "lineas": "139"
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "titulo_concepto",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "reparar_mal_comportamiento_evitar_disculpa_falsa",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "entregable_esperado",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "posición",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "delimitar_franqueza_radical_cinco_noes",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dar_valor_constante_cuatro_publicos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "celebrar_logros_planificar_cambio",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "definir_entorno_grupo_clientes_proveedores_competidores",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cambiar_forma_trabajar_conservar_plantilla",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "decir_normas_participacion_voz_alta",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "podamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "nuestro",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "seguir_frustrado_preguntar_implantacion_ideas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "más arriba",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "más arriba",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "piso",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "más abajo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "entregar_experiencia_entrevista_excelente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Entregar una experiencia de entrevista",
+     "motivo": "'Entregar una experiencia' calca 'Deliver an Amazing Interview Experience'; en español una experiencia se ofrece o se da.",
+     "propuesta": "Ofrecer una experiencia de entrevista atenta, enfocada y rápida"
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "decidir_poner_nota_comunicar_proposito_limites",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "impacto en",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "esa misma",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "transitar_pionero_equipo_nuevo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "Transitar como pionero",
+     "motivo": "'Transitar' calca el verbo inglés 'transition'; en español transitar es circular por un sitio, no pasar de un papel a otro.",
+     "propuesta": "Hacer la transición como pionero al frente de un equipo que crece"
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "aprovechar_formacion_reglada",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "regionalismo",
+     "cita": "las cinco formas que puede coger",
+     "motivo": "'coger' es forma de España (malsonante en buena parte de América); 'tomar'.",
+     "propuesta": "Cuenta con las cinco formas que puede tomar: apuntarte a un seminario de la empresa, asistir a un congreso del sector, participar en una mesa redonda, escuchar a expertos en un panel, o meterte en un taller práctico."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "voz",
+     "cita": "nos metemos en un tira y afloja clásico con nosotros mismos",
+     "motivo": "Nosotros del libro ('we engage in a classic back-and-forth with ourselves'); en la casa es tú.",
+     "propuesta": "Ten delante por qué se aplaza aunque parezca obvio que ayuda: rara vez parece urgente ni necesaria. Además de costar tiempo, tiende a costar dinero, y por eso te metes en un tira y afloja clásico contigo mismo. ¿Merece la pena? Sobre todo en medio de una semana frenética, ¿es de verdad buena idea apartarse para un taller de dos días, o renunciar a una tarde tranquila en casa por una conferencia?"
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "metemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "nosotros",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "reservar_tiempo_reflexion_metas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "aprendemos más cuando acompañamos nuestras experiencias",
+     "motivo": "Nosotros del libro ('we learn more when we couple our experiences'); en la casa es tú.",
+     "propuesta": "Ten delante la razón: un estudio de una escuela de negocios muestra que aprendes más cuando acompañas tus experiencias con reflexiones periódicas, y que, pese a que la gente prefiere aprender haciendo, los participantes que eligieron reflexionar rindieron mejor que los que eligieron experiencia adicional."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "al final del día lo estás haciendo",
+     "motivo": "'al final del día' calca 'At the end of the day' (al fin y al cabo); en español se lee como la hora del día.",
+     "propuesta": "Cuenta con que reflexionar no tiene que ser un proceso pesado: al fin y al cabo lo estás haciendo para tu propio beneficio, así que encuentra lo que mejor te funcione a ti.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "419"
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "'a cargo' sin posesivo en la persona: 'personas a cargo' se lee como quien está al mando; la forma fijada es 'a tu cargo'.",
+     "propuesta": "Y como ejemplo de metas a seis meses: completar tu equipo de líderes llenando tres puestos abiertos para que cada producto tenga un líder fuerte; hacer que todas las revisiones de producto empiecen por problemas claramente definidos de la gente que usa el producto, para tener una base común de evaluación; llegar a dominar la contratación de buenos líderes de investigación; quitar las actualizaciones de estado de tus reuniones a solas y usar ese tiempo para tener conversaciones más profundas con las personas a tu cargo; y no llevarte trabajo a casa, centrándote en ser más eficiente en la oficina."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "tramos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "aprendemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "acompañamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "nuestras",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "al final del día",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "tramos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "montar_proceso_contratacion_reducir_sesgo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[17]",
+     "tipo": "coherencia",
+     "cita": "son ocho personas de tiempo tirado",
+     "motivo": "El paso cuenta tres y tres entrevistadores (seis) y dice ocho: el lector no puede cuadrarlo. El ocho del libro incluye a los dos candidatos (Xavier y Zan) además de los seis entrevistadores.",
+     "propuesta": "Sé consistente y cuidadoso con quién entrevista a quién, y cuenta con el desperdicio que hay cuando no lo eres: si tres personas entrevistan y prefieren a un candidato y otras tres entrevistan y prefieren a otro, no hay manera de decidir, y son ocho personas de tiempo tirado, contando a los dos candidatos.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "145"
+    },
+    {
+     "campo": "pasos_accionables[22]",
+     "tipo": "regionalismo",
+     "cita": "acompañarlos al auto",
+     "motivo": "'auto' es forma regional (Cono Sur y parte de América; 'carro' en otras, 'coche' en España); forma común: 'vehículo'.",
+     "propuesta": "Crea a propósito momentos más informales, como llevar a los candidatos a comer, acompañarlos hasta su vehículo, y preguntar a quien está en recepción y a quien organiza las agendas si el candidato les produjo alguna reacción. En los momentos en que nadie se guarda, los candidatos hacen o dicen cosas reveladoras."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[20]",
+     "texto": "a por",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[22]",
+     "texto": "auto",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[28]",
+     "texto": "tiene sentido",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_ejercicio_codigo_genetico_control",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "Pega",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "pega",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "calibrar_notas_reunion_jefes_pares",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[13]",
+     "tipo": "ortografia",
+     "cita": "el de los agendas de dos años",
+     "motivo": "Concordancia: 'agenda' es femenino ('los agendas'); además lo que el libro nombra es un programa de dos años ('a two-year program'), no una agenda.",
+     "propuesta": "Pon sobre la mesa el argumento a favor de un reparto distinto para los empleados de entrada, el de los programas de dos años que invitan a quedarse solo a una minoría, y decide con tu equipo si quieres algo así o no.",
+     "fichero": "fuentes/scott_radical_candor/cap_14.md",
+     "lineas": "183"
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "persuadir_emocion_oyente_no_propia",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dimensionar_inventario_materia_prima_reposicion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "prima",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "prima",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "prima",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "mejorar_consciencia_propia_relacional_dos_practicas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "soportar",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "decidir_directivo_no_encaja_papel",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "practicar_franqueza_radical_jefe_propio",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "te pide expresamente que midas su guía, mide. Y si está siendo ruinosamente empático y pide que le midas, mide con franqueza.",
+     "motivo": "'medir su guía' calca 'gauge their feedback' / 'asks to be gauged, gauge with candor'; en español la guía se valora.",
+     "propuesta": "Aplica esta excepción a la regla de no criticar la crítica: si tu jefe ya está desplegando la franqueza radical y te pide expresamente que valores su guía, valórala. Y si está siendo ruinosamente empático y te pide que lo valores, hazlo con franqueza.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "213"
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[10]",
+     "texto": "currículum",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[14]",
+     "texto": "hacemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[14]",
+     "texto": "estamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[14]",
+     "texto": "hacemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[14]",
+     "texto": "tiene sentido",
+     "defecto": false
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "posición",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_repaso_posterior_proyecto",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "podemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "nuestro",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "hablemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "nuestros",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "aprendamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "decir_no_trabajo_excede_capacidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "Aplica aquí otro principio de producción",
+     "motivo": "'otro principio' y 'aquí' remiten a un principio anterior y a un lugar que no están en el nodo (el libro: 'Another production principle can be applied here', tras otro apartado).",
+     "propuesta": "Aplica a tu trabajo este principio de producción: la gente de fabricación se fía de sus indicadores y no deja que el material empiece su recorrido por la fábrica si cree que ya está operando a plena capacidad.",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "277"
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "identificar_disparadores_propios_reaccion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[13]",
+     "tipo": "calco",
+     "cita": "ayudarte a operar en tu mejor versión",
+     "motivo": "'operar' dicho de una persona calca 'operate at your best'; en español, rendir al máximo.",
+     "propuesta": "Y cuenta con lo que vale todo esto junto: saber qué te levanta y qué te hunde es enormemente valioso. Igual que los atletas tienen regímenes estructurados de dieta y ejercicio para seguir compitiendo en su mejor forma, el trabajo que haces para ayudarte a rendir al máximo te va a dar muchos más días buenos en el trabajo."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "definir_receta_propia_mantenerse_centrado",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "esa misma",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "esa misma",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "reemplazarse_trabajo_propio",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "voz",
+     "cita": "tendemos a apegarnos a lo que hacemos",
+     "motivo": "Nosotros del libro ('we have a tendency to get attached to what we're doing'); en la casa es tú.",
+     "propuesta": "Si encuentras o formas a alguien que resuelva un problema tan bien como tú, o mejor, el equipo gana capacidad y tú puedes asumir más. Cuesta porque es fácil apegarte a lo que haces, por gusto o por la pericia y el control que da, pero dirigir es mejorar los resultados del equipo, no satisfacer el ego. Tu tiempo va donde se cruzan lo más importante para la organización y lo que solo tú haces mejor que nadie. Lo que tu gente hace igual o mejor se delega; lo que tú haces mejor, intenta delegarlo y enseña por el camino, salvo las prioridades más importantes o si no crees que estén preparados."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "voz",
+     "cita": "tendemos a encariñarnos con lo que hacemos, porque puede gustarnos la tarea en sí o la sensación de pericia y de control que nos da",
+     "motivo": "Nosotros del libro; en la casa es tú.",
+     "propuesta": "Ten presente también por qué cuesta en la práctica: es fácil encariñarte con lo que haces, porque puede gustarte la tarea en sí o la sensación de pericia y de control que te da."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "'a cargo' sin posesivo en la persona: 'personas a cargo' se lee como quien está al mando; la forma fijada es 'a tu cargo'.",
+     "propuesta": "Saca de ahí esta consecuencia: cualquier cosa que una persona a tu cargo pueda hacer igual de bien o mejor que tú, deberías delegarla."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "coherencia",
+     "cita": "unas personas a cargo de la directiva",
+     "motivo": "'personas a cargo de la directiva' se lee como quienes mandan sobre ella; eran personas que trabajaban para ella ('a few of my reports').",
+     "propuesta": "Busca además a quien lo hace mejor que tú. Cuando unas personas que trabajaban para la directiva de la reunión de los lunes propusieron reforzar las relaciones dentro del equipo con comidas de grupo, sesiones de aprendizaje o círculos de mentoría, a ella le encantaron todas las sugerencias pero reconoció que no era su fuerte, así que pidió al directivo que había abierto la discusión, a quien le encantaba conocer gente y juntar grupos, que se encargara de decidir qué hacer. Una de sus ideas, un encuentro mensual los miércoles por la noche, se hizo tan popular que salió del equipo y se convirtió en una cita habitual de la comunidad local de diseño.",
+     "fichero": "fuentes/zhuo_manager/cap_10.md",
+     "lineas": "193"
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "'a cargo' sin posesivo en la persona: 'personas a cargo' se lee como quien está al mando; la forma fijada es 'a tu cargo'.",
+     "propuesta": "Intenta delegar todo lo que puedas también de las cosas que tú haces mejor que las personas a tu cargo, salvo que caigan en el grupo de las prioridades más importantes o que no creas que están preparadas para tener éxito, y entrénalas por el camino. Tener más práctica en conversaciones difíciles no significa tener que dar tú todos los mensajes duros: es mejor que todos mejoren colectivamente sus habilidades con el tiempo."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "'a cargo' sin posesivo en la persona: 'personas a cargo' se lee como quien está al mando; la forma fijada es 'a tu cargo'.",
+     "propuesta": "Trátalo como lo que es, una disyuntiva clásica entre el corto y el largo plazo: si una persona a tu cargo te trae un problema que tú puedes resolver fácil, puede costar resistirse a decir «ya me ocupo yo», pero, como dice el proverbio, da un pez a alguien y le das de comer un día; enséñale a pescar y le das de comer toda la vida."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "tendemos",
+     "defecto": true
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "hacemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "tendemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "hacemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "mentoría",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "escribir_apuntes_sala_estudio_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "necesitamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "crear_sistema_captura_seguimiento_candidatos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "ese mismo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "construir_indicador_tendencia_patron",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "esa misma",
+     "defecto": false
+    }
+   ]
+  }
+ ]
+}

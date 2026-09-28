@@ -1,0 +1,251 @@
+{
+ "lote": "17",
+ "nodos": [
+  {
+   "node_id": "fijar_fecha_cierre_debate_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "vender_puesto_jugador",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "contrario",
+     "cita": "y arranca justo donde termina decidir a quién contratar",
+     "motivo": "El libro dice que, aunque se presente como último paso, la venta se hace durante todo el proceso (las cinco olas empiezan en la captación); el propio paso 2 y el resumen lo dicen. La condición afirma lo contrario.",
+     "fichero": "fuentes/smart_who/cap_06.md",
+     "lineas": "147",
+     "frase": "We have presented this “Sell” chapter as the last step in the A Method. In reality, selling is something you should be doing throughout the entire process.",
+     "propuesta": "Cuando la selección ya ha señalado a la persona que quieres en tu equipo y hace falta que se incorpore de verdad. Es el cuarto y último paso del método A para contratar, detrás de la tarjeta de puntuación, de la captación de candidatos y de la selección, aunque en realidad la venta se hace durante todo el proceso, desde la captación."
+    }
+   ]
+  },
+  {
+   "node_id": "fomentar_guia_reciproca_companieros",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "hizo allí seguro equivocarse, y por tanto innovar",
+     "motivo": "Calco de \"made it safe to make mistakes\": \"hacer seguro equivocarse\" no es un giro español.",
+     "propuesta": "La buena guía entre compañeros debería darse en persona, no en una herramienta que reparte trocitos de texto, y como responsable te toca animar a tu equipo a hablar entre sí. Un caso: en dos empresas, un premio semanal que cada ganador otorgaba al siguiente buscaba que se contara el buen trabajo ajeno, y otro al error contado por uno mismo, con perdón automático, hizo allí que equivocarse, y por tanto innovar, no fuera un riesgo, y resolvió antes problemas que se habrían enquistado. No encaja en todas partes. Un vocabulario compartido para medir la guía ayuda a avanzar hacia la franqueza."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "calco",
+     "cita": "hizo seguro equivocarse, y por tanto innovar",
+     "motivo": "Calco de \"made it safe to make mistakes, and therefore to innovate\".",
+     "propuesta": "Ten presente lo que esa práctica consiguió allí: hizo que equivocarse, y por tanto innovar, no fuera un riesgo; y aceleró la resolución de problemas que, si no, se habrían enquistado."
+    }
+   ]
+  },
+  {
+   "node_id": "crear_plan_creible_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "o cuesta tanto dinero que es mala inversión",
+     "motivo": "El libro dice que es improbable que sea buena inversión (\"unlikely to be\"), no que lo sea con certeza.",
+     "fichero": "fuentes/zhuo_manager/cap_09.md",
+     "lineas": "65",
+     "frase": "Doing so will require either so much money that it’s unlikely to be a good investment",
+     "propuesta": "Comprueba lo primero que se le exige a una estrategia: que tenga una posibilidad realista de funcionar. Si tu estrategia para poner un puesto de limonada en cada manzana es conseguir que todas las grandes celebridades del mundo lo respalden, te van a mirar con las cejas levantadas, porque o cuesta tanto dinero que difícilmente será buena inversión, o exige un producto tan asombroso que las estrellas quieran asociarse a él sin cobrar, que también es improbable."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_estrategia_gente_cuatro_componentes",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "detectar_palanca_negativa_actividad_mando",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "hay actividades de mando que reducen la salida",
+     "motivo": "El libro dice que algunas actividades PUEDEN reducir la producción (\"can reduce\").",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "219",
+     "frase": "Some managerial activities can reduce the output of an organization.",
+     "propuesta": "Cuenta con que la palanca también puede ser negativa: hay actividades de mando que pueden reducir la producción de una organización."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "la salida de una organización",
+     "motivo": "Calco de \"output\": en español es la producción (o el rendimiento) de una organización, no su \"salida\".",
+     "propuesta": "Cuenta con que la palanca también puede ser negativa: hay actividades de mando que pueden reducir la producción de una organización."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "porque ninguna luz verde es una luz roja",
+     "motivo": "Traducción palabra a palabra de \"no green light is a red light\"; en español \"ninguna luz verde es una luz roja\" dice otra cosa (que ninguna luz verde es roja). La idea es que no tener luz verde equivale a tener luz roja.",
+     "propuesta": "Revisa si estás dando largas: dar largas es aplazar una decisión que va a afectar al trabajo de otras personas, y en la práctica la falta de decisión es lo mismo que una decisión negativa, porque no tener luz verde es lo mismo que tener luz roja y el trabajo puede pararse para toda una organización."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "pasa a tomar una visión mucho más restringida",
+     "motivo": "Calco de \"take a much more restricted view\": en español no se \"toma una visión\".",
+     "propuesta": "Cuenta con lo que la intromisión produce: tras verse expuesto a muchos episodios así, el subordinado empieza a tener una idea mucho más restringida de lo que se espera de él, muestra menos iniciativa para resolver sus propios problemas y se los lleva en cambio a su supervisor."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "están restando salida a la organización",
+     "motivo": "Calco de \"output\" (la producción de la organización).",
+     "propuesta": "Cuando repasas tus propias actividades de mando buscando su palanca y quieres saber cuáles de ellas están restando producción a la organización en vez de sumarla."
+    }
+   ]
+  },
+  {
+   "node_id": "abordar_cinco_efes_venta",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "auditar_calendario_reuniones_semana",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "montar_reunion_general_presentaciones_preguntas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "cómo te traes a todos contigo",
+     "motivo": "Calco de \"bring everyone along\"; \"traerse a todos\" no es un giro español para sumar a la gente a las decisiones.",
+     "propuesta": "Pero según tu equipo se hace más grande, empieza a pensar cómo llevar a todos contigo, porque sorprende lo rápido que las decisiones que toman algunos empiezan a parecer misteriosas o incluso turbias a quienes no estuvieron cerca del proceso."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "Y responde como lo hacían dos fundadores",
+     "motivo": "Sujeto que cambia: el paso 9 deja el turno de preguntas en manos de quien dirige la empresa o la fundó, y este paso manda responder al lector.",
+     "propuesta": "Y haz que se responda como lo hacían dos fundadores que llevaban muy bien este turno: aceptando toda clase de preguntas semana tras semana, sin ese tono sobrepreparado y de mensaje ensayado en el que caen a veces los que dirigen, con respuestas espontáneas, humanas y del todo auténticas, y volviendo a la reunión siguiente a recibir otra vez preguntas duras e incómodas."
+    }
+   ]
+  },
+  {
+   "node_id": "disenar_incorporacion_cien_dias",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "debatir_decidir_asuntos_cultura_evitar_delegar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "Y toma la decisión ejecutiva de sabiendo que ninguna de esas dos es la cultura que quieres.",
+     "motivo": "Frase rota (\"la decisión ejecutiva de sabiendo\"): falta lo que se decide; además \"decisión ejecutiva\" no está en el pasaje, que pide debatir y decidir de forma explícita (línea 301).",
+     "propuesta": "Y debate y decide tú esos asuntos de forma explícita, sabiendo que ninguna de esas dos es la cultura que quieres."
+    }
+   ]
+  },
+  {
+   "node_id": "exigir_critica_jefe_reticente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "abraza la incomodidad",
+     "motivo": "Calco de \"embrace the discomfort\".",
+     "propuesta": "Si te preocupa que tu jefe dude en criticar tu trabajo, puede ayudarte hacerle saber que quieres más opinión suya. Prueba con una frase concreta: qué puedo hacer o dejar de hacer para ponértelo más fácil a la hora de hablarme claro; me preocupa que estés tan pendiente de mis sentimientos que dudes en darme la opinión que necesito para mejorar; o lo que más necesito de ti es que me digas lo que piensas de verdad. Después, calla, cuenta hasta seis y aguanta la incomodidad. Haz lo que haga falta para arrancar una valoración franca a tus colegas o a tu jefe."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "Abraza la incomodidad.",
+     "motivo": "Calco de \"Embrace the discomfort\".",
+     "propuesta": "Aguanta la incomodidad."
+    }
+   ]
+  },
+  {
+   "node_id": "escribir_apuntes_sala_estudio_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "contratar_investigadores_reclutamiento",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "mantener_proceso_evaluacion_ligero_vigilar_crecimiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "regionalismo",
+     "cita": "rellenar cada impreso",
+     "motivo": "\"Impreso\" por formulario es uso de España (y aquí es una herramienta, no un papel).",
+     "propuesta": "Un proceso de evaluación tiende a crecer solo hasta comerse muchísimo tiempo de todos si nadie lo vigila, así que la ligereza no se decide una vez: se mide y se recorta. Lo mantiene corto pedir solo lo que aporta: notas por categoría, texto solo en los extremos, nota global calculada sola y explicaciones únicamente cuando el reparto se sale de lo esperado. Que la opinión de trescientos sesenta grados sea transparente ahorra sintetizar y anonimizar, y una cultura de opinión frecuente e improvisada quita peso a la evaluación formal. La vara es llenar cada formulario en menos de treinta minutos."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "regionalismo",
+     "cita": "el impreso de evaluación",
+     "motivo": "\"Impreso\" por formulario es uso de España.",
+     "propuesta": "Comprueba el resultado contra esta vara: el jefe tiene que poder rellenar el formulario de evaluación de cada empleado en menos de treinta minutos."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "regionalismo",
+     "cita": "la posibilidad de pinchar en una nota",
+     "motivo": "\"Pinchar\" por hacer clic es uso de España.",
+     "propuesta": "Dale al jefe un resumen de la opinión de sus pares para que pueda mirarlo antes de crear la valoración final, con cuánta gente dio cada nota y la posibilidad de hacer clic en una nota para ver el detalle."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "regionalismo",
+     "cita": "un impreso que el jefe rellena",
+     "motivo": "\"Impreso\" por formulario es uso de España.",
+     "propuesta": "Un proceso de evaluación ligero dos veces al año, con el tiempo que consume medido y recortado activamente, y un formulario que el jefe llena por empleado en menos de treinta minutos."
+    }
+   ]
+  },
+  {
+   "node_id": "supervisar_decision_delegada_preguntas_concretas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "repartir_supervision_puesto_funcional_mision",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "respetar_cautelas_legales_contratacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "meten a grupos distintos por procesos distintos",
+     "motivo": "Calco de \"put different groups through different processes\".",
+     "propuesta": "Cautela dos, la estandarización del proceso: usa el mismo proceso con todos los candidatos, sea cual sea su grupo demográfico. Los directivos se meten en líos cuando, a propósito o sin darse cuenta, someten a grupos distintos a procesos distintos."
+    }
+   ]
+  },
+  {
+   "node_id": "cortar_discusion_libre_momento_justo",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}

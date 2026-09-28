@@ -1,0 +1,133 @@
+{
+ "lote": "13",
+ "campos": [
+  {
+   "node_id": "montar_evaluacion_360_grados_ligera_pares",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con la razón principal: exigir evaluaciones de trescientos sesenta grados es una de las cosas más efectivas que una organización puede hacer para asegurarse de que el punto de vista subjetivo de un jefe no cree favoritismo ni permita una asignación injusta o poco óptima de recursos.",
+   "veredicto": "ORTOGRAFIA",
+   "tipos": [
+    "ortografia"
+   ],
+   "motivo": "«Asegurarse de que» con valor de procurar (make sure, cap_14 l.199) pide subjuntivo: «no cree ... ni permita», como ya dice el resumen."
+  },
+  {
+   "node_id": "conducir_llamadas_referencia",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando las tres entrevistas anteriores han terminado y los datos encajan con el puesto y con tu cultura, justo en el momento en que estás tentado de saltarte las referencias y hacer la oferta. Es la cuarta de las cuatro entrevistas del método A.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "La coletilla remite a otro nodo («seleccionar al jugador A con las cuatro entrevistas») que no está en este y repite las cuatro entrevistas; la entrevista de referencias es la cuarta de las cuatro (smart_who cap_04 l.37-45, cap_05 l.353)."
+  },
+  {
+   "node_id": "ser_honesto_transparente_desempenio",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño ajeno pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: tu persona a cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, te falta decirlo más. Si crees que va de maravilla, lo sabe; si crees que no llega al nivel que quieres, también, y sabe exactamente por qué lo crees.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz",
+    "longitud"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_04.md",
+   "lineas": "181",
+   "frase": "If you think he is the epitome of awesome, tell him. If you don’t think he is operating at the level you’d like to see, he should know that, too, and precisely why you feel that way.",
+   "motivo": "El libro lo plantea como tu valoración («If you think», «why you feel that way»); el resumen lo daba como un hecho del desempeño. Cambio mínimo en la última frase; como el arreglo lleva el resumen a 620 caracteres, se recorta «es la señal de que» y «del otro» pasa a «ajeno» (medido: 598)."
+  },
+  {
+   "node_id": "ser_honesto_transparente_desempenio",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Si a menudo se está preguntando qué piensas de ella, dale más a menudo tu opinión sobre su trabajo.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "motivo": "La frase pasa de «su jefe» en tercera persona a «tu opinión» refiriéndose a la misma persona (tú); la condición del nodo ya dice «qué piensas de ella»."
+  },
+  {
+   "node_id": "ser_honesto_transparente_desempenio",
+   "campo": "pasos_accionables[4]",
+   "decision": "actual",
+   "texto_final": "No des por hecho que puede leer entre líneas, ni que la falta de noticias sean buenas noticias.",
+   "motivo": "No se sostiene: con «ser» y atributo plural la concordancia con el atributo es normativa (DPD, concordancia: «El problema son los niños»); «que la falta de noticias sean buenas noticias» es correcto y fiel a «no news is good news»."
+  },
+  {
+   "node_id": "ser_honesto_transparente_desempenio",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Y si no crees que esté rindiendo al nivel que te gustaría ver, también debe saberlo, y saber exactamente por qué lo crees.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fragmentos": [
+    "operando"
+   ],
+   "motivo": "«Operar al nivel» calca «operating at the level» (cap_04 l.181) para el rendimiento de una persona; el entregable del nodo ya dice «rinde al nivel»."
+  },
+  {
+   "node_id": "mejorar_consciencia_propia_relacional_dos_practicas",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "En toda práctica de franqueza el hilo común eres tú, y conocer tus fuerzas y debilidades no basta: puedes tener buena intención y aun así hacer daño sin darte cuenta, o elegir no verlo. Por eso trabajas también la consciencia de la relación, que es ver el efecto que tienes en los demás a corto y largo plazo, notar cuándo has disgustado a alguien y ajustar para que ese efecto sea positivo sin dejar de decir lo difícil. Las dos consciencias se pueden mejorar con dos prácticas, contar historias y los juegos de papeles, que han funcionado bien en industrias y culturas muy distintas.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fragmentos": [
+    "se trabaja"
+   ],
+   "motivo": "Impersonal prescriptivo con «se» (de la familia de «se debe») en un resumen que habla de tú; pasa a «trabajas»."
+  },
+  {
+   "node_id": "alinear_equipo_proposito_comun",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "El propósito es el porqué del equipo: el resultado que intenta lograr y lo que cambiaría en el mundo si tuviera un éxito enorme. Cuando falta o no está claro, pueden aparecer conflictos y expectativas desalineadas, y quien imagina otro fin puede ponerse a hacer cosas que para ti son poco importantes o un derroche. El primer gran trabajo de quien dirige es que todos sepan cómo es el éxito y quieran lograrlo. Exigir que crean no basta: tienes que entender y creer tú el propósito y compartirlo en cada ocasión, en correos, objetivos, conversaciones a solas y reuniones grandes.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco",
+    "voz"
+   ],
+   "fragmentos": [
+    "se ve",
+    "hay que",
+    "uno mismo"
+   ],
+   "motivo": "«Cómo se ve el éxito» calca «what success looks like» (zhuo cap_02 l.133); el entregable dice «cómo es el éxito». «Hay que ... uno mismo» es impersonal en vez de tú (el libro: «believing in it yourself»; el paso 2 dice «tú mismo»)."
+  },
+  {
+   "node_id": "crear_espacio_seguro_madurar_ideas_nuevas",
+   "campo": "pasos_accionables[13]",
+   "decision": "corregido",
+   "texto_final": "Puedes señalar los problemas, pero con el objetivo de encontrar una manera de rodearlos, no de matar la idea.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_07.md",
+   "lineas": "195",
+   "frase": "You can point out problems but with the aim of figuring a way around those problems, not killing ideas.",
+   "motivo": "El libro da permiso para señalar problemas con una condición, justo después de pedir que no juzgues la idea; el imperativo «Señala los problemas» lo volvía una orden y chocaba con el paso anterior."
+  },
+  {
+   "node_id": "facilitar_expresion_subordinado_pregunta_mas",
+   "campo": "resumen_teorico",
+   "decision": "actual",
+   "texto_final": "En la reunión individual el supervisor está para aprender y orientar. Su trabajo es facilitar que el subordinado cuente lo que está pasando y lo que le molesta, porque quien usa bien su tiempo como mando no le habla a su gente de sus propios problemas, sino que consigue que ella hable de los suyos. La herramienta es sencilla: cuando parece que la persona ya ha dicho todo lo que quería sobre un asunto, haces una pregunta más. Seguir preguntando mantiene el flujo de ideas y saca lo que aún no había salido, hasta que los dos quedan satisfechos de haber llegado al fondo del problema.",
+   "motivo": "No se sostiene: «try to keep the flow of thoughts coming by prompting ... with queries» (grove cap_05 l.47) presenta las preguntas como el medio para mantener el flujo; «try» es el esfuerzo de la instrucción, no una reserva sobre el efecto, y el resumen cuenta ese mismo mecanismo sin perder un matiz del libro."
+  },
+  {
+   "node_id": "facilitar_expresion_subordinado_pregunta_mas",
+   "campo": "pasos_accionables[5]",
+   "decision": "actual",
+   "texto_final": "Mantén el flujo de ideas pinchando al subordinado con preguntas hasta que los dos se den por satisfechos de haber llegado al fondo de un problema.",
+   "motivo": "No se sostiene: en una instrucción, «should try to keep the flow ... by prompting» (grove cap_05 l.47) queda bien vertido por el imperativo «Mantén el flujo ... pinchando con preguntas»; el «try» no es un matiz de probabilidad o frecuencia que se pierda."
+  }
+ ]
+}

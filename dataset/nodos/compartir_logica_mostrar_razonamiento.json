@@ -1,0 +1,279 @@
+{
+  "node_id": "compartir_logica_mostrar_razonamiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Compartir tu lógica mostrando el razonamiento entero y no solo la conclusión",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Mucha gente espera que la parte lógica de convencer sea la fácil, pero tiene sus propias trampas: a veces la lógica te parece tan evidente que no la compartes, y cuando conoces algo a fondo cuesta acordarte de que los demás no lo saben. La salida es enseñar las operaciones, como en clase de matemáticas: contar cómo llegaste a la idea y no solo describir la idea. Hacerlo señala que, si hay un fallo en tu razonamiento, quieres saberlo; y si no lo hay, es más probable que la gente acepte tu idea.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 359 a 365, bajo los rotulos Logic y Show your work, dentro del paso PERSUADE de la rueda de hacer cosas. Es la tercera y ultima de las piezas de la retorica tal como el libro las reparte. Es corta, seis pasos de dos parrafos, y lo que la sostiene como nodo propio es que tiene su rotulo, su acto nombrado (enseñar las operaciones), su trampa nombrada (la logica que a ti te parece evidente) y la consecuencia de cada una. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. P1, P2 y P3 de la linea 363; P4, P5 y P6 de la linea 365. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto razonamiento se enseña, donde se corta, y que se hace cuando el fallo que te señalan no es un fallo.",
+  "pasos_accionables": [
+    "No des por hecho que la parte lógica es la fácil por no tener la incomodidad personal de establecer la credibilidad ni la finura psicológica de atender a las emociones de un grupo: tiene sus propias trampas.",
+    "Desconfía en particular de la lógica que a ti te parece evidente, porque a veces es la que te lleva a no compartirla.",
+    "Cuenta con la causa: cuando sabes algo a fondo es difícil acordarse de que los demás no lo saben.",
+    "Enseña tus operaciones, que es el secreto que ya aprendiste en clase de matemáticas en la escuela.",
+    "No describas solo la idea: comparte además cómo llegaste a ella.",
+    "Cuenta con lo que eso señala y con lo que consigue: que si hay un fallo en tu razonamiento quieres que te lo digan, y que si no lo hay es más probable que la gente acepte tu idea."
+  ],
+  "entregable_esperado": "El razonamiento entero compartido, no solo su conclusión, de forma que quien lo oiga pueda encontrarle un fallo si lo tiene.",
+  "nodos_previos": [
+    "establecer_credibilidad_pericia_humildad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando estás explicando una decisión o una idea y la lógica te parece tan evidente que casi no merece contarse."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Mucha gente espera que la parte lógica de convencer sea la fácil, pero tiene sus propias trampas: a veces la lógica te parece tan evidente que no la compartes, y cuando conoces algo a fondo cuesta acordarte de que los demás no lo saben. La salida es enseñar las operaciones, como en clase de matemáticas: contar cómo llegaste a la idea y no solo describir la idea. Hacerlo señala que, si hay un fallo en tu razonamiento, quieres saberlo; y si no lo hay, es más probable que la gente acepte tu idea.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "363-365"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La 363 dice 'Sometimes, the logic may seem self-evident' y 'it's hard to remember', y la 365 'people would be more likely to accept'; 'a tiempo' y 'porque ha podido seguir tu camino' son añadidos. La propuesta devuelve los matices y deja la razón que da la 365 (señala que quieres saber si hay un fallo).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)"
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compartir tu logica mostrando el razonamiento entero y no solo la conclusion",
+      "texto_nuevo": "Compartir tu lógica mostrando el razonamiento entero y no solo la conclusión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No des por hecho que la parte logica es la facil por no tener la incomodidad personal de establecer la credibilidad ni la finura psicologica de atender a las emociones de un grupo: el texto dice que tiene sus propias trampas.",
+      "texto_nuevo": "No des por hecho que la parte lógica es la fácil por no tener la incomodidad personal de establecer la credibilidad ni la finura psicológica de atender a las emociones de un grupo: tiene sus propias trampas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desconfia en particular de la logica que a ti te parece evidente, porque es la que te lleva a no compartirla.",
+      "texto_nuevo": "Desconfía en particular de la lógica que a ti te parece evidente, porque es la que te lleva a no compartirla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la causa que el texto pone: cuando sabes algo a fondo es dificil acordarse de que los demas no lo saben.",
+      "texto_nuevo": "Cuenta con la causa: cuando sabes algo a fondo es difícil acordarse de que los demás no lo saben.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Enseña tus operaciones, que es el secreto que el texto dice que ya aprendiste en clase de matematicas del instituto.",
+      "texto_nuevo": "Enseña tus operaciones, que es el secreto que ya aprendiste en clase de matemáticas del instituto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "No describas solo la idea: comparte ademas como llegaste a ella, que es lo que hacia Steve Jobs.",
+      "texto_nuevo": "No describas solo la idea: comparte además cómo llegaste a ella.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "que es lo que hacia Steve Jobs"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que eso señala y con lo que consigue: que si hay un fallo en tu razonamiento quieres que te lo digan, y que si no lo hay la gente aceptara tu idea con mas facilidad.",
+      "texto_nuevo": "Cuenta con lo que eso señala y con lo que consigue: que si hay un fallo en tu razonamiento quieres que te lo digan, y que si no lo hay la gente aceptará tu idea con más facilidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El razonamiento entero compartido, no solo su conclusion, de forma que quien lo oiga pueda encontrarle un fallo si lo tiene.",
+      "texto_nuevo": "El razonamiento entero compartido, no solo su conclusión, de forma que quien lo oiga pueda encontrarle un fallo si lo tiene.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_logica_mostrar_razonamiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas explicando una decision o una idea y la logica te parece tan evidente que casi no merece contarse.",
+      "texto_nuevo": "Cuando estás explicando una decisión o una idea y la lógica te parece tan evidente que casi no merece contarse.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-compartir_logica_mostrar_razonamiento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desconfía en particular de la lógica que a ti te parece evidente, porque es la que te lleva a no compartirla.",
+      "texto_nuevo": "Desconfía en particular de la lógica que a ti te parece evidente, porque a veces es la que te lleva a no compartirla.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_07.md 363",
+        "frase": "Sometimes, the logic may seem self-evident to you, so you fail to share it with others."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que A VECES la lógica te parece evidente y por eso no la compartes.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-compartir_logica_mostrar_razonamiento-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que eso señala y con lo que consigue: que si hay un fallo en tu razonamiento quieres que te lo digan, y que si no lo hay la gente aceptará tu idea con más facilidad.",
+      "texto_nuevo": "Cuenta con lo que eso señala y con lo que consigue: que si hay un fallo en tu razonamiento quieres que te lo digan, y que si no lo hay es más probable que la gente acepte tu idea.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_07.md 365",
+        "frase": "And if there wasn’t, people would be more likely to accept his idea."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que es MÁS PROBABLE que la acepten; \"aceptará\" lo daba por hecho.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-compartir_logica_mostrar_razonamiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Enseña tus operaciones, que es el secreto que ya aprendiste en clase de matemáticas del instituto.",
+      "texto_nuevo": "Enseña tus operaciones, que es el secreto que ya aprendiste en clase de matemáticas en la escuela.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "del instituto"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Instituto\" por la secundaria es forma de una sola región.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Muestra Todo tu Razonamiento",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

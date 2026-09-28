@@ -1,0 +1,277 @@
+{
+  "node_id": "profundizar_respuestas_preguntas_curiosidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Profundizar cada respuesta con el marco de qué, cómo y cuéntame más",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Las preguntas principales de una entrevista son pocas y fáciles de manejar, pero sin seguimiento no dan todas las respuestas que necesitas, y hay miles de preguntas adicionales posibles que ninguna guía cubre. La salida es sencilla: tras cada respuesta, una pregunta corta, de no más de seis palabras, que empieza por qué, por cómo o por cuéntame más y que se apoya en lo último que dijo el candidato. Sigues así hasta tener claro qué quiere decir en realidad, empujándolo a ser tan claro y preciso como pueda. Y cuando no sepas qué más preguntar, basta con decir cuéntame más.",
+  "notas_extraccion": "Las preguntas primarias de las entrevistas del metodo A son pocas y faciles de administrar, pero sin seguimiento no dan todas las respuestas que hacen falta. Hay literalmente miles de preguntas adicionales posibles, y en vez de fabricar una guia que intente cubrirlas todas los autores usan un proceso simple que llaman ponerse curioso: tras cada respuesta, una pregunta de seguimiento que empiece por que, por como o por cuentame mas, repetida hasta entender de verdad. Lo que hace que funcione es lo pequeño que es: ninguna de las preguntas pasa de seis palabras, todas se apoyan en lo ultimo que dijo el candidato y el marco es completamente abierto, asi que no compite con la pregunta primaria ni desvia la entrevista. El capitulo lo demuestra con un dialogo entero: a un candidato que se declara malo gestionando el conflicto se le sacan, solo con este marco, dos empleados enfrentados, dos amenazas de despido incumplidas, una semana sin dormir y un traslado que le ahorro tener que resolverlo. Los autores usan ese dialogo para preguntar si contratarias a esa persona para un puesto de gestion con mucho cambio por delante. El marco es tambien el que usa la tactica maestra de pintar un cuadro, que no tiene medio propio y remite a este.",
+  "pasos_accionables": [
+    "Después de que el candidato responda a una de las preguntas principales, indaga en esa respuesta haciendo una pregunta de seguimiento que empiece por qué, por cómo o por cuéntame más.",
+    "Sigue usando el marco hasta que tengas claro qué está diciendo la persona realmente.",
+    "Forma cada pregunta con tres reglas: que no pase de seis palabras, que empiece por qué, por cómo o por cuéntame más, y que se apoye en lo que el candidato acaba de decir.",
+    "Recurre a este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿cómo era eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?",
+    "Empuja al candidato a ser todo lo claro y preciso que pueda con preguntas de qué y de cómo, y cuando no tengas ni idea de qué más preguntar, di simplemente «cuéntame más». La persona seguirá hablando."
+  ],
+  "entregable_esperado": "Claridad sobre lo que el candidato está diciendo de verdad en cada respuesta, con lo que hizo y cómo lo hizo contado con precisión en vez de en generalidades.",
+  "nodos_previos": [
+    "usar_banco_nueve_preguntas_entrevista",
+    "cribar_candidatos_entrevista_telefonica",
+    "conducir_entrevista_cronologica_trayectoria"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cada vez que un candidato termina de responder a una de las preguntas principales de cualquiera de las entrevistas del método de contratación: la de criba, la cronológica de trayectoria, la enfocada o la de referencias. Se activa dentro de ellas, no en su lugar, y es el marco que se usa para sondear en busca de más información."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Las preguntas principales de una entrevista son pocas y fáciles de manejar, pero sin seguimiento no dan todas las respuestas que necesitas, y hay miles de preguntas adicionales posibles que ninguna guía cubre. La salida es sencilla: tras cada respuesta, una pregunta corta, de no más de seis palabras, que empieza por qué, por cómo o por cuéntame más y que se apoya en lo último que dijo el candidato. Sigues así hasta tener claro qué quiere decir en realidad, empujándolo a ser tan claro y preciso como pueda. Y cuando no sepas qué más preguntar, basta con decir cuéntame más.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_04.md",
+          "lineas": "101-148"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'como es breve y abierta, no desvía la entrevista' es una causa que las líneas no dan. La propuesta usa solo lo que está: seis palabras, qué, cómo, cuéntame más, apoyarse en lo último dicho, empujar a ser claro y preciso (577).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Profundizar cada respuesta con el marco de que, como y cuentame mas",
+      "texto_nuevo": "Profundizar cada respuesta con el marco de qué, cómo y cuéntame más",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues de que el candidato responda a una de las preguntas primarias, ponte curioso sobre esa respuesta haciendo una pregunta de seguimiento que empiece por que, por como o por cuentame mas.",
+      "texto_nuevo": "Después de que el candidato responda a una de las preguntas primarias, ponte curioso sobre esa respuesta haciendo una pregunta de seguimiento que empiece por qué, por cómo o por cuéntame más.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sigue usando el marco hasta que tengas claro que esta diciendo la persona realmente.",
+      "texto_nuevo": "Sigue usando el marco hasta que tengas claro qué está diciendo la persona realmente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Forma cada pregunta con tres reglas: que no pase de seis palabras, que empiece por que, por como o por cuentame mas, y que se apoye en lo que el candidato acaba de decir.",
+      "texto_nuevo": "Forma cada pregunta con tres reglas: que no pase de seis palabras, que empiece por qué, por cómo o por cuéntame más, y que se apoye en lo que el candidato acaba de decir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tira de este repertorio cuando no se te ocurra que preguntar: que quieres decir, que aspecto tenia eso, que paso, cual es un buen ejemplo de eso, cual era tu papel, que hiciste, que dijo tu jefe, cuales fueron los resultados, que mas, como lo hiciste, como fue, como te sentiste, cuanto dinero ahorraste, como lidiaste con eso.",
+      "texto_nuevo": "Tira de este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿qué aspecto tenía eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empuja al candidato a ser todo lo claro y preciso que pueda con preguntas de que y de como, y cuando no tengas ni idea de que mas preguntar, di simplemente cuentame mas. La persona seguira hablando.",
+      "texto_nuevo": "Empuja al candidato a ser todo lo claro y preciso que pueda con preguntas de qué y de cómo, y cuando no tengas ni idea de qué más preguntar, di simplemente «cuéntame más». La persona seguirá hablando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Claridad sobre lo que el candidato esta diciendo de verdad en cada respuesta, con lo que hizo y como lo hizo contado con precision en vez de en generalidades.",
+      "texto_nuevo": "Claridad sobre lo que el candidato está diciendo de verdad en cada respuesta, con lo que hizo y cómo lo hizo contado con precisión en vez de en generalidades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-profundizar_respuestas_preguntas_curiosidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cada vez que un candidato termina de responder a una de las preguntas primarias de cualquiera de las entrevistas del metodo A: la de criba, la cronologica de trayectoria, la enfocada o la de referencias. Se activa dentro de ellas, no en su lugar, y es el marco que el recuadro de seleccion manda usar para sondear en busca de mas informacion.",
+      "texto_nuevo": "Cada vez que un candidato termina de responder a una de las preguntas primarias de cualquiera de las entrevistas del método de contratación: la de criba, la cronológica de trayectoria, la enfocada o la de referencias. Se activa dentro de ellas, no en su lugar, y es el marco que se usa para sondear en busca de más información.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del metodo A",
+          "que el recuadro de seleccion manda usar"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tira de este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿qué aspecto tenía eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?",
+      "texto_nuevo": "Recurre a este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿qué aspecto tenía eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Tira de este repertorio"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'tirar de' por recurrir a es forma de España.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Después de que el candidato responda a una de las preguntas primarias, ponte curioso sobre esa respuesta haciendo una pregunta de seguimiento que empiece por qué, por cómo o por cuéntame más.",
+      "texto_nuevo": "Después de que el candidato responda a una de las preguntas principales, indaga en esa respuesta haciendo una pregunta de seguimiento que empiece por qué, por cómo o por cuéntame más.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ponte curioso sobre esa respuesta",
+          "preguntas primarias"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de «get curious about the answer» y «primary questions».",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-profundizar_respuestas_preguntas_curiosidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recurre a este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿qué aspecto tenía eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?",
+      "texto_nuevo": "Recurre a este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿cómo era eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "¿qué aspecto tenía eso?"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de «What did that look like?».",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-profundizar_respuestas_preguntas_curiosidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cada vez que un candidato termina de responder a una de las preguntas primarias de cualquiera de las entrevistas del método de contratación: la de criba, la cronológica de trayectoria, la enfocada o la de referencias. Se activa dentro de ellas, no en su lugar, y es el marco que se usa para sondear en busca de más información.",
+      "texto_nuevo": "Cada vez que un candidato termina de responder a una de las preguntas principales de cualquiera de las entrevistas del método de contratación: la de criba, la cronológica de trayectoria, la enfocada o la de referencias. Se activa dentro de ellas, no en su lugar, y es el marco que se usa para sondear en busca de más información.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "preguntas primarias"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de «primary questions».",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Profundiza con Curiosidad Genuina",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

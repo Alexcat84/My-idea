@@ -1,0 +1,400 @@
+{
+  "node_id": "juzgar_cultura_renuncias_equipo",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Juzgar la cultura de un equipo por lo que está dispuesto a ceder por sus valores",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Un valor escrito en una web dice poco, porque nadie declara que prefiere esquivar la responsabilidad. La cultura se entiende mejor por lo que un equipo está dispuesto a ceder por sus valores. Por eso cada valor declarado se pone a prueba con sus contrapartidas: ¿toleras el caos de que cada uno actúe según su criterio?, ¿aceptas que desafíen tus decisiones?, ¿asumes errores que no son directamente tuyos? Y se mira qué pasa el día que toca pagarlo, como cuando el error grave de un becario acaba en disculpas de su jefe y un repaso de todo el equipo en vez de un despido.",
+  "notas_extraccion": "Es la vara de entrada del capitulo de cultura y la que decide si un valor declarado es real: no se mide por lo que la organizacion escribe de si misma, sino por la contrapartida que acepta pagar. El libro pone su propio inventario, las tres preguntas de contrapartida del valor de hacerse cargo entero de los problemas, y el caso del becario como ejemplo nombrado de esa contrapartida pagada de verdad. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se repasa esta lista, ni quien decide si una contrapartida es aceptable, ni que se hace con el valor que no resiste sus tres preguntas.",
+  "pasos_accionables": [
+    "Cuenta con que la cultura puede salir en cuanto das la palabra a los candidatos: a una directiva le pasa que, cada vez que les pregunta si tienen alguna duda, acaban hablando de cultura, con preguntas como ¿qué tiene de único tu equipo?, ¿cuáles son la mejor y la peor parte de tu trabajo?, ¿cómo se toman las decisiones?, ¿qué cambiarías si pudieras cambiar una sola cosa de cómo funciona la empresa?",
+    "No juzgues la cultura de una organización por lo que esté escrito en su web corporativa: júzgala por lo que está dispuesta a ceder por sus valores.",
+    "Desconfía del valor que nadie declararía al revés: muchos equipos dicen que les importa que sus empleados se hagan cargo por completo de los problemas, y nadie va a admitir que en realidad prefiere escurrir el bulto y echar la culpa de los errores a otros.",
+    "Ponle a ese valor sus contrapartidas en forma de tres preguntas: ¿estás dispuesto a tolerar el caos que viene de que cada uno intente hacer lo que cree mejor? ¿Sabes agradecer que otros desafíen tus decisiones? ¿Llevas bien aceptar la responsabilidad de errores que no son directamente tuyos?",
+    "Ten presente cómo puede sonar ese valor dicho en una frase: en una gran empresa tecnológica hay una en carteles por todo el campus, que dice que allí nada es problema de otro.",
+    "Mira lo que cuesta sostenerlo el día que toca, con un caso: un becario nuevo tumbó el servicio de la empresa al meter por accidente un error grave en el código, y no lo despidieron. Su directivo se disculpó en su lugar por no haberlo preparado mejor, otros ingenieros asumieron su parte por no haber cazado el error antes, y el equipo entero hizo después un repaso para entender por qué ocurrió el fallo y qué cambios podían hacerse para evitar problemas parecidos en el futuro.",
+    "Ten claro que la cultura son las normas y los valores que gobiernan cómo se hacen las cosas, y ten presente lo que descubrió un directivo al cabo de tres años en el puesto: que dirigir no consiste solo en la relación con cada persona del equipo, sino también en la relación de ellas entre sí y con el grupo entero.",
+    "Cuenta con que según diriges a más y más gente tu papel al dar forma a la cultura se hace mayor, y con que, aunque no seas el director general, tus acciones refuerzan lo que la empresa valora."
+  ],
+  "entregable_esperado": "Dicho, para cada valor que el equipo declara, qué contrapartida está dispuesto a aceptar por él, y si esa contrapartida se paga cuando toca.",
+  "nodos_previos": [
+    "evaluar_cultura_empresa_adjetivos"
+  ],
+  "nodos_siguientes": [
+    "contrastar_cultura_actual_aspirada"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres saber qué valora de verdad un equipo, el tuyo o uno ajeno, y tienes delante sus valores declarados."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un valor escrito en una web no dice nada, porque nadie declara que prefiere esquivar la responsabilidad. La cultura real se ve en lo que un equipo está dispuesto a ceder por sus valores. Por eso cada valor declarado se pone a prueba con sus contrapartidas: ¿toleras el caos de que cada uno actúe según su criterio?, ¿aceptas que desafíen tus decisiones?, ¿asumes errores que no son tuyos? Y se mira qué pasa el día que toca pagarlo, como cuando el error grave de un becario acaba en disculpas de su jefe y un repaso de todo el equipo en vez de un despido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_11.md",
+          "lineas": "17-29"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Juzgar la cultura de un equipo por lo que esta dispuesto a ceder por sus valores",
+      "texto_nuevo": "Juzgar la cultura de un equipo por lo que está dispuesto a ceder por sus valores",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que la cultura es de lo que acaban preguntando los candidatos, con las preguntas que el libro dice que salen siempre: que tiene de unico vuestro equipo, cuales son la mejor y la peor parte de tu trabajo, como se toman las decisiones, y que cambiarias si pudieras cambiar una sola cosa de como funciona la empresa.",
+      "texto_nuevo": "Cuenta con que la cultura es de lo que acaban preguntando los candidatos, con preguntas que salen siempre: ¿qué tiene de único tu equipo?, ¿cuáles son la mejor y la peor parte de tu trabajo?, ¿cómo se toman las decisiones?, ¿qué cambiarías si pudieras cambiar una sola cosa de cómo funciona la empresa?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro dice que salen siempre",
+          "vuestro equipo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No juzgues la cultura de una organizacion por lo que este escrito en su web corporativa: juzgala por lo que esta dispuesta a ceder por sus valores.",
+      "texto_nuevo": "No juzgues la cultura de una organización por lo que esté escrito en su web corporativa: júzgala por lo que está dispuesta a ceder por sus valores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desconfia del valor que nadie declararia al reves: muchos equipos dicen que les importa que sus empleados se hagan cargo enteros de los problemas, y nadie va a admitir que en realidad prefiere escurrir el bulto y echar la culpa de los errores a otros.",
+      "texto_nuevo": "Desconfía del valor que nadie declararía al revés: muchos equipos dicen que les importa que sus empleados se hagan cargo enteros de los problemas, y nadie va a admitir que en realidad prefiere escurrir el bulto y echar la culpa de los errores a otros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ponle a ese valor sus contrapartidas, que el libro escribe como tres preguntas: estas dispuesto a tolerar el caos que viene de que cada uno intente hacer lo que cree mejor? Sabes agradecer que otros desafien tus decisiones? Llevas bien aceptar la responsabilidad de errores que no son directamente tuyos?",
+      "texto_nuevo": "Ponle a ese valor sus contrapartidas en forma de tres preguntas: ¿estás dispuesto a tolerar el caos que viene de que cada uno intente hacer lo que cree mejor? ¿Sabes agradecer que otros desafíen tus decisiones? ¿Llevas bien aceptar la responsabilidad de errores que no son directamente tuyos?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro escribe como tres preguntas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Mira si el valor esta dicho en una frase que la gente repite: en Facebook tienen una inmortalizada en carteles por todo el campus, nada en Facebook es problema de otro.",
+      "texto_nuevo": "Mira si el valor está dicho en una frase que la gente repite: en una gran empresa tecnológica hay una en carteles por todo el campus, que dice que allí nada es problema de otro.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "en Facebook tienen una inmortalizada",
+          "nada en Facebook es problema de otro"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira lo que cuesta sostenerlo el dia que toca, con el caso que el libro cuenta: un becario nuevo tiro el servicio de Facebook al meter por accidente un error grave en el codigo, y no le despidieron. Su directivo se disculpo en su lugar por no haberle preparado mejor, otros ingenieros asumieron su parte por no haber cazado el error antes, y el equipo entero hizo despues un repaso para entender por que ocurrio el fallo y que cambios podian hacerse para evitar problemas parecidos en el futuro.",
+      "texto_nuevo": "Mira lo que cuesta sostenerlo el día que toca, con un caso: un becario nuevo tumbó el servicio de la empresa al meter por accidente un error grave en el código, y no lo despidieron. Su directivo se disculpó en su lugar por no haberlo preparado mejor, otros ingenieros asumieron su parte por no haber cazado el error antes, y el equipo entero hizo después un repaso para entender por qué ocurrió el fallo y qué cambios podían hacerse para evitar problemas parecidos en el futuro.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con el caso que el libro cuenta",
+          "el servicio de Facebook"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro que la cultura son las normas y los valores que gobiernan como se hacen las cosas, y que no va solo de tu relacion con cada persona de tu equipo: va tambien de la relacion de ellos entre si y con el grupo entero.",
+      "texto_nuevo": "Ten claro que la cultura son las normas y los valores que gobiernan cómo se hacen las cosas, y que no va solo de tu relación con cada persona de tu equipo: va también de la relación de ellos entre sí y con el grupo entero.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que segun diriges a mas y mas gente tu papel al dar forma a la cultura se hace mayor, y con que aunque no seas el consejero delegado tus acciones refuerzan lo que la empresa valora.",
+      "texto_nuevo": "Cuenta con que según diriges a más y más gente tu papel al dar forma a la cultura se hace mayor, y con que, aunque no seas el director general, tus acciones refuerzan lo que la empresa valora.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dicho, para cada valor que el equipo declara, que contrapartida esta dispuesto a aceptar por el, y si esa contrapartida se paga cuando toca.",
+      "texto_nuevo": "Dicho, para cada valor que el equipo declara, qué contrapartida está dispuesto a aceptar por él, y si esa contrapartida se paga cuando toca.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-juzgar_cultura_renuncias_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres saber que valora de verdad un equipo, el tuyo o uno ajeno, y tienes delante sus valores declarados.",
+      "texto_nuevo": "Cuando quieres saber qué valora de verdad un equipo, el tuyo o uno ajeno, y tienes delante sus valores declarados.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-juzgar_cultura_renuncias_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un valor escrito en una web no dice nada, porque nadie declara que prefiere esquivar la responsabilidad. La cultura real se ve en lo que un equipo está dispuesto a ceder por sus valores. Por eso cada valor declarado se pone a prueba con sus contrapartidas: ¿toleras el caos de que cada uno actúe según su criterio?, ¿aceptas que desafíen tus decisiones?, ¿asumes errores que no son tuyos? Y se mira qué pasa el día que toca pagarlo, como cuando el error grave de un becario acaba en disculpas de su jefe y un repaso de todo el equipo en vez de un despido.",
+      "texto_nuevo": "Un valor escrito en una web dice poco, porque nadie declara que prefiere esquivar la responsabilidad. La cultura se entiende mejor por lo que un equipo está dispuesto a ceder por sus valores. Por eso cada valor declarado se pone a prueba con sus contrapartidas: ¿toleras el caos de que cada uno actúe según su criterio?, ¿aceptas que desafíen tus decisiones?, ¿asumes errores que no son tuyos? Y se mira qué pasa el día que toca pagarlo, como cuando el error grave de un becario acaba en disculpas de su jefe y un repaso de todo el equipo en vez de un despido.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 19",
+        "frase": "an organization’s culture is best understood not from reading what’s written on its corporate website but from seeing what it’s willing to give up for its values."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la cultura se entiende MEJOR por lo que se cede que por lo escrito en la web, no que lo escrito no diga nada ni que solo ahí 'se vea'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-juzgar_cultura_renuncias_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que la cultura es de lo que acaban preguntando los candidatos, con preguntas que salen siempre: ¿qué tiene de único tu equipo?, ¿cuáles son la mejor y la peor parte de tu trabajo?, ¿cómo se toman las decisiones?, ¿qué cambiarías si pudieras cambiar una sola cosa de cómo funciona la empresa?",
+      "texto_nuevo": "Cuenta con que la cultura puede salir en cuanto das la palabra a los candidatos: a una directiva le pasa que, cada vez que les pregunta si tienen alguna duda, acaban hablando de cultura, con preguntas como ¿qué tiene de único tu equipo?, ¿cuáles son la mejor y la peor parte de tu trabajo?, ¿cómo se toman las decisiones?, ¿qué cambiarías si pudieras cambiar una sola cosa de cómo funciona la empresa?",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 17",
+        "frase": "Whenever I ask prospective candidates if they have any questions for me, inevitably we get to talking about culture"
+      },
+      "decision": "auditoria completa M11 (matiz): Es la experiencia de la autora con sus candidatos, vuelta regla de lo que preguntan todos y con 'preguntas que salen siempre'; se cuenta como caso.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-juzgar_cultura_renuncias_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ten claro que la cultura son las normas y los valores que gobiernan cómo se hacen las cosas, y que no va solo de tu relación con cada persona de tu equipo: va también de la relación de ellos entre sí y con el grupo entero.",
+      "texto_nuevo": "Ten claro que la cultura son las normas y los valores que gobiernan cómo se hacen las cosas, y ten presente lo que descubrió un directivo al cabo de tres años en el puesto: que dirigir no va solo de la relación con cada persona del equipo, sino también de la relación de ellas entre sí y con el grupo entero.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 27",
+        "frase": "Because it’s not just about my relationship to the team. It’s also about their relationships with each other, and with the group as a whole."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la revelación que un directivo contó a la autora a los tres años en el puesto, y era sobre dirigir; el paso la volvía verdad general sin contarla como caso.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-juzgar_cultura_renuncias_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desconfía del valor que nadie declararía al revés: muchos equipos dicen que les importa que sus empleados se hagan cargo enteros de los problemas, y nadie va a admitir que en realidad prefiere escurrir el bulto y echar la culpa de los errores a otros.",
+      "texto_nuevo": "Desconfía del valor que nadie declararía al revés: muchos equipos dicen que les importa que sus empleados se hagan cargo por completo de los problemas, y nadie va a admitir que en realidad prefiere escurrir el bulto y echar la culpa de los errores a otros.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se hagan cargo enteros"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Hacerse cargo enteros\" calca \"fully owning problems\" (zhuo cap_11 l.19).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-juzgar_cultura_renuncias_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten claro que la cultura son las normas y los valores que gobiernan cómo se hacen las cosas, y ten presente lo que descubrió un directivo al cabo de tres años en el puesto: que dirigir no va solo de la relación con cada persona del equipo, sino también de la relación de ellas entre sí y con el grupo entero.",
+      "texto_nuevo": "Ten claro que la cultura son las normas y los valores que gobiernan cómo se hacen las cosas, y ten presente lo que descubrió un directivo al cabo de tres años en el puesto: que dirigir no consiste solo en la relación con cada persona del equipo, sino también en la relación de ellas entre sí y con el grupo entero.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no va solo de la relación",
+          "sino también de la relación"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Ir de\" por tratarse de es coloquial peninsular. No se toma \"dirigir no se trata solo de\" de la propuesta (se trata de es impersonal y no admite sujeto); va \"consiste en\".",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase6-juzgar_cultura_renuncias_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mira si el valor está dicho en una frase que la gente repite: en una gran empresa tecnológica hay una en carteles por todo el campus, que dice que allí nada es problema de otro.",
+      "texto_nuevo": "Ten presente cómo puede sonar ese valor dicho en una frase: en una gran empresa tecnológica hay una en carteles por todo el campus, que dice que allí nada es problema de otro.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 19-21",
+        "frase": "an organization’s culture is best understood not from reading what’s written on its corporate website but from seeing what it’s willing to give up for its values. / At Facebook, we have a saying immortalized in posters all across campus: Nothing at Facebook Is Somebody Else’s Problem."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El lema de los carteles ilustra el valor de hacerse cargo; el libro no propone mirar si el valor está en una frase repetida como prueba de cultura, y su criterio es lo que el equipo cede, no lo escrito.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase6-juzgar_cultura_renuncias_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un valor escrito en una web dice poco, porque nadie declara que prefiere esquivar la responsabilidad. La cultura se entiende mejor por lo que un equipo está dispuesto a ceder por sus valores. Por eso cada valor declarado se pone a prueba con sus contrapartidas: ¿toleras el caos de que cada uno actúe según su criterio?, ¿aceptas que desafíen tus decisiones?, ¿asumes errores que no son tuyos? Y se mira qué pasa el día que toca pagarlo, como cuando el error grave de un becario acaba en disculpas de su jefe y un repaso de todo el equipo en vez de un despido.",
+      "texto_nuevo": "Un valor escrito en una web dice poco, porque nadie declara que prefiere esquivar la responsabilidad. La cultura se entiende mejor por lo que un equipo está dispuesto a ceder por sus valores. Por eso cada valor declarado se pone a prueba con sus contrapartidas: ¿toleras el caos de que cada uno actúe según su criterio?, ¿aceptas que desafíen tus decisiones?, ¿asumes errores que no son directamente tuyos? Y se mira qué pasa el día que toca pagarlo, como cuando el error grave de un becario acaba en disculpas de su jefe y un repaso de todo el equipo en vez de un despido.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 21",
+        "frase": "Are you okay accepting responsibility for mistakes that aren’t directly your own?"
+      },
+      "decision": "doble lectura M11 (sexto pase) (matiz): El libro habla de errores que no son directamente tuyos (el jefe responde por no haber preparado al becario); 'que no son tuyos' lo vuelve errores ajenos sin más. 573 caracteres.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Juzga tu Cultura por Renuncias",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -1,0 +1,490 @@
+{
+ "lote": "02",
+ "nodos": [
+  {
+   "node_id": "fingir_prototipo_cinco_mil_replicas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "tomar_mando_reunion_pares_presidente_ausente",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cuantificar_impacto_innovacion_6_pasos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "antes de cambiar las palabras y lo que decías para producir esas ventas",
+     "motivo": "El nodo trata cualquier innovación (título; paso 0: \"antes de poner en marcha la innovación\"), pero este paso da por hecho que la innovación es cambiar las palabras: el ejemplo del saludo queda como si fuera el único caso y el paso no corresponde a quien prueba otro cambio.",
+     "propuesta": "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "después de cambiar las palabras",
+     "motivo": "Igual que el paso 1: el conteo posterior se ata al ejemplo de las palabras en un nodo sobre cualquier innovación.",
+     "propuesta": "Cuenta cuántas personas entraron por la puerta después de la innovación."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "ajustar_franqueza_oido_oyente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "Mide las dos dimensiones",
+     "motivo": "\"Las dos dimensiones\" aparece en el primer paso sin antecedente: el resumen habla de cuidar y desafiar pero no como dimensiones, y solo los pasos 2 y 5 dicen cuáles son.",
+     "propuesta": "Mide las dos dimensiones, cuidar personalmente y desafiar directamente, en el oído del que escucha y no en la boca del que habla."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "ese mismo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "identificar_temas_formacion_tarjetas_decision",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "Nuestra",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "empoderamiento",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "abordar_cinco_efes_venta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "Referente que no existe en el nodo: ningún campo habla de un cliente ni de una fábrica (tampoco el pasaje, cap_06 11-75).",
+     "propuesta": "Vende la familia: ten en cuenta el trauma más amplio que supone cambiar de trabajo. Pregúntale, por ejemplo, qué puedes hacer para que el cambio le resulte lo más llevadero posible a su familia."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "elegir_fabricar_pedido_pronostico",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pedir_hechos_decision_evitar_recomendaciones",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "deberíamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "deberíamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_seis_pasos_sistema_venta",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "evaluar_cultura_empresa_adjetivos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "nuestra",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "vender_encaje_candidato_empresa",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "ortografia",
+     "cita": "algo que sienten como lo correcto",
+     "motivo": "Concordancia de número: el sujeto es \"la gente\" (singular, como \"quiere\" y \"necesaria\") y el relativo pasa a plural \"sienten\".",
+     "propuesta": "Enséñale cómo se van a cubrir con tu empresa las tres cosas que la gente quiere: dejar huella en el mundo, ser necesaria y formar parte de algo que siente como lo correcto."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pedir_referencias_red_personal",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "mete también a tus contactos de negocio más amplios en la cacería",
+     "motivo": "Calco de \"your broader business contacts\": lo amplio es la red, no los contactos.",
+     "propuesta": "No te pares en tu lista: mete también en la cacería a tu red más amplia de contactos de negocio. Pregunta a tus clientes por los nombres de los mejores vendedores que los visitan."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "los desarrolladores de negocio más eficaces",
+     "motivo": "Calco de \"business developers\": en español \"desarrollador\" se lee como programador; el puesto es el de desarrollo de negocio.",
+     "propuesta": "Pregunta a tus socios de negocio quiénes creen que son los responsables de desarrollo de negocio más eficaces."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "sus agentes de compras más fuertes",
+     "motivo": "Calco de \"strongest purchasing agents\": \"fuerte\" por competente.",
+     "propuesta": "Haz lo mismo con tus proveedores para identificar a sus mejores agentes de compras."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "montar_tablero_kanban_medir_actividades",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "coherencia",
+     "cita": "premian de forma más consistente a los que más rinden y son menos propensos a los sesgos que nos acechan a todos",
+     "motivo": "Sujeto ambiguo: tal como queda, \"son menos propensos a los sesgos\" se lee dicho de los que más rinden, cuando lo menos propenso al sesgo son las evaluaciones y los ascensos (cap_11 línea 249: \"ratings and promotions that more consistently reward the top performers and are less prone to the biases\").",
+     "propuesta": "Cuenta con lo quinto: medir actividades y enseñarlas públicamente tiende a llevar a evaluaciones y ascensos menos propensos a los sesgos que nos acechan a todos y que premian de forma más consistente a los que más rinden, porque cuando queda claro para todos qué es lo que empuja el éxito es menos probable que el sesgo se cuele en las decisiones de contratar, evaluar y ascender."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "carro",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "carro",
+     "defecto": false
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "carro",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_rueda_hacer_cosas_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "impedir_punialadas_espalda_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "regionalismo",
+     "cita": "se sacaba la peor solución posible para los dos",
+     "motivo": "\"Sacarse\" una solución por inventarla es coloquial de España (y sin \"de la manga\" poco claro incluso allí); en América se lee como quitarse u obtener algo. El resumen del mismo nodo ya dice \"imponía\".",
+     "propuesta": "Ten presente este contraejemplo y lo que produjo: un director general que, cuando la gente no arreglaba las cosas sin su intervención, imponía la peor solución posible para los dos, porque odiaba mediar en conflictos. Aquella solución creaba más conflicto y no menos."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "crear_obligacion_disentir_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "elegir_forma_inspirar_cambio_conducta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "tomar una acción positiva",
+     "motivo": "Calco de \"take positive action\": en español no se \"toma una acción\", se actúa.",
+     "propuesta": "Cuenta con que hay un abanico entero de cosas más allá de las sugerencias de mejora que pueden inspirar a alguien a actuar de forma positiva: la opinión no tiene que ser crítica, porque el elogio motiva a menudo más que la crítica, y además no siempre tienes que empezar por un problema."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "tomar una acción",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "determinar_estado_presente_capacidades_proyectos_merma",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "describir_candidato_ideal_precision",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "acumular_asuntos_importantes_fichero_espera",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "preguntar_jefe_sonado_persona_cargo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "vender_fortuna_candidato",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "vencer_sindrome_grupo_pares_autoconfianza",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "conversar_suenios_cruzar_habilidades",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "ganar_confianza_personas_cargo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "\"Personas a cargo\" sin el posesivo en \"cargo\" se lee como quien manda; la forma fijada es \"a tu cargo\".",
+     "propuesta": "Ganarte la confianza de las personas a tu cargo con cuatro acciones"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "admitió ante alguien a su cargo que a ella le pasaba lo mismo",
+     "motivo": "\"Lo mismo\" no tiene antecedente en el resumen: no se dice que ella le diera una crítica ni que él tuviera un problema, así que no se sabe qué le pasaba a ella.",
+     "propuesta": "La confianza de las personas a tu cargo se gana igual que la de cualquiera: el puesto no la da hecha. Lo que la abre es mostrarte como persona y no como figura de autoridad. Una directiva criticó a alguien a su cargo y admitió que a ella le pasaba lo mismo, y eso a él le sirvió más que cualquier consejo: por un momento fueron de igual a igual, y luego les fue más fácil hablar de casi cualquier cosa. Sobre esa base se apoyan cuatro acciones: respetar a la persona y cuidar de ella, invertir tiempo en ayudarla, ser honesto sobre cómo va su desempeño y admitir tus errores y áreas de mejora."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "\"Personas a cargo\" sin el posesivo en \"cargo\" se lee como quien manda; la forma fijada es \"a tu cargo\".",
+     "propuesta": "Da por hecho que ganarte la confianza de las personas a tu cargo no es distinto de ganártela con cualquier otro, y que pide unas pocas acciones, que son estas cuatro."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "a tu persona a cargo",
+     "motivo": "\"Personas a cargo\" sin el posesivo en \"cargo\" se lee como quien manda; la forma fijada es \"a tu cargo\".",
+     "propuesta": "La primera, respetar a la persona a tu cargo y cuidar de ella."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "\"Personas a cargo\" sin el posesivo en \"cargo\" se lee como quien manda; la forma fijada es \"a tu cargo\".",
+     "propuesta": "Cuando quieres que las personas a tu cargo confíen en ti, y en particular cuando notas que todavía no lo hacen."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "titulo_concepto",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "preguntar_conducir_reunion_individual",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "La persona a cargo tiene más contexto que tú",
+     "motivo": "\"La persona a cargo\" se lee como quien manda; es la persona a tu cargo (mismo defecto de la muestra 3).",
+     "propuesta": "La reunión individual rinde cuando está preparada y cuando la mueven preguntas en vez de consejos. La persona a tu cargo tiene más contexto que tú sobre sus problemas, así que está en mejor posición para encontrar la solución; tu trabajo es ayudarla a llegar ahí, no acudir al rescate. Los consejos no pedidos suelen entrar por un oído y salir por el otro, o se sienten como microgestión. Por eso las preguntas van en tres momentos de la misma conversación: identificar qué importa, entender la raíz del problema y qué se puede hacer, y cerrar ofreciendo apoyo concreto."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "el directivo y la persona a cargo",
+     "motivo": "\"La persona a cargo\" se lee como quien manda, y \"el directivo\" pasa a tercera persona en un paso que te habla a ti.",
+     "propuesta": "Piensa de antemano los temas que quieres traer; conviene que lo hagan los dos, tú y la persona a tu cargo. Hay quien tiene este hábito: cada mañana, repasar el calendario y preparar una lista de preguntas para cada persona con la que se va a ver."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "voz",
+     "cita": "todos recordamos sermones que nos entraron por un oído y nos salieron por el otro porque era obvio que el otro no entendía nuestro problema de verdad",
+     "motivo": "El nosotros del libro (\"We all remember... our real problem\"); en la casa es tú.",
+     "propuesta": "Cuenta con que demasiadas veces los intentos de ayudar no ayudan de verdad, aunque se sirvan con la mejor de las intenciones: seguro que recuerdas sermones que te entraron por un oído y te salieron por el otro porque era obvio que el otro no entendía tu problema de verdad, y ayudas no pedidas que se hacen indistinguibles de microgestionar o de entrometerse."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "habilitar a tu persona a cargo",
+     "motivo": "\"La persona a cargo\" se lee como quien manda; es la persona a tu cargo (mismo defecto de la muestra 3).",
+     "propuesta": "Ten claro que tu trabajo no es repartir consejo ni acudir al rescate, sino habilitar a la persona a tu cargo para que encuentre ella la respuesta: tiene más contexto que tú sobre los problemas con los que está lidiando, así que está en mejor posición para destapar la solución. Déjala llevar la reunión mientras tú escuchas y hurgas."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "a tu persona a cargo",
+     "motivo": "\"La persona a cargo\" se lee como quien manda; es la persona a tu cargo (mismo defecto de la muestra 3).",
+     "propuesta": "Empieza por el grupo de identificar, que sirve para centrarse en lo que de verdad importa a la persona a tu cargo y en qué temas merecen más tiempo: ¿qué tienes en la cabeza ahora mismo?, ¿qué prioridades estás pensando para esta semana?, y ¿cuál es el mejor uso de nuestro tiempo hoy?"
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "una persona a cargo",
+     "motivo": "\"La persona a cargo\" se lee como quien manda; es la persona a tu cargo (mismo defecto de la muestra 3).",
+     "propuesta": "Cuando tienes delante una reunión a solas con una persona a tu cargo y quieres que la lleve ella mientras tú escuchas y hurgas, en vez de repartir consejo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "recordamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "nuestro",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "nuestro",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "nuestra",
+     "defecto": false
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "sopesar_consejo_legal_despedir_humildad",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "comprobar_criticas_hombre_mujeres_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "asignar_entrevistas_enfocadas_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "presionar_curva_notas_evitar_forzarla",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "calco",
+     "cita": "si un equipo entregó algo excepcional",
+     "motivo": "Calco de \"delivered something exceptional\" (como \"entregando el mensaje\" en la muestra 3): un equipo logra algo, no lo entrega.",
+     "propuesta": "Y al revés, si un equipo logró algo excepcional, asegúrate de que su jefe lo está reflejando en las notas."
+    }
+   ],
+   "avisos_revisados": []
+  }
+ ]
+}

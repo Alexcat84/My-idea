@@ -156,8 +156,11 @@ o por la decisión D3, no por el catálogo.
 | Tu Compra Correcta | The Right Purchase | Sua Compra Certa | Ton bon achat | Richtig einkaufen | Il tuo Acquisto Giusto | 正しい仕入れ | 正确采购 | 올바른 구매 | شراؤكم الصحيح | आपकी सही खरीद |
 | Del Taller a sus Manos | From Workshop to Customer | Da Oficina às Mãos Deles | De l'atelier à leurs mains | Von der Werkstatt in ihre Hände | Dal Laboratorio alle loro Mani | 工房からお客様の手へ | 从作坊到客户手中 | 공방에서 고객의 손까지 | من الورشة إلى أيديهم | कार्यशाला से उनके हाथों तक |
 
-(El mundo 11, `primer_equipo`, está registrado en el Gate 0 pero aún no integrado en la app: su
-nombre entra al glosario cuando se integre.)
+(El mundo 11, `primer_equipo`, integrado el 28 sep 2026, entra OCULTO hasta el visto del fundador:)
+
+| es | en | pt | fr | de | it | ja | zh | ko | ar | hi |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Primer Equipo | First Team | Primeira Equipe | Première équipe | Erstes Team | Prima Squadra | はじめてのチーム | 第一支团队 | 첫 팀 | فريقكم الأول | आपकी पहली टीम |
 
 ### Conceptos propios
 

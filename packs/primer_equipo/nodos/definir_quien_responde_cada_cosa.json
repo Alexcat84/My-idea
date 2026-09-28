@@ -1,0 +1,423 @@
+{
+  "node_id": "definir_quien_responde_cada_cosa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Definir quién responde de cada cosa antes de que la conversación termine",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuando nadie se apunta explícitamente a hacer algo, no se crea ninguna tarea: se habla de investigar o de consultar a alguien y lo más probable es que no ocurra nada. Lo mismo puede pasar con un correo a varios destinatarios, donde cada uno puede suponer que el responsable es otro, y con dos personas talentosas a las que se pide colaborar sin decir quién decide, que pueden acabar discutiendo en círculos hasta frenar el avance. Nombrar quién responde de qué, o repartir las piezas y reservarte la decisión final, funciona porque cuanto más claro lo dejas, menos espacio queda para la ambigüedad.",
+  "notas_extraccion": "Es la tercera cosa a tener en cuenta al planificar y la que produce el fallo mas barato de arreglar y mas caro de no ver: el trabajo que nadie recoge. Lo que la hace procedimentable son las dos frases literales del final, que son el acto concreto de aclarar, y la distincion entre ellas: una reparte piezas, la otra reparte el intento y reserva la decision. Sin esas dos frases el nodo pediria definir la responsabilidad, que es un adjetivo de adecuacion. Los dos casos van dentro (manual seccion 3.5) porque son el sintoma observable, la conversacion que no produce tarea y la pareja que discute en circulos. Lo que el libro NO dice, y por eso no esta escrito aqui, es donde se apunta el responsable, ni que se hace cuando nadie quiere serlo.",
+  "pasos_accionables": [
+    "Reconoce la escena en la que no va a pasar nada: cinco personas generando ideas, alguien propone permitir deslizar entre secciones, otro pregunta si la gente lo descubriría, un tercero dice hagamos investigación para entenderlo, un cuarto añade que se puede hablar con quien intentó algo parecido hace un año, y la conversación sigue y sigue.",
+    "Cuenta con que lo más probable es que ahí no pase nada: se habló de investigar y de hablar con alguien, pero no se creó ninguna tarea porque nadie se apuntó explícitamente a hacerla.",
+    "Entiende la regla general: cuando la responsabilidad no está clara, las cosas se quedan sin hacer.",
+    "Aplícalo también fuera de las reuniones: cada vez que escribes a más de una persona sobre un asunto que necesita seguimiento, quienes lo reciben pueden quedar confundidos sobre quién esperas que haga qué, y cada uno puede suponer que el responsable es otro.",
+    "No confíes en las buenas intenciones. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fortalezas se complementarían bien.",
+    "Cuenta con cómo falló eso, que es la parte útil del caso: tenían opiniones muy distintas sobre qué hacer, y como no se definió ni cómo debían trabajar juntas ni quién tenía en última instancia la autoridad de decidir, discutieron en círculos intentando convencerse una a la otra, y el avance se paró en seco.",
+    "Quédate con la lección: cuanto más claro seas sobre a quién haces responsable de qué, menos espacio hay para la ambigüedad y para los malentendidos.",
+    "Aclara la expectativa de antemano de una de estas dos formas. La primera, repartiendo por partes: me gustaría que tú te encargaras de plantear las opciones, y que tú te hicieras cargo de definir el lenguaje visual.",
+    "La segunda, repartiendo y reservándote la decisión: pide que cada uno plantee por su cuenta cómo lo diseñaría, y anuncia que, en los puntos donde sus opiniones difieran, se reunirán los tres y tú decidirás."
+  ],
+  "entregable_esperado": "Cada cosa con un responsable nombrado en voz alta y, cuando dos personas trabajan juntas, dicho quién tiene la autoridad de decidir.",
+  "nodos_previos": [
+    "fijar_proceso_trabajo_equipo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Al final de cualquier conversación de la que tenga que salir trabajo, y también cada vez que escribes a más de una persona sobre un asunto que pide seguimiento."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando nadie se apunta explícitamente a hacer algo, no se crea ninguna tarea: se habla de investigar o de consultar a alguien y lo más probable es que no ocurra nada. Lo mismo puede pasar con un correo a varios destinatarios, donde cada uno puede suponer que el responsable es otro, y con dos personas talentosas a las que se pide colaborar sin decir quién decide, que pueden acabar discutiendo en círculos hasta frenar el avance. Nombrar quién responde de qué, o repartir las piezas y reservarte la decisión final, funciona porque cuanto más claro lo dejas, menos espacio queda para la ambigüedad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "99-113"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir quien responde de cada cosa antes de que la conversacion termine",
+      "texto_nuevo": "Definir quién responde de cada cosa antes de que la conversación termine",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce la escena en la que no va a pasar nada. El libro la describe: cinco personas generando ideas, alguien propone permitir deslizar entre secciones, otro pregunta si la gente lo descubriria, un tercero dice hagamos investigacion para entenderlo, un cuarto anade que se puede hablar con quien intento algo parecido hace un anio, y la conversacion sigue y sigue.",
+      "texto_nuevo": "Reconoce la escena en la que no va a pasar nada: cinco personas generando ideas, alguien propone permitir deslizar entre secciones, otro pregunta si la gente lo descubriría, un tercero dice hagamos investigación para entenderlo, un cuarto añade que se puede hablar con quien intentó algo parecido hace un año, y la conversación sigue y sigue.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro la describe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que va a pasar ahi, que es nada: se hablo de investigar y de hablar con alguien, pero no se creo ninguna tarea porque nadie se apunto explicitamente a hacerla.",
+      "texto_nuevo": "Cuenta con lo que va a pasar ahí, que es nada: se habló de investigar y de hablar con alguien, pero no se creó ninguna tarea porque nadie se apuntó explícitamente a hacerla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entiende la regla general: cuando la responsabilidad no esta clara, las cosas se cuelan por las grietas.",
+      "texto_nuevo": "Entiende la regla general: cuando la responsabilidad no está clara, las cosas se cuelan por las grietas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplicalo tambien fuera de las reuniones: cada vez que escribes a mas de una persona sobre un asunto que necesita seguimiento, quienes lo reciben pueden quedar confundidos sobre de quien esperas que haga que, y cada uno puede suponer que el responsable es otro.",
+      "texto_nuevo": "Aplícalo también fuera de las reuniones: cada vez que escribes a más de una persona sobre un asunto que necesita seguimiento, quienes lo reciben pueden quedar confundidos sobre quién esperas que haga qué, y cada uno puede suponer que el responsable es otro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No confies en las buenas intenciones. La autora sento a dos de las personas mas talentosas de su equipo, les conto un problema nuevo y dificil y les pidio que trabajaran juntos para dar con una solucion, pensando que sus fuerzas se complementarian bien.",
+      "texto_nuevo": "No confíes en las buenas intenciones. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fuerzas se complementarían bien.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora sento"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con como fallo eso, que es la parte util del caso: tenian opiniones muy distintas sobre que hacer, y como ella no definio ni como queria que trabajaran juntos ni quien tenia en ultima instancia la autoridad de decidir, discutieron en circulos intentando convencerse uno al otro, y el avance se paro en seco.",
+      "texto_nuevo": "Cuenta con cómo falló eso, que es la parte útil del caso: tenían opiniones muy distintas sobre qué hacer, y como no se definió ni cómo debían trabajar juntas ni quién tenía en última instancia la autoridad de decidir, discutieron en círculos intentando convencerse una a la otra, y el avance se paró en seco.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como ella no definio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quedate con la leccion que ella saca: cuanto mas claro seas sobre a quien haces responsable de que, menos espacio hay para la ambiguedad y para los cables cruzados.",
+      "texto_nuevo": "Quédate con la lección: cuanto más claro seas sobre a quién haces responsable de qué, menos espacio hay para la ambigüedad y para los cables cruzados.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que ella saca"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aclara la expectativa por delante en una de las dos formas que el libro escribe. La primera, repartiendo por partes: me gustaria que tu llevaras la delantera en enmarcar las opciones, y que tu te hicieras cargo de definir el lenguaje visual.",
+      "texto_nuevo": "Aclara la expectativa por delante de una de estas dos formas. La primera, repartiendo por partes: me gustaría que tú llevaras la delantera en plantear las opciones, y que tú te hicieras cargo de definir el lenguaje visual.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en una de las dos formas que el libro escribe",
+          "enmarcar las opciones"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "La segunda, repartiendo y reservandote la decision: que cada uno de vosotros haga su intento de como lo disenaria, y en las areas donde tengais opiniones distintas nos juntamos los tres y yo decido.",
+      "texto_nuevo": "La segunda, repartiendo y reservándote la decisión: pide que cada uno haga su propio intento de cómo lo diseñaría, y anuncia que, en los puntos donde sus opiniones difieran, se reunirán los tres y tú decidirás.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "cada uno de vosotros",
+          "tengais"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada cosa con un responsable nombrado en voz alta, y, cuando dos personas trabajan juntas, dicho quien tiene la autoridad de decidir.",
+      "texto_nuevo": "Cada cosa con un responsable nombrado en voz alta y, cuando dos personas trabajan juntas, dicho quién tiene la autoridad de decidir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_quien_responde_cada_cosa-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al final de cualquier conversacion de la que tenga que salir trabajo, y tambien cada vez que escribes a mas de una persona sobre un asunto que pide seguimiento.",
+      "texto_nuevo": "Al final de cualquier conversación de la que tenga que salir trabajo, y también cada vez que escribes a más de una persona sobre un asunto que pide seguimiento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-definir_quien_responde_cada_cosa-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende la regla general: cuando la responsabilidad no está clara, las cosas se cuelan por las grietas.",
+      "texto_nuevo": "Entiende la regla general: cuando la responsabilidad no está clara, las cosas se quedan sin hacer.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se cuelan por las grietas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"se cuelan por las grietas\" es calco listado de \"slip through the cracks\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-definir_quien_responde_cada_cosa-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quédate con la lección: cuanto más claro seas sobre a quién haces responsable de qué, menos espacio hay para la ambigüedad y para los cables cruzados.",
+      "texto_nuevo": "Quédate con la lección: cuanto más claro seas sobre a quién haces responsable de qué, menos espacio hay para la ambigüedad y para los malentendidos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "los cables cruzados"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"cables cruzados\" es calco listado de \"crossed wires\".",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-definir_quien_responde_cada_cosa-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aclara la expectativa por delante de una de estas dos formas. La primera, repartiendo por partes: me gustaría que tú llevaras la delantera en plantear las opciones, y que tú te hicieras cargo de definir el lenguaje visual.",
+      "texto_nuevo": "Aclara la expectativa por delante de una de estas dos formas. La primera, repartiendo por partes: me gustaría que tú te encargaras de plantear las opciones, y que tú te hicieras cargo de definir el lenguaje visual.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "llevaras la delantera en"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"llevar la delantera\" es ir por delante, no encargarse (\"take the lead\").",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-barrido-definir_quien_responde_cada_cosa-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aclara la expectativa por delante de una de estas dos formas. La primera, repartiendo por partes: me gustaría que tú te encargaras de plantear las opciones, y que tú te hicieras cargo de definir el lenguaje visual.",
+      "texto_nuevo": "Aclara la expectativa de antemano de una de estas dos formas. La primera, repartiendo por partes: me gustaría que tú te encargaras de plantear las opciones, y que tú te hicieras cargo de definir el lenguaje visual.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "la expectativa por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-definir_quien_responde_cada_cosa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que va a pasar ahí, que es nada: se habló de investigar y de hablar con alguien, pero no se creó ninguna tarea porque nadie se apuntó explícitamente a hacerla.",
+      "texto_nuevo": "Cuenta con que lo más probable es que ahí no pase nada: se habló de investigar y de hablar con alguien, pero no se creó ninguna tarea porque nadie se apuntó explícitamente a hacerla.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 107",
+        "frase": "The most likely answer is that nothing happens."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que lo más probable es que no pase nada; el paso lo daba por seguro.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-definir_quien_responde_cada_cosa-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "La segunda, repartiendo y reservándote la decisión: pide que cada uno haga su propio intento de cómo lo diseñaría, y anuncia que, en los puntos donde sus opiniones difieran, se reunirán los tres y tú decidirás.",
+      "texto_nuevo": "La segunda, repartiendo y reservándote la decisión: pide que cada uno plantee por su cuenta cómo lo diseñaría, y anuncia que, en los puntos donde sus opiniones difieran, se reunirán los tres y tú decidirás.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "haga su propio intento de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"take a stab at how you'd design this\" traducido palabra a palabra (zhuo cap_09 l.113).",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-definir_quien_responde_cada_cosa-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No confíes en las buenas intenciones. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fuerzas se complementarían bien.",
+      "texto_nuevo": "No confíes en las buenas intenciones. Por ejemplo, alguien sentó a dos de las personas más talentosas de su equipo, les contó un problema nuevo y difícil y les pidió que trabajaran juntas para dar con una solución, pensando que sus fortalezas se complementarían bien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "sus fuerzas se complementarían"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"strengths\" de una persona son \"fortalezas\", no \"fuerzas\" (zhuo_manager/cap_09.md:109).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define Quién Responde de Qué"
+}

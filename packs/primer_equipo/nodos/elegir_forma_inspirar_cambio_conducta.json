@@ -1,0 +1,294 @@
+{
+  "node_id": "elegir_forma_inspirar_cambio_conducta",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Elegir con cuál de las cuatro formas de opinión inspiras un cambio de conducta",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Dar opinión no es solo señalar problemas y proponer arreglos: es cualquier cosa que inspire a alguien a cambiar su conducta para mejor. Al ensanchar la definición entran el elogio, que a menudo motiva más que la crítica, y lo que se dice antes de que el trabajo empiece. De ahí salen las cuatro formas más comunes: fijar expectativas claras al principio, dar opinión concreta de la tarea con frecuencia, hablar de la conducta con cuidado y con regularidad, y reunir la mirada de varias personas cuando hace falta objetividad. Y no siempre tienes que empezar por un problema.",
+  "notas_extraccion": "El capitulo define dar opinion de forma mucho mas ancha que sugerir mejoras, y esa ampliacion es su doctrina: lo que cuenta como opinion es cualquier cosa que inspire un cambio de conducta, asi que el elogio entra y entra tambien lo que se dice antes de que el trabajo empiece. El libro cierra la seccion con una linea que declara cuantas formas hay y las desarrolla despues una a una con su propio titulo, asi que este nodo es la cabeza y las cuatro tienen nodo propio. La cabeza no es solo un indice: trae la definicion vieja y estrecha que el libro desmonta, que es lo que hace falta para que alguien entienda por que fijar expectativas cuenta como dar opinion. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se elige entre las cuatro en un caso concreto, ni si alguna sustituye a otra.",
+  "pasos_accionables": [
+    "Parte de esta apuesta: si recuerdas la mejor opinión que has recibido en tu vida, es porque te inspiró a cambiar tu conducta y ese cambio hizo mejor tu vida. En el mejor de los casos, la opinión transforma a la gente de un modo del que luego se siente orgullosa.",
+    "Deja fuera la definición estrecha de opinión como sugerencias de mejora, cuyo ejemplo típico es la crítica de diseño: identificar un problema y proponer soluciones posibles.",
+    "Cuenta con que hay un abanico entero de cosas más allá de las sugerencias de mejora que pueden inspirar a alguien a actuar de forma positiva: la opinión no tiene que ser crítica, porque el elogio motiva a menudo más que la crítica, y además no siempre tienes que empezar por un problema.",
+    "La primera de las cuatro formas: fijar expectativas claras al principio, antes de que empiece ningún trabajo.",
+    "La segunda: dar opinión específica de la tarea tan a menudo como puedas.",
+    "La tercera: compartir opinión sobre la conducta con cuidado y con regularidad.",
+    "Y la cuarta: recoger opinión de trescientos sesenta grados cuando quieras la máxima objetividad."
+  ],
+  "entregable_esperado": "Elegida cuál de las cuatro formas usas, y sabiendo que no toda opinión útil es una crítica ni tiene que empezar por un problema.",
+  "nodos_previos": [
+    "ser_honesto_transparente_desempenio"
+  ],
+  "nodos_siguientes": [
+    "fijar_expectativas_claras_comienzo",
+    "recoger_opinion_360_grados"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres que alguien de tu equipo cambie algo de cómo trabaja, y antes de abrir la boca quieres saber cuál de las cuatro formas encaja con lo que tienes delante."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Dar opinión no es solo señalar problemas y proponer arreglos: es cualquier cosa que inspire a alguien a cambiar su conducta para mejor. Al ensanchar la definición entran el elogio, que a menudo motiva más que la crítica, y lo que se dice antes de que el trabajo empiece. De ahí salen cuatro formas distintas: fijar expectativas claras al principio, dar opinión concreta de la tarea con frecuencia, hablar de la conducta con cuidado y con regularidad, y reunir la mirada de varias personas cuando hace falta objetividad. Elegir la que encaja evita reducirlo todo a la crítica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_05.md",
+          "lineas": "29-91"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir con cual de las cuatro formas de opinion inspiras un cambio de conducta",
+      "texto_nuevo": "Elegir con cuál de las cuatro formas de opinión inspiras un cambio de conducta",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de la apuesta que el libro hace sobre ti: si recuerdas la mejor opinion que has recibido en tu vida, es porque te inspiro a cambiar tu conducta y ese cambio hizo mejor tu vida. En su mejor version, la opinion transforma a la gente de maneras de las que la gente se enorgullece.",
+      "texto_nuevo": "Parte de esta apuesta: si recuerdas la mejor opinión que has recibido en tu vida, es porque te inspiró a cambiar tu conducta y ese cambio hizo mejor tu vida. En su mejor versión, la opinión transforma a la gente de maneras de las que la gente se enorgullece.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro hace sobre ti"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja fuera la definicion estrecha de opinion como sugerencias de mejora, que es la que la autora usaba al principio de su carrera, y cuyo ejemplo canonico en su cabeza era la critica de disenio, identificar un problema y proponer soluciones posibles.",
+      "texto_nuevo": "Deja fuera la definición estrecha de opinión como sugerencias de mejora, cuyo ejemplo típico es la crítica de diseño: identificar un problema y proponer soluciones posibles.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es la que la autora usaba al principio de su carrera",
+          "en su cabeza"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que hay un abanico entero de cosas mas alla de las sugerencias de mejora que pueden inspirar a alguien a tomar una accion positiva: la opinion no tiene que ser critica, porque el elogio motiva a menudo mas que la critica, y ademas no siempre tienes que empezar por un problema.",
+      "texto_nuevo": "Cuenta con que hay un abanico entero de cosas más allá de las sugerencias de mejora que pueden inspirar a alguien a tomar una acción positiva: la opinión no tiene que ser crítica, porque el elogio motiva a menudo más que la crítica, y además no siempre tienes que empezar por un problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La primera de las cuatro formas, fijar expectativas claras al principio, antes de que empiece ningun trabajo.",
+      "texto_nuevo": "La primera de las cuatro formas: fijar expectativas claras al principio, antes de que empiece ningún trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La segunda, dar opinion especifica de la tarea tan a menudo como puedas.",
+      "texto_nuevo": "La segunda: dar opinión específica de la tarea tan a menudo como puedas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La tercera, compartir opinion sobre la conducta con cuidado y con regularidad.",
+      "texto_nuevo": "La tercera: compartir opinión sobre la conducta con cuidado y con regularidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y la cuarta, recoger opinion de trescientos sesenta grados cuando quieras la maxima objetividad.",
+      "texto_nuevo": "Y la cuarta: recoger opinión de trescientos sesenta grados cuando quieras la máxima objetividad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegida cual de las cuatro formas usas, y sabiendo que no toda opinion util es una critica ni tiene que empezar por un problema.",
+      "texto_nuevo": "Elegida cuál de las cuatro formas usas, y sabiendo que no toda opinión útil es una crítica ni tiene que empezar por un problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_forma_inspirar_cambio_conducta-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres que alguien de tu equipo cambie algo de como trabaja, y antes de abrir la boca quieres saber cual de las cuatro formas encaja con lo que tienes delante.",
+      "texto_nuevo": "Cuando quieres que alguien de tu equipo cambie algo de cómo trabaja, y antes de abrir la boca quieres saber cuál de las cuatro formas encaja con lo que tienes delante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-elegir_forma_inspirar_cambio_conducta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dar opinión no es solo señalar problemas y proponer arreglos: es cualquier cosa que inspire a alguien a cambiar su conducta para mejor. Al ensanchar la definición entran el elogio, que a menudo motiva más que la crítica, y lo que se dice antes de que el trabajo empiece. De ahí salen cuatro formas distintas: fijar expectativas claras al principio, dar opinión concreta de la tarea con frecuencia, hablar de la conducta con cuidado y con regularidad, y reunir la mirada de varias personas cuando hace falta objetividad. Elegir la que encaja evita reducirlo todo a la crítica.",
+      "texto_nuevo": "Dar opinión no es solo señalar problemas y proponer arreglos: es cualquier cosa que inspire a alguien a cambiar su conducta para mejor. Al ensanchar la definición entran el elogio, que a menudo motiva más que la crítica, y lo que se dice antes de que el trabajo empiece. De ahí salen las cuatro formas más comunes: fijar expectativas claras al principio, dar opinión concreta de la tarea con frecuencia, hablar de la conducta con cuidado y con regularidad, y reunir la mirada de varias personas cuando hace falta objetividad. Y no siempre tienes que empezar por un problema.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_05.md 37-39",
+        "frase": "And for another, you don’t always have to start with a problem. [...] Below, you’ll find the four most common ways to inspire a change in behavior."
+      },
+      "decision": "auditoria completa M11 (matiz, invencion): El libro da las cuatro formas MÁS COMUNES, no las únicas; y no afirma que elegir la forma que encaja evite reducirlo todo a la crítica: dice que la opinión no tiene que ser crítica ni empezar siempre por un problema.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-elegir_forma_inspirar_cambio_conducta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de esta apuesta: si recuerdas la mejor opinión que has recibido en tu vida, es porque te inspiró a cambiar tu conducta y ese cambio hizo mejor tu vida. En su mejor versión, la opinión transforma a la gente de maneras de las que la gente se enorgullece.",
+      "texto_nuevo": "Parte de esta apuesta: si recuerdas la mejor opinión que has recibido en tu vida, es porque te inspiró a cambiar tu conducta y ese cambio hizo mejor tu vida. En el mejor de los casos, la opinión transforma a la gente de un modo del que luego se siente orgullosa.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "En su mejor versión, la opinión transforma a la gente de maneras de las que la gente se enorgullece."
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco palabra a palabra de \"Feedback, at its best, transforms people in ways they're proud of\" (zhuo cap_05 33).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-elegir_forma_inspirar_cambio_conducta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que hay un abanico entero de cosas más allá de las sugerencias de mejora que pueden inspirar a alguien a tomar una acción positiva: la opinión no tiene que ser crítica, porque el elogio motiva a menudo más que la crítica, y además no siempre tienes que empezar por un problema.",
+      "texto_nuevo": "Cuenta con que hay un abanico entero de cosas más allá de las sugerencias de mejora que pueden inspirar a alguien a actuar de forma positiva: la opinión no tiene que ser crítica, porque el elogio motiva a menudo más que la crítica, y además no siempre tienes que empezar por un problema.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tomar una acción positiva"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'take positive action' (zhuo_manager/cap_05.md l. 37): en español no se 'toma una acción', se actúa.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Elige Cómo Inspiras Cambio"
+}

@@ -1,0 +1,307 @@
+{
+  "node_id": "celebrar_pequenias_victorias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Celebrar las pequeñas victorias para romper el ciclo negativo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "En el Pozo (el bache de desánimo) repasas sin parar tus fracasos porque dudas de si tienes lo que hace falta. Una manera de romper ese ciclo es contarte otra historia: mirar en qué estás ganando y no lo que haces mal. Una directiva lo hizo con un diario de pequeñas victorias: cada día anotaba algo de lo que se sentía orgullosa, aunque fuera pequeño, al notar que veía como rutina un trabajo valioso. Los estudios muestran que escribir cada noche cinco cosas por las que estás agradecido te hace sentir más feliz a la larga; cuando necesites confianza, haz lo mismo con lo que sí haces bien.",
+  "notas_extraccion": "Es el quinto consejo del Pozo y el mas barato de los seis: una anotacion al dia. Su inventario propio es el diario y sus tres ejemplos de entrada, que son los que fijan el listado tan bajo como el libro lo quiere, hasta responder correos a tiempo. El caso de la colega esta aqui porque es donde el libro situa el origen de la practica y porque nombra lo que la practica corrige: dejar de ver como rutina lo que es valioso. Lo que el libro NO dice, y por eso no esta escrito: ni durante cuanto tiempo se lleva el diario, ni si se relee.",
+  "pasos_accionables": [
+    "Ten delante el ciclo en el que estás: cuando estás en el Pozo repasas sin parar tus fracasos, porque te estás cuestionando si tienes o no lo que hace falta para tener éxito.",
+    "Rompe ese ciclo negativo contándote una historia distinta: en vez de preguntarte «¿qué no estoy haciendo bien?», pon el foco en todas las maneras en que estás ganando.",
+    "Ten delante de dónde sale la idea: en un periodo especialmente difícil, una directiva le contó a una colega lo ahogada que se sentía, porque no conseguía contratar lo bastante rápido para todos los proyectos que necesitaban dirección de diseño y cada día sentía la presión de ser el cuello de botella. La colega le recordó que por duras que estuvieran las cosas, no todo lo que hacía era un fracaso: la colega había compartido con todo su equipo una entrada de blog reciente de la directiva que le había tocado la fibra, y le dio las gracias por escribirla.",
+    "Fíjate en lo que aquella conversación le descubrió: se dio cuenta de que había llegado a ver su escritura, y muchas otras responsabilidades suyas como revisar trabajo de diseño, entrenar o planificar la operación, como rutina y no como algo valioso.",
+    "Monta un diario de pequeñas victorias, que es lo que ella hizo: cada día apunta algo que hiciste y de lo que estés orgulloso, aunque sea pequeño. Unas veces celebraba haberle dado a alguien un consejo útil en una reunión a solas, otros días se reconocía el mérito de haber conducido una reunión productiva, y una vez, en un día especialmente duro, apuntó que había conseguido responder a unos cuantos correos a tiempo.",
+    "Y ten delante este dato: los estudios muestran que si escribes cada noche cinco cosas por las que estés agradecido, a la larga te vas a sentir más feliz. Cuando necesites reforzar tu confianza, haz lo mismo poniendo el foco en todas las cosas que sí estás haciendo bien."
+  ],
+  "entregable_esperado": "Un registro escrito y diario de cosas que hiciste y de las que estás orgulloso, por pequeñas que sean, con el foco puesto en lo que va bien y no en lo que falta.",
+  "nodos_previos": [],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando estás en el Pozo repasando una y otra vez tus fracasos porque te estás cuestionando si tienes lo que hace falta para tener éxito."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "En el Pozo repasas sin parar tus fracasos porque dudas de si tienes lo que hace falta. Una manera de romper ese ciclo es contarte otra historia: mirar las maneras en que estás ganando y no lo que haces mal. Una directiva lo hizo con un diario de pequeñas victorias: cada día anotaba algo de lo que se sentía orgullosa, aunque fuera pequeño, al notar que veía como rutina un trabajo valioso. Los estudios muestran que escribir cada noche cinco cosas por las que estás agradecido te hace sentir más feliz a la larga; cuando necesites confianza, haz lo mismo con lo que sí haces bien.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_06.md",
+          "lineas": "337-347"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: L339 dice 'One way', no 'el remedio'. Lo de ver como rutina un trabajo valioso le pasó a una persona (L343-345), y 'alimenta la duda' no está en las líneas. La propuesta del lector cuenta el diario como caso de una directiva y conserva el dato de los estudios de L347.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Celebrar las pequenias victorias para romper el ciclo negativo",
+      "texto_nuevo": "Celebrar las pequeñas victorias para romper el ciclo negativo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten delante el ciclo en el que estas: cuando estas en el Pozo repasas sin parar tus fracasos, porque te estas cuestionando si tienes o no lo que hace falta para tener exito.",
+      "texto_nuevo": "Ten delante el ciclo en el que estás: cuando estás en el Pozo repasas sin parar tus fracasos, porque te estás cuestionando si tienes o no lo que hace falta para tener éxito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rompe ese ciclo negativo contandote una historia distinta: en vez de pensar que es lo que no estoy haciendo bien, pon el foco en todas las maneras en que estas ganando.",
+      "texto_nuevo": "Rompe ese ciclo negativo contándote una historia distinta: en vez de pensar qué es lo que no estoy haciendo bien, pon el foco en todas las maneras en que estás ganando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante de donde le vino la idea a la autora, porque el libro lo cuenta: en un periodo especialmente dificil le conto a una colega lo ahogada que se sentia, porque no conseguia contratar lo bastante rapido para todos los proyectos que necesitaban direccion de disenio y cada dia sentia la presion de ser el cuello de botella. La colega le recordo que por duras que estuvieran las cosas, no todo lo que hacia era un fracaso: una de sus entradas de blog recientes le habia tocado la fibra y la habia compartido con todo su equipo, y le dio las gracias por escribirla.",
+      "texto_nuevo": "Ten delante de dónde sale la idea: en un periodo especialmente difícil, una directiva le contó a una colega lo ahogada que se sentía, porque no conseguía contratar lo bastante rápido para todos los proyectos que necesitaban dirección de diseño y cada día sentía la presión de ser el cuello de botella. La colega le recordó que por duras que estuvieran las cosas, no todo lo que hacía era un fracaso: una de sus entradas de blog recientes le había tocado la fibra y la había compartido con todo su equipo, y le dio las gracias por escribirla.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "le vino la idea a la autora, porque el libro lo cuenta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fijate en lo que aquella conversacion le descubrio: se dio cuenta de que habia llegado a ver su escritura, y muchas otras responsabilidades suyas como revisar trabajo de disenio, entrenar o planificar la operacion, como rutina y no como algo valioso.",
+      "texto_nuevo": "Fíjate en lo que aquella conversación le descubrió: se dio cuenta de que había llegado a ver su escritura, y muchas otras responsabilidades suyas como revisar trabajo de diseño, entrenar o planificar la operación, como rutina y no como algo valioso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monta un diario de pequenias victorias, que es lo que ella hizo: cada dia apunta algo que hiciste y de lo que estes orgulloso, aunque sea pequenio. Unas veces celebraba una reunion a solas en la que le dio a alguien un consejo util, otros dias se daba credito por haber conducido una reunion productiva, y una vez, en un dia especialmente duro, apunto que habia conseguido responder a unos cuantos correos a tiempo.",
+      "texto_nuevo": "Monta un diario de pequeñas victorias, que es lo que ella hizo: cada día apunta algo que hiciste y de lo que estés orgulloso, aunque sea pequeño. Unas veces celebraba una reunión a solas en la que le dio a alguien un consejo útil, otros días se daba crédito por haber conducido una reunión productiva, y una vez, en un día especialmente duro, apuntó que había conseguido responder a unos cuantos correos a tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y ten delante el dato con el que el libro lo cierra: los estudios muestran que si escribes cada noche cinco cosas por las que estes agradecido, a la larga te vas a sentir mas feliz. Cuando necesites construir tu confianza, haz lo mismo poniendo el foco en todas las cosas que si estas haciendo bien.",
+      "texto_nuevo": "Y ten delante este dato: los estudios muestran que si escribes cada noche cinco cosas por las que estés agradecido, a la larga te vas a sentir más feliz. Cuando necesites construir tu confianza, haz lo mismo poniendo el foco en todas las cosas que sí estás haciendo bien.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con el que el libro lo cierra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un registro escrito y diario de cosas que hiciste y de las que estas orgulloso, por pequenias que sean, con el foco puesto en lo que va bien y no en lo que falta.",
+      "texto_nuevo": "Un registro escrito y diario de cosas que hiciste y de las que estás orgulloso, por pequeñas que sean, con el foco puesto en lo que va bien y no en lo que falta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-celebrar_pequenias_victorias-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas en el Pozo repasando una y otra vez tus fracasos porque te estas cuestionando si tienes lo que hace falta para tener exito.",
+      "texto_nuevo": "Cuando estás en el Pozo repasando una y otra vez tus fracasos porque te estás cuestionando si tienes lo que hace falta para tener éxito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-celebrar_pequenias_victorias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "En el Pozo repasas sin parar tus fracasos porque dudas de si tienes lo que hace falta. Una manera de romper ese ciclo es contarte otra historia: mirar las maneras en que estás ganando y no lo que haces mal. Una directiva lo hizo con un diario de pequeñas victorias: cada día anotaba algo de lo que se sentía orgullosa, aunque fuera pequeño, al notar que veía como rutina un trabajo valioso. Los estudios muestran que escribir cada noche cinco cosas por las que estás agradecido te hace sentir más feliz a la larga; cuando necesites confianza, haz lo mismo con lo que sí haces bien.",
+      "texto_nuevo": "En el Pozo (el bache de desánimo) repasas sin parar tus fracasos porque dudas de si tienes lo que hace falta. Una manera de romper ese ciclo es contarte otra historia: mirar en qué estás ganando y no lo que haces mal. Una directiva lo hizo con un diario de pequeñas victorias: cada día anotaba algo de lo que se sentía orgullosa, aunque fuera pequeño, al notar que veía como rutina un trabajo valioso. Los estudios muestran que escribir cada noche cinco cosas por las que estás agradecido te hace sentir más feliz a la larga; cuando necesites confianza, haz lo mismo con lo que sí haces bien.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Pozo repasas",
+          "las maneras en que"
+        ]
+      },
+      "decision": "pase de glosario (pozo): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-pase2-celebrar_pequenias_victorias-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Rompe ese ciclo negativo contándote una historia distinta: en vez de pensar qué es lo que no estoy haciendo bien, pon el foco en todas las maneras en que estás ganando.",
+      "texto_nuevo": "Rompe ese ciclo negativo contándote una historia distinta: en vez de preguntarte «¿qué no estoy haciendo bien?», pon el foco en todas las maneras en que estás ganando.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Salto de tú a yo sin marcar la cita; va como pregunta que te haces."
+      },
+      "decision": "auditoria completa M11 (coherencia): Salto de tú a yo sin marcar la cita; va como pregunta que te haces.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-celebrar_pequenias_victorias-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ten delante de dónde sale la idea: en un periodo especialmente difícil, una directiva le contó a una colega lo ahogada que se sentía, porque no conseguía contratar lo bastante rápido para todos los proyectos que necesitaban dirección de diseño y cada día sentía la presión de ser el cuello de botella. La colega le recordó que por duras que estuvieran las cosas, no todo lo que hacía era un fracaso: una de sus entradas de blog recientes le había tocado la fibra y la había compartido con todo su equipo, y le dio las gracias por escribirla.",
+      "texto_nuevo": "Ten delante de dónde sale la idea: en un periodo especialmente difícil, una directiva le contó a una colega lo ahogada que se sentía, porque no conseguía contratar lo bastante rápido para todos los proyectos que necesitaban dirección de diseño y cada día sentía la presión de ser el cuello de botella. La colega le recordó que por duras que estuvieran las cosas, no todo lo que hacía era un fracaso: la colega había compartido con todo su equipo una entrada de blog reciente de la directiva que le había tocado la fibra, y le dio las gracias por escribirla.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Sujeto que cambia sin marca: \"la había compartido\" tenía por sujeto la entrada; quien la compartió y dio las gracias es la colega (cap_06, línea 341)."
+      },
+      "decision": "auditoria completa M11 (coherencia): Sujeto que cambia sin marca: \"la había compartido\" tenía por sujeto la entrada; quien la compartió y dio las gracias es la colega (cap_06, línea 341).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-celebrar_pequenias_victorias-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta un diario de pequeñas victorias, que es lo que ella hizo: cada día apunta algo que hiciste y de lo que estés orgulloso, aunque sea pequeño. Unas veces celebraba una reunión a solas en la que le dio a alguien un consejo útil, otros días se daba crédito por haber conducido una reunión productiva, y una vez, en un día especialmente duro, apuntó que había conseguido responder a unos cuantos correos a tiempo.",
+      "texto_nuevo": "Monta un diario de pequeñas victorias, que es lo que ella hizo: cada día apunta algo que hiciste y de lo que estés orgulloso, aunque sea pequeño. Unas veces celebraba haberle dado a alguien un consejo útil en una reunión a solas, otros días se reconocía el mérito de haber conducido una reunión productiva, y una vez, en un día especialmente duro, apuntó que había conseguido responder a unos cuantos correos a tiempo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "celebraba una reunión a solas en la que le dio",
+          "se daba crédito por"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Celebrar una reunión\" se lee como tenerla, no festejarla; \"se daba crédito\" calca \"gave myself credit\".",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-celebrar_pequenias_victorias-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y ten delante este dato: los estudios muestran que si escribes cada noche cinco cosas por las que estés agradecido, a la larga te vas a sentir más feliz. Cuando necesites construir tu confianza, haz lo mismo poniendo el foco en todas las cosas que sí estás haciendo bien.",
+      "texto_nuevo": "Y ten delante este dato: los estudios muestran que si escribes cada noche cinco cosas por las que estés agradecido, a la larga te vas a sentir más feliz. Cuando necesites reforzar tu confianza, haz lo mismo poniendo el foco en todas las cosas que sí estás haciendo bien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "construir tu confianza"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"build your confidence\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Celebra tus Pequeñas Victorias"
+}

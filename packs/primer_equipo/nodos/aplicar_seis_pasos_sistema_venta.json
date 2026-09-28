@@ -1,0 +1,299 @@
+{
+  "node_id": "aplicar_seis_pasos_sistema_venta",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Aplicar los seis pasos principales de un sistema de venta",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Este sistema funciona porque la diferencia entre quienes producen la mayor parte de las ventas y el resto es que unos siguen un sistema y otros no. Al identificar los puntos donde el cliente decide, escribir las palabras exactas que lo llevan a cada uno, preparar los materiales, memorizar los guiones y decirlos igual cada vez, la venta se vuelve una interacción orquestada y repetible. Y el sexto paso deja a tu gente comunicarse con más efectividad: escuchar, observar y atender a cada cliente tan a fondo como lo necesite.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_19.md, unidad Cap. 18, titulo textual Your Systems Strategy. Sale de la PIEZA D2 de la frontera publicada en esta misma vuelta (.gerber_v7/frontera_cap19.txt), L141 a L154, 117 palabras. POR QUE ES PROCEDIMIENTO: el libro numera 1 a 6 en el propio texto (L143 a L153) respondiendo a su propia pregunta que es un sistema de venta, cada paso con su propio verbo de accion (identification, scripting, creation, memorization, delivery, leaving your people to communicate). SIGO EL PATRON DE UN SOLO NODO ya establecido en esta vuelta (aplicar_ocho_reglas_juego_personas y aplicar_cinco_pasos_proceso_contratacion, cap_18): la lista entera transcrita, no seis nodos mas cabeza. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI, DECISION DE ALCANCE DECLARADA: la pieza R5 (L155 a L304, 2040 palabras) despliega el Power Point Selling System (Estructura y Sustancia) y el Power Point Selling Process con sus tres Benchmarks (Appointment, Needs Analysis y Solutions Presentation), contado entero como guion ficticio entre Johnny Jones y Mr. Jackson en la Walter Mitty Company, con siete acciones numeradas SOLO dentro de la Needs Analysis Presentation (L215 a L253, the first thing you do... the seventh thing Johnny Jones does). NO LO TRANSCRIBO: es la CASA de la doctrina de estos seis pasos (manual 3.5, el caso no es la casa), y transcribir sus siete acciones exigiria separar la doctrina generica del guion especifico de Walter Mitty Company en cada linea (financial control, Money Management Questionnaire, Financial Report), un trabajo que esta vuelta no alcanza a hacer sin riesgo de fundir caso y doctrina o de inventar una version generica que el libro no escribe (D.30 15.4: parrafo rico completado por mi mano es nodo inventado). Se deja escrito aqui, con su cita, para que una vuelta futura decida si vale la pena separar esa doctrina de su ejemplo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE, cita pegada en .gerber_v7/cita_cap19_L141_L153.txt (D.35).",
+  "pasos_accionables": [
+    "Identifica los hitos específicos, o puntos de decisión del consumidor, en tu proceso de venta.",
+    "Escribe literalmente, como el guion de una obra de teatro, las palabras que te van a llevar a cada hito con éxito.",
+    "Crea los distintos materiales que se van a usar con cada guion.",
+    "Memoriza el guion de cada hito.",
+    "Haz que tus vendedores digan cada guion de forma idéntica.",
+    "Deja que tu gente se comunique con más efectividad, articulando, observando, escuchando, oyendo, reconociendo, entendiendo e implicando a cada cliente potencial tan a fondo como él lo necesite."
+  ],
+  "entregable_esperado": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso y cada guion dicho de forma idéntica por tus vendedores hasta tu gente comunicándose con cada cliente potencial tan a fondo como lo necesite.",
+  "nodos_previos": [
+    "operar_modelo_gente_destreza_minima"
+  ],
+  "nodos_siguientes": [
+    "medir_sistema_venta_trece_indicadores_benchmark"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres que vender deje de depender del talento individual de tu mejor vendedor y se convierta en un sistema que cualquiera de tu gente pueda operar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Este sistema funciona porque la diferencia entre quienes producen la mayor parte de las ventas y el resto es que unos siguen un sistema y otros no. Al identificar los puntos donde el cliente decide, escribir las palabras exactas que lo llevan a cada uno, preparar los materiales, memorizar los guiones y entregarlos igual cada vez, la venta se vuelve una interacción orquestada y repetible. Y el sexto paso deja a tu gente comunicarse con más efectividad: escuchar, observar y atender a cada cliente tan a fondo como lo necesite.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_19.md",
+          "lineas": "135-153"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene a medias. La primera frase NO inventa: justo antes de las líneas citadas el libro trae el dicho '80 percent of our sales are produced by 20 percent of our people' y afirma sin matiz que la diferencia es que el 20 por ciento usa un sistema (cap_19, líneas 127-135), así que esa es la razón que el libro da y se queda. Lo inventado es el mecanismo 'como el guion ya resuelve qué decir, tu gente queda libre'; el paso 6 solo dice 'Leaving your people to communicate more effectively'. La propuesta del lector quita la única razón que el libro da, así que se corrige solo la última frase.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar los seis pasos principales que el libro enumera para un sistema de venta",
+      "texto_nuevo": "Aplicar los seis pasos principales de un sistema de venta",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro enumera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica los Benchmarks especificos, o puntos de decision del consumidor, en tu proceso de venta.",
+      "texto_nuevo": "Identifica los hitos específicos, o puntos de decisión del consumidor, en tu proceso de venta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Benchmarks"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe literalmente, como el guion de una obra de teatro, las palabras que te van a llevar a cada Benchmark con exito.",
+      "texto_nuevo": "Escribe literalmente, como el guion de una obra de teatro, las palabras que te van a llevar a cada hito con éxito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Benchmark"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Memoriza el guion de cada Benchmark.",
+      "texto_nuevo": "Memoriza el guion de cada hito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Benchmark"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entrega cada guion de forma identica a traves de tus vendedores.",
+      "texto_nuevo": "Entrega cada guion de forma idéntica a través de tus vendedores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja que tu gente se comunique con mas efectividad, articulando, observando, escuchando, oyendo, reconociendo, entendiendo e implicando a cada prospecto tan a fondo como el lo necesite.",
+      "texto_nuevo": "Deja que tu gente se comunique con más efectividad, articulando, observando, escuchando, oyendo, reconociendo, entendiendo e implicando a cada prospecto tan a fondo como él lo necesite.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_seis_pasos_sistema_venta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema de venta con sus seis pasos completos, desde la identificacion de los Benchmarks del proceso hasta la entrega del guion por tus vendedores de forma identica cada vez.",
+      "texto_nuevo": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso hasta la entrega del guion por tus vendedores de forma idéntica cada vez.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Benchmarks"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aplicar_seis_pasos_sistema_venta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso hasta la entrega del guion por tus vendedores de forma idéntica cada vez.",
+      "texto_nuevo": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso y la entrega idéntica de cada guion por tus vendedores hasta tu gente comunicándose con cada prospecto tan a fondo como lo necesite.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Decía 'seis pasos completos' pero cerraba el recorrido en el quinto (la entrega del guion); el sexto, dejar que tu gente se comunique a fondo con cada prospecto, quedaba fuera."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decía 'seis pasos completos' pero cerraba el recorrido en el quinto (la entrega del guion); el sexto, dejar que tu gente se comunique a fondo con cada prospecto, quedaba fuera.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-aplicar_seis_pasos_sistema_venta-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja que tu gente se comunique con más efectividad, articulando, observando, escuchando, oyendo, reconociendo, entendiendo e implicando a cada prospecto tan a fondo como él lo necesite.",
+      "texto_nuevo": "Deja que tu gente se comunique con más efectividad, articulando, observando, escuchando, oyendo, reconociendo, entendiendo e implicando a cada cliente potencial tan a fondo como él lo necesite.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cada prospecto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Prospecto' por cliente potencial es calco de 'prospect'; en español general un prospecto es un folleto.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-aplicar_seis_pasos_sistema_venta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso y la entrega idéntica de cada guion por tus vendedores hasta tu gente comunicándose con cada prospecto tan a fondo como lo necesite.",
+      "texto_nuevo": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso y la entrega idéntica de cada guion por tus vendedores hasta tu gente comunicándose con cada cliente potencial tan a fondo como lo necesite.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cada prospecto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): El mismo calco de 'prospect'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-aplicar_seis_pasos_sistema_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Este sistema funciona porque la diferencia entre quienes producen la mayor parte de las ventas y el resto es que unos siguen un sistema y otros no. Al identificar los puntos donde el cliente decide, escribir las palabras exactas que lo llevan a cada uno, preparar los materiales, memorizar los guiones y entregarlos igual cada vez, la venta se vuelve una interacción orquestada y repetible. Y el sexto paso deja a tu gente comunicarse con más efectividad: escuchar, observar y atender a cada cliente tan a fondo como lo necesite.",
+      "texto_nuevo": "Este sistema funciona porque la diferencia entre quienes producen la mayor parte de las ventas y el resto es que unos siguen un sistema y otros no. Al identificar los puntos donde el cliente decide, escribir las palabras exactas que lo llevan a cada uno, preparar los materiales, memorizar los guiones y decirlos igual cada vez, la venta se vuelve una interacción orquestada y repetible. Y el sexto paso deja a tu gente comunicarse con más efectividad: escuchar, observar y atender a cada cliente tan a fondo como lo necesite.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "entregarlos igual cada vez"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Entregar\" un guion calca \"delivery of each script\" (gerber cap_19 l.151); un guion se dice.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-aplicar_seis_pasos_sistema_venta-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entrega cada guion de forma idéntica a través de tus vendedores.",
+      "texto_nuevo": "Haz que tus vendedores digan cada guion de forma idéntica.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Entrega cada guion de forma idéntica a través de tus vendedores."
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Entregar un guion a través de tus vendedores\" calca \"the delivery of each script by your salespeople\" (gerber cap_19 l.151); lo que se pide es que lo digan igual.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-aplicar_seis_pasos_sistema_venta-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso y la entrega idéntica de cada guion por tus vendedores hasta tu gente comunicándose con cada cliente potencial tan a fondo como lo necesite.",
+      "texto_nuevo": "Un sistema de venta con sus seis pasos completos, desde la identificación de los hitos del proceso y cada guion dicho de forma idéntica por tus vendedores hasta tu gente comunicándose con cada cliente potencial tan a fondo como lo necesite.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "la entrega idéntica de cada guion por tus vendedores"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Entrega de cada guion\" calca \"delivery of each script\" (gerber cap_19 l.151).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Sigue los Seis Pasos de Venta"
+}

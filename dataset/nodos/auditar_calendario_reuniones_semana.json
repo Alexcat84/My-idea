@@ -1,0 +1,287 @@
+{
+  "node_id": "auditar_calendario_reuniones_semana",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Auditar tu calendario durante una semana y limpiar las reuniones que no te necesitan",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Si vas atrasado en todo pese a trabajar de noche y los fines de semana, el problema puede estar en un calendario lleno de reuniones que no te necesitan. Mide antes de cortar: durante una semana anota cada reunión y responde si participaste, si fuiste clave para el resultado y si sacaste algo valioso de estar allí. Sé honesto con los motivos reales, como querer estar al tanto o sentirte obligado por la invitación, y depura; si quieres seguir informado, pide las notas. Tu tiempo es finito, y si confías en que el resultado correcto ocurrirá sin ti, no necesitas estar.",
+  "notas_extraccion": "Es la unica pieza del capitulo que mide antes de actuar, y por eso los dos actos van en el mismo nodo: la limpieza de calendario es lo que el libro hace como resultado de la auditoria, no un procedimiento aparte. El inventario propio que la hace procedimentable son las tres preguntas, nombradas una a una, y el periodo de una semana, que tambien lo pone el libro. La cifra del 40 por ciento es de la autora sobre si misma y va en el paso como dato suyo y en atribuciones, no como umbral que deba salirle a nadie. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se declina una invitacion sin ofender, ni cada cuanto se repite la auditoria, ni que hacer cuando la reunion que sobra es de tu jefe.",
+  "pasos_accionables": [
+    "Hazte esta pregunta: ¿cómo tienes el calendario? Y después: ¿necesitas estar en todas esas reuniones?",
+    "Durante una semana, deja una nota de cada reunión a la que asistes y de cómo te sentiste al final de ella.",
+    "Responde en esa nota tres preguntas. La primera: ¿participé?",
+    "La segunda: ¿fui clave para el resultado?",
+    "La tercera: ¿saqué algo con sustancia de estar allí en persona?",
+    "Al final de la semana, cuenta en cuántas la respuesta fue no. En un caso real salió que no en alrededor del 40 por ciento de las reuniones.",
+    "Sé honesto sobre los motivos reales por los que estabas en ellas, como querer sentirte al tanto, o estar en la lista de invitados y sentirte obligado a aparecer.",
+    "Purga de tu calendario las reuniones a las que no estabas contribuyendo de verdad.",
+    "Cuando quieras seguir al tanto de decisiones que te afectan, pide a quien organiza la reunión que te incluya en las notas de antes y de después.",
+    "Guarda el tiempo que recuperas como un dragón guarda su tesoro: tu tiempo como directivo es precioso y finito, y si confías en que los resultados correctos van a ocurrir sin ti, entonces no necesitas estar allí."
+  ],
+  "entregable_esperado": "Una nota por cada reunión de una semana con la respuesta a las tres preguntas, y un calendario purgado de las reuniones a las que no aportabas nada.",
+  "nodos_previos": [
+    "subir_productividad_gerencial_tres_vias"
+  ],
+  "nodos_siguientes": [
+    "repartir_semana_cuarenta_horas_jefe",
+    "avisar_organizador_reunion_prescindible",
+    "pelear_proliferacion_reuniones_bloquear_ejecucion"
+  ],
+  "condiciones_activacion": [
+    "Cuando te encuentras trabajando de noche y los fines de semana, con el calendario lleno de reuniones seguidas, y no entiendes por qué vas atrasado en todo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Si vas atrasado en todo pese a trabajar de noche y los fines de semana, el problema puede estar en un calendario lleno de reuniones que no te necesitan. Mide antes de cortar: durante una semana anota cada reunión y responde si participaste, si fuiste clave para el resultado y si sacaste algo valioso de estar allí. Sé honesto con los motivos reales, como querer estar al tanto o sentirte obligado por la invitación, y depura; si quieres seguir informado, pide las notas. Tu tiempo es finito, y si confías en que el resultado correcto ocurrirá sin ti, no necesitas estar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "268-281"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: 'el problema suele estar en un calendario lleno de reuniones que no te necesitan' generaliza el caso propio de la línea 269 (la encuesta de la línea 277 habla de reuniones que impiden trabajar, no de que ese sea el problema habitual de quien va atrasado), y 'si el resultado correcto ocurrirá sin ti' perdía el 'if you trust' de la línea 281. La propuesta dice 'puede estar' y devuelve 'si confías'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)"
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazte la pregunta que le hizo su marido a la autora cuando ella le dijo que aquello no era sostenible: como tienes el calendario? Y despues: necesitas estar en todas ellas?",
+      "texto_nuevo": "Hazte esta pregunta: ¿cómo tienes el calendario? Y después: ¿necesitas estar en todas esas reuniones?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la pregunta que le hizo su marido a la autora cuando ella le dijo que aquello no era sostenible"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Durante una semana, deja una nota de cada reunion a la que asistes y de como te sentiste al final de ella.",
+      "texto_nuevo": "Durante una semana, deja una nota de cada reunión a la que asistes y de cómo te sentiste al final de ella.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Responde en esa nota las tres preguntas que el libro usa. La primera: participe?",
+      "texto_nuevo": "Responde en esa nota tres preguntas. La primera: ¿participé?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las tres preguntas que el libro usa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La segunda: fui critico para el resultado?",
+      "texto_nuevo": "La segunda: ¿fui crítico para el resultado?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La tercera: saque algo con sustancia de estar alli en persona?",
+      "texto_nuevo": "La tercera: ¿saqué algo con sustancia de estar allí en persona?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al final de la semana, cuenta en cuantas la respuesta fue no. A ella le salio que no en alrededor del 40 por ciento de sus reuniones.",
+      "texto_nuevo": "Al final de la semana, cuenta en cuántas la respuesta fue no. En un caso real salió que no en alrededor del 40 por ciento de las reuniones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "A ella le salio",
+          "sus reuniones"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Se honesto sobre los motivos reales por los que estabas en ellas. Ella reconoce dos: querer sentirse al tanto, y estar en la lista de invitados y sentirse obligada a aparecer.",
+      "texto_nuevo": "Sé honesto sobre los motivos reales por los que estabas en ellas, como querer sentirte al tanto, o estar en la lista de invitados y sentirte obligado a aparecer.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Ella reconoce dos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieras seguir al tanto de decisiones que te afectan, pide a quien organiza la reunion que te incluya en las notas de antes y de despues.",
+      "texto_nuevo": "Cuando quieras seguir al tanto de decisiones que te afectan, pide a quien organiza la reunión que te incluya en las notas de antes y de después.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Guarda el tiempo que recuperas como un dragon guarda su tesoro: tu tiempo como directivo es precioso y finito, y si confias en que los resultados correctos van a ocurrir sin ti, entonces no necesitas estar alli.",
+      "texto_nuevo": "Guarda el tiempo que recuperas como un dragón guarda su tesoro: tu tiempo como directivo es precioso y finito, y si confías en que los resultados correctos van a ocurrir sin ti, entonces no necesitas estar allí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una nota por cada reunion de una semana con la respuesta a las tres preguntas, y un calendario purgado de las reuniones a las que no aportabas nada.",
+      "texto_nuevo": "Una nota por cada reunión de una semana con la respuesta a las tres preguntas, y un calendario purgado de las reuniones a las que no aportabas nada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-auditar_calendario_reuniones_semana-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te encuentras trabajando de noche y los fines de semana, con el calendario lleno de reuniones seguidas, y no entiendes por que vas atrasado en todo.",
+      "texto_nuevo": "Cuando te encuentras trabajando de noche y los fines de semana, con el calendario lleno de reuniones seguidas, y no entiendes por qué vas atrasado en todo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-auditar_calendario_reuniones_semana-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "La segunda: ¿fui crítico para el resultado?",
+      "texto_nuevo": "La segunda: ¿fui clave para el resultado?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "crítico"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Crítico\" por \"critical\" (decisivo) es calco; el resumen del nodo ya dice \"clave\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Audita tu Calendario de Reuniones",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -4,10 +4,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 
 ## Resumen
 
-- Nodos vivos: 3169
+- Nodos vivos: 3634
 - Con mas de un libro (fusiones entre libros distintos): 54
 - Nodos que absorbieron a otros: 722 (1165 ids absorbidos)
-- Fuentes distintas: 53
+- Fuentes distintas: 59
 - Ids absorbidos sin fuente registrada en ningun sitio (referencias que nunca fueron nodo): 333
 
 ## Nodos con mas de un libro
@@ -75,9 +75,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 |---|---:|---|
 | ab_testing_optimizacion | 1 | The Startup Owner's Manual - Blank, Steve |
 | abandonar_arreglos_rapidos | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| abastecer_flujo_candidatos | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | abolir_inspeccion_masiva | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| abordar_cinco_efes_venta | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| abrazar_incomodidad_arrancar_critica_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| abrazar_incomodidad_silencio_contar_seis | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | abrazar_la_incomodidad | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | abrazar_los_bordes_de_la_conciencia | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
+| abrir_debate_humor_explicar_proposito | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| abrir_discusion_notas_adhesivas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | acceptance_control | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | accident_proneness_fallacy | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | accidentes_individuales_vs_organizacionales | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -93,6 +99,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | aceptacion_de_fallas_como_inevitables | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | aceptar_la_imperfeccion_del_diseno | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | acolchado_segun_forma | 1 | Guia de empaque para envios (FedEx) |
+| acompaniar_mejores_equipo_socio | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| acordar_plan_conjunto_jefe | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | acquisicion_viral_engineering | 1 | The Startup Owner's Manual - Blank, Steve |
 | acreditacion_organismos_certificadores | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | actitud_de_experimentacion_organizacional | 1 | Change by Design, Revised and U - Tim Brown |
@@ -109,9 +117,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | actualizacion_posiciones_existentes | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | actualizar_business_model_canvas_tuneup | 1 | The Startup Owner's Manual - Blank, Steve |
 | actualizar_modelo_de_negocio_pivot_o_proceed | 1 | The Startup Owner's Manual - Blank, Steve |
+| actuar_conducta_contraria_valores | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | acuerdo_de_co_venta_y_votacion | 1 | Venture Deals - Brad Feld |
 | acuerdo_representante_servicio | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | acumulacion_capital_previo_fundacion | 1 | The Founder's Dilemmas - Wasserman, Noam |
+| acumular_asuntos_importantes_fichero_espera | 1 | High Output Management - Andrew S. Grove |
 | ad_tracking | 1 | Value Proposition Design |
 | adaptabilidad_regional_concepto | 1 | Franchise Your Business - Mark Siebert |
 | adaptacion_14_puntos_servicio_medico | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -122,8 +132,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | adaptaciones_procedimentales | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | adaptaciones_sectoriales_iso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | adaptar_empaque_segun_tipo_de_articulo | 1 | Guia visual de empaque |
+| adaptar_escucha_cultura_ajena | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | adherence_loop_diseno_temporal | 1 | Change by Design, Revised and U - Tim Brown |
 | administracion_de_inspeccion | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| admitir_errores_areas_mejora_propias | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| admitir_pronto_mal_desempenio_cuatro_razones | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | adn_de_innovacion_organizacional | 1 | Change by Design, Revised and U - Tim Brown |
 | adopcion_liderazgo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | adopciones_industria_especifica_iso9000 | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -133,10 +146,16 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | advocacy_customer_journey | 1 | Never Lose a Customer Again - Joey Coleman |
 | afinar_frente_difuso_innovacion | 1 | Winning at New Products - Robert G. Cooper |
 | afinar_motor_crecimiento | 1 | The Lean Startup - Eric Ries |
+| agendar_cuidados_propios_cumplirlos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| agrupar_interrupciones_subordinados_reuniones_regulares | 1 | High Output Management - Andrew S. Grove |
+| agrupar_tareas_semejantes_aprovechar_preparacion | 1 | High Output Management - Andrew S. Grove |
 | ai_como_coach_personalizado | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
 | aim_of_leadership | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| ajustar_franqueza_oido_oyente | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| ajustar_plan_fuerzas_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | ajuste_iterativo_plan_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | alcance_profundo_cadena_suministro | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| alentar_asuntos_corazon_vigilar_final_reunion | 1 | High Output Management - Andrew S. Grove |
 | alfabetizacion_en_materiales_maliciosos | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | alianzas_cross_industry | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | alineacion_bd_metricas_core | 1 | Traction - Gabriel Weinberg |
@@ -148,6 +167,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | alineacion_incentivos_desempeno | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | alineacion_stakeholders_ma | 1 | Venture Deals - Brad Feld |
 | alineacion_ti_negocio | 1 | Business Model Generation - Osterwalder, Alexander |
+| alinear_comunicar_tarjeta_puntuacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| alinear_equipo_proposito_comun | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| alinear_prioridades_reporte_directivo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | almacenamiento_liquidos_inflamables | 1 | SMALL_BUSINESS |
 | alternativa_agency_relationship | 1 | Franchise Your Business - Mark Siebert |
 | alternativa_business_opportunity_licensing | 1 | Franchise Your Business - Mark Siebert |
@@ -213,26 +235,41 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | antidilution_carve_outs | 1 | Venture Deals - Brad Feld |
 | antidilution_weighted_average_broad_narrow | 1 | Venture Deals - Brad Feld |
 | antigoals_framework | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
+| anunciar_decision_inesperada_reconvocar_reunion | 1 | High Output Management - Andrew S. Grove |
 | apalancamiento_de_competencias_centrales | 1 | Winning at New Products - Robert G. Cooper |
 | apalancamiento_personal_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | apertura_llamada_venta_grande | 1 | SPIN Selling - Neil Rackham |
 | aplica_modelo_ackerman | 1 | Chris Voss, Rompe la barrera del no |
+| aplicar_cinco_pasos_proceso_contratacion | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| aplicar_consecuencias_nota_apoyar_fuerzas_persona | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| aplicar_ejercicio_codigo_genetico_control | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
+| aplicar_metodo_ghsmart_contratacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| aplicar_metodo_promocion_sucesion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| aplicar_ocho_reglas_juego_personas | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | aplicar_regla_fija_de_colchon_de_relleno | 1 | Requisitos de empaque de los couriers |
+| aplicar_seis_pasos_sistema_venta | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| aplicar_tacticas_maestras_entrevista | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | apoyar_una_causa | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | aprender_desde_el_amor_empatia | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | aprender_haciendo_dfe | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| aprender_resultados_vencer_dos_presiones | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | aprendizaje_institucionalizado_benchmarking | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | aprendizaje_organizacional_desde_incidentes | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | aprendizaje_validado | 1 | The Lean Startup - Eric Ries |
 | aprobacion_alta_direccion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | arbol_decision_culpabilidad | 1 | Managing the Risks of Organizat - Reason, J. T_ |
+| archivar_indicadores_resolver_problemas | 1 | High Output Management - Andrew S. Grove |
+| armar_plan_anual_crecimiento_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | arquetipos_de_cliente | 2 | The Startup Owner's Manual - Blank, Steve<br>The Lean Startup - Eric Ries |
 | arquitectura_tecnica_modular | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | arrendamiento_verde | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | arte_de_las_finanzas | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | articular_etica_valores | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| asegurar_opinion_llega_persona | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | asignacion_agil_de_recursos | 1 | Change by Design, Revised and U - Tim Brown |
 | asignacion_recursos_en_gates | 1 | Winning at New Products - Robert G. Cooper |
+| asignar_entrevistas_enfocadas_equipo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| asignar_responsable_unico_evolucion_planificada | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | asistencia_agencias_minoritarias_mbda | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | asistencia_apertura_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | asistencia_embajadas_consulados_comerciales | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -246,12 +283,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | ata_el_pago_al_cumplimiento_real_del_servicio | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | atacar_mercados_establecidos_con_problema | 1 | Winning at New Products - Robert G. Cooper |
 | atencion_franquiciados_top | 1 | Franchise Your Business - Mark Siebert |
+| atender_modo_supervivencia_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | atestiguar_sin_prejuicios | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | atribucion_retrospectiva_del_error | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | atributos_liderazgo_ceo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | atributos_mercado_chopra_meindl | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | audacia_del_cero | 1 | The Lean Startup - Eric Ries |
 | audio_analysis_framework | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| auditar_calendario_reuniones_semana | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| auditar_formacion_premios_ultima_fila | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | auditoria_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | auditoria_calidad_proveedores | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | auditoria_de_posicionamiento | 1 | The Startup Owner's Manual - Blank, Steve |
@@ -287,9 +327,13 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | autorizar_sistema | 1 | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide |
 | autorregulacion_seguridad | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | autoservicio_y_autosanacion_del_producto | 1 | Never Lose a Customer Again - Joey Coleman |
+| avisar_organizador_reunion_prescindible | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| avisar_pronto_incumplimiento_expectativas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| ayudar_personas_jugar_fortalezas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | background_startup_vs_corporativo | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | backlog_evolutivo_y_cronograma_flexible | 1 | Winning at New Products - Robert G. Cooper |
 | bad_apple_theory | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| bajar_detalle_organizacion_fuente_hechos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | balance_estructura_libertad_aprendizaje | 1 | The Art of Thought - Wallas, Graham |
 | barreras_comerciales_no_arancelarias | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | barreras_entrada_competencia | 1 | Franchise Your Business - Mark Siebert |
@@ -309,6 +353,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | biomimicry_conexiones_naturales | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | biomimicry_diseno | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | bioremediacion_living_machines | 1 | Cradle to Cradle - Michael Braungart |
+| bloquear_tiempo_pensar_calendario | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | blue_ocean_four_actions | 1 | Business Model Generation - Osterwalder, Alexander |
 | board_control_etapas_tardias | 1 | Venture Deals - Brad Feld |
 | board_gridlock_y_directores_independientes | 1 | The Founder's Dilemmas - Wasserman, Noam |
@@ -336,7 +381,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | burn_rate_por_etapa | 1 | The Startup Owner's Manual - Blank, Steve |
 | burocracia_de_seguridad | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | busca_el_riesgo_antes_de_que_te_busque | 1 | Edwards et al., Managing Project Risks |
+| buscar_actividad_alta_palanca_tres_vias | 1 | High Output Management - Andrew S. Grove |
 | buscar_armonia_diseno | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
+| buscar_recomendaciones_confianza | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| buscar_regularidad_bloques_iguales_trabajo_mando | 1 | High Output Management - Andrew S. Grove |
 | business_excellence_models | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | business_materiality_assessment | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | business_model_canvas_scorecard | 1 | The Startup Owner's Manual - Blank, Steve |
@@ -352,6 +400,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | cadena_suministro_respuesta_desastres | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | cadencia_seguimiento_prospectos | 1 | Franchise Your Business - Mark Siebert |
 | calcula_costo_de_mantener_contra_costo_de_reponer | 1 | Max Muller, Essentials of Inventory Management |
+| calcular_embudo_reclutamiento_propio | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | calcular_peso_dimensional_antes_cotizar | 1 | Guia de empaque para envios (FedEx) |
 | calculo_contenido_valor_regional | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | calculo_de_aranceles_importacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -361,6 +410,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | calculo_roi_franquiciado_2 | 1 | Franchise Your Business - Mark Siebert |
 | calibra_tu_propio_ojo | 1 | Hubbard, The Failure of Risk Management |
 | calibracion_intensidad_celebracion | 1 | Never Lose a Customer Again - Joey Coleman |
+| calibrar_ascensos_evitar_politica | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| calibrar_decision_despido_documentarla | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| calibrar_normalidad_preguntas_jefe | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| calibrar_notas_reunion_jefes_pares | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| calibrar_vision_propia_opinion_ajena | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | calidad_de_diseno_vs_produccion | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | calidad_de_ejecucion_proceso_innovacion | 1 | Winning at New Products - Robert G. Cooper |
 | calidad_del_servicio | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -369,12 +423,20 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | calificacion_productos_procesos | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | calificacion_prospectos_award | 1 | Franchise Your Business - Mark Siebert |
 | calificacion_prospectos_marketing | 1 | Franchise Your Business - Mark Siebert |
+| calificar_tarjeta_puntuacion_habilidad_voluntad | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | call_to_action_cta | 1 | Value Proposition Design |
+| cambiar_forma_trabajar_conservar_plantilla | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
+| cambiar_formato_reunion_favorecer_participacion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| cambiar_mentalidad_fija_crecimiento | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| cambiar_posicion_hechos_explicar_cambio | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| cambiar_potencial_trayectoria_crecimiento | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| cambiar_saludo_cliente_dos_ramas | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | cambio_comportamiento_consumidor | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | canales_comunicacion_estrategicos | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | canales_de_traccion_19 | 1 | Traction - Gabriel Weinberg |
 | canales_distribucion | 1 | Business Model Generation - Osterwalder, Alexander |
 | canales_link_sharing | 1 | Traction - Gabriel Weinberg |
+| canalizar_interrupciones_cartel_hora_oficina | 1 | High Output Management - Andrew S. Grove |
 | cap_table_basico | 1 | Venture Deals - Brad Feld |
 | capacidad_de_proceso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | capacidad_de_proceso_2 | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -401,6 +463,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | carta_de_credito_letter_of_credit | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | carta_de_intencion_loi | 1 | Venture Deals - Brad Feld |
 | carta_proyecto_calidad | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| casar_flujo_fabricacion_flujo_ventas | 1 | High Output Management - Andrew S. Grove |
 | case_study_sistema_servicio_completo | 1 | The field guide to human-centered design |
 | cash_burn_calculation | 1 | The Startup Owner's Manual - Blank, Steve |
 | cash_in_advance | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -415,14 +478,22 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | causas_comunes_vs_especiales | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | causas_especiales_y_comunes_variacion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | caza_las_oportunidades_no_solo_amenazas | 1 | Edwards et al., Managing Project Risks |
+| ceder_autoridad_unilateral_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| ceder_control_reforzar_competencia_claridad | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | celebracion_automatizada_de_hitos | 1 | Never Lose a Customer Again - Joey Coleman |
 | celebracion_hitos_cliente | 1 | Never Lose a Customer Again - Joey Coleman |
+| celebrar_aceptacion_primer_dia | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| celebrar_logros_planificar_cambio | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| celebrar_pequenias_victorias | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | centaur_cyborg_ia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
+| centrar_debate_ideas_fuera_egos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | centro_asesoria_advocacy_center | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | ceo_de_guerra_vs_paz | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | ceo_equity_premium | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | ceo_puente_interino | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | cero_defectos | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
+| cerrar_brecha_dos_preguntas_estrategia | 1 | High Output Management - Andrew S. Grove |
+| cerrar_reunion_pasos_siguientes | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | certificacion_belts_six_sigma | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | certificacion_cradle_to_cradle | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | certificacion_de_proveedores | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -485,6 +556,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | clasificacion_sistemas_por_nivel_seguridad | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | clasificacion_tipos_activos | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | clasificar_tipo_paquete | 1 | ISTA 3P, Protocolo de ensayo de empaque para paqueteria |
+| clasificar_trabajo_proceso_montaje_prueba | 1 | High Output Management - Andrew S. Grove |
 | clausula_antidesviacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | clausula_deber_general_osha | 1 | SMALL_BUSINESS |
 | clausula_escape_contrato_representante | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -520,8 +592,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | company_building | 1 | The Startup Owner's Manual - Blank, Steve |
 | comparacion_metodos_inspeccion | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | comparacion_metodos_inversion | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
+| comparar_motivacion_resultado_papel | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | compartir_datos_cadena_suministro | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | compartir_lecciones_aprendidas | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| compartir_logica_mostrar_razonamiento | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| compartir_opinion_conductual_regularidad | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | compatibilidad_de_visualizacion | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | compatibilidad_motivaciones_riqueza_control | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | compensacion_de_riesgo | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -540,6 +615,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | comprender_ia_como_tecnologia_de_proposito_general | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
 | comprension_brechas_desempeno | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | comprension_capacidades_limitaciones_ia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
+| comprobar_confianza_persona_cargo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| comprobar_criticas_hombre_mujeres_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| comprobar_equipo_ejecuta_bien | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| comprobar_gusto_trato_personas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| comprobar_opinion_produce_mejora | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | compromiso_cliente_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | compromiso_gerencial_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | compromiso_linea_tiempo_cliente | 1 | Traction - Gabriel Weinberg |
@@ -557,6 +637,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | comunicacion_reporte_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | comunicacion_transparente_en_crisis | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | comunicar_politicas_organizacionales | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| comunicar_valores_diez_formas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| comunicar_vision_jugadores_organizacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | comunidad_como_activo_estrategico | 1 | Traction - Gabriel Weinberg |
 | concepcion_hormica_del_pensamiento | 1 | The Art of Thought - Wallas, Graham |
 | concepto_cuatro_pilares_programa_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
@@ -583,6 +665,12 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | condiciones_latentes_organizacionales | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | condiciones_latentes_riesgo_universal | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | conditions_precedent_financing | 1 | Venture Deals - Brad Feld |
+| conducir_entrevista_cronologica_trayectoria | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| conducir_etapas_modelo_ideal_decision | 1 | High Output Management - Andrew S. Grove |
+| conducir_llamadas_referencia | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| conducir_reunion_equipo_agenda_tres_bloques | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| conducir_reunion_individual_telefono_distancia | 1 | High Output Management - Andrew S. Grove |
+| conducir_reuniones_salto_nivel_diez_reglas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | conexion_comportamiento_proceso | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | conexion_flujos_energia_natural | 1 | Cradle to Cradle - Michael Braungart |
 | conexion_personal_emocional | 1 | Never Lose a Customer Again - Joey Coleman |
@@ -593,6 +681,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | conformidad_especificacion_aptitud_uso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | confusion_de_modos_automatizacion | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | conoce_insumos_vitales | 1 | Max Muller, Essentials of Inventory Management |
+| conocer_fuerzas_valores_sesgos_propios | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | conocer_limites_peso_tamano_courier | 1 | Guia visual de empaque |
 | conocimiento_detallado_y_justicia | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | conocimiento_local_colaboracion | 1 | Change by Design, Revised and U - Tim Brown |
@@ -625,8 +714,17 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | construccion_timeline_resolucion | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | construccion_tribu_de_marca | 1 | Never Lose a Customer Again - Joey Coleman |
 | construccion_verde_nueva | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| construir_apoyo_equipo_directivo_metodo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | construir_capacidad_evaluacion_ambiental | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| construir_confianza_equipo_tiempo_solas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| construir_empresa_plantilla_vision_diaria | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| construir_equipo_perspectivas_diversas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| construir_estrategia_gente_cuatro_componentes | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| construir_flujo_produccion_paso_limitante | 1 | High Output Management - Andrew S. Grove |
 | construir_fortalezas_verdes | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| construir_grafico_escalonado_pronosticos | 1 | High Output Management - Andrew S. Grove |
+| construir_indicador_linealidad_alerta_temprana | 1 | High Output Management - Andrew S. Grove |
+| construir_indicador_tendencia_patron | 1 | High Output Management - Andrew S. Grove |
 | construir_mvp_baja_fidelidad | 1 | The Startup Owner's Manual - Blank, Steve |
 | consultores_comercio_internacional | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | consumidor_como_eje_de_produccion | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -637,19 +735,29 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | contabilidad_innovacion | 1 | The Lean Startup - Eric Ries |
 | contabilidad_innovacion_largo_plazo | 1 | The Lean Startup - Eric Ries |
 | contabilidad_innovacion_pivote | 1 | The Lean Startup - Eric Ries |
+| contactar_despedido_mes_despues | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | contacto_con_el_cliente | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | contacto_evaluacion_representantes_extranjeros | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
+| contar_cuatro_historias_propias_ver_hueco_intencion | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| contar_firmas_cadena_tramite_parado | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
+| contar_historias_propias_explicar_franqueza_radical | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | content_marketing_blog | 1 | Traction - Gabriel Weinberg |
+| contestar_dos_preguntas_direccion_objetivos | 1 | High Output Management - Andrew S. Grove |
 | contextualizacion_datos_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | contract_close_out | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | contractor_status_report | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | contrarrestar_argumento_mercado | 1 | Venture Deals - Brad Feld |
+| contrastar_cultura_actual_aspirada | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| contrastar_motivos_querer_gestionar | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | contratacion_acelerada_hipercrecimiento | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | contratacion_experiencia_vs_potencial | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | contratar_abogado_franquicias | 1 | Franchise Your Business - Mark Siebert |
 | contratar_ambicion_correcta | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | contratar_cerrador_de_ventas | 1 | The Startup Owner's Manual - Blank, Steve |
+| contratar_investigadores_reclutamiento | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| contratar_personas_capaces_mas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | contratar_por_fortaleza | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| contratar_reclutadores_externos | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | contratar_vendedor_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | contratos_de_servicio_garantia | 1 | Businessperson's Guide to Federal Warranty Law |
 | contratos_desempeno_energetico_esco | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -672,10 +780,13 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | control_responsabilidad_manual | 1 | Franchise Your Business - Mark Siebert |
 | controles_no_rutinarias_emergencias | 1 | OSHA3886 |
 | conversacion_emocional_postcompra | 1 | Never Lose a Customer Again - Joey Coleman |
+| conversar_historia_vida_descubrir_motivadores | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| conversar_suenios_cruzar_habilidades | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | conversion_datos_co2e | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | conversion_rights | 1 | Venture Deals - Brad Feld |
 | conversion_venta_empresa | 1 | Venture Deals - Brad Feld |
 | convertible_debt_fundamentos | 1 | Venture Deals - Brad Feld |
+| convertir_cualquiera_mentor | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | convertir_necesidad_en_demanda | 1 | Change by Design, Revised and U - Tim Brown |
 | convertir_unknown_unknowns_en_known_unknowns | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | coordinacion_colaboracion_cadena_suministro | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
@@ -688,6 +799,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | coraje_para_pivotar | 1 | The Lean Startup - Eric Ries |
 | correlacion_cero_muestra_remanente | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | correr_hacia_el_riesgo | 1 | DeMarco y Lister, Waltzing with Bears |
+| correr_semana_arreglo_averias_gestion | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| cortar_discusion_libre_momento_justo | 1 | High Output Management - Andrew S. Grove |
+| cortar_efecto_divisor_persona_brillante | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | coshh_procedimiento_rolling | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | cost_management_plan | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | costeo_ciclo_de_vida | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -712,13 +826,21 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | creacion_option_pool | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | creacion_roles_c_level | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | creacion_valor_cliente | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| crear_cultura_escucha_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| crear_espacio_seguro_madurar_ideas_nuevas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | crear_infraestructura_producto | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| crear_manuales_jugadas_repetibles | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| crear_obligacion_disentir_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | crear_pitch | 1 | The field guide to human-centered design |
+| crear_plan_creible_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| crear_sistema_captura_seguimiento_candidatos | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| crear_tarjeta_puntuacion_puesto | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | create_a_concept | 1 | The field guide to human-centered design |
 | crecimiento_desde_franquiciados_existentes | 1 | Franchise Your Business - Mark Siebert |
 | crecimiento_ingresos_verdes | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | cribado_de_datos | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | cribado_prueba_barata | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| cribar_candidatos_entrevista_telefonica | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | criterio_bazooka_peashooter | 1 | Franchise Your Business - Mark Siebert |
 | criterios_baldrige_excelencia | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | criterios_de_exito_gate | 1 | Winning at New Products - Robert G. Cooper |
@@ -734,6 +856,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | critica_ground_truth_investigacion | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | critica_revolucion_industrial | 1 | Cradle to Cradle - Michael Braungart |
 | critical_path | 1 | Traction - Gabriel Weinberg |
+| criticar_trabajo_evitar_desanimo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | cronograma_proyecto | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | crosby_creatividad_gerencial | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | crosby_habilidad_transmision | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
@@ -753,15 +876,21 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | cual_es_tu_mayor_riesgo | 1 | Hubbard, The Failure of Risk Management |
 | cuan_probable_y_cuanto_doleria | 1 | Edwards et al., Managing Project Risks |
 | cuando_el_riesgo_se_vuelve_realidad | 1 | Edwards et al., Managing Project Risks |
+| cuantificar_impacto_innovacion_6_pasos | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | cuanto_sabes_y_cuanto_solo_crees | 1 | Hubbard, The Failure of Risk Management |
 | cuantos_cofundadores_agregar | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | cuatro_caminos_ante_un_riesgo | 1 | Edwards et al., Managing Project Risks |
 | cuatro_etapas_del_pensamiento_creativo | 1 | The Art of Thought - Wallas, Graham |
 | cuatro_etapas_llamada_de_ventas | 1 | SPIN Selling - Neil Rackham |
+| cubrir_indicadores_problemas_reunion_individual | 1 | High Output Management - Andrew S. Grove |
+| cuestionar_historia_irracional_cabeza | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | cuestionar_supuestos_financieros | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | cuestionar_vision_zero | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | cuestionario_autoevaluacion_gerencial_calidad | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | cuidado_con_la_falsa_precision | 1 | Hubbard, The Failure of Risk Management |
+| cuidar_persona_completa_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| cuidarse_agotamiento_centro_rueda | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| cultivar_relacion_talento_largo_plazo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | cultivo_estimulo_emocional_pensamiento_propio | 1 | The Art of Thought - Wallas, Graham |
 | cultura_climatica_innovacion | 1 | Winning at New Products - Robert G. Cooper |
 | cultura_como_mecanismo_descentralizacion | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -826,17 +955,39 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | customer_validation_sell_phase | 1 | The Startup Owner's Manual - Blank, Steve |
 | customs_bonded_warehouses | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | cycle_time | 1 | Value Proposition Design |
+| dar_critica_inmediata_ayuda_tangible | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| dar_elogio_disciplina_igual_critica | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| dar_estabilidad_situacion_emocional | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | dar_forma_politica_climatica | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| dar_guia_acto_seis_consejos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| dar_guia_humilde_tres_tecnicas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| dar_guia_util_cuatro_recordatorios | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| dar_mala_noticia_decision_tomada | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dar_opinion_critica_directa_desapasionada | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dar_opinion_especifica_tarea | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dar_opinion_frecuencia_suficiente | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dar_valor_constante_cuatro_publicos | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | data_integrity_forecasting | 1 | Winning at New Products - Robert G. Cooper |
 | data_transmission_edi_xml | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | deadlines_como_herramienta_convergencia | 1 | Change by Design, Revised and U - Tim Brown |
+| debatir_decidir_asuntos_cultura_evitar_delegar | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | debriefing_participantes | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | decide_criterio_eleccion_proveedor | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | decide_phase_roadmap | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | decide_si_lo_compras_o_lo_haces_tu | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
+| decidir_aceptar_rechazar_material_defectuoso | 1 | High Output Management - Andrew S. Grove |
+| decidir_amistad_subordinado_prueba_revision_dificil | 1 | High Output Management - Andrew S. Grove |
 | decidir_cobro_velocidad_ventana_entrega | 1 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) |
+| decidir_contratacion_final | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| decidir_directivo_no_encaja_papel | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | decidir_empacar_tu_mismo_o_subcontratar | 1 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) |
+| decidir_momento_despedir_persona | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| decidir_nivel_competente_inferior | 1 | High Output Management - Andrew S. Grove |
+| decidir_poner_nota_comunicar_proposito_limites | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| decidir_quien_comunica_cada_cuanto | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | decidir_vender_solo_online_o_tambien_tienda_fisica | 1 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) |
+| decir_no_trabajo_excede_capacidad | 1 | High Output Management - Andrew S. Grove |
+| decir_normas_participacion_voz_alta | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | decision_aptitud_uso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | decision_autofinanciamiento_vs_inversion | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | decision_comunicacion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -863,6 +1014,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | decisiones_de_financiamiento_exportacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | decisiones_por_diseno_no_por_default | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | decisiones_reversibles_irreversibles | 1 | The Startup Owner's Manual - Blank, Steve |
+| declarar_intencion_reemplazar_peticion_permiso | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | deep_dive_workshop | 1 | Change by Design, Revised and U - Tim Brown |
 | defensas_en_profundidad_3 | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | defensas_peligrosas_paradojas | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -886,19 +1038,27 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | definiciones_operacionales_3 | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | definiciones_operacionales_de_calidad | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | definiciones_operacionales_defectos | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| definir_entorno_grupo_clientes_proveedores_competidores | 1 | High Output Management - Andrew S. Grove |
 | definir_limites_huella_carbono | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | definir_meta_a_5_anos_antes_de_franquiciar | 1 | Franchise Your Business - Mark Siebert |
 | definir_metas_smart_de_proyecto | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | definir_mision_organizacional | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | definir_que_cuenta_como_dano_antes_de_probar_empaque | 1 | ISTA 3P, Protocolo de ensayo de empaque para paqueteria |
+| definir_quien_responde_cada_cosa | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| definir_receta_propia_mantenerse_centrado | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| definir_resultados_tarjeta_puntuacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | definir_tesoro_con_perspectiva_temporal | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | definir_tu_propio_pedido_perfecto | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
+| definir_vision_larga_trabajar_atras | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | deja_de_ignorar_el_riesgo | 1 | DeMarco y Lister, Waltzing with Bears |
 | deja_que_el_proveedor_diga_el_precio_primero | 1 | Chris Voss, Rompe la barrera del no |
 | del_caos_al_metodo_madurez_de_riesgo | 1 | Edwards et al., Managing Project Risks |
+| delegar_tarea_base_comun_seguimiento | 1 | High Output Management - Andrew S. Grove |
+| delimitar_franqueza_radical_cinco_noes | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | demand_curve_pricing | 1 | The Startup Owner's Manual - Blank, Steve |
 | demo_prototipo_inversion | 1 | Venture Deals - Brad Feld |
 | democratizacion_de_herramientas_creativas | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
+| demostrar_apertura_visiones_distintas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | dependency_analysis | 1 | The Startup Owner's Manual - Blank, Steve |
 | depreciacion_y_amortizacion | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | depura_proveedores_sin_respuesta | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
@@ -913,10 +1073,12 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | desarrollar_caracteristicas_proceso_2 | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | desarrollar_caracteristicas_producto | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | desarrollar_controles_transferir_operaciones | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| desarrollar_estrategia_busqueda_candidatos | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | desarrollar_estrategias_largo_plazo | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | desarrollar_manual_operaciones | 1 | Franchise Your Business - Mark Siebert |
 | desarrollar_metas_anuales | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | desarrollar_posicionamiento_empresa | 1 | The Startup Owner's Manual - Blank, Steve |
+| desarrollar_primer_curso_entrenamiento | 1 | High Output Management - Andrew S. Grove |
 | desarrollo_attack_plans | 1 | Winning at New Products - Robert G. Cooper |
 | desarrollo_capacidades_expertos_calidad | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | desarrollo_caracteristicas_producto | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -930,6 +1092,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | desarrollo_value_proposition_usp | 1 | Franchise Your Business - Mark Siebert |
 | descomponer_tiempo_ciclo_pedido | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
 | desconexion_ventas_experiencia | 1 | Never Lose a Customer Again - Joey Coleman |
+| describir_candidato_ideal_precision | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| descubrir_motivacion_sentido_persona | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | descubrir_necesidades_del_cliente | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | descubrir_valor_inesperado_cliente | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | descuento_aceptaciones_bancarias | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -945,9 +1109,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | desirability_feasibility_viability | 1 | Change by Design, Revised and U - Tim Brown |
 | desmaterializacion_producto_servicio | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | desmitificacion_barreras_exportacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
+| despedir_persona_franqueza_radical | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| despedir_persona_respeto_franqueza | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | desperdicio_cronico_vs_esporadico | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | desperdicio_es_alimento | 1 | Cradle to Cradle - Michael Braungart |
+| desplegar_estrategia_tarjeta_puntuacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| desplegar_marco_franqueza_radical | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | desplegar_metas_organizacion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| desplegar_plan_orden_operaciones_franqueza_radical | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| desplegar_tres_conversaciones_carrera | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | despliegue_continuo | 1 | The Lean Startup - Eric Ries |
 | despliegue_metas | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | destraba_una_negociacion_que_se_quedo_estancada | 1 | Chris Voss, Rompe la barrera del no |
@@ -958,7 +1128,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | deteccion_franquicia_inadvertida | 1 | Franchise Your Business - Mark Siebert |
 | deteccion_ineficiencias_ti | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | deteccion_temprana_regulatoria | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| detectar_arreglar_fallo_etapa_menor_valor | 1 | High Output Management - Andrew S. Grove |
 | detectar_empaque_poco_rigido | 1 | ISTA 3P, Protocolo de ensayo de empaque para paqueteria |
+| detectar_metodos_vudu_contratacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| detectar_palanca_negativa_actividad_mando | 1 | High Output Management - Andrew S. Grove |
 | detectar_prioridad_cliente_entrega | 1 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) |
 | determinacion_cuota_inicial | 1 | Franchise Your Business - Mark Siebert |
 | determinacion_regalias | 1 | Franchise Your Business - Mark Siebert |
@@ -966,6 +1139,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | determinacion_tamano_muestra | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | determinacion_territorio | 1 | Franchise Your Business - Mark Siebert |
 | determinar_alcance_cui | 1 | NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer |
+| determinar_estado_presente_capacidades_proyectos_merma | 1 | High Output Management - Andrew S. Grove |
 | determinar_monto_a_levantar | 1 | Venture Deals - Brad Feld |
 | determinar_tipo_de_mercado | 1 | The Startup Owner's Manual - Blank, Steve |
 | determine_what_to_prototype | 1 | The field guide to human-centered design |
@@ -973,6 +1147,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | dia_cero_defectos | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | dia_cero_defectos_2 | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | dia_en_la_vida_del_cliente | 1 | The Startup Owner's Manual - Blank, Steve |
+| diagnosticar_capacidad_motivacion_prueba_vida | 1 | High Output Management - Andrew S. Grove |
+| diagnosticar_falta_motivacion_habilidad | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | diagnostico_antes_remedio | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | diagnostico_de_productos_crudos | 1 | Cradle to Cradle - Michael Braungart |
 | diagnostico_efecto_latigo | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
@@ -991,6 +1167,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | dialogo_stakeholders | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | diamante_de_innovacion | 1 | Winning at New Products - Robert G. Cooper |
 | diamante_decision_tres_partes | 1 | Winning at New Products - Robert G. Cooper |
+| dictar_ritmo_crecimiento_preguntas_escritas | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | diez_derechos_servicio_cliente | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
 | diez_principios_prototipado | 1 | Value Proposition Design |
 | diez_principios_testing | 1 | Value Proposition Design |
@@ -1001,10 +1178,22 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | diferenciacion_garantia_contrato_servicio | 1 | Businessperson's Guide to Federal Warranty Law |
 | dilema_riqueza_vs_control | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | dilucion_propiedad_por_ronda | 1 | The Founder's Dilemmas - Wasserman, Noam |
+| dimensionar_inventario_materia_prima_reposicion | 1 | High Output Management - Andrew S. Grove |
+| dimensionar_numero_subordinados_medio_dia_semanal | 1 | High Output Management - Andrew S. Grove |
+| dimensionar_plantilla_administrativa_pronostico | 1 | High Output Management - Andrew S. Grove |
+| dirigir_reunion_decision | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dirigir_reunion_generar_ideas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dirigir_reunion_individual_semanal | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dirigir_reunion_informativa | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dirigir_reunion_reforzar_relaciones | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| dirigir_reunion_revision_trabajo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | disciplina_atencion_dirigida | 1 | The Art of Thought - Wallas, Graham |
 | disciplina_rigurosa_proceso_ventas | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | discovery_day_estrategico | 1 | Franchise Your Business - Mark Siebert |
 | disenar_empaque_logistica | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
+| disenar_entorno_rendir_mejor | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| disenar_equipo_plan_anual | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| disenar_incorporacion_cien_dias | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | disenar_los_detalles_no_lo_inevitable | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | disenar_para_sanacion | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | disenar_prompts_efectivos_para_ia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
@@ -1067,6 +1256,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | distincion_cogs_gastos_operativos | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | distincion_esfuerzo_energia | 1 | The Art of Thought - Wallas, Graham |
 | distincion_gasto_vs_capital_expenditure | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
+| distinguir_empuje_tiron_salidas_laborales | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| distinguir_tres_tipos_sistemas_negocio | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | distorsion_muestreo_mecanico | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | distribucion_binomial | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | distribucion_normal_probabilidad | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -1094,9 +1285,12 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | documentacion_mantenimiento_linea_base | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | documentacion_sistemas_operativos | 1 | Franchise Your Business - Mark Siebert |
 | documentacion_viaje_internacional | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
+| documentar_trabajo_manual_operaciones | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | documento_alcance_servicio | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | documento_quien_es_quien_equipo | 1 | Never Lose a Customer Again - Joey Coleman |
 | domina_lo_que_compras | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
+| dominar_arte_socializar_trabajo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| dominar_reacciones_emociones_ajenas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | downcycling_problema | 1 | Cradle to Cradle - Michael Braungart |
 | draft_plan_accion_climatico | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | drag_along_agreement | 1 | Venture Deals - Brad Feld |
@@ -1136,6 +1330,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | ejecucion_de_touchpoints | 1 | Change by Design, Revised and U - Tim Brown |
 | ejecucion_incremental_transicion_tecnologica | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | ejecucion_rapida_de_despidos | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| ejecutar_ciclos_cortos_aprender | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| ejecutar_embudo_reclutamiento_escala | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| ejercer_poder_posicion_etapa_decision_clara | 1 | High Output Management - Andrew S. Grove |
 | ejercicio_retrospectivo_proyecto | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | el_pre_mortem_imagina_el_fracaso | 1 | Edwards et al., Managing Project Risks |
 | el_riesgo_cambia_con_el_tiempo | 1 | Edwards et al., Managing Project Risks |
@@ -1149,8 +1346,21 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | eleccion_del_lenguaje_para_pensar | 1 | The Art of Thought - Wallas, Graham |
 | eleccion_ritmo_crecimiento | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | elegir_caja_correcta | 1 | Requisitos de empaque de los couriers |
+| elegir_categorias_nota_palabras_propias_empresa | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| elegir_cinco_indicadores_diarios_fabrica | 1 | High Output Management - Andrew S. Grove |
+| elegir_estilo_direccion_madurez_relevante_tarea | 1 | High Output Management - Andrew S. Grove |
+| elegir_fabricar_pedido_pronostico | 1 | High Output Management - Andrew S. Grove |
+| elegir_forma_inspirar_cambio_conducta | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| elegir_indicador_salida_trabajo_administrativo | 1 | High Output Management - Andrew S. Grove |
+| elegir_inspeccion_barrera_monitorizacion | 1 | High Output Management - Andrew S. Grove |
 | elegir_material_de_relleno_segun_producto | 1 | Guia de empaque para transporte |
+| elegir_medio_dar_guia_jerarquia_modos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| elegir_modo_control_motivacion_factor_cua | 1 | High Output Management - Andrew S. Grove |
 | elegir_modo_transporte_volumen_distancia | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
+| elegir_momento_actividad_palanca_maxima | 1 | High Output Management - Andrew S. Grove |
+| elegir_palabras_nota_definirlas_empresa_entera | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| elegir_pregunta_recurrente_pedir_critica | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| elegir_recolocar_despedir_persona | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | elegir_resistencia_caja_peso | 1 | DHL Express, Guia de empaque |
 | elegir_sobre_o_caja_tamano | 1 | Guia de empaque para envios (FedEx) |
 | elementos_contrato_legal | 1 | The Founder's Dilemmas - Wasserman, Noam |
@@ -1170,8 +1380,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | eliminar_desperdicio_organizacional | 1 | The Lean Startup - Eric Ries |
 | eliminar_metas_numericas_gerencia | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | eliminar_miedo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| eliminar_seguimiento_descendente_responsabilizar_dueno | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | eliminar_slogans_y_exhortaciones | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | eliminar_trabajo_a_destajo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| elogiar_publico_criticar_privado_sus_tres_matices | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| elogiar_trabajo_especifico_contexto | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | email_marketing_activacion | 1 | Traction - Gabriel Weinberg |
 | email_marketing_para_captacion | 1 | Traction - Gabriel Weinberg |
 | email_marketing_retencion | 1 | Traction - Gabriel Weinberg |
@@ -1186,8 +1399,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | empacar_flores_plantas_sin_agua | 1 | Guia de empaque para envios (FedEx) |
 | empacar_liquidos_doble_barrera | 1 | Requisitos de empaque de los couriers |
 | empaque_ecoeficiente | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| emparejar_indicadores_efecto_contraefecto | 1 | High Output Management - Andrew S. Grove |
 | empathy_map | 1 | Business Model Generation - Osterwalder, Alexander |
 | empatia_capas_de_comprension | 1 | Change by Design, Revised and U - Tim Brown |
+| empezar_cultura_franqueza_radical | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | empieza_con_lo_que_ya_funciona | 1 | Hubbard, The Failure of Risk Management |
 | employee_mobilization_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | employee_pool_esop | 1 | Venture Deals - Brad Feld |
@@ -1197,7 +1412,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | emprendedor_como_puesto_de_trabajo | 1 | The Lean Startup - Eric Ries |
 | emprendimiento_como_disciplina_de_gestion | 1 | The Lean Startup - Eric Ries |
 | emprendimiento_serial | 1 | The Founder's Dilemmas - Wasserman, Noam |
+| empujar_persona_reunion_direccion_preferida | 1 | High Output Management - Andrew S. Grove |
 | encaje_organizacional | 1 | Franchise Your Business - Mark Siebert |
+| encargar_meta_especifica_dejar_libre_metodo | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | encontrar_el_golpe_mental | 1 | The Art of Thought - Wallas, Graham |
 | encontrar_lead_vc | 1 | Venture Deals - Brad Feld |
 | encontrar_vc_adecuado | 1 | Venture Deals - Brad Feld |
@@ -1226,6 +1443,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | entender_term_sheet | 1 | Venture Deals - Brad Feld |
 | entrada_mercado_nuevo | 1 | The Startup Owner's Manual - Blank, Steve |
 | entrega_por_partes_para_exponer_el_riesgo | 1 | DeMarco y Lister, Waltzing with Bears |
+| entregar_evaluacion_desempeno_tres_claves | 1 | High Output Management - Andrew S. Grove |
+| entregar_evaluacion_formal_desempenio_nueve_consejos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| entregar_experiencia_entrevista_excelente | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| entregar_problema_dificil_reporte | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | entrenamiento_continuo | 1 | Franchise Your Business - Mark Siebert |
 | entrenamiento_de_gerentes_para_despidos | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | entrenamiento_en_sitio | 1 | Franchise Your Business - Mark Siebert |
@@ -1239,6 +1460,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | entrenar_franquiciados_validacion | 1 | Franchise Your Business - Mark Siebert |
 | epc_condiciones_productoras_error | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | epicentros_innovacion_modelo_negocio | 1 | Business Model Generation - Osterwalder, Alexander |
+| equilibrar_capacidad_personal_inventario_plazo | 1 | High Output Management - Andrew S. Grove |
+| equilibrar_corto_largo_plazo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| equilibrar_elogio_critica_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| equilibrar_microdireccion_ausencia | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | equilibrio_confianza_verificacion | 1 | Franchise Your Business - Mark Siebert |
 | equipo_conjunto_de_mejora_con_proveedores | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | equipo_customer_development | 1 | The Startup Owner's Manual - Blank, Steve |
@@ -1271,12 +1496,19 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | escala_actitud_cierre | 1 | SPIN Selling - Neil Rackham |
 | escaleras_fijas_seguridad | 1 | SMALL_BUSINESS |
 | escaleras_portatiles_seguridad | 1 | SMALL_BUSINESS |
+| escalonar_complejidad_puesto_empleado_nuevo | 1 | High Output Management - Andrew S. Grove |
+| escalonar_fuentes_informacion_gerencial | 1 | High Output Management - Andrew S. Grove |
 | escape_trampa_proveedor_pasivo | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | escenarios_de_evolucion_de_la_ia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
 | escenarios_diseno_modelo_negocio | 1 | Business Model Generation - Osterwalder, Alexander |
 | escepticismo_sano_ante_el_riesgo | 1 | Hubbard, The Failure of Risk Management |
+| escribir_apuntes_sala_estudio_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| escribir_escaleras_puesto_evitar_dos_extremos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | escrow_en_adquisiciones | 1 | Venture Deals - Brad Feld |
 | escucha_activa_requisitos | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
+| escuchar_callado_equipo_tranquilizar_incomodo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| escuchar_entender_critica_dominar_defensa | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| escuchar_ruidoso_opinion_fuerte_pedir_agujeros | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | esfuerzo_voluntario_vs_urge_espontaneo | 1 | The Art of Thought - Wallas, Graham |
 | esfuerzo_y_energia_intelectual | 1 | The Art of Thought - Wallas, Graham |
 | espacio_de_seguridad | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -1289,10 +1521,13 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | esposas_doradas_carrera | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | esposas_familiares_founder | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | establecer_capacidad_del_proceso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| establecer_credibilidad_pericia_humildad | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| establecer_dinamica_nueva_antiguos_pares | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | establecer_diseno_final_producto | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | establecer_equipo_multifuncional | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | establecer_estandar_alto_desempeno | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | establecer_estandares_desempeno | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| establecer_limites_cuidado_personal | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | establecer_linea_base_mvp | 1 | The Lean Startup - Eric Ries |
 | establecer_metas_caracteristicas | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | establecer_metas_de_calidad_basadas_en_mercado | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -1428,6 +1663,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | evaluacion_ventana_mercado | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | evaluacion_vp_ventas | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | evaluar_controles | 1 | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide |
+| evaluar_cultura_empresa_adjetivos | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| evaluar_desempenio_dos_veces_anio | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| evaluar_directivo_resultados_fortaleza | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | evaluar_huella_hidrica | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | evaluar_ia_predictiva_vs_generativa_para_negocio | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
 | evaluar_impacto_ecosistemas_biodiversidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -1438,20 +1676,29 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | evitacion_del_riesgo | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | evitar_cherry_picking | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | evitar_copia_estructura_competencia | 1 | Franchise Your Business - Mark Siebert |
+| evitar_doble_impuesto_malestar | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | evitar_greenwashing | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | evitar_lenguaje_juzgador | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | evitar_materiales_blandos_contenedor_final | 1 | Guia de empaque para envios (FedEx) |
 | evitar_micro_matching | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | evitar_o_asumir_decide_a_conciencia | 1 | Edwards et al., Managing Project Risks |
+| evitar_obsesion_ascenso_estatus | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | evitar_paralisis_por_analisis | 1 | The Lean Startup - Eric Ries |
 | evitar_perdida_situacion_awareness | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| evitar_personalizar_guia_aceptar_personal | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| evitar_preguntas_ilegales_entrevista | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| evitar_presion_social_actos_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | evitar_pseudociencia_producto | 1 | The Lean Startup - Eric Ries |
 | evitar_terminos_enganosos_garantia | 1 | Businessperson's Guide to Federal Warranty Law |
 | evitar_uso_complacencia | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| examinar_demanda_entorno_dos_marcos_temporales | 1 | High Output Management - Andrew S. Grove |
+| examinar_entorno_expectativas_tecnologia_proveedores_grupos | 1 | High Output Management - Andrew S. Grove |
+| examinar_trabajo_pasado_candidato | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | exclusividad_territorial_representante | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | executive_summary_inversion | 1 | Venture Deals - Brad Feld |
 | exenciones_legales_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | exercise_period_opciones | 1 | Venture Deals - Brad Feld |
+| exigir_critica_jefe_reticente | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | exito_franquiciado_determina_exito_franquiciador | 1 | Franchise Your Business - Mark Siebert |
 | expand_phase_roadmap | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | expandir_cadena_valor | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -1462,6 +1709,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | experimentacion_iterativa_mercado_fisico | 1 | The Lean Startup - Eric Ries |
 | experimento_cuentas_rojas | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | experticia_operativa_vs_vision_sistemica | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| explicar_idea_facil_comprender_oyente | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | explotacion_tecnologias_disruptivas | 1 | Winning at New Products - Robert G. Cooper |
 | export_administration_regulations | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | exportacion_de_servicios | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -1469,6 +1717,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | extintores_portatiles_de_incendio | 1 | SMALL_BUSINESS |
 | extraer_priorizar_hipotesis | 1 | Value Proposition Design |
 | facilidad_supervision_franquicia | 1 | Franchise Your Business - Mark Siebert |
+| facilitar_despido_tres_cosas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| facilitar_expresion_subordinado_pregunta_mas | 1 | High Output Management - Andrew S. Grove |
+| facilitar_gente_diga_verdad | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | factores_explicativos_vs_factores_de_cambio | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | factores_valoracion_startup | 1 | Venture Deals - Brad Feld |
 | fairness_opinion | 1 | Venture Deals - Brad Feld |
@@ -1517,6 +1768,17 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | fijacion_de_metas | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | fijacion_precio_exportacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | fijar_causa_ultimo_accidente_riesgo_siguiente | 1 | Managing the Risks of Organizat - Reason, J. T_ |
+| fijar_cuatro_notas_calcular_nota_global | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| fijar_duracion_lugar_reunion_individual | 1 | High Output Management - Andrew S. Grove |
+| fijar_expectativas_claras_comienzo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| fijar_fecha_cierre_debate_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| fijar_frecuencia_reunion_individual_madurez_tarea | 1 | High Output Management - Andrew S. Grove |
+| fijar_horizonte_ventana_replanificacion | 1 | High Output Management - Andrew S. Grove |
+| fijar_meta_direccion_objetivos_mitad_probabilidad | 1 | High Output Management - Andrew S. Grove |
+| fijar_periodo_direccion_objetivos_retroalimentacion | 1 | High Output Management - Andrew S. Grove |
+| fijar_proceso_trabajo_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| fijar_resultado_excelente_reunion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| fijar_vision_concreta_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | filosofia_validacion_clientes | 1 | The Startup Owner's Manual - Blank, Steve |
 | fin_precio_como_criterio_unico | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | financial_performance_representations | 1 | Franchise Your Business - Mark Siebert |
@@ -1527,6 +1789,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | financiamiento_usda_agricola | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | financiamiento_venture_capital | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | fine_tuning_ia_para_caso_de_uso | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
+| fingir_prototipo_cinco_mil_replicas | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | fiscalidad_comercio_electronico_internacional | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | fit_problema_solucion | 1 | Value Proposition Design |
 | fit_value_proposition | 1 | Value Proposition Design |
@@ -1540,6 +1803,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | fmea_analisis_de_modos_de_falla | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | foco_proximal_reacciones_falla | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | folleto_franquicia | 1 | Franchise Your Business - Mark Siebert |
+| fomentar_guia_reciproca_companieros | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | fomento_educacion_autoeducacion | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | footnotes_financieros | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | foreign_corrupt_practices_act | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -1553,6 +1817,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | formalizar_junta_asesora | 1 | The Startup Owner's Manual - Blank, Steve |
 | formalizar_un_proceso_ad_hoc | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | formar_consejo_asesor_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| formar_equipo_practicas_metodo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | formula_exponencial_confiabilidad | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | formulacion_teorias_causa | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | founder_ceo_succession_process | 1 | The Founder's Dilemmas - Wasserman, Noam |
@@ -1574,6 +1839,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | franquicia_representante_area | 1 | Franchise Your Business - Mark Siebert |
 | franquicia_unidad_individual | 1 | Franchise Your Business - Mark Siebert |
 | frecuencia_distribucion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| frenar_incoherencias_entrevista | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | fuentes_contratacion_ejecutivos | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | fuentes_datos_benchmarking | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | fuentes_financiamiento_startup | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
@@ -1594,6 +1860,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | future_scenarios_planning | 2 | Business Model Generation - Osterwalder, Alexander<br>Winning at New Products - Robert G. Cooper |
 | gamificacion_onboarding_visual | 1 | Never Lose a Customer Again - Joey Coleman |
 | ganar_comprension_del_cliente | 1 | The Startup Owner's Manual - Blank, Steve |
+| ganar_confianza_personas_cargo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | garantia_devolucion_dinero | 1 | Never Lose a Customer Again - Joey Coleman |
 | garantias_implicitas_vs_expresas | 1 | Businessperson's Guide to Federal Warranty Law |
 | garantias_producto_internacional | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -1681,6 +1948,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | gestion_visual_del_pipeline_de_desarrollo | 1 | Winning at New Products - Robert G. Cooper |
 | gestiona_contrato_tras_firma | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | gestionar_el_riesgo_es_de_adultos | 1 | DeMarco y Lister, Waltzing with Bears |
+| gestionar_personas_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| gestionar_retencion_subordinado_valioso_renuncia | 1 | High Output Management - Andrew S. Grove |
 | get_customers_funnel | 1 | The Startup Owner's Manual - Blank, Steve |
 | get_customers_funnel_webmobile | 1 | The Startup Owner's Manual - Blank, Steve |
 | get_out_building_test_sell | 1 | The Startup Owner's Manual - Blank, Steve |
@@ -1721,13 +1990,18 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | guarda_un_colchon_de_tiempo_y_dinero | 1 | DeMarco y Lister, Waltzing with Bears |
 | guia_entrevista_hcd | 1 | The field guide to human-centered design |
 | guia_y_mentoria_vc | 1 | The Founder's Dilemmas - Wasserman, Noam |
+| guiar_subordinado_etapas_resistencia_desempeno | 1 | High Output Management - Andrew S. Grove |
 | guias_diseno_sistemas_estrategicos | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | gut_check | 1 | The field guide to human-centered design |
 | habilidad_prompting_como_experticia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
 | habito_energetico_vs_mecanico | 1 | The Art of Thought - Wallas, Graham |
 | hablar_con_clientes_desmontar_supuestos | 1 | The Lean Startup - Eric Ries |
 | hacer_cajas_a_medida_del_pedido | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
+| hacer_critica_pares_transparente_ensenar_escribirla | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| hacer_opinion_accionable | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | hacer_remarcable_lo_requerido | 1 | Never Lose a Customer Again - Joey Coleman |
+| hacer_repaso_posterior_proyecto | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| hacer_trabajo_futuro_imaginar_negocio | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | handoff_transicion_ventas_cuentas | 1 | Never Lose a Customer Again - Joey Coleman |
 | hard_fixes_organizacionales | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | haz_tu_lista_de_lo_que_puede_fallar | 1 | DeMarco y Lister, Waltzing with Bears |
@@ -1786,17 +2060,24 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | identificar_brechas_gaps | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | identificar_caracteristicas_metas_proceso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | identificar_clientes_externos_e_internos | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| identificar_competencias_tarjeta_puntuacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | identificar_consejo_asesores | 1 | The Startup Owner's Manual - Blank, Steve |
+| identificar_disparadores_propios_reaccion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | identificar_earlyvangelists | 2 | The Startup Owner's Manual - Blank, Steve<br>Traction - Gabriel Weinberg |
 | identificar_eco_riesgos_oportunidades | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | identificar_evaluar_socios_estrategicos | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | identificar_high_value_jobs | 1 | Value Proposition Design |
 | identificar_oportunidades_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| identificar_paso_limitante_jornada_desfases | 1 | High Output Management - Andrew S. Grove |
 | identificar_pensadores_de_diseno_internos | 1 | Change by Design, Revised and U - Tim Brown |
 | identificar_si_tu_producto_necesita_proteccion_especial | 1 | ISTA 3P, Protocolo de ensayo de empaque para paqueteria |
+| identificar_temas_formacion_tarjetas_decision | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | identify_mapeo_datos | 1 | Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses |
+| imaginar_caso_simple_bragueta_abierta | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | impacto_calidad_ingresos_costos | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | impacto_estado_resultados_en_balance | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
+| impedir_punialadas_espalda_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| implantar_politicas_respaldan_metodo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | implementacion_controles | 2 | OSHA3885<br>OSHA3886 |
 | implementacion_monitoreo_controles | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | implementar_controles | 1 | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide |
@@ -1818,9 +2099,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | infection_control_plan | 1 | SMALL_BUSINESS |
 | inferencia_estadistica_muestreo | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | influence_map_organizacional | 1 | The Startup Owner's Manual - Blank, Steve |
+| informar_cierre_jornada_conservar_propiedad_trabajo | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | information_driver_supply_chain | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | information_rights | 1 | Venture Deals - Brad Feld |
 | informe_a_junta_directiva_despido_ejecutivo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| infundir_regularidad_reunion_proceso | 1 | High Output Management - Andrew S. Grove |
 | ingenieria_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | ingenieria_calidad_proveedores | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | ingenieria_de_prompts_efectiva | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
@@ -1839,7 +2122,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | inspeccion_caracteristicas_sensoriales | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | inspeccion_lugar_trabajo_peligros | 2 | OSHA3885<br>OSHA3886 |
 | inspeccion_optima_proceso | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| inspeccionar_reparto_informacion_notas_jefe | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | inspecciones_superficiales_y_muestreo_incompleto | 1 | Managing the Risks of Organizat - Reason, J. T_ |
+| instalar_metodo_contratacion_empresa | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | institucionalizar_breakthrough | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | institucionalizar_capacitacion | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | instituciones_financieras_bancos | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -1847,6 +2132,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | integracion_agresiva_ejecutivo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | integracion_deseabilidad_viabilidad_factibilidad_social | 1 | Change by Design, Revised and U - Tim Brown |
 | integracion_sistemas_medicion_avanzada | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| integrar_peticion_critica_rutina_existente | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| integrar_trabajo_vida_mejor_version | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | inteligencia_de_anuncios_de_la_competencia | 1 | Traction - Gabriel Weinberg |
 | intellectual_property_strategy | 2 | The Startup Owner's Manual - Blank, Steve<br>Venture Deals - Brad Feld |
 | intercambio_de_roles_para_motivacion | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
@@ -1855,8 +2142,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | international_buyer_program | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | international_partner_search | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | interpretacion_graficos_variables | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| interrogar_negocio_cinco_preguntas | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| interrumpir_candidato_escucha_reflexiva | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | intimacion_emocional_como_senal_de_verdad | 1 | The Art of Thought - Wallas, Graham |
 | introduccion_lean | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| inventar_tradiciones_celebrar_valores | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | inventario_conocimiento_estadistico_personal | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | inventory_analysis_lean | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | inversion_capacitacion_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -1872,11 +2162,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | investigacion_mercado_primaria_secundaria_2 | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | investigacion_necesidades_consumidor | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | investigacion_new_view | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| investigar_antes_contratar_lideres | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | investigar_datos_cliente | 1 | Never Lose a Customer Again - Joey Coleman |
+| invitar_desafio_reciproco_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| invitar_personas_necesarias_reunion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | involucramiento_empleados_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | involucramiento_fundador_busqueda_ceo | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | involucramiento_sindical_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | involucrar_empleados_ahorro_energetico | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| involucrar_varios_entrevistadores | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | iot_big_data_supply_chain | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | iota_analysis | 1 | Winning at New Products - Robert G. Cooper |
 | ironias_de_la_automatizacion | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -1894,6 +2188,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | just_do_its | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | just_in_time_manufacturing | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | justicia_restaurativa | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| juzgar_cultura_renuncias_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | kaizen_mejora_continua | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | kanban_validacion_aprendizaje | 1 | The Lean Startup - Eric Ries |
 | keep_customers_strategy | 2 | The Startup Owner's Manual - Blank, Steve<br>Never Lose a Customer Again - Joey Coleman |
@@ -1920,6 +2215,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | learning_card | 1 | Value Proposition Design |
 | lectura_balance_general | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | lectura_estado_resultados | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
+| leer_seniales_fallo_jefe_reunion_solas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | legislacion_especifica_vs_accidente_organizacional | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | lenguajes_jerarquia_organizacional | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | lente_sostenibilidad_finanzas | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -1938,6 +2234,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | liderazgo_gerencial_seguridad | 2 | OSHA3885<br>OSHA3886 |
 | lienzo_modelo_negocio | 3 | Business Model Generation - Osterwalder, Alexander<br>The field guide to human-centered design<br>Value Proposition Design |
 | lienzo_proyecto_innovacion | 1 | Winning at New Products - Robert G. Cooper |
+| ligar_tareas_proposito_organizacion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | limitaciones_analisis_costo_beneficio | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | limitaciones_intervalos_confianza | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | limitaciones_ltif_indicador | 1 | Managing the Risks of Organizat - Reason, J. T_ |
@@ -1952,9 +2249,13 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | limites_tolerancia_estadistica | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | linea_base_costos | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | linking_environmental_performance_budgeting | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| listar_bueno_mejorable_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| listar_debilidades_disparadores_propios | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| listar_fuerzas_propias_cuatro_preguntas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | littles_law | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | llamar_lo_que_falta | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | lleva_scorecard_desempeno_proveedor | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
+| llevar_inventario_proyectos_discrecionales | 1 | High Output Management - Andrew S. Grove |
 | local_rationality_principle | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | localizacion_internacionalizacion_web | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | lockout_tagout_procedures | 1 | SMALL_BUSINESS |
@@ -1969,6 +2270,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | machinery_equipment_safety | 1 | SMALL_BUSINESS |
 | make_certain_programa | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | mal_uso_histograma_vs_carta_control | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| manejar_enfado_persona_desafiada | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | manejo_crisis_auditoria_contable | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | manejo_de_hibridos_monstruosos | 1 | Cradle to Cradle - Michael Braungart |
 | manejo_de_incertidumbre_proyectos_innovadores | 1 | Winning at New Products - Robert G. Cooper |
@@ -1980,6 +2282,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | manejo_psicologia_ceo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | manifiesto_agile | 1 | Winning at New Products - Robert G. Cooper |
 | manten_viva_tu_lista_de_riesgos | 1 | DeMarco y Lister, Waltzing with Bears |
+| mantener_manos_trabajo_real_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| mantener_proceso_evaluacion_ligero_vigilar_crecimiento | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | mantener_puntaje_innovacion | 1 | Winning at New Products - Robert G. Cooper |
 | mantenimiento_preventivo_orientado_al_cliente | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | mantenimiento_productivo_total | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2031,6 +2335,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | mecanica_conversion_deuda | 1 | Venture Deals - Brad Feld |
 | mecanismo_resolucion_disputas | 1 | Businessperson's Guide to Federal Warranty Law |
 | meda_analisis_error_mantenimiento | 1 | Managing the Risks of Organizat - Reason, J. T_ |
+| mediar_tiempo_palabra_reunion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | medical_services_first_aid | 1 | SMALL_BUSINESS |
 | medicion_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | medicion_capacidad_servicio | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2046,11 +2351,14 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | medidas_reactivas_proactivas | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | medidas_tendencia_dispersion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | medir_comportamiento_cliente_mvp | 1 | The Startup Owner's Manual - Blank, Steve |
+| medir_critica_respuesta_oyente_brujula | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| medir_guia_propia_pegatinas_marco | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | medir_huella_carbono_corporativa | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | medir_lo_que_importa_no_solo_lo_facil | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | medir_paquete_redondeando_hacia_arriba | 1 | Guia visual de empaque |
 | medir_residuos_empresa | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | medir_satisfaccion_real_del_cliente | 1 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management |
+| medir_sistema_venta_trece_indicadores_benchmark | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | meetups_bootstrapping_comunidad | 1 | Traction - Gabriel Weinberg |
 | mejora_calidad_crosby | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | mejora_continua_del_proceso | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -2062,6 +2370,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | mejora_del_sistema_responsabilidad_gerencial | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | mejora_envolvente_edificio | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | mejora_valoracion_empresa | 1 | Franchise Your Business - Mark Siebert |
+| mejorar_consciencia_propia_relacional_dos_practicas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | mejorar_deal_despues_del_hecho | 1 | Venture Deals - Brad Feld |
 | menos_malo_vs_bueno | 1 | Cradle to Cradle - Michael Braungart |
 | mensaje_desarrolladores_area | 1 | Franchise Your Business - Mark Siebert |
@@ -2105,6 +2414,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | mide_lo_que_de_verdad_mueve_la_aguja | 1 | DeMarco y Lister, Waltzing with Bears |
 | milestone_list | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | mini_folleto_franquicia | 1 | Franchise Your Business - Mark Siebert |
+| minimizar_impuesto_colaboracion_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | minimizar_politica_organizacional | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | mission_and_operations_planning | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | mitigacion_efecto_latigo | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
@@ -2145,7 +2455,16 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | monitoreo_continuo | 1 | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide |
 | monitoreo_continuo_benchmarking | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | monocultura_como_paradigma | 1 | Cradle to Cradle - Michael Braungart |
+| montar_equipo_gestion_desempenio_revisar_sistema | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_evaluacion_360_grados_ligera_pares | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_proceso_contratacion_reducir_sesgo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_reunion_general_presentaciones_preguntas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_reunion_gran_debate | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_reunion_gran_decision | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_reuniones_solas_mentalidad_frecuencia | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| montar_tablero_kanban_medir_actividades | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | monte_carlo_simulation_model | 1 | Winning at New Products - Robert G. Cooper |
+| mostrar_candidato_cuanto_quieres | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | motivaciones_psicologicas_cofundadores | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | motivaciones_reales_franquiciado | 1 | Franchise Your Business - Mark Siebert |
 | motivated_management_franquiciado | 1 | Franchise Your Business - Mark Siebert |
@@ -2155,6 +2474,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | motor_de_crecimiento | 1 | The Lean Startup - Eric Ries |
 | motor_idea_a_lanzamiento_agil | 1 | Winning at New Products - Robert G. Cooper |
 | motores_de_seguridad_3cs | 1 | Managing the Risks of Organizat - Reason, J. T_ |
+| mover_rapido_persona_papel_equivocado | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | movilidad_verde_empleados | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | mrg_event | 1 | Winning at New Products - Robert G. Cooper |
 | muestra_puntos_en_comun_antes_de_negociar | 1 | Chris Voss, Rompe la barrera del no |
@@ -2199,6 +2519,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | nobody_cares_just_run_company | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | noise_exposure_control | 1 | SMALL_BUSINESS |
 | nombra_tus_suposiciones_fragiles | 1 | DeMarco y Lister, Waltzing with Bears |
+| nombrar_delegados_amigos_casa | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | nombrar_los_monstruos | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | normalizacion_datos_benchmarking | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | normalizacion_de_la_desviacion | 2 | Managing the Risks of Organizat - Reason, J. T_<br>The Field Guide to Understandin - Dekker, Sidney |
@@ -2209,7 +2530,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | nueve_pecados_capitales_lanzamiento | 1 | The Startup Owner's Manual - Blank, Steve |
 | nuevo_encargo_de_diseno | 1 | Cradle to Cradle - Michael Braungart |
 | nutrientes_biologicos | 1 | Cradle to Cradle - Michael Braungart |
+| nutrir_ideas_nuevas_reunion_solas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | observar_al_cliente_en_su_contexto | 1 | Never Lose a Customer Again - Joey Coleman |
+| observar_reunion_rutinaria_senales_plantilla | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | obstaculos_innovacion_modelo_negocio | 1 | Business Model Generation - Osterwalder, Alexander |
 | obtencion_compromiso | 1 | SPIN Selling - Neil Rackham |
 | obtencion_compromiso_venta | 1 | SPIN Selling - Neil Rackham |
@@ -2229,6 +2552,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | open_account | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | open_business_models | 1 | Business Model Generation - Osterwalder, Alexander |
 | operacionalizacion_de_etiquetas_psicologicas | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| operar_modelo_gente_destreza_minima | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | oportunidades_ingresos_ti_sostenible | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | optimizacion_almacenes_distribucion | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | optimizacion_caracteristicas_diseno | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2251,6 +2575,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | organizaciones_alta_confiabilidad_hro | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | organizaciones_ambidiestras | 1 | Business Model Generation - Osterwalder, Alexander |
 | organizaciones_paralelas_cambio | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| organizar_jornada_entrevistas_candidato | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| organizar_sistema_recoger_quejas_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | orgullo_por_el_trabajo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | original_issue_discount_oid | 1 | Venture Deals - Brad Feld |
 | otras_fees_franquicia | 1 | Franchise Your Business - Mark Siebert |
@@ -2265,11 +2591,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | paradoja_bajos_incidentes_altas_fatalidades | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | paradoja_exito_emprendedor | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | paradoja_responsabilidad_creatividad | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| parar_debate_emocion_agotamiento | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | paris_convention_prioridad | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | participacion_ferias_comerciales | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | participacion_preferente | 1 | Venture Deals - Brad Feld |
 | participacion_trabajadores | 2 | OSHA3885<br>OSHA3886 |
+| partir_meta_grande_hitos | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | partnerships_estrategicos_verdes | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| pasar_direccion_directa_indirecta | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| pasear_organizacion_hallar_problemas_pequenios | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | pasillos_superficies_transito | 1 | SMALL_BUSINESS |
 | pasivos_vs_operadores | 1 | Franchise Your Business - Mark Siebert |
 | paso1_libre_de_sustancias_x | 1 | Cradle to Cradle - Michael Braungart |
@@ -2284,6 +2614,16 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | patron_inside_out | 1 | Business Model Generation - Osterwalder, Alexander |
 | patron_outside_in | 1 | Business Model Generation - Osterwalder, Alexander |
 | pay_to_play | 1 | Venture Deals - Brad Feld |
+| pedir_ayuda_grupo_apoyo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| pedir_critica_anonima_curso_entrenamiento_dictado | 1 | High Output Management - Andrew S. Grove |
+| pedir_critica_equipo_premiarla | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| pedir_critica_primero_crear_seguridad_psicologica | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| pedir_hechos_decision_evitar_recomendaciones | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| pedir_opinion_otros_mejorar | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| pedir_opinion_propia_reunion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| pedir_referencias_empleados | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| pedir_referencias_red_personal | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| pelear_proliferacion_reuniones_bloquear_ejecucion | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | peligro_capital_barato | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | peligros_emergencias_no_rutinarias | 2 | OSHA3885<br>OSHA3886 |
 | penetracion_mercados_secundarios | 1 | Franchise Your Business - Mark Siebert |
@@ -2307,6 +2647,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | personalizacion_investigacion_prospecto | 1 | Never Lose a Customer Again - Joey Coleman |
 | personalizar_interacciones_cliente | 1 | Never Lose a Customer Again - Joey Coleman |
 | personas_productos_ganancias_orden | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| persuadir_emocion_oyente_no_propia | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | persuasion_directivos_prioridad_cliente | 1 | Never Lose a Customer Again - Joey Coleman |
 | pide_una_revision_externa_antes_de_firmar_cualquier_contrato | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | piensa_en_rangos_no_en_numeros_unicos | 1 | Hubbard, The Failure of Risk Management |
@@ -2370,6 +2711,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | planificacion_recuperacion_post_accidente | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | planificacion_salida_estrategica | 1 | Franchise Your Business - Mark Siebert |
 | planificacion_sucesion_ceo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| planificar_cinco_olas_venta | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| planificar_reduccion_trabajo_individual | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| planificar_tres_pasos_demanda_estado_brecha | 1 | High Output Management - Andrew S. Grove |
 | plantea_oferta_como_rango_o_cifra_precisa | 1 | Chris Voss, Rompe la barrera del no |
 | plantilla_fija_cotizaciones | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | plataforma_colaboracion_masiva | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
@@ -2401,6 +2745,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | pr_no_convencional_stunts | 1 | Traction - Gabriel Weinberg |
 | practica_de_observacion_atenta | 2 | Assembling Tomorrow: A Guide to Designing a Thriving Future<br>Change by Design, Revised and U - Tim Brown |
 | practica_deliberada_asistida_ia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
+| practicar_franqueza_radical_jefe_propio | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| practicar_triangulo_critica_tres_papeles | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | practicas_gerenciales_no_delegables | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | practicas_manufactura_justo_a_tiempo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | pre_control_estadistico | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2409,10 +2755,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | prediccion_confiabilidad_diseno | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | preferencia_de_liquidacion | 2 | Venture Deals - Brad Feld<br>The Founder's Dilemmas - Wasserman, Noam |
 | preferencias_apiladas_vs_blended | 1 | Venture Deals - Brad Feld |
+| preferir_inspeccion_proceso_prueba_destructiva | 1 | High Output Management - Andrew S. Grove |
 | preframing_expectativas | 1 | Never Lose a Customer Again - Joey Coleman |
 | pregunta_que_no_estamos_haciendo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| preguntar_conducir_reunion_individual | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| preguntar_contratar_unica_prioridad | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| preguntar_jefe_sonado_persona_cargo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | preguntar_por_que_no_que | 1 | Change by Design, Revised and U - Tim Brown |
 | preguntar_que_no_quien | 1 | The Field Guide to Understandin - Dekker, Sidney |
+| preguntar_seguimiento_hallar_huecos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | preguntas_abiertas_motivacion_proveedor | 1 | Chris Voss, Rompe la barrera del no |
 | preguntas_clave_armadura_organizacional | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | preguntas_ipo_dolor_cliente | 1 | The Startup Owner's Manual - Blank, Steve |
@@ -2420,6 +2771,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | preguntas_para_formacion_de_equipos | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | preguntas_problema_2 | 1 | SPIN Selling - Neil Rackham |
 | preguntas_situacion | 1 | SPIN Selling - Neil Rackham |
+| premiar_franqueza_hacer_escucha_tangible | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | premio_shingo | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | prepara_posicion_agenda_antes_negociar | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
 | preparacion_conversacion_despido_ejecutivo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
@@ -2430,6 +2782,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | preparar_candidato_validacion | 1 | Franchise Your Business - Mark Siebert |
 | preparar_contacto_clientes | 1 | The Startup Owner's Manual - Blank, Steve |
 | preparar_fdd | 1 | Franchise Your Business - Mark Siebert |
+| preparar_guion_reunion_individual_subordinado | 1 | High Output Management - Andrew S. Grove |
+| preparar_preguntas_entrevista_antemano | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| preparar_resena_mixta_hoja_trabajo | 1 | High Output Management - Andrew S. Grove |
+| preparar_respuestas_estandar_interrupciones_repetidas | 1 | High Output Management - Andrew S. Grove |
 | preparate_para_marcharte_del_trato | 1 | Chris Voss, Rompe la barrera del no |
 | prepare_phase_roadmap | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | presales | 1 | Value Proposition Design |
@@ -2438,6 +2794,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | presentaciones_alta_direccion | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | presentate_con_tu_nombre_para_descuento | 1 | Chris Voss, Rompe la barrera del no |
 | preservar_efectivo_buscar_modelo | 1 | The Startup Owner's Manual - Blank, Steve |
+| presionar_curva_notas_evitar_forzarla | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | presupuesto_marketing_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | presupuesto_marketing_leads_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | presupuesto_publicidad_franquicia | 1 | Franchise Your Business - Mark Siebert |
@@ -2471,10 +2828,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | priorizacion_iniciativas_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | priorizacion_issues | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | priorizar_elementos_a_validar | 1 | The Startup Owner's Manual - Blank, Steve |
+| priorizar_lista_entrenamiento_subordinados | 1 | High Output Management - Andrew S. Grove |
+| priorizar_pocas_cosas_bien | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | pro_forma_vs_actuals | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | pro_rata_rights_deuda_convertible | 1 | Venture Deals - Brad Feld |
 | probabilidad_falla_ensamblaje_multiple | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| probar_banquillo_vacaciones_largas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | probar_empaque_antes_de_escalar_envios | 1 | Guia de empaque para envios (FedEx) |
+| probar_gestion_antes_decidir | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| probar_traje_azul_seis_semanas | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | problem_solution_fit | 1 | The Startup Owner's Manual - Blank, Steve |
 | procedimientos_definidos_en_servicios | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | procesamiento_paralelo_con_espirales | 1 | Winning at New Products - Robert G. Cooper |
@@ -2509,6 +2871,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | producto_unico_superior | 1 | Winning at New Products - Robert G. Cooper |
 | productos_crudos | 1 | Cradle to Cradle - Michael Braungart |
 | productos_de_servicio | 1 | Cradle to Cradle - Michael Braungart |
+| profundizar_respuestas_preguntas_curiosidad | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | programa_afiliados | 1 | Traction - Gabriel Weinberg |
 | programa_auditoria_calidad | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | programa_cero_defectos | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
@@ -2530,6 +2893,8 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | programa_seguridad_salud_ocupacional | 2 | OSHA3885<br>SMALL_BUSINESS |
 | programacion_cultura_empresarial | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | programacion_entregas_delivery_scheduling | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
+| programar_reunion_individual_cadena | 1 | High Output Management - Andrew S. Grove |
+| programar_visita_area_observar_despachar | 1 | High Output Management - Andrew S. Grove |
 | programas_5s_verdes | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | programas_compra_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | programas_cooperativos_osha | 1 | SMALL_BUSINESS |
@@ -2560,6 +2925,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | protective_provisions | 1 | Venture Deals - Brad Feld |
 | protective_provisions_alineacion | 1 | Venture Deals - Brad Feld |
 | proteger_fragiles_caja_dentro_de_caja | 1 | DHL Express, Guia de empaque |
+| proteger_tiempo_equipo_jefe | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | protocepto | 1 | Winning at New Products - Robert G. Cooper |
 | protocolo_reuniones_gate | 1 | Winning at New Products - Robert G. Cooper |
 | prototipado_de_experiencias | 1 | Change by Design, Revised and U - Tim Brown |
@@ -2618,14 +2984,24 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | realizar_analisis_ciclo_vida | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | realizar_pruebas_pasa_no_pasa | 1 | The Startup Owner's Manual - Blank, Steve |
 | reasignacion_equity_fundadores | 1 | The Founder's Dilemmas - Wasserman, Noam |
+| rechazar_candidato_razones_relevantes | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| rechazar_conducta_toxica_entrevista | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| rechazar_contratacion_tibia | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | rechazo_gentil_prospecto | 1 | Franchise Your Business - Mark Siebert |
 | rechazo_utilidades_corto_plazo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
+| reciclar_empleado_ascendido_mas_alla_capacidad | 1 | High Output Management - Andrew S. Grove |
+| recoger_opinion_360_grados | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | recoleccion_validacion_datos_benchmarking | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | recomendaciones_smart | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | reconciliacion_utilidad_neta_flujo_caja | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor | 1 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) |
+| reconocer_decision_dificil_valores | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | reconocer_el_sesgo_narrativo | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
+| reconocer_emociones_propias_avisar_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| reconocer_excelencia_trayectoria_gradual | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | reconocer_mercancia_peligrosa_disfrazada | 1 | Guia de empaque para envios (FedEx) |
+| reconocer_recompensar_gente_estable | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| reconocer_recompensar_uso_metodo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | reconocer_sesgo_de_apofenia | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | reconocimiento_al_desempeno | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | reconocimiento_de_ingresos | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
@@ -2633,6 +3009,11 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | reconstruccion_contexto_situacional | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | reconstruccion_de_equipo_ejecutivo | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | reconstruccion_significado_trabajo | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
+| recorrer_organizacion_escuchar_plantilla | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
+| recorrer_rueda_conscientemente_cultura_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| recorrer_rueda_hacer_cosas_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| recorrer_siete_pasos_programa_desarrollo_negocio | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| recorrer_trece_elementos_proceso_evaluacion_formal | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | recursos_apoyo_gubernamental_exportacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | recursos_de_segundo_nivel | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | recursos_ecosistema_emprendedor | 1 | Venture Deals - Brad Feld |
@@ -2641,6 +3022,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | recursos_humanos_cultura | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | recursos_niosh | 1 | SMALL_BUSINESS |
 | red_flags_proyectos_en_problemas | 1 | Winning at New Products - Robert G. Cooper |
+| redactar_mision_tarjeta_puntuacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | redemption_rights | 1 | Venture Deals - Brad Feld |
 | redes_de_seguridad_regulatoria | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | rediseno_procesos_negocio_cx | 1 | Never Lose a Customer Again - Joey Coleman |
@@ -2660,10 +3042,12 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | reducir_playing_with_fire_gap | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | redundancia_en_diseno | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | reempaquetado_producto | 1 | The Startup Owner's Manual - Blank, Steve |
+| reemplazarse_trabajo_propio | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | reevolucion_industrial | 1 | Cradle to Cradle - Michael Braungart |
 | referidos_franquiciados_existentes | 1 | Franchise Your Business - Mark Siebert |
 | refinar_sales_roadmap | 1 | The Startup Owner's Manual - Blank, Steve |
 | reformular_problema_mas_alla_del_producto | 1 | Change by Design, Revised and U - Tim Brown |
+| reforzar_principios_guia_lenguaje_prueba_conocimiento | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | regalos_estrategicos_personalizados | 1 | Never Lose a Customer Again - Joey Coleman |
 | registration_rights_stock_consideration | 1 | Venture Deals - Brad Feld |
 | registro_de_riesgos | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
@@ -2683,6 +3067,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | reglas_gestion_riesgo_gambling | 1 | Winning at New Products - Robert G. Cooper |
 | reglas_origen_sectoriales | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | regulatory_process_model | 1 | Managing the Risks of Organizat - Reason, J. T_ |
+| rehacer_flujo_paso_limitante_capacidad | 1 | High Output Management - Andrew S. Grove |
 | reincorporacion_del_trabajo_previo | 1 | The Art of Thought - Wallas, Graham |
 | reinicio_programa_calidad | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | reinvencion_constante | 1 | Value Proposition Design |
@@ -2702,7 +3087,18 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | remover_barreras_orgullo_trabajo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | rendicion_de_cuentas_del_equipo | 1 | Winning at New Products - Robert G. Cooper |
 | rentabilidad_incrementada_franquicia | 1 | Franchise Your Business - Mark Siebert |
+| reparar_mal_comportamiento_evitar_disculpa_falsa | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| repartir_decision_cercanos_hechos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| repartir_equipo_cartera_horizontes | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| repartir_material_antes_reunion | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| repartir_notas_publicar_reparto_esperado | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| repartir_papeles_directivo_reclutador | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| repartir_responsabilidad_contratar_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| repartir_semana_cuarenta_horas_jefe | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| repartir_supervision_puesto_funcional_mision | 1 | High Output Management - Andrew S. Grove |
+| repartir_tiempo_atencion_mejores_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | reparto_inicial_equity | 1 | The Founder's Dilemmas - Wasserman, Noam |
+| repetir_mensaje_invariable_diario_reunion_evento | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | replicar_resultados | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | reporta_el_riesgo_sin_maquillaje | 1 | Edwards et al., Managing Project Risks |
 | reporte_auditoria | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2711,6 +3107,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | reporte_estado_miembro_equipo | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | reporte_gerencial_diagnostico_calidad | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | reporte_sostenibilidad_digital | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| representar_actividad_caja_negra_ventanas | 1 | High Output Management - Andrew S. Grove |
 | reps_warranties_indemnizacion | 1 | Venture Deals - Brad Feld |
 | requirements_documentation | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | requirements_management_plan | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
@@ -2719,15 +3116,29 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | requisitos_numericos_calidad_lotes | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | requisitos_sistema_retroalimentacion | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | resegmentacion_mercado_nicho_bajo_costo | 1 | The Startup Owner's Manual - Blank, Steve |
+| reservar_calendario_tiempo_ejecutar | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| reservar_media_hora_semanal_talento | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| reservar_tiempo_reflexion_metas | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| reservar_valor_unico_prioridades_arriba | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | reservas_de_capital_vc | 1 | Venture Deals - Brad Feld |
 | reset_total_de_expectativas | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | resistencia_al_cambio | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| resistir_dar_solucion_clasificar_decision_urgencia | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | resolucion_problemas_de_pago | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | resolucion_problemas_niveles_supervision | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
+| resolver_desencaje_valores_persona_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| resolver_dudas_frecuentes_pedir_critica | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| resolver_dudas_frecuentes_reuniones_salto_nivel | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | resolver_problemas_climaticos_clientes | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | resource_assessment | 1 | The field guide to human-centered design |
 | resource_breakdown_structure | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
+| respetar_cautelas_legales_contratacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| respetar_cuidar_persona_cargo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | respeto_a_la_diversidad | 1 | Cradle to Cradle - Michael Braungart |
+| responder_8_preguntas_construir_primary_aim | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| responder_critica_abrasiva_cuatro_reglas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| responder_primer_aviso_renuncia_subordinado | 1 | High Output Management - Andrew S. Grove |
+| responder_tres_preguntas_vocacion_directiva | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | responsabilidad_de_seguridad_en_linea | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | responsabilidad_extendida_productor_2 | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | responsabilidad_gerencial_causas_comunes | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -2744,8 +3155,12 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | restricciones_extremas_como_innovacion | 1 | Change by Design, Revised and U - Tim Brown |
 | restricciones_reputacionales | 1 | Venture Deals - Brad Feld |
 | resumen_de_datos_graficos | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| retar_superestrellas_equipo_constantemente | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | retargeting_display | 1 | Traction - Gabriel Weinberg |
 | retention_metrics | 1 | The Startup Owner's Manual - Blank, Steve |
+| retirar_barreras_politicas_metodo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| retirar_directivos_rechazan_metodo | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| retirar_etiquetas_permanentes_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | retorno_sobre_activos | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | retorno_sobre_capital | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
 | retroalimentacion_cliente_mejora_servicio | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
@@ -2756,11 +3171,19 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | reunion_pivotar_o_perseverar | 1 | The Lean Startup - Eric Ries |
 | reuniones_diarias_eliminar_bloqueos | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | reuniones_uno_a_uno | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| reunir_informacion_gerencial_vias_variadas | 1 | High Output Management - Andrew S. Grove |
 | revela_tu_propio_plazo_limite_al_negociar | 1 | Chris Voss, Rompe la barrera del no |
 | revenue_pricing_hypothesis | 1 | The Startup Owner's Manual - Blank, Steve |
 | review_mesh_evaluacion_por_calificacion | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | revisa_tus_riesgos_con_un_ritmo | 1 | Edwards et al., Managing Project Risks |
+| revisar_banderas_rojas_candidato | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| revisar_ciclo_responsabilidades_relaciones | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| revisar_cinco_causas_mal_desempenio | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| revisar_critica_mujer_agresiva_cuatro_tacticas | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
+| revisar_incentivos_trampas_equipo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | revisar_necesidades_de_empaque | 1 | DHL Express, Guia de empaque |
+| revisar_proposito_personas_proceso | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| revisar_tres_preguntas_valor_carrera | 1 | High Output Management - Andrew S. Grove |
 | revision_aplicabilidad_estandares_osha | 1 | SMALL_BUSINESS |
 | revision_de_aprendizaje | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | revision_diseno | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2854,6 +3277,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | seguimiento_cumplimiento_cadena_suministro | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | seguimiento_efectividad_controles | 2 | OSHA3885<br>OSHA3886 |
 | seguimiento_tendencias_sostenibilidad | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| seguir_frustrado_preguntar_implantacion_ideas | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
 | seguridad_electrica | 1 | SMALL_BUSINESS |
 | seguridad_producto | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 | seguridad_soldadura_corte_bronceado | 1 | SMALL_BUSINESS |
@@ -2896,6 +3320,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | seleccion_relaciones_cofundadores | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | seleccion_representante_extranjero | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | seleccionar_diseno_general_proceso | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| seleccionar_jugador_cuatro_entrevistas | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | seleccionar_tipo_de_lca_segun_recursos | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | self_regulation_deregulation_tradeoffs | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | sellar_cajas_metodo_cinta_en_h | 1 | Guia de empaque para envios (FedEx) |
@@ -2914,6 +3339,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | separar_hechos_de_percepcion | 1 | The Hard Thing About Hard Things - Ben Horowitz |
 | separar_opciones_dfe | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | ser_buen_jig | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
+| ser_honesto_transparente_desempenio | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | servicio_postventa_internacional | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | servicizacion_producto | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | sesgo_optimismo_fundador | 1 | The Founder's Dilemmas - Wasserman, Noam |
@@ -2930,6 +3356,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | siete_razones_fracaso_productos | 1 | Winning at New Products - Robert G. Cooper |
 | sigue_operando_pese_al_golpe | 1 | Edwards et al., Managing Project Risks |
 | silla_vacia_del_cliente_en_decisiones | 1 | Never Lose a Customer Again - Joey Coleman |
+| simplificar_trabajo_reducir_numero_pasos | 1 | High Output Management - Andrew S. Grove |
 | simulacion_clientes_ia | 1 | Co-Intelligence_ Living and Wor - Ethan Mollick |
 | simulacion_de_operaciones_supply_chain | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | simular_riesgos_transito_antes_de_enviar | 1 | ISTA 3P, Protocolo de ensayo de empaque para paqueteria |
@@ -2966,6 +3393,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | sistemas_sabios_vs_ignorantes | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | sistemas_sociotecnicos | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | sitio_web_franquicia | 1 | Franchise Your Business - Mark Siebert |
+| situar_transicion_cuatro_caminos | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | six_sigma_dmaic | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | skunk_works_proyectos_paralelos | 1 | Winning at New Products - Robert G. Cooper |
 | smed_setup_reduction | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
@@ -2973,10 +3401,13 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | solicitud_cambio | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | solidificar_defensa_ambiental | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | sop_colaborativo | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
+| sopesar_consejo_legal_despedir_humildad | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | soporte_continuo_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | soporte_publicidad_marketing | 1 | Franchise Your Business - Mark Siebert |
 | soporte_segunda_victima | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | sorprender_cliente_estrategico | 1 | Never Lose a Customer Again - Joey Coleman |
+| sostener_cambio_contexto_continuo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| sostener_contacto_oferta_aceptacion | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | sostener_las_ganancias | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | sostenibilidad_agil | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | sostenibilidad_cafeteria_oficina | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -3001,11 +3432,15 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | storytelling_modelo_negocio | 1 | Business Model Generation - Osterwalder, Alexander |
 | strat_map_arenas_estrategicas | 1 | Winning at New Products - Robert G. Cooper |
 | subfranquicia_master | 1 | Franchise Your Business - Mark Siebert |
+| subir_productividad_gerencial_tres_vias | 1 | High Output Management - Andrew S. Grove |
+| subir_vara_calidad_equipo | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | sucesion_iniciada_por_fundador | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | suenos_completos_diseno_responsable | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | sujetos_de_control | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | superacion_accidia_creativa | 1 | The Art of Thought - Wallas, Graham |
 | superioridad_calidad_market_share | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| supervisar_decision_delegada_preguntas_concretas | 1 | High Output Management - Andrew S. Grove |
+| supervisar_tarea_delegada_etapa_menor_valor | 1 | High Output Management - Andrew S. Grove |
 | supervision_a_liderazgo | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | supply_chain_management_systems | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | supuestos_de_procedimientos | 1 | The Field Guide to Understandin - Dekker, Sidney |
@@ -3083,6 +3518,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | tipos_sitio_web_exportacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | tirania_intergeneracional_remota | 1 | Cradle to Cradle - Michael Braungart |
 | toma_decisiones_bajo_incertidumbre | 1 | The Hard Thing About Hard Things - Ben Horowitz |
+| tomar_accion_deliberada_pausar_vocalizar_gesticular | 1 | Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet |
+| tomar_mando_reunion_pares_presidente_ausente | 1 | High Output Management - Andrew S. Grove |
+| tomar_notas_copia_guion_reunion_individual | 1 | High Output Management - Andrew S. Grove |
 | tpm_maintenance | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | trabajo_como_imaginado_vs_trabajo_como_hecho | 1 | The Field Guide to Understandin - Dekker, Sidney |
 | trabajo_con_bancos_comerciales | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -3105,15 +3543,23 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | transicion_organizacional_fluido_a_formal | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | transicion_post_sucesion | 1 | The Founder's Dilemmas - Wasserman, Noam |
 | transicion_producto_a_experiencia | 1 | Change by Design, Revised and U - Tim Brown |
+| transitar_aprendiz_primeros_meses | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| transitar_jefe_nuevo_equipo_establecido | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| transitar_pionero_equipo_nuevo | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| transitar_sucesor_equipo_entero | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | transitarios_freight_forwarders | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
+| transmitir_objetivos_prioridades_preferencias | 1 | High Output Management - Andrew S. Grove |
 | transparencia_crisis_reputacional | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | transparencia_datos_ambientales | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | transparencia_facturacion | 1 | Never Lose a Customer Again - Joey Coleman |
 | transporte_bajas_emisiones | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| tratar_jefe_entrenador | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
 | tratar_las_historias_como_herramientas | 1 | Assembling Tomorrow: A Guide to Designing a Thriving Future |
 | tratar_packaging_costo_marca | 1 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) |
 | trayectoria_del_accidente | 1 | Managing the Risks of Organizat - Reason, J. T_ |
 | trazabilidad_de_lotes | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| trazar_modelo_negocio_cliente_primero | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
+| trazar_plan_dieciocho_meses_aprendizaje | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | tres_as_de_metricas | 1 | The Lean Startup - Eric Ries |
 | tres_espacios_innovacion_prototipado | 1 | Change by Design, Revised and U - Tim Brown |
 | tres_palancas_rentabilidad | 1 | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe |
@@ -3134,6 +3580,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | unbundling_business_models | 1 | Business Model Generation - Osterwalder, Alexander |
 | understanding_customers_tecnicas | 1 | Value Proposition Design |
 | unidades_medida_sensores | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| unificar_color_forma_vestuario_modelo | 1 | The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber |
 | unique_link_tracking | 1 | Value Proposition Design |
 | unique_selling_proposition_statement | 1 | The Startup Owner's Manual - Blank, Steve |
 | unirse_organizacion_rsc_ambiental | 1 | The Green to Gold Business Play - Daniel C. Esty |
@@ -3144,6 +3591,10 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | usa_reglas_proveedor_palabra_justo | 1 | Chris Voss, Rompe la barrera del no |
 | usa_silencio_no_partas_diferencia | 1 | Chris Voss, Rompe la barrera del no |
 | usability_testing_producto | 1 | The Startup Owner's Manual - Blank, Steve |
+| usar_banco_nueve_preguntas_entrevista | 1 | High Output Management - Andrew S. Grove |
+| usar_calendario_herramienta_planificacion_produccion | 1 | High Output Management - Andrew S. Grove |
+| usar_lenguaje_no_discriminatorio_entrevista | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| usar_tres_clases_reunion_proceso | 1 | High Output Management - Andrew S. Grove |
 | uso_del_us_commercial_service | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
 | uso_inadecuado_computadoras | 1 | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev |
 | uso_intermediarios_exportacion | 1 | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) |
@@ -3167,6 +3618,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | valor_presente_franquicia_pvf | 1 | Franchise Your Business - Mark Siebert |
 | valor_vs_desperdicio | 1 | The Lean Startup - Eric Ries |
 | valoracion_costos_externos | 1 | The Green to Gold Business Play - Daniel C. Esty |
+| valorar_logro_tres_comparaciones | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | valores_centrales_baldrige | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
 | valuacion_409a | 1 | Venture Deals - Brad Feld |
 | valuacion_pre_post_money | 1 | Venture Deals - Brad Feld |
@@ -3177,11 +3629,20 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | value_proposition_startup | 1 | The Startup Owner's Manual - Blank, Steve |
 | value_stream_mapping_ambiental | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | variance_analysis | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
+| variar_frecuencia_inspeccion_nivel_calidad | 1 | High Output Management - Andrew S. Grove |
 | vehiculos_autonomos_drones_supply_chain | 1 | Essentials of Supply Chain Management - Michael H. Hugos |
 | vehiculos_combustibles_alternativos_2 | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | velocidad_crecimiento_franquicia | 1 | Franchise Your Business - Mark Siebert |
 | velocidad_crecimiento_franquicia_2 | 1 | Franchise Your Business - Mark Siebert |
+| vencer_sindrome_grupo_pares_autoconfianza | 1 | High Output Management - Andrew S. Grove |
+| vender_abastecimiento_candidatos | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| vender_cambio_trabajo_familia | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | vender_concepto_franquicia | 1 | Franchise Your Business - Mark Siebert |
+| vender_encaje_candidato_empresa | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| vender_final_entrevista | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| vender_fortuna_candidato | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| vender_libertad_candidato | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
+| vender_puesto_jugador | 1 | Who: The A Method for Hiring - Geoff Smart y Randy Street |
 | vender_sin_stock_con_drop_shipping | 1 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) |
 | venta_interna_cliente | 1 | SPIN Selling - Neil Rackham |
 | venta_primer_franquiciado | 1 | Franchise Your Business - Mark Siebert |
@@ -3214,6 +3675,9 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | vision_periferica | 1 | Winning at New Products - Robert G. Cooper |
 | visitas_soporte_campo | 1 | Franchise Your Business - Mark Siebert |
 | visualizacion_datos_deteccion_outliers | 1 | Juran's Quality Handbook_ The C - Joseph A. Defeo |
+| visualizar_recuperar_confianza | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| vivir_primero_valor_declarado | 1 | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo |
+| vivir_valores_propios_evitar_listarlos | 1 | Radical Candor: Fully Revised and Updated Edition - Kim Scott |
 | voc_temprano_en_agile_stage_gate | 1 | Winning at New Products - Robert G. Cooper |
 | voces_externas_credibles | 1 | The Green to Gold Business Play - Daniel C. Esty |
 | voice_of_customer_estrategico | 1 | Winning at New Products - Robert G. Cooper |
@@ -3241,6 +3705,7 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 | wizard_of_oz_testing | 1 | The Lean Startup - Eric Ries |
 | work_breakdown_structure | 1 | A Project Manager's Book of Forms - Cynthia Stackpole Snyder |
 | worst_case_best_case_analysis | 1 | The Startup Owner's Manual - Blank, Steve |
+| zanjar_seis_preguntas_decision_adelantado | 1 | High Output Management - Andrew S. Grove |
 | zero_defects_concepto | 1 | Quality is free _ the art of making quality certain -- Philip B_ Crosby |
 
 ## Ids absorbidos sin fuente registrada

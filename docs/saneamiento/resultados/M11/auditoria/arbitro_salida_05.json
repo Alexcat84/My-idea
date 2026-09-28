@@ -1,0 +1,802 @@
+{
+ "lote": "05",
+ "campos": [
+  {
+   "node_id": "desplegar_estrategia_tarjeta_puntuacion",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando tienes el plan de negocio del año que viene salido de tu ciclo anual de planificación y quieres que la estrategia llegue a los puestos concretos. El problema de fondo es este: las organizaciones reconocen la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a las personas del equipo los resultados con los que se logran esos objetivos.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "rinden homenaje a"
+   ],
+   "motivo": "\"Rinden homenaje a la necesidad\" calca \"paying homage to the need\"; en español se dice que la reconocen."
+  },
+  {
+   "node_id": "desplegar_estrategia_tarjeta_puntuacion",
+   "campo": "pasos_accionables[0]",
+   "decision": "actual",
+   "texto_final": "Parte de tu estrategia: del ciclo anual de planificación que culmina en el plan de negocio del año que viene.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: el \"probably\" del libro es una suposición del autor sobre el lector, no un matiz sobre el mundo; el nodo solo se activa cuando ya tienes el plan salido de tu ciclo anual (condiciones_activacion), así que el paso no da por hecho nada que el nodo no haya fijado."
+  },
+  {
+   "node_id": "calibrar_normalidad_preguntas_jefe",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Para calibrar qué es lo normal, mira escenarios concretos junto a tu propio jefe, que es una manera eficaz de hacerlo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "175",
+   "frase": "One effective way to do that is to look at specific scenarios together with your own manager.",
+   "fragmentos": [],
+   "motivo": "El libro dice \"una manera eficaz\", no la única."
+  },
+  {
+   "node_id": "calibrar_normalidad_preguntas_jefe",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "En tus primeros meses como jefe nuevo, cuando quieres entender cómo calibrar tus expectativas sobre qué es lo normal en este entorno y todavía no tienes criterio propio para juzgarlo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_03.md",
+   "lineas": "175",
+   "frase": "New managers on my team tell me that the thing they most want to understand is how to calibrate their expectations around “what’s normal.”",
+   "fragmentos": [],
+   "motivo": "Lo que los jefes nuevos de un equipo concreto dicen querer entender se volvía lo que tú más necesitas."
+  },
+  {
+   "node_id": "desarrollar_primer_curso_entrenamiento",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "Un primer curso corto dictado, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si tú solo puedes cubrir a toda la organización o hace falta preparar instructores adicionales.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "el propio mando puede"
+   ],
+   "motivo": "Tercera persona (\"el propio mando\") en un nodo dirigido a ti; el último paso ya lo dice en tú (\"si podrás cubrir tú solo\")."
+  },
+  {
+   "node_id": "desarrollar_primer_curso_entrenamiento",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando ya priorizaste en qué entrenar a tus subordinados y eliges el tema más urgente para desarrollar tu primer curso propio.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "el mando ya priorizó",
+    "sus subordinados",
+    "y elige el",
+    "su primer curso"
+   ],
+   "motivo": "Tercera persona (\"el mando\", \"sus subordinados\", \"su primer curso\") en vez de tú."
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Organizar una semana de arreglo de averías de gestión, con un registro público, una votación y un reparto entre jefes",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "Correr"
+   ],
+   "motivo": "\"Correr una semana\" calca \"run\"; en español se organiza."
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Parte de lo que las organizaciones de ingeniería hacen a menudo: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_09.md",
+   "lineas": "67",
+   "frase": "ENGINEERING ORGANIZATIONS OFTEN do the equivalent of spring cleaning.",
+   "fragmentos": [],
+   "motivo": "El libro dice que lo hacen a menudo (often); \"ya hacen\" lo volvía práctica de todas."
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Aplica la misma idea a la gestión, como decidió hacer un equipo por considerarlo una buena práctica, y como otro equipo hizo después con otro nombre.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "por pura higiene"
+   ],
+   "motivo": "\"Por pura higiene\" calca \"it would be good hygiene\"."
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando hay problemas de gestión en tu organización que llevan meses molestando a la gente y nunca se encuentra el momento de arreglarlos.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_09.md",
+   "lineas": "67",
+   "frase": "it’s a chance to fix old and annoying problems that have been bothering people for months.",
+   "fragmentos": [],
+   "motivo": "El libro habla de problemas viejos que llevan meses fastidiando a la gente y que nunca se encuentra el momento de arreglar; \"a todo el mundo\" y \"tiempo asignado\" no están."
+  },
+  {
+   "node_id": "reemplazarse_trabajo_propio",
+   "campo": "pasos_accionables[8]",
+   "decision": "corregido",
+   "texto_final": "Busca además a quien lo hace mejor que tú. Cuando unas personas a su cargo propusieron reforzar las relaciones dentro del equipo con comidas de grupo, sesiones de aprendizaje o círculos de mentoría, a ella le encantaron todas las sugerencias pero reconoció que no era su fuerte, así que pidió al directivo que había abierto la discusión, a quien le encantaba conocer gente y juntar grupos, que se encargara de decidir qué hacer. Una de sus ideas, un encuentro mensual los miércoles por la noche, se hizo tan popular que salió del equipo y se convirtió en una cita habitual de la comunidad local de diseño.",
+   "veredicto": "CONTRARIO",
+   "tipos": [
+    "contrario"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_10.md",
+   "lineas": "193",
+   "frase": "Some time ago, a few of my reports suggested that we do more to strengthen relationships within our team.",
+   "fragmentos": [],
+   "motivo": "La idea no fue de quien delega: la propusieron personas a su cargo, como cuenta el propio paso; \"aunque seas tú quien tenga la idea\" cambiaba quién la tuvo."
+  },
+  {
+   "node_id": "reemplazarse_trabajo_propio",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Ten presente cómo acabó ese caso: ella la delegó por accidente, pidiendo a unos compañeros que la sustituyeran durante su permiso parental, y al volver la reunión funcionaba mejor que cuando la dejó, con los ponentes más preparados, el contenido mejor organizado y hasta las presentaciones más divertidas. Se sentía atada a ella porque se había vuelto un hábito, incluso parte de su identidad, y en su ausencia los organizadores le dieron vida nueva.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_10.md",
+   "lineas": "185",
+   "frase": "I ended up delegating it accidentally.",
+   "fragmentos": [],
+   "motivo": "Una experiencia personal presentada como \"la prueba\" de la regla; el libro la cuenta como el caso en que ella vio su error."
+  },
+  {
+   "node_id": "reemplazarse_trabajo_propio",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Ten presente también por qué cuesta en la práctica: tendemos a encariñarnos con lo que hacemos, porque puede gustarnos la tarea en sí o la sensación de pericia y de control que nos da.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_10.md",
+   "lineas": "179",
+   "frase": "We may love the task itself or the sense of expertise and control it gives us.",
+   "fragmentos": [],
+   "motivo": "El libro dice que puede gustarnos (may love); el paso lo afirmaba."
+  },
+  {
+   "node_id": "dirigir_reunion_decision",
+   "campo": "pasos_accionables[12]",
+   "decision": "corregido",
+   "texto_final": "Evita el cuarto: que se gaste demasiado tiempo intentando llevar al grupo al consenso en vez de acudir rápido a quien decide.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "escalar"
+   ],
+   "motivo": "\"Escalar\" por \"escalate\" es calco."
+  },
+  {
+   "node_id": "dirigir_reunion_decision",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "No necesitas consenso. Lo que hace falta es que aquellos a quienes la decisión afecta sientan que la manera en que se tomó fue eficiente y justa. Si la gente no confía en el proceso, lo que verás es que la decisión se alarga.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_07.md",
+   "lineas": "57",
+   "frase": "You don’t need consensus, but those whom the decision affects should feel that the way it was made was efficient and fair.",
+   "fragmentos": [],
+   "motivo": "El libro dice que no necesitas consenso; \"no busques\" lo volvía una prohibición."
+  },
+  {
+   "node_id": "contratar_reclutadores_externos",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Un reclutador externo puede hacer poco si no sabe quién eres. Pasa como con un médico o un asesor financiero: cuanto más lo dejas a oscuras sobre tu empresa, lo que falla y lo que necesitas de verdad, menos eficaz es. Por eso lo tratas como a un socio, le muestras la cultura y el funcionamiento interno del negocio y le das tu tarjeta de puntuación desde el principio. Es poco probable que los buenos reclutadores acepten el encargo sin esa visión, y los mejores además te enseñan cómo está el mercado del talento. Ser abierto desde el inicio agiliza el proceso y mejora los resultados.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "se le trata",
+    "se le muestran",
+    "se le da"
+   ],
+   "motivo": "Impersonal prescriptivo (\"se le trata\", \"se le muestran\", \"se le da\") de la familia de \"se debe\", mezclado con \"tu tarjeta\"; pasa a tú como el resto del resumen."
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Parte de la dificultad central del oficio, que muy pocos ponen en primer lugar: establecer una relación de confianza con cada persona a tu cargo. Si diriges una organización grande no puedes tener relación con todos, pero sí puedes conocer de verdad a quienes tienes directamente a tu cargo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_04.md",
+   "lineas": "69",
+   "frase": "Very few people focus first on the central difficulty of management",
+   "fragmentos": [],
+   "motivo": "El libro dice que muy pocos se centran primero en ella, no que casi nadie se la plantee."
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Repasa tus tres responsabilidades: crear una cultura de guía, alabanza y crítica, que mantenga a todos moviéndose en la dirección correcta; entender qué motiva a cada persona de tu equipo lo bastante bien para evitar el agotamiento o el aburrimiento y mantener el equipo cohesionado; y conseguir resultados en colaboración.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_04.md",
+   "lineas": "71",
+   "frase": "They determine whether you can fulfill your three responsibilities as a manager: 1) to create a culture of guidance (praise and criticism) that will keep everyone moving in the right direction;",
+   "fragmentos": [],
+   "motivo": "El libro numera las tres responsabilidades, pero no manda repasarlas en ese orden."
+  },
+  {
+   "node_id": "repartir_tiempo_atencion_mejores_equipo",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Gestionar según las fortalezas también vale para el equipo entero: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quien se atasca reclama tu atención y quien va bien no suele pedir ayuda. Pero la cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco",
+    "regionalismo"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "hacia las fortalezas",
+    "tira de"
+   ],
+   "motivo": "\"Gestionar hacia las fortalezas\" calca \"managing to strengths\"; \"tira de\" es forma regional."
+  },
+  {
+   "node_id": "repartir_tiempo_atencion_mejores_equipo",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Lleva el principio de gestionar según las fortalezas un paso más allá y aplícalo también a los equipos, no solo a las personas.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "hacia las fortalezas"
+   ],
+   "motivo": "\"Gestionar hacia las fortalezas\" calca \"managing to strengths\"."
+  },
+  {
+   "node_id": "repartir_tiempo_atencion_mejores_equipo",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Presta atención al mejor talento de tu equipo, a quienes ya van bien y podrían ir todavía mejor, del mismo modo que cada persona debe apoyarse en sus fortalezas.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "jugar a sus fortalezas"
+   ],
+   "motivo": "\"Jugar a sus fortalezas\" calca \"play to their strengths\"."
+  },
+  {
+   "node_id": "repartir_tiempo_atencion_mejores_equipo",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Haz la cuenta con un puesto de limonada: si una persona vende treinta vasos por hora y otra solo diez, puede que te sientas empujado a pasar la mayoría de tu tiempo con la segunda para subir su producción, pero si entrenar a la primera la mejora un diez por ciento son tres vasos más, y para sacar lo mismo de la segunda tendrías que hacerla mejorar un treinta y tres por ciento, que probablemente será mucho más difícil de lograr.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_04.md",
+   "lineas": "237",
+   "frase": "you might feel compelled to spend a majority of your time with Henry to improve his output.",
+   "fragmentos": [],
+   "motivo": "El libro dice \"might feel compelled\"; el paso lo afirmaba como seguro."
+  },
+  {
+   "node_id": "planificar_tres_pasos_demanda_estado_brecha",
+   "campo": "condiciones_activacion[0]",
+   "decision": "actual",
+   "texto_final": "Cuando tienes que planificar el trabajo de tu grupo y no sabes por dónde empezar, o cuando lo que llamas plan es una lista de intenciones y no una comparación entre lo que te van a pedir y lo que vas a producir.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: una condición de activación describe cuándo usar el nodo, no atribuye nada al libro; el contraste entre una lista de intenciones y una comparación entre lo que te piden y lo que produces sale de la definición misma de planificar del pasaje (comparar lo que necesitas con lo que tienes; grove_high_output/cap_07.md 15-19)."
+  },
+  {
+   "node_id": "repartir_supervision_puesto_funcional_mision",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Una organización híbrida solo funciona si hay una manera de coordinar las unidades de misión con los grupos funcionales, para que los recursos de estos lleguen a donde aquellas los necesitan. La doble dependencia es esa manera: como el grupo funcional fija los métodos y estándares del oficio, el puesto responde a dos jefes y cada uno supervisa lo que le corresponde. El de misión le marca prioridades con problemas concretos del negocio; el funcional vela por su formación técnica, vigila su desempeño técnico y cuida su carrera.",
+   "veredicto": "CONTRARIO",
+   "tipos": [
+    "contrario",
+    "invencion"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_10.md",
+   "lineas": "43",
+   "frase": "His professional methods, practices, and standards are set by the functional group to which he belongs, the finance organization.",
+   "fragmentos": [],
+   "motivo": "Los métodos y estándares los fija el grupo funcional, no el jefe funcional; y el cierre \"ninguna de las dos necesidades queda sin dueño\" es un efecto que el libro no dice (el suyo es que la doble dependencia hace funcionar la organización híbrida, ya dicho en la primera frase). | AJUSTE DEL ORQUESTADOR: \"su organizacion\" (baranda residuo_corporativo de la casa) pasa a \"lo que le corresponde\"; el sentido no cambia."
+  },
+  {
+   "node_id": "repartir_supervision_puesto_funcional_mision",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "El reparto escrito de la supervisión de ese puesto: sus dos jefes nombrados, y al lado de cada uno lo que le toca hacer, desde las prioridades hasta la formación, la vigilancia técnica y la carrera.",
+   "veredicto": "CONTRARIO",
+   "tipos": [
+    "contrario"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_10.md",
+   "lineas": "43",
+   "frase": "His professional methods, practices, and standards are set by the functional group to which he belongs, the finance organization.",
+   "fragmentos": [],
+   "motivo": "Ponía los métodos y estándares entre lo que le toca a un jefe; los fija el grupo funcional, como dice el segundo paso."
+  },
+  {
+   "node_id": "cambiar_formato_reunion_favorecer_participacion",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con lo que garantiza dar la vuelta a la sala, que es la razón de hacerlo: que ninguna perspectiva se quede sin decir.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Tras el paso de las notas adhesivas, \"eso\" apuntaba a ellas; en el libro lo que lo garantiza es dar la vuelta a la sala."
+  },
+  {
+   "node_id": "cambiar_potencial_trayectoria_crecimiento",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con el problema de la palabra potencial: el cuadro de desempeño y potencial que muchas empresas usan pide juzgar a cada persona y meterla en una de nueve casillas, y la peor de las nueve se llama bajo desempeño y bajo potencial. Hay quien piensa que no existe un ser humano de bajo potencial.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_06.md",
+   "lineas": "57",
+   "frase": "I don’t think there is any such thing as a low-potential human being.",
+   "fragmentos": [],
+   "motivo": "Es la opinión de una persona (\"no creo que exista\") vuelta afirmación absoluta."
+  },
+  {
+   "node_id": "cambiar_potencial_trayectoria_crecimiento",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con la segunda objeción: la categoría potencial no parecía dejar sitio para evaluar bien a quien es excelente en lo que hace y quiere seguir haciéndolo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion",
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_06.md",
+   "lineas": "61",
+   "frase": "One problem with the “potential” category was that it didn’t seem to allow for a positive evaluation of people who were great at what they did and wanted to keep doing it.",
+   "fragmentos": [],
+   "motivo": "\"Que es la que lo vuelve operativo\" es una valoración que el libro no hace; y el libro dice \"didn't seem to allow\" (no parecía dejar)."
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Descarta también hacerlas cada trimestre, por dos razones: supone una carga fuerte para los jefes, y no le da al empleado mucho tiempo para enseñar mejora desde el ciclo de nota anterior.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "grava con fuerza a"
+   ],
+   "motivo": "\"Grava con fuerza\" calca \"heavily taxes\"."
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Hazlas dos veces al año.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    ", que es la frecuencia recomendada"
+   ],
+   "motivo": "\"La frecuencia recomendada\" es la recomendación de la autora, voz de libro de la familia de \"se recomienda\"."
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Recuerda a qué se refiere la frecuencia de dos veces al año: solo a la nota, que es gestión del desempeño y no desarrollo.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "esa recomendación"
+   ],
+   "motivo": "\"Esa recomendación\" remite a la recomendación de la autora (voz de libro) y, sin ella en el paso anterior, se queda sin antecedente."
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "campo": "pasos_accionables[7]",
+   "decision": "corregido",
+   "texto_final": "Ten conversaciones de desarrollo improvisadas cada semana, en privado, de dos minutos, y sin nota ni proceso.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "Mantén las",
+    "ocurriendo"
+   ],
+   "motivo": "\"Mantén ... ocurriendo\" calca \"should be happening weekly\"."
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "campo": "pasos_accionables[8]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con lo que suele haber detrás del impulso de poner notas más a menudo: la confusión entre gestión del desempeño y desarrollo. Si las notas ocurren demasiado a menudo se confunden con el desarrollo, y las conversaciones que deberían conectar con el deseo intrínseco de mejorar disparan en su lugar la resistencia que aparece cuando se nos juzga y el juicio arrastra premios y castigos extrínsecos.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz",
+    "calco"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_14.md",
+   "lineas": "193",
+   "frase": "The move to having more frequent ratings is often a result of the confusion between performance management and development.",
+   "fragmentos": [],
+   "motivo": "El libro dice que ese impulso es a menudo (often) resultado de la confusión; y \"engancharse al deseo\" calca \"hook into\"."
+  },
+  {
+   "node_id": "usar_banco_nueve_preguntas_entrevista",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "Las respuestas del candidato a las nueve preguntas, que te dan una base concreta y comparable para juzgar su desempeño pasado y sus valores operativos.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "le dan al mando"
+   ],
+   "motivo": "Tercera persona (\"al mando\") en vez de tú."
+  },
+  {
+   "node_id": "usar_banco_nueve_preguntas_entrevista",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que dispones.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "voz"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "el mando va",
+    "y necesita preguntas",
+    "de que dispone."
+   ],
+   "motivo": "Tercera persona (\"el mando\", \"necesita\", \"dispone\") en vez de tú."
+  },
+  {
+   "node_id": "auditar_calendario_reuniones_semana",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "La segunda: ¿fui clave para el resultado?",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "crítico"
+   ],
+   "motivo": "\"Crítico\" por \"critical\" (decisivo) es calco; el resumen del nodo ya dice \"clave\"."
+  },
+  {
+   "node_id": "emparejar_indicadores_efecto_contraefecto",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Emparejar cada indicador con otro que mida su contraefecto, para no reaccionar de más",
+   "veredicto": "VOZ",
+   "tipos": [
+    "regionalismo"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "pasarse de frenada"
+   ],
+   "motivo": "\"Pasarse de frenada\" es coloquialismo de España; el libro habla de no sobrerreaccionar."
+  },
+  {
+   "node_id": "emparejar_indicadores_efecto_contraefecto",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Antes de soltar un indicador, mira hacia dónde va a dirigir la atención, porque el indicador tiende a dirigir la atención hacia lo que vigila, igual que en la bicicleta sueles ir hacia donde miras.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "31",
+   "frase": "Indicators tend to direct your attention toward what they are monitoring. It is like riding a bicycle: you will probably steer it where you are looking.",
+   "fragmentos": [],
+   "motivo": "El libro dice que los indicadores tienden a dirigir la atención y que probablemente vas hacia donde miras."
+  },
+  {
+   "node_id": "emparejar_indicadores_efecto_contraefecto",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando vas a poner un indicador en marcha y sabes que quien lo mire probablemente actúe en la dirección que ese indicador marca, de modo que medir una sola cara del asunto empuja a pasarse.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/grove_high_output/cap_03.md",
+   "lineas": "31",
+   "frase": "you are likely to take action to drive your inventory levels down, which is good up to a point.",
+   "fragmentos": [],
+   "motivo": "El libro dice que es probable que actúes (you are likely to take action), no que sea seguro."
+  },
+  {
+   "node_id": "escribir_apuntes_sala_estudio_equipo",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Haz por eso lo que a una directiva le funcionó mucho mejor: hacer sitio para que todo el equipo lo haga dentro de la propia reunión.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_11.md",
+   "lineas": "151",
+   "frase": "I made time for us all to do it in my staff meeting. This worked much better.",
+   "fragmentos": [],
+   "motivo": "La experiencia de una persona (a ella le funcionó mucho mejor) vuelta regla general; el resumen ya la cuenta como caso."
+  },
+  {
+   "node_id": "interrumpir_candidato_escucha_reflexiva",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Mantén alta la sintonía durante toda la entrevista, porque es a través de ella como se consiguen los datos más valiosos, y una interrupción cortés puede construirla.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/smart_who/cap_05.md",
+   "lineas": "59",
+   "frase": "It is through maintaining very high rapport that you get the most valuable data, and polite interrupting can build that rapport.",
+   "fragmentos": [],
+   "motivo": "El libro dice que la interrupción cortés puede construir la sintonía (can build)."
+  },
+  {
+   "node_id": "interrumpir_candidato_escucha_reflexiva",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Durante la entrevista cronológica de trayectoria, en cuanto creas que el candidato se está yendo del rumbo. Se activa varias veces por entrevista, al menos una cada tres o cuatro minutos.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "\"La primera de las cinco tácticas maestras\" remite a una serie que no existe en el nodo."
+  },
+  {
+   "node_id": "fijar_cuatro_notas_calcular_nota_global",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Fija cuatro notas, que en general dan la mejor proporción entre simplicidad y señal, contando con que puede haber una buena razón para que tú hagas otra cosa.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_14.md",
+   "lineas": "107",
+   "frase": "I have settled on four ratings as generally the best ratio of simplicity to signal.",
+   "fragmentos": [],
+   "motivo": "El libro dice que cuatro notas son en general (generally) la mejor proporción."
+  },
+  {
+   "node_id": "fijar_cuatro_notas_calcular_nota_global",
+   "campo": "pasos_accionables[7]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con lo que cuatro notas por separado en cada una de las categorías elegidas pueden permitir: que la evaluación sirva de diagnóstico para mejorar, del tipo: tus resultados son asombrosos, pero tu trabajo en equipo te va a frenar; y no solo de látigo o de zanahoria como hace una nota global única.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_14.md",
+   "lineas": "109",
+   "frase": "Separate ratings for each of the four categories you’ve chosen (see below) can help the performance review serve as a diagnostic for improvement",
+   "fragmentos": [],
+   "motivo": "El libro dice que pueden ayudar (can help); el paso lo daba por hecho."
+  },
+  {
+   "node_id": "fijar_cuatro_notas_calcular_nota_global",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Cuatro notas suelen dar el mejor equilibrio entre simplicidad y señal, aunque puede haber razones para otra cosa. Con más, se crea una falsa precisión y los jefes tienden a subir la nota en cada evaluación para simular progreso, midiendo tiempo en el puesto y no desempeño. Con tres, la inmensa mayoría cae en el medio y no aprende nada; cuatro obligan a partir ese medio en dos. Poner nota por separado a cada categoría puede volver la evaluación un diagnóstico. Sin promediar, la nota alta exige sacarla en todo y una nota baja en una categoría baja la global, lo que ayuda a un reparto razonable.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "\"Serlo\" no tenía antecedente: la nota alta global exige sacarla en todas las categorías."
+  },
+  {
+   "node_id": "dirigir_reunion_revision_trabajo",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Desconfía de buscar la aprobación, porque eso crea incentivos para centrarse más en los espejismos de la presentación que en conseguir la opinión más útil para mejorar el trabajo.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "regionalismo"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "ir a por"
+   ],
+   "motivo": "\"Ir a por\" es forma regional de España."
+  },
+  {
+   "node_id": "cambiar_forma_trabajar_conservar_plantilla",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Avisa a tu jefe si necesitas cambiar a alguien.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/marquet_turn_the_ship/cap_02.md",
+   "lineas": "25",
+   "frase": "If you need to change out some people, let me know, but I’m not interested in a lot of turnover.",
+   "fragmentos": [],
+   "motivo": "El libro no habla de un canal abierto sin que nadie lo pida: es el jefe quien ofrece el aviso, sin interés en mucha rotación."
+  },
+  {
+   "node_id": "cambiar_forma_trabajar_conservar_plantilla",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con el mensaje que puede mandar no despedir a nadie, que es la razón de que importe: en un submarino, a cada tripulante le llegó que el que estaba mal no era él, sino el liderazgo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/marquet_turn_the_ship/cap_02.md",
+   "lineas": "29",
+   "frase": "This was important because it sent the message to each crew member that he wasn’t screwed up, the leadership was.",
+   "fragmentos": [],
+   "motivo": "Lo que pasó en un submarino se afirmaba como efecto general."
+  },
+  {
+   "node_id": "cambiar_forma_trabajar_conservar_plantilla",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Cuenta el plazo que tienes antes de decidir nada sobre la gente. En un submarino con seis meses hasta el despliegue, el argumento fue que con ese plazo no había mucho tiempo para encontrar sustitutos.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/marquet_turn_the_ship/cap_02.md",
+   "lineas": "25",
+   "frase": "With only six months to deployment you don’t have a lot of time to find replacements.",
+   "fragmentos": [],
+   "motivo": "El libro dice que no hay mucho tiempo (not a lot of time), no que no haya ninguno."
+  },
+  {
+   "node_id": "cambiar_forma_trabajar_conservar_plantilla",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Cambiar cómo trabaja la gente que ya tienes en vez de renovarla",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Ningún paso manda explicar el porqué: el mensaje llega por no despedir, no por decirlo; el título prometía algo que el nodo no trae."
+  }
+ ]
+}

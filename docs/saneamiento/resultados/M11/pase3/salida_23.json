@@ -1,0 +1,1047 @@
+{
+ "lote": "23",
+ "nodos": [
+  {
+   "node_id": "encargar_meta_especifica_dejar_libre_metodo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 31,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 35,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 41,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 43,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 45,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 49,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_opinion_accionable",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 211,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 213,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 219,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 223,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 225,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 227,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "observar_reunion_rutinaria_senales_plantilla",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 21,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_palabras_nota_definirlas_empresa_entera",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "matiz",
+     "cita": "Refuerza además esa definición en la propia reunión de evaluación.",
+     "motivo": "El libro presenta el refuerzo en la reunión como posibilidad (can also be reinforced); el paso lo da como orden. El resumen sí lo conserva (\"puedes reforzarla\").",
+     "fichero": "fuentes/scott_radical_candor/cap_14.md",
+     "lineas": "121",
+     "frase": "Each term should be defined clearly to everyone in the company in some very central way (e.g., a page on the company intranet), but it can also be reinforced in the review meeting.",
+     "propuesta": "También puedes reforzar esa definición en la propia reunión de evaluación."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "ortografia",
+     "cita": "trabajar con tu jefe y idear juntos",
+     "motivo": "\"y\" ante sonido i: debe ser \"e idear\" (aviso mecánico).",
+     "propuesta": "Escribe en la definición lo que la nota arrastra. Por ejemplo, algunas empresas querrían dejar claro para la nota más baja que vas a tener que trabajar con tu jefe e idear juntos un plan que te ayude a atender los problemas que ahí se describen, porque si no los atiendes probablemente acabarás en un plan de desempeño que puede llevar después al despido."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 121,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 121,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 123,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "cerrar_reunion_pasos_siguientes",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "Usa esos seguimientos como base de la agenda de la próxima vez que el grupo se reúna.",
+     "motivo": "El libro dice que los seguimientos pueden servir de base de la agenda (can then anchor); el paso lo vuelve orden. El resumen sí lo conserva (\"puede ser la base\").",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "207",
+     "frase": "These follow-ups can then anchor the agenda for when the group reconvenes.",
+     "propuesta": "Puedes usar esos seguimientos como base de la agenda de la próxima vez que el grupo se reúna."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 201,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 207,
+     "usa": true,
+     "conserva": false
+    }
+   ]
+  },
+  {
+   "node_id": "reforzar_principios_guia_lenguaje_prueba_conocimiento",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 89,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 89,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 91,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 91,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 91,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 91,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 95,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 99,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 99,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "comprobar_gusto_trato_personas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "si eres de los que sacan energía del trato con otros o de los que van a encontrar duro el día a día de la gestión",
+     "motivo": "El libro solo da probabilidades (likely to get energy; you'll probably find it challenging); el entregable lo afirma como diagnóstico seguro. Pasos y resumen sí conservan el matiz.",
+     "fichero": "fuentes/zhuo_manager/cap_02.md",
+     "lineas": "221-223",
+     "frase": "then you're the kind of person who is likely to get energy from interacting with others. / If, on the other hand, your first thought is Wow, that sounds awful, then you'll probably find the day-to-day of management challenging.",
+     "propuesta": "Tu reacción inmediata a la prueba leída y anotada, y con ella si probablemente eres de los que sacan energía del trato con otros o de los que van a encontrar duro el día a día de la gestión."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "ortografia",
+     "cita": "Si piensas sin problema, es probable",
+     "motivo": "Lo que se piensa es una cita y va sin comillas: \"si piensas sin problema\" se lee como \"si piensas sin dificultad\". Se marcan las dos reacciones con comillas (600 caracteres medidos).",
+     "propuesta": "La gestión no se separa del equipo: buena parte del puesto es escuchar y hablar con las personas que dependen de ti para que puedan prosperar. De ahí la prueba: imagina que el 70 por ciento de tu día se va en reuniones. La cifra puede ser exagerada; lo que cuenta es tu primera reacción. Si piensas «sin problema», es probable que el trato con otros te dé energía; si piensas «suena horrible», probablemente la gestión diaria te resulte dura. No es un examen de extroversión: lo que hace poco probable que el puesto te encaje es querer jornadas de concentración larga, tranquila y sin interrupciones."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 215,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 219,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 223,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 223,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 225,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "revisar_critica_mujer_agresiva_cuatro_tacticas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "ortografia",
+     "cita": "una crítica de demasiado agresiva",
+     "motivo": "Frase citada sin comillas: la cita se funde con la oración y la lectura se rompe (en el resto del pack las citas van entre comillas angulares).",
+     "propuesta": "Revisar una crítica de «demasiado agresiva» a una mujer de tu equipo con cuatro tácticas, antes de dársela"
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "ortografia",
+     "cita": "¿la crítica eres demasiado agresiva se convertiría en de verdad sabes sacar las cosas adelante?",
+     "motivo": "Frase citada sin comillas: la cita se funde con la oración y la lectura se rompe (en el resto del pack las citas van entre comillas angulares).",
+     "propuesta": "Cambia el género: si la mujer fuera un hombre que hizo exactamente lo mismo, ¿la crítica «eres demasiado agresiva» se convertiría en «de verdad sabes sacar las cosas adelante»?"
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "ortografia",
+     "cita": "una crítica como eres demasiado agresiva",
+     "motivo": "Frase citada sin comillas: la cita se funde con la oración y la lectura se rompe (en el resto del pack las citas van entre comillas angulares).",
+     "propuesta": "Sé más concreto: una crítica como «eres demasiado agresiva» es demasiado abstracta y por eso queda expuesta a la trampa de lo abrasivo."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "ortografia",
+     "cita": "Nunca te quedes en un sé más simpática",
+     "motivo": "Frase citada sin comillas: la cita se funde con la oración y la lectura se rompe (en el resto del pack las citas van entre comillas angulares).",
+     "propuesta": "Nunca te quedes en un «sé más simpática»: atiende la situación dándole a la mujer sugerencias concretas para cambiar su conducta y ser más eficaz."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "ortografia",
+     "cita": "en vez de un sé más simpática",
+     "motivo": "Frase citada sin comillas: la cita se funde con la oración y la lectura se rompe (en el resto del pack las citas van entre comillas angulares).",
+     "propuesta": "La crítica revisada por las cuatro tácticas: o descartada porque era tu sesgo, o reescrita en ejemplos concretos y sin lenguaje de género, y con sugerencias de conducta en vez de un «sé más simpática»."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 299,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 307,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "ejecutar_embudo_reclutamiento_escala",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 239,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 241,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 243,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "empujar_persona_reunion_direccion_preferida",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 167,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 167,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 167,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 169,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "decir_normas_participacion_voz_alta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "las dudas circulaban por los pasillos",
+     "motivo": "El libro dice que a menudo le llegaban por los pasillos las dudas (I'd often hear through the grapevine); el resumen quita el \"a menudo\" (el paso 2 sí lo conserva). 580 caracteres medidos.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "225",
+     "frase": "It couldn't be because my team didn't have any hard questions—I'd often hear through the grapevine that folks were skeptical about a particular strategy or wondered why one of our initiatives wasn't going well.",
+     "propuesta": "Que en una reunión nadie haga preguntas duras no siempre significa que no las haya: en el caso de una directiva, las dudas circulaban a menudo por los pasillos mientras en la sala todos se miraban esperando a que otro preguntara primero. A veces lo más fácil es decir la norma en voz alta, en tres pasos: explicas por qué te importa hablar de verdad, reconoces en primera persona que sospechas que no estás oyendo todas las preocupaciones, y declaras que las preguntas difíciles son bienvenidas mientras te comprometes a ser transparente. En su caso, así mucha más gente preguntó."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 217,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 217,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 221,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 223,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 223,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 223,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 225,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 227,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 227,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 229,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "revisar_proposito_personas_proceso",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "No contestes con los deberes de cada día",
+     "motivo": "\"No contestes\" no tiene pregunta a la que referirse: la pregunta (cómo ayudar a un grupo a lograr grandes resultados) solo está en la condición, no en el paso.",
+     "propuesta": "Cuando te preguntes cómo ayudar a tu equipo a lograr grandes resultados, no contestes con los deberes de cada día, es decir preparar la reunión siguiente, quitarle un obstáculo a alguien de tu equipo o sacar el plan de ejecución del mes que viene: es adonde se le iba la cabeza a una directiva cuando empezaba, y la respuesta está en otro sitio."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 113,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 121,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 121,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 125,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 127,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 127,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 131,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 131,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 137,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 137,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 139,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 143,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 143,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 149,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 151,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "contrastar_cultura_actual_aspirada",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "algunas de tus aspiraciones van a ser posibles y otras poco realistas",
+     "motivo": "El libro dice que algunas aspiraciones pueden ser alcanzables (may be doable) y que la preferencia sería difícil (would be hard); el paso lo da como certeza (\"van a ser\", \"será\"). El resumen sí conserva el \"puede que\".",
+     "fichero": "fuentes/zhuo_manager/cap_11.md",
+     "lineas": "75",
+     "frase": "Depending on what's within your control, some of your aspirations may be doable and some unrealistic.",
+     "propuesta": "Cuenta con que, según lo que esté dentro de tu control, algunas de tus aspiraciones pueden ser posibles y otras poco realistas. Por ejemplo: si quieres que tu equipo opere con concentración absoluta y cero distracciones, quizá preferirías que se sentara en una zona apartada y evitara tratar con otros grupos; pero si la empresa entera valora la apertura y la colaboración, esa preferencia sería difícil de conseguir."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 29,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 71,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 75,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 77,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "agrupar_tareas_semejantes_aprovechar_preparacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "rinde mucho más que si se repite con cada una",
+     "motivo": "El libro dice que así el trabajo avanza con eficiencia y la productividad sube (increase our productivity); \"mucho más\" es una magnitud que no está en las líneas. 545 caracteres medidos.",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "269-271",
+     "frase": "So for managerial work to proceed efficiently, we should use the same set-up effort to apply across a group of similar activities.",
+     "propuesta": "Toda operación de fabricación paga un tiempo de preparación antes de producir, y el trabajo de mando también: ponerte con un tipo de tarea exige un esfuerzo de preparación mental. Si ese esfuerzo se paga una vez y se aprovecha para todo un grupo de tareas semejantes, rinde más que si se repite con cada una. Por eso conviene reutilizar lo ya preparado, como unas ilustraciones de una clase que sirven para otras clases, y reservar un bloque de tiempo para leer varios informes o aprobar varias evaluaciones de desempeño seguidas, una tras otra."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 267,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 269,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 269,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 271,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 271,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 273,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 273,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 273,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "visualizar_recuperar_confianza",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "cerrar los ojos y recorrer una escena te da parte del beneficio de vivirla",
+     "motivo": "El libro dice que podemos engañarnos para obtener parte del beneficio (we can trick ourselves); el resumen lo afirma como efecto seguro. El paso 1 sí conserva el \"podemos\". 596 caracteres medidos.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "305",
+     "frase": "Because we can trick ourselves into getting some of the benefits of an activity simply by closing our eyes and imagining it in our heads.",
+     "propuesta": "Imaginarte haciendo algo activa las mismas partes del cerebro que hacerlo de verdad, así que cerrar los ojos y recorrer una escena puede darte parte del beneficio de vivirla. Por eso la visualización puede mejorar resultados y ayudarte a recuperar la confianza cuando estás en el Pozo (el bache de desánimo): ver tus miedos como algo que le pasa a todo el mundo, ensayar con detalle el éxito en lo que te pone nervioso, revivir un reto que superaste, sentir el aprecio de tu gente o recorrer un día fuera del Pozo. Funciona si la escena es concreta, y solo pide unos minutos y un sitio tranquilo."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 301,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 305,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 307,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 307,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 311,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 313,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 313,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 315,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 317,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 323,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 325,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "rechazar_conducta_toxica_entrevista",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 179,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "convertir_cualquiera_mentor",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "matiz",
+     "cita": "porque son una fuente excelente de apoyo y de consejo",
+     "motivo": "El libro dice que los pares pueden ser una fuente excelente (can be); el paso lo afirma. El resumen sí dice \"pueden ser\".",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "403",
+     "frase": "In particular, people in your peer group—those with a similar job to yours—can be an excellent source of support and advice.",
+     "propuesta": "Mira en particular a tu grupo de pares, la gente con un trabajo parecido al tuyo, porque pueden ser una fuente excelente de apoyo y de consejo. Un grupo de amigos que dirigen equipos de diseño y se ven cada pocos meses, como tienen responsabilidades parecidas, puede hablar de las tendencias del mercado, desahogarse sobre los retos que comparten e intercambiar consejo sobre cómo llevan las críticas de trabajo o cómo montan sus talleres."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "matiz",
+     "cita": "más siempre de lo que crees la respuesta va a ser que sí",
+     "motivo": "\"More often than you might think\" pasa a \"más siempre\", que vuelve el a menudo en siempre y además no es gramatical. El resumen sí dice \"más a menudo de lo que crees\".",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "411",
+     "frase": "But more often than you might think, the answer will be yes.",
+     "propuesta": "Pero cuenta con que, más a menudo de lo que crees, la respuesta va a ser que sí, porque todos nos hemos beneficiado de la mentoría de otros y mucha gente está encantada de devolverlo."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 401,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 401,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 403,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 403,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 403,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 405,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 407,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 411,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 411,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "preguntar_jefe_sonado_persona_cargo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "entregable_esperado",
+     "tipo": "voz",
+     "cita": "la clase de relación que se quiere construir entre los dos",
+     "motivo": "Impersonal \"se quiere\": esconde quién quiere; el libro y el paso 5 hablan de la relación que tú quieres construir.",
+     "propuesta": "Entendido cómo es el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada desde el principio la clase de relación que quieres construir entre los dos."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 153,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 157,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 159,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 165,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "diagnosticar_capacidad_motivacion_prueba_vida",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 15,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 17,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 17,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 17,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  }
+ ]
+}

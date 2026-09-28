@@ -1,0 +1,180 @@
+{
+  "node_id": "declarar_intencion_reemplazar_peticion_permiso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Reemplazar las frases que piden permiso por frases que declaran intención, y responder con una aprobación simple",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "La clave para que tu equipo sea más proactivo está en las palabras que usan quienes dirigen y quienes ejecutan. Pedir permiso o preguntar qué hacer son frases de seguidor pasivo, que dejan la decisión en manos del jefe. Quien dice «tengo la intención de» llega con su propio plan. En una tripulación que lo adoptó, el capitán dejó de dar órdenes y respondía «muy bien», y cada uno ejecutaba lo que había propuesto. Parecía un simple truco de lenguaje, pero allí comprobaron que hacía que quienes lo ejecutaban sintieran de verdad el plan como suyo.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_07.md, unidad Cap. 11, titulo textual I Intend To . . . FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: el paso 3 sale de la linea 55 (69 palabras) y los pasos 1 y 2 salen de las lineas 73 a 93 (165 palabras entre las dos lineas y las diez frases, contando la linea 55), todas dentro de la pieza P1 de la frontera de cap_07 publicada en esta vuelta, que reune LINEAS NO CONTIGUAS (L55 y L73 a L93) porque las dos son partes del mismo mecanismo nombrado por su propio rotulo en la linea 57, Mechanism: Use 'I Intend to . . .' to Turn Passive Followers into Active Leaders, con el desarrollo concreto de las frases en el subrotulo de la linea 71, The Power of Words. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el libro pone su propio inventario de MEDIOS, las frases mismas, nombradas una a una en dos listas (cinco frases desempoderadas en las lineas 75 a 83, cuatro frases empoderadas en las lineas 87 a 93), sin ningun adjetivo de adecuacion en el sitio del criterio: no dice usa un lenguaje apropiado, dice las frases exactas a evitar y las frases exactas a usar. EL CASO ENTRA COMO EJEMPLO Y NO COMO NODO PROPIO (manual 3.5): el origen del habito en el USS Sunfish (linea 53) y la visita de Stephen Covey (lineas 63 a 69) son anecdotas del autor que no llevan pasos propios y no se minan. LA REGLA PROPIA DE SANTA FE DE LA LINEA 61 (que la intencion declarada solo aplicaba cuando el capitan estaba despierto) NO SE ESCRIBE COMO PASO: es una restriccion operativa de esa nave, no una etapa generica del mecanismo. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: la pieza junta dos tramos no contiguos del capitulo (L55 y L73 a L93) porque los dos nombran el mismo mecanismo de la linea 57; si el auditor lee que son dos mecanismos distintos, esto se parte en dos candidatos. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 3 pasos, 3 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la extension del mecanismo que el propio libro narra desde la linea 97 (pedir que el reporte de la intencion ya venga con el razonamiento completo, para que la respuesta sea solo una aprobacion) no lleva su propio rotulo de mecanismo y sus pasos habria que inferirlos del dialogo entre el capitan y el OOD de las lineas 99 a 107, asi que se sostiene como POSTURA y no se abre nodo propio, por EXTRACTOR.md 15.4: un parrafo sin inventario propio no se completa con pasos que invento yo. Las referencias a los libros de Stephen Covey (lineas 69 y 95) tampoco entran, por ser citas a otro autor sin fecha de corte verificable como cifra. CORRECCION DECLARADA d099 (ACTA M4 M4.12, vuelta 4): el paso 3 citaba la clausula si la accion es segura y apropiada, que no esta en la linea 55 que se le atribuia; esa clausula vive en las lineas 99, 103 y 105, que son el tramo que el propio DISCUTIBLE 2 de esta misma ficha sostiene como POSTURA y no minado. Entre las dos salidas limpias que la vuelta 4 ofrece (citar la linea 105 y extender la pieza P1, o retirar la clausula), se elige RETIRAR la clausula: el paso 3 queda en la aprobacion simple que la linea 55 si sostiene, sin tocar la frontera de cap_07 ya certificada al digito por el auditor en M4.4. sed -n '55p' fuentes/marquet_turn_the_ship/cap_07.md confirma que la aprobacion simple (Very well, cada quien ejecuta su plan) esta integra en esa linea sin la clausula retirada.",
+  "pasos_accionables": [
+    "Evita las frases que piden permiso o que otro decida por ti: «solicito permiso para…», «me gustaría…», «¿qué debería hacer sobre…?», «¿crees que deberíamos…?», «¿podríamos…?».",
+    "En su lugar, declara tu intención con frases activas: «tengo la intención de…», «planeo…», «haré…», «haremos…».",
+    "Quien recibe la intención declarada responde con una aprobación simple, como «muy bien», en vez de dar una orden, y deja que cada quien ejecute su propio plan."
+  ],
+  "entregable_esperado": "La propuesta de acción formulada como una intención declarada, y la aprobación simple de quien la recibe.",
+  "nodos_previos": [
+    "seguir_frustrado_preguntar_implantacion_ideas"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando vas a proponer una acción a quien tiene la autoridad de aprobarla, en vez de pedirle permiso o pedirle que decida por ti."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La clave para que tu equipo sea más proactivo está en las palabras que usan quienes dirigen y quienes ejecutan. Pedir permiso o preguntar qué hacer son frases de seguidor pasivo, que dejan la decisión en manos del jefe. Quien dice «tengo la intención de» llega con su propio plan. En una tripulación que lo adoptó, el capitán dejó de dar órdenes y respondía «muy bien», y cada uno ejecutaba lo que había propuesto. Parecía un simple truco de lenguaje, pero allí comprobaron que trasladaba a fondo la propiedad del plan a quienes lo ejecutaban.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_07.md",
+          "lineas": "55-93"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: 'we found that it profoundly shifted ownership' (l.59) es la experiencia de una tripulación, y también es suya que el jefe respondiera 'Very well' en vez de dar órdenes (l.55). La propuesta del lector cuenta el efecto como caso, pero deja la práctica del capitán como regla y quita las comillas a las frases, lo que vuelve confuso 'Quien dice tengo la intención de llega'. El texto propio corrige las dos cosas.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reemplazar las frases que piden permiso por frases que declaran intencion, y responder con una aprobacion simple",
+      "texto_nuevo": "Reemplazar las frases que piden permiso por frases que declaran intención, y responder con una aprobación simple",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evita las frases que piden permiso o que otro decida por ti: solicito permiso para, me gustaria, que deberia hacer sobre, crees que deberiamos, podriamos. El texto lo dice asi: Request permission to . . . / I would like to . . . / What should I do about . . . / Do you think we should . . . / Could we . . .",
+      "texto_nuevo": "Evita las frases que piden permiso o que otro decida por ti: «solicito permiso para…», «me gustaría…», «¿qué debería hacer sobre…?», «¿crees que deberíamos…?», «¿podríamos…?».",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Request permission to . . . / I would like to . . . / What should I do about . . . / Do you think we should . . . / Could we . . ."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En su lugar, declara tu intencion con frases activas: tengo la intencion de, planeo, hare, haremos. El texto lo dice asi: I intend to . . . / I plan on . . . / I will . . . / We will . . .",
+      "texto_nuevo": "En su lugar, declara tu intención con frases activas: «tengo la intención de…», «planeo…», «haré…», «haremos…».",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: I intend to . . . / I plan on . . . / I will . . . / We will . . ."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quien recibe la intencion declarada responde con una aprobacion simple en vez de dar una orden, y deja que cada quien ejecute su propio plan. El texto lo dice asi: officers would state their intentions with 'I intend to . . .' and I would say, 'Very well.' Then each man would execute his plan.",
+      "texto_nuevo": "Quien recibe la intención declarada responde con una aprobación simple, como «muy bien», en vez de dar una orden, y deja que cada quien ejecute su propio plan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: officers would state their intentions with 'I intend to . . .' and I would say, 'Very well.' Then each man would execute his plan."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La propuesta de accion formulada como una intencion declarada, y la aprobacion simple de quien la recibe.",
+      "texto_nuevo": "La propuesta de acción formulada como una intención declarada, y la aprobación simple de quien la recibe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-declarar_intencion_reemplazar_peticion_permiso-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a proponer una accion a quien tiene la autoridad de aprobarla, en vez de pedirle permiso o pedirle que decida por ti.",
+      "texto_nuevo": "Cuando vas a proponer una acción a quien tiene la autoridad de aprobarla, en vez de pedirle permiso o pedirle que decida por ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-declarar_intencion_reemplazar_peticion_permiso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "La clave para que tu equipo sea más proactivo está en las palabras que usan quienes dirigen y quienes ejecutan. Pedir permiso o preguntar qué hacer son frases de seguidor pasivo, que dejan la decisión en manos del jefe. Quien dice «tengo la intención de» llega con su propio plan. En una tripulación que lo adoptó, el capitán dejó de dar órdenes y respondía «muy bien», y cada uno ejecutaba lo que había propuesto. Parecía un simple truco de lenguaje, pero allí comprobaron que trasladaba a fondo la propiedad del plan a quienes lo ejecutaban.",
+      "texto_nuevo": "La clave para que tu equipo sea más proactivo está en las palabras que usan quienes dirigen y quienes ejecutan. Pedir permiso o preguntar qué hacer son frases de seguidor pasivo, que dejan la decisión en manos del jefe. Quien dice «tengo la intención de» llega con su propio plan. En una tripulación que lo adoptó, el capitán dejó de dar órdenes y respondía «muy bien», y cada uno ejecutaba lo que había propuesto. Parecía un simple truco de lenguaje, pero allí comprobaron que hacía que quienes lo ejecutaban sintieran de verdad el plan como suyo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "trasladaba a fondo la propiedad del plan a quienes lo ejecutaban"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"shifted ownership of the plan\"; se toma otra forma que la del auditor para no encadenar \"hacía que... hicieran\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Declara tu Intención, no Pidas Permiso"
+}

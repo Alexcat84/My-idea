@@ -1,0 +1,56 @@
+{
+ "fecha": "2026-09-28",
+ "decision_del_fundador": "Umbral de la muestra ciega final, fijado ANTES de medir: cero invenciones (causas o contenido que el libro no dice) y cero contrarios; matices perdidos, calcos y problemas de coherencia, como maximo 1 por cada 5 nodos. Si no se cumple, otro pase solo sobre lo que falle, y se vuelve a medir con semilla nueva. Todas las trampas, sin marca y bajo ids reales. 'Franqueza radical' se queda como nombre del metodo, nunca como titulo de libro ni con su autora.",
+ "semilla_reparto_auditoria": 20261005,
+ "semilla_muestra_final": 20261006,
+ "escrito_antes_de_sortear": true,
+ "muestra_final": {
+  "escrito": "2026-09-28, antes de sortear y antes de aplicar la tanda m11-barrido",
+  "semilla": 20261006,
+  "nodos": 50,
+  "auditores": 2,
+  "trampas_sin_marca_por_auditor": 2,
+  "umbral_en_50_nodos": "invencion 0, contrario 0; matiz + calco + coherencia como maximo 10, contando dentro de ese tope tambien regionalismo, voz y ortografia (lectura estricta: el fundador no los nombro y no se dejan fuera)",
+  "que_cuenta": "solo los defectos que un arbitro confirme contra el libro; las trampas no cuentan"
+ },
+ "tercer_pase": {
+  "escrito": "2026-09-28, antes de repartir y antes de sortear, tras la muestra final 2 (NO CUMPLE: 0 duros, 11 blandos con la lectura estricta)",
+  "semilla_reparto_pase3": 20261011,
+  "semilla_muestra_final3": 20261012,
+  "que_se_revisa": "solo lo que fallo: matiz (dirigido, con la lista de frases con matiz del pasaje de cada nodo), calco, coherencia, voz, regionalismo, ortografia y longitud del resumen",
+  "lectura_del_umbral": "la misma que medir.py, escrita antes de la muestra 1: todo lo confirmado que no es invencion ni contrario cuenta dentro del tope de 10, tambien la longitud; los duros siguen en 0",
+  "muestra_final3": {
+   "nodos": 50,
+   "auditores": 2,
+   "trampas_sin_marca_por_auditor": 2,
+   "umbral_en_50_nodos": "invencion 0, contrario 0; el resto como maximo 10"
+  }
+ },
+ "cuarto_pase": {
+  "escrito": "2026-09-28, antes de repartir y antes de sortear, tras la muestra final 3 (NO CUMPLE: 0 duros, 11 blandos: coherencia 4, regionalismo 3, calco 2, voz 1, ortografia 1; matiz 0)",
+  "semilla_reparto_pase4": 20261013,
+  "semilla_muestra_final4": 20261014,
+  "que_se_revisa": "solo lo que fallo: coherencia, regionalismo, calco, voz y ortografia, con avisos mecanicos por nodo (lexico de regionalismos de ambos lados, primera persona del plural, 'a cargo' sin posesivo, calcos conocidos, demostrativos sin antecedente) que el auditor juzga uno a uno, mas lectura de coherencia interna del nodo",
+  "lectura_del_umbral": "la misma de medir.py: todo lo confirmado que no es invencion ni contrario cuenta, por campo; duros en 0; tope 10 en 50 nodos"
+ },
+ "quinto_pase": {
+  "escrito": "2026-09-28, antes de repartir y antes de sortear, tras la muestra final 4 (NO CUMPLE: 1 invencion; 5 blandos de 10)",
+  "semilla_reparto_pase5": 20261016,
+  "semilla_muestra_final5": 20261017,
+  "que_se_revisa": "solo lo que fallo: invenciones (y contrarios, que van con ellas). Cada nodo lleva sus clausulas marcadas por script (causa, efecto, finalidad, absolutos, cifras) y el auditor coteja cada una contra el pasaje y su capitulo",
+  "lectura_del_umbral": "la misma de medir.py; duros en 0; tope 10 en 50 nodos para el resto"
+ },
+ "sexto_pase": {
+  "escrito": "2026-09-28, antes de repartir y antes de sortear, tras la muestra final 5 (NO CUMPLE: 1 contrario; 7 blandos de 10). Decision del fundador: doble lectura.",
+  "semilla_reparto_pase6": 20261018,
+  "semilla_muestra_final6": 20261019,
+  "que_se_revisa": "invenciones y contrarios: cada nodo lo leen de punta a punta dos auditores independientes (A y B) contra el libro, con trampas sin marca distintas para cada lector; un arbitro resuelve todo lo marcado por cualquiera de los dos",
+  "lectura_del_umbral": "la misma de medir.py; duros en 0; tope 10 en 50 nodos para el resto",
+  "condiciones_del_fundador": {
+   "escrito": "2026-09-28, antes de repartir el sexto pase y antes de sortear la muestra 6",
+   "1_trampas": "las trampas sin marca se plantan ANTES de generar cualquier contexto o lista de clausulas, para que ningun texto original las delate",
+   "2_regla_de_parada": "si la muestra 6 da cero contrarios y cero invenciones, el mundo 11 queda certificado. Si da uno o mas: se corrigen, se releen con el libro los nodos del mismo libro y del mismo tipo de campo, y el mundo se integra declarando su riesgo residual estimado, igual que el catalogo, sin un sexto pase completo",
+   "3_blandos": "los defectos blandos siguen con su umbral de 1 por cada 5 nodos"
+  }
+ }
+}

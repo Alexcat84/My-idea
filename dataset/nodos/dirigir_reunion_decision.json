@@ -1,0 +1,393 @@
+{
+  "node_id": "dirigir_reunion_decision",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dirigir una reunión cuyo resultado excelente es una decisión tomada",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una reunión de decisión no triunfa solo porque salga una decisión: triunfa cuando la decisión es clara y los afectados confían en cómo se tomó. Sin esa confianza, la decisión se alarga, va y vuelve o se reabre cuando aparece el lado que no fue oído. Por eso no hace falta consenso, sino un proceso justo: presentes los más afectados, alguien designado para decidir, las opciones creíbles expuestas con su contexto y el mismo tiempo para quien discrepa. Como todos en un equipo comparten las mismas metas, confiar en quien decide y en ese proceso permite avanzar aunque haya desacuerdo.",
+  "notas_extraccion": "Es la primera de las razones para juntarse en persona que el libro nombra, y la unica del capitulo que trae dos inventarios propios en vez de uno: cuatro rasgos de la reunion buena y cinco malos resultados nombrados uno a uno. Lo que sostiene el procedimiento es que el exito de una reunion de decision no es la decision sola, sino la decision mas la confianza en el proceso, y de ahi salen los pasos de incluir a los afectados, designar a quien decide y dar tiempo a la discrepancia. El caso del plazo de diseno va DENTRO y no a nodo propio (manual seccion 3.5): la doctrina es el procedimiento y el caso es el ejemplo nombrado que la ilustra. Lo que el libro NO dice, y por eso no esta escrito aqui, es quien designa a quien decide, ni cuanto tiempo es demasiado, ni como se documenta la decision despues.",
+  "pasos_accionables": [
+    "Plantea las distintas opciones que hay sobre la mesa y pide a quien decide que tome la decisión.",
+    "Persigue las dos cosas a la vez: llegar a una decisión clara, y que todo el mundo salga con sensación de confianza en el proceso.",
+    "No necesitas consenso. Lo que hace falta es que aquellos a quienes la decisión afecta sientan que la manera en que se tomó fue eficiente y justa. Si la gente no confía en el proceso, lo que verás es que la decisión se alarga.",
+    "Incluye a las personas más directamente afectadas por la decisión, y también a alguien claramente designado como quien decide.",
+    "Presenta todas las opciones creíbles de forma objetiva y con la información de contexto relevante, e incluye la recomendación del equipo si la hay.",
+    "Da el mismo tiempo de palabra a las opiniones discrepantes y haz que la gente sienta que fue escuchada.",
+    "No tomes la decisión habiendo oído un solo trozo de contexto. Un caso: alguien de tu equipo te pide mover una semana el plazo del trabajo de diseño porque no da tiempo a explorar las tres opciones, contestas que te parece bien, y después aparece el responsable de ingeniería diciendo que tiene siete ingenieros esperando los diseños terminados y que así no llegan a su propio hito.",
+    "Si ya has decidido de esa manera y el otro lado aparece pidiéndote rehacer la decisión, admite que te equivocaste con tu proceso y reúne a todos para volver a decidir. Esa es la mejor salida que te queda, porque cambiar la decisión a solas frustra al primero y no cambiarla enfada al segundo.",
+    "No aceptes el argumento de que cualquier decisión va a dejar a alguien descontento porque los dos lados discrepan. Todos en un equipo comparten en última instancia las mismas metas, y parte de trabajar bien juntos es depositar confianza en quien decide y en un proceso justo.",
+    "Evita el primer mal resultado: que la gente sienta que su lado no se presentó bien y por eso no confíe en la decisión que salió.",
+    "Evita el segundo: que las decisiones tarden mucho en tomarse y eso retrase el avance. Las decisiones importantes y difíciles de revertir merecen consideración profunda, pero desconfía de gastar demasiado tiempo en las pequeñas y fáciles de revertir.",
+    "Evita el tercero: que las decisiones vayan y vuelvan una y otra vez, porque así es difícil confiar en ellas y actuar sobre ellas.",
+    "Evita el cuarto: que se gaste demasiado tiempo intentando llevar al grupo al consenso en vez de acudir rápido a quien decide.",
+    "Evita el quinto: que se pierda tiempo rumiando el mismo argumento de veinte maneras distintas."
+  ],
+  "entregable_esperado": "Una decisión clara tomada por quien estaba designado para tomarla, y unos afectados que salen sintiendo que la forma de decidir fue eficiente y justa aunque no estuvieran de acuerdo.",
+  "nodos_previos": [
+    "fijar_resultado_excelente_reunion"
+  ],
+  "nodos_siguientes": [
+    "cerrar_reunion_pasos_siguientes"
+  ],
+  "condiciones_activacion": [
+    "Cuando el resultado excelente que persigues es que se tome una decisión y que quede tomada, y hay opciones distintas sobre la mesa."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una reunión de decisión no triunfa solo porque salga una decisión: triunfa cuando la decisión es clara y los afectados confían en cómo se tomó. Sin esa confianza, la decisión se alarga, va y vuelve o se reabre cuando aparece el lado que no fue oído. Por eso no hace falta consenso, sino un proceso justo: presentes los más afectados, alguien designado para decidir, las opciones creíbles expuestas con su contexto y el mismo tiempo para quien discrepa. Como todos en un equipo comparten las mismas metas, confiar en quien decide y en ese proceso permite avanzar aunque haya desacuerdo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "53-95"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dirigir una reunion cuyo resultado excelente es una decision tomada",
+      "texto_nuevo": "Dirigir una reunión cuyo resultado excelente es una decisión tomada",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Enmarca las distintas opciones que hay sobre la mesa y pide a quien decide que tome la decision.",
+      "texto_nuevo": "Enmarca las distintas opciones que hay sobre la mesa y pide a quien decide que tome la decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Persigue las dos cosas a la vez: llegar a una decision clara, y que todo el mundo salga con sensacion de confianza en el proceso.",
+      "texto_nuevo": "Persigue las dos cosas a la vez: llegar a una decisión clara, y que todo el mundo salga con sensación de confianza en el proceso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No busques consenso. Lo que hace falta es que aquellos a quienes la decision afecta sientan que la manera en que se tomo fue eficiente y justa. Si la gente no confia en el proceso, lo que veras es que la decision se alarga.",
+      "texto_nuevo": "No busques consenso. Lo que hace falta es que aquellos a quienes la decisión afecta sientan que la manera en que se tomó fue eficiente y justa. Si la gente no confía en el proceso, lo que verás es que la decisión se alarga.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incluye a las personas mas directamente afectadas por la decision, y tambien a alguien claramente designado como quien decide.",
+      "texto_nuevo": "Incluye a las personas más directamente afectadas por la decisión, y también a alguien claramente designado como quien decide.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Presenta todas las opciones creibles de forma objetiva y con la informacion de contexto relevante, e incluye la recomendacion del equipo si la hay.",
+      "texto_nuevo": "Presenta todas las opciones creíbles de forma objetiva y con la información de contexto relevante, e incluye la recomendación del equipo si la hay.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No tomes la decision habiendo oido un solo trozo de contexto. La autora cuenta el caso: su reporte le pidio mover una semana el plazo del trabajo de diseno porque no daba tiempo a explorar las tres opciones, ella contesto que le parecia bien, y despues aparecio el responsable de ingenieria diciendo que tenia siete ingenieros esperando los disenos terminados y que asi no llegaban a su propio hito.",
+      "texto_nuevo": "No tomes la decisión habiendo oído un solo trozo de contexto. Un caso: alguien de tu equipo te pide mover una semana el plazo del trabajo de diseño porque no da tiempo a explorar las tres opciones, contestas que te parece bien, y después aparece el responsable de ingeniería diciendo que tiene siete ingenieros esperando los diseños terminados y que así no llegan a su propio hito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora cuenta el caso: su reporte le pidio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si ya has decidido de esa manera y el otro lado aparece pidiendote rehacer la decision, admite que te equivocaste con tu proceso y reune a todos para volver a decidir. El libro dice que esa es la mejor salida que te queda, porque cambiar la decision a solas frustra al primero y no cambiarla enfada al segundo.",
+      "texto_nuevo": "Si ya has decidido de esa manera y el otro lado aparece pidiéndote rehacer la decisión, admite que te equivocaste con tu proceso y reúne a todos para volver a decidir. Esa es la mejor salida que te queda, porque cambiar la decisión a solas frustra al primero y no cambiarla enfada al segundo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que esa es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No aceptes el argumento de que cualquier decision va a dejar a alguien descontento porque los dos lados discrepan. Todos en un equipo comparten en ultima instancia las mismas metas, y parte de trabajar bien juntos es depositar confianza en quien decide y en un proceso justo.",
+      "texto_nuevo": "No aceptes el argumento de que cualquier decisión va a dejar a alguien descontento porque los dos lados discrepan. Todos en un equipo comparten en última instancia las mismas metas, y parte de trabajar bien juntos es depositar confianza en quien decide y en un proceso justo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita el primer mal resultado: que la gente sienta que su lado no se presento bien y por eso no confie en la decision que salio.",
+      "texto_nuevo": "Evita el primer mal resultado: que la gente sienta que su lado no se presentó bien y por eso no confíe en la decisión que salió.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita el segundo: que las decisiones tarden mucho en tomarse y eso retrase el avance. Las decisiones importantes y dificiles de revertir merecen consideracion profunda, pero desconfia de gastar demasiado tiempo en las pequenias y faciles de revertir.",
+      "texto_nuevo": "Evita el segundo: que las decisiones tarden mucho en tomarse y eso retrase el avance. Las decisiones importantes y difíciles de revertir merecen consideración profunda, pero desconfía de gastar demasiado tiempo en las pequeñas y fáciles de revertir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita el tercero: que las decisiones vayan y vuelvan una y otra vez, porque asi es dificil confiar en ellas y actuar sobre ellas.",
+      "texto_nuevo": "Evita el tercero: que las decisiones vayan y vuelvan una y otra vez, porque así es difícil confiar en ellas y actuar sobre ellas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-pasos_accionables-12",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita el cuarto: que se gaste demasiado tiempo intentando llevar al grupo al consenso en vez de escalar rapido a quien decide.",
+      "texto_nuevo": "Evita el cuarto: que se gaste demasiado tiempo intentando llevar al grupo al consenso en vez de escalar rápido a quien decide.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 12,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una decision clara tomada por quien estaba designado para tomarla, y unos afectados que salen sintiendo que la forma de decidir fue eficiente y justa aunque no estuvieran de acuerdo.",
+      "texto_nuevo": "Una decisión clara tomada por quien estaba designado para tomarla, y unos afectados que salen sintiendo que la forma de decidir fue eficiente y justa aunque no estuvieran de acuerdo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_decision-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el resultado excelente que persigues es que se tome una decision y que quede tomada, y hay opciones distintas sobre la mesa.",
+      "texto_nuevo": "Cuando el resultado excelente que persigues es que se tome una decisión y que quede tomada, y hay opciones distintas sobre la mesa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_decision-pasos_accionables-12",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evita el cuarto: que se gaste demasiado tiempo intentando llevar al grupo al consenso en vez de escalar rápido a quien decide.",
+      "texto_nuevo": "Evita el cuarto: que se gaste demasiado tiempo intentando llevar al grupo al consenso en vez de acudir rápido a quien decide.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "escalar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Escalar\" por \"escalate\" es calco.",
+      "indice": 12,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_decision-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No busques consenso. Lo que hace falta es que aquellos a quienes la decisión afecta sientan que la manera en que se tomó fue eficiente y justa. Si la gente no confía en el proceso, lo que verás es que la decisión se alarga.",
+      "texto_nuevo": "No necesitas consenso. Lo que hace falta es que aquellos a quienes la decisión afecta sientan que la manera en que se tomó fue eficiente y justa. Si la gente no confía en el proceso, lo que verás es que la decisión se alarga.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 57",
+        "frase": "You don’t need consensus, but those whom the decision affects should feel that the way it was made was efficient and fair."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que no necesitas consenso; \"no busques\" lo volvía una prohibición.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-dirigir_reunion_decision-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Enmarca las distintas opciones que hay sobre la mesa y pide a quien decide que tome la decisión.",
+      "texto_nuevo": "Plantea las distintas opciones que hay sobre la mesa y pide a quien decide que tome la decisión.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Enmarca"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de «framing the different options» (cap_07, línea 55): las opciones se plantean, no se enmarcan.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dirige una Reunión de Decisión",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

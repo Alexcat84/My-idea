@@ -17,10 +17,11 @@ const leer = (rel: string) => readFileSync(path.join(RAIZ, rel), "utf-8");
  * nadie lo note, y se descubriría roto el día que hiciera falta.
  */
 const NUEVOS = ["compras", "entrega"];
+// (los "nueve" de abajo son los publicados: Primer Equipo entra oculto, ver su bloque)
 
 describe("el catálogo de mundos", () => {
-  it("tiene los nueve mundos, con los dos nuevos por su nombre de cara", () => {
-    expect(MUNDOS).toHaveLength(9);
+  it("tiene los nueve mundos publicados más Primer Equipo, con los dos nuevos por su nombre de cara", () => {
+    expect(MUNDOS).toHaveLength(10);
     expect(nombreDeMundo("compras")).toBe("Tu Compra Correcta");
     expect(nombreDeMundo("entrega")).toBe("Del Taller a sus Manos");
   });
@@ -35,7 +36,8 @@ describe("el catálogo de mundos", () => {
     // comentario del catálogo nombra los campos para explicar por qué se
     // fueron, y un grep crudo confundiría esa explicación con una recaída.
     for (const m of MUNDOS) {
-      expect(Object.keys(m).sort().join(","), m.clave).toBe("clave,nombre,promesa");
+      // 'oculto' es el interruptor de publicacion del fundador, no un campo de contenido
+      expect(Object.keys(m).filter((k) => k !== "oculto").sort().join(","), m.clave).toBe("clave,nombre,promesa");
     }
     expect(PRECIOS.mundo_activar).toBe(5);
   });
@@ -83,6 +85,35 @@ describe("el catálogo de mundos", () => {
     }
     // y el espejo de nombres que vivía en ideas.ts no puede volver
     expect(leer("lib/ideas.ts")).not.toContain("NOMBRE_MUNDO");
+  });
+});
+
+// Integracion del mundo 11 (28 sep 2026): Primer Equipo entra OCULTO hasta el
+// visto del fundador, como entraron compras y entrega. Se resuelve por clave (el
+// mini-gate lo puede caminar con ?ver=ocultos) pero no se lista.
+describe("Primer Equipo, el undécimo mundo, entra oculto", () => {
+  it("existe en el catálogo con su nombre y su promesa", () => {
+    expect(mundo("primer_equipo")).toBeDefined();
+    expect(nombreDeMundo("primer_equipo")).toBe("Primer Equipo");
+    expect(mundo("primer_equipo")!.promesa.length).toBeGreaterThan(10);
+  });
+
+  it("no se lista hasta el visto del fundador, pero la puerta lo revela", () => {
+    expect(estaPublicado("primer_equipo")).toBe(false);
+    expect(mundosVisibles().map((m) => m.clave)).not.toContain("primer_equipo");
+    expect(mundosVisibles(true).map((m) => m.clave)).toContain("primer_equipo");
+  });
+
+  it("es de la familia MEJORA: no entra en los mundos de protección", () => {
+    const linea = leer("lib/espacios.ts").split("\n").find((l) => l.includes("MUNDOS_PROTECCION ="))!;
+    expect(linea).not.toContain("primer_equipo");
+  });
+
+  it("trae sus 19 puertas horneadas y su mapa de brecha", () => {
+    const semillas = JSON.parse(leer("lib/assets/packs_entry_seeds.json")) as Record<string, { id: string }[]>;
+    expect(semillas.primer_equipo).toHaveLength(19);
+    const brecha = JSON.parse(leer("lib/assets/brecha_semillas.json")) as Record<string, Record<string, string>>;
+    expect(brecha.primer_equipo._defecto).toBe("responder_tres_preguntas_vocacion_directiva");
   });
 });
 
@@ -141,6 +172,7 @@ describe("mundos por idioma (i18n F3)", () => {
       risk_management: "Risks Under Control",
       compras: "The Right Purchase",
       entrega: "From Workshop to Customer",
+      primer_equipo: "First Team",
     };
     for (const m of MUNDOS) expect(nombreDeMundo(m.clave, "en"), m.clave).toBe(esperado[m.clave]);
     expect(mundosVisibles(false, "en").map((m) => m.nombre)).toContain("Quality & Trust");

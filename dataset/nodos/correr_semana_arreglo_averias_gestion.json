@@ -1,0 +1,377 @@
+{
+  "node_id": "correr_semana_arreglo_averias_gestion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Organizar una semana de arreglo de averías de gestión, con un registro público, una votación y un reparto entre jefes",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Hay organizaciones de ingeniería que a menudo dedican una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Un equipo decidió llevar esa idea a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_09.md, unidad Cap. 6, Guidance. Sale de las lineas 65 a 71, bajo el rotulo de seccion MANAGEMENT FIX-IT WEEKS, dentro de la seccion SOLICITING IMPROMPTU GUIDANCE. ES LA PIEZA P6 DE LA FRONTERA DE ESTA VUELTA. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: la linea 69 dice literalmente Here is how it worked, y detras va la mecanica entera con sus ETAPAS nombradas una a una, que es inventario en el sentido literal de D.27. La linea 71 aniade las tres ultimas: sistema publico para votar prioridades, alguien asignado a leerlas y agrupar duplicados, y reparto de averias entre jefes cancelando lo demas. No hay adjetivo de adecuacion en el sitio del criterio: el texto no dice un sistema adecuado, dice como era el sistema. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. P1 y P2 salen de la linea 67; P3 y P4 de la 69; P5, P6, P7 y P8 de la 71. EL CASO DE GOOGLE VA DENTRO Y NO ES LA CASA: el texto lo cuenta en pasado, At some point, a team at Google decided, pero lo que sigue no es la cronica de aquel equipo sino la mecanica en abstracto, con sus objetos de trabajo nombrados. Es la misma forma que esta casa ya adjudico a favor en cap_07, con los tres retratos en pasado bajo rotulo imperativo. NO ESCRIBO EL PERIODO: el texto dice regular management fix-it weeks y no dice cada cuanto, asi que el P3 dice lo que el texto dice y ningun paso pone una cadencia. NO ESCRIBO RESPONSABLE de crear el sistema: el P6 si nombra un responsable, pero es el que el texto nombra, Somebody was assigned the job of reading through them all. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cada cuanto se corre la semana, cuantas averias se reparten por jefe, que se hace con las que no se arreglan, ni quien decide que una averia esta cerrada.",
+  "pasos_accionables": [
+    "Parte de lo que las organizaciones de ingeniería hacen a menudo: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+    "Cuenta con esta diferencia: una semana de arreglo de averías es algo así como lo contrario de una semana de ideas nuevas. En vez de una ocasión de trabajar en cosas nuevas y emocionantes, es una ocasión de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+    "Aplica la misma idea a la gestión, como decidió hacer un equipo por considerarlo una buena práctica, y como otro equipo hizo después con otro nombre.",
+    "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño parezcan caer siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto.",
+    "Haz público ese sistema de registro, para que la gente pueda votar y fijar así las prioridades.",
+    "Asigna a alguien el trabajo de leer todas las averías registradas y agrupar las duplicadas.",
+    "Reparte las averías entre los jefes durante la semana de arreglo.",
+    "Haz que esos jefes cancelen todas sus actividades regulares, o casi todas, y se centren en arreglar los problemas de gestión que más molestan a la organización."
+  ],
+  "entregable_esperado": "Las averías de gestión más molestas de la organización registradas, priorizadas por voto, repartidas entre jefes y arregladas en una semana dedicada a eso.",
+  "nodos_previos": [
+    "organizar_sistema_recoger_quejas_equipo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando hay problemas de gestión en tu organización que llevan meses molestando a la gente y nunca se encuentra el momento de arreglarlos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Hay organizaciones de ingeniería que a menudo dedican una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Un equipo decidió llevar esa idea a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_09.md",
+          "lineas": "65-71"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'sobreviven porque nadie tiene tiempo asignado' y 'funciona porque convierte la queja difusa' no están en las líneas 65 a 71, se perdía el 'often' de la línea 67 y la práctica de un equipo (línea 69) se contaba como general. La propuesta lo cuenta como caso de un equipo, devuelve el 'a menudo' y mide 543.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)"
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Correr una semana de arreglo de averias de gestion, con el registro publico, la votacion y el reparto que el texto describe",
+      "texto_nuevo": "Correr una semana de arreglo de averías de gestión, con un registro público, una votación y un reparto entre jefes",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto describe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de lo que las organizaciones de ingenieria ya hacen y que el texto toma de ahi: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+      "texto_nuevo": "Parte de lo que las organizaciones de ingeniería ya hacen: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y que el texto toma de ahi"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto distingue: una semana de arreglo de averias es lo contrario de una semana de ideas nuevas. En vez de una ocasion de trabajar en cosas nuevas y emocionantes, es una ocasion de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+      "texto_nuevo": "Cuenta con esta diferencia: una semana de arreglo de averías es lo contrario de una semana de ideas nuevas. En vez de una ocasión de trabajar en cosas nuevas y emocionantes, es una ocasión de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto distingue"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica la misma idea a la gestion, que es lo que el texto cuenta que decidio hacer un equipo de Google por higiene, y que otro equipo hizo despues con otro nombre.",
+      "texto_nuevo": "Aplica la misma idea a la gestión, como decidió hacer un equipo por pura higiene, y como otro equipo hizo después con otro nombre.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto cuenta que decidio hacer un equipo de Google"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea un sistema donde la gente pueda registrar problemas molestos de gestion. El texto da sus propios ejemplares de que cuenta como averia de gestion: que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempenio caigan siempre en la peor epoca del anio, que la ultima encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promocion parezca injusto.",
+      "texto_nuevo": "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño caigan siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto da sus propios ejemplares"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz publico ese sistema de registro, para que la gente pueda votar y fijar asi las prioridades.",
+      "texto_nuevo": "Haz público ese sistema de registro, para que la gente pueda votar y fijar así las prioridades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reparte las averias entre los jefes durante la semana de arreglo.",
+      "texto_nuevo": "Reparte las averías entre los jefes durante la semana de arreglo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que esos jefes cancelen todas sus actividades regulares, o casi todas, y se centren en arreglar los problemas de gestion que mas molestan a la organizacion.",
+      "texto_nuevo": "Haz que esos jefes cancelen todas sus actividades regulares, o casi todas, y se centren en arreglar los problemas de gestión que más molestan a la organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las averias de gestion mas molestas de la organizacion registradas, priorizadas por voto, repartidas entre jefes y arregladas en una semana dedicada a eso.",
+      "texto_nuevo": "Las averías de gestión más molestas de la organización registradas, priorizadas por voto, repartidas entre jefes y arregladas en una semana dedicada a eso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-correr_semana_arreglo_averias_gestion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando los problemas de gestion de tu organizacion molestan a todo el mundo y nadie tiene tiempo asignado para arreglarlos.",
+      "texto_nuevo": "Cuando los problemas de gestión de tu organización molestan a todo el mundo y nadie tiene tiempo asignado para arreglarlos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-correr_semana_arreglo_averias_gestion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Correr una semana de arreglo de averías de gestión, con un registro público, una votación y un reparto entre jefes",
+      "texto_nuevo": "Organizar una semana de arreglo de averías de gestión, con un registro público, una votación y un reparto entre jefes",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Correr"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Correr una semana\" calca \"run\"; en español se organiza.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-correr_semana_arreglo_averias_gestion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Parte de lo que las organizaciones de ingeniería ya hacen: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+      "texto_nuevo": "Parte de lo que las organizaciones de ingeniería hacen a menudo: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_09.md 67",
+        "frase": "ENGINEERING ORGANIZATIONS OFTEN do the equivalent of spring cleaning."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que lo hacen a menudo (often); \"ya hacen\" lo volvía práctica de todas.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-correr_semana_arreglo_averias_gestion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica la misma idea a la gestión, como decidió hacer un equipo por pura higiene, y como otro equipo hizo después con otro nombre.",
+      "texto_nuevo": "Aplica la misma idea a la gestión, como decidió hacer un equipo por considerarlo una buena práctica, y como otro equipo hizo después con otro nombre.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "por pura higiene"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Por pura higiene\" calca \"it would be good hygiene\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-correr_semana_arreglo_averias_gestion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando los problemas de gestión de tu organización molestan a todo el mundo y nadie tiene tiempo asignado para arreglarlos.",
+      "texto_nuevo": "Cuando hay problemas de gestión en tu organización que llevan meses molestando a la gente y nunca se encuentra el momento de arreglarlos.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_09.md 67",
+        "frase": "it’s a chance to fix old and annoying problems that have been bothering people for months."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro habla de problemas viejos que llevan meses fastidiando a la gente y que nunca se encuentra el momento de arreglar; \"a todo el mundo\" y \"tiempo asignado\" no están.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-correr_semana_arreglo_averias_gestion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño caigan siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto.",
+      "texto_nuevo": "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño parezcan caer siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_09.md 69",
+        "frase": "And you could do the same if performance reviews always seemed to take place at the worst possible time of year, or if the last employee survey took too long to fill out, or if the promotion system seemed unfair, and so on."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que «parecían» caer siempre en la peor época; el paso lo daba como hecho.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-correr_semana_arreglo_averias_gestion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con esta diferencia: una semana de arreglo de averías es lo contrario de una semana de ideas nuevas. En vez de una ocasión de trabajar en cosas nuevas y emocionantes, es una ocasión de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+      "texto_nuevo": "Cuenta con esta diferencia: una semana de arreglo de averías es algo así como lo contrario de una semana de ideas nuevas. En vez de una ocasión de trabajar en cosas nuevas y emocionantes, es una ocasión de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_09.md 67",
+        "frase": "A bug fix-it week is sort of the opposite of a Hack Week; instead of a chance to work on new and exciting ideas people usually don’t have time to get to, it’s a chance to fix old and annoying problems that have been bothering people for months."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro lo atenúa (\"sort of the opposite\"); el paso lo afirmaba como lo contrario sin más.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-correr_semana_arreglo_averias_gestion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Asigna a alguien el trabajo de leerlas todas y agrupar las duplicadas.",
+      "texto_nuevo": "Asigna a alguien el trabajo de leer todas las averías registradas y agrupar las duplicadas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"leerlas\" no tiene antecedente: el femenino plural anterior es \"las prioridades\" del paso 4; en el libro son los errores registrados (\"reading through them all\", scott cap_09 l.71)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"leerlas\" no tiene antecedente: el femenino plural anterior es \"las prioridades\" del paso 4; en el libro son los errores registrados (\"reading through them all\", scott cap_09 l.71).",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dedica una Semana a Arreglar",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

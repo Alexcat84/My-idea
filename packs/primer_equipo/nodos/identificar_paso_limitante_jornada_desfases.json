@@ -1,0 +1,214 @@
+{
+  "node_id": "identificar_paso_limitante_jornada_desfases",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Identificar el paso limitante de tu jornada y crear desfases alrededor: determinar lo inamovible y mover lo flexible a su alrededor",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Los consejos corrientes para ganar tiempo se centran en recortar minutos, pero no dicen alrededor de qué ordenar la jornada. Un principio de producción sí lo dice: en toda cadena hay un paso que marca el ritmo, y lo demás se acomoda a él. En la vida de un mando hay compromisos que tienen que ocurrir a una hora fija, sin holgura ninguna. Si los identificas primero, creas desfases y colocas lo flexible a su alrededor, puedes trabajar de manera más eficiente.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P32 de la frontera publicada en la vuelta 46 (HH.2.c), L267 a L267, 122 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO: el libro pone SU PROPIO INVENTARIO de las etapas, nombradas una a una y en orden (identify our limiting step, luego create offsets, luego schedule my other work around this limiting step), y pone ademas la PRUEBA para reconocer el paso limitante, que es donde no hay give en el tiempo. Es inventario de ETAPAS DE TRABAJO y no de metas, y el criterio no es un adjetivo de adecuacion: lo inamovible se reconoce por una prueba del libro y no por un juicio mio. DE DONDE SALE CADA PASO, uno a uno, y los cinco salen de L267: paso 1 (These time-management suggestions can be improved upon, I think, by applying our production principles); paso 2 (First, we must identify our limiting step: what is the egg in our work?); paso 3 (In a manager life some things really have to happen on a schedule that is absolute... There is no give in the time here); paso 4 (Accordingly, I have to create offsets and schedule my other work around this limiting step); paso 5 (In short, if we determine what is immovable and manipulate the more yielding activities around it, we can work more efficiently). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. EL CASO ENTRA NOMBRADO Y SIN SU CIFRA (manual 3.5, y es la mitad mas cara): el caso es la clase que el autor imparte, cuya hora conoce y para la que tiene que prepararse. El paso 3 escribe la doctrina (las cosas que ocurren en un calendario absoluto, sin holgura) y NO se lleva ni la clase ni la cifra de estudiantes que el libro da para explicar por que no hay holgura. Es la misma correccion que la vuelta 46 hizo con perhaps two hundred people de L215: la cifra del caso se suelta. EL HUEVO ES DEL LIBRO Y NO UNA METAFORA MIA: el huevo es el objeto con el que este libro monto su modelo de produccion en cap_01, y aqui el autor lo invoca por su nombre (what is the egg in our work). Por eso el paso 2 lo escribe tal cual. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo CUANTO desfase se crea ni COMO se calcula, porque el tramo no pone ni cifra ni metodo; NO escribo cuales son las recomendaciones corrientes de gestion del tiempo que el paso 1 manda mejorar, porque el libro las critica en el tramo anterior (P31, L259 a L265) y alli son POSTURA, no procedimiento, y la frontera de la vuelta 46 ya las dejo en cero nodos. ARISTAS DECLARADAS POR LECTURA, para cablearlas el dia de la insercion y no hoy: (1) D.37, CABEZA subir_productividad_gerencial_tres_vias, paso 2. El texto de la cabeza dice CUANTAS vias tiene (tres) y las NOMBRA una a una, y su paso 2 es sube el ritmo con el que ejecutas tus actividades. Este nodo es una de las partes de esa via, y D.37 manda declarar la arista en la misma vuelta en que se inserta la parte, sin esperar a que ninguna senial la levante. (2) D.29, HERMANO agrupar_tareas_semejantes_aprovechar_preparacion, que es el segundo principio de produccion del mismo grupo (a second production principle, dice el libro al abrir P33), aplicado al mismo objeto. (3) D.29, HIJO usar_calendario_herramienta_planificacion_produccion, porque su paso sobre llenar los huecos entre los pasos limitantes solo se puede ejecutar si este nodo ya los identifico. (4) D.29, PARIENTE construir_flujo_produccion_paso_limitante, de cap_01, que es donde el paso limitante nace como objeto de fabrica. Este nodo lo aplica al tiempo de un mando y NO repite sus pasos. TRADUCCION DECLARADA: limiting step y offsets viajan en denominaciones. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 5 es el resumen que el propio libro hace de los pasos 2 a 4 (In short), y un lector estricto dira que repite y que el nodo se queda en cuatro. Lo sostengo porque el resumen anade la pareja inamovible contra flexible, que es la vara con la que se clasifica TODO lo demas de la jornada y que los pasos anteriores no dan. Si cae, cae DENTRO de mi marcado.",
+  "pasos_accionables": [
+    "Mejora las recomendaciones corrientes de gestión del tiempo aplicándoles los principios de producción.",
+    "Identifica primero tu paso limitante preguntándote qué es, en tu trabajo, lo que marca el ritmo al que se acomoda todo lo demás.",
+    "Busca para eso las cosas de tu vida de mando que de verdad tienen que ocurrir a una hora fija e inamovible, aquellas en cuyo tiempo no hay holgura ninguna.",
+    "Crea desfases y programa el resto de tu trabajo alrededor de ese paso limitante.",
+    "En resumen: determina qué es lo inamovible y mueve a su alrededor las actividades más flexibles, y podrás trabajar de manera más eficiente."
+  ],
+  "entregable_esperado": "El paso limitante de tu jornada ya identificado por su falta de holgura, y el resto de tu trabajo programado con sus desfases alrededor de ese paso.",
+  "nodos_previos": [
+    "construir_flujo_produccion_paso_limitante"
+  ],
+  "nodos_siguientes": [
+    "usar_calendario_herramienta_planificacion_produccion",
+    "agrupar_tareas_semejantes_aprovechar_preparacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres ordenar tu propia jornada de mando y las recomendaciones corrientes de gestión del tiempo no te dicen alrededor de qué ordenarla."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-identificar_paso_limitante_jornada_desfases-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los consejos corrientes para ganar tiempo se centran en recortar minutos, pero no dicen alrededor de qué ordenar la jornada. Un principio de producción sí lo dice: en toda cadena hay un paso que marca el ritmo, y lo demás se acomoda a él. En la vida de un mando hay compromisos que tienen que ocurrir a una hora fija, sin holgura ninguna. Si los identificas primero y colocas lo flexible a su alrededor, dejando márgenes entre una cosa y otra, lo inamovible queda protegido y el resto encuentra su hueco, y así trabajas de manera más eficiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "265-267"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)"
+    },
+    {
+      "id": "m11-limpieza-identificar_paso_limitante_jornada_desfases-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mejora las recomendaciones corrientes de gestion del tiempo aplicandoles los principios de produccion.",
+      "texto_nuevo": "Mejora las recomendaciones corrientes de gestión del tiempo aplicándoles los principios de producción.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_paso_limitante_jornada_desfases-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica primero tu paso limitante preguntandote cual es el huevo de tu trabajo.",
+      "texto_nuevo": "Identifica primero tu paso limitante preguntándote cuál es el huevo de tu trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_paso_limitante_jornada_desfases-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En resumen: determina que es lo inamovible y manipula a su alrededor las actividades mas flexibles, y trabajaras de manera mas eficiente.",
+      "texto_nuevo": "En resumen: determina qué es lo inamovible y manipula a su alrededor las actividades más flexibles, y trabajarás de manera más eficiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_paso_limitante_jornada_desfases-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres ordenar tu propia jornada de mando y las recomendaciones corrientes de gestion del tiempo no te dicen alrededor de que ordenarla.",
+      "texto_nuevo": "Cuando quieres ordenar tu propia jornada de mando y las recomendaciones corrientes de gestión del tiempo no te dicen alrededor de qué ordenarla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-identificar_paso_limitante_jornada_desfases-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Identifica primero tu paso limitante preguntándote cuál es el huevo de tu trabajo.",
+      "texto_nuevo": "Identifica primero tu paso limitante preguntándote qué es, en tu trabajo, lo que marca el ritmo al que se acomoda todo lo demás.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'El huevo' remite al ejemplo del desayuno de otro capítulo, que no está en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'El huevo' remite al ejemplo del desayuno de otro capítulo, que no está en el nodo.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-identificar_paso_limitante_jornada_desfases-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En resumen: determina qué es lo inamovible y manipula a su alrededor las actividades más flexibles, y trabajarás de manera más eficiente.",
+      "texto_nuevo": "En resumen: determina qué es lo inamovible y mueve a su alrededor las actividades más flexibles, y podrás trabajar de manera más eficiente.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 267",
+        "frase": "In short, if we determine what is immovable and manipulate the more yielding activities around it, we can work more efficiently."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): 'we can work more efficiently' es poder, no promesa; 'manipula' calca 'manipulate' (en español, mover o acomodar).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-identificar_paso_limitante_jornada_desfases-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los consejos corrientes para ganar tiempo se centran en recortar minutos, pero no dicen alrededor de qué ordenar la jornada. Un principio de producción sí lo dice: en toda cadena hay un paso que marca el ritmo, y lo demás se acomoda a él. En la vida de un mando hay compromisos que tienen que ocurrir a una hora fija, sin holgura ninguna. Si los identificas primero y colocas lo flexible a su alrededor, dejando márgenes entre una cosa y otra, lo inamovible queda protegido y el resto encuentra su hueco, y así trabajas de manera más eficiente.",
+      "texto_nuevo": "Los consejos corrientes para ganar tiempo se centran en recortar minutos, pero no dicen alrededor de qué ordenar la jornada. Un principio de producción sí lo dice: en toda cadena hay un paso que marca el ritmo, y lo demás se acomoda a él. En la vida de un mando hay compromisos que tienen que ocurrir a una hora fija, sin holgura ninguna. Si los identificas primero y colocas lo flexible a su alrededor, dejando márgenes entre una cosa y otra, lo inamovible queda protegido y el resto encuentra su hueco, y así puedes trabajar de manera más eficiente.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 267",
+        "frase": "In short, if we determine what is immovable and manipulate the more yielding activities around it, we can work more efficiently."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que así se puede trabajar más eficientemente (we can); el resumen lo afirmaba como hecho.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-identificar_paso_limitante_jornada_desfases-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca para eso las cosas de tu vida de mando que de verdad tienen que ocurrir en un calendario absoluto, aquellas en cuyo tiempo no hay holgura ninguna.",
+      "texto_nuevo": "Busca para eso las cosas de tu vida de mando que de verdad tienen que ocurrir a una hora fija e inamovible, aquellas en cuyo tiempo no hay holgura ninguna.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "en un calendario absoluto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"happen on a schedule that is absolute\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase6-identificar_paso_limitante_jornada_desfases-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los consejos corrientes para ganar tiempo se centran en recortar minutos, pero no dicen alrededor de qué ordenar la jornada. Un principio de producción sí lo dice: en toda cadena hay un paso que marca el ritmo, y lo demás se acomoda a él. En la vida de un mando hay compromisos que tienen que ocurrir a una hora fija, sin holgura ninguna. Si los identificas primero y colocas lo flexible a su alrededor, dejando márgenes entre una cosa y otra, lo inamovible queda protegido y el resto encuentra su hueco, y así puedes trabajar de manera más eficiente.",
+      "texto_nuevo": "Los consejos corrientes para ganar tiempo se centran en recortar minutos, pero no dicen alrededor de qué ordenar la jornada. Un principio de producción sí lo dice: en toda cadena hay un paso que marca el ritmo, y lo demás se acomoda a él. En la vida de un mando hay compromisos que tienen que ocurrir a una hora fija, sin holgura ninguna. Si los identificas primero, creas desfases y colocas lo flexible a su alrededor, puedes trabajar de manera más eficiente.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 267",
+        "frase": "Accordingly, I have to create offsets and schedule my other work around this limiting step. In short, if we determine what is immovable and manipulate the more yielding activities around it, we can work more efficiently."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El pasaje manda crear desfases, no dejar márgenes entre una cosa y otra (la holgura es otro principio del capítulo, ajeno al nodo), y el único efecto que da es trabajar de manera más eficiente, no que lo inamovible quede protegido.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Encuentra tu Paso Limitante"
+}

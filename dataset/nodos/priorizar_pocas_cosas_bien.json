@@ -1,0 +1,344 @@
+{
+  "node_id": "priorizar_pocas_cosas_bien",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Priorizar unas pocas cosas y hacerlas bien en vez de repartir esfuerzo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La mayoría de los resultados sale de una minoría de las causas, así que trabajar duro no basta: importa acertar en qué enfocarse. Ordenar por importancia toda lista y atender lo de arriba antes de bajar convierte esa idea en práctica diaria, con tareas, metas o puestos por cubrir. Funciona porque el esfuerzo no cuenta, cuentan los resultados: un producto modesto, hecho por pocos, superó a otro lleno de funciones gracias a una sola que tocaba lo más valorado, las personas de las fotos. Enfocarse es sobre todo decir que no a muchas otras buenas ideas.",
+  "notas_extraccion": "Es la segunda cosa a tener en cuenta al planificar y la unica del capitulo que trae una practica ejecutable en una linea: ordena toda lista por importancia. Los tres ejemplos de aplicacion, tareas del dia, metas del semestre y puestos abiertos, los pone el libro uno a uno, y son lo que evita que esto sea la postura de priorizar. El caso del producto pobre que gano va dentro y no a nodo propio (manual seccion 3.5) y con su mecanismo explicado, porque sin el mecanismo seria una anecdota de empresa. Lo que el libro NO dice, y por eso no esta escrito aqui, es con que criterio se ordena la lista cuando dos cosas parecen igual de importantes, ni quien decide el orden si el equipo discrepa.",
+  "pasos_accionables": [
+    "Parte del principio de Pareto: la mayoría de los resultados viene de una minoría de las causas, y la clave está en identificar qué cosas son las que más importan.",
+    "No te quedes en la sabiduría corriente de que el éxito viene de trabajar duro y perseverar ante las dificultades. Es consejo sensato, pero pasa por alto lo importante que es el foco.",
+    "Ordena por importancia cualquier lista que hagas, que es la mejor manera de practicar la priorización.",
+    "Asegúrate de que las cosas de arriba quedan atendidas antes de aventurarte más abajo en la lista.",
+    "Si tienes cinco tareas en tu lista de hoy, ordénalas por prioridad y haz la uno antes que la dos.",
+    "Si tienes tres metas para tu equipo este semestre, oblígate a contestar: si solo pudiera conseguir una meta, ¿cuál sería?",
+    "Si tienes cinco puestos abiertos que cubrir, vuelca tu energía en cubrir el más crítico.",
+    "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. Un caso: cuando una red social lanzó en 2005 una forma de subir fotos personales, el producto parecía pobrísimo al lado del que era entonces el gran referente, que estaba lleno de funciones: fotos de alta resolución, modo de pase a pantalla completa, búsqueda por lugar y hasta por color, navegación con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolución, pequeñas y granuladas, sin atajos, sin búsqueda y sin pantalla completa, y lo había hecho un puñado de ingenieros en unos meses. Pero llevaba una función pequeña y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtió en pocos años en el servicio de fotos más popular del mundo, porque lo más valorado de una foto personal son las personas que salen en ella.",
+    "Entiende el foco así: no consiste en decir que sí a aquello en lo que te tienes que enfocar, sino en decir que no a las otras cien buenas ideas que andan por ahí."
+  ],
+  "entregable_esperado": "Toda lista ordenada por importancia, con lo de arriba atendido antes de bajar, y un no dicho a las otras buenas ideas.",
+  "nodos_previos": [
+    "listar_bueno_mejorable_equipo",
+    "ajustar_plan_fuerzas_equipo"
+  ],
+  "nodos_siguientes": [
+    "partir_meta_grande_hitos"
+  ],
+  "condiciones_activacion": [
+    "Cada vez que hagas una lista de tareas, de metas o de puestos abiertos, y cada vez que creas que trabajar más duro va a bastar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La mayoría de los resultados sale de una minoría de las causas, así que trabajar duro no basta: importa acertar en qué enfocarse. Ordenar por importancia toda lista y atender lo de arriba antes de bajar convierte esa idea en práctica diaria, con tareas, metas o puestos por cubrir. Funciona porque el esfuerzo no cuenta, cuentan los resultados: un producto modesto, hecho por pocos, superó a otro lleno de funciones gracias a una sola que tocaba lo más valorado, las personas de las fotos. Enfocarse es sobre todo decir que no a muchas otras buenas ideas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "83-97"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de la idea general del principio que lleva el nombre de aquel economista italiano: la mayoria de los resultados viene de una minoria de las causas, y la clave esta en identificar que cosas son las que mas importan.",
+      "texto_nuevo": "Parte de una idea general muy conocida: la mayoría de los resultados viene de una minoría de las causas, y la clave está en identificar qué cosas son las que más importan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del principio que lleva el nombre de aquel economista italiano"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No te quedes en la sabiduria corriente de que el exito viene de trabajar duro y perseverar ante las dificultades. Es consejo sensato, pero pasa por alto lo importante que es el foco.",
+      "texto_nuevo": "No te quedes en la sabiduría corriente de que el éxito viene de trabajar duro y perseverar ante las dificultades. Es consejo sensato, pero pasa por alto lo importante que es el foco.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ordena por importancia cualquier lista que hagas, que es la mejor manera de practicar la priorizacion.",
+      "texto_nuevo": "Ordena por importancia cualquier lista que hagas, que es la mejor manera de practicar la priorización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de que las cosas de arriba quedan atendidas antes de aventurarte mas abajo en la lista.",
+      "texto_nuevo": "Asegúrate de que las cosas de arriba quedan atendidas antes de aventurarte más abajo en la lista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes cinco tareas en tu lista de hoy, ordenalas por prioridad y haz la uno antes que la dos.",
+      "texto_nuevo": "Si tienes cinco tareas en tu lista de hoy, ordénalas por prioridad y haz la uno antes que la dos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes tres metas para tu equipo este semestre, obligate a contestar: si solo pudiera conseguir una meta, cual seria?",
+      "texto_nuevo": "Si tienes tres metas para tu equipo este semestre, oblígate a contestar: si solo pudiera conseguir una meta, ¿cuál sería?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes cinco puestos abiertos que cubrir, vuelca tu energia en llenar el mas critico.",
+      "texto_nuevo": "Si tienes cinco puestos abiertos que cubrir, vuelca tu energía en llenar el más crítico.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. El libro pone el caso: cuando su casa lanzo en 2005 una forma de subir fotos personales, el producto era pobrisimo al lado del que era entonces el patron oro, que estaba lleno de funciones, fotos de alta resolucion, modo de pase a pantalla completa, busqueda por lugar y hasta por color, navegacion con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolucion, pequenias y granuladas, sin atajos, sin busqueda y sin pantalla completa, y lo habia hecho un punado de ingenieros en unos meses. Pero llevaba una funcion pequenia y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtio en pocos anios en el servicio de fotos mas popular del mundo, porque lo mas valorado de una foto personal son las personas que salen en ella.",
+      "texto_nuevo": "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. Un caso: cuando una red social lanzó en 2005 una forma de subir fotos personales, el producto era pobrísimo al lado del que era entonces el patrón oro, que estaba lleno de funciones: fotos de alta resolución, modo de pase a pantalla completa, búsqueda por lugar y hasta por color, navegación con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolución, pequeñas y granuladas, sin atajos, sin búsqueda y sin pantalla completa, y lo había hecho un puñado de ingenieros en unos meses. Pero llevaba una función pequeña y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtió en pocos años en el servicio de fotos más popular del mundo, porque lo más valorado de una foto personal son las personas que salen en ella.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro pone el caso",
+          "cuando su casa lanzo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende el foco como lo entiende la cita de Jobs que el libro trae: la gente cree que foco significa decir que si a aquello en lo que te tienes que enfocar, y no es eso en absoluto, significa decir que no a las otras cien buenas ideas que hay.",
+      "texto_nuevo": "Entiende el foco así: no consiste en decir que sí a aquello en lo que te tienes que enfocar, sino en decir que no a las otras cien buenas ideas que andan por ahí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como lo entiende la cita de Jobs que el libro trae",
+          "la gente cree que foco significa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-priorizar_pocas_cosas_bien-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada vez que hagas una lista de tareas, de metas o de puestos abiertos, y cada vez que creas que trabajar mas duro va a bastar.",
+      "texto_nuevo": "Cada vez que hagas una lista de tareas, de metas o de puestos abiertos, y cada vez que creas que trabajar más duro va a bastar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-priorizar_pocas_cosas_bien-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de una idea general muy conocida: la mayoría de los resultados viene de una minoría de las causas, y la clave está en identificar qué cosas son las que más importan.",
+      "texto_nuevo": "Parte del principio de Pareto: la mayoría de los resultados viene de una minoría de las causas, y la clave está en identificar qué cosas son las que más importan.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "una idea general muy conocida:"
+        ]
+      },
+      "decision": "pase de glosario (pareto): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-priorizar_pocas_cosas_bien-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. Un caso: cuando una red social lanzó en 2005 una forma de subir fotos personales, el producto era pobrísimo al lado del que era entonces el patrón oro, que estaba lleno de funciones: fotos de alta resolución, modo de pase a pantalla completa, búsqueda por lugar y hasta por color, navegación con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolución, pequeñas y granuladas, sin atajos, sin búsqueda y sin pantalla completa, y lo había hecho un puñado de ingenieros en unos meses. Pero llevaba una función pequeña y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtió en pocos años en el servicio de fotos más popular del mundo, porque lo más valorado de una foto personal son las personas que salen en ella.",
+      "texto_nuevo": "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. Un caso: cuando una red social lanzó en 2005 una forma de subir fotos personales, el producto parecía pobrísimo al lado del que era entonces el patrón oro, que estaba lleno de funciones: fotos de alta resolución, modo de pase a pantalla completa, búsqueda por lugar y hasta por color, navegación con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolución, pequeñas y granuladas, sin atajos, sin búsqueda y sin pantalla completa, y lo había hecho un puñado de ingenieros en unos meses. Pero llevaba una función pequeña y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtió en pocos años en el servicio de fotos más popular del mundo, porque lo más valorado de una foto personal son las personas que salen en ella.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 93",
+        "frase": "By contrast, Facebook’s initial product seemed incredibly bare-bones."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que parecía pobrísimo (seemed), no que lo fuera.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-priorizar_pocas_cosas_bien-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si tienes cinco puestos abiertos que cubrir, vuelca tu energía en llenar el más crítico.",
+      "texto_nuevo": "Si tienes cinco puestos abiertos que cubrir, vuelca tu energía en cubrir el más crítico.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "llenar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Un puesto se cubre, no se llena ('filling the one').",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-priorizar_pocas_cosas_bien-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. Un caso: cuando una red social lanzó en 2005 una forma de subir fotos personales, el producto parecía pobrísimo al lado del que era entonces el patrón oro, que estaba lleno de funciones: fotos de alta resolución, modo de pase a pantalla completa, búsqueda por lugar y hasta por color, navegación con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolución, pequeñas y granuladas, sin atajos, sin búsqueda y sin pantalla completa, y lo había hecho un puñado de ingenieros en unos meses. Pero llevaba una función pequeña y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtió en pocos años en el servicio de fotos más popular del mundo, porque lo más valorado de una foto personal son las personas que salen en ella.",
+      "texto_nuevo": "Cuenta con que el esfuerzo no cuenta y lo que importa son los resultados. Un caso: cuando una red social lanzó en 2005 una forma de subir fotos personales, el producto parecía pobrísimo al lado del que era entonces el gran referente, que estaba lleno de funciones: fotos de alta resolución, modo de pase a pantalla completa, búsqueda por lugar y hasta por color, navegación con vista previa y atajos de teclado. El suyo solo dejaba subir fotos de baja resolución, pequeñas y granuladas, sin atajos, sin búsqueda y sin pantalla completa, y lo había hecho un puñado de ingenieros en unos meses. Pero llevaba una función pequeña y novedosa, etiquetar a las personas de la foto y avisarlas, y con ella se convirtió en pocos años en el servicio de fotos más popular del mundo, porque lo más valorado de una foto personal son las personas que salen en ella.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el patrón oro"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'the gold standard'.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-muestra-final5-priorizar_pocas_cosas_bien-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Toda lista ordenada por importancia, con lo de arriba atendido antes de bajar, y las cosas de abajo dichas que no.",
+      "texto_nuevo": "Toda lista ordenada por importancia, con lo de arriba atendido antes de bajar, y un no dicho a las otras buenas ideas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 89, 97",
+        "frase": "Make sure that the things at the top are taken care of before you venture further down the list. / It means saying no to the hundred other good ideas that there are."
+      },
+      "decision": "auditoria completa M11 (contrario): El libro dice que a lo de abajo de la lista se llega después de atender lo de arriba (\"before you venture further down the list\", l.89); el texto dice que a lo de abajo se le dice que no. El no del foco es a las otras buenas ideas (l.97), no a lo que está en tu lista, y nada en el apartado (l.81-97) manda rechazar lo de abajo.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "contrario"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Haz Pocas Cosas, Bien",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

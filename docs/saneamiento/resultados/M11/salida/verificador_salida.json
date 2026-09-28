@@ -1,0 +1,19 @@
+{
+ "items": [
+  {"item": "construir_indicador_tendencia_patron|titulo_concepto", "veredicto": "OK", "motivo": "Operación que entrega algo: 'la producción' correcto; solo cambia el término.", "propuesta": ""},
+  {"item": "construir_indicador_tendencia_patron|resumen_teorico", "veredicto": "OK", "motivo": "'la producción de tu operación' correcto; el resto idéntico ('el resultado fue el que fue' ya estaba en el texto viejo).", "propuesta": ""},
+  {"item": "construir_indicador_tendencia_patron|entregable_esperado", "veredicto": "OK", "motivo": "'La producción medida' concuerda en femenino; solo cambia el término.", "propuesta": ""},
+  {"item": "construir_indicador_tendencia_patron|pasos_accionables[1]", "veredicto": "OK", "motivo": "Solo cambia el término; coherente con el nodo.", "propuesta": ""},
+  {"item": "construir_indicador_tendencia_patron|pasos_accionables[2]", "veredicto": "OK", "motivo": "'esa producción' concuerda; solo cambia el término.", "propuesta": ""},
+  {"item": "construir_indicador_tendencia_patron|pasos_accionables[3]", "veredicto": "FALLA", "motivo": "Añade la palabra 'total', que no estaba: cambia algo más que el término y altera el sentido (la medida no era necesariamente un total).", "propuesta": "Mide esa misma producción también contra algún patrón o nivel esperado."},
+  {"item": "construir_indicador_tendencia_patron|condiciones_activacion[0]", "veredicto": "OK", "motivo": "'nombrada la producción' concuerda en femenino; solo cambia el término.", "propuesta": ""},
+  {"item": "elegir_indicador_salida_trabajo_administrativo|resumen_teorico", "veredicto": "OK", "motivo": "Unidad administrativa: 'el resultado de la unidad' correcto; concordancia bien; resto idéntico.", "propuesta": ""},
+  {"item": "elegir_indicador_salida_trabajo_administrativo|entregable_esperado", "veredicto": "OK", "motivo": "'indicador de salida' pasa a 'indicador de resultado' según la decisión.", "propuesta": ""},
+  {"item": "elegir_indicador_salida_trabajo_administrativo|pasos_accionables[1]", "veredicto": "OK", "motivo": "Ambas apariciones cambiadas ('el resultado de la unidad', 'que son resultado'); concordancia correcta; resto idéntico.", "propuesta": ""},
+  {"item": "elegir_indicador_salida_trabajo_administrativo|pasos_accionables[4]", "veredicto": "OK", "motivo": "'indicadores de cantidad o de resultado' aplica la regla de indicador de salida a indicador de resultado; resto idéntico.", "propuesta": ""},
+  {"item": "elegir_indicador_salida_trabajo_administrativo|condiciones_activacion[0]", "veredicto": "OK", "motivo": "Habla del trabajo de la unidad administrativa: 'un resultado contable' correcto, artículo ajustado a masculino.", "propuesta": ""},
+  {"item": "zanjar_seis_preguntas_decision_adelantado|resumen_teorico", "veredicto": "OK", "motivo": "Proceso de decisión: 'su propio resultado', 'un resultado de calidad', 'qué resultado entregar'; concordancias ajustadas (propia a propio, una a un); resto idéntico.", "propuesta": ""},
+  {"item": "zanjar_seis_preguntas_decision_adelantado|pasos_accionables[0]", "veredicto": "OK", "motivo": "'lleva asociado un resultado' y 'ese resultado' con concordancia masculina correcta.", "propuesta": ""},
+  {"item": "zanjar_seis_preguntas_decision_adelantado|pasos_accionables[1]", "veredicto": "FALLA", "motivo": "Concordancia rota: el pronombre 'darla' se refería a 'una salida'; con 'un resultado' debe ser 'darlo'.", "propuesta": "Di con claridad desde el principio que esperas exactamente eso, un resultado de alta calidad y en plazo, porque es entonces cuando el proceso tiene más probabilidades de darlo, igual que los demás procesos de mando."}
+ ]
+}

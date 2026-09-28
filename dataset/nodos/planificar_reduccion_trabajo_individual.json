@@ -1,0 +1,291 @@
+{
+  "node_id": "planificar_reduccion_trabajo_individual",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Planificar la reducción de tu trabajo individual cuando el equipo crece",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Al empezar a dirigir lo más probable es que lleves a la vez tu trabajo individual y la gestión, y un error que hay quien ve en casi todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso ten listo el plan para soltar trabajo individual cuando el equipo llegue a cuatro o cinco personas.",
+  "notas_extraccion": "El libro escribe esta descripcion una sola vez, dentro del camino del aprendiz, y despues la invoca por su titulo desde el camino del pionero con la formula See description from The Apprentice. Esa invocacion por nombre es lo que la convierte en una pieza con id propio. Es corta a proposito: el libro pone disparador numerico, acto y entregable, y no pone el inventario de como se reduce el trabajo individual. Por eso aqui no hay pasos de como reducirlo: escribirlos seria inventarlos. El caso que el libro razona es de la autora, que con un equipo de seis seguia siendo la disenadora principal de un proyecto exigente, y cada vez que pasaba algo fuera de lo corriente se quedaba sin tiempo para su propio proyecto, con lo que la calidad de su trabajo sufria. Lo que el libro NO dice, y por eso no esta escrito aqui, es que responsabilidades se sueltan primero, a quien se le pasan, ni en cuanto tiempo.",
+  "pasos_accionables": [
+    "Cuenta con que en los primeros tiempos lo más probable es que lleves a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a tu cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+    "Vigila un error que hay quien ve en prácticamente todo directivo que empieza: seguir haciendo trabajo individual pasado el punto en que es sostenible.",
+    "No lo aprendas por las malas: en el momento en que tu equipo llegue a cuatro o cinco personas, ten ya un plan de cómo reducir tus responsabilidades de trabajo individual para poder ser el mejor directivo posible para tu gente."
+  ],
+  "entregable_esperado": "Un plan de cómo reducir tus responsabilidades de trabajo individual, hecho antes de que el equipo pase de cuatro o cinco personas.",
+  "nodos_previos": [
+    "transitar_aprendiz_primeros_meses",
+    "transitar_pionero_equipo_nuevo"
+  ],
+  "nodos_siguientes": [
+    "reemplazarse_trabajo_propio",
+    "pasar_direccion_directa_indirecta"
+  ],
+  "condiciones_activacion": [
+    "Cuando eres directivo nuevo, ya sea porque te tocó dirigir dentro de un equipo que crece o porque fuiste el primero en un trabajo que ahora se vuelve de equipo, y sigues llevando responsabilidades de trabajo individual además de las de gestión. El momento de actuar es cuando tu equipo llega a cuatro o cinco personas."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Al empezar a dirigir casi siempre llevas a la vez tu trabajo individual y la gestión, y el error que comete prácticamente todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "87-93"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Planificar la reduccion de tu trabajo individual cuando el equipo crece",
+      "texto_nuevo": "Planificar la reducción de tu trabajo individual cuando el equipo crece",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que en los primeros tiempos vas a llevar a la vez trabajo de contribuidor individual y trabajo de gestion: como aprendiz rara vez empiezas con un equipo grande, lo normal es empezar con un punado de personas a cargo e ir recibiendo mas con el tiempo, asi que ademas de apoyar a otros sigues vendiendo limonada.",
+      "texto_nuevo": "Cuenta con que en los primeros tiempos vas a llevar a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "sigues vendiendo limonada",
+          "contribuidor individual",
+          "como aprendiz"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila el error que la autora cuenta de si misma y que dice ver cometer a practicamente todo directivo aprendiz: seguir haciendo trabajo de contribuidor individual pasado el punto en que es sostenible.",
+      "texto_nuevo": "Vigila un error que comete prácticamente todo directivo que empieza: seguir haciendo trabajo individual pasado el punto en que es sostenible.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el error que la autora cuenta de si misma",
+          "contribuidor individual"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No lo aprendas por las malas: en el momento en que tu equipo llegue a cuatro o cinco personas, ten ya un plan de como reducir tus responsabilidades de contribuidor individual para poder ser el mejor directivo posible para tu gente.",
+      "texto_nuevo": "No lo aprendas por las malas: en el momento en que tu equipo llegue a cuatro o cinco personas, ten ya un plan de cómo reducir tus responsabilidades de trabajo individual para poder ser el mejor directivo posible para tu gente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "contribuidor individual"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un plan de como reducir tus responsabilidades de contribuidor individual, hecho antes de que el equipo pase de cuatro o cinco personas.",
+      "texto_nuevo": "Un plan de cómo reducir tus responsabilidades de trabajo individual, hecho antes de que el equipo pase de cuatro o cinco personas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "contribuidor individual"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-planificar_reduccion_trabajo_individual-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando eres directivo nuevo, por el camino del aprendiz o por el del pionero, y sigues llevando responsabilidades de contribuidor individual ademas de las de gestion. El libro pone el disparador con numero: en el momento en que tu equipo llega a cuatro o cinco personas.",
+      "texto_nuevo": "Cuando eres directivo nuevo, ya sea porque te tocó dirigir dentro de un equipo que crece o porque fuiste el primero en un trabajo que ahora se vuelve de equipo, y sigues llevando responsabilidades de trabajo individual además de las de gestión. El momento de actuar es cuando tu equipo llega a cuatro o cinco personas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por el camino del aprendiz o por el del pionero",
+          "contribuidor individual",
+          "El libro pone el disparador con numero"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-planificar_reduccion_trabajo_individual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que en los primeros tiempos vas a llevar a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+      "texto_nuevo": "Cuenta con que en los primeros tiempos lo más probable es que lleves a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 87",
+        "frase": "This means that, in the early days, most new apprentice managers are also handling individual contributor responsibilities."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la mayoría ('most') de los directivos nuevos lleva también trabajo individual; el cierre del paso sí sigue al libro ('you're also still selling lemonade') y se deja.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-planificar_reduccion_trabajo_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al empezar a dirigir casi siempre llevas a la vez tu trabajo individual y la gestión, y el error que comete prácticamente todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+      "texto_nuevo": "Al empezar a dirigir lo más probable es que lleves a la vez tu trabajo individual y la gestión, y el error que comete prácticamente todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 87",
+        "frase": "This means that, in the early days, most new apprentice managers are also handling individual contributor responsibilities."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que es lo más probable y que lo hace la mayoría (\"It's more likely\", \"most\"); \"casi siempre\" lo subía.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-muestra-final2-planificar_reduccion_trabajo_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al empezar a dirigir lo más probable es que lleves a la vez tu trabajo individual y la gestión, y el error que comete prácticamente todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+      "texto_nuevo": "Al empezar a dirigir lo más probable es que lleves a la vez tu trabajo individual y la gestión, y un error que hay quien ve en casi todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 89",
+        "frase": "Unfortunately, the mistake that I made—and that I see virtually every apprentice manager make—is continuing to do individual contributor work past the point at which it is sustainable."
+      },
+      "decision": "auditoria completa M11 (matiz): 'I see virtually every apprentice manager make' es la observación de una persona; el texto la afirma como hecho general. Se cuenta como caso ('hay quien ve'), sin cambiar la longitud.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-muestra-final2-planificar_reduccion_trabajo_individual-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vigila un error que comete prácticamente todo directivo que empieza: seguir haciendo trabajo individual pasado el punto en que es sostenible.",
+      "texto_nuevo": "Vigila un error que hay quien ve en prácticamente todo directivo que empieza: seguir haciendo trabajo individual pasado el punto en que es sostenible.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 89",
+        "frase": "Unfortunately, the mistake that I made—and that I see virtually every apprentice manager make—is continuing to do individual contributor work past the point at which it is sustainable."
+      },
+      "decision": "auditoria completa M11 (matiz): Misma observación personal ('I see virtually every apprentice manager make') afirmada como hecho general; se cuenta como caso.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-planificar_reduccion_trabajo_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al empezar a dirigir lo más probable es que lleves a la vez tu trabajo individual y la gestión, y un error que hay quien ve en casi todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso el plan para soltar trabajo individual se tiene listo cuando el equipo llega a cuatro o cinco personas.",
+      "texto_nuevo": "Al empezar a dirigir lo más probable es que lleves a la vez tu trabajo individual y la gestión, y un error que hay quien ve en casi todo directivo que empieza es seguir haciendo ese trabajo propio más allá del punto en que es sostenible. A una directiva le pasó con un equipo de unas seis personas: cada imprevisto de gestión la dejaba sin tiempo para su proyecto, la calidad bajó, sus compañeros se frustraron y acabó viendo que por intentar ser las dos cosas no hacía bien ninguna. Por eso ten listo el plan para soltar trabajo individual cuando el equipo llegue a cuatro o cinco personas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se tiene listo",
+          "el equipo llega"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Impersonal normativo (\"se tiene listo\", la voz de \"se debe\"); el libro habla al lector (\"you should have a plan\"), y la voz de la casa es tú. Pasa a \"ten listo\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-planificar_reduccion_trabajo_individual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta con que en los primeros tiempos lo más probable es que lleves a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+      "texto_nuevo": "Cuenta con que en los primeros tiempos lo más probable es que lleves a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a tu cargo e ir recibiendo más con el tiempo, así que además de apoyar a otros sigues haciendo tu propio trabajo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"personas a cargo\" sin posesivo se lee como quien manda; forma fijada \"a tu cargo\" (decisión del orquestador)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"personas a cargo\" sin posesivo se lee como quien manda; forma fijada \"a tu cargo\" (decisión del orquestador).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Reduce tu Trabajo Individual",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

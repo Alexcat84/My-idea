@@ -1,0 +1,642 @@
+{
+ "lote": "10",
+ "items": [
+  {
+   "item": "dimensionar_inventario_materia_prima_reposicion",
+   "resumen": "La inspección al recibir y el inventario de materia prima son una sola cadena: la inspección caza lo roto o fuera de tamaño, rechazarlo te deja sin material y el inventario existe para cubrir ese hueco. Su tamaño no se adivina: debe cubrir tu ritmo de consumo durante lo que tarda en llegar la reposición. Como el inventario cuesta dinero, se pesa contra lo que arriesgas si paras: el día de máquina parada, los clientes que se van y lo que cuesta recuperarlos. Funciona porque convierte una intuición sobre cuánto guardar en una cuenta con dos lados.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_02.md",
+    "lineas": "69-69"
+   },
+   "pasos_del_nodo": [
+    "Mira el material en el momento de recibirlo, que es lo que se llama inspeccion de entrada o de recepcion.",
+    "Busca en esa inspeccion no solo lo que esta roto o podrido, sino tambien lo que viene de tamano mayor o menor del que toca, porque eso cambia lo rapido que se procesa.",
+    "Devuelve el material que no sea aceptable, contando con lo que eso te deja: sin material, y por tanto parado.",
+    "Ten inventario de materia prima para no tener que parar por eso.",
+    "Dimensionalo con el principio que el libro pone: suficiente para cubrir tu ritmo de consumo durante el tiempo que tardas en reponer la materia prima, de modo que si tu proveedor entrega una vez al dia, guardes un dia de consumo.",
+    "Pesa la ventaja de llevar ese inventario contra lo que cuesta llevarlo, porque el inventario cuesta dinero.",
+    "Calcula, ademas del coste del material y del coste del dinero, la oportunidad en riesgo, con las tres preguntas del libro: cuanto costaria tener la maquina parada un dia, cuantos clientes perderias y cuanto costaria volver a atraerlos."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "escuchar_ruidoso_opinion_fuerte_pedir_agujeros",
+   "resumen": "Decir con claridad y fuerza lo que piensas saca a la luz enseguida los puntos de vista contrarios y los fallos del razonamiento, y ahorra a la gente el tiempo de adivinar qué piensa el jefe. Pero solo es escuchar si insistes en que te lleven la contraria: nombrar tú el defecto de tu idea, pedir que le hagan agujeros y reconocer en público cuando te equivocas. Como funciona solo con quien se siente seguro, hay que construir la confianza de los recién llegados y de los más callados. Y se trabaja desde el estilo que te sale natural, porque forzar otro incomoda más al equipo.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_07.md",
+    "lineas": "115-129"
+   },
+   "pasos_del_nodo": [
+    "Pon un punto de vista fuerte encima de la mesa e insiste en que te respondan.",
+    "No te quedes en desafiar a los demas: insiste en que ellos te desafien a ti, que es lo que hace que esto sea escuchar y no hablar.",
+    "Cuenta con que esto solo funciona cuando la gente se siente con confianza suficiente para aceptar el reto.",
+    "Fijate en particular en quien acaba de llegar a la empresa y no se siente bastante asentado para dar la cara, porque puede saber una buena razon por la que te equivocas y aun asi callarsela.",
+    "Ve todo lo lejos que haga falta para construir la confianza de aquellos a los que estas incomodando.",
+    "Cuenta con que segun la gente vea a unos y otros desafiar al jefe, iran sintiendo que hacerlo tambien es seguro para ellos.",
+    "Invita al desafio nombrando tu mismo el defecto de tu idea, como hacia Steve Jobs cuando iba a Jony Ive y le decia Jony, aqui va una idea tonta.",
+    "Di lo que piensas con mucha claridad y despues ve todo lo lejos que haga falta para animar a que te lleven la contraria.",
+    "Remata con una peticion explicita de agujeros, del tipo hazle agujeros a esta idea, se que puede ser terrible, dime todas las razones por las que no deberiamos hacerlo.",
+    "Reconoce en publico cuando el otro tenia razon y tu no, como el trofeo de tenias razon, me equivoque que la autora dejo en la mesa de una colega.",
+    "Quedate con el estilo que te sale mas natural. El texto dice que muchos libros de liderazgo empujan hacia la escucha callada, y que si eres de los que escuchan en voz alta es muy dificil seguir ese consejo.",
+    "En vez de forzar un estilo que no es el tuyo, afina tu conciencia de como tu estilo hace sentir a tus colegas y trabaja sobre esa dinamica.",
+    "Busca la manera de dar voz a los callados sin dejar descolocados a sus colegas mas ruidosos: el texto dice que no quieres una tirania de los mas habladores, quieres llegar juntos a la mejor respuesta."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "decidir_momento_despedir_persona",
+   "resumen": "Despedir tarde es el error habitual, porque el jefe se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_06.md",
+    "lineas": "265-291"
+   },
+   "pasos_del_nodo": [
+    "Parte de la condicion que el texto pone: cuando alguien lo hace mal y, habiendo recibido comunicacion clara sobre cual es el problema, no da ninguna senial de mejora, tienes que despedirlo. Y parte tambien de por que importa como lo haces: manda una senial clara a todo el equipo de si de verdad te importan las personas por algo mas que por lo que pueden hacer por ti en el trabajo.",
+    "Cuenta con que no hay respuesta absoluta a cuando toca, que es lo que el texto dice antes de dar sus tres preguntas.",
+    "Primera pregunta: le has dado guia radicalmente franca? Es decir, le has demostrado que te importan personalmente su trabajo y su vida, has sido cristalinamente claro al desafiarle a mejorar, tu elogio ha sido sustancioso y concreto sobre lo que ha hecho bien en vez de un balsamo para su ego, y has sido humilde ademas de directo en tu critica, ofreciendote a ayudarle a buscar soluciones en vez de atacarle como persona. Y has hecho todo eso en varias ocasiones a lo largo del tiempo.",
+    "Si la respuesta a esa primera pregunta es que si y no has visto mejora, o solo destellos de mejora, ha llegado el momento. El texto lo cierra con la definicion de locura: seguir haciendo lo mismo y esperar un resultado distinto.",
+    "Segunda pregunta: como esta afectando su mal desempenio al resto del equipo? Tu trabajo incluye entender la perspectiva de los demas, y el texto avisa de lo que te vas a encontrar: cuando el mal desempenio de un reporte tuyo llega a tu atencion, normalmente lleva mucho tiempo sacando de quicio a sus pares.",
+    "Tercera pregunta: has buscado una segunda opinion, alguien de confianza con quien hablar el problema? El texto da dos motivos: a veces crees que has sido claro y no lo has sido, y una perspectiva de fuera te ayuda a comprobar que estas siendo justo.",
+    "Y si no tienes experiencia despidiendo, habla con alguien que si la tenga. El texto avisa de que hoy la mayoria de las empresas tienen guias estrictas que hay que seguir y de que hay muchas trampas legales que pueden consumir muchisimo tiempo despues si no vas con cuidado.",
+    "Cuenta con que los jefes casi siempre esperan demasiado, y que la razon que el texto da es que se han enganiado creyendo que no hace falta.",
+    "Primera mentira: va a mejorar. Parate y preguntate como exactamente va a mejorar, que vas a hacer tu de otra forma, que va a hacer la persona de otra forma, y como podrian cambiar las circunstancias. Y aunque haya mejorado un poco, pregunta si ha mejorado lo bastante. Si no tienes respuestas bastante precisas a esas preguntas, probablemente no va a mejorar.",
+    "Segunda mentira: alguien es mejor que nadie. El texto lo desmonta con un hecho: quien lo hace mal a menudo genera a los demas tanto trabajo extra como el que saca adelante, porque deja partes de su trabajo sin hacer, hace otras de cualquier manera, o se comporta de formas que otros tienen que compensar.",
+    "Tercera mentira: un traslado es la solucion. Pasarle la persona a un colega que no sospecha nada parece mas amable que despedirla, y el texto dice que obviamente no lo es para el colega y que en general tampoco lo es para la persona con la que estas intentando ser amable.",
+    "Cuarta mentira: es malo para la moral. El texto responde que mantener a alguien que no puede hacer el trabajo es mucho peor para la moral, para la tuya, para la de quien lo esta haciendo mal y para la de todos los demas que lo estan haciendo bien."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "alentar_asuntos_corazon_vigilar_final_reunion",
+   "resumen": "La reunión individual es el foro ideal para llegar a los problemas sutiles y profundos que afectan a tu subordinado en su trabajo. Tres preguntas abren esa puerta: si está satisfecho con su propio rendimiento, si alguna frustración u obstáculo le carcome, y si tiene dudas sobre adónde va. Hay que vigilar además el riesgo contrario: que el asunto grave salga a destiempo, la mayoría de las veces cerca del final, por ejemplo que no está contento y busca trabajo fuera, y te deje solo cinco minutos para tratarlo. Abrir la puerta a tiempo te da margen para atenderlo como merece.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_05.md",
+    "lineas": "53"
+   },
+   "pasos_del_nodo": [
+    "Alienta que en la reunion individual se hablen los asuntos de corazon a corazon.",
+    "Cuenta con la razon que lo sostiene: es el foro perfecto para llegar a los problemas sutiles y profundos del trabajo que afectan al subordinado.",
+    "Preguntale si esta satisfecho con su propio rendimiento.",
+    "Preguntale si alguna frustracion o algun obstaculo le esta carcomiendo.",
+    "Preguntale si tiene dudas sobre adonde va.",
+    "Ponte en guardia contra el asunto de corazon a corazon sacado en un momento inoportuno.",
+    "Cuenta con que la mayoria de las veces esos llegan cerca del final de la reunion.",
+    "Cuenta con lo que pasa si lo dejas correr: el subordinado puede decirte algo como que no esta contento y que lleva tiempo buscando trabajo fuera, y dejarte solo cinco minutos para lidiar con ello."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "medir_guia_propia_pegatinas_marco",
+   "resumen": "La franqueza se mide en el oído de quien escucha, no en la boca de quien habla, así que necesitas que tu equipo te diga dónde cae tu guía. Un marco a la vista con pegatinas de un color para el elogio y otro para la crítica da una lectura rápida y semanal: te recuerda la franqueza en el calor del momento, da al equipo un vocabulario compartido y, si nadie participa, delata falta de confianza. Con esa línea base ves hacia dónde corregir, sabiendo que no te arreglas de una vez y que tienes que gestionarte a diario.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_09.md",
+    "lineas": "179-203"
+   },
+   "pasos_del_nodo": [
+    "Acepta lo que el texto contesta a la pregunta de si de verdad hace falta recibir guia sobre tu guia: si. Y cuenta con lo que aniade, que puede costar quince segundos.",
+    "Explica el marco a tu equipo y pideles que midan tu guia cada semana.",
+    "Sigue tu progreso en el tiempo, preguntandote si te estas moviendo hacia la franqueza radical o alejandote de ella.",
+    "Pon una copia del marco cerca de tu mesa, que es la via de baja tecnologia que el texto describe.",
+    "Deja pegatinas al lado, de un color para el elogio y de otro para la critica.",
+    "Pide a la gente que ponga pegatinas en el cuadrante que mejor describa vuestras interacciones mas recientes.",
+    "Cuenta con los cuatro casos que el texto nombra uno a uno: si alguien siente que fuiste innecesariamente duro, pone una pegatina de critica en el cuadrante de la agresion odiosa; si siente que te contuviste, la pone en el de la empatia ruinosa; si siente que repartiste demasiados buen trabajo o que orgulloso estoy de ti vacios solo para que se sintiera mejor, pone una pegatina de elogio en la empatia ruinosa; y si siente que le dijiste que lo hizo bien y a otro le dijiste que lo hizo mal, pone una pegatina de elogio en la insinceridad manipuladora.",
+    "Cuenta con las cuatro cosas que el texto dice que pedir esa medicion consigue, numeradas por el mismo: uno, expone a la gente a diario al marco, lo que les ayuda a entender que cuando los desafias lo haces porque te importan; dos, con un vocabulario compartido los colegas tienden a pedirte que seas radicalmente franco, lo que hace mucho mas facil superar el sindrome de si no tienes nada bueno que decir no digas nada; tres, la senial visual es un recordatorio que te empuja a ser radicalmente franco cuando el calor del momento tira de ti en otra direccion; y cuatro, si se lo pides y no lo hacen, o si mandan las puntuaciones de forma anonima, tienes una buena senial de que no se fian de como vas a reaccionar.",
+    "Si te sale esa cuarta senial, vuelve atras y trabaja en pedir guia radicalmente franca, demostrandole a tu equipo que no los vas a castigar por criticarte.",
+    "Lee la medicion para decidir que corregir, como el texto lo ejemplifica: si ves que varias personas etiquetan tanto tu elogio como tu critica en el cuadrante de la empatia ruinosa, sabes que no estas desafiando a la gente lo bastante directamente ni con el elogio ni con la critica, y entonces tienes que centrarte en dar elogio mas especifico y mas sincero y en simplemente decirlo cuando critiques.",
+    "Cuenta con que el camino desde la empatia ruinosa puede no ser directo: el texto dice que a veces hay que sobrecorregir y pasar por el cuadrante que mas se teme, el de la agresion odiosa, antes de llegar a la franqueza radical, y que si ese es tu caso vas en la direccion correcta y no debes pararte ahi.",
+    "Cuenta con que vas a tener semanas buenas y semanas malas, y con lo que el texto concluye de eso: no puedes arreglarte de una vez por todas, tienes que gestionarte a ti mismo a diario, y recibir de otros una senial de si te acercas o te alejas ayuda de verdad.",
+    "Escucha como se sienten con la guia que les estas dando, que es lo que el texto pone como lo mas importante, y ayudales a entender que cuando los desafias es porque te importa no solo su crecimiento profesional sino ellos como personas."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "manejar_contacto_fisico_regla_platino",
+   "resumen": "El contacto físico en el trabajo no se resuelve prohibiéndolo ni repartiéndolo por igual, sino mirando a la otra persona. Ante una pérdida o una gran noticia, un apretón de manos se queda corto y un abrazo sincero demuestra que te importa; un abrazo cálido incluso abre la puerta a una crítica. Pero el mismo gesto se vuelve agresión si es sexual, humillante o no deseado. Por eso la vara es la regla de platino: averiguar qué deja cómoda a la otra persona y hacer eso, respetar a quien no quiere abrazos y no incomodar nunca a nadie para probarte a ti.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_08.md",
+    "lineas": "123-149"
+   },
+   "pasos_del_nodo": [
+    "Cuenta con que el apreton de manos muy profesional no da para todo: el texto dice que cuando a un companiero le han matado a su pareja en un accidente de coche, o cuando alguien acaba de anunciar que se casa, un abrazo de verdad puede ser la manera mas eficaz del mundo de demostrar que te importa esa persona.",
+    "Si vas a criticar a alguien, mira lo que hizo Bill Campbell con Stacy Brown-Philpot: antes de decirle nada le dio un abrazo de oso enorme y un beso en la mejilla, y por eso ella supo que venia de un sitio calido y no se enfado con la critica de alguien a quien no conocia de nada.",
+    "Y aguanta el abrazo al menos seis segundos, que es lo que el texto cita de Gretchen Rubin para que la oxitocina y la serotonina fluyan lo mejor posible.",
+    "No des un abrazo sexual, ni humillante, ni obviamente no deseado, porque eso es agresion odiosa: el texto cuenta que un jefe suyo la abrazo cuando estaba disgustada por algo y despues empezo a restregarse contra ella de una manera sexual y nada bienvenida, y que desde entonces dejo de verle como mentor.",
+    "Y no des solo abrazos: si nunca desafias a la otra persona, tus abrazos pueden ser empatia ruinosa.",
+    "No te sientas mal cuando la otra persona no quiera que la abracen, y si el que no esta comodo con un abrazo eres tu, tambien vale: el texto cuenta que Russ Laraway, al leer esas paginas, le pidio directamente que no le abrazara.",
+    "Cumple la regla de platino y no la de oro: la de oro dice haz con los demas lo que querrias que hicieran contigo, y la de platino dice averigua que hace que la otra persona este comoda, y haz eso.",
+    "Si la mayoria de tu equipo esta comoda con los abrazos y un par de personas no, busca la manera de que esas dos no se sientan excluidas de unos abrazos que no quieren. Usa las palabras.",
+    "Puedes empujarte a ti mismo mas alla de donde estas comodo, pero no puedes incomodar a los demas: pruebalo solo con gente que quiera que la abracen."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "mtrampa_10",
+   "resumen": "La guía pierde valor muy deprisa: si esperas, olvidas los ejemplos, no puedes describir la situación con precisión y el otro ya no va a corregir ni aprovechar lo que hizo. Decirla en el acto, en dos o tres minutos entre reuniones, cuesta menos que agendar una conversación y no se te queda rondando. Tratarla como un hábito diario y no como una cita, dejar holgura en el calendario y no guardarla para los procesos formales evita tanto el olvido como la explosión de lo callado. La única excepción es no estar en condiciones, y lo que no importa no se dice.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_09.md",
+    "lineas": "115-135"
+   },
+   "pasos_del_nodo": [
+    "Da la guia tan rapido y tan informalmente como puedas, y cuenta con que eso exige disciplina, por la inclinacion natural a retrasar o evitar la confrontacion y porque el dia ya viene lleno.",
+    "Cuenta con lo que el texto describe que pasa si esperas demasiado: notas el problema, apuntas que hay que tratarlo pero no lo escribes, luego tienes que sentarte a recordar cual era exactamente, luego acordarte de agendar la reunion, y acabas necesitando una lista de cosas que querias decir y no dijiste. El texto aniade que esa lista no se sostiene, que ya no vas a poder recordar ejemplos claros del problema, que por eso no vas a poder usar el modelo de situacion, comportamiento e impacto, y que acabas con un colega confundido y frustrado.",
+    "Aplica la excepcion que el texto declara, y solo esa: si tu o la otra persona estais con hambre, enfadados o cansados, o por cualquier otro motivo no estais en buena disposicion, es mejor esperar. El texto avisa de que esto es la excepcion y no la regla, y de que demasiado a menudo usamos la excepcion como excusa para no hacer lo que sabemos que deberiamos.",
+    "Distingue decirlo en el acto de buscar pelos en la sopa: si no es importante, no lo digas en el acto ni lo digas en absoluto.",
+    "Dilo en dos o tres minutos entre reuniones. El texto sostiene que decirlo en el momento, en un minuto o dos, tres como mucho, cuesta menos que agendar una reunion para mas tarde, no digamos ya que tenerla, y que ademas no se te queda rondando la cabeza.",
+    "Piensa en esto como en lavarte los dientes y no como en una endodoncia, que es la imagen que el texto usa: no lo escribas en tu calendario, simplemente hazlo con constancia.",
+    "Cuenta con la cuenta que el texto hace: con cinco personas a tu cargo, a las que quieras elogiar tres veces por semana y criticar una, eso es mucha mas guia improvisada de la que ofrece la mayoria de los jefes, y te cuesta un maximo de sesenta minutos por semana, sacados de los ratos que de todas formas pasarias andando entre reuniones. El texto aniade que si exige energia y conciencia.",
+    "Deja holgura en tu calendario, que es la primera de las dos salidas que el texto pone: no agendes reuniones seguidas, o ten reuniones de veinticinco y de cincuenta minutos con hora de cierre firme, en vez de reuniones de treinta y de sesenta.",
+    "O bien, que es la segunda salida, acepta sin mas llegar tarde a tu reunion siguiente.",
+    "No guardes la guia para la reunion uno a uno ni para la evaluacion de desempenio. El texto dice que los procesos formales, las reuniones uno a uno, las evaluaciones anuales o semestrales y las encuestas de satisfaccion, estan para reforzar y no para sustituir lo que se hace cada dia.",
+    "Cuenta con que la guia tiene una vida media corta: si esperas una semana o un trimestre para decirlo, el incidente queda tan atras que la persona ya no puede arreglar el problema ni construir sobre el acierto.",
+    "Cuenta con que la critica no dicha estalla como una bomba sucia: callarse demasiado tiempo algo que te enfada o te frustra hace mas probable que acabes explotando de una forma que te hace parecer irracional, daniia la relacion, o las dos cosas. Salvo que sientas que estas furioso, di lo que estas pensando en el acto.",
+    "Evita los agujeros negros: avisa siempre en el acto de como esta siendo recibido el trabajo de la gente. Si le pides a alguien trabajo para preparar una reunion o una presentacion en la que esa persona no va a estar, asegurate de contarle la reaccion que tuvo su trabajo, y pasale tanto el elogio como la critica.",
+    "Mejor aun, deja que la gente presente su propio trabajo siempre que sea posible, para que reciba la guia de primera mano."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "abrazar_incomodidad_arrancar_critica_equipo",
+   "resumen": "Cuando eres el jefe, la crítica no llega sola: el puesto trae suposiciones que frenan a la gente, y si te obsesiona el respeto te pones a la defensiva y la cortas. Arrancarla exige que callar cueste más que hablar: pedirla en público, tener una pregunta fija, aguantar el silencio incómodo y repetir la pregunta. Y para que siga llegando hay que escuchar para entender sin rebatir, premiarla con un cambio visible o con una explicación honesta si discrepas, y llevar la cuenta de cuánta recibes. Así la confianza y el respeto llegan solos.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_09.md",
+    "lineas": "17-53"
+   },
+   "pasos_del_nodo": [
+    "Cuenta con lo que el texto pone como punto de partida: cuando eres el jefe la gente de verdad no quiere criticarte ni decirte lo que piensa, porque con el puesto heredas un monton de suposiciones que no tienen nada que ver con quien eres, y el papel cambia la impresion que la gente tiene de ti de maneras desconcertantes.",
+    "Trabaja duro para ganarte la confianza de tu equipo cuando te haces jefe, y no te centres de mas en el respeto: el texto avisa de que centrarse demasiado en el respeto sale al reves, porque te pone extra a la defensiva cuando te critican, y de que si escuchas la critica y reaccionas bien te llegan los dos.",
+    "Tratate a ti mismo como la excepcion a la regla de criticar en privado, que es como el texto rotula el primero de sus consejos.",
+    "Averigua quien de tu equipo esta mas comodo criticandote y pidele que lo haga delante de otros, en una reunion de equipo o en una general. El texto avisa de que al principio siempre se resisten preguntando por la regla de criticar en privado, y de que cuando eres el jefe esa regla no se te aplica.",
+    "Cuenta con las dos ventajas que el texto pone a airearlo en publico: si tienes mas de sesenta personas trabajando para ti y las haces esperar a un momento privado para darte una critica, probablemente no la oigas nunca; y te ahorra tener que oir lo mismo una y otra vez.",
+    "Cuenta con lo que el texto contesta al miedo a que el desafio publico socave tu autoridad: una buena reaccion a la critica publica puede ser justo lo que establece tu credibilidad como lider fuerte, y ayuda a construir una cultura de guia.",
+    "Ten una pregunta de cabecera. El texto da la que su autora adopto de Fred Kofman, autor de Conscious Business y su entrenador en Google: que podria hacer o dejar de hacer que hiciera mas facil trabajar conmigo. Si esas palabras no te salen solas, busca las que si, y cuenta con que esa pregunta de apertura solo esta pensada para poner las cosas en marcha.",
+    "Abraza la incomodidad. Preparate de antemano para la respuesta que el texto dice que llega casi siempre, que todo va bien y gracias por preguntar, y comprometete a seguir en la conversacion hasta tener una respuesta genuina. No asientas ni la tranquilices diciendo que te alegra oirlo.",
+    "Cuenta hasta seis antes de decir nada mas, obligando a la otra persona a aguantar el silencio. El texto dice que la meta no es abusar sino insistir en una discusion franca, poniendo mas dificil callarse que decirte lo que piensa, y que si no se le ocurre nada en el momento siempre puedes quedar otro dia.",
+    "Si contar hasta seis no funciona, vuelve a hacer la pregunta. Y otra vez si hace falta.",
+    "Senala cuando el lenguaje corporal de alguien contradice lo que dice. El texto da la frase, dicha sin ser desagradable: entonces por que estas cruzando los brazos y hundiendote en la silla, venga, dime lo que piensas de verdad.",
+    "Escucha con intencion de entender y no de responder. No empieces a criticar la critica ni a decirle a la otra persona que no ha sido radicalmente franca: repite lo que dijo para asegurarte de haberlo entendido en vez de defenderte, y aclara la critica sin debatirla. El texto da la frase, y dice que si te parece demasiado programatica busques otra: asi que lo que te oigo decir es.",
+    "Gestiona tus sentimientos en vez de dejar que ellos te gestionen a ti, y recuerdate al entrar que por injusta que sea la critica tu primer trabajo es escuchar para entender y no defenderte. El texto avisa de que la reaccion defensiva es normal, y de que se carga casi del todo la posibilidad de que esa persona vuelva a regalarte franqueza.",
+    "Premia la critica para conseguir mas. Si estas de acuerdo con ella, haz el cambio cuanto antes; y si el cambio necesario va a llevar tiempo, haz algo visible que demuestre que lo estas intentando. El texto lo ilustra con la goma elastica que la autora se puso en la muneca y que pidio a su socio Russ, y despues a todo su equipo, que le chascaran cada vez que interrumpiera.",
+    "Si no estas de acuerdo con la critica, haz lo que el texto pone y en el orden en que lo pone: primero busca algo de la critica con lo que si puedas estar de acuerdo, para senialar que estas abierto; despues comprueba que has entendido repitiendo lo que oiste; despues dile que quieres pensar lo que te ha dicho y agenda otro momento para volver a hablarlo, y vuelve de verdad; y entonces explica exactamente por que no estas de acuerdo.",
+    "Cuenta con lo que el texto dice que NO basta nunca: reconocer sin mas los sentimientos de la otra persona, que segun el texto siempre suena pasivo agresivo e insincero.",
+    "Mide la guia que recibes llevando la cuenta: cuantas veces por semana te critican y cuantas te elogian las personas que te reportan. Si todo es elogio y nada de critica, desconfia, porque segun el texto necesitas trabajar mas para que te critiquen.",
+    "Ensenia a tu equipo la idea de la franqueza radical y explicales por que no quieres que sean ruinosamente empaticos ni manipuladoramente insinceros contigo, diciendoles que prefieres la agresion odiosa al silencio.",
+    "Imprime el marco de la franqueza radical y, cuando en una conversacion notes que alguien se esta conteniendo, senialalo y pidele que vaya ahi.",
+    "No uses un medidor de programa para esto. El texto corrige aqui a su propia primera edicion: aquello no funciono bien, y mirar a la persona a los ojos mientras hablas funciona mucho mejor que una aplicacion. Mira su respuesta cuando das guia y ajusta como hablas segun lo que veas."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "conducir_reuniones_salto_nivel_diez_reglas",
+   "resumen": "La mayoría de la gente no se atreve a criticar a su jefe, y muchos jefes, sobre todo los nuevos, ahogan la crítica sin querer. Reunirte una vez al año con el equipo de cada persona a tu cargo, sin ella delante, saca a la luz lo que no llega por la vía directa. Funciona si se hace con reglas que la protegen: su consentimiento previo, que sea rutina para todos y no castigo, notas proyectadas y compartidas sin decir quién dijo qué, prioridades en vez de quejas, y uno o dos cambios concretos que el propio jefe comunica y que luego se revisan.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_09.md",
+    "lineas": "383-413"
+   },
+   "pasos_del_nodo": [
+    "Reunete una vez al anio con las personas que trabajan para cada persona a tu cargo, sin esa persona en la sala, y preguntales que podria hacer o dejar de hacer para ser mejor jefe.",
+    "Cuenta con el motivo por el que esto hace falta: la mayoria de la gente es muy reticente a criticar a su jefe, y los jefes, sobre todo los nuevos, buscaran consciente o inconscientemente reprimir la critica en vez de fomentarla.",
+    "Ve con cuidado, porque estas reuniones pueden convertirse en sesiones de queja, y tiene que quedar claro que no das por supuesto que el jefe, que es tu persona a cargo, sea culpable, ni que no estes dispuesto a oir ninguna critica suya.",
+    "Ten presente que la intencion de estas sesiones es apoyar a los jefes que te reportan y no socavarlos, y que parte de apoyarlos es saber cuando lo estan haciendo mal y ayudarlos a arreglarlo.",
+    "Y cuida, por tu propia cordura y por la cultura, que estas reuniones no animen a la gente a venir corriendo a ti en vez de hablar directamente con su jefe.",
+    "Explicalo, demuestralo y vuelve a explicarlo: dile a cada persona a tu cargo que tienes dos objetivos, ayudarla a ser mejor jefe y asegurarte de que la gente de su equipo se siente comoda dandole su opinion directamente.",
+    "Demuestra que dices lo que dices: empieza pidiendole a tu propio jefe, o a alguien que tenga tiempo, que te haga a ti una reunion de salto de nivel, y si eres el consejero delegado pideselo a un entrenador, a un asesor o a un miembro del consejo.",
+    "No tengas nunca una reunion de salto de nivel sin el consentimiento previo de la persona a tu cargo.",
+    "Pide a los jefes que te reportan que le expliquen todo el asunto a sus equipos de antemano, porque es vital que todos entiendan que la reunion contigo es en apoyo de su jefe y no un ataque contra el.",
+    "Al empezar la reunion, repite que el objetivo es que el jefe mejore, y recuerdales que la meta es crear una cultura donde todos se sientan siempre comodos dando guia, y sobre todo critica, directamente a sus jefes, y que esta reunion es un paso hacia eso y no un sustituto de eso.",
+    "Y mas importante todavia, no tengas reuniones de salto de nivel con los equipos de algunas de las personas a tu cargo y no con los de otras: tiene que quedar claro que es un proceso rutinario que se hace con cualquiera que tenga gente a su cargo.",
+    "Cuenta con lo que pasa si solo las haces cuando hay problemas en un equipo: se convierten en un castigo en vez de en una herramienta bienvenida para ayudar a la gente a desarrollar sus habilidades de gestion.",
+    "Asegurate de que la reunion es sin atribucion: que todos entiendan que, aunque el objetivo sea que la gente acabe comoda dando su opinion directamente al jefe, en esta reunion todo lo importante se le contara a su jefe, pero no quien lo dijo.",
+    "Toma notas y proyectalas: proyecta las notas que tomas durante la reunion y avisa de que las vas a compartir con el jefe.",
+    "Anima a la gente a decirlo si encuentra las notas inexactas, y cuando alguien hable, cambia las notas y comprueba dos veces que estan bien antes de seguir.",
+    "Toma las notas tu mismo en vez de pedirle a otro que las tome, por lo que el texto dice que consigue: primero demuestra que estas escuchando y atento, y segundo es una manera excelente de descubrir cuando has entendido algo mal.",
+    "Arranca la conversacion contando con que la primera de estas reuniones suele ser incomodisima y que vas a tener que trabajar duro para ganarte la confianza de todos los de la sala.",
+    "Empieza por el elogio, que es lo mas facil para que la gente hable, preguntando que esta haciendo bien tu jefe; luego que podria estar haciendo mejor; y luego que es lo que de verdad es un asco.",
+    "A medida que salgan problemas, intenta que la gente piense en soluciones, para que no degenere en una sesion de quejas.",
+    "Y si te llegan muchas quejas, recuerdate que eso es bueno y no malo: solo estas fracasando si todo es dulzura y luz.",
+    "Prioriza los asuntos: cuando la cosa fluya, recuerdale a la gente que casi siempre se plantean muchos mas problemas de los que se van a arreglar, y que la meta es mejorar las cosas, porque dejarlas perfectas no es realista.",
+    "Empuja a los de la sala a decidir cuales son los asuntos mas importantes y a priorizar esos.",
+    "Comparte las notas justo despues de la reunion: cuando queden unos ocho minutos, pide a todos que miren las notas recordandoles que vas a compartir el documento con su jefe en un momento.",
+    "Cuenta con lo que el texto dice que consigue esa inmediatez: enfoca la conversacion, hace a la gente responsable de sus sugerencias, hace que la conversacion se sienta menos a espaldas de la persona, te ahorra los pasos siguientes que se quedan rondando en la cabeza o simplemente no se hacen, y alivia la ansiedad de la persona evaluada, que quiere saber lo que se dijo ya mismo.",
+    "Asegurate de que tus personas a cargo hacen y comunican cambios: cuando hayan leido las notas, trabaja con cada una para sacar una o dos cosas concretas que pueda cambiar inmediatamente.",
+    "No dejes que sea algo grande y vago como mejorar mis relaciones: mucho mejor algo mas pequenio pero mas tangible, como discrepar en persona y no por correo.",
+    "Anima a cada persona a tu cargo a mandar un correo a su equipo explicando que ha aprendido y que va a hacer distinto a partir de ahora, con copia a ti, y a volver sobre ello en la siguiente reunion de equipo para ver si la gente cree que ha ido lo bastante lejos.",
+    "Revisa esos cambios en un seguimiento de la reunion de salto de nivel y anima al equipo a decirte si han marcado alguna diferencia o no, porque cuanto mas visible sea el cambio, mejor.",
+    "Si la gente cree que no se hizo ningun cambio, o que la reunion no sirvio de nada, tomatelo muy en serio, y en casos extremos quita al jefe en cuestion del equipo, devolviendolo a un puesto sin gente a cargo, poniendolo al frente de otro equipo o despidiendolo.",
+    "Ten estas reuniones una vez al anio para cada persona a tu cargo, y si diriges jefes, insiste en que hagan lo mismo, que es lo que hace que el proceso escale.",
+    "Cuenta con el problema que el texto nombra por su nombre: cuando empiezan a ir bien todo el mundo las quiere todo el tiempo, y se llega a la proliferacion de saltos de nivel, que consumen mucha energia y atencion y pueden acabar quemandote si tienes que hacer demasiadas."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "representar_actividad_caja_negra_ventanas",
+   "resumen": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Pero la caja cerrada solo enseña lo que ya salió. Recortarle ventanas deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_03.md",
+    "lineas": "73-79"
+   },
+   "pasos_del_nodo": [
+    "Dibuja tu actividad como una caja negra, y hazlo aunque no sea una fabrica: sirve para cualquier actividad que se parezca a un proceso de produccion.",
+    "Nombra la entrada, que es la materia prima o la informacion que entra en la caja.",
+    "Nombra la salida, que es lo que sale de la caja ya terminado.",
+    "Nombra el trabajo que entra en la caja junto con la materia prima, y cuenta dentro de el tanto el de quienes ejecutan como el tuyo de mando.",
+    "Hazlo igual con la contratacion universitaria: la entrada son los candidatos del campus, la salida son los titulados que han aceptado la oferta de empleo, y el trabajo es el de los entrevistadores del campus mas el de los mandos y tecnicos que entrevistan de vuelta en la planta.",
+    "Hazlo igual con la formacion de la fuerza de ventas: la entrada son las especificaciones crudas del producto, la salida es el personal de ventas ya formado, y el trabajo es el de la gente de marketing y de comercializacion que convierte la informacion cruda en herramientas de venta utilizables y ensena a usarlas.",
+    "Hazlo igual con un grupo que factura: la entrada es la informacion del cliente, o sea lo que ha comprado, los datos de precio y los registros de envio; la salida es la factura final que se le manda y por la que se cobra; y el trabajo es el de todo el personal implicado.",
+    "Recorta ventanas en la caja, para poder ver una parte de lo que ocurre dentro.",
+    "Mira por esas aberturas para entender el funcionamiento interno del proceso y calcular cual va a ser probablemente la salida futura."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "decidir_contratacion_final",
+   "resumen": "La decisión final no vuelve a juzgar a la persona: lee lo que ya dicen las tarjetas de puntuación, calificadas con todo lo reunido en las entrevistas y en las referencias, y por eso puede ser sencilla. Se repite el análisis de habilidad y voluntad por si las referencias movieron algo, se da a cada candidato una nota global de A, B o C y se aplica una regla de tres salidas: sin ninguna A vuelves a buscar candidatos, con una la contratas y con varias eliges la mejor. Así nunca te quedas con alguien que no es A, y queda claro que decidir no basta: falta que la persona se una.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_05.md",
+    "lineas": "319-355"
+   },
+   "pasos_del_nodo": [
+    "Saca las tarjetas de puntuacion que has completado sobre cada candidato.",
+    "Repite tu analisis del perfil de habilidad y voluntad, para asegurarte de que sigues teniendo una diana.",
+    "Asegurate de haber calificado a todos los candidatos en la tarjeta. Si no le has dado a cada uno una calificacion global de A, B o C, dasela ahora. Haz las actualizaciones que hagan falta a partir de las entrevistas de referencia: mira los datos, considera las opiniones y observaciones del equipo entrevistador, y pon una calificacion final.",
+    "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del metodo, el de abastecer el flujo de candidatos.",
+    "Si tienes una sola A, decide contratar a esa persona.",
+    "Si tienes varias A, ordenalas y decide contratar a la mejor de entre ellas.",
+    "No des el trabajo por terminado con la decision tomada. Decidir hacer algo y hacerlo son dos cosas distintas, y queda el ultimo paso, que es vender el puesto a la persona para que se una de verdad a tu equipo."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "alinear_equipo_proposito_comun",
+   "resumen": "El propósito es el porqué del equipo: el resultado que intenta lograr y lo que cambiaría en el mundo si tuviera un éxito enorme. Cuando falta o no está claro, aparecen conflictos y expectativas desalineadas, y alguien acaba dedicando esfuerzo a cosas que para ti son un derroche porque imagina otro fin. Por eso el primer gran trabajo de quien dirige es que todos sepan cómo se ve el éxito y quieran lograrlo. Exigir que crean no basta: hay que entender y creer el propósito uno mismo y compartirlo en cada ocasión, en correos, objetivos, conversaciones a solas y reuniones grandes.",
+   "evidencia": {
+    "fichero": "fuentes/zhuo_manager/cap_02.md",
+    "lineas": "127-133"
+   },
+   "pasos_del_nodo": [
+    "Ten claro que el proposito es el resultado que tu equipo intenta lograr, el porque, y contesta las tres preguntas con las que el libro lo despliega. Por que te levantas y eliges hacer esto en vez de las otras mil cosas que podrias estar haciendo, por que vuelcas tu tiempo y tu energia en esta meta concreta con este grupo concreto de personas, y que seria distinto en el mundo si tu equipo tuviera un exito descomunal.",
+    "Comprueba que todos en el equipo tienen una imagen parecida de por que importa nuestro trabajo.",
+    "Entiende y cree tu mismo en el proposito, porque conseguir que los demas lo entiendan y crean en el lo exige antes de ti.",
+    "Compartelo en cada ocasion que tengas: al escribir correos, al fijar objetivos, al verte con una sola persona de tu equipo y al dirigir reuniones grandes.",
+    "No te limites a exigir que todos crean en tu vision: quien piense que tu gran plan es una tonteria no va a estar motivado para sacarlo adelante, y puede decidir irse a un proyecto que le importe mas.",
+    "Cuando veas a alguien de tu equipo trabajando sobre una impresion distinta de para que existe esto, subelo a bordo de lo que de verdad te importa, que es lo que evita esos desalineamientos."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "reciclar_empleado_ascendido_mas_alla_capacidad",
+   "resumen": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir castiga a la persona por el error de otros y pierde a alguien que ya demostró saber hacer bien su puesto anterior. Devolverlo a ese puesto recupera su rendimiento conocido. La vergüenza del retroceso es el obstáculo real, y por eso se acompaña: hecho a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo esperado y la persona recupera la confianza.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_16.md",
+    "lineas": "49-49"
+   },
+   "pasos_del_nodo": [
+    "Reconoce que el error fue de la direccion al juzgar mal la disposicion del empleado para asumir mas responsabilidad, en vez de dejar que el empleado cargue con la culpa y termine saliendo de la empresa.",
+    "Toma medidas deliberadas y directas para colocar a la persona de vuelta en un puesto que sepa desempeñar bien, en lugar de forzar su salida de la empresa.",
+    "Apoya al empleado frente a la verguenza que es probable que sienta por el retroceso.",
+    "Haz el reciclaje abiertamente y no a escondidas, porque hecho asi la verguenza dura mucho menos de lo que todos esperan."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "conducir_llamadas_referencia",
+   "resumen": "Las referencias ponen a prueba lo que ya aprendiste del candidato con los ojos de quienes trabajaron con él. Funcionan si eliges tú a quién llamar entre jefes, pares y subordinados, si el candidato concierta las llamadas para abrirte la puerta y si repites las mismas preguntas de las entrevistas anteriores, porque así lo que oyes se funde con lo que ya sabes. Como nadie quiere hundir a un antiguo colega, lo malo suele llegar en clave: condiciones, titubeos y elogios tibios. Una referencia de verdad buena rebosa entusiasmo; la que no lo hace te está avisando.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_05.md",
+    "lineas": "183-249"
+   },
+   "pasos_del_nodo": [
+    "Elige tu las referencias correctas: repasa tus notas de la entrevista cronologica de trayectoria y escoge a los jefes, pares y subordinados con los que quieres hablar. No te limites a usar la lista de referencias que el candidato te da.",
+    "Pide al candidato que contacte el mismo con las referencias para concertar las llamadas. Algunas empresas prohiben a sus empleados servir de referencia y contra ese muro chocaras si llamas directamente, mientras que pidiendoselo al candidato tienes el doble de posibilidades de llegar a hablar con la referencia, sea en horario de trabajo o despues, en casa.",
+    "Haz el numero correcto de entrevistas: unas cuatro las haces tu personalmente y tres se las pides a colegas, siete en total. Entrevista a tres jefes anteriores, a dos pares o clientes y a dos subordinados.",
+    "Pregunta uno: en que contexto trabajaste con la persona. Es un arranque de conversacion y un despertador de memoria, porque la respuesta ya la sabes por la entrevista cronologica, pero quien esta al otro lado puede necesitar un minuto para recordar el trabajo que hizo con el candidato.",
+    "Preguntas dos y tres: las mismas dos de la entrevista de criba, en que era realmente bueno profesionalmente y en que no era bueno o no le interesaba. En los dos casos pide varios ejemplos para poner en contexto los puntos fuertes y las areas de mejora, y ponte curioso otra vez con el marco de que, como y cuentame mas. La tercera gana fuerza si le añades entonces al final: cuales eran las mayores areas de mejora de la persona entonces. Esas dos palabras liberan a la referencia para hablar de debilidades pasadas.",
+    "Pregunta cuatro: pide a la referencia que puntue al candidato de 1 a 10. Mira la nota en si, mira como se compara con lo que el candidato dijo en la entrevista de criba, y desconfia de las discrepancias amplias. Buscas gente que reciba de forma consistente notas de 8, 9 y 10; cualquier cosa por debajo es una señal de alarma que hay que examinar mas de cerca. Un solo 6 no tiene por que romper el trato si otros entrevistadores dan notas mas altas, pero tomate el tiempo de entender por que existe la discrepancia.",
+    "Pregunta cinco: usa lo que sacaste con la amenaza de comprobacion de referencias en la entrevista cronologica. Pon a prueba algo que el candidato te conto formulandolo como pregunta a la referencia, por ejemplo: la persona menciono que usted podria decir que era desorganizado, me puede contar mas sobre eso. La formula podria decir importa, porque sugiere a la referencia que tiene permiso para hablar del asunto ya que lo saco el propio candidato.",
+    "Busca tambien referencias en tu propia red, que es otra via para reunir datos objetivos y sin sesgo, incluidas las referencias informales de quien estuvo en la primera linea. Ten en cuenta que las leyes laborales de algunos paises, Canada entre ellos, no permiten este tipo de comprobacion sin pedir antes permiso al candidato.",
+    "Presta mucha atencion a lo que la gente dice y a como lo dice, porque la mayoria habla en un codigo comun cuando quiere indicar que un candidato es problematico. Cuando oigas ese codigo, ponte curioso y averigua que se esta diciendo de verdad.",
+    "Codigo uno: la formula de si esto entonces aquello. Puedes estar bastante seguro de que una referencia habla en codigo cuando matiza su respuesta con esa construccion, del tipo si estas dispuesto a que alguien te lleve la contraria, entonces contrata a esta persona.",
+    "Codigo dos: los titubeos. La referencia que duda ante la pregunta dificil esta tratando de no decir algo que condene al candidato o que la ponga a ella en riesgo legal. Cuando preguntes que tal lo hizo fulano quieres oir un entusiasmo tremendo, no vacilaciones y palabras escogidas con cuidado; pregunta que es lo que la referencia no esta diciendo.",
+    "Codigo tres: el elogio tibio o con reservas. La ausencia de entusiasmo es una señal pesima, y una referencia neutra y sin brillo llena de elogios flojos es codigo de mala referencia. No tienes una referencia positiva solo porque todo suene bien: una referencia de verdad positiva rebosa entusiasmo y admiracion evidente, y no lleva ni titubeos ni matices."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "reconocer_recompensar_uso_metodo",
+   "resumen": "Instalar un método de contratación no se consigue solo pidiéndolo: hay que premiar a quien lo usa. El reconocimiento tiene dos mitades. Una es barata y pública: buscar activamente pruebas de que alguien usa el método y reconocerlo delante de todos. La otra es económica y precisa: no premia el esfuerzo sino un resultado medible, la tasa de éxito en contratación del noventa por ciento o más, que es la misma que la política de la empresa pone en la tarjeta de cada directivo. Así la recompensa mide lo que la política exige, y esas primas se pagan solas con la productividad que traen.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_06.md",
+    "lineas": "265-273"
+   },
+   "pasos_del_nodo": [
+    "Manten los ojos abiertos buscando pruebas de que la gente esta usando el metodo. Los capitanes de industria estan siempre a la caza de esas pruebas.",
+    "Reconoce en publico a los que lo usan.",
+    "Recompensa ademas a los directivos que consiguen una tasa de exito en contratacion del noventa por ciento o mejor.",
+    "Ata esa recompensa ligando una parte sustancial de su retribucion variable a ese resultado concreto, y no a una valoracion general.",
+    "Cuenta con lo que el libro dice del coste: esas primas se pagan solas por el aumento sustancial de productividad que traen."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "construir_confianza_equipo_tiempo_solas",
+   "resumen": "La confianza lleva tiempo porque se levanta sobre un patrón constante de actuar de buena fe, así que no se puede dar por hecha de golpe ni forzar hurgando en preguntas muy personales. Pero hay que empezar por algún sitio: sin preguntar nada sobre la vida de alguien no se avanza en que te importe como persona. Lo que más la construye es pasar con regularidad un poco de tiempo a solas con cada persona, en reuniones cuyo orden del día pone ella, cuidar cómo pides y recibes críticas y sostener conversaciones anuales sobre su carrera.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_08.md",
+    "lineas": "93-95"
+   },
+   "pasos_del_nodo": [
+    "Cuenta con que construir confianza en cualquier relacion lleva tiempo, porque la confianza se construye sobre un patron constante de actuar de buena fe.",
+    "No des por supuesta demasiada confianza demasiado pronto, como hurgando en preguntas muy personales cuando apenas conoces a la persona.",
+    "Pero empieza por algun sitio: si no preguntas nunca ni una sola cosa sobre la vida de alguien, es dificil subir en el eje de que te importe personalmente.",
+    "Pasa un poco de tiempo a solas con cada una de las personas que te reportan, con regularidad, que es lo que el texto llama probablemente lo mas importante que puedes hacer para construir confianza.",
+    "Manten reuniones a solas periodicas en las que el orden del dia lo pone la persona que te reporta y tu haces preguntas, que es una buena manera de empezar a construir confianza.",
+    "Cuida como pides critica y como reaccionas cuando te la dan, porque eso construye confianza o la destruye.",
+    "Y manten conversaciones anuales de carrera, que el texto llama una manera excelente de reforzar tu relacion con cada persona que te reporta directamente."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "crear_obligacion_disentir_equipo",
+   "resumen": "Cuando todos los que están alrededor de la mesa coinciden, lo probable es que nadie haya puesto a prueba la idea; por eso el acuerdo unánime se trata como una señal de alarma y no como un éxito. Si llevar la contraria es una obligación declarada del equipo, quien discrepa deja de ser un valiente que se arriesga y pasa a cumplir un papel que a alguien le toca. Un objeto que pasa de mano en mano hace visible a quién le toca tomar la voz discrepante cuando la discusión se queda floja, y ese gesto tan simple resulta sorprendentemente eficaz para provocar un debate productivo.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_07.md",
+    "lineas": "231-233"
+   },
+   "pasos_del_nodo": [
+    "Declara en tu equipo una obligacion de disentir, que es lo que McKinsey creo muy conscientemente y lo que a la autora mas le impresiono de esa empresa.",
+    "Trata como una bandera roja que todos los que estan alrededor de la mesa esten de acuerdo.",
+    "Cuando eso pase, haz que alguien tome la voz discrepante.",
+    "Si la discusion de una reunion no esta siendo lo bastante robusta, usa un objeto que pase el turno de disentir, como los mazos con el deber de disentir escrito en japones que un directivo de Apple mando hacer para el equipo que heredo en Japon.",
+    "Deslizale el objeto a alguien de la mesa como señal de que le toca tomar el punto de vista contrario. El texto dice que ese objeto tan simple fue sorprendentemente eficaz."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "elegir_cinco_indicadores_diarios_fabrica",
+   "resumen": "Cuando diriges una operación, tu salida ya no es lo que entregas tú sino lo que entrega todo el conjunto, y para verla necesitas indicadores. Como los posibles son prácticamente ilimitados, solo sirven si cada uno apunta a una meta concreta. Cinco datos mirados a primera hora cubren lo esencial: lo que toca entregar hoy y cuánto fiarte de ese pronóstico, la materia prima, los equipos, la gente y la calidad, que no se ve contando unidades. Mirarlos temprano cada día te deja corregir un problema posible antes de que se vuelva real durante la jornada.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_03.md",
+    "lineas": "15-29"
+   },
+   "pasos_del_nodo": [
+    "Enfoca cada indicador que elijas en una meta concreta de la operacion, porque el numero de indicadores posibles es practicamente ilimitado y ninguno sirve si no esta enfocado.",
+    "Elige cinco datos, y que sean los cinco que querrias mirar cada dia nada mas llegar a tu puesto.",
+    "Pon el primero: el pronostico de ventas del dia, o sea cuantas unidades tienes que planear entregar hoy.",
+    "Pon junto a ese pronostico la desviacion entre lo que planeaste entregar ayer y lo que entregaste de verdad, que es lo que te dice cuanta confianza dar al pronostico de hoy.",
+    "Pon el segundo: el inventario de materia prima, y comprueba si llega para que la operacion funcione hoy; si te falta, todavia puedes pedir mas, y si te sobra, puedes cancelar la entrega de hoy.",
+    "Pon el tercero: el estado de los equipos; si algo se averio ayer, mandalo reparar o reordena la linea de produccion para cumplir el pronostico del dia.",
+    "Pon el cuarto: la gente disponible; si dos faltan por enfermedad, decide si llamas a refuerzo temporal o si sacas a alguien de una linea y lo pones donde hace falta.",
+    "Pon el quinto: un indicador de calidad, y no te quedes en contar cuantas unidades sirve cada persona, porque se puede servir un numero record y haber tratado mal al cliente.",
+    "Monta para ese quinto indicador un registro de quejas del cliente, y ponlo a cargo de quien cobra.",
+    "Repasa los cinco a primera hora de cada dia, y habla ese mismo dia con quien reunio ayer mas quejas de lo normal, para corregir el problema posible antes de que se vuelva real durante la jornada."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "evitar_preguntas_ilegales_entrevista",
+   "resumen": "Hay materias sobre las que no se puede preguntar en una entrevista, y nombrarlas una por una convierte una advertencia general en una lista que puedes cumplir. Dos de ellas solo se admiten si son relevantes para desempeñar el puesto, y esa relevancia se mide contra lo que el puesto exige y nada más. Como la lista cambia de un país a otro, la de Estados Unidos sirve de ejemplo y la que manda es la de tu país, confirmada con quien conoce su ley laboral. Es prevención: evitar la pregunta cuesta mucho menos que reparar el daño de haberla hecho.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_06.md",
+    "lineas": "311-319"
+   },
+   "pasos_del_nodo": [
+    "Averigua con tu equipo de personal y juridico que preguntas prohibe hacer en una entrevista la ley laboral de tu pais; la lista de los pasos siguientes es la de Estados Unidos y sirve de ejemplo de las materias que suelen prohibirse.",
+    "No preguntes nada que tenga que ver con el estado civil.",
+    "No preguntes por la intencion de tener hijos ni por si la candidata esta embarazada o no.",
+    "No preguntes cuando nacio la persona ni donde nacio.",
+    "No preguntes por la condicion medica, salvo que sea especificamente relevante para el desempeno del puesto.",
+    "No preguntes por la raza ni por la etnia.",
+    "No preguntes por la orientacion sexual.",
+    "No preguntes por las discapacidades fisicas o mentales, y aqui de nuevo salvo que sean directamente relevantes para el desempeno del puesto.",
+    "Si vas a entrevistar en otro pais, comprueba antes con tu equipo local de personal y juridico las leyes de ese pais concreto, porque las preguntas que hay que evitar varian de una nacion a otra.",
+    "Cuenta con que esto es prevencion y no reparacion: el libro cierra la cautela diciendo que una onza de prevencion siempre vale una libra de cura."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "revisar_tres_preguntas_valor_carrera",
+   "resumen": "Estas preguntas funcionan porque no hay fórmula segura para cuidar tu carrera y nadie te la debe: la administras tú, como dueño único, y cada día tienes que aumentar tu valor. Por eso te examinan en tres frentes: si añades valor real o solo pasas información, si estás conectado a lo que pasa en tu empresa y en tu sector o esperas a que otros te lo interpreten, y si pruebas en persona ideas y tecnologías nuevas o esperas a que otros rehagan tu puesto sin ti. Cada respuesta te dice de qué lado estás.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_01.md",
+    "lineas": "99-107"
+   },
+   "pasos_del_nodo": [
+    "Preguntate si estas anadiendo valor real o si solo estas pasando informacion de un lado a otro.",
+    "Contesta el como que el propio libro pone para esa primera pregunta: buscar sin parar maneras de hacer que las cosas sean de verdad mejores en tu departamento.",
+    "Mide esa primera pregunta con la vara que el libro le pone: en principio, cada hora de tu dia deberia irse en aumentar la produccion, o el valor de la produccion, de las personas de las que respondes.",
+    "Preguntate si estas enchufado a lo que pasa a tu alrededor, y cuenta dentro de eso lo que pasa dentro de tu empresa y lo que pasa dentro de tu sector entero.",
+    "Comprueba en esa segunda pregunta si esperas a que un jefe o cualquier otro te interprete lo que esta pasando, y si eres un nodo conectado a una red de gente enchufada o vas flotando por tu cuenta.",
+    "Preguntate si estas probando ideas, tecnicas y tecnologias nuevas, y probandolas en persona, no solo leyendo sobre ellas.",
+    "Comprueba en esa tercera pregunta si estas esperando a que otros averiguen como rehacer tu puesto de trabajo, y a ti fuera de ese puesto."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "sostener_contacto_oferta_aceptacion",
+   "resumen": "Entre la oferta y el sí, el candidato sigue en juego: puede tener una contraoferta de su empleador actual y otras opciones abiertas a la vez. Apartarse para darle tiempo, después de un cortejo largo, se vive como un desprecio, y el silencio es el peor enemigo en esta fase. Por eso el contacto no se corta: se sostiene con regularidad y se usa para localizar sus preocupaciones con las cinco efes y atender cada una, del encaje a la familia, la libertad, el dinero y la diversión. Pasarse de ardiente asusta a alguno, pero es mucho más frecuente vender de menos que de más.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_06.md",
+    "lineas": "171-179"
+   },
+   "pasos_del_nodo": [
+    "No te apartes ahora. Muchos jefes se retiran en este punto creyendo que el futuro contratado necesita tiempo para pensarlo. Puede que lo necesite, pero esto habra sido probablemente un cortejo largo, y apartarse demasiado ahora se parece mucho a un desprecio.",
+    "En vez de meter a la persona en el congelador, da por supuesto que ha recibido una contraoferta atractiva de su empleador actual y que esta considerando otras opciones al mismo tiempo. Son jugadores A, al fin y al cabo. El silencio es tu peor enemigo en esta fase.",
+    "Manten el contacto con ella con regularidad.",
+    "Localiza con precision sus preocupaciones usando las cinco efes como guia.",
+    "Enseñale cuanto va a encajar en la empresa y cuanto va a aportar a la empresa.",
+    "Corteja a su familia.",
+    "Comprometete a darle libertad y autonomia para hacer su trabajo.",
+    "Atiende las preocupaciones economicas.",
+    "Metela en la diversion que tus empleados ya se estan dando.",
+    "No te frenes por miedo a pasarte. De vez en cuando enfriaras a un candidato por ser un pretendiente demasiado ardiente, pero la experiencia de los autores es que los jefes venden de menos mucho mas a menudo que de mas."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "organizar_sistema_recoger_quejas_equipo",
+   "resumen": "Decirle a tu equipo que se sienta libre de sugerir y quejarse no cambia nada: la gente solo se siente libre cuando hay acciones concretas que hacen que criticarte no solo sea seguro sino esperado. Un sistema organizado, aunque sea tan simple como una caja en una zona de paso cuyas preguntas contestas en la reunión general, demuestra con hechos que tratas cada pregunta con respeto y que arreglas los problemas en vez de castigar al mensajero. Cuando esa confianza se asienta, la caja se vacía y la gente te plantea los asuntos a la cara.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_09.md",
+    "lineas": "55-63"
+   },
+   "pasos_del_nodo": [
+    "Cuenta con la diferencia que el texto marca entre las dos redacciones del credo original de Johnson and Johnson: la primera decia que los empleados deben tener un sistema organizado para sugerencias y quejas, y al reescribirlo se aguo en la afirmacion mucho mas vaga de que los empleados deben sentirse libres de hacer sugerencias y quejas.",
+    "No te quedes en anunciar como deben sentirse tus empleados: el texto dice que si eres el jefe tienes que hacerlo mucho mejor que eso.",
+    "Toma acciones concretas que aseguren que hacer sugerencias y quejas no solo es seguro sino esperado, porque segun el texto la gente no se va a sentir libre si no las tomas.",
+    "Organiza un sistema. Y cuenta con el limite que el texto pone en la frase siguiente: no hace falta que sea elaborado.",
+    "Copia la mecanica del ejemplar que el texto da, la caja naranja de Michael Dearing: pon una caja con una ranura en la tapa en una zona de mucho paso, para que la gente pueda echar dentro preguntas o comentarios.",
+    "En tu reunion general, mete la mano en la caja y contesta sobre la marcha.",
+    "Trata cada pregunta con respeto y a fondo por banal que sea, que es lo que el texto destaca de como aquel lo hacia, y no te muestres molesto ni impaciente.",
+    "Demuestrale al equipo que vas a arreglar los problemas cuando te los senialen, en vez de matar al mensajero, que es lo que segun el texto acabo construyendo una cultura donde la gente le desafiaba directamente.",
+    "Cuenta con lo que el texto dice que pasa entonces, y que es la senial de que el sistema ha hecho su trabajo: con el tiempo la caja se vacio, y cuando alguien tenia un asunto se levantaba y preguntaba directamente, o se pasaba por su sitio."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "dar_guia_acto_seis_consejos",
+   "resumen": "La guía pierde valor muy deprisa: si esperas, olvidas los ejemplos, no puedes describir la situación con precisión y el otro ya no puede corregir ni aprovechar lo que hizo. Decirla en el acto, en dos o tres minutos entre reuniones, cuesta menos que agendar una conversación y no se te queda rondando. Tratarla como un hábito diario y no como una cita, dejar holgura en el calendario y no guardarla para los procesos formales evita tanto el olvido como la explosión de lo callado. La única excepción es no estar en condiciones, y lo que no importa no se dice.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_09.md",
+    "lineas": "115-135"
+   },
+   "pasos_del_nodo": [
+    "Da la guia tan rapido y tan informalmente como puedas, y cuenta con que eso exige disciplina, por la inclinacion natural a retrasar o evitar la confrontacion y porque el dia ya viene lleno.",
+    "Cuenta con lo que el texto describe que pasa si esperas demasiado: notas el problema, apuntas que hay que tratarlo pero no lo escribes, luego tienes que sentarte a recordar cual era exactamente, luego acordarte de agendar la reunion, y acabas necesitando una lista de cosas que querias decir y no dijiste. El texto aniade que esa lista no se sostiene, que ya no vas a poder recordar ejemplos claros del problema, que por eso no vas a poder usar el modelo de situacion, comportamiento e impacto, y que acabas con un colega confundido y frustrado.",
+    "Aplica la excepcion que el texto declara, y solo esa: si tu o la otra persona estais con hambre, enfadados o cansados, o por cualquier otro motivo no estais en buena disposicion, es mejor esperar. El texto avisa de que esto es la excepcion y no la regla, y de que demasiado a menudo usamos la excepcion como excusa para no hacer lo que sabemos que deberiamos.",
+    "Distingue decirlo en el acto de buscar pelos en la sopa: si no es importante, no lo digas en el acto ni lo digas en absoluto.",
+    "Dilo en dos o tres minutos entre reuniones. El texto sostiene que decirlo en el momento, en un minuto o dos, tres como mucho, cuesta menos que agendar una reunion para mas tarde, no digamos ya que tenerla, y que ademas no se te queda rondando la cabeza.",
+    "Piensa en esto como en lavarte los dientes y no como en una endodoncia, que es la imagen que el texto usa: no lo escribas en tu calendario, simplemente hazlo con constancia.",
+    "Cuenta con la cuenta que el texto hace: con cinco personas a tu cargo, a las que quieras elogiar tres veces por semana y criticar una, eso es mucha mas guia improvisada de la que ofrece la mayoria de los jefes, y te cuesta un maximo de sesenta minutos por semana, sacados de los ratos que de todas formas pasarias andando entre reuniones. El texto aniade que si exige energia y conciencia.",
+    "Deja holgura en tu calendario, que es la primera de las dos salidas que el texto pone: no agendes reuniones seguidas, o ten reuniones de veinticinco y de cincuenta minutos con hora de cierre firme, en vez de reuniones de treinta y de sesenta.",
+    "O bien, que es la segunda salida, acepta sin mas llegar tarde a tu reunion siguiente.",
+    "No guardes la guia para la reunion uno a uno ni para la evaluacion de desempenio. El texto dice que los procesos formales, las reuniones uno a uno, las evaluaciones anuales o semestrales y las encuestas de satisfaccion, estan para reforzar y no para sustituir lo que se hace cada dia.",
+    "Cuenta con que la guia tiene una vida media corta: si esperas una semana o un trimestre para decirlo, el incidente queda tan atras que la persona ya no puede arreglar el problema ni construir sobre el acierto.",
+    "Cuenta con que la critica no dicha estalla como una bomba sucia: callarse demasiado tiempo algo que te enfada o te frustra hace mas probable que acabes explotando de una forma que te hace parecer irracional, daniia la relacion, o las dos cosas. Salvo que sientas que estas furioso, di lo que estas pensando en el acto.",
+    "Evita los agujeros negros: avisa siempre en el acto de como esta siendo recibido el trabajo de la gente. Si le pides a alguien trabajo para preparar una reunion o una presentacion en la que esa persona no va a estar, asegurate de contarle la reaccion que tuvo su trabajo, y pasale tanto el elogio como la critica.",
+    "Mejor aun, deja que la gente presente su propio trabajo siempre que sea posible, para que reciba la guia de primera mano."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "manejar_enfado_persona_desafiada",
+   "resumen": "Desafiar a alguien de verdad a veces duele, y el enfado que sigue no es señal de que lo hiciste mal: si nadie se enfada nunca contigo, probablemente no estás desafiando lo bastante. Lo que decide si la relación sale reforzada es cómo manejas ese enfado. Reconocer el dolor muestra que te importa sin retirar la crítica; negar que duele o pedir que no se lo tome como algo personal insulta al otro, y negar el problema para que se sienta mejor lo engaña. Ofrecer ayuda para arreglarlo junta el cuidado y el desafío en el mismo gesto.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_04.md",
+    "lineas": "131-131"
+   },
+   "pasos_del_nodo": [
+    "Acepta antes de empezar lo que el texto pone como parte del puesto: que a veces la gente de tu equipo va a estar enfadada contigo. El texto anade que si nadie se enfada nunca contigo es probable que no estes desafiando bastante a tu equipo.",
+    "Trata como la clave lo que el texto llama la clave, igual que en cualquier relacion: como manejas el enfado.",
+    "Cuando lo que dices duele, reconoce el dolor de la otra persona.",
+    "No finjas que no duele y no digas que no deberia doler: solo demuestra que te importa.",
+    "Elimina de tu vocabulario la frase no te lo tomes como algo personal. El texto dice que es insultante.",
+    "En su lugar, ofrecete a ayudar a arreglar el problema.",
+    "No finjas que no hay problema solo para intentar que alguien se sienta mejor."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "vencer_sindrome_grupo_pares_autoconfianza",
+   "resumen": "Un grupo de iguales se atasca porque cada miembro teme apartarse de los demás y espera a que aparezca un consenso antes de arriesgar una postura. Lo que rompe ese bloqueo es la autoconfianza de cada uno. Una parte nace de conocer bien el asunto y otra de la experiencia, pero la mayor parte sale de asumir, en el fondo, que nadie se ha muerto nunca por una decisión de negocio equivocada, por una acción inapropiada o por ser desautorizado. Por eso conviene que toda tu operación lo entienda, y no solo quien se sienta a decidir.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_06.md",
+    "lineas": "43-49"
+   },
+   "pasos_del_nodo": [
+    "Cuando quieras vencer el sindrome del grupo de pares, trabaja sobre la autoconfianza de cada uno de los miembros, que es lo que lo vence.",
+    "Apoya una parte de esa autoconfianza en que cada miembro este familiarizado con el asunto que se esta considerando.",
+    "Apoya otra parte en la experiencia.",
+    "Cuenta con que al final la autoconfianza sale sobre todo de una constatacion visceral: que nadie se ha muerto nunca por tomar una decision de negocio equivocada, ni por emprender una accion inapropiada, ni por ser desautorizado.",
+    "Haz que todo el mundo en tu operacion entienda esto, y no solo los que se sientan a la mesa."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "pedir_critica_equipo_premiarla",
+   "resumen": "Pedir crítica activamente, y no solo estar abierto a ella, muestra que sabes que te equivocas y quieres oírlo, te enseña lo que ven quienes te observan más de cerca, te hace sentir cómo aterriza una crítica y construye confianza. Lo que decide si la gente vuelve a hablar es cómo la recibes: sin criticar la crítica ni defenderte, escuchando para entender y premiando la franqueza. Con un equipo que calla, hay que aguantar el silencio y premiar a la vista de todos la primera queja, por pequeña que sea, porque abre paso a las sustanciales.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_05.md",
+    "lineas": "217-229"
+   },
+   "pasos_del_nodo": [
+    "Empieza pidiendo que te critiquen a ti, y cuenta con las cuatro razones que el texto da: es la mejor forma de mostrar que sabes que a menudo te equivocas y que quieres que te lo digan; vas a aprender mucho, porque poca gente te escruta tan de cerca como quien te reporta; cuanta mas experiencia de primera mano tengas de como se siente recibir una critica, mejor idea tendras de como aterriza la tuya en los demas; y pedir critica construye confianza y refuerza tus relaciones.",
+    "No te baste con estar abierto a la critica: pidela activamente, que es lo que el texto distingue.",
+    "Si una persona es lo bastante valiente como para criticarte, no critiques su critica.",
+    "Si ves a alguien criticando a un par de forma inapropiada, di algo.",
+    "Pero si es a ti a quien te critican de forma inapropiada, tu trabajo es escuchar con intencion de entender y despues premiar la franqueza.",
+    "Anima la critica tambien entre los miembros de tu equipo, que el texto pone como igual de importante que pedirla para ti.",
+    "No reacciones a la defensiva, que es la clave que el texto da para el equipo que si le hablaba claro. El texto pone dos ejemplares de lo que recibio de aquel equipo de Dublin, que eres muy rapida dandole a enviar, y que nosotros tambien tenemos hijos cuando retraso una reunion hasta la hora de su cena.",
+    "Con un equipo que no habla, aguanta el silencio. En el caso de Tokio la autora pregunto que podria hacer o dejar de hacer para mejorarles la vida, conto hasta diez en vez de hasta seis y no hablo nadie, y pregunto de otra manera y siguio sin hablar nadie.",
+    "Prueba a contar la historia que el texto usa para eso: Toyota pinto un cuadrado rojo grande en el suelo de la linea de montaje, los empleados nuevos tenian que ponerse dentro al final de su primera semana, y no podian salir hasta haber criticado al menos tres cosas de la linea. El texto dice que la mejora continua que salio de esa practica fue parte de su exito.",
+    "Premia generosamente la primera franqueza, por pequenia que sea. En el caso de Tokio la primera queja fue sobre el te de la oficina, y la autora dio las gracias en publico, mando una nota escrita a mano, aprobo fondos para que hubiera mejor te, y se aseguro de que todo el mundo supiera que habia mejor te porque alguien se habia quejado en aquella reunion.",
+    "Cuenta con que despues de esa primera queja pequenia se empiezan a levantar asuntos mas sustanciales."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "revisar_banderas_rojas_candidato",
+   "resumen": "Hay conductas que asoman durante la contratación y avisan de un riesgo: exagerar, apuntarse el trabajo ajeno, hablar mal de jefes anteriores, culpar siempre a otros. No son motivos de descarte, sino señales de que hay algo bajo la superficie que merece explorarse. Lo que sostiene el repaso es una correlación: estas conductas abundan en personas que parecen de primer nivel durante el proceso y bajan de nivel una vez contratadas. Por eso, cuando se acumulan, lo que toca es mirar los datos con dureza antes de decidir, sin descartar a ciegas ni pasarlas por alto.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_05.md",
+    "lineas": "269-315"
+   },
+   "pasos_del_nodo": [
+    "Trata estas pistas como banderas, no como motivos de descarte. Las banderas en si no matan el trato: lo que indican es que probablemente hay algo bajo la superficie que merece explorarse.",
+    "Repasa las diez banderas mayores del proceso de contratacion: que el candidato no mencione fracasos pasados; que exagere sus respuestas; que se apunte el trabajo de otros; que hable mal de sus jefes anteriores; que no sepa explicar sus cambios de puesto; que las personas mas importantes para el no apoyen el cambio; que, tratandose de un puesto de direccion, nunca haya tenido que contratar ni despedir a nadie; que parezca mas interesado en la retribucion y los beneficios que en el trabajo en si; que se esfuerce demasiado en parecer un experto; y que este ensimismado.",
+    "Repasa tambien los ocho descarriladores de conducta que Marshall Goldsmith señala como los que hay que vigilar durante el proceso de contratacion: ganar demasiado, es decir presumir de batallas ganadas que no importaban tanto; añadir demasiado valor, o sea meter tantas ideas propias a la que tu acabas de lanzar que da a entender que la tuya no valia sola; empezar frases con no, pero o sin embargo durante la entrevista; contar al mundo lo listos que somos, con el despliegue insano de atribuirse credito en exceso; hacer comentarios destructivos sobre colegas anteriores, porque quien los hace de ellos los hara de ti; pasar la pelota, porque los ganadores no culpan; poner excusas, que se detecta preguntando cuales fueron sus retos y oyendo si la culpa fue siempre de otros; y la necesidad excesiva de ser yo, que suena a eso soy yo, no soy organizado, y avisa de que la persona no esta abierta a adaptar su estilo a tu cultura.",
+    "Cuando veas demasiadas banderas, mira los datos con dureza antes de decidir. Ninguna bandera basta por si sola para un pulgar abajo, pero correlacionan mucho con gente que parece jugador A y se hunde al nivel B o C una vez contratada, y no interesa llegar hasta aqui para equivocarse al final."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "agrupar_tareas_semejantes_aprovechar_preparacion",
+   "resumen": "Toda operación de fabricación paga un tiempo de preparación antes de producir, y el trabajo de mando también: ponerte con un tipo de tarea exige un esfuerzo de preparación mental. Si ese esfuerzo se paga una vez y se aprovecha para todo un grupo de tareas semejantes, rinde mucho más que si se repite con cada una. Por eso conviene reutilizar lo ya preparado, como unas ilustraciones de una clase que sirven para otras clases, y reservar un bloque de tiempo para leer varios informes o aprobar varias evaluaciones de desempeño seguidas, una tras otra.",
+   "evidencia": {
+    "fichero": "fuentes/grove_high_output/cap_04.md",
+    "lineas": "269-271"
+   },
+   "pasos_del_nodo": [
+    "Aplica a tu trabajo de mando el segundo principio de produccion: agrupar las tareas semejantes.",
+    "Cuenta con que toda operacion de fabricacion exige una cierta cantidad de tiempo de preparacion, y con que ese tiempo tiene muchos paralelos en el trabajo de mando.",
+    "Para que el trabajo de mando avance con eficiencia, usa un mismo esfuerzo de preparacion y aplicalo a todo un grupo de actividades semejantes.",
+    "Reutiliza lo que ya preparaste: una vez preparado un juego de ilustraciones para una clase de formacion, tu productividad sube si puedes usar ese mismo juego una y otra vez con otras clases o grupos.",
+    "Cuando tengas varios informes que leer o varias evaluaciones de desempeno que aprobar, reserva un bloque de tiempo y hazlos en tanda, uno tras otro.",
+    "Hazlo asi para aprovechar al maximo el tiempo de preparacion mental que esa tarea necesita."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "reforzar_principios_guia_lenguaje_prueba_conocimiento",
+   "resumen": "Una lista de principios colgada en la pared no cambia nada si no entra en la vida diaria de la organización. Para que se vuelvan reales hay que usarlos: cuando describes una conducta en un reconocimiento o en una evaluación con las mismas palabras de los principios, la gente aprende qué significan en la práctica y ve que cuentan. Y como es fácil creer que todos los conocen, conviene comprobarlo: preguntar a las primeras personas que encuentras cuáles son revela si los principios viven en la gente o solo en quien los escribió.",
+   "evidencia": {
+    "fichero": "fuentes/marquet_turn_the_ship/cap_14.md",
+    "lineas": "89-99"
+   },
+   "pasos_del_nodo": [
+    "Cuando escribas premios o evaluaciones, procura describir el comportamiento en el lenguaje de tus principios guia, por ejemplo diciendo que un empleado mostro tal o cual principio al hacer algo. El texto lo dice asi: For example, when we wrote awards or evaluations, we tried to couch behaviors in the language of these principles. 'Petty Officer M exhibited Courage and Openness when reporting . . .'",
+    "Pon a prueba si tus principios guia son reales de verdad: sal y pregunta a las tres primeras personas que veas en tu organizacion cuales son. El texto lo dice asi: Most of you have organizational principles. Go out and ask the first three people you see what they are."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "descubrir_motivacion_sentido_persona",
+   "resumen": "Solo cuando sabes qué motiva a cada persona, qué ambiciones tiene a largo plazo y cómo encaja su momento actual, puedes poner a la gente adecuada en los papeles adecuados. El sentido del trabajo es muy personal: un eslogan que a ti te inspira puede no decirle nada a otro, y exigir pasión presiona a todos sin necesidad. Ganarse un sueldo que sostiene la vida que uno quiere ya tiene sentido de sobra. Por eso tu papel no es imponer un propósito, sino escuchar, reconocer lo que oyes y crear condiciones para que cada cual encuentre el suyo.",
+   "evidencia": {
+    "fichero": "fuentes/scott_radical_candor/cap_06.md",
+    "lineas": "87-111"
+   },
+   "pasos_del_nodo": [
+    "Averigua que motiva a cada persona de tu equipo, que es lo que el texto pone como condicion para poder gestionar el crecimiento.",
+    "Averigua cuales son las ambiciones a largo plazo de cada cual.",
+    "Y entiende como encajan sus circunstancias actuales con esas motivaciones y con sus metas de vida.",
+    "Cuenta con lo que el texto dice que solo entonces se puede hacer: poner a la gente adecuada en los papeles adecuados y asignar los proyectos adecuados a las personas adecuadas.",
+    "No te pases de la raya con la pasion. El texto no discute que la gente trabaje mejor cuando encuentra sentido en lo que hace, pero avisa de que los jefes que leen eso como que su trabajo es proveer el proposito tienden a excederse, y de que insistir en que la gente tenga pasion por su trabajo pone presion innecesaria sobre el jefe y sobre el empleado.",
+    "Acepta que trabajar duro para ganarse un sueldo que sostiene la vida que quieres llevar tiene sentido de sobra. El texto lo ilustra con la respuesta de una escritora sobre por que eligio las empresas en las que trabajo: porque eran las unicas que le ofrecian un trabajo, que le parecio una gran razon entonces y le sigue pareciendo una gran razon hoy.",
+    "Cuenta con que la persona que ya tiene su propia forma de encontrar sentido no la necesita de ti. El texto pone el caso de una joven que habia estudiado filosofia y que corto en seco el eslogan de su jefa diciendo que el trabajo era un poco aburrido, que habia que admitirlo, que no pasaba nada, y que Plutarco puso ladrillos y Spinoza pulio lentes, porque el tedio es parte de la vida. El texto aniade que aquella forma de encontrar sentido era unica de ella y no habria inspirado al equipo entero.",
+    "Ten presente que las motivaciones son muy personales, y que un eslogan inspirador para ti puede no serlo para otros: el texto lo dice de uno famoso, y lo dice de si misma admirando a su autor.",
+    "Haz lo que el texto saca de la historia de los tres albaniles a los que el arquitecto pregunto que hacian, y que contestaron que trabajar, que levantar un muro y que construir una catedral: no inventes tu un sentido de proposito y se lo metas a todos en la cabeza a martillazos.",
+    "Escucha, que es la primera de las tres cosas que el texto dice que hizo aquel arquitecto.",
+    "Reconoce el significado de lo que oigas, que es la segunda.",
+    "Y crea las condiciones de trabajo que permitan a todo el mundo encontrar sentido a su propia manera, que es la tercera.",
+    "Puedes poner el trabajo del equipo en contexto y contar por que a ti te da sentido, que el texto dice que puede ayudar a otros a encontrar el suyo. Pero recuerda lo que aniade justo despues: no va todo de ti."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  },
+  {
+   "item": "asignar_entrevistas_enfocadas_equipo",
+   "resumen": "La entrevista cronológica ya da casi toda la respuesta, pero una ronda más enfocada permite mirar al candidato con más detalle antes de decidir. Funciona porque cada entrevistador se ciñe a una parte concreta de la tarjeta de puntuación, los resultados y las competencias que le tocan, en vez de guiarse por una descripción vaga o por su intuición. Repartir esas partes por temas mete al equipo en la contratación sin repetir la historia completa, y seguir el guion preguntando qué, cómo y cuéntame más impide que cada uno vuelva a sus corazonadas.",
+   "evidencia": {
+    "fichero": "fuentes/smart_who/cap_05.md",
+    "lineas": "97-133"
+   },
+   "pasos_del_nodo": [
+    "Enfoca cada entrevista en los resultados y las competencias de la tarjeta de puntuacion, y no en una descripcion de puesto vagamente definida ni en la intuicion del directivo. Esa es la unica diferencia mayor con la entrevista de conducta al uso.",
+    "Reparte los resultados y las competencias de la tarjeta entre los miembros del equipo que van a entrevistar, agrupando en cada entrevistador los que tratan del mismo asunto. Con una tarjeta de cuatro resultados y seis competencias, el libro reparte asi entre tres: el primero toma los dos primeros resultados y las dos primeras competencias porque todos tienen que ver con el mismo tema, el segundo toma el resultado relativo a construir el equipo y las dos competencias que tratan de como el candidato lo construye, y el tercero se queda con todo lo demas.",
+    "Calcula de cuarenta y cinco minutos a una hora por entrevista, segun cuantos resultados y competencias asignes a cada entrevistador.",
+    "Deja claro a tu equipo que esto no es otra entrevista cronologica: una sola pasada por la historia completa del candidato es suficiente.",
+    "Insiste en que todos sigan el guion, porque si no algunos colegas recaeran en sus metodos vudu favoritos de contratacion.",
+    "Arranca cada entrevista con las preguntas primarias y despues ponte curioso tras cada respuesta con el marco de que, como y cuentame mas, sin dejar de preguntar hasta entender que hizo la persona y como lo hizo."
+   ],
+   "lineas_del_libro": "(retirado del repo: lineas del libro, ver evidencia fichero y lineas)"
+  }
+ ]
+}

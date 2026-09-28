@@ -1,0 +1,576 @@
+{
+ "lote": "11",
+ "nodos": [
+  {
+   "node_id": "identificar_disparadores_propios_reaccion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "Las cuatro preguntas te ayudan a encontrarlos",
+     "motivo": "Referente sin antecedente: el resumen nunca presenta ninguna pregunta y habla de \"las cuatro preguntas\" como si el lector ya las conociera.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "247-255",
+     "propuesta": "Un disparador es una situación que te afecta de forma desmedida a ti en concreto, más que a quienes tienes alrededor, y ahí es donde más riesgo corres de que te vean como irracional. Si sabes de antemano qué te dispara, puedes cazarte en el momento y dar un paso atrás antes de responder en caliente; hay quien con cinco minutos vuelve a estar sereno. Compartirlos ayuda porque cada uno funciona de forma distinta y los demás quizá no saben cómo te afecta su conducta. Cuatro preguntas sobre tus reacciones te ayudan a encontrarlos, y conocerte así te da más días buenos en el trabajo."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "como en el ejemplo de la fábrica que viste antes",
+     "motivo": "Referente inexistente: ni el nodo ni el capítulo tienen ningún ejemplo de una fábrica; el pasaje solo da la lista de disparadores ajenos, sin remitir a nada anterior. Sale la coletilla.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "243",
+     "frase": "Maybe you recoil when someone says something in an aggressive or overly dramatic manner, or your temper flares when a team member takes days to respond to your messages.",
+     "propuesta": "Cuenta con que los disparadores de otros son otros: a unos les dispara quien parece arrogante o interesado, otros se ponen nerviosos cuando un detalle diminuto no es perfecto, quizá tú retrocedes cuando alguien dice algo de forma agresiva o demasiado dramática, o se te enciende el genio cuando alguien del equipo tarda días en responder a tus mensajes."
+    }
+   ]
+  },
+  {
+   "node_id": "distinguir_empuje_tiron_salidas_laborales",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "mi papel se encogió",
+     "motivo": "Calco palabra a palabra de \"My role shrank\"; en español un puesto no \"se encoge\".",
+     "fichero": "fuentes/smart_who/cap_05.md",
+     "lineas": "77",
+     "frase": "“My role shrank.”",
+     "propuesta": "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; me recortaron funciones; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Justo después de preguntar por qué dejaste ese trabajo",
+     "motivo": "Cambio de persona: sin comillas, \"por qué dejaste ese trabajo\" se lee como si quien dejó el trabajo fuera el lector y no el candidato al que se le pregunta.",
+     "fichero": "fuentes/smart_who/cap_05.md",
+     "lineas": "75",
+     "frase": "After you ask, “Why did you leave that job?” you will hear one of two answers",
+     "propuesta": "Justo después de preguntar «¿por qué dejaste ese trabajo?», en cada empleo que repasas en la entrevista cronológica de trayectoria. Se aplica a cada salida de empleo de la carrera del candidato."
+    }
+   ]
+  },
+  {
+   "node_id": "delegar_tarea_base_comun_seguimiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "voz",
+     "cita": "en línea con lo que se espera de ella",
+     "motivo": "Voz impersonal \"se espera\" (lista de voz) y calco de \"in line with expectations\".",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "249",
+     "frase": "Monitoring is not meddling, but means checking to make sure an activity is proceeding in line with expectations.",
+     "propuesta": "Separa el seguimiento de la intromisión: supervisar no es entrometerse, sino comprobar que una actividad avanza según lo previsto."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "invencion",
+     "cita": "con la decisión consciente y dicha de qué retienes",
+     "motivo": "El libro pide una decisión consciente y saber lo que haces, no anunciarla: \"y dicha\" añade el requisito de comunicarla, que no está en el pasaje.",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "247",
+     "frase": "this is not too bad so long as it is based on a conscious decision that you will hold on to certain tasks that you enjoy performing ... But be sure to know exactly what you’re doing",
+     "propuesta": "La tarea delegada sobre una base común de información ya comprobada, con la decisión consciente de qué retienes y qué sueltas, y con el seguimiento de la tarea delegada ya montado."
+    }
+   ]
+  },
+  {
+   "node_id": "preparar_respuestas_estandar_interrupciones_repetidas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "ortografia",
+     "cita": "y las mismas tienden a aflorar",
+     "motivo": "Concordancia: el antecedente es \"preguntas y problemas\" (géneros mezclados), así que va en masculino: \"los mismos\".",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "315",
+     "propuesta": "Cuenta con lo que hace que eso funcione: los clientes no salen con preguntas y problemas totalmente nuevos un día tras otro, y los mismos tienden a aflorar una y otra vez."
+    }
+   ]
+  },
+  {
+   "node_id": "reciclar_empleado_ascendido_mas_alla_capacidad",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "cambiar_formato_reunion_favorecer_participacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "Si das la vuelta a la sala",
+     "motivo": "Calco de \"going around the room\": en español \"dar la vuelta a la sala\" es recorrerla; lo que se describe es una ronda de turnos.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "235",
+     "frase": "One example is going around the room.",
+     "propuesta": "En una discusión sin estructura cada cual decide si habla y cuándo. Con un grupo introvertido puede costar que digan lo que piensan, los extrovertidos pueden dominarla, y el rango, la antigüedad o la familiaridad también influyen en lo cómoda que se siente la gente para hablar. Un formato más estructurado contrarresta esa dinámica natural del grupo. Si haces una ronda y cada persona dice qué opción prefiere y por qué, te aseguras de que ninguna perspectiva se quede sin decir; si todos anotan antes sus ideas y trabajan un rato en silencio, a cada cual le cuesta menos participar."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "si todos anotan antes sus ideas y trabajan un rato en silencio, cada cual lo pone por escrito antes de hablar",
+     "motivo": "Frase circular y sin referente: \"lo\" no concuerda con \"ideas\" y repite la condición como si fuera el efecto; el efecto del libro es que baja la barrera para participar.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "241",
+     "frase": "By encouraging people to get their own thoughts down on paper before sharing them, the barrier to participation is lowered.",
+     "propuesta": "En una discusión sin estructura cada cual decide si habla y cuándo. Con un grupo introvertido puede costar que digan lo que piensan, los extrovertidos pueden dominarla, y el rango, la antigüedad o la familiaridad también influyen en lo cómoda que se siente la gente para hablar. Un formato más estructurado contrarresta esa dinámica natural del grupo. Si haces una ronda y cada persona dice qué opción prefiere y por qué, te aseguras de que ninguna perspectiva se quede sin decir; si todos anotan antes sus ideas y trabajan un rato en silencio, a cada cual le cuesta menos participar."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "dar la vuelta a la sala",
+     "motivo": "Calco de \"going around the room\"; en español es una ronda de turnos.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "235",
+     "frase": "One example is going around the room.",
+     "propuesta": "Usa como primer ejemplo hacer una ronda: si hay que decidir entre tres opciones, pregunta a cada persona cuál prefiere y por qué."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "en el que la sala trabaja en concentración silenciosa entre diez y quince minutos",
+     "motivo": "Calco de \"have the room work in quiet concentration\": \"la sala\" por la gente y \"concentración silenciosa\" palabra a palabra; además se pierde el \"about\" del libro.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "237",
+     "frase": "Then, have the room work in quiet concentration for about ten to fifteen minutes.",
+     "propuesta": "Prueba también otra táctica, el arranque con notas adhesivas, en el que todos trabajan en silencio, concentrados, unos diez o quince minutos."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "dar la vuelta a la sala",
+     "motivo": "Calco de \"going around the room\".",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "235",
+     "frase": "This guarantees that no perspectives are left unsaid.",
+     "propuesta": "Cuenta con lo que garantiza hacer esa ronda, que es la razón de hacerla: que ninguna perspectiva se quede sin decir."
+    }
+   ]
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz",
+     "cita": "que las evaluaciones de desempeño caigan siempre en la peor época del año",
+     "motivo": "El libro dice que \"parecían\" caer siempre en la peor época; el paso lo afirma como hecho.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "69",
+     "frase": "if performance reviews always seemed to take place at the worst possible time of year",
+     "propuesta": "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño parezcan caer siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto."
+    }
+   ]
+  },
+  {
+   "node_id": "calibrar_decision_despido_documentarla",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "hay quien ha visto muchos casos en que el jefe oye ser justo, olvida no ser demasiado fácil y el problema sigue meses",
+     "motivo": "Sujeto ambiguo: el resumen acaba de hablar de \"tu jefe\" y \"el jefe\" parece ser ese, cuando es el mando que redacta el plan de mejora; además \"oye ser justo\" no se entiende sin el consejo que lo explica.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "185",
+     "frase": "The managers hear the “fair” part but ignore the “not too easy” part.",
+     "propuesta": "Un despido es un asunto tan cargado que mucha gente se pierde en su propia cabeza, y no quieres despedir a alguien por enfado ni dejar de hacerlo por negación. No lo decidas en solitario: tu jefe y tus iguales pueden ayudarte a pensar con más claridad, y una buena persona de recursos humanos, a hacerlo sin exponerte a una demanda. Pide que alguien con experiencia edite lo que escribes, porque el consejo es demasiado abstracto: hay quien ha visto muchos casos en que quien redacta un plan de mejora solo oye que sea justo y el problema sigue meses. Cuesta tiempo, pero una demanda es mucho peor."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz",
+     "cita": "no solo te ayuda a pensar con más claridad, sino que también se asegura de que lo haces",
+     "motivo": "El libro dice que la buena gente de recursos humanos \"puede\" ayudarte y asegurarse; el paso lo afirma como lo que siempre hace.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "183",
+     "frase": "Good HR people can not only help you think more clearly but also make sure you do it in a way that won’t get you or the company sued.",
+     "propuesta": "Y cuenta con lo que añade la gente buena de recursos humanos: no solo puede ayudarte a pensar con más claridad, sino también asegurarse de que lo hagas de una manera que no te lleve a ti ni a la empresa a una demanda."
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_recompensar_gente_estable",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "o quien rinde siempre queda por debajo",
+     "motivo": "El libro dice que la consecuencia es \"a menudo\" que las estrellas de rock reciben menos nota de la que merecen; \"siempre\" (además ambiguo) lo vuelve regla.",
+     "fichero": "fuentes/scott_radical_candor/cap_06.md",
+     "lineas": "157-159",
+     "frase": "However, an unintended consequence is often that rock stars get lower ratings than they should.",
+     "propuesta": "Para mucha gente estable, ascender no es un premio: la saca de un papel que domina y quiere, o la sube por encima de su nivel de competencia, y a veces acaba yéndose. Reconocerla por otras vías la mantiene contenta y aprovecha lo que sabe: dinero, visibilidad si le gusta, enseñar si tiene aptitud, gratitud en privado si es tímida. Las puntuaciones deben premiar el trabajo pasado, no justificar ascensos futuros, o a menudo quien rinde con constancia queda por debajo. Rechazar etiquetas como tocar techo sostiene a quienes dan estabilidad al equipo."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "ortografia",
+     "cita": "asegúrate de que son justas con esta gente",
+     "motivo": "Concordancia: el antecedente es \"puntuaciones de desempeño o bonos\" (géneros mezclados), va en masculino: \"justos\".",
+     "fichero": "fuentes/scott_radical_candor/cap_06.md",
+     "lineas": "153",
+     "propuesta": "Si tu organización da puntuaciones de desempeño o bonos, asegúrate de que son justos con esta gente."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "a quien está en línea de ser promovido",
+     "motivo": "Calco de \"in line to get promoted\".",
+     "fichero": "fuentes/scott_radical_candor/cap_06.md",
+     "lineas": "157",
+     "frase": "all the top ratings are reserved for people who are in line to get promoted",
+     "propuesta": "Cuenta con este mecanismo concreto: en algunas empresas la gente estable no saca la puntuación que merece porque las puntuaciones altas están reservadas a quien tiene un ascenso a la vista, y muchas empresas racionan cuántas puntuaciones altas se pueden dar."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "calco",
+     "cita": "puede llegar a echar a alguien del equipo",
+     "motivo": "Calco de \"drive a person off the team\": en español \"echar a alguien\" es expulsarlo, y el libro habla de que la persona acabe yéndose harta de interrupciones.",
+     "fichero": "fuentes/scott_radical_candor/cap_06.md",
+     "lineas": "169",
+     "frase": "there are times when being the go-to expert might drive a person off the team because the person hates being interrupted",
+     "propuesta": "Sé sensible a que ser el experto de referencia puede llegar a hacer que alguien deje el equipo si odia que le interrumpan con preguntas todo el día. Y si en cambio disfruta enseñando y contestando, anímalo y prémialo por hacerlo."
+    }
+   ]
+  },
+  {
+   "node_id": "practicar_franqueza_radical_jefe_propio",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "No pidas permiso para empezar a intentarlo",
+     "motivo": "El libro responde que no hace falta pedir permiso (a \"Do you have to get permission?\" contesta \"I would say no\"); el paso lo vuelve una prohibición.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "211",
+     "frase": "Do you have to get permission to start trying it? Not surprisingly, since I believe that unilateral authority doesn’t work, I’d say no. Take the initiative on your own.",
+     "propuesta": "No hace falta que pidas permiso para empezar a intentarlo: toma la iniciativa por tu cuenta."
+    },
+    {
+     "campo": "pasos_accionables[14]",
+     "tipo": "coherencia",
+     "cita": "sí, tuve ocasión de discutirlo",
+     "motivo": "La respuesta contesta a una pregunta del equipo (\"¿no lo discutiste?\") que el paso nunca presenta.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "221",
+     "frase": "When they ask, “Why are we doing this, it makes no sense to us, didn’t you argue?” you can reply",
+     "propuesta": "Y cuando lo entiendas a fondo, explícaselo a tu equipo aunque tú no lo compartas. Si te preguntan por qué se hace esto y si no lo discutiste, una respuesta posible: entiendo tu punto de vista; sí, tuve ocasión de discutirlo; esto es lo que dije, y esto es lo que aprendí sobre por qué estamos haciendo lo que hacemos."
+    }
+   ]
+  },
+  {
+   "node_id": "pasear_organizacion_hallar_problemas_pequenios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "matar la idea de «esto no es mi trabajo»",
+     "motivo": "Calco de \"kill the ... mentality\".",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "265",
+     "frase": "the best way to kill the “it’s not my job” or, worse, the “that’s beneath me” mentality on your team",
+     "propuesta": "Si diriges a otros jefes no puedes oír a cientos de personas, y demasiadas veces eres el último en enterarte de que algo va mal, en general no porque te escondan los problemas, sino porque solo te traen lo que creen importante. Una hora semanal paseando te deja ver lo que no ves desde la mesa, hablar con quien hace tiempo que no oyes y hallar problemas pequeños que quizá importan más de lo que otros creen. Enseñas con el ejemplo: arreglar tú algún detalle es lo mejor para acabar con la idea de «esto no es mi trabajo», y si cuidas lo pequeño, a todos les importa más y algo de lo grande mejora."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "escuchar hondo en tu organización",
+     "motivo": "Calco de listening \"deep\" in your organization.",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "255",
+     "frase": "But if you are a manager of managers, listening “deep” in your organization is much harder.",
+     "propuesta": "Parte de la dificultad: escuchar a quienes tienes directamente a tu cargo es relativamente sencillo aunque lleve tiempo y disciplina, pero si eres jefe de jefes escuchar a fondo a toda tu organización es mucho más difícil, porque no puedes escuchar a todo el mundo ni tener reuniones a solas con cientos o miles de personas, y las horas de consulta te traen a los mismos tres quejosos semana tras semana."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "matar la mentalidad del «esto no es mi trabajo»",
+     "motivo": "Calco de \"kill the ... mentality\".",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "265",
+     "frase": "the best way to kill the “it’s not my job” or, worse, the “that’s beneath me” mentality on your team",
+     "propuesta": "Cuenta con lo segundo: ser consciente de los problemas pequeños y quizá incluso arremangarte y arreglarlos tú es la mejor manera de acabar con la mentalidad del «esto no es mi trabajo» o, peor, la del «esto está por debajo de mí». Si nada está por debajo de tu atención, los demás también prestarán atención a los detalles."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "matiz",
+     "cita": "se te ha vuelto imposible",
+     "motivo": "El libro dice que escuchar en profundidad es \"mucho más difícil\", no imposible.",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "255",
+     "frase": "listening “deep” in your organization is much harder.",
+     "propuesta": "Cuando eres jefe de jefes y escuchar a fondo a toda tu organización se te ha vuelto mucho más difícil: no puedes tener reuniones a solas con cientos o miles de personas, y si pones horas de consulta te llegan los mismos tres quejosos semana tras semana."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "escuchar hondo en tu organización",
+     "motivo": "Calco de listening \"deep\" in your organization.",
+     "fichero": "fuentes/scott_radical_candor/cap_11.md",
+     "lineas": "255",
+     "frase": "listening “deep” in your organization",
+     "propuesta": "Cuando eres jefe de jefes y escuchar a fondo a toda tu organización se te ha vuelto mucho más difícil: no puedes tener reuniones a solas con cientos o miles de personas, y si pones horas de consulta te llegan los mismos tres quejosos semana tras semana."
+    }
+   ]
+  },
+  {
+   "node_id": "minimizar_impuesto_colaboracion_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "profundizar_respuestas_preguntas_curiosidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "ponte curioso sobre esa respuesta",
+     "motivo": "Calco de \"get curious about the answer\".",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "105",
+     "frase": "get curious about the answer by asking a follow-up question",
+     "propuesta": "Después de que el candidato responda a una de las preguntas principales, indaga en esa respuesta haciendo una pregunta de seguimiento que empiece por qué, por cómo o por cuéntame más."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "preguntas primarias",
+     "motivo": "Calco de \"primary questions\"; el propio resumen dice \"preguntas principales\".",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "103-105",
+     "frase": "unless you follow up on the four primary questions",
+     "propuesta": "Después de que el candidato responda a una de las preguntas principales, indaga en esa respuesta haciendo una pregunta de seguimiento que empiece por qué, por cómo o por cuéntame más."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "¿qué aspecto tenía eso?",
+     "motivo": "Calco palabra a palabra de \"What did that look like?\".",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "147",
+     "frase": "What did that look like?",
+     "propuesta": "Recurre a este repertorio cuando no se te ocurra qué preguntar: ¿qué quieres decir?, ¿cómo era eso?, ¿qué pasó?, ¿cuál es un buen ejemplo de eso?, ¿cuál era tu papel?, ¿qué hiciste?, ¿qué dijo tu jefe?, ¿cuáles fueron los resultados?, ¿qué más?, ¿cómo lo hiciste?, ¿cómo fue?, ¿cómo te sentiste?, ¿cuánto dinero ahorraste?, ¿cómo lidiaste con eso?"
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "preguntas primarias",
+     "motivo": "Calco de \"primary questions\".",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "103-105",
+     "frase": "the four primary questions",
+     "propuesta": "Cada vez que un candidato termina de responder a una de las preguntas principales de cualquiera de las entrevistas del método de contratación: la de criba, la cronológica de trayectoria, la enfocada o la de referencias. Se activa dentro de ellas, no en su lugar, y es el marco que se usa para sondear en busca de más información."
+    }
+   ]
+  },
+  {
+   "node_id": "definir_resultados_tarjeta_puntuacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "que se puede contar por cabezas",
+     "motivo": "Calco de \"count heads\".",
+     "fichero": "fuentes/smart_who/cap_03.md",
+     "lineas": "79",
+     "frase": "you can count heads at community gatherings",
+     "propuesta": "Cuando el puesto no permita cuantificar el resultado con esa facilidad, busca hacerlo lo más objetivo y observable posible. Por ejemplo: para un director de mercadotecnia, crear e implantar una nueva campaña de mercadotecnia en los 180 días siguientes a la fecha de incorporación; para un coordinador de proyección comunitaria, mayor visibilidad o una asistencia mayor y más variada en los foros de la comunidad, que puedes medir contando a los asistentes."
+    }
+   ]
+  },
+  {
+   "node_id": "manejar_enfado_persona_desafiada",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "voz",
+     "cita": "con la frase que se elimina del vocabulario",
+     "motivo": "Voz impersonal normativa (\"se elimina\"), de la familia de \"se recomienda\" o \"se debe\"; el resto del nodo va en tú.",
+     "fichero": "fuentes/scott_radical_candor/cap_04.md",
+     "lineas": "131",
+     "propuesta": "Manejar el enfado de la persona a la que acabas de desafiar, con la frase que borras de tu vocabulario"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "ortografia",
+     "cita": "la frase no te lo tomes como algo personal, que es insultante",
+     "motivo": "Faltan las comillas de la cita: sin ellas \"no te lo tomes como algo personal\" se lee como una orden del propio texto (en el paso 4 sí van con «»).",
+     "fichero": "fuentes/scott_radical_candor/cap_04.md",
+     "lineas": "131",
+     "propuesta": "Desafiar a alguien de verdad a veces duele, y que a veces la gente de tu equipo se enfade contigo es parte del puesto: si nadie se enfada nunca contigo, probablemente no estás desafiando lo bastante. La clave, como en cualquier relación, es cómo manejas ese enfado. Cuando lo que dices duele, reconoce el dolor del otro y demuestra que te importa, sin fingir que no duele ni decir que no debería doler. Borra de tu vocabulario la frase «no te lo tomes como algo personal», que es insultante, y ofrece ayuda para arreglar el problema, sin fingir que no lo hay solo para que se sienta mejor."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "ortografia",
+     "cita": "la frase no te lo tomes como algo personal fuera de tu vocabulario",
+     "motivo": "Faltan las comillas de la cita, como en el paso 4.",
+     "fichero": "fuentes/scott_radical_candor/cap_04.md",
+     "lineas": "131",
+     "propuesta": "El dolor reconocido en voz alta, la frase «no te lo tomes como algo personal» fuera de tu vocabulario, y una oferta de ayuda para arreglar el problema sin haber negado que el problema existe."
+    }
+   ]
+  },
+  {
+   "node_id": "cribar_candidatos_entrevista_telefonica",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "cómo te puntuarían tus últimos jefes",
+     "motivo": "Cambio de persona: el resumen habla del candidato y el \"te\" convierte al lector en el puntuado.",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "83",
+     "propuesta": "La entrevista de criba ahorra tiempo porque saca cuanto antes de la lista a quien no encaja. Se hace por teléfono, en media hora como mucho, y siempre con las mismas cuatro preguntas: metas, puntos fuertes, puntos flojos y cómo lo puntuarían sus últimos jefes. Repetir las preguntas da consistencia y deja ver enseguida las diferencias entre candidatos. Decir «cuando hablemos con ellos» y no «si hablamos» es, en la experiencia de quien usa esta entrevista, la llave para sacar la verdad. Si al terminar dudas, descartas: solo pasan quienes encajan con fuerza con tu tarjeta de puntuación."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "Si hay desalineación clara con el papel, pasa el nombre a un colega para el que otro puesto de la empresa encaje",
+     "motivo": "Cambia quién encaja con qué: el libro dice que otro puesto encaje con el candidato capaz, no con el colega; y la desalineación pide ponerse en alerta, no pasar el nombre sin más.",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "69",
+     "frase": "A clear misalignment should put you on alert. ... Pass the name along to one of your colleagues if some other role in the company seems right for an able candidate",
+     "propuesta": "Pregunta uno: ¿cuáles son tus metas profesionales? Va primero para oír las metas y las pasiones del candidato antes de contaminar la conversación con tus propios comentarios. Si no tiene metas o suena a eco de tu propia web, descártalo y la llamada ha terminado. Una desalineación clara con el puesto te pone en alerta: si otro puesto de la empresa parece encajar con un candidato capaz, pasa su nombre a un colega, pero no gastes más tiempo con esa persona para este puesto."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "Cierra el balance de la pregunta tres con su corte: está incompleto",
+     "motivo": "\"El balance\" no tiene antecedente en el nodo (el libro habla del balance del candidato, con su haber y su debe) y \"su corte\" queda oscuro.",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "77-81",
+     "frase": "Your balance sheet on a candidate will be incomplete if you can’t identify at least five to eight areas",
+     "propuesta": "Cierra la pregunta tres con este corte: tu balance del candidato está incompleto si no identificas al menos entre cinco y ocho áreas donde la persona flojea, no tiene interés o no quiere operar. Si te quedas muy corto, si las debilidades son todas puntos fuertes disfrazados o si ves algo que lo descarta de plano frente a tu tarjeta de puntuación, descártalo."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "algo que mata el trato",
+     "motivo": "Calco de \"deal killers\".",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "81",
+     "frase": "or if you see any deal killers relative to your scorecard",
+     "propuesta": "Cierra la pregunta tres con este corte: tu balance del candidato está incompleto si no identificas al menos entre cinco y ocho áreas donde la persona flojea, no tiene interés o no quiere operar. Si te quedas muy corto, si las debilidades son todas puntos fuertes disfrazados o si ves algo que lo descarta de plano frente a tu tarjeta de puntuación, descártalo."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "matiz",
+     "cita": "porque se ha visto que quien se pone un 6 o menos está diciendo en realidad un 2",
+     "motivo": "Experiencia de quienes usan el método (\"We have found\") contada como hecho establecido; el mismo paso sí la cuenta como experiencia dos frases antes.",
+     "fichero": "fuentes/smart_who/cap_04.md",
+     "lineas": "89",
+     "frase": "We have found that people who give themselves a rating of 6 or lower are really saying 2.",
+     "propuesta": "Pregunta cuatro: ¿quiénes fueron tus últimos cinco jefes y cómo va a puntuar cada uno tu desempeño de 1 a 10 cuando hablemos con ellos? Di «cuando hablemos», no «si hablamos»: en la experiencia de quien usa esta entrevista, ese matiz es la llave de la verdad. Pide que liste cada jefe y dé una nota a cada uno, y sigue presionando por detalles, por ejemplo qué le hace pensar que su jefe le pondría un 7. Buscas muchos 8, 9 y 10; el 7 es neutro; del 6 para abajo es malo, porque, en la experiencia de quien usa esta entrevista, quien se pone un 6 o menos está diciendo en realidad un 2. Si oyes demasiados 6 o menos, descártalo, pero escucha de verdad lo que se está diciendo."
+    }
+   ]
+  },
+  {
+   "node_id": "asegurar_opinion_llega_persona",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "la perspectiva de tu persona a cargo: una forma simple es decir tu punto de forma directa",
+     "motivo": "Calcos de \"your report\" (\"tu persona a cargo\") y de \"state your point\" (\"decir tu punto\").",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "201",
+     "frase": "approach it with a sense of curiosity and an honest desire to understand your report’s perspective. One simple way to do this is to state your point directly",
+     "propuesta": "Cuando lo que tengas que compartir sea crítico, abórdalo con curiosidad y con un deseo honesto de entender la perspectiva de la persona a tu cargo: una forma simple es exponer lo que piensas de forma directa y seguir con un ¿te resuena esta opinión?, ¿por qué sí o por qué no?"
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "calco",
+     "cita": "cuando sospeches que tu mensaje no aterriza",
+     "motivo": "Calco de \"isn’t landing\".",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "205",
+     "frase": "Gather and share 360-degree feedback when you suspect your message isn’t landing",
+     "propuesta": "Y la tercera es ayudar a la persona a oír el mismo mensaje muchas veces y desde muchas fuentes: dedica varias reuniones individuales a las áreas de crecimiento más duras, y recoge y comparte opinión de trescientos sesenta grados cuando sospeches que tu mensaje no está calando, porque es una forma potente de transmitir que otros están viendo lo mismo."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "tu mensaje no está aterrizando",
+     "motivo": "Calco de \"isn’t landing\".",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "205",
+     "frase": "when you suspect your message isn’t landing",
+     "propuesta": "Cada vez que das opinión, y con más urgencia cuando sospechas que tu mensaje no está calando o cuando te llega de rebote una versión distorsionada de lo que dijiste."
+    }
+   ]
+  },
+  {
+   "node_id": "ceder_control_reforzar_competencia_claridad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "Pero el control repartido solo funciona si la gente es competente y entiende para qué existe la organización",
+     "motivo": "Es lo que descubrió una tripulación en su experiencia (\"we discovered\"); el resumen lo afirma como ley general.",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_01.md",
+     "lineas": "97",
+     "frase": "Control, we discovered, only works with a competent workforce that understands the organization’s purpose.",
+     "propuesta": "Pasar de un modelo de líder y seguidores a uno de líder a líder exige ceder el control a otros sin soltar la responsabilidad, que sigue siendo tuya. Pero, según descubrió una tripulación al aplicarlo, el control repartido solo funciona si la gente es competente y entiende para qué existe la organización; si falta cualquiera de las dos cosas, no funciona. Por eso, al mismo ritmo al que cedes, refuerzas la competencia técnica y la claridad organizativa. Antes toca soltar ideas viejas para hacer sitio a las nuevas. Y no se hace una sola vez: estos ciclos se repiten en círculos cada vez mayores."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz",
+     "cita": "Cuenta con esta condición del control: solo funciona",
+     "motivo": "Experiencia de una tripulación (\"we discovered\") contada como regla general.",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_01.md",
+     "lineas": "97",
+     "frase": "Control, we discovered, only works with a competent workforce that understands the organization’s purpose.",
+     "propuesta": "Cuenta con esta condición del control, que una tripulación descubrió en la práctica: solo funciona con una plantilla competente que entienda el propósito de la organización."
+    }
+   ]
+  },
+  {
+   "node_id": "buscar_actividad_alta_palanca_tres_vias",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "una pieza de conocimiento o de información única y clave",
+     "motivo": "Calco de \"a piece of knowledge or information\"; el propio resumen lo dice bien (\"un conocimiento o un dato\").",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "213",
+     "frase": "When a large group’s work is affected by an individual supplying a unique, key piece of knowledge or information.",
+     "propuesta": "Tercera vía: aquella en la que el trabajo de un grupo grande queda afectado por un individuo que aporta un conocimiento o un dato único y clave."
+    }
+   ]
+  },
+  {
+   "node_id": "comprobar_criticas_hombre_mujeres_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "como en el ejemplo de la fábrica que viste antes",
+     "motivo": "Referente inexistente: ni el nodo ni el pasaje tienen ningún ejemplo de una fábrica. Sale la coletilla.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "293",
+     "frase": "it can be helpful to become aware of how the woman feels about your guidance; just ask her.",
+     "propuesta": "Averigua cómo se siente con tu guía la mujer con la que te preocupa estar conteniéndote: simplemente pregúntaselo."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+{
+ "lote": "14A",
+ "nodos": [
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "revisar_ciclo_responsabilidades_relaciones",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "parar_debate_emocion_agotamiento",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "dar_elogio_disciplina_igual_critica",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "entregar_problema_dificil_reporte",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "canalizar_interrupciones_cartel_hora_oficina",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "mantener_manos_trabajo_real_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "minimizar_impuesto_colaboracion_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "empujar_persona_reunion_direccion_preferida",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "zanjar_seis_preguntas_decision_adelantado",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "definir_vision_larga_trabajar_atras",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "seguir_frustrado_preguntar_implantacion_ideas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "sopesar_consejo_legal_despedir_humildad",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "dominar_reacciones_emociones_ajenas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "construir_grafico_escalonado_pronosticos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "usar_tres_clases_reunion_proceso",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "alinear_comunicar_tarjeta_puntuacion",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "aplicar_cinco_pasos_proceso_contratacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "invencion",
+     "cita": "Completa con él los papeles de empleo, que es lo que hacen las empresas con menos rotación.",
+     "motivo": "El libro solo pone el último punto de la lista del primer día («completar los papeles de empleo»); no dice nada de empresas con menos rotación, ni aquí ni en ningún otro capítulo del libro (no aparece 'turnover'). La cláusula añade una procedencia y un efecto inventados.",
+     "fichero": "fuentes/gerber_emyth/cap_18.md",
+     "lineas": "257-271",
+     "frase": "5. First day of training to include the following activities for both the Boss and the new employee: ... • Completing the employment papers",
+     "propuesta": "Completa con él los papeles de empleo."
+    }
+   ]
+  },
+  {
+   "node_id": "distinguir_perfil_guepardo_cordero",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "situar_transicion_cuatro_caminos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "elegir_modo_control_motivacion_factor_cua",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "contestar_dos_preguntas_direccion_objetivos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "Por eso le bastan dos preguntas, y cada una entrega un producto distinto. [...] Separarlas importa porque el objetivo solo fija el destino, y son los hitos los que te dejan ver por el camino si de verdad te estás acercando a él.",
+     "motivo": "Dos causas que el libro no dice. (1) «Por eso»: el libro pone la idea simple (si no sabes adónde vas, no llegas) y a continuación dice que al sistema le bastan dos preguntas, sin decir que una cosa sea la razón de la otra; la idea solo sostiene la primera pregunta. (2) «Separarlas importa porque»: el libro no habla de la importancia de separarlas; lo que sí dice es que la segunda pregunta sirve para ver si estás llegando, y lo ilustra con el viaje al aeropuerto (si a los 20 minutos no has pasado por A, te has perdido). Se quitan los dos nexos causales y se deja lo que el libro dice.",
+     "fichero": "fuentes/grove_high_output/cap_07.md",
+     "lineas": "69-77",
+     "frase": "The idea behind MBO is extremely simple: If you don't know where you're going, you will not get there. [...] A successful MBO system needs only to answer two questions: 1. Where do I want to go? (The answer provides the objective.) 2. How will I pace myself to see if I am getting there? (The answer gives us milestones, or key results.) [...] If I have been driving for 20 minutes and haven't yet made town A, I know I'm lost.",
+     "propuesta": "Un sistema de dirección por objetivos se apoya en una idea muy simple: si no sabes adónde vas, no vas a llegar. Para funcionar le bastan dos preguntas, y cada una entrega un producto distinto. La primera, adónde quieres ir, da el objetivo. La segunda, cómo vas a marcarte el ritmo para comprobar si estás llegando, da los hitos o resultados clave. El objetivo fija el destino, y los hitos te dejan ver por el camino si de verdad te estás acercando a él: si a la hora prevista no has pasado por el primero, sabes que te has perdido."
+    }
+   ]
+  },
+  {
+   "node_id": "vivir_primero_valor_declarado",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "escuchar_ruidoso_opinion_fuerte_pedir_agujeros",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "montar_reunion_gran_decision",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "fijar_duracion_lugar_reunion_individual",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "aplicar_consecuencias_nota_apoyar_fuerzas_persona",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "identificar_disparadores_propios_reaccion",
+   "limpio": true,
+   "defectos": []
+  }
+ ]
+}

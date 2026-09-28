@@ -1,0 +1,159 @@
+{
+  "node_id": "definir_entorno_grupo_clientes_proveedores_competidores",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Definir tu entorno mirando tu grupo como si fuera una empresa independiente: clientes, proveedores y competidores",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Para planificar necesitas saber qué te va a pedir tu entorno, y para eso primero hay que delimitarlo. Si miras tu grupo dentro de la organización como si fuera una empresa independiente, tu entorno aparece hecho de otros grupos que influyen directamente en lo que haces: clientes que necesitan tus servicios, proveedores que pueden darte determinadas capacidades y, por último, competidores. Dentro de la organización no tienes competidores, pero puedes comparar tu servicio con uno de fuera como manera de juzgar tu desempeño y de fijar tus estándares.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_07.md, PIEZA P8 de la frontera publicada en la vuelta 53 (docs/loop/REPORTE.md L50888), tramo L25 a L25, 110 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone SU PROPIO INVENTARIO de OBJETOS DE TRABAJO, nombrados uno a uno (customers who need your services, vendors who are able to provide you with certain capabilities, and finally, your competitors), y ademas pone el medio con el que se mira (as if it were a stand-alone company) y la salida del caso sin competidores (compare your service to one like United Parcel as a way to judge performance and set standards). No hay adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, uno a uno, todos de L25: paso 1 (If you look at your own group within an organization as if it were a stand-alone company); paso 2 (you see that your environment is made up of other such groups that directly influence what you do); paso 3 (customers who need your services); paso 4 (vendors who are able to provide you with certain capabilities); paso 5 (and finally, your competitors); paso 6 (You don't, of course, have competitors internally, but you can compare your service to one like United Parcel as a way to judge performance and set standards). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. LOS SITIOS DE TENTACION QUE DECLARO Y EN LOS QUE NO ESCRIBI: NO escribo QUE MIRAR en cada uno de esos grupos, porque eso es la pieza P9 del mismo capitulo y su nodo aparte; meterlo aqui comprimiria dos tramos en uno. NO escribo los dos marcos temporales, que son P10. NO escribo cada cuanto se revisa el entorno: el periodo es la segunda especie de PUENTE del lote 1 y el parrafo no lo dice. NO escribo quien lo hace. NI UNA CIFRA A atribuciones: el tramo no trae ninguna. EL EJEMPLO DEL LIBRO ES EJEMPLO Y NO CASA, manual 3.5: la sala de correo y United Parcel ilustran, y por eso los pasos hablan de tu grupo y no de una sala de correo, salvo el estandar de comparacion, que el libro pone como MEDIO y no como dato del ejemplo. ARISTA QUE ANUNCIO Y NO CABLEO HOY: esta pieza es una de las partes de la cabeza planificar_tres_pasos_demanda_estado_brecha (P5), que dice TRES pasos y los nombra, asi que es caso de D.37; la cabeza vive en cuarentena y no en el grafo, y esta vuelta NO INSERTA, de modo que la arista se cablea el dia de la insercion, no hoy. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 6 podria leerse como dos cosas pegadas, la constatacion de que no hay competidor interno y el medio de comparacion. Lo dejo en un solo paso porque el libro los une con un pero y el segundo solo tiene sentido como salida del primero.",
+  "pasos_accionables": [
+    "Mira tu propio grupo dentro de la organización como si fuera una empresa independiente.",
+    "Anota como entorno los otros grupos de ese tipo que influyen directamente en lo que haces.",
+    "Lista a tus clientes, que son quienes necesitan tus servicios.",
+    "Lista a tus proveedores, que son quienes pueden darte determinadas capacidades.",
+    "Lista por último a tus competidores.",
+    "Cuenta con que dentro de la organización no tienes competidores, y en su lugar compara tu servicio con uno de fuera para juzgar tu desempeño y fijar tus estándares."
+  ],
+  "entregable_esperado": "Tu entorno escrito por sus tres clases de grupo: la lista de tus clientes, la de tus proveedores y la de tus competidores, y para estos últimos el servicio de fuera con el que te comparas.",
+  "nodos_previos": [
+    "planificar_tres_pasos_demanda_estado_brecha"
+  ],
+  "nodos_siguientes": [
+    "examinar_entorno_expectativas_tecnologia_proveedores_grupos",
+    "examinar_demanda_entorno_dos_marcos_temporales"
+  ],
+  "condiciones_activacion": [
+    "Cuando empiezas a planificar por lo que tu entorno te va a pedir y no sabes todavía qué cuenta como tu entorno ni dónde acaba."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-definir_entorno_grupo_clientes_proveedores_competidores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Para planificar necesitas saber qué te va a pedir tu entorno, y para eso primero hay que delimitarlo. Si miras tu grupo dentro de la organización como si fuera una empresa independiente, tu entorno aparece hecho de otros grupos que influyen directamente en lo que haces: clientes que necesitan tus servicios, proveedores que pueden darte determinadas capacidades y, por último, competidores. Dentro de la organización no tienes competidores, pero puedes comparar tu servicio con uno de fuera como manera de juzgar tu desempeño y de fijar tus estándares.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_07.md",
+          "lineas": "19-25"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): 'Así el entorno deja de ser difuso y se vuelve una lista concreta' es un resultado que no está en L19-25. La propuesta lo quita y queda fiel a la línea: mirar el grupo como empresa independiente, clientes, proveedores que 'are able to provide you with certain capabilities' y la comparación con un servicio de fuera 'as a way to judge performance and set standards'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-definir_entorno_grupo_clientes_proveedores_competidores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira tu propio grupo dentro de la organizacion como si fuera una empresa independiente.",
+      "texto_nuevo": "Mira tu propio grupo dentro de la organización como si fuera una empresa independiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_entorno_grupo_clientes_proveedores_competidores-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lista por ultimo a tus competidores.",
+      "texto_nuevo": "Lista por último a tus competidores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_entorno_grupo_clientes_proveedores_competidores-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que dentro de la organizacion no tienes competidores, y en su lugar compara tu servicio con uno de fuera para juzgar tu desempeno y fijar tus estandares.",
+      "texto_nuevo": "Cuenta con que dentro de la organización no tienes competidores, y en su lugar compara tu servicio con uno de fuera para juzgar tu desempeño y fijar tus estándares.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_entorno_grupo_clientes_proveedores_competidores-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu entorno escrito por sus tres clases de grupo: la lista de tus clientes, la de tus proveedores y la de tus competidores, y para estos ultimos el servicio de fuera con el que te comparas.",
+      "texto_nuevo": "Tu entorno escrito por sus tres clases de grupo: la lista de tus clientes, la de tus proveedores y la de tus competidores, y para estos últimos el servicio de fuera con el que te comparas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_entorno_grupo_clientes_proveedores_competidores-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a dar el paso 1 de la planificacion, el de la demanda del entorno, y no sabes todavia que cuenta como tu entorno ni donde acaba.",
+      "texto_nuevo": "Cuando vas a dar el paso 1 de la planificación, el de la demanda del entorno, y no sabes todavía qué cuenta como tu entorno ni dónde acaba.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-definir_entorno_grupo_clientes_proveedores_competidores-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando vas a dar el paso 1 de la planificación, el de la demanda del entorno, y no sabes todavía qué cuenta como tu entorno ni dónde acaba.",
+      "texto_nuevo": "Cuando empiezas a planificar por lo que tu entorno te va a pedir y no sabes todavía qué cuenta como tu entorno ni dónde acaba.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Ningún texto del nodo presenta los pasos de la planificación: \"el paso 1\" no tiene antecedente. Se nombra lo que es: planificar por lo que el entorno te va a pedir."
+      },
+      "decision": "auditoria completa M11 (coherencia): Ningún texto del nodo presenta los pasos de la planificación: \"el paso 1\" no tiene antecedente. Se nombra lo que es: planificar por lo que el entorno te va a pedir.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define tu Entorno de Negocio",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

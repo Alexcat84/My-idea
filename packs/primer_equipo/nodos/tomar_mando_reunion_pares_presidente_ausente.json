@@ -1,0 +1,248 @@
+{
+  "node_id": "tomar_mando_reunion_pares_presidente_ausente",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Decidir quién toma el mando en una reunión de iguales sin presidente formal: el que más se juega, y si no, el de mayor rango presente",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Entre iguales, la mayoría teme arriesgar una postura propia y espera a que aparezca el consenso, y el grupo puede dar vueltas sin avanzar. Cuando no hay presidente formal, conviene que tome el mando quien más se juega en el asunto y, si eso no funciona, la persona presente de mayor rango. Probablemente no sepa del tema más que los demás, quizá sepa menos, pero es probable que actúe como padrino que conoce cómo deben tomarse las decisiones y que dé al grupo la confianza que necesita para decidir.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_06.md, unidad Cap. 5, titulo textual Decisions, Decisions. Sale de la PIEZA P18 de la frontera publicada hoy en OO.2.a, L51, 89 palabras. FRONTERA DENTRO DEL NODO, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): LOS SEIS PASOS SALEN LOS SEIS DE L51 y de ningun otro sitio. Lo unico que viene de otro tramo es el NOMBRE del remedio, peer-plus-one approach, que el libro acuna en L41 (We named this the peer-plus-one approach, and have used it since then to aid decision-making where we must), y por eso va en denominaciones y NO en los pasos. Y EL CASO DE L41 ES CASO Y NO CASA (manual 3.5): el juego de papeles de la primera sesion de formacion de Intel, con sus quince minutos de vueltas y el presidente que vuelve a entrar y golpea la mesa, es el EJEMPLO NOMBRADO de esta doctrina, no su nodo. Por eso NI EL ENTREGABLE NI NINGUN PASO llevan un dato de aquel caso, que es la senial barata de que un caso se convirtio en casa. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone la condicion de activacion con sus dos mitades, pone la accion, pone la alternativa para cuando la primera falla, y pone lo que hay que esperar y lo que no de quien asume el control. Inventario de MEDIOS y de ETAPAS, no de fines. DE DONDE SALE CADA PASO, uno a uno, todos de L51: paso 1 (If the peer-group syndrome manifests itself, and the meeting has no formal chairman); paso 2 (the person who has the most at stake should take charge); paso 3 (If that doesn't work, one can always ask the senior person present to assume control); paso 4 (He is likely to be no more expert in the issues at hand than other members of the group, perhaps less expert); paso 5 (but he is likely to act as a godfather, a repository of knowledge about how decisions should be made); paso 6 (and give the group the confidence needed to make a decision). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. LOS SITIOS DE TENTACION QUE DECLARO, y en los que NO escribi: NO escribo COMO se averigua quien se juega mas, porque el libro lo nombra y no pone la prueba. NO escribo cuanto tiempo se espera antes de declarar que no funciona y pasar al de mayor rango: el periodo es la segunda especie de PUENTE del lote 1, y aqui la tentacion es fuerte porque el caso de L41 trae unos quince minutos; esos quince minutos son del CASO y no del procedimiento, y meterlos como umbral seria exactamente convertir el caso en casa. NO escribo quien nombra al que toma el mando. NI UNA CIFRA A atribuciones. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: este nodo y el de P17 tratan los dos el mismo sindrome y van a levantar vecindad entre si. Sostengo que son HERMANOS: P17 previene, trabajando la autoconfianza de cada miembro antes y despues de la reunion, y este repara, diciendo quien coge el mando cuando el sindrome ya se manifesto y no hay presidente. Si cae, cae DENTRO de mi marcado.",
+  "pasos_accionables": [
+    "Comprueba primero las dos condiciones juntas: que el síndrome del grupo de pares se esté manifestando, y que la reunión no tenga presidente formal.",
+    "Haz entonces que tome el mando la persona que más se juega en el asunto.",
+    "Si eso no funciona, siempre puedes pedir a la persona presente de mayor rango que asuma el control.",
+    "No cuentes con que esa persona sea más experta en los asuntos que se tratan que los demás miembros del grupo, y cuenta con que quizá lo sea menos.",
+    "Cuenta con lo que sí es probable que aporte: actuar de padrino, es decir, de depósito de conocimiento sobre cómo deben tomarse las decisiones.",
+    "Cuenta con lo que es probable que eso le dé al grupo: la confianza que hace falta para tomar una decisión."
+  ],
+  "entregable_esperado": "Alguien con el mando de la reunión tomado: el que más se juega en el asunto, o en su defecto la persona presente de mayor rango, actuando de padrino y devolviendo al grupo la confianza para decidir.",
+  "nodos_previos": [
+    "decidir_nivel_competente_inferior"
+  ],
+  "nodos_siguientes": [
+    "conducir_etapas_modelo_ideal_decision",
+    "vencer_sindrome_grupo_pares_autoconfianza"
+  ],
+  "condiciones_activacion": [
+    "Cuando el síndrome del grupo de pares se manifiesta en una reunión de iguales y esa reunión no tiene presidente formal, de manera que el grupo da vueltas sin que nadie lo enderece."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Entre iguales, la mayoría teme arriesgar una postura propia y espera a que aparezca el consenso, y el grupo puede dar vueltas sin avanzar. Cuando no hay presidente formal, conviene que tome el mando quien más se juega en el asunto y, si eso no funciona, la persona presente de mayor rango. Probablemente no sepa del tema más que los demás, quizá sepa menos, pero es probable que actúe como padrino que conoce cómo deben tomarse las decisiones y que dé al grupo la confianza que necesita para decidir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_06.md",
+          "lineas": "41-51"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 43 'most people are afraid' y 51 'he is likely to act as a godfather... and give the group the confidence'. La propuesta del lector devuelve el 'likely' pero cambia 'most' por 'muchas', que rebaja el matiz; se pone 'la mayoría'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decidir quien toma el mando en una reunion de iguales sin presidente formal: el que mas se juega, y si no, el de mayor rango presente",
+      "texto_nuevo": "Decidir quién toma el mando en una reunión de iguales sin presidente formal: el que más se juega, y si no, el de mayor rango presente",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba primero las dos condiciones juntas: que el sindrome del grupo de pares se este manifestando, y que la reunion no tenga presidente formal.",
+      "texto_nuevo": "Comprueba primero las dos condiciones juntas: que el síndrome del grupo de pares se esté manifestando, y que la reunión no tenga presidente formal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz entonces que tome el mando la persona que mas se juega en el asunto.",
+      "texto_nuevo": "Haz entonces que tome el mando la persona que más se juega en el asunto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No cuentes con que esa persona sea mas experta en los asuntos que se tratan que los demas miembros del grupo, y cuenta con que probablemente lo sea menos.",
+      "texto_nuevo": "No cuentes con que esa persona sea más experta en los asuntos que se tratan que los demás miembros del grupo, y cuenta con que probablemente lo sea menos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que si es probable que aporte: actuar de padrino, es decir, de deposito de conocimiento sobre como deben tomarse las decisiones.",
+      "texto_nuevo": "Cuenta con lo que sí es probable que aporte: actuar de padrino, es decir, de depósito de conocimiento sobre cómo deben tomarse las decisiones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que eso le da al grupo: la confianza que hace falta para tomar una decision.",
+      "texto_nuevo": "Cuenta con lo que eso le da al grupo: la confianza que hace falta para tomar una decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Alguien con el mando de la reunion tomado: el que mas se juega en el asunto, o en su defecto la persona presente de mayor rango, actuando de padrino y devolviendo al grupo la confianza para decidir.",
+      "texto_nuevo": "Alguien con el mando de la reunión tomado: el que más se juega en el asunto, o en su defecto la persona presente de mayor rango, actuando de padrino y devolviendo al grupo la confianza para decidir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-tomar_mando_reunion_pares_presidente_ausente-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el sindrome del grupo de pares se manifiesta en una reunion de iguales y esa reunion no tiene presidente formal, de manera que el grupo da vueltas sin que nadie lo enderece.",
+      "texto_nuevo": "Cuando el síndrome del grupo de pares se manifiesta en una reunión de iguales y esa reunión no tiene presidente formal, de manera que el grupo da vueltas sin que nadie lo enderece.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si eso no funciona, pide siempre que puedas a la persona presente de mayor rango que asuma el control.",
+      "texto_nuevo": "Si eso no funciona, siempre puedes pedir a la persona presente de mayor rango que asuma el control.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_06.md 51",
+        "frase": "If that doesn’t work, one can always ask the senior person present to assume control."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro ofrece una opción siempre disponible; 'siempre que puedas' la volvía condicional.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No cuentes con que esa persona sea más experta en los asuntos que se tratan que los demás miembros del grupo, y cuenta con que probablemente lo sea menos.",
+      "texto_nuevo": "No cuentes con que esa persona sea más experta en los asuntos que se tratan que los demás miembros del grupo, y cuenta con que quizá lo sea menos.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_06.md 51",
+        "frase": "He is likely to be no more expert in the issues at hand than other members of the group—perhaps less expert"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'perhaps less expert' (quizá), no 'probablemente'.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-tomar_mando_reunion_pares_presidente_ausente-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que eso le da al grupo: la confianza que hace falta para tomar una decisión.",
+      "texto_nuevo": "Cuenta con lo que es probable que eso le dé al grupo: la confianza que hace falta para tomar una decisión.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_06.md 51",
+        "frase": "He is likely to be no more expert in the issues at hand than other members of the group—perhaps less expert—but he is likely to act as a godfather, a repository of knowledge about how decisions should be made, and give the group the confidence needed to make a decision."
+      },
+      "decision": "auditoria completa M11 (matiz): El \"is likely to\" del libro gobierna también dar confianza al grupo; el paso lo daba por seguro.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Toma el Mando Sin Presidente"
+}

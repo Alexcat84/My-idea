@@ -1,0 +1,230 @@
+{
+  "node_id": "resistir_dar_solucion_clasificar_decision_urgencia",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Resistir dar la solución y clasificar la decisión del equipo según su urgencia",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "La inmensa mayoría de las situaciones no exigen una decisión inmediata, pero se sigue aplicando el modelo de crisis. Cuando los asuntos no se anticipan, el equipo no tiene tiempo para pensar, decide el jefe deprisa, eso no forma al equipo y el círculo se repite. Para intentar cambiarlo, abre un espacio, aunque sea de segundos, para que el equipo reaccione, y anticipa las decisiones que se acercan. Ajusta la participación a la urgencia: si urge, decides y luego el equipo critica; si hay algo de margen, pides su opinión; si puede esperar, exiges sus aportes y cuidas la disidencia.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_08.md, unidad Cap. 12, titulo textual Up Scope! FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los pasos 1 y 2 salen de la linea 107 (151 palabras) y los pasos 3, 4 y 5 salen de las lineas 117, 119 y 121, todas dentro de la pieza P1 de la frontera de cap_08 publicada en esta vuelta, que reune LINEAS NO CONTIGUAS (L107, L115 a L121) porque las dos partes desarrollan el mismo mecanismo nombrado por su propio rotulo en la linea 103, Mechanism: Resist the Urge to Provide Solutions. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el libro pone su propio inventario de ETAPAS de decision, nombradas una a una segun su urgencia (linea 115, here are a few ways to try to get your team thinking for themselves): urgente, razonablemente pronto, y puede retrasarse (lineas 117, 119 y 121), cada una con su propia accion, sin adjetivo de adecuacion en el sitio del criterio: la clasificacion es de tiempo disponible, no de que tan bien se decide. EL CASO ENTRA COMO EJEMPLO Y NO COMO NODO PROPIO (manual 3.5): el ataque de torpedo entero contra el submarino enemigo (lineas 9 a 101) es la escena naval especifica de la que Marquet generaliza el mecanismo, con jerga naval propia de esa maniobra (set, shoot, detect, acquire) que no es un procedimiento de negocio replicable, y la anecdota del simulador de entrenamiento donde el equipo condujo en linea recta treinta minutos (linea 109) tampoco se mina, por ser el fracaso propio de esa sesion y no una etapa del mecanismo. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: la pieza junta dos tramos no contiguos del capitulo (L107 y L115 a L121) porque los dos desarrollan el mismo mecanismo de la linea 103; si el auditor lee que son dos mecanismos distintos (uno de dar espacio para decidir, otro de clasificar por urgencia), esto se parte en dos candidatos. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la reflexion sobre por que las organizaciones caen en un espiral reactivo cuando nadie anticipa las decisiones (linea 113) no se escribe como paso porque es diagnostico, no accion; y el detalle naval completo del ataque (torpedo Mk 48 ADCAP, procedimientos de disparo) no entra porque es el dato del caso, no la etapa generica del mecanismo.",
+  "pasos_accionables": [
+    "Resiste el impulso de dar tú la solución: date tiempo, aunque sean solo unos minutos o segundos, para que el equipo entero reaccione y piense antes de decidir.",
+    "Anticipa qué decisiones se acercan y avisa a tu equipo con antelación de que hará falta tomar una, en vez de esperar a que surja de golpe.",
+    "Si la decisión es urgente, tómala tú mismo y después haz que el equipo la someta a crítica y la evalúe.",
+    "Si la decisión se puede tomar en un plazo razonablemente próximo, pide la opinión del equipo, aunque sea breve, y después decide.",
+    "Si la decisión se puede retrasar, obliga al equipo a dar sus aportes sin forzar el consenso: no borres las diferencias ni los votos disidentes, valora la disidencia."
+  ],
+  "entregable_esperado": "La decisión tomada por el equipo o con su participación, según el grado de urgencia.",
+  "nodos_previos": [
+    "repartir_decision_cercanos_hechos"
+  ],
+  "nodos_siguientes": [
+    "crear_obligacion_disentir_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo enfrenta una decisión y tú, como responsable, sientes el impulso de darles directamente la solución en vez de dejar que la piensen."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La inmensa mayoría de las situaciones no exigen una decisión inmediata, pero se sigue aplicando el modelo de crisis. Cuando los asuntos no se anticipan, el equipo no tiene tiempo para pensar, decide el jefe deprisa, eso no forma al equipo y el círculo se repite. Para intentar cambiarlo, abre un espacio, aunque sea de segundos, para que el equipo reaccione, y anticipa las decisiones que se acercan. Ajusta la participación a la urgencia: si urge, decides y luego el equipo critica; si hay algo de margen, pides su opinión; si puede esperar, exiges sus aportes y cuidas la disidencia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_08.md",
+          "lineas": "107-121"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: 'a few ways to try to get your team thinking' (l.115) quedó en 'rompe ese círculo', y 'lo hace viable' no está. La propuesta describe el círculo con la cadena de l.113, habla de intentar cambiarlo y deja el ajuste a la urgencia sin efecto inventado.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Resistir dar la solucion y clasificar la decision del equipo segun su urgencia",
+      "texto_nuevo": "Resistir dar la solución y clasificar la decisión del equipo según su urgencia",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Resiste el impulso de dar tu la solucion: date tiempo, aunque sean solo unos minutos o segundos, para que el equipo entero reaccione y piense antes de decidir. El texto lo dice asi: you have to create a space for open decision by the entire team, even if that space is only a few minutes, or a few seconds, long.",
+      "texto_nuevo": "Resiste el impulso de dar tú la solución: date tiempo, aunque sean solo unos minutos o segundos, para que el equipo entero reaccione y piense antes de decidir.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: you have to create a space for open decision by the entire team, even if that space is only a few minutes, or a few seconds, long."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Anticipa que decisiones se acercan y avisa a tu equipo con antelacion de que hara falta tomar una, en vez de esperar a que surja de golpe. El texto lo dice asi: this is harder than in the leader-follower approach because it requires you to anticipate decisions and alert your team to the need for an upcoming one.",
+      "texto_nuevo": "Anticipa qué decisiones se acercan y avisa a tu equipo con antelación de que hará falta tomar una, en vez de esperar a que surja de golpe.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: this is harder than in the leader-follower approach because it requires you to anticipate decisions and alert your team to the need for an upcoming one."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la decision es urgente, tomala tu mismo y despues haz que el equipo la someta a critica y la evalue. El texto lo dice asi: if the decision needs to be made urgently, make it, then have the team red-team the decision and evaluate it.",
+      "texto_nuevo": "Si la decisión es urgente, tómala tú mismo y después haz que el equipo la someta a crítica y la evalúe.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: if the decision needs to be made urgently, make it, then have the team red-team the decision and evaluate it."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la decision se puede tomar en un plazo razonablemente proximo, pide la opinion del equipo, aunque sea breve, y despues decide. El texto lo dice asi: if the decision needs to be made reasonably soon, ask for team input, even briefly, then make the decision.",
+      "texto_nuevo": "Si la decisión se puede tomar en un plazo razonablemente próximo, pide la opinión del equipo, aunque sea breve, y después decide.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: if the decision needs to be made reasonably soon, ask for team input, even briefly, then make the decision."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la decision se puede retrasar, obliga al equipo a dar sus aportes sin forzar el consenso: no elimines las diferencias ni los votos disidentes, valora la disidencia. El texto lo dice asi: if the decision can be delayed, then force the team to provide inputs. Do not force the team to come to consensus... Cherish the dissension.",
+      "texto_nuevo": "Si la decisión se puede retrasar, obliga al equipo a dar sus aportes sin forzar el consenso: no borres las diferencias ni los votos disidentes, valora la disidencia.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: if the decision can be delayed, then force the team to provide inputs. Do not force the team to come to consensus... Cherish the dissension."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La decision tomada por el equipo o con su participacion, segun el grado de urgencia, en vez de una orden directa del responsable.",
+      "texto_nuevo": "La decisión tomada por el equipo o con su participación, según el grado de urgencia, en vez de una orden directa del responsable.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resistir_dar_solucion_clasificar_decision_urgencia-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el equipo enfrenta una decision y tu, como responsable, sientes el impulso de darles directamente la solucion en vez de dejar que la piensen.",
+      "texto_nuevo": "Cuando el equipo enfrenta una decisión y tú, como responsable, sientes el impulso de darles directamente la solución en vez de dejar que la piensen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase6-resistir_dar_solucion_clasificar_decision_urgencia-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La decisión tomada por el equipo o con su participación, según el grado de urgencia, en vez de una orden directa del responsable.",
+      "texto_nuevo": "La decisión tomada por el equipo o con su participación, según el grado de urgencia.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_08.md 117-121",
+        "frase": "If the decision needs to be made urgently, make it, then have the team “red-team” the decision and evaluate it."
+      },
+      "decision": "doble lectura M11 (sexto pase) (matiz): Si la decisión urge la toma el responsable y luego el equipo la critica; 'en vez de una orden directa del responsable' borra ese caso. Cambio mínimo: sale la cola (propuesta de A; la de B reescribe de más).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Clasifica la Urgencia, No Resuelvas",
+  "fuentes_internas": [
+    "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet"
+  ]
+}

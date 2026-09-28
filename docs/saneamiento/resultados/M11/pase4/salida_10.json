@@ -1,0 +1,588 @@
+{
+ "lote": "10",
+ "nodos": [
+  {
+   "node_id": "dar_opinion_critica_directa_desapasionada",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "voz",
+     "cita": "porque nos alteramos o nos emocionamos",
+     "motivo": "el nosotros del libro dirigido al lector; en la casa es tú",
+     "propuesta": "Cuenta con que nadie que piense racionalmente pretende decir la primera ni la segunda y aun así pasa, porque te alteras o te emocionas. El mejor consejo de prevención: no entres en la discusión cuando estás alterado, porque lo que se dice con ira se lamenta, y los puentes tardan meses o años en construirse y se queman en un instante. Reconoce cuando esa vena de la frente empieza a hincharse, respira hondo, di que prefieres hablarlo más tarde y sal de escena."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "alteramos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "emocionamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "podemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "hablemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "podemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "texto": "podemos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "conducir_reunion_individual_telefono_distancia",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "Haz que el supervisor tenga el guion",
+     "motivo": "\"el guion\" no tiene antecedente en el nodo: nada dice de qué guion se trata (el de la reunión)",
+     "propuesta": "Haz que el supervisor tenga el guion de la reunión antes de que empiece."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "asignar_responsable_unico_evolucion_planificada",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "titulo_concepto",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "entregable_esperado",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "a cargo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "examinar_trabajo_pasado_candidato",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "retirar_etiquetas_permanentes_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "referente inexistente: ningún campo del nodo habla de un cliente ni de una fábrica (en el pasaje, esas tres puntuaciones las propone el cofundador de una empresa)",
+     "propuesta": "Para combatir las etiquetas permanentes, refiere la puntuación al periodo y no a la persona, con tres valores: trimestre flojo, trimestre sólido y trimestre excepcional."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "elegir_inspeccion_barrera_monitorizacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "calibrar_ascensos_evitar_politica",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "exige a todas tus personas a cargo",
+     "motivo": "\"a tu cargo\" es la forma fijada; \"tus personas a cargo\" puede leerse como las personas que mandan",
+     "propuesta": "Si tu empresa no llega a esos extremos, haz lo que está a tu alcance: consulta con tus iguales, o si diriges a otros jefes exige a todas las personas a tu cargo que calibren sus planes de ascenso entre ellas antes de que se apruebe ningún ascenso."
+    },
+    {
+     "campo": "pasos_accionables[15]",
+     "tipo": "regionalismo",
+     "cita": "ir a coger algo juntos",
+     "motivo": "\"coger\" es de España y malsonante en buena parte de América; \"tomar algo\"",
+     "propuesta": "Planifica alguna clase de actividad de despeje, como un paseo juntos. En general no conviene mezclar alcohol y trabajo, pero si hay un momento para ir a tomar algo juntos, es este."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "quieres que tus personas a cargo calibren",
+     "motivo": "\"a tu cargo\" es la forma fijada; \"tus personas a cargo\" puede leerse como las personas que mandan",
+     "propuesta": "Cuando se acerca un ciclo de ascensos y vas a decidirlos junto con otros jefes, o cuando diriges a otros jefes y quieres que las personas a tu cargo calibren sus planes de ascenso antes de que se apruebe ninguno."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "minimizar_impuesto_colaboracion_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "transitar_aprendiz_primeros_meses",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "fijar_proceso_trabajo_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "comunicar_vision_jugadores_organizacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "tenemos",
+     "defecto": false
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "nuestra",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "tenemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "nuestra",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "nuestros",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "resistir_dar_solucion_clasificar_decision_urgencia",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pedir_opinion_otros_mejorar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "dar opinión a tus personas a cargo",
+     "motivo": "\"a tu cargo\" es la forma fijada; \"tus personas a cargo\" puede leerse como las personas que mandan",
+     "propuesta": "Si le das importancia a dar opinión a las personas a tu cargo, esto no debería sorprenderte: si hay un ingrediente secreto para mejorar uno mismo, es pedir opinión a otras personas todo el tiempo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_periodo_direccion_objetivos_retroalimentacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "responder_tres_preguntas_vocacion_directiva",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "un sí rotundo aquí puede compensar",
+     "motivo": "la pregunta es disyuntiva (¿resultado o papel?): un \"sí\" no la contesta; lo que compensa es inclinarse con claridad por el resultado",
+     "propuesta": "Hazte la primera pregunta: ¿me motiva más lograr un resultado concreto o desempeñar un papel concreto? Es la más importante de las tres, y una respuesta rotunda a favor del resultado puede compensar casi cualquier otra cosa."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "mover_rapido_persona_papel_equivocado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "en la experiencia de una directiva",
+     "motivo": "la directiva ya se presentó en el paso anterior; \"una directiva\" otra vez la hace parecer otra persona",
+     "propuesta": "Pero cuenta con que, en la experiencia de esa directiva, el ochenta por ciento de las veces ese esfuerzo, que son más reuniones a solas, ayuda en los proyectos, conversaciones con los pares y charlas de ánimo, acabó siendo inútil."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "los asuntos de conciencia",
+     "motivo": "calco de \"issues of awareness\": en español \"asuntos de conciencia\" son cuestiones morales; aquí es no saber cómo es un gran trabajo (la primera de las cinco razones)",
+     "propuesta": "Cuenta con que los casos de quien no sabe cómo es un gran trabajo o no se siente apreciado sí suelen poder abordarse con una serie de conversaciones honestas."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "si tu persona a cargo",
+     "motivo": "\"a tu cargo\" es la forma fijada; \"tus personas a cargo\" puede leerse como las personas que mandan",
+     "propuesta": "Y si la persona a tu cargo tiene una carencia de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "en el caso de una directiva",
+     "motivo": "la misma directiva de los pasos anteriores reaparece con artículo indefinido, como si fuera otra",
+     "propuesta": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de esa directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, vivía esa ayuda como un ojo que vigilaba cada uno de sus movimientos, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "frenar_incoherencias_entrevista",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "alguien afirma que en aquel puesto lo hicieron muy bien",
+     "motivo": "cambio de sujeto: \"alguien\" afirma que \"lo hicieron\" otros, y el paso siguiente averigua cuánto \"lo hizo\" esa persona",
+     "propuesta": "Vigila las incoherencias entre lo que se dice y cómo se dice, porque son el mayor indicador de que alguien está mintiendo. Por ejemplo, alguien afirma que en aquel puesto lo hizo muy bien mientras se remueve en la silla, mira hacia abajo y se tapa la boca: eso es una señal de alto."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "disenar_equipo_plan_anual",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reconocer_excelencia_trayectoria_gradual",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "ortografia",
+     "cita": "sacándola del anonimato sin ascenderla",
+     "motivo": "concordancia: \"quien\" genérico retomado en femenino sin que haya una mujer en el caso",
+     "propuesta": "Reconocer a quien hace un trabajo excelente en trayectoria gradual y se siente invisible, sacándolo del anonimato sin ascenderlo"
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "ortografia",
+     "cita": "no vas a ascenderla",
+     "motivo": "concordancia: \"alguien\" retomado con pronombre femenino",
+     "propuesta": "Cuando tienes a alguien que hace un trabajo excelente, está en una trayectoria de crecimiento gradual, se siente invisible, y no vas a ascenderlo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "pega",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "a cargo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_notas_publicar_reparto_esperado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "ortografia",
+     "cita": "a quien quieres retener",
+     "motivo": "concordancia: el antecedente es un grupo (entre el uno y el cinco por ciento de una población), plural",
+     "propuesta": "Cuenta con que normalmente entre el uno y el cinco por ciento de una población hace un trabajo de verdad excepcional, a quienes quieres retener a toda costa. Identificar a esa gente es un ejercicio importante, pero no hace falta crear una nota especial para ella."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "archivar_indicadores_resolver_problemas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "desviaciones malsanas respecto de la norma",
+     "motivo": "calco de \"unhealthy departures\": \"malsano\" es lo dañino para la salud; en español llano son desviaciones preocupantes",
+     "propuesta": "Los indicadores pueden ayudar mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones preocupantes respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "desviaciones malsanas respecto de la norma",
+     "motivo": "calco de \"unhealthy departures\": \"malsano\" es lo dañino para la salud; en español llano son desviaciones preocupantes",
+     "propuesta": "Busca en ese repaso las desviaciones preocupantes respecto de la norma, que es lo que te señala dónde está el problema."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "desviaciones malsanas respecto de la norma",
+     "motivo": "calco de \"unhealthy departures\": \"malsano\" es lo dañino para la salud; en español llano son desviaciones preocupantes",
+     "propuesta": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones preocupantes respecto de la norma ya señaladas."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "elegir_indicador_salida_trabajo_administrativo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "en ese mismo edificio",
+     "motivo": "\"ese mismo edificio\" no tiene antecedente: el nodo no nombra ningún edificio (es el que se limpia)",
+     "propuesta": "Empareja en limpieza los metros cuadrados limpiados con una calificación de la calidad del trabajo, en parte objetiva y en parte subjetiva, hecha por un mando que tenga su despacho en el mismo edificio que se limpia."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "ese mismo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "crear_manuales_jugadas_repetibles",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "regionalismo",
+     "cita": "repostar",
+     "motivo": "\"repostar\" es de España; en América es \"cargar combustible\"",
+     "propuesta": "Cuenta con por qué no se improvisa: la mayor parte del trabajo que hace falta para que algo ocurra hoy es asombrosamente complejo. Piensa en la cantidad de pasos que lleva que un avión despegue: limpiar la cabina del vuelo anterior, cargar combustible, registrar a los pasajeros, cargar el equipaje, hacer las comprobaciones de seguridad. Es casi imposible recordar todos los pasos de cabeza, y ya no digamos improvisarlos en el momento."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "digamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_responsabilidad_contratar_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "escala",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "encargar_meta_especifica_dejar_libre_metodo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "regionalismo",
+     "cita": "cien por cien de apoyo",
+     "motivo": "\"cien por cien\" es la forma de España; en América es \"cien por ciento\"",
+     "propuesta": "Ofrece apoyo sin decidir por el encargado: cien por ciento de apoyo, pero sin bajar a decirle lo que necesita."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "medir_guia_propia_pegatinas_marco",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "regionalismo",
+     "cita": "pegatinas",
+     "motivo": "\"pegatina\" es de España; en América es \"adhesivo\" o \"calcomanía\"",
+     "propuesta": "Medir tu propia guía con el marco y los adhesivos de colores, tomar la línea base y seguir tus mejoras"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "regionalismo",
+     "cita": "pegatinas",
+     "motivo": "\"pegatina\" es de España; en América es \"adhesivo\" o \"calcomanía\"",
+     "propuesta": "La franqueza se mide en el oído de quien escucha, no en la boca de quien habla, así que necesitas que tu equipo te diga dónde cae tu guía. Un marco a la vista con adhesivos de un color para el elogio y otro para la crítica da una lectura rápida y semanal: te recuerda la franqueza en el calor del momento, da al equipo un vocabulario compartido y, si nadie participa, delata falta de confianza. Con esa línea base ves hacia dónde corregir, sabiendo que no te arreglas de una vez y que tienes que gestionarte a diario."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "regionalismo",
+     "cita": "pegatinas",
+     "motivo": "\"pegatina\" es de España; en América es \"adhesivo\" o \"calcomanía\"",
+     "propuesta": "Deja adhesivos al lado, de un color para el elogio y de otro para la crítica."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "regionalismo",
+     "cita": "pegatinas",
+     "motivo": "\"pegatina\" es de España; en América es \"adhesivo\" o \"calcomanía\"",
+     "propuesta": "Pide a la gente que ponga adhesivos en el cuadrante que mejor describa sus interacciones más recientes contigo."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "regionalismo",
+     "cita": "pegatina",
+     "motivo": "\"pegatina\" es de España; en América es \"adhesivo\" o \"calcomanía\"",
+     "propuesta": "Ten en cuenta estos cuatro casos: si alguien siente que fuiste innecesariamente duro, pone un adhesivo de crítica en el cuadrante de la agresión odiosa; si siente que te contuviste, la pone en el de la empatía ruinosa; si siente que repartiste demasiados «buen trabajo» o «qué orgulloso estoy de ti» vacíos solo para que se sintiera mejor, pone un adhesivo de elogio en la empatía ruinosa; y si siente que le dijiste que lo hizo bien y a otro le dijiste que lo hizo mal, pone un adhesivo de elogio en la insinceridad manipuladora."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "titulo_concepto",
+     "texto": "pega",
+     "defecto": true
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "pega",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "pega",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "pega",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "pega",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "pega",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "pega",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "calibrar_normalidad_preguntas_jefe",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "Pídele que te comparta sus impresiones",
+     "motivo": "calco de \"share with you\": \"compartir\" pide \"con\"; \"que comparta contigo\"",
+     "propuesta": "Pídele que comparta contigo sus impresiones sobre cómo cree que fue tal proyecto o tal reunión, y por qué lo cree."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "llevar_inventario_proyectos_discrecionales",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "titulo_concepto",
+     "texto": "prima",
+     "defecto": false
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "prima",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "prima",
+     "defecto": false
+    }
+   ]
+  }
+ ]
+}

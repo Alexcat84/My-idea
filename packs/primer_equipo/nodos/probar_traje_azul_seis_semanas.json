@@ -1,0 +1,138 @@
+{
+  "node_id": "probar_traje_azul_seis_semanas",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Hacer una prueba de seis semanas comparando dos vestuarios completos para medir el efecto del color en las ventas",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Es una prueba de seis semanas para quien vende. Durante las tres primeras, el vendedor va a trabajar con traje marrón, camisa tostada almidonada, corbata marrón y zapatos marrones bien lustrados, todo limpio y bien planchado. Durante las tres siguientes, con traje azul marino, camisa blanca almidonada, corbata con algo de rojo, o un broche o un pañuelo con rojo, y zapatos negros muy lustrados. Según lo que han visto una y otra vez los clientes de una consultoría, las ventas suben en la segunda mitad, porque el traje azul vende más que el marrón, lo lleve quien lo lleve.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_12.md, unidad Cap. 10, titulo textual The Business Development Process. Sale de la PIEZA R3d de la frontera fina publicada en la vuelta 4 (.gerber_v4/frontera_cap12.txt), L63 a L64, 82 palabras. Es el segundo de los tres ejemplos THE INNOVATION que la vuelta 3 leyo de golpe como R3 (L22 a L83, POSTURA y CASO) y que d101 (ACTA G3 3.1) devolvio a leer pieza por pieza. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 y 9.1 delante: el parrafo trae su propio inventario de OBJETOS DE TRABAJO, nombrados uno a uno para cada una de las dos etapas (traje, camisa, corbata o accesorio, zapatos, cuatro prendas por etapa, ocho en total), sin adjetivo de adecuacion en el sitio del criterio: no dice vistete de forma profesional, dice el color y la prenda exactos de cada semana. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 2 pasos, 2 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v4/cita_cap12_L63.txt (D.35). LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: el libro no dice a cuantos vendedores se aplica el test, ni quien mide las ventas de cada mitad del periodo (eso lo desarrolla el nodo cuantificar_impacto_innovacion_6_pasos de la vuelta 3, vecino de este), asi que no invento destinatario ni responsable. EL RESULTADO ATRIBUIDO (blue suits outsell brown suits, sin cifra ni banda, mas la postura de que McDonalds, Federal Express, Disney y Mrs Fields tambien invierten en su apariencia) NO es parte de los pasos: es la pieza R3e de la misma frontera fina (L65 a L68), postura y caso, y no se transcribe aqui porque no es un paso que el lector ejecute.",
+  "pasos_accionables": [
+    "Durante las primeras tres semanas de la prueba, haz que el vendedor vista: un traje marrón, una camisa tostada almidonada, una corbata marrón (para hombres) y zapatos marrones bien lustrados, cuidando que todas las piezas estén limpias y bien planchadas.",
+    "Durante las tres semanas siguientes, haz que el vendedor vista: un traje azul marino, una camisa blanca almidonada, una corbata con rojo (un pin o un pañuelo con rojo para mujeres) y zapatos negros muy lustrados."
+  ],
+  "entregable_esperado": "Una prueba comparativa de seis semanas, con dos conjuntos de vestuario completos y opuestos ya definidos prenda por prenda, lista para comparar las ventas de la primera mitad del periodo contra las de la segunda.",
+  "nodos_previos": [
+    "unificar_color_forma_vestuario_modelo"
+  ],
+  "nodos_siguientes": [
+    "cuantificar_impacto_innovacion_6_pasos"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes vendedores de cara al cliente y quieres poner a prueba si el color de su vestuario tiene un efecto medible en las ventas."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-probar_traje_azul_seis_semanas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Es una prueba de seis semanas para quien vende. Durante las tres primeras, el vendedor va a trabajar con traje marrón, camisa tostada almidonada, corbata marrón y zapatos marrones bien lustrados, todo limpio y bien planchado. Durante las tres siguientes, con traje azul marino, camisa blanca almidonada, corbata con algo de rojo, o un broche o un pañuelo con rojo, y zapatos negros muy lustrados. Según lo que han visto una y otra vez los clientes de una consultoría, las ventas suben en la segunda mitad, porque el traje azul vende más que el marrón, lo lleve quien lo lleve.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_12.md",
+          "lineas": "63-65"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: aislar una variable y convertir una intuición en dato son razones inventadas; l.65 solo da 'as our clients have consistently discovered, blue suits outsell brown suits'. La propuesta del lector lo corrige.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-probar_traje_azul_seis_semanas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Durante las primeras tres semanas del test, haz que el vendedor vista: un traje marron, una camisa tostada almidonada, una corbata marron (para hombres) y zapatos marrones bien lustrados, cuidando que todas las piezas esten limpias y bien planchadas.",
+      "texto_nuevo": "Durante las primeras tres semanas de la prueba, haz que el vendedor vista: un traje marrón, una camisa tostada almidonada, una corbata marrón (para hombres) y zapatos marrones bien lustrados, cuidando que todas las piezas estén limpias y bien planchadas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_traje_azul_seis_semanas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Durante las tres semanas siguientes, haz que el vendedor vista: un traje azul marino, una camisa blanca almidonada, una corbata con rojo (un pin o un panuelo con rojo para mujeres) y zapatos negros muy lustrados.",
+      "texto_nuevo": "Durante las tres semanas siguientes, haz que el vendedor vista: un traje azul marino, una camisa blanca almidonada, una corbata con rojo (un pin o un pañuelo con rojo para mujeres) y zapatos negros muy lustrados.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-probar_traje_azul_seis_semanas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Correr un test de seis semanas comparando dos vestuarios completos para medir el efecto del color en las ventas",
+      "texto_nuevo": "Hacer una prueba de seis semanas comparando dos vestuarios completos para medir el efecto del color en las ventas",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Correr un test"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Correr un test\" calca \"run a test\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-probar_traje_azul_seis_semanas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tienes vendedores de cara al cliente y quieres poner a prueba si el color y la formalidad de su vestuario tienen un efecto medible en las ventas.",
+      "texto_nuevo": "Cuando tienes vendedores de cara al cliente y quieres poner a prueba si el color de su vestuario tiene un efecto medible en las ventas.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "lineas": "fuentes/gerber_emyth/cap_12.md 63-65",
+        "frase": "Because, as our clients have consistently discovered, blue suits outsell brown suits!"
+      },
+      "decision": "auditoria completa M11 (invencion): Los dos vestuarios son igual de formales (traje, camisa almidonada, corbata); la prueba compara colores y el libro concluye que el azul vende más que el marrón. La formalidad no es la variable.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-muestra-final6-probar_traje_azul_seis_semanas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un test comparativo de seis semanas, con dos conjuntos de vestuario completos y opuestos ya definidos prenda por prenda, listo para comparar las ventas de la primera mitad del periodo contra las de la segunda.",
+      "texto_nuevo": "Una prueba comparativa de seis semanas, con dos conjuntos de vestuario completos y opuestos ya definidos prenda por prenda, lista para comparar las ventas de la primera mitad del periodo contra las de la segunda.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Un test comparativo",
+          "listo para comparar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'test' copia el 'a six-week test' del libro (gerber_emyth/cap_12.md:63) en un sentido (ensayo comparativo de ventas) que el español no le da (en la RAE es examen de aptitudes o prueba psicológica o médica); el título y el resumen del nodo ya dicen 'prueba'. Cambio mínimo con la concordancia ('lista').",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Prueba el Efecto del Vestuario"
+}

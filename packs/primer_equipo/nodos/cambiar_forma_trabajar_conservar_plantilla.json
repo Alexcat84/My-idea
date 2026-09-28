@@ -1,0 +1,297 @@
+{
+  "node_id": "cambiar_forma_trabajar_conservar_plantilla",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cambiar cómo trabaja la gente que ya tienes en vez de renovarla",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Cuando un equipo va mal y el plazo es corto, puede que no haya tiempo para encontrar sustitutos. En un caso, con seis meses por delante, el jefe pidió trabajar con lo que había y que le avisaran si hacía falta cambiar a alguien, y al final no se despidió a nadie. Eso importó porque a cada persona le llegó el mensaje de que el problema no era ella, sino el liderazgo. El reto quedó entonces en usar la misma gente y el mismo apoyo, y subir el resultado de forma notable cambiando cómo interactuaban y se comportaban.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_02.md, unidad Cap. 3, titulo textual Change of Course. Sale de la linea 29, que es la PIEZA P1 de la frontera publicada en la vuelta 25, 49 palabras, y de la linea 25, que es de la pieza R3 y trae la instruccion en boca del jefe. FRONTERA DENTRO DEL NODO, declarada porque EXTRACTOR.md 10 la pide: pasos 1 a 3 de L25, pasos 4 y 5 de L29. Las dos lineas son de la misma unidad. POR QUE ES PROCEDIMIENTO Y NO CASO: la instruccion esta escrita en imperativo en el propio libro, en boca del jefe (if you need to change out some people let me know, but I am not interested in a lot of turnover; a better focus would be on working with what you have got), y L29 le pone la razon y el reto que de ahi sale. El inventario es de medios y de objetos de trabajo: el plazo, la gente que ya esta, el canal para la excepcion, el mensaje, y el objeto sobre el que se trabaja. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: cuanta rotacion es demasiada, ni como se comunica el mensaje a la tripulacion. El texto dice que el mensaje llego, no como se mando, y escribir el canal seria un puente de la especie destinatario. DISCUTIBLE MARCADO EN EL REPORTE DE LA VUELTA 25: es el par mas proximo del propio capitulo contra encargar_meta_especifica_dejar_libre_metodo, porque los dos salen del mismo encargo del mismo jefe en la misma conversacion. Los separo porque uno dice QUE se encarga y el otro QUE se hace con la gente que hay, y porque sus condiciones de activacion son distintas: una es la del que encarga y otra la del que recibe el encargo. CORRECCION DE PUERTA EN EL MISMO ACTO (EXTRACTOR.md 16): la primera escritura puso denominaciones.otros_idiomas como lista de cadenas y el esquema pide objetos con idioma y termino. La aduana lo tumbo con CAERIA antes de que este candidato contara como escrito, se corrigio y se volvio a correr. Es la caida numero 1 del lote 5 y la primera de una clave nueva, que es donde D.23 mide que caen cuatro de cada diez. SEGUNDA CORRECCION DE PUERTA EN EL MISMO ACTO: el id era cambiar_forma_trabajar_sin_renovar_plantilla y la aduana lo tumbo por la regla 3 de docs/REGLAS_DE_ID.md, preposicion o articulo prohibido, sin. Es la regla que mas cae de todas, 35 de los 65 del estreno, y me cayo a mi tambien en el primer capitulo con procedimiento del lote 5. Se cambia sin por el verbo conservar, que dice lo mismo sin preposicion. CORRECCION DECLARADA DE LA VUELTA 27, 16 sep 2026, POR LA ADJUDICACION 3.4 DE LA ACTA 25, SIN BORRAR LO QUE SE DICE QUE HABIA: el paso 3 decia 'Pide igualmente el canal abierto para cambiar a alguien si hace falta, que es como el texto lo deja dicho: avisame si necesitas cambiar a alguien.' y hoy dice 'Avisa a tu jefe si necesitas cambiar a alguien'. ERA PUENTE DE LA ESPECIE ACTO, que es la cuarta especie y no esta en la tabla de D.30: el paso invertia quien hace el acto. La linea del libro, reabierta con su sed y no de memoria, sed -n '25p' fuentes/marquet_turn_the_ship/cap_02.md, dice: 'If you need to change out some people, let me know, but I am not interested in a lot of turnover.' El que ejecuta este nodo es el que RECIBE el encargo, y para el el libro contiene avisa cuando lo necesites, no pide que exista el aviso: el jefe concede el canal sin que nadie lo pida. El propio paso viejo se desmentia solo, porque escribia el verbo Pide y a continuacion citaba el libro correctamente. La correccion es de una palabra y el candidato seguia en la bandeja, asi que sale corregido ANTES de entrar al grafo. CORRECCION DECLARADA DE LA VUELTA 1 DEL FRENTE marquet_turn_the_ship, SIN BORRAR NADA DE LO DE ARRIBA, Y EL HALLAZGO NO ES MIO: LO CAZO LA APERTURA CIEGA DEL AUDITOR DE ESTA MISMA VUELTA (docs/loop/APERTURA_CIEGA.md seccion 9.1 punto 2), y mi propia relectura D.30 de esta vuelta no lo vio. El paso 4 dice el mensaje que manda no despedir a nadie, y que no despidiera a nadie NO esta en L29, que es la linea que este resumen declara para ese paso: esta en L27, que dice I was thinking that too. In the end, I fired no one. LA FRONTERA DENTRO DEL NODO QUEDA ENTONCES ASI: pasos 1 a 3 de L25, paso 4 de L27 mas L29, paso 5 de L29. NO ES UN PUENTE y por eso el numerador de PASOS INVENTADOS de cap_02 sigue en 0: la linea existe y es del libro y de la misma unidad. ES UNA FRONTERA INCOMPLETA corrida una linea, la misma especie que la de L51 en el otro candidato de cap_02, y se arregla igual, declarando la linea.",
+  "pasos_accionables": [
+    "Cuenta el plazo que tienes antes de decidir nada sobre la gente. En un submarino con seis meses hasta el despliegue, el argumento fue que con ese plazo no había mucho tiempo para encontrar sustitutos.",
+    "Céntrate en trabajar con lo que tienes, en vez de apostar por mucha rotación.",
+    "Avisa a tu jefe si necesitas cambiar a alguien.",
+    "Cuenta con el mensaje que puede mandar no despedir a nadie, que es la razón de que importe: en un submarino, a cada tripulante le llegó que el que estaba mal no era él, sino el liderazgo.",
+    "Fija entonces tu reto: usar la misma gente y el mismo equipo de apoyo, y subir el resultado cambiando la forma en que interactúan y se comportan."
+  ],
+  "entregable_esperado": "El equipo de siempre con el mensaje de que el problema no era la gente, y el trabajo centrado en cambiar cómo se comporta y cómo interactúa.",
+  "nodos_previos": [
+    "listar_bueno_mejorable_equipo"
+  ],
+  "nodos_siguientes": [
+    "encargar_meta_especifica_dejar_libre_metodo"
+  ],
+  "condiciones_activacion": [
+    "Cuando te haces cargo de un equipo que va mal, tienes plazo corto y te planteas cambiar a la gente."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando un equipo va mal y el plazo es corto, puede que no haya tiempo para encontrar sustitutos. En un caso, con seis meses por delante, el jefe pidió trabajar con lo que había, dejando abierto el aviso si hacía falta cambiar a alguien, y al final no se despidió a nadie. Eso importó porque a cada persona le llegó el mensaje de que el problema no era ella, sino el liderazgo. El reto quedó entonces en usar la misma gente y el mismo apoyo, y subir el resultado de forma notable cambiando cómo interactuaban y se comportaban.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_02.md",
+          "lineas": "25-29"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): L25-29 son un caso (seis meses, nadie despedido, 'my challenge would be'); el texto lo volvía regla y convertía el reto en resultado. La propuesta lo cuenta como caso, mantiene la razón que da L29 (el mensaje de que el problema era el liderazgo) y deja la subida del resultado como reto.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)"
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cambiar como trabaja la gente que ya tienes en vez de renovarla, y decir por que",
+      "texto_nuevo": "Cambiar cómo trabaja la gente que ya tienes en vez de renovarla, y decir por qué",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta el plazo que tienes antes de decidir nada sobre la gente. En el caso del texto eran seis meses hasta el despliegue, y el argumento que se da es que con ese plazo no hay tiempo de encontrar sustitutos.",
+      "texto_nuevo": "Cuenta el plazo que tienes antes de decidir nada sobre la gente. En un submarino con seis meses hasta el despliegue, el argumento fue que con ese plazo no había tiempo de encontrar sustitutos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "En el caso del texto eran",
+          "y el argumento que se da es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Centrate en trabajar con lo que tienes, que es lo que el texto recomienda por encima de mucha rotacion.",
+      "texto_nuevo": "Céntrate en trabajar con lo que tienes, en vez de apostar por mucha rotación.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto recomienda por encima de"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Avisa a tu jefe si necesitas cambiar a alguien, que es el canal que el texto deja abierto sin que nadie lo pida: avisame si necesitas cambiar a alguien.",
+      "texto_nuevo": "Avisa a tu jefe si necesitas cambiar a alguien: es un canal que queda abierto sin que nadie lo pida.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el canal que el texto deja abierto",
+          "avisame si necesitas cambiar a alguien."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el mensaje que manda no despedir a nadie, y que el texto pone como la razon de que aquello importara: a cada persona del equipo le llega que el que estaba mal no era el, sino el liderazgo.",
+      "texto_nuevo": "Cuenta con el mensaje que manda no despedir a nadie, que es la razón de que importe: a cada persona del equipo le llega que el que estaba mal no era él, sino el liderazgo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y que el texto pone como la razon de que aquello importara"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fija entonces tu reto donde el texto lo fija: usar la misma gente y el mismo equipo de apoyo, y subir el resultado cambiando la forma en que interactuan y se comportan.",
+      "texto_nuevo": "Fija entonces tu reto ahí: usar la misma gente y el mismo equipo de apoyo, y subir el resultado cambiando la forma en que interactúan y se comportan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "donde el texto lo fija"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cambiar_forma_trabajar_conservar_plantilla-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El equipo de siempre con el mensaje de que el problema no era la gente, y el trabajo centrado en cambiar como se comporta y como interactua.",
+      "texto_nuevo": "El equipo de siempre con el mensaje de que el problema no era la gente, y el trabajo centrado en cambiar cómo se comporta y cómo interactúa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Avisa a tu jefe si necesitas cambiar a alguien: es un canal que queda abierto sin que nadie lo pida.",
+      "texto_nuevo": "Avisa a tu jefe si necesitas cambiar a alguien.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_02.md 25",
+        "frase": "If you need to change out some people, let me know, but I’m not interested in a lot of turnover."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no habla de un canal abierto sin que nadie lo pida: es el jefe quien ofrece el aviso, sin interés en mucha rotación.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con el mensaje que manda no despedir a nadie, que es la razón de que importe: a cada persona del equipo le llega que el que estaba mal no era él, sino el liderazgo.",
+      "texto_nuevo": "Cuenta con el mensaje que puede mandar no despedir a nadie, que es la razón de que importe: en un submarino, a cada tripulante le llegó que el que estaba mal no era él, sino el liderazgo.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_02.md 29",
+        "frase": "This was important because it sent the message to each crew member that he wasn’t screwed up, the leadership was."
+      },
+      "decision": "auditoria completa M11 (matiz): Lo que pasó en un submarino se afirmaba como efecto general.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta el plazo que tienes antes de decidir nada sobre la gente. En un submarino con seis meses hasta el despliegue, el argumento fue que con ese plazo no había tiempo de encontrar sustitutos.",
+      "texto_nuevo": "Cuenta el plazo que tienes antes de decidir nada sobre la gente. En un submarino con seis meses hasta el despliegue, el argumento fue que con ese plazo no había mucho tiempo para encontrar sustitutos.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "lineas": "fuentes/marquet_turn_the_ship/cap_02.md 25",
+        "frase": "With only six months to deployment you don’t have a lot of time to find replacements."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que no hay mucho tiempo (not a lot of time), no que no haya ninguno.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cambiar_forma_trabajar_conservar_plantilla-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cambiar cómo trabaja la gente que ya tienes en vez de renovarla, y decir por qué",
+      "texto_nuevo": "Cambiar cómo trabaja la gente que ya tienes en vez de renovarla",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Ningún paso manda explicar el porqué: el mensaje llega por no despedir, no por decirlo; el título prometía algo que el nodo no trae."
+      },
+      "decision": "auditoria completa M11 (coherencia): Ningún paso manda explicar el porqué: el mensaje llega por no despedir, no por decirlo; el título prometía algo que el nodo no trae.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-cambiar_forma_trabajar_conservar_plantilla-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando un equipo va mal y el plazo es corto, puede que no haya tiempo para encontrar sustitutos. En un caso, con seis meses por delante, el jefe pidió trabajar con lo que había, dejando abierto el aviso si hacía falta cambiar a alguien, y al final no se despidió a nadie. Eso importó porque a cada persona le llegó el mensaje de que el problema no era ella, sino el liderazgo. El reto quedó entonces en usar la misma gente y el mismo apoyo, y subir el resultado de forma notable cambiando cómo interactuaban y se comportaban.",
+      "texto_nuevo": "Cuando un equipo va mal y el plazo es corto, puede que no haya tiempo para encontrar sustitutos. En un caso, con seis meses por delante, el jefe pidió trabajar con lo que había y que le avisaran si hacía falta cambiar a alguien, y al final no se despidió a nadie. Eso importó porque a cada persona le llegó el mensaje de que el problema no era ella, sino el liderazgo. El reto quedó entonces en usar la misma gente y el mismo apoyo, y subir el resultado de forma notable cambiando cómo interactuaban y se comportaban.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "'dejando abierto el aviso si' no tiene sentido; el jefe pidió que le avisaran si hacía falta cambiar a alguien ('If you need to change out some people, let me know')."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'dejando abierto el aviso si' no tiene sentido; el jefe pidió que le avisaran si hacía falta cambiar a alguien ('If you need to change out some people, let me know').",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-cambiar_forma_trabajar_conservar_plantilla-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Fija entonces tu reto ahí: usar la misma gente y el mismo equipo de apoyo, y subir el resultado cambiando la forma en que interactúan y se comportan.",
+      "texto_nuevo": "Fija entonces tu reto: usar la misma gente y el mismo equipo de apoyo, y subir el resultado cambiando la forma en que interactúan y se comportan.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "'ahí' no apunta a nada del paso; sobra."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'ahí' no apunta a nada del paso; sobra.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cambia el Trabajo, no la Gente"
+}

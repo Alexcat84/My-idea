@@ -1,0 +1,369 @@
+{
+  "node_id": "compartir_opinion_conductual_regularidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Compartir opinión sobre la conducta con cuidado y con regularidad",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La opinión sobre una tarea mira un hecho; la opinión sobre la conducta mira el patrón que aparece al juntar muchos hechos de la misma persona. Por eso da una personalización y una profundidad que la otra no tiene: puede ayudar a entender cómo los intereses, la personalidad y los hábitos de alguien afectan a su impacto, y cómo le ven los demás, que puede ser distinto de cómo se ve. Pero como es una afirmación sobre cómo percibes a esa persona, pide palabras pensadas y ejemplos concretos que expliquen por qué, y lo mejor es darla en persona, para que pueda preguntar y responder.",
+  "notas_extraccion": "Es la tercera de las cuatro formas de dar opinion, y la que el libro define por contraste con la anterior: donde la especifica de tarea mira un hecho, esta mira el patron que emerge de muchos hechos. El inventario propio del libro esta en dos sitios: las tres preguntas de ejemplo con las que se buscan los temas, escritas una a una, y las tres condiciones de entrega que le pone, palabras pensadas, ejemplos concretos que expliquen el porque, y conversacion en persona. Esas tres condiciones no son adorno: son lo que separa esta forma de un juicio sobre la persona, y el libro las justifica diciendo que aqui estas afirmando como percibes a alguien. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto es con regularidad, ni cuantos ejemplos hacen falta para que un tema sea un tema.",
+  "pasos_accionables": [
+    "Aleja el foco y mira juntos muchos ejemplos de opinión específica de tarea sobre una misma persona, y pregúntate qué temas emergen: si toma decisiones rápido o despacio, si es un mago del proceso o un pensador poco convencional, si gravita hacia soluciones pragmáticas o hacia soluciones idealistas.",
+    "Usa esa pregunta sobre los temas para reflexionar sobre las fortalezas únicas o las áreas de desarrollo de la persona a tu cargo tal como se muestran en sus patrones de conducta.",
+    "Cuenta con para qué sirve: relacionando entre sí muchos ejemplos puedes ayudar a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan.",
+    "Piensa bien las palabras, porque al dar opinión sobre la conducta estás haciendo una afirmación sobre cómo percibes a esa persona.",
+    "Apóyala con ejemplos concretos que expliquen por qué te sientes así.",
+    "Y hazlo en persona, que es como mejor se discute, para que quien la recibe pueda preguntar y tener contigo un ida y vuelta.",
+    "Cuenta con que puede costar hablar de esto porque es muy personal, hasta el punto de que hay quien lo compara con sesiones de terapia, y con que en su mejor versión ayuda a la gente a entender la realidad de cómo la ven los demás, que puede ser distinta de cómo se ve ella misma.",
+    "Usa como modelo estos dos ejemplos. Para la crítica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo; por ejemplo, cuando una compañera dejó un comentario en tu código respondiste con un «confía en mí», lo que desatendió el fondo de su comentario y te hizo parecer menos digno de confianza.",
+    "Y para el elogio: tus habilidades para captar talento son de primera, los candidatos dicen a menudo que salen de una conversación contigo más inspirados que cuando entraron, y además tienes buen ojo para sugerir a las personas adecuadas para los puestos adecuados; por ejemplo, identificaste a alguien para un proyecto hace un año y ahora está prosperando."
+  ],
+  "entregable_esperado": "Dicho a la persona a tu cargo, en persona y con ejemplos concretos que expliquen por qué lo ves así, cuáles son sus fortalezas únicas o sus áreas de desarrollo según sus patrones de conducta.",
+  "nodos_previos": [
+    "dar_opinion_especifica_tarea"
+  ],
+  "nodos_siguientes": [
+    "recoger_opinion_360_grados",
+    "comprobar_opinion_produce_mejora"
+  ],
+  "condiciones_activacion": [
+    "Cuando llevas acumulados muchos ejemplos de opinión específica de tarea sobre la misma persona y quieres alejar el foco para ver qué patrones hay detrás."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La opinión sobre una tarea mira un hecho; la opinión sobre la conducta mira el patrón que aparece al juntar muchos hechos de la misma persona. Por eso da una personalización y una profundidad que la otra no tiene: ayuda a entender cómo los intereses, la personalidad y los hábitos de alguien afectan a su impacto, y cómo le ven los demás, que puede ser distinto de cómo se ve. Pero como es una afirmación sobre cómo percibes a esa persona, pide palabras pensadas y ejemplos concretos que expliquen por qué, y lo mejor es darla en persona, para que pueda preguntar y responder.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_05.md",
+          "lineas": "75-89"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: 'solo funciona con' y 'se queda en un juicio' inventan condición y efecto; l.83 dice 'need to be' y 'It's best discussed in person'. La propuesta del lector es fiel pero dice 'hablarla en persona'; se ajusta a 'darla en persona'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compartir opinion sobre la conducta con cuidado y con regularidad",
+      "texto_nuevo": "Compartir opinión sobre la conducta con cuidado y con regularidad",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aleja el foco y mira juntos muchos ejemplos de opinion especifica de tarea sobre una misma persona, y preguntate que temas emergen: toma decisiones rapido o despacio, es un mago del proceso o un pensador poco convencional, gravita hacia soluciones pragmaticas o hacia soluciones idealistas.",
+      "texto_nuevo": "Aleja el foco y mira juntos muchos ejemplos de opinión específica de tarea sobre una misma persona, y pregúntate qué temas emergen: si toma decisiones rápido o despacio, si es un mago del proceso o un pensador poco convencional, si gravita hacia soluciones pragmáticas o hacia soluciones idealistas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa esa pregunta sobre los temas para reflexionar sobre las fortalezas unicas o las areas de desarrollo de tu persona a cargo tal como se muestran en sus patrones de conducta.",
+      "texto_nuevo": "Usa esa pregunta sobre los temas para reflexionar sobre las fortalezas únicas o las áreas de desarrollo de tu persona a cargo tal como se muestran en sus patrones de conducta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con para que sirve: conectando los puntos entre multiples ejemplos ayudas a la gente a entender como sus intereses, su personalidad y sus habitos afectan a su capacidad de tener impacto, que es la personalizacion y la profundidad que a la opinion especifica de tarea le faltan.",
+      "texto_nuevo": "Cuenta con para qué sirve: conectando los puntos entre múltiples ejemplos ayudas a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Piensa bien las palabras, porque al dar opinion sobre la conducta estas haciendo una afirmacion sobre como percibes a esa persona.",
+      "texto_nuevo": "Piensa bien las palabras, porque al dar opinión sobre la conducta estás haciendo una afirmación sobre cómo percibes a esa persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Apoyala con ejemplos concretos que expliquen por que te sientes asi.",
+      "texto_nuevo": "Apóyala con ejemplos concretos que expliquen por qué te sientes así.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que puede costar hablar de esto porque es muy personal, hasta el punto de que un amigo de la autora lo compara con sesiones de terapia, y con que en su mejor version ayuda a la gente a entender la realidad de como la ven los demas, que puede ser distinta de como se ve ella misma.",
+      "texto_nuevo": "Cuenta con que puede costar hablar de esto porque es muy personal, hasta el punto de que hay quien lo compara con sesiones de terapia, y con que en su mejor versión ayuda a la gente a entender la realidad de cómo la ven los demás, que puede ser distinta de cómo se ve ella misma.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "un amigo de la autora lo compara"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa como modelo los dos ejemplos que el libro escribe. Para la critica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo, por ejemplo cuando Sally dejo un comentario en tu codigo respondiste con un confia en mi, lo que desatendio el fondo de su comentario y te hizo parecer menos digno de confianza.",
+      "texto_nuevo": "Usa como modelo estos dos ejemplos. Para la crítica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo; por ejemplo, cuando una compañera dejó un comentario en tu código respondiste con un confía en mí, lo que desatendió el fondo de su comentario y te hizo parecer menos digno de confianza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los dos ejemplos que el libro escribe",
+          "Sally"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Y para el elogio: tus habilidades para captar talento son de primera, los candidatos dicen a menudo que salen de una conversacion contigo mas inspirados que cuando entraron, y ademas tienes buen ojo para sugerir a las personas adecuadas para los puestos adecuados, por ejemplo identificaste a John para el proyecto tal hace un anio y ahora esta prosperando.",
+      "texto_nuevo": "Y para el elogio: tus habilidades para captar talento son de primera, los candidatos dicen a menudo que salen de una conversación contigo más inspirados que cuando entraron, y además tienes buen ojo para sugerir a las personas adecuadas para los puestos adecuados; por ejemplo, identificaste a alguien para un proyecto hace un año y ahora está prosperando.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "John"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dicho a tu persona a cargo, en persona y con ejemplos concretos que expliquen por que lo ves asi, cuales son sus fortalezas unicas o sus areas de desarrollo segun sus patrones de conducta.",
+      "texto_nuevo": "Dicho a tu persona a cargo, en persona y con ejemplos concretos que expliquen por qué lo ves así, cuáles son sus fortalezas únicas o sus áreas de desarrollo según sus patrones de conducta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-compartir_opinion_conductual_regularidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando llevas acumulados muchos ejemplos de opinion especifica de tarea sobre la misma persona y quieres alejar el foco para ver que patrones hay detras.",
+      "texto_nuevo": "Cuando llevas acumulados muchos ejemplos de opinión específica de tarea sobre la misma persona y quieres alejar el foco para ver qué patrones hay detrás.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-compartir_opinion_conductual_regularidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con para qué sirve: conectando los puntos entre múltiples ejemplos ayudas a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan.",
+      "texto_nuevo": "Cuenta con para qué sirve: conectando los puntos entre múltiples ejemplos puedes ayudar a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_05.md 81",
+        "frase": "By connecting the dots across multiple examples, you can help people understand how their unique interests, personalities, and habits affect their ability to have impact."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'you can help'.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-compartir_opinion_conductual_regularidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con para qué sirve: conectando los puntos entre múltiples ejemplos puedes ayudar a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan.",
+      "texto_nuevo": "Cuenta con para qué sirve: relacionando entre sí muchos ejemplos puedes ayudar a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "conectando los puntos entre múltiples ejemplos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"conectando los puntos\" calca \"connecting the dots\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-compartir_opinion_conductual_regularidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La opinión sobre una tarea mira un hecho; la opinión sobre la conducta mira el patrón que aparece al juntar muchos hechos de la misma persona. Por eso da una personalización y una profundidad que la otra no tiene: ayuda a entender cómo los intereses, la personalidad y los hábitos de alguien afectan a su impacto, y cómo le ven los demás, que puede ser distinto de cómo se ve. Pero como es una afirmación sobre cómo percibes a esa persona, pide palabras pensadas y ejemplos concretos que expliquen por qué, y lo mejor es darla en persona, para que pueda preguntar y responder.",
+      "texto_nuevo": "La opinión sobre una tarea mira un hecho; la opinión sobre la conducta mira el patrón que aparece al juntar muchos hechos de la misma persona. Por eso da una personalización y una profundidad que la otra no tiene: puede ayudar a entender cómo los intereses, la personalidad y los hábitos de alguien afectan a su impacto, y cómo le ven los demás, que puede ser distinto de cómo se ve. Pero como es una afirmación sobre cómo percibes a esa persona, pide palabras pensadas y ejemplos concretos que expliquen por qué, y lo mejor es darla en persona, para que pueda preguntar y responder.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_05.md 81",
+        "frase": "By connecting the dots across multiple examples, you can help people understand how their unique interests, personalities, and habits affect their ability to have impact."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que juntando ejemplos puedes ayudar a entender; el resumen lo daba como efecto seguro. Se devuelve el puede.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-compartir_opinion_conductual_regularidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Usa esa pregunta sobre los temas para reflexionar sobre las fortalezas únicas o las áreas de desarrollo de tu persona a cargo tal como se muestran en sus patrones de conducta.",
+      "texto_nuevo": "Usa esa pregunta sobre los temas para reflexionar sobre las fortalezas únicas o las áreas de desarrollo de la persona a tu cargo tal como se muestran en sus patrones de conducta.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo' (decisión del orquestador para todo el pack)."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo' (decisión del orquestador para todo el pack).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-compartir_opinion_conductual_regularidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Dicho a tu persona a cargo, en persona y con ejemplos concretos que expliquen por qué lo ves así, cuáles son sus fortalezas únicas o sus áreas de desarrollo según sus patrones de conducta.",
+      "texto_nuevo": "Dicho a la persona a tu cargo, en persona y con ejemplos concretos que expliquen por qué lo ves así, cuáles son sus fortalezas únicas o sus áreas de desarrollo según sus patrones de conducta.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final4-compartir_opinion_conductual_regularidad-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa como modelo estos dos ejemplos. Para la crítica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo; por ejemplo, cuando una compañera dejó un comentario en tu código respondiste con un confía en mí, lo que desatendió el fondo de su comentario y te hizo parecer menos digno de confianza.",
+      "texto_nuevo": "Usa como modelo estos dos ejemplos. Para la crítica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo; por ejemplo, cuando una compañera dejó un comentario en tu código respondiste con un «confía en mí», lo que desatendió el fondo de su comentario y te hizo parecer menos digno de confianza.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "En el libro es cita textual entre comillas (zhuo cap_05, 87: \"you replied with “just trust me.”\"); en español una cita textual, y más sustantivada con \"un\", va entre comillas. Sin ellas \"confía en mí\" se lee como parte de la frase. Se añaden comillas angulares, sin otro cambio."
+      },
+      "decision": "auditoria completa M11 (ortografia): En el libro es cita textual entre comillas (zhuo cap_05, 87: \"you replied with “just trust me.”\"); en español una cita textual, y más sustantivada con \"un\", va entre comillas. Sin ellas \"confía en mí\" se lee como parte de la frase. Se añaden comillas angulares, sin otro cambio.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Da Opinión sobre la Conducta"
+}

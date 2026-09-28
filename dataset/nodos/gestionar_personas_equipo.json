@@ -1,0 +1,219 @@
+{
+  "node_id": "gestionar_personas_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Gestionar bien a las personas de tu equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Las personas son el quién del trabajo de un directivo, y el resultado del equipo depende de que estén preparadas para tener éxito, tengan las habilidades adecuadas y estén motivadas. Sin las personas adecuadas o sin un entorno donde puedan prosperar, los problemas llegan: basta con que alguien mida mal, que otro no atienda bien a los clientes o que tú planifiques mal. Por eso gestionar bien a las personas pide cuatro frentes a la vez: relaciones de confianza, conocer fuerzas y debilidades, incluidas las tuyas, decidir bien quién hace qué y entrenar a cada uno para que dé lo mejor de sí.",
+  "notas_extraccion": "Es el desarrollo del segundo de los tres cubos del capitulo, las personas, que el libro llama el quien. El cubo entra con tres preguntas de diagnostico nombradas por el libro y se resuelve con cuatro frentes que el libro enumera en una sola frase encabezada por para gestionar bien a las personas debes. El ultimo paso trae el ejemplo del puesto de limonada con el que el capitulo entero razona, y lo trae con los tres fallos que el libro nombra, uno de un empleado, otro de otro, y el tercero del propio directivo: el libro se incluye a si mismo en la lista de lo que puede fallar, y por eso el tercero esta escrito. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se desarrolla una relacion de confianza, con que instrumento se miden las fuerzas y las debilidades, ni cuando una decision sobre quien hace que es buena: eso lo desarrollan otros capitulos del libro que esta vuelta no abre.",
+  "pasos_accionables": [
+    "Pregunta primero si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo.",
+    "Desarrolla relaciones de confianza con ellos.",
+    "Entiende las fuerzas y las debilidades de cada uno, y también las tuyas.",
+    "Toma buenas decisiones sobre quién debe hacer qué, y eso incluye contratar y despedir cuando haga falta.",
+    "Entrena a cada persona para que dé lo mejor de sí.",
+    "Y cuenta con que si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas: basta con que uno no mida bien las cantidades de lo que prepara, con que otro no se moleste en saludar con educación a los clientes, o con que tú planifiques mal."
+  ],
+  "entregable_esperado": "Las personas adecuadas para el trabajo y un entorno donde puedan prosperar, con los cuatro frentes atendidos: relaciones de confianza, fuerzas y debilidades conocidas, decisiones tomadas sobre quién hace qué, y cada persona entrenada para dar lo mejor de sí.",
+  "nodos_previos": [
+    "revisar_proposito_personas_proceso"
+  ],
+  "nodos_siguientes": [
+    "ganar_confianza_personas_cargo",
+    "ayudar_personas_jugar_fortalezas",
+    "diagnosticar_falta_motivacion_habilidad",
+    "comprobar_confianza_persona_cargo",
+    "conocer_fuerzas_valores_sesgos_propios"
+  ],
+  "condiciones_activacion": [
+    "Cuando revisas cómo están las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Las personas son el quién del trabajo de un directivo, y el resultado del equipo depende de que estén preparadas para tener éxito, tengan las habilidades adecuadas y estén motivadas. Sin las personas adecuadas o sin un entorno donde puedan prosperar, los problemas llegan: basta con que alguien mida mal, que otro no atienda bien a los clientes o que tú planifiques mal. Por eso gestionar bien a las personas pide cuatro frentes a la vez: relaciones de confianza, conocer fuerzas y debilidades, incluidas las tuyas, decidir bien quién hace qué y entrenar a cada uno para que dé lo mejor de sí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_02.md",
+          "lineas": "135-137"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)"
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta primero si los miembros de tu equipo estan preparados para tener exito, si tienen las habilidades adecuadas y si estan motivados para hacer un gran trabajo.",
+      "texto_nuevo": "Pregunta primero si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entiende las fuerzas y las debilidades de cada uno, y tambien las tuyas.",
+      "texto_nuevo": "Entiende las fuerzas y las debilidades de cada uno, y también las tuyas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Toma buenas decisiones sobre quien debe hacer que, y eso incluye contratar y despedir cuando haga falta.",
+      "texto_nuevo": "Toma buenas decisiones sobre quién debe hacer qué, y eso incluye contratar y despedir cuando haga falta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entrena a cada persona para que de lo mejor de si.",
+      "texto_nuevo": "Entrena a cada persona para que dé lo mejor de sí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y cuenta con que si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas: basta con que uno no mida bien los ingredientes de la formula, con que otro no se moleste en saludar con educacion a los clientes, o con que tu planifiques mal.",
+      "texto_nuevo": "Y cuenta con que si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas: basta con que uno no mida bien los ingredientes de la fórmula, con que otro no se moleste en saludar con educación a los clientes, o con que tú planifiques mal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las personas adecuadas para el trabajo y un entorno donde puedan prosperar, con los cuatro frentes atendidos: relaciones de confianza, fuerzas y debilidades conocidas, decisiones tomadas sobre quien hace que, y cada persona entrenada para dar lo mejor de si.",
+      "texto_nuevo": "Las personas adecuadas para el trabajo y un entorno donde puedan prosperar, con los cuatro frentes atendidos: relaciones de confianza, fuerzas y debilidades conocidas, decisiones tomadas sobre quién hace qué, y cada persona entrenada para dar lo mejor de sí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-gestionar_personas_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando revisas el cubo de las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no estan preparados para tener exito, que no tienen las habilidades adecuadas o que no estan motivados para hacer un gran trabajo.",
+      "texto_nuevo": "Cuando revisas el apartado de las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el cubo de las personas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-gestionar_personas_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Y cuenta con que si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas: basta con que uno no mida bien los ingredientes de la fórmula, con que otro no se moleste en saludar con educación a los clientes, o con que tú planifiques mal.",
+      "texto_nuevo": "Y cuenta con que si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas: basta con que uno no mida bien las cantidades de lo que prepara, con que otro no se moleste en saludar con educación a los clientes, o con que tú planifiques mal.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"La fórmula\" remite a la fórmula secreta del puesto de limonada del libro, que el nodo no cuenta."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La fórmula\" remite a la fórmula secreta del puesto de limonada del libro, que el nodo no cuenta.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final5-gestionar_personas_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando revisas el apartado de las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo.",
+      "texto_nuevo": "Cuando revisas cómo están las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "«el apartado» remite a los tres apartados del libro (\"three buckets: purpose, people, and process\", zhuo cap_02 l.125) que el nodo no nombra en ningún campo; se cambia solo ese referente. Las tres preguntas sí tienen antecedente (paso 0, l.135)."
+      },
+      "decision": "auditoria completa M11 (coherencia): «el apartado» remite a los tres apartados del libro (\"three buckets: purpose, people, and process\", zhuo cap_02 l.125) que el nodo no nombra en ningún campo; se cambia solo ese referente. Las tres preguntas sí tienen antecedente (paso 0, l.135).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Gestiona Bien a tu Gente",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

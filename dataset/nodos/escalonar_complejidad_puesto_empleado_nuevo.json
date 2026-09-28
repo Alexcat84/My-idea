@@ -1,0 +1,339 @@
+{
+  "node_id": "escalonar_complejidad_puesto_empleado_nuevo",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Escalonar la complejidad del puesto de un empleado nuevo, partiendo de un puesto poco complejo, incierto y ambiguo y subiéndola a medida que gana experiencia compartida con la organización",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Quien acaba de llegar se mueve sobre todo por interés propio, y por eso conviene darle un puesto claro, estructurado y poco complejo, incierto y ambiguo. Si le va bien, se siente en casa, se preocupa menos por sí mismo y más por su grupo; entonces ya puede con un puesto más complejo, incierto y ambiguo. La experiencia compartida con compañeros, jefes y subordinados le enseña los valores, objetivos y métodos de la organización, y eso lo prepara para jefes múltiples y decisiones entre pares. Por eso las empresas con culturas fuertes suelen preferir la promoción interna.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_11.md, unidad interna Cap. 10, titulo textual Modes of Control. Sale de la PIEZA P26 de la frontera de esta vuelta (.v57ext/frontera.py, .v57ext/frontera.txt), tramo L63 a L63, 210 palabras, un solo renglon. POR QUE ES PROCEDIMIENTO, y por que no es solo un caso: el parrafo abre con Let's apply our model to the work of a new employee, que anuncia una aplicacion GENERALIZADA del cuadro de elegir_modo_control_motivacion_factor_cua (el nodo anterior de esta misma tanda) y no el relato de una persona real y nombrada: no hay nombre propio, no hay empresa nombrada, y el sujeto es el pronombre generico he a lo largo de todo el tramo. El libro mismo generaliza al cierre (This is why promotion from within tends to be the approach favored by corporations with strong corporate cultures. Bring young people in...), en imperativo dirigido al lector y no en pasado narrativo. Por eso este tramo no cae en el mismo cesto que P3 a P5, P18, P29 a P34 de este mismo capitulo, que la frontera etiqueta CASO porque narran un hecho concreto con dato del caso. DE DONDE SALE CADA PASO, uno a uno, todos de L63: paso 1 (What is his motivation? It is very much based on self-interest); paso 2 (So you should give him a clearly structured job with a low CUA factor); paso 3 (If he does well, he will begin to feel more at home, worry less about himself, and start to care more about his team); paso 4 (The employee can then be promoted into a more complex, uncertain, ambiguous job. (These tend to pay more.)); paso 5 (As time passes, he will continue to gain an increasing amount of shared experience with other members of the organization and will be ready to tackle more and more complex, ambiguous, and uncertain tasks); paso 6 (This is why promotion from within tends to be the approach favored by corporations with strong corporate cultures); paso 7 (Bring young people in at relatively low-level, well-defined jobs with low CUA factors); paso 8 (and over time they will share experiences with their peers, supervisors, and subordinates and will learn the values, objectives, and methods of the organization); paso 9 (They will gradually accept, even flourish in, the complex world of multiple bosses and peer decision-making). NOTA DE TRANSCRIPCION: el original imprime andmethods sin espacio entre and y methods en la frase and will learn the values, objectives, andmethods of the organization; lo cito como and methods porque es una errata tipografica evidente del propio fichero fuente y el paso 8 lo escribe con el espacio que el sentido exige, sin que eso cambie una sola palabra del contenido. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: no escribo la metafora del barco (He learns that if he is on a boat and wants to get ahead, it is better for him to help row than to run to the bow), porque es una ilustracion figurada de que el empleado empieza a cuidar del equipo y no una instruccion ejecutable por el mando (no se puede literalmente subir a nadie a un barco); el paso 3 recoge el mismo contenido (empieza a cuidar mas de su equipo) sin la imagen. No escribo el caso del directivo senior contratado de fuera, que es la PIEZA P27 inmediatamente siguiente (L65) y que la frontera adjudica CERO nodos porque ahi el libro no da procedimiento, solo cruza los dedos (All we can do is cross our fingers and hope she quickly forgets self-interest); menciono ese contraste aqui solo como advertencia y no como paso. ARISTA DECLARADA POR LECTURA, para cablearla el dia de la insercion (D.39 mide la puerta cerrada para grove_high_output en esta vuelta): D.29 desde elegir_modo_control_motivacion_factor_cua, el candidato anterior de esta misma tanda: aquel da el criterio general (motivacion contra factor CUA) y este es su aplicacion a un caso de uso concreto, la incorporacion de personal nuevo; comparten la grafia factor CUA a proposito (regla de id 4). DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO, y es el mas serio de los que traigo hoy: el parrafo se anuncia como aplicacion de un modelo (Let's apply our model to the work of a new employee) y un lector estricto de manual 3.5 puede leer esto como un CASO HIPOTETICO del propio autor y no como doctrina nueva, en cuyo caso el contenido entero vive dentro del resumen de elegir_modo_control_motivacion_factor_cua y no en un nodo propio. Lo sostengo como nodo separado porque su condicion de activacion (incorporar personal nuevo y planear su trayectoria de puesto) es distinta de la de aquel (elegir el modo de control de una conducta ya en curso), y porque el texto generaliza en imperativo (Bring young people in) y no narra un hecho pasado de una persona nombrada, que es la marca que el propio banco usa para distinguir CASO de doctrina generalizada. Si cae, cae DENTRO de mi marcado, y su arreglo es fundir sus nueve pasos dentro del resumen del nodo anterior sin escribir un id nuevo.",
+  "pasos_accionables": [
+    "Cuando incorpores a un empleado nuevo, cuenta con que su motivación será sobre todo de interés propio.",
+    "Dale un puesto claramente estructurado, poco complejo, incierto y ambiguo.",
+    "Cuenta con que si le va bien, empezará a sentirse más a gusto, a preocuparse menos por sí mismo y a cuidar más de su equipo.",
+    "Promuévelo después a un puesto más complejo, incierto y ambiguo, que además suele pagar más.",
+    "Cuenta con que, a medida que pase el tiempo, irá ganando una cantidad creciente de experiencia compartida con el resto de la organización y estará listo para tareas cada vez más complejas, ambiguas e inciertas.",
+    "Reconoce que esta es la razón por la que la promoción interna suele ser el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+    "Trae gente joven a puestos de nivel relativamente bajo y bien definidos, poco complejos, inciertos y ambiguos.",
+    "Cuenta con que, con el tiempo, compartirán experiencias con sus compañeros, jefes y subordinados y aprenderán los valores, los objetivos y los métodos de la organización.",
+    "Cuenta con que irán aceptando el mundo complejo de múltiples jefes y de las decisiones entre pares, e incluso llegarán a prosperar en él."
+  ],
+  "entregable_esperado": "Una trayectoria de puesto para el empleado nuevo: poca complejidad, incertidumbre y ambigüedad al entrar, subida gradual de complejidad conforme gana experiencia compartida con sus compañeros, jefes y subordinados, y no el mismo nivel de complejidad desde el primer día.",
+  "nodos_previos": [
+    "elegir_modo_control_motivacion_factor_cua",
+    "disenar_incorporacion_cien_dias"
+  ],
+  "nodos_siguientes": [
+    "elegir_estilo_direccion_madurez_relevante_tarea"
+  ],
+  "condiciones_activacion": [
+    "Cuando incorporas a un empleado nuevo y tienes que decidir hasta qué punto su primer puesto debe ser estructurado, o complejo, incierto y ambiguo, y cómo irá cambiando eso con el tiempo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Quien acaba de llegar se mueve sobre todo por interés propio, y por eso conviene darle un puesto claro, estructurado y poco complejo, incierto y ambiguo. Si le va bien, se siente en casa, se preocupa menos por sí mismo y más por su grupo; entonces ya puede con un puesto más complejo, incierto y ambiguo. La experiencia compartida con compañeros, jefes y subordinados le enseña los valores, objetivos y métodos de la organización, y eso lo prepara para jefes múltiples y decisiones entre pares. Por eso las empresas con culturas fuertes suelen preferir la promoción interna.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_11.md",
+          "lineas": "63-63"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 'promotion from within tends to be the approach favored' lleva un 'tends to' que el texto quita. La propuesta del lector lo devuelve con 'suelen preferir', pero conserva 'cuidar a su equipo', baranda de la casa; se cambia por 'más por su grupo'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)"
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escalonar la complejidad del puesto de un empleado nuevo, partiendo de un factor CUA bajo y subiendolo a medida que gana experiencia compartida con la organizacion",
+      "texto_nuevo": "Escalonar la complejidad del puesto de un empleado nuevo, partiendo de un puesto poco complejo, incierto y ambiguo y subiéndola a medida que gana experiencia compartida con la organización",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "partiendo de un factor CUA bajo y subiendolo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando incorpores a un empleado nuevo, cuenta con que su motivacion sera sobre todo de interes propio.",
+      "texto_nuevo": "Cuando incorpores a un empleado nuevo, cuenta con que su motivación será sobre todo de interés propio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dale un puesto claramente estructurado, con un factor CUA bajo.",
+      "texto_nuevo": "Dale un puesto claramente estructurado, poco complejo, incierto y ambiguo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con un factor CUA bajo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que si le va bien, empezara a sentirse mas a gusto, a preocuparse menos por si mismo y a cuidar mas de su equipo.",
+      "texto_nuevo": "Cuenta con que si le va bien, empezará a sentirse más a gusto, a preocuparse menos por sí mismo y a cuidar más de su equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Promuevelo despues a un puesto mas complejo, incierto y ambiguo, que ademas suele pagar mas.",
+      "texto_nuevo": "Promuévelo después a un puesto más complejo, incierto y ambiguo, que además suele pagar más.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que, a medida que pase el tiempo, ira ganando una cantidad creciente de experiencia compartida con el resto de la organizacion y estara listo para tareas cada vez mas complejas, ambiguas e inciertas.",
+      "texto_nuevo": "Cuenta con que, a medida que pase el tiempo, irá ganando una cantidad creciente de experiencia compartida con el resto de la organización y estará listo para tareas cada vez más complejas, ambiguas e inciertas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que esta es la razon por la que la promocion interna es el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+      "texto_nuevo": "Reconoce que esta es la razón por la que la promoción interna es el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trae gente joven a puestos de nivel relativamente bajo y bien definidos, con factor CUA bajo.",
+      "texto_nuevo": "Trae gente joven a puestos de nivel relativamente bajo y bien definidos, poco complejos, inciertos y ambiguos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con factor CUA bajo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que, con el tiempo, compartiran experiencias con sus companeros, jefes y subordinados y aprenderan los valores, los objetivos y los metodos de la organizacion.",
+      "texto_nuevo": "Cuenta con que, con el tiempo, compartirán experiencias con sus compañeros, jefes y subordinados y aprenderán los valores, los objetivos y los métodos de la organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que iran aceptando, incluso disfrutando, el mundo complejo de multiples jefes y de las decisiones entre pares.",
+      "texto_nuevo": "Cuenta con que irán aceptando, incluso disfrutando, el mundo complejo de múltiples jefes y de las decisiones entre pares.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una trayectoria de puesto para el empleado nuevo: bajo factor CUA al entrar, subida gradual de complejidad conforme gana experiencia compartida con sus companeros, jefes y subordinados, y no el mismo nivel de complejidad desde el primer dia.",
+      "texto_nuevo": "Una trayectoria de puesto para el empleado nuevo: poca complejidad, incertidumbre y ambigüedad al entrar, subida gradual de complejidad conforme gana experiencia compartida con sus compañeros, jefes y subordinados, y no el mismo nivel de complejidad desde el primer día.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "bajo factor CUA al entrar"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-escalonar_complejidad_puesto_empleado_nuevo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando incorporas a un empleado nuevo y tienes que decidir que tan estructurado o que tan complejo, incierto y ambiguo debe ser su primer puesto, y como ira cambiando eso con el tiempo.",
+      "texto_nuevo": "Cuando incorporas a un empleado nuevo y tienes que decidir qué tan estructurado o qué tan complejo, incierto y ambiguo debe ser su primer puesto, y cómo irá cambiando eso con el tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconoce que esta es la razón por la que la promoción interna es el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+      "texto_nuevo": "Reconoce que esta es la razón por la que la promoción interna suele ser el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_11.md 63",
+        "frase": "This is why promotion from within tends to be the approach favored by corporations with strong corporate cultures."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la promoción interna tiende a ser el enfoque favorecido; el paso lo afirmaba sin matiz.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que irán aceptando, incluso disfrutando, el mundo complejo de múltiples jefes y de las decisiones entre pares.",
+      "texto_nuevo": "Cuenta con que irán aceptando el mundo complejo de múltiples jefes y de las decisiones entre pares, e incluso llegarán a prosperar en él.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_11.md 63",
+        "frase": "They will gradually accept, even flourish in, the complex world of multiple bosses and peer decision-making."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro dice que llegan a prosperar en ese mundo ('flourish in'), no a disfrutarlo.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase4-escalonar_complejidad_puesto_empleado_nuevo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando incorporas a un empleado nuevo y tienes que decidir qué tan estructurado o qué tan complejo, incierto y ambiguo debe ser su primer puesto, y cómo irá cambiando eso con el tiempo.",
+      "texto_nuevo": "Cuando incorporas a un empleado nuevo y tienes que decidir hasta qué punto su primer puesto debe ser estructurado, o complejo, incierto y ambiguo, y cómo irá cambiando eso con el tiempo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "qué tan estructurado o qué tan complejo"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"qué tan\" es forma americana; pasa a la forma general \"hasta qué punto\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Escalona la Complejidad del Puesto",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

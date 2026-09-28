@@ -1,0 +1,348 @@
+{
+  "node_id": "programar_visita_area_observar_despachar",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Programar la visita a un área de trabajo para observar lo que pasa y despachar allí los asuntos de dos minutos",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Pasar por el sitio es una forma muy eficiente de informarte y de despachar. Cuando alguien entra en tu despacho y se sienta, la costumbre impone un arranque y una parada, y un asunto de dos minutos a menudo ocupa media hora. Si recorres un área y te cruzas con la persona, puedes tratarlo allí mismo y seguir, y ella puede hacer lo mismo contigo. Lo que frena estas visitas es la incomodidad de pasearse sin tarea concreta. En una empresa la combaten programándolas con una tarea formal, como revisar el orden, los laboratorios y el material de seguridad, que abre paso a esos intercambios.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P10 de la frontera publicada en esta vuelta 46, L155 a L157, 337 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO: el libro pone la operacion (visit a particular place in the company and observe what is going on there), pone su mecanica (stop, cover it, and be on his way), pone el obstaculo y su remedio (the awkwardness about walking through an area without a specific task in mind, combatido con programmed visits meant to accomplish formal tasks) y sobre todo pone SU PROPIO INVENTARIO de lo que se mira en la visita, nombrado uno a uno: the housekeeping, the arrangement of things, the labs, and the safety equipment. Es inventario de OBJETOS DE TRABAJO, no de metas (EXTRACTOR.md 9.1 restriccion 1), y no hay adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L155 (That is to visit a particular place in the company and observe what is going on there); paso 2 de L155 (A certain stop-and-start dynamics occurs when the visitor sits down, something socially dictated. While a two-minute kernel of information is exchanged, the meeting often takes a half hour); paso 3 de L155 (But if a manager walks through an area and sees a person with whom he has a two-minute concern, he can simply stop, cover it, and be on his way); paso 4 de L155 (Ditto for the subordinate when he initiates conversation); paso 5 de L157 (Because of the awkwardness that managers feel about walking through an area without a specific task in mind. At Intel we combat this problem by using programmed visits meant to accomplish formal tasks, but which also set the stage for ad hoc mini-transactions); paso 6 de L157 (we ask our managers to participate in Mr. Clean inspections, in which they go to a part of the company that they normally would not visit); pasos 7 y 8 de L157 (The managers examine the housekeeping, the arrangement of things, the labs, and the safety equipment, and in so doing spend an hour or so browsing around and getting acquainted with things firsthand). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo CADA CUANTO se visita, porque el libro no pone periodo en este tramo y el periodo es la segunda especie de puente de EXTRACTOR.md 15.4; la unica cifra de tiempo que escribo es la hora que dura la visita, y esa SI esta en el renglon (spend an hour or so); NO escribo a quien se le informa de lo visto, porque el tramo no encarga ningun traslado; NO escribo quien decide que area toca. EL CASO ENTRA NOMBRADO DENTRO Y NO EN CASA PROPIA (manual 3.5): la inspeccion de Mister Limpio es el ejemplar de la visita programada y viaja dentro de este nodo, nombrada. Y LA SENIAL BARATA DE QUE ESO SE HIZO MAL LA COMPRUEBO CONTRA MI PROPIO ENTREGABLE: el entregable de esta ficha no lleva ningun dato del caso, ni el nombre de la inspeccion ni el de la empresa. TRADUCCION DECLARADA: programmed visits, ad hoc mini-transactions y Mr. Clean inspections viajan en denominaciones; housekeeping va como orden y limpieza. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: los pasos 6, 7 y 8 salen del caso, y un lector estricto puede decir que un caso no puede poner pasos. Lo sostengo porque el inventario de lo que se examina es lo unico que este tramo da como contenido de la visita programada, porque el libro lo escribe como practica viva y no como anecdota, y porque sin esos tres pasos la visita programada se queda en el NOMBRE de un procedimiento, que es justo lo que EXTRACTOR.md 9 no deja pasar. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA DE LA VUELTA 50, SIN BORRAR EL NUMERO VIEJO (manual principio 6, deuda d036, adjudicada en ACTA 48 seccion 48.5.a): donde esta ficha dice mas arriba que la PIEZA P10, L155 a L157, tiene 337 palabras, TIENE QUE LEERSE 236 palabras. La cifra buena es la que la frontera de HH.2.c publica para esta pieza, y no una tercera cifra mia: la recompute en la vuelta 50 con el mismo recuento de .v46/frontera.py linea 136 y me da 236, identica a la de la frontera. EL RENGLON DEL INSTRUMENTO QUE LO SOSTIENE, pegado (.v50/palabras_d036.txt): programar_visita_area_observar_despachar P10 L155 a L157 dice 337 HH.2.c 236 cuento 236 la frontera manda. LO QUE ESTA CORRECCION NO TOCA: ni un paso, ni una atribucion, ni la frontera, que es precisamente la que sale bien. El numero viejo era un numero escrito a mano en la vuelta 46 que ni la frontera citada ni ningun recuento reproducen.",
+  "pasos_accionables": [
+    "Ve a un sitio concreto de la empresa y observa lo que está pasando allí.",
+    "Cuenta con lo que pasa en el caso contrario, que es el que quieres evitar: cuando alguien viene a verte al despacho y se sienta, se dispara una dinámica de arranque y parada que la costumbre impone, y un asunto de dos minutos se lleva muchas veces media hora.",
+    "Si al recorrer el área ves a una persona con la que tienes un asunto de dos minutos, párate, despáchalo y sigue tu camino.",
+    "Deja que esa persona haga exactamente lo mismo contigo cuando sea ella quien inicie la conversación.",
+    "Si lo que te frena es el reparo de recorrer un área sin una tarea concreta en la cabeza, programa la visita con una tarea formal que cumplir, que además es la que prepara el terreno para los intercambios breves sobre la marcha.",
+    "Ve, en esa visita programada, a una parte de la empresa que normalmente no visitarías, por ejemplo en una ronda de inspección de orden y limpieza.",
+    "Examina allí el orden y la limpieza, la disposición de las cosas, los laboratorios y el equipo de seguridad.",
+    "Dedícale más o menos una hora, dando vueltas por el sitio y tomando contacto con las cosas de primera mano."
+  ],
+  "entregable_esperado": "La visita hecha y sus asuntos breves despachados en el sitio, con el área recorrida de primera mano y sus objetos de revisión mirados uno a uno.",
+  "nodos_previos": [
+    "escalonar_fuentes_informacion_gerencial"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando los asuntos pequeños te llegan al despacho y cada uno se te come media hora, y a la vez te da reparo recorrer un área sin una tarea concreta en la cabeza, así que apenas vas."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Pasar por el sitio es una forma muy eficiente de informarte y de despachar. Cuando alguien entra en tu despacho y se sienta, la costumbre impone un arranque y una parada, y un asunto de dos minutos a menudo ocupa media hora. Si recorres un área y te cruzas con la persona, puedes tratarlo allí mismo y seguir, y ella puede hacer lo mismo contigo. Lo que frena estas visitas es la incomodidad de pasearse sin tarea concreta. En una empresa la combaten programándolas con una tarea formal, como revisar el orden, los laboratorios y el material de seguridad, que abre paso a esos intercambios.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "155-157"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: L155 'often takes a half hour' y L157 'At Intel we combat' es práctica de una empresa. La propuesta del lector devuelve el 'a menudo' pero deja las visitas programadas como 'una forma' general en vez de caso; el propio las cuenta como lo que hace una empresa.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)"
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Programar la visita a un area de trabajo para observar lo que pasa y despachar alli los asuntos de dos minutos",
+      "texto_nuevo": "Programar la visita a un área de trabajo para observar lo que pasa y despachar allí los asuntos de dos minutos",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ve a un sitio concreto de la empresa y observa lo que esta pasando alli.",
+      "texto_nuevo": "Ve a un sitio concreto de la empresa y observa lo que está pasando allí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que pasa en el caso contrario, que es el que quieres evitar: cuando alguien viene a verte al despacho y se sienta, se dispara una dinamica de arranque y parada que la costumbre impone, y un nucleo de informacion de dos minutos se lleva muchas veces media hora.",
+      "texto_nuevo": "Cuenta con lo que pasa en el caso contrario, que es el que quieres evitar: cuando alguien viene a verte al despacho y se sienta, se dispara una dinámica de arranque y parada que la costumbre impone, y un núcleo de información de dos minutos se lleva muchas veces media hora.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si al recorrer el area ves a una persona con la que tienes un asunto de dos minutos, parate, despachalo y sigue tu camino.",
+      "texto_nuevo": "Si al recorrer el área ves a una persona con la que tienes un asunto de dos minutos, párate, despáchalo y sigue tu camino.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja que el subordinado haga exactamente lo mismo cuando sea el quien inicie la conversacion.",
+      "texto_nuevo": "Deja que el subordinado haga exactamente lo mismo cuando sea él quien inicie la conversación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lo que te frena es el reparo de recorrer un area sin una tarea concreta en la cabeza, programa la visita con una tarea formal que cumplir, que ademas es la que prepara el terreno para las microtransacciones sueltas.",
+      "texto_nuevo": "Si lo que te frena es el reparo de recorrer un área sin una tarea concreta en la cabeza, programa la visita con una tarea formal que cumplir, que además es la que prepara el terreno para las microtransacciones sueltas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ve, en esa visita programada, a una parte de la empresa que normalmente no visitarias, que es lo que en la casa del autor se hace con las inspecciones que llaman de Mister Limpio.",
+      "texto_nuevo": "Ve, en esa visita programada, a una parte de la empresa que normalmente no visitarías, por ejemplo en una ronda de inspección de orden y limpieza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que en la casa del autor se hace con las inspecciones que llaman de Mister Limpio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Examina alli el orden y la limpieza, la disposicion de las cosas, los laboratorios y el equipo de seguridad.",
+      "texto_nuevo": "Examina allí el orden y la limpieza, la disposición de las cosas, los laboratorios y el equipo de seguridad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dedicale una hora o asi, dando vueltas por el sitio y tomando contacto con las cosas de primera mano.",
+      "texto_nuevo": "Dedícale una hora o así, dando vueltas por el sitio y tomando contacto con las cosas de primera mano.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La visita hecha y sus asuntos breves despachados en el sitio, con el area recorrida de primera mano y sus objetos de revision mirados uno a uno.",
+      "texto_nuevo": "La visita hecha y sus asuntos breves despachados en el sitio, con el área recorrida de primera mano y sus objetos de revisión mirados uno a uno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-programar_visita_area_observar_despachar-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando los asuntos pequenos te llegan al despacho y cada uno se te come media hora, y a la vez te da reparo recorrer un area sin una tarea concreta en la cabeza, asi que no vas nunca.",
+      "texto_nuevo": "Cuando los asuntos pequeños te llegan al despacho y cada uno se te come media hora, y a la vez te da reparo recorrer un área sin una tarea concreta en la cabeza, así que no vas nunca.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-programar_visita_area_observar_despachar-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si lo que te frena es el reparo de recorrer un área sin una tarea concreta en la cabeza, programa la visita con una tarea formal que cumplir, que además es la que prepara el terreno para las microtransacciones sueltas.",
+      "texto_nuevo": "Si lo que te frena es el reparo de recorrer un área sin una tarea concreta en la cabeza, programa la visita con una tarea formal que cumplir, que además es la que prepara el terreno para los intercambios breves sobre la marcha.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "las microtransacciones sueltas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'ad hoc mini-transactions'; 'microtransacciones' en español remite a pagos pequeños.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-programar_visita_area_observar_despachar-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que pasa en el caso contrario, que es el que quieres evitar: cuando alguien viene a verte al despacho y se sienta, se dispara una dinámica de arranque y parada que la costumbre impone, y un núcleo de información de dos minutos se lleva muchas veces media hora.",
+      "texto_nuevo": "Cuenta con lo que pasa en el caso contrario, que es el que quieres evitar: cuando alguien viene a verte al despacho y se sienta, se dispara una dinámica de arranque y parada que la costumbre impone, y un asunto de dos minutos se lleva muchas veces media hora.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un núcleo de información"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"a two-minute kernel of information\" calcado.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-programar_visita_area_observar_despachar-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dedícale una hora o así, dando vueltas por el sitio y tomando contacto con las cosas de primera mano.",
+      "texto_nuevo": "Dedícale más o menos una hora, dando vueltas por el sitio y tomando contacto con las cosas de primera mano.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "o así"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"o así\" como aproximación es coloquial de España; en neutro, \"más o menos\".",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase4-programar_visita_area_observar_despachar-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Deja que el subordinado haga exactamente lo mismo cuando sea él quien inicie la conversación.",
+      "texto_nuevo": "Deja que esa persona haga exactamente lo mismo contigo cuando sea ella quien inicie la conversación.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'El subordinado' no tiene antecedente en el nodo: el paso anterior habla de 'una persona' (en el libro es la misma: \"Ditto for the subordinate when he initiates conversation\", grove cap_04 l.155)."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'El subordinado' no tiene antecedente en el nodo: el paso anterior habla de 'una persona' (en el libro es la misma: \"Ditto for the subordinate when he initiates conversation\", grove cap_04 l.155).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase5-programar_visita_area_observar_despachar-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando los asuntos pequeños te llegan al despacho y cada uno se te come media hora, y a la vez te da reparo recorrer un área sin una tarea concreta en la cabeza, así que no vas nunca.",
+      "texto_nuevo": "Cuando los asuntos pequeños te llegan al despacho y cada uno se te come media hora, y a la vez te da reparo recorrer un área sin una tarea concreta en la cabeza, así que apenas vas.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 155-157",
+        "frase": "Then why are they underutilized? Because of the awkwardness that managers feel about walking through an area without a specific task in mind."
+      },
+      "decision": "auditoria completa M11 (matiz): Absoluto donde el libro matiza: las visitas están desaprovechadas por ese reparo ('much neglected', 'underutilized'), no abandonadas del todo; 'no vas nunca' pasa a 'apenas vas'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Visita, Observa y Despacha",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "node_id": "atender_modo_supervivencia_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Atender el modo supervivencia antes de invertir en el largo plazo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Invertir en propósito, personas y proceso da fruto con el tiempo, pero solo si la organización puede esperar. La mayoría de los consejos sobre gestión suponen un horizonte largo; si la organización está ardiendo, esa lógica deja de valer y lo único que importa es apagar las llamas. Igual que en las necesidades humanas, las de nivel bajo se imponen a las de nivel alto: si no puedes respirar, lo demás da igual. Por eso primero decides si estás en modo supervivencia, y solo cuando lo has superado tiene sentido planificar lo que te ayudará en los meses y años que vienen.",
+  "notas_extraccion": "Es la excepcion que el propio capitulo pone a su doctrina central. Despues de sostener que el trabajo del directivo es mejorar el proposito, las personas y el proceso, el libro se pregunta si esa inversion es siempre la decision correcta y se contesta que no, que el contexto siempre importa. El razonamiento se apoya en la jerarquia de necesidades de Maslow trasladada a la organizacion, y en un caso minimo con un puesto de limonada montado con dinero prestado. El libro es explicito sobre lo que espera del lector: como estas leyendo este libro y preguntandote como ser mejor directivo, dice, es bastante seguro suponer que tu organizacion no esta al borde del colapso inminente, pero si lo esta, deja el libro ahora mismo. Las tres preguntas del cuarto paso son las tres que el libro escribe, una a una. Lo que el libro NO dice, y por eso no esta escrito aqui, es con que senial se declara que una organizacion esta ardiendo, quien lo declara, ni cuanto dura el modo supervivencia.",
+  "pasos_accionables": [
+    "Antes de invertir en el propósito, las personas y el proceso, mira el contexto, que siempre importa: invertir ahí cuesta tiempo y energía, y no siempre es la decisión correcta.",
+    "Decide si tu organización está ardiendo. El consejo habitual sobre gestión supone un horizonte largo en el que lo que gastas hoy lo recoges con creces con el tiempo, y eso solo es cierto si tu organización no está ardiendo.",
+    "Si lo está, nada de eso vale ya: lo que toca entonces es hacer lo que puedas por apagar las llamas. Deja todo lo demás ahora mismo y averigua qué hace falta para que tu equipo enderece las cosas.",
+    "Pregúntate si puedes arengar a la tropa para una jugada espectacular, si puedes idear tácticas ingeniosas e improvisadas para salir del apuro, y si puedes arremangarte y arrimar el hombro haciendo llamadas en frío o vendiendo tú mismo.",
+    "Ordena lo que atiendes por la jerarquía de necesidades: ciertas necesidades se imponen a otras, y hay que satisfacer las de nivel bajo antes de ocuparse de las de nivel alto. Si no puedes respirar, da igual que tengas hambre, que estés solo o que no tengas trabajo.",
+    "Cuando estés en modo supervivencia, haz lo que haga falta para sobrevivir.",
+    "Y solo cuando hayas pasado la supervivencia en la jerarquía de necesidades de tu equipo, planifica el futuro y piensa qué puedes hacer hoy que te ayude a lograr más en los meses y años que vienen."
+  ],
+  "entregable_esperado": "La decisión tomada y dicha: o tu organización está ardiendo y todo tu esfuerzo va a apagar las llamas, o has pasado la supervivencia y entonces sí planificas el futuro.",
+  "nodos_previos": [
+    "revisar_proposito_personas_proceso"
+  ],
+  "nodos_siguientes": [
+    "definir_vision_larga_trabajar_atras",
+    "equilibrar_corto_largo_plazo"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a invertir tiempo y energía en el propósito, las personas y el proceso de tu equipo, que es lo que da fruto a la larga, y antes tienes que saber si tu organización se puede permitir esperar a la larga."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Invertir en propósito, personas y proceso da fruto con el tiempo, pero solo si la organización puede esperar. Casi todo el consejo sobre gestión supone un horizonte largo; si la organización está ardiendo, esa lógica deja de valer y lo único que importa es apagar las llamas. Igual que en las necesidades humanas, las de nivel bajo se imponen a las de nivel alto: si no puedes respirar, lo demás da igual. Por eso primero se decide si estás en modo supervivencia, y solo cuando lo has superado tiene sentido planificar lo que te ayudará en los meses y años que vienen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_02.md",
+          "lineas": "172-189"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)"
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de invertir en el proposito, las personas y el proceso, mira el contexto, que siempre importa: invertir ahi cuesta tiempo y energia, y no siempre es la decision correcta.",
+      "texto_nuevo": "Antes de invertir en el propósito, las personas y el proceso, mira el contexto, que siempre importa: invertir ahí cuesta tiempo y energía, y no siempre es la decisión correcta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide si tu organizacion esta ardiendo. El consejo habitual sobre gestion supone un horizonte largo en el que lo que gastas hoy lo recoges con creces con el tiempo, y eso solo es cierto si tu organizacion no esta ardiendo.",
+      "texto_nuevo": "Decide si tu organización está ardiendo. El consejo habitual sobre gestión supone un horizonte largo en el que lo que gastas hoy lo recoges con creces con el tiempo, y eso solo es cierto si tu organización no está ardiendo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si lo esta, todas las apuestas quedan canceladas: lo que toca entonces es hacer lo que puedas por apagar las llamas. Deja el libro ahora mismo y averigua que hace falta para que tu equipo enderece las cosas.",
+      "texto_nuevo": "Si lo está, todas las apuestas quedan canceladas: lo que toca entonces es hacer lo que puedas por apagar las llamas. Deja todo lo demás ahora mismo y averigua qué hace falta para que tu equipo enderece las cosas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Deja el libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntate si puedes arengar a la tropa para una jugada espectacular, si puedes idear tacticas de las de MacGyver para salir del apuro, y si puedes arremangarte y arrimar el hombro haciendo llamadas en frio o vendiendo vasos de limonada.",
+      "texto_nuevo": "Pregúntate si puedes arengar a la tropa para una jugada espectacular, si puedes idear tácticas ingeniosas e improvisadas para salir del apuro, y si puedes arremangarte y arrimar el hombro haciendo llamadas en frío o vendiendo vasos de limonada.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de las de MacGyver"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ordena lo que atiendes por la jerarquia de necesidades: ciertas necesidades se imponen a otras, y hay que satisfacer las de nivel bajo antes de ocuparse de las de nivel alto. Si no puedes respirar, da igual que tengas hambre, que estes solo o que no tengas trabajo.",
+      "texto_nuevo": "Ordena lo que atiendes por la jerarquía de necesidades: ciertas necesidades se imponen a otras, y hay que satisfacer las de nivel bajo antes de ocuparse de las de nivel alto. Si no puedes respirar, da igual que tengas hambre, que estés solo o que no tengas trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estes en modo supervivencia, haz lo que haga falta para sobrevivir.",
+      "texto_nuevo": "Cuando estés en modo supervivencia, haz lo que haga falta para sobrevivir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y solo cuando hayas pasado la supervivencia en la jerarquia de necesidades de tu equipo, planifica el futuro y piensa que puedes hacer hoy que te ayude a lograr mas en los meses y anios que vienen.",
+      "texto_nuevo": "Y solo cuando hayas pasado la supervivencia en la jerarquía de necesidades de tu equipo, planifica el futuro y piensa qué puedes hacer hoy que te ayude a lograr más en los meses y años que vienen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La decision tomada y dicha: o tu organizacion esta ardiendo y todo tu esfuerzo va a apagar las llamas, o has pasado la supervivencia y entonces si planificas el futuro.",
+      "texto_nuevo": "La decisión tomada y dicha: o tu organización está ardiendo y todo tu esfuerzo va a apagar las llamas, o has pasado la supervivencia y entonces sí planificas el futuro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-atender_modo_supervivencia_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a invertir tiempo y energia en el proposito, las personas y el proceso de tu equipo, que es lo que da fruto a la larga, y antes tienes que saber si tu organizacion se puede permitir esperar a la larga.",
+      "texto_nuevo": "Cuando vas a invertir tiempo y energía en el propósito, las personas y el proceso de tu equipo, que es lo que da fruto a la larga, y antes tienes que saber si tu organización se puede permitir esperar a la larga.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-atender_modo_supervivencia_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Pregúntate si puedes arengar a la tropa para una jugada espectacular, si puedes idear tácticas ingeniosas e improvisadas para salir del apuro, y si puedes arremangarte y arrimar el hombro haciendo llamadas en frío o vendiendo vasos de limonada.",
+      "texto_nuevo": "Pregúntate si puedes arengar a la tropa para una jugada espectacular, si puedes idear tácticas ingeniosas e improvisadas para salir del apuro, y si puedes arremangarte y arrimar el hombro haciendo llamadas en frío o vendiendo tú mismo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "La limonada viene del ejemplo del puesto de limonada del capítulo, que no está en el nodo; queda como referente suelto."
+      },
+      "decision": "auditoria completa M11 (coherencia): La limonada viene del ejemplo del puesto de limonada del capítulo, que no está en el nodo; queda como referente suelto.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-atender_modo_supervivencia_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Invertir en propósito, personas y proceso da fruto con el tiempo, pero solo si la organización puede esperar. Casi todo el consejo sobre gestión supone un horizonte largo; si la organización está ardiendo, esa lógica deja de valer y lo único que importa es apagar las llamas. Igual que en las necesidades humanas, las de nivel bajo se imponen a las de nivel alto: si no puedes respirar, lo demás da igual. Por eso primero se decide si estás en modo supervivencia, y solo cuando lo has superado tiene sentido planificar lo que te ayudará en los meses y años que vienen.",
+      "texto_nuevo": "Invertir en propósito, personas y proceso da fruto con el tiempo, pero solo si la organización puede esperar. La mayoría de los consejos sobre gestión suponen un horizonte largo; si la organización está ardiendo, esa lógica deja de valer y lo único que importa es apagar las llamas. Igual que en las necesidades humanas, las de nivel bajo se imponen a las de nivel alto: si no puedes respirar, lo demás da igual. Por eso primero se decide si estás en modo supervivencia, y solo cuando lo has superado tiene sentido planificar lo que te ayudará en los meses y años que vienen.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 177",
+        "frase": "Traditionally, most advice you hear about management assumes a longer time frame where if you spend a little today, you’ll reap bountiful rewards in time."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'most advice' (la mayoría), no casi todo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-atender_modo_supervivencia_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si lo está, todas las apuestas quedan canceladas: lo que toca entonces es hacer lo que puedas por apagar las llamas. Deja todo lo demás ahora mismo y averigua qué hace falta para que tu equipo enderece las cosas.",
+      "texto_nuevo": "Si lo está, nada de eso vale ya: lo que toca entonces es hacer lo que puedas por apagar las llamas. Deja todo lo demás ahora mismo y averigua qué hace falta para que tu equipo enderece las cosas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "todas las apuestas quedan canceladas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de 'all bets are off'.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-atender_modo_supervivencia_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Invertir en propósito, personas y proceso da fruto con el tiempo, pero solo si la organización puede esperar. La mayoría de los consejos sobre gestión suponen un horizonte largo; si la organización está ardiendo, esa lógica deja de valer y lo único que importa es apagar las llamas. Igual que en las necesidades humanas, las de nivel bajo se imponen a las de nivel alto: si no puedes respirar, lo demás da igual. Por eso primero se decide si estás en modo supervivencia, y solo cuando lo has superado tiene sentido planificar lo que te ayudará en los meses y años que vienen.",
+      "texto_nuevo": "Invertir en propósito, personas y proceso da fruto con el tiempo, pero solo si la organización puede esperar. La mayoría de los consejos sobre gestión suponen un horizonte largo; si la organización está ardiendo, esa lógica deja de valer y lo único que importa es apagar las llamas. Igual que en las necesidades humanas, las de nivel bajo se imponen a las de nivel alto: si no puedes respirar, lo demás da igual. Por eso primero decides si estás en modo supervivencia, y solo cuando lo has superado tiene sentido planificar lo que te ayudará en los meses y años que vienen.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "primero se decide"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Impersonal prescriptivo (\"se decide\", de la familia de \"se debe\") mezclado con el tú (\"estás\"); pasa a \"decides\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Atiende Primero la Supervivencia"
+}

@@ -1,0 +1,409 @@
+{
+  "node_id": "disenar_equipo_plan_anual",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Diseñar tu equipo a un año vista antes de que el hambre decida por ti",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Con el equipo corto de gente puede costar mucho resistirse a quien parece disponible y listo, aunque no sea lo que necesitas, igual que con hambre cualquier cosa de la nevera parece una comida. La salida es planificar antes de que apriete: dibujar el organigrama que quieres a final de año, ver qué habilidades, fuerzas o experiencias faltan y cuáles ya tiene el equipo, y listar los puestos por cubrir. Ese plan se vuelve el marco con el que evalúas candidatos, así no dices que sí al primero que aparece, y como se ajusta cuando algo cambia, siempre tienes clara la forma que debe tener tu equipo.",
+  "notas_extraccion": "Es el primer procedimiento del capitulo y el unico que se ejecuta cuando no hay ninguna vacante abierta, que es justo su razon de ser: la analogia de la nevera dice que la decision mala no se toma por falta de criterio sino por hambre. El inventario propio del libro son las preguntas del ejercicio, nombradas una a una, y los tres actos del ejercicio, organigrama, analisis de huecos y lista de puestos. Por eso los pasos son transcripcion. El plan sirve ademas de marco de evaluacion, que es un segundo uso que el libro nombra y que no se deduce solo. Lo que el libro NO dice, y por eso no esta escrito aqui, es donde se guarda el plan, con quien se comparte, ni cada cuanto se revisa mas alla de modificarlo cuando algo cambia.",
+  "pasos_accionables": [
+    "Reconoce el peligro que te lleva a hacerlo: cuando estás al límite por la presión de un equipo corto de personal, puede ser muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+    "Planifica de antemano, que es la solución tanto para una dieta más sana como para un equipo mejor: si vas al supermercado el domingo y compras lo que necesitas para una cena decente cada noche, cuando llegue el hambre del miércoles es más probable que eches mano del pollo y la verdura.",
+    "Dibuja el organigrama que esperas tener a final de año.",
+    "Analiza los huecos en habilidades, en fuerzas o en experiencias.",
+    "Haz la lista de puestos abiertos para los que hay que contratar.",
+    "Pregúntate cuánta gente nueva vas a añadir al equipo este año, mirando el crecimiento de la empresa, la rotación esperada, el presupuesto y las prioridades.",
+    "Pregúntate, para cada contratación nueva, qué nivel de experiencia estás buscando.",
+    "Pregúntate qué habilidades o fuerzas concretas le hacen falta al equipo, por ejemplo pensamiento creativo, excelencia operativa o dominio de tal materia.",
+    "Pregúntate qué habilidades y fuerzas tiene ya el equipo, porque en esas los que entren se pueden permitir ser más flojos.",
+    "Pregúntate qué rasgos, experiencias pasadas o personalidades reforzarían la diversidad de tu equipo.",
+    "Usa ese plan a un año como marco para evaluar candidatos, que es lo que te evita caer en la trampa de decir que sí a la siguiente persona que aparezca.",
+    "Modifica el plan sobre la marcha cuando las cosas cambien, porque tu organización se reestructura, alguien se va de golpe o las prioridades se mueven, de manera que siempre tengas en la cabeza una imagen clara de cómo debería ser tu equipo.",
+    "Si estás en una empresa sin muchas necesidades de contratación, haz la variante: considera la posibilidad de la rotación y dónde buscarías si alguien se fuera, de dónde vinieron tus mejores empleados, qué habilidades nuevas querrías añadir si acaso, y a quién en concreto te encantaría traerte si se abriera un hueco."
+  ],
+  "entregable_esperado": "Un organigrama futuro, un análisis de los huecos en habilidades, fuerzas o experiencias, y una lista de puestos abiertos para los que contratar.",
+  "nodos_previos": [
+    "transitar_pionero_equipo_nuevo",
+    "ajustar_plan_fuerzas_equipo"
+  ],
+  "nodos_siguientes": [
+    "montar_proceso_contratacion_reducir_sesgo",
+    "repartir_papeles_directivo_reclutador",
+    "construir_equipo_perspectivas_diversas",
+    "contratar_personas_capaces_mas",
+    "dimensionar_numero_subordinados_medio_dia_semanal"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres dibujar tu equipo a un año vista, antes de que esté corto de gente, porque es entonces cuando puede costar mucho resistirse a quien parece disponible y listo para el trabajo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Con el equipo corto de gente cuesta mucho resistirse a quien parece disponible y listo, aunque no sea lo que necesitas, igual que con hambre cualquier cosa de la nevera parece una comida. La salida es planificar antes de que apriete: dibujar el organigrama que quieres a final de año, ver qué habilidades, fuerzas o experiencias faltan y cuáles ya tiene el equipo, y listar los puestos por cubrir. Ese plan se vuelve el marco con el que evalúas candidatos, así no dices que sí al primero que aparece, y como se ajusta cuando algo cambia, siempre tienes clara la forma que debe tener tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "39-61"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disenar tu equipo a un anio vista antes de que el hambre decida por ti",
+      "texto_nuevo": "Diseñar tu equipo a un año vista antes de que el hambre decida por ti",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce el peligro que te lleva a hacerlo: cuando estas doblado bajo la tension de un equipo corto de personal, es muy dificil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estomago y asaltas la nevera y unos pepinillos con ketchup y pan te parecen una comida aceptable.",
+      "texto_nuevo": "Reconoce el peligro que te lleva a hacerlo: cuando estás doblado bajo la tensión de un equipo corto de personal, es muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Planifica por delante, que es la solucion tanto para una dieta mas sana como para un equipo mejor: si vas al supermercado el domingo y compras lo que necesitas para una cena decente cada noche, cuando llegue el hambre del miercoles es mas probable que eches mano del pollo y la verdura.",
+      "texto_nuevo": "Planifica por delante, que es la solución tanto para una dieta más sana como para un equipo mejor: si vas al supermercado el domingo y compras lo que necesitas para una cena decente cada noche, cuando llegue el hambre del miércoles es más probable que eches mano del pollo y la verdura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dibuja el organigrama que esperas tener a final de anio.",
+      "texto_nuevo": "Dibuja el organigrama que esperas tener a final de año.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate cuanta gente nueva vas a anadir al equipo este anio, mirando el crecimiento de la empresa, la rotacion esperada, el presupuesto y las prioridades.",
+      "texto_nuevo": "Pregúntate cuánta gente nueva vas a añadir al equipo este año, mirando el crecimiento de la empresa, la rotación esperada, el presupuesto y las prioridades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate, para cada contratacion nueva, que nivel de experiencia estas buscando.",
+      "texto_nuevo": "Pregúntate, para cada contratación nueva, qué nivel de experiencia estás buscando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate que habilidades o fuerzas concretas le hacen falta al equipo, por ejemplo pensamiento creativo, excelencia operativa o dominio de tal materia.",
+      "texto_nuevo": "Pregúntate qué habilidades o fuerzas concretas le hacen falta al equipo, por ejemplo pensamiento creativo, excelencia operativa o dominio de tal materia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate que habilidades y fuerzas tiene ya el equipo, porque en esas los que entren se pueden permitir ser mas flojos.",
+      "texto_nuevo": "Pregúntate qué habilidades y fuerzas tiene ya el equipo, porque en esas los que entren se pueden permitir ser más flojos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate que rasgos, experiencias pasadas o personalidades reforzarian la diversidad de tu equipo.",
+      "texto_nuevo": "Pregúntate qué rasgos, experiencias pasadas o personalidades reforzarían la diversidad de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa ese plan a un anio como marco para evaluar candidatos, que es lo que te evita caer en la trampa de decir que si a la siguiente persona que aparezca.",
+      "texto_nuevo": "Usa ese plan a un año como marco para evaluar candidatos, que es lo que te evita caer en la trampa de decir que sí a la siguiente persona que aparezca.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Modifica el plan sobre la marcha cuando las cosas cambien, porque tu organizacion se reestructura, alguien se va de golpe o las prioridades se mueven, de manera que siempre tengas en la cabeza una imagen clara de como deberia ser tu equipo.",
+      "texto_nuevo": "Modifica el plan sobre la marcha cuando las cosas cambien, porque tu organización se reestructura, alguien se va de golpe o las prioridades se mueven, de manera que siempre tengas en la cabeza una imagen clara de cómo debería ser tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-pasos_accionables-12",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si estas en una empresa sin muchas necesidades de contratacion, haz la variante: considera la posibilidad de la rotacion y donde buscarias si alguien se fuera, de donde vinieron tus mejores empleados, que habilidades nuevas querrias anadir si acaso, y a quien en concreto te encantaria traerte si se abriera un hueco.",
+      "texto_nuevo": "Si estás en una empresa sin muchas necesidades de contratación, haz la variante: considera la posibilidad de la rotación y dónde buscarías si alguien se fuera, de dónde vinieron tus mejores empleados, qué habilidades nuevas querrías añadir si acaso, y a quién en concreto te encantaría traerte si se abriera un hueco.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 12,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un organigrama futuro, un analisis de los huecos en habilidades, fuerzas o experiencias, y una lista de puestos abiertos para los que contratar.",
+      "texto_nuevo": "Un organigrama futuro, un análisis de los huecos en habilidades, fuerzas o experiencias, y una lista de puestos abiertos para los que contratar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-disenar_equipo_plan_anual-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una vez al anio, y antes de que el equipo este corto de gente, porque es entonces cuando cuesta resistirse a quien parece disponible y listo para el trabajo.",
+      "texto_nuevo": "Una vez al año, y antes de que el equipo esté corto de gente, porque es entonces cuando cuesta resistirse a quien parece disponible y listo para el trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-disenar_equipo_plan_anual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Con el equipo corto de gente cuesta mucho resistirse a quien parece disponible y listo, aunque no sea lo que necesitas, igual que con hambre cualquier cosa de la nevera parece una comida. La salida es planificar antes de que apriete: dibujar el organigrama que quieres a final de año, ver qué habilidades, fuerzas o experiencias faltan y cuáles ya tiene el equipo, y listar los puestos por cubrir. Ese plan se vuelve el marco con el que evalúas candidatos, así no dices que sí al primero que aparece, y como se ajusta cuando algo cambia, siempre tienes clara la forma que debe tener tu equipo.",
+      "texto_nuevo": "Con el equipo corto de gente puede costar mucho resistirse a quien parece disponible y listo, aunque no sea lo que necesitas, igual que con hambre cualquier cosa de la nevera parece una comida. La salida es planificar antes de que apriete: dibujar el organigrama que quieres a final de año, ver qué habilidades, fuerzas o experiencias faltan y cuáles ya tiene el equipo, y listar los puestos por cubrir. Ese plan se vuelve el marco con el que evalúas candidatos, así no dices que sí al primero que aparece, y como se ajusta cuando algo cambia, siempre tienes clara la forma que debe tener tu equipo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 41",
+        "frase": "When you are buckling under the strain of a short-staffed team, it can be very hard to resist someone who seems available and ready to do the work."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"it can be very hard\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-disenar_equipo_plan_anual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconoce el peligro que te lleva a hacerlo: cuando estás doblado bajo la tensión de un equipo corto de personal, es muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+      "texto_nuevo": "Reconoce el peligro que te lleva a hacerlo: cuando estás doblado bajo la tensión de un equipo corto de personal, puede ser muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 41",
+        "frase": "When you are buckling under the strain of a short-staffed team, it can be very hard to resist someone who seems available and ready to do the work."
+      },
+      "decision": "auditoria completa M11 (matiz): Se pierde el \"can\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-barrido-disenar_equipo_plan_anual-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Planifica por delante, que es la solución tanto para una dieta más sana como para un equipo mejor: si vas al supermercado el domingo y compras lo que necesitas para una cena decente cada noche, cuando llegue el hambre del miércoles es más probable que eches mano del pollo y la verdura.",
+      "texto_nuevo": "Planifica de antemano, que es la solución tanto para una dieta más sana como para un equipo mejor: si vas al supermercado el domingo y compras lo que necesitas para una cena decente cada noche, cuando llegue el hambre del miércoles es más probable que eches mano del pollo y la verdura.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "Planifica por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-disenar_equipo_plan_anual-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce el peligro que te lleva a hacerlo: cuando estás doblado bajo la tensión de un equipo corto de personal, puede ser muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+      "texto_nuevo": "Reconoce el peligro que te lleva a hacerlo: cuando estás al límite por la presión de un equipo corto de personal, puede ser muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "doblado bajo la tensión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de \"buckling under the strain\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-disenar_equipo_plan_anual-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una vez al año, y antes de que el equipo esté corto de gente, porque es entonces cuando cuesta resistirse a quien parece disponible y listo para el trabajo.",
+      "texto_nuevo": "Cuando quieres dibujar tu equipo a un año vista, antes de que esté corto de gente, porque es entonces cuando puede costar mucho resistirse a quien parece disponible y listo para el trabajo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 41-45",
+        "frase": "When you are buckling under the strain of a short-staffed team, it can be very hard to resist someone who seems available and ready to do the work. [...] One exercise I do every January is to map out where I hope my team will be by the end of the year."
+      },
+      "decision": "auditoria completa M11 (matiz): Hacerlo cada enero es la costumbre de una persona, ofrecida como algo que puedes imitar; la condición la volvía frecuencia fija. Y el libro dice que puede ser muy difícil resistirse, no que cueste sin más.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Diseña tu Equipo a un Año",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

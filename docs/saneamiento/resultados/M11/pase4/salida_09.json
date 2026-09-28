@@ -1,0 +1,550 @@
+{
+ "lote": "09",
+ "nodos": [
+  {
+   "node_id": "evitar_personalizar_guia_aceptar_personal",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "voz",
+     "cita": "el trabajo es parte de quienes somos",
+     "motivo": "Nosotros del narrador; en la casa se habla en tu o en tercera persona.",
+     "propuesta": "Personalizar la guía la estropea: explicar lo que hizo alguien por un rasgo de su carácter suele ser inexacto y convierte un problema resoluble en uno muy difícil de arreglar, porque la personalidad cambia muy despacio. Hablar de lo que se hizo, con un «creo que eso está mal» en lugar de un «estás mal», deja el asunto sobre la mesa y fuera del choque de egos. A la vez, la guía siempre es personal para quien la recibe, porque el trabajo es parte de quien es cada uno; por eso la emoción se reconoce en vez de negarla con un «no te lo tomes como algo personal»."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "voz",
+     "cita": "la mayoría volcamos más tiempo y energía en nuestro trabajo",
+     "motivo": "Nosotros del narrador (most of us); en la casa se habla en tu o en tercera persona.",
+     "propuesta": "Cuenta con el motivo: aunque des todos los pasos anteriores y no personalices, la guía SÍ es personal para quien la recibe, porque la mayoría de la gente vuelca más tiempo y energía en su trabajo que en ninguna otra cosa, y el trabajo es parte de quien es cada uno. Decir «no te lo tomes como algo personal» es negar esos sentimientos, como decir «no estés triste» o «no te enfades»."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "volcamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "nuestro",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "comprobar_gusto_trato_personas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "recorrer_rueda_conscientemente_cultura_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "te deja influir en el resto",
+     "motivo": "\"el resto\" no tiene antecedente en el resumen (el libro dice que influyes en otros aspectos de tu cultura).",
+     "propuesta": "La cultura de un equipo pesa mucho en sus resultados, y la personalidad de quien lo dirige, en esa cultura. Como es casi imposible cambiar quién eres, la salida es mirar la conducta y no el carácter: si pides crítica con regularidad y de verdad, lo peor saldrá a la luz, y recorrer a sabiendas cada paso de la rueda de hacer cosas te deja influir en otros aspectos de ella. Como jefe todos te miran con lupa, así que aclara lo que comunicas; cuidar lo pequeño y el entorno puede persuadir mucho, y aprender de lo que sale mal evita una cultura que no aprende. Una cultura fuerte se replica sola."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "que es lo que hace el resto del trabajo",
+     "motivo": "La coletilla no se entiende ni tiene referente en el nodo; el libro dice que asi influyes tambien en otros aspectos de tu cultura.",
+     "propuesta": "E influye también en otros aspectos de tu cultura recorriendo a sabiendas los pasos de la rueda de hacer cosas."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "en el eje de desafiar directamente",
+     "motivo": "\"el eje\" remite a un marco (la franqueza radical y sus dos ejes) que este nodo no presenta; el cliente no sabe de que eje se habla.",
+     "propuesta": "Cuenta con lo que pasa a menudo: dices o haces algo esperando que se lo tomen a la ligera, y en realidad has desafiado mucho más directamente de lo que pretendías."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "puede tener un gran impacto en persuadir a la gente",
+     "motivo": "Calco de \"have a big impact on persuading\": \"impacto en\" mas infinitivo no es construccion espanola.",
+     "propuesta": "Persuade prestando atención a las cosas pequeñas, porque eso puede pesar mucho a la hora de persuadir a la gente de que tu cultura merece entenderse y adaptarse a ella."
+    },
+    {
+     "campo": "pasos_accionables[13]",
+     "tipo": "coherencia",
+     "cita": "Y escucha hasta el final de la rueda",
+     "motivo": "La rueda se cierra volviendo a escuchar (el libro: \"Listen ...\"); \"escucha hasta el final\" dice otra cosa y no se entiende.",
+     "propuesta": "Y vuelve a escuchar al cerrar la rueda, con esta señal para saber que lo has conseguido: una cultura fuerte se replica sola, y sabrás que has tenido éxito cuando de verdad ya no se trate de ti."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "auto",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "impacto en",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "cuidar_persona_completa_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "voz",
+     "cita": "en el trabajo seguimos siendo personas",
+     "motivo": "Nosotros del narrador; en la casa se habla en tu o en tercera persona.",
+     "propuesta": "Una relación con quien trabaja para ti no se construye cuidando solo su trabajo o su carrera: hace falta cuidar a la persona entera, con tu persona entera. Parte de lo que lo impide es el mandato de mantenerlo todo en lo profesional, que niega que en el trabajo sigues siendo una persona, y en algunos jefes la sensación de superioridad, que olvida que ser jefe es un puesto y no un juicio de valor. Cuidar no pide gestos forzados: pide conversaciones de verdad y saber qué le importa a cada uno, y a menudo pasa por mostrarte vulnerable primero y dejar que los demás hagan lo mismo sin riesgo."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "a tus personas a cargo",
+     "motivo": "\"a cargo\" sin la forma fijada; es \"las personas a tu cargo\".",
+     "propuesta": "Da ejemplo tú primero mostrando alguna vulnerabilidad a las personas a tu cargo, o simplemente admitiendo cuando tienes un mal día, y crea un espacio seguro para que los demás hagan lo mismo: mostrarte en el trabajo tal como eres a menudo pasa por eso."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "una persona a cargo",
+     "motivo": "\"una persona a cargo\" se lee como quien manda; es \"una persona a tu cargo\".",
+     "propuesta": "Cuando la relación con una persona a tu cargo se ha quedado en lo estrictamente profesional y quieres saber qué hacer con ella, sin caer en memorizar cumpleaños ni en la charla forzada."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "seguimos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "Referente que no existe en el nodo: no hay ningun cliente de fabrica antes.",
+     "propuesta": "Usa un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "montar_reuniones_solas_mentalidad_frecuencia",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "esa misma",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_recompensar_uso_metodo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "coherencia",
+     "cita": "usan el método",
+     "motivo": "\"el método\" sin antecedente en el titulo, que es lo primero que se lee (y lo que se ve en navegacion); no dice de que metodo se trata.",
+     "propuesta": "Reconocer y recompensar a quienes usan el método de contratación y consiguen resultados"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "que es la misma que la política de la empresa pone en la tarjeta de cada directivo. Así la recompensa mide lo que la política exige",
+     "motivo": "\"la política de la empresa\" y \"la tarjeta de cada directivo\" no existen en el nodo (vienen de otro punto del capitulo); ademas mezcla infinitivo e imperativo (\"buscar... liga\").",
+     "propuesta": "Instalar un método de contratación no se consigue solo pidiéndolo: hay que premiar a quien lo usa. El reconocimiento tiene dos mitades. Una es pública: buscar activamente pruebas de que alguien usa el método y reconocerlo delante de todos. La otra es económica y precisa: ligar una parte sustancial de la prima a un resultado medible, la tasa de éxito en contratación del noventa por ciento o más. Así la recompensa mide un resultado concreto, y esas primas se pagan solas con la productividad que traen."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "prima",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "equilibrar_corto_largo_plazo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "pesar el intercambio entre los dos plazos",
+     "motivo": "Calco de \"weigh the trade-offs\": \"intercambio\" no es trade-off en espanol.",
+     "propuesta": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Pasar la decisión por tres escenarios concretos, contratar, planificar y gestionar el desempeño, pone delante los dos riesgos antes de inclinarte. Funciona porque no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que sopesar lo que se gana y se pierde con cada plazo."
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "calco",
+     "cita": "pesar el intercambio entre los dos",
+     "motivo": "Calco de \"weigh the trade-offs between the two\".",
+     "propuesta": "Saca la conclusión de los tres escenarios: no siempre puedes aplicar un mismo enfoque general, ni a corto ni a largo, y las decisiones que tomes tienen que sopesar lo que ganas y lo que pierdes con cada uno."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "ha pesado el intercambio entre los dos plazos",
+     "motivo": "Calco de \"trade-offs\".",
+     "propuesta": "Una decisión que ha sopesado lo que se gana y lo que se pierde con cada plazo, en vez de aplicar por sistema un enfoque solo de corto o solo de largo plazo."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "disenar_entorno_rendir_mejor",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "guiar_subordinado_etapas_resistencia_desempeno",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "y el mando tiene que llevarlo",
+     "motivo": "El sujeto cambia sin motivo a tercera persona (\"el mando\") en un nodo que te habla a ti.",
+     "propuesta": "Cuando un subordinado tiene un problema de desempeño serio, del tipo que podría costarle el puesto si no se corrige, y tienes que llevarlo a través de una revisión de conflicto para resolverlo."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "aplicar_tacticas_maestras_entrevista",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "escucha reflectiva",
+     "motivo": "Calco de \"reflective listening\": en espanol es \"escucha reflexiva\" (\"reflectivo\" es lo que refleja la luz).",
+     "propuesta": "Táctica uno, interrumpir. Tienes que interrumpir al candidato, no hay manera de evitarlo, y tendrás que hacerlo al menos una vez cada tres o cuatro minutos. Interrumpe en cuanto creas que se está yendo del rumbo, y hazlo por la vía buena: sonriendo abiertamente, igualando su nivel de entusiasmo y usando escucha reflexiva para que pare sin desmoralizarse."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "decidir_nivel_competente_inferior",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "involucrar_varios_entrevistadores",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "emparejar_indicadores_efecto_contraefecto",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "acordar_plan_conjunto_jefe",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "bloquear_tiempo_pensar_calendario",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "digamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "supervisar_tarea_delegada_etapa_menor_valor",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dirigir_reunion_revision_trabajo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reforzar_principios_guia_lenguaje_prueba_conocimiento",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reconocer_emociones_propias_avisar_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "debatir_decidir_asuntos_cultura_evitar_delegar",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "delegar a recursos humanos",
+     "motivo": "Calco de \"delegate to HR\": en espanol se delega en alguien.",
+     "propuesta": "Debatir y decidir tú los asuntos de cultura que te tienta delegar en recursos humanos, para que no los decidan sin tu influencia humanizadora ni se queden sin decidir"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "delegar a recursos humanos",
+     "motivo": "Calco de \"delegate to HR\": en espanol se delega en alguien.",
+     "propuesta": "Hay asuntos que tendrás la tentación de delegar en recursos humanos porque a menudo preferirías no gastar tus neuronas en ellos: qué nombre lleva la fiesta, si se sirve alcohol o qué se hace ante una broma que ofendió a alguien. Si los delegas, las decisiones que tomen recursos humanos y los abogados laborales sin tu influencia humanizadora empujarán tu cultura hacia normas rígidas y sin sentido común; si nadie decide, se impone el desorden. Ninguna de las dos es la cultura que quieres, así que debátelos y decídelos de forma explícita en vez de dejar que pasen sin más."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "delegar a recursos humanos",
+     "motivo": "Calco de \"delegate to HR\": en espanol se delega en alguien.",
+     "propuesta": "Reconoce la tentación por su nombre: hay una serie de debates y decisiones que vas a sentir la tentación de delegar en recursos humanos, y suelen ser cosas en las que preferirías no gastar tus neuronas."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "aplicación",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_critica_pares_transparente_ensenar_escribirla",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "Además ahorra a los jefes sintetizar lo escrito",
+     "motivo": "Sujeto ambiguo: el ultimo sujeto explicito es \"esta\" (la confidencial), asi que \"Además ahorra\" se lee como ventaja de la confidencial, y es de la transparente.",
+     "propuesta": "La crítica entre pares transparente impulsa una cultura de crítica directa, cosa que la confidencial no hace: esta no obliga a los compañeros a hablarse directamente, en el anonimato la gente a menudo es más agresiva, y en el peor caso se fomenta la puñalada por la espalda. Además, la transparente ahorra a los jefes sintetizarla, un paso que a veces resta valor, y da una crítica de más calidad. Saber que el otro verá quién escribe hace poner más cuidado. Extenderla a toda la plantilla evita un privilegio más para los de arriba, y cuanto antes enseñes a escribirla con ejemplos, más útil será."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "más abajo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "variar_frecuencia_inspeccion_nivel_calidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "voz",
+     "cita": "somos animales de costumbres y seguimos haciendo las cosas como las hemos hecho siempre",
+     "motivo": "Nosotros del narrador; en la casa se habla en tu o en tercera persona.",
+     "propuesta": "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que la gente es animal de costumbres y sigue haciendo las cosas como las ha hecho siempre, sea de una semana a otra o de un año a otro."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "seguimos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "hemos",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "alentar_asuntos_corazon_vigilar_final_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "Referente que no existe en el nodo: no hay ningun cliente de fabrica antes.",
+     "propuesta": "Cuenta con lo que pasa si lo dejas correr: el subordinado puede decirte algo como que no está contento y que lleva tiempo buscando trabajo fuera, y dejarte solo cinco minutos para lidiar con ello."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "escalonar_complejidad_puesto_empleado_nuevo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "regionalismo",
+     "cita": "qué tan estructurado o qué tan complejo",
+     "motivo": "\"qué tan\" es forma americana; la forma general es \"hasta qué punto\".",
+     "propuesta": "Cuando incorporas a un empleado nuevo y tienes que decidir hasta qué punto su primer puesto debe ser estructurado, o complejo, incierto y ambiguo, y cómo irá cambiando eso con el tiempo."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "vivir_valores_propios_evitar_listarlos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "mantenerte en contacto con los tuyos y demostrarlos",
+     "motivo": "\"los tuyos\" se lee como \"tu gente\", no como tus valores; referente ambiguo.",
+     "propuesta": "Obligar a la gente a escribir y compartir sus valores parece una forma de centrarla, pero conviene desconfiar de ese ejercicio: algo que se forja durante toda una vida puede sentirse abaratado, pide poner en palabras lo que a otros les parece imposible explicitar con sentido, toca creencias que muchos viven como privadas y puede abrir brechas en vez de ayudar a encontrar lo común, e incluso obligar a alguien a mentir sobre sus valores. Lo que sí sirve es mantenerte en contacto con tus propios valores y demostrarlos en cómo diriges, no escribirlos en un papel."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "regionalismo",
+     "cita": "si hubiera salido del armario",
+     "motivo": "\"salir del armario\" es la forma de Espana (en America, \"salir del closet\"); se dice sin modismo regional.",
+     "propuesta": "Cuenta con que un ejercicio que obliga a hablar de los valores en público puede abrir una brecha en vez de ayudar a la gente a encontrar lo que tiene en común: un hombre del Medio Oeste estaba seguro de que, si hubiera contado en su trabajo anterior que era homosexual, muchos compañeros le habrían apartado, y hacer allí un ejercicio de valores podría haberle obligado a mentir sobre los suyos."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "honradez",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_organizacion_escuchar_plantilla",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cuestionar_historia_irracional_cabeza",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "voz",
+     "cita": "todos tenemos sesgos ... nuestro cerebro",
+     "motivo": "Nosotros del narrador; en la casa se habla en tu o en tercera persona.",
+     "propuesta": "Recuerda que todo el mundo tiene sesgos, y que parte de la razón de que el sesgo exista es que el cerebro está hecho para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "cómo percibimos ... cuando reunimos ... intentamos ... cuando estamos en el Pozo ... nuestra historia",
+     "motivo": "Nosotros del narrador, y cambio de persona frente al tu del resto del nodo (paso 2: \"has estado batallando\").",
+     "propuesta": "Cuenta con que esto mismo pasa con cómo percibes los acontecimientos: cuando reúnes unos pocos datos, intentas construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estás en el Pozo (el bache de desánimo), tu historia tiende a ser la del peor caso posible."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "voz",
+     "cita": "las historias que nos contamos ... cuando estamos en el Pozo",
+     "motivo": "Nosotros del narrador, y cambio de persona frente al tu del mismo paso (\"en tu contra\", \"mereces\").",
+     "propuesta": "Ten claro lo que eso dice: las historias que te cuentas a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estás en el Pozo. Nueve de cada diez veces la otra persona no está en tu contra, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "gafas",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "tenemos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "nuestro",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "percibimos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "reunimos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "intentamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "estamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "nuestra",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "esa misma",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "pensábamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "contamos",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "estamos",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_metodo_ghsmart_contratacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  }
+ ]
+}

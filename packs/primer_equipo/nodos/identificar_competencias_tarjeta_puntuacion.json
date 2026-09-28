@@ -1,0 +1,261 @@
+{
+  "node_id": "identificar_competencias_tarjeta_puntuacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Identificar las competencias del puesto en la tarjeta de puntuación",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "La misión dice para qué existe el puesto y los resultados dicen qué hay que lograr; las competencias completan la tarjeta de puntuación al describir cómo esperas que actúe quien llegue. Hay listas de competencias de las que partir, pero son solo sugerencias de arranque: cada puesto tiene requisitos y resultados distintos, así que el conjunto se adapta a cada caso. Como dos personas pueden llegar al mismo resultado por caminos diferentes, conviene no hacer la lista demasiado estrecha. La sección puede servirte de lista de comprobación en la entrevista.",
+  "notas_extraccion": "Las competencias son la tercera parte de la tarjeta de puntuacion y aseguran el encaje de comportamiento. Trabajan en dos niveles: definen las habilidades y comportamientos que exige un puesto, y reflejan las demandas mas amplias de la cultura de la organizacion. El libro publica dos listas. La primera, las diez competencias criticas de un jugador A, sale de un trabajo con la Universidad de Chicago sobre la base de datos de ghSMART fundido con lo que dijeron los consejeros delegados entrevistados. La segunda es la lista larga que los autores reparten cuando presentan el metodo a un cliente nuevo. El aviso con el que el libro cierra las dos: son sugerencias de arranque, no un catalogo cerrado, y hay mas de una manera de despellejar un gato, que es como los autores explican que dos lideres de una fundacion puedan recaudar fondos uno con folletos en color a muchos donantes y otro llamando a los donantes uno a uno. El caso nombrado es el de Bill Johnson, consejero delegado de Heinz desde 1998, que tiene su propia lista de cinco: la quimica personal, el compromiso mutuo, si la persona es entrenable, si tiene el ego bajo control y si tiene el intelecto requerido. El libro lo pone como ejemplo de personalizacion y lo cierra mandando lo contrario de copiarlo: la lista de Johnson captura lo que EL mas valora, y lo que hay que asegurarse es de que la tuya haga lo mismo.",
+  "pasos_accionables": [
+    "Identifica las competencias del puesto, tantas como te parezcan apropiadas, para describir los comportamientos que alguien tiene que demostrar para lograr los resultados que ya escribiste.",
+    "Para elegirlas, parte de esta lista de diez competencias críticas de un jugador A: eficiencia, honestidad e integridad, organización y planificación, empuje, cumplimiento de los compromisos, inteligencia, capacidad analítica, atención al detalle, persistencia y proactividad.",
+    "Considera también esta otra lista, más larga: capacidad de contratar jugadores A y capacidad de desarrollar personas, las dos para puestos de mando, flexibilidad y adaptabilidad, calma bajo presión, pensamiento estratégico y visión, creatividad e innovación, entusiasmo, ética de trabajo, altos estándares, capacidad de escucha, apertura a la crítica y a las ideas, comunicación, trabajo en equipo y persuasión.",
+    "Trata las dos listas como sugerencias de arranque y no como la lista definitiva: adapta el conjunto de competencias al puesto concreto y a la naturaleza peculiar de tu institución, porque cada puesto tiene requisitos distintos y cada tarjeta resultados distintos.",
+    "No hagas la lista de competencias demasiado estrecha, porque en la práctica dos personas pueden lograr el mismo resultado con enfoques distintos.",
+    "Identifica de cinco a ocho competencias que describan tu cultura y ponlas en todas las tarjetas de puntuación.",
+    "Usa la sección de competencias de la tarjeta como lista de comprobación durante el proceso de entrevista, y personalízala para que encaje con tus necesidades."
+  ],
+  "entregable_esperado": "La sección de competencias de la tarjeta de puntuación escrita, con las competencias del puesto que describen los comportamientos necesarios para lograr los resultados, y con las de cinco a ocho competencias de cultura que van en todas las tarjetas de la casa.",
+  "nodos_previos": [
+    "crear_tarjeta_puntuacion_puesto",
+    "definir_resultados_tarjeta_puntuacion",
+    "evaluar_cultura_empresa_adjetivos"
+  ],
+  "nodos_siguientes": [
+    "alinear_comunicar_tarjeta_puntuacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes escritas la misión y los resultados del puesto. Las competencias salen directamente de esos dos primeros elementos de la tarjeta de puntuación: la misión define la esencia del trabajo, los resultados describen lo que hay que lograr, y las competencias definen cómo esperas que actúe quien llegue para cumplirlos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La misión dice para qué existe el puesto y los resultados dicen qué hay que lograr; las competencias completan la tarjeta de puntuación al describir cómo esperas que actúe quien llegue. Hay listas de competencias de las que partir, pero son solo sugerencias de arranque: cada puesto tiene requisitos y resultados distintos, así que el conjunto se adapta a cada caso. Como dos personas pueden llegar al mismo resultado por caminos diferentes, conviene no hacer la lista demasiado estrecha. La sección puede servirte de lista de comprobación en la entrevista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "85-145"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: 'ahorra empezar de cero' y 'la convierte en una guía útil' son beneficios que las líneas no dan ('starter suggestions only'; 'we use ... as a checklist'), y 'deja fuera a quien lo lograría a su manera' estira el 'we recommend that you do not create too narrow a list'. La propuesta dice lo que dicen las líneas con su razón (dos caminos al mismo resultado) y 'cómo esperas que actúe' calca 'how you expect a new hire to operate'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)"
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar las competencias del puesto en la tarjeta de puntuacion",
+      "texto_nuevo": "Identificar las competencias del puesto en la tarjeta de puntuación",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para elegirlas, parte de la lista de las diez competencias criticas de un jugador A que el libro publica: eficiencia, honestidad e integridad, organizacion y planificacion, agresividad, cumplimiento de los compromisos, inteligencia, capacidad analitica, atencion al detalle, persistencia y proactividad.",
+      "texto_nuevo": "Para elegirlas, parte de esta lista de diez competencias críticas de un jugador A: eficiencia, honestidad e integridad, organización y planificación, agresividad, cumplimiento de los compromisos, inteligencia, capacidad analítica, atención al detalle, persistencia y proactividad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro publica"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considera tambien la lista larga que los autores reparten a los clientes nuevos: capacidad de contratar jugadores A y capacidad de desarrollar personas, las dos para puestos de mando, flexibilidad y adaptabilidad, calma bajo presion, pensamiento estrategico y vision, creatividad e innovacion, entusiasmo, etica de trabajo, altos estandares, capacidad de escucha, apertura a la critica y a las ideas, comunicacion, trabajo en equipo y persuasion.",
+      "texto_nuevo": "Considera también esta otra lista, más larga: capacidad de contratar jugadores A y capacidad de desarrollar personas, las dos para puestos de mando, flexibilidad y adaptabilidad, calma bajo presión, pensamiento estratégico y visión, creatividad e innovación, entusiasmo, ética de trabajo, altos estándares, capacidad de escucha, apertura a la crítica y a las ideas, comunicación, trabajo en equipo y persuasión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que los autores reparten a los clientes nuevos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata las dos listas como sugerencias de arranque y no como la lista definitiva: adapta el conjunto de competencias al puesto concreto y a la naturaleza peculiar de tu institucion, porque cada puesto tiene requisitos distintos y cada tarjeta resultados distintos.",
+      "texto_nuevo": "Trata las dos listas como sugerencias de arranque y no como la lista definitiva: adapta el conjunto de competencias al puesto concreto y a la naturaleza peculiar de tu institución, porque cada puesto tiene requisitos distintos y cada tarjeta resultados distintos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No hagas la lista de competencias demasiado estrecha, porque en la practica dos personas pueden lograr el mismo resultado con enfoques distintos.",
+      "texto_nuevo": "No hagas la lista de competencias demasiado estrecha, porque en la práctica dos personas pueden lograr el mismo resultado con enfoques distintos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica de cinco a ocho competencias que describan tu cultura y ponlas en todas las tarjetas de puntuacion.",
+      "texto_nuevo": "Identifica de cinco a ocho competencias que describan tu cultura y ponlas en todas las tarjetas de puntuación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa la seccion de competencias de la tarjeta como lista de comprobacion durante el proceso de entrevista, y personalizala para que encaje con tus necesidades.",
+      "texto_nuevo": "Usa la sección de competencias de la tarjeta como lista de comprobación durante el proceso de entrevista, y personalízala para que encaje con tus necesidades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La seccion de competencias de la tarjeta de puntuacion escrita, con las competencias del puesto que describen los comportamientos necesarios para lograr los resultados, y con las de cinco a ocho competencias de cultura que van en todas las tarjetas de la casa.",
+      "texto_nuevo": "La sección de competencias de la tarjeta de puntuación escrita, con las competencias del puesto que describen los comportamientos necesarios para lograr los resultados, y con las de cinco a ocho competencias de cultura que van en todas las tarjetas de la casa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_competencias_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes escritas la mision y los resultados del puesto. El libro dice que las competencias fluyen directamente de esos dos primeros elementos de la tarjeta de puntuacion: la mision define la esencia del trabajo, los resultados describen lo que hay que lograr, y las competencias definen como esperas que el nuevo opere para cumplirlos.",
+      "texto_nuevo": "Cuando ya tienes escritas la misión y los resultados del puesto. Las competencias fluyen directamente de esos dos primeros elementos de la tarjeta de puntuación: la misión define la esencia del trabajo, los resultados describen lo que hay que lograr, y las competencias definen cómo esperas que el nuevo opere para cumplirlos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-identificar_competencias_tarjeta_puntuacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para elegirlas, parte de esta lista de diez competencias críticas de un jugador A: eficiencia, honestidad e integridad, organización y planificación, agresividad, cumplimiento de los compromisos, inteligencia, capacidad analítica, atención al detalle, persistencia y proactividad.",
+      "texto_nuevo": "Para elegirlas, parte de esta lista de diez competencias críticas de un jugador A: eficiencia, honestidad e integridad, organización y planificación, empuje, cumplimiento de los compromisos, inteligencia, capacidad analítica, atención al detalle, persistencia y proactividad.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "agresividad"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco semántico de \"aggressiveness\": en español \"agresividad\" connota hostilidad, y el libro la define como moverse rápido y tomar posición firme sin ser áspero (smart_who/cap_03.md 99).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-identificar_competencias_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes escritas la misión y los resultados del puesto. Las competencias fluyen directamente de esos dos primeros elementos de la tarjeta de puntuación: la misión define la esencia del trabajo, los resultados describen lo que hay que lograr, y las competencias definen cómo esperas que el nuevo opere para cumplirlos.",
+      "texto_nuevo": "Cuando ya tienes escritas la misión y los resultados del puesto. Las competencias salen directamente de esos dos primeros elementos de la tarjeta de puntuación: la misión define la esencia del trabajo, los resultados describen lo que hay que lograr, y las competencias definen cómo esperas que actúe quien llegue para cumplirlos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "fluyen",
+          "que el nuevo opere"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de \"flow directly from\" y \"how you expect a new hire to operate\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Identifica las Competencias del Puesto"
+}

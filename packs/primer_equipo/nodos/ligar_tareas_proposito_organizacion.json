@@ -1,0 +1,329 @@
+{
+  "node_id": "ligar_tareas_proposito_organizacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ligar cada tarea al propósito mayor y no confundirlo con su indicador",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuando todo el equipo entiende y hace suyo lo que en última instancia se intenta lograr, las decisiones del día a día se simplifican: basta preguntar qué opción acerca más al futuro que se busca. Los conflictos aparecen cuando la gente no sabe qué importa y por qué. Pero el propósito no es su indicador: medir cuánto tarda en cerrarse una queja ayuda, y si el equipo persigue solo ese número puede ganar velocidad y perder calidad, alejándose de la visión. Por eso conviene describir una y otra vez el mundo que quieres ver y ligar cada tarea, decisión y meta a ese propósito mayor.",
+  "notas_extraccion": "Es la tercera tactica de equilibrio y la que mas se acerca a ser postura, y lo que la salva es el aviso del indicador: el libro no se queda en repite la vision, sino que da el fallo concreto que aparece cuando la vision se sustituye por su medida, con su ejemplo numerico y su consecuencia observable, sube la velocidad y baja la calidad. Ese aviso es un objeto de trabajo y no una meta. El caso del fundador que rechazo la oferta de compra NO va dentro como paso: va en atribuciones, porque es una cifra y una cita del autor y no un acto que alguien ejecute. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se repite la vision, ni como se corrige un indicador que ya deformo la conducta.",
+  "pasos_accionables": [
+    "Si formas parte de una organización mayor, cuenta con que probablemente haya una visión paraguas, sea un pollo en cada olla, ser la empresa más centrada en el cliente de la Tierra o ser la empresa de automoción más exitosa y respetada del país.",
+    "Ten claro el papel concreto que tu equipo juega para conseguirla, sea idear un nuevo plan fiscal, crear el mejor servicio al cliente del sector o apuntar a casi cero errores de producción.",
+    "Consigue que todo el mundo entienda y haga suyo lo que en última instancia se intenta hacer, porque entonces las decisiones tácticas del día a día se vuelven más fáciles: se pueden mirar desde la pregunta de qué opción nos acerca más al futuro que queremos.",
+    "Cuenta con lo contrario, que es cuando aparecen los conflictos: cuando la gente no entiende qué es lo que importa en última instancia y por qué.",
+    "Desconfía de confundir tu propósito con los indicadores que usas para medir tu avance. Por ejemplo, si te importa dar el mejor servicio al cliente del sector, un dato que podrías seguir es cuánto se tarda en resolver una queja, y podrías fijar como meta que ninguna queja tarde más de tres días en cerrarse.",
+    "Reconoce que esa meta está bien, y no pierdas de vista que es una aproximación de lo que de verdad te importa. Si el equipo se centra demasiado en ella, puede que los agentes de atención al cliente acaben tomando decisiones apresuradas que van contra lo que el cliente quiere, y si sube la velocidad de resolución pero baja la calidad del servicio, no te estás acercando de verdad a tu visión.",
+    "Recuerda a la gente lo que de verdad importa, y describe una y otra vez el mundo que te gustaría ver.",
+    "Intenta conectar cada tarea, cada proyecto, cada decisión y cada meta con el propósito de nivel superior de la organización, porque si todo el mundo entiende el sueño las acciones del equipo estarán alineadas para hacerlo realidad."
+  ],
+  "entregable_esperado": "Un equipo que entiende el propósito mayor y puede mirar cada decisión desde la pregunta de qué opción nos acerca al futuro que queremos.",
+  "nodos_previos": [
+    "alinear_equipo_proposito_comun",
+    "definir_vision_larga_trabajar_atras"
+  ],
+  "nodos_siguientes": [
+    "comunicar_valores_diez_formas"
+  ],
+  "condiciones_activacion": [
+    "De forma continua, y con más urgencia cuando aparecen conflictos sobre decisiones tácticas o cuando el equipo persigue una meta numérica."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando todo el equipo entiende y hace suyo lo que en última instancia se intenta lograr, las decisiones del día a día se simplifican: basta preguntar qué opción acerca más al futuro que se busca. Los conflictos aparecen cuando la gente no sabe qué importa y por qué. Pero el propósito no es su indicador: medir cuánto tarda en cerrarse una queja ayuda, y si el equipo persigue solo ese número puede ganar velocidad y perder calidad, alejándose de la visión. Por eso conviene describir una y otra vez el mundo que quieres ver y ligar cada tarea, decisión y meta a ese propósito mayor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "237-249"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ligar cada tarea al proposito mayor y no confundirlo con su indicador",
+      "texto_nuevo": "Ligar cada tarea al propósito mayor y no confundirlo con su indicador",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si formas parte de una organizacion mayor, cuenta con que hay una vision paraguas, sea un pollo en cada olla, ser la empresa mas centrada en el cliente de la tierra o ser la empresa de automocion mas exitosa y respetada del pais.",
+      "texto_nuevo": "Si formas parte de una organización mayor, cuenta con que hay una visión paraguas, sea un pollo en cada olla, ser la empresa más centrada en el cliente de la Tierra o ser la empresa de automoción más exitosa y respetada del país.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro el papel concreto que tu equipo juega para conseguirla, sea idear un nuevo plan fiscal, crear el mejor servicio al cliente del sector o apuntar a casi cero errores de produccion.",
+      "texto_nuevo": "Ten claro el papel concreto que tu equipo juega para conseguirla, sea idear un nuevo plan fiscal, crear el mejor servicio al cliente del sector o apuntar a casi cero errores de producción.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue que todo el mundo entienda y compre lo que en ultima instancia se intenta hacer, porque entonces las decisiones tacticas del dia a dia se vuelven mas faciles: se pueden mirar a traves de la lente de que opcion nos acerca mas al futuro que queremos.",
+      "texto_nuevo": "Consigue que todo el mundo entienda y compre lo que en última instancia se intenta hacer, porque entonces las decisiones tácticas del día a día se vuelven más fáciles: se pueden mirar a través de la lente de qué opción nos acerca más al futuro que queremos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo contrario, que es cuando aparecen los conflictos: cuando la gente no entiende que es lo que importa en ultima instancia y por que.",
+      "texto_nuevo": "Cuenta con lo contrario, que es cuando aparecen los conflictos: cuando la gente no entiende qué es lo que importa en última instancia y por qué.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desconfia de confundir tu proposito con los indicadores que usas para medir tu avance. El libro pone el caso: si te importa dar el mejor servicio al cliente del sector, un dato que podrias seguir es cuanto se tarda en resolver una queja, y podrias fijar como meta que ninguna queja tarde mas de tres dias en cerrarse.",
+      "texto_nuevo": "Desconfía de confundir tu propósito con los indicadores que usas para medir tu avance. Por ejemplo, si te importa dar el mejor servicio al cliente del sector, un dato que podrías seguir es cuánto se tarda en resolver una queja, y podrías fijar como meta que ninguna queja tarde más de tres días en cerrarse.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro pone el caso:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que esa meta esta bien, y no pierdas de vista que es una aproximacion de lo que de verdad te importa. Si el equipo se centra demasiado en ella, puedes acabar con representantes tomando decisiones apresuradas que van contra lo que el cliente quiere, y si sube la velocidad de resolucion pero baja la calidad del servicio, no te estas acercando de verdad a tu vision.",
+      "texto_nuevo": "Reconoce que esa meta está bien, y no pierdas de vista que es una aproximación de lo que de verdad te importa. Si el equipo se centra demasiado en ella, puedes acabar con representantes tomando decisiones apresuradas que van contra lo que el cliente quiere, y si sube la velocidad de resolución pero baja la calidad del servicio, no te estás acercando de verdad a tu visión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recuerda a la gente lo que de verdad importa, y describe una y otra vez el mundo que te gustaria ver.",
+      "texto_nuevo": "Recuerda a la gente lo que de verdad importa, y describe una y otra vez el mundo que te gustaría ver.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Intenta conectar cada tarea, cada proyecto, cada decision y cada meta con el proposito de nivel superior de la organizacion, porque si todo el mundo entiende el sueno las acciones del equipo estaran alineadas para hacerlo realidad.",
+      "texto_nuevo": "Intenta conectar cada tarea, cada proyecto, cada decisión y cada meta con el propósito de nivel superior de la organización, porque si todo el mundo entiende el sueño las acciones del equipo estarán alineadas para hacerlo realidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un equipo que entiende el proposito mayor y puede mirar cada decision a traves de la lente de cual opcion nos acerca al futuro que queremos.",
+      "texto_nuevo": "Un equipo que entiende el propósito mayor y puede mirar cada decisión a través de la lente de qué opción nos acerca al futuro que queremos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ligar_tareas_proposito_organizacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "De forma continua, y con mas urgencia cuando aparecen conflictos sobre decisiones tacticas o cuando el equipo persigue una meta numerica.",
+      "texto_nuevo": "De forma continua, y con más urgencia cuando aparecen conflictos sobre decisiones tácticas o cuando el equipo persigue una meta numérica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ligar_tareas_proposito_organizacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si formas parte de una organización mayor, cuenta con que hay una visión paraguas, sea un pollo en cada olla, ser la empresa más centrada en el cliente de la Tierra o ser la empresa de automoción más exitosa y respetada del país.",
+      "texto_nuevo": "Si formas parte de una organización mayor, cuenta con que probablemente haya una visión paraguas, sea un pollo en cada olla, ser la empresa más centrada en el cliente de la Tierra o ser la empresa de automoción más exitosa y respetada del país.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 237",
+        "frase": "If you’re part of a larger organization, you’ll likely have an overarching vision"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"you’ll likely have\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-ligar_tareas_proposito_organizacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue que todo el mundo entienda y compre lo que en última instancia se intenta hacer, porque entonces las decisiones tácticas del día a día se vuelven más fáciles: se pueden mirar a través de la lente de qué opción nos acerca más al futuro que queremos.",
+      "texto_nuevo": "Consigue que todo el mundo entienda y haga suyo lo que en última instancia se intenta hacer, porque entonces las decisiones tácticas del día a día se vuelven más fáciles: se pueden mirar desde la pregunta de qué opción nos acerca más al futuro que queremos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "compre",
+          "a través de la lente de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'comprar' por 'buy into' y 'a través de la lente de' por 'through the lens of' son calcos; se usa 'haga suyo' como en el resumen.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-ligar_tareas_proposito_organizacion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce que esa meta está bien, y no pierdas de vista que es una aproximación de lo que de verdad te importa. Si el equipo se centra demasiado en ella, puedes acabar con representantes tomando decisiones apresuradas que van contra lo que el cliente quiere, y si sube la velocidad de resolución pero baja la calidad del servicio, no te estás acercando de verdad a tu visión.",
+      "texto_nuevo": "Reconoce que esa meta está bien, y no pierdas de vista que es una aproximación de lo que de verdad te importa. Si el equipo se centra demasiado en ella, puede que los agentes de atención al cliente acaben tomando decisiones apresuradas que van contra lo que el cliente quiere, y si sube la velocidad de resolución pero baja la calidad del servicio, no te estás acercando de verdad a tu visión.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "puedes acabar con representantes tomando"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'acabar con representantes' se lee como eliminarlos (calco de 'end up with') y 'representantes' queda sin decir de qué; se conserva el 'might' con 'puede que'.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-ligar_tareas_proposito_organizacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un equipo que entiende el propósito mayor y puede mirar cada decisión a través de la lente de qué opción nos acerca al futuro que queremos.",
+      "texto_nuevo": "Un equipo que entiende el propósito mayor y puede mirar cada decisión desde la pregunta de qué opción nos acerca al futuro que queremos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "a través de la lente de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'through the lens of'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Liga tus Tareas al Propósito"
+}

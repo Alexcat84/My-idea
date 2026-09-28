@@ -120,6 +120,34 @@ const CAEN: Record<string, Record<Locale, string | null>> = {
     ar: "استكشفوه مجانًا",
     hi: "मुफ़्त में खोजें",
   },
+  // Integración del mundo 11 (decisión del fundador, 28 sep 2026): la voz de libro.
+  vozDeLibro: {
+    es: "Aplica las tres preguntas que el libro nombra.",
+    en: "Use the three questions the book lists.",
+    pt: "Aplique as três perguntas que o livro enumera.",
+    fr: "Applique les trois questions du livre.",
+    de: "Wende die drei Fragen aus dem Buch an.",
+    it: "Applica le tre domande che il libro elenca.",
+    ja: "本書の3つの質問を使ってください。",
+    zh: "使用书中列出的三个问题。",
+    ko: "이 책의 세 가지 질문을 써 보세요.",
+    ar: "طبّقوا الأسئلة الثلاثة التي يذكرها الكتاب.",
+    hi: "पुस्तक में दिए गए तीन सवाल अपनाएँ।",
+  },
+  // Y las marcas de auditoría de la extracción (rutas, líneas, identificadores de regla).
+  marcasInternas: {
+    es: "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_13.md, lineas 187 a 198, con D.27 delante.",
+    en: "Source unit: fuentes/grove_high_output/cap_04.md, lines 12 to 20.",
+    pt: "Vem de fuentes/smart_who/cap_02.md.",
+    fr: "Tiré de fuentes/zhuo_manager/cap_05.md.",
+    de: "Aus fuentes/grove_high_output/cap_03.md.",
+    it: "Da fuentes/gerber_emyth/cap_09.md.",
+    ja: "fuentes/grove_high_output/cap_04.md より。",
+    zh: "出自 fuentes/grove_high_output/cap_04.md。",
+    ko: "fuentes/grove_high_output/cap_04.md 에서.",
+    ar: "من fuentes/grove_high_output/cap_04.md.",
+    hi: "fuentes/grove_high_output/cap_04.md से।",
+  },
 };
 
 // Lo que el canon PERMITE y que una guardia torpe cazaría (no debe caer).
@@ -146,6 +174,18 @@ const PASAN: [Locale, string][] = [
   ["pt", "Divida seu tempo pela metade"], // aritmética, no un estado de tarea
   ["de", "Wenn dein Projekt in den nächsten Zyklus geht, kannst du diese Welt erneut kostenlos erkunden."], // la frase viva
   ["de", "Wähle, wie ihr im Team entscheidet"], // plural del equipo que el usuario declaró (BANCO §3)
+  // La voz de libro no es cualquier "texto" ni cualquier "autor" (mundo 11, 28 sep 2026).
+  ["es", "Pega el texto de tu anuncio y compáralo."],
+  ["es", "Revisa los derechos de autor de las imágenes."],
+  ["es", "Aplica la gestión de libro abierto con tu equipo."],
+  ["es", "Usa un libro de texto para entrenar al nuevo."],
+  ["es", "Revisa la línea de producción 3."],
+  ["en", "Paste the text of your ad."],
+  ["en", "Check the copyright of every image."],
+  ["fr", "Ces crédits ne sont utilisés que si on le livre."], // le verbe livrer
+  ["ar", "جارٍ الكتابة…"], // la escritura, no el libro
+  ["zh", "区分顾问和工作者。"], // 工作者 = trabajador
+  ["zh", "正确界定你的合作者身份"], // 合作者 = colaborador
 ];
 
 describe("guardias de frases por idioma (D8)", () => {

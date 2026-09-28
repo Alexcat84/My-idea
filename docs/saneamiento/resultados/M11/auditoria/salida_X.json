@@ -1,0 +1,48 @@
+{
+ "lote": "X",
+ "nodos": [
+  {
+   "node_id": "preparar_guion_reunion_individual_subordinado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "calco",
+     "cita": "pasee después al supervisor por todo el material",
+     "motivo": "Calco de 'walk the supervisor through': en español no se 'pasea' a alguien por un material.",
+     "propuesta": "Haz que el subordinado le explique después al supervisor todo el material, punto por punto."
+    }
+   ]
+  },
+  {
+   "node_id": "canalizar_interrupciones_cartel_hora_oficina",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "Obliga en todo caso a los que te interrumpen a menudo",
+     "motivo": "El libro dice que hay que INTENTAR obligarlos ('should try to force'); el texto lo da como orden cumplida.",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "321",
+     "frase": "In any case, a manager should try to force his frequent interrupters to make an active decision about whether an issue can wait.",
+     "propuesta": "Intenta en todo caso obligar a los que te interrumpen a menudo a tomar una decisión activa sobre si su asunto puede esperar."
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_resultado_excelente_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "reunión de estado",
+     "motivo": "Calco de 'status meeting'; en español es reunión de seguimiento.",
+     "propuesta": "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de seguimiento puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala."
+    }
+   ]
+  }
+ ],
+ "_nota": "defectos reales en campos donde se planto una trampa: la primera version del consolidador los dejo fuera (fallo del orquestador, corregido)"
+}

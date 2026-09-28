@@ -1,0 +1,367 @@
+{
+  "node_id": "usar_banco_nueve_preguntas_entrevista",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Usar el banco de nueve preguntas que un grupo de mandos consideró las mejores para entrevistar a un candidato",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Una entrevista suele durar una hora o dos, y en ese tiempo intentas averiguar cómo es probable que rinda alguien en un entorno nuevo, así que el riesgo de fallar es alto. Estas nueve preguntas son las que un grupo de directivos consideró las mejores: proyectos valorados, debilidades, problemas del puesto actual, logros, fracasos y lo que aprendió de ellos. Lo que se obtiene con ellas tiende a caer en cuatro categorías: qué sabe hacer en el puesto, qué hizo con ese saber, por qué pudo haber distancia entre lo que sabía y lo que logró, y qué valores guían su trabajo.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_15.md, unidad Cap. 14, titulo textual Two Difficult Tasks. Sale de la PIEZA P11 a P12 de la frontera publicada hoy en .v58ext/frontera.txt, L37 a L55, 143 palabras. FRONTERA DENTRO DEL NODO, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): L37 es la cabeza que anuncia que un grupo de mandos aporto las preguntas, y L39 a L55 son las nueve preguntas literales, una por linea. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el texto trae el inventario COMPLETO Y LITERAL de las nueve preguntas, cada una en su propia linea con guion, listas para usarse tal cual; es inventario de un OBJETO DE TRABAJO concreto (las preguntas mismas), no de fines ni de un adjetivo de adecuacion. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L39 (Describe some projects that were highly regarded by your management, especially by the levels above your immediate supervisor); paso 2 de L41 (What are your weaknesses? How are you working to eliminate them?); paso 3 de L43 (Convince me why my company should hire you); paso 4 de L45 (What are some of the problems you are encountering in your current position? How are you going about solving them? What could you have done to prevent them from cropping up?); paso 5 de L47 (Why do you think you're ready for this new job?); paso 6 de L49 (What do you consider your most significant achievements? Why were they important to you?); paso 7 de L51 (What do you consider your most significant failures? What did you learn from them?); paso 8 de L53 (Why do you think an engineer should be chosen for a marketing position? Vary this one according to the situation.); paso 9 de L55 (What was the most important course or project you completed in your college career? Why was it so important?). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LA CLASIFICACION DE LAS CUATRO CATEGORIAS NO ENTRA COMO NODO PROPIO (P.19, repeticion interna): L57 nombra cuatro categorias de informacion (tecnico, que hizo con el saber, discrepancias, valores operativos) y L59 a L87 reparten estas MISMAS nueve preguntas bajo esas cuatro categorias, sin aportar ninguna pregunta nueva. El objeto ya esta en casa: mandarlo a un nodo aparte fabricaria el gemelo de este banco de preguntas, asi que esa clasificacion queda fuera del catalogo esta vuelta y se deja escrito aqui por si una lectura futura encuentra un uso propio para ella que no dependa de repetir estas nueve preguntas. CORRECCION DECLARADA DE LA VUELTA 73 de la linea serial, en la relectura de fidelidad entera que D.30 y D.58 mandan antes de la insercion (TAREA 2.2 del encargo de la 73), sin insertar nada. LOS PASOS 3 Y 8 TRAIAN UNA CLAUSULA PUENTE CADA UNO, Y LA CONDICION UNA CIFRA QUE EL LIBRO NO DA; SE REESCRIBEN SIN BORRAR EL RASTRO. El paso 3 decia: Preguntale que te convenceria de que tu empresa deberia contratarlo. Hoy dice: Pidele que te convenza de por que tu empresa deberia contratarlo. LO QUE SE CORRIGE es la pregunta: L43 dice Convince me why my company should hire you, que le pide al candidato que convenza, y el paso viejo le preguntaba que convenceria al mando, que es otra pregunta. El paso 8 decia: Si el puesto lo justifica, preguntale por que cree que deberia elegirse a un ingeniero para un puesto de marketing, o la variante equivalente segun la situacion. Hoy dice: Preguntale por que cree que deberia elegirse a un ingeniero para un puesto de marketing, variando esta pregunta segun la situacion. LA CLAUSULA QUE SE RETIRA, Si el puesto lo justifica, no la pone el libro: L53 dice (Vary this one according to the situation.), que manda variar la pregunta y no condicionarla. La condicion de activacion decia la hora u hora y media de que dispone, y hoy dice la hora o dos de entrevista de que dispone: L27 dice an hour or two of interview time. DONDE ARRIBA DICE RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE, la cifra de la relectura de la vuelta 73 es 9 pasos, 7 TRANSCRIPCION y 2 PUENTE sobre el texto viejo, y 9 TRANSCRIPCION y 0 PUENTE despues de esta correccion (.v73ext/fidelidad.tsv). La cifra vieja no se borra, manual principio 6.",
+  "pasos_accionables": [
+    "Pide al candidato que describa proyectos que fueron muy valorados por su dirección, en especial por los niveles por encima de su supervisor inmediato.",
+    "Pregúntale cuáles son sus debilidades y qué está haciendo para eliminarlas.",
+    "Pídele que te convenza de por qué tu empresa debería contratarlo.",
+    "Pregúntale qué problemas está encontrando en su puesto actual, cómo los está resolviendo y qué podría haber hecho para evitar que aparecieran.",
+    "Pregúntale por qué cree que está listo para este nuevo puesto.",
+    "Pregúntale cuáles considera sus logros más importantes y por qué fueron importantes para él.",
+    "Pregúntale cuáles considera sus fracasos más importantes y qué aprendió de ellos.",
+    "Pregúntale por qué cree que debería elegirse a un ingeniero para un puesto de mercadotecnia, variando esta pregunta según la situación.",
+    "Pregúntale cuál fue el curso o proyecto más importante que completó en su etapa universitaria y por qué fue tan importante."
+  ],
+  "entregable_esperado": "Las respuestas del candidato a las nueve preguntas, que te dan una base concreta para juzgar su desempeño pasado y sus valores operativos.",
+  "nodos_previos": [
+    "preparar_preguntas_entrevista_antemano"
+  ],
+  "nodos_siguientes": [
+    "profundizar_respuestas_preguntas_curiosidad",
+    "involucrar_varios_entrevistadores"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que sueles disponer."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una entrevista dura apenas una hora o dos, y en ese tiempo intentas averiguar cómo es probable que rinda alguien en un entorno nuevo, así que el riesgo de fallar es alto. Estas nueve preguntas son las que un grupo de directivos consideró las mejores: proyectos valorados, debilidades, problemas del puesto actual, logros, fracasos y lo que aprendió de ellos. Lo que se obtiene con ellas tiende a caer en cuatro categorías: qué sabe hacer en el puesto, qué hizo con ese saber, por qué pudo haber distancia entre lo que sabía y lo que logró, y qué valores guían su trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_15.md",
+          "lineas": "27-57"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: 'aprovechan ese tiempo escaso porque...' y 'respuestas que puedes comparar' no están; las preguntas son las que un grupo de directivos creyó las mejores (l.37) y la información 'tends to fall' en cuatro categorías (l.57). La propuesta dice eso y trae el riesgo alto de fallar de l.27.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)"
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usar el banco de nueve preguntas que un grupo de mandos considero las mejores para entrevistar a un candidato",
+      "texto_nuevo": "Usar el banco de nueve preguntas que un grupo de mandos consideró las mejores para entrevistar a un candidato",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide al candidato que describa proyectos que fueron muy valorados por su direccion, en especial por los niveles por encima de su supervisor inmediato.",
+      "texto_nuevo": "Pide al candidato que describa proyectos que fueron muy valorados por su dirección, en especial por los niveles por encima de su supervisor inmediato.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale cuales son sus debilidades y que esta haciendo para eliminarlas.",
+      "texto_nuevo": "Pregúntale cuáles son sus debilidades y qué está haciendo para eliminarlas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pidele que te convenza de por que tu empresa deberia contratarlo.",
+      "texto_nuevo": "Pídele que te convenza de por qué tu empresa debería contratarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale que problemas esta encontrando en su puesto actual, como los esta resolviendo y que podria haber hecho para evitar que aparecieran.",
+      "texto_nuevo": "Pregúntale qué problemas está encontrando en su puesto actual, cómo los está resolviendo y qué podría haber hecho para evitar que aparecieran.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale por que cree que esta listo para este nuevo puesto.",
+      "texto_nuevo": "Pregúntale por qué cree que está listo para este nuevo puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale cuales considera sus logros mas importantes y por que fueron importantes para el.",
+      "texto_nuevo": "Pregúntale cuáles considera sus logros más importantes y por qué fueron importantes para él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale cuales considera sus fracasos mas importantes y que aprendio de ellos.",
+      "texto_nuevo": "Pregúntale cuáles considera sus fracasos más importantes y qué aprendió de ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale por que cree que deberia elegirse a un ingeniero para un puesto de marketing, variando esta pregunta segun la situacion.",
+      "texto_nuevo": "Pregúntale por qué cree que debería elegirse a un ingeniero para un puesto de marketing, variando esta pregunta según la situación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale cual fue el curso o proyecto mas importante que completo en su etapa universitaria y por que fue tan importante.",
+      "texto_nuevo": "Pregúntale cuál fue el curso o proyecto más importante que completó en su etapa universitaria y por qué fue tan importante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_banco_nueve_preguntas_entrevista-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las respuestas del candidato a las nueve preguntas, que le dan al mando una base concreta y comparable para juzgar su desempeno pasado y sus valores operativos.",
+      "texto_nuevo": "Las respuestas del candidato a las nueve preguntas, que le dan al mando una base concreta y comparable para juzgar su desempeño pasado y sus valores operativos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-usar_banco_nueve_preguntas_entrevista-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntale por qué cree que debería elegirse a un ingeniero para un puesto de marketing, variando esta pregunta según la situación.",
+      "texto_nuevo": "Pregúntale por qué cree que debería elegirse a un ingeniero para un puesto de mercadotecnia, variando esta pregunta según la situación.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "marketing"
+        ]
+      },
+      "decision": "pase de glosario (marketing): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_banco_nueve_preguntas_entrevista-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las respuestas del candidato a las nueve preguntas, que le dan al mando una base concreta y comparable para juzgar su desempeño pasado y sus valores operativos.",
+      "texto_nuevo": "Las respuestas del candidato a las nueve preguntas, que te dan una base concreta y comparable para juzgar su desempeño pasado y sus valores operativos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "le dan al mando"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Tercera persona (\"al mando\") en vez de tú.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_banco_nueve_preguntas_entrevista-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando el mando va a entrevistar a un candidato a un puesto y necesita preguntas concretas para la hora o dos de entrevista de que dispone.",
+      "texto_nuevo": "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que dispones.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el mando va",
+          "y necesita preguntas",
+          "de que dispone."
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Tercera persona (\"el mando\", \"necesita\", \"dispone\") en vez de tú.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase2-usar_banco_nueve_preguntas_entrevista-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una entrevista dura apenas una hora o dos, y en ese tiempo intentas averiguar cómo es probable que rinda alguien en un entorno nuevo, así que el riesgo de fallar es alto. Estas nueve preguntas son las que un grupo de directivos consideró las mejores: proyectos valorados, debilidades, problemas del puesto actual, logros, fracasos y lo que aprendió de ellos. Lo que se obtiene con ellas tiende a caer en cuatro categorías: qué sabe hacer en el puesto, qué hizo con ese saber, por qué pudo haber distancia entre lo que sabía y lo que logró, y qué valores guían su trabajo.",
+      "texto_nuevo": "Una entrevista suele durar una hora o dos, y en ese tiempo intentas averiguar cómo es probable que rinda alguien en un entorno nuevo, así que el riesgo de fallar es alto. Estas nueve preguntas son las que un grupo de directivos consideró las mejores: proyectos valorados, debilidades, problemas del puesto actual, logros, fracasos y lo que aprendió de ellos. Lo que se obtiene con ellas tiende a caer en cuatro categorías: qué sabe hacer en el puesto, qué hizo con ese saber, por qué pudo haber distancia entre lo que sabía y lo que logró, y qué valores guían su trabajo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_15.md 27",
+        "frase": "The means at your disposal typically consist of an hour or two of interview time and a check of the candidate’s references."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que lo habitual (\"typically\") es una hora o dos; el resumen lo daba como duración fija.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-usar_banco_nueve_preguntas_entrevista-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las respuestas del candidato a las nueve preguntas, que te dan una base concreta y comparable para juzgar su desempeño pasado y sus valores operativos.",
+      "texto_nuevo": "Las respuestas del candidato a las nueve preguntas, que te dan una base concreta para juzgar su desempeño pasado y sus valores operativos.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_15.md 57",
+        "frase": "The information to be gained here tends to fall into four distinct categories."
+      },
+      "decision": "auditoria completa M11 (invencion): El pasaje no habla de comparar candidatos con estas preguntas, solo de las cuatro categorías de información que se obtienen; \"comparable\" sale.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase3-usar_banco_nueve_preguntas_entrevista-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que dispones.",
+      "texto_nuevo": "Cuando vas a entrevistar a un candidato a un puesto y necesitas preguntas concretas para la hora o dos de entrevista de que sueles disponer.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_15.md 27",
+        "frase": "The means at your disposal typically consist of an hour or two of interview time and a check of the candidate’s references."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la hora o dos de entrevista es lo habitual (\"typically\"); la condición lo daba como lo que siempre tienes.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Usa las Nueve Mejores Preguntas",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

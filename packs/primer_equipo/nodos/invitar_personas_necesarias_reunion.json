@@ -1,0 +1,382 @@
+{
+  "node_id": "invitar_personas_necesarias_reunion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Invitar a la reunión a todos los necesarios y a nadie de sobra",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una reunión suele salir mejor cuando están todos los que hacen falta y nadie más, y la lista sale del resultado que buscas: quién es necesario para que ocurra. Invitar de más puede apagar la energía y, como en una revisión de diseño, volver formal y tensa la sala; invitar de menos deja fuera a los afectados, y la decisión se retrasa o puede reabrirse. Cuando hay desacuerdo sobre quién debe estar, escuchas los argumentos y desempatas con la meta principal; si toca recortar, lo que se pierde se busca por otras vías, como un resumen de las notas o sesiones de preguntas con los líderes.",
+  "notas_extraccion": "La doctrina es que la lista de invitados no se hereda ni se negocia por prestigio, sino que se deduce del resultado excelente: quien hace falta para que ocurra. Los dos fallos son simetricos y el libro insiste en que el de invitar de menos cuesta tanto como el de invitar de mas. El caso de la revision de diseno va DENTRO y no a nodo propio (manual seccion 3.5), y es ademas lo que hace procedimentable la segunda mitad: sin el, los pasos de escuchar los argumentos, medir contra la meta primaria y buscar vias alternativas para lo que se pierde no estarian escritos en ninguna parte del capitulo. Lo que el libro NO dice, y por eso no esta escrito aqui, es quien tiene la ultima palabra sobre la lista cuando los directivos no se ponen de acuerdo, ni como se avisa a quien se deja fuera.",
+  "pasos_accionables": [
+    "Vuelve a tu respuesta de cómo sería un resultado excelente para esta reunión, y pregúntate: ¿qué personas son necesarias para que ese resultado ocurra? Con esa pregunta decides la lista.",
+    "Vigila el primer fallo, invitar de más. Todos hemos estado en salas con energía apagada porque hay demasiada gente apretada alrededor de la mesa, mucha de ella distraída y mirando el teléfono.",
+    "Vigila el segundo fallo, invitar de menos, que también sale caro. Si la decisión va a tener un impacto grande en otro equipo, por ejemplo una decisión de producto sobre qué funciones construir, que afecta también a sus perspectivas de venta, tiene que haber representantes de ese equipo presentes: sin todos los afectados en la sala no se puede tomar una decisión justa, así que o la decisión se retrasa o se arriesga a que la vuelvan a elevar y a debatir.",
+    "Cuenta con que gente razonable pueda discrepar sobre quién tiene que estar. Por ejemplo, en una reunión de revisión de diseño a la que estaban invitados todos los diseñadores, según se contrataba a más gente el número de asistentes creció hasta que la reunión parecía un aula, con solo un puñado de personas presentando en cada sesión y todos los demás mirando y escuchando.",
+    "Escucha los argumentos a favor de la lista larga antes de cortarla, porque en ese caso eran buenos: que la reunión enseñaba a los diseñadores nuevos qué clase de opinión esperar, y que era una reunión muy visible, con mucha exposición a los líderes, y estar en esa sala daba a la gente la sensación de ser miembros valiosos del equipo.",
+    "Vuelve entonces a la meta principal de la reunión y mide contra ella para desempatar: en ese caso la meta era que los directivos pudieran dar opinión útil sobre proyectos a medio hacer, y tener tantos observadores lo hacía más difícil, porque el ambiente se volvía formal y de mucha presión, los que presentaban empezaban a gastar demasiado tiempo retocando los detalles de sus presentaciones, y quien revisaba sentía que tenía que elegir sus palabras con cuidado delante de tanta gente y no podía ser tan informal y directo como habría querido.",
+    "Si la meta principal sale perjudicada, encoge la lista de asistentes.",
+    "Busca entonces otras vías para los beneficios que pierdes al encogerla, por ejemplo otras maneras de invertir en la formación en diseño y en construir relaciones, entre ellas compartir un resumen detallado de las notas de la reunión y organizar más sesiones de preguntas y respuestas con los líderes."
+  ],
+  "entregable_esperado": "Una lista de invitados en la que está todo el que hace falta para que el resultado excelente ocurra, y nadie más.",
+  "nodos_previos": [
+    "fijar_resultado_excelente_reunion"
+  ],
+  "nodos_siguientes": [
+    "repartir_material_antes_reunion"
+  ],
+  "condiciones_activacion": [
+    "Al armar la lista de invitados de cualquier reunión, y otra vez cuando una reunión periódica lleva tiempo creciendo de asistentes."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una reunión rinde cuando están todos los que hacen falta y nadie más, y la lista sale del resultado que buscas: quién es necesario para que ocurra. Invitar de más apaga la energía y vuelve formal y tensa la sala; invitar de menos deja fuera a los afectados, y la decisión se retrasa o se vuelve a abrir. Cuando hay desacuerdo sobre quién debe estar, escuchas los argumentos y desempatas con la meta principal de la reunión; si toca recortar, los beneficios que se pierden se buscan por otras vías, como un resumen de las notas o sesiones de preguntas con los líderes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "171-185"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Invitar a la reunion a todos los necesarios y a nadie de sobra",
+      "texto_nuevo": "Invitar a la reunión a todos los necesarios y a nadie de sobra",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vuelve a tu respuesta de a que se parece un resultado excelente para esta reunion, y preguntate: que personas son necesarias para que ese resultado ocurra? Esa es la pregunta con la que el libro decide la lista.",
+      "texto_nuevo": "Vuelve a tu respuesta de a qué se parece un resultado excelente para esta reunión, y pregúntate: ¿qué personas son necesarias para que ese resultado ocurra? Con esa pregunta decides la lista.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Esa es la pregunta con la que el libro decide la lista."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vigila el primer fallo, invitar de mas. Todos hemos estado en salas con energia apagada porque hay demasiada gente apretada alrededor de la mesa, mucha de ella distraida y mirando el movil.",
+      "texto_nuevo": "Vigila el primer fallo, invitar de más. Todos hemos estado en salas con energía apagada porque hay demasiada gente apretada alrededor de la mesa, mucha de ella distraída y mirando el móvil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila el segundo fallo, invitar de menos, que el libro dice que sale igual de caro. Si la decision va a tener un impacto grande en otro equipo, por ejemplo una decision de producto sobre que funciones construir, que afecta tambien a sus perspectivas de venta, tiene que haber representantes de ese equipo presentes: sin todos los afectados en la sala no se puede tomar una decision justa, asi que o la decision se retrasa o se arriesga a que la reescalen y la vuelvan a debatir.",
+      "texto_nuevo": "Vigila el segundo fallo, invitar de menos, que sale igual de caro. Si la decisión va a tener un impacto grande en otro equipo, por ejemplo una decisión de producto sobre qué funciones construir, que afecta también a sus perspectivas de venta, tiene que haber representantes de ese equipo presentes: sin todos los afectados en la sala no se puede tomar una decisión justa, así que o la decisión se retrasa o se arriesga a que la vuelvan a elevar y a debatir.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro dice que",
+          "reescalen"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que gente razonable pueda discrepar sobre quien tiene que estar. La autora cuenta el caso de su reunion de revision de diseno, a la que estaban invitados todos los disenadores: segun contrataban a mas gente, el numero de asistentes crecio hasta que la reunion parecia un aula, con solo un punado de personas presentando en cada sesion y todos los demas mirando y escuchando.",
+      "texto_nuevo": "Cuenta con que gente razonable pueda discrepar sobre quién tiene que estar. Por ejemplo, en una reunión de revisión de diseño a la que estaban invitados todos los diseñadores, según se contrataba a más gente el número de asistentes creció hasta que la reunión parecía un aula, con solo un puñado de personas presentando en cada sesión y todos los demás mirando y escuchando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora cuenta el caso de su reunion de revision de diseno"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escucha los argumentos a favor de la lista larga antes de cortarla, porque en ese caso eran buenos: que la reunion ensenaba a los disenadores nuevos que clase de opinion esperar, y que era una reunion muy visible, con mucha exposicion a los lideres, y estar en esa sala daba a la gente la sensacion de ser miembros valiosos del equipo.",
+      "texto_nuevo": "Escucha los argumentos a favor de la lista larga antes de cortarla, porque en ese caso eran buenos: que la reunión enseñaba a los diseñadores nuevos qué clase de opinión esperar, y que era una reunión muy visible, con mucha exposición a los líderes, y estar en esa sala daba a la gente la sensación de ser miembros valiosos del equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vuelve entonces a la meta primaria de la reunion y mide contra ella, que es lo que el libro hace para desempatar: la meta era que ella y otros directivos pudieran dar opinion util sobre proyectos a mitad de vuelo, y tener tantos observadores lo hacia mas dificil, porque el ambiente se volvia formal y de mucha presion, los que presentaban empezaban a gastar demasiado tiempo retocando los detalles de sus presentaciones, y la que revisaba sentia que tenia que elegir sus palabras con cuidado delante de tanta gente y no podia ser tan informal y directa como habria querido.",
+      "texto_nuevo": "Vuelve entonces a la meta primaria de la reunión y mide contra ella para desempatar: en ese caso la meta era que los directivos pudieran dar opinión útil sobre proyectos a medio hacer, y tener tantos observadores lo hacía más difícil, porque el ambiente se volvía formal y de mucha presión, los que presentaban empezaban a gastar demasiado tiempo retocando los detalles de sus presentaciones, y quien revisaba sentía que tenía que elegir sus palabras con cuidado delante de tanta gente y no podía ser tan informal y directo como habría querido.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el libro hace para desempatar",
+          "que ella y otros directivos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca entonces otras vias para los beneficios que pierdes al encogerla. Ellos resolvieron buscar otras maneras de invertir en la formacion en diseno y en construir relaciones, y el libro nombra dentro de esas maneras, sin cerrar la lista, compartir un resumen detallado de las notas de la reunion y organizar mas sesiones de preguntas y respuestas con los lideres.",
+      "texto_nuevo": "Busca entonces otras vías para los beneficios que pierdes al encogerla, por ejemplo otras maneras de invertir en la formación en diseño y en construir relaciones, entre ellas compartir un resumen detallado de las notas de la reunión y organizar más sesiones de preguntas y respuestas con los líderes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Ellos resolvieron",
+          "y el libro nombra dentro de esas maneras, sin cerrar la lista,"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de invitados en la que esta todo el que hace falta para que el resultado excelente ocurra, y nadie mas.",
+      "texto_nuevo": "Una lista de invitados en la que está todo el que hace falta para que el resultado excelente ocurra, y nadie más.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-invitar_personas_necesarias_reunion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al armar la lista de invitados de cualquier reunion, y otra vez cuando una reunion periodica lleva tiempo creciendo de asistentes.",
+      "texto_nuevo": "Al armar la lista de invitados de cualquier reunión, y otra vez cuando una reunión periódica lleva tiempo creciendo de asistentes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-invitar_personas_necesarias_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila el primer fallo, invitar de más. Todos hemos estado en salas con energía apagada porque hay demasiada gente apretada alrededor de la mesa, mucha de ella distraída y mirando el móvil.",
+      "texto_nuevo": "Vigila el primer fallo, invitar de más. Todos hemos estado en salas con energía apagada porque hay demasiada gente apretada alrededor de la mesa, mucha de ella distraída y mirando el teléfono.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "mirando el móvil"
+        ]
+      },
+      "decision": "pase de glosario (orquestador): arbitro (redactor): fila anadida a glosario/DECISIONES.md por el orquestador (mismo criterio: espanol llano y neutro, un concepto un nombre); el verificador confirma que el sentido no cambia",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-invitar_personas_necesarias_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una reunión rinde cuando están todos los que hacen falta y nadie más, y la lista sale del resultado que buscas: quién es necesario para que ocurra. Invitar de más apaga la energía y vuelve formal y tensa la sala; invitar de menos deja fuera a los afectados, y la decisión se retrasa o se vuelve a abrir. Cuando hay desacuerdo sobre quién debe estar, escuchas los argumentos y desempatas con la meta principal de la reunión; si toca recortar, los beneficios que se pierden se buscan por otras vías, como un resumen de las notas o sesiones de preguntas con los líderes.",
+      "texto_nuevo": "Una reunión suele salir mejor cuando están todos los que hacen falta y nadie más, y la lista sale del resultado que buscas: quién es necesario para que ocurra. Invitar de más puede apagar la energía y, como en una revisión de diseño, volver formal y tensa la sala; invitar de menos deja fuera a los afectados, y la decisión se retrasa o se vuelve a abrir. Cuando hay desacuerdo sobre quién debe estar, escuchas los argumentos y desempatas con la meta principal; si toca recortar, lo que se pierde se busca por otras vías, como un resumen de las notas o sesiones de preguntas con los líderes.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 171",
+        "frase": "You’re more likely to have a great meeting if everyone necessary, and nobody extraneous, is there."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que es más probable (more likely) tener una gran reunión así, y lo de la sala formal y tensa es lo que pasó en una revisión de diseño concreta. Se recortan dos giros para que el resumen quepa en 600 caracteres.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-invitar_personas_necesarias_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vuelve entonces a la meta primaria de la reunión y mide contra ella para desempatar: en ese caso la meta era que los directivos pudieran dar opinión útil sobre proyectos a medio hacer, y tener tantos observadores lo hacía más difícil, porque el ambiente se volvía formal y de mucha presión, los que presentaban empezaban a gastar demasiado tiempo retocando los detalles de sus presentaciones, y quien revisaba sentía que tenía que elegir sus palabras con cuidado delante de tanta gente y no podía ser tan informal y directo como habría querido.",
+      "texto_nuevo": "Vuelve entonces a la meta principal de la reunión y mide contra ella para desempatar: en ese caso la meta era que los directivos pudieran dar opinión útil sobre proyectos a medio hacer, y tener tantos observadores lo hacía más difícil, porque el ambiente se volvía formal y de mucha presión, los que presentaban empezaban a gastar demasiado tiempo retocando los detalles de sus presentaciones, y quien revisaba sentía que tenía que elegir sus palabras con cuidado delante de tanta gente y no podía ser tan informal y directo como habría querido.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "meta primaria"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'meta primaria' calca 'primary goal'; es 'meta principal', como ya dice el resumen.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-invitar_personas_necesarias_reunion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la meta primaria pierde, encoge la lista de asistentes.",
+      "texto_nuevo": "Si la meta principal sale perjudicada, encoge la lista de asistentes.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Si la meta primaria pierde"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Si la meta primaria pierde' calca 'primary goal' y es ambiguo; queda 'si la meta principal sale perjudicada'.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-barrido-invitar_personas_necesarias_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vuelve a tu respuesta de a qué se parece un resultado excelente para esta reunión, y pregúntate: ¿qué personas son necesarias para que ese resultado ocurra? Con esa pregunta decides la lista.",
+      "texto_nuevo": "Vuelve a tu respuesta de cómo sería un resultado excelente para esta reunión, y pregúntate: ¿qué personas son necesarias para que ese resultado ocurra? Con esa pregunta decides la lista.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "de a qué se parece un resultado excelente"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-invitar_personas_necesarias_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una reunión suele salir mejor cuando están todos los que hacen falta y nadie más, y la lista sale del resultado que buscas: quién es necesario para que ocurra. Invitar de más puede apagar la energía y, como en una revisión de diseño, volver formal y tensa la sala; invitar de menos deja fuera a los afectados, y la decisión se retrasa o se vuelve a abrir. Cuando hay desacuerdo sobre quién debe estar, escuchas los argumentos y desempatas con la meta principal; si toca recortar, lo que se pierde se busca por otras vías, como un resumen de las notas o sesiones de preguntas con los líderes.",
+      "texto_nuevo": "Una reunión suele salir mejor cuando están todos los que hacen falta y nadie más, y la lista sale del resultado que buscas: quién es necesario para que ocurra. Invitar de más puede apagar la energía y, como en una revisión de diseño, volver formal y tensa la sala; invitar de menos deja fuera a los afectados, y la decisión se retrasa o puede reabrirse. Cuando hay desacuerdo sobre quién debe estar, escuchas los argumentos y desempatas con la meta principal; si toca recortar, lo que se pierde se busca por otras vías, como un resumen de las notas o sesiones de preguntas con los líderes.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 173",
+        "frase": "so either the decision gets delayed or it risks being reescalated and debated again."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la decisión se retrasa o \"corre el riesgo\" de volver a elevarse y debatirse; el resumen daba la reapertura por hecha.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase6-invitar_personas_necesarias_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vigila el segundo fallo, invitar de menos, que sale igual de caro. Si la decisión va a tener un impacto grande en otro equipo, por ejemplo una decisión de producto sobre qué funciones construir, que afecta también a sus perspectivas de venta, tiene que haber representantes de ese equipo presentes: sin todos los afectados en la sala no se puede tomar una decisión justa, así que o la decisión se retrasa o se arriesga a que la vuelvan a elevar y a debatir.",
+      "texto_nuevo": "Vigila el segundo fallo, invitar de menos, que también sale caro. Si la decisión va a tener un impacto grande en otro equipo, por ejemplo una decisión de producto sobre qué funciones construir, que afecta también a sus perspectivas de venta, tiene que haber representantes de ese equipo presentes: sin todos los afectados en la sala no se puede tomar una decisión justa, así que o la decisión se retrasa o se arriesga a que la vuelvan a elevar y a debatir.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 173",
+        "frase": "This is costly as well because you can't make a fair decision without all affected stakeholders in the room, so either the decision gets delayed or it risks being reescalated and debated again."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El libro dice que invitar de menos también es costoso ('as well'), no que cueste lo mismo que invitar de más; la igualdad es un cuánto inventado.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Invita Solo a los Necesarios"
+}

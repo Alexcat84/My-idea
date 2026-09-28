@@ -78,7 +78,7 @@ primero.
 | # | Comando | Llamadas | Qué hace |
 |---|---|---|---|
 | A1 | `python engine/build_question_cache.py --faltantes --yes` | 40 (Haiku) | La pregunta de los 40 nodos con siguientes y sin pregunta. No pisa ninguna base. |
-| A2 | `python engine/build_question_cache.py --neutrales --yes` | 2.940, más reintentos (Haiku) | La versión neutral de cada base viva, en `pregunta_neutral`. La base no se toca. |
+| A2 | `python engine/build_question_cache.py --neutrales --yes` | 3.287 con el mundo 11 (2.940 sin él), más reintentos (Haiku) | La versión neutral de cada base viva, en `pregunta_neutral`. La base no se toca. |
 | A3 | `python scripts/sync_assets_web.py` | 0 | Copia la caché a la web. |
 
 Después: los dos topes de `web/lib/engine/cacheNeutrales.test.ts` pasan a 0. Luego las suites, el commit, el visto y
@@ -141,11 +141,11 @@ Con las cifras medidas en el vuelo del 27 sep 2026:
 | Paso | Base de la cuenta | USD |
 |---|---|---|
 | A1, preguntas nuevas | 40 × ~0,002 | 0,1 |
-| A2, versiones neutrales | 2.940 × 0,0008 a 0,0015, con reintentos | 2,4 a 4,4 |
+| A2, versiones neutrales | 3.287 × 0,0008 a 0,0015, con reintentos | 2,6 a 4,9 |
 | B, en la app | 3 núcleos con plan × ~0,33, más 30 mundos × ~5 turnos × ~0,012 | ~2,8 |
 | B, el arnés | actor ~200 turnos × 0,002, más juez 3 × ~0,1 | ~0,7 |
 | C, vuelo | 1,76 medidos hasta la 2L, más la 2L, la 2M, los reportes y el adaptador | 2,3 a 3 |
-| **Total** | | **unos 8 a 11 USD** |
+| **Total** | | **unos 8,5 a 11,5 USD** |
 
 Voyage (la brújula y la prioridad) es otro proveedor y no entra en el saldo de Anthropic: menos de 0,01 USD.
 

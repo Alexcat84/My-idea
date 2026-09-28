@@ -1,0 +1,179 @@
+{
+  "node_id": "clasificar_trabajo_proceso_montaje_prueba",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Clasificar tu trabajo en las tres operaciones de producción: proceso, montaje y prueba",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Preparar un desayuno, formar a una fuerza de ventas o desarrollar un programa informático se parecen poco, pero comparten un flujo básico para producir un resultado: algo se transforma, las partes se juntan en una entidad nueva y el resultado se examina. Esas tres operaciones, proceso, montaje y prueba, se pueden aplicar a trabajos muy distintos. Al nombrarlas en el tuyo puedes probar cada pieza antes de montarla, devolver a proceso lo que falla para rehacerlo, montar solo lo que ya pasó su prueba y examinar el producto completo antes de mandarlo al cliente.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P5 de la frontera publicada en la vuelta 1 del frente, L37 a L47, 582 palabras. FRONTERA DENTRO DEL NODO: pasos 1, 2 y 3 de L39, que es donde el libro nombra los tres tipos uno a uno; la segunda mitad de los pasos 1 y 2 y la mitad de los pasos 4 y 5 de L41, que es el caso de la formacion de la fuerza de ventas; y los pasos 4, 5, 6 y 7 de L45, que es el caso del compilador. POR QUE ES PROCEDIMIENTO: el inventario es del libro y es de ETAPAS Y OBJETOS DE TRABAJO, nombrados uno a uno con su definicion pegada (process manufacturing, an activity that physically or chemically changes material; assembly, in which components are put together to constitute a new entity; and test, which subjects the components or the total to an examination of its characteristics). No hay adjetivo de adecuacion en el sitio del criterio: el libro no dice pruebas apropiadas, dice que prueba y sobre que. LOS DOS CASOS ENTRAN DENTRO Y NO EN CASA PROPIA (manual 3.5): la formacion de la fuerza de ventas (L41) y el desarrollo de un compilador (L43 y L45). El compilador es el que trae la secuencia entera de prueba unitaria, vuelta a proceso, montaje y prueba de sistema, y por eso sus pasos son pasos de este nodo y no de otro. LO QUE NO ME TRAIGO AQUI AUNQUE ESTE EN MI TRAMO, y lo digo para que no parezca olvido: la ultima frase de L45 vuelve sobre los desfases de tiempo (the timing of the releases of various bodies of software from one stage to another can all be calculated and staged in advance). Ese objeto ya vive entero en construir_flujo_produccion_paso_limitante, que sale de L25 y L27 de esta misma unidad, y P.19 manda no mandar a nodo propio el objeto que ya esta en casa. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cada cuanto se prueba ni cuantas piezas se muestrean, porque el libro no pone ni periodo ni tamano de muestra en este tramo; NO escribo quien hace cada prueba mas alla de lo que el libro dice (un grupo escogido de vendedores y de mandos de venta, en el caso), porque poner responsable seria puente de la tercera especie. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: los pasos 4 a 7 salen del caso del compilador, y un lector estricto puede decir que un caso no puede poner pasos. Lo sostengo porque la secuencia que el caso describe (prueba unitaria, vuelta a proceso, montaje y prueba de sistema) es la doctrina de las tres operaciones puesta en orden, el propio libro la escribe con sus nombres tecnicos entre comillas, y L47 cierra diciendo que los cuatro trabajos distintos poseen un flujo de actividad basicamente similar. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA de la vuelta 44 de la linea serial (deuda d004, cita grove PARA_ALEXIS 5.3.4, resuelta por D.53 del 17 sep 2026), y se escribe aqui para que la vuelta que inserte este candidato no dependa de que alguien se acuerde, que es la perdida que D.29 vino a cerrar. LA ACTA 32 seccion 3.3 del frente grove adjudico CONTINUA este par por la lectura vieja de que un par con arista declarada no puede ser SANO. D.53 decide lo contrario con su prueba por reduccion: UN SANO PUEDE LLEVAR ARISTA DECLARADA, Y DECLARARLA NO LO CONVIERTE EN CONTINUA, porque si lo hiciera D.37 seria imposible y toda cabeza de serie devoraria sus partes. RE ADJUDICADO: el veredicto de clasificar_trabajo_proceso_montaje_prueba con preferir_inspeccion_proceso_prueba_destructiva vuelve a SANO, que es lo que esta ficha publico, y la caida que dependia de la lectura vieja se retira citando D.53. LA ARISTA SIGUE EN PIE Y SE CABLEA AL INSERTAR: madre clasificar_trabajo_proceso_montaje_prueba paso 3, hijo preferir_inspeccion_proceso_prueba_destructiva. No se borra nada: la clase CONTINUA de la ACTA 32 queda escrita donde esta. CORRECCION DECLARADA de la vuelta 45 de la linea serial, deuda d021, cita ACTA 43 seccion 43.3.a, D.30, cap_02 L41 y L45. EL PASO 4 TRAIA UN PUENTE Y SE REESCRIBE SIN BORRAR EL RASTRO. El texto viejo era: Prueba cada pieza por separado antes de montarla, que es lo que el libro llama prueba unitaria, y en un trabajo de personas toma la forma de una presentacion en seco ante un grupo escogido. LA MITAD QUE SE RETIRA es la que empieza en y en un trabajo de personas: igualaba la prueba unitaria del compilador de L45 con la presentacion en seco de la formacion de ventas de L41 y se lo atribuia al libro. EL PARRAFO QUE NO LO DICE, citado: L47 dice solamente Breakfast preparation, college recruiting, sales training, and compiler design are very much unlike one another, but all of them possess a basically similar flow of activity to produce a specific output. Flujo basicamente similar no es la misma operacion, y ningun renglon de L41, L45 ni L47 iguala las dos. Y LA LECTURA AGRAVA EL PUENTE EN VEZ DE ATENUARLO: en L41 la presentacion en seco prueba la presentacion YA MONTADA (las estrategias y los datos de mercado se hacen fluir a una sola presentacion, y el test operation comes in the form of a dry run), asi que en el orden del propio libro esa prueba esta del lado de la prueba de sistema y no del lado de la prueba unitaria, que es pieza a pieza ANTES del montaje. LO QUE QUEDA es transcripcion de L45: Each piece then undergoes an individual operation called a unit test, y After all the pieces pass their respective unit tests, they are assembled to form the compiler. CORRECCION DECLARADA A LA CIFRA DE ESTA MISMA FICHA: donde arriba dice RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE, la cifra buena es 7 pasos, 6 TRANSCRIPCION, 1 PUENTE en el acto de escribirla, y 7 TRANSCRIPCION, 0 PUENTE despues de esta correccion. La cifra vieja no se borra: se tacha aqui y se pone la vigente al lado, manual principio 6. CORRECCION DECLARADA de la vuelta 46 de la linea serial, deuda d023, cita ACTA 44 seccion 44.4 DISCUTIBLE 1 y 44.5.a, y deuda d021, cita ACTA 43 seccion 43.3.a. EL PASO 5 TRAIA EL MISMO PUENTE QUE EL PASO 4 Y SE REESCRIBE SIN BORRAR EL RASTRO. El texto viejo era: Devuelve a la fase de proceso la pieza que falle su prueba, para rehacerla, y rehazla contra lo que la prueba dijo: las preocupaciones y las objeciones del publico que la probo. LA MITAD QUE SE RETIRA es la que empieza en y rehazla contra lo que la prueba dijo: volvia a casar L45, que es la pieza de software que falla su prueba unitaria y donde no hay publico ninguno, con L41, que es la presentacion en seco ante un grupo escogido de vendedores. EL PARRAFO QUE NO LO DICE, citado entero: L45 dice solamente When one fails, the defective portion of the software is returned to the process phase for rework, y ahi se acaba el renglon: no dice contra que se rehace. LA FRASE DE LAS PREOCUPACIONES Y LAS OBJECIONES ES DE L41 Y DE NINGUN OTRO SITIO: If the dry run fails the test, the material must be reworked to meet the concerns and objections of the test audience. Y LO CONDENA EL ARGUMENTO QUE ESCRIBIO MI PROPIA CORRECCION DEL PASO 4: en L41 lo que se prueba es la presentacion YA MONTADA, o sea del lado de la prueba de sistema, asi que traer su remedio al paso que va pieza a pieza ANTES del montaje es el mismo puente dos veces. LO QUE QUEDA es transcripcion literal de L45. CORRECCION DECLARADA A LA LINEA FRONTERA DENTRO DEL NODO de esta misma ficha: donde arriba dice y la mitad de los pasos 4 y 5 de L41, que es el caso de la formacion de la fuerza de ventas, la frontera vigente es que NI EL PASO 4 NI EL PASO 5 traen ya nada de L41: los dos son transcripcion de L45 y solo de L45. La linea vieja no se borra: se tacha aqui y se pone la vigente al lado, manual principio 6. CORRECCION DECLARADA A LA CIFRA DE FIDELIDAD, QUE ES LA TERCERA PATA DE d023: donde la correccion de la vuelta 45 dice 7 TRANSCRIPCION, 0 PUENTE despues de esta correccion, la cifra buena en ese momento era 6 TRANSCRIPCION Y 1 PUENTE, porque el paso 5 seguia trayendo el suyo y nadie lo habia mirado. LA CIFRA VIGENTE HOY, despues de la correccion del paso 5 que esta ficha acaba de recibir, SI es 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. Las dos cifras viejas quedan escritas donde estan.",
+  "pasos_accionables": [
+    "Señala en tu trabajo el paso de proceso, que es la actividad que cambia el material física o químicamente, como hervir cambia un huevo, o la que convierte una cantidad grande de datos crudos en algo distinto, como los datos del producto convertidos en estrategias de venta que el vendedor entiende.",
+    "Señala el paso de montaje, que es donde los componentes se juntan para constituir una entidad nueva: el huevo, el pan y el café juntos hacen un desayuno, y las estrategias sueltas más los datos de mercado se reúnen en una sola presentación con sus folletos, sus hojas y sus láminas.",
+    "Señala la prueba, que es la operación que somete los componentes o el total a un examen de sus características, y cuenta también las pruebas visuales: ves que el café humea y que el pan está tostado.",
+    "Prueba cada pieza por separado antes de montarla, lo que se conoce como prueba unitaria.",
+    "Devuelve a la fase de proceso la pieza que falle su prueba, para rehacerla.",
+    "Monta el producto solo cuando todas las piezas hayan pasado su prueba unitaria.",
+    "Haz una prueba del sistema completo antes de mandar el producto al cliente."
+  ],
+  "entregable_esperado": "Tu trabajo repartido en las tres operaciones, con la prueba de cada pieza antes del montaje, el camino de vuelta a proceso para lo que falle, y la prueba del producto completo antes de mandarlo al cliente.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "construir_flujo_produccion_paso_limitante",
+    "detectar_arreglar_fallo_etapa_menor_valor",
+    "simplificar_trabajo_reducir_numero_pasos",
+    "representar_actividad_caja_negra_ventanas"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes delante un trabajo que no parece una fábrica y quieres aplicarle la disciplina de la producción: antes de medirlo, saber qué parte de él es proceso, qué parte es montaje y qué parte es prueba."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Preparar un desayuno, formar a una fuerza de ventas o desarrollar un programa informático se parecen poco, pero comparten un flujo básico para producir un resultado: algo se transforma, las partes se juntan en una entidad nueva y el resultado se examina. Esas tres operaciones, proceso, montaje y prueba, se pueden aplicar a trabajos muy distintos. Al nombrarlas en el tuyo puedes probar cada pieza antes de montarla, devolver a proceso lo que falla para rehacerlo, montar solo lo que ya pasó su prueba y examinar el producto completo antes de mandarlo al cliente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_02.md",
+          "lineas": "37-47"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 41 y 47 hablan de trabajos muy distintos con un flujo parecido, no de 'casi cualquier trabajo', y 'los defectos se atrapan antes de llegar al cliente' es un efecto que 45 no enuncia. La propuesta del lector se queda en lo que dicen 39-47 y mide 564.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasificar tu trabajo en las tres operaciones de produccion: proceso, montaje y prueba",
+      "texto_nuevo": "Clasificar tu trabajo en las tres operaciones de producción: proceso, montaje y prueba",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Senala en tu trabajo el paso de proceso, que es la actividad que cambia el material fisica o quimicamente, como hervir cambia un huevo, o la que convierte una cantidad grande de datos crudos en algo distinto, como los datos del producto convertidos en estrategias de venta que el vendedor entiende.",
+      "texto_nuevo": "Señala en tu trabajo el paso de proceso, que es la actividad que cambia el material física o químicamente, como hervir cambia un huevo, o la que convierte una cantidad grande de datos crudos en algo distinto, como los datos del producto convertidos en estrategias de venta que el vendedor entiende.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Senala el paso de montaje, que es donde los componentes se juntan para constituir una entidad nueva: el huevo, el pan y el cafe juntos hacen un desayuno, y las estrategias sueltas mas los datos de mercado se hacen fluir a una sola presentacion con sus folletos, sus hojas y sus laminas.",
+      "texto_nuevo": "Señala el paso de montaje, que es donde los componentes se juntan para constituir una entidad nueva: el huevo, el pan y el café juntos hacen un desayuno, y las estrategias sueltas más los datos de mercado se hacen fluir a una sola presentación con sus folletos, sus hojas y sus láminas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Senala la prueba, que es la operacion que somete los componentes o el total a un examen de sus caracteristicas, y cuenta tambien las pruebas visuales: ves que el cafe humea y que el pan esta tostado.",
+      "texto_nuevo": "Señala la prueba, que es la operación que somete los componentes o el total a un examen de sus características, y cuenta también las pruebas visuales: ves que el café humea y que el pan está tostado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Prueba cada pieza por separado antes de montarla, que es lo que el libro llama prueba unitaria.",
+      "texto_nuevo": "Prueba cada pieza por separado antes de montarla, lo que se conoce como prueba unitaria.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el libro llama prueba unitaria"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-clasificar_trabajo_proceso_montaje_prueba-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes delante un trabajo que no parece una fabrica y quieres aplicarle la disciplina de la produccion: antes de medirlo, saber que parte de el es proceso, que parte es montaje y que parte es prueba.",
+      "texto_nuevo": "Cuando tienes delante un trabajo que no parece una fábrica y quieres aplicarle la disciplina de la producción: antes de medirlo, saber qué parte de él es proceso, qué parte es montaje y qué parte es prueba.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-clasificar_trabajo_proceso_montaje_prueba-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Señala el paso de montaje, que es donde los componentes se juntan para constituir una entidad nueva: el huevo, el pan y el café juntos hacen un desayuno, y las estrategias sueltas más los datos de mercado se hacen fluir a una sola presentación con sus folletos, sus hojas y sus láminas.",
+      "texto_nuevo": "Señala el paso de montaje, que es donde los componentes se juntan para constituir una entidad nueva: el huevo, el pan y el café juntos hacen un desayuno, y las estrategias sueltas más los datos de mercado se reúnen en una sola presentación con sus folletos, sus hojas y sus láminas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se hacen fluir a"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"are made to flow into one presentation\" (grove_high_output/cap_02.md 41).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Clasifica tu Trabajo en Tres Fases"
+}

@@ -1,0 +1,266 @@
+{
+  "node_id": "involucrar_varios_entrevistadores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Involucrar a varios entrevistadores y hacer que cada uno escriba antes de hablar",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Que el candidato hable con varias personas que saben lo que necesita el puesto, y que cada una pregunte cosas distintas, es la mejor práctica para entrevistar: así el grupo sale con una visión completa. Tener varios entrevistadores puede reducir el sesgo y cazar señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto. El punto delicado es la puesta en común: cada persona registra por separado su razonamiento y su decisión final de contratar o no antes de oír a los demás, para asegurar que la discusión no lleve al pensamiento de grupo.",
+  "notas_extraccion": "Es la tercera tactica de apostar con cabeza y la unica del capitulo que cambia el PROCEDIMIENTO del grupo en vez del criterio de una persona. Su pieza dura es el paso 4: el registro independiente antes de oir al resto, con su razon nombrada por el libro, el pensamiento de grupo. El paso 2 trae el ejemplo del responsable de finanzas entero porque es el reparto concreto de areas entre entrevistadores, que es lo que hace ejecutable la idea de que cada uno pregunte cosas distintas. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantos entrevistadores son varios, ni en que soporte se registra, ni quien resuelve cuando los registros independientes se contradicen.",
+  "pasos_accionables": [
+    "Haz que el candidato hable con varias personas que sepan lo que el puesto necesita, que es la mejor práctica para las entrevistas.",
+    "Reparte las preguntas para que cada entrevistador pregunte cosas distintas, de manera que el grupo salga con una visión completa. Por ejemplo, si contratas a un responsable de finanzas, un entrevistador puede evaluar habilidades de gestión y de colaboración, otro hacer preguntas detalladas de finanzas, y otro explorar la experiencia de trabajo pasada del candidato.",
+    "Cuenta con lo que eso te puede dar: reducir el sesgo y cazar señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto.",
+    "En la puesta en común, haz que cada persona registre de forma independiente su razonamiento y su decisión final de contratar o no contratar antes de oír lo que piensan los demás entrevistadores.",
+    "Hazlo para asegurar que la discusión no lleve al pensamiento de grupo."
+  ],
+  "entregable_esperado": "Una visión completa del candidato, con el razonamiento y el veredicto de cada entrevistador escritos antes de que nadie oiga al resto.",
+  "nodos_previos": [
+    "usar_banco_nueve_preguntas_entrevista",
+    "preparar_preguntas_entrevista_antemano",
+    "montar_proceso_contratacion_reducir_sesgo"
+  ],
+  "nodos_siguientes": [
+    "rechazar_contratacion_tibia"
+  ],
+  "condiciones_activacion": [
+    "En cualquier proceso de entrevista, y muy en particular al preparar la puesta en común posterior."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una sola persona que entrevista ve solo una parte del candidato y lleva sus propios sesgos. Si varias personas que conocen lo que pide el puesto se reparten las áreas, el grupo junta una imagen completa, se reduce el sesgo y aparecen señales de alarma sutiles que alguien solo habría pasado por alto. El riesgo está en la puesta en común: si se habla antes de decidir, las opiniones se contagian y gana el pensamiento de grupo. Por eso cada entrevistador escribe su razonamiento y su veredicto por separado antes de oír a los demás, y así cada juicio llega intacto a la discusión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "145-147"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz que el candidato hable con varias personas que sepan lo que el puesto necesita, que es la mejor practica que el libro nombra para las entrevistas.",
+      "texto_nuevo": "Haz que el candidato hable con varias personas que sepan lo que el puesto necesita, que es la mejor práctica para las entrevistas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reparte las preguntas para que cada entrevistador pregunte cosas distintas, de manera que el grupo salga con una perspectiva redonda. El libro pone el ejemplo de contratar a un responsable de finanzas: un entrevistador puede evaluar habilidades de gestion y de colaboracion, otro hacer preguntas detalladas de finanzas, y otro explorar la experiencia de trabajo pasada del candidato.",
+      "texto_nuevo": "Reparte las preguntas para que cada entrevistador pregunte cosas distintas, de manera que el grupo salga con una perspectiva redonda. Por ejemplo, si contratas a un responsable de finanzas, un entrevistador puede evaluar habilidades de gestión y de colaboración, otro hacer preguntas detalladas de finanzas, y otro explorar la experiencia de trabajo pasada del candidato.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro pone el ejemplo de contratar a un responsable de finanzas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que eso compra, que el libro nombra: reduce el sesgo, y caza banderas rojas sutiles que cualquiera por su cuenta podria haber pasado por alto.",
+      "texto_nuevo": "Cuenta con lo que eso te da: reduce el sesgo y caza señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra",
+          "banderas rojas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En la puesta en comun, haz que cada persona registre de forma independiente su razonamiento y su decision final de contratar o no contratar antes de oir lo que piensan los demas entrevistadores.",
+      "texto_nuevo": "En la puesta en común, haz que cada persona registre de forma independiente su razonamiento y su decisión final de contratar o no contratar antes de oír lo que piensan los demás entrevistadores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazlo por la razon que el libro da: para asegurar que la discusion no lleve al pensamiento de grupo.",
+      "texto_nuevo": "Hazlo para asegurar que la discusión no lleve al pensamiento de grupo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por la razon que el libro da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-involucrar_varios_entrevistadores-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En cualquier proceso de entrevista, y muy en particular al preparar la puesta en comun posterior.",
+      "texto_nuevo": "En cualquier proceso de entrevista, y muy en particular al preparar la puesta en común posterior.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-involucrar_varios_entrevistadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una sola persona que entrevista ve solo una parte del candidato y lleva sus propios sesgos. Si varias personas que conocen lo que pide el puesto se reparten las áreas, el grupo junta una imagen completa, se reduce el sesgo y aparecen señales de alarma sutiles que alguien solo habría pasado por alto. El riesgo está en la puesta en común: si se habla antes de decidir, las opiniones se contagian y gana el pensamiento de grupo. Por eso cada entrevistador escribe su razonamiento y su veredicto por separado antes de oír a los demás, y así cada juicio llega intacto a la discusión.",
+      "texto_nuevo": "Que el candidato hable con varias personas que saben lo que necesita el puesto, y que cada una pregunte cosas distintas, es la mejor práctica para entrevistar: así el grupo sale con una perspectiva redonda. Tener varios entrevistadores puede reducir el sesgo y cazar señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto. El punto delicado es la puesta en común: cada persona registra por separado su razonamiento y su decisión final de contratar o no antes de oír a los demás, para asegurar que la discusión no lleve al pensamiento de grupo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 147",
+        "frase": "Having multiple interviewers can reduce bias and catch subtle red flags that any one person might have missed"
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_08.md línea 147: \"Having multiple interviewers can reduce bias and catch subtle red flags that any one person might have missed\"; el texto afirmaba \"se reduce el sesgo\" y \"habría pasado por alto\". Además \"una sola persona ve solo una parte y lleva sus propios sesgos\" y \"las opiniones se contagian\" no están en las líneas 145-147. Se reescribe con el can y el might devueltos y con la razón que da la línea 147: \"to ensure that the discussion doesn't lead to groupthink\".",
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-involucrar_varios_entrevistadores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que eso te da: reduce el sesgo y caza señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto.",
+      "texto_nuevo": "Cuenta con lo que eso te puede dar: reducir el sesgo y cazar señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 147",
+        "frase": "Having multiple interviewers can reduce bias and catch subtle red flags that any one person might have missed."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro: varios entrevistadores pueden (can) reducir el sesgo.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-involucrar_varios_entrevistadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Que el candidato hable con varias personas que saben lo que necesita el puesto, y que cada una pregunte cosas distintas, es la mejor práctica para entrevistar: así el grupo sale con una perspectiva redonda. Tener varios entrevistadores puede reducir el sesgo y cazar señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto. El punto delicado es la puesta en común: cada persona registra por separado su razonamiento y su decisión final de contratar o no antes de oír a los demás, para asegurar que la discusión no lleve al pensamiento de grupo.",
+      "texto_nuevo": "Que el candidato hable con varias personas que saben lo que necesita el puesto, y que cada una pregunte cosas distintas, es la mejor práctica para entrevistar: así el grupo sale con una visión completa. Tener varios entrevistadores puede reducir el sesgo y cazar señales de alarma sutiles que cualquiera por su cuenta podría haber pasado por alto. El punto delicado es la puesta en común: cada persona registra por separado su razonamiento y su decisión final de contratar o no antes de oír a los demás, para asegurar que la discusión no lleve al pensamiento de grupo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una perspectiva redonda"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"well-rounded perspective\" (zhuo cap_08 l.145).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-involucrar_varios_entrevistadores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reparte las preguntas para que cada entrevistador pregunte cosas distintas, de manera que el grupo salga con una perspectiva redonda. Por ejemplo, si contratas a un responsable de finanzas, un entrevistador puede evaluar habilidades de gestión y de colaboración, otro hacer preguntas detalladas de finanzas, y otro explorar la experiencia de trabajo pasada del candidato.",
+      "texto_nuevo": "Reparte las preguntas para que cada entrevistador pregunte cosas distintas, de manera que el grupo salga con una visión completa. Por ejemplo, si contratas a un responsable de finanzas, un entrevistador puede evaluar habilidades de gestión y de colaboración, otro hacer preguntas detalladas de finanzas, y otro explorar la experiencia de trabajo pasada del candidato.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una perspectiva redonda"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"well-rounded perspective\" (zhuo cap_08 l.145).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-involucrar_varios_entrevistadores-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una perspectiva redonda del candidato, con el razonamiento y el veredicto de cada entrevistador escritos antes de que nadie oiga al resto.",
+      "texto_nuevo": "Una visión completa del candidato, con el razonamiento y el veredicto de cada entrevistador escritos antes de que nadie oiga al resto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Una perspectiva redonda"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"well-rounded perspective\" (zhuo cap_08 l.145).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Involucra a Varios Entrevistadores",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

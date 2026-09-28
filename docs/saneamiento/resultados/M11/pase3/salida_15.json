@@ -1,0 +1,1004 @@
+{
+ "lote": "15",
+ "nodos": [
+  {
+   "node_id": "vivir_primero_valor_declarado",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 101,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 115,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 115,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 117,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_organizacion_escuchar_plantilla",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "como en el tercer punto de la lista anterior",
+     "motivo": "Referente que no existe en el nodo: no hay ninguna lista anterior ni un tercer punto, y el pasaje (líneas 11-15) tampoco lo tiene.",
+     "propuesta": "Deja de lado la revisión de expedientes que el procedimiento manda, por ejemplo, en un submarino, una lista para repasar en dos semanas con registros de formación, de escuela, administrativos, de premios, de ascensos, los de operación y mantenimiento de la planta del reactor, el sistema de armas, los torpedos y misiles, calendarios, ejercicios y material clasificado."
+    }
+   ],
+   "matiz_revisado": []
+  },
+  {
+   "node_id": "examinar_trabajo_pasado_candidato",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 117,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 123,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 125,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 127,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_recompensar_uso_metodo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 265,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 271,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "entregar_evaluacion_desempeno_tres_claves",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 109,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 111,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 111,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 111,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 111,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 113,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 113,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 117,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 119,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 119,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "aprovechar_formacion_reglada",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "Cuenta con las cinco formas que va a tomar",
+     "motivo": "El libro da ejemplos de lo que la formación puede ser (\"might mean\"); el paso lo vuelve una lista cerrada de cinco formas que va a tomar.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "455",
+     "frase": "This might mean signing up for a company seminar, attending an industry conference, participating in a roundtable discussion, hearing experts on a panel, or engaging in a hands-on workshop.",
+     "propuesta": "Cuenta con algunas formas que puede tomar: apuntarte a un seminario de la empresa, asistir a un congreso del sector, participar en una mesa redonda, escuchar a expertos en un panel, o meterte en un taller práctico."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "casi nunca se siente urgente",
+     "motivo": "Calco de \"feels urgent\": en español una cosa no \"se siente\" urgente, parece urgente.",
+     "propuesta": "La formación estructurada casi nunca parece urgente, cuesta tiempo y a menudo dinero, y por eso se aplaza en las semanas cargadas. La cuenta del retorno la desbloquea: si diez horas de formación te hacen apenas un uno por ciento más eficiente, recuperas unas veinte horas al año. Cambiar la pregunta ayuda a decidir: no si vale la pena ahora con todo lo que tienes encima, sino si dentro de un año te alegrarás de haberlo hecho. Y la inversión no es solo tuya: cuanto mejor seas, más capaz serás de sostener a tu equipo."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "rara vez se siente urgente ni necesaria",
+     "motivo": "Calco de \"rarely feels urgent or necessary\": en español, rara vez parece urgente ni necesaria.",
+     "propuesta": "Ten delante por qué se aplaza aunque parezca obvio que ayuda: rara vez parece urgente ni necesaria. Además de costar tiempo, tiende a costar dinero, y por eso nos metemos en un tira y afloja clásico con nosotros mismos. ¿Merece la pena? Sobre todo en medio de una semana frenética, ¿es de verdad buena idea apartarse para un taller de dos días, o renunciar a una tarde tranquila en casa por una conferencia?"
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 455,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 457,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 457,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 459,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 461,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 461,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 463,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 463,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 465,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 465,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "crear_cultura_escucha_equipo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 133,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 133,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 133,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 133,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 135,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 135,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 137,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 137,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 139,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 141,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 143,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 145,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 145,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 147,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 149,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 149,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 151,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 151,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "establecer_credibilidad_pericia_humildad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "Cuando falta historial, se apoya en la pericia y en lo ya conseguido.",
+     "motivo": "El libro habla de no tener un historial de grandes transformaciones o de ser tan nuevo que apenas se tiene historial; \"cuando falta historial\" lo vuelve la falta de todo historial (el paso 4 sí lo conserva).",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "357",
+     "frase": "But how do you establish your credibility if you don’t happen to be Steve Jobs with a track record of so-called Schumpeterian change, or if you’re so new that you don’t have much of a track record at all? Focus on your expertise and past accomplishments.",
+     "propuesta": "No puedes esperar que ejecuten una decisión si quien la tomó no tiene credibilidad, así que persuadir exige establecerla, seas tú quien decide o sea otro de tu equipo. La credibilidad tiene tres partes: conocer la materia, tener un historial de decisiones sólidas y mostrar humildad, que a veces escasea. Sin un historial de grandes cambios o con poco historial, se apoya en la pericia y en lo ya conseguido. La humildad se nota en decir nosotros y no yo; en un caso, recordar unos orígenes humildes permitió señalar la propia pericia sin perder al público. Ni presumir ni fingir humildad funcionan."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 347,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 347,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 353,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 353,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 355,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 355,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 357,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "instalar_metodo_contratacion_empresa",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 253,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 265,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 271,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 281,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 283,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 295,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 295,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "retirar_directivos_rechazan_metodo",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": []
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 189,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 191,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 193,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 193,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "desplegar_plan_orden_operaciones_franqueza_radical",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[14]",
+     "tipo": "coherencia",
+     "cita": "en pasar esas tres conversaciones con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres",
+     "motivo": "\"Esas tres conversaciones\" no tiene antecedente en el nodo: ningún paso dice que las conversaciones de carrera sean tres.",
+     "propuesta": "En paralelo, perfecciona tus reuniones a solas, y en paralelo por esto: vas a tardar al menos de tres a seis semanas en pasar las tres conversaciones de carrera con todo tu equipo, porque quieres dejar una o dos semanas entre cada una de las tres."
+    },
+    {
+     "campo": "pasos_accionables[32]",
+     "tipo": "calco",
+     "cita": "dedica un pensamiento extra a cómo estás recompensando",
+     "motivo": "Calco de \"give some extra thought to\".",
+     "propuesta": "Asegúrate de que no estás creando una cultura obsesionada con el ascenso, y piensa un poco más en cómo estás recompensando a tus estrellas de rock."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 17,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 19,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 21,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 31,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 33,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 37,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 37,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 39,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 41,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 43,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 45,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 49,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 51,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_ocho_reglas_juego_personas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "Respetadas las ocho reglas del juego de tu gente",
+     "motivo": "El libro da estas reglas como unas pocas para dar una idea y dice que el resto se descubre jugando; \"las ocho reglas del juego\" las presenta como el conjunto completo.",
+     "fichero": "fuentes/gerber_emyth/cap_18.md",
+     "lineas": "141",
+     "frase": "I’ve included a few here to give you a taste for them. As for the rest of them, you’ll have to discover them for yourself by playing a game of your own.",
+     "propuesta": "Respetadas estas ocho reglas del juego de tu gente, que son solo algunas de las que tiene (el resto se descubre jugando), desde que el juego va primero y lo que tu gente hace después, hasta que robas un juego ajeno si no se te ocurre uno bueno."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 123,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 129,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 129,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 141,
+     "usa": true,
+     "conserva": false
+    },
+    {
+     "linea": 147,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 149,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 151,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 153,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 155,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 155,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 159,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 159,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 159,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 161,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 163,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 165,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_reclutadores_externos",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 375,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 377,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 381,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 381,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 383,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 383,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "cambiar_potencial_trayectoria_crecimiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "cambiar una sola palabra marca toda la diferencia",
+     "motivo": "Lo que el libro cuenta como resultado de un caso (en ese equipo, cambiar la palabra marcó una gran diferencia) el paso lo afirma como regla general.",
+     "fichero": "fuentes/scott_radical_candor/cap_06.md",
+     "lineas": "63",
+     "frase": "Changing one word made a world of difference.",
+     "propuesta": "Cambia la palabra potencial por la palabra crecimiento: en un equipo, cambiar una sola palabra marcó toda la diferencia."
+    }
+   ],
+   "matiz_revisado": [
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 53,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 55,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 57,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 61,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 63,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 63,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 65,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_investigadores_reclutamiento",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 383,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 383,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 387,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 387,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 391,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 393,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 395,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 395,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "cuantificar_impacto_innovacion_6_pasos",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 91,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 93,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 95,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_horizonte_ventana_replanificacion",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 57,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 61,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 63,
+     "usa": false,
+     "conserva": null
+    }
+   ]
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 177,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 179,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 179,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  },
+  {
+   "node_id": "explicar_idea_facil_comprender_oyente",
+   "limpio": true,
+   "defectos": [],
+   "matiz_revisado": [
+    {
+     "linea": 201,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 201,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 203,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 203,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 205,
+     "usa": true,
+     "conserva": true
+    },
+    {
+     "linea": 209,
+     "usa": false,
+     "conserva": null
+    },
+    {
+     "linea": 209,
+     "usa": true,
+     "conserva": true
+    }
+   ]
+  }
+ ]
+}
