@@ -181,7 +181,7 @@ corregidas a la vez. Un comentario o una nota que contradice `precios.ts` no es
 una segunda opinión: es un bug, y gana `precios.ts`.)
 
 **Cómo aplicarla:** antes de versionar cualquier entrega de canon, además del
-chequeo de acentos (`scripts/chequeo_acentos_canon.ts`), coteja toda cifra de
+chequeo de acentos (`web/scripts/chequeo_acentos_canon.ts`), coteja toda cifra de
 precio del `REGLAS_Y_TOKENS.md` contra `precios.ts`. Si difieren, corrige el
 canon en la adopción, deja una nota de adopción citando `precios.ts`, y avísale
 a Design para que su próxima entrega venga alineada de origen. Ninguna ruta
