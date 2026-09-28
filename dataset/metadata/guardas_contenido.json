@@ -1,0 +1,1198 @@
+{
+ "version": "1.0.0",
+ "fecha": "2026-09-28",
+ "nota": "Generado desde web/lib/guardasContenido.ts (npx tsx scripts/exportar_guardas.ts desde web/). No se edita a mano: web/lib/guardasContenido.test.ts exige que coincida con el codigo. Patrones en sintaxis ECMAScript (en Python, el modulo regex, no re, por \\p{L} y los lookbehind).",
+ "voz": [
+  {
+   "id": "raya",
+   "origen": "BANCO §3: cero guiones largos o medios",
+   "que": "— y – en el texto (coma, dos puntos o punto)",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "en": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "de": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "it": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "[—–]",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "puntosSuspensivos",
+   "origen": "F3_CONVENCIONES (la voz): puntos suspensivos con el carácter …",
+   "que": "tres puntos seguidos en vez de …",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "en": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "pt": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "fr": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "de": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "it": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "ja": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "zh": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "ko": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "ar": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ],
+    "hi": [
+     {
+      "patron": "\\.\\.\\.",
+      "flags": ""
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "signosInvertidos",
+   "origen": "F3_CONVENCIONES (la voz): nada de ¿ ni ¡ fuera del español",
+   "que": "¿ o ¡ en un idioma que no es el español",
+   "porIdioma": {
+    "es": [],
+    "en": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "de": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "it": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "[¿¡]",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {
+    "es": "son la puntuación propia del español"
+   }
+  },
+  {
+   "id": "jergaCruda",
+   "origen": "BANCO §3: cero jerga de manual (MVP, pivot, earlyvangelists, stakeholder, Build-Measure-Learn)",
+   "que": "la jerga de manual cruda, en su forma original o transliterada",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "ピボット|ステークホルダー|アーリーエバンジェリスト",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "피벗|스테이크홀더|얼리\\s?(?:밴|반)젤리스트",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "بيفوت|ستيك\\s?هولدر",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "(?<!\\p{L})(?:MVPs?|pivot(?:e|es|s|ar|ear|ing)?|earlyvangelists?|stakeholders?|build[- ]measure[- ]learn)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "एमवीपी|पिवट|स्टेकहोल्डर",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "monedaTokens",
+   "origen": "BANCO §3: la moneda son créditos, jamás \"tokens\"",
+   "que": "llamar \"tokens\" a los créditos",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:jetons?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "トークン",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "代币|令牌",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "토큰",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "توكن",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "(?<!\\p{L})(?:tokens?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "टोकन",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "tuteoSingular",
+   "origen": "BANCO §3: tuteo singular, le habla a UNA persona (y el registro de DISENO §6 / D7)",
+   "que": "tratar al usuario en plural (el \"ustedes\") o, en francés, italiano y alemán, salir del tuteo",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:ustedes|vosotr[oa]s)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:vocês|vós)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:vous|votre|vos)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:euch|euer|eure[mnrs]?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:voi|vostr[oaie])(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "皆さん|皆様|あなたたち|あなた方",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "你们",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "여러분",
+      "flags": "u"
+     }
+    ],
+    "ar": [],
+    "hi": [
+     {
+      "patron": "आप लोग|आप सब",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {
+    "en": "\"you\" no distingue singular de plural: no hay forma que prohibir",
+    "ar": "D7: el plural de cortesía (أنتم، ـكم) ES la forma neutra canónica en árabe, no un \"ustedes\""
+   }
+  },
+  {
+   "id": "reproche",
+   "origen": "BANCO §3 (espejo, jamás regaño) y §5 (notificaciones): prohibido \"vas tarde\", \"te atrasaste\", \"no cumpliste\", \"deberías haber\", \"estás atrasado\"",
+   "que": "reprocharle al usuario su ritmo o sus fechas",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:vas tarde|te atrasaste|no cumpliste|deber[ií]as haber|est[aá]s atrasad[oa]|vas atrasad[oa])(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:you['’]re (?:late|behind)|you are (?:late|behind)|you fell behind|you(?:['’]ve| have) fallen behind|you didn['’]t (?:meet|keep|finish)|you failed to|you should have)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:você está atrasad[oa]|você se atrasou|você não cumpriu|você deveria ter)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:tu es en retard|tu as pris du retard|tu n['’]as pas (?:respecté|tenu)|tu aurais dû)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:du bist (?:spät dran|zu spät|im verzug|im rückstand|hinterher)|du hast dich verspätet|du hättest)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:sei in ritardo|sei indietro|ti sei attardat[oa]|non hai rispettato|avresti dovuto)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "遅れています|遅れました|遅れてしまいました|守れませんでした|(?:す|する)べきでした",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "你落后了|你迟到了|你拖延了|你没有完成|你本应|你本该|你早该",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "늦었어요|뒤처졌어요|지키지 못했어요|했어야 (?:했어요|해요)",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "أنتم متأخرون|تأخرتم|لم تلتزموا|كان عليكم أن|كان ينبغي عليكم",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "आप पीछे (?:चल रहे )?हैं|आप पिछड़ गए|आपने पूरा नहीं किया|आपको .{0,30}चाहिए था",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "aMedias",
+   "origen": "BANCO §3: vocabulario de los estados de tarea, \"en proceso\" (nunca \"a medias\")",
+   "que": "llamar \"a medias\" a una tarea en proceso",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:a medias)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:half[- ](?:done|finished|baked))(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:ficou|feit[oa]|deixad[oa]) pela metade|meio feit[oa])(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:à moitié (?:fait|faite|finie?|terminée?))(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:halb fertig|halbfertig|halb erledigt)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:fatt[oa] a metà|lasciat[oa] a metà)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "中途半端",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "做了一半|半途而废|半拉子",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "어중간|하다 만",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "نصف منجز",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "आधा[- ]अधूरा",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "claimsNoUsar",
+   "origen": "BANCO §6: \"Cero alucinación\" NO USAR ASÍ (decirlo entero o no decirlo)",
+   "que": "el claim recortado de \"cero alucinación\"",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:cero alucinaci(?:ón|ones))(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:zero hallucinations?|no hallucinations)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:zero alucinaç(?:ão|ões))(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:zéro hallucinations?|aucune hallucination)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:null halluzination(?:en)?|keine halluzinationen)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:zero allucinazion[ei]|nessuna allucinazione)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "ハルシネーションゼロ|幻覚ゼロ",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "零幻觉",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "환각 제로",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "صفر هلوسة",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "शून्य मतिभ्रम",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "reemplazaConsultor",
+   "origen": "BANCO §6: \"Reemplaza a un consultor\" NO USAR (ver §4: no sustituye a un consultor humano)",
+   "que": "afirmar que My Idea reemplaza a un consultor (la frontera dicha en negativo sí vale)",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!no )(?:reemplaza|sustituye) a (?:un|tu) consultor",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!(?:not|n['’]t|never) )replaces? (?:a|your) consultant|(?<!(?:not|n['’]t) )(?:a )?replacement for (?:a|your) consultant",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!não )substitui (?:um|seu|o seu) consultor",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!ne )remplace (?:un|ton) consultant",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "ersetzt (?:einen|deinen) Berater|ersetzt (?:eine|deine) Beraterin",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!non )sostituisce (?:un|il tuo) consulente",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "コンサルタントの代わりになります|コンサルタントに取って代わ|コンサルタントは不要",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "(?<!不|不能|无法|不会|并不)(?:取代|替代)(?:你的)?顾问",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "컨설턴트를 대체(?:해요|합니다|한다|할 수 있)",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "(?<!لا )(?:يحل|تحل) محل (?:ال)?مستشار",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "सलाहकार की जगह ले(?:ता|ती|ते) है",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "lenguajeMuerto",
+   "origen": "app/potenciadores/page.test.ts y BANCO §5: el precio va al frente; murieron \"Explóralo gratis\" y \"Se paga por uso\"",
+   "que": "las invitaciones muertas a explorar gratis o pagar por uso",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:expl[oó]ral[oa] gratis|se paga por uso)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:explore it (?:for )?free|pay per use|pay as you go)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:explore(?:-o)? (?:de graça|grátis|gratuitamente)|pague pelo uso|paga-se pelo uso)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:explore-le (?:gratuitement|gratis)|paiement à l['’]utilisation)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?:^|[.:!?]\\s+)kostenlos erkunden|erkunde (?:sie|es|ihn) kostenlos|bezahlung nach nutzung",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:esploral[oa] (?:gratis|gratuitamente)|si paga a consumo|paghi a consumo)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "無料で探求してみ|無料で探ってみ|従量課金",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "免费探索一下|免费探索吧|按使用付费|按量付费",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "무료로 탐색해 보세요|무료로 둘러보세요|사용한 만큼 (?:결제|지불)",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "استكشفوه مجان|استكشفوها مجان|الدفع حسب الاستخدام|ادفعوا حسب الاستخدام",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "मुफ़?्त में (?:खोजें|देखें)|जितना इस्तेमाल,? उतना भुगतान",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "vozDeLibro",
+   "origen": "BANCO §5 y AGENTS.md (ningún libro ni autor llega al cliente), extendida el 28 sep 2026 por el fundador: tampoco \"el libro\", \"el texto\" ni \"el autor\"",
+   "que": "hablarle al cliente con voz de libro: el libro, el texto (como fuente), el autor, el capítulo",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:el|del|al|este|ese|propio|mismo) libro(?! de texto| abierto))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:(?:el|del|al|la|de la|los|las) autor(?:a|es|as)?)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:(?:seg[uú]n|como dice|lo que dice) el texto)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:el texto (?:lo |la |las |los |le |les |no )?(?:dice|pone|nombra|enumera|escribe|cuenta|llama|describe|avisa|hace|propone|atribuye|define|recoge|da|trae|manda|pide|admite|advierte|recomienda|sugiere|abre|cierra|usa|deja|insiste|lista|habla))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:(?:del|propio) texto(?! (?:de|legal|lineal|completo|largo|plano)))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:(?:el|del|este|ese|mismo|propio) cap[ií]tulo)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:como se (?:ilustra|muestra) en (?:el|un) (?:caso|ejemplo))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:se (?:ilustra|ejemplifica) con)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:se detallan? en (?:los )?cap[ií]tulos)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:vist[oa]s? anteriormente)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:los libros (?:llaman|dicen|nombran))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:se presenta (?:de forma lineal|como el mecanismo))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:(?:a|en) la fecha de la fuente|(?:al|en el) momento de la fuente)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:se contrasta (?:el|la|los|las))(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:se resume en la frase)(?!\\p{L})",
+      "flags": "iu"
+     },
+     {
+      "patron": "(?<!\\p{L})(?:se analizan (?:dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez) (?:palancas|factores|elementos|dimensiones|tipos))(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:the|this) (?:book|author)|in the book|the text (?:says|puts|calls|names|lists))(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:o|do|no|este|esse) livro|(?:o|a|do|da) autora?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:du|ce|dans le) livre|l['’]auteur(?:e)?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:das|dem|des|im|dieses|diesem) Buch(?:es)?|(?:der|die|den|des) Autor(?:in)?)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "(?<!\\p{L})(?:(?:il|del|nel|questo) libro|l['’]autore|l['’]autrice)(?!\\p{L})",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "本書|この本|著者",
+      "flags": "u"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "本书|书中|(?<![工合创])作者",
+      "flags": "u"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "이 책|책에서|저자",
+      "flags": "u"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "الكتاب(?!ة)|المؤلف",
+      "flags": "u"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "पुस्तक|किताब|लेखक",
+      "flags": "u"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  },
+  {
+   "id": "marcasInternas",
+   "origen": "BANCO §5 (la mecánica interna es confidencial), extendida el 28 sep 2026 por el fundador: ninguna ruta de archivo, número de línea ni marca de auditoría",
+   "que": "rutas de archivo, números de línea y marcas de auditoría de la extracción",
+   "porIdioma": {
+    "es": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "en": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "pt": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "fr": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "de": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "it": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "ja": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "zh": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "ko": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "ar": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ],
+    "hi": [
+     {
+      "patron": "fuentes\\/[a-z_]+|\\bcap_\\d+|[a-z0-9_]\\.md\\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\\bD\\.\\d{1,3}\\b|\\bl[ií]neas? \\d+(?: a \\d+)?\\b|\\bsed -n\\b|\\bgrep -r|Puntero jurisdiccional",
+      "flags": "iu"
+     }
+    ]
+   },
+   "sinEquivalente": {}
+  }
+ ],
+ "campos_de_cliente": [
+  "etiqueta_arbol",
+  "titulo_concepto",
+  "resumen_teorico",
+  "pasos_accionables",
+  "condiciones_activacion",
+  "entregable_esperado"
+ ],
+ "adjudicados": {
+  "reglas_de_origen_fta_2.pasos_accionables": "\"el capítulo de ROOs del FTA\" es el capítulo de reglas de origen de un tratado comercial, no el de un libro",
+  "definicion_calidad_segun_agente.resumen_teorico": "\"el autor\" es uno de los agentes que juzgan la calidad de un producto impreso (la planta, el consumidor, el impresor o el autor), no una cita a una fuente"
+ },
+ "glosario": [
+  {
+   "aparece": "\"las cinco efes\" (7 nodos), \"los cinco motivos de decision\" (1)",
+   "queda": "\"las cinco áreas de la venta\" (ya en 2)",
+   "porque": "la mnemotecnia de la F no sobrevive en espanol; el nombre dice lo que son"
+  },
+  {
+   "aparece": "\"te reporta\", \"que te reportan\", \"reporte(s)\" en el sentido de persona",
+   "queda": "\"a tu cargo\" / \"persona(s) a tu cargo\" (25 ya)",
+   "porque": "calco del ingles \"report\"; la forma mayoritaria del pack"
+  },
+  {
+   "aparece": "\"colaboradores directos\", \"que dependen directamente de ti\"",
+   "queda": "\"personas a tu cargo\"",
+   "porque": "un concepto, un nombre (salvo que la frase pida otra cosa)"
+  },
+  {
+   "aparece": "\"contribuidor individual\", \"especialista sin equipo a cargo\", \"un miembro mas del equipo, sin gente a cargo\"",
+   "queda": "\"trabajo individual\" / \"quien trabaja sin gente a cargo\"",
+   "porque": "calco; la forma mas llana"
+  },
+  {
+   "aparece": "\"consejero delegado\" (10)",
+   "queda": "\"director general\"",
+   "porque": "regionalismo de Espana; el catalogo usa \"director general\""
+  },
+  {
+   "aparece": "\"coger\" (11)",
+   "queda": "\"tomar\", \"agarrar\", \"quedarte con\"... segun la frase",
+   "porque": "en buena parte de Latinoamerica es vulgar; el catalogo nunca lo usa"
+  },
+  {
+   "aparece": "\"coche\" (3)",
+   "queda": "\"auto\"",
+   "porque": "regionalismo; el catalogo usa \"auto\" o \"vehiculo\""
+  },
+  {
+   "aparece": "\"vale\" como muletilla de Espana, \"la he liado\", \"liarla\"",
+   "queda": "\"de acuerdo\", \"me he equivocado\"",
+   "porque": "regionalismo"
+  },
+  {
+   "aparece": "\"marketing\" (2)",
+   "queda": "\"mercadotecnia\" (3)",
+   "porque": "ingles; forma mayoritaria del pack"
+  },
+  {
+   "aparece": "\"capitanes de industria\"",
+   "queda": "\"grandes empresarios\"",
+   "porque": "calco"
+  },
+  {
+   "aparece": "\"banderas rojas\"",
+   "queda": "\"señales de alarma\"",
+   "porque": "calco"
+  },
+  {
+   "aparece": "\"jugador A\", \"metodo A\"",
+   "queda": "SE QUEDAN (24 y 8 nodos)",
+   "porque": "nombre propio del metodo de contratacion, como \"franqueza radical\"; en los nodos del mismo libro, \"de primer nivel\" pasa a \"jugador A\" si nombra ese concepto"
+  },
+  {
+   "aparece": "\"una idea general muy conocida\" (priorizar_pocas_cosas_bien)",
+   "queda": "\"el principio de Pareto\"",
+   "porque": "nombre de concepto, no fuente (como \"ley de Parkinson\" y \"falacia de la planificacion\", que se quedan)"
+  },
+  {
+   "aparece": "\"capitulo siguiente\" (despedir_persona_respeto_franqueza)",
+   "queda": "\"etapa siguiente\"",
+   "porque": "evita confundirse con voz de libro"
+  },
+  {
+   "aparece": "\"sandwich\"",
+   "queda": "leer: si es la jerga del libro, se nombra lo que es (\"envolver la critica entre dos elogios\"); sin groserias",
+   "porque": "calco y registro"
+  },
+  {
+   "aparece": "cifras de EJEMPLO con moneda (\"dos millones de dolares\")",
+   "queda": "la cifra se queda, la moneda sale (\"dos millones en ventas\")",
+   "porque": "regla de la cifra: el cliente no es de EE. UU.; la cifra de ejemplo ilustra la proporcion, no un precio"
+  },
+  {
+   "aparece": "femenino dirigido AL LECTOR (\"preparada\", \"tu misma\", \"mantente atenta\")",
+   "queda": "masculino generico (\"preparado\", \"tu mismo\")",
+   "porque": "voz del catalogo. OJO: el femenino de una ANECDOTA en tercera persona (\"una directiva... ella\") se queda"
+  },
+  {
+   "aparece": "\"el Pozo\"",
+   "queda": "se queda; en el primer uso de cada nodo, si no se explica, \"el Pozo (el bache de desanimo)\"",
+   "porque": "nombre de concepto sin definir"
+  },
+  {
+   "aparece": "\"movil\" (telefono)",
+   "queda": "\"telefono\"",
+   "porque": "regionalismo de Espana (\"celular\" en America); neutro. Decidido por el orquestador tras el verificador, 28 sep"
+  },
+  {
+   "aparece": "\"metedura de pata\"",
+   "queda": "\"error\"",
+   "porque": "regionalismo (\"metida de pata\" en America); neutro"
+  },
+  {
+   "aparece": "\"lo cala\" (se da cuenta)",
+   "queda": "\"lo nota\"",
+   "porque": "coloquial de Espana; \"no cala\" (no llega) se queda"
+  },
+  {
+   "aparece": "\"reportar\" en el sentido de informar de un estado",
+   "queda": "\"informar\"",
+   "porque": "calco; neutro (el sentido de persona a cargo ya estaba en su fila)"
+  },
+  {
+   "aparece": "\"dinero\" como nombre del area de la venta",
+   "queda": "\"fortuna\"",
+   "porque": "el area se llama \"fortuna\" en sus nodos propios (vender_fortuna_candidato); un concepto, un nombre"
+  },
+  {
+   "aparece": "\"Mercadeo\"",
+   "queda": "\"Mercadotecnia\"",
+   "porque": "misma fila que marketing"
+  }
+ ],
+ "referencias": {
+  "titulos_canonicos_de_los_libros": "dataset/metadata/fuentes_canonicas.json",
+  "vara_de_fases": "docs/puente_forja/paso4/vara_fases.md",
+  "reglas_de_la_casa": "docs/REGLAS_DE_LA_CASA.md"
+ }
+}
