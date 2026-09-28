@@ -9,8 +9,8 @@ describe("evaluacionBrecha (determinística, sin LLM)", () => {
     for (const pack of ["quality", "health_safety", "environmental", "exportacion", "franquicias"]) {
       expect(semillasDelPack(pack)).toHaveLength(7);
     }
-    // seguridad_digital: 6 semillas aprobadas (v1.3.2)
-    expect(semillasDelPack("seguridad_digital")).toHaveLength(6);
+    // seguridad_digital: 6 semillas aprobadas (v1.3.2) + gestion_riesgo_seguridad_ia, puerta de la auditoria final (28 sep 2026)
+    expect(semillasDelPack("seguridad_digital")).toHaveLength(7);
     // risk_management: 8 semillas aprobadas (v1.4), 2 por cada fase del canon
     expect(semillasDelPack("risk_management")).toHaveLength(8);
   });

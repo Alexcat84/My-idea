@@ -49,6 +49,7 @@ con la misma vara que el catálogo.
 | C28 | El catálogo no se borra; los datos personales sí (borrar la cuenta borra de verdad) | Fundador | 26 sep 2026 | `web/app/api/cuenta/eliminar/borradoCompleto.test.ts` |
 | C29 | Frontera OPERATIVO / INVENCIÓN: lo operativo concreta el cómo sin afirmar nada nuevo y se queda; la invención añade un qué, un por qué o un cuánto que el libro no dice, o endurece lo que dice con cautela, y sale (o pasa a "Sugerencia de My Idea:" si es un consejo práctico útil) | Fundador, tras la auditoría final (dos pasos que la campaña dio por OPERATIVOS y el árbitro por invención) | 28 sep 2026 | lectura ciega con árbitro (etapa 1 del remedio); detalle en R6 |
 | C30 | Las etiquetas llevan mayúscula de rótulo en las palabras con peso ("Traza tu Plan de Exportación"): es estilo de la casa, no falta de ortografía | Fundador (3.541 de 3.634 etiquetas ya lo usaban, sin regla escrita) | 28 sep 2026 | lectura; los lectores de ortografía no lo cuentan como falta |
+| C31 | Cada puerta de un mundo entra con su pregunta de ENTRADA propia (`pregunta_entrada`, campo aparte), que parte del concepto de la puerta y de la situación que la persona cuenta; la base no se toca; se verifica a ciegas con trampa sin marca | Fundador, tras la auditoría final (las bases miraban al siguiente concepto) | 28 sep 2026 | `web/lib/engine/puertasMundo.test.ts`, `web/lib/engine/preguntaEntrada.test.ts` |
 
 ## B. Producto (lo que la app hace, promete y cobra)
 

@@ -508,3 +508,35 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
   "Cash Conversion Cycle", "Discovery/Decision Day") se quedan.
 - **La guarda:** `engine/test_tildes_mecanicas.py` hace que ningún nodo vivo vuelva a traer una palabra de la lista.
   Gate 0 y las dos suites pasan.
+
+**Puertas con pregunta de entrada (punto 3 del fundador), 28 sep 2026:**
+- **El motor:** la pregunta de entrada vive en un campo aparte de la caché (`pregunta_entrada`). Sale al entrar a un
+  mundo y al reelegir puerta; la base no se toca (Principio 2). El adaptador la trata igual que las demás, y su salida
+  segura es ella misma.
+- **Las preguntas:** 86, las 85 puertas de los mundos más `gestion_riesgo_seguridad_ia`. Cuatro redactores las
+  escribieron leyendo cada nodo.
+- **La verificación ciega:** 9 lotes con 10 trampas sin marca bajo ids reales que no son puerta (otro tema, papeles
+  supuestos, genérica, dos preguntas encadenadas, salto al siguiente). **Las 10 cazadas.**
+  - 79 salieron adecuadas a la primera.
+  - 7 salieron flojas; se reescribieron con el reparo del lector y pasaron en la segunda ronda.
+  - Un ajuste posterior sin reverificar: la de `responder_critica_abrasiva_cuatro_reglas` quita el supuesto de género.
+  - Evidencia en `docs/auditoria_final/preguntas_entrada.json`.
+- **`gestion_riesgo_seguridad_ia` entra como puerta de Seguridad Digital:** G2 pasa. La navegación queda en verde, con
+  alcanzabilidad del 100 % en el núcleo y en cada mundo, y pasa a ser guarda permanente de la suite
+  (`engine/test_navegacion_catalogo.py`).
+- **Lo que queda para la etapa 2:** los lectores marcaron 14 condiciones de entrada de puertas como vagas o como un
+  punto intermedio. Van a la etapa 2 (condiciones), con su método.
+
+**Etapa 1, cambios de método declarados mientras corre (antes de que los lotes afectados se leyeran):**
+- **Instrucciones v2 del lector, desde el lote 17 y en los terceros lectores:**
+  - Tras los 9 primeros lotes, las trampas de endurecer y de matiz no las cazaba ningún lector.
+  - Se añade una comprobación obligatoria nodo a nodo de enumeraciones y de grados de certeza, con un campo `cotejo`
+    que la deja escrita.
+  - Los lotes 1 a 16 se leyeron con la v1.
+- **Trampas v2, desde el lote 25, que nadie había abierto:**
+  - **El defecto de diseño:** el `cotejo` mostró que los lectores sí veían las diferencias. La trampa de matiz quitaba
+    un elemento de una lista que muchas veces no cambia el consejo ("y otros costos" lo cubría). La de endurecer caía a
+    veces dentro de una pregunta.
+  - **El arreglo:** desde el lote 25, el matiz quita una condición o una excepción ("salvo que…", "solo si…"), que
+    siempre cambia el consejo. Endurecer va solo en el resumen, con "siempre va a", y nunca tras un clítico.
+  - Las trampas y los paquetes de los lotes 1 a 24 no cambian. La cuenta de trampas se da por versión.
