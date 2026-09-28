@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo Six Sigma DMAIC",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.",
+  "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo.",
   "pasos_accionables": [
     "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
     "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
@@ -211,6 +211,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
       "indice": 10
+    },
+    {
+      "id": "final-e1-024-six_sigma_dmaic-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.",
+      "texto_nuevo": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5036-5044",
+        "frase": "The Six Sigma DMAIC Improvement Model has gained wide acceptance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no atribuye al método métricas en cada fase ni ese porqué.; Misma característica añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

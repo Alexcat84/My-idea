@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Establecimiento de la Capacidad del Proceso Mejorado",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.",
+  "resumen_teorico": "Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas que confirmen la mejora sin crear problemas nuevos, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.",
   "pasos_accionables": [
     "Decidir cómo se probarán las mejoras",
-    "Preparar un plan de prueba para cada mejora",
+    "Preparar un plan de prueba para cada mejora, identificando las limitaciones de la prueba y cómo tratarlas",
     "Conducir la prueba y medir resultados",
-    "Ajustar las mejoras si los resultados no son satisfactorios",
-    "Confirmar control estadístico mediante cartas de control",
+    "Ajustar las mejoras si los resultados no son satisfactorios, y volver a probar, medir y ajustar hasta confirmar que el proceso funcionará en condiciones reales de operación",
+    "Confirmar control estadístico mediante cartas de control y, si el proceso no lo está, mejorarlo más hasta que lo esté",
     "Realizar el análisis de capacidad del proceso"
   ],
   "entregable_esperado": "Proceso confirmado en control estadístico con capacidad medida y documentada",
@@ -28,5 +28,74 @@
   "etiqueta_arbol": "Confirma tu Proceso Mejorado",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-020-establecimiento_capacidad_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.",
+      "texto_nuevo": "Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas que confirmen la mejora sin crear problemas nuevos, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14914",
+        "frase": "ensure that no new problems have inadvertently been created by your improvement(s)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que la prueba confirma que el problema mejoró y que la mejora no creó problemas nuevos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-establecimiento_capacidad_proceso-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar un plan de prueba para cada mejora",
+      "texto_nuevo": "Preparar un plan de prueba para cada mejora, identificando las limitaciones de la prueba y cómo tratarlas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14924-14926",
+        "frase": "Identify limitations of the test(s). Develop an approach to deal with limitations."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además identificar las limitaciones de la prueba y preparar cómo tratarlas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-establecimiento_capacidad_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajustar las mejoras si los resultados no son satisfactorios",
+      "texto_nuevo": "Ajustar las mejoras si los resultados no son satisfactorios, y volver a probar, medir y ajustar hasta confirmar que el proceso funcionará en condiciones reales de operación",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14932-14934",
+        "frase": "Retest, measure, and adjust until satisfied that the improved process will work"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide repetir prueba, medición y ajuste hasta estar seguro de que el proceso funcionará en condiciones reales de operación.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-establecimiento_capacidad_proceso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar control estadístico mediante cartas de control",
+      "texto_nuevo": "Confirmar control estadístico mediante cartas de control y, si el proceso no lo está, mejorarlo más hasta que lo esté",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14936",
+        "frase": "If not, improve the process further until it is."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que, si el proceso no está en control estadístico, hay que mejorarlo más hasta que lo esté.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

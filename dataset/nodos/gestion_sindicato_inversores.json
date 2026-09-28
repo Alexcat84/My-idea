@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo manejar a un grupo de inversores en la misma ronda (sindicato)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando levantas una ronda con varios inversores a la vez (un sindicato), tú eres responsable de comunicarte con todos ellos, no solo con quien lidera. Evita las rondas armadas con demasiados inversores pequeños (party round), porque nadie termina realmente comprometido para acompañarte en rondas futuras. El inversor que lidera debe tener tu autorización clara para negociar los términos en nombre de todo el grupo.",
+  "resumen_teorico": "Cuando levantas una ronda con varios inversores a la vez (un sindicato), tú eres responsable de comunicarte con todos ellos, no solo con quien lidera. Evita las rondas armadas con demasiados inversores pequeños (party round), porque nadie termina realmente comprometido para acompañarte en rondas futuras. Insiste en que los inversores acepten, al menos de palabra, que quien lidera negocie los términos en nombre de todo el grupo.",
   "pasos_accionables": [
     "Mantén comunicación activa con cada inversor del sindicato, no solo con quien lidera",
     "Evita armar rondas con demasiados inversores pequeños (party round)",
@@ -39,5 +39,23 @@
   ],
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-gestion_sindicato_inversores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando levantas una ronda con varios inversores a la vez (un sindicato), tú eres responsable de comunicarte con todos ellos, no solo con quien lidera. Evita las rondas armadas con demasiados inversores pequeños (party round), porque nadie termina realmente comprometido para acompañarte en rondas futuras. El inversor que lidera debe tener tu autorización clara para negociar los términos en nombre de todo el grupo.",
+      "texto_nuevo": "Cuando levantas una ronda con varios inversores a la vez (un sindicato), tú eres responsable de comunicarte con todos ellos, no solo con quien lidera. Evita las rondas armadas con demasiados inversores pequeños (party round), porque nadie termina realmente comprometido para acompañarte en rondas futuras. Insiste en que los inversores acepten, al menos de palabra, que quien lidera negocie los términos en nombre de todo el grupo.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "200",
+        "frase": "you should insist that investors agree (at least verbally) that the lead investor can speak"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Invierte quién da el acuerdo: son los inversores quienes deben aceptar que el líder hable por el sindicato, y tú lo exiges.; Misma inversión de quién da el aval.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

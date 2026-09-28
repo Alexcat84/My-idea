@@ -7,7 +7,7 @@
   "resumen_teorico": "El Viral Loop es el proceso mediante el cual clientes satisfechos refieren a otros a un negocio (web, móvil o físico), produciendo incrementos exponenciales en clientes/usuarios/tráfico. El Marketing Viral son las actividades diseñadas específicamente para estimular esas referencias entre clientes.",
   "pasos_accionables": [
     "Diseñar mecanismos dentro del producto que incentiven a los clientes a referir a otros.",
-    "Medir la tasa de referidos (viral coefficient).",
+    "Medir el coeficiente viral (viral coefficient) contando los referidos que se activan, no solo los referidos brutos, y el tiempo de ciclo viral, es decir, cuánto tarda un invitado en convertirse en cliente.",
     "Optimizar los incentivos de referencia para maximizar el crecimiento exponencial.",
     "Definir el momento óptimo en el journey para activar la solicitud de referido (después de logro del objetivo del cliente)",
     "Diseñar un incentivo que sea significativo pero no necesariamente monetario (ej. beneficios del propio producto)",
@@ -23,8 +23,8 @@
     "Identificar qué es lo que tus mejores clientes valoran más allá del dinero (estatus, acceso, reconocimiento)",
     "Segmentar a los clientes según el tipo de recompensa que resonaría más con ellos",
     "Diseñar una oferta de referido que otorgue algo escaso o de difícil acceso",
-    "Comunicar la oferta rápidamente después de identificar el perfil ideal de cliente referidor",
-    "Identifica qué tipo de viralidad (inherente, colaborativa, embebida, incentivada, social) aplica mejor a tu producto",
+    "Comunicar la oferta una vez que confirmes que el cliente encaja en el perfil ideal de cliente referidor",
+    "Identifica qué tipo de viralidad (boca a boca, inherente, colaborativa, en las comunicaciones del producto, incentivada, embebida, social) aplica mejor a tu producto",
     "Diseña mecanismos de invitación integrados en el flujo natural de uso del producto",
     "Incentiva a los usuarios a invitar a otros (créditos, espacio extra, descuentos)",
     "Simplifica al máximo el proceso de registro para los invitados",
@@ -46,5 +46,58 @@
     "The Startup Owner's Manual - Blank, Steve",
     "Never Lose a Customer Again - Joey Coleman",
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-viral_loop_marketing-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir la tasa de referidos (viral coefficient).",
+      "texto_nuevo": "Medir el coeficiente viral (viral coefficient) contando los referidos que se activan, no solo los referidos brutos, y el tiempo de ciclo viral, es decir, cuánto tarda un invitado en convertirse en cliente.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12194",
+        "frase": "Be careful to measure activated users, not just gross referrals, which can deceive you."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El coeficiente viral cuenta referidos activados; los referidos brutos pueden engañar.; Se cae el tiempo de ciclo viral, el segundo factor clave que hay que medir.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-038-viral_loop_marketing-pasos_accionables-17",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar la oferta rápidamente después de identificar el perfil ideal de cliente referidor",
+      "texto_nuevo": "Comunicar la oferta una vez que confirmes que el cliente encaja en el perfil ideal de cliente referidor",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5244",
+        "frase": "Once they confirmed that I fit the profile they desired"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija rapidez para enviar la oferta; la rapidez fue la del cliente al referir.; Mismo plazo añadido.",
+      "indice": 17,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-038-viral_loop_marketing-pasos_accionables-18",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica qué tipo de viralidad (inherente, colaborativa, embebida, incentivada, social) aplica mejor a tu producto",
+      "texto_nuevo": "Identifica qué tipo de viralidad (boca a boca, inherente, colaborativa, en las comunicaciones del producto, incentivada, embebida, social) aplica mejor a tu producto",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2260",
+        "frase": "including word of mouth, inherent, collaborative, communicative, incentives, embedded, and social"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro tiene siete tipos; faltan el boca a boca y la viralidad en las comunicaciones del producto.",
+      "indice": 18,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

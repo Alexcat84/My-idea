@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Establecimiento del Proyecto: Declaración de Problema y Meta",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Antes de iniciar el diagnóstico, es esencial preparar una declaración de problema y una declaración de meta con la misma variable y unidad de medida, seleccionar un facilitador o Black Belt, y lanzar el equipo con un líder capacitado. Esta alineación asegura que el equipo resuelva efectivamente el problema seleccionado por el consejo, evitando desviaciones entre la meta y el problema real.",
+  "resumen_teorico": "Antes de iniciar el diagnóstico, es esencial preparar una declaración de problema y una declaración de meta con la misma variable y unidad de medida, seleccionar un facilitador o Black Belt, y lanzar el equipo con un líder capacitado. Esta alineación importa porque, si la meta y el problema no coinciden, el equipo puede cumplir la meta sin resolver el problema seleccionado por el consejo.",
   "pasos_accionables": [
     "Redactar una declaración de problema clara y específica",
     "Redactar una declaración de meta con la misma variable y unidad de medida que el problema",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Declara el Problema y la Meta",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-020-establecer_proyecto_mejora-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de iniciar el diagnóstico, es esencial preparar una declaración de problema y una declaración de meta con la misma variable y unidad de medida, seleccionar un facilitador o Black Belt, y lanzar el equipo con un líder capacitado. Esta alineación asegura que el equipo resuelva efectivamente el problema seleccionado por el consejo, evitando desviaciones entre la meta y el problema real.",
+      "texto_nuevo": "Antes de iniciar el diagnóstico, es esencial preparar una declaración de problema y una declaración de meta con la misma variable y unidad de medida, seleccionar un facilitador o Black Belt, y lanzar el equipo con un líder capacitado. Esta alineación importa porque, si la meta y el problema no coinciden, el equipo puede cumplir la meta sin resolver el problema seleccionado por el consejo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5348",
+        "frase": "the team may carry out the goal and not solve the problem"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no garantiza que la alineación asegure la solución; solo advierte que sin ella el equipo puede cumplir la meta sin resolver el problema.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

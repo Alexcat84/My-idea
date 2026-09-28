@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Cuidar la calidad de cómo gestionas a tu equipo (employee life cycle)",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Así como quien revisa la calidad de un producto no puede construirlo, pero sí detectar cuando falla, cuidar bien cómo gestionas a las personas de tu equipo no crea por sí solo una gran cultura, pero te deja ver cuándo los líderes de tu equipo no están cumpliendo. El recorrido completo de una persona en tu negocio (reclutamiento, compensación, entrenamiento, evaluación de desempeño, motivación) te sirve para revisar de forma sistemática qué tan bien se está gestionando tu empresa.",
+  "resumen_teorico": "Así como quien revisa la calidad de un producto no puede construirlo, pero sí detectar cuando falla, cuidar bien cómo gestionas a las personas de tu equipo no crea por sí solo una gran cultura, pero te deja ver cuándo tú y los líderes de tu equipo no están cumpliendo. El recorrido completo de una persona en tu negocio (reclutamiento, compensación, entrenamiento, evaluación de desempeño, motivación) te sirve para revisar de forma sistemática qué tan bien se está gestionando tu empresa.",
   "pasos_accionables": [
     "Evalúa cada etapa del recorrido de una persona en tu equipo: reclutamiento, compensación, integración, desempeño, motivación",
     "Pregunta si quienes hacen las entrevistas están bien preparados y llegan a tiempo",
     "Compara los paquetes de compensación y participación (stock options) con lo que ofrece la competencia por talento",
     "Mide cuánto tarda alguien nuevo en volverse productivo",
     "Evalúa el compromiso: ¿las personas creen en lo que estás construyendo, disfrutan venir a trabajar, o están desconectadas?",
-    "Contrata a alguien que sepa diseñar procesos de primer nivel para cuidar a tu equipo, igual que quien lidera el control de calidad (QA) de un producto"
+    "Contrata a alguien que sepa diseñar procesos de primer nivel para cuidar a tu equipo, igual que quien lidera el control de calidad (QA) de un producto, y que además sea diplomático para que tus gerentes lo vean como ayuda y no como vigilancia, conozca la industria, tenga tu confianza y perciba lo que nadie dice en voz alta"
   ],
   "entregable_esperado": "Un mapa de revisión del recorrido completo de una persona en tu negocio, con métricas por etapa: reclutamiento, compensación, entrenamiento, desempeño y motivación",
   "nodos_previos": [
@@ -54,6 +54,39 @@
         "motivo": "Revisar sistemáticamente cómo se gestiona a las personas conduce al principio de priorizar primero a la gente, luego los productos y al final las ganancias."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-032-hr_calidad_gestion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Así como quien revisa la calidad de un producto no puede construirlo, pero sí detectar cuando falla, cuidar bien cómo gestionas a las personas de tu equipo no crea por sí solo una gran cultura, pero te deja ver cuándo los líderes de tu equipo no están cumpliendo. El recorrido completo de una persona en tu negocio (reclutamiento, compensación, entrenamiento, evaluación de desempeño, motivación) te sirve para revisar de forma sistemática qué tan bien se está gestionando tu empresa.",
+      "texto_nuevo": "Así como quien revisa la calidad de un producto no puede construirlo, pero sí detectar cuando falla, cuidar bien cómo gestionas a las personas de tu equipo no crea por sí solo una gran cultura, pero te deja ver cuándo tú y los líderes de tu equipo no están cumpliendo. El recorrido completo de una persona en tu negocio (reclutamiento, compensación, entrenamiento, evaluación de desempeño, motivación) te sirve para revisar de forma sistemática qué tan bien se está gestionando tu empresa.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1759",
+        "frase": "it can tell you when you and your managers are not getting the job done"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el área detecta cuándo tú y tus gerentes no cumplen; el nodo saca al propio fundador de la revisión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-hr_calidad_gestion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contrata a alguien que sepa diseñar procesos de primer nivel para cuidar a tu equipo, igual que quien lidera el control de calidad (QA) de un producto",
+      "texto_nuevo": "Contrata a alguien que sepa diseñar procesos de primer nivel para cuidar a tu equipo, igual que quien lidera el control de calidad (QA) de un producto, y que además sea diplomático para que tus gerentes lo vean como ayuda y no como vigilancia, conozca la industria, tenga tu confianza y perciba lo que nadie dice en voz alta",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1825-1833",
+        "frase": "Managers must believe that HR is there to help them improve rather than police them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige además diplomacia (ayuda y no vigilancia), conocimiento de la industria, la confianza del CEO y percibir lo no dicho; el paso deja solo el diseño de procesos.; Mismo defecto: se cae la diplomacia, sin la cual el área no sirve, y el conocimiento de la industria.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

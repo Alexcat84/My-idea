@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Estilos de Pensamiento: Intuitivo-Adaptativo vs. Lógico-Sistemático",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Se pueden contrastar dos tradiciones de pensamiento colectivo: la inglesa ('muddling through'), que enfatiza las etapas menos conscientes de Intimación e Iluminación (avanzar por experimentación, sentir el camino, adaptarse a nuevos hechos, incluso a costa de la coherencia lógica perfecta), y la francesa ('espíritu clásico'), que enfatiza las etapas más conscientes de Preparación y Verificación (partir de principios abstractos y deducir consecuencias con rigor matemático, incluso desatendiendo la evidencia empírica cambiante). Ambos estilos tienen ventajas y peligros: el estilo adaptativo permite responder ágilmente a nuevas condiciones pero puede ser lento cuando se necesita velocidad y decisión firme; el estilo lógico ofrece consistencia y compromisos claros pero puede volverse rígido ante hechos nuevos. Este marco es directamente relevante para comparar metodologías de gestión de proyectos: el enfoque experimental/iterativo (propio de metodologías ágiles y de validación de hipótesis) frente al enfoque de planificación exhaustiva y ejecución lineal.",
+  "resumen_teorico": "Se pueden contrastar dos tradiciones de pensamiento colectivo: la inglesa ('muddling through'), que enfatiza las etapas menos conscientes de Intimación e Iluminación (avanzar por experimentación, sentir el camino, adaptarse a nuevos hechos, incluso a costa de la coherencia lógica perfecta), y la francesa ('espíritu clásico'), que enfatiza las etapas más conscientes de Preparación y Verificación (partir de principios abstractos y deducir consecuencias con rigor matemático, incluso desatendiendo la evidencia empírica cambiante). Ambos estilos tienen ventajas y peligros: el estilo adaptativo permite responder ágilmente a nuevas condiciones, pero puede ser lento cuando se necesita velocidad, puede llevar a evitar el esfuerzo de reunir todo el conocimiento disponible y probar las hipótesis con rigor, y pide mucho cuidado antes de asumir compromisos firmes; el estilo lógico ofrece consistencia y compromisos claros pero puede volverse rígido ante hechos nuevos.",
   "pasos_accionables": [
     "Identificar si el equipo fundador tiende naturalmente hacia un estilo adaptativo/experimental o hacia uno de planificación rigurosa",
     "Evaluar si la etapa actual del proyecto (alta incertidumbre vs. ejecución madura) requiere más flexibilidad o más rigor lógico",
-    "Combinar conscientemente ambos estilos: usar el pensamiento adaptativo para descubrir el modelo de negocio y el pensamiento lógico-sistemático para escalar y ejecutar",
+    "Combinar conscientemente ambos estilos, reconociendo lo que cada uno acierta y evitando en lo posible los errores de cada uno.",
     "Documentar decisiones tomadas 'por intuición/sensación' para poder verificarlas posteriormente con datos"
   ],
   "entregable_esperado": "Un diagnóstico del estilo cognitivo dominante del equipo y un plan de cuándo aplicar experimentación ágil vs. planificación estructurada según la fase del proyecto",
@@ -40,6 +40,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-027 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-030-estilos_pensamiento_intuitivo_vs_logico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Se pueden contrastar dos tradiciones de pensamiento colectivo: la inglesa ('muddling through'), que enfatiza las etapas menos conscientes de Intimación e Iluminación (avanzar por experimentación, sentir el camino, adaptarse a nuevos hechos, incluso a costa de la coherencia lógica perfecta), y la francesa ('espíritu clásico'), que enfatiza las etapas más conscientes de Preparación y Verificación (partir de principios abstractos y deducir consecuencias con rigor matemático, incluso desatendiendo la evidencia empírica cambiante). Ambos estilos tienen ventajas y peligros: el estilo adaptativo permite responder ágilmente a nuevas condiciones pero puede ser lento cuando se necesita velocidad y decisión firme; el estilo lógico ofrece consistencia y compromisos claros pero puede volverse rígido ante hechos nuevos. Este marco es directamente relevante para comparar metodologías de gestión de proyectos: el enfoque experimental/iterativo (propio de metodologías ágiles y de validación de hipótesis) frente al enfoque de planificación exhaustiva y ejecución lineal.",
+      "texto_nuevo": "Se pueden contrastar dos tradiciones de pensamiento colectivo: la inglesa ('muddling through'), que enfatiza las etapas menos conscientes de Intimación e Iluminación (avanzar por experimentación, sentir el camino, adaptarse a nuevos hechos, incluso a costa de la coherencia lógica perfecta), y la francesa ('espíritu clásico'), que enfatiza las etapas más conscientes de Preparación y Verificación (partir de principios abstractos y deducir consecuencias con rigor matemático, incluso desatendiendo la evidencia empírica cambiante). Ambos estilos tienen ventajas y peligros: el estilo adaptativo permite responder ágilmente a nuevas condiciones, pero puede ser lento cuando se necesita velocidad, puede llevar a evitar el esfuerzo de reunir todo el conocimiento disponible y probar las hipótesis con rigor, y pide mucho cuidado antes de asumir compromisos firmes; el estilo lógico ofrece consistencia y compromisos claros pero puede volverse rígido ante hechos nuevos.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "631",
+        "frase": "avoid the severe effort of collecting and arranging all available knowledge"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no aplica el contraste a metodologías de gestión ni lo liga a la validación de hipótesis; advierte que el estilo adaptativo tiende a eludir probar hipótesis.; Misma aplicación añadida que la marca 0.; Mismos peligros perdidos que la marca 1.; Se caen dos peligros del estilo adaptativo que el libro enumera: eludir reunir datos y probar hipótesis, y la cautela ante compromisos firmes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-030-estilos_pensamiento_intuitivo_vs_logico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Combinar conscientemente ambos estilos: usar el pensamiento adaptativo para descubrir el modelo de negocio y el pensamiento lógico-sistemático para escalar y ejecutar",
+      "texto_nuevo": "Combinar conscientemente ambos estilos, reconociendo lo que cada uno acierta y evitando en lo posible los errores de cada uno.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "641",
+        "frase": "the psychological truths implied in both types of thinking may be recognized and combined"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo espera que se combinen las ventajas de ambos y se eviten sus errores; el reparto descubrir frente a escalar es añadido.; Mismo reparto por fases añadido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

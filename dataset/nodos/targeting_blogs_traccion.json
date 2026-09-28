@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Targeting de Blogs para Tracción Inicial",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Estrategia de adquisición de clientes mediante el patrocinio directo de blogs pequeños y personales, especialmente aquellos con audiencias fieles pero sin monetización propia. Permite testear mensajes, entender el perfil de cliente más interesado y generar tracción temprana con bajo costo. Se complementa con partnerships de contenido con sitios más grandes.",
+  "resumen_teorico": "Estrategia de adquisición de clientes mediante el patrocinio directo de blogs pequeños y personales, especialmente aquellos con audiencias fieles pero sin monetización propia. Permite medir qué blogs funcionan mejor, entender el perfil de cliente más interesado y generar tracción temprana con bajo costo. Se complementa con partnerships de contenido con sitios más grandes.",
   "pasos_accionables": [
     "Identificar blogs de nicho usando buscadores, YouTube, Twitter, Social Mention y preguntando directamente a la audiencia objetivo",
     "Contactar bloggers pequeños ofreciendo pago por publicidad o acceso anticipado al producto",
@@ -42,5 +42,23 @@
   ],
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-034-targeting_blogs_traccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estrategia de adquisición de clientes mediante el patrocinio directo de blogs pequeños y personales, especialmente aquellos con audiencias fieles pero sin monetización propia. Permite testear mensajes, entender el perfil de cliente más interesado y generar tracción temprana con bajo costo. Se complementa con partnerships de contenido con sitios más grandes.",
+      "texto_nuevo": "Estrategia de adquisición de clientes mediante el patrocinio directo de blogs pequeños y personales, especialmente aquellos con audiencias fieles pero sin monetización propia. Permite medir qué blogs funcionan mejor, entender el perfil de cliente más interesado y generar tracción temprana con bajo costo. Se complementa con partnerships de contenido con sitios más grandes.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "827",
+        "frase": "Noah tracked each advertisement to see which blogs were most effective"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que rastrear cada anuncio mostró qué blogs funcionaban y qué cliente se interesaba más; no habla de probar mensajes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

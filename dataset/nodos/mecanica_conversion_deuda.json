@@ -6,9 +6,9 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Define las condiciones bajo las cuales la deuda convertible se transforma automáticamente en equity: un plazo máximo (Maturity Date), un monto mínimo de la ronda calificada (Qualified Financing) y el proceso de conversión si no se cumplen las condiciones. También regula qué porcentaje de tenedores de deuda debe aprobar cambios en los términos.",
   "pasos_accionables": [
-    "Definir el plazo máximo (Maturity Date) para que ocurra una ronda de financiamiento calificada.",
+    "Definir el plazo máximo (Maturity Date) para que ocurra una ronda de financiamiento calificada, buscando que sea lo más largo posible (con un fondo de capital de riesgo, un año puede ser el máximo que logres negociar).",
     "Establecer el monto mínimo de la ronda futura que activa la conversión automática (Qualified Financing).",
-    "Especificar el porcentaje de tenedores de deuda (Majority Holders) necesario para aprobar cambios en los términos.",
+    "Especificar el porcentaje de tenedores de deuda (Majority Holders) necesario para aprobar cambios en los términos, cuidando que no sea demasiado alto (por ejemplo, una mayoría calificada en lugar de una mayoría simple).",
     "Anticipar qué sucede si no se cumplen las condiciones de conversión (deuda permanece vigente)."
   ],
   "entregable_esperado": "Cláusulas de conversión documentadas con plazos, montos mínimos y reglas de mayoría para enmiendas.",
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "Define tu Conversión de Deuda",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-mecanica_conversion_deuda-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir el plazo máximo (Maturity Date) para que ocurra una ronda de financiamiento calificada.",
+      "texto_nuevo": "Definir el plazo máximo (Maturity Date) para que ocurra una ronda de financiamiento calificada, buscando que sea lo más largo posible (con un fondo de capital de riesgo, un año puede ser el máximo que logres negociar).",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2258",
+        "frase": "we'd try to get this period to be as long as possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido.; Se pierde el consejo de buscar el plazo más largo posible y que con un fondo de riesgo un año puede ser el máximo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-038-mecanica_conversion_deuda-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Especificar el porcentaje de tenedores de deuda (Majority Holders) necesario para aprobar cambios en los términos.",
+      "texto_nuevo": "Especificar el porcentaje de tenedores de deuda (Majority Holders) necesario para aprobar cambios en los términos, cuidando que no sea demasiado alto (por ejemplo, una mayoría calificada en lugar de una mayoría simple).",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2274",
+        "frase": "make sure the standard doesn't get too high"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde la advertencia de que la exigencia para aprobar cambios no sea demasiado alta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

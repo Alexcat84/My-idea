@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "ISO 31000 - Gestión de Riesgos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "ISO 31000:2009 proporciona principios, marco de trabajo y un proceso para gestionar cualquier forma de riesgo de manera transparente, sistemática y creíble, dentro de cualquier alcance o contexto organizacional. Es una herramienta clave para integrar la gestión de riesgo dentro de los sistemas de calidad.",
+  "resumen_teorico": "ISO 31000:2009 proporciona principios, marco de trabajo y un proceso para gestionar cualquier forma de riesgo de manera transparente, sistemática y creíble, dentro de cualquier alcance o contexto organizacional. Esta norma internacional se desarrolló para ayudar a las organizaciones a gestionar el riesgo con eficacia.",
   "pasos_accionables": [
     "Establecer el contexto organizacional y los objetivos de gestión de riesgo",
     "Identificar y evaluar los riesgos relevantes al proceso o proyecto",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Gestiona Riesgos con Método",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-iso_31000_gestion_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "ISO 31000:2009 proporciona principios, marco de trabajo y un proceso para gestionar cualquier forma de riesgo de manera transparente, sistemática y creíble, dentro de cualquier alcance o contexto organizacional. Es una herramienta clave para integrar la gestión de riesgo dentro de los sistemas de calidad.",
+      "texto_nuevo": "ISO 31000:2009 proporciona principios, marco de trabajo y un proceso para gestionar cualquier forma de riesgo de manera transparente, sistemática y creíble, dentro de cualquier alcance o contexto organizacional. Esta norma internacional se desarrolló para ayudar a las organizaciones a gestionar el riesgo con eficacia.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11463",
+        "frase": "was developed to help organizations manage risk effectively"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que la norma se creó para ayudar a gestionar el riesgo con eficacia.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

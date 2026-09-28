@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Establecimiento de Metas de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las metas de calidad deben ser medibles (comunicables con precisión), alcanzables (evidenciadas por logros de otros) y equitativas (comparables entre responsabilidades similares). Se establecen combinando análisis tecnológico para productos/procesos y benchmarking externo/necesidades del negocio para funciones y personas, evitando basarse únicamente en desempeño histórico.",
+  "resumen_teorico": "Idealmente, las metas de calidad deberían ser legítimas (con estatus oficial indudable), medibles (comunicables con precisión), alcanzables (evidenciadas por logros de otros) y equitativas (comparables entre responsabilidades similares). Se establecen combinando análisis tecnológico para productos/procesos y benchmarking externo/necesidades del negocio para funciones y personas, en lugar de basarse en el desempeño histórico.",
   "pasos_accionables": [
     "Definir metas cuantificables y comunicables con precisión",
     "Validar que las metas ya hayan sido alcanzadas por otras organizaciones o benchmarks",
     "Asegurar equidad en la exigencia de metas entre roles comparables",
-    "Combinar análisis tecnológico con benchmarking externo para fijar objetivos",
+    "Combinar análisis tecnológico para productos y procesos con benchmarking externo y necesidades del negocio para funciones y personas al fijar objetivos",
     "Establecer metas estratégicas de largo plazo como reducción de costos de mala calidad"
   ],
   "entregable_esperado": "Documento de metas de calidad medibles, alcanzables y equitativas alineadas con benchmarking",
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Establece Metas de Calidad Medibles",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-020-establecimiento_metas_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las metas de calidad deben ser medibles (comunicables con precisión), alcanzables (evidenciadas por logros de otros) y equitativas (comparables entre responsabilidades similares). Se establecen combinando análisis tecnológico para productos/procesos y benchmarking externo/necesidades del negocio para funciones y personas, evitando basarse únicamente en desempeño histórico.",
+      "texto_nuevo": "Idealmente, las metas de calidad deberían ser legítimas (con estatus oficial indudable), medibles (comunicables con precisión), alcanzables (evidenciadas por logros de otros) y equitativas (comparables entre responsabilidades similares). Se establecen combinando análisis tecnológico para productos/procesos y benchmarking externo/necesidades del negocio para funciones y personas, en lugar de basarse en el desempeño histórico.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7539-7553",
+        "frase": "Ideally such goals should be Legitimate. They should have undoubted official status."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que idealmente (Ideally) las metas tendrían esas cualidades; el nodo lo vuelve obligación.; El libro dice que las metas de funciones y personas se basen en el negocio y el benchmarking en lugar del histórico; el nodo lo suaviza a no únicamente.; La lista del libro tiene una cuarta cualidad: que las metas sean legítimas, con estatus oficial indudable.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-establecimiento_metas_de_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Combinar análisis tecnológico con benchmarking externo para fijar objetivos",
+      "texto_nuevo": "Combinar análisis tecnológico para productos y procesos con benchmarking externo y necesidades del negocio para funciones y personas al fijar objetivos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7549-7553",
+        "frase": "Goals for functions, departments, and people should be based on the need of the business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro asigna cada base a un tipo de meta y suma la necesidad del negocio; el paso lo pierde.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -3,11 +3,11 @@
   "dominio": "core",
   "titulo_concepto": "Composición del Board de Directores",
   "fuente": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Tu junta de directores (board) es uno de los mecanismos de control más poderosos: puede aprobar presupuestos, fusiones, salidas a bolsa y reemplazar al director general. Su composición suele negociarse en una ronda de inversión: en etapa temprana tiene entre 3 y 5 asientos (tú, un inversionista, un miembro independiente); en etapa madura crece a 7-9 con más miembros externos. Los asientos se dividen en Directores Preferentes (elegidos por inversionistas), Directores Comunes (elegidos por fundadores) y Directores Mutuos (elegidos por consenso), lo que define el poder entre tú y tus inversionistas. Incluir a más de un cofundador puede confundir los roles entre tu equipo y la junta. Los miembros independientes aportan mediación y experiencia externa, y suelen cobrar entre 0.25% y 0.5% en opciones con 2 a 4 años de vesting. Si eres un director general primerizo, busca directores con más experiencia que equilibren tu optimismo y falta de foco.",
+  "resumen_teorico": "Tu junta de directores (board) es uno de los mecanismos de control más poderosos: puede aprobar presupuestos, fusiones, salidas a bolsa y reemplazar al director general. Su composición suele negociarse en una ronda de inversión: en etapa temprana tiene entre 3 y 5 asientos (tú, un inversionista, un miembro independiente); en etapa madura crece a 7-9 con más miembros externos. Los asientos se dividen en Directores Preferentes (elegidos por inversionistas), Directores Comunes (elegidos por fundadores) y Directores Mutuos (elegidos por consenso o por voto conjunto de ambas clases, donde decide la que tenga mayoría), lo que define el poder entre tú y tus inversionistas. Incluir a más de un cofundador puede confundir los roles entre tu equipo y la junta. Los miembros independientes aportan mediación y experiencia externa, y suelen cobrar entre 0.25% y 0.5% en opciones con 2 a 4 años de vesting. Si eres fundador y director general, busca directores con más experiencia que sirvan de contrapeso si tiendes al exceso de optimismo o a perder el foco.",
   "pasos_accionables": [
     "Definir el tamaño del board acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
     "Negociar el balance de asientos entre Directores Preferentes (inversionistas), Comunes (fundadores) y Mutuos, y quién tiene derecho a designar cada uno",
-    "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores",
+    "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
     "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, vesting de 2-4 años)",
     "Evaluar los costos de largo plazo de incluir a más de un cofundador en el board frente a los beneficios inmediatos de tener aliados dentro de él",
     "Ajustar la composición ideal del board (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa"
@@ -46,5 +46,40 @@
   "fuentes_internas": [
     "Venture Deals - Brad Feld",
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-035-composicion_board_directors-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu junta de directores (board) es uno de los mecanismos de control más poderosos: puede aprobar presupuestos, fusiones, salidas a bolsa y reemplazar al director general. Su composición suele negociarse en una ronda de inversión: en etapa temprana tiene entre 3 y 5 asientos (tú, un inversionista, un miembro independiente); en etapa madura crece a 7-9 con más miembros externos. Los asientos se dividen en Directores Preferentes (elegidos por inversionistas), Directores Comunes (elegidos por fundadores) y Directores Mutuos (elegidos por consenso), lo que define el poder entre tú y tus inversionistas. Incluir a más de un cofundador puede confundir los roles entre tu equipo y la junta. Los miembros independientes aportan mediación y experiencia externa, y suelen cobrar entre 0.25% y 0.5% en opciones con 2 a 4 años de vesting. Si eres un director general primerizo, busca directores con más experiencia que equilibren tu optimismo y falta de foco.",
+      "texto_nuevo": "Tu junta de directores (board) es uno de los mecanismos de control más poderosos: puede aprobar presupuestos, fusiones, salidas a bolsa y reemplazar al director general. Su composición suele negociarse en una ronda de inversión: en etapa temprana tiene entre 3 y 5 asientos (tú, un inversionista, un miembro independiente); en etapa madura crece a 7-9 con más miembros externos. Los asientos se dividen en Directores Preferentes (elegidos por inversionistas), Directores Comunes (elegidos por fundadores) y Directores Mutuos (elegidos por consenso o por voto conjunto de ambas clases, donde decide la que tenga mayoría), lo que define el poder entre tú y tus inversionistas. Incluir a más de un cofundador puede confundir los roles entre tu equipo y la junta. Los miembros independientes aportan mediación y experiencia externa, y suelen cobrar entre 0.25% y 0.5% en opciones con 2 a 4 años de vesting. Si eres fundador y director general, busca directores con más experiencia que sirvan de contrapeso si tiendes al exceso de optimismo o a perder el foco.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2832",
+        "frase": "To the extent that founders are overconfident and passionate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da dos formas de elegir los asientos restantes; con el voto conjunto decide la clase con mayoría, lo que cambia el reparto de poder.; El libro liga las juntas más experimentadas al director general fundador y plantea el exceso de confianza y la falta de foco como condicionales, no como hechos.; Mismo defecto que la marca 0: da por hechos el optimismo y la dispersión que el libro plantea en la medida en que existan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-035-composicion_board_directors-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores",
+      "texto_nuevo": "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1364",
+        "frase": "Be wary of observers. Sometimes they add no value"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la advertencia de desconfiar de los observadores, que pueden no aportar e inclinar la discusión del board.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

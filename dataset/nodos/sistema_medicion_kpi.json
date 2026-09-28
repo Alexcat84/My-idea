@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Medición con Indicadores Clave de Desempeño (KPI)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un sistema de medición efectivo vincula indicadores a tus metas (visión, misión y objetivos), incluye las preocupaciones de quienes dependen de tu negocio y de tus clientes, mantiene un número reducido de medidas clave de fácil obtención, e identifica el desperdicio crónico o costo de mala calidad. Estos indicadores te permiten monitorear el progreso hacia tus objetivos y facilitar decisiones oportunas. Un buen reporte es simple, cuantitativo y visual, como un tablero, y debe revisarse periódicamente frente a las metas establecidas para verificar cumplimiento, especialmente cuando aún no cuentas con un sistema formal de seguimiento de desempeño.",
+  "resumen_teorico": "Un sistema de medición efectivo vincula indicadores a tus metas (visión, misión y objetivos), incluye las preocupaciones de quienes dependen de tu negocio y de tus clientes, mantiene un número reducido de medidas clave de fácil obtención, e identifica el desperdicio crónico o costo de mala calidad. Estos indicadores te permiten monitorear el progreso hacia tus objetivos y facilitar decisiones oportunas. Un buen reporte es simple, cuantitativo y visual, como un tablero, y una vez en marcha debe revisarse periódicamente frente a las metas establecidas para verificar cumplimiento.",
   "pasos_accionables": [
     "Define indicadores que se vinculen directamente con tu visión, misión y metas",
     "Incluye métricas que reflejen las necesidades de quienes trabajan contigo y de tus clientes",
@@ -46,5 +46,23 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-024-sistema_medicion_kpi-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un sistema de medición efectivo vincula indicadores a tus metas (visión, misión y objetivos), incluye las preocupaciones de quienes dependen de tu negocio y de tus clientes, mantiene un número reducido de medidas clave de fácil obtención, e identifica el desperdicio crónico o costo de mala calidad. Estos indicadores te permiten monitorear el progreso hacia tus objetivos y facilitar decisiones oportunas. Un buen reporte es simple, cuantitativo y visual, como un tablero, y debe revisarse periódicamente frente a las metas establecidas para verificar cumplimiento, especialmente cuando aún no cuentas con un sistema formal de seguimiento de desempeño.",
+      "texto_nuevo": "Un sistema de medición efectivo vincula indicadores a tus metas (visión, misión y objetivos), incluye las preocupaciones de quienes dependen de tu negocio y de tus clientes, mantiene un número reducido de medidas clave de fácil obtención, e identifica el desperdicio crónico o costo de mala calidad. Estos indicadores te permiten monitorear el progreso hacia tus objetivos y facilitar decisiones oportunas. Un buen reporte es simple, cuantitativo y visual, como un tablero, y una vez en marcha debe revisarse periódicamente frente a las metas establecidas para verificar cumplimiento.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9189",
+        "frase": "Once the measurement system is in place, it must be reviewed periodically"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pone esa condición; pide revisar una vez que el sistema está en marcha.; Misma condición añadida; el libro pide la revisión una vez que el sistema está en marcha.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

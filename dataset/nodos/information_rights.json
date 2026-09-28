@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Derechos de Información (Information Rights)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Obligan a la empresa a entregar periódicamente información financiera a los inversionistas: presupuesto anual, estados financieros auditados anuales y no auditados trimestrales, comparación de presupuesto vs. resultados reales, y derechos de inspección/visita. Estos derechos suelen terminar al momento de una oferta pública inicial calificada (Qualified IPO).",
+  "resumen_teorico": "Obligan a la empresa a entregar periódicamente información financiera a los inversionistas: presupuesto anual, estados financieros auditados anuales y no auditados trimestrales, comparación de presupuesto vs. resultados reales, y derechos de inspección/visita. Estos derechos suelen terminar con una oferta pública inicial calificada (Qualified IPO). Suelen aceptarse tal cual; solo varía el mínimo de acciones para conservarlos.",
   "pasos_accionables": [
     "Establecer la periodicidad de entrega de reportes financieros (mensual/trimestral/anual).",
     "Definir el nivel de detalle: presupuesto, estados auditados, comparativos.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Comparte Información con Inversionistas",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-information_rights-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Obligan a la empresa a entregar periódicamente información financiera a los inversionistas: presupuesto anual, estados financieros auditados anuales y no auditados trimestrales, comparación de presupuesto vs. resultados reales, y derechos de inspección/visita. Estos derechos suelen terminar al momento de una oferta pública inicial calificada (Qualified IPO).",
+      "texto_nuevo": "Obligan a la empresa a entregar periódicamente información financiera a los inversionistas: presupuesto anual, estados financieros auditados anuales y no auditados trimestrales, comparación de presupuesto vs. resultados reales, y derechos de inspección/visita. Estos derechos suelen terminar con una oferta pública inicial calificada (Qualified IPO). Suelen aceptarse tal cual; solo varía el mínimo de acciones para conservarlos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1787",
+        "frase": "Information rights are generally something companies are stuck with in order to get investment capital."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido.; Se pierde que es un término estándar que en general se acepta tal como viene y que solo varía el umbral de acciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

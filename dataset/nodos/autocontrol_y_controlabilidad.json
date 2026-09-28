@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Autocontrol (Self-Control) y Controlabilidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Hay estudios que mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
+  "resumen_teorico": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores dependen sobre todo de quien diseñó el proceso, es decir de ti, y es arriesgado culpar a quien lo ejecuta, aunque esa persona también debería avisarte de las fallas que vea. Hay estudios que mostraron que, históricamente, cerca del 80% de los defectos del nivel operativo dependían de quien dirige el proceso y cerca del 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
   "pasos_accionables": [
     "Verificar que el proceso tenga capacidad real para cumplir las metas fijadas",
     "Dar a quien ejecuta el trabajo manera de conocer las metas y su desempeño real",
@@ -60,6 +60,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-018 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-023-autocontrol_y_controlabilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Hay estudios que mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
+      "texto_nuevo": "Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores dependen sobre todo de quien diseñó el proceso, es decir de ti, y es arriesgado culpar a quien lo ejecuta, aunque esa persona también debería avisarte de las fallas que vea. Hay estudios que mostraron que, históricamente, cerca del 80% de los defectos del nivel operativo dependían de quien dirige el proceso y cerca del 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8098",
+        "frase": "In such cases it is risky for leaders to hold the workers responsible for quality."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da una proporción aproximada ('del orden de 80 a 20') medida a nivel de quien ejecuta; el resumen la vuelve exacta y general.; El libro dice que el defecto es controlable por la dirección y que es arriesgado culpar a quien ejecuta, y admite que la teoría no es cierta al 100%, porque este debería avisar de las fallas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

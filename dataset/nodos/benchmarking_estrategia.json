@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Benchmarking y Planificación Estratégica",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El benchmarking aporta una perspectiva externa fundamental para el desarrollo de la visión organizacional, el establecimiento de metas estratégicas y la revisión periódica del desempeño. Al proporcionar evidencia objetiva de lo que las organizaciones líderes ya logran, permite a las empresas ajustar su visión, cerrar brechas de desempeño y convertir posiciones de rezago en liderazgo de clase mundial.",
+  "resumen_teorico": "El benchmarking aporta una perspectiva externa fundamental para el desarrollo de la visión organizacional, el establecimiento de metas estratégicas y la revisión periódica del desempeño. Bien hecho, con un proceso definido, un alcance claro y un enfoque sistemático, aporta evidencia objetiva de lo que las organizaciones líderes ya logran y puede ayudar a las empresas a ajustar su visión, cerrar brechas de desempeño y convertir posiciones de rezago en liderazgo de clase mundial.",
   "pasos_accionables": [
     "Definir la visión organizacional considerando el desempeño de referentes externos identificados por benchmarking.",
     "Establecer metas estratégicas basadas en datos reales de mejores prácticas, no solo en tendencias históricas internas.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Compara para Definir tu Rumbo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-023-benchmarking_estrategia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El benchmarking aporta una perspectiva externa fundamental para el desarrollo de la visión organizacional, el establecimiento de metas estratégicas y la revisión periódica del desempeño. Al proporcionar evidencia objetiva de lo que las organizaciones líderes ya logran, permite a las empresas ajustar su visión, cerrar brechas de desempeño y convertir posiciones de rezago en liderazgo de clase mundial.",
+      "texto_nuevo": "El benchmarking aporta una perspectiva externa fundamental para el desarrollo de la visión organizacional, el establecimiento de metas estratégicas y la revisión periódica del desempeño. Bien hecho, con un proceso definido, un alcance claro y un enfoque sistemático, aporta evidencia objetiva de lo que las organizaciones líderes ya logran y puede ayudar a las empresas a ajustar su visión, cerrar brechas de desempeño y convertir posiciones de rezago en liderazgo de clase mundial.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17292",
+        "frase": "If conducted correctly, benchmarking can contribute to the effectiveness of strategic performance management"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el aporte a que se haga bien, con proceso definido, alcance claro y enfoque sistemático planificado, y dice 'puede'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

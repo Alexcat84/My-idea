@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Evitar prohibiciones tajantes de herramientas de IA que empujen a un uso clandestino, y sustituirlas por marcos de uso responsable y transparente",
     "Crear canales seguros y sin penalización para que empleados compartan cómo usan IA en su trabajo",
-    "Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico)",
-    "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA",
-    "Comunicar explícitamente que el uso de IA no resultará en despidos automáticos",
+    "Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico) e incluir en la agenda de IA a tanta gente de la organización como sea posible",
+    "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos grandes y tangibles (premios en dinero, ascensos, trabajar desde casa) para quienes descubran usos valiosos de IA; que sean grandes también muestra que la organización va en serio",
+    "Considerar garantizar explícitamente que nadie será despedido como resultado del uso de IA, o que el tiempo que libere la IA podrá dedicarse a proyectos más interesantes o a terminar antes la jornada",
     "Sugerencia de My Idea: Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados"
   ],
   "entregable_esperado": "Una política interna de IA que fomente la transparencia y capture buenas prácticas de empleados",
@@ -60,6 +60,57 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro constata el uso oculto de la IA, pero no recomienda encuestas anónimas para medirlo. Esa herramienta es nueva (se buscaron 'anonym' y 'survey').",
       "indice": 5,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C128-041"
+    },
+    {
+      "id": "final-e1-037-shadow_ia_organizacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA",
+      "texto_nuevo": "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos grandes y tangibles (premios en dinero, ascensos, trabajar desde casa) para quienes descubran usos valiosos de IA; que sean grandes también muestra que la organización va en serio",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1109",
+        "frase": "offering substantial rewards to people finding substantial opportunities for AI to help"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide recompensas sustanciales (premios del tamaño de un sueldo anual, ascensos, teletrabajo) cuyo tamaño muestra seriedad; 'bonos, reconocimientos' pierde esa escala.; Mismo defecto: se pierde la escala grande de las recompensas que el libro pide.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-037-shadow_ia_organizacional-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar explícitamente que el uso de IA no resultará en despidos automáticos",
+      "texto_nuevo": "Considerar garantizar explícitamente que nadie será despedido como resultado del uso de IA, o que el tiempo que libere la IA podrá dedicarse a proyectos más interesantes o a terminar antes la jornada",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1107",
+        "frase": "Perhaps organizations can offer guarantees that no employees will be laid off"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea garantizar que nadie será despedido por usar IA, o que el tiempo liberado irá a proyectos más interesantes; 'despidos automáticos' vacía la garantía.; Mismo defecto: la garantía del libro es que nadie será despedido como resultado del uso de IA.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-037-shadow_ia_organizacional-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico)",
+      "texto_nuevo": "Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico) e incluir en la agenda de IA a tanta gente de la organización como sea posible",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1103",
+        "frase": "companies need to include as much of their organization as possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concluye que, como la habilidad puede estar en cualquier parte, hay que incluir en la agenda de IA a tanta gente como sea posible.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Condiciones de Cierre (Conditions to Close) en el LOI",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Son las condiciones que el comprador establece para completar la transacción, como aprobación del board, ausencia de cambios materiales adversos, o resolución de litigios pendientes. La complejidad y cantidad de estas condiciones revela la actitud y flexibilidad real del comprador respecto al deal.",
+  "resumen_teorico": "Son las condiciones que el comprador establece para completar la transacción, como aprobación del board, ausencia de cambios materiales adversos, o resolución de litigios pendientes. La complejidad y cantidad de estas condiciones es un dato más sobre la actitud del comprador: una lista larga y compleja suele indicar exigencias muy particulares.",
   "pasos_accionables": [
     "Revisar la lista completa de condiciones de cierre propuestas por el comprador.",
     "Cuestionar condiciones inusualmente restrictivas o específicas desde el inicio.",
     "Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en el due diligence.",
-    "Evaluar el nivel de compromiso del comprador según la complejidad de las condiciones."
+    "Leer la complejidad de las condiciones como un indicio de la actitud del comprador y de cómo será la negociación."
   ],
   "entregable_esperado": "Lista de condiciones de cierre negociada y con plan de resolución temprana.",
   "nodos_previos": [
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Define tus Condiciones de Cierre",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-035-condiciones_de_cierre_adquisicion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el nivel de compromiso del comprador según la complejidad de las condiciones.",
+      "texto_nuevo": "Leer la complejidad de las condiciones como un indicio de la actitud del comprador y de cómo será la negociación.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4279",
+        "frase": "this is another data point about the attitude of the buyer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lee la complejidad como dato sobre la actitud del comprador y sobre cómo será la negociación, no como medida de su compromiso.; Mismo defecto: el nivel de compromiso no es lo que el libro deduce de las condiciones.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-035-condiciones_de_cierre_adquisicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Son las condiciones que el comprador establece para completar la transacción, como aprobación del board, ausencia de cambios materiales adversos, o resolución de litigios pendientes. La complejidad y cantidad de estas condiciones revela la actitud y flexibilidad real del comprador respecto al deal.",
+      "texto_nuevo": "Son las condiciones que el comprador establece para completar la transacción, como aprobación del board, ausencia de cambios materiales adversos, o resolución de litigios pendientes. La complejidad y cantidad de estas condiciones es un dato más sobre la actitud del comprador: una lista larga y compleja suele indicar exigencias muy particulares.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4279",
+        "frase": "this is another data point about the attitude of the buyer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro lo trata como un dato más sobre la actitud del comprador, no como revelación de su flexibilidad real.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

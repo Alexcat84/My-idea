@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Riesgo de Sobredependencia y Pérdida de Criterio Propio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "El uso excesivo de IA sin supervisión crítica puede generar 'pereza cognitiva': los usuarios dejan de pensar profundamente, aceptan la primera respuesta de la IA (efecto ancla) y pierden capacidad de juicio propio. Estudios muestran que profesionales con IA de alta calidad se volvieron menos rigurosos y cometieron peores decisiones que quienes no usaban IA, especialmente en tareas ambiguas o con datos engañosos.",
+  "resumen_teorico": "El uso excesivo de IA sin supervisión crítica puede generar 'pereza cognitiva': los usuarios dejan de pensar profundamente, aceptan la primera respuesta de la IA (efecto ancla) y pierden capacidad de juicio propio. Estudios muestran que profesionales con IA de alta calidad se volvieron menos rigurosos y cometieron peores decisiones que quienes usaban una IA de menor calidad o ninguna, especialmente en tareas ambiguas o con datos engañosos.",
   "pasos_accionables": [
     "Establecer como norma editar y cuestionar siempre las salidas de la IA antes de usarlas.",
     "Rotar tareas críticas entre revisión humana pura y asistida por IA para mantener el criterio del equipo.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "No Dependas Ciegamente de la IA",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-riesgo_sobredependencia_ia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El uso excesivo de IA sin supervisión crítica puede generar 'pereza cognitiva': los usuarios dejan de pensar profundamente, aceptan la primera respuesta de la IA (efecto ancla) y pierden capacidad de juicio propio. Estudios muestran que profesionales con IA de alta calidad se volvieron menos rigurosos y cometieron peores decisiones que quienes no usaban IA, especialmente en tareas ambiguas o con datos engañosos.",
+      "texto_nuevo": "El uso excesivo de IA sin supervisión crítica puede generar 'pereza cognitiva': los usuarios dejan de pensar profundamente, aceptan la primera respuesta de la IA (efecto ancla) y pierden capacidad de juicio propio. Estudios muestran que profesionales con IA de alta calidad se volvieron menos rigurosos y cometieron peores decisiones que quienes usaban una IA de menor calidad o ninguna, especialmente en tareas ambiguas o con datos engañosos.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "993",
+        "frase": "made worse decisions than recruiters who used low-quality AI or no AI"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro compara también con quienes usaban IA de baja calidad: cuanto mejor la IA, menos atención humana.; Mismo defecto: falta la comparación con quienes usaban IA de menor calidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

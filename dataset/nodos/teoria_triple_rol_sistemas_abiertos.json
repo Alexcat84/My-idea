@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Teoría del Triple Rol y Sistemas Abiertos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Modelo organizacional donde cada función, departamento o individuo actúa simultáneamente como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
+  "resumen_teorico": "Modelo organizacional donde cada función, departamento o individuo actúa de forma más o menos simultánea como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
   "pasos_accionables": [
     "Mapear las transacciones repetitivas entre proveedores, procesadores y clientes en cada proceso clave",
     "Identificar expectativas mutuas explícitas (especificaciones, procedimientos) entre cada par de roles, estableciendo canales claros de comunicación de requisitos entre proveedor y procesador",
-    "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, entre cliente y procesador",
+    "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, del procesador al proveedor y del cliente al procesador",
     "Aplicar pensamiento sistémico antes de implementar cualquier cambio, evaluando el impacto en todas las funciones interrelacionadas"
   ],
   "entregable_esperado": "Mapa de roles triples (proveedor-procesador-cliente) con expectativas y mecanismos de retroalimentación documentados para los procesos críticos de la organización",
@@ -51,6 +51,39 @@
         "evidencia": "F22-015: Mapear roles proveedor, procesador y cliente en procesos clave para diagnosticar defectos es gestion de calidad de una organizacion en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-022-teoria_triple_rol_sistemas_abiertos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo organizacional donde cada función, departamento o individuo actúa simultáneamente como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
+      "texto_nuevo": "Modelo organizacional donde cada función, departamento o individuo actúa de forma más o menos simultánea como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1536",
+        "frase": "All these entities perform three more or less simultaneous roles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que los tres roles son más o menos simultáneos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-teoria_triple_rol_sistemas_abiertos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, entre cliente y procesador",
+      "texto_nuevo": "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, del procesador al proveedor y del cliente al procesador",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1538",
+        "frase": "the processor provides the supplier with feedback on the extent to which"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone también la retroalimentación del procesador al proveedor como parte del lazo de control.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

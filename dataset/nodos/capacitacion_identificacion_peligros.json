@@ -10,9 +10,9 @@
     "Enseñar a reconocer peligros específicos de su puesto y generales",
     "Instruir sobre jerarquía de controles y su importancia",
     "Entrenar en uso correcto de prácticas administrativas y EPP",
-    "Repetir capacitación ante cambios de proceso, equipo o tarea"
+    "Dar capacitación adicional, según haga falta, cuando un cambio de instalaciones, equipos, procesos, materiales u organización del trabajo pueda aumentar los peligros, y cada vez que se asigne una tarea nueva"
   ],
-  "entregable_esperado": "Trabajadores capacitados y certificados en identificación y control de peligros de su puesto",
+  "entregable_esperado": "Trabajadores capacitados en identificación y control de peligros de su puesto",
   "nodos_previos": [
     "capacitacion_roles_gerencia",
     "capacitacion_educacion_seguridad"
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Entrena para Identificar Peligros",
   "fuentes_internas": [
     "OSHA3885"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-027-capacitacion_identificacion_peligros-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repetir capacitación ante cambios de proceso, equipo o tarea",
+      "texto_nuevo": "Dar capacitación adicional, según haga falta, cuando un cambio de instalaciones, equipos, procesos, materiales u organización del trabajo pueda aumentar los peligros, y cada vez que se asigne una tarea nueva",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "879",
+        "frase": "when a change in facilities, equipment, processes, materials, or work organization could increase hazards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la condición de que el cambio pueda aumentar los peligros y parte de la enumeración.; Se cae la condición del libro (cambios que puedan aumentar los peligros, según haga falta) y parte de la lista de cambios.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-027-capacitacion_identificacion_peligros-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Trabajadores capacitados y certificados en identificación y control de peligros de su puesto",
+      "texto_nuevo": "Trabajadores capacitados en identificación y control de peligros de su puesto",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "863",
+        "frase": "Train workers on hazard identification and controls"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de capacitar; la certificación no aparece.; Misma certificación añadida que el libro no menciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

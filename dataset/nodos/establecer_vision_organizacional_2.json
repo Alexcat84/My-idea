@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Establecer una Visión para tu Negocio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La planificación estratégica de calidad empieza con una visión enfocada en el cliente. Una visión poderosa es simple, directa, y define los beneficios que tus clientes, las personas que trabajan contigo, tus socios y la sociedad pueden esperar de tu negocio. Debe ser un reto alcanzable en 3 a 5 años, con logros medibles, y considerar a tus clientes, tus mercados, tu entorno y tu cultura actual.",
+  "resumen_teorico": "La planificación estratégica de calidad empieza con una visión enfocada en el cliente. Una visión poderosa es simple, directa, y define los beneficios que tus clientes, las personas que trabajan contigo, tus socios y la sociedad pueden esperar de tu negocio. A menudo conviene que sea un reto alcanzable en 3 a 5 años, con logros medibles, y debe considerar a tus clientes, tus mercados, tu entorno y tu cultura actual.",
   "pasos_accionables": [
     "Dedica tiempo a pensar con claridad hacia dónde quieres llevar tu negocio en los próximos años, y si tienes con quién conversarlo, hazlo",
     "Redacta una visión simple, directa y medible a 3 o 5 años",
-    "Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo y tus socios",
-    "Evita errores comunes como enfocarte solo en tus socios o crear visiones inalcanzables",
+    "Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo, tus socios y la sociedad",
+    "Evita errores comunes como enfocarte solo en tus socios o crear visiones demasiado fáciles o inalcanzables",
     "Comparte la visión de forma que sea entendida y compartida por todas las personas que trabajan contigo"
   ],
   "entregable_esperado": "Una declaración de visión escrita, que tú apruebes y compartas con las personas que trabajan contigo",
@@ -41,6 +41,56 @@
         "evidencia": "F01-012: Redactar la vision a 3 o 5 años dentro de la planificacion estrategica de calidad es planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-020-establecer_vision_organizacional_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La planificación estratégica de calidad empieza con una visión enfocada en el cliente. Una visión poderosa es simple, directa, y define los beneficios que tus clientes, las personas que trabajan contigo, tus socios y la sociedad pueden esperar de tu negocio. Debe ser un reto alcanzable en 3 a 5 años, con logros medibles, y considerar a tus clientes, tus mercados, tu entorno y tu cultura actual.",
+      "texto_nuevo": "La planificación estratégica de calidad empieza con una visión enfocada en el cliente. Una visión poderosa es simple, directa, y define los beneficios que tus clientes, las personas que trabajan contigo, tus socios y la sociedad pueden esperar de tu negocio. A menudo conviene que sea un reto alcanzable en 3 a 5 años, con logros medibles, y debe considerar a tus clientes, tus mercados, tu entorno y tu cultura actual.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8795",
+        "frase": "It is often a good idea to make the vision a stretch"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo es buena idea (often a good idea) que la visión sea un reto a 3 a 5 años medible; el nodo lo vuelve obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-establecer_vision_organizacional_2-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo y tus socios",
+      "texto_nuevo": "Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo, tus socios y la sociedad",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8779",
+        "frase": "the benefits a customer, an employee, a shareholder, or society at large can expect"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye a la sociedad en general como beneficiaria de la visión; el paso la omite.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-establecer_vision_organizacional_2-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita errores comunes como enfocarte solo en tus socios o crear visiones inalcanzables",
+      "texto_nuevo": "Evita errores comunes como enfocarte solo en tus socios o crear visiones demasiado fáciles o inalcanzables",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8807",
+        "frase": "Creating a vision that is either too easy or too difficult to achieve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala como error una visión demasiado fácil o demasiado difícil; el paso solo conserva lo inalcanzable.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

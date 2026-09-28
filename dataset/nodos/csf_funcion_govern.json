@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Función Govern del NIST CSF 2.0",
   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-  "resumen_teorico": "Govern es la función central del CSF 2.0 que ayuda a la pequeña empresa a establecer, comunicar y monitorear su estrategia de gestión de riesgo de ciberseguridad, incluyendo expectativas, políticas y roles de responsabilidad. Integra la ciberseguridad como un riesgo de negocio más, alineado con la misión organizacional.",
+  "resumen_teorico": "Govern es la función del CSF 2.0 que ayuda a la pequeña empresa a establecer, comunicar y monitorear su estrategia de gestión de riesgo de ciberseguridad, incluyendo expectativas, políticas y roles de responsabilidad. Integra la ciberseguridad como un riesgo de negocio más, alineado con la misión organizacional.",
   "pasos_accionables": [
     "Documentar la misión del negocio y qué riesgos de ciberseguridad podrían impedir alcanzarla",
     "Identificar requisitos legales, regulatorios y contractuales de ciberseguridad aplicables",
@@ -12,7 +12,7 @@
     "Evaluar el impacto potencial de perder activos o operaciones críticas",
     "Evaluar si un seguro de ciberseguridad es apropiado para el negocio",
     "Evaluar riesgos de proveedores y terceros antes de formalizar relaciones comerciales",
-    "Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización"
+    "Comunicar el apoyo del liderazgo a una cultura consciente del riesgo, ética y de mejora continua, y comunicar, hacer cumplir y mantener políticas de gestión de riesgo de ciberseguridad en toda la organización"
   ],
   "entregable_esperado": "Documento de gobernanza que incluya misión del negocio, riesgos identificados, requisitos legales/regulatorios/contractuales, y designación formal de responsables de ciberseguridad",
   "nodos_previos": [
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Gobierna tu Riesgo de Ciberseguridad",
   "fuentes_internas": [
     "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-025-csf_funcion_govern-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Govern es la función central del CSF 2.0 que ayuda a la pequeña empresa a establecer, comunicar y monitorear su estrategia de gestión de riesgo de ciberseguridad, incluyendo expectativas, políticas y roles de responsabilidad. Integra la ciberseguridad como un riesgo de negocio más, alineado con la misión organizacional.",
+      "texto_nuevo": "Govern es la función del CSF 2.0 que ayuda a la pequeña empresa a establecer, comunicar y monitorear su estrategia de gestión de riesgo de ciberseguridad, incluyendo expectativas, políticas y roles de responsabilidad. Integra la ciberseguridad como un riesgo de negocio más, alineado con la misión organizacional.",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "25",
+        "frase": "The CSF organizes cybersecurity outcomes into six high-level Functions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta Govern como una de seis funciones y nunca la llama central.; Mismo defecto: calificar a Govern de función central no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_funcion_govern-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización",
+      "texto_nuevo": "Comunicar el apoyo del liderazgo a una cultura consciente del riesgo, ética y de mejora continua, y comunicar, hacer cumplir y mantener políticas de gestión de riesgo de ciberseguridad en toda la organización",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "59",
+        "frase": "Communicate, enforce, and maintain policies for managing cybersecurity risks."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Además del apoyo del liderazgo, se cae mantener las políticas, que el libro pide junto a comunicarlas y hacerlas cumplir.; El bloque Communicate del libro incluye comunicar el apoyo del liderazgo a una cultura consciente del riesgo, y el paso lo pierde.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

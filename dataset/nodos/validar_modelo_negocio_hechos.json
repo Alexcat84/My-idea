@@ -10,7 +10,7 @@
     "Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas",
     "Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente",
     "Identificar pruebas pass/fail para cada hipótesis",
-    "Determinar si los resultados cumplen los objetivos de tráfico o financieros"
+    "Determinar si los resultados cumplen los objetivos de tráfico o financieros y, si no los cumplen, iterar o pivotar y volver a probar"
   ],
   "entregable_esperado": "Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas",
   "nodos_previos": [
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Contrasta Supuestos con Datos",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-validar_modelo_negocio_hechos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si los resultados cumplen los objetivos de tráfico o financieros",
+      "texto_nuevo": "Determinar si los resultados cumplen los objetivos de tráfico o financieros y, si no los cumplen, iterar o pivotar y volver a probar",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12961",
+        "frase": "it's time to iterate or pivot, and retest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido.; Se cae la consecuencia del libro: si no se cumplen los objetivos, iterar o pivotar y volver a probar.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

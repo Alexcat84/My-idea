@@ -4,15 +4,15 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Perfiles Organizacionales del CSF (Current y Target Profile)",
   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-  "resumen_teorico": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual) y un Target Profile (estado deseado), pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
+  "resumen_teorico": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual), un Target Profile (estado deseado) o ambos, pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
   "pasos_accionables": [
     "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida",
     "Definir el Target Profile: qué resultados se han priorizado como objetivo de gestión de riesgo",
     "Considerar usar un Community Profile del sector como base para el Target Profile",
-    "Usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
-    "Comparar Current vs Target Profile para identificar brechas y priorizar acciones futuras"
+    "Considerar usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
+    "Sugerencia de My Idea: comparar el Current Profile con el Target Profile para identificar brechas y priorizar acciones futuras"
   ],
-  "entregable_esperado": "Documento con Current Profile y Target Profile definidos, más un análisis de brechas entre ambos",
+  "entregable_esperado": "Documento con Current Profile y Target Profile definidos",
   "nodos_previos": [
     "csf_funcion_govern",
     "csf_funcion_recover"
@@ -27,5 +27,73 @@
   "etiqueta_arbol": "Define tu Perfil de Ciberseguridad",
   "fuentes_internas": [
     "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-025-csf_perfiles_organizacionales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual) y un Target Profile (estado deseado), pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
+      "texto_nuevo": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual), un Target Profile (estado deseado) o ambos, pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "315",
+        "frase": "Every Organizational Profile includes one or both of the following"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que todo perfil incluye uno o ambos, no necesariamente los dos.; Mismo endurecimiento de 'one or both'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_perfiles_organizacionales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
+      "texto_nuevo": "Considerar usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "317",
+        "frase": "You can also choose to use the CSF Tiers to inform your Profile creation."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta los Tiers como opción ('you can also choose'); el paso lo vuelve instrucción.; Mismo endurecimiento; el paso hermano del Community Profile ya dice 'Considerar'.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_perfiles_organizacionales-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar Current vs Target Profile para identificar brechas y priorizar acciones futuras",
+      "texto_nuevo": "Sugerencia de My Idea: comparar el Current Profile con el Target Profile para identificar brechas y priorizar acciones futuras",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "315-317",
+        "frase": "A Target Profile specifies the outcomes an organization has selected and prioritized"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de comparar perfiles ni de brechas; como consejo práctico queda como sugerencia.; Mismo añadido; se conserva como sugerencia de la casa.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_perfiles_organizacionales-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento con Current Profile y Target Profile definidos, más un análisis de brechas entre ambos",
+      "texto_nuevo": "Documento con Current Profile y Target Profile definidos",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "319",
+        "frase": "how to get started creating Current and Target Profiles for your organization"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El análisis de brechas no aparece en el libro.; Mismo añadido del análisis de brechas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -7,12 +7,12 @@
   "resumen_teorico": "Identify ayuda a determinar el riesgo actual de ciberseguridad del negocio mediante la creación de un inventario de activos (hardware, software, sistemas, servicios), la evaluación de vulnerabilidades, y la priorización de datos sensibles y amenazas mediante un registro de riesgos.",
   "pasos_accionables": [
     "Crear y mantener un inventario de hardware, software, sistemas y servicios que el negocio utiliza",
-    "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales",
+    "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales, y evaluar la eficacia del programa de ciberseguridad para identificar qué necesita mejorar",
     "Clasificar y priorizar los datos del negocio según su sensibilidad",
     "Documentar amenazas internas y externas y sus respuestas asociadas en un registro de riesgos",
     "Comunicar planes y políticas de ciberseguridad a todo el personal y terceros relevantes"
   ],
-  "entregable_esperado": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados y si requiere MFA) y un registro de riesgos documentado",
+  "entregable_esperado": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados, si requiere MFA y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
   "nodos_previos": [
     "csf_funcion_govern"
   ],
@@ -40,6 +40,39 @@
         "evidencia": "F07-021: Mantener inventario de activos y registro de riesgos de ciberseguridad es gestion operativa del negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-025-csf_funcion_identify-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales",
+      "texto_nuevo": "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales, y evaluar la eficacia del programa de ciberseguridad para identificar qué necesita mejorar",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "101",
+        "frase": "Assess the effectiveness of the business's cybersecurity program to identify areas that need improvement."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El bloque Assess del libro trae una segunda evaluación, la eficacia del programa, que ningún paso recoge.; Mismo elemento perdido de la enumeración.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_funcion_identify-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados y si requiere MFA) y un registro de riesgos documentado",
+      "texto_nuevo": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados, si requiere MFA y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "117",
+        "frase": "Risk to business if we lose access to this asset"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla de inventario del libro trae también el riesgo para el negocio si se pierde el acceso al activo.; Misma columna perdida de la tabla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

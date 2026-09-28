@@ -9,7 +9,7 @@
     "Para cada proceso de tu negocio, revisa el enfoque que usas, qué tanto lo aplicas de verdad, cómo lo vas mejorando y qué tan alineado está con el resto de lo que haces",
     "Para cada resultado, revisa tu nivel actual, tu tendencia, cómo te comparas con la competencia o con referencias del mercado, y qué tan alineado está con tus objetivos",
     "Asigna un puntaje a cada categoría siguiendo las guías de puntuación correspondientes",
-    "Suma el puntaje total y compáralo con los negocios o casos que consideras como referencia"
+    "Suma el puntaje total de tu negocio en la escala de 0 a 1000 puntos"
   ],
   "entregable_esperado": "Un puntaje consolidado de tu negocio con el método ADLI/LeTCI, con un análisis claro de qué tienes fuerte y dónde tienes brechas por categoría",
   "nodos_previos": [
@@ -37,6 +37,23 @@
         "evidencia": "F26-010: Autoevaluacion Baldrige de procesos y resultados de un negocio en marcha para medir madurez y mejorar; es control y mejora. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-024-sistema_puntuacion_baldrige-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Suma el puntaje total y compáralo con los negocios o casos que consideras como referencia",
+      "texto_nuevo": "Suma el puntaje total de tu negocio en la escala de 0 a 1000 puntos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26019",
+        "frase": "The Baldrige scoring system is based on a 0–1,000 point scale."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone comparar el puntaje total con otros negocios.; Las comparaciones son un factor de resultados, no un uso del puntaje total.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

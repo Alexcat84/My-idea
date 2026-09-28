@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Fase Affirm: Gestionar el Remordimiento del Comprador",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Después de la euforia de la fase Admit, el cliente entra en Affirm y experimenta 'buyer's remorse': la dopamina de la decisión baja y aparece disonancia cognitiva postdecisión, con dudas, miedo a perder dinero y ansiedad por el compromiso. Esto se agrava en la 'zona de silencio', el lapso entre la compra y el primer uso o entrega de valor real, especialmente en productos de alto costo o compromiso. Si no actúas proactivamente en ese vacío, la incertidumbre lo llena por ti y el cliente puede cancelar antes de recibir valor. La clave es anticiparte con comunicación honesta, incluso sobre posibles obstáculos, en vez de esperar a que la duda se manifieste.",
+  "resumen_teorico": "Después de la euforia de la fase Admit, el cliente entra en Affirm y experimenta 'buyer's remorse': la dopamina de la decisión baja y aparece disonancia cognitiva postdecisión, con dudas, miedo a perder dinero y ansiedad por el compromiso. Esto se agrava en la 'zona de silencio', el lapso entre la compra y el primer uso o entrega de valor real, especialmente en productos de alto costo o compromiso. Si no actúas proactivamente en ese vacío, la incertidumbre lo llena por ti y el cliente puede cancelar antes de recibir valor. La clave es anticiparte reafirmando cuanto antes su decisión, en vez de esperar a que la duda se manifieste.",
   "pasos_accionables": [
     "Mapea cuánto dura el periodo de silencio entre la compra y el primer uso o entrega de valor real",
     "Diseña al menos un punto de contacto proactivo (llamada, email, correo físico) durante ese periodo de silencio",
     "Redacta comunicaciones que reafirmen los beneficios, la garantía y la validez de la decisión tomada",
-    "Anticipa y comunica con honestidad posibles obstáculos antes de que el cliente los descubra solo",
+    "Anticipa el recorrido emocional del cliente y ten listas estrategias para contrarrestar sus dudas y emociones negativas",
     "Crea un espacio explícito donde el cliente pueda expresar sus dudas, como una llamada de bienvenida o check-in",
     "Mide la tasa de cancelaciones o devoluciones en este periodo como termómetro del remordimiento"
   ],
@@ -62,5 +62,40 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-026-fase_affirm_buyers_remorse-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de la euforia de la fase Admit, el cliente entra en Affirm y experimenta 'buyer's remorse': la dopamina de la decisión baja y aparece disonancia cognitiva postdecisión, con dudas, miedo a perder dinero y ansiedad por el compromiso. Esto se agrava en la 'zona de silencio', el lapso entre la compra y el primer uso o entrega de valor real, especialmente en productos de alto costo o compromiso. Si no actúas proactivamente en ese vacío, la incertidumbre lo llena por ti y el cliente puede cancelar antes de recibir valor. La clave es anticiparte con comunicación honesta, incluso sobre posibles obstáculos, en vez de esperar a que la duda se manifieste.",
+      "texto_nuevo": "Después de la euforia de la fase Admit, el cliente entra en Affirm y experimenta 'buyer's remorse': la dopamina de la decisión baja y aparece disonancia cognitiva postdecisión, con dudas, miedo a perder dinero y ansiedad por el compromiso. Esto se agrava en la 'zona de silencio', el lapso entre la compra y el primer uso o entrega de valor real, especialmente en productos de alto costo o compromiso. Si no actúas proactivamente en ese vacío, la incertidumbre lo llena por ti y el cliente puede cancelar antes de recibir valor. La clave es anticiparte reafirmando cuanto antes su decisión, en vez de esperar a que la duda se manifieste.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2672, 2871-2873",
+        "frase": "offer ways for a customer to reaffirm their decision as quickly as possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone comunicar obstáculos; su clave es reafirmar la decisión del cliente lo antes posible.; Mismo defecto: la clave del libro es reafirmar la decisión con comunicaciones positivas, no hablar de obstáculos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-026-fase_affirm_buyers_remorse-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipa y comunica con honestidad posibles obstáculos antes de que el cliente los descubra solo",
+      "texto_nuevo": "Anticipa el recorrido emocional del cliente y ten listas estrategias para contrarrestar sus dudas y emociones negativas",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2723, 2752",
+        "frase": "Understand and anticipate the customer’s emotional journey."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone comunicar obstáculos (incluso advierte que insinuar problemas aumenta el miedo); no cabe como sugerencia porque choca con el libro, y se vuelve a lo que sí dice: anticipar el recorrido emocional.; Mismo defecto; se corrige hacia lo que el libro sí propone en esta fase en lugar de dejarlo como sugerencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

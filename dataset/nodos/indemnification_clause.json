@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Acepta la cláusula de indemnización como algo estándar en tus documentos de financiamiento",
     "Contrata un seguro D&O razonable que te cubra a ti como fundador y también a tus inversores",
-    "Revisa que el seguro D&O se mantenga consistente si haces rondas de financiamiento después de la Serie A",
+    "Ten en cuenta que en la Serie A el seguro D&O suele poder negociarse, pero en las rondas posteriores a la Serie A lo habitual hoy es contratarlo",
     "Confirma que la cobertura sea suficiente antes de sumar a alguien externo a tu junta directiva"
   ],
   "entregable_esperado": "Póliza de seguro D&O contratada y cláusula de indemnización incluida en tus documentos corporativos",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Protege a tu Junta Legalmente",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-indemnification_clause-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa que el seguro D&O se mantenga consistente si haces rondas de financiamiento después de la Serie A",
+      "texto_nuevo": "Ten en cuenta que en la Serie A el seguro D&O suele poder negociarse, pero en las rondas posteriores a la Serie A lo habitual hoy es contratarlo",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2092",
+        "frase": "One can usually negotiate away insurance in a Series A deal"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido.; Se pierde que en la Serie A el seguro suele poder negociarse fuera y que en las rondas posteriores lo habitual es contratarlo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

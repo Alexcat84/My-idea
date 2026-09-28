@@ -7,7 +7,7 @@
   "resumen_teorico": "En vez de avanzar como en una carrera de relevos, donde una área termina su parte y se la pasa a la siguiente, trabaja como en rugby: haz que distintas áreas avancen al mismo tiempo y se comuniquen todo el rato, así aceleras el desarrollo sin bajar la calidad. Complementa esto con ciclos de validación: construye, prueba, escucha la respuesta y ajusta usando prototipos económicos antes de gastar más dinero, partiendo de la idea de que tus clientes no saben lo que quieren hasta que lo ven.",
   "pasos_accionables": [
     "Reorganiza el trabajo para que las distintas áreas avancen al mismo tiempo y no una detrás de la otra",
-    "Crea versiones tempranas y baratas de tu producto (bocetos, prototipos virtuales)",
+    "Crea versiones tempranas y baratas de tu producto (un modelo, un prototipo virtual o un protocept)",
     "Haz ciclos rápidos de prueba con tus clientes y ajusta el diseño antes de seguir avanzando",
     "Repite estos ciclos de validación en cada etapa de tu desarrollo"
   ],
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Trabaja en Paralelo, Siempre",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-procesamiento_paralelo_con_espirales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crea versiones tempranas y baratas de tu producto (bocetos, prototipos virtuales)",
+      "texto_nuevo": "Crea versiones tempranas y baratas de tu producto (un modelo, un prototipo virtual o un protocept)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2628",
+        "frase": "early and inexpensive versions of the product (a model, virtual prototype, or protocept)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La lista del libro es modelo, prototipo virtual o protocept; 'bocetos' no aparece en ella.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

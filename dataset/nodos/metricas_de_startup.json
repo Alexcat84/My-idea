@@ -3,12 +3,12 @@
   "dominio": "core",
   "titulo_concepto": "Métricas de Startup vs Métricas de Empresa Establecida",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.",
+  "resumen_teorico": "Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante, los planes de contratación a corto plazo y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.",
   "pasos_accionables": [
     "Definir junto al equipo o la dirección un tablero de métricas de aprendizaje, en vez de un reporte financiero tradicional",
     "Medir si el problema del cliente y las características del producto han sido validados en cada iteración",
     "Rastrear métricas de validación de clientes: tamaño promedio de pedido, valor de vida del cliente, tiempo hasta la primera compra, tasa de cierre",
-    "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante y tiempo estimado hasta el punto de equilibrio"
+    "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante, planes de contratación a corto plazo y tiempo estimado hasta el punto de equilibrio"
   ],
   "entregable_esperado": "Tablero de métricas de aprendizaje y supervivencia que reemplace o complemente los reportes financieros tradicionales en las reuniones de dirección tempranas",
   "condiciones_activacion": [
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "No Midas tu Startup Como Grande",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-metricas_de_startup-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.",
+      "texto_nuevo": "Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante, los planes de contratación a corto plazo y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1240",
+        "frase": "cash-burn rate, number of months’ worth of cash left, short-term hiring plans"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la cuarta métrica financiera de la lista: los planes de contratación a corto plazo.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-037-metricas_de_startup-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante y tiempo estimado hasta el punto de equilibrio",
+      "texto_nuevo": "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante, planes de contratación a corto plazo y tiempo estimado hasta el punto de equilibrio",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1240",
+        "frase": "cash-burn rate, number of months’ worth of cash left, short-term hiring plans"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la métrica de planes de contratación a corto plazo.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

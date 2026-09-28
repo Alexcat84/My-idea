@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Encontrar el 'Golpe' o Método Natural de Esfuerzo Mental",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Así como un atleta natural encuentra su 'stroke' (golpe/técnica) óptimo sin enseñanza explícita, el pensador debe descubrir la forma particular de esfuerzo que canaliza mejor su energía intelectual hacia la tarea correcta. Un ejemplo es William Morris, quien tenía gran energía pero la dirigía mal en su activismo político (a diferencia de su maestría en diseño y poesía), lo que ilustra que el fracaso creativo a menudo proviene de aplicar el tipo equivocado de esfuerzo a una tarea, no de falta de energía.",
+  "resumen_teorico": "Así como un atleta natural encuentra su 'stroke' (golpe/técnica) óptimo sin enseñanza explícita, el pensador debe descubrir la forma particular de esfuerzo que canaliza mejor su energía intelectual hacia la tarea correcta. Un ejemplo es William Morris, quien tenía gran energía pero la dirigía mal en su activismo político (a diferencia de su maestría en el diseño y la imprenta, y a veces en su poesía), lo que ilustra que el fracaso creativo a menudo proviene de aplicar el tipo equivocado de esfuerzo a una tarea, no de falta de energía.",
   "pasos_accionables": [
     "Identificar en qué actividades o dominios el pensador ya demuestra fluidez natural y resultados de calidad",
     "Analizar qué tipo de esfuerzo (ej. intuitivo, analítico, verbal, visual) corresponde a esos dominios exitosos",
@@ -56,6 +56,22 @@
         "motivo": "El 'golpe' de esfuerzo mental de Wallas no prepara la segmentacion de clientes. Los nodos no tienen relacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-030-encontrar_el_golpe_mental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Así como un atleta natural encuentra su 'stroke' (golpe/técnica) óptimo sin enseñanza explícita, el pensador debe descubrir la forma particular de esfuerzo que canaliza mejor su energía intelectual hacia la tarea correcta. Un ejemplo es William Morris, quien tenía gran energía pero la dirigía mal en su activismo político (a diferencia de su maestría en diseño y poesía), lo que ilustra que el fracaso creativo a menudo proviene de aplicar el tipo equivocado de esfuerzo a una tarea, no de falta de energía.",
+      "texto_nuevo": "Así como un atleta natural encuentra su 'stroke' (golpe/técnica) óptimo sin enseñanza explícita, el pensador debe descubrir la forma particular de esfuerzo que canaliza mejor su energía intelectual hacia la tarea correcta. Un ejemplo es William Morris, quien tenía gran energía pero la dirigía mal en su activismo político (a diferencia de su maestría en el diseño y la imprenta, y a veces en su poesía), lo que ilustra que el fracaso creativo a menudo proviene de aplicar el tipo equivocado de esfuerzo a una tarea, no de falta de energía.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "589",
+        "frase": "in the arts of designing and printing, and sometimes in his poetry"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro limita la maestría poética de Morris a 'a veces' y nombra diseño e imprenta; el nodo la vuelve constante.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

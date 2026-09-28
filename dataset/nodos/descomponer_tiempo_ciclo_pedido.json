@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Descomponer el tiempo de ciclo del pedido",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El tiempo total desde que un cliente hace un pedido hasta que lo recibe no es un solo número: es la suma de varias etapas separadas. Se puede dividir en el tiempo desde que llega el pedido hasta que lo registras, de ahí hasta que lo asignas para armar, de ahí hasta que efectivamente lo armas, de ahí hasta que sale de tu punto de despacho, y finalmente desde que sale hasta que llega al cliente. Cuando alguien se queja de que el pedido tardó mucho, medir solo el total no dice nada útil. Medir cada tramo por separado sí permite encontrar exactamente dónde se atora el proceso, en vez de adivinar o culpar al courier cuando el problema real estaba en tu propia demora para armar el paquete.",
+  "resumen_teorico": "El tiempo total desde que un cliente hace un pedido hasta que lo recibe no es un solo número: es la suma de varias etapas separadas. Se puede dividir en el tiempo desde que llega el pedido hasta que lo registras, de ahí hasta que lo asignas para armar, de ahí hasta que efectivamente lo armas, de ahí hasta que sale de tu punto de despacho, y finalmente desde que sale hasta que llega al cliente. Cuando alguien se queja de que el pedido tardó mucho, medir solo el total no te dice en qué parte está el problema. Medir cada tramo por separado sí permite encontrar exactamente dónde se atora el proceso, en vez de adivinar o culpar al courier cuando el problema real estaba en tu propia demora para armar el paquete.",
   "pasos_accionables": [
     "Lista las etapas de tu propio proceso: recepción, registro, asignación para armar, armado, despacho y entrega.",
     "Anota fecha y hora en que cada pedido pasa por cada etapa, aunque sea en una hoja simple.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Mide cada etapa de tu pedido",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-029-descomponer_tiempo_ciclo_pedido-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tiempo total desde que un cliente hace un pedido hasta que lo recibe no es un solo número: es la suma de varias etapas separadas. Se puede dividir en el tiempo desde que llega el pedido hasta que lo registras, de ahí hasta que lo asignas para armar, de ahí hasta que efectivamente lo armas, de ahí hasta que sale de tu punto de despacho, y finalmente desde que sale hasta que llega al cliente. Cuando alguien se queja de que el pedido tardó mucho, medir solo el total no dice nada útil. Medir cada tramo por separado sí permite encontrar exactamente dónde se atora el proceso, en vez de adivinar o culpar al courier cuando el problema real estaba en tu propia demora para armar el paquete.",
+      "texto_nuevo": "El tiempo total desde que un cliente hace un pedido hasta que lo recibe no es un solo número: es la suma de varias etapas separadas. Se puede dividir en el tiempo desde que llega el pedido hasta que lo registras, de ahí hasta que lo asignas para armar, de ahí hasta que efectivamente lo armas, de ahí hasta que sale de tu punto de despacho, y finalmente desde que sale hasta que llega al cliente. Cuando alguien se queja de que el pedido tardó mucho, medir solo el total no te dice en qué parte está el problema. Medir cada tramo por separado sí permite encontrar exactamente dónde se atora el proceso, en vez de adivinar o culpar al courier cuando el problema real estaba en tu propia demora para armar el paquete.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2519",
+        "frase": "if there is a customer service problem it can be measured and traced quickly"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que el total sea inútil, solo que desglosarlo permite rastrear e identificar el problema.; Se sostiene el endurecimiento de 'nada útil'; lo de localizar el problema sí lo dice el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

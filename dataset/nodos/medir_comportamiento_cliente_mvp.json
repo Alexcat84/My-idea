@@ -11,7 +11,7 @@
     "Identifica qué características tienen los usuarios que regresan con más frecuencia",
     "Rastrea tasas de cancelación o inactividad como indicador de retención",
     "Calcula el porcentaje de usuarios que te refieren y cuántos referidos se activan",
-    "Compara todos los resultados contra tus criterios pass o fail definidos previamente"
+    "Compara todos los resultados contra tus criterios pass o fail definidos previamente, y busca una respuesta grande o masiva, no solo un aprobado"
   ],
   "entregable_esperado": "Dashboard o reporte con métricas de Purchase, Engagement, Retention y Referral del MVP, con conclusión sobre la validez del modelo",
   "nodos_previos": [
@@ -44,5 +44,24 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-medir_comportamiento_cliente_mvp-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara todos los resultados contra tus criterios pass o fail definidos previamente",
+      "texto_nuevo": "Compara todos los resultados contra tus criterios pass o fail definidos previamente, y busca una respuesta grande o masiva, no solo un aprobado",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9016",
+        "frase": "look for great or massive response and activity, not just a passing grade"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la advertencia de buscar una respuesta grande o masiva, no solo aprobar.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

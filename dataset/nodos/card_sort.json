@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Card Sort (Clasificación de Tarjetas)",
   "fuente": "The field guide to human-centered design",
-  "resumen_teorico": "Técnica de investigación/síntesis donde se presentan tarjetas con conceptos, imágenes o citas a los usuarios o al equipo de diseño para que las agrupen, prioricen o clasifiquen según categorías relevantes. Ayuda a revelar patrones mentales, preferencias y jerarquías de importancia que no son evidentes en entrevistas directas.",
+  "resumen_teorico": "Técnica de investigación donde se ponen en manos de la persona para quien diseñas tarjetas con una palabra o una imagen para que las ordene según lo que más le importa o las acomode como prefiera. Ayuda a revelar patrones mentales, preferencias y jerarquías de importancia, y abre una conversación sobre lo que valora y por qué.",
   "pasos_accionables": [
-    "Crear tarjetas con conceptos, imágenes, citas o ideas relevantes al desafío",
-    "Pedir a los participantes que las agrupen según categorías propias o preestablecidas",
+    "Crear tarjetas con una palabra o una imagen cada una, relevantes al desafío y fáciles de entender, mezclando ideas concretas con otras más abstractas; usar imágenes si la persona habla otro idioma o no sabe leer",
+    "Pedir a los participantes que las ordenen según lo que más les importa o, como variante, que las acomoden como prefieran o las ordenen en distintos escenarios (con más dinero, en la vejez, en una gran ciudad)",
     "Observar y documentar la lógica de agrupación que usan los participantes",
     "Usar los resultados para identificar patrones y prioridades ocultas"
   ],
-  "entregable_esperado": "Categorías de agrupación documentadas con la lógica subyacente de los usuarios",
+  "entregable_esperado": "Orden de importancia o categorías de agrupación documentadas, con la lógica subyacente de los usuarios y el porqué de lo que más les importa",
   "nodos_previos": [
     "guia_entrevista_hcd"
   ],
@@ -26,5 +26,73 @@
   "etiqueta_arbol": "Clasifica Ideas con Tarjetas",
   "fuentes_internas": [
     "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-033-card_sort-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica de investigación/síntesis donde se presentan tarjetas con conceptos, imágenes o citas a los usuarios o al equipo de diseño para que las agrupen, prioricen o clasifiquen según categorías relevantes. Ayuda a revelar patrones mentales, preferencias y jerarquías de importancia que no son evidentes en entrevistas directas.",
+      "texto_nuevo": "Técnica de investigación donde se ponen en manos de la persona para quien diseñas tarjetas con una palabra o una imagen para que las ordene según lo que más le importa o las acomode como prefiera. Ayuda a revelar patrones mentales, preferencias y jerarquías de importancia, y abre una conversación sobre lo que valora y por qué.",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "2304",
+        "frase": "a deck of cards, each with a word or single image, in someone’s hands"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no compara con las entrevistas directas; dice que abre una conversación sobre lo que la persona valora y por qué.; El libro usa tarjetas con una palabra o una imagen en manos de la persona para quien se diseña; las citas y el equipo de diseño como clasificador no están.; Mismo defecto que la marca 0; además el libro pide ordenar según lo que más importa o acomodar a gusto, no clasificar en categorías.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-033-card_sort-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear tarjetas con conceptos, imágenes, citas o ideas relevantes al desafío",
+      "texto_nuevo": "Crear tarjetas con una palabra o una imagen cada una, relevantes al desafío y fáciles de entender, mezclando ideas concretas con otras más abstractas; usar imágenes si la persona habla otro idioma o no sabe leer",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "2314-2334",
+        "frase": "use either a word or a picture on each card"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro pide una palabra o una imagen en cada tarjeta; citas e ideas no están.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se caen las condiciones del mazo: fácil de entender, imágenes si la persona no lee o habla otro idioma, mezclar ideas concretas y abstractas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-033-card_sort-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pedir a los participantes que las agrupen según categorías propias o preestablecidas",
+      "texto_nuevo": "Pedir a los participantes que las ordenen según lo que más les importa o, como variante, que las acomoden como prefieran o las ordenen en distintos escenarios (con más dinero, en la vejez, en una gran ciudad)",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "2336-2342",
+        "frase": "ask her to sort them according to what’s most important."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El ejercicio central es ordenar las tarjetas según lo que más importa; acomodarlas libremente y plantear escenarios son variantes que se pierden.; El libro deja que la persona las acomode como quiera; las categorías preestablecidas no están.; Mismo defecto que las marcas 0 y 1: categorías preestablecidas inventadas y el orden por importancia ausente.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-033-card_sort-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Categorías de agrupación documentadas con la lógica subyacente de los usuarios",
+      "texto_nuevo": "Orden de importancia o categorías de agrupación documentadas, con la lógica subyacente de los usuarios y el porqué de lo que más les importa",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "2298-2304",
+        "frase": "help you identify what’s most important to the people you’re designing for"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El resultado principal del libro es saber qué es lo más importante para la persona, y el entregable lo omite.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

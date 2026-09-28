@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Integración Agresiva de un Nuevo Ejecutivo",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Contratar bien a un ejecutivo no basta: la forma en que lo integras es tan importante como la entrevista. Tienes que exigirle resultados desde el primer día, asegurarte de que entienda a fondo tu producto, tu mercado y tus clientes, y ponerlo en contacto directo con las personas clave de tu negocio desde el arranque.",
+  "resumen_teorico": "Contratar bien a un ejecutivo no basta: la forma en que lo integras es tan importante como la entrevista. Tienes que exigirle resultados desde el primer día, asegurarte de que entienda a fondo tu producto, tu tecnología, tu mercado y tus clientes, y ponerlo en contacto directo con las personas clave de tu negocio desde el arranque.",
   "pasos_accionables": [
     "Define objetivos mensuales, semanales y diarios para la persona que acabas de contratar, desde el día uno",
-    "Reúnete con ella todos los días para que traiga las preguntas sobre todo lo que no le haya quedado claro",
+    "Considera reunirte con ella todos los días para que traiga las preguntas sobre todo lo que no le haya quedado claro",
     "Responde esas preguntas yendo a la raíz de cada tema, desde los primeros principios",
-    "Si en 30 días no ves progreso real, considera despedirla",
+    "Si no trae preguntas, considera despedirla; si en 30 días no ves progreso real, despídela sin dudar",
     "Dale una lista de las personas clave con las que debe reunirse y pídele que te cuente qué aprendió de cada una"
   ],
   "entregable_esperado": "Un plan de integración de 30 días con objetivos diarios y semanales, reuniones de seguimiento y una lista de las personas clave con las que debe hablar",
@@ -28,5 +28,57 @@
   "etiqueta_arbol": "Integra Rápido a tus Ejecutivos",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-032-integracion_agresiva_ejecutivo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contratar bien a un ejecutivo no basta: la forma en que lo integras es tan importante como la entrevista. Tienes que exigirle resultados desde el primer día, asegurarte de que entienda a fondo tu producto, tu mercado y tus clientes, y ponerlo en contacto directo con las personas clave de tu negocio desde el arranque.",
+      "texto_nuevo": "Contratar bien a un ejecutivo no basta: la forma en que lo integras es tan importante como la entrevista. Tienes que exigirle resultados desde el primer día, asegurarte de que entienda a fondo tu producto, tu tecnología, tu mercado y tus clientes, y ponerlo en contacto directo con las personas clave de tu negocio desde el arranque.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1559",
+        "frase": "Every executive must understand the product, the technology, the customers, and the market."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro es producto, tecnología, clientes y mercado; el nodo omite la tecnología.; Mismo defecto: falta la tecnología en la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-integracion_agresiva_ejecutivo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si en 30 días no ves progreso real, considera despedirla",
+      "texto_nuevo": "Si no trae preguntas, considera despedirla; si en 30 días no ves progreso real, despídela sin dudar",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1559",
+        "frase": "you don't feel that they are coming up to speed, definitely fire them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice despedirla sin duda si a los 30 días no se pone al día; el paso lo rebaja a considerarlo.; Mismo defecto que las marcas 0 y 1: el 'considera' del libro es para la falta de preguntas, a los 30 días es tajante.; Se cae la señal temprana del libro: si no trae preguntas, considera despedirla.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-integracion_agresiva_ejecutivo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúnete con ella todos los días para que traiga las preguntas sobre todo lo que no le haya quedado claro",
+      "texto_nuevo": "Considera reunirte con ella todos los días para que traiga las preguntas sobre todo lo que no le haya quedado claro",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1559",
+        "frase": "Consider scheduling a daily meeting with your new executive."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro sugiere considerar una reunión diaria; el paso lo endurece a una instrucción fija.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

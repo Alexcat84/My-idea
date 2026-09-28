@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Fase Adopt del Ciclo de Vida del Cliente",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, incluso en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando seis canales de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.",
+  "resumen_teorico": "La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, y probablemente también mejoras en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando los canales que elijas entre los seis de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.",
   "pasos_accionables": [
     "Define qué comportamientos/métricas indican que un cliente ha 'adoptado' tu producto",
-    "Diseña interacciones específicas para cada uno de los 6 canales (in-person, email, mail, phone, video, present)",
+    "Diseña interacciones específicas considerando cada uno de los 6 canales (in-person, email, mail, phone, video, present), sin que haga falta usarlos todos",
     "Implementa una encuesta de éxito para recopilar datos de personalización",
     "Establece un ritual de reconocimiento de hitos/aniversarios de la relación"
   ],
-  "entregable_esperado": "Mapa de touchpoints de la fase Adopt con al menos una acción definida por canal",
+  "entregable_esperado": "Mapa de touchpoints de la fase Adopt con las acciones definidas en los canales que elijas",
   "nodos_previos": [
     "arquetipos_de_cliente",
     "celebracion_automatizada_de_hitos",
@@ -28,5 +28,56 @@
   "etiqueta_arbol": "Formaliza una Relación Duradera",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-026-fase_adopt_ciclo_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, incluso en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando seis canales de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.",
+      "texto_nuevo": "La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, y probablemente también mejoras en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando los canales que elijas entre los seis de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4836-4847",
+        "frase": "the customer is likely experiencing improvements in unexpected areas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que el cliente probablemente experimenta mejoras en áreas inesperadas, no que las vea siempre.; Presenta los seis canales como método obligado; el libro invita a ampliar su uso pero dice que no hace falta usarlos todos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-026-fase_adopt_ciclo_cliente-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña interacciones específicas para cada uno de los 6 canales (in-person, email, mail, phone, video, present)",
+      "texto_nuevo": "Diseña interacciones específicas considerando cada uno de los 6 canales (in-person, email, mail, phone, video, present), sin que haga falta usarlos todos",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4847",
+        "frase": "you don’t have to use each communication tool in every phase"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: exige interacciones en los seis canales cuando el libro dice que no hace falta usar cada herramienta.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-026-fase_adopt_ciclo_cliente-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mapa de touchpoints de la fase Adopt con al menos una acción definida por canal",
+      "texto_nuevo": "Mapa de touchpoints de la fase Adopt con las acciones definidas en los canales que elijas",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4847",
+        "frase": "you don’t have to use each communication tool in every phase"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: exige una acción en cada canal cuando el libro no obliga a usarlos todos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

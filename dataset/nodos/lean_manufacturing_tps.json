@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Lean Manufacturing y Toyota Production System (TPS)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad.",
+  "resumen_teorico": "Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad. Quien hace el trabajo debe asumirlo: la cultura y la gestión pesan tanto o más que las herramientas.",
   "pasos_accionables": [
     "Identificar los tipos de desperdicio (muda) presentes en los procesos productivos",
     "Implementar kaizen (mejora continua) como práctica constante",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Elimina el Desperdicio y Mejora Procesos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-lean_manufacturing_tps-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad.",
+      "texto_nuevo": "Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad. Quien hace el trabajo debe asumirlo: la cultura y la gestión pesan tanto o más que las herramientas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12803",
+        "frase": "The cultural and managerial aspects of a Lean organization are just as"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el cierre del pasaje sobre la gente y la cultura.; Se cae que los conceptos deben entenderlos y adoptarlos quienes hacen el trabajo y que lo cultural pesa tanto o más que las herramientas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

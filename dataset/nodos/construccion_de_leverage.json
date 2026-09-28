@@ -9,8 +9,8 @@
     "Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial",
     "Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares",
     "Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales",
-    "Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto",
-    "Nunca ser el primero en ofrecer un term sheet con precio a un VC"
+    "Anclar en unos pocos términos prioritarios y mantener flexibilidad en el resto",
+    "Nunca ser el primero en ofrecer un term sheet a un VC, y menos con precio"
   ],
   "entregable_esperado": "Múltiples conversaciones activas con inversionistas gestionadas estratégicamente en el tiempo, y una lista de términos ancla definidos",
   "nodos_previos": [
@@ -30,5 +30,41 @@
   "etiqueta_arbol": "Negocia con Varias Ofertas",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-035-construccion_de_leverage-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto",
+      "texto_nuevo": "Anclar en unos pocos términos prioritarios y mantener flexibilidad en el resto",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3627",
+        "frase": "Anchoring means to pick a few points, state clearly what you want"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de elegir unos pocos puntos; la cifra 2-3 es añadida.; Mismo defecto: la cifra 2-3 no está en el libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-035-construccion_de_leverage-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nunca ser el primero en ofrecer un term sheet con precio a un VC",
+      "texto_nuevo": "Nunca ser el primero en ofrecer un term sheet a un VC, y menos con precio",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3629",
+        "frase": "Never provide a term sheet to a VC, especially with a price attached"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro desaconseja dar cualquier term sheet al VC, sobre todo con precio; el nodo lo limita a los que llevan precio.; Mismo defecto: el nodo deja entender que sin precio sí se puede ofrecer.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

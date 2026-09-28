@@ -4,14 +4,14 @@
   "dominio": "entrega",
   "titulo_concepto": "Aplicar una regla fija de colchón de relleno",
   "fuente": "Requisitos de empaque de los couriers",
-  "resumen_teorico": "Adivinar cuánto relleno poner en cada caja es una fuente constante de daños y devoluciones. Los couriers coinciden en una cifra similar: deja entre cinco y seis centímetros de separación entre el producto y cada pared de la caja, y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+  "resumen_teorico": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
   "pasos_accionables": [
     "Mide con una regla la distancia entre el producto y cada pared de la caja antes de cerrarla.",
     "Ajusta el tamaño de caja si la distancia es menor a cinco centímetros en algún lado.",
     "Rellena cualquier espacio vacío hasta que el producto no se mueva al agitar la caja con cuidado.",
     "Sugerencia de My Idea: anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez."
   ],
-  "entregable_esperado": "Una regla escrita de cinco a seis centímetros de colchón en todos los lados, aplicada en cada envío.",
+  "entregable_esperado": "Una regla escrita de al menos cinco centímetros de colchón en todos los lados, aplicada en cada envío.",
   "nodos_previos": [
     "hacer_cajas_a_medida_del_pedido",
     "elegir_caja_correcta"
@@ -42,6 +42,38 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. La extraccion da la regla (FedEx 5 a 7.5 cm, UPS 5 cm, DHL 6 cm; nodo: unos 5 cm por todos lados), pero en las 108 lineas del fichero no aparece nada sobre anotarla, ponerla a la vista ni tener una zona de empaque. Busque visible, anota, zona, checklist, lista y documento, sin resultado. El cartel visible es un formato que pone el paso, asi que no es una simple concrecion.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-007"
+    },
+    {
+      "id": "final-e1-028-aplicar_regla_fija_de_colchon_de_relleno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adivinar cuánto relleno poner en cada caja es una fuente constante de daños y devoluciones. Los couriers coinciden en una cifra similar: deja entre cinco y seis centímetros de separación entre el producto y cada pared de la caja, y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+      "texto_nuevo": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "26-30",
+        "frase": "UPS mínimo 2 pulgadas (5 cm) de relleno; DHL mínimo 6 cm de separación"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da las cifras como mínimos (UPS mínimo 5 cm, DHL mínimo 6 cm, FedEx de 5 a 7.5 cm); el rango cerrado pierde que es un piso.; El libro no afirma que adivinar el relleno sea una fuente constante de daños y devoluciones.; Mismo defecto que la marca 0: el libro fija un mínimo, no un techo de 6 cm.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-028-aplicar_regla_fija_de_colchon_de_relleno-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una regla escrita de cinco a seis centímetros de colchón en todos los lados, aplicada en cada envío.",
+      "texto_nuevo": "Una regla escrita de al menos cinco centímetros de colchón en todos los lados, aplicada en cada envío.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "26-30",
+        "frase": "UPS mínimo 2 pulgadas (5 cm) de relleno; DHL mínimo 6 cm de separación"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija un mínimo de unos 5 cm, no un rango con techo de 6 cm.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

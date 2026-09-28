@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Creación de un Pitch",
   "fuente": "The field guide to human-centered design",
-  "resumen_teorico": "Herramienta para estructurar la comunicación de un proyecto a audiencias clave (inversores, socios, financiadores). Consiste en definir de forma sucinta el proyecto, identificar a quién se dirige el pitch, determinar el formato adecuado y redactar una versión corta que luego pueda expandirse.",
+  "resumen_teorico": "Herramienta para estructurar la comunicación de un proyecto a audiencias clave (inversores, socios, financiadores, clientes potenciales). Consiste en definir de forma sucinta el proyecto, identificar a quién se dirige el pitch, determinar el formato adecuado y redactar una versión corta que luego pueda expandirse.",
   "pasos_accionables": [
-    "Definir de forma sucinta qué es el proyecto",
+    "Definir de forma sucinta, en menos de un minuto, qué es el proyecto: el contexto, la idea central, por qué es distinto y la llamada a la acción",
     "Identificar a quién se necesita presentar el pitch",
     "Determinar el formato o formatos que tomará el pitch",
     "Escribir una versión corta del pitch pensando en cómo expandirla después"
@@ -41,6 +41,39 @@
         "evidencia": "Q072-015: Definir y redactar el pitch del proyecto para buscar inversores y socios es preparar la busqueda de recursos, fase planificacion, como la propia condicion lo situa al cerrar la planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-033-crear_pitch-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Herramienta para estructurar la comunicación de un proyecto a audiencias clave (inversores, socios, financiadores). Consiste en definir de forma sucinta el proyecto, identificar a quién se dirige el pitch, determinar el formato adecuado y redactar una versión corta que luego pueda expandirse.",
+      "texto_nuevo": "Herramienta para estructurar la comunicación de un proyecto a audiencias clave (inversores, socios, financiadores, clientes potenciales). Consiste en definir de forma sucinta el proyecto, identificar a quién se dirige el pitch, determinar el formato adecuado y redactar una versión corta que luego pueda expandirse.",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "6976-6984",
+        "frase": "convince different types of people—from banks to potential customers—to rally to your cause"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dirige el pitch también a consumidores y clientes potenciales, no solo a quien financia o se asocia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-033-crear_pitch-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir de forma sucinta qué es el proyecto",
+      "texto_nuevo": "Definir de forma sucinta, en menos de un minuto, qué es el proyecto: el contexto, la idea central, por qué es distinto y la llamada a la acción",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "6994-7000",
+        "frase": "Offer context, the main thrust of your idea, why it’s different"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se caen los elementos que el libro pide (contexto, idea central, por qué es distinto, llamada a la acción) y el límite de menos de un minuto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

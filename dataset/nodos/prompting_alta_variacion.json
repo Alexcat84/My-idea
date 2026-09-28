@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Prompting de Alta Variación para Romper la Respuesta Promedio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Por defecto, la IA tiende a dar la respuesta 'promedio' más probable estadísticamente, lo que produce ideas genéricas y poco originales. Para obtener ideas verdaderamente novedosas es necesario empujar deliberadamente al modelo hacia respuestas de alta variación, por ejemplo asignándole personajes o escenarios inusuales (ej. 'cómo un superhéroe haría espresso') que fuerzan conexiones menos obvias. La investigación muestra que generar muchas ideas 'raras' incrementa la probabilidad de encontrar algunas verdaderamente valiosas, ya que los humanos son buenos filtrando baja calidad pero necesitan material de partida diverso.",
+  "resumen_teorico": "Por defecto, la IA tiende a dar la respuesta 'promedio' más probable estadísticamente, lo que produce ideas genéricas y poco originales. Para obtener ideas verdaderamente novedosas es necesario empujar deliberadamente al modelo hacia respuestas de alta variación, por ejemplo asignándole personajes o escenarios inusuales (ej. 'cómo un superhéroe haría espresso') que fuerzan conexiones menos obvias. La investigación muestra que para dar con buenas ideas novedosas probablemente hay que generar muchas malas, porque la mayoría de las ideas nuevas lo son; como los humanos son buenos filtrando baja calidad, generar muchas ideas 'raras' rápido y barato incrementa la probabilidad de encontrar algunas verdaderamente valiosas.",
   "pasos_accionables": [
     "Definir un rol o personaje inusual para la IA al pedir ideas (ej. 'eres un experto en resolver problemas de forma poco convencional')",
     "Pedir explícitamente ideas 'diferentes entre sí' y 'poco probables' en el prompt",
@@ -39,6 +39,22 @@
         "motivo": "Pedir a la IA respuestas de alta variacion no tiene que ver con la variacion estadistica en pruebas de prototipos; solo comparten la palabra variacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-037-prompting_alta_variacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Por defecto, la IA tiende a dar la respuesta 'promedio' más probable estadísticamente, lo que produce ideas genéricas y poco originales. Para obtener ideas verdaderamente novedosas es necesario empujar deliberadamente al modelo hacia respuestas de alta variación, por ejemplo asignándole personajes o escenarios inusuales (ej. 'cómo un superhéroe haría espresso') que fuerzan conexiones menos obvias. La investigación muestra que generar muchas ideas 'raras' incrementa la probabilidad de encontrar algunas verdaderamente valiosas, ya que los humanos son buenos filtrando baja calidad pero necesitan material de partida diverso.",
+      "texto_nuevo": "Por defecto, la IA tiende a dar la respuesta 'promedio' más probable estadísticamente, lo que produce ideas genéricas y poco originales. Para obtener ideas verdaderamente novedosas es necesario empujar deliberadamente al modelo hacia respuestas de alta variación, por ejemplo asignándole personajes o escenarios inusuales (ej. 'cómo un superhéroe haría espresso') que fuerzan conexiones menos obvias. La investigación muestra que para dar con buenas ideas novedosas probablemente hay que generar muchas malas, porque la mayoría de las ideas nuevas lo son; como los humanos son buenos filtrando baja calidad, generar muchas ideas 'raras' rápido y barato incrementa la probabilidad de encontrar algunas verdaderamente valiosas.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "865",
+        "frase": "we likely have to come up with many bad novel ideas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro justifica generar muchas ideas porque la mayoría de las ideas nuevas son malas y filtrarlas es fácil; 'necesitan material de partida diverso' es una causa que no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

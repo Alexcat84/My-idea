@@ -7,7 +7,7 @@
   "resumen_teorico": "En lugar de usar un único modelo de Stage-Gate para todos los proyectos, las empresas líderes desarrollan versiones escalables: el proceso completo de cinco etapas para proyectos grandes y riesgosos, una versión 'Lite' para proyectos de riesgo moderado, y una versión 'XPress' para cambios menores. Esto evita sobrecargar proyectos simples con procesos diseñados para complejidad alta.",
   "pasos_accionables": [
     "Clasificar los proyectos de innovación por nivel de riesgo y complejidad",
-    "Diseñar al menos tres versiones del proceso: completo, lite y express",
+    "Diseñar versiones escalables del proceso según el riesgo; a menudo son tres: completo, lite y express",
     "Definir criterios claros para asignar cada proyecto a la versión correspondiente",
     "Documentar las diferencias en actividades, entregables y gates de cada versión"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Adapta tu Proceso por Etapas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-procesos_contextuales_stage_gate-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar al menos tres versiones del proceso: completo, lite y express",
+      "texto_nuevo": "Diseñar versiones escalables del proceso según el riesgo; a menudo son tres: completo, lite y express",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3632",
+        "frase": "For example, there are often three versions of Stage-Gate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo hay tres versiones; 'al menos tres' lo endurece a un mínimo obligatorio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

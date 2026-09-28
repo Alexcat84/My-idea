@@ -6,7 +6,7 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Práctica de expandir el set de métricas base en tres escenarios (caso base, peor caso, mejor caso) para estresar el modelo financiero y detectar riesgos ocultos, especialmente en supuestos críticos como tasas de atrición, costos de adquisición o dependencia de un solo canal de ingresos (ej. publicidad).",
   "pasos_accionables": [
-    "Tomar el modelo de métricas base y crear una versión con supuestos pesimistas",
+    "Revisar paso a paso cada cifra del modelo de métricas base para descartar errores y luego crear una versión con supuestos pesimistas",
     "Crear una versión con supuestos optimistas",
     "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, CPM, costo de adquisición)",
     "Revalidar los supuestos críticos con validación de canal y clientes adicional",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Calcula tus Escenarios Extremos",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-worst_case_best_case_analysis-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tomar el modelo de métricas base y crear una versión con supuestos pesimistas",
+      "texto_nuevo": "Revisar paso a paso cada cifra del modelo de métricas base para descartar errores y luego crear una versión con supuestos pesimistas",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2687",
+        "frase": "That process starts with a step-by-step revalidation of every single number on the page"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro empieza por revalidar paso a paso cada número para descartar errores y solo después hace el peor caso.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

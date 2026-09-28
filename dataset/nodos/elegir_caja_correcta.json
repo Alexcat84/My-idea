@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Cómo elegir la caja correcta para tu envío",
   "fuente": "Requisitos de empaque de los couriers",
-  "resumen_teorico": "La caja que uses determina si tu producto llega entero y si pagas de mas por el envio. Una caja gastada, aplastada o sin rigidez ya perdió su capacidad de proteger, sin importar cuanto relleno le pongas adentro. El tamaño también importa en ambas direcciones: una caja muy ajustada no deja espacio para el acolchado, y una muy grande se aplasta o cuesta mas porque los couriers cobran según el volumen que ocupa, no solo el peso real. Para contenido pesado o delicado, una caja de doble pared resiste mejor el manejo. Antes de armar tu envio, conviene preguntar directamente a tu courier cual es su método para calcular el peso por volumen, porque esa cifra cambia entre empresas y se actualiza con el tiempo.",
+  "resumen_teorico": "La caja que uses determina si tu producto llega entero y si pagas de más por el envío. Una caja gastada, aplastada o sin rigidez ya perdió su capacidad de proteger. El tamaño también importa en ambas direcciones: una caja muy ajustada no deja espacio para el acolchado, y una muy grande se aplasta o cuesta más porque los couriers cobran según el volumen que ocupa, no solo el peso real. Para contenido pesado o delicado, una caja de doble pared resiste mejor el manejo. Antes de armar tu envío, conviene preguntar directamente a tu courier cuál es su método para calcular el peso por volumen.",
   "pasos_accionables": [
     "Descarta cualquier caja gastada, aplastada o perforada, sin excepción.",
     "Elige el tamaño que deje espacio para el relleno sin quedar demasiado holgado.",
@@ -166,6 +166,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-028-elegir_caja_correcta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La caja que uses determina si tu producto llega entero y si pagas de mas por el envio. Una caja gastada, aplastada o sin rigidez ya perdió su capacidad de proteger, sin importar cuanto relleno le pongas adentro. El tamaño también importa en ambas direcciones: una caja muy ajustada no deja espacio para el acolchado, y una muy grande se aplasta o cuesta mas porque los couriers cobran según el volumen que ocupa, no solo el peso real. Para contenido pesado o delicado, una caja de doble pared resiste mejor el manejo. Antes de armar tu envio, conviene preguntar directamente a tu courier cual es su método para calcular el peso por volumen, porque esa cifra cambia entre empresas y se actualiza con el tiempo.",
+      "texto_nuevo": "La caja que uses determina si tu producto llega entero y si pagas de más por el envío. Una caja gastada, aplastada o sin rigidez ya perdió su capacidad de proteger. El tamaño también importa en ambas direcciones: una caja muy ajustada no deja espacio para el acolchado, y una muy grande se aplasta o cuesta más porque los couriers cobran según el volumen que ocupa, no solo el peso real. Para contenido pesado o delicado, una caja de doble pared resiste mejor el manejo. Antes de armar tu envío, conviene preguntar directamente a tu courier cuál es su método para calcular el peso por volumen.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "10-19",
+        "frase": "JAMÁS reusar cajas gastadas, aplastadas, perforadas o que perdieron rigidez"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que la fórmula del peso por volumen varíe entre empresas ni que se actualice con el tiempo.; El libro solo manda no reusar cajas cansadas; que ningún relleno lo compense es un efecto añadido.; Mismo porqué inventado que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

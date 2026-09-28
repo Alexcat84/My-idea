@@ -7,8 +7,8 @@
   "resumen_teorico": "Las firmas de VC tienen una jerarquía interna (Managing Directors/General Partners, Principals, Associates, Analysts, Venture Partners, EIRs) que determina quién tiene poder real de decisión. Muchos títulos como 'partner' pueden ser engañosos, ya que no siempre implican autoridad para aprobar una inversión. Es crucial identificar quién realmente decide en la firma con la que se negocia.",
   "pasos_accionables": [
     "Investigar en el sitio web de la firma y con otros emprendedores quién tiene poder real de decisión",
-    "Preguntar directamente el proceso de aprobación interno de la firma",
-    "Insistir en desarrollar una relación directa con un Managing Director o General Partner",
+    "Si con eso no basta, preguntar directamente el proceso de aprobación interno de la firma, sabiendo que cuanto más abajo en la jerarquía esté quien responde, menos exacta suele ser la información",
+    "Tratar con mucho respeto a quien lleve el trato desde otros puestos, pero insistir en desarrollar también una relación directa con un Managing Director o General Partner",
     "No asumir que un título de 'partner' implica poder de decisión final"
   ],
   "entregable_esperado": "Mapa de contactos clave dentro de cada firma VC objetivo, identificando quién tiene poder de decisión real",
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Conoce Quién Decide en el VC",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-jerarquia_firma_vc-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preguntar directamente el proceso de aprobación interno de la firma",
+      "texto_nuevo": "Si con eso no basta, preguntar directamente el proceso de aprobación interno de la firma, sabiendo que cuanto más abajo en la jerarquía esté quien responde, menos exacta suele ser la información",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "87",
+        "frase": "the further down the hierarchy of the firm the person is, the less likely"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde que preguntar es el último recurso y que cuanto más abajo en la jerarquía, menos exacta la respuesta.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-038-jerarquia_firma_vc-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Insistir en desarrollar una relación directa con un Managing Director o General Partner",
+      "texto_nuevo": "Tratar con mucho respeto a quien lleve el trato desde otros puestos, pero insistir en desarrollar también una relación directa con un Managing Director o General Partner",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "96",
+        "frase": "treat her with an enormous amount of respect, but insist on developing a direct relationship"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide la relación con el MD o GP además de tratar con mucho respeto a quien lleve el trato, no en su lugar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

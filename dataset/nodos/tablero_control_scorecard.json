@@ -6,9 +6,9 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El scorecard es un paquete de informes diseñado para que tu conozcas el estado de la calidad en tu negocio. Debe incluir indicadores clave, reportes cuantitativos basados en datos, reportes narrativos sobre amenazas y oportunidades, y auditorías realizadas. Debe presentarse en formato fácil de leer, mostrando metas, desempeño real y variaciones.",
   "pasos_accionables": [
-    "Definir los indicadores clave que quieres seguir de cerca",
+    "Definir los indicadores clave que quieres seguir de cerca, a partir de lo que pide tu plan estratégico",
     "Diseñar reportes cuantitativos que muestren metas, desempeño real y variaciones",
-    "Incluir reportes narrativos sobre amenazas, oportunidades y eventos relevantes",
+    "Incluir reportes narrativos sobre amenazas, oportunidades y eventos relevantes, y las auditorías realizadas",
     "Establecer una frecuencia de publicación, mensual o trimestral, alineada con tus revisiones periódicas",
     "Asignar quién será responsable de editarlo, ya seas tú mismo o la persona que te ayuda con la calidad"
   ],
@@ -127,6 +127,40 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-022-tablero_control_scorecard-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir los indicadores clave que quieres seguir de cerca",
+      "texto_nuevo": "Definir los indicadores clave que quieres seguir de cerca, a partir de lo que pide tu plan estratégico",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9287",
+        "frase": "the strategic plan dictates the choice of subjects and identifies the measures needed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el plan estratégico dicta los temas y las medidas del tablero.; Mismo defecto: se cae el criterio del plan estratégico.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-tablero_control_scorecard-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir reportes narrativos sobre amenazas, oportunidades y eventos relevantes",
+      "texto_nuevo": "Incluir reportes narrativos sobre amenazas, oportunidades y eventos relevantes, y las auditorías realizadas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9289-9297",
+        "frase": "Audits conducted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las auditorías realizadas son el cuarto componente del tablero y ningún paso las incluye.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

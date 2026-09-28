@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación y Evaluación de Peligros (Industria General)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Es un proceso continuo para descubrir peligros presentes o previsibles en tu lugar de trabajo. Reúne la información que ya tienes: manuales, fichas de seguridad, registros de incidentes y lesiones (los que te pida tu mercado), análisis de riesgos por tarea y resultados de mediciones. Haz inspecciones periódicas, asumiendo tú mismo el papel de la persona que revisa el sitio con frecuencia. Investiga incidentes y casi-accidentes para encontrar la causa real, y agrupa los casos parecidos para detectar patrones. Prioriza los peligros según qué tan grave serían y qué tan probable es que ocurran; eso te da la base para poner controles o actuar antes de cambios importantes en procesos, equipos, personas o etapas del trabajo. No detectar peligros a tiempo es una causa frecuente de accidentes, por eso este proceso nunca se detiene.",
+  "resumen_teorico": "Es un proceso continuo para descubrir peligros presentes o previsibles en tu lugar de trabajo. Reúne la información que ya tienes: manuales, fichas de seguridad, registros de incidentes y lesiones (los que te pida tu mercado), análisis de riesgos por tarea y resultados de mediciones. Haz inspecciones frecuentes y regulares a cargo de una persona competente que designes. Investiga incidentes y casi-accidentes para encontrar la causa real, y agrupa los casos parecidos para detectar patrones. Considera también los peligros de emergencias previsibles y de tareas no rutinarias. Prioriza los peligros según qué tan graves serían, qué tan probable es que ocurran y cuántas personas quedarían expuestas; eso te da la base para poner controles o actuar antes de cambios importantes en procesos, equipos, personas o etapas del trabajo. No detectar peligros a tiempo es una de las causas de fondo de los accidentes, por eso este proceso nunca se detiene.",
   "pasos_accionables": [
     "Reunir la información que ya existe sobre peligros: manuales, fichas de seguridad, registros de lesiones, análisis de riesgos por tarea y resultados de mediciones",
-    "Hacer inspecciones regulares del lugar de trabajo, involucrando a quienes trabajan contigo cuando sea posible",
+    "Hacer inspecciones regulares del lugar de trabajo, con quienes trabajan contigo como parte del equipo de inspección",
     "Documentar lo que encuentres con fotos o videos para poder darle seguimiento y corregirlo",
     "Investigar incidentes y casi-accidentes para entender la causa de fondo",
     "Agrupar incidentes parecidos para detectar patrones",
-    "Priorizar los peligros según qué tan graves serían y qué tan probable es que pasen"
+    "Priorizar los peligros según qué tan graves serían, qué tan probable es que pasen y cuántas personas quedarían expuestas"
   ],
   "entregable_esperado": "Un registro documentado de inspecciones con la lista de peligros priorizada por riesgo y un plan de acción correctivo.",
   "nodos_previos": [
@@ -49,5 +49,57 @@
   "fuentes_internas": [
     "OSHA3885",
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-027-identificacion_evaluacion_peligros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es un proceso continuo para descubrir peligros presentes o previsibles en tu lugar de trabajo. Reúne la información que ya tienes: manuales, fichas de seguridad, registros de incidentes y lesiones (los que te pida tu mercado), análisis de riesgos por tarea y resultados de mediciones. Haz inspecciones periódicas, asumiendo tú mismo el papel de la persona que revisa el sitio con frecuencia. Investiga incidentes y casi-accidentes para encontrar la causa real, y agrupa los casos parecidos para detectar patrones. Prioriza los peligros según qué tan grave serían y qué tan probable es que ocurran; eso te da la base para poner controles o actuar antes de cambios importantes en procesos, equipos, personas o etapas del trabajo. No detectar peligros a tiempo es una causa frecuente de accidentes, por eso este proceso nunca se detiene.",
+      "texto_nuevo": "Es un proceso continuo para descubrir peligros presentes o previsibles en tu lugar de trabajo. Reúne la información que ya tienes: manuales, fichas de seguridad, registros de incidentes y lesiones (los que te pida tu mercado), análisis de riesgos por tarea y resultados de mediciones. Haz inspecciones frecuentes y regulares a cargo de una persona competente que designes. Investiga incidentes y casi-accidentes para encontrar la causa real, y agrupa los casos parecidos para detectar patrones. Considera también los peligros de emergencias previsibles y de tareas no rutinarias. Prioriza los peligros según qué tan graves serían, qué tan probable es que ocurran y cuántas personas quedarían expuestas; eso te da la base para poner controles o actuar antes de cambios importantes en procesos, equipos, personas o etapas del trabajo. No detectar peligros a tiempo es una de las causas de fondo de los accidentes, por eso este proceso nunca se detiene.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "513",
+        "frase": "Designate a competent person to conduct frequent and regular inspections of the job sites"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Afirma que debes ser tú quien inspecciona, cuando el libro pide designar a una persona competente.; El libro evalúa cada peligro también por el número de trabajadores que podrían quedar expuestos.; El libro la llama una de las causas de fondo; \"frecuente\" es una afirmación que no hace.; El libro pide designar a una persona competente para las inspecciones; el nodo pierde la condición de competencia.; Misma frecuencia añadida sobre una causa que el libro solo llama de fondo.; Mismo paso perdido: peligros de emergencias y situaciones no rutinarias.; Se cae un paso del procedimiento: considerar los peligros de emergencias y tareas no rutinarias.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-027-identificacion_evaluacion_peligros-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar los peligros según qué tan graves serían y qué tan probable es que pasen",
+      "texto_nuevo": "Priorizar los peligros según qué tan graves serían, qué tan probable es que pasen y cuántas personas quedarían expuestas",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "625",
+        "frase": "and the number of workers who might be exposed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el tercer criterio del libro: el número de trabajadores que podrían quedar expuestos.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-027-identificacion_evaluacion_peligros-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hacer inspecciones regulares del lugar de trabajo, involucrando a quienes trabajan contigo cuando sea posible",
+      "texto_nuevo": "Hacer inspecciones regulares del lugar de trabajo, con quienes trabajan contigo como parte del equipo de inspección",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "505",
+        "frase": "Have workers participate on the inspection team, and talk to them about hazards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los trabajadores formen parte del equipo de inspección sin reservas; \"cuando sea posible\" lo vuelve opcional.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

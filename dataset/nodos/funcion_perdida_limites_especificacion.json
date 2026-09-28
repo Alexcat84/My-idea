@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Función de Pérdida para Establecer Límites de Especificación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos, minimizando la pérdida total para el productor y el cliente.",
+  "resumen_teorico": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos: más allá del límite, ajustar en fábrica sale más barato que esperar la queja y ajustar bajo garantía.",
   "pasos_accionables": [
     "Determinar el costo de ajuste en campo/garantía cuando el cliente detecta la desviación",
     "Determinar el costo de ajuste en fábrica antes del envío, que es usualmente menor",
-    "Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente, el llamado coeficiente k",
+    "Calcular la constante de la función de pérdida, el llamado coeficiente k, dividiendo el costo del ajuste en garantía entre el cuadrado de la desviación promedio que genera quejas del cliente",
     "Igualar la función de pérdida al costo de ajuste en fábrica y despejar el límite de especificación",
     "Establecer los límites de especificación resultantes alrededor del valor nominal"
   ],
@@ -37,5 +37,40 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-021-funcion_perdida_limites_especificacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos, minimizando la pérdida total para el productor y el cliente.",
+      "texto_nuevo": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos: más allá del límite, ajustar en fábrica sale más barato que esperar la queja y ajustar bajo garantía.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20510",
+        "frase": "adjustment at the factory is less expensive than waiting for a customer complaint"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de minimizar una pérdida total del productor y el cliente; justifica el límite porque fuera de él ajustar en fábrica es más barato que en garantía.; Mismo efecto añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-021-funcion_perdida_limites_especificacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente, el llamado coeficiente k",
+      "texto_nuevo": "Calcular la constante de la función de pérdida, el llamado coeficiente k, dividiendo el costo del ajuste en garantía entre el cuadrado de la desviación promedio que genera quejas del cliente",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20500",
+        "frase": "costs the producer $100 to adjust a valve body under warranty"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el ejemplo del libro k sale del costo del ajuste en garantía y de la desviación que provoca la queja; el paso omite el costo.; Mismo defecto: falta el costo en garantía en el cálculo de k.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

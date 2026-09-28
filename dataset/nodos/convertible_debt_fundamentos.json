@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Fundamentos de la Deuda Convertible (Convertible Debt)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+  "resumen_teorico": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla; antes lo era también porque reducía la complejidad legal y los costos frente a una ronda de equity preferente, pero hoy esa diferencia pesa poco y lo que más impulsa su uso es evitar fijar la valuación. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
   "pasos_accionables": [
     "Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity",
     "Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)",
@@ -48,6 +48,22 @@
         "motivo": "La deuda convertible es un instrumento de financiamiento; no usa ni continua el lienzo de modelo de negocio. La correccion fue solo marcar un paso como sugerencia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-035-convertible_debt_fundamentos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+      "texto_nuevo": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla; antes lo era también porque reducía la complejidad legal y los costos frente a una ronda de equity preferente, pero hoy esa diferencia pesa poco y lo que más impulsa su uso es evitar fijar la valuación. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2370",
+        "frase": "the legal fees argument doesn’t carry much weight these days"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el argumento de los costos legales ya pesa poco y que lo que impulsa su uso es evitar fijar la valuación.; Mismo defecto: se cae que la diferencia de costos hoy es pequeña y que el motor principal es no fijar valuación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

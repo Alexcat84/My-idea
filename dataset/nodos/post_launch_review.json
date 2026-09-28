@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Revisión Post-Lanzamiento",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Revisión que ocurre generalmente entre 12 y 18 meses después de la comercialización, donde se compara el desempeño real (ingresos, costos, gastos, ganancias, tiempos) contra las proyecciones hechas en los Gates 3 y 5. Incluye una auditoría retrospectiva del proyecto completo para identificar aprendizajes y mejorar procesos futuros (kaizen). Muchas empresas hacen dos revisiones: una temprana (1-2 meses) para correcciones inmediatas y otra tardía (12-24 meses) para rendición de cuentas final.",
+  "resumen_teorico": "Revisión que ocurre generalmente entre 12 y 18 meses después de la comercialización, donde se compara el desempeño real (ingresos, costos, gastos, ganancias, tiempos) contra las proyecciones hechas en los Gates 3 y 5. Incluye una auditoría retrospectiva del proyecto completo para identificar aprendizajes y mejorar procesos futuros (kaizen). Muchas empresas hacen dos revisiones: una temprana (1-2 meses) para correcciones inmediatas y el análisis retrospectivo mientras los recuerdos están frescos, y otra tardía (12-24 meses) para rendición de cuentas final.",
   "pasos_accionables": [
     "Comparar resultados reales de ventas, costos y ganancias contra las proyecciones originales",
     "Evaluar la responsabilidad y desempeño del equipo del proyecto",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Revisa tu Desempeño Post-Lanzamiento",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-post_launch_review-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisión que ocurre generalmente entre 12 y 18 meses después de la comercialización, donde se compara el desempeño real (ingresos, costos, gastos, ganancias, tiempos) contra las proyecciones hechas en los Gates 3 y 5. Incluye una auditoría retrospectiva del proyecto completo para identificar aprendizajes y mejorar procesos futuros (kaizen). Muchas empresas hacen dos revisiones: una temprana (1-2 meses) para correcciones inmediatas y otra tardía (12-24 meses) para rendición de cuentas final.",
+      "texto_nuevo": "Revisión que ocurre generalmente entre 12 y 18 meses después de la comercialización, donde se compara el desempeño real (ingresos, costos, gastos, ganancias, tiempos) contra las proyecciones hechas en los Gates 3 y 5. Incluye una auditoría retrospectiva del proyecto completo para identificar aprendizajes y mejorar procesos futuros (kaizen). Muchas empresas hacen dos revisiones: una temprana (1-2 meses) para correcciones inmediatas y el análisis retrospectivo mientras los recuerdos están frescos, y otra tardía (12-24 meses) para rendición de cuentas final.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3252",
+        "frase": "undertake a retrospective analysis of the project... while memories are still fresh"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro sitúa el análisis retrospectivo en la revisión temprana, mientras los recuerdos están frescos; el nodo lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

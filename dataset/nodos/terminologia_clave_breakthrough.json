@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Terminología Clave para Diagnóstico de Breakthrough",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para realizar un diagnóstico riguroso es esencial dominar conceptos clave: defecto (no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada, sigue el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (proceso de estudiar síntomas y probar teorías) y remedio (cambio que elimina la causa).",
+  "resumen_teorico": "Para un diagnóstico riguroso es esencial dominar conceptos clave: defecto (falta de aptitud para el uso o no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada; si hay varias, siguen el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (estudiar síntomas, teorizar causas, probar teorías y descubrir causas) y remedio (cambio que elimina o neutraliza la causa).",
   "pasos_accionables": [
     "Definir claramente cada término con el equipo antes de iniciar el diagnóstico",
     "Diferenciar síntomas de causas en cada problema detectado",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Domina los Términos Clave",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-022-terminologia_clave_breakthrough-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para realizar un diagnóstico riguroso es esencial dominar conceptos clave: defecto (no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada, sigue el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (proceso de estudiar síntomas y probar teorías) y remedio (cambio que elimina la causa).",
+      "texto_nuevo": "Para un diagnóstico riguroso es esencial dominar conceptos clave: defecto (falta de aptitud para el uso o no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada; si hay varias, siguen el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (estudiar síntomas, teorizar causas, probar teorías y descubrir causas) y remedio (cambio que elimina o neutraliza la causa).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7153-7165",
+        "frase": "Often there are multiple causes, in which case they follow the Pareto principle"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro define defecto también como falta de aptitud para el uso.; El remedio puede eliminar o neutralizar la causa; se cae la neutralización.; Endurece: solo cuando hay varias causas siguen el principio de Pareto.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.; Se caen dos de los cuatro elementos del diagnóstico: teorizar causas y descubrirlas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

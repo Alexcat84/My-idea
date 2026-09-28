@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Canal de Ingresos Cuando Tienes Dos Tipos de Usuarios (mercado multi-sided)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Si tu negocio funciona como Google o las redes sociales, con un lado de usuarios que no pagan y otro que sí, necesitas construir una hipótesis separada para ese segundo lado: normalmente son anunciantes que pagan por llegar a la audiencia que usa tu producto gratis. El valor de esa audiencia depende de su tamaño y de qué tan distinta sea de otras; si es pequeña o se parece a cualquier otra, te va a costar más venderla.",
+  "resumen_teorico": "Si tu negocio funciona como Google o las redes sociales, con un lado de usuarios que no pagan y otro que sí, necesitas construir una hipótesis separada para ese segundo lado: normalmente son anunciantes que pagan por llegar a la audiencia que usa tu producto gratis. El valor de esa audiencia depende de su tamaño y de qué tan distinta sea de otras; si es pequeña o se parece a cualquier otra, enfrentas los dos problemas más letales de un negocio que vive de la publicidad.",
   "pasos_accionables": [
     "Identifica posibles anunciantes o agencias que puedan interesarse en tu audiencia",
     "Estima cuánto estarían dispuestos a pagar y cómo se maneja ese proceso de venta",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Encuentra Quién Paga de Verdad",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-multi_sided_market_channel-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio funciona como Google o las redes sociales, con un lado de usuarios que no pagan y otro que sí, necesitas construir una hipótesis separada para ese segundo lado: normalmente son anunciantes que pagan por llegar a la audiencia que usa tu producto gratis. El valor de esa audiencia depende de su tamaño y de qué tan distinta sea de otras; si es pequeña o se parece a cualquier otra, te va a costar más venderla.",
+      "texto_nuevo": "Si tu negocio funciona como Google o las redes sociales, con un lado de usuarios que no pagan y otro que sí, necesitas construir una hipótesis separada para ese segundo lado: normalmente son anunciantes que pagan por llegar a la audiencia que usa tu producto gratis. El valor de esa audiencia depende de su tamaño y de qué tan distinta sea de otras; si es pequeña o se parece a cualquier otra, enfrentas los dos problemas más letales de un negocio que vive de la publicidad.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5894",
+        "frase": "Beware the two deadliest advertising-related problems for multi-sided marketers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta la audiencia pequeña y la indistinta como los dos problemas más letales; el nodo lo rebaja a 'costar más'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

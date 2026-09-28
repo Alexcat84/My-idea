@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Confirmar que la calidad tiene la máxima prioridad organizacional, sin conflictos con metas de venta u otras",
     "Establecer confianza mutua entre liderazgo y fuerza laboral",
-    "Asegurar que las condiciones de autocontrol estén cumplidas antes de delegar",
+    "Asegurar que las condiciones de autocontrol estén cumplidas antes de delegar, y aplicar la autoinspección solo a productos y procesos estables que cumplen especificaciones y a personas que ya demostraron su competencia",
     "Entrenar a los trabajadores en criterios de conformidad del producto",
-    "Implementar un proceso de certificación y auditoría periódica de las decisiones delegadas"
+    "Implementar un proceso de certificación de los trabajadores, que después pueden quedar sujetos a auditoría de sus decisiones"
   ],
   "entregable_esperado": "Programa formal de auto-inspección con criterios de certificación y plan de auditoría",
   "nodos_previos": [
@@ -26,5 +26,41 @@
   "etiqueta_arbol": "Deja que Inspeccionen su Propio Trabajo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-023-auto_inspeccion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar un proceso de certificación y auditoría periódica de las decisiones delegadas",
+      "texto_nuevo": "Implementar un proceso de certificación de los trabajadores, que después pueden quedar sujetos a auditoría de sus decisiones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8192",
+        "frase": "The successful candidates are certified and may be subject to audit of decisions thereafter."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los certificados pueden quedar sujetos a auditoría de sus decisiones; 'periódica' lo endurece y fija.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-023-auto_inspeccion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asegurar que las condiciones de autocontrol estén cumplidas antes de delegar",
+      "texto_nuevo": "Asegurar que las condiciones de autocontrol estén cumplidas antes de delegar, y aplicar la autoinspección solo a productos y procesos estables que cumplen especificaciones y a personas que ya demostraron su competencia",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23099",
+        "frase": "Self-inspection should apply only to products and processes that are stabilized and meet specifications"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la autoinspección a productos y procesos estables que cumplen especificaciones y a personas con competencia demostrada.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

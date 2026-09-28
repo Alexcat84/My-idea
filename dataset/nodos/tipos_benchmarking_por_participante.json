@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Tipos de Benchmarking según Participantes (Interno, Externo, Competitivo, No Competitivo)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Clasificación del benchmarking según el tipo de organización con la que se compara. El benchmarking interno compara operaciones similares dentro de la misma organización, siendo el más económico pero con menor potencial de aprendizaje. El externo compara con otras organizaciones, subdividiéndose en competitivo (mismo sector, alta sensibilidad de datos) y no competitivo (mismo sector sin competencia directa o cross-industry, con mayor apertura para compartir información).",
+  "resumen_teorico": "Clasificación del benchmarking según el tipo de organización con la que se compara. El benchmarking interno compara operaciones similares dentro de la misma organización; probablemente es el más económico, pero su potencial de aprendizaje suele ser menor. El externo compara con otras organizaciones, subdividiéndose en competitivo (mismo sector, alta sensibilidad de datos) y no competitivo (mismo sector sin competencia directa o cross-industry, con mayor apertura para compartir información).",
   "pasos_accionables": [
     "Definir si existen operaciones duplicadas internas que permitan benchmarking interno como primer paso seguro.",
     "Evaluar si los competidores directos son necesarios para el análisis o si basta con organizaciones no competidoras del mismo sector.",
     "Determinar el nivel de confidencialidad requerido según el tipo de participante elegido.",
-    "Seleccionar el tipo de benchmarking que maximice el aprendizaje según el grado de apertura de información disponible."
+    "Seleccionar el tipo de benchmarking sopesando la similitud con los participantes, el control sobre el proceso, el costo y el tiempo, el grado de apertura de información disponible y el potencial de aprendizaje."
   ],
   "entregable_esperado": "Documento de selección de tipo de benchmarking con justificación de participantes y nivel de confidencialidad requerido.",
   "nodos_previos": [
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Compárate con Otros, Estratégicamente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-022-tipos_benchmarking_por_participante-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificación del benchmarking según el tipo de organización con la que se compara. El benchmarking interno compara operaciones similares dentro de la misma organización, siendo el más económico pero con menor potencial de aprendizaje. El externo compara con otras organizaciones, subdividiéndose en competitivo (mismo sector, alta sensibilidad de datos) y no competitivo (mismo sector sin competencia directa o cross-industry, con mayor apertura para compartir información).",
+      "texto_nuevo": "Clasificación del benchmarking según el tipo de organización con la que se compara. El benchmarking interno compara operaciones similares dentro de la misma organización; probablemente es el más económico, pero su potencial de aprendizaje suele ser menor. El externo compara con otras organizaciones, subdividiéndose en competitivo (mismo sector, alta sensibilidad de datos) y no competitivo (mismo sector sin competencia directa o cross-industry, con mayor apertura para compartir información).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17084",
+        "frase": "likely also to be the least costly and time-consuming way to benchmark"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece ambas cosas: probablemente el menos costoso y un aprendizaje que suele ser más limitado.; Endurece: el libro dice que probablemente es el menos costoso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-tipos_benchmarking_por_participante-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar el tipo de benchmarking que maximice el aprendizaje según el grado de apertura de información disponible.",
+      "texto_nuevo": "Seleccionar el tipo de benchmarking sopesando la similitud con los participantes, el control sobre el proceso, el costo y el tiempo, el grado de apertura de información disponible y el potencial de aprendizaje.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17065-17075",
+        "frase": "specific benefits and drawbacks that need to be considered when selecting"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide sopesar cinco factores al elegir; el paso reduce la elección al aprendizaje y la apertura.; Mismo defecto: se caen la similitud, el control y el costo y tiempo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

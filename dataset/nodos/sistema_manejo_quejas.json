@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema Organizado de Manejo de Quejas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, y medir el impacto de tus resoluciones en la lealtad de marca, fortalece la confianza a largo plazo.",
+  "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, reduce su ansiedad.",
   "pasos_accionables": [
     "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
     "Crea una base de datos simple, aunque sea una hoja de cálculo, para registrar cada queja recibida",
@@ -108,6 +108,22 @@
         "motivo": "La publicidad indirecta en redes y el sistema de quejas son temas distintos; solo comparten la palabra lealtad."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-024-sistema_manejo_quejas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, y medir el impacto de tus resoluciones en la lealtad de marca, fortalece la confianza a largo plazo.",
+      "texto_nuevo": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, reduce su ansiedad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "836",
+        "frase": "Nevertheless, being kept informed reduces the anxiety"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que mantenerlos informados reduce la ansiedad; la confianza a largo plazo no está.; Que medir el impacto de las resoluciones fortalezca la confianza no lo dice el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

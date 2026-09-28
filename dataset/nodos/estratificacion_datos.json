@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La estratificación es la separación de datos en categorías para identificar qué grupos contribuyen a un problema de calidad. Se usa en análisis de problemas, identificación de proyectos, análisis de síntomas, prueba de hipótesis y desarrollo de soluciones. Ayuda a responder preguntas sobre frecuencia de defectos, factores contribuyentes y diferencias entre grupos (estratos), como en el caso de comparar proveedores distintos.",
   "pasos_accionables": [
-    "Seleccionar las variables de estratificación relevantes",
+    "Seleccionar las variables de estratificación relevantes y, si vas a recolectar datos nuevos, registrar como identificadores todas las variables de estratificación posibles",
     "Establecer categorías (valores discretos o rangos) para cada variable",
     "Clasificar las observaciones en las categorías correspondientes",
     "Calcular el fenómeno medido (conteo, promedio o histograma) para cada categoría",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Separa tus Datos por Grupos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-020-estratificacion_datos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar las variables de estratificación relevantes",
+      "texto_nuevo": "Seleccionar las variables de estratificación relevantes y, si vas a recolectar datos nuevos, registrar como identificadores todas las variables de estratificación posibles",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18774",
+        "frase": "be certain that all potential stratification variables are collected as identifiers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que, si se recogen datos nuevos, se registren como identificadores todas las variables de estratificación posibles.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

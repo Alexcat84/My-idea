@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Selección de Sujetos de Control (Control Subjects)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.",
+  "resumen_teorico": "Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, rasgos del proceso, regulaciones, seguridad y ambiente, efectos secundarios a evitar, FMEA, planes de control y diseño de experimentos.",
   "pasos_accionables": [
     "Identificar los procesos y productos clave a controlar",
     "Definir los objetivos del proceso de trabajo",
-    "Traducir la voz del cliente en características de producto (KPC)",
+    "Identificar a los clientes del proceso y traducir su voz en características de producto (KPC)",
     "Identificar características de control de proceso (KCC) relacionadas",
     "Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Elige qué Vas a Controlar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-024-sujetos_de_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.",
+      "texto_nuevo": "Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, rasgos del proceso, regulaciones, seguridad y ambiente, efectos secundarios a evitar, FMEA, planes de control y diseño de experimentos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7485-7503",
+        "frase": "Need to avoid side effects such as irritations to stakeholders"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de fuentes del libro incluye proceso, medio ambiente, efectos secundarios y planes de control.; Misma lista incompleta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-024-sujetos_de_control-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Traducir la voz del cliente en características de producto (KPC)",
+      "texto_nuevo": "Identificar a los clientes del proceso y traducir su voz en características de producto (KPC)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7485",
+        "frase": "identify the customers of the process, and then select the control subjects"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye identificar a los clientes del proceso.; Mismo paso omitido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando un inversionista te ofrece una propuesta formal de inversión (term sheet), sus abogados te van a pedir documentación extensa: tabla de socios y porcentajes (cap table), contratos con clientes, contratos de empleados, actas de tus reuniones de junta, entre otros. Organiza todos estos documentos con anticipación para no frenar el proceso, y nunca escondas información problemática: la transparencia es lo que te da confianza a largo plazo con quien te está invirtiendo.",
   "pasos_accionables": [
     "Armas y mantienes actualizada tu tabla de socios y porcentajes (cap table)",
-    "Reúnes los contratos con clientes, empleados y proveedores relevantes",
+    "Reúnes los contratos relevantes con clientes y los contratos de empleados",
     "Organizas las actas de tus reuniones de junta",
     "Revisas un listado de documentos típicos de esta revisión a fondo, disponible en recursos como venturedeals.com",
     "Cuentas por adelantado cualquier problema o zona gris de tu negocio"
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Prepara tus Documentos Legales",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-materiales_due_diligence-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúnes los contratos con clientes, empleados y proveedores relevantes",
+      "texto_nuevo": "Reúnes los contratos relevantes con clientes y los contratos de empleados",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "536",
+        "frase": "such as capitalization tables, material customer agreements, employment agreements, and board meeting minutes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra contratos con clientes y de empleo, no con proveedores.; Mismo elemento añadido a la lista.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gestión Efectiva de Iniciativas de Benchmarking",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para que una iniciativa de benchmarking tenga éxito, debe gestionarse con un equipo dedicado liderado por un dueño de proyecto (project owner), mientras la alta gerencia cumple roles clave: fijar metas de benchmarking, integrar el benchmarking al plan estratégico, actuar como modelo a seguir, establecer el entorno para el cambio, crear la infraestructura necesaria (capacitación, reconocimiento) y monitorear el progreso. Es esencial que el bajo desempeño identificado no sea castigado, ya que el benchmarking no debe usarse como herramienta de evaluación de personal.",
+  "resumen_teorico": "Para que una iniciativa de benchmarking tenga éxito, debe gestionarse de forma efectiva, normalmente con un equipo de varias disciplinas liderado por un dueño de proyecto (project owner), mientras la alta gerencia cumple roles clave: fijar metas de benchmarking, integrar el benchmarking al plan estratégico, actuar como modelo a seguir, establecer el entorno para el cambio, crear la infraestructura necesaria (capacitación, reconocimiento) y monitorear el progreso. Es esencial que el bajo desempeño identificado no sea castigado, ya que el benchmarking no debe usarse como herramienta de evaluación de personal.",
   "pasos_accionables": [
     "Establecer un equipo de benchmarking multidisciplinario con un project owner al frente",
     "Definir y documentar una política de benchmarking con metas claras",
@@ -43,5 +43,23 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-021-gestion_efectiva_benchmarking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para que una iniciativa de benchmarking tenga éxito, debe gestionarse con un equipo dedicado liderado por un dueño de proyecto (project owner), mientras la alta gerencia cumple roles clave: fijar metas de benchmarking, integrar el benchmarking al plan estratégico, actuar como modelo a seguir, establecer el entorno para el cambio, crear la infraestructura necesaria (capacitación, reconocimiento) y monitorear el progreso. Es esencial que el bajo desempeño identificado no sea castigado, ya que el benchmarking no debe usarse como herramienta de evaluación de personal.",
+      "texto_nuevo": "Para que una iniciativa de benchmarking tenga éxito, debe gestionarse de forma efectiva, normalmente con un equipo de varias disciplinas liderado por un dueño de proyecto (project owner), mientras la alta gerencia cumple roles clave: fijar metas de benchmarking, integrar el benchmarking al plan estratégico, actuar como modelo a seguir, establecer el entorno para el cambio, crear la infraestructura necesaria (capacitación, reconocimiento) y monitorear el progreso. Es esencial que el bajo desempeño identificado no sea castigado, ya que el benchmarking no debe usarse como herramienta de evaluación de personal.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17633",
+        "frase": "will normally establish a benchmarking team comprising individuals from a range of disciplines"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro exige gestión efectiva y dice que el equipo se forma normalmente, de varias disciplinas; el nodo lo vuelve obligatorio y dedicado.; Mismo defecto: 'normally' pasa a obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

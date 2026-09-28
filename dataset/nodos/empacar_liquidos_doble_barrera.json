@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Empacar líquidos con doble o triple barrera",
   "fuente": "Requisitos de empaque de los couriers",
-  "resumen_teorico": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+  "resumen_teorico": "Los líquidos y polvos necesitan más de una barrera. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
   "pasos_accionables": [
     "Sugerencia de My Idea: verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
     "Sugerencia de My Idea: coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
@@ -107,6 +107,22 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R051-032 (CONTRARIO, lector y verificador de acuerdo): Cambia la cifra de capas que da la fuente. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R051-032"
+    },
+    {
+      "id": "final-e1-028-empacar_liquidos_doble_barrera-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+      "texto_nuevo": "Los líquidos y polvos necesitan más de una barrera. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "52-54",
+        "frase": "envase a prueba de fugas, sellado DENTRO de bolsa plástica, y en caja resistente"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe las barreras pero no afirma que un envase fallido arruine el paquete ni dañe otros envíos.; Mismo porqué inventado que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Identificar posibles escenarios de desalineación entre fundador e inversionista (ej. empresa estancada)",
     "Negociar un asiento en el directorio para el VC como mecanismo de control",
     "Considerar un número impar de miembros del directorio con al menos un independiente",
-    "Evaluar derechos de redención como presión adicional en decisiones críticas"
+    "Evaluar derechos de redención para el VC como presión adicional en decisiones críticas, sabiendo que pueden no resultarte aceptables como director general"
   ],
   "entregable_esperado": "Estructura de gobierno corporativo que mitigue costos de agencia",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Cuidado con Intereses Distintos",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-035-costos_agencia_asimetria_informacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar derechos de redención como presión adicional en decisiones críticas",
+      "texto_nuevo": "Evaluar derechos de redención para el VC como presión adicional en decisiones críticas, sabiendo que pueden no resultarte aceptables como director general",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4539",
+        "frase": "while not necessarily palatable to the CEO, provides some additional pressure"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los derechos de redención del VC pueden no ser aceptables para el director general, a quien se dirige el nodo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

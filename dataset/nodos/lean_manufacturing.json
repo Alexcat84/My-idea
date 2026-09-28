@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el valor desde la perspectiva del cliente",
     "Mapear el flujo de valor actual (Value Stream Map)",
-    "Identificar y eliminar actividades sin valor agregado",
+    "Identificar y eliminar actividades sin valor agregado (muda), atendiendo también la sobrecarga (muri) y la irregularidad (mura), no solo lo primero",
     "Implementar sistema pull basado en takt time",
     "Establecer controles para sostener las mejoras"
   ],
@@ -40,6 +40,23 @@
         "evidencia": "Q078-012: Lean mapea el flujo actual y elimina desperdicios de una operacion manufacturera ya en marcha: es mejorar lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-037-lean_manufacturing-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar y eliminar actividades sin valor agregado",
+      "texto_nuevo": "Identificar y eliminar actividades sin valor agregado (muda), atendiendo también la sobrecarga (muri) y la irregularidad (mura), no solo lo primero",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13050",
+        "frase": "One must ensure that all three waste types are addressed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que atender solo el muda es reactivo e insuficiente y pide abordar también muri y mura.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros para la Salud (Industria General)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y requieren conocimiento especializado para detectarlos. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Requiere revisar SDS, realizar evaluaciones cuantitativas de exposición y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
   "pasos_accionables": [
     "Revisa SDS y etiquetas de productos para identificar químicos de riesgo",
     "Evalúa tu exposición a ruido, calor o radiación",
-    "Identifica fuentes de riesgo biológico como moho, plantas tóxicas, animales o alérgenos",
-    "Analiza tus tareas con factores de riesgo ergonómico como levantamiento de carga, repetición o vibración",
+    "Identifica fuentes de riesgo biológico como enfermedades infecciosas, moho, plantas tóxicas, animales o alérgenos",
+    "Analiza tus tareas con factores de riesgo ergonómico como levantamiento de carga, trabajo por encima del hombro, repetición o vibración",
     "Realiza muestreos de aire o mediciones directas cuando sea posible",
     "Revisa tus registros médicos anonimizados para detectar patrones de enfermedad ocupacional"
   ],
@@ -44,5 +44,57 @@
   "fuentes_internas": [
     "OSHA3885",
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-027-identificacion_peligros_salud-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y requieren conocimiento especializado para detectarlos. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Requiere revisar SDS, realizar evaluaciones cuantitativas de exposición y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+      "texto_nuevo": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "555-559",
+        "frase": "Identifying and assessing health hazards may require specialized knowledge."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que identificarlos puede requerir conocimiento especializado; el nodo lo afirma como requisito.; El libro pide evaluaciones cuantitativas cuando sea posible; el nodo las vuelve obligatorias.; Mismo defecto: faltan las fuentes de enfermedades infecciosas.; Mismo endurecimiento de \"may require specialized knowledge\".; Mismo endurecimiento: las evaluaciones cuantitativas son cuando sea posible.; Se cae el primer peligro biológico del libro: las enfermedades infecciosas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-027-identificacion_peligros_salud-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica fuentes de riesgo biológico como moho, plantas tóxicas, animales o alérgenos",
+      "texto_nuevo": "Identifica fuentes de riesgo biológico como enfermedades infecciosas, moho, plantas tóxicas, animales o alérgenos",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "551",
+        "frase": "exposed to sources of infectious diseases, molds, toxic or poisonous plants"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta el primer elemento de la lista biológica.; Se caen las fuentes de enfermedades infecciosas, primeras de la lista biológica del libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-027-identificacion_peligros_salud-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analiza tus tareas con factores de riesgo ergonómico como levantamiento de carga, repetición o vibración",
+      "texto_nuevo": "Analiza tus tareas con factores de riesgo ergonómico como levantamiento de carga, trabajo por encima del hombro, repetición o vibración",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "553",
+        "frase": "heavy lifting, work above shoulder height, repetitive motions, or tasks with significant vibration"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae de la lista el trabajo por encima de la altura del hombro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

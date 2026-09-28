@@ -7,7 +7,7 @@
   "resumen_teorico": "Waterfall Development es un proceso de ingeniería lineal y secuencial por etapas, donde todo el producto y sus características se especifican por adelantado y cada etapa se asigna a un equipo separado para mayor control. Es la antítesis del Agile Development, que es iterativo y flexible. Entender esta distinción es clave para elegir el enfoque de desarrollo de producto adecuado para un startup en búsqueda de su modelo de negocio.",
   "pasos_accionables": [
     "Evaluar si el contexto del proyecto requiere certeza total de requisitos (waterfall) o iteración (agile).",
-    "Para startups en fase de búsqueda, preferir metodologías ágiles que permitan pivotar.",
+    "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes.",
     "Alinear el proceso de desarrollo de producto con el proceso de Customer Development."
   ],
   "entregable_esperado": "Una decisión documentada sobre la metodología de desarrollo de producto a utilizar.",
@@ -41,6 +41,23 @@
         "motivo": "Tras ver la diferencia entre cascada y ágil, lo natural es ir a los valores y principios que fundan lo ágil."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-038-waterfall_vs_agile_development-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para startups en fase de búsqueda, preferir metodologías ágiles que permitan pivotar.",
+      "texto_nuevo": "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1002-1004",
+        "frase": "Customer Development is useless unless the product development organization can iterate the product"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz: 'preferir' lo vuelve opcional.; Para el libro lo ágil es una necesidad, no una preferencia: sin ello el desarrollo de clientes no sirve.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

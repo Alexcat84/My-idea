@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "Fórmula Exponencial de Confiabilidad y MTBF",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de sobrevivir exactamente el tiempo del MTBF es solo del 37%.",
+  "resumen_teorico": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de operar sin fallo un tiempo igual o mayor que el MTBF es solo del 37%.",
   "pasos_accionables": [
-    "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil)",
+    "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil); como normalmente no hay datos suficientes para comprobarlo, ten en cuenta que a menudo se cumple cuando las fallas tempranas se eliminaron antes de la entrega y el producto o sus piezas se reemplazan antes del desgaste",
     "Calcular el MTBF a partir de datos históricos de fallos",
     "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial",
     "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
@@ -68,6 +68,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-e1-021-formula_exponencial_confiabilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de sobrevivir exactamente el tiempo del MTBF es solo del 37%.",
+      "texto_nuevo": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de operar sin fallo un tiempo igual o mayor que el MTBF es solo del 37%.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20188",
+        "frase": "operate without failure for a time equal to or greater than it's MTBF"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El 37 % es la probabilidad de operar sin fallo un tiempo igual o mayor que el MTBF, no exactamente ese tiempo.; Mismo defecto: se pierde el 'o mayor'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-021-formula_exponencial_confiabilidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil)",
+      "texto_nuevo": "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil); como normalmente no hay datos suficientes para comprobarlo, ten en cuenta que a menudo se cumple cuando las fallas tempranas se eliminaron antes de la entrega y el producto o sus piezas se reemplazan antes del desgaste",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20175",
+        "frase": "In practice, sufficient data usually are not available to evaluate the assumption."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que normalmente no hay datos para evaluar el supuesto y que a menudo se cumple bajo dos condiciones; el paso las pierde.; Mismo defecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

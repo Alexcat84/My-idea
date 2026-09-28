@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Registro de Pensamientos Marginales (Fringe-thoughts)",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Mientras trabajamos en una tarea principal, surgen en la periferia de la conciencia ideas secundarias o 'pensamientos marginales' que pueden ser muy valiosos. Conviene desarrollar el hábito de anotarlos brevemente sin interrumpir el foco principal del trabajo, para revisarlos y desarrollarlos más tarde. Estos pensamientos, escritos en su forma más cruda y personal, suelen encontrar naturalmente su lugar en el argumento principal o revelar nuevas conexiones inesperadas.",
+  "resumen_teorico": "Mientras trabajamos en una tarea principal, surgen en la periferia de la conciencia ideas secundarias o 'pensamientos marginales' que pueden ser muy valiosos. Conviene desarrollar el hábito de anotarlos brevemente sin interrumpir el foco principal del trabajo, para revisarlos y desarrollarlos más tarde, salvo si uno resulta más importante que la tarea y conviene pausarla para desarrollarlo. Estos pensamientos, escritos en su forma más cruda y personal, suelen encontrar naturalmente su lugar en el argumento principal o revelar nuevas conexiones inesperadas.",
   "pasos_accionables": [
     "Mantener siempre a mano una libreta o método rápido de anotación (notas, corchetes, taquigrafía personal).",
-    "Anotar cualquier pensamiento marginal significativo tan pronto como aparezca, sin abandonar la tarea principal.",
+    "Anotar cualquier pensamiento marginal significativo tan pronto como aparezca, sin abandonar la tarea principal, salvo que resulte más importante que ella: entonces puede convenir interrumpirla un momento para desarrollarlo.",
     "Revisar semanalmente las notas acumuladas y reorganizar los pensamientos marginales en las secciones correspondientes.",
-    "Crear una carpeta o categoría 'Redistribuir' para ideas que no encajan aún en ningún tema definido.",
+    "Crear una carpeta o categoría 'Redistribuir' para ideas que no encajan aún en ningún tema definido, y revisarla con cuidado de vez en cuando: ahí es donde es más probable encontrar ideas nuevas.",
     "Mantener carpetas temáticas (al estilo Darwin) para agrupar pensamientos recurrentes sobre temas específicos."
   ],
   "entregable_esperado": "Un sistema de notas y carpetas organizado que capture ideas marginales para su desarrollo posterior, evitando la pérdida de pensamientos valiosos.",
@@ -41,6 +41,56 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-020 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-030-gestion_de_pensamientos_marginales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mientras trabajamos en una tarea principal, surgen en la periferia de la conciencia ideas secundarias o 'pensamientos marginales' que pueden ser muy valiosos. Conviene desarrollar el hábito de anotarlos brevemente sin interrumpir el foco principal del trabajo, para revisarlos y desarrollarlos más tarde. Estos pensamientos, escritos en su forma más cruda y personal, suelen encontrar naturalmente su lugar en el argumento principal o revelar nuevas conexiones inesperadas.",
+      "texto_nuevo": "Mientras trabajamos en una tarea principal, surgen en la periferia de la conciencia ideas secundarias o 'pensamientos marginales' que pueden ser muy valiosos. Conviene desarrollar el hábito de anotarlos brevemente sin interrumpir el foco principal del trabajo, para revisarlos y desarrollarlos más tarde, salvo si uno resulta más importante que la tarea y conviene pausarla para desarrollarlo. Estos pensamientos, escritos en su forma más cruda y personal, suelen encontrar naturalmente su lugar en el argumento principal o revelar nuevas conexiones inesperadas.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "537",
+        "frase": "a fringe-thought may sometimes be recognized as more important than the main thought-train"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que a veces un pensamiento marginal es más importante que la tarea y conviene interrumpirla para desarrollarlo; esa excepción se cae.; Misma excepción perdida que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-030-gestion_de_pensamientos_marginales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anotar cualquier pensamiento marginal significativo tan pronto como aparezca, sin abandonar la tarea principal.",
+      "texto_nuevo": "Anotar cualquier pensamiento marginal significativo tan pronto como aparezca, sin abandonar la tarea principal, salvo que resulte más importante que ella: entonces puede convenir interrumpirla un momento para desarrollarlo.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "537",
+        "frase": "a temporary interruption of work may be desirable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro prevé que un pensamiento marginal resulte más importante que la tarea y convenga interrumpirla; la excepción se cae.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-030-gestion_de_pensamientos_marginales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear una carpeta o categoría 'Redistribuir' para ideas que no encajan aún en ningún tema definido.",
+      "texto_nuevo": "Crear una carpeta o categoría 'Redistribuir' para ideas que no encajan aún en ningún tema definido, y revisarla con cuidado de vez en cuando: ahí es donde es más probable encontrar ideas nuevas.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "537",
+        "frase": "in such a collection that new ideas are most likely to be found"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro manda revisar esa carpeta con cuidado de vez en cuando porque ahí es más probable hallar ideas nuevas; el paso solo manda crearla.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

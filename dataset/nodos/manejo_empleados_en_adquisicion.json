@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Asuntos de Empleados durante la Venta de la Empresa",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El board y el management tienen responsabilidad fiduciaria hacia los accionistas, pero también deben cuidar a los empleados que construyeron la empresa. Negociar paquetes de compensación para empleados clave demasiado pronto genera desconfianza en el comprador y fricción con inversionistas; negociarlo demasiado tarde da ventaja excesiva al comprador. El balance temporal es clave.",
+  "resumen_teorico": "El board y el management tienen responsabilidad fiduciaria hacia los accionistas, pero también deben cuidar a los empleados que construyeron la empresa. Negociar paquetes de compensación para empleados clave demasiado pronto suele generar desconfianza en el comprador y fricción con inversionistas; negociarlo demasiado tarde da ventaja excesiva al comprador. El balance temporal es clave.",
   "pasos_accionables": [
     "Posponer la negociación detallada de compensación individual hasta después de firmado el LOI.",
     "No dejar la negociación de contratos de empleo para el final del proceso.",
     "Balancear los intereses de empleados, management e inversionistas de forma transparente.",
-    "Evaluar el impacto reputacional de no cuidar adecuadamente a los empleados en la salida."
+    "Cuidar adecuadamente a los empleados en la transacción, recordando que solo podrás hacerlo si la venta llega a concretarse."
   ],
   "entregable_esperado": "Plan de comunicación y negociación de compensación de empleados clave alineado con el timeline de la transacción.",
   "nodos_previos": [
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Cuida a tu Gente al Vender",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-manejo_empleados_en_adquisicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El board y el management tienen responsabilidad fiduciaria hacia los accionistas, pero también deben cuidar a los empleados que construyeron la empresa. Negociar paquetes de compensación para empleados clave demasiado pronto genera desconfianza en el comprador y fricción con inversionistas; negociarlo demasiado tarde da ventaja excesiva al comprador. El balance temporal es clave.",
+      "texto_nuevo": "El board y el management tienen responsabilidad fiduciaria hacia los accionistas, pero también deben cuidar a los empleados que construyeron la empresa. Negociar paquetes de compensación para empleados clave demasiado pronto suele generar desconfianza en el comprador y fricción con inversionistas; negociarlo demasiado tarde da ventaja excesiva al comprador. El balance temporal es clave.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4264",
+        "frase": "typically makes buyers uncomfortable with the motivation of the management team for the sale"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esto 'typically' y 'often' ocurre; el resumen lo da como seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-038-manejo_empleados_en_adquisicion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el impacto reputacional de no cuidar adecuadamente a los empleados en la salida.",
+      "texto_nuevo": "Cuidar adecuadamente a los empleados en la transacción, recordando que solo podrás hacerlo si la venta llega a concretarse.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4264",
+        "frase": "there won't be an opportunity to take care of everyone appropriately if you don't"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de impacto reputacional; dice que solo podrás cuidar a todos si la transacción llega a hacerse.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

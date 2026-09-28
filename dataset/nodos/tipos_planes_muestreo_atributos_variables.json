@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planes de Muestreo por Atributos y por Variables",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los planes de muestreo de aceptación se dividen en dos tipos: por atributos (cada unidad se clasifica como aceptable/defectuosa y se compara el número de defectuosos contra un límite) y por variables (se mide una característica cuantitativa y se calcula un estadístico como la media, comparándolo con un valor permitido). Los planes por variables requieren muestras más pequeñas pero deben evaluar cada característica por separado, mientras que los de atributos permiten agrupar varias características en un solo criterio de aceptación.",
+  "resumen_teorico": "Los planes de muestreo de aceptación se dividen en dos tipos: por atributos (cada unidad se clasifica como aceptable/defectuosa y se compara el número de defectuosos contra un límite) y por variables (se mide una característica cuantitativa y se calcula un estadístico como la media, comparándolo con un valor permitido). Los planes por variables requieren muestras más pequeñas que un plan por atributos con los mismos riesgos, pero deben evaluar cada característica por separado, mientras que los de atributos permiten agrupar varias características en un solo criterio de aceptación.",
   "pasos_accionables": [
     "Determinar si el producto tiene características medibles cuantitativamente o solo clasificables como pasa/no pasa",
     "Elegir plan de variables si se busca menor tamaño de muestra y hay pocas características críticas",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Elige tu Plan de Muestreo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-022-tipos_planes_muestreo_atributos_variables-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los planes de muestreo de aceptación se dividen en dos tipos: por atributos (cada unidad se clasifica como aceptable/defectuosa y se compara el número de defectuosos contra un límite) y por variables (se mide una característica cuantitativa y se calcula un estadístico como la media, comparándolo con un valor permitido). Los planes por variables requieren muestras más pequeñas pero deben evaluar cada característica por separado, mientras que los de atributos permiten agrupar varias características en un solo criterio de aceptación.",
+      "texto_nuevo": "Los planes de muestreo de aceptación se dividen en dos tipos: por atributos (cada unidad se clasifica como aceptable/defectuosa y se compara el número de defectuosos contra un límite) y por variables (se mide una característica cuantitativa y se calcula un estadístico como la media, comparándolo con un valor permitido). Los planes por variables requieren muestras más pequeñas que un plan por atributos con los mismos riesgos, pero deben evaluar cada característica por separado, mientras que los de atributos permiten agrupar varias características en un solo criterio de aceptación.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24987",
+        "frase": "smaller sample sizes compared with an attributes plan that has the same risks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La ventaja de muestra menor es frente a un plan por atributos con los mismos riesgos.; Mismo defecto: se cae la condición de iguales riesgos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

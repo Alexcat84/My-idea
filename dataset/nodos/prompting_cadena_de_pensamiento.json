@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Prompting en Cadena de Pensamiento (Chain-of-Thought)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Técnica que consiste en pedir a la IA que razone paso a paso, dividiendo una tarea compleja en subpasos secuenciales (listar opciones, criticarlas, compararlas en una tabla, elegir la mejor). Esto mejora significativamente la calidad y precisión de las respuestas frente a preguntas directas de una sola vez, permitiendo además revisar y refinar cada etapa del proceso.",
+  "resumen_teorico": "Técnica que consiste en darle a la IA, antes de tu pedido, un ejemplo de cómo quieres que razone, o en pedirle que razone paso a paso, dividiendo una tarea compleja en subpasos secuenciales (listar opciones, criticarlas, compararlas en una tabla, elegir la mejor). Esto tiende a hacer más precisas las respuestas frente a preguntas directas de una sola vez, permitiendo además revisar y refinar cada etapa del proceso.",
   "pasos_accionables": [
     "Dividir la tarea compleja en pasos secuenciales explícitos",
     "Pedir a la IA que primero liste opciones o ideas",
@@ -38,6 +38,22 @@
         "motivo": "Una tecnica de prompting no tiene como continuacion la IA aplicada a la cadena de suministro."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-037-prompting_cadena_de_pensamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica que consiste en pedir a la IA que razone paso a paso, dividiendo una tarea compleja en subpasos secuenciales (listar opciones, criticarlas, compararlas en una tabla, elegir la mejor). Esto mejora significativamente la calidad y precisión de las respuestas frente a preguntas directas de una sola vez, permitiendo además revisar y refinar cada etapa del proceso.",
+      "texto_nuevo": "Técnica que consiste en darle a la IA, antes de tu pedido, un ejemplo de cómo quieres que razone, o en pedirle que razone paso a paso, dividiendo una tarea compleja en subpasos secuenciales (listar opciones, criticarlas, compararlas en una tabla, elegir la mejor). Esto tiende a hacer más precisas las respuestas frente a preguntas directas de una sola vez, permitiendo además revisar y refinar cada etapa del proceso.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1235",
+        "frase": "which will tend to make the output of your prompts more accurate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que tiende a hacer la respuesta más precisa; 'mejora significativamente' endurece.; Mismo endurecimiento que la marca 0.; Mismo matiz que la marca 1.; Se cae la forma que el libro llama cadena de pensamiento: darle antes del pedido un ejemplo de cómo quieres que razone.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

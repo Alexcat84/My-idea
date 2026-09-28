@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Selección del Tipo de Modelo de IA según Necesidad del Negocio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Existen distintos tipos de LLMs disponibles: modelos pequeños y especializados (baratos, ideales para tareas simples y de alto volumen como responder preguntas frecuentes), modelos open-source (gratuitos, modificables, con comunidades de desarrolladores) y Frontier Models (los más avanzados y costosos, con capacidades emergentes pero también mayor costo de operación). Elegir el modelo correcto depende del presupuesto, la complejidad de la tarea y la necesidad de personalización.",
+  "resumen_teorico": "Existen distintos tipos de LLMs disponibles: modelos pequeños y especializados (limitados en capacidad pero baratos, ideales para usos acotados como responder preguntas simples de atención al cliente), modelos open-source (gratuitos, modificables, con comunidades de desarrolladores) y Frontier Models (los más avanzados y costosos, con capacidades emergentes pero también mayor costo de operación).",
   "pasos_accionables": [
     "Definir la complejidad de la tarea que la IA debe resolver",
     "Evaluar el presupuesto disponible para infraestructura de IA",
     "Comparar modelos pequeños/especializados vs open-source vs frontier models",
-    "Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+    "Sugerencia de My Idea: Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
     "Decidir según relación costo-beneficio y facilidad de integración"
   ],
   "entregable_esperado": "Documento de decisión que especifique qué tipo de modelo de IA usará el negocio y por qué, con pruebas piloto realizadas.",
@@ -40,6 +40,39 @@
         "evidencia": "F05-002: Elegir el modelo de IA según presupuesto y complejidad es decidir recursos y tecnología para el negocio, no explorar la idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-037-seleccion_modelo_ia_adecuado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen distintos tipos de LLMs disponibles: modelos pequeños y especializados (baratos, ideales para tareas simples y de alto volumen como responder preguntas frecuentes), modelos open-source (gratuitos, modificables, con comunidades de desarrolladores) y Frontier Models (los más avanzados y costosos, con capacidades emergentes pero también mayor costo de operación). Elegir el modelo correcto depende del presupuesto, la complejidad de la tarea y la necesidad de personalización.",
+      "texto_nuevo": "Existen distintos tipos de LLMs disponibles: modelos pequeños y especializados (limitados en capacidad pero baratos, ideales para usos acotados como responder preguntas simples de atención al cliente), modelos open-source (gratuitos, modificables, con comunidades de desarrolladores) y Frontier Models (los más avanzados y costosos, con capacidades emergentes pero también mayor costo de operación).",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "219",
+        "frase": "small, specialized LLMs that are limited in capability but also very cheap"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de usos acotados como preguntas simples de atención al cliente; 'alto volumen' no está.; El libro solo describe los tres tipos; no afirma de qué depende la elección.; Se cae que los modelos pequeños están limitados en capacidad, lo que pesa en la elección.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-037-seleccion_modelo_ia_adecuado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+      "texto_nuevo": "Sugerencia de My Idea: Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "219",
+        "frase": "There are now small, specialized LLMs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de pruebas piloto ni fija un mínimo de opciones; queda como sugerencia de la casa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

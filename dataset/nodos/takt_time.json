@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Takt Time y Producción en Flujo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos, dimensionar tu dotación de trabajo y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando sea posible. Si la demanda varía mucho, considera manejar líneas de valor separadas para no desbalancear tu operación completa.",
+  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos y dimensionar tu dotación de trabajo; reducir restricciones como los tiempos de cambio permite lotes más pequeños e, idealmente, flujo de una sola pieza, y si lo logras eliminas la sobreproducción. Si la demanda varía mucho, considera manejar líneas de valor separadas, cada una con su propio takt time y sus propios recursos.",
   "pasos_accionables": [
     "Calcular la demanda del cliente en un periodo definido",
-    "Determinar el takt time dividiendo el tiempo disponible entre la demanda",
+    "Determinar el takt time dividiendo el tiempo disponible entre la demanda; si la variabilidad del proceso obliga a ajustarlo, llamarlo takt práctico y tratar ese ajuste como desperdicio planeado",
     "Comparar el takt time con tu capacidad demostrada y teórica",
     "Ajustar tu dotación de trabajo y balancear las estaciones según el takt",
     "Reducir tiempos de cambio (setup) para permitir lotes más pequeños",
@@ -68,6 +68,39 @@
         "motivo": "Referencia de un nodo vivo a value_stream_mapping_2, deprecado; su superviviente es mapeo_flujo_valor."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-022-takt_time-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos, dimensionar tu dotación de trabajo y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando sea posible. Si la demanda varía mucho, considera manejar líneas de valor separadas para no desbalancear tu operación completa.",
+      "texto_nuevo": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos y dimensionar tu dotación de trabajo; reducir restricciones como los tiempos de cambio permite lotes más pequeños e, idealmente, flujo de una sola pieza, y si lo logras eliminas la sobreproducción. Si la demanda varía mucho, considera manejar líneas de valor separadas, cada una con su propio takt time y sus propios recursos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13329, 13490",
+        "frase": "If this reduction can be achieved, it will eliminate overproduction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye la eliminación de la sobreproducción a reducir restricciones y lograr lotes pequeños o flujo de una pieza, no a la comparación con la capacidad.; El libro recomienda varias líneas de valor, cada una con su takt y sus recursos; el porqué de no desbalancear la operación es añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-takt_time-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar el takt time dividiendo el tiempo disponible entre la demanda",
+      "texto_nuevo": "Determinar el takt time dividiendo el tiempo disponible entre la demanda; si la variabilidad del proceso obliga a ajustarlo, llamarlo takt práctico y tratar ese ajuste como desperdicio planeado",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13375",
+        "frase": "Although modifiers may be planned, they are still waste, or planned waste."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el takt puede necesitar ajuste por la variabilidad, con otro nombre y como desperdicio planeado.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

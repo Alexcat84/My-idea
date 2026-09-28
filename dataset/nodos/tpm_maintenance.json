@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Mantenimiento Productivo Total (TPM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Filosofía de mantenimiento basada en la participación total de los empleados (mantenimiento autónomo), donde el operador es el experto del proceso y realiza tareas rutinarias de limpieza, lubricación y ajuste, enfocándose en eliminar pérdidas y lograr cero fallas y cero defectos.",
+  "resumen_teorico": "Filosofía de mantenimiento basada en la participación total de los empleados (mantenimiento autónomo): el operador es el experto del proceso, detiene anomalías y fuentes de deterioro acelerado y realiza la limpieza, lubricación y ajuste rutinarios, buscando eliminar pérdidas hasta llegar a cero, incluidas las de calidad.",
   "pasos_accionables": [
-    "Capacitar a los operadores en mantenimiento autónomo básico",
+    "Capacitar a los operadores en mantenimiento autónomo básico, incluido detener anomalías y otras fuentes de deterioro acelerado del equipo",
     "Establecer rutinas diarias de limpieza, lubricación y ajuste por parte del operador",
     "Identificar y eliminar fuentes de pérdidas de productividad",
-    "Integrar TPM con 6S para sostenibilidad",
-    "Medir mejoras mediante indicadores de disponibilidad y desempeño de equipo"
+    "Incorporar la capacitación de TPM al trabajo con 6S",
+    "Medir mejoras mediante indicadores de disponibilidad, eficiencia y calidad del equipo"
   ],
   "entregable_esperado": "Programa de mantenimiento autónomo implementado con operadores capacitados",
   "nodos_previos": [
@@ -27,5 +27,74 @@
   "etiqueta_arbol": "Involucra a Todos en Mantenimiento",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-022-tpm_maintenance-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Filosofía de mantenimiento basada en la participación total de los empleados (mantenimiento autónomo), donde el operador es el experto del proceso y realiza tareas rutinarias de limpieza, lubricación y ajuste, enfocándose en eliminar pérdidas y lograr cero fallas y cero defectos.",
+      "texto_nuevo": "Filosofía de mantenimiento basada en la participación total de los empleados (mantenimiento autónomo): el operador es el experto del proceso, detiene anomalías y fuentes de deterioro acelerado y realiza la limpieza, lubricación y ajuste rutinarios, buscando eliminar pérdidas hasta llegar a cero, incluidas las de calidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13608-13610",
+        "frase": "focuses on zero losses (including quality losses) for productivity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro apunta a cero pérdidas, incluidas las de calidad, no a cero fallas y cero defectos.; Mismo defecto: la meta de cero fallas y cero defectos no está en el libro.; Se cae de la lista de tareas del operador detener anomalías y otras fuentes de deterioro acelerado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-tpm_maintenance-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a los operadores en mantenimiento autónomo básico",
+      "texto_nuevo": "Capacitar a los operadores en mantenimiento autónomo básico, incluido detener anomalías y otras fuentes de deterioro acelerado del equipo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13610",
+        "frase": "Operators are trained to stop abnormalities and other sources of accelerated deterioration."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que se capacita a los operadores para detener anomalías y otras fuentes de deterioro acelerado; el paso lo pierde.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-tpm_maintenance-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Integrar TPM con 6S para sostenibilidad",
+      "texto_nuevo": "Incorporar la capacitación de TPM al trabajo con 6S",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13610",
+        "frase": "Training is the key and should be incorporated with 6S mentioned earlier."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la capacitación debe incorporarse con 6S; el porqué de la sostenibilidad es añadido.; Mismo defecto: el propósito 'para sostenibilidad' no está en el pasaje.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-tpm_maintenance-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir mejoras mediante indicadores de disponibilidad y desempeño de equipo",
+      "texto_nuevo": "Medir mejoras mediante indicadores de disponibilidad, eficiencia y calidad del equipo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13623",
+        "frase": "machine availability, machine efficiency, and machine quality performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La medida del libro (efectividad global del equipo) suma disponibilidad, eficiencia y calidad; se cae la calidad.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

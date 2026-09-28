@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Sostenibilidad Ágil (Agile Sustainability)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La sostenibilidad ágil es la capacidad de una organización para responder rápida y efectivamente a cambios inesperados, y sostener esa capacidad de respuesta en el tiempo. Requiere crear estructuras y procesos que detecten tendencias internas y externas (sociales, gubernamentales, tecnológicas), evalúen su significado, y permitan una acción adaptativa rápida. Su ausencia puede llevar a que organizaciones líderes colapsen ante crisis inesperadas, como ocurrió en la crisis de 2008.",
+  "resumen_teorico": "La sostenibilidad ágil es la capacidad de una organización para responder rápida y efectivamente a cambios inesperados, y sostener esa capacidad de respuesta en el tiempo. Requiere crear estructuras y procesos que detecten tendencias internas y externas (sociales, gubernamentales, tecnológicas), evalúen su significado, y permitan una acción adaptativa rápida, todo a partir de datos oportunos y confiables. Su ausencia puede llevar a que organizaciones líderes colapsen ante crisis inesperadas, y quizá explique lo que les pasó a muchas en la crisis de 2008.",
   "pasos_accionables": [
     "Crear estructuras que detecten cambios o tendencias internas y externas potencialmente relevantes",
-    "Establecer procesos que evalúen e interpreten la información detectada",
+    "Establecer procesos que evalúen e interpreten la información detectada y la hagan llegar a las personas o áreas con poder para actuar",
     "Diseñar una estructura organizacional que facilite acción adaptativa rápida",
     "Implementar un ciclo continuo (espiral) de detección-interpretación-acción"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Responde Rápido y de Forma Sostenida",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-024-sostenibilidad_agil-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La sostenibilidad ágil es la capacidad de una organización para responder rápida y efectivamente a cambios inesperados, y sostener esa capacidad de respuesta en el tiempo. Requiere crear estructuras y procesos que detecten tendencias internas y externas (sociales, gubernamentales, tecnológicas), evalúen su significado, y permitan una acción adaptativa rápida. Su ausencia puede llevar a que organizaciones líderes colapsen ante crisis inesperadas, como ocurrió en la crisis de 2008.",
+      "texto_nuevo": "La sostenibilidad ágil es la capacidad de una organización para responder rápida y efectivamente a cambios inesperados, y sostener esa capacidad de respuesta en el tiempo. Requiere crear estructuras y procesos que detecten tendencias internas y externas (sociales, gubernamentales, tecnológicas), evalúen su significado, y permitan una acción adaptativa rápida, todo a partir de datos oportunos y confiables. Su ausencia puede llevar a que organizaciones líderes colapsen ante crisis inesperadas, y quizá explique lo que les pasó a muchas en la crisis de 2008.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2195",
+        "frase": "Our theory was that although these organizations were good at responding"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro presenta el vínculo con 2008 como teoría propia; el nodo lo afirma como hecho.; El libro señala los datos oportunos y confiables como quizá el prerrequisito más crucial.; Mismo endurecimiento de la teoría sobre 2008.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-024-sostenibilidad_agil-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer procesos que evalúen e interpreten la información detectada",
+      "texto_nuevo": "Establecer procesos que evalúen e interpreten la información detectada y la hagan llegar a las personas o áreas con poder para actuar",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2101",
+        "frase": "refer the distilled information to empowered functions or persons within the organization"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide remitir la información evaluada a quien tiene poder para actuar.; Misma mitad perdida del proceso del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

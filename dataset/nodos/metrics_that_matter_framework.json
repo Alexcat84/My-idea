@@ -11,7 +11,7 @@
     "Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto",
     "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo",
     "Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo",
-    "Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos"
+    "Acuerda con tus inversionistas cuál burn rate es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos"
   ],
   "entregable_esperado": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
   "nodos_previos": [
@@ -93,6 +93,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 2
+    },
+    {
+      "id": "final-e1-037-metrics_that_matter_framework-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos",
+      "texto_nuevo": "Acuerda con tus inversionistas cuál burn rate es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2288",
+        "frase": "the founders and investors must agree on what the burn rate should be"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que fundadores e inversionistas acuerden el burn rate y los pivotes costeables.; Mismo defecto.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

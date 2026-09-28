@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planifica el autocontrol en tu servicio (Self-Control)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El autocontrol dice que para que tú, o la persona que te ayuda, sean responsables de la calidad de un trabajo, necesitas tres cosas: saber con claridad qué se espera de ese trabajo (procedimientos y estándares definidos), saber cómo se está desempeñando en la realidad (retroalimentación) y tener la capacidad y la disposición para ajustar el proceso y reducir la variación. Esto aplica tanto a lo que el cliente ve como a lo que pasa detrás de escena.",
+  "resumen_teorico": "El autocontrol dice que para que tú, o la persona que te ayuda, sean responsables de la calidad de un trabajo, necesitas tres cosas: saber con claridad qué se espera de ese trabajo (procedimientos y estándares definidos, y una selección y formación adecuadas de quien lo hace), saber cómo se está desempeñando en la realidad (retroalimentación) y tener la capacidad y la disposición para ajustar el proceso y reducir la variación. Esto aplica tanto a lo que el cliente ve como a lo que pasa detrás de escena.",
   "pasos_accionables": [
     "Documenta y ten a mano procedimientos de trabajo claros y actualizados",
     "Define estándares concretos de calidad y cantidad para tu trabajo",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Prepara a tu Equipo para Autocontrolarse",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-023-autocontrol_planificacion_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El autocontrol dice que para que tú, o la persona que te ayuda, sean responsables de la calidad de un trabajo, necesitas tres cosas: saber con claridad qué se espera de ese trabajo (procedimientos y estándares definidos), saber cómo se está desempeñando en la realidad (retroalimentación) y tener la capacidad y la disposición para ajustar el proceso y reducir la variación. Esto aplica tanto a lo que el cliente ve como a lo que pasa detrás de escena.",
+      "texto_nuevo": "El autocontrol dice que para que tú, o la persona que te ayuda, sean responsables de la calidad de un trabajo, necesitas tres cosas: saber con claridad qué se espera de ese trabajo (procedimientos y estándares definidos, y una selección y formación adecuadas de quien lo hace), saber cómo se está desempeñando en la realidad (retroalimentación) y tener la capacidad y la disposición para ajustar el proceso y reducir la variación. Esto aplica tanto a lo que el cliente ve como a lo que pasa detrás de escena.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21494-21502",
+        "frase": "Adequate selection and training of personnel"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en el primer criterio la selección y formación adecuadas del personal, que el resumen omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

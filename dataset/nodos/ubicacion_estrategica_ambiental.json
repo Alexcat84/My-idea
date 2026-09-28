@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Estrategia Ambiental de Ubicación en Manufactura",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La ubicación de la manufactura influye fuertemente en la huella ambiental total, considerando la 'energía incorporada' (embodied energy) del producto: desde la fuente energética regional (nuclear, carbón, renovable) hasta las distancias de transporte de insumos y distribución. Elegir proveedores cercanos y fuentes de energía regional más limpias puede reducir drásticamente las emisiones de gases de efecto invernadero.",
+  "resumen_teorico": "La ubicación de la manufactura influye fuertemente en la huella ambiental total, considerando la 'energía incorporada' (embodied energy) del producto: desde la fuente energética regional (nuclear, carbón, renovable) hasta las distancias de transporte de insumos y distribución. Elegir proveedores cercanos y fuentes de energía regional más limpias, siempre que sea viable económica y logísticamente, puede reducir drásticamente las emisiones de gases de efecto invernadero.",
   "pasos_accionables": [
     "Analizar la matriz energética de las posibles ubicaciones de manufactura.",
     "Seleccionar proveedores ubicados cerca de la planta o con menor energía incorporada.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Elige tu Ubicación con Conciencia Ambiental",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-031-ubicacion_estrategica_ambiental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La ubicación de la manufactura influye fuertemente en la huella ambiental total, considerando la 'energía incorporada' (embodied energy) del producto: desde la fuente energética regional (nuclear, carbón, renovable) hasta las distancias de transporte de insumos y distribución. Elegir proveedores cercanos y fuentes de energía regional más limpias puede reducir drásticamente las emisiones de gases de efecto invernadero.",
+      "texto_nuevo": "La ubicación de la manufactura influye fuertemente en la huella ambiental total, considerando la 'energía incorporada' (embodied energy) del producto: desde la fuente energética regional (nuclear, carbón, renovable) hasta las distancias de transporte de insumos y distribución. Elegir proveedores cercanos y fuentes de energía regional más limpias, siempre que sea viable económica y logísticamente, puede reducir drásticamente las emisiones de gases de efecto invernadero.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4629",
+        "frase": "Whenever economically and logistically possible, establish manufacturing operations in locations with the lowest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona elegir la ubicación de menor energía incorporada a que sea viable económica y logísticamente; el resumen lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

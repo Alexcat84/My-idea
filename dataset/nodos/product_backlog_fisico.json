@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Lista de requisitos flexible para productos físicos (product backlog)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu lista y tu presupuesto se vuelven más estables, hasta que los terminas de fijar cerca del final de la etapa de desarrollo.",
+  "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
   "pasos_accionables": [
     "Crea una lista inicial de requisitos priorizada, aceptando que no está completa al 100%",
     "Actualiza esa lista de forma continua con el feedback de tus clientes y lo que aprendes en cada iteración técnica",
-    "Congela las decisiones de hardware más temprano, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
-    "Fija tu presupuesto final cuando termines la etapa de desarrollo, no antes"
+    "Congela antes algunas decisiones de hardware, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
+    "Como regla práctica, fija tu presupuesto final hacia el final de la etapa de desarrollo, a medida que baja la incertidumbre"
   ],
   "entregable_esperado": "Un documento vivo con tu lista de requisitos, que actualizas en cada sprint, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
   "nodos_previos": [
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Ajusta tu Lista de Requisitos",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-product_backlog_fisico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu lista y tu presupuesto se vuelven más estables, hasta que los terminas de fijar cerca del final de la etapa de desarrollo.",
+      "texto_nuevo": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4749",
+        "frase": "A rule of thumb is that one can lock-in the final budget"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Lo que el libro estabiliza es el cronograma y el presupuesto, y fijar el presupuesto hacia el final de Desarrollo es una regla práctica; la lista de requisitos no se fija.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-036-product_backlog_fisico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fija tu presupuesto final cuando termines la etapa de desarrollo, no antes",
+      "texto_nuevo": "Como regla práctica, fija tu presupuesto final hacia el final de la etapa de desarrollo, a medida que baja la incertidumbre",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4749",
+        "frase": "A rule of thumb is that one can lock-in the final budget"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da una regla práctica (se puede fijar hacia el final de Desarrollo); el 'no antes' es una prohibición que no pone.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-036-product_backlog_fisico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Congela las decisiones de hardware más temprano, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
+      "texto_nuevo": "Congela antes algunas decisiones de hardware, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4627",
+        "frase": "some hardware choices must be frozen earlier than software choices"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que algunas decisiones de hardware deben congelarse antes; el nodo lo extiende a todas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

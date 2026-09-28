@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Consiste en compartir abiertamente los datos de desempeño ambiental (consumo energético, emisiones, agua) con los empleados para fomentar la conciencia y la competencia sana. Herramientas como 'pantallas verdes', medidores inteligentes y portales web permiten a los equipos monitorear su propio impacto y compararlo con otros.",
   "pasos_accionables": [
-    "Instalar sistemas de medición en tiempo real de energía, agua y residuos",
+    "Instalar sistemas de medición en tiempo real de electricidad, gas y agua",
     "Crear portales o paneles visuales accesibles a todos los empleados",
     "Nombrar responsables o 'capitanes de energía' por sede o departamento",
     "Establecer reuniones periódicas de revisión de desempeño ambiental con retroalimentación directa"
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Comparte tus Datos Ambientales",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-031-transparencia_datos_ambientales-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Instalar sistemas de medición en tiempo real de energía, agua y residuos",
+      "texto_nuevo": "Instalar sistemas de medición en tiempo real de electricidad, gas y agua",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6735",
+        "frase": "real-time information on facilities' electricity, gas, and water consumption"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La medición en tiempo real del libro cubre electricidad, gas y agua; los residuos no figuran.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

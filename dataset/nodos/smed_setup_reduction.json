@@ -9,7 +9,7 @@
     "Documentar el proceso actual de cambio/setup",
     "Clasificar actividades en internas y externas",
     "Mover actividades internas a externas siempre que sea posible",
-    "Simplificar y estandarizar las actividades internas restantes",
+    "Simplificar y estandarizar las actividades internas restantes y, después, simplificar también las externas",
     "Eliminar necesidad de ajustes y pruebas de ensayo"
   ],
   "entregable_esperado": "Tiempo de cambio (setup) reducido y documentado, con procedimiento estandarizado",
@@ -55,6 +55,23 @@
         "motivo": "El SMED es una de las piezas de la manufactura celular; con los cambios ya reducidos, organizar la línea en células es el paso siguiente."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-024-smed_setup_reduction-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Simplificar y estandarizar las actividades internas restantes",
+      "texto_nuevo": "Simplificar y estandarizar las actividades internas restantes y, después, simplificar también las externas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13578",
+        "frase": "Streamline the internal activity with the same principles as production"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide simplificar después también la actividad externa.; Mismo paso del procedimiento perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

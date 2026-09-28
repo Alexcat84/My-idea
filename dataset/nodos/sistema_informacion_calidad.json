@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Información para la Toma de Decisiones de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, y resúmenes para que los líderes controlen los pocos vitales. Un equipo multifuncional, que incluya clientes y proveedores de información, debe diseñar este sistema, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.",
+  "resumen_teorico": "El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, resúmenes para que los líderes controlen los pocos vitales, y datos para ver tendencias, amenazas, oportunidades y el desempeño de áreas y personas. Lo mejor es que lo diseñe un equipo multifuncional que incluya clientes y proveedores de información, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.",
   "pasos_accionables": [
     "Conformar un equipo multifuncional para diseñar el sistema de información de calidad",
     "Incluir en el diseño tanto a clientes como proveedores de información",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Informa tus Decisiones de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-024-sistema_informacion_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, y resúmenes para que los líderes controlen los pocos vitales. Un equipo multifuncional, que incluya clientes y proveedores de información, debe diseñar este sistema, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.",
+      "texto_nuevo": "El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, resúmenes para que los líderes controlen los pocos vitales, y datos para ver tendencias, amenazas, oportunidades y el desempeño de áreas y personas. Lo mejor es que lo diseñe un equipo multifuncional que incluya clientes y proveedores de información, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8354",
+        "frase": "detect major trends, identify threats and opportunities, and evaluate the performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que un equipo multifuncional es la mejor forma, no una obligación.; Mismo tercer uso perdido.; Se pierde el tercer uso de la red: tendencias, amenazas, oportunidades y desempeño.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

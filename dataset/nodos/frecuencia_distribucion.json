@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Distribución de Frecuencia",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Una distribución de frecuencia es una tabulación de datos organizados según su magnitud, que revela dónde se agrupan la mayoría de los datos y cuánta variación existe. Cuando los datos son numerosos, pueden agruparse en celdas para condensar la información, siguiendo un procedimiento estándar de construcción (número de celdas, intervalo, límites, tabulación).",
+  "resumen_teorico": "Una distribución de frecuencia es una tabulación de datos organizados según su magnitud, que revela dónde se agrupan la mayoría de los datos y cuánta variación existe. Cuando los datos son numerosos, pueden agruparse en celdas para condensar la información, aunque así se pierde algo de detalle, siguiendo un procedimiento estándar de construcción (número de celdas, intervalo, límites, tabulación).",
   "pasos_accionables": [
     "Recolectar los datos crudos del proceso o característica de interés",
     "Decidir el número de celdas según el tamaño de la muestra",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Observa la Distribución de Datos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-021-frecuencia_distribucion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una distribución de frecuencia es una tabulación de datos organizados según su magnitud, que revela dónde se agrupan la mayoría de los datos y cuánta variación existe. Cuando los datos son numerosos, pueden agruparse en celdas para condensar la información, siguiendo un procedimiento estándar de construcción (número de celdas, intervalo, límites, tabulación).",
+      "texto_nuevo": "Una distribución de frecuencia es una tabulación de datos organizados según su magnitud, que revela dónde se agrupan la mayoría de los datos y cuánta variación existe. Cuando los datos son numerosos, pueden agruparse en celdas para condensar la información, aunque así se pierde algo de detalle, siguiendo un procedimiento estándar de construcción (número de celdas, intervalo, límites, tabulación).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11618",
+        "frase": "Grouping the data into cells condenses the original data, and therefore some detail is lost."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que agrupar en celdas condensa los datos y por eso se pierde algo de detalle.; Mismo límite omitido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

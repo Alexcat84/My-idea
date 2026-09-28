@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Teoremas Básicos de Probabilidad Aplicados a Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los teoremas fundamentales de probabilidad (complementario, de unión, de intersección/independencia) permiten calcular probabilidades combinadas de eventos relacionados con la calidad, como fallos de subsistemas o combinaciones de resultados de muestreo. Son la base matemática para el análisis de confiabilidad de sistemas.",
+  "resumen_teorico": "Los teoremas fundamentales de probabilidad (complementario, de unión, de intersección/independencia) permiten calcular probabilidades combinadas de eventos relacionados con la calidad, como fallos de subsistemas o combinaciones de resultados de muestreo. Son básicos para analizar la probabilidad de eventos específicos y pueden ampliarse a cualquier número de eventos.",
   "pasos_accionables": [
     "Identificar los eventos de interés (A, B) y si son mutuamente excluyentes o independientes",
     "Aplicar el teorema complementario para calcular la probabilidad de no ocurrencia",
@@ -38,6 +38,22 @@
         "motivo": "Los teoremas de probabilidad aplicados a la confiabilidad de calidad no preparan la identificacion cualitativa de riesgos del negocio. Ademas el nodo dice que la probabilidad se evalua despues de identificar, asi que el orden tampoco encaja."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-022-teoremas_probabilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los teoremas fundamentales de probabilidad (complementario, de unión, de intersección/independencia) permiten calcular probabilidades combinadas de eventos relacionados con la calidad, como fallos de subsistemas o combinaciones de resultados de muestreo. Son la base matemática para el análisis de confiabilidad de sistemas.",
+      "texto_nuevo": "Los teoremas fundamentales de probabilidad (complementario, de unión, de intersección/independencia) permiten calcular probabilidades combinadas de eventos relacionados con la calidad, como fallos de subsistemas o combinaciones de resultados de muestreo. Son básicos para analizar la probabilidad de eventos específicos y pueden ampliarse a cualquier número de eventos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11569, 12071",
+        "frase": "Three theorems of probability are basic in analyzing the probability of specific events."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro los presenta como básicos para analizar la probabilidad de eventos específicos; el sistema de subsistemas es solo un ejemplo.; Mismo defecto: declararlos la base del análisis de confiabilidad de sistemas es añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

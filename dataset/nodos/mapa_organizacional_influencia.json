@@ -3,10 +3,10 @@
   "dominio": "core",
   "titulo_concepto": "Mapa Organizacional y de Influencia",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Ningún cliente decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, jefes, familia, amigos, proveedores-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.",
+  "resumen_teorico": "Salvo en casos raros, la mayoría de los clientes no decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, familia, amigos-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.",
   "pasos_accionables": [
     "Listar a todas las personas que rodean e influyen en la decisión de compra del cliente objetivo",
-    "Dibujar un diagrama tentativo de relaciones e influencias (colegas, jefes, familia, amigos, proveedores)",
+    "Dibujar un diagrama tentativo de relaciones e influencias (colegas, familia, amigos)",
     "Representar el impacto del producto en la vida diaria o laboral de cada persona del mapa",
     "Actualizar el mapa a medida que se descubren nuevos actores relevantes",
     "Actualizar el lienzo de modelo de negocio con estos hallazgos"
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Mapea Quién Influye en la Compra",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-mapa_organizacional_influencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ningún cliente decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, jefes, familia, amigos, proveedores-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.",
+      "texto_nuevo": "Salvo en casos raros, la mayoría de los clientes no decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, familia, amigos-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5765",
+        "frase": "except in rare cases, most customers don’t work by themselves"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade jefes y proveedores a la lista del libro (amigos, familia, colegas).; Endurece: el libro dice que, salvo en casos raros, la mayoría de los clientes no actúa sola.; Misma enumeración ampliada que la marca 1.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-037-mapa_organizacional_influencia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dibujar un diagrama tentativo de relaciones e influencias (colegas, jefes, familia, amigos, proveedores)",
+      "texto_nuevo": "Dibujar un diagrama tentativo de relaciones e influencias (colegas, familia, amigos)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5765",
+        "frase": "Consumers interact with friends and family, while businesspeople interact with their colleagues"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade jefes y proveedores, que el libro no nombra.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

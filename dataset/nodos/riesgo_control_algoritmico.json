@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Riesgo del Control Algorítmico sobre Trabajadores",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "La IA puede supercargar formas previas de control algorítmico (como las de Uber o UPS), monitoreando y dirigiendo cada aspecto del trabajo de forma opaca y en tiempo real. Aunque puede presentarse como coaching amigable, sigue siendo el algoritmo quien controla. Las organizaciones deben decidir conscientemente evitar este camino distópico.",
+  "resumen_teorico": "La IA puede supercargar formas previas de control algorítmico (como las de Uber o UPS), monitoreando y dirigiendo cada aspecto del trabajo de forma opaca y en tiempo real. Aunque puede presentarse como coaching amigable, sigue siendo el algoritmo quien controla. Si la historia sirve de precedente, es un camino probable para muchas empresas: las organizaciones deben decidir conscientemente evitarlo.",
   "pasos_accionables": [
     "Auditar si los sistemas de IA implementados están usándose para monitoreo excesivo o control opresivo",
     "Establecer límites éticos claros sobre qué puede y no puede decidir un sistema de IA sobre el desempeño humano",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Cuidado con Controlar por Algoritmo",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-riesgo_control_algoritmico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La IA puede supercargar formas previas de control algorítmico (como las de Uber o UPS), monitoreando y dirigiendo cada aspecto del trabajo de forma opaca y en tiempo real. Aunque puede presentarse como coaching amigable, sigue siendo el algoritmo quien controla. Las organizaciones deben decidir conscientemente evitar este camino distópico.",
+      "texto_nuevo": "La IA puede supercargar formas previas de control algorítmico (como las de Uber o UPS), monitoreando y dirigiendo cada aspecto del trabajo de forma opaca y en tiempo real. Aunque puede presentarse como coaching amigable, sigue siendo el algoritmo quien controla. Si la historia sirve de precedente, es un camino probable para muchas empresas: las organizaciones deben decidir conscientemente evitarlo.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1132",
+        "frase": "If history is a precedent, this is a likely path for many companies."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que, si la historia sirve de precedente, este es el camino probable para muchas empresas, lo que da peso a la advertencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

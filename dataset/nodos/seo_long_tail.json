@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia SEO Long-Tail",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "El long-tail SEO se enfoca en posicionar múltiples términos de búsqueda específicos y de bajo volumen individual (ej. 'owls of East Asia bingo') que en conjunto representan el 70% de todas las búsquedas. Es ideal para startups tempranas porque es menos competitivo que el fat-head. Requiere generar gran cantidad de contenido de calidad orientado a nichos específicos, muchas veces usando freelancers económicos o aprovechando datos generados naturalmente por el producto.",
+  "resumen_teorico": "El long-tail SEO se enfoca en posicionar múltiples términos de búsqueda específicos y de bajo volumen individual (ej. 'owls of East Asia bingo') que en conjunto representan el 70% de todas las búsquedas. Es una estrategia popular entre startups tempranas porque es menos competitiva que el fat-head. Requiere generar gran cantidad de contenido de calidad orientado a nichos específicos, muchas veces usando freelancers económicos o aprovechando datos generados naturalmente por el producto.",
   "pasos_accionables": [
     "Evaluar volumen agregado de keywords long-tail con Google Keyword Planner",
     "Revisar analytics del sitio para detectar tráfico long-tail existente",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Apunta a Búsquedas Muy Específicas",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-034-seo_long_tail-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El long-tail SEO se enfoca en posicionar múltiples términos de búsqueda específicos y de bajo volumen individual (ej. 'owls of East Asia bingo') que en conjunto representan el 70% de todas las búsquedas. Es ideal para startups tempranas porque es menos competitivo que el fat-head. Requiere generar gran cantidad de contenido de calidad orientado a nichos específicos, muchas veces usando freelancers económicos o aprovechando datos generados naturalmente por el producto.",
+      "texto_nuevo": "El long-tail SEO se enfoca en posicionar múltiples términos de búsqueda específicos y de bajo volumen individual (ej. 'owls of East Asia bingo') que en conjunto representan el 70% de todas las búsquedas. Es una estrategia popular entre startups tempranas porque es menos competitiva que el fat-head. Requiere generar gran cantidad de contenido de calidad orientado a nichos específicos, muchas veces usando freelancers económicos o aprovechando datos generados naturalmente por el producto.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1687",
+        "frase": "a popular SEO strategy for early-stage startups is to focus on the long tail"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro la presenta como estrategia popular entre startups tempranas y pide evaluar antes si puede funcionar; ideal endurece.; Mismo defecto: popular, no ideal.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

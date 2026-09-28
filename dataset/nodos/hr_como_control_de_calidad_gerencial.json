@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "El área de personas como control de calidad de tus gerentes",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Por más buena que sea tu área de personas, no puede por sí sola crear un negocio bien gestionado con una gran cultura. Lo que sí puede hacer es detectar y señalarte cuándo tus gerentes no están cumpliendo su función, igual que el control de calidad (Quality Assurance) detecta fallas sin poder construir el producto. Tu foco debe estar en medir la calidad de la gestión a lo largo del ciclo de vida de cada empleado: contratación, compensación, entrenamiento, gestión del desempeño y motivación.",
+  "resumen_teorico": "Por más buena que sea tu área de personas, no puede por sí sola crear un negocio bien gestionado con una gran cultura. Lo que sí puede hacer es detectar y señalarte cuándo tú y tus gerentes no están cumpliendo su función, igual que el control de calidad (Quality Assurance) detecta fallas sin poder construir el producto. Tu foco debe estar en medir la calidad de la gestión a lo largo del ciclo de vida de cada empleado: contratación, compensación, entrenamiento, gestión del desempeño y motivación.",
   "pasos_accionables": [
     "Define el ciclo de vida completo del empleado en tu negocio (reclutamiento, compensación, integración, desempeño, motivación).",
     "Establece preguntas de revisión para cada fase, por ejemplo: ¿tus gerentes dan retroalimentación consistente? ¿las revisiones de desempeño llegan a tiempo?",
     "Diseña métricas objetivas para monitorear la calidad de gestión en cada fase.",
-    "Usa lo que encuentres para corregir directamente a tus gerentes antes de que el problema escale."
+    "Usa lo que encuentres para que tu área de personas trabaje directamente con tus gerentes y los ayude a mejorar, como apoyo y no como vigilancia, y que te lo lleve a ti solo cuando haga falta."
   ],
   "entregable_esperado": "Un marco de evaluación del ciclo de vida del empleado con métricas de calidad de gestión por fase.",
   "nodos_previos": [
@@ -66,6 +66,39 @@
         "motivo": "Construir un buen lugar para trabajar lleva a preguntar qué papel tiene el área de personas: vigilar la calidad de la gestión de los gerentes. hr_calidad_gestion no sirve como predecesor porque parece un duplicado del propio nodo."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-032-hr_como_control_de_calidad_gerencial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Por más buena que sea tu área de personas, no puede por sí sola crear un negocio bien gestionado con una gran cultura. Lo que sí puede hacer es detectar y señalarte cuándo tus gerentes no están cumpliendo su función, igual que el control de calidad (Quality Assurance) detecta fallas sin poder construir el producto. Tu foco debe estar en medir la calidad de la gestión a lo largo del ciclo de vida de cada empleado: contratación, compensación, entrenamiento, gestión del desempeño y motivación.",
+      "texto_nuevo": "Por más buena que sea tu área de personas, no puede por sí sola crear un negocio bien gestionado con una gran cultura. Lo que sí puede hacer es detectar y señalarte cuándo tú y tus gerentes no están cumpliendo su función, igual que el control de calidad (Quality Assurance) detecta fallas sin poder construir el producto. Tu foco debe estar en medir la calidad de la gestión a lo largo del ciclo de vida de cada empleado: contratación, compensación, entrenamiento, gestión del desempeño y motivación.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1759",
+        "frase": "it can tell you when you and your managers are not getting the job done"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el área detecta cuándo tú y tus gerentes no cumplen; el nodo deja fuera al fundador.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-hr_como_control_de_calidad_gerencial-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa lo que encuentres para corregir directamente a tus gerentes antes de que el problema escale.",
+      "texto_nuevo": "Usa lo que encuentres para que tu área de personas trabaje directamente con tus gerentes y los ayude a mejorar, como apoyo y no como vigilancia, y que te lo lleve a ti solo cuando haga falta.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1827",
+        "frase": "Managers must believe that HR is there to help them improve rather than police them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el área trabaje con los gerentes para ayudarlos a mejorar, no para vigilarlos, y escale al CEO solo cuando haga falta; el paso pierde esa condición.; No es lo opuesto: el libro también quiere que el CEO sostenga a los gerentes en un estándar alto; lo que se cae es que sea como ayuda y no como vigilancia, con escalada solo cuando haga falta.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

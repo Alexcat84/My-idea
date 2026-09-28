@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Fase 5: Acclimate (Aclimatar)",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "El cliente aprende y se acostumbra a la forma particular de operar de la organización. Las empresas suelen asumir erróneamente que los clientes ya conocen sus procesos internos, cuando en realidad es la primera vez que el cliente los experimenta. Si no se guía adecuadamente al cliente en este proceso, nunca se convertirá en un cliente leal a largo plazo.",
+  "resumen_teorico": "El cliente aprende y se acostumbra a la forma particular de operar de la organización. Las empresas suelen asumir erróneamente que los clientes ya conocen sus procesos internos, cuando lo más probable es que sea la primera vez que el cliente los experimenta. Si no se guía adecuadamente al cliente en este proceso, nunca se convertirá en un cliente leal a largo plazo.",
   "pasos_accionables": [
     "Crear materiales de onboarding que expliquen claramente 'cómo trabajamos aquí'.",
     "Acompañar activamente al cliente durante su proceso de adaptación (no asumir que ya sabe).",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Enseña tus Procesos al Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-026-fase_acclimate-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El cliente aprende y se acostumbra a la forma particular de operar de la organización. Las empresas suelen asumir erróneamente que los clientes ya conocen sus procesos internos, cuando en realidad es la primera vez que el cliente los experimenta. Si no se guía adecuadamente al cliente en este proceso, nunca se convertirá en un cliente leal a largo plazo.",
+      "texto_nuevo": "El cliente aprende y se acostumbra a la forma particular de operar de la organización. Las empresas suelen asumir erróneamente que los clientes ya conocen sus procesos internos, cuando lo más probable es que sea la primera vez que el cliente los experimenta. Si no se guía adecuadamente al cliente en este proceso, nunca se convertirá en un cliente leal a largo plazo.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "1094",
+        "frase": "this is most likely the first time they’ve ever experienced this"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece 'lo más probable es que sea la primera vez' a una certeza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

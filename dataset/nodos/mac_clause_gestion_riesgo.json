@@ -9,7 +9,7 @@
     "Verificar si el term sheet incluye referencia explícita a una cláusula MAC; si no aparece, indagar directamente con el prestamista.",
     "Investigar el historial y reputación del prestamista respecto al uso histórico de cláusulas MAC con otras empresas de portafolio.",
     "Consultar con los inversionistas VC sobre su relación previa con el prestamista y experiencias pasadas con cláusulas de control.",
-    "Entender que eliminar la cláusula MAC por completo suele ser impráctico; enfocar la negociación en su alcance y aplicación."
+    "Entender que eliminar la cláusula MAC por completo suele ser impráctico; enfocar la negociación en su alcance y aplicación, sabiendo que tu margen para eliminarla o modificarla depende del contexto de la empresa, del contexto del préstamo y, sobre todo, de la relación entre tus inversionistas y el prestamista."
   ],
   "entregable_esperado": "Informe de due diligence sobre la reputación del prestamista y el riesgo asociado a la cláusula MAC específica del contrato.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Anticipa el Cambio Adverso",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-mac_clause_gestion_riesgo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Entender que eliminar la cláusula MAC por completo suele ser impráctico; enfocar la negociación en su alcance y aplicación.",
+      "texto_nuevo": "Entender que eliminar la cláusula MAC por completo suele ser impráctico; enfocar la negociación en su alcance y aplicación, sabiendo que tu margen para eliminarla o modificarla depende del contexto de la empresa, del contexto del préstamo y, sobre todo, de la relación entre tus inversionistas y el prestamista.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2972",
+        "frase": "most importantly, the relationship between your investors and the lender"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismos tres factores perdidos.; Se pierde de qué depende el margen para eliminar o modificar la cláusula.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

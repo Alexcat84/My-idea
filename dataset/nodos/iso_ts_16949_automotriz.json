@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "ISO/TS 16949 - Sistema de Gestión de Calidad Automotriz",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte remoto como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
+  "resumen_teorico": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción y, cuando corresponda, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte remoto como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
   "pasos_accionables": [
     "Identificar si la organización pertenece a la cadena de suministro automotriz",
     "Mapear los sitios y funciones de soporte (diseño, distribución) que deben incluirse en la auditoría",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Cumple Calidad del Sector Automotriz",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-iso_ts_16949_automotriz-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte remoto como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
+      "texto_nuevo": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción y, cuando corresponda, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte remoto como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11401",
+        "frase": "production and, when relevant, installation and service of automotive-related products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye instalación y servicio solo cuando corresponda.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

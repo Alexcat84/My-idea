@@ -9,7 +9,7 @@
     "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable",
     "Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)",
     "Determinar costos operativos básicos, costos de canal y márgenes",
-    "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año",
+    "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año, según la curva de crecimiento de ingresos propia de tu tipo de mercado",
     "Verificar el balance de caja disponible (runway)",
     "Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas"
   ],
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Valida tu Modelo Financiero",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-validar_modelo_financiero-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año",
+      "texto_nuevo": "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año, según la curva de crecimiento de ingresos propia de tu tipo de mercado",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13042",
+        "frase": "different market types drive different revenue curves to consider in longer-term revenue predictions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye el tipo de mercado porque cada tipo tiene una curva de ingresos distinta que condiciona la proyección.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

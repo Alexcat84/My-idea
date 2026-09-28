@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Sostener las Ganancias (Hold the Gains)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Fase final del ciclo de mejora donde se diseñan e implementan controles formales, se aplica el mistake-proofing (poka-yoke) cuando es necesario, y se auditan los controles periódicamente. Sin esta fase, las mejoras logradas pueden desaparecer con el tiempo, especialmente ante rotación de personal o falta de capacitación formal, como ilustra el caso del linóleo dañado que reapareció por falta de un plan de control formal y entrenamiento.",
+  "resumen_teorico": "Fase del ciclo de mejora, posterior a implementar el remedio, donde se diseñan e implementan controles formales, se aplica el mistake-proofing (poka-yoke) cuando es necesario, y se auditan los controles periódicamente. Sin esta fase, las mejoras logradas pueden desaparecer con el tiempo, especialmente ante rotación de personal o falta de capacitación formal, como ilustra el caso del linóleo dañado que reapareció por falta de un plan de control formal y entrenamiento.",
   "pasos_accionables": [
     "Diseñar e implementar controles formales y documentados",
-    "Aplicar técnicas de a prueba de errores (mistake-proofing) donde sea posible",
+    "Aplicar técnicas de a prueba de errores (mistake-proofing) donde sea necesario",
     "Establecer un programa de entrenamiento formal para nuevos empleados",
     "Auditar periódicamente que los controles se estén cumpliendo, con responsables de supervisión que verifiquen el cumplimiento del control",
     "Documentar el plan de control por escrito para evitar dependencia de la memoria individual",
@@ -39,5 +39,40 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-024-sostener_las_ganancias-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar técnicas de a prueba de errores (mistake-proofing) donde sea posible",
+      "texto_nuevo": "Aplicar técnicas de a prueba de errores (mistake-proofing) donde sea necesario",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5281",
+        "frase": "Mistake-proof the process, as necessary."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'as necessary'; 'donde sea posible' amplía el alcance.; Mismo endurecimiento del alcance.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-024-sostener_las_ganancias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fase final del ciclo de mejora donde se diseñan e implementan controles formales, se aplica el mistake-proofing (poka-yoke) cuando es necesario, y se auditan los controles periódicamente. Sin esta fase, las mejoras logradas pueden desaparecer con el tiempo, especialmente ante rotación de personal o falta de capacitación formal, como ilustra el caso del linóleo dañado que reapareció por falta de un plan de control formal y entrenamiento.",
+      "texto_nuevo": "Fase del ciclo de mejora, posterior a implementar el remedio, donde se diseñan e implementan controles formales, se aplica el mistake-proofing (poka-yoke) cuando es necesario, y se auditan los controles periódicamente. Sin esta fase, las mejoras logradas pueden desaparecer con el tiempo, especialmente ante rotación de personal o falta de capacitación formal, como ilustra el caso del linóleo dañado que reapareció por falta de un plan de control formal y entrenamiento.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5285",
+        "frase": "Replicate results and nominate new projects (management does this):"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En la secuencia del libro, después de sostener las ganancias vienen replicar y nominar nuevos proyectos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

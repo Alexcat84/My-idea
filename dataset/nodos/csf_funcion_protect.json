@@ -12,7 +12,7 @@
     "Actualizar y parchear regularmente software y sistemas operativos, habilitando actualizaciones automáticas",
     "Realizar copias de seguridad periódicas de los datos y probar su restauración",
     "Configurar cifrado de disco completo en laptops y tablets",
-    "Capacitar al personal para reconocer ataques comunes y realizar higiene cibernética básica"
+    "Capacitar al personal para reconocer ataques comunes, reportar ataques o actividad sospechosa y realizar higiene cibernética básica"
   ],
   "entregable_esperado": "Checklist de MFA habilitado por cuenta crítica, política de actualización de software, y plan de respaldo de datos probado",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Protege tus Sistemas Clave",
   "fuentes_internas": [
     "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-025-csf_funcion_protect-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar al personal para reconocer ataques comunes y realizar higiene cibernética básica",
+      "texto_nuevo": "Capacitar al personal para reconocer ataques comunes, reportar ataques o actividad sospechosa y realizar higiene cibernética básica",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "155",
+        "frase": "recognize common attacks, report attacks or suspicious activity, and perform basic cyber hygiene"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también enseñar al personal a reportar ataques o actividad sospechosa.; Mismo elemento perdido de la enumeración.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

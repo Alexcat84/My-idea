@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Manejo de Crisis con Auditores en Medio de una Transacción Crítica",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Caso real de cómo una discrepancia inesperada en la interpretación contable de un auditor puede amenazar una transacción de venta multimillonaria. La lección clave es que en los negocios surgen situaciones que contradicen todo lo que se creía seguro ('el cielo es púrpura'), y el liderazgo debe actuar con rapidez, movilizar toda la red de contactos disponible, negociar bajo presión extrema, y mantener la posición de valor de la empresa (no aceptar descuentos que socaven la narrativa de 'estándar de oro') incluso cuando la junta directiva sugiere lo contrario.",
+  "resumen_teorico": "Caso real de cómo una discrepancia inesperada en la interpretación contable de un auditor puede amenazar una transacción de venta multimillonaria. La lección clave es que en los negocios surgen situaciones que contradicen todo lo que se creía seguro ('el cielo es púrpura'), y entonces no suele servir seguir discutiendo que el cielo es azul: hay que aceptarlo y lidiar con ello. En este caso, el liderazgo actuó rápido, movilizó toda su red de contactos, negoció bajo presión extrema y mantuvo la posición de valor de la empresa (no aceptó descuentos que socavaran la narrativa de 'estándar de oro') aunque la junta sugería lo contrario y sin saber si tenía razón.",
   "pasos_accionables": [
     "Actuar con rapidez extrema ante una crisis inesperada que amenaza una transacción crítica",
     "Movilizar toda la red de contactos (board, empleados, socios) para resolver el problema en tiempo récord",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Enfrenta Crisis con tus Auditores",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-032-manejo_crisis_auditoria_contable-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Caso real de cómo una discrepancia inesperada en la interpretación contable de un auditor puede amenazar una transacción de venta multimillonaria. La lección clave es que en los negocios surgen situaciones que contradicen todo lo que se creía seguro ('el cielo es púrpura'), y el liderazgo debe actuar con rapidez, movilizar toda la red de contactos disponible, negociar bajo presión extrema, y mantener la posición de valor de la empresa (no aceptar descuentos que socaven la narrativa de 'estándar de oro') incluso cuando la junta directiva sugiere lo contrario.",
+      "texto_nuevo": "Caso real de cómo una discrepancia inesperada en la interpretación contable de un auditor puede amenazar una transacción de venta multimillonaria. La lección clave es que en los negocios surgen situaciones que contradicen todo lo que se creía seguro ('el cielo es púrpura'), y entonces no suele servir seguir discutiendo que el cielo es azul: hay que aceptarlo y lidiar con ello. En este caso, el liderazgo actuó rápido, movilizó toda su red de contactos, negoció bajo presión extrema y mantuvo la posición de valor de la empresa (no aceptó descuentos que socavaran la narrativa de 'estándar de oro') aunque la junta sugería lo contrario y sin saber si tenía razón.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3136-3144",
+        "frase": "it usually does no good to keep arguing that the sky is blue"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro cuenta lo que hizo el CEO en ese caso, sin saber si tenía razón; el nodo lo convierte en un deber general de sostener la posición contra la junta.; La lección explícita del libro es que no suele servir seguir discutiendo que el cielo es azul: hay que aceptarlo y lidiar con ello; el nodo la pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

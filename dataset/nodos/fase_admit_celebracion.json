@@ -6,7 +6,7 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "La fase Admit comienza cuando el cliente decide comprar (firma, hace clic en 'comprar', paga). En este momento se libera dopamina generando euforia y emoción en el cliente. Las empresas suelen celebrar internamente (campanas, aplausos, comisiones) pero rara vez incluyen al cliente en esa celebración, perdiendo la oportunidad de alinear las emociones de ambas partes. Ejemplos como Build-A-Bear y Ridemakerz muestran cómo co-crear el producto con el cliente y anunciar públicamente el 'nacimiento' de la relación genera un vínculo emocional memorable desde el inicio.",
   "pasos_accionables": [
-    "Diseñar un ritual o momento de celebración compartido con el cliente al cerrar la compra",
+    "Diseñar un ritual o momento de celebración compartido con el cliente al cerrar la compra, a la medida del momento y del cliente, sin exagerar",
     "Crear un artefacto físico o digital que memorialice el momento (certificado, mensaje personalizado, video)",
     "Involucrar al cliente en la co-creación de su producto/servicio cuando sea posible",
     "Alinear la comunicación de celebración interna de la empresa con una comunicación externa hacia el cliente",
@@ -49,5 +49,24 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-026-fase_admit_celebracion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar un ritual o momento de celebración compartido con el cliente al cerrar la compra",
+      "texto_nuevo": "Diseñar un ritual o momento de celebración compartido con el cliente al cerrar la compra, a la medida del momento y del cliente, sin exagerar",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2384-2394",
+        "frase": "create a celebration that fits the moment and the customer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: cae la advertencia de no celebrar de más y ajustar la celebración al momento y al cliente.; Se pierde el límite del libro: celebrar según el momento y el cliente, sin pasarse ni celebrar de más tan pronto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

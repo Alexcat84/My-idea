@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El RCCA (Root Cause Corrective Action) de Juran es un método de cuatro pasos para identificar y solucionar la causa raíz de problemas esporádicos: Definir el problema, Analizar y diagnosticar la causa, Mejorar/remediar la causa, y Controlar para mantener las ganancias. Es análogo al proceso médico de diagnóstico y tratamiento, y se enfoca en causas especiales (esporádicas), a diferencia de Six Sigma que aborda causas comunes (crónicas).",
   "pasos_accionables": [
-    "Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema",
+    "Definir el problema: identificar si es esporádico o crónico (si es crónico, aplicar métodos de mejora de avance en lugar de este), establecer quién es responsable de resolverlo si un plan de control no lo fija ya, y preparar un enunciado del problema",
     "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz",
     "Mejorar: diseñar e implementar el remedio",
     "Controlar: ajustar los controles para mantener las ganancias"
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Halla la Causa Raíz",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-037-juran_rcca_metodo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema",
+      "texto_nuevo": "Definir el problema: identificar si es esporádico o crónico (si es crónico, aplicar métodos de mejora de avance en lugar de este), establecer quién es responsable de resolverlo si un plan de control no lo fija ya, y preparar un enunciado del problema",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15198-15200",
+        "frase": "Establish responsibility to solve it, if it is not already established"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el subpaso de establecer quién es responsable de resolverlo.; Mismo subpaso perdido que la marca 1.; Se pierde la bifurcación: si es crónico se aplican métodos de mejora de avance.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

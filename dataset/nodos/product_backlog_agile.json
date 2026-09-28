@@ -7,7 +7,7 @@
   "resumen_teorico": "El backlog de producto es el equivalente ágil de la especificación de requisitos tradicional, pero en lugar de detallar especificaciones técnicas fijas, contiene necesidades, deseos y preferencias del cliente priorizadas. Es un documento vivo que se actualiza y reprioriza continuamente con nuevo aprendizaje. Algunas empresas usan 'user stories' con 'story points' (ej. tallas de camiseta S/M/L/XL) para estimar el esfuerzo requerido.",
   "pasos_accionables": [
     "Recopilar necesidades, deseos y preferencias del cliente (VoC) en lugar de especificaciones técnicas rígidas",
-    "Priorizar los ítems del backlog según valor para el cliente y urgencia",
+    "Priorizar los ítems del backlog, definir su secuencia óptima y atacar primero los más importantes",
     "Traducir los ítems de mayor prioridad en un sprint backlog al inicio de cada sprint",
     "Actualizar y reprioritizar el backlog constantemente conforme se obtiene nueva información",
     "Opcional: usar user stories con story points para estimar esfuerzo"
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Adapta Requisitos Continuamente",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-product_backlog_agile-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar los ítems del backlog según valor para el cliente y urgencia",
+      "texto_nuevo": "Priorizar los ítems del backlog, definir su secuencia óptima y atacar primero los más importantes",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4508",
+        "frase": "the optimal sequence determined, and the most important tackled first"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro prioriza, fija la secuencia óptima y ataca primero lo más importante, sin fijar criterios como la urgencia.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

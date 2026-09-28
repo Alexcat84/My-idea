@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Transferencia de Actividades de Calidad a Quien Ejecuta el Trabajo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un área aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dándoles la capacitación necesaria para asumir esa responsabilidad.",
+  "resumen_teorico": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un área aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, asegurándote de que entiendan con claridad de qué son responsables y dándoles la capacitación necesaria para asumir esa responsabilidad.",
   "pasos_accionables": [
     "Identificar qué tareas de calidad están hoy centralizadas y podrían pasar a quien hace el trabajo",
     "Capacitar a esas personas en las nuevas responsabilidades",
-    "Dejar que quien antes se encargaba de calidad funcione ahora como apoyo o consultor interno",
-    "Medir con encuestas periódicas qué tan conforme queda quien recibe el trabajo de otra parte del negocio"
+    "Dejar que quien antes se encargaba de calidad funcione ahora como apoyo o consultor interno, sin dejar de dar una evaluación independiente de la calidad del producto",
+    "Medir con encuestas a quienes reciben el apoyo de calidad qué importancia le dan a cada servicio y qué tan conformes quedan con él"
   ],
   "entregable_esperado": "Un plan de traspaso de responsabilidades de calidad con su cronograma de capacitación",
   "nodos_previos": [
@@ -83,6 +83,56 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-022-transferencia_de_actividades_a_departamentos_de_linea-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un área aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dándoles la capacitación necesaria para asumir esa responsabilidad.",
+      "texto_nuevo": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un área aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, asegurándote de que entiendan con claridad de qué son responsables y dándoles la capacitación necesaria para asumir esa responsabilidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9596",
+        "frase": "line departments must clearly and fully understand the activities for which they are responsible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige además que las áreas entiendan clara y plenamente de qué responden; el resumen solo trae la capacitación.; Mismo defecto: se cae la primera condición de éxito del traspaso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-transferencia_de_actividades_a_departamentos_de_linea-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dejar que quien antes se encargaba de calidad funcione ahora como apoyo o consultor interno",
+      "texto_nuevo": "Dejar que quien antes se encargaba de calidad funcione ahora como apoyo o consultor interno, sin dejar de dar una evaluación independiente de la calidad del producto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9600",
+        "frase": "always be a need for a quality department to provide an independent evaluation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro sostiene que siempre hará falta una evaluación independiente de la calidad del producto además del apoyo interno.; Mismo defecto: el paso reduce la función a apoyo y pierde la evaluación independiente.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-transferencia_de_actividades_a_departamentos_de_linea-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir con encuestas periódicas qué tan conforme queda quien recibe el trabajo de otra parte del negocio",
+      "texto_nuevo": "Medir con encuestas a quienes reciben el apoyo de calidad qué importancia le dan a cada servicio y qué tan conformes quedan con él",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9598",
+        "frase": "both the relative importance of certain services and the degree of satisfaction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El paso mide la conformidad de cualquier área que recibe trabajo de otra, objeto que el libro no propone; la encuesta del libro es sobre los servicios de calidad.; La encuesta del libro es a los clientes internos del área de calidad y pregunta la importancia de cada servicio además de la satisfacción; el paso pierde la importancia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

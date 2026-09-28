@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Estrategias de Estimación de Costos: Recursos Totales vs. Costo Unitario",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario es más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
+  "resumen_teorico": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
   "pasos_accionables": [
-    "Determinar si la actividad a medir es mejor evaluada por recursos totales o por costo unitario",
+    "Determinar si la actividad a medir es mejor evaluada por recursos totales, por costo unitario o por las dos estrategias juntas",
     "Para recursos totales: identificar el costo total de la categoría y estimar el porcentaje atribuible a mala calidad",
     "Para costo unitario: estimar el costo de corregir una ocurrencia promedio y multiplicarlo por la frecuencia anual",
     "Usar fuentes de datos como sistemas de reporte de tiempo, contabilidad de costos, o juicio informado de supervisores",
-    "Incluir en el cálculo beneficios, salarios, costos de capital asignado y penalizaciones por pagos tardíos"
+    "Incluir en el cálculo beneficios, salarios, costos de capital asignado, penalizaciones o descuentos mal aprovechados por pagos tardíos y sobreprecios pagados por pedidos o envíos urgentes"
   ],
   "entregable_esperado": "Una estimación documentada y justificada del costo de cada actividad de mala calidad identificada",
   "nodos_previos": [
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Estima tus Costos de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-020-estrategias_estimacion_costos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario es más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
+      "texto_nuevo": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6150",
+        "frase": "Unit cost is often the most appropriate strategy when deficiencies occur rarely"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el costo unitario suele ser (often) la estrategia más apropiada; el nodo lo vuelve tajante.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-estrategias_estimacion_costos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si la actividad a medir es mejor evaluada por recursos totales o por costo unitario",
+      "texto_nuevo": "Determinar si la actividad a medir es mejor evaluada por recursos totales, por costo unitario o por las dos estrategias juntas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6008",
+        "frase": "These strategies can be used individually or together."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que las dos estrategias pueden usarse por separado o juntas; el paso las plantea como excluyentes.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-020-estrategias_estimacion_costos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir en el cálculo beneficios, salarios, costos de capital asignado y penalizaciones por pagos tardíos",
+      "texto_nuevo": "Incluir en el cálculo beneficios, salarios, costos de capital asignado, penalizaciones o descuentos mal aprovechados por pagos tardíos y sobreprecios pagados por pedidos o envíos urgentes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6194-6200",
+        "frase": "include penalties or misused discounts for late payments and premium prices paid for rush orders"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae también los descuentos mal aprovechados por pagos tardíos y los sobreprecios por pedidos o envíos urgentes.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

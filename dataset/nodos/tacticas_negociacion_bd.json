@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Tácticas de Aproximación y Negociación en BD",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Aproximarse a un partner requiere identificar al contacto correcto (quien controla la métrica que te interesa impactar), conseguir una introducción cálida, y negociar un term sheet simple que cubra duración, exclusividad, pagos y revenue sharing. Mantener las negociaciones simples acelera el cierre de tratos, especialmente en integraciones técnicas.",
+  "resumen_teorico": "Aproximarse a un partner requiere identificar al contacto correcto (quien controla la métrica que te interesa impactar), conseguir una introducción cálida, y negociar un term sheet simple que cubra duración, exclusividad, pagos, nivel de compromiso, garantías y revenue sharing. Mantener las negociaciones simples acelera el cierre de tratos, especialmente en integraciones técnicas.",
   "pasos_accionables": [
     "Identificar a la persona responsable de la métrica que tu partnership impactará",
     "Conseguir una introducción cálida con un resumen de la propuesta fácil de reenviar",
     "Programar reunión o llamada lo antes posible tras el primer contacto",
-    "Negociar un term sheet simple de una página cubriendo duración, exclusividad y revenue sharing",
+    "Negociar un term sheet simple de una página cubriendo duración, exclusividad, pagos, nivel de compromiso, garantías y revenue sharing",
     "Minimizar la carga técnica/legal para el partner (ej. construir interfaces custom)",
     "Documentar en un memo cómo se cerró el trato: tiempos, contactos clave, obstáculos"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Negocia tu Alianza Estratégica",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-034-tacticas_negociacion_bd-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aproximarse a un partner requiere identificar al contacto correcto (quien controla la métrica que te interesa impactar), conseguir una introducción cálida, y negociar un term sheet simple que cubra duración, exclusividad, pagos y revenue sharing. Mantener las negociaciones simples acelera el cierre de tratos, especialmente en integraciones técnicas.",
+      "texto_nuevo": "Aproximarse a un partner requiere identificar al contacto correcto (quien controla la métrica que te interesa impactar), conseguir una introducción cálida, y negociar un term sheet simple que cubra duración, exclusividad, pagos, nivel de compromiso, garantías y revenue sharing. Mantener las negociaciones simples acelera el cierre de tratos, especialmente en integraciones técnicas.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2501",
+        "frase": "the level of commitment between partners, any guarantees in the deal, and revenue sharing agreements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de términos clave del libro incluye el nivel de compromiso y las garantías, que el nodo omite.; Mismo defecto: faltan compromiso y garantías en la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-034-tacticas_negociacion_bd-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar un term sheet simple de una página cubriendo duración, exclusividad y revenue sharing",
+      "texto_nuevo": "Negociar un term sheet simple de una página cubriendo duración, exclusividad, pagos, nivel de compromiso, garantías y revenue sharing",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2501",
+        "frase": "lifetime of the deal, exclusivity, how payments work (if any), the level of commitment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso deja fuera pagos, nivel de compromiso y garantías, que el libro lista entre los términos clave.; Mismo defecto: lista incompleta de términos clave.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

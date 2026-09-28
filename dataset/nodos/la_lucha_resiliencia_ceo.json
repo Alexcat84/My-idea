@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "La Lucha: Gestionar el Colapso Psicológico del Emprendedor",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "La Lucha (The Struggle) es el estado emocional extremo que atraviesa todo fundador cuando la empresa no cumple las expectativas: dudas existenciales, pérdida de confianza del equipo, aislamiento y desesperación. No es sinónimo de fracaso, pero puede causarlo si el líder es débil. Reconocer este estado como una etapa normal e inevitable del camino emprendedor permite abordarlo con estrategias concretas en lugar de negarlo.",
+  "resumen_teorico": "La Lucha (The Struggle) es el estado emocional extremo que atraviesa todo fundador cuando la empresa no cumple las expectativas: dudas existenciales, pérdida de confianza del equipo, aislamiento y desesperación. No es sinónimo de fracaso, pero causa el fracaso, sobre todo si el líder es débil, y siempre si lo es. Reconocer este estado como una etapa normal del camino emprendedor, en lugar de negarlo, no lo resuelve: la Lucha no tiene una respuesta, solo cosas que pueden ayudar o no.",
   "pasos_accionables": [
-    "Reconocer que la Lucha es parte normal del camino, no una señal de que todo está perdido",
+    "Reconocer que la Lucha es parte normal del camino, no una señal de que todo está perdido, aunque pasar por ella tampoco garantiza que vayas a salir adelante",
     "Compartir la carga con el equipo en lugar de cargar todo el peso individualmente",
     "Buscar siempre 'el próximo movimiento' aunque parezca que no hay opciones (pensar como ajedrez, no como damas)",
     "Evitar tomarse los fracasos de manera excesivamente personal",
-    "Sobrevivir el tiempo suficiente para que las condiciones del mercado cambien a favor"
+    "Sobrevivir el tiempo suficiente, porque el mañana puede traer la respuesta que hoy parece imposible"
   ],
   "entregable_esperado": "Plan personal de afrontamiento psicológico y lista de acciones concretas ante escenarios de crisis (a quién recurrir, qué compartir con el equipo)",
   "nodos_previos": [
@@ -57,6 +57,56 @@
         "motivo": "Después de reconocer La Lucha, el siguiente paso es dejar las excusas y enfocar toda la energía en dirigir la empresa hacia adelante."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-032-la_lucha_resiliencia_ceo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La Lucha (The Struggle) es el estado emocional extremo que atraviesa todo fundador cuando la empresa no cumple las expectativas: dudas existenciales, pérdida de confianza del equipo, aislamiento y desesperación. No es sinónimo de fracaso, pero puede causarlo si el líder es débil. Reconocer este estado como una etapa normal e inevitable del camino emprendedor permite abordarlo con estrategias concretas en lugar de negarlo.",
+      "texto_nuevo": "La Lucha (The Struggle) es el estado emocional extremo que atraviesa todo fundador cuando la empresa no cumple las expectativas: dudas existenciales, pérdida de confianza del equipo, aislamiento y desesperación. No es sinónimo de fracaso, pero causa el fracaso, sobre todo si el líder es débil, y siempre si lo es. Reconocer este estado como una etapa normal del camino emprendedor, en lugar de negarlo, no lo resuelve: la Lucha no tiene una respuesta, solo cosas que pueden ayudar o no.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "765-775",
+        "frase": "The Struggle is not failure, but it causes failure. Especially if you are weak."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la Lucha causa el fracaso, sobre todo y siempre si eres débil; el nodo lo rebaja a una posibilidad.; El libro dice que la Lucha no tiene respuesta y solo ofrece cosas que pueden ayudar o no; el nodo promete estrategias concretas.; Mismo defecto que la marca 0: se rebaja a posibilidad lo que el libro afirma.; Mismo defecto que la marca 1: resultado prometido que el libro niega.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-la_lucha_resiliencia_ceo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sobrevivir el tiempo suficiente para que las condiciones del mercado cambien a favor",
+      "texto_nuevo": "Sobrevivir el tiempo suficiente, porque el mañana puede traer la respuesta que hoy parece imposible",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "781",
+        "frase": "If you survive long enough to see tomorrow, it may bring you the answer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que si aguantas quizá tengas suerte y el mañana puede traer la respuesta; el paso da por esperado un cambio a favor del mercado.; Mismo defecto: endurece un 'puede' del libro en un cambio a favor que se espera.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-la_lucha_resiliencia_ceo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconocer que la Lucha es parte normal del camino, no una señal de que todo está perdido",
+      "texto_nuevo": "Reconocer que la Lucha es parte normal del camino, no una señal de que todo está perdido, aunque pasar por ella tampoco garantiza que vayas a salir adelante",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "769",
+        "frase": "But that does not mean that you will make it. You may not make it."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que todos los grandes pasaron por la Lucha, pero que eso no garantiza que lo logres; el paso pierde ese límite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
   "pasos_accionables": [
-    "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder",
+    "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder; si tu producto es complejo, puede hacer falta un análisis más sofisticado, como el análisis conjunto",
     "Determinar si la diferencia de preferencia cae fuera del rango 25-75 por ciento",
     "Traducir las ventajas técnicas a términos económicos comprensibles para el comprador, como costo por uso o ahorro",
-    "Si la diferencia es amplia invertir en mejoras de calidad; si es pequeña invertir en marketing",
+    "Invertir en mejoras de calidad si pueden llevar tu preferencia de débil a aceptable o de aceptable a claramente dominante; con diferencias pequeñas, lo que decide la cuota es la habilidad de marketing",
     "Evitar mejoras menores de calidad que el cliente no perciba ni valore"
   ],
   "entregable_esperado": "Informe de análisis de preferencia de consumidor frente a cuota de mercado con recomendación de invertir en calidad o en marketing.",
@@ -39,5 +39,41 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-022-superioridad_calidad_market_share-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la diferencia es amplia invertir en mejoras de calidad; si es pequeña invertir en marketing",
+      "texto_nuevo": "Invertir en mejoras de calidad si pueden llevar tu preferencia de débil a aceptable o de aceptable a claramente dominante; con diferencias pequeñas, lo que decide la cuota es la habilidad de marketing",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "585-587",
+        "frase": "bringing them from an acceptable preference to a clearly dominant preference"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja la mejora de calidad cuando lleva la preferencia de débil a aceptable o de aceptable a dominante, no según el tamaño actual de la diferencia.; Mismo defecto: con diferencia pequeña el libro aún aconseja una mejora que lleve a preferencia claramente dominante.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-022-superioridad_calidad_market_share-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder",
+      "texto_nuevo": "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder; si tu producto es complejo, puede hacer falta un análisis más sofisticado, como el análisis conjunto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "565",
+        "frase": "More complex products such as insurance or financial instruments may require more sophisticated analysis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La elección forzada vale para productos relativamente simples; los complejos pueden requerir análisis más sofisticados.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

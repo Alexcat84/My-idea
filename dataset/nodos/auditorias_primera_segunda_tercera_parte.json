@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Auditorías de Primera, Segunda y Tercera Parte",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Modelo de verificación de sistemas de calidad en cadenas de suministro. Las auditorías de primera parte son internas (realizadas por la propia organización proveedora); las de segunda parte son externas, realizadas por el cliente sobre su proveedor dentro de un contrato bilateral; y las de tercera parte son realizadas por un organismo de certificación/registro independiente que valida el cumplimiento de un estándar (p. ej. ISO 9001) y emite un certificado público, eliminando la redundancia de múltiples auditorías bilaterales en la cadena de suministro.",
+  "resumen_teorico": "Modelo de verificación de sistemas de calidad en cadenas de suministro. Las auditorías de primera parte son internas (realizadas por la propia organización proveedora); las de segunda parte son externas, realizadas por el cliente sobre su proveedor dentro de un contrato bilateral; y las de tercera parte son realizadas por un organismo de certificación/registro independiente que valida el cumplimiento de un estándar (p. ej. ISO 9001) y emite un certificado público, reduciendo la redundancia de múltiples auditorías bilaterales en la cadena de suministro.",
   "pasos_accionables": [
-    "Determinar si la relación con el cliente requiere auditoría interna (primera parte) o auditoría del cliente (segunda parte)",
-    "Evaluar si conviene certificar el sistema de calidad mediante un organismo de tercera parte para evitar auditorías redundantes",
+    "Determinar qué auditorías pide la relación con el cliente: típicamente, auditoría interna (primera parte) y además auditoría del cliente (segunda parte)",
+    "Evaluar si conviene certificar el sistema de calidad mediante un organismo de tercera parte para reducir auditorías redundantes",
     "Programar auditorías internas periódicas antes de someterse a auditorías externas",
     "Seleccionar un registrador/certificador competente y acreditado"
   ],
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Elige quién Audita tu Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-023-auditorias_primera_segunda_tercera_parte-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo de verificación de sistemas de calidad en cadenas de suministro. Las auditorías de primera parte son internas (realizadas por la propia organización proveedora); las de segunda parte son externas, realizadas por el cliente sobre su proveedor dentro de un contrato bilateral; y las de tercera parte son realizadas por un organismo de certificación/registro independiente que valida el cumplimiento de un estándar (p. ej. ISO 9001) y emite un certificado público, eliminando la redundancia de múltiples auditorías bilaterales en la cadena de suministro.",
+      "texto_nuevo": "Modelo de verificación de sistemas de calidad en cadenas de suministro. Las auditorías de primera parte son internas (realizadas por la propia organización proveedora); las de segunda parte son externas, realizadas por el cliente sobre su proveedor dentro de un contrato bilateral; y las de tercera parte son realizadas por un organismo de certificación/registro independiente que valida el cumplimiento de un estándar (p. ej. ISO 9001) y emite un certificado público, reduciendo la redundancia de múltiples auditorías bilaterales en la cadena de suministro.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11240",
+        "frase": "a means to reduce the redundant, non-value-adding effort of these multiple audits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la certificación de tercera parte es un medio para reducir la redundancia, no para eliminarla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-023-auditorias_primera_segunda_tercera_parte-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si la relación con el cliente requiere auditoría interna (primera parte) o auditoría del cliente (segunda parte)",
+      "texto_nuevo": "Determinar qué auditorías pide la relación con el cliente: típicamente, auditoría interna (primera parte) y además auditoría del cliente (segunda parte)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11229",
+        "frase": "Such contracts typically also include provisions to have external audits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que estos contratos típicamente prevén las dos auditorías; el paso las presenta como alternativas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-023-auditorias_primera_segunda_tercera_parte-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si conviene certificar el sistema de calidad mediante un organismo de tercera parte para evitar auditorías redundantes",
+      "texto_nuevo": "Evaluar si conviene certificar el sistema de calidad mediante un organismo de tercera parte para reducir auditorías redundantes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11240",
+        "frase": "a means to reduce the redundant, non-value-adding effort of these multiple audits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la certificación reduce el esfuerzo redundante de las auditorías, no que lo evite.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

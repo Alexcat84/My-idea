@@ -9,7 +9,7 @@
     "Utilizar los hallazgos de benchmarking para alimentar el diseño de nuevos productos o procesos.",
     "Aplicar el principio de Pareto (80/20) para priorizar las áreas de mejora identificadas por el benchmarking.",
     "Incorporar los datos de benchmarking en los sistemas de control de calidad para desafiar los estándares actuales.",
-    "Usar las brechas de desempeño identificadas para diagnosticar causas raíz en proyectos de mejora."
+    "Usar las brechas de desempeño identificadas para ver dónde el desempeño es más débil y dónde es más fuerte, y así priorizar los proyectos de mejora."
   ],
   "entregable_esperado": "Matriz de priorización de proyectos de mejora basada en gap analysis y principio de Pareto derivado del benchmarking.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Conecta Benchmarking con tu Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-023-benchmarking_trilogia_juran-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar las brechas de desempeño identificadas para diagnosticar causas raíz en proyectos de mejora.",
+      "texto_nuevo": "Usar las brechas de desempeño identificadas para ver dónde el desempeño es más débil y dónde es más fuerte, y así priorizar los proyectos de mejora.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17273",
+        "frase": "identify where their performance is weakest and where it is strongest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro usa las brechas para ver dónde el desempeño es más débil o más fuerte y priorizar proyectos; no para diagnosticar causas raíz.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

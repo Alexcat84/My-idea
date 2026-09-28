@@ -7,9 +7,9 @@
   "resumen_teorico": "La inteligencia no basta para ser un buen empleado. Existen tres arquetipos de empleados brillantes que dañan la organización: el Hereje (construye el caso de que la empresa es un desastre en vez de arreglar problemas), el Volátil/Flaky (rendimiento excepcional intercalado con ausencias o caídas inexplicables, a menudo por causas de fondo serias), y el Idiota/Jerk (comportamiento hostil consistente que bloquea la comunicación del equipo, especialmente dañino en el nivel ejecutivo). Reconocer estos patrones permite al líder actuar antes de que degraden la cultura y comunicación de toda la empresa.",
   "pasos_accionables": [
     "Identifica si un empleado crítico busca arreglar problemas o solo acumula evidencia de que la empresa 'no sirve'",
-    "Investiga causas de fondo en comportamientos erráticos (adicciones, salud mental, conflictos de interés) antes de tomar acción",
-    "Evalúa si un ejecutivo hostil está bloqueando que otros hablen de temas importantes en su presencia",
-    "Decide con claridad: solo se puede 'esperar el autobús' (tolerar comportamiento disruptivo) por UN empleado excepcional, no por varios"
+    "Investiga causas de fondo en comportamientos erráticos (adicciones, salud mental, conflictos de interés) antes de tomar acción, sin olvidar que, por alto que sea su potencial, no obtienes valor de alguien con quien no puedes contar",
+    "Evalúa si un ejecutivo hostil está bloqueando que otros hablen de temas importantes en su presencia; si es así, tienes que sacarlo",
+    "Decide con claridad: solo se puede 'esperar el autobús' (tolerar comportamiento disruptivo) por UN empleado excepcional, no por varios, y solo si tú mismo mitigas sus defectos y evitas que contamine la cultura"
   ],
   "entregable_esperado": "Plan de acción individual para cada empleado problemático identificado, con decisión de retención o desvinculación",
   "nodos_previos": [
@@ -26,5 +26,58 @@
   "etiqueta_arbol": "Maneja a tus Genios Difíciles",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-032-gestion_empleados_brillantes_problematicos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investiga causas de fondo en comportamientos erráticos (adicciones, salud mental, conflictos de interés) antes de tomar acción",
+      "texto_nuevo": "Investiga causas de fondo en comportamientos erráticos (adicciones, salud mental, conflictos de interés) antes de tomar acción, sin olvidar que, por alto que sea su potencial, no obtienes valor de alguien con quien no puedes contar",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2108",
+        "frase": "no matter how high an employee's potential, you cannot get value from him unless"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone el límite: por alto que sea su potencial, no obtienes valor de alguien que no trabaja de forma confiable; el paso solo pide investigar.; Mismo defecto: se pierde el límite de la confiabilidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-gestion_empleados_brillantes_problematicos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa si un ejecutivo hostil está bloqueando que otros hablen de temas importantes en su presencia",
+      "texto_nuevo": "Evalúa si un ejecutivo hostil está bloqueando que otros hablen de temas importantes en su presencia; si es así, tienes que sacarlo",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2114",
+        "frase": "destroys communication on your staff, you need to send her to the pound"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no se queda en evaluar: si uno de tus pesos pesados destruye la comunicación del equipo, tienes que sacarlo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-032-gestion_empleados_brillantes_problematicos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide con claridad: solo se puede 'esperar el autobús' (tolerar comportamiento disruptivo) por UN empleado excepcional, no por varios",
+      "texto_nuevo": "Decide con claridad: solo se puede 'esperar el autobús' (tolerar comportamiento disruptivo) por UN empleado excepcional, no por varios, y solo si tú mismo mitigas sus defectos y evitas que contamine la cultura",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2122",
+        "frase": "You may decide that you will personally mitigate the employee's negative attributes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona esperar el autobús a que la persona aporte muchísimo y a que tú mismo mitigues sus defectos para que no contamine la cultura.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

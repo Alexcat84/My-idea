@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar el presupuesto y tiempo disponible para determinar la fuente de datos más viable.",
     "Si se requiere rapidez, considerar benchmarking por base de datos con un proveedor de reputación comprobada.",
-    "Si se necesita profundidad, optar por benchmarking uno a uno o de consorcio.",
+    "Si se necesita profundidad, optar por benchmarking de consorcio, o por uno a uno con un socio que un estudio previo haya identificado como de desempeño superior en el tema.",
     "Verificar la validez y definición clara de las métricas antes de aceptar los datos de cualquier fuente."
   ],
   "entregable_esperado": "Selección documentada de la fuente de datos de benchmarking más adecuada según recursos y objetivos.",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Elige tus Fuentes de Comparación",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-021-fuentes_datos_benchmarking-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se necesita profundidad, optar por benchmarking uno a uno o de consorcio.",
+      "texto_nuevo": "Si se necesita profundidad, optar por benchmarking de consorcio, o por uno a uno con un socio que un estudio previo haya identificado como de desempeño superior en el tema.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17180",
+        "frase": "an organization is identified as delivering superior performance levels in the subject area"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el uno a uno rinde cuando un estudio previo identificó al socio como de desempeño superior; las visitas superficiales rara vez aportan.; Misma condición omitida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

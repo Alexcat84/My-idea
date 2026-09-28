@@ -4,9 +4,9 @@
   "dominio": "entrega",
   "titulo_concepto": "Evaluar el proceso completo, no cada métrica por separado",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "Cuando mides tu entrega por partes (a tiempo, completa, sin daño, con factura correcta) cada porcentaje puede verse alto por separado, pero el cliente vive todas esas partes juntas en un solo pedido. Si cada paso acierta, digamos, entre el noventa y cinco y el noventa y nueve por ciento, el resultado real no se suma sino que se multiplica: varios aciertos altos combinados dan un numero final mucho mas bajo de lo que cualquier métrica individual sugiere. Por eso conviene juntar tus indicadores en una sola cifra compuesta antes de decidir si tu servicio esta bien o necesita ajustes. Mirar cada métrica aislada esconde el verdadero nivel de satisfacción que estas entregando.",
+  "resumen_teorico": "Cuando mides tu entrega por partes (a tiempo, completa, sin daño, bien armada y con factura correcta) cada porcentaje puede verse alto por separado, pero el cliente vive todas esas partes juntas en un solo pedido. Si cada paso acierta, digamos, entre el noventa y cinco y el noventa y nueve por ciento, el resultado real no se suma sino que se multiplica: varios aciertos altos combinados dan un número final mucho más bajo de lo que cualquier métrica individual sugiere. Por eso conviene juntar tus indicadores en una sola cifra compuesta antes de decidir si tu servicio está bien o necesita ajustes. Mirar cada métrica aislada esconde el verdadero nivel de satisfacción que estás entregando.",
   "pasos_accionables": [
-    "Anota cada paso de tu entrega que pueda fallar: a tiempo, completo, sin daño, factura correcta.",
+    "Anota cada paso de tu entrega que pueda fallar: a tiempo, completo, sin daño, bien armado, factura correcta.",
     "Mide el porcentaje de aciertos de cada paso por separado durante un mes.",
     "Multiplica esos porcentajes entre sí para obtener el resultado combinado real.",
     "Compara esa cifra combinada con lo que le prometes al cliente y ajusta tus metas.",
@@ -108,6 +108,39 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-029-evaluar_proceso_completo_no_cada_metrica-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota cada paso de tu entrega que pueda fallar: a tiempo, completo, sin daño, factura correcta.",
+      "texto_nuevo": "Anota cada paso de tu entrega que pueda fallar: a tiempo, completo, sin daño, bien armado, factura correcta.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "3052-3098",
+        "frase": "orders filled accurately"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta 'orders filled accurately' de la lista del libro.; La medición acumulada del libro tiene cinco factores e incluye el pedido armado con exactitud; omitirlo infla el producto.; Se cae el factor de armado exacto que entra en la multiplicación.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-029-evaluar_proceso_completo_no_cada_metrica-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando mides tu entrega por partes (a tiempo, completa, sin daño, con factura correcta) cada porcentaje puede verse alto por separado, pero el cliente vive todas esas partes juntas en un solo pedido. Si cada paso acierta, digamos, entre el noventa y cinco y el noventa y nueve por ciento, el resultado real no se suma sino que se multiplica: varios aciertos altos combinados dan un numero final mucho mas bajo de lo que cualquier métrica individual sugiere. Por eso conviene juntar tus indicadores en una sola cifra compuesta antes de decidir si tu servicio esta bien o necesita ajustes. Mirar cada métrica aislada esconde el verdadero nivel de satisfacción que estas entregando.",
+      "texto_nuevo": "Cuando mides tu entrega por partes (a tiempo, completa, sin daño, bien armada y con factura correcta) cada porcentaje puede verse alto por separado, pero el cliente vive todas esas partes juntas en un solo pedido. Si cada paso acierta, digamos, entre el noventa y cinco y el noventa y nueve por ciento, el resultado real no se suma sino que se multiplica: varios aciertos altos combinados dan un número final mucho más bajo de lo que cualquier métrica individual sugiere. Por eso conviene juntar tus indicadores en una sola cifra compuesta antes de decidir si tu servicio está bien o necesita ajustes. Mirar cada métrica aislada esconde el verdadero nivel de satisfacción que estás entregando.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "3052-3098",
+        "frase": "orders filled accurately"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La medición acumulada del libro incluye el pedido armado con exactitud; omitirlo infla el resultado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistemas Pull versus Push en Producción",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en pronósticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según consumo real, no según pronostico.",
+  "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en la demanda, ignorando las restricciones o cuellos de botella de tu proceso, lo que puede causar un flujo desbalanceado e inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según el consumo real.",
   "pasos_accionables": [
     "Evaluar si tu operación actual funciona bajo un esquema push o pull",
     "Identificar los cuellos de botella que el sistema push está ignorando en tu proceso",
@@ -163,6 +163,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-024-sistema_pull_push-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en pronósticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según consumo real, no según pronostico.",
+      "texto_nuevo": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en la demanda, ignorando las restricciones o cuellos de botella de tu proceso, lo que puede causar un flujo desbalanceado e inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según el consumo real.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13295",
+        "frase": "ignores constraints or bottlenecks within the process and can cause unbalanced flow"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el push empuja según la demanda; la oposición contra el pronóstico no está.; El libro dice que el push puede causar flujo desbalanceado y exceso de WIP; el nodo lo vuelve seguro.; Mismo endurecimiento: lo que el libro dice que puede pasar queda como efecto seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

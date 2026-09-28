@@ -7,13 +7,13 @@
   "resumen_teorico": "Recover involucra las actividades para restaurar activos y operaciones afectados por un incidente de ciberseguridad, incluyendo procesos formales de recuperación, priorización de restauración, y documentación de lecciones aprendidas.",
   "pasos_accionables": [
     "Identificar quién dentro y fuera del negocio tiene responsabilidades de recuperación",
-    "Preparar un informe post-incidente (after-action report) que documente el incidente, la respuesta y las lecciones aprendidas",
+    "Preparar un informe post-incidente (after-action report) que documente el incidente, las acciones de respuesta y de recuperación tomadas y las lecciones aprendidas",
     "Evaluar la integridad de los datos y activos respaldados antes de usarlos para la restauración",
-    "Priorizar las acciones de recuperación según necesidades organizacionales y recursos disponibles",
-    "Comunicar regularmente con partes interesadas internas y externas durante el proceso de recuperación",
+    "Priorizar las acciones de recuperación según necesidades organizacionales, recursos disponibles y activos afectados",
+    "Comunicar de forma regular y segura con partes interesadas internas y externas durante el proceso de recuperación",
     "Documentar la finalización del incidente y la reanudación de actividades normales"
   ],
-  "entregable_esperado": "Playbook de recuperación con procesos formales, documentación de criticidad de recursos, lista de personal responsable y plan de comunicación",
+  "entregable_esperado": "Playbook de recuperación con procesos formales, documentación de criticidad de recursos, documentación de los sistemas que procesan y guardan la información (sobre todo los activos clave) para ordenar la restauración, lista de personal responsable y plan de comunicación",
   "nodos_previos": [
     "funcion_respond_plan_incidentes"
   ],
@@ -27,5 +27,74 @@
   "etiqueta_arbol": "Recupera tu Negocio del Ataque",
   "fuentes_internas": [
     "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-025-csf_funcion_recover-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar un informe post-incidente (after-action report) que documente el incidente, la respuesta y las lecciones aprendidas",
+      "texto_nuevo": "Preparar un informe post-incidente (after-action report) que documente el incidente, las acciones de respuesta y de recuperación tomadas y las lecciones aprendidas",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "279",
+        "frase": "documents the incident, the response and recovery actions taken, and lessons learned"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El informe del libro documenta también las acciones de recuperación tomadas.; Mismo elemento perdido de la enumeración: las acciones de recuperación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_funcion_recover-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar las acciones de recuperación según necesidades organizacionales y recursos disponibles",
+      "texto_nuevo": "Priorizar las acciones de recuperación según necesidades organizacionales, recursos disponibles y activos afectados",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "283",
+        "frase": "Prioritize your recovery actions based on organizational needs, resources, and assets impacted."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo criterio perdido: activos afectados.; Se cae el tercer criterio de priorización del libro: los activos afectados.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_funcion_recover-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar regularmente con partes interesadas internas y externas durante el proceso de recuperación",
+      "texto_nuevo": "Comunicar de forma regular y segura con partes interesadas internas y externas durante el proceso de recuperación",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "287",
+        "frase": "Communicate regularly and securely with internal and external stakeholders."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide comunicar de forma regular y segura; se pierde la condición de seguridad.; Mismo defecto: falta 'securely'.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-025-csf_funcion_recover-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Playbook de recuperación con procesos formales, documentación de criticidad de recursos, lista de personal responsable y plan de comunicación",
+      "texto_nuevo": "Playbook de recuperación con procesos formales, documentación de criticidad de recursos, documentación de los sistemas que procesan y guardan la información (sobre todo los activos clave) para ordenar la restauración, lista de personal responsable y plan de comunicación",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "297-299",
+        "frase": "Documentation of systems that process and store organizational information, particularly key assets"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El playbook del libro incluye documentar los sistemas que procesan y guardan la información, que orienta el orden de restauración.; Mismo elemento perdido, con su énfasis en los activos clave.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

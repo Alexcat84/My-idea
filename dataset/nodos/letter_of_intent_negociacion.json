@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Negociación de Carta de Intención (LOI)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La carta de intención (LOI) es típicamente el primer paso formal de una adquisición, generalmente no vinculante excepto por cláusulas como el no-shop. A diferencia de un financiamiento donde todos pueden ganar expandiendo el pastel, la negociación de LOI es por un pastel fijo, por lo que el tono es más tenso. Esta negociación es la primera muestra real del estilo de negociación del comprador.",
+  "resumen_teorico": "La carta de intención (LOI) es típicamente el primer paso formal de una adquisición, generalmente no vinculante excepto por cláusulas como el no-shop. A diferencia de un financiamiento donde todos pueden ganar expandiendo el pastel, la negociación de LOI es por un pastel fijo, por lo que el tono es más tenso. Esta negociación suele ser la primera muestra real del estilo de negociación del comprador.",
   "pasos_accionables": [
     "Contar con asesoría legal experimentada antes de firmar cualquier LOI",
     "Analizar cuidadosamente la cláusula de no-shop antes de comprometerse",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Negocia tu Carta de Intención",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-038-letter_of_intent_negociacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La carta de intención (LOI) es típicamente el primer paso formal de una adquisición, generalmente no vinculante excepto por cláusulas como el no-shop. A diferencia de un financiamiento donde todos pueden ganar expandiendo el pastel, la negociación de LOI es por un pastel fijo, por lo que el tono es más tenso. Esta negociación es la primera muestra real del estilo de negociación del comprador.",
+      "texto_nuevo": "La carta de intención (LOI) es típicamente el primer paso formal de una adquisición, generalmente no vinculante excepto por cláusulas como el no-shop. A diferencia de un financiamiento donde todos pueden ganar expandiendo el pastel, la negociación de LOI es por un pastel fijo, por lo que el tono es más tenso. Esta negociación suele ser la primera muestra real del estilo de negociación del comprador.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3967",
+        "frase": "The LOI negotiation is usually a first taste of the actual negotiating style"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo endurecimiento.; Quita el 'usually' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

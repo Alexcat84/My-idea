@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir el modo de transporte según volumen y distancia",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "Como primera aproximación, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rápido o mas puntual, incluso si el criterio de costo puro sugeriría otra cosa. Los umbrales exactos de tamaño y distancia varían según el país y el proveedor, así que sirven como método de razonamiento, no como tabla fija.",
+  "resumen_teorico": "Como primera aproximación, el tamaño de tu envío y la distancia que debe recorrer indican qué modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar más por un modo más rápido o más puntual, incluso si el criterio de costo puro sugeriría otra cosa. Es una relación teórica, así que sirve como método de razonamiento, no como tabla fija.",
   "pasos_accionables": [
     "Ubica el tamaño típico de tus envíos (paquete individual, pallet, carga grande) y la distancia que recorren.",
     "Pregunta a tus posibles transportistas qué modo usan normalmente para ese tamaño y esa distancia.",
@@ -140,6 +140,22 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-029-elegir_modo_transporte_volumen_distancia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como primera aproximación, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rápido o mas puntual, incluso si el criterio de costo puro sugeriría otra cosa. Los umbrales exactos de tamaño y distancia varían según el país y el proveedor, así que sirven como método de razonamiento, no como tabla fija.",
+      "texto_nuevo": "Como primera aproximación, el tamaño de tu envío y la distancia que debe recorrer indican qué modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar más por un modo más rápido o más puntual, incluso si el criterio de costo puro sugeriría otra cosa. Es una relación teórica, así que sirve como método de razonamiento, no como tabla fija.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "14284-14300",
+        "frase": "In theory, the volume of freight (or size of load) to be moved"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la matriz como relación teórica; no dice que los umbrales varíen por país o proveedor.; Hecho añadido que el libro no afirma.; Hecho añadido; el libro solo dice que la matriz vale en teoría y otros factores pueden pesar más.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

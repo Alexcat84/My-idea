@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Entender que este término es prácticamente no negociable en cualquier deal de VC.",
     "Revisar la tasa de conversión inicial (usualmente 1:1) y sus ajustes por splits o dividendos.",
-    "No perder tiempo negociando este punto; enfocar esfuerzo en otros términos más flexibles."
+    "No perder tiempo negociando el derecho a convertir; enfocar esfuerzo en otros términos más flexibles, como los umbrales de la conversión automática, que sí conviene negociar."
   ],
   "entregable_esperado": "Comprensión clara de los derechos de conversión estándar antes de firmar el term sheet.",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Conoce tu Derecho de Conversión",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-035-conversion_rights-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No perder tiempo negociando este punto; enfocar esfuerzo en otros términos más flexibles.",
+      "texto_nuevo": "No perder tiempo negociando el derecho a convertir; enfocar esfuerzo en otros términos más flexibles, como los umbrales de la conversión automática, que sí conviene negociar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1604",
+        "frase": "The thresholds for the automatic conversion are critical to negotiate."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En la misma cláusula de conversión el libro destaca que la conversión automática tiene componentes negociables y umbrales críticos de negociar.; Mismo defecto: se cae que los umbrales de la conversión automática sí se negocian.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

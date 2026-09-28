@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Design Principles (Principios de Diseño)",
   "fuente": "The field guide to human-centered design",
-  "resumen_teorico": "Los Principios de Diseño son las 'barandillas' de una solución: recetas breves y memorables que mantienen la coherencia en futuras iteraciones. Describen los elementos más importantes de la solución y evolucionan conforme se sigue diseñando. Deben ser afirmaciones positivas, cortas y centradas en una sola idea, alineadas con los temas encontrados en la investigación previa.",
+  "resumen_teorico": "Los Principios de Diseño son las 'barandillas' de una solución: recetas breves y memorables que mantienen la coherencia en futuras iteraciones. Describen los elementos más importantes de la solución y evolucionan conforme se sigue diseñando. Deben ser afirmaciones positivas, cortas y centradas en una sola idea, y lo más probable es que se alineen con los temas encontrados en la investigación previa.",
   "pasos_accionables": [
     "Revisar los post-its más importantes y los temas identificados en 'Find Themes'",
     "Considerar los principios centrales que subyacen a esos temas y formularlos como afirmaciones positivas",
@@ -42,6 +42,22 @@
       },
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R065-020 (ANADIDO, lector y verificador de acuerdo): Rango numérico que el libro no establece. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta. La frase de la cita esta partida en el texto por las columnas mezcladas de la guia (L4696 y L4698); se cita en sus dos trozos literales.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R065-020"
+    },
+    {
+      "id": "final-e1-033-design_principles-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los Principios de Diseño son las 'barandillas' de una solución: recetas breves y memorables que mantienen la coherencia en futuras iteraciones. Describen los elementos más importantes de la solución y evolucionan conforme se sigue diseñando. Deben ser afirmaciones positivas, cortas y centradas en una sola idea, alineadas con los temas encontrados en la investigación previa.",
+      "texto_nuevo": "Los Principios de Diseño son las 'barandillas' de una solución: recetas breves y memorables que mantienen la coherencia en futuras iteraciones. Describen los elementos más importantes de la solución y evolucionan conforme se sigue diseñando. Deben ser afirmaciones positivas, cortas y centradas en una sola idea, y lo más probable es que se alineen con los temas encontrados en la investigación previa.",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "4676",
+        "frase": "Odds are, they will align with the themes you found earlier"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que lo más probable es que coincidan con los temas hallados, no que deban alinearse con ellos.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

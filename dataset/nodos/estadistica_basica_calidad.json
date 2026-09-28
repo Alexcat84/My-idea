@@ -9,7 +9,7 @@
     "Determinar el tipo de dato (continuo, ordinal, nominal) antes de elegir el análisis",
     "Calcular medidas de tendencia central: media, mediana, moda",
     "Calcular medidas de dispersión: rango, varianza, desviación estándar",
-    "Definir el esquema de muestreo (aleatorio, estratificado) y el tamaño de muestra requerido",
+    "Definir el esquema de muestreo (aleatorio, estratificado) y el tamaño de muestra requerido, considerando la precisión requerida, la variación de la característica y el nivel de confianza (por ejemplo, 95 %)",
     "Verificar que la muestra sea libre de sesgo, representativa y aleatoria"
   ],
   "entregable_esperado": "Resumen estadístico descriptivo de los datos del problema, con esquema de muestreo definido",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Aprende Estadística Básica de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-020-estadistica_basica_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir el esquema de muestreo (aleatorio, estratificado) y el tamaño de muestra requerido",
+      "texto_nuevo": "Definir el esquema de muestreo (aleatorio, estratificado) y el tamaño de muestra requerido, considerando la precisión requerida, la variación de la característica y el nivel de confianza (por ejemplo, 95 %)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17958-17968",
+        "frase": "Precision required (+/-?) Amount of characteristic's variation Confidence level (e.g., 95 percent)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone también como consideraciones del muestreo la precisión requerida, la variación de la característica y el nivel de confianza.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

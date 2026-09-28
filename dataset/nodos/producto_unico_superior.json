@@ -10,8 +10,8 @@
     "Busca necesidades que tu cliente ni siquiera sabe nombrar, no solo lo obvio que ya te pide, y descubre qué es lo que realmente le importa a la hora de decidir",
     "Define tu producto como un conjunto de beneficios para el cliente y no como una lista de características técnicas, teniendo clara la diferencia: las características (features) te cuestan dinero a ti, y los beneficios (benefits) son lo que tu cliente realmente compra",
     "Compara directamente lo que ofreces contra la competencia en beneficios percibidos, valor por el dinero y calidad: desarma sus productos y encuentra sus puntos débiles, y no te quedes con la foto de hoy, imagina cómo evolucionará el producto de tu competidor en el futuro",
-    "Traduce todo lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor, y revisa si esa propuesta depende solo del precio bajo o si también conecta con lo que tu cliente siente y necesita, aunque eso cambie con el tiempo",
-    "Antes de desarrollar todo, prueba la idea con usuarios reales usando prototipos simples o conceptuales (protocepts)"
+    "Traduce todo lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor, teniendo en cuenta que las necesidades de tu cliente pueden cambiar con el tiempo",
+    "Antes de desarrollar todo, prueba la idea con usuarios reales en varias iteraciones, usando prototipos simples o conceptuales (protocepts), y asegúrate de que su respuesta sea favorable"
   ],
   "entregable_esperado": "Un documento con tu propuesta de valor diferenciada, que convierte las características técnicas de tu producto en beneficios claros para el cliente, validado hablando directamente con tus clientes y mirando a la competencia",
   "nodos_previos": [
@@ -48,5 +48,41 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-producto_unico_superior-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Traduce todo lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor, y revisa si esa propuesta depende solo del precio bajo o si también conecta con lo que tu cliente siente y necesita, aunque eso cambie con el tiempo",
+      "texto_nuevo": "Traduce todo lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor, teniendo en cuenta que las necesidades de tu cliente pueden cambiar con el tiempo",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1476",
+        "frase": "translate the information into a product definition, paying special attention to the benefits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de precio bajo ni de lo que el cliente siente; solo de traducir lo hallado en una definición centrada en beneficios, y de necesidades que cambian con el tiempo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-036-producto_unico_superior-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de desarrollar todo, prueba la idea con usuarios reales usando prototipos simples o conceptuales (protocepts)",
+      "texto_nuevo": "Antes de desarrollar todo, prueba la idea con usuarios reales en varias iteraciones, usando prototipos simples o conceptuales (protocepts), y asegúrate de que su respuesta sea favorable",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1478",
+        "frase": "test the product concept with users, and make sure they indicate a favorable response"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide varias iteraciones de prueba y asegurarse de una respuesta favorable antes del desarrollo serio; el nodo pierde ambas condiciones.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

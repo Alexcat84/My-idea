@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Proceso de Benchmarking de 7 Pasos (Juran)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología estructurada para comparar el desempeño entre plantas, regiones o unidades de una organización con el fin de identificar mejores prácticas y sostenerlas en el tiempo. Consta de siete pasos: preparación y planificación, recolección y validación de datos, análisis de datos (normalización), reporte de benchmark, aprendizaje de mejores prácticas, planificación e implementación de mejoras, y aprendizaje institucionalizado.",
+  "resumen_teorico": "Metodología estructurada para comparar el desempeño entre plantas, regiones o unidades de una organización, o con otras organizaciones, con el fin de identificar mejores prácticas y sostenerlas en el tiempo. Consta de siete pasos: preparación y planificación, recolección y validación de datos, análisis de datos (normalización), reporte de benchmark, aprendizaje de mejores prácticas, planificación e implementación de mejoras, y aprendizaje institucionalizado.",
   "pasos_accionables": [
     "Definir áreas, KPIs y métricas a comparar (Paso 1: Preparación y planificación)",
     "Recolectar y validar datos de las unidades a comparar (Paso 2)",
@@ -12,7 +12,7 @@
     "Elaborar el informe de benchmarking con hallazgos y brechas (Paso 4)",
     "Realizar talleres de transferencia de mejores prácticas (Paso 5)",
     "Desarrollar plan de acción de mejora e implementarlo (Paso 6)",
-    "Institucionalizar el aprendizaje mediante capacitación continua (Paso 7)"
+    "Institucionalizar el aprendizaje, enseñando o volviendo a enseñar las mejores prácticas cuando el plan de acción lo requiera (Paso 7)"
   ],
   "entregable_esperado": "Informe de benchmarking completo con gap analysis, plan de mejora y mecanismo de sostenibilidad de mejores prácticas",
   "nodos_previos": [
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Aplica los Siete Pasos Comparativos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-023-benchmarking_7_pasos_juran-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Institucionalizar el aprendizaje mediante capacitación continua (Paso 7)",
+      "texto_nuevo": "Institucionalizar el aprendizaje, enseñando o volviendo a enseñar las mejores prácticas cuando el plan de acción lo requiera (Paso 7)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26404-26407",
+        "frase": "there may be requirements to teach or reteach to achieve the best practices identified"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede hacer falta enseñar o reenseñar como parte del plan de acción; 'capacitación continua' lo endurece.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-023-benchmarking_7_pasos_juran-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología estructurada para comparar el desempeño entre plantas, regiones o unidades de una organización con el fin de identificar mejores prácticas y sostenerlas en el tiempo. Consta de siete pasos: preparación y planificación, recolección y validación de datos, análisis de datos (normalización), reporte de benchmark, aprendizaje de mejores prácticas, planificación e implementación de mejoras, y aprendizaje institucionalizado.",
+      "texto_nuevo": "Metodología estructurada para comparar el desempeño entre plantas, regiones o unidades de una organización, o con otras organizaciones, con el fin de identificar mejores prácticas y sostenerlas en el tiempo. Consta de siete pasos: preparación y planificación, recolección y validación de datos, análisis de datos (normalización), reporte de benchmark, aprendizaje de mejores prácticas, planificación e implementación de mejoras, y aprendizaje institucionalizado.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26304",
+        "frase": "perform internal benchmarks of the organization or perform external benchmarks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea este proceso para benchmarks internos o externos (y lo aplica también con otras organizaciones); el resumen lo limita a la comparación interna.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

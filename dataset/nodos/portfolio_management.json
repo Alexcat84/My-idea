@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Portafolio de Proyectos (Portfolio Management)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos.",
+  "resumen_teorico": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos. Abarca también la estrategia de nuevos productos y sus roadmaps.",
   "pasos_accionables": [
     "Evaluar si existen demasiados proyectos para los recursos disponibles",
     "Revisar el balance del portafolio (proyectos pequeños vs de alto valor)",
@@ -42,5 +42,23 @@
   "etiqueta_arbol": "Gestiona tu Portafolio de Proyectos",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-portfolio_management-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos.",
+      "texto_nuevo": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos. Abarca también la estrategia de nuevos productos y sus roadmaps.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5708",
+        "frase": "developing a new-product strategy for the business, complete with strategic resource allocation decisions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La definición del libro incluye desarrollar la estrategia de nuevos productos con asignación estratégica de recursos y roadmaps; el nodo la reduce a la selección de proyectos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

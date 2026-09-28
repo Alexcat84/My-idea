@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Características Clave de Producto y Proceso (KPC)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.",
+  "resumen_teorico": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, te ayuda a dirigir el esfuerzo de control a lo que el cliente valora y a lo que realmente afecta el resultado final.",
   "pasos_accionables": [
     "Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE",
     "Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental",
     "Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos",
-    "Documenta la relación entre las características de proceso y los resultados de producto",
+    "Descubre con análisis de datos la relación entre las características de proceso y los resultados de producto, y documéntala",
     "Registra las características clave en planos y especificaciones"
   ],
   "entregable_esperado": "Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.",
@@ -58,6 +58,39 @@
         "motivo": "El analisis del tipo de mercado y de la competencia no continua en identificar caracteristicas clave de producto y proceso."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-037-key_process_product_characteristics-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.",
+      "texto_nuevo": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, te ayuda a dirigir el esfuerzo de control a lo que el cliente valora y a lo que realmente afecta el resultado final.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22400",
+        "frase": "Planners are better able to allocate resources"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que conocer la importancia relativa permite asignar mejor los recursos, no que lo asegure.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-037-key_process_product_characteristics-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta la relación entre las características de proceso y los resultados de producto",
+      "texto_nuevo": "Descubre con análisis de datos la relación entre las características de proceso y los resultados de producto, y documéntala",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22422",
+        "frase": "to discover, by data analysis, the relationships between process features"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide descubrir esa relación mediante análisis de datos, no solo anotarla.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "El Poder de Nueve: Artefactos, Roles y Herramientas de Agile",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Scrum reúne nueve piezas: tres artefactos (sprint, reunión diaria o daily scrum, y retrospectiva), tres roles (tu equipo de desarrollo, quien facilita el proceso o scrum master, y quien gestiona los requisitos o product owner) y tres herramientas visuales (la lista de tareas o product backlog, el tablero de sprint o kanban, y el gráfico de avance o burn-down chart). La clave no es usar piezas sueltas, sino aplicar todo el sistema junto con un cambio en cómo trabajas.",
+  "resumen_teorico": "Scrum reúne nueve piezas: tres artefactos (sprint, reunión diaria o daily scrum, y retrospectiva), tres roles (tu equipo de desarrollo, quien facilita el proceso o scrum master, y quien gestiona los requisitos o product owner) y tres herramientas visuales (la lista priorizada de requisitos del cliente o product backlog, el tablero de sprint o kanban, y el gráfico de avance o burn-down chart). La clave no es usar piezas sueltas, sino aplicar todo el sistema junto con un cambio en cómo trabajas.",
   "pasos_accionables": [
-    "Asigna los tres roles: tu equipo de desarrollo autogestionado, quien facilita el proceso (scrum master) y quien gestiona los requisitos y las personas interesadas (product owner)",
-    "Establece los tres artefactos: la reunión de planificación del sprint, la reunión diaria de 10 a 15 minutos (daily stand-up) y la retrospectiva al cerrar el sprint",
-    "Implementa las tres herramientas visuales: la lista de tareas priorizada (product backlog), el tablero de sprint con columnas de pendiente, en curso y hecho (kanban) y el gráfico de avance diario (burn-down chart)",
+    "Asigna los tres roles: tu equipo de desarrollo autogestionado, quien facilita el proceso (scrum master) y quien gestiona los requisitos y las personas interesadas (product owner); no todas las empresas adoptan los tres, y algunas mantienen roles conocidos como el líder de proyecto",
+    "Establece los tres artefactos: el sprint (un bloque de dos a cuatro semanas que empieza con su reunión de planificación y cierra con una revisión ante las personas interesadas), la reunión diaria de 10 a 15 minutos (daily stand-up) y la retrospectiva al cerrar el sprint",
+    "Implementa las tres herramientas visuales: la lista priorizada de requisitos del cliente (product backlog), el tablero de sprint con columnas de pendiente, en curso y hecho (kanban) y el gráfico de avance diario (burn-down chart)",
     "Capacítate junto con tu equipo en el cambio de mentalidad que esto exige, no solo en usar las herramientas"
   ],
   "entregable_esperado": "Equipo Scrum operativo con roles asignados, cadencia de reuniones establecida y tablero visual de seguimiento activo",
@@ -27,5 +27,74 @@
   "etiqueta_arbol": "Domina las Nueve Piezas Ágiles",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-036-power_of_nine_agile-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece los tres artefactos: la reunión de planificación del sprint, la reunión diaria de 10 a 15 minutos (daily stand-up) y la retrospectiva al cerrar el sprint",
+      "texto_nuevo": "Establece los tres artefactos: el sprint (un bloque de dos a cuatro semanas que empieza con su reunión de planificación y cierra con una revisión ante las personas interesadas), la reunión diaria de 10 a 15 minutos (daily stand-up) y la retrospectiva al cerrar el sprint",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4460",
+        "frase": "The first artefact is the sprint: This is a time-boxed work effort"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El primer artefacto del libro es el sprint mismo, un bloque de dos a cuatro semanas con planificación al inicio y revisión al final; el nodo lo reduce a la reunión de planificación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-036-power_of_nine_agile-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Scrum reúne nueve piezas: tres artefactos (sprint, reunión diaria o daily scrum, y retrospectiva), tres roles (tu equipo de desarrollo, quien facilita el proceso o scrum master, y quien gestiona los requisitos o product owner) y tres herramientas visuales (la lista de tareas o product backlog, el tablero de sprint o kanban, y el gráfico de avance o burn-down chart). La clave no es usar piezas sueltas, sino aplicar todo el sistema junto con un cambio en cómo trabajas.",
+      "texto_nuevo": "Scrum reúne nueve piezas: tres artefactos (sprint, reunión diaria o daily scrum, y retrospectiva), tres roles (tu equipo de desarrollo, quien facilita el proceso o scrum master, y quien gestiona los requisitos o product owner) y tres herramientas visuales (la lista priorizada de requisitos del cliente o product backlog, el tablero de sprint o kanban, y el gráfico de avance o burn-down chart). La clave no es usar piezas sueltas, sino aplicar todo el sistema junto con un cambio en cómo trabajas.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4508",
+        "frase": "but rather customer requirements, needs, wants, and preferences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro define el product backlog como requisitos, necesidades y preferencias del cliente; las tareas son el sprint backlog.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-036-power_of_nine_agile-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Implementa las tres herramientas visuales: la lista de tareas priorizada (product backlog), el tablero de sprint con columnas de pendiente, en curso y hecho (kanban) y el gráfico de avance diario (burn-down chart)",
+      "texto_nuevo": "Implementa las tres herramientas visuales: la lista priorizada de requisitos del cliente (product backlog), el tablero de sprint con columnas de pendiente, en curso y hecho (kanban) y el gráfico de avance diario (burn-down chart)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4508",
+        "frase": "but rather customer requirements, needs, wants, and preferences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El product backlog contiene requisitos del cliente, no tareas; las tareas salen de él al sprint backlog del tablero.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-036-power_of_nine_agile-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asigna los tres roles: tu equipo de desarrollo autogestionado, quien facilita el proceso (scrum master) y quien gestiona los requisitos y las personas interesadas (product owner)",
+      "texto_nuevo": "Asigna los tres roles: tu equipo de desarrollo autogestionado, quien facilita el proceso (scrum master) y quien gestiona los requisitos y las personas interesadas (product owner); no todas las empresas adoptan los tres, y algunas mantienen roles conocidos como el líder de proyecto",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4497",
+        "frase": "not all Agile-Stage-Gate user-firms adopt all three roles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no todas las empresas adoptan los tres roles y algunas conservan el de líder de proyecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

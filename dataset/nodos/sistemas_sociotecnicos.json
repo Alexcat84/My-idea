@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Sistemas Sociotécnicos (STS)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Enfoque organizacional que reconoce la interacción entre el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) dentro de una organización. Propone diseñar el trabajo de forma híbrida entre estructuras funcionales y por procesos, donde las unidades de negocio son responsables de resultados y las áreas funcionales de la mejora continua de procesos y desarrollo de recursos.",
+  "resumen_teorico": "Enfoque organizacional que reconoce la interacción entre el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) dentro de una organización. Se asocia a la previsión de que la organización probablemente será híbrida entre estructuras funcionales y por procesos, donde las unidades de negocio son responsables de resultados y las áreas funcionales de la mejora continua de procesos y desarrollo de recursos.",
   "pasos_accionables": [
     "Mapear los procesos técnicos y los roles sociales existentes en la organización",
     "Identificar puntos de fricción entre el sistema técnico y el social",
     "Rediseñar roles de supervisión hacia modelos de 'coach' en lugar de control directo",
-    "Ampliar las responsabilidades de los operarios hacia decisiones multihabilidad"
+    "Ampliar las responsabilidades de los operarios hacia decisiones multihabilidad y apoyarte en el trabajo en equipos"
   ],
   "entregable_esperado": "Mapa organizacional híbrido que balancee estructura funcional y por procesos, con roles rediseñados",
   "nodos_previos": [
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Combina lo Social y lo Técnico",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-024-sistemas_sociotecnicos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfoque organizacional que reconoce la interacción entre el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) dentro de una organización. Propone diseñar el trabajo de forma híbrida entre estructuras funcionales y por procesos, donde las unidades de negocio son responsables de resultados y las áreas funcionales de la mejora continua de procesos y desarrollo de recursos.",
+      "texto_nuevo": "Enfoque organizacional que reconoce la interacción entre el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) dentro de una organización. Se asocia a la previsión de que la organización probablemente será híbrida entre estructuras funcionales y por procesos, donde las unidades de negocio son responsables de resultados y las áreas funcionales de la mejora continua de procesos y desarrollo de recursos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1738",
+        "frase": "This organization will likely be a hybrid of functional and process-based organizations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro prevé con cautela una organización probablemente híbrida; el nodo lo vuelve propuesta del enfoque.; Misma atribución endurecida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-024-sistemas_sociotecnicos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ampliar las responsabilidades de los operarios hacia decisiones multihabilidad",
+      "texto_nuevo": "Ampliar las responsabilidades de los operarios hacia decisiones multihabilidad y apoyarte en el trabajo en equipos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1740",
+        "frase": "Team concepts play an important role in these new approaches."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da a los equipos un papel importante en estas formas de trabajo.; Mismo elemento perdido: el trabajo en equipos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
