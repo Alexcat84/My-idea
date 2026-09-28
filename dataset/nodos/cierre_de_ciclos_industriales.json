@@ -9,7 +9,7 @@
     "Mapear todos los flujos de residuos generados en el proceso productivo.",
     "Identificar posibles usos de esos residuos como insumos internos o para otras empresas.",
     "Explorar alianzas con empresas cercanas para intercambio de subproductos (simbiosis industrial).",
-    "Rediseñar procesos para incorporar materiales reciclados o recuperados como insumo principal."
+    "Rediseñar procesos para incorporar materiales reciclados o recuperados como insumo."
   ],
   "entregable_esperado": "Diagrama de flujo de ciclo cerrado con socios identificados (internos o externos) y cálculo de ahorro en materiales vírgenes evitados.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Cierra tus Ciclos Industriales",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-frontera-02",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseñar procesos para incorporar materiales reciclados o recuperados como insumo principal.",
+      "texto_nuevo": "Rediseñar procesos para incorporar materiales reciclados o recuperados como insumo.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4640, 4644",
+        "frase": "with outputs, including waste, to be recycled or reused again as inputs"
+      },
+      "decision": "auditoria final, frontera OPERATIVO/INVENCION (decision del fundador, 28 sep 2026; docs/REGLAS_DE_LA_CASA.md C29): la campania de fidelidad lo dio por OPERATIVO con dos lecturas; con la frontera escrita es INVENCION, porque 'como insumo principal' endurece lo que el libro dice con cautela (reutilizar residuos como insumos, en mezclas). Sale 'principal'.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.1"
+    }
   ]
 }

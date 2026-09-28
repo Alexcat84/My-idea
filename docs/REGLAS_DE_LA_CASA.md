@@ -4,7 +4,7 @@
 28 sep 2026 (auditoría final, punto 4).
 - Cada regla lleva su origen (quién la decidió o qué incidente la trajo), su fecha y dónde se cumple: una guarda o una
   prueba que muerde, un script, un documento, o "lectura" si no la hace cumplir nada automático.
-- El desarrollo de las reglas del 28 sep 2026 (las numeradas R1 a R5) sigue más abajo, íntegro.
+- El desarrollo de las reglas del 28 sep 2026 (las numeradas R1 a R6) sigue más abajo, íntegro.
 - Los detalles de proceso siguen en `AGENTS.md`, la voz y el copy en `docs/BANCO_DE_TEXTOS.md` y el protocolo del
   auditor en `docs/loop/AUDITOR.md`: este índice los cita, no los sustituye.
 
@@ -47,6 +47,8 @@ con la misma vara que el catálogo.
 | C26 | Alcanzabilidad: todo nodo vivo se alcanza desde las puertas de su mundo (o las semillas del núcleo) | Auditoría final | 28 sep 2026 | `scripts/auditoria_final/navegacion.py`, Gate 0 (`scripts/run_phase1.py`) |
 | C27 | Puerta legítima: una situación que la persona cuenta y que ningún nodo produce; los aparcados no se borran | Fundador (mundo 11) | 28 sep 2026 | `engine/test_importar_forja_aparcados.py` |
 | C28 | El catálogo no se borra; los datos personales sí (borrar la cuenta borra de verdad) | Fundador | 26 sep 2026 | `web/app/api/cuenta/eliminar/borradoCompleto.test.ts` |
+| C29 | Frontera OPERATIVO / INVENCIÓN: lo operativo concreta el cómo sin afirmar nada nuevo y se queda; la invención añade un qué, un por qué o un cuánto que el libro no dice, o endurece lo que dice con cautela, y sale (o pasa a "Sugerencia de My Idea:" si es un consejo práctico útil) | Fundador, tras la auditoría final (dos pasos que la campaña dio por OPERATIVOS y el árbitro por invención) | 28 sep 2026 | lectura ciega con árbitro (etapa 1 del remedio); detalle en R6 |
+| C30 | Las etiquetas llevan mayúscula de rótulo en las palabras con peso ("Traza tu Plan de Exportación"): es estilo de la casa, no falta de ortografía | Fundador (3.541 de 3.634 etiquetas ya lo usaban, sin regla escrita) | 28 sep 2026 | lectura; los lectores de ortografía no lo cuentan como falta |
 
 ## B. Producto (lo que la app hace, promete y cobra)
 
@@ -211,3 +213,20 @@ jefe": miraba si partía de la situación del nodo y si servía para elegir, per
 
 **Dónde vive:** el juez de sesión (`desajustes_de_papel` en `SYSTEM_JUEZ_SESION`) y el juez de la prueba de coherencia.
 Toda rúbrica nueva que juzgue preguntas lo lleva desde el primer día.
+
+## R6. La frontera entre lo operativo y la invención
+
+**Decisión del fundador, 28 sep 2026**, tras la medida 1 de la auditoría final: la campaña de fidelidad dio dos pasos
+por OPERATIVOS con dos lecturas y el árbitro de la auditoría los dio por invención. Desde hoy la frontera está escrita
+y la usa toda la etapa 1 del remedio.
+
+- **OPERATIVO:** concreta el CÓMO (el orden, el formato, una herramienta común) sin afirmar nada nuevo. **Se queda.**
+- **INVENCIÓN:** añade un QUÉ, un POR QUÉ o un CUÁNTO que el libro no dice (un hecho, una causa, una cifra, un plazo,
+  un resultado prometido), o **endurece** lo que el libro dice con cautela. **Sale**, o pasa a "Sugerencia de My Idea:"
+  si es un consejo práctico útil.
+
+**Los dos casos que la fijaron** (tanda `final-frontera`):
+- "esas pepitas de oro que valen más que cualquier encuesta": la comparación con las encuestas es un QUÉ nuevo. Sale.
+- "materiales reciclados o recuperados como insumo principal": "principal" endurece un consejo que el libro da con
+  cautela. Sale.
+

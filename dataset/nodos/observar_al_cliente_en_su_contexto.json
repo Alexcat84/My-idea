@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Observa a un cliente usando tu producto o servicio en su contexto real al menos una vez al mes",
     "Ponte en el lugar de tu cliente y experimenta tu producto desde cero, como si fueras él",
-    "Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan, esas pepitas de oro que valen más que cualquier encuesta",
+    "Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan: son las pepitas de oro que pueden cambiar el rumbo de la relación con tu cliente.",
     "Anota tus observaciones apenas las tengas y revísalas uno o dos días después",
     "Busca patrones o momentos clave que puedan mejorar la experiencia de tu cliente"
   ],
@@ -41,6 +41,23 @@
         "evidencia": "O063-017.entregable: observación, releído, días, ahí (Faltaban las tildes en observación, releído, días y ahí; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-frontera-01",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan, esas pepitas de oro que valen más que cualquier encuesta",
+      "texto_nuevo": "Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan: son las pepitas de oro que pueden cambiar el rumbo de la relación con tu cliente.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5762-5767",
+        "frase": "if you listen closely, you will learn things that can change the course of the customer journey"
+      },
+      "decision": "auditoria final, frontera OPERATIVO/INVENCION (decision del fundador, 28 sep 2026; docs/REGLAS_DE_LA_CASA.md C29): la campania de fidelidad lo dio por OPERATIVO con dos lecturas; con la frontera escrita es INVENCION, porque 'valen mas que cualquier encuesta' anade un QUE (una comparacion de valor) que el libro no hace. Sale la comparacion y queda lo que el libro dice de las pepitas de oro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.1"
     }
   ]
 }

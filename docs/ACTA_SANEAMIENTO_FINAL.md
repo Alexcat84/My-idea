@@ -403,3 +403,95 @@ Seis pasajes de `docs/BANCO_DE_TEXTOS.md` decían que el plan cita libro y capí
 el claim "cada plan cita su fuente" pasa a PROHIBIDO en §6. **Ningún prompt pide citar libro, capítulo ni autor:**
 `SYSTEM_PLAN` dice "sin autores" y prohíbe "fuentes nuevas que no esten en el material". `docs/REGLAS_DE_LA_CASA.md`
 marca el choque como resuelto (commit 2f7285ec).
+
+## 9. El remedio (visto del fundador, 28 sep 2026)
+
+Decisiones del fundador sobre el diagnóstico de la sección 7. El remedio va por orden de daño. **Todo lo de esta
+sección, del 9.1 al 9.5, se escribe y se commitea ANTES de leer nada:** el diseño, las semillas, las trampas y las reglas de
+parada. Sigue sin ninguna llamada a Anthropic. Voyage, una sola pasada al final del remedio.
+
+### 9.1 La frontera entre lo operativo y la invención (C29 y R6 de `docs/REGLAS_DE_LA_CASA.md`)
+
+- **OPERATIVO:** concreta el cómo (orden, formato, herramienta común) sin afirmar nada nuevo. Se queda.
+- **INVENCIÓN:** añade un qué, un por qué o un cuánto que el libro no dice (hecho, causa, cifra, plazo, resultado
+  prometido), o endurece lo que el libro dice con cautela. Sale, o pasa a "Sugerencia de My Idea:" si es un consejo
+  práctico útil.
+
+**Los 2 casos de pasos del diagnóstico (7.2), reclasificados con esta regla:** los dos son INVENCIÓN y se corrigen en
+la tanda `final-frontera`, declarada en cada nodo con su cita:
+- `observar_al_cliente_en_su_contexto`, paso 3: "esas pepitas de oro que valen más que cualquier encuesta" añade una
+  comparación que el libro no hace. Queda: "son las pepitas de oro que pueden cambiar el rumbo de la relación con tu
+  cliente".
+- `cierre_de_ciclos_industriales`, paso 4: "como insumo principal" endurece un consejo que el libro da con cautela. Sale
+  "principal".
+
+### 9.2 Las mayúsculas de las etiquetas (C30)
+
+Se quedan: la mayúscula de rótulo es estilo de la casa, sin tanda de corrección. Los lectores de ortografía no la
+cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de contar.
+
+### 9.3 Antes de la etapa 1: las tildes mecánicas
+
+- **Qué entra:** solo las palabras que SIEMPRE llevan tilde, sin otra lectura posible sin ella (por ejemplo "decision",
+  "pais", "despues", "tambien", "garantia"). Un script las propone a partir de las formas con tilde del propio catálogo.
+  Reviso a mano toda la lista de palabras antes de aplicar nada, y el script solo corrige las que quedan en ella.
+- **Qué no entra:** las palabras ambiguas van a los lectores ("solo", "este", "tu", "si", "mas", "el", "aun", que/qué,
+  esta/está, como/cómo, "critica", "practica", "publico", "calculo", "continua", "limites", "numero" y similares).
+  Tampoco entran las palabras dentro de un nombre en inglés ("Decision Day", "Mission", "Commission").
+- **Dónde:** en los campos que ve la persona o la IA: el resumen, los pasos, las condiciones, el entregable, la
+  etiqueta y el título (el aplicador admite ORTOGRAFIA en el título).
+- **Cómo:** una tanda ORTOGRAFIA declarada por campo y nodo, con una prueba en rojo primero sobre la lista curada.
+
+### 9.4 Etapa 1: contrarios, invenciones y matices, ENTERA, con doble lectura
+
+- **Universo:** los 3.169 nodos vivos fuera del mundo 11.
+- **Campos juzgados:** el resumen, los pasos y el entregable, que es donde el diagnóstico sitúa los tres defectos
+  (tabla 7.1). El lector ve el nodo entero para entenderlo.
+- **Lotes:**
+  - Hasta 12 nodos, todos del mismo libro (su `fuentes_internas`). Hay 61 libros y salen 297 lotes.
+  - Cada libro se parte en `ceil(n/12)` lotes casi iguales, en orden de `node_id`.
+  - El orden de lectura de los lotes se sortea con `random.Random(20260930)`.
+- **Trampas sin marca, plantadas antes de generar ningún paquete.** Hay 1 por lote, en la COPIA del lector de un nodo
+  del propio lote, nunca en el dataset. El nodo se sortea con `random.Random(20260930 + 1000 + lote)`. El tipo va por
+  turnos según el número de lote:
+  - **Contrario:** un par de antónimos cambiado en el resumen ("aumenta"/"reduce", "antes de"/"después de"…).
+  - **Invención de cifra:** una frase con una cifra o un plazo inventados, añadida al resumen.
+  - **Invención por endurecer:** un "puede", "suele" o "a menudo" que pasa a "debe", "siempre" o "siempre".
+  - **Matiz:** un elemento que se cae de una enumeración del resumen o de un paso.
+
+  Si el nodo sorteado no admite el tipo, se prueba el siguiente del lote. La clave vive en
+  `auditoria-final-claves/remedio/`, que no lee ningún agente.
+- **Lectores:** dos lectores ciegos independientes (A y B) por lote, con el mismo paquete.
+  - Cada uno marca contrario, invención (con la frontera 9.1) y matiz, con fichero y líneas de evidencia.
+  - Cada uno propone el texto corregido con el cambio mínimo: quitar lo inventado, devolver el matiz, o pasar un
+    consejo útil a "Sugerencia de My Idea:".
+- **Trampa cazada:** alguno de los dos lectores marca el fragmento plantado con cualquiera de los tres tipos de la
+  etapa.
+- **Regla de relectura:** si ninguno de los dos caza la trampa de su lote, un tercer lector independiente relee el lote
+  entero y cuenta la unión. Si el tercero tampoco la caza, se declara fallo de método en ese lote.
+- **Árbitro:** relee contra el libro la unión de lo que marcaron los lectores fuera del fragmento plantado.
+  - Decide confirmado, reclasificado o rechazado.
+  - En lo confirmado, escribe el texto final con su cita (fichero, líneas y una frase de 15 palabras como mucho).
+  - Los paquetes de arbitraje juntan lotes del mismo libro.
+- **Aplicación:** tandas declaradas `final-e1-*` con `scripts/fidelidad/aplicar_correcciones.py`, con estos veredictos:
+  - contrario → CONTRARIO;
+  - invención y matiz → ANADIDO, como en el mundo 11.
+
+  El aplicador se niega si el texto viejo no es el vigente.
+- **Regla de parada (fijada ahora):**
+  - **La muestra:** 150 nodos del mismo universo, estratificada por espacio (8 como mínimo por espacio y el resto por
+    restos mayores), con semilla 20261001. La leen dos lectores y un árbitro con el mismo método, en 15 lotes de 10
+    con una trampa sin marca cada uno.
+  - **PASA con:** 0 contrarios, 0 invenciones, matiz ≤ 0,2 por nodo, y todas las trampas de matiz cazadas.
+  - **Si no pasa:** se releen los lotes del libro o del espacio donde cayó lo confirmado, y se mide otra muestra con
+    semilla 20261001 + k (k = 1, 2…).
+
+### 9.5 Etapas 2 a 4, hasta donde alcance la cuota, cerrando siempre en un punto limpio
+
+| Etapa | Criterio | Método | Regla de parada (fijada ahora) |
+|---|---|---|---|
+| 2 | Fase, condiciones y etiquetas | Sin libro, lotes de 25 del mismo espacio, 1 lector y un verificador ciego en 1 de cada 4 lotes, 1 trampa por lote, árbitro en lo marcado | Muestra de 200, semilla 20261002: fase ≤ 3 %, condiciones ≤ 2 %, etiquetas ≤ 2 % |
+| 3 | Ortografía (lo que dejan las tildes mecánicas: ambiguas y faltas que no son de tilde) | Lotes de 30, 1 lector, segunda lectura de 1 de cada 5 lotes, 1 trampa por lote | Muestra de 200, semilla 20261003: ≤ 1 % de nodos, sin contar C30 |
+| 4 | Calcos | Un detector con la tabla del glosario y los calcos confirmados en la medida 1 y en la etapa 1, y después lectura en lotes de 30 con 1 trampa por lote | Muestra de 200, semilla 20261004: ≤ 0,2 por nodo |
+
+**El certificado:** al acabar, una medida 2 de todos los criterios, con el diseño de la sección 3 y semilla 20261010.
