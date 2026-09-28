@@ -219,3 +219,137 @@ Lo demás pasa. Los defectos de contenido no son de unos pocos nodos: se reparte
 certificación del mundo 11. Por la doctrina, corregir solo los 200 nodos de la muestra no bastaría, porque la próxima
 muestra, con semilla nueva, volvería a caer. El remedio es el método que certificó el mundo 11, aplicado a los 3.169
 nodos vivos restantes. Su alcance y su coste los decide el fundador antes de empezar.
+
+## 7. Diagnóstico de los defectos confirmados (solo lectura, 28 sep 2026) y propuesta de remedio SIN LANZAR
+
+Encargo del fundador tras la medida 1. **Nada de esta sección cambia el dataset:** la campaña de remedio espera su
+visto. Base del diagnóstico: los 411 defectos que el árbitro confirmó o reclasificó
+(`docs/auditoria_final/defectos_arbitrados.json`; 406 confirmados y 5 reclasificados).
+
+### 7.1 Reparto por campo, para cada criterio
+
+| Criterio | Pasos | Resumen | Entregable | Condiciones | Título | Etiqueta | Fase o dominio |
+|---|---|---|---|---|---|---|---|
+| Contrario | 0 | **4** | 0 | 0 | 0 | 0 | |
+| Invención | 2 | **22** | 1 | 0 | 0 | 0 | |
+| Fase | | | | | | | 10 |
+| Dominio | | | | | | | 3 |
+| Condición | | | | 7 | | | |
+| Etiqueta | | | | | | 12 | |
+| Ortografía | 2 | **44** | 0 | **42** | 3 | 11 | |
+| Matiz | 44 | 53 | 2 | 0 | 0 | 0 | |
+| Calco | 55 | 57 | 17 | 7 | 8 | 0 | |
+| Regionalismo | 3 | 1 | 0 | 1 | 0 | 0 | |
+
+**Por espacio** (defectos confirmados; nodos de la muestra entre paréntesis):
+
+| Criterio | core (45) | quality (27) | mundo 11 (22) | environmental (17) | health_safety (16) | franquicias (14) | exportacion (13) | entrega (12) | risk_management (12) | compras (11) | seguridad_digital (11) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Contrario | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| Invención | 8 | 4 | 0 | 2 | 0 | 0 | 1 | **7** | 1 | 1 | 1 |
+| Matiz | 23 | 9 | 0 | 5 | 7 | 13 | 12 | 7 | 7 | 7 | 9 |
+| Calco | 53 | 10 | 1 | 14 | 10 | 14 | 9 | 5 | 0 | 5 | 23 |
+| Ortografía | 21 | 19 | 0 | 11 | 0 | 3 | 10 | 13 | 0 | **20** | 5 |
+
+Fase, condiciones y etiquetas, por espacio, en la tabla de la sección 6.2.
+
+### 7.2 Los 4 contrarios y las 25 invenciones contra el registro de la campaña de fidelidad
+
+**Qué leyó la campaña de fidelidad** (`docs/fidelidad/INFORME_FINAL_CAMPANIA.md`):
+- **Los pasos:** los 15.311 pasos vivos, con al menos dos lecturas ciegas cada uno (secciones 1 y 2).
+- **Los demás campos que llegan a la persona** (resumen, entregable, condiciones, título y etiqueta): una pasada aparte
+  (sección 10) que buscaba **solo contrarios y añadidos de cifra, plazo o norma**. El propio informe declara: "en esos
+  campos no se buscaron añadidos prácticos".
+- **Cómo se decidió cada nodo en esa pasada:** según `docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl`, un nodo
+  limpio y no muestreado quedaba decidido con **una sola lectura** ("lector (limpio no muestreado)").
+
+| Dónde está el defecto | Cómo lo decidió la campaña | Contrarios | Invenciones |
+|---|---|---|---|
+| Resumen | una sola lectura ("lector (limpio no muestreado)") | 4 | 19 |
+| Resumen | lector y verificador de acuerdo | 0 | 3 |
+| Entregable | una sola lectura | 0 | 1 |
+| Pasos (`observar_al_cliente_en_su_contexto` p3, `cierre_de_ciclos_industriales` p4) | **dos lecturas, veredicto OPERATIVO** (`campania/c2/VEREDICTOS_CAMPANIA.jsonl`) | 0 | 2 |
+
+**Lectura:**
+- **27 de los 29 están en campos que no pasaron por doble lectura con libro:** 26 los decidió una sola lectura, y los
+  3 que tuvieron dos buscaban solo cifra, plazo o norma. La mayoría de las invenciones confirmadas son de causa, efecto
+  o contenido, justo lo que esa pasada no buscaba.
+- **Los 2 de pasos son un desacuerdo de vara:** la campaña los dio por OPERATIVOS con dos lecturas y este árbitro los
+  da por invención. La frontera entre OPERATIVO e invención se arbitra en el remedio.
+- **Ninguno está en un paso que la campaña marcara FIEL con dos lecturas.**
+
+### 7.3 Defectos anteriores o introducidos por correcciones posteriores
+
+Para cada defecto se miraron las correcciones declaradas de su campo. Si el fragmento aparece en un texto nuevo y no
+en el anterior, lo introdujo esa corrección. La comparación es por fragmento, así que la atribución es aproximada.
+
+- **398 de 411 son anteriores:** vienen de la extracción. 373 están en campos que ninguna corrección tocó y 21
+  sobrevivieron a una corrección del mismo campo. En 4 más el fragmento no aparece en ningún texto de corrección.
+- **13 los introdujo una corrección posterior:**
+
+| Corrección | Qué introdujo |
+|---|---|
+| Tanda `n1-condicion` (condiciones reescritas, COHERENCIA) | 5 faltas de ortografía |
+| Tanda `n1-orto` (ortografía) | 2 matices perdidos |
+| Limpieza del mundo 11 (`m11-limpieza`) | 2 regionalismos |
+| Tandas de fidelidad `fidelidad-t1`, `fidelidad-t7` y `fidelidad-t15` | 1 invención, 1 calco y 1 matiz |
+| Tanda `n1-fase` | 1 fase |
+
+### 7.4 Ortografía: las dos varas
+
+- **La pasada O** (`docs/SANEAMIENTO_DATASET.md`, punto 16):
+  - leyó 21.649 textos de **etiquetas, pasos y entregables** y las preguntas de la caché;
+  - hizo 1.036 correcciones;
+  - su residuo del 1,3 % es de **faltas**: 3 que el primer lector no vio sobre 227, en 1 de cada 5 lotes;
+  - **no cubrió ni el resumen, ni las condiciones de activación, ni el título.**
+- **Esta medida** cuenta **nodos** con al menos una falta confirmada, en **todos** los campos que ve la persona.
+
+| | Nodos con falta | Tasa |
+|---|---|---|
+| Todo lo confirmado | 39 | 19,5 % |
+| Sin las mayúsculas a la inglesa de las etiquetas | 34 | 17 % |
+| Solo en resumen, condiciones y título (fuera de la pasada O) | 32 | 16 % |
+| Solo en los campos que la pasada O sí cubrió | 4 | 2 % |
+
+- **Cuál es la correcta:** las dos lo son para lo que miden. La del umbral U7 (≤ 1 % de nodos) es la de esta medida,
+  porque cuenta todo lo que ve la persona. La pasada O dejó limpios sus campos (2 %, en el orden de su residuo); lo que
+  falla es lo que nunca leyó.
+- **Una decisión de vara que es del fundador:** 3.541 de las 3.634 etiquetas vivas usan mayúsculas interiores a la
+  inglesa ("Traza tu Plan de Exportación"). Es el estilo de hecho, sin regla escrita, y la ortografía académica pide
+  minúscula. Los lectores marcaron algunas (8 confirmadas). Hay que decidir si es estilo de la casa (se escribe la regla
+  y no cuenta como falta) o falta (1 tanda mecánica sobre las 3.541).
+- **Qué es mecánico:**
+  - el 70 % de las faltas confirmadas son tildes que faltan;
+  - en todo el catálogo hay **1.231 palabras sin tilde, en 305 nodos**, cuya forma con tilde domina en el propio
+    catálogo ("decision", "pais", "despues", "segun", "tambien", "garantia", "operacion"…): 899 en resúmenes y 264 en
+    condiciones;
+  - una lista curada de formas sin ambigüedad las corrige de forma mecánica y declarada (veredicto ORTOGRAFIA);
+  - quedan para la lectura las ambiguas ("critica", "especifica", "limites" también son verbos; que/qué, esta/está) y
+    las faltas que no son de tilde (unas 30 de las 102).
+
+### 7.5 Propuesta de remedio, por orden de daño (SIN LANZAR: espera el visto del fundador)
+
+Todas las etapas siguen la doctrina de siempre:
+- **Correcciones:** tandas declaradas en `correcciones`, que no borran nada.
+- **Método de lectura:** trampas sin marca plantadas antes de todo contexto, clave fuera de lo que leen los agentes,
+  semilla escrita antes y árbitro en los desacuerdos.
+- **Regla de parada:** una muestra ciega nueva por etapa, con su umbral. Si no cumple, se relee lo del mismo libro o
+  espacio que falló, no otra pasada completa.
+- **Voyage:** al final de todo, una sola pasada con todos los nodos corregidos (decisión del fundador).
+- **Coste:** en agentes. La lectura de esta auditoría gastó unos 100.000 a 130.000 tokens por lector de 11 nodos con
+  libro.
+
+| Etapa | Criterio | Alcance | Método | Regla de parada | Coste estimado |
+|---|---|---|---|---|---|
+| 1 | Contrarios e invenciones | Resumen y entregable de los 3.169 nodos vivos fuera del mundo 11 (ahí están 27 de los 29); los pasos, solo los OPERATIVOS de la frontera | Doble lectura ciega contra el libro buscando contrario e invención de cualquier tipo (causa, efecto, cifra, contenido), no solo cifra, plazo o norma; árbitro en los desacuerdos. Antes, el fundador fija la frontera OPERATIVO/invención con los 2 casos de pasos | Muestra ciega de 150 nodos, semilla nueva: 0 contrarios y 0 invenciones | Lotes de 12 nodos: ~265 lotes × 2 lectores ≈ **530 agentes**, más ~50 árbitros y ~10 de verificación extra: **unos 590** |
+| 2 | Fase, condiciones y etiquetas | Los 3.169 nodos | Sin libro: la fase contra la vara, las condiciones contra el propio nodo, la etiqueta contra el nodo. Un lector por lote y un verificador ciego en 1 de cada 4 lotes | Muestra de 200: fase ≤ 3 %, condiciones ≤ 2 %, etiquetas ≤ 2 % | Lotes de 25: ~127 lectores, ~32 verificadores y ~10 árbitros: **unos 170** |
+| 3 | Ortografía | Resumen, condiciones y título de los 3.169 nodos (lo que la pasada O no cubrió) | Primero, lo mecánico: la lista curada de tildes sin ambigüedad (unas 1.000 correcciones en ~300 nodos) y, si el fundador lo decide así, las mayúsculas de etiqueta. Un verificador ciego muestrea el 5 %. Después, un lector por lote para lo ambiguo y lo que no es tilde | Muestra de 200: ≤ 1 % de nodos | Lo mecánico, **0 agentes** (script y prueba) más ~5 de verificación; la lectura en lotes de 30: ~106 lectores y ~20 de segunda lectura: **unos 130** |
+| 4 | Matices y calcos | Pasos, resumen y entregable de los 3.169 nodos | Matices, contra el libro, con listas dirigidas por nodo como en el mundo 11. Calcos: primero un detector con la tabla del glosario más los calcos confirmados en esta muestra, luego lectura | Muestra de 200: matices ≤ 0,2 por nodo y calcos ≤ 0,2 por nodo; la trampa de matiz tiene que cazarse | Matices: ~265 lotes con libro, **unos 300 agentes**. Calcos sin libro: **unos 130** |
+
+- **Total estimado:** unos **1.300 agentes**, más de 100 millones de tokens de subagente.
+- **Alternativa que ahorra una pasada entera con libro:** leer matices dentro de la etapa 1, porque ya se tiene el
+  libro abierto en los mismos campos. Las correcciones se aplicarían igual en el orden de daño. Quedaría en unos 1.000
+  agentes.
+- **Por qué un pase entero y no solo los nodos de la muestra:** los defectos se reparten por todos los espacios fuera
+  del mundo 11 (sección 6.2). Corregir la muestra y volver a medir con semilla nueva volvería a caer.
+- **Lo que no se toca:** el mundo 11. Su método de certificación es el que esta propuesta aplica al resto.
