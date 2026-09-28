@@ -21,6 +21,53 @@ cuánto cuesta y cómo se compara con su medición.
    shell, no en el `.env`: `VUELO_BASE_URL` con la URL de producción.
 6. **El fundador anota el saldo de la API** y la hora de inicio (UTC).
 
+## Lista de comprobación del fundador (con la hora de cada cosa)
+
+Aprobado el plan el 28 sep 2026: 33 recorridos, y el orden es completar la caché, desplegar, coherencia y vuelo. Se
+rellena la hora (UTC) al hacer cada cosa. Las horas 4 y 11 son la ventana de la consulta de costes. Los valores
+anteriores de los límites se anotan para devolverlos tal cual.
+
+> En Vercel, cambiar una variable de entorno **no** afecta al despliegue que ya está en marcha: hace falta volver a
+> desplegar producción, al subir los límites y otra vez al devolverlos.
+
+| # | Paso | Hecho | Hora UTC |
+|---|---|---|---|
+| 1 | Anotar el **saldo de la API** de Anthropic: ______ USD | ☐ | |
+| 2 | **Sembrar los créditos** del dev user hasta 120 disponibles (consulta de abajo) | ☐ | |
+| 3 | **Subir los límites** en Vercel (producción): `LIMITE_ARRANQUES_DIA` de ___ a 80 y `FUSIBLE_SESIONES_DIA` de ___ a 100 (sin variable, valen 5 y 30), y **volver a desplegar** producción | ☐ | |
+| 4 | **Inicio de la ventana:** empieza el paso A (completar la caché) | ☐ | |
+| 5 | Paso A terminado: `--faltantes` y `--neutrales` sin fallidas; anotar lo que imprimieron: ______ USD | ☐ | |
+| 6 | Caché sincronizada, suites en verde, visto y **despliegue** con la caché completa | ☐ | |
+| 7 | Paso B: `npx tsx scripts/coherencia.ts --confirmo-gasto` terminado; anotar el dictamen y "El arnés": ______ USD | ☐ | |
+| 8 | Paso C: `pnpm vuelo` terminado | ☐ | |
+| 9 | **Devolver los límites** a los valores anotados en el paso 3 y **volver a desplegar** producción | ☐ | |
+| 10 | Retirar el `.env` | ☐ | |
+| 11 | **Fin de la ventana:** anotar el **saldo de la API**: ______ USD | ☐ | |
+| 12 | Correr la consulta de costes con las horas 4 y 11 y comparar (ver "Cómo se compara") | ☐ | |
+
+**Sembrar (paso 2)**, en el SQL Editor. Primero el saldo que ya tiene:
+
+```sql
+SELECT a.creditos_total AS saldo,
+       COALESCE((SELECT sum(r.monto) FROM credit_reservas r
+                 WHERE r.user_id = a.user_id AND r.estado = 'activa'), 0) AS apartado
+FROM credit_accounts a
+WHERE a.user_id = (SELECT id FROM auth.users WHERE email = 'dev@my-idea.local');
+```
+
+Después, se otorga la diferencia hasta 120 disponibles (saldo menos apartado). En el ejemplo son 120; cambia el monto
+por la diferencia real. La clave hace que correrlo dos veces no siembre dos veces:
+
+```sql
+SELECT public.otorgar_creditos(
+  (SELECT id FROM auth.users WHERE email = 'dev@my-idea.local'),
+  120,
+  'siembra_beta',
+  'siembra_corrida_final_2026',
+  NULL
+);
+```
+
 ## Lo que se ejecuta, en este orden
 
 ### Paso A. Completar la caché (local, antes de desplegar)
@@ -142,7 +189,9 @@ ORDER BY usd DESC;
 
 ## Al terminar
 
-1. Devolver `LIMITE_ARRANQUES_DIA` y `FUSIBLE_SESIONES_DIA` a su valor.
+Lo mismo que los pasos 9 a 12 de la lista de comprobación:
+
+1. Devolver `LIMITE_ARRANQUES_DIA` y `FUSIBLE_SESIONES_DIA` a los valores anotados y volver a desplegar producción.
 2. Retirar el `.env`.
 3. Anotar el saldo final y comparar con la suma de arriba.
 4. Pasar al auditor el informe de coherencia y la exportación del vuelo.
