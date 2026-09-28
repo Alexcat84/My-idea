@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Uso de Almacenes Aduaneros (Bonded Warehouses)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Un almacén aduanero es un espacio donde bienes dutiable pueden almacenarse o manipularse sin pagar aranceles hasta su retiro. Permite controlar el flujo de efectivo relacionado con el pago de aranceles y almacenar bienes sujetos a cuota. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Un almacén aduanero es un espacio donde bienes dutiable pueden almacenarse o manipularse sin pagar aranceles hasta su retiro. Permite controlar el flujo de efectivo relacionado con el pago de aranceles y almacenar bienes sujetos a cuota. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Evaluar si el flujo de importación se beneficiaría de diferir el pago de aranceles",
     "Contactar a la oficina de U.S. Customs and Border Protection más cercana",
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Usa Almacenes Aduaneros",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-21",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un almacén aduanero es un espacio donde bienes dutiable pueden almacenarse o manipularse sin pagar aranceles hasta su retiro. Permite controlar el flujo de efectivo relacionado con el pago de aranceles y almacenar bienes sujetos a cuota. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Un almacén aduanero es un espacio donde bienes dutiable pueden almacenarse o manipularse sin pagar aranceles hasta su retiro. Permite controlar el flujo de efectivo relacionado con el pago de aranceles y almacenar bienes sujetos a cuota. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

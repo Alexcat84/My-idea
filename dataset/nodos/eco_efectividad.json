@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Eco-efectividad como Nuevo Paradigma",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "En contraste con la eco-eficiencia, la eco-efectividad busca rediseñar productos y sistemas industriales desde su origen para que sean beneficiosos, no solo 'menos dañinos'. Se ilustra con el ejemplo de tres libros: uno convencional (tóxico al desecharse), uno 'eco-eficiente' (con compromisos de calidad y toxicidad residual), y uno 'eco-efectivo' hecho de polímeros infinitamente reciclables al mismo nivel de calidad, diseñado desde el inicio pensando en su próxima vida útil.",
+  "resumen_teorico": "En contraste con la eco-eficiencia, la eco-efectividad busca rediseñar productos y sistemas industriales desde su origen para que sean beneficiosos, no solo 'menos dañinos'. Un ejemplo son tres libros: uno convencional (tóxico al desecharse), uno 'eco-eficiente' (con compromisos de calidad y toxicidad residual), y uno 'eco-efectivo' hecho de polímeros infinitamente reciclables al mismo nivel de calidad, diseñado desde el inicio pensando en su próxima vida útil.",
   "pasos_accionables": [
     "Seleccionar un producto piloto de la empresa para rediseñar bajo el paradigma eco-efectivo",
     "Definir los ciclos biológicos y técnicos en los que este producto podría reintegrarse sin pérdida de calidad",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Diseña Productos que Regeneren",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-23",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "En contraste con la eco-eficiencia, la eco-efectividad busca rediseñar productos y sistemas industriales desde su origen para que sean beneficiosos, no solo 'menos dañinos'. Se ilustra con el ejemplo de tres libros: uno convencional (tóxico al desecharse), uno 'eco-eficiente' (con compromisos de calidad y toxicidad residual), y uno 'eco-efectivo' hecho de polímeros infinitamente reciclables al mismo nivel de calidad, diseñado desde el inicio pensando en su próxima vida útil.",
+      "texto_nuevo": "En contraste con la eco-eficiencia, la eco-efectividad busca rediseñar productos y sistemas industriales desde su origen para que sean beneficiosos, no solo 'menos dañinos'. Un ejemplo son tres libros: uno convencional (tóxico al desecharse), uno 'eco-eficiente' (con compromisos de calidad y toxicidad residual), y uno 'eco-efectivo' hecho de polímeros infinitamente reciclables al mismo nivel de calidad, diseñado desde el inicio pensando en su próxima vida útil.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Se ilustra con el ejemplo de tres libros:"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

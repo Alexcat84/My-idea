@@ -35,6 +35,39 @@ describe("la voz de cliente: ni voz de libro ni marcas de auditoría", () => {
     ]).toEqual(["resumen_teorico", "pasos_accionables[0]"]);
   });
 
+  // Auditoría final (28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md, G6 y G7): fragmentos reales del catálogo que la guarda
+  // no cazaba. La voz de EXPOSICIÓN (el nodo que se presenta como el libro que lo contó) y la etiqueta interna del aviso
+  // jurisdiccional con su "a la fecha de la fuente". Los usos legítimos de al lado no caen.
+  it("la voz de exposición y el puntero jurisdiccional caen; los usos legítimos no", () => {
+    const reglas = (t: string) => [...new Set(faltasDeCliente(t).map((f) => f.regla))].sort();
+    for (const t of [
+      "como se ilustra en el caso de una empresa eléctrica que enfrentaba fallos",
+      "Se ilustra con el ejemplo de tres libros",
+      "Se ejemplifica con la agricultura de monocultivo",
+      "preguntas de Situación y Problema (se detallan en capítulos posteriores)",
+      "la evaluación de factores personales y de carrera vistos anteriormente",
+      "Los libros llaman a esto riesgo de rotación",
+      "Aunque se presenta de forma lineal, en la práctica",
+      "Se contrasta el modelo estadounidense con el modelo japonés",
+      "Se resume en la frase irónica",
+      "Se analizan cuatro palancas de ventaja competitiva",
+    ]) {
+      expect(reglas(t), t).toEqual(["vozDeLibro"]);
+    }
+    expect(
+      reglas("Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente;")
+    ).toEqual(["marcasInternas", "vozDeLibro"]);
+    for (const t of [
+      "cuando se presenta delante del grupo como aprendizaje",
+      "Revisa el texto de tu garantía antes de venderla",
+      "Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento",
+      "las diferencias en tasas de incidentes se explican por la exposición",
+      "problemas que pueden salir más adelante",
+    ]) {
+      expect(reglas(t), t).toEqual([]);
+    }
+  });
+
   it("barre todos los campos que llegan a la IA o a la pantalla", () => {
     expect([...CAMPOS_DE_CLIENTE].sort()).toEqual(
       ["condiciones_activacion", "entregable_esperado", "etiqueta_arbol", "pasos_accionables", "resumen_teorico", "titulo_concepto"].sort()

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Crecimiento Regenerativo (Good Growth)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Redefine el concepto de 'crecimiento' industrial no como acumulación cancerígena de recursos, sino como un proceso que replica el crecimiento natural: expansivo mas no destructivo, que nutre el entorno mientras se desarrolla. Se contrasta el crecimiento de una comunidad de hormigas o un cerezo -que enriquecen su ecosistema- con el crecimiento industrial típico que degrada su entorno. El reto es diseñar sistemas humanos que 'crezcan bien': más salud, diversidad, educación y prosperidad, sin destruir el capital natural.",
+  "resumen_teorico": "Redefine el concepto de 'crecimiento' industrial no como acumulación cancerígena de recursos, sino como un proceso que replica el crecimiento natural: expansivo mas no destructivo, que nutre el entorno mientras se desarrolla. El crecimiento de una comunidad de hormigas o de un cerezo enriquece su ecosistema; el crecimiento industrial típico, en cambio, degrada su entorno. El reto es diseñar sistemas humanos que 'crezcan bien': más salud, diversidad, educación y prosperidad, sin destruir el capital natural.",
   "pasos_accionables": [
     "Definir qué tipo de crecimiento es deseable para el proyecto (ej. educación, salud, diversidad)",
     "Analizar los efectos secundarios del crecimiento propuesto sobre el ecosistema y la comunidad",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Crece de Forma Regenerativa",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-13",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Redefine el concepto de 'crecimiento' industrial no como acumulación cancerígena de recursos, sino como un proceso que replica el crecimiento natural: expansivo mas no destructivo, que nutre el entorno mientras se desarrolla. Se contrasta el crecimiento de una comunidad de hormigas o un cerezo -que enriquecen su ecosistema- con el crecimiento industrial típico que degrada su entorno. El reto es diseñar sistemas humanos que 'crezcan bien': más salud, diversidad, educación y prosperidad, sin destruir el capital natural.",
+      "texto_nuevo": "Redefine el concepto de 'crecimiento' industrial no como acumulación cancerígena de recursos, sino como un proceso que replica el crecimiento natural: expansivo mas no destructivo, que nutre el entorno mientras se desarrolla. El crecimiento de una comunidad de hormigas o de un cerezo enriquece su ecosistema; el crecimiento industrial típico, en cambio, degrada su entorno. El reto es diseñar sistemas humanos que 'crezcan bien': más salud, diversidad, educación y prosperidad, sin destruir el capital natural.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Se contrasta el crecimiento de una comunidad de hormigas o un cerezo -que enriquecen su ecosistema- con el crecimiento industrial típico que degrada su entorno."
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Estrategia de Eco-Advantage",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Consiste en filtrar las iniciativas de sostenibilidad potenciales según su valor estratégico, priorizando aquellas que generan una diferenciación competitiva duradera (Eco-Advantage). Se analizan cuatro palancas de ventaja competitiva: reducción de riesgos, reducción de costos, crecimiento de ingresos y fortalecimiento de marca/reputación. Empresas líderes ya no ven la sostenibilidad solo como carga regulatoria sino como fuente de innovación y diferenciación en el mercado.",
+  "resumen_teorico": "Consiste en filtrar las iniciativas de sostenibilidad potenciales según su valor estratégico, priorizando aquellas que generan una diferenciación competitiva duradera (Eco-Advantage). Hay cuatro palancas de ventaja competitiva: reducción de riesgos, reducción de costos, crecimiento de ingresos y fortalecimiento de marca/reputación. Empresas líderes ya no ven la sostenibilidad solo como carga regulatoria sino como fuente de innovación y diferenciación en el mercado.",
   "pasos_accionables": [
     "Evaluar cada iniciativa sostenible según su impacto en riesgos, costos, ingresos y marca",
     "Calcular el costo de implementación y el retorno esperado de cada iniciativa",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Prioriza tu Ventaja Ecológica",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-27",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consiste en filtrar las iniciativas de sostenibilidad potenciales según su valor estratégico, priorizando aquellas que generan una diferenciación competitiva duradera (Eco-Advantage). Se analizan cuatro palancas de ventaja competitiva: reducción de riesgos, reducción de costos, crecimiento de ingresos y fortalecimiento de marca/reputación. Empresas líderes ya no ven la sostenibilidad solo como carga regulatoria sino como fuente de innovación y diferenciación en el mercado.",
+      "texto_nuevo": "Consiste en filtrar las iniciativas de sostenibilidad potenciales según su valor estratégico, priorizando aquellas que generan una diferenciación competitiva duradera (Eco-Advantage). Hay cuatro palancas de ventaja competitiva: reducción de riesgos, reducción de costos, crecimiento de ingresos y fortalecimiento de marca/reputación. Empresas líderes ya no ven la sostenibilidad solo como carga regulatoria sino como fuente de innovación y diferenciación en el mercado.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Se analizan cuatro palancas de ventaja competitiva:"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

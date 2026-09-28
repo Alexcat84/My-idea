@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Investigación de Regulaciones de Importación de Gobiernos Extranjeros",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los requisitos de documentación de importación y otras regulaciones impuestas por gobiernos extranjeros varían de país a país. Muchos gobiernos requieren facturas consulares, certificados de inspección, certificación de salud y otros documentos específicos. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Los requisitos de documentación de importación y otras regulaciones impuestas por gobiernos extranjeros varían de país a país. Muchos gobiernos requieren facturas consulares, certificados de inspección, certificación de salud y otros documentos específicos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Consultar con el U.S. Commercial Service antes de exportar a un nuevo país",
     "Investigar los requisitos de documentación específicos del país destino",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Investiga las Reglas de Importación",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-36",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Los requisitos de documentación de importación y otras regulaciones impuestas por gobiernos extranjeros varían de país a país. Muchos gobiernos requieren facturas consulares, certificados de inspección, certificación de salud y otros documentos específicos. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Los requisitos de documentación de importación y otras regulaciones impuestas por gobiernos extranjeros varían de país a país. Muchos gobiernos requieren facturas consulares, certificados de inspección, certificación de salud y otros documentos específicos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

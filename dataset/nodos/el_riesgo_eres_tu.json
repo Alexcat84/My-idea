@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Fundador Como Punto Único de Falla",
   "fuente": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
-  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
   "pasos_accionables": [
     "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
     "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
@@ -75,6 +75,22 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): ANADIDO de plazo (C133-013): el entregable repite el plazo de dos semanas que el libro no respalda; se corrige igual que el paso.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-013"
+    },
+    {
+      "id": "final-voz-24",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Los libros llaman a esto riesgo de rotación,"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ],
   "fuentes_internas": [

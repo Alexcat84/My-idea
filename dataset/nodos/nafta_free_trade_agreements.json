@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Aprovechamiento de NAFTA y Tratados de Libre Comercio",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "NAFTA (y otros tratados de libre comercio de EE.UU.) eliminan aranceles sobre bienes que cumplen reglas de origen específicas. Para calificar, los bienes deben originarse en la región según las reglas del Artículo 401, y los importadores deben basar sus reclamos en certificados de origen del exportador. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "NAFTA (y otros tratados de libre comercio de EE.UU.) eliminan aranceles sobre bienes que cumplen reglas de origen específicas. Para calificar, los bienes deben originarse en la región según las reglas del Artículo 401, y los importadores deben basar sus reclamos en certificados de origen del exportador. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Determinar si el producto califica bajo alguna de las cuatro reglas de origen del Artículo 401",
     "Calcular el valor regional del contenido (60% método de transacción o 50% método de costo neto) si aplica",
@@ -23,5 +23,24 @@
     "Si el país destino es Canadá, México u otro país con FTA vigente con EE.UU."
   ],
   "etiqueta_arbol": "Aprovecha los Tratados Comerciales",
-  "deprecado": true
+  "deprecado": true,
+  "correcciones": [
+    {
+      "id": "final-voz-dep-03",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "NAFTA (y otros tratados de libre comercio de EE.UU.) eliminan aranceles sobre bienes que cumplen reglas de origen específicas. Para calificar, los bienes deben originarse en la región según las reglas del Artículo 401, y los importadores deben basar sus reclamos en certificados de origen del exportador. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "NAFTA (y otros tratados de libre comercio de EE.UU.) eliminan aranceles sobre bienes que cumplen reglas de origen específicas. Para calificar, los bienes deben originarse en la región según las reglas del Artículo 401, y los importadores deben basar sus reclamos en certificados de origen del exportador. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo de la web (nodos deprecados, que resuelven la historia)"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Determinar si se necesita Licencia de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de exportar, es fundamental determinar si el producto requiere una licencia de exportación bajo las regulaciones EAR (Bureau of Industry and Security), ITAR (Departamento de Estado) u OFAC (sanciones económicas). Aunque el 95% de los productos no requieren licencia, todos están sujetos a leyes de control de exportación que determinan a quién y a qué países se puede vender. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Antes de exportar, es fundamental determinar si el producto requiere una licencia de exportación bajo las regulaciones EAR (Bureau of Industry and Security), ITAR (Departamento de Estado) u OFAC (sanciones económicas). Aunque el 95% de los productos no requieren licencia, todos están sujetos a leyes de control de exportación que determinan a quién y a qué países se puede vender. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Clasificar el producto con un ECCN (Export Control Classification Number) en bis.gov",
     "Verificar si el producto está en la Lista de Municiones de EE.UU. (USML) bajo ITAR",
@@ -86,6 +86,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-voz-38",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Antes de exportar, es fundamental determinar si el producto requiere una licencia de exportación bajo las regulaciones EAR (Bureau of Industry and Security), ITAR (Departamento de Estado) u OFAC (sanciones económicas). Aunque el 95% de los productos no requieren licencia, todos están sujetos a leyes de control de exportación que determinan a quién y a qué países se puede vender. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Antes de exportar, es fundamental determinar si el producto requiere una licencia de exportación bajo las regulaciones EAR (Bureau of Industry and Security), ITAR (Departamento de Estado) u OFAC (sanciones económicas). Aunque el 95% de los productos no requieren licencia, todos están sujetos a leyes de control de exportación que determinan a quién y a qué países se puede vender. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ]
 }

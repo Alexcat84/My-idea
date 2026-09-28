@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cálculo del Contenido de Valor Regional (RVC)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Elaborar una lista de materiales con costos (costed bill of materials)",
     "Identificar el valor de los materiales no originarios (VNM) usados en la producción",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Calcula tu Valor Regional",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-03",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

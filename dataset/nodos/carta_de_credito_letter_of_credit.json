@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Carta de Crédito (Letter of Credit)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del 100% del valor de la factura, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). Es confirmada por un banco corresponsal en el país del exportador, lo que añade una capa de seguridad adicional al pago. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del 100% del valor de la factura, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). Es confirmada por un banco corresponsal en el país del exportador, lo que añade una capa de seguridad adicional al pago. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Revisar minuciosamente todos los términos y condiciones de la L/C recibida antes de aceptar la orden.",
     "Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.",
@@ -67,6 +67,23 @@
         "motivo": "Orden invertido: el comprador usa la pro forma invoice para abrir la carta de credito, asi que la pro forma va antes que la L/C y no despues."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-voz-06",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del 100% del valor de la factura, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). Es confirmada por un banco corresponsal en el país del exportador, lo que añade una capa de seguridad adicional al pago. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del 100% del valor de la factura, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). Es confirmada por un banco corresponsal en el país del exportador, lo que añade una capa de seguridad adicional al pago. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ],
   "fuentes_internas": [

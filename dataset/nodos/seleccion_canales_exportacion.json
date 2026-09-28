@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Selección de Canales de Venta Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Una empresa exportadora puede utilizar múltiples canales simultáneamente para llegar a mercados internacionales, en lugar de limitarse a uno solo. Las opciones incluyen venta directa al usuario final, distribuidores en el país destino, ser proveedor del gobierno de EE.UU. en el extranjero, sitio web propio de e-commerce, plataformas de e-commerce de terceros (con fulfillment propio o del tercero), ser proveedor de una gran empresa estadounidense con ventas internacionales, o franquiciar el negocio. La mayoría de los exportadores pequeños actualmente venden a un solo país (ej. Canadá), perdiendo oportunidad de diversificación y crecimiento al no explorar múltiples mercados y canales. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Una empresa exportadora puede utilizar múltiples canales simultáneamente para llegar a mercados internacionales, en lugar de limitarse a uno solo. Las opciones incluyen venta directa al usuario final, distribuidores en el país destino, ser proveedor del gobierno de EE.UU. en el extranjero, sitio web propio de e-commerce, plataformas de e-commerce de terceros (con fulfillment propio o del tercero), ser proveedor de una gran empresa estadounidense con ventas internacionales, o franquiciar el negocio. La mayoría de los exportadores pequeños actualmente venden a un solo país (ej. Canadá), perdiendo oportunidad de diversificación y crecimiento al no explorar múltiples mercados y canales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Enumerar los canales de venta disponibles según el tipo de producto/servicio (directo, distribuidor, e-commerce propio o de terceros, franquicia, etc.)",
     "Evaluar ventajas y costos de cada canal para la empresa (control, inversión, velocidad de entrada)",
@@ -21,5 +21,24 @@
     "Si la empresa exporta actualmente solo a un mercado y busca diversificar"
   ],
   "etiqueta_arbol": "Elige tus Canales de Venta",
-  "deprecado": true
+  "deprecado": true,
+  "correcciones": [
+    {
+      "id": "final-voz-dep-07",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una empresa exportadora puede utilizar múltiples canales simultáneamente para llegar a mercados internacionales, en lugar de limitarse a uno solo. Las opciones incluyen venta directa al usuario final, distribuidores en el país destino, ser proveedor del gobierno de EE.UU. en el extranjero, sitio web propio de e-commerce, plataformas de e-commerce de terceros (con fulfillment propio o del tercero), ser proveedor de una gran empresa estadounidense con ventas internacionales, o franquiciar el negocio. La mayoría de los exportadores pequeños actualmente venden a un solo país (ej. Canadá), perdiendo oportunidad de diversificación y crecimiento al no explorar múltiples mercados y canales. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Una empresa exportadora puede utilizar múltiples canales simultáneamente para llegar a mercados internacionales, en lugar de limitarse a uno solo. Las opciones incluyen venta directa al usuario final, distribuidores en el país destino, ser proveedor del gobierno de EE.UU. en el extranjero, sitio web propio de e-commerce, plataformas de e-commerce de terceros (con fulfillment propio o del tercero), ser proveedor de una gran empresa estadounidense con ventas internacionales, o franquiciar el negocio. La mayoría de los exportadores pequeños actualmente venden a un solo país (ej. Canadá), perdiendo oportunidad de diversificación y crecimiento al no explorar múltiples mercados y canales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo de la web (nodos deprecados, que resuelven la historia)"
+    }
+  ]
 }

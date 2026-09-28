@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Monocultura como Paradigma de Eficiencia",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Refleja cómo el paradigma industrial trata la diversidad natural y cultural como una amenaza a los objetivos de diseño, favoreciendo la homogeneidad. Se ejemplifica con la agricultura de monocultivo, que elimina especies que brindarían servicios ecosistémicos (control de plagas, prevención de erosión), obligando a un mayor uso de químicos para mantener el sistema artificialmente estable.",
+  "resumen_teorico": "Refleja cómo el paradigma industrial trata la diversidad natural y cultural como una amenaza a los objetivos de diseño, favoreciendo la homogeneidad. Un ejemplo es la agricultura de monocultivo, que elimina especies que brindarían servicios ecosistémicos (control de plagas, prevención de erosión), obligando a un mayor uso de químicos para mantener el sistema artificialmente estable.",
   "pasos_accionables": [
     "Evaluar si el proceso productivo elimina diversidad natural o cultural en pos de la eficiencia",
     "Identificar servicios ecosistémicos perdidos por la simplificación del sistema",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Desconfía de la Uniformidad Total",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-40",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Refleja cómo el paradigma industrial trata la diversidad natural y cultural como una amenaza a los objetivos de diseño, favoreciendo la homogeneidad. Se ejemplifica con la agricultura de monocultivo, que elimina especies que brindarían servicios ecosistémicos (control de plagas, prevención de erosión), obligando a un mayor uso de químicos para mantener el sistema artificialmente estable.",
+      "texto_nuevo": "Refleja cómo el paradigma industrial trata la diversidad natural y cultural como una amenaza a los objetivos de diseño, favoreciendo la homogeneidad. Un ejemplo es la agricultura de monocultivo, que elimina especies que brindarían servicios ecosistémicos (control de plagas, prevención de erosión), obligando a un mayor uso de químicos para mantener el sistema artificialmente estable.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Se ejemplifica con la agricultura de monocultivo,"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

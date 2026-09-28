@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Proceso de Diseño de Modelo de Negocio (5 Fases)",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Proceso genérico y adaptable de cinco fases para diseñar y ejecutar una iniciativa de innovación de modelo de negocio: Movilizar, Entender, Diseñar, Implementar y Gestionar. Aunque se presenta de forma lineal, en la práctica las fases de Entender y Diseñar suelen ocurrir en paralelo, con prototipado temprano que retroalimenta la investigación.",
+  "resumen_teorico": "Proceso genérico y adaptable de cinco fases para diseñar y ejecutar una iniciativa de innovación de modelo de negocio: Movilizar, Entender, Diseñar, Implementar y Gestionar. Aunque las fases van en orden, en la práctica las fases de Entender y Diseñar suelen ocurrir en paralelo, con prototipado temprano que retroalimenta la investigación.",
   "pasos_accionables": [
     "Fase 1 Movilizar: prepara el proyecto, forma equipo y establece lenguaje común (Canvas)",
     "Fase 2 Entender: investiga clientes, mercado, tecnología y contexto",
@@ -42,6 +42,22 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R028-014 (CONTRARIO, arbitro): Tiene razon el lector B. El libro ofrece objetivo y foco por fase como marco generico (L4221), pero no apoya un plan de proyecto con actividades de las cinco fases fijadas al iniciar; dice expresamente que las dos ultimas solo pueden planificarse mas tarde. Cambia la secuencia de planificacion que da el libro. Busque en todo el libro otros pasajes sobre planificar las fases y ninguno apoya el campo. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R028-014"
+    },
+    {
+      "id": "final-voz-45",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proceso genérico y adaptable de cinco fases para diseñar y ejecutar una iniciativa de innovación de modelo de negocio: Movilizar, Entender, Diseñar, Implementar y Gestionar. Aunque se presenta de forma lineal, en la práctica las fases de Entender y Diseñar suelen ocurrir en paralelo, con prototipado temprano que retroalimenta la investigación.",
+      "texto_nuevo": "Proceso genérico y adaptable de cinco fases para diseñar y ejecutar una iniciativa de innovación de modelo de negocio: Movilizar, Entender, Diseñar, Implementar y Gestionar. Aunque las fases van en orden, en la práctica las fases de Entender y Diseñar suelen ocurrir en paralelo, con prototipado temprano que retroalimenta la investigación.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Aunque se presenta de forma lineal, en la práctica"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ],
   "fuentes_internas": [

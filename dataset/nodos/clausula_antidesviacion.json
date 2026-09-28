@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cláusula Antidesviación (Destination Control Statement)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Si exportas mercancia comercial desde Estados Unidos, casi siempre necesitas incluir una declaracion de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaracion avisa que la mercancia fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la seccion 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente a la fecha de la fuente; verifica la regulacion vigente en tu mercado antes de actuar.",
+  "resumen_teorico": "Si exportas mercancia comercial desde Estados Unidos, casi siempre necesitas incluir una declaracion de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaracion avisa que la mercancia fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la seccion 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente en su momento; verifica la regulacion vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
     "Incluye la declaración mínima de control de destino en tu factura comercial",
     "Incluye la misma declaración en el bill of lading o air waybill",
@@ -135,6 +135,22 @@
         "evidencia": "O052-009.entregable: declaración, antidesviación (Solo añade las tildes que faltaban en declaración y antidesviación.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-voz-12",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si exportas mercancia comercial desde Estados Unidos, casi siempre necesitas incluir una declaracion de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaracion avisa que la mercancia fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la seccion 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente a la fecha de la fuente; verifica la regulacion vigente en tu mercado antes de actuar.",
+      "texto_nuevo": "Si exportas mercancia comercial desde Estados Unidos, casi siempre necesitas incluir una declaracion de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaracion avisa que la mercancia fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la seccion 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente en su momento; verifica la regulacion vigente en tu mercado antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ]
 }

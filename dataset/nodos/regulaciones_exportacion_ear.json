@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Regulaciones de Administración de Exportaciones (EAR) y Licencias",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Las Export Administration Regulations (EAR) regulan la exportación y reexportación de artículos por razones de seguridad nacional, no proliferación, política exterior y escasez. Solo un porcentaje relativamente pequeño de exportaciones requiere licencia, dependiendo de las características técnicas del artículo, su destino, uso final y usuario final. El Bureau of Industry and Security (BIS) administra estas regulaciones. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Las Export Administration Regulations (EAR) regulan la exportación y reexportación de artículos por razones de seguridad nacional, no proliferación, política exterior y escasez. Solo un porcentaje relativamente pequeño de exportaciones requiere licencia, dependiendo de las características técnicas del artículo, su destino, uso final y usuario final. El Bureau of Industry and Security (BIS) administra estas regulaciones. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Determinar la clasificación técnica (ECCN) del producto a exportar",
     "Usar el chart de las EAR para verificar si se requiere licencia según destino, uso y usuario final",
@@ -26,5 +26,24 @@
     "Cuando el producto tiene aplicaciones potencialmente sensibles (dual-use, tecnología, defensa)"
   ],
   "etiqueta_arbol": "Tramita tus Licencias de Exportación",
-  "deprecado": true
+  "deprecado": true,
+  "correcciones": [
+    {
+      "id": "final-voz-dep-06",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las Export Administration Regulations (EAR) regulan la exportación y reexportación de artículos por razones de seguridad nacional, no proliferación, política exterior y escasez. Solo un porcentaje relativamente pequeño de exportaciones requiere licencia, dependiendo de las características técnicas del artículo, su destino, uso final y usuario final. El Bureau of Industry and Security (BIS) administra estas regulaciones. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Las Export Administration Regulations (EAR) regulan la exportación y reexportación de artículos por razones de seguridad nacional, no proliferación, política exterior y escasez. Solo un porcentaje relativamente pequeño de exportaciones requiere licencia, dependiendo de las características técnicas del artículo, su destino, uso final y usuario final. El Bureau of Industry and Security (BIS) administra estas regulaciones. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo de la web (nodos deprecados, que resuelven la historia)"
+    }
+  ]
 }

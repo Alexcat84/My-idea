@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Educación y Capacitación de Distribuidores Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y despliegue de personal cuando sea necesario, como se ilustra en el caso de una empresa exportadora con seminarios dirigidos a asociaciones profesionales locales. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y despliegue de personal cuando sea necesario, por ejemplo, con seminarios dirigidos a asociaciones profesionales locales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Evaluar el nivel de conocimiento técnico y regulatorio del distribuidor",
     "Diseñar un programa de capacitación técnica sobre el producto",
@@ -25,5 +25,25 @@
   "etiqueta_arbol": "Capacita a tus Distribuidores",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-05",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y despliegue de personal cuando sea necesario, como se ilustra en el caso de una empresa exportadora con seminarios dirigidos a asociaciones profesionales locales. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y despliegue de personal cuando sea necesario, por ejemplo, con seminarios dirigidos a asociaciones profesionales locales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "como se ilustra en el caso de una empresa exportadora con seminarios dirigidos a asociaciones profesionales locales.",
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan; la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Programa de Catorce Pasos para la Mejora de la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Considerado la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Se presenta como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
+  "resumen_teorico": "Considerado la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Es el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
   "pasos_accionables": [
     "Adaptar el programa de catorce pasos a la realidad y madurez de cada unidad de negocio.",
     "Iniciar con unidades piloto para generar casos de éxito antes de expandir a toda la corporación.",
@@ -59,6 +59,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: confirmador corrige."
+    },
+    {
+      "id": "final-voz-14",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerado la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Se presenta como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
+      "texto_nuevo": "Considerado la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Es el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Se presenta como el mecanismo operativo central"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ],
   "fuentes_internas": [

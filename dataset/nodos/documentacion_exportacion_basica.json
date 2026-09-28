@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Documentación Básica de Exportación (Pro Forma Invoice, Commercial Invoice, Packing List, SED)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Conjunto de documentos esenciales para toda operación de exportación: la Pro Forma Invoice informa al comprador antes del envío sobre bienes, valor y especificaciones; la Commercial Invoice formaliza la venta con datos de contacto, contenido y costo; el Packing List detalla el contenido y dimensiones del envío; y el Shipper's Export Declaration (SED) es requerido para embarques superiores a $2,500 por número de Schedule B o cuando se requiere licencia de exportación. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Conjunto de documentos esenciales para toda operación de exportación: la Pro Forma Invoice informa al comprador antes del envío sobre bienes, valor y especificaciones; la Commercial Invoice formaliza la venta con datos de contacto, contenido y costo; el Packing List detalla el contenido y dimensiones del envío; y el Shipper's Export Declaration (SED) es requerido para embarques superiores a $2,500 por número de Schedule B o cuando se requiere licencia de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Preparar la Pro Forma Invoice para cotizar al comprador antes del envío",
     "Emitir la Commercial Invoice una vez confirmada la venta, incluyendo términos de venta y pago",
@@ -46,5 +46,24 @@
     "documentacion_de_exportacion"
   ],
   "etiqueta_arbol": "Prepara tus Documentos Esenciales",
-  "deprecado": true
+  "deprecado": true,
+  "correcciones": [
+    {
+      "id": "final-voz-dep-02",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conjunto de documentos esenciales para toda operación de exportación: la Pro Forma Invoice informa al comprador antes del envío sobre bienes, valor y especificaciones; la Commercial Invoice formaliza la venta con datos de contacto, contenido y costo; el Packing List detalla el contenido y dimensiones del envío; y el Shipper's Export Declaration (SED) es requerido para embarques superiores a $2,500 por número de Schedule B o cuando se requiere licencia de exportación. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Conjunto de documentos esenciales para toda operación de exportación: la Pro Forma Invoice informa al comprador antes del envío sobre bienes, valor y especificaciones; la Commercial Invoice formaliza la venta con datos de contacto, contenido y costo; el Packing List detalla el contenido y dimensiones del envío; y el Shipper's Export Declaration (SED) es requerido para embarques superiores a $2,500 por número de Schedule B o cuando se requiere licencia de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo de la web (nodos deprecados, que resuelven la historia)"
+    }
+  ]
 }

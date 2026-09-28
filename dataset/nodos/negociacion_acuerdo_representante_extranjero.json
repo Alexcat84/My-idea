@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Negociación del Acuerdo con el Representante Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, requisitos de desempeño (volumen mínimo de ventas), confidencialidad, y la ley aplicable en caso de disputa. Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, requisitos de desempeño (volumen mínimo de ventas), confidencialidad, y la ley aplicable en caso de disputa. Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Definir estructura de precios, comisiones y términos de pago",
     "Establecer si se otorgará exclusividad y por cuánto tiempo",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Negocia con tu Representante Extranjero",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-41",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, requisitos de desempeño (volumen mínimo de ventas), confidencialidad, y la ley aplicable en caso de disputa. Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, requisitos de desempeño (volumen mínimo de ventas), confidencialidad, y la ley aplicable en caso de disputa. Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

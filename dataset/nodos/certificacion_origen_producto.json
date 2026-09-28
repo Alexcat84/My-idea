@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Certificación de Origen para Beneficios FTA",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Verificar con el comprador o agente aduanal si el FTA requiere un formato específico de COO",
     "Completar la información requerida: nombre/dirección de importador, exportador y productor",
@@ -46,6 +46,23 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de 5 años sigue vigente, pero la norma lo fija como MÍNIMO (\"at least\" / \"minimum of\"), y el nodo dice \"hasta por 5 años\", que se lee como un máximo. Además, el punto desde el que se cuenta depende del papel: certificación para exportador/productor, importación para importador. ecfr.gov red",
       "indice": 5,
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "final-voz-07",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ],
   "fuentes_internas": [

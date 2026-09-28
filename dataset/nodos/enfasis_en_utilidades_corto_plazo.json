@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Énfasis en Utilidades de Corto Plazo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La búsqueda del dividendo trimestral, alimentada por el miedo a una adquisición hostil y la presión de banqueros y accionistas, destruye la constancia de propósito. Se contrasta el modelo estadounidense (maximizar utilidades para accionistas) con el modelo japonés (ser el proveedor más eficiente del mundo, dejando que las utilidades sean consecuencia natural). Prácticas como enviar todo el inventario disponible a fin de trimestre sin importar la calidad, o postergar compras de materiales, son síntomas de esta enfermedad.",
+  "resumen_teorico": "La búsqueda del dividendo trimestral, alimentada por el miedo a una adquisición hostil y la presión de banqueros y accionistas, destruye la constancia de propósito. El modelo estadounidense (maximizar utilidades para accionistas) contrasta con el modelo japonés (ser el proveedor más eficiente del mundo, dejando que las utilidades sean consecuencia natural). Prácticas como enviar todo el inventario disponible a fin de trimestre sin importar la calidad, o postergar compras de materiales, son síntomas de esta enfermedad.",
   "pasos_accionables": [
     "Revisar si las decisiones gerenciales se basan en resultados trimestrales o en visión de largo plazo",
     "Educar a inversionistas y directivos sobre el valor de la mejora continua sobre la ganancia inmediata",
@@ -68,6 +68,22 @@
         "evidencia": "F29-016: Corrige practicas de gestion de una empresa en marcha (presion trimestral, contabilidad de fin de periodo), es gestion operativa y no validacion con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-voz-26",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "La búsqueda del dividendo trimestral, alimentada por el miedo a una adquisición hostil y la presión de banqueros y accionistas, destruye la constancia de propósito. Se contrasta el modelo estadounidense (maximizar utilidades para accionistas) con el modelo japonés (ser el proveedor más eficiente del mundo, dejando que las utilidades sean consecuencia natural). Prácticas como enviar todo el inventario disponible a fin de trimestre sin importar la calidad, o postergar compras de materiales, son síntomas de esta enfermedad.",
+      "texto_nuevo": "La búsqueda del dividendo trimestral, alimentada por el miedo a una adquisición hostil y la presión de banqueros y accionistas, destruye la constancia de propósito. El modelo estadounidense (maximizar utilidades para accionistas) contrasta con el modelo japonés (ser el proveedor más eficiente del mundo, dejando que las utilidades sean consecuencia natural). Prácticas como enviar todo el inventario disponible a fin de trimestre sin importar la calidad, o postergar compras de materiales, son síntomas de esta enfermedad.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Se contrasta el modelo estadounidense (maximizar utilidades para accionistas) con el modelo japonés"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ]
 }

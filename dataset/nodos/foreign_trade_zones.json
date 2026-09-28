@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Uso de Foreign Trade Zones (FTZs) para Optimización Aduanera",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Las FTZs son sitios domésticos de EE.UU. considerados fuera del territorio aduanero, útiles para actividades de almacenamiento, ensamblaje, manufactura y reexportación sin pago de aranceles hasta que los bienes entren al territorio aduanero de EE.UU. No hay restricciones de cuota para actividad de exportación. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Las FTZs son sitios domésticos de EE.UU. considerados fuera del territorio aduanero, útiles para actividades de almacenamiento, ensamblaje, manufactura y reexportación sin pago de aranceles hasta que los bienes entren al territorio aduanero de EE.UU. No hay restricciones de cuota para actividad de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si la operación de la empresa se beneficiaría de usar una FTZ (materiales dutiable para reexportación)",
     "Contactar al gerente de zona o a la oficina local del U.S. Commercial Service",
@@ -39,6 +39,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-voz-33",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las FTZs son sitios domésticos de EE.UU. considerados fuera del territorio aduanero, útiles para actividades de almacenamiento, ensamblaje, manufactura y reexportación sin pago de aranceles hasta que los bienes entren al territorio aduanero de EE.UU. No hay restricciones de cuota para actividad de exportación. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Las FTZs son sitios domésticos de EE.UU. considerados fuera del territorio aduanero, útiles para actividades de almacenamiento, ensamblaje, manufactura y reexportación sin pago de aranceles hasta que los bienes entren al territorio aduanero de EE.UU. No hay restricciones de cuota para actividad de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ]
 }

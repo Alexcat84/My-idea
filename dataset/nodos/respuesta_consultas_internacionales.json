@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Establecimiento de una Política para Responder Consultas Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas por falta de un proceso adecuado. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas por falta de un proceso adecuado. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Establecer una política formal de respuesta a consultas de exportación",
     "Utilizar servicios de traducción (bancos, freight forwarders, universidades) si la consulta no está en inglés",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Responde Consultas Internacionales Rápido",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-51",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas por falta de un proceso adecuado. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas por falta de un proceso adecuado. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Documentación que necesitas para viajar por negocios al extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes a la fecha de la fuente: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+  "resumen_teorico": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
   "pasos_accionables": [
     "Revisa que tu pasaporte esté vigente",
     "Consulta los requisitos de visa del país al que vas en su embajada o consulado",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Alista tus Papeles de Viaje",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-22",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes a la fecha de la fuente: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+      "texto_nuevo": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

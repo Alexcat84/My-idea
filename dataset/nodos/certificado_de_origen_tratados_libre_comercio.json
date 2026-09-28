@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Certificado de Origen y Tratados de Libre Comercio (T-MEC/USMCA, Rules of Origin, RVC)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
     "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
@@ -99,6 +99,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "final-voz-09",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "Puntero jurisdiccional-temporal:",
+          "a la fecha de la fuente"
+        ]
+      },
+      "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
     }
   ],
   "fuentes_internas": [

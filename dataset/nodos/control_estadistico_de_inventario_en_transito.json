@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Control estadístico de procesos aplicado a tiempos de tránsito e inventario",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos, como se muestra en el ejemplo de la ruta Buffalo-Kansas City, que generó ahorros de 500,000 dólares anuales.",
+  "resumen_teorico": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos: en una ruta entre Buffalo y Kansas City, esto generó ahorros de 500,000 dólares anuales.",
   "pasos_accionables": [
     "Recolectar datos históricos de tiempo de tránsito o duración del proceso.",
     "Construir un gráfico de control para identificar si el proceso está en control estadístico.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Mide tus Tiempos de Tránsito",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-18",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos, como se muestra en el ejemplo de la ruta Buffalo-Kansas City, que generó ahorros de 500,000 dólares anuales.",
+      "texto_nuevo": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos: en una ruta entre Buffalo y Kansas City, esto generó ahorros de 500,000 dólares anuales.",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          "generando ahorros significativos, como se muestra en el ejemplo de la ruta Buffalo-Kansas City, que generó ahorros de 500,000 dólares anuales."
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }

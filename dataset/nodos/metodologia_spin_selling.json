@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diagnosticar si tu venta es 'pequeña' (una sola llamada, bajo valor) o 'grande' (ciclo largo, alto valor, decisión pública)",
     "Abandonar el enfoque en cierres agresivos y manejo de objeciones si vendes productos/servicios de alto valor",
-    "Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio (se detallan en capítulos posteriores)",
+    "Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio",
     "Medir el impacto de la investigación mejorada: los estudios muestran incrementos de más del 20% en volumen de ventas"
   ],
   "entregable_esperado": "Diagnóstico escrito de qué tipo de venta maneja el usuario (pequeña vs grande) y decisión de adoptar el enfoque SPIN en lugar de técnicas tradicionales",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Aplica las Preguntas SPIN",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-39",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio (se detallan en capítulos posteriores)",
+      "texto_nuevo": "Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio",
+      "cita": {
+        "regla": "voz de libro y marcas de auditoria fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6 y G7); cazado por la guarda de voz de cliente extendida (web/lib/i18n/frasesProhibidas.ts) sobre el grafo vivo",
+        "fragmentos": [
+          " (se detallan en capítulos posteriores)"
+        ]
+      },
+      "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
+      "indice": 2,
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    }
   ]
 }
