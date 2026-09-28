@@ -28,6 +28,7 @@
 import { semillasDelPack } from "./evaluacionBrecha";
 import { esOfrecible, type Grafo } from "./graph";
 import { tokensCosecha } from "./tokens";
+import { UMBRAL_PRIORIDAD, type Puntuador } from "./prioridad";
 
 /**
  * El nodo y TODOS sus sucesores transitivos. El intérprete no rechaza un nodo:
@@ -91,6 +92,8 @@ export function reelegirPuertaDeMundo(params: {
   cubiertos: Set<string>;
   /** ramas que el intérprete ya rechazó en esta sesión */
   descartados: Set<string>;
+  /** Construccion 4 (28 sep 2026): la prioridad declarada manda. La puerta que la atiende va primero. */
+  puntuarPrioridad?: Puntuador | null;
 }): ResultadoReeleccion | null {
   const { dominio, graph, cubiertos, descartados } = params;
   const contexto = tokensCosecha(`${params.estadoVivo ?? ""} ${params.perfilSesion ?? ""}`);
@@ -101,10 +104,14 @@ export function reelegirPuertaDeMundo(params: {
     !descartados.has(nid) &&
     esOfrecible(nid, graph, [dominio]);
 
+  const prioridad = (id: string): number => {
+    const s = params.puntuarPrioridad?.(id) ?? null;
+    return s !== null && s >= UMBRAL_PRIORIDAD ? s : 0;
+  };
   const ordenar = (ids: string[]) =>
     ids
-      .map((id) => ({ id, p: afinidad(id, graph, contexto) }))
-      .sort((a, b) => b.p - a.p || a.id.localeCompare(b.id));
+      .map((id) => ({ id, p: afinidad(id, graph, contexto), q: prioridad(id) }))
+      .sort((a, b) => b.q - a.q || b.p - a.p || a.id.localeCompare(b.id));
 
   const semillas = ordenar(semillasDelPack(dominio).map((s) => s.id).filter(disponible));
   if (semillas.length > 0) {

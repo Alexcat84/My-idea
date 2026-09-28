@@ -191,3 +191,44 @@ export function seleccionarAfines(
   }
   return resultados;
 }
+
+/**
+ * CONSTRUCCION 4 (decision del fundador, 28 sep 2026): la PRIORIDAD declarada manda al elegir el siguiente nodo. Para
+ * saber que candidato la atiende se usa el mismo indice semantico: la prioridad se embebe UNA vez por texto (queda en
+ * memoria de la instancia; cuesta lo mismo que una consulta de la brujula) y cada candidato se puntua por coseno contra
+ * su vector del indice, sin mas llamadas. null si la brujula no esta disponible: entonces la regla vive solo en el prompt
+ * y el llamador lo deja dicho en un evento.
+ */
+const embedsPorTexto = new Map<string, number[]>();
+let posicionPorId: Map<string, number> | null = null;
+
+/** El puntuador a partir de un vector ya embebido. Se exporta para probarlo sin red. */
+export function puntuadorDesdeEmbedding(
+  query: number[],
+  graph?: Record<string, NodoConDominio>
+): (id: string) => number | null {
+  if (!posicionPorId) posicionPorId = new Map(index.ids.map((id, i) => [id, i]));
+  const posiciones = posicionPorId;
+  return (id: string) => {
+    const real = graph ? resolverId(id, graph) ?? id : id;
+    const i = posiciones.get(real) ?? posiciones.get(id);
+    return i === undefined ? null : coseno(query, index.embeddings[i]);
+  };
+}
+
+export async function puntuadorContra(
+  texto: string,
+  graph?: Record<string, NodoConDominio>
+): Promise<((id: string) => number | null) | null> {
+  const t = texto.trim();
+  if (!t) return null;
+  let query = embedsPorTexto.get(t);
+  if (!query) {
+    const e = await embedQuery(t);
+    if (!e) return null;
+    if (embedsPorTexto.size >= 200) embedsPorTexto.clear();
+    embedsPorTexto.set(t, e);
+    query = e;
+  }
+  return puntuadorDesdeEmbedding(query, graph);
+}

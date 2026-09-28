@@ -29,10 +29,16 @@ export const PRECIOS: Record<string, [number, number]> = {
   [MODEL_HAIKU]: [1.0, 5.0],
 };
 
-// Multiplicadores de cache ephemeral (5 min) sobre el precio de entrada:
-// lectura de cache cuesta ~10%, escritura de cache cuesta ~125% (Fase 2.7).
+// Multiplicadores de cache sobre el precio de entrada: lectura ~10%;
+// escritura de 5 minutos ~125% (Fase 2.7); escritura de 1 hora ~200%
+// (contexto de la entrevista, principio 3, 28 sep 2026).
 export const CACHE_READ_MULT = 0.1;
 export const CACHE_WRITE_MULT = 1.25;
+export const CACHE_WRITE_1H_MULT = 2.0;
+
+/** Marca de cache de 1 hora: la parte fija (system y reglas) y el contexto del
+ * proyecto. La parte del turno usa la de 5 minutos, la marca sin ttl. */
+export const CACHE_1H = { type: "ephemeral", ttl: "1h" } as const;
 
 // Hotfix v2.2.1: configurable por variable de entorno, espejo exacto de
 // PRESUPUESTO_SESION_USD en prototipo_motor.py (mismo nombre de env var,
@@ -54,13 +60,40 @@ export interface UsoModelo {
   out: number;
   llamadas: number;
   cache_read: number;
+  /** escrituras de cache de 5 minutos (1.25x) */
   cache_write: number;
+  /** escrituras de cache de 1 hora (2x); ausente en registros anteriores */
+  cache_write_1h?: number;
+}
+
+/** El registro de UNA llamada, para medir el ahorro real del cache. */
+export interface RegistroLlamada {
+  componente: string | null;
+  modelo: string;
+  in: number;
+  out: number;
+  cache_read: number;
+  cache_write_5m: number;
+  cache_write_1h: number;
+  usd: number;
+  stop_reason: string | null;
 }
 
 export interface UsoAcumulado {
   uso: Record<string, UsoModelo>;
   uso_por_componente: Record<string, number>;
   presupuesto_excedido: boolean;
+  /** una entrada por llamada; ausente en registros anteriores */
+  llamadas?: RegistroLlamada[];
+}
+
+/** Una respuesta cortada por tope de tokens que siguio cortada tras el
+ * reintento: no se guarda nunca, se falla con aviso. */
+export class RespuestaCortadaError extends Error {
+  constructor(componente: string | null | undefined, maxTokens: number) {
+    super(`respuesta cortada por tope de tokens (${componente ?? "sin componente"}, max_tokens ${maxTokens})`);
+    this.name = "RespuestaCortadaError";
+  }
 }
 
 export function usoVacio(): UsoAcumulado {
@@ -73,13 +106,15 @@ export function costoLlamadaUsd(
   inTokens: number,
   outTokens: number,
   cacheReadTokens = 0,
-  cacheWriteTokens = 0
+  cacheWriteTokens = 0,
+  cacheWrite1hTokens = 0
 ): number {
   const [pin, pout] = PRECIOS[model] ?? [0.0, 0.0];
   return (
     (inTokens / 1_000_000) * pin +
     (cacheReadTokens / 1_000_000) * pin * CACHE_READ_MULT +
     (cacheWriteTokens / 1_000_000) * pin * CACHE_WRITE_MULT +
+    (cacheWrite1hTokens / 1_000_000) * pin * CACHE_WRITE_1H_MULT +
     (outTokens / 1_000_000) * pout
   );
 }
@@ -88,7 +123,7 @@ export function costoLlamadaUsd(
 export function costoAcumuladoUsd(acumulado: UsoAcumulado): number {
   let total = 0;
   for (const [model, s] of Object.entries(acumulado.uso)) {
-    total += costoLlamadaUsd(model, s.in, s.out, s.cache_read, s.cache_write);
+    total += costoLlamadaUsd(model, s.in, s.out, s.cache_read, s.cache_write, s.cache_write_1h ?? 0);
   }
   return total;
 }
@@ -99,28 +134,53 @@ export function costoAcumuladoUsd(acumulado: UsoAcumulado): number {
 export function registrarUso(
   acumulado: UsoAcumulado,
   model: string,
-  usage: { input_tokens: number; output_tokens: number; cache_read_input_tokens?: number | null; cache_creation_input_tokens?: number | null },
-  componente?: string | null
+  usage: {
+    input_tokens: number;
+    output_tokens: number;
+    cache_read_input_tokens?: number | null;
+    cache_creation_input_tokens?: number | null;
+    cache_creation?: { ephemeral_5m_input_tokens?: number | null; ephemeral_1h_input_tokens?: number | null } | null;
+  },
+  componente?: string | null,
+  stopReason: string | null = null
 ): UsoAcumulado {
   const previo = acumulado.uso[model] ?? { in: 0, out: 0, llamadas: 0, cache_read: 0, cache_write: 0 };
   const cacheRead = usage.cache_read_input_tokens ?? 0;
-  const cacheWrite = usage.cache_creation_input_tokens ?? 0;
+  // Con desglose por TTL, cada escritura con su tarifa; sin el (respuestas
+  // anteriores o dobles de prueba), toda escritura cuenta como de 5 minutos.
+  const cacheWrite1h = usage.cache_creation ? usage.cache_creation.ephemeral_1h_input_tokens ?? 0 : 0;
+  const cacheWrite = usage.cache_creation
+    ? usage.cache_creation.ephemeral_5m_input_tokens ?? 0
+    : usage.cache_creation_input_tokens ?? 0;
   const nuevoUso: UsoModelo = {
     in: previo.in + usage.input_tokens,
     out: previo.out + usage.output_tokens,
     cache_read: previo.cache_read + cacheRead,
     cache_write: previo.cache_write + cacheWrite,
+    cache_write_1h: (previo.cache_write_1h ?? 0) + cacheWrite1h,
     llamadas: previo.llamadas + 1,
   };
+  const costo = costoLlamadaUsd(model, usage.input_tokens, usage.output_tokens, cacheRead, cacheWrite, cacheWrite1h);
   const usoPorComponente = { ...acumulado.uso_por_componente };
   if (componente) {
-    const costo = costoLlamadaUsd(model, usage.input_tokens, usage.output_tokens, cacheRead, cacheWrite);
     usoPorComponente[componente] = (usoPorComponente[componente] ?? 0) + costo;
   }
+  const registro: RegistroLlamada = {
+    componente: componente ?? null,
+    modelo: model,
+    in: usage.input_tokens,
+    out: usage.output_tokens,
+    cache_read: cacheRead,
+    cache_write_5m: cacheWrite,
+    cache_write_1h: cacheWrite1h,
+    usd: costo,
+    stop_reason: stopReason,
+  };
   return {
     uso: { ...acumulado.uso, [model]: nuevoUso },
     uso_por_componente: usoPorComponente,
     presupuesto_excedido: acumulado.presupuesto_excedido,
+    llamadas: [...(acumulado.llamadas ?? []), registro],
   };
 }
 
@@ -137,13 +197,19 @@ export function sumarUso(base: UsoAcumulado, extra: UsoAcumulado): UsoAcumulado 
       llamadas: b.llamadas + e.llamadas,
       cache_read: b.cache_read + e.cache_read,
       cache_write: b.cache_write + e.cache_write,
+      cache_write_1h: (b.cache_write_1h ?? 0) + (e.cache_write_1h ?? 0),
     };
   }
   const uso_por_componente = { ...base.uso_por_componente };
   for (const [c, costo] of Object.entries(extra.uso_por_componente)) {
     uso_por_componente[c] = (uso_por_componente[c] ?? 0) + costo;
   }
-  return { uso, uso_por_componente, presupuesto_excedido: base.presupuesto_excedido || extra.presupuesto_excedido };
+  return {
+    uso,
+    uso_por_componente,
+    presupuesto_excedido: base.presupuesto_excedido || extra.presupuesto_excedido,
+    llamadas: [...(base.llamadas ?? []), ...(extra.llamadas ?? [])],
+  };
 }
 
 export class PresupuestoExcedidoError extends Error {
@@ -157,6 +223,9 @@ export class PresupuestoExcedidoError extends Error {
  * `rotulosFijos`, los marcadores de estructura que el código lee de la salida. */
 export interface LlamadaOpts {
   maxTokens?: number;
+  /** El contexto del proyecto (memoria y ficha de la persona): viaja en su
+   * propio bloque, con cache de 1 hora, antes de la parte del turno. */
+  contexto?: string | null;
   componente?: string;
   presupuestoUsd?: number;
   idiomaSalida?: string | null;
@@ -189,25 +258,44 @@ export async function llamarClaude(
   if (costoAcumuladoUsd(acumulado) >= presupuestoUsd) {
     throw new PresupuestoExcedidoError(presupuestoUsd);
   }
-  const msg = await client.messages.create({
-    model,
-    max_tokens: opts.maxTokens ?? 1500,
-    system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
-    messages: [{ role: "user", content: userText }],
-  });
-  const nuevoAcumulado = registrarUso(acumulado, model, msg.usage, opts.componente);
-  // Phase 3.7 (voz): punto único de salida — ningún texto del modelo viaja
-  // con guiones largos/medios, ni siquiera si el prompt fue desobedecido.
-  const texto = limpiarGuiones(
-    msg.content
-      .filter((b): b is Anthropic.TextBlock => b.type === "text")
-      .map((b) => b.text)
-      .join("")
-  );
-  return { texto, acumulado: nuevoAcumulado };
+  const content: string | BloqueTexto[] = opts.contexto
+    ? [
+        { type: "text", text: opts.contexto, cache_control: CACHE_1H },
+        { type: "text", text: userText },
+      ]
+    : userText;
+  let maxTokens = opts.maxTokens ?? 1500;
+  let nuevoAcumulado = acumulado;
+  for (let intento = 0; ; intento++) {
+    const msg = await client.messages.create({
+      model,
+      max_tokens: maxTokens,
+      system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
+      messages: [{ role: "user", content }] as Anthropic.MessageParam[],
+    });
+    nuevoAcumulado = registrarUso(nuevoAcumulado, model, msg.usage, opts.componente, msg.stop_reason ?? null);
+    // Una respuesta cortada por tope de tokens no se guarda nunca: un
+    // reintento con el doble de tope, y si sigue cortada, error con aviso.
+    if (msg.stop_reason === "max_tokens") {
+      if (intento === 0) {
+        maxTokens *= 2;
+        continue;
+      }
+      throw new RespuestaCortadaError(opts.componente, maxTokens);
+    }
+    // Phase 3.7 (voz): punto único de salida — ningún texto del modelo viaja
+    // con guiones largos/medios, ni siquiera si el prompt fue desobedecido.
+    const texto = limpiarGuiones(
+      msg.content
+        .filter((b): b is Anthropic.TextBlock => b.type === "text")
+        .map((b) => b.text)
+        .join("")
+    );
+    return { texto, acumulado: nuevoAcumulado };
+  }
 }
 
-export type BloqueTexto = { type: "text"; text: string; cache_control?: { type: "ephemeral" } };
+export type BloqueTexto = { type: "text"; text: string; cache_control?: { type: "ephemeral"; ttl?: "5m" | "1h" } };
 export type MensajeConversacion =
   | { role: "user"; content: string | BloqueTexto[] }
   | { role: "assistant"; content: string };
@@ -263,19 +351,39 @@ export async function llamarClaudeConversacion(
     }
   }
 
+  // Principio 1 (28 sep 2026): en el PRIMER turno de la conversacion, el
+  // contexto del proyecto entra en su propio bloque con cache de 1 hora; desde
+  // ahi vive al principio del historial, que solo crece por el final.
+  const bloqueTurno: BloqueTexto = { type: "text", text: nuevoTurnoTexto, cache_control: { type: "ephemeral" } };
   const nuevoTurno: MensajeConversacion = {
     role: "user",
-    content: [{ type: "text", text: nuevoTurnoTexto, cache_control: { type: "ephemeral" } }],
+    content:
+      historialMensajes.length === 0 && opts.contexto
+        ? [{ type: "text", text: opts.contexto, cache_control: CACHE_1H }, bloqueTurno]
+        : [bloqueTurno],
   };
 
-  const msg = await client.messages.create({
-    model,
-    max_tokens: opts.maxTokens ?? 600,
-    system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
-    messages: [...historialSinMarca, nuevoTurno] as Anthropic.MessageParam[],
-  });
-
-  const nuevoAcumulado = registrarUso(acumulado, model, msg.usage, opts.componente);
+  let maxTokens = opts.maxTokens ?? 600;
+  let nuevoAcumulado = acumulado;
+  let msg: Anthropic.Message;
+  for (let intento = 0; ; intento++) {
+    msg = await client.messages.create({
+      model,
+      max_tokens: maxTokens,
+      system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
+      messages: [...historialSinMarca, nuevoTurno] as Anthropic.MessageParam[],
+    });
+    nuevoAcumulado = registrarUso(nuevoAcumulado, model, msg.usage, opts.componente, msg.stop_reason ?? null);
+    // Misma regla que llamarClaude: nunca se guarda una respuesta cortada.
+    if (msg.stop_reason === "max_tokens") {
+      if (intento === 0) {
+        maxTokens *= 2;
+        continue;
+      }
+      throw new RespuestaCortadaError(opts.componente, maxTokens);
+    }
+    break;
+  }
   // Phase 3.7 (voz): mismo filtro que llamarClaude — ver nota allá.
   const texto = limpiarGuiones(
     msg.content
@@ -296,7 +404,10 @@ export async function llamarClaudeConversacion(
 }
 
 export interface DesgloseCosto {
-  por_modelo: Record<string, { llamadas: number; in: number; out: number; cache_read: number; cache_write: number; costo_usd: number }>;
+  por_modelo: Record<
+    string,
+    { llamadas: number; in: number; out: number; cache_read: number; cache_write: number; cache_write_1h: number; costo_usd: number }
+  >;
   por_componente: Record<string, number>;
   total_usd: number;
   presupuesto_excedido: boolean;
@@ -308,9 +419,17 @@ export function desgloseCosto(acumulado: UsoAcumulado): DesgloseCosto {
   const porModelo: DesgloseCosto["por_modelo"] = {};
   let total = 0;
   for (const [model, s] of Object.entries(acumulado.uso)) {
-    const costo = costoLlamadaUsd(model, s.in, s.out, s.cache_read, s.cache_write);
+    const costo = costoLlamadaUsd(model, s.in, s.out, s.cache_read, s.cache_write, s.cache_write_1h ?? 0);
     total += costo;
-    porModelo[model] = { llamadas: s.llamadas, in: s.in, out: s.out, cache_read: s.cache_read, cache_write: s.cache_write, costo_usd: costo };
+    porModelo[model] = {
+      llamadas: s.llamadas,
+      in: s.in,
+      out: s.out,
+      cache_read: s.cache_read,
+      cache_write: s.cache_write,
+      cache_write_1h: s.cache_write_1h ?? 0,
+      costo_usd: costo,
+    };
   }
   return {
     por_modelo: porModelo,

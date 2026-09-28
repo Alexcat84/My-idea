@@ -1,0 +1,150 @@
+# -*- coding: utf-8 -*-
+"""PRINCIPIO 2 (decision del fundador, 28 sep 2026): nada se elimina ni se cambia. El generador de la cache solo
+AÑADE: la version neutral de cada base (campo aparte, pregunta_neutral) y la pregunta de los nodos con siguientes que
+no la tienen. La base no se toca jamas. Todo con un cliente falso: ninguna llamada a la API real hasta la corrida
+final (regla del fundador, 28 sep 2026). Las funciones que se prueban reciben el cliente; ninguna mira ANTHROPIC_API_KEY
+(la guardia vive solo en main), asi que el veredicto no depende de los secretos del ambiente."""
+import json
+import os
+import re
+import sys
+from types import SimpleNamespace
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+import build_question_cache as bqc
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+# --- 1. La regla unica es la misma letra que la del producto ---------------------------------------------------------
+ts = open(os.path.join(RAIZ, "web", "lib", "reglaContextoUsuario.ts"), encoding="utf-8").read()
+cuerpo = ts[ts.index("REGLA_CONTEXTO_USUARIO =") : ts.index(";", ts.index("REGLA_CONTEXTO_USUARIO ="))]
+regla_ts = "".join(re.findall(r'"((?:[^"\\]|\\.)*)"', cuerpo))
+assert regla_ts == bqc.REGLA_CONTEXTO_USUARIO, "la regla del generador difiere de web/lib/reglaContextoUsuario.ts"
+assert bqc.REGLA_CONTEXTO_USUARIO in bqc.SYSTEM_NEUTRAL
+assert bqc.SYSTEM_PREGUNTA_CON_REGLA.endswith(bqc.REGLA_CONTEXTO_USUARIO)
+assert bqc.SYSTEM_PREGUNTA_CON_REGLA.startswith(bqc.SYSTEM_PREGUNTA)
+print("OK regla unica: misma letra que el producto, en los dos generadores")
+
+
+# --- 2. comprobar_neutral ---------------------------------------------------------------------------------------------
+BASE = "¿Qué le dirías a tu propio jefe si te pide un informe de avance?"
+assert len(BASE) == 64
+assert bqc.comprobar_neutral(BASE, "¿Qué le contarías a quien sigue tu avance?") is None
+# tuteo que se parece al voseo salvo la tilde: NO es voseo
+assert bqc.comprobar_neutral(BASE, "¿Qué sabes hoy de lo que buscas y necesitas? Mira tus números.") is None
+assert bqc.comprobar_neutral(BASE, "¿Qué haces cuando tienes dudas?") is None
+# voseo: no pasa
+for vos in ["¿Qué tenés pensado?", "¿Qué sabés de tu cliente?", "Mirá, ¿qué harías?", "¿Vos qué buscás?", "¿Qué podes hacer?"]:
+    assert bqc.comprobar_neutral(BASE, vos) == "voseo", vos
+assert bqc.comprobar_neutral(BASE, "Cuéntame tu avance.") == "no_es_pregunta"
+assert bqc.comprobar_neutral(BASE, "¿A quién le cuentas — si hay alguien — cómo vas?") == "guion_largo"
+assert bqc.comprobar_neutral(BASE, "  ") == "vacia"
+# Tope a mano: max(2 x 64, 64 + 200) = max(128, 264) = 264 caracteres.
+assert bqc.comprobar_neutral(BASE, "¿" + "a" * 262 + "?") is None  # 1 + 262 + 1 = 264
+assert bqc.comprobar_neutral(BASE, "¿" + "a" * 263 + "?") == "demasiado_larga"  # 265
+print("OK comprobar_neutral: tuteo pasa, voseo/guion/largo/vacia/no-pregunta no")
+
+
+# --- cliente falso ----------------------------------------------------------------------------------------------------
+class ClienteFalso:
+    def __init__(self, salidas):
+        self.salidas = list(salidas)  # (texto, stop_reason)
+        self.llamadas = []
+        self.messages = self
+
+    def create(self, **kw):
+        self.llamadas.append(kw)
+        texto, stop = self.salidas.pop(0)
+        return SimpleNamespace(
+            content=[SimpleNamespace(type="text", text=texto)],
+            usage=SimpleNamespace(input_tokens=300, output_tokens=40),
+            stop_reason=stop,
+        )
+
+
+def nodo(titulo, siguientes=(), deprecado=False):
+    n = {"titulo_concepto": titulo, "etiqueta_arbol": titulo.lower(), "resumen_teorico": "resumen de " + titulo,
+         "nodos_siguientes": list(siguientes), "condiciones_activacion": ["cuando aplica"]}
+    if deprecado:
+        n["deprecado"] = True
+    return n
+
+
+graph = {
+    "a": nodo("Informe al jefe", ["s"]),
+    "t": nodo("Tema cortado", ["s"]),
+    "b": nodo("Deprecado", ["s"], deprecado=True),
+    "c": nodo("Ya neutral", ["s"]),
+    "x": nodo("Sin pregunta", ["s"]),
+    "s": nodo("Siguiente"),
+}
+
+
+def cache_inicial():
+    return {
+        "a": {"pregunta": BASE, "candidatos": ["s"]},
+        "t": {"pregunta": "¿Qué tema quieres cortar?", "candidatos": ["s"]},
+        "b": {"pregunta": "¿Deprecada?", "candidatos": ["s"]},
+        "c": {"pregunta": "¿Ya neutral?", "pregunta_neutral": "¿Ya neutral, de verdad?", "candidatos": ["s"]},
+        "d": {"pregunta": "¿De un nodo que ya no existe?", "candidatos": []},
+    }
+
+
+# --- 3. correr_neutrales ----------------------------------------------------------------------------------------------
+cache = cache_inicial()
+assert bqc.objetivos_neutrales(cache, graph) == ["a", "t"]  # ni deprecado, ni ya hecho, ni nodo inexistente
+cliente = ClienteFalso([
+    (json.dumps({"pregunta_neutral": "¿Qué le contarías a quien sigue tu avance si te lo pide? Contame."}), "end_turn"),  # a: voseo
+    (json.dumps({"pregunta_neutral": "¿Qué le contarías a quien sigue tu avance si te pide un informe?"}), "end_turn"),  # a: bien
+    ('{"pregunta_neutral": "¿Qué tema', "max_tokens"),  # t: cortada
+    ('{"pregunta_neutral": "¿Qué tema', "max_tokens"),  # t: cortada otra vez
+])
+guardados = []
+r = bqc.correr_neutrales(cliente, cache, graph, guardar=lambda c: guardados.append(json.loads(json.dumps(c))))
+# A mano: 4 llamadas pagadas (2 de 'a', 2 de 't'), cada una 300 de entrada y 40 de salida.
+#   tokens_in  = 4 x 300 = 1200
+#   tokens_out = 4 x 40  = 160
+# 'a' queda hecha al segundo intento; 't' falla las dos veces (reintentos=1 -> 2 intentos) y se reporta.
+assert r["hechas"] == 1
+assert r["fallidas"] == [("t", "respuesta cortada por tope de tokens")]
+assert r["tokens_in"] == 1200 and r["tokens_out"] == 160, r
+assert len(cliente.llamadas) == 4
+assert cache["a"] == {"pregunta": BASE, "candidatos": ["s"],
+                      "pregunta_neutral": "¿Qué le contarías a quien sigue tu avance si te pide un informe?"}
+assert cache["t"] == cache_inicial()["t"]  # sin neutral: nada inventado
+for nid in ["b", "c", "d"]:
+    assert cache[nid] == cache_inicial()[nid], nid  # intactas
+for nid, e in cache.items():
+    assert e["pregunta"] == cache_inicial()[nid]["pregunta"], nid  # NINGUNA base cambia
+assert guardados and guardados[-1] == cache  # se guarda al final
+# lo que viaja: la base, el concepto por su etiqueta y los siguientes por su etiqueta; system = SYSTEM_NEUTRAL
+enviado = json.loads(cliente.llamadas[0]["messages"][0]["content"])
+assert enviado == {"pregunta_base": BASE, "concepto": {"etiqueta": "informe al jefe", "resumen": "resumen de Informe al jefe"},
+                   "temas_siguientes": ["siguiente"]}
+assert cliente.llamadas[0]["system"][0]["text"] == bqc.SYSTEM_NEUTRAL
+# reanudable: una segunda pasada solo trabaja lo que falta ('t')
+assert bqc.objetivos_neutrales(cache, graph) == ["t"]
+print("OK correr_neutrales: añade sin tocar la base, reintenta, reporta el fallo y cuenta todo lo pagado")
+
+
+# --- 4. correr_faltantes ----------------------------------------------------------------------------------------------
+cache = cache_inicial()
+assert bqc.faltantes(cache, graph) == ["x"]  # 'b' deprecado no; los que tienen base no
+cliente = ClienteFalso([(json.dumps({"pregunta": "¿Qué te gustaría ordenar primero?"}), "end_turn")])
+r = bqc.correr_faltantes(cliente, cache, graph)
+# A mano: 1 llamada -> 300 de entrada, 40 de salida.
+assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40}, r
+assert cache["x"] == {"pregunta": "¿Qué te gustaría ordenar primero?", "candidatos": ["s"]}
+assert cliente.llamadas[0]["system"][0]["text"] == bqc.SYSTEM_PREGUNTA_CON_REGLA  # nace con la regla unica
+for nid, e in cache_inicial().items():
+    assert cache[nid] == e, nid  # nada de lo que habia cambia
+# una salida cortada no se guarda nunca
+cache = cache_inicial()
+r = bqc.correr_faltantes(ClienteFalso([('{"pregunta": "¿Qué te', "max_tokens")]), cache, graph)
+assert r["hechas"] == 0 and r["fallidas"] == [("x", "respuesta cortada por tope de tokens")]
+assert "x" not in cache
+print("OK correr_faltantes: solo los que no tienen pregunta, con la regla unica, nunca una salida cortada")
+
+print("\nTODO OK")

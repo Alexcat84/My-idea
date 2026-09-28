@@ -1,10 +1,10 @@
 /**
- * D3 (i18n F5): fuera del español, las preguntas del grafo las adapta la IA.
- * Las cacheadas están en español; si una llega cruda a una idea en otro idioma,
- * Haiku la expresa en ese idioma (misma intención, una sola pregunta). Si la IA
- * falla, queda la cacheada: mejor una pregunta en español que ninguna.
- * Y la pregunta genérica (nodo sin cacheada) nombra el tema por su ETIQUETA,
- * nunca por el titulo_concepto (AGENTS.md: la etiqueta enamora).
+ * CONSTRUCCION 2 (decision del fundador, 28 sep 2026): el adaptador dentro del turno. Antes (D3, i18n F5) la cacheada
+ * solo se traducia fuera del español y en español salia cruda. Ahora toda pregunta que sale de la cache pasa por el
+ * adaptador, en cualquier idioma: la dice a esta persona y en el idioma de su idea (sustituye a la traduccion). Si la
+ * IA falla, sale la neutral del nodo; si aun no la tiene, una plantilla neutral sin roles, nunca la base cruda.
+ * Y la pregunta genérica (nodo sin cacheada) nombra el tema por su ETIQUETA, nunca por el titulo_concepto (AGENTS.md:
+ * la etiqueta enamora).
  */
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -17,7 +17,6 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { usoVacio } from "../costmeter";
 import { cargarFamilies } from "../readiness";
 import { cargarGrafo, cargarPreguntasCache, obtenerPregunta } from "./graph";
-import { preguntaEnIdioma } from "./preguntaEnIdioma";
 import { avanzarTurno, estadoInicial } from "./recorrido";
 import { MOTOR } from "../i18n/mensajes/motor";
 import { interpolar } from "../i18n/interpolar";
@@ -28,39 +27,16 @@ const families = cargarFamilies();
 const preguntasCache = cargarPreguntasCache();
 
 function cliente(texto: string | Error) {
-  const create = vi.fn(async () => {
+  const create = vi.fn(async (_req: unknown) => {
     if (texto instanceof Error) throw texto;
-    return { content: [{ type: "text", text: texto }], usage: { input_tokens: 10, output_tokens: 5 } };
+    return { content: [{ type: "text", text: texto }], usage: { input_tokens: 10, output_tokens: 5 }, stop_reason: "end_turn" };
   });
   return { create, client: { messages: { create } } as unknown as Anthropic };
 }
 
-describe("preguntaEnIdioma", () => {
-  it("en español (o sin idioma) no llama a la IA", async () => {
-    const { create, client } = cliente("x");
-    expect((await preguntaEnIdioma(client, "¿Cómo vas?", "es", usoVacio())).pregunta).toBe("¿Cómo vas?");
-    expect((await preguntaEnIdioma(client, "¿Cómo vas?", null, usoVacio())).pregunta).toBe("¿Cómo vas?");
-    expect(create).not.toHaveBeenCalled();
-  });
+const salidaAdaptador = (pregunta: string) => JSON.stringify({ pregunta, busca: "como separa las capas de su diseño" });
 
-  it("en coreano, la IA la expresa con la regla de idioma", async () => {
-    const { create, client } = cliente("요즘 어떻게 지내요?");
-    const r = await preguntaEnIdioma(client, "¿Cómo vas?", "ko", usoVacio());
-    expect(r).toMatchObject({ pregunta: "요즘 어떻게 지내요?", traducida: true });
-    const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
-  });
-
-  it("si la IA falla o devuelve vacío, queda la cacheada", async () => {
-    expect(await preguntaEnIdioma(cliente(new Error("sin red")).client, "¿Cómo vas?", "ko", usoVacio())).toMatchObject({
-      pregunta: "¿Cómo vas?",
-      traducida: false,
-    });
-    expect((await preguntaEnIdioma(cliente("   ").client, "¿Cómo vas?", "ko", usoVacio())).traducida).toBe(false);
-  });
-});
-
-describe("avanzarTurno adapta la pregunta cacheada fuera del español", () => {
+describe("avanzarTurno pasa la pregunta cacheada por el adaptador", () => {
   beforeEach(() => interpretarMultiSaltoFalso.mockReset());
   const nid = "mapeo_capas_diseno";
 
@@ -76,9 +52,9 @@ describe("avanzarTurno adapta la pregunta cacheada fuera del español", () => {
     });
   }
 
-  it("idea en coreano: la cacheada (en español) llega traducida y queda como pendiente", async () => {
+  it("idea en coreano: la cacheada (en español) llega adaptada y en coreano, y queda como pendiente", async () => {
     avance();
-    const { client } = cliente("디자인 층을 어떻게 나눴나요?");
+    const { client, create } = cliente(salidaAdaptador("디자인 층을 어떻게 나눴나요?"));
     const estado = estadoInicial({ actualId: "design_thinking_fundamentos", perfilSesion: "p", textoOriginal: "t", idioma: "ko" });
     const r = await avanzarTurno({ client, graph, families, preguntasCache, estado, respuestaUsuario: null, acumulado: usoVacio(), dbSessionId: "s" });
     if (r.tipo !== "pregunta") throw new Error("esperaba pregunta");
@@ -86,16 +62,36 @@ describe("avanzarTurno adapta la pregunta cacheada fuera del español", () => {
     expect(r.pregunta).toBe("디자인 층을 어떻게 나눴나요?");
     expect(r.estado.preguntaPendiente).toBe("디자인 층을 어떻게 나눴나요?");
     expect(r.estado.ultimasPreguntas.at(-1)).toBe("디자인 층을 어떻게 나눴나요?");
+    const sistema = (create.mock.calls[0][0] as { system: Array<{ text: string }> }).system;
+    expect(sistema.at(-1)!.text).toMatch(/^IDIOMA DE SALIDA: coreano/);
   });
 
-  it("idea en español: la cacheada tal cual, sin llamar a la IA", async () => {
+  it("idea en español: la cacheada ya no sale cruda, tambien se adapta", async () => {
     avance();
-    const { create, client } = cliente("no");
+    const { create, client } = cliente(salidaAdaptador("¿Cómo separas hoy las capas de tu taller?"));
     const estado = estadoInicial({ actualId: "design_thinking_fundamentos", perfilSesion: "p", textoOriginal: "t" });
     const r = await avanzarTurno({ client, graph, families, preguntasCache, estado, respuestaUsuario: null, acumulado: usoVacio(), dbSessionId: "s" });
     if (r.tipo !== "pregunta") throw new Error("esperaba pregunta");
-    expect(r.pregunta).toBe(preguntasCache[nid]!.pregunta);
-    expect(create).not.toHaveBeenCalled();
+    expect(create).toHaveBeenCalledTimes(1);
+    expect(r.pregunta).toBe("¿Cómo separas hoy las capas de tu taller?");
+    expect(r.estado.fallbackEvents.at(-1)).toMatchObject({ tipo: "adaptacion_pregunta", nodo: nid, de: preguntasCache[nid]!.pregunta, salida: "adaptada" });
+  });
+
+  it("si la IA falla, el turno sigue: sale la salida segura y el evento dice cual", async () => {
+    avance();
+    const { client } = cliente(new Error("sin red"));
+    const estado = estadoInicial({ actualId: "design_thinking_fundamentos", perfilSesion: "p", textoOriginal: "t" });
+    const r = await avanzarTurno({ client, graph, families, preguntasCache, estado, respuestaUsuario: null, acumulado: usoVacio(), dbSessionId: "s" });
+    if (r.tipo !== "pregunta") throw new Error("esperaba pregunta");
+    const entrada = preguntasCache[nid]!;
+    const neutral = typeof entrada.pregunta_neutral === "string" ? entrada.pregunta_neutral : null;
+    if (neutral) expect(r.pregunta).toBe(neutral);
+    expect(r.pregunta).not.toBe(entrada.pregunta);
+    expect(r.estado.fallbackEvents.at(-1)).toMatchObject({
+      tipo: "adaptacion_pregunta",
+      salida: neutral ? "neutral" : "plantilla_neutral",
+      motivo: "sin red",
+    });
   });
 });
 

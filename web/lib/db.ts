@@ -11,6 +11,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
 import { costoAcumuladoUsd, type UsoAcumulado } from "./costmeter";
 import { ETIQUETAS_CICLO, type CapacidadSemanal, type ChecklistEstado, type ModoCamino, type ModoRuta, type PlanEtiqueta, type ProjectNodeTipo, type SessionTipo } from "./dbContract";
+import { agregarAlHilo, fusionarFicha, memoriaDe, type EntradaHilo, type FichaContexto } from "./engine/memoria";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
 import type { FilaHeredada } from "./engine/replanteamiento";
@@ -24,6 +25,8 @@ export interface Proyecto {
   titulo: string | null;
   entrada_original: string;
   estado_vivo: string | null;
+  /** Principio 1 (migracion 049): la memoria de contexto del proyecto, ver lib/engine/memoria.ts. */
+  memoria?: unknown;
   fase_actual: Fase;
   session_count: number;
   status: "active" | "archived";
@@ -151,6 +154,24 @@ export async function listarProyectos(supabase: SupabaseClient): Promise<Proyect
   const { data, error } = await supabase.from("projects").select("*").order("updated_at", { ascending: false });
   if (error) throw error;
   return data as Proyecto[];
+}
+
+/** PRINCIPIO 1 (28 sep 2026): la memoria de contexto del proyecto se actualiza en CADA turno. Lee la memoria, fusiona
+ * la ficha (un dato desconocido nunca pisa uno conocido) y, si hay pareja, la añade al final del hilo. Falla ruidoso
+ * si la columna no existe: sin la migracion 049 aplicada no hay memoria que guardar. */
+export async function anotarEnMemoria(
+  supabase: SupabaseClient,
+  projectId: string,
+  ficha: Partial<FichaContexto> | null,
+  entrada: EntradaHilo | null
+): Promise<void> {
+  const { data, error } = await supabase.from("projects").select("memoria").eq("id", projectId).limit(1);
+  if (error) throw error;
+  let memoria = memoriaDe((data as Array<{ memoria: unknown }>)[0]?.memoria);
+  memoria = { ...memoria, ficha: fusionarFicha(memoria.ficha, ficha) };
+  if (entrada) memoria = agregarAlHilo(memoria, entrada);
+  const { error: e2 } = await supabase.from("projects").update({ memoria }).eq("id", projectId);
+  if (e2) throw e2;
 }
 
 export async function actualizarProyecto(

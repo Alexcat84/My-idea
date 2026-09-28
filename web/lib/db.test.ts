@@ -4,7 +4,7 @@
 // igual, con banda null, en vez de romper el nacimiento del plan.
 import { describe, expect, it } from "vitest";
 import { crearSupabaseFalso, estadoFalsoVacio } from "./testUtils/fakeSupabase";
-import { crearProyecto, guardarEstadoSesion, insertarChecklist } from "./db";
+import { anotarEnMemoria, crearProyecto, guardarEstadoSesion, insertarChecklist } from "./db";
 import type { EstadoSesionPersistido } from "./db";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
@@ -177,5 +177,49 @@ describe("guardarEstadoSesion: cada turno deja el coste en la sesion", () => {
     expect(escrito!.estado_recorrido).toBe(estado);
     expect(escrito!.costo_usd as number).toBeCloseTo(0.003, 10);
     expect(escrito!.costo_desglose).toEqual({ turnos: 0.002, clasificacion: 0.001 });
+  });
+});
+
+// PRINCIPIO 1 (28 sep 2026): la memoria del proyecto se guarda en la base y se
+// actualiza en CADA turno: la ficha fusionada y la pareja pregunta-respuesta al
+// final del hilo. A mano: memoria {} + (ficha dueno, pareja 1) -> hilo [1];
+// + (ficha con 2 personas, pareja 2) -> papel sigue dueno, personas 2, hilo [1, 2].
+describe("anotarEnMemoria: la memoria del proyecto crece en cada turno", () => {
+  it("fusiona la ficha y añade la pareja al final del hilo, sin perder lo anterior", async () => {
+    let memoria: unknown = {};
+    const client = {
+      from: () => ({
+        select: () => ({ eq: () => ({ limit: async () => ({ data: [{ memoria }], error: null }) }) }),
+        update: (payload: { memoria: unknown }) => {
+          memoria = payload.memoria;
+          return { eq: async () => ({ error: null }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    const p1 = { sesion: "s1", dominio: "core", nodo: "n1", pregunta: "¿Que vendes?", respuesta: "Macetas", en: "t1" };
+    const p2 = { sesion: "s1", dominio: "core", nodo: "n2", pregunta: "¿Con quien?", respuesta: "Con dos empleados", en: "t2" };
+    await anotarEnMemoria(client, "p1", { papel: "dueno" }, p1);
+    await anotarEnMemoria(client, "p1", { equipo: { personas: 2, descripcion: null } }, p2);
+    const m = memoria as { ficha: { papel: string; equipo: { personas: number } }; hilo: unknown[] };
+    expect(m.ficha.papel).toBe("dueno");
+    expect(m.ficha.equipo.personas).toBe(2);
+    expect(m.hilo).toEqual([p1, p2]);
+  });
+
+  it("sin pareja (primer turno de una sesion) solo actualiza la ficha", async () => {
+    let memoria: unknown = { ficha: { papel: "empleado" }, hilo: [{ sesion: "s0", dominio: "core", nodo: null, pregunta: null, respuesta: "x", en: "t0" }] };
+    const client = {
+      from: () => ({
+        select: () => ({ eq: () => ({ limit: async () => ({ data: [{ memoria }], error: null }) }) }),
+        update: (payload: { memoria: unknown }) => {
+          memoria = payload.memoria;
+          return { eq: async () => ({ error: null }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    await anotarEnMemoria(client, "p1", { tiene_jefe: true }, null);
+    const m = memoria as { ficha: { papel: string; tiene_jefe: boolean }; hilo: unknown[] };
+    expect(m.ficha).toMatchObject({ papel: "empleado", tiene_jefe: true });
+    expect(m.hilo).toHaveLength(1);
   });
 });

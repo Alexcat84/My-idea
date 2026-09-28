@@ -106,6 +106,9 @@ describe("el hilo del idioma", () => {
     const start = readFileSync(path.join(RAIZ_APP, "api/project/[id]/world/[pack]/start/route.ts"), "utf8");
     // i18n F5: la pregunta sale en el idioma de las plantillas de la IDEA
     // (el suyo si es de los once; si no, el de la interfaz).
-    expect(start).toMatch(/obtenerPregunta\(semillaId, graph\[semillaId\], preguntasCache, idiomaDePlantilla\(idiomaIdea, idioma\)\)/);
+    // Construccion 2 (28 sep 2026): el mismo idioma de plantillas va tambien al adaptador.
+    expect(start).toMatch(/const idiomaPlantilla = idiomaDePlantilla\(idiomaIdea, idioma\);/);
+    expect(start).toMatch(/obtenerPregunta\(semillaId, graph\[semillaId\], preguntasCache, idiomaPlantilla\)/);
+    expect(start).toMatch(/\{ graph, preguntasCache, idiomaPlantilla \}/);
   });
 });

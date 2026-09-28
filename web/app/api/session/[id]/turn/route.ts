@@ -96,13 +96,24 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // pantalla + esta respuesta) y viaja al estado persistido, para que el
   // usuario lo vuelva a ver al reentrar y para el análisis de la beta.
   const turnos = [...(estadoPersistido.turnos ?? [])];
+  const en = new Date().toISOString();
   if (estadoPersistido.ultimaPregunta) {
     turnos.push({
       pregunta: estadoPersistido.ultimaPregunta,
       respuesta,
-      en: new Date().toISOString(),
+      en,
     });
   }
+  // Principio 1 (28 sep 2026): la misma pareja entra al hilo de la memoria del
+  // proyecto, con su sesion, su dominio y el nodo donde se respondio.
+  const entradaHilo = {
+    sesion: sessionId,
+    dominio: estadoPersistido.recorrido.dominioSesion ?? "core",
+    nodo: estadoPersistido.recorrido.ruta.at(-1) ?? null,
+    pregunta: estadoPersistido.ultimaPregunta ?? null,
+    respuesta,
+    en,
+  };
 
   // P2b: en los mundos de protección la pregunta del turno se ancla a una
   // actividad real antes de responder (y de persistirse). En todo lo demás el
@@ -117,6 +128,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     anclado.acumulado,
     [],
     turnos,
-    idioma
+    idioma,
+    entradaHilo
   );
 }

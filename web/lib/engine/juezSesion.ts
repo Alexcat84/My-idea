@@ -28,6 +28,9 @@ export interface VeredictoJuez {
   pertinencia_transiciones: 1 | 2 | 3 | 4 | 5;
   repeticion_detectada: boolean;
   señales_fuera_de_material: string[];
+  /** Bloque 7 (28 sep 2026): preguntas que suponen un papel o una estructura que la ficha contradice o que la
+   * persona no menciono (un jefe, recursos humanos, un equipo). Ausente en veredictos de antes. */
+  desajustes_de_papel?: string[];
   comentario: string;
 }
 
@@ -40,7 +43,9 @@ export async function evaluarCalidadSesion(
   decisiones: Array<EventoInterprete | Record<string, unknown>>,
   graph: Grafo,
   acumulado: UsoAcumulado,
-  muestreo?: number
+  muestreo?: number,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<{ calidad: VeredictoJuez | null; acumulado: UsoAcumulado }> {
   const tasaMuestreo = muestreo ?? leerMuestreo();
   if (Math.random() >= tasaMuestreo) {
@@ -64,11 +69,17 @@ export async function evaluarCalidadSesion(
     saltos_posibles: d.saltos_posibles.map((s) => ({ titulo: s.titulo, afinidad: s.afinidad })),
     respuesta_usuario: d.respuesta_usuario ?? null,
     razonamiento: d.razonamiento,
+    pregunta: d.pregunta ?? null,
   }));
+  // Bloque 7: las preguntas de la cache tal como se mostraron, junto a su base, para mirar papeles y fondo.
+  const preguntasAdaptadas = decisiones
+    .filter((d): d is Extract<EventoInterprete, { tipo: "adaptacion_pregunta" }> => d.tipo === "adaptacion_pregunta")
+    .map((d) => ({ base: d.de, mostrada: d.a }));
 
   try {
-    const r = await llamarClaude(client, SYSTEM_JUEZ_SESION, JSON.stringify({ turnos }), MODEL_HAIKU, acumulado, {
+    const r = await llamarClaude(client, SYSTEM_JUEZ_SESION, JSON.stringify({ turnos, preguntas_adaptadas: preguntasAdaptadas }), MODEL_HAIKU, acumulado, {
       maxTokens: 400,
+      contexto,
       componente: "juez_sesion",
     });
     const calidad = parsearJson<VeredictoJuez>(r.texto);

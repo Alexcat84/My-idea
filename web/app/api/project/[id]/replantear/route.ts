@@ -59,6 +59,7 @@ import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_CAMINOS } from "@/lib/prompts";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -218,6 +219,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           maxTokens: 1200,
           componente: "caminos",
           idiomaSalida,
+          contexto: contextoDeSesion(aperturaDeSesion(proyecto)),
         });
         acumulado = r.acumulado;
         caminos = validarCaminos(parsearJson(r.texto), candidatosIds);
@@ -242,6 +244,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       dominioSesion: dominio,
       idioma: idiomaSalida,
       ciclo: { tipo: "replantear", historia, conserva, suelta, caminos, caminoElegido: null, generacion },
+      // Principio 1 (28 sep 2026): la memoria del proyecto viaja al plan del camino elegido.
+      ...aperturaDeSesion(proyecto),
     });
     // Sin entrevista: la sesión queda lista para generar el plan del camino que
     // elija la persona en el paso 4.

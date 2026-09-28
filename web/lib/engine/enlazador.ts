@@ -187,7 +187,9 @@ export async function enlazarPlanProteccion(
   respuestas: Array<{ texto: string; etapa: number }>,
   snapshot: SnapshotNucleo,
   acumulado: UsoAcumulado,
-  opts: { presupuestoUsd?: number } = {}
+  opts: { presupuestoUsd?: number } = {},
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoEnlace> {
   const vacio = (fallo: string | null): ResultadoEnlace => ({
     enlaces: new Array(respuestas.length).fill(null),
@@ -213,6 +215,7 @@ export async function enlazarPlanProteccion(
       acumulado,
       {
         maxTokens: Math.min(4000, 300 + respuestas.length * 60),
+        contexto,
         componente: "enlace_proteccion",
         presupuestoUsd: opts.presupuestoUsd ?? 5,
       }

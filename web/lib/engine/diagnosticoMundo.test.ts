@@ -47,7 +47,7 @@ describe("redactarDiagnostico: el idioma de la idea (i18n F5)", () => {
     const create = vi.fn(async () => ({ content: [{ type: "text", text: "تشخيص" }], usage: { input_tokens: 1, output_tokens: 1 } }));
     await redactarI18n({ messages: { create } } as never, {} as never, usoVacioI18n(), "ar");
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma;
-    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
+    expect(sistema).toHaveLength(4); // prompt, sin fuentes, regla de contexto (28 sep 2026), idioma;
+    expect(sistema[3].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
   });
 });

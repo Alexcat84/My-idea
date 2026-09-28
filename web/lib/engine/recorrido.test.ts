@@ -17,7 +17,10 @@ const buscarAfinesFalso = vi.fn<(...args: unknown[]) => Promise<{ id: string; sc
   async () => []
 );
 vi.mock("../compass", () => ({
+  MIN_SCORE_SALTO: 0.3,
   buscarAfines: (...args: unknown[]) => buscarAfinesFalso(...args),
+  // Construccion 4: sin brujula, la prioridad no se mide (la regla queda en el prompt).
+  puntuadorContra: async () => null,
 }));
 
 import { usoVacio } from "../costmeter";
@@ -25,6 +28,7 @@ import { cargarFamilies } from "../readiness";
 import { cargarGrafo, cargarPreguntasCache } from "./graph";
 import { avisosNodo } from "./avisos";
 import { avanzarTurno, estadoInicial } from "./recorrido";
+import { fichaVacia } from "./memoria";
 
 const graph = cargarGrafo();
 const families = cargarFamilies();
@@ -475,5 +479,60 @@ describe("avanzarTurno: el riel en el idioma de la interfaz (D3)", () => {
       if (antes === undefined) delete ETIQUETAS_RIEL.en[nid];
       else ETIQUETAS_RIEL.en[nid] = antes;
     }
+  });
+});
+
+// PRINCIPIO 1 (28 sep 2026): la sesion lleva la foto del contexto del proyecto y la
+// ficha de contexto; se las pasa al interprete en cada turno y fusiona lo que el
+// interprete revela (ficha_update y prioridad) en su ficha, sin perder nada.
+describe("avanzarTurno: la ficha de contexto viaja y se actualiza cada turno", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("pasa contexto y ficha al interprete y fusiona ficha_update y prioridad", async () => {
+    const nid = "mapeo_capas_diseno";
+    interpretarMultiSaltoFalso.mockResolvedValueOnce({
+      resultado: {
+        accion: "avanzar",
+        camino: [nid],
+        esSalto: false,
+        preguntaNecesaria: true,
+        preguntaAdaptada: "¿Como repartes el trabajo?",
+        repregunta: null,
+        perfilUpdate: null,
+        prioridadDeclarada: { texto: "dirigir a mis dos empleados", conteo: 1 },
+        fichaUpdate: { equipo: { personas: 2, descripcion: "dos empleados" } },
+        numerosDetectados: null,
+        tipoOfertaDetectado: null,
+        unidadVentaDetectada: null,
+      },
+      acumulado: usoVacio(),
+      historialMensajes: [],
+    });
+    const estado = estadoInicial({
+      actualId: "design_thinking_fundamentos",
+      perfilSesion: "p",
+      textoOriginal: "t",
+      contextoProyecto: "CONTEXTO DEL PROYECTO: taller",
+      ficha: { ...fichaVacia(), papel: "dueno", tiene_jefe: false },
+    });
+    const r = await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado,
+      respuestaUsuario: "Tengo dos empleados",
+      acumulado: usoVacio(),
+      dbSessionId: "s",
+    });
+    const params = interpretarMultiSaltoFalso.mock.calls[0][0] as { contextoProyecto: string; fichaActual: { papel: string } };
+    expect(params.contextoProyecto).toBe("CONTEXTO DEL PROYECTO: taller");
+    expect(params.fichaActual.papel).toBe("dueno");
+    expect(r.estado.ficha).toMatchObject({
+      papel: "dueno",
+      tiene_jefe: false,
+      equipo: { personas: 2, descripcion: "dos empleados" },
+      prioridad_declarada: { texto: "dirigir a mis dos empleados", conteo: 1 },
+    });
   });
 });

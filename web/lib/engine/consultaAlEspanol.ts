@@ -12,13 +12,16 @@ export async function consultaAlEspanol(
   client: Anthropic,
   texto: string,
   idiomaIdea: string | null | undefined,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** Principio 1 (28 sep 2026): el contexto completo de la sesion. */
+  contexto: string | null = null
 ): Promise<{ consulta: string; acumulado: UsoAcumulado; fallo: boolean }> {
   if (!idiomaIdea || idiomaIdea === "es" || !texto.trim()) return { consulta: texto, acumulado, fallo: false };
   try {
     const r = await llamarClaude(client, SYSTEM_CONSULTA_AL_ESPANOL, texto, MODEL_HAIKU, acumulado, {
       maxTokens: 400,
       componente: "turnos",
+      contexto,
     });
     const consulta = r.texto.trim();
     if (!consulta) throw new Error("traducción vacía");

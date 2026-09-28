@@ -67,6 +67,8 @@ export type ResultadoPasoReporte =
 interface IdiomasReporte {
   salida: string | null;
   documento: Locale;
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto?: string | null;
 }
 
 function idiomasDelReporte(idiomaIdea: string | null, interfaz: Locale): IdiomasReporte {
@@ -96,7 +98,7 @@ async function generarContenidoReporte(
     registrarEvento({ tipo: "gigo_abortado", motivo: gigo.motivo ?? "" });
   } else {
     const resultados = calcularReporte(numeros, tipoOferta as TipoOferta);
-    const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado, idiomas.documento, idiomas.salida);
+    const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado, idiomas.documento, idiomas.salida, idiomas.contexto ?? null);
     contenido = r.contenido;
     acumuladoFinal = r.acumulado;
     // AUD-09 M20: el reporte sin IA deja su evento (caja de vidrio).
@@ -132,9 +134,11 @@ export async function iniciarReporte(
    * reporte generado es un documento: sigue el idioma de la IDEA (D2, F5). */
   idioma: Locale = LOCALE_BASE,
   /** i18n F5: el idioma de la idea (projects.idioma). Sin él, español. */
-  idiomaIdea: string | null = null
+  idiomaIdea: string | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoPasoReporte> {
-  const idiomas = idiomasDelReporte(idiomaIdea, idioma);
+  const idiomas = { ...idiomasDelReporte(idiomaIdea, idioma), contexto };
   if (!tipoOferta) {
     const estado: EstadoReporte = {
       fase: "clasificando_oferta",
@@ -204,11 +208,13 @@ export async function avanzarReporte(
   /** i18n: el idioma de las preguntas (ver iniciarReporte). */
   idioma: Locale = LOCALE_BASE,
   /** i18n F5: el idioma de la idea (ver iniciarReporte). */
-  idiomaIdea: string | null = null
+  idiomaIdea: string | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoPasoReporte> {
-  const idiomas = idiomasDelReporte(idiomaIdea, idioma);
+  const idiomas = { ...idiomasDelReporte(idiomaIdea, idioma), contexto };
   if (estado.fase === "clasificando_oferta") {
-    const r = await clasificarOferta(client, respuesta, acumulado, idiomas.salida);
+    const r = await clasificarOferta(client, respuesta, acumulado, idiomas.salida, idiomas.contexto ?? null);
     // Igual que Python: si la clasificacion falla, tipo_oferta queda null
     // (nunca se fuerza a "producto_fisico") -- las tablas de consulta
     // (camposEsencialesPorTipo/preguntasPorTipo) ya tratan null como ese
@@ -224,7 +230,7 @@ export async function avanzarReporte(
   }
 
   if (estado.fase === "reclasificando_molde") {
-    const r = await clasificarOferta(client, respuesta, acumulado, idiomas.salida);
+    const r = await clasificarOferta(client, respuesta, acumulado, idiomas.salida, idiomas.contexto ?? null);
     if (r.tipo && r.tipo !== estado.tipoOferta) {
       const unidadVenta = r.unidad ?? estado.unidadVenta;
       const resultado = await continuarConTipoConocido(client, numeros, r.tipo, unidadVenta, 0, true, r.acumulado, idioma, idiomas);

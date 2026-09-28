@@ -910,8 +910,11 @@ async function faseMundosNuevos(cookie: string, projectId: string) {
     if (!rw.mensaje || String(rw.mensaje).length < 20) {
       throw new Error("PANTALLA MUDA: seguridad_digital cerro sin una palabra para el usuario (4.3 §2)");
     }
-    if (!rw.unlock_revertido) {
-      throw new Error("seguridad_digital cerro por incompatible pero NO devolvio la activacion (4.3 §1)");
+    // AUD-09 H04 (decision del fundador, 25 sep 2026: NADA SE BORRA JAMAS): la fila del mundo se queda y la
+    // respuesta lo dice con unlock_revertido=false. La asercion de la 4.3 (exigia true) quedo vieja; se corrige
+    // antes de la corrida final (28 sep 2026).
+    if (rw.unlock_revertido !== false) {
+      throw new Error(`seguridad_digital cerro por incompatible y unlock_revertido=${rw.unlock_revertido}: desde AUD-09 H04 debe ser false (la fila no se borra)`);
     }
     const { data: ev } = await supabaseAdmin
       .from("sessions")

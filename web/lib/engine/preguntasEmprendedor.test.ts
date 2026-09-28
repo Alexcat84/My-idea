@@ -31,11 +31,13 @@ function supuestos(): string[] {
   return fuera.sort();
 }
 
-// PENDIENTES DE REGENERAR con el generador corregido (la regla ROLES DE EMPRESA
-// GRANDE de engine/build_question_cache.py). La lista solo puede ENCOGER: una
-// pregunta nueva que suponga un jefe hace fallar la guarda. Cuando se regeneren,
-// esta lista queda vacia y asi se queda.
-const PENDIENTES_DE_REGENERAR = new Set<string>([
+// BASES CONOCIDAS CON EL SUPUESTO. Ya no se regeneran: por el principio 2 del
+// fundador (28 sep 2026, docs/REGLAS_DE_LA_CASA.md) las preguntas base se quedan
+// exactamente como estan, y el adaptador (lib/engine/adaptadorPregunta.ts) las
+// dice a la persona real; su salida segura es la neutral o la plantilla neutral,
+// nunca la base. La lista solo puede ENCOGER: una pregunta NUEVA (--faltantes,
+// que nace con la regla unica) que suponga un jefe hace fallar la guarda.
+const BASES_CON_SUPUESTO = new Set<string>([
   "acordar_plan_conjunto_jefe",
   "aplicar_ejercicio_codigo_genetico_control",
   "calibrar_decision_despido_documentarla",
@@ -51,14 +53,14 @@ const PENDIENTES_DE_REGENERAR = new Set<string>([
 ]);
 
 describe("la guarda del contexto del emprendedor (mundo 11)", () => {
-  it("la lista de pendientes solo encoge: cada pendiente sigue fallando o sale de la lista", () => {
+  it("la lista de bases conocidas solo encoge: cada una sigue con su supuesto o sale de la lista", () => {
     const siguen = new Set(supuestos().map((x) => x.split(" ")[0]));
-    const yaArreglados = [...PENDIENTES_DE_REGENERAR].filter((id) => !siguen.has(id));
-    expect(yaArreglados, `regenerados y todavia en la lista (sacalos): ${yaArreglados.join(", ")}`).toEqual([]);
+    const yaSinSupuesto = [...BASES_CON_SUPUESTO].filter((id) => !siguen.has(id));
+    expect(yaSinSupuesto, `ya sin el supuesto y todavia en la lista (sacalos): ${yaSinSupuesto.join(", ")}`).toEqual([]);
   });
 
   it("ninguna pregunta de Primer Equipo supone jefe, recursos humanos o empresa grande", () => {
-    const nuevos = supuestos().filter((x) => !PENDIENTES_DE_REGENERAR.has(x.split(" ")[0]));
+    const nuevos = supuestos().filter((x) => !BASES_CON_SUPUESTO.has(x.split(" ")[0]));
     expect(nuevos, nuevos.join("\n")).toEqual([]);
   });
 });

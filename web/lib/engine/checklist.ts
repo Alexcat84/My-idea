@@ -26,12 +26,14 @@ const RE_PASO = /^(\d+)\.\s+(.*)$/;
  * Una sola expresión para los dos: son el mismo campo. */
 export const RE_PRIMERA_ACCION = /^\*\*(?:Primera acci[oó]n|Esta semana):?\*\*\s*(.*)$/i;
 
-/** Primera oración del párrafo, sin markdown de énfasis, tope 180 chars. */
+/** Primera oración del párrafo, sin markdown de énfasis, ENTERA. Contexto de la
+ * entrevista (28 sep 2026): antes se cortaba a 177 caracteres + "…" y esa frase
+ * rota viajaba al seguimiento, al plan anterior y a la estimación. Se guarda
+ * completa; el recorte vive solo al mostrarla (lib/textoTarea.ts). */
 function resumirPaso(cuerpo: string): string {
   const plano = cuerpo.replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
   const punto = plano.indexOf(". ");
-  const frase = punto > 20 ? plano.slice(0, punto + 1) : plano;
-  return frase.length > 180 ? frase.slice(0, 177).trimEnd() + "…" : frase;
+  return punto > 20 ? plano.slice(0, punto + 1) : plano;
 }
 
 export function derivarChecklist(markdownPlan: string, idioma: Locale = LOCALE_BASE): ItemDerivado[] {
